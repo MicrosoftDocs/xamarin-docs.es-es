@@ -1,49 +1,52 @@
 ---
-title: Filtros de máscara de SkiaSharp
-description: Obtenga información sobre cómo usar el filtro de máscara para crear desenfoques y otros efectos alfabéticos.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 940422A1-8BC0-4039-8AD7-26C61320F858
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/27/2018
-ms.openlocfilehash: 36a8b5c32261d4f508c82feea1e6127574db6a20
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 10192e93d2e20f9aa58ca95dd81c07f560193905
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198247"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136414"
 ---
 # <a name="skiasharp-mask-filters"></a>Filtros de máscara de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Los filtros de máscara son los efectos que manipulan la geometría y el canal alfa de objetos gráficos. Para usar un filtro de máscara, establezca el [ `MaskFilter` ](xref:SkiaSharp.SKPaint.MaskFilter) propiedad de `SKPaint` a un objeto de tipo [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) que ha creado llamando a uno de los `SKMaskFilter` métodos estáticos.
+Los filtros de máscara son efectos que manipulan la geometría y el canal alfa de objetos gráficos. Para usar un filtro de máscara, establezca la [`MaskFilter`](xref:SkiaSharp.SKPaint.MaskFilter) propiedad de `SKPaint` en un objeto de tipo [`SKMaskFilter`](xref:SkiaSharp.SKMaskFilter) que haya creado mediante una llamada a uno de los `SKMaskFilter` métodos estáticos.
 
-La mejor manera de familiarizarse con los filtros de la máscara está experimentando con estos métodos estáticos. El filtro de máscara más útil, crea un desenfoque:
+La mejor manera de familiarizarse con los filtros de máscara es experimentar con estos métodos estáticos. El filtro de máscara más útil crea un desenfoque:
 
-![Ejemplo de desenfoque](mask-filters-images/MaskFilterExample.png "desenfoque de ejemplo")
+![Ejemplo de desenfoque](mask-filters-images/MaskFilterExample.png "Ejemplo de desenfoque")
 
-Que es la única característica de filtro de máscara que se describe en este artículo. El siguiente artículo en [ **filtros de imágenes de SkiaSharp** ](image-filters.md) también se describe un efecto de desenfoque es preferible a ésta. 
+Esta es la única característica de filtro de máscara que se describe en este artículo. En el siguiente artículo de [**filtros de imagen de SkiaSharp**](image-filters.md) también se describe un efecto de desenfoque que podría preferir a este. 
 
-Estático [ `SKMaskFilter.CreateBlur` ](xref:SkiaSharp.SKMaskFilter.CreateBlur(SkiaSharp.SKBlurStyle,System.Single)) método tiene la siguiente sintaxis:
+El [`SKMaskFilter.CreateBlur`](xref:SkiaSharp.SKMaskFilter.CreateBlur(SkiaSharp.SKBlurStyle,System.Single)) método estático tiene la siguiente sintaxis:
 
 ```csharp
 public static SKMaskFilter CreateBlur (SKBlurStyle blurStyle, float sigma);
 ```
 
-Las sobrecargas permiten especificar marcas para el algoritmo utilizado para crear el efecto de desenfoque y un rectángulo para evitar el desenfoque en áreas que se tratarán con otros objetos gráficos.
+Las sobrecargas permiten especificar marcas para el algoritmo utilizado para crear el desenfoque y un rectángulo para evitar desenfoques en áreas que se tratarán con otros objetos gráficos.
 
-[`SKBlurStyle`](xref:SkiaSharp.SKBlurStyle) es una enumeración con los miembros siguientes:
+[`SKBlurStyle`](xref:SkiaSharp.SKBlurStyle)es una enumeración con los siguientes miembros:
 
 - `Normal`
 - `Solid`
 - `Outer`
 - `Inner`
 
-En los ejemplos siguientes se muestran los efectos de estos estilos. El `sigma` parámetro especifica la extensión de desenfoque. En versiones anteriores de Skia, la extensión del desenfoque se ha indicado con un valor de radio. Si un valor de radio es preferible para la aplicación, hay una estática [ `SKMaskFilter.ConvertRadiusToSigma` ](xref:SkiaSharp.SKMaskFilter.ConvertRadiusToSigma*) método que se puede convertir de uno a otro. El método multiplica el radio por 0.57735 y agrega 0,5.
+Los efectos de estos estilos se muestran en los ejemplos siguientes. El `sigma` parámetro especifica la extensión del desenfoque. En versiones anteriores de Skia, la extensión del desenfoque se indicaba con un valor de radio. Si se prefiere un valor de radio para su aplicación, existe un método estático [`SKMaskFilter.ConvertRadiusToSigma`](xref:SkiaSharp.SKMaskFilter.ConvertRadiusToSigma*) que puede convertir de uno a otro. El método multiplica el radio por 0,57735 y agrega 0,5.
 
-El **desenfoque experimentar máscara** página en el [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) ejemplo le permite experimentar con los valores de sigma y estilos de desenfoque. El archivo XAML crea una instancia de un `Picker` con los cuatro `SKBlurStyle` miembros de enumeración y un `Slider` para especificar el valor de sigma:
+La página **experimento de desenfoque de máscara** en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) permite experimentar con los estilos de desenfoque y los valores de Sigma. El archivo XAML crea una instancia de `Picker` con los cuatro `SKBlurStyle` miembros de enumeración y un `Slider` para especificar el valor de Sigma:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -89,7 +92,7 @@ El **desenfoque experimentar máscara** página en el [ **SkiaSharpFormsDemos** 
 </ContentPage>
 ```
 
-El archivo de código subyacente usa esos valores para crear un `SKMaskFilter` objeto y establézcalo como el `MaskFilter` propiedad de un `SKPaint` objeto. Esto `SKPaint` objeto se usa para dibujar una cadena de texto y un mapa de bits:
+El archivo de código subyacente utiliza esos valores para crear un `SKMaskFilter` objeto y establecerlo en la `MaskFilter` propiedad de un `SKPaint` objeto. Este `SKPaint` objeto se usa para dibujar una cadena de texto y un mapa de bits:
 
 ```csharp
 public partial class MaskBlurExperimentPage : ContentPage
@@ -157,15 +160,15 @@ public partial class MaskBlurExperimentPage : ContentPage
 }
 ```
 
-Este es el programa que se ejecutan en iOS, Android y la plataforma Universal de Windows (UWP) con el `Normal` estilo y el aumento de desenfoque `sigma` niveles:
+Este es el programa que se ejecuta en iOS, Android y el Plataforma universal de Windows (UWP) con el `Normal` estilo de desenfoque y los niveles crecientes `sigma` :
 
-[![Enmascarar desenfoque experimento - Normal](mask-filters-images/MaskBlurExperiment-Normal.png "máscara desenfoque experimento - Normal")](mask-filters-images/MaskBlurExperiment-Normal-Large.png#lightbox)
+[![Experimento de desenfoque de máscara-normal](mask-filters-images/MaskBlurExperiment-Normal.png "Experimento de desenfoque de máscara-normal")](mask-filters-images/MaskBlurExperiment-Normal-Large.png#lightbox)
 
-Observará que solo los bordes del mapa de bits se ven afectados por el desenfoque. La `SKMaskFilter` clase no es el efecto correcto para usar si desea una imagen de mapa de bits completo de desenfoque. Para el que desea usar el [ `SKImageFilter` ](xref:SkiaSharp.SKImageFilter) tal como se describe en el siguiente artículo en la clase [ **filtros de imágenes de SkiaSharp**](image-filters.md).
+Observará que solo los bordes del mapa de bits se ven afectados por el desenfoque. La `SKMaskFilter` clase no es el efecto correcto que se debe usar si se desea desenfocar una imagen de mapa de bits completa. Para ello, querrá usar la [`SKImageFilter`](xref:SkiaSharp.SKImageFilter) clase tal y como se describe en el siguiente artículo sobre los [**filtros de imagen de SkiaSharp**](image-filters.md).
 
-El texto se difuminan mucho más con el aumento de los valores de la `sigma` argumento. Experimentar con este programa, observará que para un determinado `sigma` valor, el desenfoque es más extremo en el escritorio de Windows 10. Esta diferencia se produce porque la densidad de píxeles es inferior a un monitor de escritorio que en dispositivos móviles y, por lo tanto, el alto en píxeles del texto es menor. El `sigma` valor es proporcional a una extensión de desenfoque, en píxeles, por lo que para un determinado `sigma` valor, el efecto es más extremo en pantallas de resolución inferior. En una aplicación de producción, probablemente quiera calcular un `sigma` valor que es proporcional al tamaño del gráfico. 
+El texto se desenfoca más con los valores de aumento del `sigma` argumento. Al experimentar con este programa, observará que, para un valor determinado `sigma` , el desenfoque es más extremo en el escritorio de Windows 10. Esta diferencia se debe a que la densidad de píxeles es más baja en un monitor de escritorio que en los dispositivos móviles, por lo que el alto del texto en píxeles es inferior. El `sigma` valor es proporcional a una extensión de desenfoque en píxeles, de modo que, para un `sigma` valor determinado, el efecto es más extremo en pantallas de menor resolución. En una aplicación de producción, probablemente querrá calcular un `sigma` valor que es proporcional al tamaño del gráfico. 
 
-Probar varios valores antes de decidirse por un nivel de desenfoque que busca la mejor para su aplicación. Por ejemplo, en el **máscara desenfoque experimento** página, pruebe a establecer `sigma` similar al siguiente:
+Pruebe varios valores antes de la liquidación en un nivel de desenfoque que tenga el mejor aspecto para su aplicación. Por ejemplo, en la página **experimento de desenfoque de máscara** , pruebe a establecer `sigma` este aspecto:
 
 ```csharp
 sigma = paint.TextSize / 18;
@@ -174,23 +177,23 @@ paint.MaskFilter = SKMaskFilter.CreateBlur(blurStyle, sigma);
 
 Ahora el `Slider` no tiene ningún efecto, pero el grado de desenfoque es coherente entre las plataformas:
 
-[![Enmascarar desenfoque experimento - coherente](mask-filters-images/MaskBlurExperiment-Consistent.png "enmascarar desenfoque experimento - coherente")](mask-filters-images/MaskBlurExperiment-Consistent-Large.png#lightbox)
+[![Desenfoque de máscara: coherente](mask-filters-images/MaskBlurExperiment-Consistent.png "Desenfoque de máscara: coherente")](mask-filters-images/MaskBlurExperiment-Consistent-Large.png#lightbox)
 
-Todas las capturas de pantalla hasta ahora han demostrado desenfoque creado con el `SKBlurStyle.Normal` miembro de enumeración. Las capturas de pantalla siguientes muestran los efectos de la `Solid`, `Outer`, y `Inner` desenfoque estilos:
+Todas las capturas de pantallas hasta ahora han mostrado el desenfoque creado con el `SKBlurStyle.Normal` miembro de enumeración. Las capturas de pantallas siguientes muestran los efectos de los `Solid` `Outer` estilos de `Inner` desenfoque, y:
 
-[![Enmascarar desenfoque experimento](mask-filters-images/MaskBlurExperiment.png "enmascarar el experimento de desenfoque")](mask-filters-images/MaskBlurExperiment-Large.png#lightbox)
+[![Experimento de desenfoque de máscara](mask-filters-images/MaskBlurExperiment.png "Experimento de desenfoque de máscara")](mask-filters-images/MaskBlurExperiment-Large.png#lightbox)
 
-La captura de pantalla de `Solid` iOS muestra el estilo: Los caracteres de texto siguen presentes como trazos negros sólidos y el desenfoque se agrega a la parte externa de estos caracteres de texto. 
+La captura de pantalla de iOS muestra el `Solid` estilo: los caracteres de texto siguen presentes como trazos negros sólidos y el desenfoque se agrega a la parte externa de estos caracteres de texto. 
 
-La captura de pantalla de Android en el `Outer` centro muestra el estilo: Los trazos de caracteres se eliminan (como es el mapa de bits) y el desenfoque rodea el espacio vacío en el que aparecían los caracteres de texto. 
+La captura de pantalla de Android en el centro muestra el `Outer` estilo: los trazos de caracteres se eliminan (como es el mapa de bits) y el desenfoque rodea el espacio vacío en el que aparecían los caracteres de texto. 
 
-La captura de pantalla UWP de la derecha se muestra el `Inner` estilo. El efecto de desenfoque está restringido para el área ocupada normalmente por los caracteres de texto.
+La captura de pantalla de UWP de la derecha muestra el `Inner` estilo. El desenfoque está restringido al área ocupada normalmente por los caracteres de texto.
 
-El [ **degradado lineal de SkiaSharp** ](shaders/linear-gradient.md#transparency-and-gradients) artículo se describe un **reflexión degradado** programa que usa un degradado lineal y una transformación para imitar un reflejo de una cadena de texto:
+En el artículo sobre el [**degradado lineal SkiaSharp**](shaders/linear-gradient.md#transparency-and-gradients) se describe un programa de **gradiente de reflexión** que usaba un degradado lineal y una transformación para imitar el reflejo de una cadena de texto:
 
-[![Degradado de reflexión](shaders/linear-gradient-images/ReflectionGradient.png "degradado de la reflexión")](shaders/linear-gradient-images/ReflectionGradient-Large.png#lightbox)
+[![Degradado de reflexión](shaders/linear-gradient-images/ReflectionGradient.png "Degradado de reflexión")](shaders/linear-gradient-images/ReflectionGradient-Large.png#lightbox)
 
-El **reflexión borrosa** página agrega una instrucción única a ese código:
+La página de **reflexión borrosa** agrega una única instrucción a ese código:
 
 ```csharp
 public class BlurryReflectionPage : ContentPage
@@ -261,15 +264,15 @@ public class BlurryReflectionPage : ContentPage
 }
 ```
 
-La nueva instrucción agrega un filtro de desenfoque para el texto reflejado en la que se basa en el tamaño del texto:
+La nueva instrucción agrega un filtro de desenfoque para el texto reflejado que se basa en el tamaño del texto:
 
 ```csharp
 paint.MaskFilter = SKMaskFilter.CreateBlur(SKBlurStyle.Normal, paint.TextSize / 36);
 ```
 
-Este filtro de desenfoque hace que la reflexión a resultar mucho más realistas:
+Este filtro de desenfoque hace que la reflexión parezca mucho más realista:
 
-[![Reflexión borrosa](mask-filters-images/BlurryReflection.png "borrosa reflexión")](mask-filters-images/BlurryReflection-Large.png#lightbox)
+[![Reflexión borrosa](mask-filters-images/BlurryReflection.png "Reflexión borrosa")](mask-filters-images/BlurryReflection-Large.png#lightbox)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

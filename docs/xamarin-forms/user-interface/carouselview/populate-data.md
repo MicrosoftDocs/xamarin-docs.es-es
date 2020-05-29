@@ -1,29 +1,32 @@
 ---
-title: Datos de Xamarin. Forms CarouselView
-description: Un CarouselView se rellena con datos estableciendo su propiedad ItemsSource en cualquier colección que implementa IEnumerable.
-ms.prod: xamarin
-ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/29/2020
-ms.openlocfilehash: cdd77d333ead9b4ff4d2cf29b1e36ee2f287dd22
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+title: Xamarin.FormsDatos de CarouselView
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1081bfafae8e4d7a7a522414e9b45cde48037f1d
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517367"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136557"
 ---
-# <a name="xamarinforms-carouselview-data"></a>Datos de Xamarin. Forms CarouselView
+# <a name="xamarinforms-carouselview-data"></a>Xamarin.FormsDatos de CarouselView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Descargar el](~/media/shared/download.png) ejemplo descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView)incluye las siguientes propiedades que definen los datos que se van a mostrar y su apariencia:
 
-- [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource), de tipo `IEnumerable`, especifica la colección de elementos que se van a mostrar y tiene un valor predeterminado `null`de.
-- [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate), de tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), especifica la plantilla que se va a aplicar a cada elemento de la colección de elementos que se va a mostrar.
+- [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource), de tipo `IEnumerable` , especifica la colección de elementos que se van a mostrar y tiene un valor predeterminado de `null` .
+- [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate), de tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , especifica la plantilla que se va a aplicar a cada elemento de la colección de elementos que se va a mostrar.
 
 Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que las propiedades pueden ser destinos de enlaces de datos.
 
@@ -34,7 +37,7 @@ Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms
 
 ## <a name="populate-a-carouselview-with-data"></a>Rellenar un CarouselView con datos
 
-Un [`CarouselView`](xref:Xamarin.Forms.CarouselView) se rellena con datos estableciendo su [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) propiedad en cualquier colección que implementa. `IEnumerable` Los elementos se pueden agregar en XAML inicializando `ItemsSource` la propiedad desde una matriz de cadenas:
+Un [`CarouselView`](xref:Xamarin.Forms.CarouselView) se rellena con datos estableciendo su [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) propiedad en cualquier colección que implementa `IEnumerable` . Los elementos se pueden agregar en XAML inicializando la `ItemsSource` propiedad desde una matriz de cadenas:
 
 ```xaml
 <CarouselView>
@@ -72,17 +75,17 @@ carouselView.ItemsSource = new string[]
 ```
 
 > [!IMPORTANT]
-> Si [`CarouselView`](xref:Xamarin.Forms.CarouselView) es necesario actualizar a medida que se agregan, quitan o cambian elementos en la colección subyacente, la colección subyacente debe ser `IEnumerable` una colección que envíe notificaciones de cambios de propiedades `ObservableCollection`, como.
+> Si [`CarouselView`](xref:Xamarin.Forms.CarouselView) es necesario actualizar a medida que se agregan, quitan o cambian elementos en la colección subyacente, la colección subyacente debe ser una `IEnumerable` colección que envíe notificaciones de cambios de propiedades, como `ObservableCollection` .
 
-De forma predeterminada [`CarouselView`](xref:Xamarin.Forms.CarouselView) , muestra los elementos horizontalmente. Las capturas de pantallas `CarouselView` siguientes muestran una visualización de elementos de cadena diferentes en iOS y Android:
+De forma predeterminada, [`CarouselView`](xref:Xamarin.Forms.CarouselView) muestra los elementos horizontalmente. Las capturas de pantallas siguientes muestran una `CarouselView` visualización de elementos de cadena diferentes en iOS y Android:
 
 [![Captura de pantalla de CarouselView que contiene elementos de texto, en iOS y Android](populate-data-images/text.png "Elementos de texto en un CarouselView")](populate-data-images/text-large.png#lightbox "Elementos de texto en un CarouselView")
 
-Para obtener información sobre cómo cambiar la [`CarouselView`](xref:Xamarin.Forms.CarouselView) orientación, vea [diseño de Xamarin. Forms CarouselView](layout.md). Para obtener información sobre cómo definir la apariencia de cada elemento en `CarouselView`, vea definir la apariencia del [elemento](#define-item-appearance).
+Para obtener información sobre cómo cambiar la [`CarouselView`](xref:Xamarin.Forms.CarouselView) orientación, vea [ Xamarin.Forms diseño de CarouselView](layout.md). Para obtener información sobre cómo definir la apariencia de cada elemento en `CarouselView` , vea [definir la apariencia del elemento](#define-item-appearance).
 
 ### <a name="data-binding"></a>Enlace de datos
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)se puede rellenar con datos mediante el enlace de datos [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) para enlazar `IEnumerable` su propiedad a una colección. En XAML, esto se consigue con la `Binding` extensión de marcado:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView)se puede rellenar con datos mediante el enlace de datos para enlazar su [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) propiedad a una `IEnumerable` colección. En XAML, esto se consigue con la `Binding` extensión de marcado:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}" />
@@ -98,13 +101,13 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 En este ejemplo, los [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) datos de la propiedad se enlazan a la `Monkeys` propiedad del ViewModel conectado.
 
 > [!NOTE]
-> Los enlaces compilados se pueden habilitar para mejorar el rendimiento del enlace de datos en aplicaciones de Xamarin. Forms. Para obtener más información, vea [Enlaces compilados](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
+> Los enlaces compilados se pueden habilitar para mejorar el rendimiento del enlace de datos en Xamarin.Forms las aplicaciones. Para obtener más información, vea [Enlaces compilados](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
-Para obtener más información sobre el enlace de datos, vea [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+Para obtener más información sobre el enlace de datos, consulte [ Xamarin.Forms enlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
 ## <a name="define-item-appearance"></a>Definir la apariencia del elemento
 
-La apariencia de cada elemento en [`CarouselView`](xref:Xamarin.Forms.CarouselView) puede definirse estableciendo la [`CarouselView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) propiedad en: [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)
+La apariencia de cada elemento en [`CarouselView`](xref:Xamarin.Forms.CarouselView) puede definirse estableciendo la [`CarouselView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) propiedad en [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) :
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -179,7 +182,7 @@ carouselView.ItemTemplate = new DataTemplate(() =>
 });
 ```
 
-Los elementos especificados en [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) definen la apariencia de cada elemento en `CarouselView`. En el ejemplo, el diseño dentro `DataTemplate` de se administra mediante [`StackLayout`](xref:Xamarin.Forms.StackLayout)un, y los datos se muestran con [`Image`](xref:Xamarin.Forms.Image) un objeto y tres [`Label`](xref:Xamarin.Forms.Label) objetos, que se enlazan a las propiedades `Monkey` de la clase:
+Los elementos especificados en [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) definen la apariencia de cada elemento en `CarouselView` . En el ejemplo, el diseño dentro de `DataTemplate` se administra mediante un [`StackLayout`](xref:Xamarin.Forms.StackLayout) , y los datos se muestran con un [`Image`](xref:Xamarin.Forms.Image) objeto y tres [`Label`](xref:Xamarin.Forms.Label) objetos, que se enlazan a las propiedades de la `Monkey` clase:
 
 ```csharp
 public class Monkey
@@ -195,11 +198,11 @@ Las siguientes capturas de pantallas muestran el resultado de la plantilla de ca
 
 [![Captura de pantalla de CarouselView donde cada elemento tiene una plantilla, en iOS y Android](populate-data-images/datatemplate.png "Elementos con plantilla en un CarouselView")](populate-data-images/datatemplate-large.png#lightbox "Elementos con plantilla en un CarouselView")
 
-Para obtener más información sobre las plantillas de datos, consulte [Plantillas de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
+Para obtener más información acerca de las plantillas de datos, consulte [ Xamarin.Forms plantillas de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
 ## <a name="choose-item-appearance-at-runtime"></a>Elección de la apariencia del elemento en tiempo de ejecución
 
-La apariencia de cada elemento en se [`CarouselView`](xref:Xamarin.Forms.CarouselView) puede elegir en tiempo de ejecución, según el valor del elemento, estableciendo la [`CarouselView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) propiedad en un [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) objeto:
+La apariencia de cada elemento en [`CarouselView`](xref:Xamarin.Forms.CarouselView) se puede elegir en tiempo de ejecución, según el valor del elemento, estableciendo la [`CarouselView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) propiedad en un [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) objeto:
 
 ```xaml
 <ContentPage ...
@@ -234,7 +237,7 @@ CarouselView carouselView = new CarouselView
 carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-La [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) propiedad se establece en un `MonkeyDataTemplateSelector` objeto. En el ejemplo siguiente se `MonkeyDataTemplateSelector` muestra la clase:
+La [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) propiedad se establece en un `MonkeyDataTemplateSelector` objeto. En el ejemplo siguiente se muestra la `MonkeyDataTemplateSelector` clase:
 
 ```csharp
 public class MonkeyDataTemplateSelector : DataTemplateSelector
@@ -249,18 +252,18 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 }
 ```
 
-La `MonkeyDataTemplateSelector` clase define `AmericanMonkey` las `OtherMonkey` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) propiedades y que se establecen en distintas plantillas de datos. La `OnSelectTemplate` invalidación devuelve `AmericanMonkey` la plantilla cuando el nombre de Monkey contiene "America". Cuando el nombre de Monkey no contiene "America", `OnSelectTemplate` la invalidación `OtherMonkey` devuelve la plantilla, que muestra los datos atenuados:
+La `MonkeyDataTemplateSelector` clase define `AmericanMonkey` `OtherMonkey` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) las propiedades y que se establecen en distintas plantillas de datos. La `OnSelectTemplate` invalidación devuelve la `AmericanMonkey` plantilla cuando el nombre de Monkey contiene "America". Cuando el nombre de Monkey no contiene "America", la `OnSelectTemplate` invalidación devuelve la `OtherMonkey` plantilla, que muestra los datos atenuados:
 
 [![Captura de pantalla de selección de plantilla de elemento de tiempo de ejecución de CarouselView, en iOS y Android](populate-data-images/datatemplateselector.png "Selección de plantilla de elementos en tiempo de ejecución en un CarouselView")](populate-data-images/datatemplateselector-large.png#lightbox "Selección de plantilla de elementos en tiempo de ejecución en un CarouselView")
 
-Para obtener más información sobre los selectores de plantilla de datos, vea [Create a Xamarin. Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+Para más información sobre los selectores de plantilla de datos, consulte [creación de un Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
 > [!IMPORTANT]
-> Al utilizar [`CarouselView`](xref:Xamarin.Forms.CarouselView), no establezca nunca el elemento raíz de [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) los objetos en `ViewCell`un. Esto hará que se produzca una excepción porque `CarouselView` no tiene concepto de celdas.
+> Al utilizar [`CarouselView`](xref:Xamarin.Forms.CarouselView) , no establezca nunca el elemento raíz de los [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) objetos en un `ViewCell` . Esto hará que se produzca una excepción porque `CarouselView` no tiene concepto de celdas.
 
 ## <a name="display-indicators"></a>presentación de indicadores
 
-Los indicadores, que representan el número de elementos y la posición actual `CarouselView`en un, se pueden mostrar junto `CarouselView`a. Esto puede hacerse con el `IndicatorView` control:
+Los indicadores, que representan el número de elementos y la posición actual en un `CarouselView` , se pueden mostrar junto a `CarouselView` . Esto puede hacerse con el `IndicatorView` control:
 
 ```xaml
 <StackLayout>
@@ -277,18 +280,18 @@ Los indicadores, que representan el número de elementos y la posición actual `
 </StackLayout>
 ```
 
-En este ejemplo, `IndicatorView` se representa debajo de `CarouselView`, con un indicador para cada elemento en. `CarouselView` `IndicatorView` Se rellena con datos estableciendo la `CarouselView.IndicatorView` propiedad en el `IndicatorView` objeto. Cada indicador es un círculo gris claro, mientras que el indicador que representa el elemento actual del `CarouselView` es gris oscuro:
+En este ejemplo, `IndicatorView` se representa debajo de `CarouselView` , con un indicador para cada elemento en `CarouselView` . `IndicatorView`Se rellena con datos estableciendo la `CarouselView.IndicatorView` propiedad en el `IndicatorView` objeto. Cada indicador es un círculo gris claro, mientras que el indicador que representa el elemento actual del `CarouselView` es gris oscuro:
 
 [![Captura de pantalla de CarouselView y IndicatorView en iOS y Android](populate-data-images/indicators.png "Círculos IndicatorView")](populate-data-images/indicators-large.png#lightbox "Círculos IndicatorView")
 
 > [!IMPORTANT]
-> Al establecer `CarouselView.IndicatorView` la propiedad, se `IndicatorView.Position` obtiene el enlace de `CarouselView.Position` la propiedad a la `IndicatorView.ItemsSource` propiedad y la propiedad `CarouselView.ItemsSource` se enlaza a la propiedad.
+> Al establecer la propiedad `CarouselView.IndicatorView` , se obtiene el enlace de la `IndicatorView.Position` propiedad a la `CarouselView.Position` propiedad y la `IndicatorView.ItemsSource` propiedad se enlaza a la `CarouselView.ItemsSource` propiedad.
 
-Para obtener más información sobre los indicadores, consulte [Xamarin. Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md).
+Para obtener más información acerca de los indicadores, vea [ Xamarin.Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md).
 
 ## <a name="context-menus"></a>Menús contextuales
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)admite menús contextuales para elementos de datos `SwipeView`a través de, que revela el menú contextual con un gesto de deslizar rápidamente. `SwipeView` Es un control contenedor que se ajusta alrededor de un elemento de contenido y proporciona elementos de menú contextual para ese elemento de contenido. Por lo tanto, los menús contextuales se implementan para un `CarouselView` mediante la creación de un `SwipeView` que define el contenido que `SwipeView` contiene y los elementos de menú contextual revelados por el gesto de deslizar rápidamente. Esto se logra agregando `SwipeView` a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que define la apariencia de cada elemento de datos en: `CarouselView`
+[`CarouselView`](xref:Xamarin.Forms.CarouselView)admite menús contextuales para elementos de datos a través de `SwipeView` , que revela el menú contextual con un gesto de deslizar rápidamente. `SwipeView`Es un control contenedor que se ajusta alrededor de un elemento de contenido y proporciona elementos de menú contextual para ese elemento de contenido. Por lo tanto, los menús contextuales se implementan para un `CarouselView` mediante la creación de un `SwipeView` que define el contenido que `SwipeView` contiene y los elementos de menú contextual revelados por el gesto de deslizar rápidamente. Esto se logra agregando `SwipeView` a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que define la apariencia de cada elemento de datos en `CarouselView` :
 
 ```xaml
 <CarouselView x:Name="carouselView"
@@ -375,18 +378,18 @@ carouselView.ItemTemplate = new DataTemplate(() =>
 });
 ```
 
-En este ejemplo, el `SwipeView` contenido es un [`StackLayout`](xref:Xamarin.Forms.StackLayout) que define la apariencia de cada elemento rodeado por un [`Frame`](xref:Xamarin.Forms.Frame) en. [`CarouselView`](xref:Xamarin.Forms.CarouselView) Los elementos de deslizamiento se utilizan para realizar acciones `SwipeView` en el contenido y se revelan cuando el control se desliza rápidamente desde la parte superior y desde la parte inferior:
+En este ejemplo, el `SwipeView` contenido es un [`StackLayout`](xref:Xamarin.Forms.StackLayout) que define la apariencia de cada elemento rodeado por un [`Frame`](xref:Xamarin.Forms.Frame) en [`CarouselView`](xref:Xamarin.Forms.CarouselView) . Los elementos de deslizamiento se utilizan para realizar acciones en el `SwipeView` contenido y se revelan cuando el control se desliza rápidamente desde la parte superior y desde la parte inferior:
 
-[![Captura de pantalla del elemento de menú contextual de CarouselView inferior, en](populate-data-images/swipeview-bottom.png "CarouselView con el elemento de menú contextual SwipeView inferior")](populate-data-images/swipeview-bottom-large.png#lightbox "CarouselView con el elemento de menú contextual SwipeView inferior")
-la[![captura de pantalla de iOS y Android del elemento de menú superior de CarouselView, en iOS y Android](populate-data-images/swipeview-top.png "CarouselView con el elemento de menú contextual principal de SwipeView")](populate-data-images/swipeview-top-large.png#lightbox "CarouselView con el elemento de menú contextual principal de SwipeView")
+[![Captura de pantalla del elemento de menú contextual de CarouselView inferior, en iOS y Android](populate-data-images/swipeview-bottom.png "CarouselView con el elemento de menú contextual SwipeView inferior")](populate-data-images/swipeview-bottom-large.png#lightbox "CarouselView con el elemento de menú contextual SwipeView inferior") 
+ [ ![Captura de pantalla del elemento de menú superior de CarouselView, en iOS y Android](populate-data-images/swipeview-top.png "CarouselView con el elemento de menú contextual principal de SwipeView")](populate-data-images/swipeview-top-large.png#lightbox "CarouselView con el elemento de menú contextual principal de SwipeView")
 
-`SwipeView`admite cuatro direcciones de deslizamiento diferentes, con la dirección de deslizamiento que `SwipeItems` se define `SwipeItems` en la colección direcciona a la que se agregan los objetos. De forma predeterminada, se ejecuta un dedo al puntear en el usuario. Además, una vez que se ha ejecutado un dedo, se ocultan los elementos de `SwipeView` deslizamiento y se vuelve a mostrar el contenido. Sin embargo, estos comportamientos se pueden cambiar.
+`SwipeView`admite cuatro direcciones de deslizamiento diferentes, con la dirección de deslizamiento que se define en la colección direcciona `SwipeItems` a la que `SwipeItems` se agregan los objetos. De forma predeterminada, se ejecuta un dedo al puntear en el usuario. Además, una vez que se ha ejecutado un dedo, se ocultan los elementos de deslizamiento y `SwipeView` se vuelve a mostrar el contenido. Sin embargo, estos comportamientos se pueden cambiar.
 
-Para obtener más información sobre `SwipeView` el control, consulte [Xamarin. Forms SwipeView](~/xamarin-forms/user-interface/swipeview.md).
+Para obtener más información sobre el `SwipeView` control, vea [ Xamarin.Forms SwipeView](~/xamarin-forms/user-interface/swipeview.md).
 
 ## <a name="pull-to-refresh"></a>Extraer para actualizar
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)admite la funcionalidad de extracción para actualizar `RefreshView`a través de, lo que permite que los datos que se muestran se actualicen al desplazarse por los elementos. `RefreshView` Es un control contenedor que proporciona la funcionalidad de extracción para actualizar a su elemento secundario, siempre que el elemento secundario admita contenido desplazable. Por lo tanto, la extracción de la actualización `CarouselView` se implementa para una al establecerla como `RefreshView`el elemento secundario de un:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView)admite la funcionalidad de extracción para actualizar a través de `RefreshView` , lo que permite que los datos que se muestran se actualicen al desplazarse por los elementos. `RefreshView`Es un control contenedor que proporciona la funcionalidad de extracción para actualizar a su elemento secundario, siempre que el elemento secundario admita contenido desplazable. Por lo tanto, la extracción de la actualización se implementa para una `CarouselView` al establecerla como el elemento secundario de un `RefreshView` :
 
 ```xaml
 <RefreshView IsRefreshing="{Binding IsRefreshing}"
@@ -415,13 +418,13 @@ refreshView.Content = carouselView;
 // ...
 ```
 
-Cuando el usuario inicia una actualización, se ejecuta `ICommand` la definida por `Command` la propiedad, que debe actualizar los elementos que se muestran. Se muestra una visualización de actualización mientras se produce la actualización, que consta de un círculo de progreso animado:
+Cuando el usuario inicia una actualización, `ICommand` se ejecuta la definida por la `Command` propiedad, que debe actualizar los elementos que se muestran. Se muestra una visualización de actualización mientras se produce la actualización, que consta de un círculo de progreso animado:
 
 [![Captura de pantalla de incorporación de cambios a la actualización de CarouselView en iOS y Android](populate-data-images/pull-to-refresh.png "Incorporación de cambios a la actualización de CarouselView")](populate-data-images/pull-to-refresh-large.png#lightbox "Incorporación de cambios a la actualización de CarouselView")
 
-El valor de la `RefreshView.IsRefreshing` propiedad indica el estado actual de `RefreshView`. Cuando el usuario desencadena una actualización, esta propiedad pasará automáticamente a `true`. Una vez finalizada la actualización, debe restablecer la propiedad a `false`.
+El valor de la `RefreshView.IsRefreshing` propiedad indica el estado actual de `RefreshView` . Cuando el usuario desencadena una actualización, esta propiedad pasará automáticamente a `true` . Una vez finalizada la actualización, debe restablecer la propiedad a `false` .
 
-Para obtener más información `RefreshView`sobre, consulte [Xamarin. Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md).
+Para obtener más información sobre `RefreshView` , vea [ Xamarin.Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md).
 
 ## <a name="load-data-incrementally"></a>Cargar datos incrementalmente
 
@@ -429,18 +432,18 @@ Para obtener más información `RefreshView`sobre, consulte [Xamarin. Forms Refr
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView)define las siguientes propiedades para controlar la carga incremental de datos:
 
-- `RemainingItemsThreshold`, de tipo `int`, el umbral de elementos que todavía no están visibles en la lista en `RemainingItemsThresholdReached` la que se desencadenará el evento.
-- `RemainingItemsThresholdReachedCommand`, de tipo `ICommand`, que se ejecuta cuando se `RemainingItemsThreshold` alcanza el.
+- `RemainingItemsThreshold`, de tipo `int` , el umbral de elementos que todavía no están visibles en la lista en la que se `RemainingItemsThresholdReached` desencadenará el evento.
+- `RemainingItemsThresholdReachedCommand`, de tipo `ICommand` , que se ejecuta cuando `RemainingItemsThreshold` se alcanza el.
 - `RemainingItemsThresholdReachedCommandParameter`, de tipo `object`, que es el parámetro que se pasa a `RemainingItemsThresholdReachedCommand`.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)también define un `RemainingItemsThresholdReached` evento que se desencadena cuando `CarouselView` se desplaza lo suficiente como para que `RemainingItemsThreshold` no se muestren los elementos. Este evento se puede controlar para cargar más elementos. Además, cuando se desencadena `RemainingItemsThresholdReached` el evento, se ejecuta `RemainingItemsThresholdReachedCommand` , lo que permite que la carga de datos incrementales se realice en un ViewModel.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView)también define un `RemainingItemsThresholdReached` evento que se desencadena cuando `CarouselView` se desplaza lo suficiente como para que `RemainingItemsThreshold` no se muestren los elementos. Este evento se puede controlar para cargar más elementos. Además, cuando `RemainingItemsThresholdReached` se desencadena el evento, `RemainingItemsThresholdReachedCommand` se ejecuta, lo que permite que la carga de datos incrementales se realice en un ViewModel.
 
-El valor predeterminado de la `RemainingItemsThreshold` propiedad es-1, lo que indica que `RemainingItemsThresholdReached` el evento nunca se desencadenará. Cuando el valor de la propiedad es 0 `RemainingItemsThresholdReached` , el evento se desencadena cuando [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) se muestra el último elemento de. En el caso de valores mayores que `RemainingItemsThresholdReached` 0, el evento se desencadena `ItemsSource` cuando contiene ese número de elementos a los que todavía no se ha desplazado.
+El valor predeterminado de la `RemainingItemsThreshold` propiedad es-1, lo que indica que el `RemainingItemsThresholdReached` evento nunca se desencadenará. Cuando el valor de la propiedad es 0, el `RemainingItemsThresholdReached` evento se desencadena cuando se muestra el último elemento de [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) . En el caso de valores mayores que 0, el `RemainingItemsThresholdReached` evento se desencadena cuando `ItemsSource` contiene ese número de elementos a los que todavía no se ha desplazado.
 
 > [!NOTE]
 > [`CarouselView`](xref:Xamarin.Forms.CarouselView)valida la `RemainingItemsThreshold` propiedad de modo que su valor sea siempre mayor o igual que-1.
 
-En el siguiente ejemplo de XAML [`CarouselView`](xref:Xamarin.Forms.CarouselView) se muestra un que carga datos incrementalmente:
+En el siguiente ejemplo de XAML se muestra un [`CarouselView`](xref:Xamarin.Forms.CarouselView) que carga datos incrementalmente:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Animals}"
@@ -462,7 +465,7 @@ carouselView.RemainingItemsThresholdReached += OnCollectionViewRemainingItemsThr
 carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Animals");
 ```
 
-En este ejemplo de código, `RemainingItemsThresholdReached` el evento se desencadena cuando hay dos elementos que todavía no se han desplazado a y, `OnCollectionViewRemainingItemsThresholdReached` en respuesta, ejecuta el controlador de eventos:
+En este ejemplo de código, el `RemainingItemsThresholdReached` evento se desencadena cuando hay dos elementos que todavía no se han desplazado a y, en respuesta, ejecuta el `OnCollectionViewRemainingItemsThresholdReached` controlador de eventos:
 
 ```csharp
 void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
@@ -477,8 +480,8 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [CarouselView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
-- [IndicatorView de Xamarin. Forms](~/xamarin-forms/user-interface/indicatorview.md)
-- [RefreshView de Xamarin. Forms](~/xamarin-forms/user-interface/refreshview.md)
-- [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
-- [Plantillas de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
-- [Creación de un DataTemplateSelector de Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
+- [Xamarin.FormsIndicatorView](~/xamarin-forms/user-interface/indicatorview.md)
+- [Xamarin.FormsRefreshView](~/xamarin-forms/user-interface/refreshview.md)
+- [Xamarin.FormsEnlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Xamarin.FormsPlantillas de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Creación de un Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

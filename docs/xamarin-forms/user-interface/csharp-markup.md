@@ -1,37 +1,40 @@
 ---
-title: Marcado de C# de Xamarin. Forms
-description: El marcado de C# es un conjunto opcional de métodos y clases auxiliares fluidas para simplificar el proceso de creación de interfaces de usuario de Xamarin. Forms declarativas en C#.
-ms.prod: xamarin
-ms.assetid: D41B9DCD-5C34-4C2F-B177-FC082AB2E9E0
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/15/2020
-ms.openlocfilehash: 4fa8397dafbbdd836f88193081720b4960f1ce5d
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: Xamarin.FormsMarcado de C#
+description: El marcado de C# es un conjunto opcional de métodos y clases auxiliares fluidas para simplificar el proceso de creación de interfaces de usuario declarativas Xamarin.Forms en C#.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 939727d3dd8d419cdc020d33d3e7241dcedb8158
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425805"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137753"
 ---
-# <a name="xamarinforms-c-markup"></a>Marcado de C# de Xamarin. Forms
+# <a name="xamarinforms-c-markup"></a>Xamarin.FormsMarcado de C#
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 
-El marcado de C# es un conjunto opcional de métodos y clases auxiliares fluidas para simplificar el proceso de creación de interfaces de usuario de Xamarin. Forms declarativas en C#. La API fluida proporcionada por el marcado de C# está disponible en el `Xamarin.Forms.Markup` espacio de nombres.
+El marcado de C# es un conjunto opcional de métodos y clases auxiliares fluidas para simplificar el proceso de creación de interfaces de usuario declarativas Xamarin.Forms en C#. La API fluida proporcionada por el marcado de C# está disponible en el `Xamarin.Forms.Markup` espacio de nombres.
 
 Al igual que con XAML, el marcado de C# permite una separación limpia entre el marcado de la interfaz de usuario y la lógica de la interfaz de usuario. Esto se puede lograr separando el marcado de la interfaz de usuario y la lógica de la interfaz de usuario en archivos de clase parcial distintos. Por ejemplo, para una página de inicio de sesión, el marcado de la interfaz de usuario se encontraba en un archivo denominado *LoginPage.CS*, mientras que la lógica de la interfaz de usuario se encontraba en un archivo denominado *LoginPage.Logic.CS*.
 
-El marcado de C# está disponible en Xamarin. Forms 4,6. Sin embargo, actualmente es experimental y solo se puede usar agregando la siguiente línea de código al archivo *app.CS* :
+El marcado de C# está disponible en Xamarin.Forms 4,6. Sin embargo, actualmente es experimental y solo se puede usar agregando la siguiente línea de código al archivo *app.CS* :
 
 ```csharp
 Device.SetFlags(new string[]{ "Markup_Experimental" });
 ```
 
 > [!NOTE]
-> El marcado de C# está disponible en todas las plataformas compatibles con Xamarin. Forms.
+> El marcado de C# está disponible en todas las plataformas admitidas por Xamarin.Forms .
 
 ## <a name="basic-example"></a>Ejemplo básico
 
@@ -89,7 +92,7 @@ Este ejemplo es idéntico al ejemplo anterior, pero la API fluida de marcado en 
 
 ## <a name="data-binding"></a>Enlace de datos
 
-El marcado de C# incluye un `Bind` método de extensión, junto con sobrecargas, que crea un enlace de datos entre una propiedad de vista enlazable y una propiedad especificada. El `Bind` método conoce la propiedad enlazable predeterminada para la mayoría de los controles que se incluyen en Xamarin. Forms. Por lo tanto, normalmente no es necesario especificar la propiedad de destino al utilizar este método. Sin embargo, también puede registrar la propiedad enlazable predeterminada para controles adicionales:
+El marcado de C# incluye un `Bind` método de extensión, junto con sobrecargas, que crea un enlace de datos entre una propiedad de vista enlazable y una propiedad especificada. El `Bind` método conoce la propiedad enlazable predeterminada para la mayoría de los controles que se incluyen en Xamarin.Forms . Por lo tanto, normalmente no es necesario especificar la propiedad de destino al utilizar este método. Sin embargo, también puede registrar la propiedad enlazable predeterminada para controles adicionales:
 
 ```csharp
 using Xamarin.Forms.Markup;

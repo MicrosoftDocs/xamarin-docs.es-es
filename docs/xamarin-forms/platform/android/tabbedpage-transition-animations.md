@@ -1,24 +1,27 @@
 ---
-title: Animaciones de transición de páginas de TabbedPage en Android
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo utilizar el específico de la plataforma Android que deshabilita las animaciones de transición al navegar por las páginas de un TabbedPage.
-ms.prod: xamarin
-ms.assetid: 2DB4EA6D-9CED-4137-BAB2-B20A457B1CA3
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: 4f8d6ec2b06855364970bc9b672c3d3f7b9bfdfc
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d3ae03ec6cbc3469422e6a2d57f186254e87f40c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649838"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84140028"
 ---
 # <a name="tabbedpage-page-transition-animations-on-android"></a>Animaciones de transición de páginas de TabbedPage en Android
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Esta plataforma Android específica se usa para deshabilitar animaciones de transición al navegar por las páginas, ya sea mediante programación o cuando se usa la barra de [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)pestañas, en. Se consume en XAML estableciendo el `TabbedPage.IsSmoothScrollEnabled` propiedad enlazable a `false`:
+Esta plataforma Android específica se usa para deshabilitar animaciones de transición al navegar por las páginas, ya sea mediante programación o cuando se usa la barra de pestañas, en [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) . Se consume en XAML estableciendo la `TabbedPage.IsSmoothScrollEnabled` propiedad Bindable en `false` :
 
 ```xaml
 <TabbedPage ...
@@ -28,7 +31,7 @@ Esta plataforma Android específica se usa para deshabilitar animaciones de tran
 </TabbedPage>
 ```
 
-Como alternativa, pueden usarse desde C# mediante la API fluida:
+Como alternativa, se puede usar desde C# con la API fluida:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -38,15 +41,15 @@ using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 On<Android>().SetIsSmoothScrollEnabled(false);
 ```
 
-El `TabbedPage.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El `TabbedPage.SetIsSmoothScrollEnabled` método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se usa para controlar si las animaciones de transición se mostrará al navegar entre páginas en un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Además, el `TabbedPage` clase en el `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` espacio de nombres también tiene los métodos siguientes:
+El `TabbedPage.On<Android>` método especifica que este específico de la plataforma solo se ejecutará en Android. El `TabbedPage.SetIsSmoothScrollEnabled` método, en el [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se utiliza para controlar si se mostrarán animaciones de transición al navegar entre las páginas de un [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) . Además, la `TabbedPage` clase del espacio de `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` nombres también tiene los siguientes métodos:
 
-- `IsSmoothScrollEnabled`, que se usa para recuperar datos si las animaciones de transición se mostrará al navegar entre páginas en un `TabbedPage`.
-- `EnableSmoothScroll`, que se usa para habilitar animaciones de transición al navegar entre páginas en un `TabbedPage`.
-- `DisableSmoothScroll`, que se usa para deshabilitar las animaciones de transición al navegar entre páginas en un `TabbedPage`.
+- `IsSmoothScrollEnabled`, que se usa para recuperar si se mostrarán animaciones de transición al navegar entre las páginas de un `TabbedPage` .
+- `EnableSmoothScroll`, que se usa para habilitar animaciones de transición al navegar entre las páginas de un `TabbedPage` .
+- `DisableSmoothScroll`, que se usa para deshabilitar las animaciones de transición al navegar entre las páginas de un `TabbedPage` .
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de AndroidSpecific](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
-- [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)
+- [AndroidSpecific. AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

@@ -1,54 +1,57 @@
 ---
-title: Las rutas de acceso y las líneas de SkiaSharp
-description: En este artículo se explica cómo usar SkiaSharp para dibujar líneas y trazados de gráficos en las aplicaciones de Xamarin.Forms y esto se muestra con código de ejemplo.
-ms.prod: xamarin
-ms.assetid: 316A15FE-383D-4D06-8641-BAC7EE7474CA
-ms.technology: xamarin-skiasharp
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/10/2017
-ms.openlocfilehash: f9964d68e33e84dff789a4ad34443782f22ea821
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: ''
+description: En este artículo se explica cómo usar SkiaSharp para dibujar líneas y trazados de gráficos en Xamarin.Forms aplicaciones, y se muestra con código de ejemplo.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 97c7305e59a023e65535186bbbe39a9c2b7d4c26
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759161"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139001"
 ---
-# <a name="skiasharp-lines-and-paths"></a>Las rutas de acceso y las líneas de SkiaSharp
+# <a name="skiasharp-lines-and-paths"></a>Trazados y líneas de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_Use SkiaSharp para dibujar líneas y los gráficos de rutas de acceso_
+_Usar SkiaSharp para dibujar líneas y trazados de gráficos_
 
-El [sección anterior](~/xamarin-forms/user-interface/graphics/skiasharp/basics/index.md) demostró que el SkiaSharp `SKCanvas` clase incluye varios métodos para dibujar círculos, elipses, rectángulos, rectángulos redondeados, texto y mapas de bits. Esta sección y en las secciones posteriores tratan las distintas clases conectadas con la creación y la representación *trazados de gráficos*.
+En la [sección anterior](~/xamarin-forms/user-interface/graphics/skiasharp/basics/index.md) se mostró que la `SKCanvas` clase SkiaSharp incluye varios métodos para dibujar círculos, óvalos, rectángulos, rectángulos redondeados, texto y mapas de bits. En esta sección y en secciones posteriores se tratan las distintas clases conectadas con la creación y representación de *trazados de gráficos*.
 
-La ruta de acceso de gráficos es el enfoque más generalizado para dibujar líneas y curvas de SkiaSharp. En esta sección se describe el uso un [ `SKPath` ](xref:SkiaSharp.SKPath) objeto para dibujar líneas rectas y usar una colección de líneas rectas diminutas (llamado un *polyline*) para dibujar curvas que se pueden definir de forma algorítmica. Una sección posterior en [ **trazados y curvas de SkiaSharp** ](../curves/index.md) se describen los distintos tipos de curvas compatibles con `SKPath`.
+La ruta de acceso de los gráficos es el enfoque más generalizado para dibujar líneas y curvas en SkiaSharp. En esta sección se describe el uso [`SKPath`](xref:SkiaSharp.SKPath) de un objeto para dibujar líneas rectas y el uso de una colección de pequeñas líneas rectas (denominada *polilínea*) para dibujar curvas que se pueden definir de manera algorítmica. En una sección posterior de [**curvas y trazados de SkiaSharp**](../curves/index.md) se describen los distintos tipos de curvas admitidas por `SKPath` .
 
-Todos los programas de ejemplo en esta sección aparecen bajo el encabezado **líneas y las rutas de acceso** en la página principal de la [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programa y en el [ **Rutas** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths) carpeta de la solución.
+Todos los programas de ejemplo de esta sección aparecen en las **líneas** de encabezado y las rutas de acceso en la Página principal del programa [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) y en la carpeta [**rutas**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths) de acceso de la solución.
 
-## <a name="lines-and-stroke-capslinesmd"></a>[Líneas y extremos de trazo](lines.md)
+## <a name="lines-and-stroke-caps"></a>[Líneas y extremos de trazo](lines.md)
 
-Obtenga información sobre cómo usar SkiaSharp para dibujar líneas con extremos de trazo diferente.
+Aprenda a usar SkiaSharp para dibujar líneas con distintos extremos de trazo.
 
-## <a name="path-basicspathsmd"></a>[Conceptos básicos del trazado](paths.md)
+## <a name="path-basics"></a>[Conceptos básicos del trazado](paths.md)
 
-Explore la SkiaSharp `SKPath` objeto para la combinación de líneas y curvas.
+Explore el `SKPath` objeto SkiaSharp para combinar líneas y curvas.
 
-## <a name="the-path-fill-typesfill-typesmd"></a>[Tipos de relleno del trazado](fill-types.md)
+## <a name="the-path-fill-types"></a>[Tipos de relleno del trazado](fill-types.md)
 
-Descubra los distintos efectos posibles con tipos de relleno de ruta de acceso de SkiaSharp.
+Descubra los distintos efectos posibles con los tipos de relleno de ruta de acceso de SkiaSharp.
 
-## <a name="polylines-and-parametric-equationspolylinesmd"></a>[Polilíneas y ecuaciones paramétricas](polylines.md)
+## <a name="polylines-and-parametric-equations"></a>[Polilíneas y ecuaciones paramétricas](polylines.md)
 
-Utilice SkiaSharp para representar cualquier línea que se puede definir con ecuaciones paramétricas.
+Use SkiaSharp para representar cualquier línea que pueda definir con ecuaciones paramétricas.
 
-## <a name="dots-and-dashesdotsmd"></a>[Puntos y guiones](dots.md)
+## <a name="dots-and-dashes"></a>[Puntos y guiones](dots.md)
 
-Supere las complejidades de dibujo de líneas de puntos y guiones de SkiaSharp.
+Domine las complejidades del dibujo de líneas de puntos y guiones en SkiaSharp.
 
-## <a name="finger-paintingfinger-paintmd"></a>[Pintura con los dedos](finger-paint.md)
+## <a name="finger-painting"></a>[Pintura con los dedos](finger-paint.md)
 
-Utilizar los dedos para pintar en el lienzo.
+Use los dedos para pintar en el lienzo.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

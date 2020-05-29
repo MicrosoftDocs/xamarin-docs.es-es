@@ -1,18 +1,21 @@
 ---
-title: Pruebas unitarias de aplicaciones empresariales
-description: En este capítulo se explica cómo se realizan las pruebas unitarias en la aplicación móvil eShopOnContainers.
-ms.prod: xamarin
-ms.assetid: 4af82e52-f99b-4cad-b278-1745f190c240
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/07/2017
-ms.openlocfilehash: 0fb63c650e73bce5a08b204f942f0c19583e4899
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a05de34089fdf6ad90740067b88edea0b62f55a7
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770683"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84134659"
 ---
 # <a name="unit-testing-enterprise-apps"></a>Pruebas unitarias de aplicaciones empresariales
 
@@ -50,13 +53,13 @@ public class OrderDetailViewModel : ViewModelBase
 }
 ```
 
-La `OrderDetailViewModel` clase tiene una dependencia en el `IOrderService` tipo que el contenedor resuelve cuando crea una instancia de un `OrderDetailViewModel` objeto. Sin embargo, en lugar de `OrderService` crear un objeto para la `OrderDetailViewModel` prueba unitaria de la clase, en `OrderService` su lugar, reemplace el objeto por un simulacro para el propósito de las pruebas. En la figura 10-1 se muestra esta relación.
+La `OrderDetailViewModel` clase tiene una dependencia en el `IOrderService` tipo que el contenedor resuelve cuando crea una instancia de un `OrderDetailViewModel` objeto. Sin embargo, en lugar de crear un `OrderService` objeto para la prueba unitaria de la `OrderDetailViewModel` clase, en su lugar, reemplace el `OrderService` objeto por un simulacro para el propósito de las pruebas. En la figura 10-1 se muestra esta relación.
 
-![](unit-testing-images/unittesting.png "Clases que implementan la interfaz IOrderService")
+![](unit-testing-images/unittesting.png "Classes that implement the IOrderService interface")
 
 **Figura 10-1:** Clases que implementan la interfaz IOrderService
 
-Este enfoque permite pasar `OrderService` el objeto a la `OrderDetailViewModel` clase en tiempo de ejecución y, en aras de la capacidad de prueba, permite pasar `OrderMockService` la clase a la clase en `OrderDetailViewModel` el momento de la prueba. La principal ventaja de este enfoque es que permite que las pruebas unitarias se ejecuten sin necesidad de recursos difíciles de manejar, como los servicios web o las bases de datos.
+Este enfoque permite `OrderService` pasar el objeto a la clase en tiempo de `OrderDetailViewModel` ejecución y, en aras de la capacidad de prueba, permite `OrderMockService` pasar la clase a la `OrderDetailViewModel` clase en el momento de la prueba. La principal ventaja de este enfoque es que permite que las pruebas unitarias se ejecuten sin necesidad de recursos difíciles de manejar, como los servicios web o las bases de datos.
 
 ## <a name="testing-mvvm-applications"></a>Prueba de aplicaciones MVVM
 
@@ -70,7 +73,7 @@ La aplicación móvil eShopOnContainers usa [xUnit](https://xunit.github.io/) pa
 - Los hechos son pruebas que siempre son verdaderas, que prueban las condiciones invariables.
 - Las teorías son pruebas que solo son verdaderas para un conjunto determinado de datos.
 
-Las pruebas unitarias que se incluyen con la aplicación móvil eShopOnContainers son pruebas de hechos y, por lo tanto, cada `[Fact]` método de prueba unitaria se decora con el atributo.
+Las pruebas unitarias que se incluyen con la aplicación móvil eShopOnContainers son pruebas de hechos y, por lo tanto, cada método de prueba unitaria se decora con el `[Fact]` atributo.
 
 > [!NOTE]
 > las pruebas xUnit se ejecutan en un ejecutor de pruebas. Para ejecutar el ejecutor de pruebas, ejecute el proyecto eShopOnContainers. TestRunner para la plataforma necesaria.
@@ -93,13 +96,13 @@ public async Task OrderPropertyIsNotNullAfterViewModelInitializationTest()
 }
 ```
 
-Esta prueba unitaria comprueba que la `Order` propiedad de la `OrderDetailViewModel` instancia tendrá un valor después de que `InitializeAsync` se haya invocado el método. El `InitializeAsync` método se invoca cuando se navega a la vista correspondiente del modelo de vista. Para obtener más información sobre la navegación, consulte [navegación](~/xamarin-forms/enterprise-application-patterns/navigation.md).
+Esta prueba unitaria comprueba que la `Order` propiedad de la `OrderDetailViewModel` instancia tendrá un valor después de que se haya `InitializeAsync` invocado el método. El `InitializeAsync` método se invoca cuando se navega a la vista correspondiente del modelo de vista. Para obtener más información sobre la navegación, consulte [navegación](~/xamarin-forms/enterprise-application-patterns/navigation.md).
 
-Cuando se `OrderDetailViewModel` crea la instancia, espera que se especifique `OrderService` una instancia como argumento. Sin embargo, `OrderService` recupera datos de un servicio Web. Por consiguiente, `OrderMockService` una instancia de, que es una versión ficticia `OrderService` de la clase, se especifica como argumento para `OrderDetailViewModel` el constructor. A continuación, cuando se invoca el `InitializeAsync` método del modelo de vista, que `IOrderService` invoca las operaciones, se recuperan los datos ficticios en lugar de comunicarse con un servicio Web.
+Cuando `OrderDetailViewModel` se crea la instancia, espera que `OrderService` se especifique una instancia como argumento. Sin embargo, `OrderService` recupera datos de un servicio Web. Por consiguiente, una `OrderMockService` instancia de, que es una versión ficticia de la `OrderService` clase, se especifica como argumento para el `OrderDetailViewModel` constructor. A continuación, cuando se invoca el método del modelo de vista `InitializeAsync` , que invoca `IOrderService` las operaciones, se recuperan los datos ficticios en lugar de comunicarse con un servicio Web.
 
 ### <a name="testing-inotifypropertychanged-implementations"></a>Probar implementaciones de INotifyPropertyChanged
 
-La implementación `INotifyPropertyChanged` de la interfaz permite a las vistas reaccionar a los cambios que se originan en modelos de vista y modelos. Estos cambios no se limitan a los datos que se muestran en los controles; también se usan para controlar la vista, como los Estados del modelo de vista que hacen que las animaciones se inicien o se deshabiliten los controles.
+La implementación de la `INotifyPropertyChanged` interfaz permite a las vistas reaccionar a los cambios que se originan en modelos de vista y modelos. Estos cambios no se limitan a los datos que se muestran en los controles; también se usan para controlar la vista, como los Estados del modelo de vista que hacen que las animaciones se inicien o se deshabiliten los controles.
 
 Las propiedades que se pueden actualizar directamente mediante la prueba unitaria se pueden probar asociando un controlador de eventos al `PropertyChanged` evento y comprobando si el evento se genera después de establecer un nuevo valor para la propiedad. En el ejemplo de código siguiente se muestra este tipo de prueba:
 
@@ -123,11 +126,11 @@ public async Task SettingOrderPropertyShouldRaisePropertyChanged()
 }
 ```
 
-Esta prueba unitaria invoca el `InitializeAsync` método de la `OrderViewModel` clase, que hace que se `Order` actualice su propiedad. Se superará la prueba unitaria, siempre que `PropertyChanged` se produzca el evento para `Order` la propiedad.
+Esta prueba unitaria invoca el `InitializeAsync` método de la `OrderViewModel` clase, que hace que `Order` se actualice su propiedad. Se superará la prueba unitaria, siempre que `PropertyChanged` se produzca el evento para la `Order` propiedad.
 
 ### <a name="testing-message-based-communication"></a>Prueba de la comunicación basada en mensajes
 
-Los modelos de vista que [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) utilizan la clase para la comunicación entre las clases de acoplamiento flexible pueden ser pruebas unitarias suscritos al mensaje enviado por el código sometido a prueba, como se muestra en el ejemplo de código siguiente:
+Los modelos de vista que utilizan la [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) clase para la comunicación entre las clases de acoplamiento flexible pueden ser pruebas unitarias suscritos al mensaje enviado por el código sometido a prueba, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 [Fact]  
@@ -148,7 +151,7 @@ public void AddCatalogItemCommandSendsAddProductMessageTest()
 }
 ```
 
-Esta prueba unitaria comprueba que el `CatalogViewModel` publica el `AddProduct` mensaje en respuesta a su `AddCatalogItemCommand` ejecución. Dado que [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) la clase admite las suscripciones de mensajes de multidifusión, la prueba `AddProduct` unitaria se puede suscribir al mensaje y ejecutar un delegado de devolución de llamada en respuesta a recibirlo. Este delegado de devolución de llamada, especificado como una expresión lambda `boolean` , establece un campo que se `Assert` usa en la instrucción para comprobar el comportamiento de la prueba.
+Esta prueba unitaria comprueba que el `CatalogViewModel` publica el `AddProduct` mensaje en respuesta a su `AddCatalogItemCommand` ejecución. Dado que la [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) clase admite las suscripciones de mensajes de multidifusión, la prueba unitaria se puede suscribir al `AddProduct` mensaje y ejecutar un delegado de devolución de llamada en respuesta a recibirlo. Este delegado de devolución de llamada, especificado como una expresión lambda, establece un `boolean` campo que se usa en la `Assert` instrucción para comprobar el comportamiento de la prueba.
 
 ### <a name="testing-exception-handling"></a>Probar el control de excepciones
 
@@ -168,14 +171,14 @@ public void InvalidEventNameShouldThrowArgumentExceptionText()
 }
 ```
 
-Esta prueba unitaria producirá una excepción, porque el [`ListView`](xref:Xamarin.Forms.ListView) control no tiene un evento denominado. `OnItemTapped` El `Assert.Throws<T>` método es un método genérico, `T` donde es el tipo de la excepción esperada. El argumento pasado al `Assert.Throws<T>` método es una expresión lambda que producirá la excepción. Por lo tanto, la prueba unitaria se superará siempre que la expresión lambda `ArgumentException`produzca una excepción.
+Esta prueba unitaria producirá una excepción, porque el [`ListView`](xref:Xamarin.Forms.ListView) control no tiene un evento denominado `OnItemTapped` . El `Assert.Throws<T>` método es un método genérico, donde `T` es el tipo de la excepción esperada. El argumento pasado al `Assert.Throws<T>` método es una expresión lambda que producirá la excepción. Por lo tanto, la prueba unitaria se superará siempre que la expresión lambda produzca una excepción `ArgumentException` .
 
 > [!TIP]
 > Evite escribir pruebas unitarias que examinen cadenas de mensajes de excepción. Las cadenas de mensajes de excepción pueden cambiar con el tiempo, por lo que las pruebas unitarias que dependen de su presencia se consideran frágiles.
 
 ### <a name="testing-validation"></a>Probar la validación
 
-Hay dos aspectos para probar la implementación de la validación: probar que las reglas de validación se implementan correctamente y probar `ValidatableObject<T>` que la clase funciona como se esperaba.
+Hay dos aspectos para probar la implementación de la validación: probar que las reglas de validación se implementan correctamente y probar que la `ValidatableObject<T>` clase funciona como se esperaba.
 
 Normalmente, la lógica de validación es sencilla de probar, ya que normalmente es un proceso independiente en el que la salida depende de la entrada. Debe haber pruebas sobre los resultados de invocar el `Validate` método en cada propiedad que tiene al menos una regla de validación asociada, como se muestra en el ejemplo de código siguiente:
 
@@ -193,9 +196,9 @@ public void CheckValidationPassesWhenBothPropertiesHaveDataTest()
 }
 ```
 
-Esta prueba unitaria comprueba que la validación se realiza correctamente cuando `ValidatableObject<T>` las dos propiedades `MockViewModel` de la instancia tienen datos.
+Esta prueba unitaria comprueba que la validación se realiza correctamente cuando las dos `ValidatableObject<T>` propiedades de la `MockViewModel` instancia tienen datos.
 
-Además de comprobar que la validación se realiza correctamente, las pruebas unitarias de validación también deben comprobar `Value`los `IsValid`valores de `Errors` las propiedades, `ValidatableObject<T>` y de cada instancia, para comprobar que la clase funciona según lo esperado. En el ejemplo de código siguiente se muestra una prueba unitaria que hace lo siguiente:
+Además de comprobar que la validación se realiza correctamente, las pruebas unitarias de validación también deben comprobar los valores de las `Value` `IsValid` propiedades, y `Errors` de cada `ValidatableObject<T>` instancia, para comprobar que la clase funciona según lo esperado. En el ejemplo de código siguiente se muestra una prueba unitaria que hace lo siguiente:
 
 ```csharp
 [Fact]  
@@ -216,7 +219,7 @@ public void CheckValidationFailsWhenOnlyForenameHasDataTest()
 }
 ```
 
-Esta prueba unitaria comprueba que se produce un error `Surname` de validación cuando `MockViewModel` la propiedad de no tiene ningún dato `Value`y `IsValid`las propiedades `Errors` , y de `ValidatableObject<T>` cada instancia están establecidas correctamente.
+Esta prueba unitaria comprueba que se produce un error de validación cuando la `Surname` propiedad de `MockViewModel` no tiene ningún dato y las `Value` `IsValid` propiedades, y `Errors` de cada `ValidatableObject<T>` instancia están establecidas correctamente.
 
 ## <a name="summary"></a>Resumen
 

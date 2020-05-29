@@ -1,24 +1,27 @@
 ---
-title: Color de fondo de celda en iOS
-description: Las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir el valor específico de la plataforma iOS que establece el color de fondo predeterminado de las celdas en iOS.
-ms.prod: xamarin
-ms.assetid: 2A3FDACF-5AE2-40DE-8488-6FE41733712F
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: 24276dce97e4935ba41d7012cf6a9aa8fa2658a8
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 90282262926fef663183be247e37d64dd1be9124
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68651376"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138575"
 ---
 # <a name="cell-background-color-on-ios"></a>Color de fondo de celda en iOS
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Este valor específico de la plataforma iOS establece el color de fondo predeterminado de las instancias de [`Cell`](xref:Xamarin.Forms.Cell) . Se utiliza en XAML estableciendo la propiedad `Cell.DefaultBackgroundColor` enlazable en un [`Color`](xref:Xamarin.Forms.Color):
+Este valor específico de la plataforma iOS establece el color de fondo predeterminado de [`Cell`](xref:Xamarin.Forms.Cell) las instancias. Se consume en XAML estableciendo la `Cell.DefaultBackgroundColor` propiedad Bindable en [`Color`](xref:Xamarin.Forms.Color) :
 
 ```xaml
 <ContentPage ...
@@ -41,7 +44,7 @@ Este valor específico de la plataforma iOS establece el color de fondo predeter
 </ContentPage>
 ```
 
-Como alternativa, se puede utilizar para C# usar la API fluida:
+Como alternativa, se puede usar desde C# con la API fluida:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -52,9 +55,9 @@ var viewCell = new ViewCell { View = ... };
 viewCell.On<iOS>().SetDefaultBackgroundColor(Color.Teal);
 ```
 
-El método `ListView.On<iOS>` especifica que este específico de la plataforma solo se ejecutará en iOS. El método `Cell.SetDefaultBackgroundColor`, en el espacio de nombres [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) , establece el color de fondo de la celda en un [`Color`](xref:Xamarin.Forms.Color)especificado. Además, se puede utilizar el método `Cell.DefaultBackgroundColor` para recuperar el color de fondo de la celda actual.
+El `ListView.On<iOS>` método especifica que este específico de la plataforma solo se ejecutará en iOS. El `Cell.SetDefaultBackgroundColor` método, en el [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) espacio de nombres, establece el color de fondo de la celda en un especificado [`Color`](xref:Xamarin.Forms.Color) . Además, `Cell.DefaultBackgroundColor` se puede utilizar el método para recuperar el color de fondo de la celda actual.
 
-El resultado es que el color de fondo de un [`Cell`](xref:Xamarin.Forms.Cell) se puede establecer en un [`Color`](xref:Xamarin.Forms.Color)específico:
+El resultado es que el color de fondo de un [`Cell`](xref:Xamarin.Forms.Cell) se puede establecer en un específico [`Color`](xref:Xamarin.Forms.Color) :
 
 [![Captura de pantalla de las celdas de encabezado de verde azulado, en iOS](cell-background-color-images/group-header-cell-color.png "ListView con celdas de encabezado de verde azulado")](cell-background-color-images/group-header-cell-color-large.png#lightbox "ListView con celdas de encabezado de verde azulado")
 

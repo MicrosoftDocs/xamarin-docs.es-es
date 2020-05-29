@@ -1,40 +1,43 @@
 ---
-title: RefreshView de Xamarin. Forms
-description: Xamarin. Forms RefreshView es un control contenedor que proporciona funcionalidad de extracción para actualizar el contenido desplazable.
-ms.prod: xamarin
-ms.assetId: 58DBD23B-ADB9-40DA-B331-4DDB6E698990
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 09/19/2019
-ms.openlocfilehash: e38987006025dad1c2ff49c3ea8916e2075d61d7
-ms.sourcegitcommit: d1d4700b3b1b417a9d7b7da85ab5d28f8e8e599d
+title: Xamarin.FormsRefreshView
+description: Xamarin.FormsRefreshView es un control de contenedor que proporciona funcionalidad de extracción para actualizar el contenido desplazable.
+ms.prod: ''
+ms.assetId: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d84e6bb6ed41f2fbc213cd15051d071521f588cd
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73649291"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84127613"
 ---
-# <a name="xamarinforms-refreshview"></a>RefreshView de Xamarin. Forms
+# <a name="xamarinforms-refreshview"></a>Xamarin.FormsRefreshView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
 
-El `RefreshView` es un control contenedor que proporciona funcionalidad de extracción para actualizar el contenido desplazable. Por lo tanto, el elemento secundario de un `RefreshView` debe ser un control desplazable, como [`ScrollView`](xref:Xamarin.Forms.ScrollView), [`CollectionView`](xref:Xamarin.Forms.CollectionView)o [`ListView`](xref:Xamarin.Forms.ListView).
+`RefreshView`Es un control contenedor que proporciona funcionalidad de extracción para actualizar el contenido desplazable. Por lo tanto, el elemento secundario de `RefreshView` debe ser un control desplazable, como [`ScrollView`](xref:Xamarin.Forms.ScrollView) , [`CollectionView`](xref:Xamarin.Forms.CollectionView) o [`ListView`](xref:Xamarin.Forms.ListView) .
 
 `RefreshView` define las siguientes propiedades:
 
-- `Command`, de tipo `ICommand`, que se ejecuta cuando se desencadena una actualización.
+- `Command`, de tipo `ICommand` , que se ejecuta cuando se desencadena una actualización.
 - `CommandParameter`, de tipo `object`, que es el parámetro que se pasa a `Command`.
-- `IsRefreshing`, de tipo `bool`, que indica el estado actual de la `RefreshView`.
-- `RefreshColor`, de tipo `Color`, el color del círculo de progreso que aparece durante la actualización.
+- `IsRefreshing`, de tipo `bool` , que indica el estado actual de `RefreshView` .
+- `RefreshColor`, de tipo `Color` , el color del círculo de progreso que aparece durante la actualización.
 
-Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
 
 > [!NOTE]
-> En el Plataforma universal de Windows, la dirección de extracción de una `RefreshView` se puede establecer con una plataforma específica. Para obtener más información, vea [dirección de extracción de RefreshView](~/xamarin-forms/platform/windows/refreshview-pulldirection.md).
+> En el Plataforma universal de Windows, la dirección de extracción de un `RefreshView` se puede establecer con un específico de la plataforma. Para obtener más información, vea [dirección de extracción de RefreshView](~/xamarin-forms/platform/windows/refreshview-pulldirection.md).
 
 ## <a name="create-a-refreshview"></a>Creación de un RefreshView
 
-En el ejemplo siguiente se muestra cómo crear una instancia de un `RefreshView` en XAML:
+En el ejemplo siguiente se muestra cómo crear una instancia `RefreshView` de en XAML:
 
 ```xaml
 <RefreshView IsRefreshing="{Binding IsRefreshing}"
@@ -50,7 +53,7 @@ En el ejemplo siguiente se muestra cómo crear una instancia de un `RefreshView`
 </RefreshView>
 ```
 
-También se puede crear un `RefreshView` en el código:
+`RefreshView`También se puede crear en el código:
 
 ```csharp
 RefreshView refreshView = new RefreshView();
@@ -68,43 +71,43 @@ scrollView.Content = flexLayout;
 refreshView.Content = scrollView;
 ```
 
-En este ejemplo, el `RefreshView` proporciona la funcionalidad de extracción para actualizar a una [`ScrollView`](xref:Xamarin.Forms.ScrollView) cuyo elemento secundario es un [`FlexLayout`](xref:Xamarin.Forms.FlexLayout). En el `FlexLayout` se usa un diseño enlazable para generar su contenido enlazando con una colección de elementos y se establece la apariencia de cada elemento con un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Para obtener más información sobre los diseños enlazables, vea [diseños enlazables en Xamarin. Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md).
+En este ejemplo, `RefreshView` proporciona la funcionalidad de extracción para actualizar a un [`ScrollView`](xref:Xamarin.Forms.ScrollView) cuyo elemento secundario es [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) . `FlexLayout`Utiliza un diseño enlazable para generar su contenido enlazando a una colección de elementos y establece la apariencia de cada elemento con un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) . Para obtener más información sobre los diseños enlazables, vea [diseños enlazables en Xamarin.Forms ](~/xamarin-forms/user-interface/layouts/bindable-layouts.md).
 
-El valor de la propiedad `RefreshView.IsRefreshing` indica el estado actual del `RefreshView`. Cuando el usuario desencadena una actualización, esta propiedad pasará automáticamente a `true`. Una vez finalizada la actualización, debe restablecer la propiedad a `false`.
+El valor de la `RefreshView.IsRefreshing` propiedad indica el estado actual de `RefreshView` . Cuando el usuario desencadena una actualización, esta propiedad pasará automáticamente a `true` . Una vez finalizada la actualización, debe restablecer la propiedad a `false` .
 
-Cuando el usuario inicia una actualización, se ejecuta el `ICommand` definido por la propiedad `Command`, que debe actualizar los elementos que se muestran. Se muestra una visualización de actualización mientras se produce la actualización, que consta de un círculo de progreso animado:
+Cuando el usuario inicia una actualización, `ICommand` se ejecuta la definida por la `Command` propiedad, que debe actualizar los elementos que se muestran. Se muestra una visualización de actualización mientras se produce la actualización, que consta de un círculo de progreso animado:
 
 [![Captura de pantalla de una RefreshView actualización de datos, en iOS y Android](refreshview-images/default-progress-circle.png "RefreshView actualizar datos")](refreshview-images/default-progress-circle-large.png#lightbox "RefreshView actualizar datos")
 
 > [!NOTE]
-> Establecer manualmente la propiedad `IsRefreshing` en `true` desencadenará la visualización de la actualización y ejecutará el `ICommand` definido por la propiedad `Command`.
+> Al establecer manualmente la `IsRefreshing` propiedad en `true` , se desencadenará la visualización de la actualización y se ejecutará el `ICommand` definido por la `Command` propiedad.
 
 ## <a name="refreshview-appearance"></a>Apariencia de RefreshView
 
-Además de las propiedades que `RefreshView` heredan de la clase [`VisualElement`](xref:Xamarin.Forms.VisualElement) , `RefreshView` también define la propiedad `RefreshColor`. Esta propiedad se puede establecer para definir el color del círculo de progreso que aparece durante la actualización:
+Además de las propiedades que `RefreshView` heredan de la [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase, `RefreshView` también define la `RefreshColor` propiedad. Esta propiedad se puede establecer para definir el color del círculo de progreso que aparece durante la actualización:
 
 ```xaml
 <RefreshView RefreshColor="Teal"
              ... />
 ```
 
-En la captura de pantalla siguiente se muestra un `RefreshView` con el conjunto de propiedades `RefreshColor`:
+En la captura de pantalla siguiente se muestra un `RefreshView` con el `RefreshColor` conjunto de propiedades:
 
 [![Captura de pantalla de un RefreshView con un círculo de progreso de verde azulado, en iOS y Android](refreshview-images/teal-progress-circle.png "RefreshView con un círculo de progreso de verde azulado")](refreshview-images/teal-progress-circle-large.png#lightbox "RefreshView con un círculo de progreso de verde azulado")
 
-Además, la propiedad `BackgroundColor` se puede establecer en un [`Color`](xref:Xamarin.Forms.Color) que representa el color de fondo del círculo de progreso.
+Además, la `BackgroundColor` propiedad se puede establecer en un [`Color`](xref:Xamarin.Forms.Color) que representa el color de fondo del círculo de progreso.
 
 > [!NOTE]
-> En iOS, la propiedad `BackgroundColor` establece el color de fondo del `UIView` que contiene el círculo de progreso.
+> En iOS, la `BackgroundColor` propiedad establece el color de fondo del `UIView` que contiene el círculo de progreso.
 
 ## <a name="disable-a-refreshview"></a>Deshabilitar un RefreshView
 
-Una aplicación puede entrar en un estado en el que la extracción para actualizar no es una operación válida. En tales casos, el `RefreshView` se puede deshabilitar estableciendo su propiedad `IsEnabled` en `false`. Esto impedirá que los usuarios puedan desencadenar la incorporación de cambios a la actualización.
+Una aplicación puede entrar en un estado en el que la extracción para actualizar no es una operación válida. En tales casos, `RefreshView` se puede deshabilitar estableciendo su `IsEnabled` propiedad en `false` . Esto impedirá que los usuarios puedan desencadenar la incorporación de cambios a la actualización.
 
-Como alternativa, al definir la propiedad `Command`, se puede especificar el delegado `CanExecute` de la `ICommand` para habilitar o deshabilitar el comando.
+Como alternativa, al definir la `Command` propiedad, `CanExecute` `ICommand` se puede especificar el delegado de para habilitar o deshabilitar el comando.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [RefreshView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
-- [Diseños enlazables en Xamarin. Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
+- [Diseños enlazables enXamarin.Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
 - [Específico de la plataforma de dirección de extracción RefreshView](~/xamarin-forms/platform/windows/refreshview-pulldirection.md)

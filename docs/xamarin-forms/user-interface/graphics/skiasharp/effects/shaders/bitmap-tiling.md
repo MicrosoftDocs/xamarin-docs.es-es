@@ -1,48 +1,51 @@
 ---
-title: Mosaico de mapa de bits de SkiaSharp
-description: Icono de un área con mapas de bits repetido horizontal y verticalmente.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 9ED14E07-4DC8-4B03-8A33-772838BF51EA
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/23/2018
-ms.openlocfilehash: f019b6e031774d7bcdf593015394d0c73c96949b
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6a28dd20eb8978334365ac217df1241e5288fd28
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198647"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137434"
 ---
-# <a name="skiasharp-bitmap-tiling"></a>Mosaico de mapa de bits de SkiaSharp
+# <a name="skiasharp-bitmap-tiling"></a>Mosaico de mapa de bits SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
 
-Como ha visto en los dos artículos anteriores, el [ `SKShader` ](xref:SkiaSharp.SKShader) clase puede crear degradados lineales o circulares. En este artículo se centra en la `SKShader` objeto que usa un mapa de bits en un área de mosaico. El mapa de bits se puede repetir horizontalmente y verticalmente, ya sea en su orientación original o como alternativa volteado horizontalmente y verticalmente. El volteo evita discontinuidades entre los iconos:
+Como ha visto en los dos artículos anteriores, la [`SKShader`](xref:SkiaSharp.SKShader) clase puede crear degradados lineales o circulares. Este artículo se centra en el `SKShader` objeto que utiliza un mapa de bits para colocar en mosaico un área. El mapa de bits se puede repetir horizontal y verticalmente, en su orientación original, o bien voltearse horizontal y verticalmente de forma alternativa. El volteo evita discontinuidades entre los mosaicos:
 
-![Ejemplo de disposición en mosaico de mapa de bits](bitmap-tiling-images/BitmapTilingSample.png "ejemplo de disposición en mosaico de mapa de bits")
+![Ejemplo de mosaico de mapas de bits](bitmap-tiling-images/BitmapTilingSample.png "Ejemplo de mosaico de mapas de bits")
 
-Estático [ `SKShader.CreateBitmap` ](xref:SkiaSharp.SKShader.CreateBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKShaderTileMode,SkiaSharp.SKShaderTileMode)) el método que crea este sombreador tiene un `SKBitmap` parámetro y dos miembros de la [ `SKShaderTileMode` ](xref:SkiaSharp.SKShaderTileMode) enumeración:
+El [`SKShader.CreateBitmap`](xref:SkiaSharp.SKShader.CreateBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKShaderTileMode,SkiaSharp.SKShaderTileMode)) método estático que crea este sombreador tiene un `SKBitmap` parámetro y dos miembros de la [`SKShaderTileMode`](xref:SkiaSharp.SKShaderTileMode) enumeración:
 
 ```csharp
 public static SKShader CreateBitmap (SKBitmap src, SKShaderTileMode tmx, SKShaderTileMode tmy)
 ```
 
-Los dos parámetros indican los modos utilizados para el mosaico horizontal y vertical disposición en mosaico. Esto es lo mismo `SKShaderTileMode` enumeración que también se utiliza con los métodos de degradado.
+Los dos parámetros indican los modos que se usan para el mosaico horizontal y el mosaico vertical. Esta es la misma `SKShaderTileMode` enumeración que también se utiliza con los métodos de degradado.
 
-Un [ `CreateBitmap` ](xref:SkiaSharp.SKShader.CreateBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKShaderTileMode,SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) sobrecarga incluye un `SKMatrix` argumento para realizar una transformación en los mapas de bits en mosaico:
+Una [`CreateBitmap`](xref:SkiaSharp.SKShader.CreateBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKShaderTileMode,SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) sobrecarga incluye un `SKMatrix` argumento para realizar una transformación en los mapas de bits en mosaico:
 
 ```csharp
 public static SKShader CreateBitmap (SKBitmap src, SKShaderTileMode tmx, SKShaderTileMode tmy, SKMatrix localMatrix)
 ```
 
-En este artículo contiene varios ejemplos del uso de esta transformación de matriz con los mapas de bits en mosaico.
+Este artículo contiene varios ejemplos de cómo usar esta transformación de matriz con mapas de bits en mosaico.
 
 ## <a name="exploring-the-tile-modes"></a>Exploración de los modos de mosaico
 
-El primer programa en el **mosaico de mapa de bits** sección de la **sombreadores y otros efectos** página de la [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) ejemplo Muestra los efectos de los dos `SKShaderTileMode` argumentos. El **modos de voltear mosaico de mapa de bits** archivo XAML crea instancias de un `SKCanvasView` y dos `Picker` vistas que le permiten seleccionar un `SKShaderTilerMode` valor de disposición en mosaico horizontal y vertical. Tenga en cuenta que una matriz de los `SKShaderTileMode` miembros se define en el `Resources` sección:
+El primer programa de la sección **segmentación de mapas de bits** de la página **sombreadores y otros efectos** del ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) muestra los efectos de los dos `SKShaderTileMode` argumentos. El archivo XAML de los **modos de volteo del mosaico de mapa de bits** crea una instancia de `SKCanvasView` y dos `Picker` vistas que permiten seleccionar un `SKShaderTilerMode` valor para el mosaico horizontal y vertical. Observe que se define una matriz de los `SKShaderTileMode` miembros en la `Resources` sección:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -85,7 +88,7 @@ El primer programa en el **mosaico de mapa de bits** sección de la **sombreador
 </ContentPage>
 ```
 
-El constructor del archivo de código subyacente se carga en el recurso de mapa de bits que se muestra un objeto monkey sentado. En primer lugar, recorta la imagen mediante el [ `ExtractSubset` ](xref:SkiaSharp.SKBitmap.ExtractSubset(SkiaSharp.SKBitmap,SkiaSharp.SKRectI)) método `SKBitmap` para que la cabeza y los pies tocan los bordes del mapa de bits. El constructor, a continuación, usa el [ `Resize` ](xref:SkiaSharp.SKBitmap.Resize(SkiaSharp.SKImageInfo,SkiaSharp.SKBitmapResizeMethod)) método para crear otro mapa de bits de la mitad del tamaño. Estos cambios hacen que el mapa de bits que un poco más adecuado para la colocación en mosaico:
+El constructor del archivo de código subyacente se carga en el recurso de mapa de bits que muestra un Monkey sentado. En primer lugar, recorta la imagen con el [`ExtractSubset`](xref:SkiaSharp.SKBitmap.ExtractSubset(SkiaSharp.SKBitmap,SkiaSharp.SKRectI)) método de `SKBitmap` para que el encabezado y los pies toquen los bordes del mapa de bits. A continuación, el constructor usa el [`Resize`](xref:SkiaSharp.SKBitmap.Resize(SkiaSharp.SKImageInfo,SkiaSharp.SKBitmapResizeMethod)) método para crear otro mapa de bits de la mitad del tamaño. Estos cambios hacen que el mapa de bits sea un poco más adecuado para el mosaico:
 
 ```csharp
 public partial class BitmapTileFlipModesPage : ContentPage
@@ -141,21 +144,21 @@ public partial class BitmapTileFlipModesPage : ContentPage
 }
 ```
 
-El `PaintSurface` controlador obtiene la `SKShaderTileMode` configuración de los dos `Picker` vistas y crea un `SKShader` objeto basado en el mapa de bits y esos dos valores. Este sombreador se usa para rellenar el lienzo:
+El `PaintSurface` controlador obtiene los `SKShaderTileMode` valores de las dos `Picker` vistas y crea un `SKShader` objeto basado en el mapa de bits y esos dos valores. Este sombreador se usa para rellenar el lienzo:
 
-[![Modos de voltear mosaico de mapa de bits](bitmap-tiling-images/BitmapTileFlipModes.png "modos de voltear mosaico de mapa de bits")](bitmap-tiling-images/BitmapTileFlipModes-Large.png#lightbox)
+[![Modos de volteo de iconos de mapa de bits](bitmap-tiling-images/BitmapTileFlipModes.png "Modos de volteo de iconos de mapa de bits")](bitmap-tiling-images/BitmapTileFlipModes-Large.png#lightbox)
 
-La pantalla de iOS a la izquierda muestra el efecto de los valores predeterminados de `SKShaderTileMode.Clamp`. El mapa de bits se encuentra en la esquina superior izquierda. A continuación el mapa de bits, se repite la fila inferior de píxeles hacia abajo. A la derecha del mapa de bits, la columna situada más de píxeles se repite completamente a través. El resto del lienzo se colorea por píxel Marrón oscuro en la esquina inferior derecha del mapa de bits. Debería ser obvio que la `Clamp` opción casi nunca se utiliza con el mosaico de mapa de bits.
+La pantalla de iOS de la izquierda muestra el efecto de los valores predeterminados de `SKShaderTileMode.Clamp` . El mapa de bits se encuentra en la esquina superior izquierda. Debajo del mapa de bits, la fila inferior de píxeles se repite hasta el final. A la derecha del mapa de bits, la columna de píxeles situada más a la derecha se repite en todo el recorrido. El resto del lienzo está coloreado por el píxel marrón oscuro de la esquina inferior derecha del mapa de bits. Debería ser obvio que la `Clamp` opción casi nunca se usa con el mosaico de mapas de bits.
 
-En el centro de la pantalla de Android muestra el resultado de `SKShaderTileMode.Repeat` para ambos argumentos. Se repite el mosaico horizontal y verticalmente. La plataforma Universal de Windows se muestra en pantalla `SKShaderTileMode.Mirror`. Los iconos se repite pero también puede voltear horizontalmente y verticalmente. La ventaja de esta opción es que no hay ningún discontinuidades entre los iconos.
+En la pantalla de Android del centro se muestra el resultado de `SKShaderTileMode.Repeat` ambos argumentos. El mosaico se repite horizontalmente y verticalmente. Se muestra la pantalla Plataforma universal de Windows `SKShaderTileMode.Mirror` . Los mosaicos se repiten pero se voltean horizontal y verticalmente de forma alternativa. La ventaja de esta opción es que no hay ninguna discontinuidad entre los mosaicos.
 
-Tenga en cuenta que puede utilizar diferentes opciones para la repetición horizontal y vertical. Puede especificar `SKShaderTileMode.Mirror` como el segundo argumento `CreateBitmap` pero `SKShaderTileMode.Repeat` como tercer argumento. En cada fila, el monos todavía alternar entre la imagen normal y la imagen reflejada, pero ninguno de los objetos son al revés.
+Tenga en cuenta que puede usar diferentes opciones para la repetición horizontal y vertical. Puede especificar `SKShaderTileMode.Mirror` como segundo argumento, `CreateBitmap` pero `SKShaderTileMode.Repeat` como tercer argumento. En cada fila, el Monkeys sigue siendo alterno entre la imagen normal y la imagen reflejada, pero ninguna de las Monkeys están al revés.
 
-## <a name="patterned-backgrounds"></a>Fondos de entramado
+## <a name="patterned-backgrounds"></a>Fondo con patrones
 
-Mosaico de mapa de bits se usa normalmente para crear un fondo con trama de un mapa de bits relativamente pequeño. El ejemplo clásico es una pared.
+El mosaico de mapas de bits se usa normalmente para crear un fondo con patrones a partir de un mapa de bits relativamente pequeño. El ejemplo clásico es un muro de bricks.
 
-El **pared algorítmico** página crea un mapa de bits pequeño que es similar a un brick todo y dos mitades de un brick separados por mortero. Dado que se usa este brick en el ejemplo siguiente, se crea mediante un constructor estático y han hecho públicos con una propiedad estática:
+La página de la **pared del brick algorítmico** crea un mapa de bits pequeño que se asemeja a un Brick entero y dos mitades de un Brick separado por un mortero. Dado que este Brick se usa también en el ejemplo siguiente, se crea mediante un constructor estático y se convierte en público con una propiedad estática:
 
 ```csharp
 public class AlgorithmicBrickWallPage : ContentPage
@@ -206,11 +209,11 @@ public class AlgorithmicBrickWallPage : ContentPage
 }
 ```
 
-El mapa de bits resultante es 70 píxeles de ancho y alto de 60 píxeles:
+El mapa de bits resultante tiene 70 píxeles de ancho y 60 píxeles de alto:
 
-![Brick algorítmico de pared icono](bitmap-tiling-images/AlgorithmicBrickWallTile.png "algorítmico Brick de pared icono")
+![Icono de pared de Brick algorítmico](bitmap-tiling-images/AlgorithmicBrickWallTile.png "Icono de pared de Brick algorítmico")
 
-El resto de la **pared algorítmico** página crea un `SKShader` objeto que se repite esta imagen horizontal y verticalmente:
+El resto de la página de la **pared del brick algorítmico** crea un `SKShader` objeto que repite esta imagen horizontal y verticalmente:
 
 ```csharp
 public class AlgorithmicBrickWallPage : ContentPage
@@ -249,13 +252,13 @@ public class AlgorithmicBrickWallPage : ContentPage
 
 Este es el resultado:
 
-[![Pared algorítmico](bitmap-tiling-images/AlgorithmicBrickWall.png "algorítmica pared.")](bitmap-tiling-images/AlgorithmicBrickWall-Large.png#lightbox)
+[![Muro de bricks algorítmico](bitmap-tiling-images/AlgorithmicBrickWall.png "Muro de bricks algorítmico")](bitmap-tiling-images/AlgorithmicBrickWall-Large.png#lightbox)
 
-Es posible que prefieran algo un poco más realistas. En ese caso, puede tomar una fotografía de una pared real y, a continuación, recortarlo. Este mapa de bits es de 300 píxeles de ancho por 150 píxeles de alto:
+Podría preferir algo más realista. En ese caso, puede tomar una fotografía de una pared de Brick real y recortarla. Este mapa de bits es de 300 píxeles de ancho y 150 píxeles de alto:
 
-![Icono de pared Brick](bitmap-tiling-images/BrickWallTile.jpg "paredes de ladrillo icono")
+![Icono de pared de Brick](bitmap-tiling-images/BrickWallTile.jpg "Icono de pared de Brick")
 
-Este mapa de bits se usa en el **pared fotográficas** página:
+Este mapa de bits se usa en la página de la **pared del brick fotográfico** :
 
 ```csharp
 public class PhotographicBrickWallPage : ContentPage
@@ -294,17 +297,17 @@ public class PhotographicBrickWallPage : ContentPage
 }
 ```
 
-Tenga en cuenta que el `SKShaderTileMode` argumentos `CreateBitmap` son ambos `Mirror`. Esta opción normalmente es necesaria al usar los iconos creados con imágenes reales. Creación de reflejo de los iconos evita discontinuidades:
+Observe que los `SKShaderTileMode` argumentos de `CreateBitmap` son ambos `Mirror` . Normalmente, esta opción es necesaria cuando se usan mosaicos creados a partir de imágenes del mundo real. La creación de reflejo de los mosaicos evita discontinuidades:
 
-[![Papel fotográfico pared](bitmap-tiling-images/PhotographicBrickWall.png "pared fotográficas")](bitmap-tiling-images/PhotographicBrickWall-Large.png#lightbox)
+[![Pared de Brick fotográfico](bitmap-tiling-images/PhotographicBrickWall.png "Pared de Brick fotográfico")](bitmap-tiling-images/PhotographicBrickWall-Large.png#lightbox)
 
-Es necesario algún trabajo para obtener un mapa de bits adecuado para el icono. Ésta no funciona muy bien porque destaca el brick más oscuro demasiado. Con frecuencia aparece dentro de las imágenes repetidas, revelar el hecho de que este paredes de ladrillo se construyen a partir de un mapa de bits más pequeño.
+Se requiere algún trabajo para obtener un mapa de bits adecuado para el icono. Este no funciona bien porque el brick más oscuro destaca demasiado. Aparece periódicamente en las imágenes repetidas, lo que revela el hecho de que esta pared de Brick se construyó a partir de un mapa de bits más pequeño.
 
-El **Media** carpeta de la [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) ejemplo también incluye esta imagen de una pared de piedra:
+La carpeta de **medios** del ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) también incluye esta imagen de una pared de piedra:
 
-![Icono del muro de piedra](bitmap-tiling-images/StoneWallTile.jpg "muro de piedra icono")
+![Icono de pared de piedra](bitmap-tiling-images/StoneWallTile.jpg "Icono de pared de piedra")
 
-Sin embargo, el mapa de bits original es un poco demasiado grande para un icono. Podría cambiarse, pero la `SKShader.CreateBitmap` método también puede cambiar el icono al aplicar una transformación a él. Esta opción se muestra en el **pared de piedra** página:
+Sin embargo, el mapa de bits original es un poco demasiado grande para un icono. Podría cambiarse de tamaño, pero el `SKShader.CreateBitmap` método también puede cambiar el tamaño del icono aplicándole una transformación. Esta opción se muestra en la página de la **pared de piedra** :
 
 ```csharp
 public class StoneWallPage : ContentPage
@@ -347,11 +350,11 @@ public class StoneWallPage : ContentPage
 }
 ```
 
-Un `SKMatrix` valor se crea para escalar la imagen a la mitad de su tamaño original:
+`SKMatrix`Se crea un valor para escalar la imagen a la mitad de su tamaño original:
 
-[![Tiro pared](bitmap-tiling-images/StoneWall.png "piedra pared")](bitmap-tiling-images/StoneWall-Large.png#lightbox)
+[![Plano de piedra](bitmap-tiling-images/StoneWall.png "Plano de piedra")](bitmap-tiling-images/StoneWall-Large.png#lightbox)
 
-¿Funciona la transformación en el mapa de bits original utilizado en el `CreateBitmap` método? ¿O transforman la matriz resultante de iconos? 
+¿La transformación funciona en el mapa de bits original utilizado en el `CreateBitmap` método? ¿O transforma la matriz resultante de mosaicos? 
 
 Una manera fácil de responder a esta pregunta es incluir una rotación como parte de la transformación:
 
@@ -360,29 +363,29 @@ SKMatrix matrix = SKMatrix.MakeScale(0.5f, 0.5f);
 SKMatrix.PostConcat(ref matrix, SKMatrix.MakeRotationDegrees(15));
 ```
 
-Si la transformación se aplica al icono individual, a continuación, se debe girar cada imagen repetida del icono y el resultado debería contener muchas interrupciones. Pero resulta obvio a partir de esta captura de pantalla que se transforma la matriz compuesta de iconos:
+Si la transformación se aplica al mosaico individual, se debe girar cada imagen repetida del mosaico y el resultado contendrá muchas discontinuidades. Pero es obvio que en esta captura de pantalla se transforma la matriz compuesta de mosaicos:
 
-[![Tiro pared girado](bitmap-tiling-images/StoneWallRotated.png "piedra pared girado")](bitmap-tiling-images/StoneWallRotated-Large.png#lightbox)
+[![Plano de piedra girado](bitmap-tiling-images/StoneWallRotated.png "Plano de piedra girado")](bitmap-tiling-images/StoneWallRotated-Large.png#lightbox)
 
-En la sección [ **icono alineación**](#tile-alignment), verá un ejemplo de una transformación de traslación que se aplica para el sombreador.
+En la sección [**alineación de mosaicos**](#tile-alignment), verá un ejemplo de una transformación translate aplicada al sombreador.
 
-Independiente [ **reloj Cat** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock) ejemplo (no forma parte de **SkiaSharpFormsDemos**) simula un grano de madera en segundo plano mediante el mosaico de mapa de bits en función de este mapa de bits 240 píxeles cuadrado:
+El ejemplo de [**reloj de gato**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock) independiente (que no forma parte de **SkiaSharpFormsDemos**) simula un fondo de grano de madera mediante mosaicos de mapas de bits basados en este mapa de bits cuadrado de 240 píxeles:
 
-![Nivel de detalle de madera](bitmap-tiling-images/WoodGrain.png "grano de madera")
+![Grano de madera](bitmap-tiling-images/WoodGrain.png "Grano de madera")
 
-Es una fotografía de un piso de madera. El `SKShaderTileMode.Mirror` opción permite que aparezca como un área mucho mayor de madera:
+Es una fotografía de un piso de madera. La `SKShaderTileMode.Mirror` opción permite que aparezca como un área mucho mayor de madera:
 
-[![Cat reloj](bitmap-tiling-images/CatClock.png "Cat reloj")](bitmap-tiling-images/CatClock-Large.png#lightbox)
+[![Reloj CAT](bitmap-tiling-images/CatClock.png "Reloj CAT")](bitmap-tiling-images/CatClock-Large.png#lightbox)
 
-## <a name="tile-alignment"></a>Alineación de icono
+## <a name="tile-alignment"></a>Alineación de mosaicos
 
-Todos los ejemplos mostrados hasta ahora han usado el sombreador creado por `SKShader.CreateBitmap` para cubrir todo el lienzo. En la mayoría de los casos, usará el mosaico de mapa de bits para la tramitación de las áreas más pequeñas o (más rara vez) para rellenar el interior de las líneas gruesas. Este es el icono de pared fotográficas utilizado para un rectángulo más pequeño:
+Todos los ejemplos mostrados hasta ahora han usado el sombreador creado por `SKShader.CreateBitmap` para cubrir todo el lienzo. En la mayoría de los casos, usará el mosaico de mapas de bits para el archivado de áreas más pequeñas o, en raras ocasiones, para rellenar el interior de las líneas gruesas. Este es el icono de la pared de ladrillos fotográfica que se usa para un rectángulo más pequeño:
 
-[![Alineación de icono](bitmap-tiling-images/TileAlignment.png "alineación de icono")](bitmap-tiling-images/TileAlignment-Large.png#lightbox)
+[![Alineación de mosaicos](bitmap-tiling-images/TileAlignment.png "Alineación de mosaicos")](bitmap-tiling-images/TileAlignment-Large.png#lightbox)
 
-Esto podría ser correcto para usted, o quizá no. Quizás haya molestado en que el modelo de mosaico no comienza con un brick completo en la esquina superior izquierda del rectángulo. Eso es porque los sombreadores se alinean con el lienzo y no el objeto gráfico adornan.
+Esto podría tener un aspecto correcto o quizás no. Es posible que se le moleste que el patrón de mosaico no comienza con un Brick completo en la esquina superior izquierda del rectángulo. Esto se debe a que los sombreadores se alinean con el lienzo y no con el objeto gráfico que son adornos.
 
-La solución es sencilla. Crear un `SKMatrix` valor basado en una transformación de traslación. La transformación traslada eficazmente el patrón de mosaico en el punto donde desea que la esquina superior izquierda del icono esté alineado. Este método se muestra en el **alineación de icono** página, que se creó la imagen de los iconos sin alinear mostrado anteriormente:
+La corrección es sencilla. Cree un `SKMatrix` valor basado en una transformación de traslación. La transformación desplaza eficazmente el patrón en mosaico hasta el punto en el que desea que se alinee la esquina superior izquierda del icono. Este enfoque se muestra en la página **alineación del mosaico** , que creó la imagen de los mosaicos no alineados mostrados anteriormente:
 
 ```csharp
 public class TileAlignmentPage : ContentPage
@@ -450,11 +453,11 @@ public class TileAlignmentPage : ContentPage
 }
 ```
 
-El **alineación de icono** página incluye un `TapGestureRecognizer`. Pulse o haga clic en la pantalla y los modificadores del programa para la `SKShader.CreateBitmap` método con un `SKMatrix` argumento. Esta transformación cambia el patrón para que la esquina superior izquierda contiene un brick completo:
+La página de **alineación del mosaico** incluye un `TapGestureRecognizer` . Pulse o haga clic en la pantalla y el programa cambiará al `SKShader.CreateBitmap` método con un `SKMatrix` argumento. Esta transformación desplaza el patrón de modo que la esquina superior izquierda contenga un Brick completo:
 
-[![Icono alineación pulsado](bitmap-tiling-images/TileAlignmentTapped.png "pulsado de alineación de icono")](bitmap-tiling-images/TileAlignmentTapped-Large.png#lightbox)
+[![Puntear alineación de mosaico](bitmap-tiling-images/TileAlignmentTapped.png "Puntear alineación de mosaico")](bitmap-tiling-images/TileAlignmentTapped-Large.png#lightbox)
 
-También puede usar esta técnica para asegurarse de que el patrón de mosaico de mapa de bits se centra dentro del área que pinta. En el **centrado iconos** página, el `PaintSurface` controlador calcula primero coordenadas como si va a mostrar el mapa de bits única en el centro del lienzo. A continuación, usa esas coordenadas para crear una transformación de traslación para `SKShader.CreateBitmap`. Esta transformación cambia el modelo completo para que se centra un icono:
+También puede usar esta técnica para asegurarse de que el patrón de mapa de bits en mosaico está centrado dentro del área que pinta. En la página **mosaicos centrados** , el `PaintSurface` controlador calcula primero las coordenadas como si va a mostrar el único mapa de bits en el centro del lienzo. A continuación, utiliza esas coordenadas para crear una transformación de traducción para `SKShader.CreateBitmap` . Esta transformación desplaza todo el patrón para que un mosaico esté centrado:
 
 ```csharp
 public class CenteredTilesPage : ContentPage
@@ -502,35 +505,35 @@ public class CenteredTilesPage : ContentPage
 }
 ```
 
-El `PaintSurface` controlador concluye con el dibujo de un círculo en el centro del lienzo. Inevitablemente, uno de los iconos está exactamente en el centro del círculo, y los demás se organizan en un modelo simétrico:
+El `PaintSurface` controlador termina dibujando un círculo en el centro del lienzo. Asegúrese de que uno de los mosaicos esté exactamente en el centro del círculo y que los demás estén organizados en un patrón simétrico:
 
-[![Centrado iconos](bitmap-tiling-images/CenteredTiles.png "centrado iconos")](bitmap-tiling-images/CenteredTiles-Large.png#lightbox)
+[![Mosaicos centrados](bitmap-tiling-images/CenteredTiles.png "Mosaicos centrados")](bitmap-tiling-images/CenteredTiles-Large.png#lightbox)
 
-Otro enfoque centrado es realmente un poco más fácil. En lugar de construir una transformación de traslación que coloca un icono en el centro, puede Centrar una esquina del patrón de mosaico. En el `SKMatrix.MakeTranslation` llamada, utilice los argumentos para el centro del lienzo:
+Otro enfoque de centrado es realmente más fácil. En lugar de construir una transformación translate que coloca un icono en el centro, puede centrar una esquina del patrón en mosaico. En la `SKMatrix.MakeTranslation` llamada, use los argumentos del centro del lienzo:
 
 ```csharp
 SKMatrix matrix = SKMatrix.MakeTranslation(info.Rect.MidX, info.Rect.MidY);
 ```
 
-El patrón es aún centrado y simétricos, pero ningún icono está en el centro:
+El patrón sigue centrado y simétrico, pero no hay ningún mosaico en el centro:
 
-[![Centrado iconos alternativo](bitmap-tiling-images/CenteredTilesAlternate.png "centrado iconos alternativo")](bitmap-tiling-images/CenteredTilesAlternate-Large.png#lightbox)
+[![Mosaicos centrados alternativos](bitmap-tiling-images/CenteredTilesAlternate.png "Mosaicos centrados alternativos")](bitmap-tiling-images/CenteredTilesAlternate-Large.png#lightbox)
 
-## <a name="simplification-through-rotation"></a>Simplificación de rotación
+## <a name="simplification-through-rotation"></a>Simplificación a través de la rotación
 
-A veces, mediante una transformación de giro en el `SKShader.CreateBitmap` método puede simplificar el icono de mapa de bits. Esto se hace evidente cuando se intenta definir un icono para una barrera de vínculo de la cadena. El **ChainLinkTile.cs** archivo crea el icono se muestra a continuación (con un fondo de color rosado para una mayor claridad):
+A veces, el uso de una transformación de giro en el `SKShader.CreateBitmap` método puede simplificar el icono de mapa de bits. Esto resulta evidente cuando se intenta definir un icono para una barrera de vínculo de cadena. El archivo **ChainLinkTile.CS** crea el icono que se muestra aquí (con un fondo rosa para fines de claridad):
 
-![Icono de vínculo físico de cadena](bitmap-tiling-images/HardChainLinkTile.png "icono de vínculo físico de cadena")
+![Cadena rígida: icono de vínculo](bitmap-tiling-images/HardChainLinkTile.png "Cadena rígida: icono de vínculo")
 
-El icono debe incluir dos vínculos, por lo que el código del mosaico divide en cuatro cuadrantes. Los cuadrantes superior izquierda e inferior derecha son los mismos, pero no están completos. Los cables tienen poca muescas deben controlarse con algunos dibujo adicionales en los cuadrantes superior derecha e inferior izquierda. El archivo que hace este trabajo es 174 líneas de largo.
+El icono debe incluir dos vínculos, de modo que el código divida el mosaico en cuatro cuadrantes. Los cuadrantes superior izquierdo e inferior derecho son los mismos, pero no están completos. Los cables tienen poca muescas que se deben controlar con algún dibujo adicional en los cuadrantes superior derecho e inferior izquierdo. El archivo que realiza todo este trabajo tiene 174 líneas de longitud.
 
-Resulta para ser mucho más fácil de crear este icono:
+Resulta mucho más fácil crear este icono:
 
-![Icono de vínculo de la cadena sea más fácil](bitmap-tiling-images/EasierChainLinkTile.png "más fácil de icono de vínculo de cadena")
+![Icono cadena: vínculo más sencillo](bitmap-tiling-images/EasierChainLinkTile.png "Icono cadena: vínculo más sencillo")
 
-Si el sombreador de mosaico de mapa de bits es gira 90 grados, los objetos visuales son prácticamente los mismos.
+Si el sombreador de mosaicos de mapa de bits se gira 90 grados, los objetos visuales son prácticamente los mismos.
 
-El código para crear el icono de vínculo de la cadena sea más fácil es parte de la **eslabones icono** página. El constructor determina un tamaño del mosaico según el tipo de dispositivo que se está ejecutando el programa y, a continuación, llama a `CreateChainLinkTile`, que se basa en el mapa de bits mediante líneas, las rutas de acceso y los sombreadores de degradado:
+El código para crear el icono de vínculo de cadena más sencillo forma parte de la página de **mosaicos de vínculo de cadena** . El constructor determina un tamaño de mosaico basado en el tipo de dispositivo en el que se está ejecutando el programa y, a continuación, llama a `CreateChainLinkTile` , que se dibuja en el mapa de bits mediante líneas, rutas de acceso y sombreadores de degradado:
 
 ```csharp
 public class ChainLinkFencePage : ContentPage
@@ -618,7 +621,7 @@ public class ChainLinkFencePage : ContentPage
 }
 ```
 
-Excepto los cables, el icono es transparente, lo que significa que puede mostrar en la parte superior algo más. El programa se carga en uno de los recursos de mapa de bits, lo muestra para rellenar el lienzo y, a continuación, dibuja al sombreador en la parte superior:
+A excepción de los cables, el icono es transparente, lo que significa que puede mostrarlo encima de otra cosa. El programa se carga en uno de los recursos de mapa de bits, lo muestra para rellenar el lienzo y, a continuación, dibuja el sombreador en la parte superior:
 
 ```csharp
 public class ChainLinkFencePage : ContentPage
@@ -650,17 +653,17 @@ public class ChainLinkFencePage : ContentPage
 }
 ```
 
-Tenga en cuenta que el sombreador es girados 45 grados, por lo que es la orientación como una barrera de vínculo de cadena real:
+Tenga en cuenta que el sombreador gira 45 grados, por lo que está orientado como una barrera de vínculo de cadena real:
 
-[![Barrera eslabones](bitmap-tiling-images/ChainLinkFence.png "eslabones barrera")](bitmap-tiling-images/ChainLinkFence-Large.png#lightbox)
+[![Barrera de vínculo de cadena](bitmap-tiling-images/ChainLinkFence.png "Barrera de vínculo de cadena")](bitmap-tiling-images/ChainLinkFence-Large.png#lightbox)
 
-## <a name="animating-bitmap-tiles"></a>Animación de los iconos de mapa de bits
+## <a name="animating-bitmap-tiles"></a>Animar iconos de mapa de bits
 
-Puede animar un patrón de mosaico de mapa de bits completo al animar la transformación de matriz. Quizás desee que el patrón para mover horizontal o verticalmente, o ambos. Puede hacerlo mediante la creación de una transformación de traslación en función de las coordenadas cambiantes.
+Puede animar un patrón de mosaico de mapa de bits completo animando la transformación de la matriz. Quizás desee que el patrón se mueva horizontal o verticalmente, o ambos. Puede hacerlo mediante la creación de una transformación de traslación basada en las coordenadas de desplazamiento.
 
-También es posible dibujar en un mapa de bits pequeño, o para manipular los bits de píxeles del mapa de bits a una velocidad de 60 veces por segundo. Ese mapa de bits, a continuación, se puede usar para la colocación en mosaico y el patrón de mosaico completo puede parecer que se va a animar. 
+También es posible dibujar en un mapa de bits pequeño o manipular los bits de píxel del mapa de bits a la velocidad de 60 veces a un segundo. Dicho mapa de bits se puede usar para la disposición en mosaico y el patrón en mosaico completo puede parecer animado. 
 
-El **mosaico de mapa de bits animado** página muestra este enfoque. Se crea una instancia de un mapa de bits como un campo sea 64 píxeles al cuadrado. El constructor llama a `DrawBitmap` para darle una apariencia inicial. Si el `angle` campo es cero (como cuando se llama al método por primera vez), a continuación, el mapa de bits contiene dos líneas cruzadas como una X. Las líneas están lo suficientemente largo para siempre en contacto con el borde del mapa de bits, independientemente de la `angle` valor: 
+En la página del **icono de mapa de bits animado** se muestra este enfoque. Se crea una instancia de un mapa de bits como un campo de 64 píxeles cuadrados. El constructor llama `DrawBitmap` a para darle un aspecto inicial. Si el `angle` campo es cero (como cuando se llama al método por primera vez), el mapa de bits contiene dos líneas que se cruzan como una X. Las líneas son lo suficientemente largas como para llegar siempre al borde del mapa de bits, independientemente del `angle` valor: 
 
 ```csharp
 public class AnimatedBitmapTilePage : ContentPage
@@ -705,7 +708,7 @@ public class AnimatedBitmapTilePage : ContentPage
 }
 ```
 
-Se produce la sobrecarga de animación en el `OnAppearing` y `OnDisappearing` invalida. El `OnTimerTick` método anima la `angle` valor de 0 grados a 360 grados cada 10 segundos para girar la ilustración X en el mapa de bits:
+La sobrecarga de animación se produce en `OnAppearing` e `OnDisappearing` invalida. El `OnTimerTick` método anima el `angle` valor de 0 a 360 grados cada 10 segundos para girar la figura X en el mapa de bits:
 
 ```csharp
 public class AnimatedBitmapTilePage : ContentPage
@@ -746,9 +749,9 @@ public class AnimatedBitmapTilePage : ContentPage
 }
 ```
 
-Debido a la simetría de la ilustración X, esto equivale a girar el `angle` valor entre 0 y 90 grados cada 2,5 segundos.
+Debido a la simetría de la figura X, es lo mismo que girar el `angle` valor de 0 a 90 grados cada 2,5 segundos.
 
-El `PaintSurface` controlador crea un sombreado del mapa de bits y utiliza el objeto de pintura para todo el lienzo de color:
+El `PaintSurface` controlador crea un sombreador a partir del mapa de bits y usa el objeto Paint para colorear todo el lienzo:
 
 ```csharp
 public class AnimatedBitmapTilePage : ContentPage
@@ -773,9 +776,9 @@ public class AnimatedBitmapTilePage : ContentPage
 }
 ```
 
-El `SKShaderTileMode.Mirror` opciones garantizan que las ramas de la X en cada mapa de bits join con la X en los mapas de bits adyacentes para crear un patrón animado global que se parece mucho más complejo que sugeriría la animación sencilla:
+Las `SKShaderTileMode.Mirror` Opciones aseguran que los brazos de la x de cada combinación de mapas de bits con la x en los mapas de bits adyacentes para crear un patrón animado general que parezca mucho más complejo que la simple animación sugerida:
 
-[![Anima el mosaico de mapa de bits](bitmap-tiling-images/AnimatedBitmapTile.png "animado mosaico de mapa de bits")](bitmap-tiling-images/AnimatedBitmapTile-Large.png#lightbox)
+[![Icono de mapa de bits animado](bitmap-tiling-images/AnimatedBitmapTile.png "Icono de mapa de bits animado")](bitmap-tiling-images/AnimatedBitmapTile-Large.png#lightbox)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

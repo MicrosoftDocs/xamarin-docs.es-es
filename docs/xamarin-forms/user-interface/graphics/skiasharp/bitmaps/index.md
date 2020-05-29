@@ -1,49 +1,52 @@
 ---
-title: Mapas de bits de SkiaSharp
-description: Aprenda a cargar, guardar, mostrar, crear, dibuje en, animar y tener acceso a los bits de SkiaSharp mapas de bits.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 70C19370-157A-4B1B-9532-F77E32AC21BC
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/17/2018
-ms.openlocfilehash: 22e03038c28f1f202fbb713d472e2da9955404d5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1d21fc199dd67471440ca0e3eeaf9a140e7a1967
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61399918"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84140236"
 ---
-# <a name="skiasharp-bitmaps"></a>Mapas de bits de SkiaSharp
+# <a name="skiasharp-bitmaps"></a>Mapas de bits SkiaSharp
 
-Un mapa de bits es una matriz rectangular de datos correspondientes a los píxeles de un dispositivo de pantalla. El área de programación de gráficos asociado con los mapas de bits a veces se denomina _gráficos de trama_ (denominado después de las líneas de exploración de las primeras pantallas de vídeo) en contraposición a la _gráficos vectoriales_ de líneas y curvas . 
+Un mapa de bits es una matriz rectangular de datos que corresponden a los píxeles de un dispositivo de pantalla. El área de programación de gráficos asociada a los mapas de bits se denomina a veces _gráficos de tramas_ (con el nombre de las líneas de recorrido de vídeo inicial que se muestran) a diferencia de los _gráficos vectoriales_ de líneas y curvas. 
 
-El artículo **[conceptos básicos de mapa de bits de SkiaSharp](../basics/bitmaps.md)** describe algunos de los aspectos básicos de cargar y mostrar mapas de bits. Los conceptos de ese artículo introductorio amplían estos artículos:
+En el artículo **[conceptos básicos de mapas de bits en SkiaSharp](../basics/bitmaps.md)** se describen algunos de los aspectos básicos de la carga y visualización de mapas de bits. En estos artículos se amplían los conceptos de este artículo introductorio:
 
-## <a name="displaying-skiasharp-bitmapsdisplayingmd"></a>[Mostrar mapas de bits de SkiaSharp](displaying.md)
+## <a name="displaying-skiasharp-bitmaps"></a>[Mostrar mapas de bits SkiaSharp](displaying.md)
 
-Obtenga información sobre cómo mostrar SkiaSharp mapas de bits en sus píxeles nativo tamaños o expanden para rellenar a rectángulos, mientras conserva la relación de aspecto.
+Obtenga información sobre cómo mostrar los mapas de bits de SkiaSharp en sus tamaños de píxeles nativos o expandirlos para rellenar los rectángulos mientras se conserva la relación de aspecto.
 
-## <a name="creating-and-drawing-on-skiasharp-bitmapsdrawingmd"></a>[Crear y dibujar en mapas de bits de SkiaSharp](drawing.md)
+## <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>[Crear y dibujar en mapas de bits de SkiaSharp](drawing.md)
 
-Aprenda a crear mapas de bits de SkiaSharp y, a continuación, dibuje en estos mapas de bits mediante la creación de un lienzo mediante el mapa de bits como una superficie de dibujo.
+Aprenda a crear mapas de bits de SkiaSharp y, a continuación, dibuje en estos mapas de bits creando un lienzo con el mapa de bits como una superficie de dibujo.
 
-## <a name="cropping-skiasharp-bitmapscroppingmd"></a>[Recortar los mapas de bits de SkiaSharp](cropping.md)
+## <a name="cropping-skiasharp-bitmaps"></a>[Recortar mapas de bits de SkiaSharp](cropping.md)
 
-Obtenga información sobre cómo usar SkiaSharp para diseñar una interfaz de usuario para describir un rectángulo de recorte de forma interactiva.
+Obtenga información sobre cómo usar SkiaSharp para diseñar una interfaz de usuario para describir de forma interactiva un rectángulo de recorte.
 
-## <a name="segmented-display-of-skiasharp-bitmapssegmentedmd"></a>[Visualización segmentada de mapas de bits de SkiaSharp](segmented.md)
+## <a name="segmented-display-of-skiasharp-bitmaps"></a>[Presentación segmentada de mapas de bits SkiaSharp](segmented.md)
 
-Descubra las opciones de celosía para representar mapas de bits y nueve especializada-patch.
+Descubra las opciones de Nine y Lattice especializadas para la representación de mapas de bits.
 
-## <a name="saving-skiasharp-bitmaps-to-filessavingmd"></a>[Guardar mapas de bits de SkiaSharp en archivos](saving.md)
+## <a name="saving-skiasharp-bitmaps-to-files"></a>[Guardar mapas de bits de SkiaSharp en archivos](saving.md)
 
-Guardar mapas de bits en la biblioteca de fotos del usuario.
+Guarde los mapas de bits en la biblioteca de fotos del usuario.
 
-## <a name="accessing-skiasharp-bitmap-pixel-bitspixel-bitsmd"></a>[Acceso a los bits de píxeles del mapa de bits de SkiaSharp](pixel-bits.md)
+## <a name="accessing-skiasharp-bitmap-pixel-bits"></a>[Obtener acceso a bits de píxel de mapa de bits SkiaSharp](pixel-bits.md)
 
-Descubra las distintas técnicas para obtener acceso y modificar los bits de píxeles de SkiaSharp mapas de bits.
+Descubra las diversas técnicas para obtener acceso y modificar los bits de píxeles de los mapas de bits de SkiaSharp.
 
-## <a name="animating-skiasharp-bitmapsanimatingmd"></a>[Animar los mapas de bits de SkiaSharp](animating.md)
+## <a name="animating-skiasharp-bitmaps"></a>[Animar mapas de bits SkiaSharp](animating.md)
 
-Obtenga información sobre cómo realizar una animación mapa de bits por secuencialmente mostrar mapas de bits diferentes y la representación de mapas de bits GIF animados.
+Obtenga información sobre cómo realizar la animación de mapas de bits mediante la visualización secuencial de mapas de bits diferentes y la representación de mapas de bits GIF animados.

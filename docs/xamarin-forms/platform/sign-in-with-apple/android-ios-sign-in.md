@@ -1,24 +1,27 @@
 ---
-title: Uso del inicio de sesión con Apple para Xamarin. Forms
-description: Aprenda a implementar el inicio de sesión con Apple en sus aplicaciones móviles de Xamarin. Forms.
-ms.prod: xamarin
-ms.assetid: 2E47E7F2-93D4-4CA3-9E66-247466D25E4D
-ms.technology: xamarin-forms
-author: davidortinau
-ms.author: daortin
-ms.date: 09/10/2019
-ms.openlocfilehash: df011a6eb72b6eb30af0a197d4be48b0f2494384
-ms.sourcegitcommit: fc689c1a6b641c124378dedc1bd157d96fc759a7
+title: Usar el inicio de sesión con Apple paraXamarin.Forms
+description: Aprenda a implementar el inicio de sesión con Apple en sus Xamarin.Forms aplicaciones móviles.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: fb37f8fb2d01154bf2e749e685c4e96c12d6bc5e
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71319521"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139495"
 ---
-# <a name="use-sign-in-with-apple-in-xamarinforms"></a>Uso del inicio de sesión con Apple en Xamarin. Forms
+# <a name="use-sign-in-with-apple-in-xamarinforms"></a>Usar el inicio de sesión con Apple enXamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/signinwithapple/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/signinwithapple/)
 
-Iniciar sesión con Apple es para todas las aplicaciones nuevas de iOS 13 que usan servicios de autenticación de terceros. Los detalles de implementación entre iOS y Android son bastante diferentes. En esta guía se explica cómo puede hacerlo hoy mismo en Xamarin. Forms.
+Iniciar sesión con Apple es para todas las aplicaciones nuevas de iOS 13 que usan servicios de autenticación de terceros. Los detalles de implementación entre iOS y Android son bastante diferentes. En esta guía se explica cómo puede hacerlo hoy mismo en Xamarin.Forms .
 
 En esta guía y muestra, se usan servicios de plataforma específicos para controlar el inicio de sesión con Apple:
 
@@ -27,28 +30,28 @@ En esta guía y muestra, se usan servicios de plataforma específicos para contr
 
 ## <a name="a-sample-apple-sign-in-flow"></a>Un flujo de inicio de sesión de Apple de ejemplo
 
-Este ejemplo ofrece una implementación de bien fundamentadas para que Apple Sign in funcione en su aplicación de Xamarin. Forms.
+Este ejemplo ofrece una implementación de bien fundamentadas para que Apple Sign in funcione en su Xamarin.Forms aplicación.
 
 Usamos dos Azure Functions para ayudar con el flujo de autenticación:
 
-1. `applesignin_auth`: Genera la dirección URL de autorización de inicio de sesión de Apple y la redirige a ella.  Haremos esto en el lado del servidor, en lugar de en la aplicación móvil, para que podamos `state` almacenar en caché el y validarlo cuando los servidores de Apple envíen una devolución de llamada.
+1. `applesignin_auth`: Genera la dirección URL de autorización de inicio de sesión de Apple y la redirige a ella.  Haremos esto en el lado del servidor, en lugar de en la aplicación móvil, para que podamos almacenar en caché el `state` y validarlo cuando los servidores de Apple envíen una devolución de llamada.
 2. `applesignin_callback`: Controla la devolución de llamada POST de Apple y intercambia de forma segura el código de autorización para un token de acceso y un token de identificador.  Por último, redirige de nuevo al esquema de URI de la aplicación, devolviendo los tokens en un fragmento de dirección URL.
 
-La aplicación móvil se registra para controlar el esquema de URI personalizado que hemos seleccionado (en este caso `xamarinformsapplesignin://`), por `applesignin_callback` lo que la función puede retransmitir los tokens de vuelta a él.
+La aplicación móvil se registra para controlar el esquema de URI personalizado que hemos seleccionado (en este caso `xamarinformsapplesignin://` ), por lo que la `applesignin_callback` función puede retransmitir los tokens de vuelta a él.
 
 Cuando el usuario inicia la autenticación, se producen los pasos siguientes:
 
-1. La aplicación móvil genera un `nonce` valor `state` y y los pasa a la `applesignin_auth` función de Azure.
-2. La `applesignin_auth` función de Azure genera una dirección URL de autorización de inicio de sesión `state` de `nonce`Apple (con el proporcionado y el) y redirige al explorador de aplicaciones móviles.
+1. La aplicación móvil genera un `nonce` `state` valor y y los pasa a la `applesignin_auth` función de Azure.
+2. La `applesignin_auth` función de Azure genera una dirección URL de autorización de inicio de sesión de Apple (con el proporcionado `state` y el `nonce` ) y redirige al explorador de aplicaciones móviles.
 3. El usuario escribe sus credenciales de forma segura en la página de autorización de inicio de sesión de Apple hospedada en los servidores de Apple.
-4. Una vez que el flujo de inicio de sesión de Apple finaliza en los servidores de Apple, `redirect_uri` Apple redirige a `applesignin_callback` la que será la función de Azure.
-5. La solicitud de Apple enviada a la `applesignin_callback` función se valida para asegurarse de que se `state` devuelve el correcto y que las notificaciones del token de identificador son válidas.
-6. La `applesignin_callback` función de Azure intercambia `code` el publicado por Apple para un token de _acceso_, un _token de actualización_y un _token de identificador_ (que contiene notificaciones sobre el ID. de usuario, el nombre y el correo electrónico).
-7. Finalmente `applesignin_callback` , la función de Azure redirige de nuevo al esquema de URI de`xamarinformsapplesignin://`la aplicación () anexando un fragmento de URI con los `xamarinformsapplesignin://#access_token=...&refresh_token=...&id_token=...`tokens (por ejemplo,).
+4. Una vez que el flujo de inicio de sesión de Apple finaliza en los servidores de Apple, Apple redirige a la `redirect_uri` que será la `applesignin_callback` función de Azure.
+5. La solicitud de Apple enviada a la `applesignin_callback` función se valida para asegurarse de `state` que se devuelve el correcto y que las notificaciones del token de identificador son válidas.
+6. La `applesignin_callback` función de Azure intercambia el `code` publicado por Apple para un token de _acceso_, un _token de actualización_y un _token de identificador_ (que contiene notificaciones sobre el ID. de usuario, el nombre y el correo electrónico).
+7. `applesignin_callback`Finalmente, la función de Azure redirige de nuevo al esquema de URI de la aplicación ( `xamarinformsapplesignin://` ) anexando un fragmento de URI con los tokens (por ejemplo, `xamarinformsapplesignin://#access_token=...&refresh_token=...&id_token=...` ).
 8. La aplicación móvil analiza el fragmento de URI en `AppleAccount` y valida que la `nonce` demanda recibida coincida con la `nonce` generada al inicio del flujo.
 9. La aplicación móvil ya está autenticada.
 
-## <a name="azure-functions"></a>Comprobación de
+## <a name="azure-functions"></a>Azure Functions
 
 Este ejemplo utiliza Azure Functions. Como alternativa, un controlador de ASP.NET Core o una solución de servidor Web similar podría ofrecer la misma funcionalidad.
 
@@ -63,7 +66,7 @@ Deben configurarse varias opciones de configuración de la aplicación al usar A
 - `APPLE_SIGNIN_REDIRECT_URI`-La *dirección URL de redireccionamiento* que se configura al crear el *identificador de servicios* en la sección de configuración *de inicio de sesión de Apple* .  Para probarlo, podría ser similar a lo siguiente:`http://local.test:7071/api/applesignin_callback`
 - `APPLE_SIGNIN_P8_KEY`: El contenido de texto del `.p8` archivo, con todas las `\n` nuevas líneas quitadas, por lo que es una cadena larga.
 
-### <a name="security-considerations"></a>Consideraciones de seguridad
+### <a name="security-considerations"></a>Consideraciones sobre la seguridad
 
 **Nunca** almacene la clave de P8 dentro del código de la aplicación. El código de aplicación es fácil de descargar y desensamblar. 
 
@@ -71,7 +74,7 @@ También se considera una práctica inadecuada usar un `WebView` para hospedar e
 
 ## <a name="a-cross-platform-sign-in-service"></a>Un servicio de inicio de sesión multiplataforma
 
-Con Xamarin. Forms DependencyService, puede crear servicios de autenticación independientes que usan los servicios de la plataforma en iOS y un servicio Web genérico para Android y otras plataformas que no son iOS basados en una interfaz compartida.
+Con Xamarin.Forms DependencyService, puede crear servicios de autenticación independientes que usan los servicios de la plataforma en iOS y un servicio Web genérico para Android y otras plataformas que no son iOS basados en una interfaz compartida.
 
 ```csharp
 public interface IAppleSignInService
@@ -174,7 +177,7 @@ class AuthManager : NSObject, IASAuthorizationControllerDelegate, IASAuthorizati
 #endif
 ```
 
-La marca `__IOS__13` de compilación se usa para proporcionar compatibilidad con iOS 13 así como versiones heredadas que se reservan al servicio Web genérico.
+La marca de compilación `__IOS__13` se usa para proporcionar compatibilidad con iOS 13 así como versiones heredadas que se reservan al servicio Web genérico.
 
 En Android, se usa el servicio Web genérico con Azure Functions:
 
@@ -243,7 +246,7 @@ public class WebAppleSignInService : IAppleSignInService
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se describen los pasos necesarios para configurar el inicio de sesión con Apple para su uso en las aplicaciones de Xamarin. Forms.
+En este artículo se describen los pasos necesarios para configurar el inicio de sesión con Apple para su uso en las Xamarin.Forms aplicaciones.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

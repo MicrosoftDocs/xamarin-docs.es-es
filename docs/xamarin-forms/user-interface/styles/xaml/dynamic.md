@@ -1,27 +1,30 @@
 ---
-title: Estilos dinámicos en Xamarin.Forms
-description: En este artículo se explica cómo una aplicación de Xamarin.Forms puede responder a los cambios de estilo dinámicamente en tiempo de ejecución mediante el uso de recursos dinámicos.
-ms.prod: xamarin
-ms.assetid: 13D4FA4B-DF10-42BF-B001-2C49367FC216
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/28/2019
-ms.custom: video
-ms.openlocfilehash: 9a26532d13b843b812da94739be071c7accac212
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+title: Estilos dinámicos enXamarin.Forms
+description: En este artículo se explica cómo una Xamarin.Forms aplicación puede responder dinámicamente a los cambios de estilo en tiempo de ejecución mediante recursos dinámicos.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.custom: ''
+ms.openlocfilehash: d40ca3423cca68757cf458faf5cca1138aec5461
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306624"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84140093"
 ---
-# <a name="dynamic-styles-in-xamarinforms"></a>Estilos dinámicos en Xamarin.Forms
+# <a name="dynamic-styles-in-xamarinforms"></a>Estilos dinámicos enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 
 _Los estilos no responden a los cambios de propiedad y permanecen sin cambios durante la ejecución de una aplicación. Por ejemplo, después de asignar un estilo a un elemento visual, si una de las instancias del establecedor se modifica, se quita o se agrega una nueva instancia de establecedor, los cambios no se aplicarán al elemento visual. Sin embargo, las aplicaciones pueden responder dinámicamente a los cambios de estilo en tiempo de ejecución mediante recursos dinámicos._
 
-La extensión de marcado `DynamicResource` es similar a la extensión de marcado `StaticResource` en que ambos usan una clave de diccionario para capturar un valor de un [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). Sin embargo, mientras que el `StaticResource` realiza una búsqueda de diccionario única, el `DynamicResource` mantiene un vínculo a la clave del diccionario. Por lo tanto, si se reemplaza la entrada del diccionario asociada con la clave, el cambio se aplica al elemento visual. Esto permite que los cambios de estilo en tiempo de ejecución que se realiza en una aplicación.
+La `DynamicResource` extensión de marcado es similar a la `StaticResource` extensión de marcado en que ambos usan una clave de diccionario para capturar un valor de [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . Sin embargo, mientras `StaticResource` realiza una búsqueda de un solo diccionario, `DynamicResource` mantiene un vínculo a la clave del diccionario. Por lo tanto, si se reemplaza la entrada del diccionario asociada a la clave, el cambio se aplica al elemento visual. Esto permite realizar cambios de estilo en tiempo de ejecución en una aplicación.
 
 En el ejemplo de código siguiente se muestran los estilos *dinámicos* en una página XAML:
 
@@ -54,9 +57,9 @@ En el ejemplo de código siguiente se muestran los estilos *dinámicos* en una p
 </ContentPage>
 ```
 
-Las instancias de [`SearchBar`](xref:Xamarin.Forms.SearchBar) utilizan la extensión de marcado `DynamicResource` para hacer referencia a una [`Style`](xref:Xamarin.Forms.Style) denominada `searchBarStyle`, que no está definida en el código XAML. Sin embargo, dado que las propiedades de [`Style`](xref:Xamarin.Forms.NavigableElement.Style) de las instancias de `SearchBar` se establecen con un `DynamicResource`, la clave del diccionario que falta no produce una excepción.
+Las [`SearchBar`](xref:Xamarin.Forms.SearchBar) instancias de usan la `DynamicResource` extensión de marcado para hacer referencia a un [`Style`](xref:Xamarin.Forms.Style) denominado `searchBarStyle` , que no está definido en el XAML. Sin embargo, dado que las [`Style`](xref:Xamarin.Forms.NavigableElement.Style) propiedades de las `SearchBar` instancias se establecen mediante `DynamicResource` , la clave del diccionario que falta no produce una excepción.
 
-En su lugar, en el archivo de código subyacente, el constructor crea una entrada de [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) con la clave `searchBarStyle`, como se muestra en el ejemplo de código siguiente:
+En su lugar, en el archivo de código subyacente, el constructor crea una [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) entrada con la clave `searchBarStyle` , como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 public partial class DynamicStylesPage : ContentPage
@@ -82,10 +85,10 @@ public partial class DynamicStylesPage : ContentPage
 }
 ```
 
-Cuando se ejecuta el controlador de eventos `OnButtonClicked`, `searchBarStyle` cambiará entre `blueSearchBarStyle` y `greenSearchBarStyle`. El resultado es el aspecto que se muestra en las capturas de pantalla siguientes:
+Cuando `OnButtonClicked` se ejecuta el controlador de eventos, cambiará `searchBarStyle` entre `blueSearchBarStyle` y `greenSearchBarStyle` . El resultado es el aspecto que se muestra en las capturas de pantalla siguientes:
 
-[![ejemplo de estilo dinámico azul](dynamic-images/dynamic-style-blue.png)](dynamic-images/dynamic-style-blue-large.png#lightbox)
-[![ejemplo de estilo dinámico verde](dynamic-images/dynamic-style-green.png)](dynamic-images/dynamic-style-green-large.png#lightbox)
+Ejemplo de estilo dinámico [ ![ azul ejemplo](dynamic-images/dynamic-style-blue.png)](dynamic-images/dynamic-style-blue-large.png#lightbox)de 
+ [ ![ estilo dinámico verde](dynamic-images/dynamic-style-green.png)](dynamic-images/dynamic-style-green-large.png#lightbox)
 
 En el ejemplo de código siguiente se muestra la página equivalente en C#:
 
@@ -123,11 +126,11 @@ public class DynamicStylesPageCS : ContentPage
 }
 ```
 
-En C#, las instancias de [`SearchBar`](xref:Xamarin.Forms.SearchBar) utilizan el método [`SetDynamicResource`](xref:Xamarin.Forms.Element.SetDynamicResource*) para hacer referencia a `searchBarStyle`. El código del controlador de eventos `OnButtonClicked` es idéntico al ejemplo XAML y, cuando se ejecuta, `searchBarStyle` cambiará entre `blueSearchBarStyle` y `greenSearchBarStyle`.
+En C#, las [`SearchBar`](xref:Xamarin.Forms.SearchBar) instancias de usan el [`SetDynamicResource`](xref:Xamarin.Forms.Element.SetDynamicResource*) método para hacer referencia a `searchBarStyle` . El `OnButtonClicked` código del controlador de eventos es idéntico al ejemplo XAML y, cuando se ejecuta, cambiará `searchBarStyle` entre `blueSearchBarStyle` y `greenSearchBarStyle` .
 
 ## <a name="dynamic-style-inheritance"></a>Herencia de estilo dinámico
 
-No se puede derivar un estilo a partir de un estilo dinámico mediante la propiedad [`Style.BasedOn`](xref:Xamarin.Forms.Style.BasedOn) . En su lugar, la clase [`Style`](xref:Xamarin.Forms.Style) incluye la propiedad [`BaseResourceKey`](xref:Xamarin.Forms.Style.BaseResourceKey) , que se puede establecer en una clave de diccionario cuyo valor puede cambiar dinámicamente.
+No se puede derivar un estilo a partir de un estilo dinámico mediante la [`Style.BasedOn`](xref:Xamarin.Forms.Style.BasedOn) propiedad. En su lugar, la [`Style`](xref:Xamarin.Forms.Style) clase incluye la [`BaseResourceKey`](xref:Xamarin.Forms.Style.BaseResourceKey) propiedad, que se puede establecer en una clave de diccionario cuyo valor puede cambiar dinámicamente.
 
 En el ejemplo de código siguiente se muestra la herencia de estilo *dinámico* en una página XAML:
 
@@ -159,12 +162,12 @@ En el ejemplo de código siguiente se muestra la herencia de estilo *dinámico* 
 </ContentPage>
 ```
 
-Las instancias de [`SearchBar`](xref:Xamarin.Forms.SearchBar) utilizan la extensión de marcado `StaticResource` para hacer referencia a una [`Style`](xref:Xamarin.Forms.Style) denominada `tealSearchBarStyle`. Esta `Style` establece algunas propiedades adicionales y usa la propiedad [`BaseResourceKey`](xref:Xamarin.Forms.Style.BaseResourceKey) para hacer referencia a `searchBarStyle`. La extensión de marcado `DynamicResource` no es necesaria porque `tealSearchBarStyle` no cambiará, excepto por el `Style` del que se deriva. Por lo tanto, `tealSearchBarStyle` mantiene un vínculo a `searchBarStyle` y se modifica cuando cambia el estilo base.
+Las [`SearchBar`](xref:Xamarin.Forms.SearchBar) instancias de usan la `StaticResource` extensión de marcado para hacer referencia a un [`Style`](xref:Xamarin.Forms.Style) denominado `tealSearchBarStyle` . Esto `Style` establece algunas propiedades adicionales y usa la [`BaseResourceKey`](xref:Xamarin.Forms.Style.BaseResourceKey) propiedad como referencia `searchBarStyle` . La `DynamicResource` extensión de marcado no es necesaria porque `tealSearchBarStyle` no cambiará, salvo `Style` que se derive de. Por lo tanto, `tealSearchBarStyle` mantiene un vínculo a `searchBarStyle` y se modifica cuando cambia el estilo base.
 
-En el archivo de código subyacente, el constructor crea una entrada de [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) con el `searchBarStyle`de clave, como se muestra en el ejemplo anterior que demostró los estilos dinámicos. Cuando se ejecuta el controlador de eventos `OnButtonClicked`, `searchBarStyle` cambiará entre `blueSearchBarStyle` y `greenSearchBarStyle`. El resultado es el aspecto que se muestra en las capturas de pantalla siguientes:
+En el archivo de código subyacente, el constructor crea una [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) entrada con la clave `searchBarStyle` , tal y como se muestra en el ejemplo anterior que demostró los estilos dinámicos. Cuando `OnButtonClicked` se ejecuta el controlador de eventos, cambiará `searchBarStyle` entre `blueSearchBarStyle` y `greenSearchBarStyle` . El resultado es el aspecto que se muestra en las capturas de pantalla siguientes:
 
-[![ejemplo de herencia de estilo dinámico azul](dynamic-images/dynamic-style-inheritance-blue.png)](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox)
-[![ejemplo de herencia de estilo dinámico verde](dynamic-images/dynamic-style-inheritance-green.png)](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox)
+Ejemplo de herencia de [ ![ estilo dinámico azul ejemplo](dynamic-images/dynamic-style-inheritance-blue.png)](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox)de 
+ [ ![ herencia de estilo dinámico verde](dynamic-images/dynamic-style-inheritance-green.png)](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox)
 
 En el ejemplo de código siguiente se muestra la página equivalente en C#:
 
@@ -206,7 +209,7 @@ public class DynamicStylesInheritancePageCS : ContentPage
 }
 ```
 
-El `tealSearchBarStyle` se asigna directamente a la propiedad [`Style`](xref:Xamarin.Forms.NavigableElement.Style) de las instancias de [`SearchBar`](xref:Xamarin.Forms.SearchBar) . Esta `Style` establece algunas propiedades adicionales y usa la propiedad [`BaseResourceKey`](xref:Xamarin.Forms.Style.BaseResourceKey) para hacer referencia a `searchBarStyle`. El método [`SetDynamicResource`](xref:Xamarin.Forms.Element.SetDynamicResource*) no es necesario aquí porque no cambiará `tealSearchBarStyle`, excepto el `Style` del que se deriva. Por lo tanto, `tealSearchBarStyle` mantiene un vínculo a `searchBarStyle` y se modifica cuando cambia el estilo base.
+`tealSearchBarStyle`Se asigna directamente a la [`Style`](xref:Xamarin.Forms.NavigableElement.Style) propiedad de las [`SearchBar`](xref:Xamarin.Forms.SearchBar) instancias de. Esto `Style` establece algunas propiedades adicionales y usa la [`BaseResourceKey`](xref:Xamarin.Forms.Style.BaseResourceKey) propiedad como referencia `searchBarStyle` . El [`SetDynamicResource`](xref:Xamarin.Forms.Element.SetDynamicResource*) método no es necesario aquí porque `tealSearchBarStyle` no cambiará, salvo `Style` que se derive de. Por lo tanto, `tealSearchBarStyle` mantiene un vínculo a `searchBarStyle` y se modifica cuando cambia el estilo base.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
@@ -215,7 +218,7 @@ El `tealSearchBarStyle` se asigna directamente a la propiedad [`Style`](xref:Xam
 - [Trabajar con estilos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Estilo](xref:Xamarin.Forms.Style)
-- [Establecedor](xref:Xamarin.Forms.Setter)
+- [Setter](xref:Xamarin.Forms.Setter)
 
 ## <a name="related-video"></a>Vídeo relacionado
 

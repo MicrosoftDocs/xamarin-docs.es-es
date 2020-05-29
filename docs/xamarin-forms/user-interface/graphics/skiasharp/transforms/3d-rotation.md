@@ -1,38 +1,41 @@
 ---
-title: Rotaciones de 3D de SkiaSharp
-description: En este artículo se explica cómo utilizar las transformaciones no afines girar objetos 2D en el espacio 3D y esto se muestra con código de ejemplo.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/14/2017
-ms.openlocfilehash: 60f09b2e60708df6b1e6b68be7ce0792bc8cd9b0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3706139a2c15d01af67203c2bd09b281de80ed52
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759181"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84140210"
 ---
-# <a name="3d-rotations-in-skiasharp"></a>Rotaciones de 3D de SkiaSharp
+# <a name="3d-rotations-in-skiasharp"></a>Rotaciones 3D en SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_Utilizar las transformaciones no afines girar objetos 2D en el espacio 3D._
+_Use transformaciones no afines para girar objetos 2D en el espacio 3D._
 
-Una aplicación común de las transformaciones no afines está simulando el giro de un objeto 2D en el espacio 3D:
+Una aplicación común de las transformaciones no afines es simular el giro de un objeto 2D en el espacio 3D:
 
-![](3d-rotation-images/3drotationsexample.png "Una cadena de texto girada en el espacio 3D")
+![](3d-rotation-images/3drotationsexample.png "A text string rotated in 3D space")
 
-Este trabajo implica trabajar con rotaciones tridimensionales y, a continuación, derivar no afines `SKMatrix` transformación que realiza estas rotaciones 3D.
+Este trabajo implica trabajar con giros tridimensionales y, a continuación, derivar una transformación no afín `SKMatrix` que realiza estos giros 3D.
 
-Resulta difícil desarrollar `SKMatrix` transformación funciona únicamente dentro de dos dimensiones. El trabajo pasa a ser mucho más fácil cuando esta matriz 3 por 3 se deriva de una matriz de 4 x 4 utilizada en los gráficos 3D. SkiaSharp incluye la [ `SKMatrix44` ](xref:SkiaSharp.SKMatrix44) clase para este propósito, pero algunos en segundo plano en los gráficos 3D es necesaria para comprender las rotaciones de 3D y la matriz de transformación de 4 por 4.
+Es difícil desarrollar esta `SKMatrix` transformación trabajando únicamente en dos dimensiones. El trabajo es mucho más sencillo cuando esta matriz de 3 por 3 se deriva de una matriz de 4 por 4 utilizada en gráficos 3D. SkiaSharp incluye la [`SKMatrix44`](xref:SkiaSharp.SKMatrix44) clase para este propósito, pero se necesita algún fondo en gráficos 3D para comprender los giros 3D y la matriz de transformación 4 por 4.
 
-Un sistema de coordenadas tridimensional agrega un tercer eje Z. conceptualmente llamado, el eje Z es perpendicular a la pantalla. Se indican los puntos de coordenada en el espacio 3D con tres números: (x, y, z). En el modelo 3D del sistema de coordenadas utilizado en este artículo, aumentar los valores de X son a la derecha e incrementar los valores de Y dejan de funcionar, al igual que en dos dimensiones. Los valores de Z positivos crecientes vienen fuera de la pantalla. El origen es la esquina superior izquierda, al igual que en los gráficos 2D. La pantalla se puede considerar como un plano XY con el eje Z en ángulos rectos este plano.
+Un sistema de coordenadas tridimensional agrega un tercer eje denominado Z. conceptualmente, el eje Z está en los ángulos rectos de la pantalla. Los puntos de coordenadas en el espacio 3D se indican con tres números: (x, y, z). En el sistema de coordenadas 3D que se usa en este artículo, el aumento de los valores de X es el derecho y el aumento de los valores de Y se desplazan hacia abajo, al igual que en dos dimensiones. Aumentar los valores Z positivos salen de la pantalla. El origen es la esquina superior izquierda, al igual que en los gráficos 2D. Puede pensar en la pantalla como un plano XY con el eje Z en los ángulos rectos de este plano.
 
-Esto se denomina un sistema de coordenadas izquierdo. Si señala el índice de la mano izquierda en la dirección de positivo X coordenadas (a la derecha) y coordina el dedo intermedio en la dirección del creciente Y (hacia abajo), a continuación, el pulgar puntos en la dirección de aumentar las coordenadas Z, ampliación horizontal de la pantalla.
+Esto se denomina sistema de coordenadas de la izquierda. Si apunta el índice para su mano izquierda en la dirección de las coordenadas X positivas (a la derecha) y el dedo central en la dirección de incrementar las coordenadas Y (hacia abajo), los puntos de control en la dirección de las coordenadas Z que aumentan se extienden desde la pantalla.
 
-En los gráficos 3D, las transformaciones se basan en una matriz de 4 por 4. Aquí es la matriz de identidad de 4 por 4:
+En los gráficos 3D, las transformaciones se basan en una matriz de 4 por 4. Esta es la matriz de identidad 4 por 4:
 
 <pre>
 |  1  0  0  0  |
@@ -41,7 +44,7 @@ En los gráficos 3D, las transformaciones se basan en una matriz de 4 por 4. Aqu
 |  0  0  0  1  |
 </pre>
 
-Al trabajar con una matriz de 4 por 4, es conveniente identificar las celdas con sus números de fila y columna:
+Al trabajar con una matriz de 4 por 4, es conveniente identificar las celdas con los números de fila y de columna:
 
 <pre>
 |  M11  M12  M13  M14  |
@@ -50,9 +53,9 @@ Al trabajar con una matriz de 4 por 4, es conveniente identificar las celdas con
 |  M41  M42  M43  M44  |
 </pre>
 
-Sin embargo, el SkiaSharp `Matrix44` clase es un poco diferente. La única forma de establecer u obtener los valores de celda individual en `SKMatrix44` es mediante la [ `Item` ](xref:SkiaSharp.SKMatrix44.Item(System.Int32,System.Int32)) indizador. Los índices de fila y columna son basado en cero en lugar de basado en uno, y se intercambian las filas y columnas. La celda M14 en el diagrama anterior se obtiene acceso mediante el indizador `[3, 0]` en un `SKMatrix44` objeto.
+Sin embargo, la `Matrix44` clase SkiaSharp es un poco diferente. La única manera de establecer u obtener valores de celda individuales en `SKMatrix44` es mediante el [`Item`](xref:SkiaSharp.SKMatrix44.Item(System.Int32,System.Int32)) indizador. Los índices de fila y columna están basados en cero en lugar de basados en uno, y las filas y columnas se intercambian. Se tiene acceso a la celda M14 del diagrama anterior mediante el indexador `[3, 0]` de un `SKMatrix44` objeto.
 
-En un sistema de gráficos 3D, un punto 3D (x, y, z) se convierte en una matriz de 1 al 4 para multiplicar por la matriz de transformación de 4 por 4:
+En un sistema de gráficos 3D, un punto 3D (x, y, z) se convierte en una matriz de 1 por 4 para multiplicar por la matriz de transformación de 4 por 4:
 
 <pre>
                  |  M11  M12  M13  M14  |
@@ -61,7 +64,7 @@ En un sistema de gráficos 3D, un punto 3D (x, y, z) se convierte en una matriz 
                  |  M41  M42  M43  M44  |
 </pre>
 
-Como 2D transformaciones que tienen lugar en tres dimensiones, las transformaciones 3D se supone que tienen lugar en cuatro dimensiones. La cuarta dimensión se conoce como W y el espacio 3D se supone que existe dentro del espacio de 4D donde las coordenadas de W son iguales a 1. Las fórmulas de transformación son los siguientes:
+De forma análoga a las transformaciones 2D que tienen lugar en tres dimensiones, se supone que las transformaciones 3D tienen lugar en cuatro dimensiones. La cuarta dimensión se conoce como W y se supone que el espacio 3D existe en el espacio 4D, donde las coordenadas W son iguales a 1. Las fórmulas de transformación son las siguientes:
 
 `x' = M11·x + M21·y + M31·z + M41`
 
@@ -71,9 +74,9 @@ Como 2D transformaciones que tienen lugar en tres dimensiones, las transformacio
 
 `w' = M14·x + M24·y + M34·z + M44`
 
-En las fórmulas de transformación resulta evidente que las celdas `M11`, `M22`, `M33` son factores de escala en las direcciones X, Y y Z, y `M41`, `M42`, y `M43` son factores de traslación en la X, Y y Z direcciones.
+Es obvio que las fórmulas de transformación que las celdas `M11` , `M22` , `M33` son factores de escalado en las direcciones x, y y z, y `M41` , y `M42` `M43` son factores de traducción en las direcciones x, y y z.
 
-Para volver a convertir estas coordenadas en el espacio 3D donde W es igual a 1, x', y', y z 'coordenadas son todos divididas por w':
+Para volver a convertir estas coordenadas en el espacio 3D en el que W es igual a 1, las coordenadas x ', y ' y z se dividen por w ':
 
 `x" = x' / w'`
 
@@ -83,9 +86,9 @@ Para volver a convertir estas coordenadas en el espacio 3D donde W es igual a 1,
 
 `w" = w' / w' = 1`
 
-División por w' proporciona una perspectiva en el espacio 3D. Si w' es igual a 1, a continuación, se produce ninguna perspectiva.
+Esa división de w ' proporciona perspectiva en el espacio 3D. Si w ' es igual a 1, no se produce ninguna perspectiva.
 
-Los giros en el espacio 3D pueden ser bastante complejos, pero las rotaciones más simple son aquellos alrededor del eje X, Y y Z. Un giro del ángulo α alrededor del eje X es esta matriz:
+Los giros en el espacio 3D pueden ser bastante complejos, pero los giros más simples son los que están alrededor de los ejes X, Y y Z. Una rotación del ángulo α alrededor del eje X es esta matriz:
 
 <pre>
 |  1     0       0     0  |
@@ -94,7 +97,7 @@ Los giros en el espacio 3D pueden ser bastante complejos, pero las rotaciones m�
 |  0     0       0     1  |
 </pre>
 
-Los valores de X siguen siendo los mismos cuando está sometido a esta transformación. Rotación alrededor del eje Y deja los valores de Y sin cambios:
+Los valores de X siguen siendo los mismos cuando se someten a esta transformación. La rotación alrededor del eje Y deja valores de Y sin modificar:
 
 <pre>
 |  cos(α)  0  –sin(α)  0  |
@@ -103,7 +106,7 @@ Los valores de X siguen siendo los mismos cuando está sometido a esta transform
 |    0     0     0     1  |
 </pre>
 
-Rotación alrededor del eje Z es igual que en los gráficos 2D:
+El giro alrededor del eje Z es el mismo que en los gráficos 2D:
 
 <pre>
 |  cos(α)  sin(α)  0  0  |
@@ -112,24 +115,24 @@ Rotación alrededor del eje Z es igual que en los gráficos 2D:
 |    0       0     0  1  |
 </pre>
 
-La dirección de la rotación está implícito en la situación del sistema de coordenadas. Se trata de un sistema zurdo, por lo que si el punto de control de posición de la mano izquierda hacia el aumento de los valores de un eje determinado, a la derecha de la rotación alrededor del eje X, hacia abajo de rotación alrededor del eje Y y hacia TI rotación alrededor del eje Z, a continuación, la curva de yo el otro dedo indica la dirección de rotación de ángulos positivos.
+La dirección de la rotación viene implícita por la mano del sistema de coordenadas. Se trata de un sistema que se entrega a la izquierda, por lo que si se apunta el pulgar de la mano izquierda hacia los valores en aumento para un eje determinado (a la derecha para la rotación alrededor del eje X), hacia abajo para la rotación alrededor del eje Y, y hacia el usuario para la rotación alrededor del eje Z
 
-`SKMatrix44` se generalizado estático [ `CreateRotation` ](xref:SkiaSharp.SKMatrix44.CreateRotation(System.Single,System.Single,System.Single,System.Single)) y [ `CreateRotationDegrees` ](xref:SkiaSharp.SKMatrix44.CreateRotationDegrees(System.Single,System.Single,System.Single,System.Single)) métodos que le permiten especificar el eje alrededor de la cual se produce la rotación:
+`SKMatrix44`tiene métodos y estáticos generalizados [`CreateRotation`](xref:SkiaSharp.SKMatrix44.CreateRotation(System.Single,System.Single,System.Single,System.Single)) [`CreateRotationDegrees`](xref:SkiaSharp.SKMatrix44.CreateRotationDegrees(System.Single,System.Single,System.Single,System.Single)) que le permiten especificar el eje alrededor del cual se produce la rotación:
 
 ```csharp
 public static SKMatrix44 CreateRotationDegrees (Single x, Single y, Single z, Single degrees)
 ```
 
-Rotación alrededor del eje X, establezca los tres primeros argumentos en 1, 0, 0. Rotación alrededor del eje Y, los establecerá en 0, 1, 0 y rotación alrededor del eje Z, los establecerá en 0, 0, 1.
+En el caso de la rotación alrededor del eje X, establezca los tres primeros argumentos en 1, 0, 0. En el caso de la rotación alrededor del eje Y, establézcalo en 0, 1, 0 y para el giro alrededor del eje Z, establézcalo en 0, 0, 1.
 
-Es la cuarta columna de 4 por 4 de perspectiva. El `SKMatrix44` no tiene métodos para crear transformaciones de perspectiva, pero puede crear una propia mediante el código siguiente:
+La cuarta columna de 4 por 4 es para la perspectiva. `SKMatrix44`No tiene métodos para crear transformaciones de perspectiva, pero puede crear una con el código siguiente:
 
 ```csharp
 SKMatrix44 perspectiveMatrix = SKMatrix44.CreateIdentity();
 perspectiveMatrix[3, 2] = -1 / depth;
 ```
 
-La razón para el nombre del argumento `depth` será evidente en breve. Ese código crea la matriz:
+El motivo del nombre del argumento `depth` será evidente en breve. Ese código crea la matriz:
 
 <pre>
 |  1  0  0      0     |
@@ -138,21 +141,21 @@ La razón para el nombre del argumento `depth` será evidente en breve. Ese cód
 |  0  0  0      1     |
 </pre>
 
-Como resultado de las fórmulas de transformación en el siguiente cálculo de w':
+Las fórmulas de transformación dan como resultado el siguiente cálculo de w ':
 
 `w' = –z / depth + 1`
 
-Esto sirve para reducir las coordenadas X e Y cuando los valores de Z son inferiores a cero (conceptualmente detrás del plano XY) y aumentar las coordenadas X e Y para los valores positivos de Z. Cuando la coordenada Z es igual a `depth`, a continuación, w' es cero, y las coordenadas se convierten en infinitas. Los sistemas de gráficos tridimensionales se basan en una metáfora de la cámara y el `depth` aquí el valor representa la distancia de la cámara desde el origen del sistema de coordenadas. Si un objeto gráfico tiene una Z es coordinar `depth` unidades desde el origen, conceptualmente es tocar la lente de la cámara y pasa a ser más grande.
+Esto sirve para reducir las coordenadas X e y cuando los valores de Z son menores que cero (conceptualmente detrás del plano XY) y para aumentar las coordenadas X e y para los valores positivos de Z. Cuando la coordenada Z es igual `depth` a, w ' es cero y las coordenadas se convierten en infinitas. Los sistemas de gráficos tridimensionales se crean a partir de una metáfora de cámara y el `depth` valor aquí representa la distancia de la cámara desde el origen del sistema de coordenadas. Si un objeto gráfico tiene una coordenada Z que es una `depth` unidad de origen, se toca conceptualmente la lente de la cámara y se vuelve infinitamente grande.
 
-Tenga en cuenta que probablemente usará este `perspectiveMatrix` valor junto con las matrices de rotación. Si un objeto graphics que se giran tiene las coordenadas X o Y mayor `depth`, entonces es probable que implican las coordenadas Z mayor que la rotación de este objeto en el espacio 3D `depth`. ¡Esto se debe evitar! Al crear `perspectiveMatrix` desea establecer `depth` en un valor lo suficientemente grande para todas las coordenadas del objeto de gráficos con independencia de cómo se gira. Esto garantiza que nunca es una división por cero.
+Tenga en cuenta que probablemente usará este `perspectiveMatrix` valor en combinación con matrices de rotación. Si un objeto Graphics que se está girando tiene coordenadas X o Y mayores que `depth` , es probable que el giro de este objeto en el espacio 3D implique coordenadas Z mayores que `depth` . Esto se debe evitar. Al crear `perspectiveMatrix` , desea establecer `depth` en un valor lo suficientemente grande para todas las coordenadas del objeto de gráficos, independientemente de cómo se gire. Esto garantiza que nunca haya ninguna División por cero.
 
-Combinación de perspectiva y rotaciones 3D requiere la multiplicación de matrices de 4 por 4 juntos. Para este propósito, `SKMatrix44` define los métodos de concatenación. Si `A` y `B` son `SKMatrix44` objetos, a continuación, el código siguiente establece un igual a un × B:
+La combinación de rotaciones y perspectivas 3D requiere la multiplicación de matrices de 4 por 4. Para este propósito, `SKMatrix44` define métodos de concatenación. Si `A` y `B` son `SKMatrix44` objetos, el código siguiente establece un valor igual a a × B:
 
 ```csharp
 A.PostConcat(B);
 ```
 
-Cuando se usa una matriz de transformación de 4 por 4 en un sistema de gráficos 2D, se aplica a objetos 2D. Estos objetos son fijos y se supone que tiene las coordenadas Z de cero. La multiplicación de transformación es un poco más sencilla que la transformación mostrada anteriormente:
+Cuando se usa una matriz de transformación de 4 por 4 en un sistema de gráficos 2D, se aplica a los objetos 2D. Estos objetos son planos y se supone que tienen coordenadas Z de cero. La multiplicación de transformación es un poco más sencilla que la transformación mostrada anteriormente:
 
 <pre>
                  |  M11  M12  M13  M14  |
@@ -161,27 +164,27 @@ Cuando se usa una matriz de transformación de 4 por 4 en un sistema de gráfico
                  |  M41  M42  M43  M44  |
 </pre>
 
-Que el valor de 0 para los resultados de la z en las fórmulas de transformación que no implican ninguna de las celdas de la tercera fila de la matriz:
+Ese valor 0 para z produce fórmulas de transformación que no implican ninguna celda de la tercera fila de la matriz:
 
-x' = M11·x M21·y + M41
+x ' = M11 · x + M21 · y + M41
 
-y' = M12·x M22·y + M42
+y ' = M12 · x + M22 · y + M42
 
-z' = M13·x M23·y + M43
+z ' = M13 · x + M23 · y + M43
 
-w' = M14·x M24·y + M44
+w ' = M14 · x + M24 · y + M44
 
-Además, el punto z' coordenadas también es irrelevante aquí. Cuando se muestra un objeto 3D en un sistema de gráficos 2D, se contrae a un objeto bidimensional pasando por alto los valores de las coordenadas Z. Las fórmulas de transformación son en realidad, estos dos:
+Además, la coordenada z también es irrelevante. Cuando se muestra un objeto 3D en un sistema de gráficos 2D, se contrae en un objeto bidimensional omitiendo los valores de la coordenada Z. En realidad, las fórmulas de transformación son solo las dos:
 
 `x" = x' / w'`
 
 `y" = y' / w'`
 
-Esto significa que la tercera fila *y* se puede omitir la tercera columna de la matriz de 4 por 4.
+Esto significa que se puede omitir la tercera fila *y* la tercera columna de la matriz de 4 por 4.
 
-Pero si es así, ¿por qué es la matriz de 4 por 4 incluso necesario en primer lugar?
+Pero, si es así, ¿por qué es necesario en primer lugar la matriz de 4 por 4?
 
-Aunque la tercera fila y la tercera columna de 4 por 4 no son pertinentes para las transformaciones bidimensionales, la tercera fila y columna *hacer* desempeñan un papel antes de que cuando varios `SKMatrix44` se multiplican los valores. Por ejemplo, supongamos que multiplica rotación alrededor del eje Y con la transformación de perspectiva:
+Aunque la tercera fila y la *tercera columna de* 4 por 4 son irrelevantes para las transformaciones bidimensionales, la tercera fila y columna desempeñan un rol antes de eso cuando `SKMatrix44` se multiplican varios valores juntos. Por ejemplo, supongamos que multiplica el giro alrededor del eje Y con la transformación de perspectiva:
 
 <pre>
 |  cos(α)  0  –sin(α)  0  |   |  1  0  0      0     |   |  cos(α)  0  –sin(α)   sin(α)/depth  |
@@ -190,7 +193,7 @@ Aunque la tercera fila y la tercera columna de 4 por 4 no son pertinentes para l
 |    0     0     0     1  |   |  0  0  0      1     |   |    0     0     0           1        |
 </pre>
 
-En el producto, la celda `M14` ahora contiene un valor de la perspectiva. Si desea aplicar esa matriz a objetos 2D, la tercera fila y columna se eliminan para convertirla en una matriz de 3 por 3:
+En el producto, la celda `M14` contiene ahora un valor de perspectiva. Si desea aplicar esa matriz a objetos 2D, se elimina la tercera fila y columna para convertirla en una matriz de 3 por 3:
 
 <pre>
 |  cos(α)  0  sin(α)/depth  |
@@ -198,7 +201,7 @@ En el producto, la celda `M14` ahora contiene un valor de la perspectiva. Si des
 |    0     0       1        |
 </pre>
 
-Ahora puede usarse para transformar un punto de 2D:
+Ahora se puede usar para transformar un punto 2D:
 
 <pre>
                 |  cos(α)  0  sin(α)/depth  |
@@ -214,17 +217,17 @@ Las fórmulas de transformación son:
 
 `z' = (sin(α)/depth)·x + 1`
 
-Ahora todo lo dividido z ":
+Ahora, divida todo por z ':
 
 `x" = cos(α)·x / ((sin(α)/depth)·x + 1)`
 
 `y" = y / ((sin(α)/depth)·x + 1)`
 
-Cuando se giran los objetos 2D con un ángulo positivo alrededor del eje Y, a continuación, positivo valores X se desvanecen en segundo plano mientras negativo X valores vienen al primer plano. Los valores X parecen acercarse al eje Y (que se rige por el valor de coseno) como coordenadas más alejado del eje Y se convierte en más de cerca en el Visor de o menor o mayor cuando se mueven más lejos del Visor.
+Cuando los objetos 2D se giran con un ángulo positivo alrededor del eje Y, los valores X positivos se receden al fondo mientras que los valores X negativos llegan al primer plano. Los valores X parecen ir más cerca del eje Y (que se rige por el valor del coseno), ya que las coordenadas más alejadas del eje Y se vuelven más pequeñas o más grandes a medida que se mueven más lejos del visor o más cerca del visor.
 
-Cuando se usa `SKMatrix44`, realizar todas las operaciones de perspectiva y giro 3D mediante la multiplicación diversos `SKMatrix44` valores. A continuación, puede extraer una matriz bidimensional de 3 por 3 de 4 por 4 matriz utilizando el [ `Matrix` ](xref:SkiaSharp.SKMatrix44.Matrix) propiedad de la `SKMatrix44` clase. Esta propiedad devuelve un familiar `SKMatrix` valor.
+Al utilizar `SKMatrix44` , realice todas las operaciones de rotación y perspectiva 3D multiplicando varios `SKMatrix44` valores. Después, puede extraer una matriz bidimensional de 3 por 3 de la matriz de 4 por 4 mediante la [`Matrix`](xref:SkiaSharp.SKMatrix44.Matrix) propiedad de la `SKMatrix44` clase. Esta propiedad devuelve un `SKMatrix` valor conocido.
 
-El **giro 3D** página permite experimentar con giro 3D. El [ **Rotation3DPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml) cuatro controles deslizantes para establecer el giro alrededor del eje X, Y y Z y para establecer un valor de profundidad crea una instancia de archivo:
+La página **rotación 3D** permite experimentar con la rotación 3D. El archivo [**Rotation3DPage. Xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml) crea una instancia de cuatro controles deslizantes para establecer la rotación alrededor de los ejes X, y y Z, y para establecer un valor de profundidad:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -303,9 +306,9 @@ El **giro 3D** página permite experimentar con giro 3D. El [ **Rotation3DPage.x
 </ContentPage>
 ```
 
-Tenga en cuenta que el `depthSlider` se inicializa con un `Minimum` valor de 250. Esto implica que el objeto 2D que se giran aquí tiene las coordenadas X e Y restringidas a un círculo definido por un radio de 250 píxeles en torno al origen. Los valores de coordenadas inferior a 250 producirá siempre cualquier rotación de este objeto en el espacio 3D.
+Observe que `depthSlider` se inicializa con un `Minimum` valor de 250. Esto implica que el objeto 2D que se gira aquí tiene las coordenadas X e y restringidas a un círculo definido por un radio de 250 píxeles alrededor del origen. Cualquier rotación de este objeto en el espacio 3D siempre dará como resultado valores de coordenadas inferiores a 250.
 
-El [ **Rotation3DPage.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml.cs) carga el archivo de código subyacente en un mapa de bits que es de 300 píxeles cuadrados:
+El archivo de código subyacente [**Rotation3DPage.CS**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml.cs) se carga en un mapa de bits de 300 píxeles cuadrados:
 
 ```csharp
 public partial class Rotation3DPage : ContentPage
@@ -336,9 +339,9 @@ public partial class Rotation3DPage : ContentPage
 }
 ```
 
-Si la transformación 3D se centra en este mapa de bits, a continuación, coordenadas X e Y el intervalo entre –150 y 150, mientras que las esquinas son 212 píxeles desde el centro, por lo que todo está dentro del radio de 250 píxeles.
+Si la transformación 3D está centrada en este mapa de bits, las coordenadas X e y oscilan entre – 150 y 150, mientras que las esquinas son de 212 píxeles desde el centro, por lo que todo está en el radio de 250 píxeles.
 
-El `PaintSurface` controlador crea `SKMatrix44` objetos basados en los controles deslizantes y se multiplican juntos mediante `PostConcat`. El `SKMatrix` valor extraído de la última `SKMatrix44` objeto está rodeado por traduzco las transformaciones para centrar la rotación en el centro de la pantalla:
+El `PaintSurface` controlador crea `SKMatrix44` objetos basados en los controles deslizantes y los multiplica con `PostConcat` . El `SKMatrix` valor extraído del `SKMatrix44` objeto final está rodeado por transformaciones de traslación para centrar la rotación en el centro de la pantalla:
 
 ```csharp
 public partial class Rotation3DPage : ContentPage
@@ -407,11 +410,11 @@ public partial class Rotation3DPage : ContentPage
 }
 ```
 
-Cuando se experimenta con el control deslizante cuarto, observará que la configuración de profundidad diferentes no mover el objeto aún más lejos del Visor, pero en su lugar alter el alcance de la perspectiva de efecto:
+Al experimentar con el cuarto control deslizante, observará que la configuración de profundidad diferente no mueve el objeto más allá del visor, sino que modifica la extensión del efecto de perspectiva:
 
-[![](3d-rotation-images/rotation3d-small.png "Captura de pantalla triple de la página de giro 3D")](3d-rotation-images/rotation3d-large.png#lightbox "Triple captura de pantalla de la página de giro 3D")
+[![](3d-rotation-images/rotation3d-small.png "Triple screenshot of the Rotation 3D page")](3d-rotation-images/rotation3d-large.png#lightbox "Triple screenshot of the Rotation 3D page")
 
-El **animado giro 3D** también usa `SKMatrix44` para animar una cadena de texto en el espacio 3D. La `textPaint` objeto establecido como un campo se usa en el constructor para determinar los límites del texto:
+La **rotación animada 3D** también utiliza `SKMatrix44` para animar una cadena de texto en un espacio 3D. El `textPaint` conjunto de objetos como un campo se utiliza en el constructor para determinar los límites del texto:
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
@@ -443,7 +446,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-El `OnAppearing` invalidación define tres Xamarin.Forms `Animation` objetos que se va a animar el `xRotationDegrees`, `yRotationDegrees`, y `zRotationDegrees` campos con distintas velocidades. Tenga en cuenta que se establecen los períodos de estas animaciones preparar números (5 segundos, 7 segundos y 11 segundos) para que la combinación general solo repite cada 385 segundos o más de 10 minutos:
+La `OnAppearing` invalidación define tres Xamarin.Forms `Animation` objetos para animar los `xRotationDegrees` `yRotationDegrees` campos, y `zRotationDegrees` a velocidades diferentes. Observe que los períodos de estas animaciones se establecen en números primos (5 segundos, 7 segundos y 11 segundos), por lo que la combinación global solo se repite cada 385 segundos o más de 10 minutos:
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
@@ -477,7 +480,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-Como se muestra en el programa anterior, el `PaintCanvas` controlador crea `SKMatrix44` los valores de rotación y perspectiva y multiplica juntos:
+Como en el programa anterior, el `PaintCanvas` controlador crea `SKMatrix44` valores para la rotación y la perspectiva, y los multiplica juntos:
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
@@ -531,9 +534,9 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-Este giro 3D está acotado por varias transformaciones 2D para mover el centro de rotación en el centro de la pantalla y escalar el tamaño de la cadena de texto para que sea el mismo ancho que la pantalla:
+Este giro 3D está rodeado de varias transformaciones 2D para descartar el centro de giro al centro de la pantalla, y para escalar el tamaño de la cadena de texto de modo que tenga el mismo ancho que la pantalla:
 
-[![](3d-rotation-images/animatedrotation3d-small.png "Triple captura de pantalla de la página de rotación animados 3D")](3d-rotation-images/animatedrotation3d-large.png#lightbox "Triple captura de pantalla de la página de rotación animados 3D")
+[![](3d-rotation-images/animatedrotation3d-small.png "Triple screenshot of the Animated Rotation 3D page")](3d-rotation-images/animatedrotation3d-large.png#lightbox "Triple screenshot of the Animated Rotation 3D page")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

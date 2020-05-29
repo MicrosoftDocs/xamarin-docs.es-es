@@ -1,24 +1,27 @@
 ---
-title: Marcas experimentales de Xamarin. Forms
-description: Las marcas experimentales de Xamarin. Forms permiten al equipo de ingeniería enviar nuevas características a los usuarios con más rapidez, al tiempo que se pueden cambiar las API de características antes de que pasen a una versión estable.
-ms.prod: xamarin
-ms.assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/14/2020
-ms.openlocfilehash: cca377a7a88599bc34fd66695ad303162e6be200
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+title: Xamarin.Formsmarcas experimentales
+description: Xamarin.Formslas marcas experimentales permiten al equipo de ingeniería enviar nuevas características a los usuarios con más rapidez, al mismo tiempo que se pueden cambiar las API de características antes de que pasen a una versión estable.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b548323330ccdce6fb01e83c7e8ab7c2d5307125
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82516551"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139066"
 ---
-# <a name="xamarinforms-experimental-flags"></a>Marcas experimentales de Xamarin. Forms
+# <a name="xamarinforms-experimental-flags"></a>Xamarin.Formsmarcas experimentales
 
-Cuando se implementa una nueva característica de Xamarin. Forms, a veces se coloca detrás de una marca experimental. Esto permite al equipo de ingeniería proporcionar nuevas características con mayor rapidez, al tiempo que sigue pudiendo cambiar las API de características antes de que pasen a una versión estable. Después, se quita la marca experimental una vez que la característica se mueve a una versión estable.
+Cuando Xamarin.Forms se implementa una nueva característica, a veces se coloca detrás de una marca experimental. Esto permite al equipo de ingeniería proporcionar nuevas características con mayor rapidez, al tiempo que sigue pudiendo cambiar las API de características antes de que pasen a una versión estable. Después, se quita la marca experimental una vez que la característica se mueve a una versión estable.
 
-Xamarin. Forms incluye las siguientes marcas experimentales:
+Xamarin.Formsincluye las siguientes marcas experimentales:
 
 - `AppTheme_Experimental`
 - `CarouselView_Experimental`
@@ -50,7 +53,7 @@ Xamarin.Forms.Forms.SetFlags("CarouselView_Experimental");
 El `SetFlags` método debe invocarse en la `AppDelegate` clase en iOS, en la `MainActivity` clase en Android y en la `App` clase en UWP.
 
 > [!IMPORTANT]
-> La habilitación de una marca experimental en los proyectos de la `Forms.Init` plataforma debe realizarse antes de que se invoque el método.
+> La habilitación de una marca experimental en los proyectos de la plataforma debe realizarse antes de que `Forms.Init` se invoque el método.
 
 El `Xamarin.Forms.Forms.SetFlags` método acepta un `string` argumento de matriz, lo que hace posible habilitar varias marcas experimentales en una única llamada al método:
 

@@ -1,51 +1,54 @@
 ---
-title: Crear y dibujar en mapas de bits de SkiaSharp
-description: Aprenda a crear mapas de bits de SkiaSharp y, a continuación, dibuje en estos mapas de bits mediante la creación de un lienzo basado en ellas.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/17/2018
-ms.openlocfilehash: 1e2b50a260ed5f5bbbbfc3c4ba55a33075262f25
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 593d6a8b30d5ed0e143d1c013849d2bef571f6dc
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228104"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84140301"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Crear y dibujar en mapas de bits de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Ha visto cómo una aplicación puede cargar los mapas de bits de la Web, de recursos de aplicación y de biblioteca de fotos del usuario. También es posible crear mapas de bits nuevo dentro de la aplicación. El enfoque más sencillo implica uno de los constructores de [ `SKBitmap` ](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)):
+Ha visto cómo una aplicación puede cargar mapas de bits desde Internet, desde recursos de aplicaciones y desde la biblioteca de fotos del usuario. También es posible crear mapas de bits nuevos dentro de la aplicación. El enfoque más sencillo implica a uno de los constructores de [`SKBitmap`](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)) :
 
 ```csharp
 SKBitmap bitmap = new SKBitmap(width, height);
 ```
 
-El `width` y `height` parámetros son números enteros y especificar las dimensiones en píxeles del mapa de bits. Este constructor crea un mapa de bits de color completo con cuatro bytes por píxel: un byte para el rojo, verde, azul y los componentes alfa (opacidad).
+Los `width` `height` parámetros y son enteros y especifican las dimensiones de píxeles del mapa de bits. Este constructor crea un mapa de bits de color completo con cuatro bytes por píxel: un byte para cada uno de los componentes rojo, verde, azul y alfa (opacidad).
 
-Después de crear un nuevo mapa de bits, deberá obtener algo en la superficie del mapa de bits. Por lo general hacer esto de dos maneras:
+Después de crear un nuevo mapa de bits, debe obtener algo en la superficie del mapa de bits. En general, esto se realiza de una de estas dos maneras:
 
-- Dibujar en el mapa de bits mediante el estándar `Canvas` métodos de dibujo.
-- Obtener acceso a los bits de píxeles directamente.
+- Dibuje en el mapa de bits mediante `Canvas` métodos de dibujo estándar.
+- Acceso directo a los bits de píxeles.
 
 En este artículo se muestra el primer enfoque:
 
-![Ejemplo de dibujo](drawing-images/DrawingSample.png "ejemplo de dibujo")
+![Ejemplo de dibujo](drawing-images/DrawingSample.png "Ejemplo de dibujo")
 
-El segundo enfoque se describe en el artículo [ **acceso a píxeles de mapa de bits de SkiaSharp**](pixel-bits.md).
+El segundo enfoque se describe en el artículo [**acceso a SkiaSharp Bitmap pixels**](pixel-bits.md).
 
 ## <a name="drawing-on-the-bitmap"></a>Dibujar en el mapa de bits
 
-Dibujar en la superficie de un mapa de bits es igual a dibujar en una pantalla de vídeo. Para dibujar en una pantalla de vídeo, obtendrá un `SKCanvas` objeto desde el `PaintSurface` argumentos de evento. Para dibujar en un mapa de bits, se crea un `SKCanvas` objeto utilizando el [ `SKCanvas` ](xref:SkiaSharp.SKCanvas.%23ctor(SkiaSharp.SKBitmap)) constructor:
+Dibujar en la superficie de un mapa de bits es igual que dibujar en una pantalla de vídeo. Para dibujar en una pantalla de vídeo, se obtiene un `SKCanvas` objeto de los `PaintSurface` argumentos de evento. Para dibujar en un mapa de bits, se crea un `SKCanvas` objeto mediante el [`SKCanvas`](xref:SkiaSharp.SKCanvas.%23ctor(SkiaSharp.SKBitmap)) constructor:
 
 ```csharp
 SKCanvas canvas = new SKCanvas(bitmap);
 ```
 
-Cuando haya terminado de dibujar en el mapa de bits, puede desechar el `SKCanvas` objeto. Por este motivo, el `SKCanvas` generalmente se denomina constructor en un `using` instrucción:
+Cuando haya terminado de dibujar en el mapa de bits, puede desechar el `SKCanvas` objeto. Por esta razón, `SKCanvas` se suele llamar al constructor en una `using` instrucción:
 
 ```csharp
 using (SKCanvas canvas = new SKCanvas(bitmap))
@@ -54,13 +57,13 @@ using (SKCanvas canvas = new SKCanvas(bitmap))
 }
 ```
 
-A continuación, se puede mostrar el mapa de bits. En un momento posterior, puede crear un nuevo programa `SKCanvas` objeto basado en mismo mapa de bits y dibuje en él algo más.
+A continuación, se puede mostrar el mapa de bits. En un momento posterior, el programa puede crear un nuevo `SKCanvas` objeto basado en ese mismo mapa de bits y dibujarlo más.
 
-El **mapa de bits Hello** página en el **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** aplicación escribe el texto "Hola, mapa de bits" en un mapa de bits y luego se muestra que varias veces de mapa de bits.
+La página de **mapa de bits de Hello** en la aplicación **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** escribe el texto "Hello, bitmap!" en un mapa de bits y, a continuación, muestra el mapa de bits varias veces.
 
-El constructor de la `HelloBitmapPage` comienza creando una `SKPaint` objeto para mostrar texto. Determina las dimensiones de una cadena de texto y crea un mapa de bits con dichas dimensiones. A continuación, se crea un `SKCanvas` objeto basado en ese mapa de bits, las llamadas `Clear`y, a continuación, llama a `DrawText`. Siempre es una buena idea para llamar a `Clear` con un nuevo mapa de bits porque un mapa de bits recién creada podría contener datos aleatorios.
+El constructor de `HelloBitmapPage` comienza creando un `SKPaint` objeto para mostrar texto. Determina las dimensiones de una cadena de texto y crea un mapa de bits con esas dimensiones. A continuación, crea un `SKCanvas` objeto basado en ese mapa de bits, llama a `Clear` y, a continuación, llama a `DrawText` . Siempre es una buena idea llamar a `Clear` con un nuevo mapa de bits, ya que un mapa de bits recién creado podría contener datos aleatorios.
 
-El constructor concluye mediante la creación de un `SKCanvasView` objeto para mostrar el mapa de bits:
+El constructor finaliza creando un `SKCanvasView` objeto para mostrar el mapa de bits:
 
 ```csharp
 public partial class HelloBitmapPage : ContentPage
@@ -111,95 +114,95 @@ public partial class HelloBitmapPage : ContentPage
 }
 ```
 
-El `PaintSurface` controlador procesa el mapa de bits varias veces en filas y columnas de la pantalla. Tenga en cuenta que el `Clear` método en el `PaintSurface` controlador tiene un argumento de `SKColors.Aqua`, que los colores del fondo de la superficie de presentación:
+El `PaintSurface` controlador representa el mapa de bits varias veces en filas y columnas de la pantalla. Observe que el `Clear` método del `PaintSurface` controlador tiene un argumento de `SKColors.Aqua` , que colorea el fondo de la superficie de la pantalla:
 
-[![Hola, mapa de bits ](drawing-images/HelloBitmap.png "Hello, mapa de bits.")](drawing-images/HelloBitmap-Large.png#lightbox)
+[![¡ Hola, mapa de bits!](drawing-images/HelloBitmap.png "¡ Hola, mapa de bits!")](drawing-images/HelloBitmap-Large.png#lightbox)
 
-La apariencia del fondo aguamarina revela que el mapa de bits es transparente, excepto el texto.
+La apariencia del fondo aguamarina revela que el mapa de bits es transparente excepto para el texto.
 
 ## <a name="clearing-and-transparency"></a>Borrar y transparencia
 
-La presentación de la **mapa de bits Hello** página se muestra que el mapa de bits el programa creado es transparente, excepto el texto de color negro. Por eso el color aguamarina de la superficie de pantalla se muestra a través.
+La presentación de la página de **mapa de bits de Hola** muestra que el mapa de bits que creó el programa es transparente excepto para el texto negro. Este es el motivo por el que se muestra el color aguamarina de la superficie de la pantalla.
 
-La documentación de los `Clear` métodos de `SKCanvas` los describe con la instrucción: "Reemplaza todos los píxeles del lienzo ' clip actual '. El uso de la palabra "reemplaza" revela una característica importante de estos métodos: Todos los métodos de dibujo `SKCanvas` de agregan algo a la superficie de pantalla existente. El `Clear` métodos _reemplazar_ lo que está allí.
+La documentación de los `Clear` métodos de los `SKCanvas` describe con la instrucción: "reemplaza todos los píxeles del lienzo ' clip actual '. El uso de la palabra "reemplaza" revela una característica importante de estos métodos: todos los métodos de dibujo de `SKCanvas` agregan algo a la superficie de pantalla existente. Los `Clear` métodos _reemplazan_ a lo que ya existe.
 
-`Clear` existe en dos versiones diferentes:
+`Clear`existe en dos versiones diferentes:
 
-- El [ `Clear` ](xref:SkiaSharp.SKCanvas.Clear(SkiaSharp.SKColor)) método con un `SKColor` parámetro reemplaza los píxeles de la superficie de pantalla con píxeles de ese color.
+- El [`Clear`](xref:SkiaSharp.SKCanvas.Clear(SkiaSharp.SKColor)) método con un `SKColor` parámetro reemplaza los píxeles de la superficie de presentación con píxeles de ese color.
 
-- El [ `Clear` ](xref:SkiaSharp.SKCanvas.Clear) método sin parámetros reemplaza los píxeles con el [ `SKColors.Empty` ](xref:SkiaSharp.SKColors.Empty) color, que es un color en el que todos los componentes (rojo, verde, azul y alfa) se establecen en cero. Este color se conoce a veces como "negro transparente".
+- El [`Clear`](xref:SkiaSharp.SKCanvas.Clear) método sin parámetros reemplaza los píxeles por el [`SKColors.Empty`](xref:SkiaSharp.SKColors.Empty) color, que es un color en el que todos los componentes (rojo, verde, azul y alfa) se establecen en cero. Este color se conoce a veces como "negro transparente".
 
-Una llamada a `Clear` sin argumentos en un mapa de bits nuevo inicializa el mapa de bits completo para que sea totalmente transparente. Normalmente, nada dibujado posteriormente en el mapa de bits será opaco o parcialmente opaco.
+Llamar a `Clear` sin argumentos en un nuevo mapa de bits inicializa todo el mapa de bits para que sea completamente transparente. Todo lo que se dibuje posteriormente en el mapa de bits será opaco o parcialmente opaco.
 
-Este es algo que probar: En la página de **mapa de bits** de `Clear` Hello, reemplace el `bitmapCanvas` método aplicado a por este:
+Este es algo que probar: en la página de **mapa de bits de Hello** , reemplace el `Clear` método aplicado a `bitmapCanvas` por este:
 
 ```csharp
 bitmapCanvas.Clear(new SKColor(255, 0, 0, 128));
 ```
 
-El orden de los `SKColor` los parámetros del constructor es rojo, verde, azul y alfa, donde cada valor puede oscilar entre 0 y 255. Tenga en cuenta que un valor alfa de 0 es transparente, mientras que un valor alfa de 255 es opaco.
+El orden de los `SKColor` parámetros del constructor es rojo, verde, azul y alfa, donde cada valor puede oscilar entre 0 y 255. Tenga en cuenta que un valor alfa de 0 es transparente, mientras que un valor alfa de 255 es opaco.
 
-El valor (255, 0, 0, 128) borra los píxeles del mapa de bits en píxeles rojo con un 50% de opacidad. Esto significa que el fondo de mapa de bits es semitransparente. El fondo rojo semitransparente del mapa de bits se combina con el fondo de la superficie de pantalla para crear un fondo gris aguamarina.
+El valor (255, 128 0,0) borra los píxeles del mapa de bits a píxeles rojos con una opacidad del 50%. Esto significa que el fondo del mapa de bits es semitransparente. El fondo rojo semitransparente del mapa de bits se combina con el fondo aguamarina de la superficie de la pantalla para crear un fondo gris.
 
-Intente establecer el color del texto en negro transparente, colocando la siguiente asignación el `SKPaint` inicializador:
+Pruebe a establecer el color del texto en negro transparente colocando la siguiente asignación en el `SKPaint` inicializador:
 
 ```csharp
 Color = new SKColor(0, 0, 0, 0)
 ```
 
-Podría pensar que este texto transparente crearía totalmente transparentes áreas del mapa de bits a través del cual se vería el fondo de la superficie de visualización aguamarina. Es decir, pero no así. El texto se dibuja encima de lo que ya está en el mapa de bits. No estará visible en todo el texto transparente.
+Podría pensar que este texto transparente crearía áreas completamente transparentes del mapa de bits a través del cual vería el fondo aguamarina de la superficie de la pantalla. Pero esto no es así. El texto se dibuja encima de lo que ya está en el mapa de bits. El texto transparente no será visible en absoluto.
 
-No `Draw` método alguna vez realiza un mapa de bits más transparente. Solo `Clear` puede hacerlo.
+Ningún `Draw` método hace que un mapa de bits sea más transparente. `Clear`Esto solo puede hacerlo.
 
 ## <a name="bitmap-color-types"></a>Tipos de colores de mapa de bits
 
-El más sencillo `SKBitmap` constructor le permite especificar un ancho de píxel de entero y el alto del mapa de bits. Otros `SKBitmap` constructores son más complejos. Estos constructores requieren argumentos de los dos tipos de enumeración: [ `SKColorType` ](xref:SkiaSharp.SKColorType) y [ `SKAlphaType` ](xref:SkiaSharp.SKAlphaType). Otros constructores utilizan el [ `SKImageInfo` ](xref:SkiaSharp.SKImageInfo) estructura, que consolida toda esta información.
+El constructor más sencillo `SKBitmap` le permite especificar un ancho y un alto de píxel de entero para el mapa de bits. Otros `SKBitmap` constructores son más complejos. Estos constructores requieren argumentos de dos tipos de enumeración: [`SKColorType`](xref:SkiaSharp.SKColorType) y [`SKAlphaType`](xref:SkiaSharp.SKAlphaType) . Otros constructores usan la [`SKImageInfo`](xref:SkiaSharp.SKImageInfo) estructura, que consolida esta información.
 
-El `SKColorType` enumeración tiene 9 miembros. Cada uno de estos miembros describe una manera determinada de almacenamiento de los píxeles del mapa de bits:
-
-- `Unknown`
-- `Alpha8` &mdash; cada píxel es de 8 bits, que representa un valor alfa de totalmente transparente a totalmente opaco
-- `Rgb565` &mdash; cada píxel es de 16 bits, 5 bits para el rojo y azul y 6 para el verde
-- `Argb4444` &mdash; cada píxel tiene 4 alfa, rojo, verde y azul de 16 bits
-- `Rgba8888` &mdash; cada píxel es de 32 bits, 8 para rojo, verde, azul y alfa
-- `Bgra8888` &mdash; cada píxel es de 32 bits, 8 para alfa, rojo, verde y azul
-- `Index8` &mdash; cada píxel es de 8 bits y representa un índice en una [`SKColorTable`](xref:SkiaSharp.SKColorTable)
-- `Gray8` &mdash; cada píxel es de 8 bits que representa una sombra gris, del negro a blanco
-- `RgbaF16` &mdash; cada píxel es 64 bits, con rojo, verde, azul y alfa en un formato de punto flotante de 16 bits
-
-Los dos formatos donde cada píxel es 32 píxeles (4 bytes) a menudo se denominan _todo color_ formatos. Muchos de la fecha de otros formatos de un momento cuando se muestra el vídeo a sí mismos no eran capaces de a todo color. Mapas de bits de color limitado eran las adecuadas para estas pantallas y permiten a los mapas de bits ocupar menos espacio en la memoria.
-
-En la actualidad, los programadores casi siempre usar mapas de bits de color completo y no se moleste con otros formatos. La excepción es el `RgbaF16` formato, lo que permite una mayor resolución de color que incluso los formatos a todo color. Sin embargo, este formato se usa para propósitos especializados, como imágenes médicas y no tiene mucho sentido cuando se usa con las pantallas todo color estándar.
-
-Esta serie de artículos se restringirá a sí misma para la `SKBitmap` color formatos usados de forma predeterminada cuando no hay ninguna `SKColorType` se especifica el miembro. Este formato de forma predeterminada se basa en la plataforma subyacente. Para las plataformas compatibles con Xamarin.Forms, el tipo de color predeterminado es:
-
-- `Rgba8888` para iOS y Android
-- `Bgra8888` para UWP
-
-La única diferencia es el orden de los 4 bytes en la memoria, y esto solo resulta un problema cuando se accede directamente a los bits de píxeles. Esto no se vuelven importante hasta llegar al artículo [ **acceso a píxeles de mapa de bits de SkiaSharp**](pixel-bits.md).
-
-El `SKAlphaType` enumeración tiene cuatro miembros:
+La `SKColorType` enumeración tiene 9 miembros. Cada uno de estos miembros describe una manera determinada de almacenar los píxeles del mapa de bits:
 
 - `Unknown`
-- `Opaque` &mdash; el mapa de bits no tiene transparencia
-- `Premul` &mdash; los componentes de color se multiplican previamente por el componente alfa
-- `Unpremul` &mdash; los componentes de color no se multiplican previamente por el componente alfa
+- `Alpha8`&mdash;cada píxel es de 8 bits, que representa un valor alfa de totalmente transparente a totalmente opaco.
+- `Rgb565`&mdash;cada píxel es de 16 bits, 5 bits para rojo y azul, y 6 para verde
+- `Argb4444`&mdash;cada píxel es de 16 bits, 4 para alfa, rojo, verde y azul
+- `Rgba8888`&mdash;cada píxel es 32 bits, 8 cada uno para rojo, verde, azul y alfa.
+- `Bgra8888`&mdash;cada píxel es 32 bits, 8 cada uno para azul, verde, rojo y alfa.
+- `Index8`&mdash;cada píxel es de 8 bits y representa un índice en un[`SKColorTable`](xref:SkiaSharp.SKColorTable)
+- `Gray8`&mdash;cada píxel es de 8 bits que representa un sombreado gris del negro al blanco
+- `RgbaF16`&mdash;cada píxel es 64 bits, con rojo, verde, azul y alfa en un formato de punto flotante de 16 bits.
 
-Este es un píxel del mapa de bits de color rojo de 4 bytes con una transparencia del 50%, con los bytes que se muestra en el rojo de orden, verde, azul, alfa:
+Los dos formatos en los que cada píxel es 32 píxeles (4 bytes) se denominan a menudo formatos _de color completo_ . Muchos de los otros formatos de fecha a partir de una hora en que el vídeo se muestra en sí mismos no eran capaces de color completo. Los mapas de bits de color limitado eran adecuados para estas pantallas y los mapas de bits permitidos ocupan menos espacio en la memoria.
+
+Estos días, los programadores casi siempre usan mapas de bits de color completo y no se molestan en otros formatos. La excepción es el `RgbaF16` formato, que permite una mayor resolución de color que incluso los formatos de colores completos. Sin embargo, este formato se usa para fines especializados, como la creación de imágenes médicas, y no tiene mucho sentido cuando se usa con pantallas de color completo estándar.
+
+Esta serie de artículos se restringirá a los `SKBitmap` formatos de color que se usan de forma predeterminada cuando no `SKColorType` se especifica ningún miembro. Este formato predeterminado se basa en la plataforma subyacente. En el caso de las plataformas admitidas por Xamarin.Forms , el tipo de color predeterminado es:
+
+- `Rgba8888`para iOS y Android
+- `Bgra8888`para UWP
+
+La única diferencia es el orden de los 4 bytes en memoria y esto solo se convierte en un problema cuando se accede directamente a los bits de píxeles. Esto no será importante hasta que llegue al artículo [**acceso a los píxeles del mapa de bits de SkiaSharp**](pixel-bits.md).
+
+La `SKAlphaType` enumeración tiene cuatro miembros:
+
+- `Unknown`
+- `Opaque`&mdash;el mapa de bits no tiene transparencia
+- `Premul`&mdash;los componentes de color se multiplican previamente por el componente alfa
+- `Unpremul`&mdash;los componentes de color no se multiplican previamente por el componente alfa
+
+Este es un píxel de mapa de bits rojo de 4 bytes con una transparencia del 50%, con los bytes mostrados en el orden rojo, verde, azul, alfa:
 
 0xFF 0x00 0x00 0x80
 
-Cuando se representa un mapa de bits que contiene píxeles parcialmente transparentes en una superficie de pantalla, los componentes de color de cada píxel del mapa de bits deben ser multiplicados por el valor alfa de ese píxel y se deben multiplicar los componentes de color del píxel correspondiente de la superficie de pantalla 255 menos el valor alfa. A continuación, se pueden combinar los dos píxeles. El mapa de bits se puede representar con mayor rapidez si los componentes de color en los píxeles del mapa de bits ya han sido pre-mulitplied por el valor alfa. Ese mismo píxel rojo se almacenaría similar al siguiente en un formato premultiplicado:
+Cuando un mapa de bits que contiene píxeles semitransparentes se representa en una superficie de presentación, los componentes de color de cada píxel de mapa de bits se deben multiplicar por el valor alfa de ese píxel y los componentes de color del píxel correspondiente de la superficie de presentación se deben multiplicar por 255 menos el valor alfa. Los dos píxeles se pueden combinar a continuación. El mapa de bits se puede representar más rápido si el valor alfa ya mulitplied los componentes de color de los píxeles del mapa de bits. Ese mismo píxel rojo se almacenaría como este en un formato premultiplicado:
 
-0x80 0x00 0x00 0x80
+0x80 0x00 0x00 en 0x80
 
-Esta mejora del rendimiento es por eso `SkiaSharp` mapas de bits de forma predeterminada se crean con un `Premul` formato. Pero, nuevamente, es necesario saber esto únicamente al obtener acceso y manipular los bits de píxeles.
+Esta mejora de rendimiento es el motivo por el `SkiaSharp` que los mapas de bits se crean de forma predeterminada con un `Premul` formato. Pero de nuevo, es necesario conocer esto solo cuando se tiene acceso a bits de píxeles y se manipulan.
 
-## <a name="drawing-on-existing-bitmaps"></a>Dibujar en mapas de bits existente
+## <a name="drawing-on-existing-bitmaps"></a>Dibujar en mapas de bits existentes
 
 No es necesario crear un nuevo mapa de bits para dibujar en él. También puede dibujar en un mapa de bits existente.
 
-El **Monkey Moustache** página usa el constructor para cargar el **MonkeyFace.png** imagen. A continuación, se crea un `SKCanvas` objeto basándose en ese mapa de bits y utiliza `SKPaint` y `SKPath` objetos que se va a dibujar un moustache en él:
+La página **Moustache de Monkey** usa su constructor para cargar la imagen de **MonkeyFace. png** . A continuación, crea un `SKCanvas` objeto basado en dicho mapa de bits y usa `SKPaint` `SKPath` objetos y para dibujar un Moustache en él:
 
 ```csharp
 public partial class MonkeyMoustachePage : ContentPage
@@ -254,27 +257,27 @@ public partial class MonkeyMoustachePage : ContentPage
 }
 ```
 
-El constructor concluye mediante la creación de un `SKCanvasView` cuyo `PaintSurface` controlador simplemente muestra el resultado:
+El constructor finaliza creando un `SKCanvasView` cuyo `PaintSurface` controlador simplemente muestra el resultado:
 
-[![Juguetear Moustache](drawing-images/MonkeyMoustache.png "juguetear Moustache")](drawing-images/MonkeyMoustache-Large.png#lightbox)
+[![Monkey Moustache](drawing-images/MonkeyMoustache.png "Monkey Moustache")](drawing-images/MonkeyMoustache-Large.png#lightbox)
 
-## <a name="copying-and-modifying-bitmaps"></a>Copiar y modificar los mapas de bits
+## <a name="copying-and-modifying-bitmaps"></a>Copiar y modificar mapas de bits
 
-Los métodos de `SKCanvas` que puede usar para dibujar en un mapa de bits incluyen `DrawBitmap`. Esto significa que puede dibujar un mapa de bits en el otro, normalmente se modifica de alguna manera.
+Los métodos de `SKCanvas` que puede usar para dibujar en un mapa de bits incluyen `DrawBitmap` . Esto significa que puede dibujar un mapa de bits en otro, lo que normalmente lo modifica de alguna manera.
 
-La forma más versátil para modificar un mapa de bits es a través de acceso a los bits de píxeles reales, un asunto tratado en el artículo  **[píxeles del mapa de bits de SkiaSharp acceso a](pixel-bits.md)** . Pero hay muchas otras técnicas para modificar los mapas de bits que no necesitan acceso a los bits de píxeles.
+La forma más versátil de modificar un mapa de bits es obtener acceso a los bits de píxeles reales, un asunto que se trata en el artículo sobre el **[acceso a los píxeles del mapa](pixel-bits.md)** de bits SkiaSharp. Pero hay muchas otras técnicas para modificar los mapas de bits que no requieren el acceso a los bits de píxeles.
 
-El siguiente mapa de bits incluido con el **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** aplicación es 360 píxeles de ancho y 480 píxeles de alto:
+El siguiente mapa de bits incluido con la aplicación **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** tiene 360 píxeles de ancho y 480 píxeles de alto:
 
-![Alpinistas](drawing-images/MountainClimbers.jpg "alpinistas")
+![Montañas rocosas](drawing-images/MountainClimbers.jpg "Montañas rocosas")
 
-Supongamos que no ha recibido el permiso de objeto monkey a la izquierda para publicar esta fotografía. Una solución consiste en Ocultar la cara del objeto monkey mediante una técnica denominada _pixelization_. Los píxeles de la cara se reemplazan con bloques de color, por lo que no se puede realizar las características. Los bloques de color se derivan normalmente de la imagen original con el promedio de los colores de los píxeles correspondientes a estos bloques. Pero no es necesario realizar este promedio por sí mismo. Sucede automáticamente cuando se copia un mapa de bits en una dimensión de píxel más pequeña.
+Supongamos que no ha recibido el permiso del Monkey de la izquierda para publicar esta fotografía. Una solución consiste en ocultar la superficie del Monkey con una técnica llamada _pixelización_. Los píxeles de la superficie se reemplazan por bloques de color para que no pueda crear las características. Los bloques de color normalmente se derivan de la imagen original al calcular el promedio de los colores de los píxeles correspondientes a estos bloques. Pero no es necesario realizar esta promediación por sí mismo. Se produce automáticamente cuando se copia un mapa de bits en una dimensión de píxeles más pequeña.
 
-Cara del objeto monkey izquierdo ocupa aproximadamente una zona cuadrada de 72 píxeles con una esquina superior izquierda en el punto (112, 238). Vamos a reemplazar esa zona cuadrada 72 píxeles con una matriz de 9 x 9 de bloques de color, cada uno de los cuales es 8 por 8 píxeles cuadrados.
+La superficie del Monkey izquierdo ocupa aproximadamente un área cuadrada de 72 píxeles con una esquina superior izquierda en el punto (112, 238). Vamos a reemplazar el área cuadrada de 72 píxeles con una matriz de bloques de color 9 por 9, cada una de las cuales tiene un cuadrado de 8 por 8 píxeles.
 
-El **Pixelize imagen** página se carga en ese mapa de bits y crea primero un mapa de 9 píxeles cuadrado bits pequeño denominado `faceBitmap`. Se trata de un destino para copiar solo los cara del objeto monkey. El rectángulo de destino es simplemente 9-píxeles al cuadrado pero el rectángulo de origen es 72 píxeles al cuadrado. Cada bloque de 8 por 8 de píxeles de origen se consolida hasta un solo píxel calculando los colores.
+La página de **imagen de píxel** se carga en ese mapa de bits y crea primero un mapa de bits de 9 píxeles reducido denominado `faceBitmap` . Se trata de un destino para copiar solo la superficie del Monkey. El rectángulo de destino tiene solo 9 píxeles cuadrados, pero el rectángulo de origen tiene 72 píxeles cuadrados. Cada bloque de píxeles de origen de 8 por 8 se consolida en un solo píxel al calcular el promedio de los colores.
 
-El siguiente paso es copiar el mapa de bits original en un nuevo mapa de bits del mismo tamaño llamado `pixelizedBitmap`. El pequeño `faceBitmap` , a continuación, se copia en él con un rectángulo de destino de 72 píxeles cuadrados para que cada píxel de `faceBitmap` se expande a su tamaño 8 veces:
+El siguiente paso consiste en copiar el mapa de bits original en un nuevo mapa de bits del mismo tamaño denominado `pixelizedBitmap` . `faceBitmap`Después, el diminuto se copia en la parte superior con un rectángulo de destino de 72 píxeles cuadrados para que cada píxel de `faceBitmap` se expanda a 8 veces su tamaño:
 
 ```csharp
 public class PixelizedImagePage : ContentPage
@@ -334,17 +337,17 @@ public class PixelizedImagePage : ContentPage
 }
 ```
 
-El constructor concluye mediante la creación de un `SKCanvasView` para mostrar el resultado:
+El constructor finaliza creando un `SKCanvasView` para mostrar el resultado:
 
-[![Imagen de pixelize](drawing-images/PixelizeImage.png "Pixelize imagen")](drawing-images/PixelizeImage-Large.png#lightbox)
+[![Imagen de píxel](drawing-images/PixelizeImage.png "Imagen de píxel")](drawing-images/PixelizeImage-Large.png#lightbox)
 
 <a name="rotating-bitmaps" />
 
-## <a name="rotating-bitmaps"></a>Rotación de mapas de bits
+## <a name="rotating-bitmaps"></a>Rotar mapas de bits
 
-Otra tarea común es la rotación los mapas de bits. Esto es especialmente útil cuando se recuperan los mapas de bits de una biblioteca de fotos iPhone o iPad. A menos que el dispositivo se mantuvo en una orientación determinada cuando se tomó la fotografía, la imagen es probable que sea la boca abajo o hacia un lado.
+Otra tarea común es rotar mapas de bits. Esto es especialmente útil cuando se recuperan mapas de bits de una biblioteca de fotos de iPhone o iPad. A menos que el dispositivo se haya mantenido en una orientación determinada cuando se tomó la foto, es probable que la imagen esté al revés o a un lado.
 
-Si activa un mapa de bits al revés es necesario crear otro mapa de bits del mismo tamaño que la primera y, a continuación, configurar una transformación para girar 180 grados al copiar la primera a la segunda. En todos los ejemplos en esta sección, `bitmap` es la `SKBitmap` objeto que debe girar:
+Al activar un mapa de bits hacia abajo, es necesario crear otro mapa de bits del mismo tamaño que el primero y, a continuación, establecer una transformación para que rote en 180 grados mientras se copia el primero en el segundo. En todos los ejemplos de esta sección, `bitmap` es el `SKBitmap` objeto que necesita girar:
 
 ```csharp
 SKBitmap rotatedBitmap = new SKBitmap(bitmap.Width, bitmap.Height);
@@ -357,7 +360,7 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
 }
 ```
 
-Al girar 90 grados, deberá crear un mapa de bits que es un tamaño distinto al original, intercambiando el alto y ancho. Por ejemplo, si el mapa de bits original es 1200 píxeles de ancho y alto de 800 píxeles, el mapa de bits girado es 800 píxeles de ancho y 1200 píxeles de ancho. Establezca la traslación y rotación para que el mapa de bits se gira en torno a su esquina superior izquierda y, a continuación, se desplaza en la vista. (Tenga en cuenta que el `Translate` y `RotateDegrees` métodos se llaman en orden inverso de la forma en que se apliquen.) Este es el código para girar 90 grados a la derecha:
+Al rotar en 90 grados, debe crear un mapa de bits que tenga un tamaño diferente del original intercambiando el alto y el ancho. Por ejemplo, si el mapa de bits original tiene 1200 píxeles de ancho y 800 píxeles de alto, el mapa de bits girado tiene un ancho de 800 píxeles y 1200 píxeles de ancho. Establezca la traslación y la rotación para que el mapa de bits se rote alrededor de la esquina superior izquierda y, a continuación, se desplace hacia la vista. (Tenga en cuenta que `Translate` `RotateDegrees` se llama a los métodos y en el orden opuesto a la manera en que se aplican). Este es el código para rotar 90 grados en el sentido de las agujas del reloj:
 
 ```csharp
 SKBitmap rotatedBitmap = new SKBitmap(bitmap.Height, bitmap.Width);
@@ -371,7 +374,7 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
 }
 ```
 
-Y aquí es una función similar para girar 90 grados hacia la izquierda:
+Y esta es una función similar para rotar 90 grados en el sentido contrario a las agujas del reloj:
 
 ```csharp
 SKBitmap rotatedBitmap = new SKBitmap(bitmap.Height, bitmap.Width);
@@ -385,11 +388,11 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
 }
 ```
 
-Estos dos métodos se usan en el **foto rompecabezas** páginas que se describe en el artículo [ **recortar los mapas de bits de SkiaSharp**](cropping.md#tile-division).
+Estos dos métodos se usan en las páginas de **rompecabezas fotográfico** descritas en el artículo [**recortar mapas de bits de SkiaSharp**](cropping.md#tile-division).
 
-Un programa que permite al usuario que se va a girar un mapa de bits en incrementos de 90 grados sólo necesita implementar una función de rotación de 90 grados. El usuario puede girar, a continuación, en cualquier incremento de 90 grados mediante la ejecución repetida de esta uno función.
+Un programa que permite al usuario girar un mapa de bits en incrementos de 90 grados solo necesita implementar una función para la rotación de 90 grados. Después, el usuario puede girar en cualquier incremento de 90 grados repitiendo la ejecución de esta función.
 
-Un programa también puede girar un mapa de bits en cualquier cantidad. Un enfoque sencillo es modificar la función que gira 180 grados reemplazando 180 por generalizada `angle` variable:
+Un programa también puede girar un mapa de bits en cualquier cantidad. Un enfoque sencillo es modificar la función que gira en 180 grados reemplazando 180 por una variable generalizada `angle` :
 
 ```csharp
 SKBitmap rotatedBitmap = new SKBitmap(bitmap.Width, bitmap.Height);
@@ -402,9 +405,9 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
 }
 ```
 
-Sin embargo, por lo general, esta lógica se recorta las esquinas del mapa de bits girado. Un mejor enfoque consiste en calcular el tamaño del mapa de bits girado usar funciones trigonométricas para incluir esas esquinas.
+Sin embargo, en el caso general, esta lógica recortará las esquinas del mapa de bits girado. Un enfoque más adecuado consiste en calcular el tamaño del mapa de bits girado mediante trigonometría para incluir esas esquinas.
 
-Se muestra este trigonometría en la **Rotator de mapa de bits** página. El archivo XAML crea una instancia de un `SKCanvasView` y un `Slider` que puede estar comprendido entre 0 y 360 grados con un `Label` que muestra el valor actual:
+Este trigonometría se muestra en la página de **rotación de mapas de bits** . El archivo XAML crea una instancia `SKCanvasView` de y un `Slider` que puede oscilar entre 0 y 360 grados con un que `Label` muestra el valor actual:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -431,7 +434,7 @@ Se muestra este trigonometría en la **Rotator de mapa de bits** página. El arc
 </ContentPage>
 ```
 
-El archivo de código subyacente carga un recurso de mapa de bits y lo guarda como un campo estático de solo lectura denominado `originalBitmap`. El mapa de bits que se muestra en el `PaintSurface` controlador es `rotatedBitmap`, que se establece inicialmente en `originalBitmap`:
+El archivo de código subyacente carga un recurso de mapa de bits y lo guarda como un campo estático de solo lectura denominado `originalBitmap` . El mapa de bits mostrado en el `PaintSurface` controlador es `rotatedBitmap` , que se establece inicialmente en `originalBitmap` :
 
 ```csharp
 public partial class BitmapRotatorPage : ContentPage
@@ -484,19 +487,19 @@ public partial class BitmapRotatorPage : ContentPage
 }
 ```
 
-El `ValueChanged` controlador de la `Slider` realiza las operaciones que se creación un nuevo `rotatedBitmap` según el ángulo de giro. El nuevo ancho y alto se basan en absolute values de senos y cosenos de los altos y anchos originales. Las transformaciones que se usa para dibujar el mapa de bits original en el mapa de bits girado mover el centro del mapa de bits original al origen, a continuación, rotación, el número especificado de grados y, a continuación, convertir ese centro en el centro del mapa de bits girado. (El `Translate` y `RotateDegrees` métodos se llaman en orden inverso de cómo se aplican.)
+El `ValueChanged` controlador de `Slider` realiza las operaciones que crean un nuevo `rotatedBitmap` basándose en el ángulo de rotación. El nuevo ancho y alto se basan en los valores absolutos de senos y los pares de ancho y alto originales. Las transformaciones que se usan para dibujar el mapa de bits original en el mapa de bits girado mueven el centro de mapas de bits original al origen, después lo giran en el número de grados especificado y, a continuación, traducen ese centro al centro del mapa de bits girado. (Los `Translate` `RotateDegrees` métodos y se llaman en el orden contrario al de cómo se aplican).
 
-Tenga en cuenta el uso de la `Clear` método para hacer que el fondo de `rotatedBitmap` un rosa claro. Esto es únicamente para ilustrar el tamaño de `rotatedBitmap` en la pantalla:
+Observe el uso del `Clear` método para hacer que el fondo de `rotatedBitmap` una rosa clara. Esto es únicamente para ilustrar el tamaño de `rotatedBitmap` en la pantalla:
 
-[![Mapa de bits Rotator](drawing-images/BitmapRotator.png "Rotator de mapa de bits")](drawing-images/BitmapRotator-Large.png#lightbox)
+[![Rotador de mapa de bits](drawing-images/BitmapRotator.png "Rotador de mapa de bits")](drawing-images/BitmapRotator-Large.png#lightbox)
 
-El mapa de bits girado es lo suficientemente grande como para incluir todo el mapa de bits original, pero no más.
+El mapa de bits girado es lo suficientemente grande como para incluir el mapa de bits original completo, pero no mayor.
 
-## <a name="flipping-bitmaps"></a>Voltear los mapas de bits
+## <a name="flipping-bitmaps"></a>Voltear mapas de bits
 
-Se llama a otra operación que se realizan normalmente en los mapas de bits _voltear_. Conceptualmente, el mapa de bits se gira en tres dimensiones en torno a un eje vertical o eje horizontal a través del centro del mapa de bits. Volteo vertical, crea una imagen reflejada.
+Otra operación que se realiza normalmente en mapas de bits se denomina _volteo_. Conceptualmente, el mapa de bits gira en tres dimensiones en torno a un eje vertical o eje horizontal a través del centro del mapa de bits. El volteo vertical crea una imagen reflejada.
 
-El **impulsor de mapa de bits** página en el **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** aplicación muestra estos procesos. El archivo XAML contiene una `SKCanvasView` y dos botones para voltear verticalmente y horizontalmente:
+La página de **impulsor de mapa de bits** en la aplicación **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** muestra estos procesos. El archivo XAML contiene `SKCanvasView` y dos botones para voltearlos vertical y horizontalmente:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -532,7 +535,7 @@ El **impulsor de mapa de bits** página en el **[SkiaSharpFormsDemos](https://do
 </ContentPage>
 ```
 
-El archivo de código subyacente implementa estas dos operaciones en el `Clicked` controladores para los botones:
+El archivo de código subyacente implementa estas dos operaciones en los `Clicked` controladores de los botones:
 
 ```csharp
 public partial class BitmapFlipperPage : ContentPage
@@ -588,13 +591,13 @@ public partial class BitmapFlipperPage : ContentPage
 }
 ```
 
-El volteo vertical se logra mediante una transformación de escala con un factor de escala horizontal de &ndash;1. El centro de la escala es el centro vertical del mapa de bits. El volteo horizontal es una transformación de escala con un factor de escala vertical de &ndash;1.
+El volteo vertical se logra mediante una transformación de escalado con un factor de escala horizontal de &ndash; 1. El centro de escala es el centro vertical del mapa de bits. El volteo horizontal es una transformación de escala con un factor de escala vertical de &ndash; 1.
 
-Como puede ver en el rótulo invertido en camisa de monkey, voltear no es igual que la rotación. Pero como se muestra en la captura de pantalla UWP de la derecha, ambos volteo horizontal y verticalmente es el mismo que girar 180 grados:
+Como puede ver a partir de la letra invertida en la camisa de la Monkey, el volteo no es lo mismo que la rotación. Pero como se muestra en la captura de pantalla de UWP de la derecha, el volteo horizontal y vertical es igual que la rotación de 180 grados:
 
-[![Mapa de bits impulsor](drawing-images/BitmapFlipper.png "impulsor de mapa de bits")](drawing-images/BitmapFlipper-Large.png#lightbox)
+[![Impulsor de mapa de bits](drawing-images/BitmapFlipper.png "Impulsor de mapa de bits")](drawing-images/BitmapFlipper-Large.png#lightbox)
 
-Es otra tarea común que se puede controlar utilizando técnicas similares al recortar un mapa de bits a un subconjunto rectangular. Esto se describe en el siguiente artículo [ **recortar los mapas de bits de SkiaSharp**](cropping.md).
+Otra tarea común que se puede controlar mediante técnicas similares es recortando un mapa de bits a un subconjunto rectangular. Esto se describe en el siguiente artículo [**recortar mapas de bits de SkiaSharp**](cropping.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -1,32 +1,35 @@
 ---
-title: Los modos de mezcla separables
-description: Utilizar los modos de mezcla separables para modificar los colores rojos, verde y azules.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 66D1A537-A247-484E-B5B9-FBCB7838FBE9
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/23/2018
-ms.openlocfilehash: 621bc872a80cf023bb9428e2d3183e8af611211f
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c1939c30cbefdbf8d6546761a8c6ac7199bfff62
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200389"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139690"
 ---
-# <a name="the-separable-blend-modes"></a>Los modos de mezcla separables
+# <a name="the-separable-blend-modes"></a>Modos de fusión separables
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Como se vio en el artículo [ **modos de fusión de SkiaSharp Porter-Duff**](porter-duff.md), por lo general, los modos de mezcla Porter Duff realizan operaciones de recorte. Los modos de mezcla separables son diferentes. Los modos separables modificar los componentes de color rojo, verde y azul individuales de una imagen. Modos de fusión separables pueden mezclar el color para demostrar que es realmente en blanco la combinación de rojo, verde y azul:
+Como vimos en el artículo [**SkiaSharp Porter-Duff Blend modes**](porter-duff.md), los modos de mezcla Porter-Duff generalmente realizan operaciones de recorte. Los modos de fusión separables son diferentes. Los modos separables modifican los componentes de color rojo, verde y azul de una imagen. Los modos de mezcla separables pueden mezclar colores para demostrar que la combinación de rojo, verde y azul es realmente blanca:
 
-![Colores primarios](separable-images/SeparableSample.png "colores primarios")
+![Colores primarios](separable-images/SeparableSample.png "Colores primarios")
 
-## <a name="lighten-and-darken-two-ways"></a>Aclarar y oscurecer dos formas 
+## <a name="lighten-and-darken-two-ways"></a>Aclarar y oscurecer dos maneras 
 
-Es habitual tener un mapa de bits que es algo demasiado oscura o demasiado clara. Puede utilizar los modos de mezcla separables para aclarar u oscurecer el imabe.  De hecho, dos de los modos de blend separables en el [ `SKBlendMode` ](xref:SkiaSharp.SKBlendMode) se denominan enumeración `Lighten` y `Darken`. 
+Es habitual tener un mapa de bits que sea algo demasiado oscuro o demasiado claro. Puede usar los modos de mezcla separables para aclarar u oscurecer el imabe.  En realidad, dos de los modos de mezcla que [`SKBlendMode`](xref:SkiaSharp.SKBlendMode) se pueden separar en la enumeración se denominan `Lighten` y `Darken` . 
 
-Estos dos modos se muestran en el **aclarar y oscurecer** página. El archivo XAML crea una instancia de dos `SKCanvasView` objetos y dos `Slider` vistas:
+Estos dos modos se muestran en la página **aclarar y oscurecer** . El archivo XAML crea una instancia de dos `SKCanvasView` objetos y dos `Slider` vistas:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -54,7 +57,7 @@ Estos dos modos se muestran en el **aclarar y oscurecer** página. El archivo XA
 </ContentPage>
 ```
 
-La primera `SKCanvasView` y `Slider` demostrar `SKBlendMode.Lighten` y muestra el segundo par `SKBlendMode.Darken`. Los dos `Slider` vistas comparten el mismo `ValueChanged` controlador y los dos `SKCanvasView` comparten el mismo `PaintSurface` controlador. Ambos eventos controladores, consulte el objeto que está desencadenando el evento:
+La primera `SKCanvasView` y `Slider` `SKBlendMode.Lighten` la demostración y el segundo par demuestran `SKBlendMode.Darken` . Las dos `Slider` vistas comparten el mismo `ValueChanged` controlador y las dos `SKCanvasView` comparten el mismo `PaintSurface` controlador. Ambos controladores de eventos comprueban qué objeto está desencadenando el evento:
 
 ```csharp
 public partial class LightenAndDarkenPage : ContentPage
@@ -121,67 +124,92 @@ public partial class LightenAndDarkenPage : ContentPage
 }
 ```
 
-El `PaintSurface` controlador calcula un rectángulo adecuado para el mapa de bits. El controlador muestra ese mapa de bits y, a continuación, se muestra un rectángulo a través de mapa de bits mediante un `SKPaint` objeto con su `BlendMode` propiedad establecida en `SKBlendMode.Lighten` o `SKBlendMode.Darken`. El `Color` propiedad es una sombra gris según el `Slider`. Para el `Lighten` modo, los rangos de colores del negro a blanco, pero la `Darken` modo lo comprendido entre el blanco y negro.
+El `PaintSurface` controlador calcula un rectángulo adecuado para el mapa de bits. El controlador muestra ese mapa de bits y, a continuación, muestra un rectángulo en el mapa de bits utilizando un `SKPaint` objeto con su `BlendMode` propiedad establecida en `SKBlendMode.Lighten` o `SKBlendMode.Darken` . La `Color` propiedad es un sombreado gris basado en `Slider` . En el `Lighten` modo, el color oscila entre el negro y el blanco, pero para el `Darken` modo va de blanco a negro.
 
-Las capturas de pantalla de izquierda a derecha se muestran cada vez mayores `Slider` los valores de la imagen superior obtiene más clara y más oscura la imagen inferior:
+Las capturas de pantallas de izquierda a derecha muestran valores cada vez mayores `Slider` , ya que la imagen superior se ilumina y la imagen inferior se oscurece:
 
-[![Aclarar y oscurecer](separable-images/LightenAndDarken.png "aclarar y oscurecer")](separable-images/LightenAndDarken-Large.png#lightbox)
+[![Aclarar y oscurecer](separable-images/LightenAndDarken.png "Aclarar y oscurecer")](separable-images/LightenAndDarken-Large.png#lightbox)
 
-Este programa muestra la forma normal en la que se usan los modos de mezcla separables: El destino es una imagen de algún tipo, muy a menudo un mapa de bits. El origen es un rectángulo que se muestran mediante un `SKPaint` objeto con su `BlendMode` propiedad establecida en un modo de mezcla separables. El rectángulo puede ser un color sólido (como aquí) o un degradado. La transparencia es _no_ utilizados normalmente con los modos de mezcla separables.
+Este programa muestra la forma normal en la que se usan los modos de mezcla separables: el destino es una imagen de algún tipo, muy a menudo un mapa de bits. El origen es un rectángulo que se muestra utilizando un `SKPaint` objeto con su `BlendMode` propiedad establecida en un modo de mezcla separable. El rectángulo puede ser un color sólido (tal como está aquí) o un degradado. La transparencia _no_ se utiliza generalmente con los modos de mezcla separables.
 
-Mientras experimenta con este programa, descubrirá que estos modos de fusión de dos no aclarar y oscurecer la imagen de manera uniforme. En su lugar, el `Slider` establece un umbral de algún tipo. Por ejemplo, al aumentar el `Slider` para el `Lighten` modo, las áreas más oscuras de la imagen produce luz primero mientras las áreas más claras siguen siendo los mismos.
+Al experimentar con este programa, descubrirá que estos dos modos de fusión no aclaran y oscurecen la imagen uniformemente. En su lugar, `Slider` parece establecer un umbral de algún tipo. Por ejemplo, a medida que aumenta el `Slider` para el `Lighten` modo, las áreas más oscuras de la imagen se iluminan primero, mientras que las áreas más claras siguen siendo las mismas.
 
-Para el `Lighten` modo, si el píxel del destino es el valor de color RGB (base de datos de recuperación ante desastres, Dg,) y el píxel del origen es el color (Sr, Sg, Sb), entonces el resultado es (o Og, Ob) calcula como sigue:
+En el `Lighten` modo, si el píxel de destino es el valor de color RGB (Dr, DG, dB) y el píxel de origen es el color (Sr, SG, SB), el resultado es (o, OG, OB) calculado de la manera siguiente:
 
- `Or = max(Dr, Sr)``Og = max(Dg, Sg)`
+ `Or = max(Dr, Sr)` `Og = max(Dg, Sg)`
  `Ob = max(Db, Sb)`
 
-Para rojo, verde y azul por separado, el resultado es el mayor número de origen y de destino. Esto produce el efecto de las áreas oscuras del destino de rayo en primer lugar.
+En rojo, verde y azul por separado, el resultado es el mayor del destino y el origen. Esto produce el efecto de aclarar primero las áreas oscuras del destino.
 
-El `Darken` modo es similar, salvo que el resultado es el menor de origen y de destino:
+El `Darken` modo es similar, salvo que el resultado es el menor del destino y el origen:
 
- `Or = min(Dr, Sr)``Og = min(Dg, Sg)`
+ `Or = min(Dr, Sr)` `Og = min(Dg, Sg)`
  `Ob = min(Db, Sb)`
 
-Los componentes rojos, verde y azules son cada controlan por separado, motivo por el cual estos modos de fusión se conocen como el _separables_ modos de fusión. Por este motivo, las abreviaturas **Dc** y **Sc** puede usarse para el destino y los colores de origen y se entiende que los cálculos se aplican a cada uno de los componentes rojos, verde y azules por separado.
+Los componentes rojo, verde y azul se administran por separado, por lo que se hace referencia a estos modos _de mezcla como modos de fusión_ separables. Por esta razón, las abreviaturas **DC** y **SC** se pueden usar para los colores de origen y destino, y se entiende que los cálculos se aplican a cada uno de los componentes rojo, verde y azul por separado.
 
-En la tabla siguiente se muestra todos los modos de blend separables con explicaciones de lo que hacen. La segunda columna muestra el color de origen que se produce ningún cambio:
+En la tabla siguiente se muestran todos los modos de fusión separables con explicaciones breves de lo que hacen. La segunda columna muestra el color de origen que no produce ningún cambio:
 
 | Modo de mezcla   | Sin cambios | Operación |
-| ------------ | --------- | --------- |
-| `Plus`       | Negro     | Aclara mediante la adición de colores: SC + DC |
-| `Modulate`   | Blanco     | Se oscurece multiplicando los colores: Seguro CD | 
-| `Screen`     | Negro     | Complementa el producto de complementos: SC + DC &ndash; SC · CD |
-| `Overlay`    | Gris      | Inverso de `HardLight` |
-| `Darken`     | Blanco     | Mínimo de colores: min (Sc, el controlador de dominio) |
-| `Lighten`    | Negro     | Máximo de colores: max (Sc, el controlador de dominio) |
-| `ColorDodge` | Negro     | Ilumina el destino en función de origen |
-| `ColorBurn`  | Blanco     | Se oscurece el destino en función de origen | 
-| `HardLight`  | Gris      | Similar al efecto de foco intenso |
-| `SoftLight`  | Gris      | Similar al efecto de foco suave | 
-| `Difference` | Negro     | Resta el más oscuro del más claro: ABS (DC &ndash; SC) | 
-| `Exclusion`  | Negro     | Similar a `Difference` contraste pero más bajo |
-| `Multiply`   | Blanco     | Se oscurece multiplicando los colores: Seguro CD |
+| ---
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-Los algoritmos más detallados que pueden encontrarse en el W3C [ **la composición y mezcla de nivel 1** ](https://www.w3.org/TR/compositing-1/) especificación y el Skia [ **SkBlendMode referencia** ](https://skia.org/user/api/SkBlendMode_Reference), aunque la notación de estos dos orígenes no es el mismo. Tenga en cuenta que `Plus` normalmente se considera como un modo de blend Porter Duff, y `Modulate` no forma parte de la especificación de W3C.
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-Si el origen es transparente, a continuación, para todos los separables modos de fusión excepto `Modulate`, el modo de mezcla no tiene ningún efecto. Como ha visto anteriormente, el `Modulate` modo blend incorpora el canal alfa en la multiplicación. En caso contrario, `Modulate` tiene el mismo efecto que `Multiply`. 
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-Tenga en cuenta los dos modos denominados `ColorDodge` y `ColorBurn`. Las palabras _dodge_ y _grabar_ se originó en prácticas de papel fotográfico oscura. Un ampliador de hace una impresión fotográfica brillando luz a través de un negativo. Sin luz, la impresión es blanca. La impresión obtiene oscura a medida que se encuentra más luz en la impresión de un período de tiempo más largo. Creadores de impresión usan a menudo una mano u objetos pequeños para bloquear algunos de la luz no caiga en una determinada parte de la impresión, que se convierte más claro. Esto se conoce como _. evitar_. Por el contrario, se podría usar opaco material con un hueco en él (o manos bloquea la mayor parte de la luz) para dirigir más luz en una zona determinada para oscurecer denominado _grabación_.
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-El **aclarar y Burn** programa es muy similar a **aclarar y oscurecer**. El archivo XAML está estructurado el mismo pero con nombres de elementos diferentes y el archivo de código subyacente del mismo modo es bastante similar, pero el efecto de estos modos dos blend es bastante diferente:
+------ | ---title: Descripción: MS. Prod: MS. Technology: MS. AssetID: Author: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-[![Aclarar y Burn](separable-images/DodgeAndBurn.png "aclarar y Burn")](separable-images/DodgeAndBurn-Large.png#lightbox)
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-Para pequeñas `Slider` valores, el `Lighten` modo aclara áreas oscuras en primer lugar, mientras `ColorDodge` aclara más uniformemente.
+----- | ---title: Descripción: MS. Prod: MS. Technology: MS. AssetID: Author: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-Programas de aplicación de procesamiento de imágenes suelen permiten. evitar y grabación se restrinja a áreas específicas, al igual que en un cuarto oscuro. Esto puede realizarse mediante los degradados o mediante un mapa de bits con distintas tonalidades de gris.
+-
+Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-## <a name="exploring-the-separable-blend-modes"></a>Exploración de los modos de mezcla separables
+----- | | `Plus`       | Negro | Se aclara mediante la adición de colores: SC + DC | | `Modulate`   | Blanco | Se oscurece mediante la multiplicación de colores: SC · DC | | `Screen`     | Negro | Complementa el producto de complementos: SC + DC &ndash; SC · DC | | `Overlay`    | Gris | Inverso de `HardLight` | | `Darken`     | Blanco | Mínimo de colores: mín. (SC, DC) | | `Lighten`    | Negro | Número máximo de colores: Max (SC, DC) | | `ColorDodge` | Negro | Brillante el destino en función del origen | | `ColorBurn`  | Blanco | Oscurece el destino basándose en el origen | | `HardLight`  | Gris | Similar al efecto de la luz severa | | `SoftLight`  | Gris | Similar al efecto de la luz de software | | `Difference` | Negro | Resta el más oscuro de la más clara: ABS (DC &ndash; SC) | | `Exclusion`  | Negro | Similar a `Difference` pero menor contraste | | `Multiply`   | Blanco | Se oscurece mediante la multiplicación de colores: SC · DC |
 
-El **separables modos Blend** página le permite examinar todos los modos de blend separables. Muestra un destino de mapa de bits y un origen de rectángulo de color mediante uno de los modos de mezcla. 
+Se pueden encontrar algoritmos más detallados en las especificaciones W3C [**Comfunding and blending Level 1**](https://www.w3.org/TR/compositing-1/) y Skia [**SkBlendMode Reference**](https://skia.org/user/api/SkBlendMode_Reference), aunque la notación de estos dos orígenes no es la misma. Tenga en cuenta que `Plus` normalmente se considera un modo de mezcla Porter-Duff y `Modulate` no forma parte de la especificación del W3C.
 
-El archivo XAML define una `Picker` (para seleccionar el modo de mezcla) y cuatro de los controles deslizantes. Los primeros tres controles deslizantes permiten definir los componentes rojos, verde y azules del origen. El control deslizante cuarto está pensado para reemplazar estos valores estableciendo una sombra gris. No se identifican los controles deslizantes individuales, pero los colores indican su función:
+Si el origen es transparente, para todos los modos de fusión separables excepto `Modulate` , el modo de mezcla no tiene ningún efecto. Como ha visto anteriormente, el `Modulate` modo de mezcla incorpora el canal alfa en la multiplicación. De lo contrario, `Modulate` tiene el mismo efecto que `Multiply` . 
+
+Observe los dos modos denominados `ColorDodge` y `ColorBurn` . Las palabras _sobreexponer_ y _grabar_ se originaron en las prácticas fotográficas de Darkroom. Un ampliador crea una impresión fotográfica por luz luminosa a través de un negativo. Sin luz, la impresión es blanca. La impresión se oscurece a medida que la luz cae en la impresión durante un período de tiempo más largo. Los fabricantes de impresión solían utilizar un objeto de mano o pequeño para impedir que parte de la luz caiga en una determinada parte de la impresión, lo que hace que el área sea más clara. Esto se conoce como _dodging_. Por el contrario, el material opaco con un hueco (o el bloqueo de la mayor parte de la luz) podría usarse para dirigir más luz en un punto determinado para oscurecerlo, denominado _grabación_.
+
+El programa **aclarar y grabar** es muy similar a **aclarar y oscurecer**. El archivo XAML está estructurado de la misma forma pero con diferentes nombres de elemento, y el archivo de código subyacente es similar, pero el efecto de estos dos modos de fusión es bastante diferente:
+
+[![Aclarar y grabar](separable-images/DodgeAndBurn.png "Aclarar y grabar")](separable-images/DodgeAndBurn-Large.png#lightbox)
+
+En el caso de `Slider` los valores pequeños, el `Lighten` modo aclara primero las áreas oscuras, a la vez que se `ColorDodge` aclara de manera uniforme.
+
+Los programas de aplicación de procesamiento de imágenes suelen permitir que dodging y Burning se limiten a áreas específicas, al igual que en un Darkroom. Esto puede realizarse mediante degradados o mediante un mapa de bits con diferentes tonalidades de gris.
+
+## <a name="exploring-the-separable-blend-modes"></a>Explorar los modos de mezcla separables
+
+La página **modos de mezcla** separables permite examinar todos los modos de mezcla que se pueden separar. Muestra un destino de mapa de bits y un origen de rectángulo coloreado mediante uno de los modos de mezcla. 
+
+El archivo XAML define un `Picker` (para seleccionar el modo de mezcla) y cuatro controles deslizantes. Los tres primeros controles deslizantes permiten establecer los componentes rojo, verde y azul del origen. El cuarto control deslizante está diseñado para invalidar esos valores estableciendo un sombreado gris. Los controles deslizantes individuales no se identifican, pero los colores indican su función:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -255,7 +283,7 @@ El archivo XAML define una `Picker` (para seleccionar el modo de mezcla) y cuatr
 </ContentPage>
 ```
 
-Uno de los recursos de mapa de bits se carga el archivo de código subyacente y lo dibuja dos veces, una vez en la mitad superior del lienzo y de nuevo en la parte inferior del lienzo de la mitad:
+El archivo de código subyacente carga uno de los recursos de mapa de bits y lo dibuja dos veces, una vez en la mitad superior del lienzo y otra vez en la mitad inferior del lienzo:
 
 ```csharp
 public partial class SeparableBlendModesPage : ContentPage
@@ -325,19 +353,19 @@ public partial class SeparableBlendModesPage : ContentPage
 }
 ```
 
-Hacia la parte inferior de la `PaintSurface` controlador, un rectángulo se dibuja en el segundo mapa de bits con el modo de mezcla seleccionado y el color seleccionado. Puede comparar el mapa de bits modificado en la parte inferior con el mapa de bits original en la parte superior:
+Hacia la parte inferior del `PaintSurface` controlador, se dibuja un rectángulo sobre el segundo mapa de bits con el modo de mezcla seleccionado y el color seleccionado. Puede comparar el mapa de bits modificado en la parte inferior con el mapa de bits original en la parte superior:
 
-[![Modos de fusión separables](separable-images/SeparableBlendModes.png "modos separables Blend")](separable-images/SeparableBlendModes-Large.png#lightbox)
+[![Modos de fusión separables](separable-images/SeparableBlendModes.png "Modos de fusión separables")](separable-images/SeparableBlendModes-Large.png#lightbox)
 
-## <a name="additive-and-subtractive-primary-colors"></a>Adición y sustracción colores primarios
+## <a name="additive-and-subtractive-primary-colors"></a>Colores primarios de suma y resta
 
-El **colores primarios** página dibuja tres círculos superpuestos de rojo, verde y azul:
+La página **colores primarios** dibuja tres círculos superpuestos de rojo, verde y azul:
 
-[![Colores primarios aditivos](separable-images/PrimaryColors-Additive.png "aditivos colores primarios")](separable-images/PrimaryColors-Additive.png#lightbox)
+[![Colores primarios aditivos](separable-images/PrimaryColors-Additive.png "Colores primarios aditivos")](separable-images/PrimaryColors-Additive.png#lightbox)
 
-Estos son los colores primarios aditivos. Combinaciones de dos producen aguamarina, fucsia y amarillo y una combinación de las tres es blanca.
+Estos son los colores primarios aditivos. Las combinaciones de dos dos producen cian, magenta y amarillo, y una combinación de los tres es blanco.
 
-Estos tres círculos se dibujan con el `SKBlendMode.Plus` modo, pero también puede usar `Screen`, `Lighten`, o `Difference` para el mismo efecto. Este es el programa:
+Estos tres círculos se dibujan con el `SKBlendMode.Plus` modo, pero también puede usar `Screen` , `Lighten` o `Difference` para el mismo efecto. Este es el programa:
 
 ```csharp
 public class PrimaryColorsPage : ContentPage
@@ -419,9 +447,9 @@ public class PrimaryColorsPage : ContentPage
 }
 ```
 
-El programa incluye un `TabGestureRecognizer`. Cuando pulse o haga clic en la pantalla, el programa usa `SKBlendMode.Multiply` para mostrar las tres principales sustracción:
+El programa incluye un `TabGestureRecognizer` . Al pulsar o hacer clic en la pantalla, el programa utiliza `SKBlendMode.Multiply` para mostrar las tres principales sustractivas:
 
-[![Colores primarios sustracción](separable-images/PrimaryColors-Subtractive.png "sustracción colores primarios")](separable-images/PrimaryColors-Subtractive-Large.png#lightbox)
+[![Colores primarios restados](separable-images/PrimaryColors-Subtractive.png "Colores primarios restados")](separable-images/PrimaryColors-Subtractive-Large.png#lightbox)
 
 El `Darken` modo también funciona para este mismo efecto.
 

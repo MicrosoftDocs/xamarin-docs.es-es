@@ -1,25 +1,28 @@
 ---
-title: Aplicaciones de Xamarin.Forms de estilo
-description: Esta guía explica cómo diseñar aplicaciones de Xamarin.Forms con estilos XAML y mediante el uso de estilos en cascada.
-ms.prod: xamarin
-ms.assetid: EABF5072-B89B-4356-B7B3-1C6B40358926
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/28/2018
-ms.openlocfilehash: 75de62017c01c14ef4d2bab6d458336484d5cd69
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+title: Aplicación de estilos Xamarin.Forms
+description: En esta guía se explica cómo aplicar estilo a Xamarin.Forms las aplicaciones mediante el uso de estilos XAML y el uso de hojas de estilo CSS.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8775793c2d9ae1ba6e1eba38fe48647b43056bf8
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61170107"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84140119"
 ---
-# <a name="styling-xamarinforms-apps"></a>Aplicaciones de Xamarin.Forms de estilo
+# <a name="styling-xamarinforms-apps"></a>Aplicación de estilos Xamarin.Forms
 
-## <a name="styling-xamarinforms-apps-using-xaml-stylesxamlindexmd"></a>[Aplicación de estilos para aplicaciones Xamarin.Forms con estilos XAML](xaml/index.md)
+## <a name="styling-xamarinforms-apps-using-xaml-stylesxamlindexmd"></a>[Aplicar estilos a las Xamarin.Forms aplicaciones mediante estilos XAML](xaml/index.md)
 
-Aplicar un estilo a una aplicación de Xamarin.Forms tradicionalmente se logra mediante el [ `Style` ](xref:Xamarin.Forms.Style) clase para agrupar una colección de valores de propiedad en un objeto que, a continuación, se puede aplicar a varias instancias del elemento visual. Esto ayuda a reducir el marcado repetitivo y permite una apariencia de las aplicaciones a cambiarse más fácilmente.
+El estilo de una Xamarin.Forms aplicación se realiza tradicionalmente mediante el uso de la [`Style`](xref:Xamarin.Forms.Style) clase para agrupar una colección de valores de propiedad en un objeto que se puede aplicar a varias instancias de elementos visuales. Esto ayuda a reducir el marcado repetitivo y permite cambiar la apariencia de las aplicaciones más fácilmente.
 
-## <a name="styling-xamarinforms-apps-using-cascading-style-sheetscssindexmd"></a>[Aplicación de estilos para aplicaciones Xamarin.Forms con hojas de estilo CSS](css/index.md)
+## <a name="styling-xamarinforms-apps-using-cascading-style-sheetscssindexmd"></a>[Aplicación de estilos a Xamarin.Forms aplicaciones con hojas de estilo CSS](css/index.md)
 
-Xamarin.Forms es compatible con los elementos de estilo visual con hojas de estilos en cascada (CSS). Una hoja de estilos consta de una lista de reglas, con cada regla que consta de uno o varios de los selectores y un bloque de declaración.
+Xamarin.Formsadmite el estilo de los elementos visuales mediante Hojas de estilo CSS (CSS). Una hoja de estilos se compone de una lista de reglas, donde cada regla consta de uno o varios selectores y un bloque de declaración.

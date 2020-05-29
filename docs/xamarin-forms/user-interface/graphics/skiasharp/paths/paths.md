@@ -1,46 +1,49 @@
 ---
-title: Conceptos básicos de la ruta de acceso de SkiaSharp
-description: En este artículo explora el objeto de SkiaSharp SKPath para la combinación de líneas y curvas conectadas y esto se muestra con código de ejemplo.
-ms.prod: xamarin
-ms.assetid: A7EDA6C2-3921-4021-89F3-211551E430F1
-ms.technology: xamarin-skiasharp
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/10/2017
-ms.openlocfilehash: c892adf2f75ec00c4a9ee171ded78f79bb8227e9
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6ceac2d866e67af5cf3496fcf8c072ae83ecfe38
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725199"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84140249"
 ---
-# <a name="path-basics-in-skiasharp"></a>Conceptos básicos de la ruta de acceso de SkiaSharp
+# <a name="path-basics-in-skiasharp"></a>Conceptos básicos de la ruta de acceso en SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explore el objeto SKPath de SkiaSharp para combinar líneas y curvas conectadas_
 
-Una de las características más importantes de la ruta de acceso de gráficos es la capacidad para definir cuándo deben estar conectadas varias líneas y al no deben estar conectados. La diferencia puede ser significativa, como se muestra en la parte superior de estos dos triángulos:
+Una de las características más importantes de la ruta de acceso de gráficos es la capacidad de definir cuándo deben conectarse varias líneas y cuándo no deben estar conectadas. La diferencia puede ser significativa, ya que la parte superior de estos dos triángulos muestra:
 
 ![](paths-images/connectedlinesexample.png "Two triangles showing the difference between connected and disconnected lines")
 
-Una ruta de acceso de gráficos está encapsulada por el objeto [`SKPath`](xref:SkiaSharp.SKPath) . Una ruta de acceso es una colección de uno o varios *contornos*. Cada contorno es una colección de líneas rectas y curvas *conectadas* . Contornos no están conectados entre sí, pero pueden superponer visualmente. A veces un único perfil puede superponer.
+El objeto encapsula una ruta de acceso de gráficos [`SKPath`](xref:SkiaSharp.SKPath) . Una ruta de acceso es una colección de uno o varios *contornos*. Cada contorno es una colección de líneas rectas y curvas *conectadas* . Los contornos no están conectados entre sí, pero pueden superponerse visualmente. A veces, un solo contorno puede superponerse.
 
-Generalmente, un perfil comienza con una llamada al siguiente método de `SKPath`:
+Un perfil generalmente comienza con una llamada al método siguiente de `SKPath` :
 
-- [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo*) para iniciar un nuevo contorno
+- [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo*)para iniciar un nuevo perfil
 
-El argumento para ese método es un punto único, que se puede expresar como un valor `SKPoint` o como coordenadas X e y independientes. La llamada a `MoveTo` establece un punto al principio del contorno y un *punto actual*inicial. Puede llamar a los métodos siguientes para continuar con el contorno con una línea o curva desde el punto actual a un punto especificado en el método, que, a continuación, se convierte en el nuevo punto activo:
+El argumento para ese método es un punto único, que se puede expresar como un `SKPoint` valor o como coordenadas X e y independientes. La `MoveTo` llamada establece un punto al principio del contorno y un *punto actual*inicial. Puede llamar a los métodos siguientes para continuar el contorno con una línea o una curva desde el punto actual hasta un punto especificado en el método, que luego se convierte en el nuevo punto actual:
 
-- [`LineTo`](xref:SkiaSharp.SKPath.LineTo*) para agregar una línea recta a la ruta de acceso
-- [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo*) para agregar un arco, que es una línea en la circunferencia de un círculo o una elipse
-- [`CubicTo`](xref:SkiaSharp.SKPath.CubicTo*) para agregar una curva spline Bézier cúbica
-- [`QuadTo`](xref:SkiaSharp.SKPath.QuadTo*) para agregar una curva spline Bézier cuadrática
-- [`ConicTo`](xref:SkiaSharp.SKPath.ConicTo*) para agregar una curva spline Bézier cuadrática, que puede representar con precisión las secciones cónicas (elipses, PARABOLAS y hyperbolas)
+- [`LineTo`](xref:SkiaSharp.SKPath.LineTo*)para agregar una línea recta a la ruta de acceso
+- [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo*)para agregar un arco, que es una línea en la circunferencia de un círculo o una elipse
+- [`CubicTo`](xref:SkiaSharp.SKPath.CubicTo*)para agregar una curva spline Bézier cúbica
+- [`QuadTo`](xref:SkiaSharp.SKPath.QuadTo*)para agregar una curva spline Bézier cuadrática
+- [`ConicTo`](xref:SkiaSharp.SKPath.ConicTo*)para agregar una curva spline Bézier cuadrática racional, que puede representar con precisión las secciones cónicas (elipses, PARABOLAS y hyperbolas)
 
-Ninguno de estos cinco métodos contienen toda la información necesaria para describir la línea o curva. Cada uno de estos cinco métodos funciona junto con el punto actual establecido por la llamada de método que le precede inmediatamente. Por ejemplo, el método `LineTo` agrega una línea recta al contorno basándose en el punto actual, por lo que el parámetro que se va a `LineTo` es solo un único punto.
+Ninguno de estos cinco métodos contiene toda la información necesaria para describir la línea o la curva. Cada uno de estos cinco métodos funciona junto con el punto actual establecido por la llamada al método inmediatamente anterior. Por ejemplo, el `LineTo` método agrega una línea recta al contorno basándose en el punto actual, por lo que el parámetro en `LineTo` es solo un punto único.
 
-La clase `SKPath` también define métodos que tienen los mismos nombres que los seis métodos pero con un `R` al principio:
+La `SKPath` clase también define métodos que tienen los mismos nombres que estos seis métodos pero con un `R` al principio:
 
 - [`RMoveTo`](xref:SkiaSharp.SKPath.RMoveTo*)
 - [`RLineTo`](xref:SkiaSharp.SKPath.RLineTo*)
@@ -49,11 +52,11 @@ La clase `SKPath` también define métodos que tienen los mismos nombres que los
 - [`RQuadTo`](xref:SkiaSharp.SKPath.RQuadTo*)
 - [`RConicTo`](xref:SkiaSharp.SKPath.RConicTo*)
 
-El `R` significa *relativo*. Estos métodos tienen la misma sintaxis que los métodos correspondientes sin el `R` pero son relativos al punto actual. Estos son útiles para dibujar partes similares de una ruta de acceso en un método que se llama varias veces.
+`R`Significa *relativo*. Estos métodos tienen la misma sintaxis que los métodos correspondientes sin, `R` pero son relativos al punto actual. Son útiles para dibujar partes similares de una ruta de acceso en un método al que se llama varias veces.
 
-Un contorno finaliza con otra llamada a `MoveTo` o `RMoveTo`, que inicia un nuevo perfil, o una llamada a `Close`, que cierra el contorno. El método `Close` anexa automáticamente una línea recta desde el punto actual al primer punto del contorno y marca la ruta de acceso como cerrada, lo que significa que se representará sin ningún extremo de trazo.
+Un contorno finaliza con otra llamada a `MoveTo` o `RMoveTo` , que inicia un nuevo perfil, o una llamada a `Close` , que cierra el contorno. El `Close` método anexa automáticamente una línea recta desde el punto actual al primer punto del contorno y marca la ruta de acceso como cerrada, lo que significa que se representará sin ningún extremo de trazo.
 
-La diferencia entre los contornos abiertos y cerrados se ilustra en la página de **contornos de triángulo** , que usa un objeto de `SKPath` con dos contornos para representar dos triángulos. El primer contorno está abierto y se cierra el segundo. Esta es la clase [`TwoTriangleContoursPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/TwoTriangleContoursPage.cs) :
+La diferencia entre los contornos abiertos y cerrados se ilustra en la página de **contornos de triángulo** , que utiliza un `SKPath` objeto con dos contornos para representar dos triángulos. El primer contorno está abierto y el segundo está cerrado. Esta es la [`TwoTriangleContoursPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/TwoTriangleContoursPage.cs) clase:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -99,33 +102,33 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-El primer contorno se compone de una llamada a [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo(System.Single,System.Single)) mediante las coordenadas X e y en lugar de un valor `SKPoint`, seguido de tres llamadas a [`LineTo`](xref:SkiaSharp.SKPath.LineTo(System.Single,System.Single)) para dibujar los tres lados del triángulo. El segundo contorno solo tiene dos llamadas a `LineTo` pero finaliza el contorno con una llamada a [`Close`](xref:SkiaSharp.SKPath.Close), que cierra el contorno. La diferencia es importante:
+El primer contorno consta de una llamada al uso de las [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo(System.Single,System.Single)) coordenadas X e y en lugar de un `SKPoint` valor, seguido de tres llamadas a [`LineTo`](xref:SkiaSharp.SKPath.LineTo(System.Single,System.Single)) para dibujar los tres lados del triángulo. El segundo contorno solo tiene dos llamadas a `LineTo` , pero finaliza el contorno con una llamada a [`Close`](xref:SkiaSharp.SKPath.Close) , que cierra el contorno. La diferencia es importante:
 
 [![](paths-images/twotrianglecontours-small.png "Triple screenshot of the Two Triangle Contours page")](paths-images/twotrianglecontours-large.png#lightbox "Triple screenshot of the Two Triangle Contours page")
 
-Como puede ver, el contorno de la primera es obviamente una serie de tres líneas conectadas, pero no se conecta con el principio final. Las dos líneas se superponen en la parte superior. Obviamente, el segundo contorno está cerrado y se ha realizado con una menor cantidad de llamadas `LineTo` porque el método `Close` agrega automáticamente una línea final para cerrar el contorno.
+Como puede ver, el primer contorno es obviamente una serie de tres líneas conectadas, pero el extremo no se conecta con el principio. Las dos líneas se superponen en la parte superior. Obviamente, el segundo contorno está cerrado y se ha realizado con una menor cantidad de `LineTo` llamadas porque el `Close` método agrega automáticamente una línea final para cerrar el contorno.
 
-`SKCanvas` define solo un método de [`DrawPath`](xref:SkiaSharp.SKCanvas.DrawPath(SkiaSharp.SKPath,SkiaSharp.SKPaint)) , que en esta demostración se llama dos veces para rellenar y trazar la ruta de acceso. Se rellenan todos los contornos, incluso aquellos que no están cerrados. Para fines de rellenar trazados no cerrados, una línea recta se supone que existe entre los puntos inicial y final de los perfiles. Si quita el último `LineTo` del primer contorno, o quita la llamada `Close` del segundo perfil, cada contorno tendrá solo dos lados, pero se rellenará como si fuera un triángulo.
+`SKCanvas`define solo un [`DrawPath`](xref:SkiaSharp.SKCanvas.DrawPath(SkiaSharp.SKPath,SkiaSharp.SKPaint)) método, al que en esta demostración se llama dos veces para rellenar y trazar el trazado. Se rellenan todos los contornos, incluso los que no están cerrados. Con el fin de rellenar las rutas de acceso sin cerrar, se supone que existe una línea recta entre los puntos inicial y final de los contornos. Si quita el último `LineTo` del primer contorno, o quita la `Close` llamada del segundo perfil, cada contorno tendrá solo dos lados, pero se rellenará como si fuera un triángulo.
 
-`SKPath` define muchos otros métodos y propiedades. Los métodos siguientes agregan contornos todas la ruta de acceso, lo que podría cerrarse o no se cierra en función del método:
+`SKPath`define muchos otros métodos y propiedades. Los métodos siguientes agregan todos los contornos a la ruta de acceso, que podrían estar cerrados o no cerrados según el método:
 
 - [`AddRect`](xref:SkiaSharp.SKPath.AddRect*)
 - [`AddRoundedRect`](xref:SkiaSharp.SKPath.AddRoundedRect(SkiaSharp.SKRect,System.Single,System.Single,SkiaSharp.SKPathDirection))
 - [`AddCircle`](xref:SkiaSharp.SKPath.AddCircle(System.Single,System.Single,System.Single,SkiaSharp.SKPathDirection))
 - [`AddOval`](xref:SkiaSharp.SKPath.AddOval(SkiaSharp.SKRect,SkiaSharp.SKPathDirection))
-- [`AddArc`](xref:SkiaSharp.SKPath.AddArc(SkiaSharp.SKRect,System.Single,System.Single)) para agregar una curva en la circunferencia de una elipse
-- [`AddPath`](xref:SkiaSharp.SKPath.AddPath*) agregar otra ruta de acceso a la ruta de acceso actual
-- [`AddPathReverse`](xref:SkiaSharp.SKPath.AddPathReverse(SkiaSharp.SKPath)) agregar otra ruta de acceso en orden inverso
+- [`AddArc`](xref:SkiaSharp.SKPath.AddArc(SkiaSharp.SKRect,System.Single,System.Single))para agregar una curva en la circunferencia de una elipse
+- [`AddPath`](xref:SkiaSharp.SKPath.AddPath*)para agregar otra ruta de acceso a la ruta de acceso actual
+- [`AddPathReverse`](xref:SkiaSharp.SKPath.AddPathReverse(SkiaSharp.SKPath))para agregar otra ruta de acceso en orden inverso
 
-Tenga en cuenta que un objeto `SKPath` define solo una geometría &mdash; una serie de puntos y conexiones. Solo cuando un `SKPath` se combina con un objeto `SKPaint` es la ruta de acceso representada con un color determinado, el ancho del trazo, etc. Además, tenga en cuenta que el `SKPaint` objeto pasado al método `DrawPath` define características de la ruta de acceso completa. Si desea que se va a dibujar algo que requiere varios colores, debe usar una ruta de acceso independiente para cada color.
+Tenga en cuenta que un `SKPath` objeto solo define una &mdash; serie de puntos y conexiones de geometría. Solo cuando un `SKPath` se combina con un `SKPaint` objeto es la ruta de acceso representada con un color determinado, el ancho del trazo, etc. Además, tenga en cuenta que el `SKPaint` objeto pasado al `DrawPath` método define características de la ruta de acceso completa. Si desea dibujar algo que requiera varios colores, debe usar una ruta de acceso independiente para cada color.
 
-Del mismo modo que la apariencia del inicio y el final de una línea se define mediante un extremo del trazo, la apariencia de la conexión entre dos líneas se define mediante una *combinación de trazo*. Para especificar esto, establezca la propiedad [`StrokeJoin`](xref:SkiaSharp.SKPaint.StrokeJoin) de `SKPaint` en un miembro de la enumeración [`SKStrokeJoin`](xref:SkiaSharp.SKStrokeJoin) :
+Del mismo modo que la apariencia del inicio y el final de una línea se define mediante un extremo del trazo, la apariencia de la conexión entre dos líneas se define mediante una *combinación de trazo*. Para especificar esto, establezca la [`StrokeJoin`](xref:SkiaSharp.SKPaint.StrokeJoin) propiedad de `SKPaint` en un miembro de la [`SKStrokeJoin`](xref:SkiaSharp.SKStrokeJoin) enumeración:
 
-- `Miter` para una combinación puntual
-- `Round` para una combinación redondeada
-- `Bevel` para una combinación cortada
+- `Miter`para una combinación puntual
+- `Round`para una combinación redondeada
+- `Bevel`para una combinación cortada
 
-En la página **combinaciones de trazo** se muestran estas tres combinaciones de trazos con código similar a la página de **extremos** . Este es el controlador de eventos `PaintSurface` en la clase [`StrokeJoinsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeJoinsPage.cs) :
+En la página **combinaciones de trazo** se muestran estas tres combinaciones de trazos con código similar a la página de **extremos** . Este es el `PaintSurface` controlador de eventos de la [`StrokeJoinsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeJoinsPage.cs) clase:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -189,11 +192,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Este es el programa que se ejecuta:
+Esta es la ejecución del programa:
 
 [![](paths-images/strokejoins-small.png "Triple screenshot of the Stroke Joins page")](paths-images/strokejoins-large.png#lightbox "Triple screenshot of the Stroke Joins page")
 
-La unión angular consta de un vértice agudo donde las líneas de conexión. Cuando se unen dos líneas en un ángulo pequeño, la unión angular puede ser bastante larga. Para evitar combinaciones en ángulo excesivamente largas, la longitud de la unión angular está limitada por el valor de la propiedad [`StrokeMiter`](xref:SkiaSharp.SKPaint.StrokeMiter) de `SKPaint`. Una unión angular que supera esta longitud se cortan para convertirse en una unión biselada.
+La unión angular se compone de un punto nítido en el que se conectan las líneas. Cuando dos líneas se unen en un ángulo pequeño, la unión angular puede llegar a ser bastante larga. Para evitar combinaciones en ángulo excesivamente largas, la longitud de la unión angular está limitada por el valor de la [`StrokeMiter`](xref:SkiaSharp.SKPaint.StrokeMiter) propiedad de `SKPaint` . Una unión angular que supera esta longitud se corta y se convierte en una unión biselada.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

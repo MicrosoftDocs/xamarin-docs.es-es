@@ -1,24 +1,27 @@
 ---
-title: Iconos de TabbedPage en Windows
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir la plataforma específica de Windows que permite mostrar iconos de página en una barra de herramientas de TabbedPage.
-ms.prod: xamarin
-ms.assetid: 7C5031A5-74EE-4469-994E-BEA7BA9D33CB
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: a40203e4d01f45ef36ee6988198400a259600aac
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f6db5014050ad3f037869120d017e51803a7c48f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198096"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136544"
 ---
 # <a name="tabbedpage-icons-on-windows"></a>Iconos de TabbedPage en Windows
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Esta plataforma universal de Windows específica de la plataforma permite mostrar iconos de página en una [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) barra de herramientas y proporciona la capacidad de especificar el tamaño del icono opcionalmente. Se consume en XAML estableciendo el [ `TabbedPage.HeaderIconsEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsEnabledProperty) propiedad adjunta `true`y, opcionalmente, estableciendo el [ `TabbedPage.HeaderIconsSize` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsSizeProperty) propiedad adjunta un [ `Size` ](xref:Xamarin.Forms.Size) valor:
+Esta Plataforma universal de Windows específica de la plataforma permite mostrar iconos de página en una [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) barra de herramientas y proporciona la capacidad de especificar el tamaño del icono opcionalmente. Se utiliza en XAML estableciendo la [`TabbedPage.HeaderIconsEnabled`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsEnabledProperty) propiedad adjunta en y estableciendo `true` opcionalmente la [`TabbedPage.HeaderIconsSize`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsSizeProperty) propiedad adjunta en un [`Size`](xref:Xamarin.Forms.Size) valor:
 
 ```xaml
 <TabbedPage ...
@@ -44,7 +47,7 @@ Esta plataforma universal de Windows específica de la plataforma permite mostra
 </TabbedPage>
 ```
 
-Como alternativa, pueden usarse desde C# mediante la API fluida:
+Como alternativa, se puede usar desde C# con la API fluida:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -65,13 +68,13 @@ public class WindowsTabbedPageIconsCS : Xamarin.Forms.TabbedPage
 }
 ```
 
-El `TabbedPage.On<Windows>` método especifica que solo se ejecutan este específicos de la plataforma en la plataforma Universal de Windows. El [ `TabbedPage.SetHeaderIconsEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.SetHeaderIconsEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.TabbedPage},System.Boolean)) método, en el [ `Xamarin.Forms.PlatformConfiguration.WindowsSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) espacio de nombres, se usa para activar o desactivar los iconos de encabezado. El [ `TabbedPage.SetHeaderIconsSize` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.SetHeaderIconsSize(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.TabbedPage},Xamarin.Forms.Size)) método, opcionalmente, especifica el tamaño del icono de encabezado con un [ `Size` ](xref:Xamarin.Forms.Size) valor.
+El `TabbedPage.On<Windows>` método especifica que este específico de la plataforma solo se ejecutará en el plataforma universal de Windows. [ `TabbedPage.SetHeaderIconsEnabled` ] (XREF: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. TabbedPage. SetHeaderIconsEnabled ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . TabbedPage}, System. Boolean)), en el [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) espacio de nombres, se usa para activar o desactivar los iconos de encabezado. [ `TabbedPage.SetHeaderIconsSize` ] (XREF: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. TabbedPage. SetHeaderIconsSize ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . TabbedPage}, Xamarin.Forms . Size)) el método especifica opcionalmente el tamaño del icono de encabezado con un [`Size`](xref:Xamarin.Forms.Size) valor.
 
-Además, el `TabbedPage` clase en el `Xamarin.Forms.PlatformConfiguration.WindowsSpecific` espacio de nombres también tiene un [ `EnableHeaderIcons` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.EnableHeaderIcons*) método que permite a los iconos de encabezado, un [ `DisableHeaderIcons` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.DisableHeaderIcons*) método que deshabilita los iconos de encabezado, y un [ `IsHeaderIconsEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.IsHeaderIconsEnabled*) método que devuelve un `boolean` valor que indica si se habilitan los iconos de encabezado.
+Además, la `TabbedPage` clase del espacio de `Xamarin.Forms.PlatformConfiguration.WindowsSpecific` nombres también tiene un [`EnableHeaderIcons`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.EnableHeaderIcons*) método que habilita los iconos de encabezado, un [`DisableHeaderIcons`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.DisableHeaderIcons*) método que deshabilita los iconos de encabezado y un [`IsHeaderIconsEnabled`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.IsHeaderIconsEnabled*) método que devuelve un `boolean` valor que indica si los iconos de encabezado están habilitados.
 
-El resultado es esa página se pueden mostrar los iconos en un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) barra de herramientas, con el tamaño de icono que se va a establecer opcionalmente al tamaño que desee:
+El resultado es que los iconos de página se pueden mostrar en una [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) barra de herramientas, con el tamaño de icono establecido opcionalmente en un tamaño deseado:
 
-![Específico de plataforma iconos habilitados TabbedPage](tabbedpage-icons-images/tabbedpage-icons.png "TabbedPage iconos habilitados específico de plataforma")
+![Iconos de TabbedPage habilitados específicos de la plataforma](tabbedpage-icons-images/tabbedpage-icons.png "Iconos de TabbedPage habilitados específicos de la plataforma")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

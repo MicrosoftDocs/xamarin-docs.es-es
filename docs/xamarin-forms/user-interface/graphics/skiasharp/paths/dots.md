@@ -1,38 +1,41 @@
 ---
-title: Puntos y guiones de SkiaSharp
-description: Este artículo explora cómo supere las complejidades de dibujo de líneas de puntos y guiones de SkiaSharp y esto muestra con código de ejemplo.
-ms.prod: xamarin
-ms.assetid: 8E9BCC13-830C-458C-9FC8-ECB4EAE66078
-ms.technology: xamarin-skiasharp
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/10/2017
-ms.openlocfilehash: 229f60cbb96058454a1c634e53a7bb00ec725bcf
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8698bacd7257df431b12166c749f5826e8d6fd3c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76723759"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138456"
 ---
-# <a name="dots-and-dashes-in-skiasharp"></a>Puntos y guiones de SkiaSharp
+# <a name="dots-and-dashes-in-skiasharp"></a>Puntos y guiones en SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Domine las complejidades del dibujo de líneas de puntos y guiones en SkiaSharp_
 
-SkiaSharp le permite dibujar líneas que no son sólidos, pero en su lugar están formados por puntos y guiones:
+SkiaSharp permite dibujar líneas que no son sólidas, sino que se componen de puntos y guiones:
 
 ![](dots-images/dottedlinesample.png "Dotted line")
 
-Esto se hace con un *efecto de ruta de acceso*, que es una instancia de la clase [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) que se establece en la propiedad [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) de `SKPaint`. Puede crear un efecto de trazado (o combinar los efectos de la ruta de acceso) mediante uno de los métodos de creación estáticos definidos por `SKPathEffect`. (`SKPathEffect` es uno de los seis efectos admitidos por SkiaSharp; los demás se describen en la sección [**SkiaSharp Effect**](../effects/index.md)).
+Esto se hace con un *efecto de ruta de acceso*, que es una instancia de la [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) clase que se establece en la [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) propiedad de `SKPaint` . Puede crear un efecto de trazado (o combinar los efectos de la ruta de acceso) mediante uno de los métodos de creación estáticos definidos por `SKPathEffect` . ( `SKPathEffect` es uno de los seis efectos que admite SkiaSharp; los demás se describen en la sección [**SkiaSharp Effect**](../effects/index.md)).
 
-Para dibujar líneas de puntos o guiones, utilice el método estático [`SKPathEffect.CreateDash`](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) . Hay dos argumentos: el primero es una matriz de `float` valores que indican las longitudes de los puntos y guiones, y la longitud de los espacios que hay entre ellos. Esta matriz debe tener un número par de elementos, y debe haber al menos dos elementos. (Puede haber cero elementos en la matriz, pero el resultado es una línea sólida). Si hay dos elementos, el primero es la longitud de un punto o un guión, y el segundo es la longitud del espacio antes del punto o guión siguiente. Si hay más de dos elementos, a continuación, se encuentran en este orden: dash longitud, longitud del espacio, longitud del guión, duración de la brecha y así sucesivamente.
+Para dibujar líneas de puntos o guiones, se usa el [`SKPathEffect.CreateDash`](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) método estático. Hay dos argumentos: el primero es una matriz de `float` valores que indican las longitudes de los puntos y guiones, y la longitud de los espacios que hay entre ellos. Esta matriz debe tener un número par de elementos y debe haber al menos dos elementos. (Puede haber cero elementos en la matriz, pero el resultado es una línea sólida). Si hay dos elementos, el primero es la longitud de un punto o un guión, y el segundo es la longitud del espacio antes del punto o guión siguiente. Si hay más de dos elementos, se encuentran en este orden: longitud de guión, longitud de hueco, longitud de guión, longitud de hueco, etc.
 
-Por lo general, deseará hacer las longitudes de dash y gap un múltiplo del ancho del trazo. Si el ancho del trazo es de 10 píxeles, por ejemplo, a continuación, la matriz {10, 10} dibujará una línea de puntos donde las brechas y los puntos son la misma longitud que el grosor del trazo.
+Por lo general, querrá que las longitudes de los guiones y los espacios sean múltiplos del ancho del trazo. Por ejemplo, si el ancho del trazo es de 10 píxeles, la matriz {10, 10} dibujará una línea de puntos en la que los puntos y huecos tengan la misma longitud que el grosor del trazo.
 
-Sin embargo, el valor `StrokeCap` del objeto `SKPaint` también afecta a estos puntos y guiones. Como verá en breve, tiene un impacto en los elementos de esta matriz.
+Sin embargo, el `StrokeCap` valor del `SKPaint` objeto también afecta a estos puntos y guiones. Como verá en breve, esto afectará a los elementos de esta matriz.
 
-Las líneas de puntos y guiones se muestran en la página **puntos y guiones** . El archivo [**DotsAndDashesPage. Xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/DotsAndDashesPage.xaml) crea una instancia de dos vistas de `Picker`, una para permitirle seleccionar un extremo del trazo y el segundo para seleccionar una matriz de guiones:
+Las líneas de puntos y guiones se muestran en la página **puntos y guiones** . El archivo [**DotsAndDashesPage. Xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/DotsAndDashesPage.xaml) crea una instancia `Picker` de dos vistas, una para permitirle seleccionar un extremo del trazo y el segundo para seleccionar una matriz de guiones:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -98,9 +101,9 @@ Las líneas de puntos y guiones se muestran en la página **puntos y guiones** .
 </ContentPage>
 ```
 
- Los tres primeros elementos de la `dashArrayPicker` suponen que el ancho del trazo es de 10 píxeles. El {10, 10} matriz es para una línea de puntos, {30, 10} es para una línea discontinua y {10, 10, 30, 10} es para una línea de punto y guión. (Los otros tres se tratarán en breve.)
+ Los tres primeros elementos de `dashArrayPicker` suponen que el ancho del trazo es de 10 píxeles. La matriz {10, 10} es para una línea de puntos, {30, 10} es para una línea discontinua, y {10, 10, 30, 10} es para una línea de puntos y guiones. (Los otros tres se tratarán en breve).
 
-El archivo de código subyacente [`DotsAndDashesPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/DotsAndDashesPage.xaml.cs) contiene el controlador de eventos `PaintSurface` y un par de rutinas auxiliares para tener acceso a las vistas `Picker`:
+El [`DotsAndDashesPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/DotsAndDashesPage.xaml.cs) archivo de código subyacente contiene el `PaintSurface` controlador de eventos y un par de rutinas auxiliares para tener acceso a las `Picker` vistas:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -148,23 +151,23 @@ float[] GetPickerArray(Picker picker)
 }
 ```
 
-En las siguientes capturas de pantalla, la pantalla de iOS en el extremo izquierdo muestra una línea de puntos:
+En las siguientes capturas de pantalla, la pantalla de iOS de la izquierda muestra una línea de puntos:
 
 [![](dots-images/dotsanddashes-small.png "Triple screenshot of the Dots and Dashes page")](dots-images/dotsanddashes-large.png#lightbox "Triple screenshot of the Dots and Dashes page")
 
-Sin embargo, la pantalla de Android también se supone que para mostrar una línea de puntos utilizando la matriz {10, 10}, pero en su lugar, la línea es sólida. ¿Qué ha ocurrido? El problema es que la pantalla Android también tiene un valor de Bloq Mayús de `Square`. Este comando extiende todos los guiones por la mitad del ancho de trazo, provocando que llenar los espacios.
+Sin embargo, también se supone que la pantalla de Android muestra una línea de puntos con la matriz {10, 10} pero, en su lugar, la línea es sólida. ¿Qué ha ocurrido? El problema es que la pantalla Android también tiene un valor de Bloq Mayús `Square` . Esto extiende todos los guiones a la mitad del ancho del trazo, lo que hace que rellenen los huecos.
 
-Para evitar este problema cuando se usa un extremo de trazo de `Square` o `Round`, se deben disminuir las longitudes de los guiones en la matriz por la longitud del trazo (a veces, lo que da lugar a una longitud de guión de 0) y aumentar las longitudes de los espacios en función de la longitud del trazo. Así es como se calcularon las últimas tres matrices en el `Picker` en el archivo XAML:
+Para evitar este problema cuando se usa un extremo de trazo de `Square` o `Round` , debe reducir las longitudes de los guiones en la matriz por la longitud del trazo (a veces, lo que da lugar a una longitud de guión de 0) y aumentar las longitudes de los espacios por la longitud del trazo. Así es como se calcularon las últimas tres matrices en el `Picker` en el archivo XAML:
 
 - {10, 10} se convierte en {0, 20} para una línea de puntos
 - {30, 10} se convierte en {20, 20} para una línea discontinua
 - {10, 10, 30, 10} se convierte en {0, 20, 20, 20} para una línea de puntos y guiones
 
-La pantalla de UWP muestra la línea de puntos y guiones para un extremo de trazo de `Round`. El extremo del trazo `Round` suele proporcionar la mejor apariencia de los puntos y los guiones en líneas gruesas.
+La pantalla de UWP muestra el punto y la línea discontinua de un extremo de trazo de `Round` . El `Round` extremo del trazo suele proporcionar la mejor apariencia de los puntos y los guiones en líneas gruesas.
 
-Hasta ahora no se ha hecho ninguna mención del segundo parámetro al método `SKPathEffect.CreateDash`. Este parámetro se denomina `phase` y hace referencia a un desplazamiento dentro del patrón de puntos y guiones para el principio de la línea. Por ejemplo, si la matriz de guiones es {10, 10} y el `phase` es 10, la línea comienza con un espacio en lugar de un punto.
+Hasta ahora no se ha hecho ninguna mención del segundo parámetro al `SKPathEffect.CreateDash` método. Este parámetro se denomina `phase` y hace referencia a un desplazamiento dentro del patrón de puntos y guiones para el principio de la línea. Por ejemplo, si la matriz de guiones es {10, 10} y `phase` es 10, la línea comienza con un espacio en lugar de un punto.
 
-Una aplicación interesante del parámetro `phase` está en una animación. La página de **espiral animada** es similar a la página de **espiral Archimedean** , excepto en que la clase [`AnimatedSpiralPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/AnimatedSpiralPage.cs) anima el parámetro `phase` mediante el método `Device.Timer` de Xamarin. Forms:
+Una aplicación interesante del `phase` parámetro está en una animación. La página de **espiral animada** es similar a la página de **espiral Archimedean** , excepto en que la [`AnimatedSpiralPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/AnimatedSpiralPage.cs) clase anima el `phase` parámetro mediante el Xamarin.Forms `Device.Timer` método:
 
 ```csharp
 public class AnimatedSpiralPage : ContentPage

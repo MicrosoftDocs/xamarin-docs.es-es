@@ -1,18 +1,21 @@
 ---
-title: Microservicios en contenedores
-description: En este capítulo se explica cómo usar microservicios y contenedores para crear aplicaciones en la nube modernas, escalables y confiables.
-ms.prod: xamarin
-ms.assetid: 5872ad92-04e0-4f1a-9691-79d5602f5683
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/07/2017
-ms.openlocfilehash: dc71da512519cdd7fcc56df1ff987ffbc1354663
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a05090c18039f9d3a7f9376285ce2863e0482903
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306336"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139261"
 ---
 # <a name="containerized-microservices"></a>Microservicios en contenedores
 
@@ -56,9 +59,9 @@ Sin embargo, una solución basada en microservicios también tiene posibles desv
 - En producción, existe una complejidad operativa en la implementación y administración de un sistema comprometido con muchos servicios independientes.
 - La comunicación directa de cliente a microservicio puede dificultar la refactorización de los contratos de microservicios. Por ejemplo, con el tiempo, es posible que deba cambiar el sistema en el que se crean particiones en los servicios. Un único servicio puede dividirse en dos o más servicios, y dos servicios pueden combinarse. Cuando los clientes se comunican directamente con los microservicios, este trabajo de refactorización puede interrumpir la compatibilidad con las aplicaciones cliente.
 
-## <a name="containerization"></a>Contenedorización
+## <a name="containerization"></a>Inclusión en contenedores
 
-La inclusión en contenedores es un enfoque para el desarrollo de software en el que una aplicación y su conjunto de dependencias con control de versiones, además de la configuración del entorno que se abstrae como archivos de manifiesto de implementación, se empaquetan como una imagen de contenedor, se prueba como una unidad y implementado en un sistema operativo host.
+La inclusión en contenedores es un enfoque para el desarrollo de software en el que una aplicación y su conjunto de dependencias con control de versiones, además de su configuración de entorno abstraeda como archivos de manifiesto de implementación, se empaquetan como una imagen de contenedor, se prueban como una unidad y se implementan en un sistema operativo host.
 
 Un contenedor es un entorno operativo aislado, controlado por recursos y portátil, donde una aplicación puede ejecutarse sin tocar los recursos de otros contenedores o del host. Por lo tanto, un contenedor se parece a un equipo físico recién instalado o a una máquina virtual.
 
@@ -146,7 +149,7 @@ Para obtener información sobre la implementación del bus de eventos, vea [micr
 
 ## <a name="summary"></a>Resumen
 
-Los microservicios ofrecen un enfoque para el desarrollo y la implementación de aplicaciones que se adapta a los requisitos de agilidad, escala y confiabilidad de las aplicaciones en la nube modernas. Una de las principales ventajas de los microservicios es que se pueden escalar horizontalmente de forma independiente, lo que significa que se puede escalar un área funcional específica que requiere más capacidad de procesamiento o ancho de banda de red para admitir la demanda, sin necesidad de escalar de forma innecesaria áreas de la aplicación que no está experimentando una mayor demanda.
+Los microservicios ofrecen un enfoque para el desarrollo y la implementación de aplicaciones que se adapta a los requisitos de agilidad, escala y confiabilidad de las aplicaciones en la nube modernas. Una de las principales ventajas de los microservicios es que se pueden escalar horizontalmente de forma independiente, lo que significa que se puede escalar un área funcional específica que requiere más capacidad de procesamiento o ancho de banda de red para admitir la demanda, sin necesidad de escalar de forma innecesaria las áreas de la aplicación que no experimentan una mayor demanda.
 
 Un contenedor es un entorno operativo aislado, controlado por recursos y portátil, donde una aplicación puede ejecutarse sin tocar los recursos de otros contenedores o del host. Las empresas están adoptando cada vez más contenedores al implementar aplicaciones basadas en microservicios y Docker se ha convertido en la implementación de contenedor estándar que ha adoptado la mayoría de las plataformas de software y los proveedores de nube.
 

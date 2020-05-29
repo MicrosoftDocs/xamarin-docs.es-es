@@ -1,28 +1,31 @@
 ---
-title: Elegir un diseño de Xamarin. Forms
-description: Las clases de diseño de Xamarin. Forms permiten organizar y agrupar los controles de interfaz de usuario en la aplicación.
-ms.prod: xamarin
-ms.assetid: 05A39752-A174-447E-A30D-3CC9EF98CB96
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/21/2018
-ms.openlocfilehash: 14e48d04696bb758a2010bd1d56ecaa125bbd30a
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+title: Elegir un Xamarin.Forms diseño
+description: Xamarin.Formslas clases de diseño permiten organizar y agrupar los controles de interfaz de usuario en la aplicación.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 16a48423d05ce1cede75c0020bf18f4f398f5adc
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83150010"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138507"
 ---
-# <a name="choose-a-xamarinforms-layout"></a>Elegir un diseño de Xamarin. Forms
+# <a name="choose-a-xamarinforms-layout"></a>Elegir un Xamarin.Forms diseño
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
-Las clases de diseño de Xamarin. Forms permiten organizar y agrupar los controles de interfaz de usuario en la aplicación. La elección de una clase de diseño requiere saber cómo el diseño coloca sus elementos secundarios y cómo el diseño dimensiona sus elementos secundarios. Además, puede ser necesario anidar diseños para crear el diseño deseado.
+Xamarin.Formslas clases de diseño permiten organizar y agrupar los controles de interfaz de usuario en la aplicación. La elección de una clase de diseño requiere saber cómo el diseño coloca sus elementos secundarios y cómo el diseño dimensiona sus elementos secundarios. Además, puede ser necesario anidar diseños para crear el diseño deseado.
 
-En la imagen siguiente se muestran los diseños típicos que se pueden lograr con las clases de diseño principales de Xamarin. Forms:
+En la imagen siguiente se muestran los diseños típicos que se pueden lograr con las Xamarin.Forms clases de diseño principales:
 
-[![Clases de diseño principales de Xamarin. Forms](images/layouts.png "Clases de diseño de Xamarin. Forms")](images/layouts-large.png#lightbox "Clases de diseño de Xamarin. Forms")
+[![Clases de diseño principales enXamarin.Forms](images/layouts.png "[! Operador. Clases de diseño NO-LOC (Xamarin. Forms)]")](images/layouts-large.png#lightbox "[! Operador. Clases de diseño NO-LOC (Xamarin. Forms)]")
 
 ## <a name="stacklayout"></a>StackLayout
 
@@ -73,7 +76,7 @@ Es una pérdida de tiempo porque se realizan cálculos de diseño innecesarios. 
 > [!TIP]
 > Al utilizar [`StackLayout`](xref:Xamarin.Forms.StackLayout) , asegúrese de que solo un elemento secundario está establecido en [`LayoutOptions.Expands`](xref:Xamarin.Forms.LayoutOptions.Expands) . Esta propiedad garantiza que el elemento secundario especificado ocupa el mayor espacio que el `StackLayout` puede asignarle y es poco rentable realizar estos cálculos más de una vez.
 
-Para obtener más información, consulte [Xamarin. Forms StackLayout](stacklayout.md).
+Para obtener más información, vea [ Xamarin.Forms StackLayout](stacklayout.md).
 
 ## <a name="grid"></a>Cuadrícula
 
@@ -118,7 +121,7 @@ El espacio se puede distribuir dentro de una columna o fila mediante el ajuste a
 > [!CAUTION]
 > Intente asegurarse de que el tamaño de las filas y columnas es el máximo posible [`Auto`](xref:Xamarin.Forms.GridLength.Auto) . Cada fila o columna de tamaño automático hará que el motor de diseño tenga que realizar cálculos de diseño adicionales. En su lugar, use filas y columnas de tamaño fijo si es posible. También puede establecer filas y columnas para ocupar una cantidad proporcional de espacio con el [`GridUnitType.Star`](xref:Xamarin.Forms.GridUnitType.Star) valor de enumeración.
 
-Para obtener más información, consulte [cuadrícula de Xamarin. Forms](grid.md).
+Para obtener más información, vea [ Xamarin.Forms Grid](grid.md).
 
 ## <a name="flexlayout"></a>FlexLayout
 
@@ -142,7 +145,7 @@ En este ejemplo, el diseño funciona de la siguiente manera:
 - La [`AlignItems`](xref:Xamarin.Forms.FlexLayout.AlignItems) propiedad se establece en `Center` , lo que hace que cada elemento se Centre horizontalmente.
 - La [`JustifyContent`](xref:Xamarin.Forms.FlexLayout.JustifyContent) propiedad se establece en `SpaceEvenly` , que asigna todo el espacio vertical sobrante por igual entre todos los elementos y por encima del primer elemento, y por debajo del último elemento.
 
-Para obtener más información, consulte [Xamarin. Forms FlexLayout](flex-layout.md).
+Para obtener más información, vea [ Xamarin.Forms FlexLayout](flex-layout.md).
 
 ## <a name="relativelayout"></a>RelativeLayout
 
@@ -191,7 +194,7 @@ En este ejemplo, el diseño funciona de la siguiente manera:
 > [!WARNING]
 > Evite el uso de un `RelativeLayout` siempre que sea posible. Como resultado, la CPU tendrá que realizar mucho más trabajo.
 
-Para obtener más información, consulte [Xamarin. Forms RelativeLayout](relative-layout.md).
+Para obtener más información, vea [ Xamarin.Forms RelativeLayout](relative-layout.md).
 
 ## <a name="absolutelayout"></a>AbsoluteLayout
 
@@ -231,7 +234,7 @@ En este ejemplo, el diseño funciona de la siguiente manera:
 > [!CAUTION]
 > Evite utilizar la [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) propiedad siempre que sea posible, ya que hará que el motor de diseño realice cálculos de diseño adicionales.
 
-Para obtener más información, consulte [Xamarin. Forms AbsoluteLayout](absolute-layout.md).
+Para obtener más información, vea [ Xamarin.Forms AbsoluteLayout](absolute-layout.md).
 
 ## <a name="input-transparency"></a>Transparencia de entrada
 
@@ -248,11 +251,11 @@ Además, el rendimiento de la representación de páginas también se puede mejo
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Diseño (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
-- [Diseños de Xamarin. Forms (vídeo)](https://youtu.be/4HlLjTZQzjM)
-- [StackLayout de Xamarin. Forms](stacklayout.md)
-- [Cuadrícula de Xamarin. Forms](grid.md)
-- [FlexLayout de Xamarin. Forms](flex-layout.md)
-- [AbsoluteLayout de Xamarin. Forms](absolute-layout.md)
-- [RelativeLayout de Xamarin. Forms](relative-layout.md)
+- [Xamarin.FormsDiseños (vídeo)](https://youtu.be/4HlLjTZQzjM)
+- [Xamarin.FormsStackLayout](stacklayout.md)
+- [Xamarin.FormsCuadrícula](grid.md)
+- [Xamarin.FormsFlexLayout](flex-layout.md)
+- [Xamarin.FormsAbsoluteLayout](absolute-layout.md)
+- [Xamarin.FormsRelativeLayout](relative-layout.md)
 - [Optimizar el rendimiento del diseño](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance)
 - [Compresión de diseño](layout-compression.md)

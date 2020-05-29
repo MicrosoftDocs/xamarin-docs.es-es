@@ -1,24 +1,27 @@
 ---
-title: StackLayout de Xamarin. Forms
-description: Un StackLayout organiza las vistas secundarias en una pila de una dimensión, ya sea horizontal o verticalmente.
-ms.prod: xamarin
-ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/11/2020
-ms.openlocfilehash: 2535a92814181c5039256ea1e42b06419ed427aa
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: Xamarin.FormsStackLayout
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f624674cc6d4ba1bdc34a42fb52fb63ff8a7135a
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426033"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137974"
 ---
-# <a name="xamarinforms-stacklayout"></a>StackLayout de Xamarin. Forms
+# <a name="xamarinforms-stacklayout"></a>Xamarin.FormsStackLayout
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
 
-[![StackLayout de Xamarin. Forms](stacklayout-images/layouts.png "StackLayout de Xamarin. Forms")](stacklayout-images/layouts-large.png#lightbox "StackLayout de Xamarin. Forms")
+[![Xamarin.FormsStackLayout](stacklayout-images/layouts.png "[! Operador. NO-LOC (Xamarin. Forms)] StackLayout")](stacklayout-images/layouts-large.png#lightbox "[! Operador. NO-LOC (Xamarin. Forms)] StackLayout")
 
 Un [`StackLayout`](xref:Xamarin.Forms.StackLayout) organiza las vistas secundarias en una pila unidimensional, ya sea horizontal o verticalmente. De forma predeterminada, una `StackLayout` está orientada verticalmente. Además, `StackLayout` se puede utilizar como un diseño primario que contiene otros diseños secundarios.
 
@@ -343,7 +346,7 @@ public ExpansionPageCS()
 > [!IMPORTANT]
 > Cuando se usa todo el espacio de un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout), las preferencias de expansión no tienen ningún efecto.
 
-Para obtener más información sobre la alineación y la expansión, vea [Opciones de diseño de Xamarin.Forms](layout-options.md).
+Para obtener más información acerca de la alineación y la expansión, vea [Opciones de diseño en Xamarin.Forms ](layout-options.md).
 
 ## <a name="nested-stacklayout-objects"></a>Objetos StackLayout anidados
 
@@ -469,6 +472,6 @@ public class CombinedStackLayoutPageCS : ContentPage
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Demostraciones de StackLayout (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
-- [Opciones de diseño de Xamarin. Forms](layout-options.md)
-- [Elegir un diseño de Xamarin. Forms](choose-layout.md)
-- [Mejora del rendimiento de aplicaciones Xamarin.Forms](~/xamarin-forms/deploy-test/performance.md)
+- [Opciones de diseño enXamarin.Forms](layout-options.md)
+- [Elegir un Xamarin.Forms diseño](choose-layout.md)
+- [Mejorar el rendimiento de las Xamarin.Forms aplicaciones](~/xamarin-forms/deploy-test/performance.md)

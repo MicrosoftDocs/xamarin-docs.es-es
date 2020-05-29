@@ -1,40 +1,43 @@
 ---
-title: Recortar los mapas de bits de SkiaSharp
-description: Obtenga información sobre cómo usar SkiaSharp para diseñar una interfaz de usuario de forma interactiva desribing un rectángulo de recorte.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/17/2018
-ms.openlocfilehash: e9ba34dfcbdf041cb9bce7f277da3987acf9fec8
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6c5e340818b702d79a1157f29c1ecec19bf1db76
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228239"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139950"
 ---
-# <a name="cropping-skiasharp-bitmaps"></a>Recortar los mapas de bits de SkiaSharp
+# <a name="cropping-skiasharp-bitmaps"></a>Recortar mapas de bits de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-El [ **creando y mapas de bits de dibujo de SkiaSharp** ](drawing.md) artículo se describe cómo un `SKBitmap` objeto se puede pasar a un `SKCanvas` constructor. Cualquier método de dibujo se llama en la que hace que los gráficos de lienzo para representarse en el mapa de bits. Estos métodos de dibujo incluyen `DrawBitmap`, lo que significa que esta técnica permite transferir parte o la totalidad de un mapa de bits a otro mapa de bits, quizás con las transformaciones aplicadas.
+En el artículo [**creación y dibujo de mapas de bits de SkiaSharp**](drawing.md) se describe cómo se `SKBitmap` puede pasar un objeto a un `SKCanvas` constructor. Cualquier método de dibujo llamado en ese lienzo hace que los gráficos se representen en el mapa de bits. Estos métodos de dibujo incluyen `DrawBitmap` , lo que significa que esta técnica permite transferir parte o todo un mapa de bits a otro mapa de bits, quizás con las transformaciones aplicadas.
 
-Puede usar esa técnica para recortar un mapa de bits mediante una llamada a la [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKRect,SkiaSharp.SKPaint)) método con rectángulos de origen y destino:
+Puede utilizar esa técnica para recortar un mapa de bits llamando al [`DrawBitmap`](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKRect,SkiaSharp.SKPaint)) método con los rectángulos de origen y de destino:
 
 ```csharp
 canvas.DrawBitmap(bitmap, sourceRect, destRect);
 ```
 
-Sin embargo, las aplicaciones que implementan el recorte a menudo proporcionan una interfaz para el usuario seleccionar el rectángulo de recorte de forma interactiva:
+Sin embargo, las aplicaciones que implementan el recorte a menudo proporcionan una interfaz para que el usuario seleccione de forma interactiva el rectángulo de recorte:
 
-![Ejemplo de recorte](cropping-images/CroppingSample.png "recortar de ejemplo")
+![Ejemplo de recorte](cropping-images/CroppingSample.png "Ejemplo de recorte")
 
-En este artículo se centra en esa interfaz.
+Este artículo se centra en la interfaz.
 
-## <a name="encapsulating-the-cropping-rectangle"></a>Que encapsula el rectángulo de recorte
+## <a name="encapsulating-the-cropping-rectangle"></a>Encapsular el rectángulo de recorte
 
-Resulta útil aislar parte de la lógica de recorte en una clase denominada `CroppingRectangle`. Los parámetros del constructor incluyen un rectángulo máximo, que suele ser el tamaño del mapa de bits que se recorta, y una relación de aspecto opcional. En primer lugar, el constructor define un rectángulo de recorte inicial, que hace que sea pública en el `Rect` propiedad de tipo `SKRect`. Este rectángulo de recorte inicial es el 80% del ancho y alto del rectángulo de mapa de bits, pero se ajusta a continuación, si se especifica una relación de aspecto:
+Resulta útil aislar parte de la lógica de recorte en una clase denominada `CroppingRectangle` . Los parámetros de constructor incluyen un rectángulo máximo, que suele ser el tamaño del mapa de bits que se va a recortar y una relación de aspecto opcional. El constructor define primero un rectángulo de recorte inicial, que hace público en la `Rect` propiedad de tipo `SKRect` . Este rectángulo de recorte inicial es 80% del ancho y alto del rectángulo de mapa de bits, pero se ajusta después si se especifica una relación de aspecto:
 
 ```csharp
 class CroppingRectangle
@@ -82,7 +85,7 @@ class CroppingRectangle
 }
 ```
 
-Un elemento útil de información que `CroppingRectangle` también hace disponible es una matriz de `SKPoint` los valores correspondientes a las cuatro esquinas de en el orden superior izquierda, superior derecha, inferior derecha e inferior izquierda del rectángulo de recorte:
+Una parte útil de la información que `CroppingRectangle` también está disponible es una matriz de `SKPoint` valores que corresponden a las cuatro esquinas del rectángulo de recorte en el orden superior izquierda, superior derecha, inferior derecha e inferior izquierda:
 
 ```csharp
 class CroppingRectangle
@@ -105,7 +108,7 @@ class CroppingRectangle
 }
 ```
 
-Esta matriz se usa en el método siguiente, que se denomina `HitTest`. El `SKPoint` parámetro es un punto que corresponde a un toque del dedo o un clic del mouse. El método devuelve un índice (0, 1, 2 o 3) correspondiente a la esquina que toca el puntero del dedo o el mouse, dentro de una distancia dada por la `radius` parámetro: 
+Esta matriz se utiliza en el método siguiente, que se denomina `HitTest` . El `SKPoint` parámetro es un punto que corresponde a un toque de dedo o un clic del mouse. El método devuelve un índice (0, 1, 2 o 3) que corresponde a la esquina que el dedo o el puntero del mouse tocan, dentro de una distancia dada por el `radius` parámetro: 
 
 ```csharp
 class CroppingRectangle
@@ -131,9 +134,9 @@ class CroppingRectangle
 }
 ```
 
-Si el punto táctil o mouse no estaba en `radius` unidades de cualquier esquina, el método devuelve &ndash;1.
+Si el toque o el punto del mouse no estaban dentro `radius` de las unidades de cualquier esquina, el método devuelve &ndash; 1.
 
-El método final en `CroppingRectangle` se denomina `MoveCorner`, que se llama en respuesta a tocar ni el mouse sobre el movimiento. Los dos parámetros indican el índice de la esquina se mueve y la nueva ubicación de esa esquina. La primera mitad del método ajusta según la nueva ubicación de la esquina, pero siempre dentro de los límites del rectángulo de recorte `maxRect`, que es el tamaño del mapa de bits. Esta lógica también tiene en cuenta el `MINIMUM` campo para evitar la contracción del rectángulo de recorte en nothing:
+Se llama al método final de `CroppingRectangle` `MoveCorner` , al que se llama en respuesta a la entrada táctil o al movimiento del mouse. Los dos parámetros indican el índice de la esquina que se está moviendo y la nueva ubicación de dicha esquina. La primera mitad del método ajusta el rectángulo de recorte basándose en la nueva ubicación de la esquina, pero siempre dentro de los límites de `maxRect` , que es el tamaño del mapa de bits. Esta lógica también tiene en cuenta el `MINIMUM` campo para evitar la contracción del rectángulo de recorte en nada:
 
 ```csharp
 class CroppingRectangle
@@ -205,13 +208,13 @@ class CroppingRectangle
 
 La segunda mitad del método se ajusta para la relación de aspecto opcional.
 
-Tenga en cuenta que todo el contenido de esta clase está en unidades de píxeles.
+Tenga en cuenta que todo lo que hay en esta clase se encuentra en unidades de píxeles.
 
-## <a name="a-canvas-view-just-for-cropping"></a>Una vista de lienzo para recortar
+## <a name="a-canvas-view-just-for-cropping"></a>Una vista de lienzo solo para recortar
 
-El `CroppingRectangle` utilizan la clase que ya ha visto la `PhotoCropperCanvasView` (clase), que se deriva de `SKCanvasView`. Esta clase es responsable de mostrar el mapa de bits y el rectángulo de recorte, así como controlar los eventos de funciones táctiles o mouse para cambiar el rectángulo de recorte.
+La clase `CroppingRectangle` que acaba de visualizar se usa en la `PhotoCropperCanvasView` clase, que se deriva de `SKCanvasView` . Esta clase es responsable de mostrar el mapa de bits y el rectángulo de recorte, así como controlar los eventos táctiles o de mouse para cambiar el rectángulo de recorte.
 
-El `PhotoCropperCanvasView` constructor requiere un mapa de bits. Una relación de aspecto es opcional. El constructor crea una instancia de un objeto de tipo `CroppingRectangle` según esta relación de aspecto y el mapa de bits y lo guarda como un campo:
+El `PhotoCropperCanvasView` constructor requiere un mapa de bits. Una relación de aspecto es opcional. El constructor crea una instancia de un objeto de tipo `CroppingRectangle` basado en este mapa de bits y relación de aspecto y lo guarda como un campo:
 
 ```csharp
 class PhotoCropperCanvasView : SKCanvasView
@@ -232,7 +235,7 @@ class PhotoCropperCanvasView : SKCanvasView
 }
 ```
 
-Dado que esta clase se deriva de `SKCanvasView`, no es necesario instalar un controlador para el `PaintSurface` eventos. En su lugar, puede invalidar su `OnPaintSurface` método. El método muestra el mapa de bits y utiliza un par de `SKPaint` objetos guardados como campos que se va a dibujar el rectángulo de recorte actual:
+Dado que esta clase deriva de `SKCanvasView` , no es necesario instalar un controlador para el `PaintSurface` evento. En su lugar, puede invalidar su `OnPaintSurface` método. El método muestra el mapa de bits y utiliza un par de `SKPaint` objetos guardados como campos para dibujar el rectángulo de recorte actual:
 
 ```csharp
 class PhotoCropperCanvasView : SKCanvasView
@@ -312,11 +315,11 @@ class PhotoCropperCanvasView : SKCanvasView
 }
 ```
 
-El código en el `CroppingRectangle` clase base del rectángulo de recorte en el tamaño de píxel del mapa de bits. Sin embargo, la presentación del mapa de bits mediante el `PhotoCropperCanvasView` clase se escala en función del tamaño del área de visualización. El `bitmapScaleMatrix` calculado en el `OnPaintSurface` reemplazar asignaciones de los píxeles del mapa de bits de tamaño y posición del mapa de bits, tal y como se muestra. Esta matriz, a continuación, se utiliza para transformar el rectángulo de recorte para que se pueden mostrar en relación con el mapa de bits.
+El código de la `CroppingRectangle` clase basa el rectángulo de recorte en el tamaño de píxel del mapa de bits. Sin embargo, la visualización del mapa de bits mediante la `PhotoCropperCanvasView` clase se escala en función del tamaño del área de presentación. El `bitmapScaleMatrix` calculado en la `OnPaintSurface` invalidación se asigna desde píxeles del mapa de bits hasta el tamaño y la posición del mapa de bits tal y como se muestra. Esta matriz se utiliza para transformar el rectángulo de recorte de modo que se pueda mostrar en relación con el mapa de bits.
 
-La última línea de la `OnPaintSurface` invalidación toma el inverso de la `bitmapScaleMatrix` y lo guarda como el `inverseBitmapMatrix` campo. Esto se usa para el procesamiento de toque.
+La última línea de la `OnPaintSurface` invalidación toma el inverso de `bitmapScaleMatrix` y lo guarda como el `inverseBitmapMatrix` campo. Se utiliza para el procesamiento táctil.
 
-Un `TouchEffect` se crea una instancia de objeto como un campo y el constructor adjunta un controlador para el `TouchAction` eventos, pero la `TouchEffect` debe agregarse a la `Effects` colección de la _primario_ de la `SKCanvasView`derivados, por lo que terminamos el `OnParentSet` invalidar:
+`TouchEffect`Se crea una instancia de un objeto como un campo y el constructor adjunta un controlador al `TouchAction` evento, pero `TouchEffect` debe agregarse a la `Effects` colección del _elemento primario_ del `SKCanvasView` derivado, por lo que se realiza en la `OnParentSet` invalidación:
 
 ```csharp
 class PhotoCropperCanvasView : SKCanvasView
@@ -405,13 +408,13 @@ class PhotoCropperCanvasView : SKCanvasView
 }
 ```
 
-Procesan los eventos de toque el `TouchAction` controlador están en unidades independientes del dispositivo. Estos primero deben convertirse a píxeles mediante los `ConvertToPixel` método en la parte inferior de la clase y, a continuación, se convierte en `CroppingRectangle` unidades mediante `inverseBitmapMatrix`.
+Los eventos Touch procesados por el `TouchAction` controlador se encuentran en unidades independientes del dispositivo. Estos primeros deben convertirse en píxeles mediante el `ConvertToPixel` método situado en la parte inferior de la clase y, a continuación, convertirse en `CroppingRectangle` unidades mediante `inverseBitmapMatrix` .
 
-Para `Pressed` eventos, el `TouchAction` llamadas del controlador de la `HitTest` método `CroppingRectangle`. Si esto devuelve un índice distinto &ndash;1, a continuación, una de las esquinas del rectángulo de recorte se está manipulando. Que el índice y un desplazamiento del punto táctil actual desde la esquina se almacena en un `TouchPoint` de objetos y agregado a la `touchPoints` diccionario.
+En el caso de los `Pressed` eventos, el `TouchAction` controlador llama al `HitTest` método de `CroppingRectangle` . Si esto devuelve un índice distinto de &ndash; 1, se está manipulando una de las esquinas del rectángulo de recorte. Ese índice y un desplazamiento del punto de toque real de la esquina se almacenan en un `TouchPoint` objeto y se agregan al `touchPoints` Diccionario.
 
-Para el `Moved` eventos, el `MoveCorner` método `CroppingRectangle` se llama para mover la esquina, con posibles ajustes para la relación de aspecto.
+En el `Moved` caso del evento, `MoveCorner` se llama al método de `CroppingRectangle` para trasladar la esquina, con posibles ajustes para la relación de aspecto.
 
-En cualquier momento, un programa mediante `PhotoCropperCanvasView` puede tener acceso a la `CroppedBitmap` propiedad. Esta propiedad usa el `Rect` propiedad de la `CroppingRectangle` para crear un nuevo mapa de bits del tamaño recortado. La versión de `DrawBitmap` con el origen y destino rectángulos, a continuación, extrae un subconjunto del mapa de bits original:
+En cualquier momento, un programa `PhotoCropperCanvasView` que use puede tener acceso a la `CroppedBitmap` propiedad. Esta propiedad usa la `Rect` propiedad de `CroppingRectangle` para crear un nuevo mapa de bits del tamaño recortado. La versión de `DrawBitmap` con los rectángulos de origen y de destino extrae un subconjunto del mapa de bits original:
 
 ```csharp
 class PhotoCropperCanvasView : SKCanvasView
@@ -443,9 +446,9 @@ class PhotoCropperCanvasView : SKCanvasView
 }
 ```
 
-## <a name="hosting-the-photo-cropper-canvas-view"></a>Hospedaje de la vista de lienzo de puntero Recortar foto
+## <a name="hosting-the-photo-cropper-canvas-view"></a>Hospedaje de la vista de lienzo Photo Cropper
 
-Con esas dos clases de control de la lógica de recorte, la **Recortar foto** página en el **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** aplicación tiene muy poco trabajo. El archivo XAML crea una instancia de un `Grid` al host la `PhotoCropperCanvasView` y un **realiza** botón:
+Con esas dos clases que controlan la lógica de recorte, la página de **recorte de fotografías** en la aplicación **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** tiene muy poco trabajo. El archivo XAML crea una instancia de `Grid` para hospedar el `PhotoCropperCanvasView` y un botón **Done** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -472,9 +475,9 @@ Con esas dos clases de control de la lógica de recorte, la **Recortar foto** p�
 </ContentPage>
 ```
 
-El `PhotoCropperCanvasView` no pueden crearse instancias en el archivo XAML porque requiere un parámetro de tipo `SKBitmap`.
+`PhotoCropperCanvasView`No se puede crear una instancia del archivo XAML porque requiere un parámetro de tipo `SKBitmap` .
 
-En su lugar, el `PhotoCropperCanvasView` se crea una instancia en el constructor del archivo de código subyacente mediante uno de los mapas de bits de recursos:
+En su lugar, `PhotoCropperCanvasView` se crea una instancia del en el constructor del archivo de código subyacente utilizando uno de los mapas de bits de recursos:
 
 ```csharp
 public partial class PhotoCroppingPage : ContentPage
@@ -514,31 +517,31 @@ public partial class PhotoCroppingPage : ContentPage
 }
 ```
 
-El usuario, a continuación, puede manipular el rectángulo de recorte:
+Después, el usuario puede manipular el rectángulo de recorte:
 
-[![Foto de puntero Recortar 1](cropping-images/PhotoCropping1.png "foto puntero Recortar 1")](cropping-images/PhotoCropping1-Large.png#lightbox)
+[![Foto Cropper 1](cropping-images/PhotoCropping1.png "Foto Cropper 1")](cropping-images/PhotoCropping1-Large.png#lightbox)
 
-Si se ha definido un rectángulo de recorte válido, haga clic en el **realiza** botón. El `Clicked` controlador obtiene el mapa de bits recortado desde el `CroppedBitmap` propiedad de `PhotoCropperCanvasView`y reemplaza todo el contenido de la página con un nuevo `SKCanvasView` objeto que muestra este mapa de bits recortado:
+Cuando se haya definido un buen rectángulo de recorte, haga clic en el botón **listo** . El `Clicked` controlador obtiene el mapa de bits recortado de la `CroppedBitmap` propiedad de `PhotoCropperCanvasView` y reemplaza todo el contenido de la página por un nuevo `SKCanvasView` objeto que muestra este mapa de bits recortado:
 
-[![Foto de puntero Recortar 2](cropping-images/PhotoCropping2.png "puntero Recortar 2 de fotografías")](cropping-images/PhotoCropping2-Large.png#lightbox)
+[![Foto Cropper 2](cropping-images/PhotoCropping2.png "Foto Cropper 2")](cropping-images/PhotoCropping2-Large.png#lightbox)
 
-Pruebe a establecer el segundo argumento de `PhotoCropperCanvasView` a 1.78f (por ejemplo):
+Pruebe a establecer el segundo argumento de `PhotoCropperCanvasView` en 1,78 f (por ejemplo):
 
 ```csharp
 photoCropper = new PhotoCropperCanvasView(bitmap, 1.78f);
 ```
 
-Verá el rectángulo de recorte restringido a una relación de aspecto de 16 a 9 característico de televisión de alta definición.
+Verá que el rectángulo de recorte está restringido a una característica de relación de aspecto de 16 a 9 de televisión de alta definición.
 
 <a name="tile-division" />
 
-## <a name="dividing-a-bitmap-into-tiles"></a>Dividir un mapa de bits en los iconos
+## <a name="dividing-a-bitmap-into-tiles"></a>Dividir un mapa de bits en mosaicos
 
-Una versión de Xamarin.Forms de la famosa 14 y 15 rompecabezas aparecieron en 22 capítulo del libro [ _Creating Mobile Apps with Xamarin.Forms_ ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) y se pueden descargar como [  **XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle). Sin embargo, el rompecabezas pasa a ser más divertido (y a menudo más difícil) cuando se basa en una imagen de su propia biblioteca de fotos.
+Una Xamarin.Forms versión del rompecabezas 14-15 famoso apareció en el capítulo 22 del libro [_creación de Mobile Apps con Xamarin. Forms_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) y se puede descargar como [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle). Sin embargo, el rompecabezas se vuelve más divertido (y a menudo más desafiante) cuando se basa en una imagen de su propia biblioteca de fotos.
 
-Esta versión del 14 y 15 rompecabezas es parte de la **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** aplicación y consta de una serie de páginas denominado **foto rompecabezas**.
+Esta versión del rompecabezas 14-15 forma parte de la aplicación **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** y consta de una serie de páginas con el título **Photo Puzzle**.
 
-El **PhotoPuzzlePage1.xaml** archivo consta de un `Button`:
+El archivo **PhotoPuzzlePage1. Xaml** se compone de `Button` :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -554,7 +557,7 @@ El **PhotoPuzzlePage1.xaml** archivo consta de un `Button`:
 </ContentPage>
 ```
 
-El archivo de código subyacente implementa una `Clicked` controlador que usa el `IPhotoLibrary` servicio de dependencia para permitir que el usuario tome una foto de la biblioteca de fotos:
+El archivo de código subyacente implementa un `Clicked` controlador que utiliza el `IPhotoLibrary` servicio de dependencia para permitir que el usuario elija una foto de la biblioteca de fotos:
 
 ```csharp
 public partial class PhotoPuzzlePage1 : ContentPage
@@ -580,11 +583,11 @@ public partial class PhotoPuzzlePage1 : ContentPage
 }
 ```
 
-El método, a continuación, navega a `PhotoPuzzlePage2`, pasando en el constructor del mapa de bits seleccionado.
+A continuación, el método navega a `PhotoPuzzlePage2` , pasando al constructor el mapa de bits seleccionado.
 
-Es posible que la foto seleccionada de la biblioteca no está orientada tal y como aparece en la biblioteca de fotos, pero se gira o al revés. (Esto es especialmente un problema con dispositivos iOS). Por ese motivo, `PhotoPuzzlePage2` permite girar la imagen a la orientación deseada. El archivo XAML contiene tres botones etiquetados **90&#x00B0; derecha** (es decir, hacia la derecha), **90&#x00B0; izquierda** (izquierda) y **realiza**.
+Es posible que la foto seleccionada de la biblioteca no esté orientada a medida que aparecía en la biblioteca de fotos, sino que esté girada o en paralelo. (Esto es especialmente un problema con dispositivos iOS). Por ese motivo, `PhotoPuzzlePage2` le permite girar la imagen a una orientación deseada. El archivo XAML contiene tres botones con la etiqueta **90&#x00B0; derecha** (lo que significa el sentido de las agujas del reloj), **90&#x00B0; izquierda** (en sentido contrario a las agujas del reloj) y **listo**.
 
-El archivo de código subyacente implementa la lógica de rotación del mapa de bits que se muestra en el artículo  **[creación y dibujo de SkiaSharp Bitmaps](drawing.md#rotating-bitmaps)** . El usuario puede girar la imagen 90 grados hacia la derecha o hacia la izquierda cualquier número de veces: 
+El archivo de código subyacente implementa la lógica de rotación del mapa de bits que se muestra en el artículo **[crear y dibujar en mapas de bits de SkiaSharp](drawing.md#rotating-bitmaps)**. El usuario puede girar la imagen 90 grados en el sentido de las agujas del reloj o en el sentido contrario a las agujas del reloj: 
 
 ```csharp
 public partial class PhotoPuzzlePage2 : ContentPage
@@ -647,11 +650,11 @@ public partial class PhotoPuzzlePage2 : ContentPage
 }
 ```
 
-Cuando el usuario hace clic en el **realiza** botón, el `Clicked` controlador navega a `PhotoPuzzlePage3`, pasando el mapa de bits girado final en el constructor de la página.
+Cuando el usuario hace clic en el botón **Done** , el `Clicked` controlador navega hasta `PhotoPuzzlePage3` y pasa el mapa de bits girado final en el constructor de la página.
 
-`PhotoPuzzlePage3` permite la foto debe recortarse. El programa requiere un mapa de bits cuadrado para dividir en una cuadrícula de mosaicos de 4 por 4.
+`PhotoPuzzlePage3`permite recortar la foto. El programa requiere un mapa de bits cuadrado para dividirlo en una cuadrícula de 4 por 4 de mosaicos.
 
-El **PhotoPuzzlePage3.xaml** archivo contiene un `Label`, un `Grid` al host la `PhotoCropperCanvasView`y otro **realiza** botón:
+El archivo **PhotoPuzzlePage3. Xaml** contiene un `Label` , un `Grid` para hospedar `PhotoCropperCanvasView` y otro botón **listo** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -685,7 +688,7 @@ El **PhotoPuzzlePage3.xaml** archivo contiene un `Label`, un `Grid` al host la `
 </ContentPage>
 ```
 
-Crea una instancia en el archivo de código subyacente del `PhotoCropperCanvasView` con el mapa de bits que se pasa al constructor. Tenga en cuenta que 1 se pasa como segundo argumento de `PhotoCropperCanvasView`. Esta relación de aspecto 1 fuerza el rectángulo de recorte como un cuadrado:
+El archivo de código subyacente crea una instancia de `PhotoCropperCanvasView` con el mapa de bits que se pasa a su constructor. Observe que se pasa 1 como el segundo argumento a `PhotoCropperCanvasView` . Esta relación de aspecto de 1 fuerza que el rectángulo de recorte sea un cuadrado:
 
 ```csharp
 public partial class PhotoPuzzlePage3 : ContentPage
@@ -736,31 +739,31 @@ public partial class PhotoPuzzlePage3 : ContentPage
 }
 ```
 
-El **realiza** controlador de botón Obtiene el ancho y alto del mapa de bits recortado (estos dos valores deben ser la misma) y, a continuación, se divide en 15 mapas de bits independientes, cada uno de los cuales es 1/4 el ancho y alto del original. (No se crea el último de los mapas de bits de 16 posibles). El `DrawBitmap` método con el rectángulo de origen y de destino permite un mapa de bits se crean en función de subconjunto de un mapa de bits mayor.
+El controlador de botón **Done** obtiene el ancho y el alto del mapa de bits recortado (estos dos valores deben ser iguales) y, a continuación, lo divide en 15 mapas de bits independientes, cada uno de los cuales es 1/4 el ancho y el alto del original. (No se crea el último de los 16 mapas de bits posibles). El `DrawBitmap` método con el rectángulo de origen y de destino permite crear un mapa de bits basado en un subconjunto de un mapa de bits mayor.
 
-## <a name="converting-to-xamarinforms-bitmaps"></a>Convertir en mapas de bits de Xamarin.Forms
+## <a name="converting-to-xamarinforms-bitmaps"></a>Convertir en Xamarin.Forms mapas de bits
 
-En el `OnDoneButtonClicked` método, la matriz creada para los mapas de 15 bits es de tipo [ `ImageSource` ](xref:Xamarin.Forms.ImageSource):
+En el `OnDoneButtonClicked` método, la matriz creada para los 15 mapas de bits es de tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource) :
 
 ```csharp
 ImageSource[] imgSources = new ImageSource[15];
 ```
 
-`ImageSource` es el tipo de base de Xamarin.Forms que encapsula un mapa de bits. Afortunadamente, SkiaSharp permite la conversión de mapas de bits de SkiaSharp en Xamarin.Forms mapas de bits. El **SkiaSharp.Views.Forms** ensamblado define un [ `SKBitmapImageSource` ](xref:SkiaSharp.Views.Forms.SKBitmapImageSource) clase que derive de `ImageSource` pero se pueden crear en función de un SkiaSharp `SKBitmap` objeto. `SKBitmapImageSource` incluso define las conversiones entre `SKBitmapImageSource` y `SKBitmap`y de cómo `SKBitmap` objetos se almacenan en una matriz como mapas de bits de Xamarin.Forms:
+`ImageSource`es el Xamarin.Forms tipo base que encapsula un mapa de bits. Afortunadamente, SkiaSharp permite convertir mapas de bits de SkiaSharp en Xamarin.Forms mapas de bits. El ensamblado **SkiaSharp. views. Forms** define una [`SKBitmapImageSource`](xref:SkiaSharp.Views.Forms.SKBitmapImageSource) clase que `ImageSource` se deriva de pero que se puede crear basándose en un `SKBitmap` objeto SkiaSharp. `SKBitmapImageSource`incluso define las conversiones entre `SKBitmapImageSource` y `SKBitmap` , y así es como `SKBitmap` se almacenan los objetos en una matriz como Xamarin.Forms mapas de bits:
 
 ```csharp
 imgSources[4 * row + col] = (SKBitmapImageSource)bitmap;
 ```
 
-Esta matriz de mapas de bits se pasa como un constructor para `PhotoPuzzlePage4`. Dicha página está completamente Xamarin.Forms y no usa ningún SkiaSharp. Es muy similar a [ **XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle), por lo que no se describen aquí, pero muestra la foto seleccionada dividida en mosaicos cuadrados 15:
+Esta matriz de mapas de bits se pasa como un constructor a `PhotoPuzzlePage4` . Esa página es completamente Xamarin.Forms y no usa ningún SkiaSharp. Es muy similar a [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle), por lo que no se describe aquí, pero muestra la foto seleccionada dividida en 15 mosaicos cuadrados:
 
-[![Foto de rompecabezas 1](cropping-images/PhotoPuzzle1.png "foto rompecabezas 1")](cropping-images/PhotoPuzzle1-Large.png#lightbox)
+[![Foto Puzzle 1](cropping-images/PhotoPuzzle1.png "Foto Puzzle 1")](cropping-images/PhotoPuzzle1-Large.png#lightbox)
 
-Al presionar el **Randomize** botón mezcla copia todos los iconos:
+Al presionar el botón **aleatorizar** se mezclan todos los mosaicos:
 
-[![Foto 2 rompecabezas](cropping-images/PhotoPuzzle2.png "rompecabezas 2 de fotografías")](cropping-images/PhotoPuzzle2-Large.png#lightbox)
+[![Rompecabezas fotográfico 2](cropping-images/PhotoPuzzle2.png "Rompecabezas fotográfico 2")](cropping-images/PhotoPuzzle2-Large.png#lightbox)
 
-Ahora puede colocarlas en el orden correcto. Los iconos en la misma fila o columna como cuadrado en blanco pueden ser punteados moverlos a cuadrado en blanco. 
+Ahora puede volver a colocarlos en el orden correcto. Los mosaicos de la misma fila o columna que el cuadrado en blanco se pueden puntear para moverlos al cuadrado en blanco. 
 
 ## <a name="related-links"></a>Vínculos relacionados
 

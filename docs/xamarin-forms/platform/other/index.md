@@ -1,38 +1,41 @@
 ---
-title: Xamarin. Forms otras plataformas
-description: En esta guía se explican las plataformas adicionales compatibles con Xamarin. Forms.
-ms.prod: xamarin
-ms.assetid: C713B905-0C98-4442-B5CB-91C384A384DA
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/04/2019
-ms.openlocfilehash: 7c3c995607a85fd8e6325bbaed65c0d590e46205
-ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
+title: Xamarin.FormsOtras plataformas
+description: En esta guía se explican las plataformas adicionales que admite Xamarin.Forms .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a0ab248d3e23854e8027f515fbcf0fa6ca9521fd
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71997121"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139547"
 ---
-# <a name="xamarinforms-other-platforms"></a>Xamarin. Forms otras plataformas
+# <a name="xamarinforms-other-platforms"></a>Xamarin.FormsOtras plataformas
 
-Xamarin. Forms admite plataformas adicionales más allá de iOS, Android y Windows.
+Xamarin.Formsadmite plataformas adicionales más allá de iOS, Android y Windows.
 
 > [!IMPORTANT]
-> Para obtener más información sobre las plataformas de Xamarin. Forms admitidas, consulte [compatibilidad con la plataforma de Xamarin. Forms](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
+> Para obtener más información acerca de las Xamarin.Forms plataformas compatibles, consulte [ Xamarin.Forms compatibilidad con plataformas](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
 
-## <a name="gtkgtkmd"></a>[GTK](gtk.md)
+## <a name="gtk"></a>[GTK](gtk.md)
 
-Xamarin. Forms ahora tiene compatibilidad con vista previa para aplicaciones GTK #.
+Xamarin.Formsahora tiene compatibilidad con la versión preliminar de las aplicaciones GTK #.
 
-## <a name="macmacmd"></a>[Mac](mac.md)
+## <a name="mac"></a>[Mac](mac.md)
 
-Xamarin. Forms ahora tiene compatibilidad con versión preliminar para aplicaciones de macOS.
+Xamarin.Formsahora tiene compatibilidad con la versión preliminar para aplicaciones macOS.
 
-## <a name="tizentizenmd"></a>[Tizen](tizen.md)
+## <a name="tizen"></a>[Tizen](tizen.md)
 
-Tizen .NET le permite compilar aplicaciones .NET con Xamarin. Forms y el .NET Framework de Tizen.
+Tizen .NET le permite compilar aplicaciones .NET con Xamarin.Forms y el .NET Framework de Tizen.
 
-## <a name="wpfwpfmd"></a>[WPF](wpf.md)
+## <a name="wpf"></a>[WPF](wpf.md)
 
-Xamarin. Forms ahora tiene compatibilidad con vista previa para aplicaciones Windows Presentation Foundation (WPF).
+Xamarin.Formsahora tiene compatibilidad con vista previa para aplicaciones de Windows Presentation Foundation (WPF).

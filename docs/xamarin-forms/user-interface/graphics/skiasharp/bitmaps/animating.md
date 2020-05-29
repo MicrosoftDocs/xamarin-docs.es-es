@@ -1,46 +1,49 @@
 ---
-title: Animar los mapas de bits de SkiaSharp
-description: Obtenga información sobre cómo realizar una animación mapa de bits secuencialmente mostrando una serie de mapas de bits, y procesar archivos GIF animados.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/12/2018
-ms.openlocfilehash: 33e17a01d8a13fcdaee27e5857c554a4a232c534
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 763f44c26d653aa32429b2aa764989e18e8b8078
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305676"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139976"
 ---
-# <a name="animating-skiasharp-bitmaps"></a>Animar los mapas de bits de SkiaSharp
+# <a name="animating-skiasharp-bitmaps"></a>Animar mapas de bits SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Las aplicaciones que animan gráficos SkiaSharp generalmente llaman a `InvalidateSurface` en el `SKCanvasView` a una velocidad fija, a menudo cada 16 milisegundos. Al invalidar la superficie, se desencadena una llamada al controlador de `PaintSurface` para volver a dibujar la pantalla. Como los objetos visuales se vuelven a dibujar 60 veces por segundo, aparecen animar sin problemas.
+Las aplicaciones que animan gráficos SkiaSharp generalmente llaman a `InvalidateSurface` en `SKCanvasView` una velocidad fija, a menudo cada 16 milisegundos. Al invalidar la superficie, se desencadena una llamada al `PaintSurface` controlador para volver a dibujar la pantalla. A medida que los objetos visuales se vuelven a dibujar 60 veces por segundo, parecen estar animados sin problemas.
 
-Sin embargo, si los gráficos son demasiado complejos para representarse en 16 milisegundos, la animación puede ser impreciso. El programador puede optar por reducir la frecuencia de actualización a 30 veces o 15 veces por segundo, pero a veces incluso no es suficiente. En ocasiones, los gráficos son tan complejos que simplemente no se puede representar en tiempo real.
+Sin embargo, si los gráficos son demasiado complejos para representarlos en 16 milisegundos, la animación puede llegar a ser vibrante. El programador puede optar por reducir la frecuencia de actualización a 30 veces o 15 veces por segundo, pero a veces esto no es suficiente. A veces, los gráficos son tan complejos que simplemente no se pueden representar en tiempo real.
 
-Una solución consiste en preparar para la animación con antelación con la representación de los marcos individuales de la animación en una serie de mapas de bits. Para mostrar la animación, sólo es necesario mostrar estos mapas de bits secuencialmente 60 veces por segundo.
+Una solución es preparar la animación de antemano representando los marcos individuales de la animación en una serie de mapas de bits. Para mostrar la animación, solo es necesario mostrar estos mapas de bits secuencialmente 60 veces por segundo.
 
-Por supuesto, que es potencialmente una gran cantidad de mapas de bits, pero que es 3D de gran presupuesto cómo se realizan las películas animadas. Los gráficos 3D son mucho demasiado complejos para representarse en tiempo real. Una gran cantidad de tiempo de procesamiento es necesario para representar cada fotograma. Lo que verá cuando vea la película es básicamente una serie de mapas de bits.
+Por supuesto, eso es potencialmente una gran cantidad de mapas de bits, pero es la forma en que se realizan las películas animadas 3D de gran presupuesto. Los gráficos 3D son mucho demasiado complejos para representarlos en tiempo real. Se requiere mucho tiempo de procesamiento para representar cada fotograma. Lo que se ve al ver la película es esencialmente una serie de mapas de bits.
 
-Puede hacer algo similar en SkiaSharp. En este artículo se muestra dos tipos de animación de mapa de bits. El primer ejemplo es una animación del conjunto de Mandelbrot:
+Puede hacer algo similar en SkiaSharp. En este artículo se muestran dos tipos de animación de mapa de bits. El primer ejemplo es una animación del conjunto de Mandelbrot:
 
 ![Animar ejemplo](animating-images/AnimatingSample.png "Animar ejemplo")
 
-El segundo ejemplo muestra cómo usar SkiaSharp para representar un archivo GIF animado.
+En el segundo ejemplo se muestra cómo usar SkiaSharp para representar un archivo GIF animado.
 
 ## <a name="bitmap-animation"></a>Animación de mapa de bits
 
-El conjunto de Mandelbrot es visualmente fascinante pero computionally largas. (Para obtener una explicación del conjunto de Mandelbrot y las matemáticas que se usan aquí, consulte el [capítulo 20 de _creación de Mobile Apps con Xamarin. Forms_ ](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) a partir de la página 666. La siguiente descripción supone esa información en segundo plano).
+El conjunto Mandelbrot es visualmente fascinante pero computionally largo. (Para obtener una explicación del conjunto de Mandelbrot y las matemáticas que se usan aquí, consulte el [capítulo 20 de _creación de Mobile Apps con Xamarin. Forms_ ](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) a partir de la página 666. En la descripción siguiente se da por supuesto que el conocimiento en segundo plano).
 
-En el ejemplo de [**animación de Mandelbrot**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima) se usa la animación de mapas de bits para simular un zoom continuo de un punto fijo en el conjunto de Mandelbrot. Acercar va seguido de alejar y, a continuación, el ciclo se repite indefinidamente o hasta que finalice el programa.
+En el ejemplo de [**animación de Mandelbrot**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima) se usa la animación de mapas de bits para simular un zoom continuo de un punto fijo en el conjunto de Mandelbrot. El zoom se hace seguido del zoom y, a continuación, el ciclo se repite siempre o hasta que el programa finaliza.
 
-El programa se prepara para esta animación mediante la creación de hasta 50 mapas de bits que almacena en almacenamiento local para la aplicación. Cada mapa de bits abarca la mitad del ancho y alto del plano complejo como el mapa de bits anterior. (En el programa, se dice que estos mapas de bits representan _niveles de zoom_enteros). Los mapas de bits se muestran en la secuencia. La escala de cada mapa de bits se anima para proporcionar un avance sin problemas desde un mapa de bits a otro.
+El programa se prepara para esta animación creando hasta 50 mapas de bits que almacena en el almacenamiento local de la aplicación. Cada mapa de bits abarca la mitad del ancho y el alto del plano complejo como mapa de bits anterior. (En el programa, se dice que estos mapas de bits representan _niveles de zoom_enteros). Los mapas de bits se muestran en la secuencia. El escalado de cada mapa de bits se anima para proporcionar una progresión fluida de un mapa de bits a otro.
 
-Al igual que el último programa descrito en el capítulo 20 de _creación de Mobile Apps con Xamarin. Forms_, el cálculo del conjunto de Mandelbrot en la **animación de Mandelbrot** es un método asincrónico con ocho parámetros. Los parámetros incluyen un punto central complejas y un ancho y alto del plano complejo que rodean a ese punto central. Los siguientes tres parámetros son el ancho en píxeles y el alto del mapa de bits que se va a crear y un número máximo de iteraciones para el cálculo recursiva. El parámetro `progress` se usa para mostrar el progreso de este cálculo. El parámetro `cancelToken` no se usa en este programa:
+Al igual que el último programa descrito en el capítulo 20 de _creación de Mobile Apps con Xamarin. Forms_, el cálculo del conjunto de Mandelbrot en la **animación de Mandelbrot** es un método asincrónico con ocho parámetros. Los parámetros incluyen un punto central complejo y un ancho y alto del plano complejo que rodea ese punto central. Los tres parámetros siguientes son el ancho y el alto de píxel del mapa de bits que se va a crear y un número máximo de iteraciones para el cálculo recursivo. El `progress` parámetro se usa para mostrar el progreso de este cálculo. El `cancelToken` parámetro no se usa en este programa:
 
 ```csharp
 static class Mandelbrot
@@ -127,7 +130,7 @@ class BitmapInfo
 }
 ```
 
-El archivo XAML de **animación de Mandelbrot** incluye dos vistas `Label`, una `ProgressBar`y una `Button`, así como la `SKCanvasView`:
+El archivo XAML de **animación de Mandelbrot** incluye dos `Label` vistas, a `ProgressBar` y a, así `Button` como a `SKCanvasView` :
 
 ```csharp
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -159,7 +162,7 @@ El archivo XAML de **animación de Mandelbrot** incluye dos vistas `Label`, una 
 </ContentPage>
 ```
 
-El archivo de código subyacente comienza definiendo tres constantes fundamentales y una matriz de mapas de bits:
+El archivo de código subyacente comienza definiendo tres constantes cruciales y una matriz de mapas de bits:
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -179,11 +182,11 @@ public partial class MainPage : ContentPage
 }
 ```
 
-En algún momento, es probable que desee cambiar el valor de `COUNT` a 50 para ver el intervalo completo de la animación. Los valores superiores a 50 no son útiles. En torno a un nivel de zoom de 48 o algo así, la resolución de números de punto flotante de precisión doble resultará insuficiente para el cálculo del conjunto de Mandelbrot. Este problema se describe en la página 684 de _creación de Mobile Apps con Xamarin. Forms_.
+En algún momento, es probable que desee cambiar el `COUNT` valor a 50 para ver el intervalo completo de la animación. Los valores por encima de 50 no son útiles. En torno a un nivel de zoom de 48 o por lo tanto, la resolución de números de punto flotante de precisión doble es insuficiente para el cálculo del conjunto de Mandelbrot. Este problema se describe en la página 684 de _creación de Mobile Apps con Xamarin. Forms_.
 
-El valor `center` es muy importante. Este es el enfoque de zoom de la animación. Los tres valores del archivo son los que se usan en las tres capturas de pantallas finales del capítulo 20 de _creación de Mobile Apps con Xamarin. Forms_ en la página 684, pero puede experimentar con el programa de ese capítulo para obtener uno de sus propios valores.
+El `center` valor es muy importante. Este es el foco del zoom de animación. Los tres valores del archivo son los que se usan en las tres capturas de pantallas finales del capítulo 20 de _creación de Mobile Apps con Xamarin. Forms_ en la página 684, pero puede experimentar con el programa de ese capítulo para obtener uno de sus propios valores.
 
-El ejemplo de **animación de Mandelbrot** almacena estos `COUNT` mapas de bits en el almacenamiento de aplicaciones local. Los mapas de cincuenta bits requieren más de 20 megabytes de almacenamiento en el dispositivo, por lo que es posible que desee saber cuánto almacenamiento estos mapas de bits se ocupan y, en algún momento es posible que desee eliminarlos todos. Este es el propósito de estos dos métodos en la parte inferior de la clase `MainPage`:
+El ejemplo de **animación de Mandelbrot** almacena estos `COUNT` mapas de bits en el almacenamiento de la aplicación local. 50 los mapas de bits requieren más de 20 megabytes de almacenamiento en el dispositivo, por lo que es posible que desee saber cuánto almacenamiento están ocupando estos mapas de bits y, en algún momento, puede que desee eliminarlos todos. Este es el propósito de estos dos métodos en la parte inferior de la `MainPage` clase:
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -213,11 +216,11 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Puede eliminar los mapas de bits en el almacenamiento local mientras el programa anima a los mapas de bits mismos porque el sistema conserva en memoria. Pero la próxima vez que ejecute el programa, será necesario volver a crear los mapas de bits.
+Puede eliminar los mapas de bits en el almacenamiento local mientras el programa está animando los mismos mapas de bits porque el programa los conserva en la memoria. Pero la próxima vez que ejecute el programa, tendrá que volver a crear los mapas de bits.
 
-Los mapas de bits almacenados en el almacenamiento de la aplicación local incorporan el valor `center` en sus nombres de archivo, por lo que si cambia la configuración de `center`, los mapas de bits existentes no se reemplazarán en el almacenamiento y seguirán ocupando espacio.
+Los mapas de bits almacenados en el almacenamiento de la aplicación local incorporan el `center` valor en sus nombres de archivo, por lo que si cambia la `center` configuración, los mapas de bits existentes no se reemplazarán en el almacenamiento y seguirán ocupando espacio.
 
-Estos son los métodos que `MainPage` usa para construir los nombres de archivo, así como un método `MakePixel` para definir un valor de píxel basado en componentes de color:
+Estos son los métodos que `MainPage` usa para construir los nombres de archivo, así como un `MakePixel` método para definir un valor de píxel basado en componentes de color:
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -238,9 +241,9 @@ public partial class MainPage : ContentPage
 }
 ```
 
-El parámetro `zoomLevel` para `FilePath` intervalos de 0 a la constante `COUNT` menos 1.
+El `zoomLevel` parámetro va `FilePath` de 0 a la `COUNT` constante menos 1.
 
-El constructor `MainPage` llama al método `LoadAndStartAnimation`:
+El `MainPage` constructor llama al `LoadAndStartAnimation` método:
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -256,7 +259,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-El método `LoadAndStartAnimation` es responsable de tener acceso al almacenamiento local de la aplicación para cargar los mapas de bits que puedan haberse creado cuando el programa se ejecutó anteriormente. Recorre en bucle `zoomLevel` valores de 0 a `COUNT`. Si el archivo existe, lo carga en la matriz de `bitmaps`. De lo contrario, debe crear un mapa de bits para los valores `center` y `zoomLevel` concretos llamando a `Mandelbrot.CalculateAsync`. Ese método obtiene los recuentos de iteración para cada píxel, que este método se convierte en colores:
+El `LoadAndStartAnimation` método es responsable de tener acceso al almacenamiento local de la aplicación para cargar los mapas de bits que puedan haberse creado cuando el programa se ejecutó anteriormente. Recorre `zoomLevel` los valores de 0 a `COUNT` . Si el archivo existe, lo carga en la `bitmaps` matriz. De lo contrario, debe crear un mapa de bits para los `center` valores y concretos llamando `zoomLevel` a `Mandelbrot.CalculateAsync` . Ese método obtiene los recuentos de iteraciones para cada píxel, que este método convierte en colores:
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -374,13 +377,13 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Tenga en cuenta que el sistema almacena estos mapas de bits en el almacenamiento de la aplicación local en lugar de en la biblioteca de fotografías del dispositivo. La biblioteca .NET Standard 2,0 permite usar los métodos `File.OpenRead` y `File.WriteAllBytes` conocidos para esta tarea.
+Tenga en cuenta que el programa almacena estos mapas de bits en el almacenamiento de aplicaciones local en lugar de en la biblioteca fotográfica del dispositivo. La biblioteca .NET Standard 2,0 permite usar los `File.OpenRead` métodos y conocidos `File.WriteAllBytes` para esta tarea.
 
-Una vez que todos los mapas de bits se han creado o cargado en la memoria, el método inicia un objeto `Stopwatch` y llama a `Device.StartTimer`. Se llama al método `OnTimerTick` cada 16 milisegundos.
+Una vez que todos los mapas de bits se han creado o cargado en la memoria, el método inicia un `Stopwatch` objeto y llama a `Device.StartTimer` . `OnTimerTick`Se llama al método cada 16 milisegundos.
 
-`OnTimerTick` calcula un valor de `time` en milisegundos comprendido entre 0 y 6000 veces `COUNT`, que se apportions seis segundos para la presentación de cada mapa de bits. El valor de `progress` usa el valor `Math.Sin` para crear una animación sinusoidal que será más lenta al principio del ciclo y más lenta al final a medida que invierte la dirección.
+`OnTimerTick`calcula un `time` valor en milisegundos comprendido entre 0 y 6000 veces `COUNT` , lo que apportions seis segundos para la presentación de cada mapa de bits. El `progress` valor usa el `Math.Sin` valor para crear una animación sinusoidal que será más lenta al principio del ciclo y más lenta al final a medida que invierte la dirección.
 
-El valor de `progress` va de 0 a `COUNT`. Esto significa que la parte entera de `progress` es un índice en la matriz de `bitmaps`, mientras que la parte fraccionaria de `progress` indica un nivel de zoom para ese mapa de bits determinado. Estos valores se almacenan en los campos `bitmapIndex` y `bitmapProgress`, y se muestran en el `Label` y `Slider` en el archivo XAML. El `SKCanvasView` se invalida para actualizar la presentación del mapa de bits:
+El `progress` valor va de 0 a `COUNT` . Esto significa que la parte entera de `progress` es un índice de la `bitmaps` matriz, mientras que la parte fraccionaria de `progress` indica un nivel de zoom para ese mapa de bits determinado. Estos valores se almacenan en `bitmapIndex` los `bitmapProgress` campos y, y se muestran en `Label` y `Slider` en el archivo XAML. `SKCanvasView`Se invalida para actualizar la presentación del mapa de bits:
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -421,7 +424,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Por último, el controlador de `PaintSurface` de la `SKCanvasView` calcula un rectángulo de destino para mostrar el mapa de bits lo más grande posible mientras mantiene la relación de aspecto. Un rectángulo de origen se basa en el valor de `bitmapProgress`. El `fraction` valor calculado aquí oscila entre 0 cuando `bitmapProgress` es 0 para mostrar todo el mapa de bits, hasta 0,25 cuando `bitmapProgress` es 1 para mostrar la mitad del ancho y el alto del mapa de bits, con lo que se amplía de forma eficaz:
+Por último, el `PaintSurface` controlador de `SKCanvasView` calcula un rectángulo de destino para mostrar el mapa de bits lo más grande posible mientras se mantiene la relación de aspecto. Un rectángulo de origen se basa en el `bitmapProgress` valor. El `fraction` valor que se calcula aquí oscila entre 0 cuando `bitmapProgress` es 0 para mostrar todo el mapa de bits, hasta 0,25 cuando `bitmapProgress` es 1 para mostrar la mitad del ancho y el alto del mapa de bits, con lo que se amplía de forma eficaz:
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -465,11 +468,11 @@ Esta es la ejecución del programa:
 
 [![Animación de Mandelbrot](animating-images/MandelbrotAnimation.png "Animación de Mandelbrot")](animating-images/MandelbrotAnimation-Large.png#lightbox)
 
-## <a name="gif-animation"></a>Animación de GIF
+## <a name="gif-animation"></a>Animación GIF
 
-La especificación de formato de intercambio de gráficos (GIF) incluye una característica que permite un único archivo GIF incluir varios marcos secuenciales de una escena que se pueden mostrar en sucesión, a menudo en un bucle. Estos archivos se conocen como archivos _GIF animados_. Los exploradores Web pueden reproducir archivos GIF animados y SkiaSharp permite que una aplicación para extraer los marcos de un archivo GIF animado y para mostrarlos de manera secuencial.
+La especificación del formato de intercambio de gráficos (GIF) incluye una característica que permite que un solo archivo GIF contenga varios marcos secuenciales de una escena que se pueden mostrar en sucesión, a menudo en un bucle. Estos archivos se conocen como archivos _GIF animados_. Los exploradores Web pueden reproducir archivos GIF animados y SkiaSharp permite a una aplicación extraer los fotogramas de un archivo GIF animado y mostrarlos secuencialmente.
 
-En el ejemplo [SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) se incluye un recurso GIF animado denominado **Newtons_cradle_animation_book_2. gif** creado por DemonDeLuxe y que se ha descargado de la página de [base de Newton](https://en.wikipedia.org/wiki/Newton%27s_cradle) en Wikipedia. La página **GIF animada** incluye un archivo XAML que proporciona esa información y crea una instancia de un `SKCanvasView`:
+En el ejemplo [SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) se incluye un recurso GIF animado denominado **Newtons_cradle_animation_book_2. gif** creado por DemonDeLuxe y que se ha descargado de la página de [base de Newton](https://en.wikipedia.org/wiki/Newton%27s_cradle) en Wikipedia. La página **GIF animada** incluye un archivo XAML que proporciona esa información y crea una instancia de `SKCanvasView` :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -496,19 +499,19 @@ En el ejemplo [SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/x
 </ContentPage>
 ```
 
-El archivo de código subyacente no se ha generalizado para reproducir cualquier archivo GIF animado. Parte de la información que está disponible, en particular omite un recuento de repetición y simplemente se reproduce el archivo GIF animado en un bucle.
+El archivo de código subyacente no se generaliza para reproducir ningún archivo GIF animado. Omite parte de la información que está disponible, en particular un recuento de repetición y simplemente reproduce el GIF animado en un bucle.
 
-El uso de SkisSharp para extraer los marcos de un archivo GIF animado no parece que se documentan en cualquier lugar, por lo que es más detallada de lo habitual la descripción del código que sigue:
+El uso de SkisSharp para extraer los marcos de un archivo GIF animado no parece estar documentado en ningún lugar, por lo que la descripción del código siguiente es más detallada que la habitual:
 
-La descodificación del archivo GIF animado se produce en el constructor de la página y requiere que se utilice el objeto `Stream` que hace referencia al mapa de bits para crear un objeto `SKManagedStream` y, a continuación, un objeto [`SKCodec`](xref:SkiaSharp.SKCodec) . La propiedad [`FrameCount`](xref:SkiaSharp.SKCodec.FrameCount) indica el número de fotogramas que componen la animación.
+La descodificación del archivo GIF animado se produce en el constructor de la página y requiere que `Stream` se utilice el objeto que hace referencia al mapa de bits para crear un `SKManagedStream` objeto y, a continuación, un [`SKCodec`](xref:SkiaSharp.SKCodec) objeto. La [`FrameCount`](xref:SkiaSharp.SKCodec.FrameCount) propiedad indica el número de fotogramas que componen la animación.
 
-Estos marcos se guardan finalmente como mapas de bits individuales, por lo que el constructor usa `FrameCount` para asignar una matriz de tipo `SKBitmap` así como dos matrices de `int` para la duración de cada fotograma y (para facilitar la lógica de animación) de las duraciones acumuladas.
+Estos marcos se guardan finalmente como mapas de bits individuales, por lo que el constructor utiliza `FrameCount` para asignar una matriz de tipo, así `SKBitmap` como dos `int` matrices para la duración de cada fotograma y (para facilitar la lógica de animación) de las duraciones acumuladas.
 
-La propiedad [`FrameInfo`](xref:SkiaSharp.SKCodec.FrameInfo) de `SKCodec` clase es una matriz de valores [`SKCodecFrameInfo`](xref:SkiaSharp.SKCodecFrameInfo) , uno para cada fotograma, pero lo único que este programa toma de esa estructura es el [`Duration`](xref:SkiaSharp.SKCodecFrameInfo.Duration) del marco en milisegundos.
+La [`FrameInfo`](xref:SkiaSharp.SKCodec.FrameInfo) propiedad de la `SKCodec` clase es una matriz de [`SKCodecFrameInfo`](xref:SkiaSharp.SKCodecFrameInfo) valores, uno para cada fotograma, pero lo único que este programa toma de esa estructura es el [`Duration`](xref:SkiaSharp.SKCodecFrameInfo.Duration) del marco en milisegundos.
 
-`SKCodec` define una propiedad denominada [`Info`](xref:SkiaSharp.SKCodec.Info) de tipo [`SKImageInfo`](xref:SkiaSharp.SKImageInfo), pero ese valor de `SKImageInfo` indica (al menos para esta imagen) que el tipo de color es `SKColorType.Index8`, lo que significa que cada píxel es un índice en un tipo de color. Para evitar molestarse con las tablas de color, el programa utiliza el [`Width`](xref:SkiaSharp.SKImageInfo.Width) y [`Height`](xref:SkiaSharp.SKImageInfo.Height) información de esa estructura para construir su propio valor de `ImageInfo` de color completo. Cada `SKBitmap` se crea a partir de ese.
+`SKCodec`define una propiedad denominada [`Info`](xref:SkiaSharp.SKCodec.Info) de tipo [`SKImageInfo`](xref:SkiaSharp.SKImageInfo) , pero ese `SKImageInfo` valor indica (al menos para esta imagen) que el tipo de color es `SKColorType.Index8` , lo que significa que cada píxel es un índice en un tipo de color. Para evitar molestarse con las tablas de color, el programa utiliza la [`Width`](xref:SkiaSharp.SKImageInfo.Width) [`Height`](xref:SkiaSharp.SKImageInfo.Height) información y de esa estructura para construir su propio valor de color completo `ImageInfo` . Cada `SKBitmap` se crea a partir de ese.
 
-El método `GetPixels` de `SKBitmap` devuelve un `IntPtr` que hace referencia a los bits de píxeles de ese mapa de bits. Estos bits de píxeles no se ha establecido aún. Dicho `IntPtr` se pasa a uno de los métodos de [`GetPixels`](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions)) de `SKCodec`. Ese método copia el marco del archivo GIF en el espacio de memoria al que hace referencia el `IntPtr`. El constructor [`SKCodecOptions`](xref:SkiaSharp.SKCodecOptions) indica el número de marco:
+El `GetPixels` método de `SKBitmap` devuelve un `IntPtr` que hace referencia a los bits de píxel de ese mapa de bits. Estos bits de píxeles aún no se han establecido. Que `IntPtr` se pasa a uno de los [`GetPixels`](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions)) métodos de `SKCodec` . Ese método copia el marco del archivo GIF en el espacio de memoria al que hace referencia `IntPtr` . El [`SKCodecOptions`](xref:SkiaSharp.SKCodecOptions) constructor indica el número de marco:
 
 ```csharp
 public partial class AnimatedGifPage : ContentPage
@@ -576,11 +579,11 @@ public partial class AnimatedGifPage : ContentPage
 }
 ```
 
-A pesar del valor de `IntPtr`, no se requiere ningún código `unsafe` porque el `IntPtr` nunca se convierte C# en un valor de puntero.
+A pesar del `IntPtr` valor, no `unsafe` se requiere ningún código porque `IntPtr` nunca se convierte en un valor de puntero de C#.
 
-Después de haber extraído cada fotograma, el constructor totales de las duraciones de todos los marcos y, a continuación, inicializa otra matriz con las duraciones acumuladas.
+Una vez extraído cada fotograma, el constructor totaliza las duraciones de todos los marcos y, a continuación, inicializa otra matriz con las duraciones acumuladas.
 
-El resto del archivo de código subyacente se dedica a la animación. El método `Device.StartTimer` se usa para iniciar un temporizador y la devolución de llamada de `OnTimerTick` utiliza un objeto `Stopwatch` para determinar el tiempo transcurrido en milisegundos. Recorrer en iteración la matriz de duraciones acumulado es suficiente para encontrar el marco actual:
+El resto del archivo de código subyacente está dedicado a la animación. El `Device.StartTimer` método se usa para iniciar un temporizador y la devolución de `OnTimerTick` llamada usa un `Stopwatch` objeto para determinar el tiempo transcurrido en milisegundos. Recorrer la matriz duraciones acumuladas es suficiente para encontrar el fotograma actual:
 
 ```csharp
 public partial class AnimatedGifPage : ContentPage
@@ -651,11 +654,11 @@ public partial class AnimatedGifPage : ContentPage
 }
 ```
 
-Cada vez que cambia la variable `currentframe`, se invalida el `SKCanvasView` y se muestra el nuevo marco:
+Cada vez que `currentframe` cambia la variable, `SKCanvasView` se invalida y se muestra el nuevo marco:
 
 [![GIF animado](animating-images/AnimatedGif.png "GIF animado")](animating-images/AnimatedGif-Large.png#lightbox)
 
-Por supuesto, deseará ejecutar el programa para ver la animación.
+Por supuesto, querrá ejecutar el programa usted mismo para ver la animación.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
