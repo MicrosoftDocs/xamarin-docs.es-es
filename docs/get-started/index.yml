@@ -10,14 +10,17 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 12/23/2019
-  ms.openlocfilehash: 672bf80503c85ac4bdaa903c647144be3819635d
-  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+  no-loc:
+  - Xamarin.Forms
+  - Xamarin.Essentials
+  ms.openlocfilehash: 7a976d8f711f2a1f940177f0fbe7605f4bfabf94
+  ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 04/09/2020
-  ms.locfileid: "76550086"
+  ms.lasthandoff: 05/28/2020
+  ms.locfileid: "84133138"
 landingContent:
-- title: Introducción
+- title: Primeros pasos
   linkLists:
   - linkListType: overview
     links:
@@ -77,9 +80,9 @@ landingContent:
       url: tutorials/app-lifecycle/index.yml
     - text: Base de datos local
       url: tutorials/local-database/index.yml
-    - text: SERVICIOS WEB
+    - text: servicios Web
       url: tutorials/web-service/index.yml
-- title: Más información sobre Xamarin
+- title: Obtener información sobre Xamarin
   linkLists:
   - linkListType: concept
     links:

@@ -10,18 +10,21 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 12/27/2019
-  ms.openlocfilehash: 5f01b3ecf914d6c7c5c36378511c0fd7e30c952c
-  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+  no-loc:
+  - Xamarin.Forms
+  - Xamarin.Essentials
+  ms.openlocfilehash: 6e40cb17a6ea852d5bc5e3ae31b0983773105d5a
+  ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 04/09/2020
-  ms.locfileid: "75679693"
+  ms.lasthandoff: 05/28/2020
+  ms.locfileid: "84138390"
 landingContent:
-- title: Introducción
+- title: Primeros pasos
   linkLists:
   - linkListType: concept
     links:
-    - text: Aspectos básicos
+    - text: Fundamentos
       url: xaml-basics/index.md
     - text: Controles
       url: xaml-controls.md
@@ -61,6 +64,8 @@ landingContent:
       url: resource-dictionaries.md
     - text: Paso de argumentos
       url: passing-arguments.md
+    - text: Genéricos
+      url: generics.md
     - text: Modificadores de campo
       url: field-modifiers.md
     - text: Carga de XAML en tiempo de ejecución
