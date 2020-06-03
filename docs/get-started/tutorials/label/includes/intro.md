@@ -11,7 +11,7 @@ Antes de intentar este tutorial, debe haber completado correctamente lo siguient
 - Inicio rápido [Creación de una primera aplicación de Xamarin.Forms](~/get-started/first-app/index.md).
 - Tutorial sobre el [diseño de pila](~/get-started/tutorials/stacklayout/index.yml) (StackLayout).
 
-En este tutorial, aprenderá a:
+En este tutorial aprenderá a:
 
 > [!div class="checklist"]
 >

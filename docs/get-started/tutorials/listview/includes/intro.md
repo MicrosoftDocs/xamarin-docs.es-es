@@ -14,7 +14,7 @@ Antes de intentar este tutorial, debe haber completado correctamente lo siguient
 - Tutorial sobre las [etiquetas](~/get-started/tutorials/label/index.yml) (Label).
 - Tutorial sobre las [imágenes](~/get-started/tutorials/image/index.yml) (Image).
 
-En este tutorial, aprenderá a:
+En este tutorial aprenderá a:
 
 > [!div class="checklist"]
 >
