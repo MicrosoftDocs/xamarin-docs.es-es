@@ -1,24 +1,28 @@
 ---
-title: Resumen del capítulo 21. Transformaciones
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 21. Transformaciones'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/07/2017
-ms.openlocfilehash: 40c091d0c5042d172108709f89774e41e9339d4b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 21. Transforms''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 32393108f84ea3a57079c86b6a9a8e628ceca03a
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70760576"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136674"
 ---
 # <a name="summary-of-chapter-21-transforms"></a>Resumen del capítulo 21. Transformaciones
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21)
 
-Una vista de Xamarin.Forms aparece en la pantalla en una ubicación y un tamaño determinados por su elemento primario, que generalmente es un derivado de `Layout` o `Layout<View>`. La propiedad *transform* es una característica de Xamarin.Forms que puede modificar esa ubicación, tamaño o incluso orientación.
+Una vista de Xamarin.Forms aparece en la pantalla en una ubicación y con un tamaño determinados por su elemento primario, que generalmente es un derivado de `Layout` o `Layout<View>`. La propiedad *transform* es una característica de Xamarin.Forms que puede modificar esa ubicación, tamaño o incluso orientación.
 
 Xamarin.Forms admite tres tipos básicos de transformaciones:
 
@@ -39,7 +43,7 @@ Las transformaciones se admiten con ocho propiedades de tipo `double` definidas 
 - [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX)
 - [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)
 
-Todas estas propiedades están respaldadas por propiedades enlazables. Pueden ser destinos de enlace de datos y con estilo. En el [**Capítulo 22. Animación**](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter22.md) se muestra cómo se pueden animar estas propiedades, pero ya en algunos ejemplos de este capítulo se muestra cómo se pueden animar mediante el [temporizador](~/xamarin-forms/platform/device.md#devicestarttimer) de Xamarin.Forms.
+Todas estas propiedades están respaldadas por propiedades enlazables. Pueden ser destinos de enlace de datos y con estilo. En el [**Capítulo 22. Animación**](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter22.md) se indica cómo se pueden animar estas propiedades, pero ya en algunos ejemplos de este capítulo se muestra cómo se pueden animar mediante el [temporizador](~/xamarin-forms/platform/device.md#devicestarttimer) de Xamarin.Forms.
 
 Las propiedades de transformación solo afectan al modo en que se representa el elemento y *no* afectan a la percepción del elemento en el diseño.
 

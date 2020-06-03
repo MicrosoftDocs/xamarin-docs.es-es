@@ -1,18 +1,21 @@
 ---
-title: Reproducción de un vídeo web
-description: En este artículo se explica cómo reproducir vídeos web en una aplicación de reproductor de vídeo, mediante Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: 75781A10-865D-4BA8-8D6B-E3DA012922BC
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/12/2018
-ms.openlocfilehash: 107b2a970041c70bb021b03dd98f8c91eaea8d34
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: En este artículo se explica cómo reproducir vídeos web en una aplicación de reproductor de vídeo mediante Xamarin.Forms.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b4269b768d6dd9a0eadbbe557f701f8a43b74c99
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771759"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84133684"
 ---
 # <a name="playing-a-web-video"></a>Reproducción de un vídeo web
 
@@ -54,7 +57,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-La propiedad `Source` es de tipo `VideoSource`, que se modela a partir de la clase abstracta [`ImageSource`](xref:Xamarin.Forms.ImageSource) de Xamarin.Forms y sus tres derivadas [`UriImageSource`](xref:Xamarin.Forms.UriImageSource), [`FileImageSource`](xref:Xamarin.Forms.FileImageSource) y [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource). Pero no hay ninguna opción de hacer streaming disponible para `VideoPlayer`, porque iOS y Android no admiten la reproducción de un vídeo desde una secuencia.
+La propiedad `Source` es de tipo `VideoSource`, que se modela a partir de la clase abstracta [`ImageSource`](xref:Xamarin.Forms.ImageSource) de Xamarin.Forms y sus tres derivadas: [`UriImageSource`](xref:Xamarin.Forms.UriImageSource), [`FileImageSource`](xref:Xamarin.Forms.FileImageSource) y [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource). Pero no hay ninguna opción de hacer streaming disponible para `VideoPlayer`, porque iOS y Android no admiten la reproducción de un vídeo desde una secuencia.
 
 ## <a name="video-sources"></a>Orígenes de vídeo
 

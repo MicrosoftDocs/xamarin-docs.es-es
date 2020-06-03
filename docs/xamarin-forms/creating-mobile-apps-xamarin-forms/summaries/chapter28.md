@@ -1,18 +1,22 @@
 ---
-title: Resumen del capítulo 28. Ubicación y mapas
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 28. Ubicación y mapas'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/19/2018
-ms.openlocfilehash: 5dcd84536cc6d80deb753fc6fe57f9090f6b2dad
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 28. Location and maps''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 301dc65c7909603e117717a993959e3c73fa2d32
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "72697073"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84133411"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Resumen del capítulo 28. Ubicación y mapas
 
@@ -179,14 +183,14 @@ Una nueva biblioteca para este libro denominada [**Xamarin.FormsBook.Toolkit.Map
 
 Puede llamar al método [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion(Xamarin.Forms.Maps.MapSpan)) de `Map` para establecer mediante programación una ubicación y un nivel de zoom en el mapa. El argumento es de tipo `MapSpan`. Puede crear un objeto `MapSpan` con una de las siguientes opciones:
 
-- [Constructor `MapSpan`](xref:Xamarin.Forms.Maps.MapSpan.%23ctor(Xamarin.Forms.Maps.Position,System.Double,System.Double)) con `Position`, y un intervalo de latitud y longitud
+- [`MapSpan` constructor](xref:Xamarin.Forms.Maps.MapSpan.%23ctor(Xamarin.Forms.Maps.Position,System.Double,System.Double)) con `Position`, y un intervalo de latitud y longitud
 - [`MapSpan.FromCenterAndRadius`](xref:Xamarin.Forms.Maps.MapSpan.FromCenterAndRadius(Xamarin.Forms.Maps.Position,Xamarin.Forms.Maps.Distance)) con `Position` y radio
 
 También es posible crear un nuevo atributo `MapSpan` a partir de uno existente mediante los métodos [`ClampLatitude`](xref:Xamarin.Forms.Maps.MapSpan.ClampLatitude(System.Double,System.Double)) o [`WithZoom`](xref:Xamarin.Forms.Maps.MapSpan.WithZoom(System.Double)).
 
 El archivo [WyomingPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/WyomingPage.xaml) y el archivo de código subyacente [WyomingPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/WyomingPage.xaml.cs) demuestran cómo utilizar el método `MoveToRegion` para mostrar el estado de Wyoming.
 
-También puede usar el [constructor `Map`](xref:Xamarin.Forms.Maps.Map.%23ctor(Xamarin.Forms.Maps.MapSpan)) con un objeto `MapSpan` para inicializar la ubicación del mapa. En el archivo [XamarinHQPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/XamarinHQPage.xaml) se muestra cómo hacerlo completamente en XAML para mostrar las oficinas centrales de Xamarin en San Francisco.
+También puede usar el [`Map` constructor](xref:Xamarin.Forms.Maps.Map.%23ctor(Xamarin.Forms.Maps.MapSpan)) con un objeto `MapSpan` para inicializar la ubicación del mapa. En el archivo [XamarinHQPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/XamarinHQPage.xaml) se muestra cómo hacerlo completamente en XAML para mostrar las oficinas centrales de Xamarin en San Francisco.
 
 ### <a name="dynamic-zooming"></a>Zoom dinámico
 
@@ -231,7 +235,7 @@ El programa también muestra cómo restringir dinámicamente el número de marca
 
 ## <a name="geocoding-and-back-again"></a>Geocodificación y regreso
 
-El ensamblado [**Xamarin.Forms.Maps**](xref:Xamarin.Forms.Maps) contiene también una clase [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) con un método [`GetPositionsForAddressAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync(System.String)) que convierte una dirección de texto en cero o más posibles posiciones geográficas, y otro método [`GetAddressesForPositionAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync(Xamarin.Forms.Maps.Position)) que convierte en la otra dirección.
+El ensamblado [ **Xamarin.Forms.Maps**](xref:Xamarin.Forms.Maps) contiene también una clase [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) con un método [`GetPositionsForAddressAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync(System.String)) que convierte una dirección de texto en cero o más posibles posiciones geográficas, y otro método [`GetAddressesForPositionAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync(Xamarin.Forms.Maps.Position)) que convierte en la otra dirección.
 
 El archivo [GeocoderRoundTrip.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml) y el archivo de código subyacente [GeocoderRoundTrip.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml.cs) demuestran esta utilidad.
 

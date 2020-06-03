@@ -1,18 +1,22 @@
 ---
-title: Resumen del capítulo 18. MVVM
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 18. MVVM'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/07/2017
-ms.openlocfilehash: 32c16409f30d6b6d502b7cc074eafb182898594a
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 18. MVVM''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1f180173a42654c54c5686e423ba20d9586271ea
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771075"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136713"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>Resumen del capítulo 18. MVVM
 
@@ -77,7 +81,7 @@ Para admitir la interfaz de comandos, un Modelo de vista debe definir una propie
 
 Internamente, un Modelo de vista establece cada propiedad de tipo `ICommand` en una instancia de una clase que implementa la interfaz `ICommand`. A través del enlace de datos, `Button` llama inicialmente al método `CanExecute` y se deshabilita a sí mismo si el método devuelve `false`. También establece un controlador para el evento `CanExecuteChanged` y llama a `CanExecute` cada vez que se desencadena ese evento. Si `Button` está habilitado, llama al método `Execute` cada vez que se hace clic en `Button`.
 
-Es posible que tenga algunos Modelos de vista que son anteriores a Xamarin. Forms, y que estos ya admitan la interfaz de comandos. En el caso de los nuevos Modelos de vista que se van a usar solo con Xamarin.Forms, Xamarin.Forms proporciona una clase [`Command`](xref:Xamarin.Forms.Command) y una clase [`Command<T>`](xref:Xamarin.Forms.Command`1) que implementa la interfaz `ICommand`. El tipo genérico es el tipo del argumento para los métodos `Execute` y `CanExecute`.
+Es posible que tenga algunos Modelos de vista que son anteriores a Xamarin.Forms, y que estos ya admitan la interfaz de comandos. En el caso de los nuevos Modelos de vista que se van a usar solo con Xamarin.Forms, Xamarin.Formsproporciona una clase [`Command`](xref:Xamarin.Forms.Command) y una clase [`Command<T>`](xref:Xamarin.Forms.Command`1) que implementa la interfaz `ICommand`. El tipo genérico es el tipo del argumento para los métodos `Execute` y `CanExecute`.
 
 ### <a name="simple-method-executions"></a>Ejecuciones de método simples
 
@@ -97,4 +101,4 @@ En el ejemplo [**AddingMachine**](https://github.com/xamarin/xamarin-forms-book-
 
 - [Texto completo del capítulo 18 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf)
 - [Ejemplos del capítulo 18](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
-- [Patrones de las aplicaciones empresariales con el libro electrónico de Xamarin.Forms](~/xamarin-forms/enterprise-application-patterns/index.md)
+- [Patrones de aplicación empresarial con el libro electrónico de Xamarin.Forms](~/xamarin-forms/enterprise-application-patterns/index.md)

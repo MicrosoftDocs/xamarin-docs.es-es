@@ -1,21 +1,24 @@
 ---
 title: Análisis detallado de inicio rápido de Xamarin.Forms
 description: En este artículo se examinan los aspectos fundamentales del desarrollo de aplicaciones con Xamarin.Forms. Los temas que se han tratado incluyen la anatomía de una aplicación de Xamarin.Forms, la arquitectura y los elementos fundamentales, y la interfaz de usuario.
-zone_pivot_groups: platform
-ms.topic: quickstart
-ms.prod: xamarin
-ms.custom: video
-ms.assetid: 7B2340A1-6883-41D8-860C-0BB6C4E0C316
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/27/2018
-ms.openlocfilehash: def54534d30b92b3d6ea8b5a0e7cac2c93293710
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+zone_pivot_groups: ''
+ms.topic: ''
+ms.prod: ''
+ms.custom: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1bfb76f71a2ac9d8bc9ae84152501909000b9623
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83149828"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84132527"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Análisis detallado de inicio rápido de Xamarin.Forms
 
@@ -44,7 +47,7 @@ En la captura de pantalla siguiente se muestra el contenido del proyecto de bibl
 
 El proyecto tiene un nodo **Dependencias** que contiene los nodos **NuGet** y **SDK**:
 
-- **NuGet**: los paquetes NuGet Xamarin.Forms y sqlite-net-pcl que se han agregado al proyecto.
+- **NuGet**: paquetes NuGet Xamarin.Forms y sqlite-net-pcl que se han agregado al proyecto.
 - **SDK**: el metapaquete `NETStandard.Library` que hace referencia al conjunto completo de paquetes NuGet que definen .NET Standard.
 
 ::: zone-end
@@ -70,7 +73,7 @@ En la captura de pantalla siguiente se muestra el contenido del proyecto de bibl
 
 El proyecto tiene un nodo **Dependencias** que contiene los nodos **NuGet** y **SDK**:
 
-- **NuGet**: los paquetes NuGet Xamarin.Forms y sqlite-net-pcl que se han agregado al proyecto.
+- **NuGet**: paquetes NuGet Xamarin.Forms y sqlite-net-pcl que se han agregado al proyecto.
 - **SDK**: el metapaquete `NETStandard.Library` que hace referencia al conjunto completo de paquetes NuGet que definen .NET Standard.
 
 ::: zone-end
@@ -157,11 +160,11 @@ namespace Notes.iOS
 }
 ```
 
-El reemplazo `FinishedLaunching` inicializa el marco de Xamarin.Forms mediante una llamada al método `Init`. Esto provoca que la implementación específica de iOS de Xamarin.Forms se cargue en la aplicación antes de que se establezca el controlador de vista raíz mediante la llamada al método `LoadApplication`.
+El reemplazo `FinishedLaunching` inicializa el marco de Xamarin.Forms mediante una llamada al método `Init`. Esto hace que la implementación específica de iOS de Xamarin.Forms se cargue en la aplicación antes de que se establezca el controlador de vista raíz mediante la llamada al método `LoadApplication`.
 
 ### <a name="android"></a>Android
 
-Para iniciar la página de inicio de Xamarin.Forms en Android, el proyecto Notes.Droid incluye código para crear un elemento `Activity` con el atributo `MainLauncher`, y la actividad se hereda de la clase `FormsAppCompatActivity`:
+Para iniciar la página de inicio de Xamarin.Forms en Android, el proyecto Notes.Android incluye código para crear un elemento `Activity` con el atributo `MainLauncher`, y la actividad se hereda de la clase `FormsAppCompatActivity`:
 
 ```csharp
 namespace Notes.Droid
@@ -192,7 +195,7 @@ El reemplazo `OnCreate` inicializa el marco de Xamarin.Forms mediante una llamad
 
 ### <a name="universal-windows-platform"></a>Plataforma universal de Windows
 
-En las aplicaciones de plataforma universal de Windows (UWP), el método `Init` que inicializa el marco de Xamarin.Forms se invoca desde la clase `App`:
+En las aplicaciones de Plataforma universal de Windows (UWP), el método `Init` que inicializa el marco de Xamarin.Forms se invoca desde la clase `App`:
 
 ```csharp
 Xamarin.Forms.Forms.Init (e);
@@ -203,7 +206,7 @@ if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
 }
 ```
 
-Esto provoca que la implementación específica de UWP de Xamarin.Forms se cargue en la aplicación. La página inicial de Xamarin.Forms se inicia mediante la clase `MainPage`:
+Esto hace que la implementación específica de UWP de Xamarin.Forms se cargue en la aplicación. La página inicial de Xamarin.Forms se inicia mediante la clase `MainPage`:
 
 ```csharp
 namespace Notes.UWP
@@ -222,7 +225,7 @@ namespace Notes.UWP
 La aplicación de Xamarin.Forms se carga con el método `LoadApplication`.
 
 > [!NOTE]
-> Las aplicaciones para la Plataforma universal de Windows se pueden compilar con Xamarin.Forms, pero solo mediante Visual Studio en Windows.
+> Las aplicaciones para la Plataforma universal de Windows se pueden compilar con Xamarin.Forms, pero solo mediante Visual Studio en Windows.
 
 ::: zone-end
 
@@ -230,10 +233,10 @@ La aplicación de Xamarin.Forms se carga con el método `LoadApplication`.
 
 Existen cuatro grupos de controles principales que se usan para crear la interfaz de usuario de una aplicación Xamarin.Forms:
 
-1. **Páginas**: las páginas de Xamarin.Forms representan pantallas de aplicaciones móviles multiplataforma. En la aplicación Notes se usa la clase [`ContentPage`](xref:Xamarin.Forms.ContentPage) para mostrar pantallas únicas. Para obtener más información sobre las páginas, consulte [Xamarin.Forms Pages](~/xamarin-forms/user-interface/controls/pages.md) (Páginas de Xamarin.Forms).
-1. **Vistas**: las vistas de Xamarin.Forms son los controles que se muestran en la interfaz de usuario, como etiquetas, botones y cuadros de entrada de texto. En la aplicación Notes terminada se usan las vistas [`ListView`](xref:Xamarin.Forms.ListView), [`Editor`](xref:Xamarin.Forms.Editor) y [`Button`](xref:Xamarin.Forms.Button). Para obtener más información sobre las vistas, consulte [Xamarin.Forms Views](~/xamarin-forms/user-interface/controls/views.md) (Vistas de Xamarin.Forms).
-1. **Diseños**: los diseños de Xamarin.Forms son contenedores que se usan para crear vistas en estructuras lógicas. En la aplicación Notes se usa la clase [`StackLayout`](xref:Xamarin.Forms.StackLayout) para organizar las vistas en una pila vertical y la clase [`Grid`](xref:Xamarin.Forms.Grid) para organizar los botones de forma horizontal. Para obtener más información sobre los diseños, consulte [Xamarin.Forms Layouts](~/xamarin-forms/user-interface/controls/layouts.md) (Diseños de Xamarin.Forms).
-1. **Celdas**: las celdas de Xamarin.Forms son elementos especializados que se usan para los elementos de una lista, y describen cómo debe dibujarse cada elemento de una lista. En la aplicación Notes se usa [`TextCell`](xref:Xamarin.Forms.TextCell) para mostrar dos elementos para cada fila de la lista. Para obtener más información sobre las celdas, consulte [Xamarin.Forms Cells](~/xamarin-forms/user-interface/controls/cells.md) (Celdas de Xamarin.Forms).
+1. **Páginas**: las páginas de Xamarin.Forms representan pantallas de aplicaciones móviles multiplataforma. En la aplicación Notes se usa la clase [`ContentPage`](xref:Xamarin.Forms.ContentPage) para mostrar pantallas únicas. Para obtener más información sobre las páginas de códigos, vea [Páginas de Xamarin.Forms](~/xamarin-forms/user-interface/controls/pages.md).
+1. **Vistas**: las vistas de Xamarin.Forms son los controles que se muestran en la interfaz de usuario, como etiquetas, botones y cuadros de entrada de texto. En la aplicación Notes terminada se usan las vistas [`ListView`](xref:Xamarin.Forms.ListView), [`Editor`](xref:Xamarin.Forms.Editor) y [`Button`](xref:Xamarin.Forms.Button). Para obtener más información sobre las vistas, consulte [Vistas de Xamarin.Forms](~/xamarin-forms/user-interface/controls/views.md).
+1. **Diseños**: los diseños de Xamarin.Forms son contenedores que se usan para crear vistas en estructuras lógicas. En la aplicación Notes se usa la clase [`StackLayout`](xref:Xamarin.Forms.StackLayout) para organizar las vistas en una pila vertical y la clase [`Grid`](xref:Xamarin.Forms.Grid) para organizar los botones de forma horizontal. Para obtener más información sobre los diseños, consulte [Diseños de Xamarin.Forms](~/xamarin-forms/user-interface/controls/layouts.md).
+1. **Celdas**: las celdas de Xamarin.Forms son elementos especializados que se usan para los elementos de una lista, y describen cómo debe dibujarse cada elemento de una lista. En la aplicación Notes se usa [`TextCell`](xref:Xamarin.Forms.TextCell) para mostrar dos elementos para cada fila de la lista. Para obtener más información sobre las celdas, consulte [Celdas de Xamarin.Forms](~/xamarin-forms/user-interface/controls/cells.md).
 
 En tiempo de ejecución, cada control se asignará a su equivalente nativo, que es lo que se representará.
 
@@ -344,7 +347,7 @@ Para más información sobre la clase [`ListView`](xref:Xamarin.Forms.ListView),
 
 ## <a name="navigation"></a>Navegación
 
-Xamarin.Forms proporciona una serie de experiencias de navegación de páginas diferente, en función del tipo de [`Page`](xref:Xamarin.Forms.Page) que se use. Para las instancias de [`ContentPage`](xref:Xamarin.Forms.ContentPage), la navegación puede ser jerárquica o modal. Para obtener información sobre la navegación modal, vea [Páginas modales de Xamarin.Forms](~/xamarin-forms/app-fundamentals/navigation/modal.md).
+Xamarin.Forms proporciona una serie de experiencias de navegación de páginas diferente, en función del tipo [`Page`](xref:Xamarin.Forms.Page) que se use. Para las instancias de [`ContentPage`](xref:Xamarin.Forms.ContentPage), la navegación puede ser jerárquica o modal. Para obtener información sobre la navegación modal, consulte [Páginas modales de Xamarin.Forms](~/xamarin-forms/app-fundamentals/navigation/modal.md).
 
 > [!NOTE]
 > Las clases [`CarouselPage`](xref:Xamarin.Forms.CarouselPage), [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) y [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) proporcionan experiencias de navegación alternativas. Para obtener más información, consulte [Navigation](~/xamarin-forms/app-fundamentals/navigation/index.md) (Navegación).
@@ -381,7 +384,7 @@ Para obtener más información sobre la navegación jerárquica, consulte [Hiera
 
 ## <a name="data-binding"></a>Enlace de datos
 
-El enlace de datos se usa para simplificar la forma en que una aplicación de Xamarin.Forms muestra e interactúa con sus datos. Establece una conexión entre la interfaz de usuario y la aplicación subyacente. La clase [`BindableObject`](xref:Xamarin.Forms.BindableObject) contiene gran parte de la infraestructura para admitir el enlace de datos.
+El enlace de datos se usa para simplificar la forma en que una aplicación de Xamarin.Forms muestra sus datos e interactúa con ellos. Establece una conexión entre la interfaz de usuario y la aplicación subyacente. La clase [`BindableObject`](xref:Xamarin.Forms.BindableObject) contiene gran parte de la infraestructura para admitir el enlace de datos.
 
 El enlace de datos conecta dos objetos, denominados *origen* y *destino*. El objeto de *origen* proporciona los datos. El objeto de *destino* usa (y, a menudo, muestra) los datos del objeto de origen. Por ejemplo, un control [`Editor`](xref:Xamarin.Forms.Editor) (objeto de *destino*) normalmente enlazará su propiedad [`Text`](xref:Xamarin.Forms.InputView.Text) a una propiedad `string` pública en un objeto de *origen*. En el diagrama siguiente se muestra la relación de enlace:
 
@@ -434,7 +437,7 @@ Después, el objeto [`Editor`](xref:Xamarin.Forms.Editor) de `NoteEntryPage` se 
 
 Se establece un enlace entre la propiedad [`Editor.Text`](xref:Xamarin.Forms.InputView.Text) y la propiedad `Text` del objeto de *origen*. Los cambios realizados en `Editor` se propagarán de forma automática al objeto `Note`. De forma similar, si se realizan cambios en la propiedad `Note.Text`, el motor de enlace de Xamarin.Forms también actualizará el contenido de `Editor`. Esto se conoce como *enlace bidireccional*.
 
-Para obtener más información sobre el enlace de datos, vea [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+Para obtener más información sobre el enlace de datos, consulte [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
 ## <a name="styling"></a>Aplicación de estilos
 
@@ -473,9 +476,9 @@ Este estilo se aplica a cualquier instancia de [`Editor`](xref:Xamarin.Forms.Edi
 Al crear un elemento [`Style`](xref:Xamarin.Forms.Style), siempre se requiere la propiedad [`TargetType`](xref:Xamarin.Forms.Style.TargetType).
 
 > [!NOTE]
-> Normalmente, la aplicación de estilo a una aplicación Xamarin.Forms se realiza mediante estilos XAML. Pero Xamarin.Forms también admite aplicar estilo a los elementos visuales mediante Hojas de estilo CSS (CSS). Para más información, vea [Aplicación de estilos para aplicaciones Xamarin.Forms con hojas de estilo (CSS)](~/xamarin-forms/user-interface/styles/css/index.md).
+> Normalmente, la aplicación de estilo a una aplicación Xamarin.Forms se realiza mediante estilos XAML. Aun así, Xamarin.Forms también admite aplicar estilo a los elementos visuales mediante hojas de estilo CSS (CSS). Para obtener más información, vea [Aplicación de estilos para aplicaciones Xamarin.Forms con hojas de estilo (CSS)](~/xamarin-forms/user-interface/styles/css/index.md).
 
-Para obtener más información sobre los estilos XAML, vea [Styling Xamarin.Forms Apps using XAML Styles](~/xamarin-forms/user-interface/styles/xaml/index.md) (Aplicación de estilo a aplicaciones Xamarin.Forms mediante XAML).
+Para obtener más información sobre los estilos XAML, vea [Aplicación de estilo a aplicaciones Xamarin.Forms con estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md).
 
 ### <a name="providing-platform-specific-styles"></a>Proporcionar estilos específicos de la plataforma
 
@@ -519,10 +522,10 @@ Los simuladores son un buen lugar para comenzar a implementar y probar una aplic
 
 En este análisis detallado se han examinado los aspectos fundamentales del desarrollo de aplicaciones con Xamarin.Forms. Se recomienda que, como paso siguiente, lea sobre las funcionalidades que se indican a continuación:
 
-- Existen cuatro grupos de control principales que se usan para crear la interfaz de usuario de una aplicación de Xamarin.Forms. Para obtener más información, vea [Referencia de controles](~/xamarin-forms/user-interface/controls/index.md).
+- Existen cuatro grupos de controles principales que se usan para crear la interfaz de usuario de una aplicación Xamarin.Forms. Para obtener más información, vea [Referencia de controles](~/xamarin-forms/user-interface/controls/index.md).
 - El enlace de datos es la técnica que consiste en vincular las propiedades de dos objetos para que los cambios en una propiedad se reflejen automáticamente en la otra propiedad. Para obtener más información, vea [Enlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 - Xamarin.Forms proporciona una serie de experiencias de navegación de páginas diferente, en función del tipo de página que se use. Para obtener más información, consulte [Navigation](~/xamarin-forms/app-fundamentals/navigation/index.md) (Navegación).
-- Los estilos permiten reducir el uso de marcado repetitivo y conseguir que la apariencia de las aplicaciones pueda cambiarse con mayor facilidad. Para obtener más información, vea [Aplicación de estilos a aplicaciones de Xamarin.Forms](~/xamarin-forms/user-interface/styles/index.md).
+- Los estilos permiten reducir el uso de marcado repetitivo y conseguir que la apariencia de las aplicaciones pueda cambiarse con mayor facilidad. Para obtener más información, consulte [Aplicación de estilos a aplicaciones Xamarin.Forms](~/xamarin-forms/user-interface/styles/index.md).
 - Las extensiones de marcado XAML extienden las funciones avanzadas y la flexibilidad de XAML al permitir establecer atributos de elementos desde orígenes distintos de cadenas de texto literales. Para obtener más información, vea [Extensiones de marcado XAML](~/xamarin-forms/xaml/markup-extensions/index.md).
 - Las plantillas de datos permiten definir la presentación de los datos en las vistas admitidas. Para obtener más información, consulte [Data Templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md) (Plantillas de datos).
 - Cada página, diseño y control se representan de forma diferente en cada plataforma mediante una clase `Renderer` que, a su vez, crea un control nativo, lo organiza en la pantalla y agrega el comportamiento especificado al código compartido. Los desarrolladores pueden implementar sus propias clases `Renderer` personalizadas para personalizar la apariencia o el comportamiento de un control. Para obtener más información, consulte [Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) (Representadores personalizados).
@@ -537,9 +540,9 @@ También es recomendable el libro de Charles Petzold titulado [_Creating Mobile 
 - [Enlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Controls Reference](~/xamarin-forms/user-interface/controls/index.md) (Referencia de controles)
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Xamarin.Forms Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms) (Ejemplos de Xamarin.Forms)
+- [Ejemplos de Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Getting Started Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms%20get%20started) (Ejemplos de introducción)
-- [Referencia de la API de Xamarin.Forms](xref:Xamarin.Forms)
+- [Referencia de la API Xamarin.Forms](xref:Xamarin.Forms)
 - [Aprendizaje autoguiado gratuito (vídeo)](https://university.xamarin.com/self-guided/)
 
 ## <a name="related-video"></a>Vídeo relacionado

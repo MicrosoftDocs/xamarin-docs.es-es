@@ -1,26 +1,18 @@
 ---
-title: Creación de una aplicación de Xamarin.Forms Shell
-description: El proceso para crear una aplicación de Xamarin.Forms Shell consiste en crear un archivo XAML que sirva de subclase de la clase Shell, establecer la propiedad MainPage de la clase App de la aplicación en el objeto Shell con subclases y, a continuación, describir la jerarquía visual de la aplicación en la clase Shell con subclases.
-ms.prod: xamarin
-ms.assetid: 2A51D78F-6CD5-4BC4-A62E-11CEFA799987
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/24/2019
-ms.openlocfilehash: eec20ff6ceb4aee7e8fde59992576899690616c3
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "68739305"
+title: "Creación de una aplicación de Xamarin.Forms Shell" description: "El proceso para crear una aplicación de Xamarin.Forms Shell consiste en crear un archivo XAML que sirva de subclase de la clase Shell, establecer la propiedad MainPage de la clase App de la aplicación en el objeto Shell con subclases y, después, describir la jerarquía visual de la aplicación en la clase Shell con subclases".
+ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
+- "Xamarin.Forms"
+- "Xamarin.Essentials"
+
 ---
+
 # <a name="create-a-xamarinforms-shell-application"></a>Creación de una aplicación de Xamarin.Forms Shell
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
-El proceso de creación de una aplicación de Xamarin.Forms Shell es el siguiente:
+El proceso para crear una aplicación de Xamarin.Forms Shell es el siguiente:
 
-1. Cree una nueva aplicación de Xamarin.Forms, o cargue una aplicación existente que desee convertir en una aplicación de Shell.
+1. Cree una aplicación de Xamarin.Forms o cargue una aplicación existente que quiera convertir en una aplicación de Shell.
 1. Agregue un archivo XAML al proyecto de código compartido que sirva de subclase de la clase `Shell`. Para obtener más información, consulte [Subclass the Shell class](#subclass-the-shell-class) (Establecimiento de subclases en la clase Shell).
 1. Establezca la propiedad [`MainPage`](xref:Xamarin.Forms.Application.MainPage) de la clase `App` de la aplicación en el objeto `Shell` con subclases. Para obtener más información, consulte [Bootstrap the Shell application](#bootstrap-the-shell-application) (Arranque de la aplicación Shell).
 1. Describa la jerarquía visual de la aplicación en la clase `Shell` con subclases. Para obtener más información, consulte [Describe the visual hierarchy of the application](#describe-the-visual-hierarchy-of-the-application) (Descripción de la jerarquía visual de la aplicación).
@@ -80,7 +72,7 @@ En este ejemplo, la clase `AppShell` es el archivo XAML que se deriva de la clas
 
 ## <a name="describe-the-visual-hierarchy-of-the-application"></a>Descripción de la jerarquía visual de la aplicación
 
-El último paso para crear una aplicación de Xamarin.Forms Shell consiste en describir la jerarquía visual de la aplicación, en la clase `Shell` con subclases. Una clase `Shell` con subclases consta de tres objetos jerárquicos principales:
+El último paso para crear una aplicación de Xamarin.Forms Shell consiste en describir la jerarquía visual de la aplicación en la clase `Shell` con subclases. Una clase `Shell` con subclases consta de tres objetos jerárquicos principales:
 
 - `FlyoutItem` o `TabBar`. Un `FlyoutItem` representa uno o varios elementos en el control flotante y debe usarse cuando el modelo de navegación de la aplicación incluye un control flotante. Un `TabBar` representa la barra de pestañas de la parte inferior y debe usarse cuando el patrón de navegación de la aplicación comienza con pestañas en la parte inferior. Cada objeto `FlyoutItem` o `TabBar` es un elemento secundario del objeto `Shell`.
 - `Tab`, que representa contenido agrupado, navegable mediante las pestañas inferiores. Cada objeto `Tab` es un elemento secundario de un objeto `FlyoutItem` o un objeto `TabBar`.

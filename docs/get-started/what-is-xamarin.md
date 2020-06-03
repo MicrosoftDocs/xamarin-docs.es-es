@@ -1,18 +1,21 @@
 ---
-title: ¿Qué es Xamarin?
-description: En este artículo se presentan Xamarin y las bibliotecas relacionadas.
-ms.prod: xamarin
-ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
-ms.custom: video
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 09/16/2019
-ms.openlocfilehash: 34763804e9833224721ea32f9c7e6200dd5faba7
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.custom: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a9a25cff30b9dfbed44e60faeae2f577d07940fc
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75607885"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139222"
 ---
 # <a name="what-is-xamarin"></a>¿Qué es Xamarin?
 
@@ -71,9 +74,9 @@ Las aplicaciones Xamarin.iOS se compilan **Ahead-of-Time (AOT)** de forma comple
 
 Para más información, vea [Arquitectura de Xamarin.iOS](~/ios/internals/architecture.md).
 
-### <a name="xamarinessentials"></a>Xamarin.Essentials
+### Xamarin.Essentials
 
-Xamarin.Essentials es una biblioteca que proporciona API multiplataforma para características de dispositivos nativos. Como sucede con Xamarin, Xamarin.Essentials es una abstracción que simplifica el proceso de acceso a funciones nativas. Algunos ejemplos de la funcionalidad proporcionada por Xamarin.Essentials son los siguientes:
+Xamarin.Essentials es una biblioteca que proporciona API multiplataforma para características de dispositivos nativos. Como el propio Xamarin, Xamarin.Essentials es una abstracción que simplifica el proceso de acceso a la funcionalidad nativa. Algunos ejemplos de la funcionalidad proporcionada por Xamarin.Essentials son los siguientes:
 
 - Información del dispositivo
 - Sistema de archivos
@@ -82,11 +85,11 @@ Xamarin.Essentials es una biblioteca que proporciona API multiplataforma para ca
 - Texto a voz
 - Bloqueo de pantalla
 
-Para más información, vea [Xamarin.Essentials](~/essentials/index.md).
+Para obtener más información, vea [Xamarin.Essentials](~/essentials/index.md).
 
-### <a name="xamarinforms"></a>Xamarin.Forms
+### Xamarin.Forms
 
-Xamarin.Forms es un marco de interfaz de usuario de código abierto. Xamarin.Forms permite a los desarrolladores compilar aplicaciones iOS, Android y Windows desde un único código base compartido. Xamarin.Forms permite a los desarrolladores crear interfaces de usuario en XAML con código subyacente en C#. Estas interfaces de usuario se representan como controles nativos con mejor rendimiento en cada plataforma. Algunos ejemplos de características proporcionadas por Xamarin.Forms son los siguientes:
+Xamarin.Forms es un marco de interfaz de usuario de código abierto. Xamarin.Forms permite a los desarrolladores compilar aplicaciones iOS, Android y Windows desde un único código base compartido. Xamarin.Forms permite a los desarrolladores crear interfaces de usuario en XAML con código subyacente en C#. Estas interfaces de usuario se representan como controles nativos con mejor rendimiento en cada plataforma. Algunos ejemplos de las características que proporciona Xamarin.Forms son los siguientes:
 
 - Lenguaje de la interfaz de usuario de XAML
 - Enlace de datos
@@ -94,7 +97,7 @@ Xamarin.Forms es un marco de interfaz de usuario de código abierto. Xamarin.For
 - Efectos
 - Aplicación de estilos
 
-Para más información, vea [Xamarin.Forms](~/xamarin-forms/index.yml).
+Para obtener más información, vea [Xamarin.Forms](~/xamarin-forms/index.yml).
 
 ## <a name="get-started"></a>Primeros pasos
 

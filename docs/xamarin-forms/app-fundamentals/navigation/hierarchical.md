@@ -1,18 +1,21 @@
 ---
-title: Navegación jerárquica
-description: En este artículo se muestra cómo utilizar la clase NavigationPage para realizar la navegación en una pila de páginas en la que el último en entrar es el primero en salir (LIFO).
-ms.prod: xamarin
-ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/10/2020
-ms.openlocfilehash: 984f54698ccdee54c0b8670a50cb1f4432327977
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 92774cffdfed7412bdb4d44993dc221993ad56c8
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517279"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137894"
 ---
 # <a name="hierarchical-navigation"></a>Navegación jerárquica
 
@@ -88,7 +91,7 @@ Al invocar el método [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*
 - Se invoca la invalidación de [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) de la página a la que se ha navegado.
 - La tarea `PushAsync` finaliza.
 
-Sin embargo, el orden exacto en el que se producen estos eventos depende de la plataforma. Para obtener más información, consulte el [capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro sobre Xamarin.Forms de Charles Petzold.
+Sin embargo, el orden exacto en el que se producen estos eventos depende de la plataforma. Para obtener más información, consulte el [capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro sobre Xamarin.Forms de Charles Petzold.
 
 > [!NOTE]
 > Las llamadas a [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) y las invalidaciones de [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) no se pueden tratar como indicaciones garantizadas de navegación de páginas. Por ejemplo, en iOS, la invalidación de `OnDisappearing` se llama en la página activa cuando la aplicación finaliza.
@@ -112,7 +115,7 @@ Esto hace que la instancia de `Page2Xaml` se quite de la pila de navegación y q
 - Se invoca la invalidación de [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) de la página a la que se ha regresado.
 - La tarea `PopAsync` vuelve.
 
-Sin embargo, el orden exacto en el que se producen estos eventos depende de la plataforma. Para obtener más información, consulte el [capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro sobre Xamarin.Forms de Charles Petzold.
+Sin embargo, el orden exacto en el que se producen estos eventos depende de la plataforma. Para obtener más información, consulte el [capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro sobre Xamarin.Forms de Charles Petzold.
 
 Al igual que los métodos [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) y [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync), la propiedad [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) de cada página también proporciona un método [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync), que se muestra en el ejemplo de código siguiente:
 

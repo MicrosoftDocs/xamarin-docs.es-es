@@ -1,18 +1,21 @@
 ---
-title: Personalización de una entrada
+title: ''
 description: El control Entry de Xamarin.Forms permite que se edite una sola línea de texto. En este artículo se muestra cómo crear un representador personalizado para el control Entry, lo que permite que los desarrolladores reemplacen la representación nativa de forma predeterminada con su propia personalización específica de la plataforma.
-ms.prod: xamarin
-ms.assetid: 7B5DD10D-0411-424F-88D8-8A474DF16D8D
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/26/2018
-ms.openlocfilehash: 86714c2041edcd98c2bdd7b740a897dab8069752
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 61bd66fd25b7aea3e5be346f79e63d410164b002
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82516472"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138988"
 ---
 # <a name="customizing-an-entry"></a>Personalización de una entrada
 
@@ -20,7 +23,7 @@ ms.locfileid: "82516472"
 
 _El control Entry de Xamarin.Forms permite que se edite una sola línea de texto. En este artículo se muestra cómo crear un representador personalizado para el control Entry, lo que permite que los desarrolladores reemplacen la representación nativa de forma predeterminada con su propia personalización específica de la plataforma._
 
-Todos los controles de Xamarin.Forms tienen un representador que lo acompaña para cada plataforma y que crea una instancia de un control nativo. Cuando una aplicación de Xamarin.Forms representa un control [`Entry`](xref:Xamarin.Forms.Entry), se crea una instancia de la clase `EntryRenderer` en iOS que, a su vez, crea una instancia de un control `UITextField` nativo. En la plataforma Android, la clase `EntryRenderer` crea una instancia de un control `EditText`. En la Plataforma universal de Windows (UWP), la clase `EntryRenderer` crea una instancia de un control `TextBox`. Para obtener más información sobre el representador y las clases de control nativo a las que se asignan los controles de Xamarin.Forms, vea [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) (Clases base y controles nativos del representador).
+Todos los controles de Xamarin.Forms tienen un representador que las acompaña para cada plataforma y que crea una instancia de un control nativo. Cuando una aplicación de Xamarin.Forms representa un control [`Entry`](xref:Xamarin.Forms.Entry), se crea en iOS una instancia de la clase `EntryRenderer` que, a su vez, crea una instancia de un control `UITextField` nativo. En la plataforma Android, la clase `EntryRenderer` crea una instancia de un control `EditText`. En la Plataforma universal de Windows (UWP), la clase `EntryRenderer` crea una instancia de un control `TextBox`. Para obtener más información sobre el representador y las clases de control nativo a las que se asignan los controles de Xamarin.Forms, vea [Clases base y controles nativos del representador](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 El siguiente diagrama muestra la relación entre el control [`Entry`](xref:Xamarin.Forms.Entry) y los controles nativos correspondientes que lo implementan:
 
@@ -29,7 +32,7 @@ El siguiente diagrama muestra la relación entre el control [`Entry`](xref:Xamar
 El proceso de representación puede aprovecharse para implementar las personalizaciones específicas de la plataforma creando un representador personalizado para el control [`Entry`](xref:Xamarin.Forms.Entry) en cada plataforma. Para hacerlo, siga este procedimiento:
 
 1. [Cree](#Creating_the_Custom_Entry_Control) un control personalizado de Xamarin.Forms.
-1. [Use](#Consuming_the_Custom_Control) el control personalizado de Xamarin.Forms.
+1. [Consuma](#Consuming_the_Custom_Control) el control personalizado de Xamarin.Forms.
 1. [Cree](#Creating_the_Custom_Renderer_on_each_Platform) el representador personalizado para el control en cada plataforma.
 
 Ahora se analizará en detalle cada elemento, para implementar un control [`Entry`](xref:Xamarin.Forms.Entry) que tiene un color de fondo diferente en cada plataforma.
@@ -104,7 +107,7 @@ El proceso para crear la clase del representador personalizado es el siguiente:
 
 1. Cree una subclase de la clase `EntryRenderer` que representa el control nativo.
 1. Invalide el método `OnElementChanged` que representa el control nativo y escriba lógica para personalizar el control. Se llama a este método cuando se crea el correspondiente control de Xamarin.Forms.
-1. Agregue un atributo `ExportRenderer` a la clase de representador personalizada para especificar que se utilizará para representar el control de Xamarin.Forms. Este atributo se usa para registrar al representador personalizado con Xamarin.Forms.
+1. Agregue un atributo `ExportRenderer` a la clase de representador personalizada para especificar que se usará para representar el control de Xamarin.Forms. Este atributo se usa para registrar al representador personalizado con Xamarin.Forms.
 
 > [!NOTE]
 > Proporcionar un representador personalizado en cada proyecto de la plataforma es un paso opcional. Si no se registra un representador personalizado, se usará el representador predeterminado de la clase base del control.
@@ -121,7 +124,7 @@ La clase `EntryRenderer` expone el método `OnElementChanged`, al que se llama c
 
 El lugar para realizar la personalización del control nativo es una versión reemplazada del método `OnElementChanged` en la clase `MyEntryRenderer`. Una referencia con tipo para el control nativo que se usa en la plataforma puede obtenerse a través de la propiedad `Control`. Además, se puede obtener una referencia al control de Xamarin.Forms que se representa mediante la propiedad `Element`, aunque no se usa en la aplicación de ejemplo.
 
-Cada clase de representador personalizado se decora con un atributo `ExportRenderer` que registra el representador con Xamarin.Forms. El atributo toma dos parámetros: el nombre de tipo del control de Xamarin.Forms que se va a representar y el nombre de tipo del representador personalizado. El prefijo `assembly` para el atributo especifica que el atributo se aplica a todo el ensamblado.
+Cada clase de representador personalizado se decora con un atributo `ExportRenderer` que registra el representador con Xamarin.Forms. El atributo toma dos parámetros: el nombre de tipo del control de Xamarin.Forms que se representa y el nombre de tipo del representador personalizado. El prefijo `assembly` para el atributo especifica que el atributo se aplica a todo el ensamblado.
 
 En las secciones siguientes se describe la implementación de cada clase de representador personalizado `MyEntryRenderer` específico de plataforma.
 
@@ -211,7 +214,7 @@ La llamada al método `OnElementChanged` de la clase base crea una instancia de 
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se mostró cómo crear un representador de control personalizado para el control [`Entry`](xref:Xamarin.Forms.Entry) de Xamarin.Forms, lo que permite que los desarrolladores reemplacen la representación nativa de forma predeterminada con su propia representación específica de la plataforma. Los representadores personalizados proporcionan un método eficaz para personalizar la apariencia de los controles de Xamarin.Forms. Se pueden usar para pequeños cambios de estilo o para una personalización sofisticada del diseño y el comportamiento específicos de una plataforma.
+En este artículo se ha mostrado cómo crear un representador de control personalizado para el control [`Entry`](xref:Xamarin.Forms.Entry) de Xamarin.Forms, lo que permite que los desarrolladores reemplacen la representación nativa predeterminada por su propia representación específica de la plataforma. Los representadores personalizados proporcionan un método eficaz para personalizar la apariencia de los controles de Xamarin.Forms. Se pueden usar para realizar pequeños cambios de estilo o para una personalización sofisticada del diseño y el comportamiento específicos de una plataforma.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

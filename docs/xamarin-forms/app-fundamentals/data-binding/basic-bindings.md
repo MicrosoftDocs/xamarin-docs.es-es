@@ -1,19 +1,22 @@
 ---
 title: Enlaces básicos de Xamarin.Forms
 description: En este artículo se explica cómo usar el enlace de datos de Xamarin.Forms, que enlaza un par de propiedades entre dos objetos, del que al menos uno suele ser un objeto de interfaz de usuario. Estos dos objetos se denominan el destino y el origen.
-ms.prod: xamarin
-ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/22/2019
-ms.custom: video
-ms.openlocfilehash: 2227e2bd47a5b4960d28be67bac7947a4fb57a93
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.custom: ''
+ms.openlocfilehash: c0c6bc6e1005997548952aedc09cd83a451e7caa
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303784"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84133554"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Enlaces básicos de Xamarin.Forms
 
@@ -175,7 +178,7 @@ Esto se muestra en el ejemplo **Enlace de código alternativo**. El archivo XAML
 </ContentPage>
 ```
 
-El archivo de código subyacente establece el enlace con el método [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) definido por el objeto `BindableObject`. El argumento es un [constructor](xref:Xamarin.Forms.Binding.%23ctor(System.String,Xamarin.Forms.BindingMode,Xamarin.Forms.IValueConverter,System.Object,System.String,System.Object)) para la clase [`Binding`](xref:Xamarin.Forms.Binding):
+El archivo de código subyacente establece el enlace con el método [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) definido por el objeto`BindableObject`. El argumento es un [constructor](xref:Xamarin.Forms.Binding.%23ctor(System.String,Xamarin.Forms.BindingMode,Xamarin.Forms.IValueConverter,System.Object,System.String,System.Object)) para la clase [`Binding`](xref:Xamarin.Forms.Binding):
 
 ```csharp
 public partial class AlternativeCodeBindingPage : ContentPage
@@ -332,7 +335,7 @@ En el [artículo siguiente](binding-mode.md), verá cómo el *modo de enlace* pu
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
-- [Capítulo sobre enlace de datos del libro de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Capítulo sobre el enlace de datos del libro Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 
 ## <a name="related-video"></a>Vídeo relacionado
 

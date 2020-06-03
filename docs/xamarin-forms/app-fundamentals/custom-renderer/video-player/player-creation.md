@@ -1,18 +1,21 @@
 ---
-title: Creación de reproductores de vídeo de plataforma
+title: ''
 description: En este artículo se explica cómo implementar un representador personalizado de reproductor de vídeo en cada plataforma mediante Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: EEE2FB9B-EB73-4A3F-A859-7A1D4808E149
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/12/2018
-ms.openlocfilehash: 007c027772701e424aad5995c0ec025c3589171c
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d026ecc3288da155aefb0f68ee0c70721106c0da
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76725096"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84133749"
 ---
 # <a name="creating-the-platform-video-players"></a>Creación de reproductores de vídeo de plataforma
 
@@ -73,7 +76,7 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-Por lo general, un representador que establece un control de plataforma deriva de la clase [`ViewRenderer<View, NativeView>`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/ViewRenderer.cs), donde `View` es el derivado `View` de Xamarin.Forms (en este caso, `VideoPlayer`) y `NativeView` es un derivado `UIView` de iOS para la clase de representador. Para este representador, ese argumento genérico simplemente se establece en `UIView`, por motivos que va a entender en breve.
+Por lo general, un representador que establece un control de plataforma deriva de la clase [`ViewRenderer<View, NativeView>`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/ViewRenderer.cs), donde `View` es el derivado Xamarin.Forms de `View` (en este caso, `VideoPlayer`) y `NativeView` es un derivado `UIView` de iOS para la clase de representador. Para este representador, ese argumento genérico simplemente se establece en `UIView`, por motivos que va a entender en breve.
 
 Cuando un representador se basa en un derivado `UIViewController` (como este), la clase debe reemplazar la propiedad `ViewController` y devolver el controlador de vistas, en este caso `AVPlayerViewController`. Ese es el propósito del campo `_playerViewController`:
 
@@ -120,7 +123,7 @@ Por lo general, la propiedad `Control` de la clase de representador hace referen
 
 ### <a name="the-android-video-view"></a>Vista de vídeo de Android
 
-El representador de Android para `VideoPlayer` se basa en la clase [`VideoView`](xref:Android.Widget.VideoView) de Android. Pero, si se usa `VideoView` por sí solo para reproducir un vídeo en una aplicación de Xamarin.Forms, el vídeo llena el área asignada para `VideoPlayer` sin mantener la relación de aspecto correcta. Por este motivo (como verá en breve), `VideoView` se convierte en elemento secundario de un elemento `RelativeLayout` de Android. Una directiva `using` define `ARelativeLayout` para distinguirlo del elemento `RelativeLayout` de Xamarin.Forms, y ese es el segundo argumento genérico de `ViewRenderer`:
+El representador de Android para `VideoPlayer` se basa en la clase [`VideoView`](xref:Android.Widget.VideoView) de Android. Pero, si se usa `VideoView` por sí solo para reproducir un vídeo en una aplicación de Xamarin.Forms, el vídeo llena el área asignada para `VideoPlayer` sin mantener la relación de aspecto correcta. Por este motivo (como verá en breve), `VideoView` se convierte en elemento secundario de un elemento `RelativeLayout` de Android. Una directiva `using` define `ARelativeLayout` para distinguirlo del elemento Xamarin.Forms de `RelativeLayout`, y ese es el segundo argumento genérico de `ViewRenderer`:
 
 ```csharp
 using System;
@@ -151,7 +154,7 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-A partir de Xamarin.Forms 2.5, los representadores de Android deben incluir un constructor con un argumento `Context`.
+A partir de Xamarin.Forms 2.5, los representadores de Android deben incluir un constructor con un argumento `Context`.
 
 La invalidación `OnElementChanged` crea `VideoView` y `RelativeLayout` y establece los parámetros de diseño de `VideoView` para centrar dentro de `RelativeLayout`.
 

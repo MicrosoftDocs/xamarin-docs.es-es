@@ -1,18 +1,22 @@
 ---
-title: Resumen del capítulo 4. Desplazamiento de la pila
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 4. Desplazamiento de la pila'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/19/2018
-ms.openlocfilehash: 5313dd34839d6a5d21432161b9fd3a0ffce6e816
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 4. Scrolling the stack''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9890ecdf286ee33d7af28fd20847788b063df8f5
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83149940"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136895"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Resumen del capítulo 4. Desplazamiento de la pila
 
@@ -23,7 +27,7 @@ Este capítulo está dedicado principalmente a introducir el concepto de *diseñ
 El diseño implica varias clases que derivan de [`Layout`](xref:Xamarin.Forms.Layout) y [`Layout<T>`](xref:Xamarin.Forms.Layout`1). Este capítulo se centra en [`StackLayout`](xref:Xamarin.Forms.StackLayout).
 
 > [!NOTE]
-> La clase [`FlexLayout`](~/xamarin-forms/user-interface/layouts/flex-layout.md) introducida en Xamarin.Forms 3.0 se puede usar de manera similar a `StackLayout` pero con mayor flexibilidad.
+> La clase [`FlexLayout`](~/xamarin-forms/user-interface/layouts/flex-layout.md) introducida en Xamarin.Forms 3.0 se puede usar de manera similar a `StackLayout` pero con mayor flexibilidad.
 
 También se han introducido en este capítulo las clases [`ScrollView`](xref:Xamarin.Forms.ScrollView), [`Frame`](xref:Xamarin.Forms.Frame) y [`BoxView`](xref:Xamarin.Forms.BoxView).
 

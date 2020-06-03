@@ -1,22 +1,25 @@
 ---
-title: Creación de una primera aplicación de Xamarin.Forms
-description: Guía de vídeo que muestra cómo crear una primera aplicación de Xamarin.Forms en Visual Studio.
-zone_pivot_groups: platform-dev16
-ms.prod: xamarin
-ms.assetid: 72B6AF82-4D98-47E5-AB54-0A35B3253468
-ms.technology: xamarin-forms
-ms.custom: video
-author: conceptdev
-ms.author: crdun
-ms.date: 05/23/2019
-ms.openlocfilehash: fd2fcf6ebe11df27444f2ecc1d89955debf56cb4
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Compilación de la primera aplicación Xamarin.Forms
+description: Guía de vídeo en la que se muestra cómo compilar una primera aplicación de Xamarin.Forms en Visual Studio.
+zone_pivot_groups: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+ms.custom: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: da56bde956a0ff7730ef6737e2802c3723d6d716
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75502805"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84133489"
 ---
-# <a name="build-your-first-xamarinforms-app"></a>Creación de una primera aplicación de Xamarin.Forms
+# <a name="build-your-first-xamarinforms-app"></a>Compilación de la primera aplicación de Xamarin.Forms
 
 _Vea este vídeo y siga el tutorial para crear una primera aplicación móvil con Xamarin.Forms._
 
@@ -115,7 +118,7 @@ En este vídeo se describe el proceso de compilación y prueba de una aplicació
 
 Siga estos pasos, junto con el vídeo anterior:
 
-1. Elija **Archivo > Nuevo > Proyecto...** o presione el botón **Crear proyecto nuevo...**  y, a continuación, seleccione **Visual C# > Multiplataforma > Aplicación móvil (Xamarin.Forms)** :
+1. Elija **Archivo > Nuevo > Proyecto…** o presione el botón **Crear proyecto nuevo…** y, luego, seleccione **Visual C# > Multiplataforma > Aplicación móvil (Xamarin.Forms)** :
 
     [![Aplicación móvil (Xamarin.Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
 
@@ -212,5 +215,5 @@ Puede descargar el código completo desde la [galería de ejemplos](https://docs
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [Inicio rápido de una sola página](~/get-started/quickstarts/single-page.md): compilación de una aplicación más funcional.
-- [Ejemplos de Xamarin.Forms](~/xamarin-forms/samples/index.md): descarga y ejecución de ejemplos de código y aplicaciones de muestra.
-- [Libro electrónico Creación de aplicaciones móviles](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md): capítulos detallados en los que se describe el desarrollo de Xamarin.Forms, disponible como archivo PDF y que incluye cientos de ejemplos adicionales.
+- [Ejemplos de Xamarin.Forms](~/xamarin-forms/samples/index.md): descarga y ejecución de ejemplos de código y de aplicaciones.
+- [Libro electrónico Creación de aplicaciones móviles](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md): capítulos detallados en los que se describe el desarrollo de Xamarin.Forms, disponible como archivo PDF y con cientos de ejemplos adicionales.

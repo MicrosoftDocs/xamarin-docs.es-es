@@ -1,18 +1,21 @@
 ---
 title: Enlace de datos de Xamarin.Forms
-description: El enlace de datos es la técnica que consiste en vincular las propiedades de dos objetos para que los cambios en una propiedad se reflejen automáticamente en la otra propiedad. El enlace de datos es una parte integral de la arquitectura de aplicación Model-View-ViewModel (MVVM).
-ms.prod: xamarin
-ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/23/2020
-ms.openlocfilehash: 9e3e602eda0d2fa78dd25905a2b6ccf3ce5a744d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4b99877342ddbaf9ad5606ec5dc284818fcfeffd
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80247605"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139703"
 ---
 # <a name="xamarinforms-data-binding"></a>Enlace de datos de Xamarin.Forms
 
@@ -22,7 +25,7 @@ _El enlace de datos es la técnica que consiste en vincular las propiedades de d
 
 ## <a name="the-data-linking-problem"></a>El problema de vinculación de datos
 
-Una aplicación de Xamarin.Forms consta de una o varias páginas, cada una de los cuales generalmente contiene varios objetos de interfaz de usuario denominados *vistas*. Una de las tareas principales del programa consiste en mantener estas vistas sincronizadas y realizar un seguimiento de los distintos valores o selecciones que representan. A menudo las vistas representan valores de un origen de datos subyacente y el usuario manipula estas vistas para cambiar esos datos. Cuando la vista cambia, los datos subyacentes deben reflejar ese cambio y, de forma similar, cuando los datos subyacentes cambian, ese cambio debe reflejarse en la vista.
+Una aplicación de Xamarin.Forms consta de una o varias páginas, cada una de las cuales generalmente contiene varios objetos de interfaz de usuario denominados *vistas*. Una de las tareas principales del programa consiste en mantener estas vistas sincronizadas y realizar un seguimiento de los distintos valores o selecciones que representan. A menudo las vistas representan valores de un origen de datos subyacente y el usuario manipula estas vistas para cambiar esos datos. Cuando la vista cambia, los datos subyacentes deben reflejar ese cambio y, de forma similar, cuando los datos subyacentes cambian, ese cambio debe reflejarse en la vista.
 
 Para controlar este trabajo correctamente, el programa debe recibir una notificación de cambios en estas vistas o en los datos subyacentes. La solución habitual consiste en definir eventos que indican cuándo se produce un cambio. Después, se puede instalar un controlador de eventos que recibe la notificación de estos cambios, y responde transfiriendo datos de un objeto a otro. Pero cuando hay muchas vistas, también es necesario que haya muchos controladores de eventos y se involucra una gran cantidad de código.
 
@@ -78,5 +81,5 @@ Use enlaces compilados para mejorar el rendimiento del enlace de datos.
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
-- [Capítulo sobre enlace de datos del libro de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Capítulo sobre el enlace de datos del libro Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/markup-extensions/index.md)

@@ -1,18 +1,21 @@
 ---
 title: Formato de cadena de Xamarin.Forms
-description: En este artículo se explica cómo usar enlaces de datos de Xamarin.Forms para dar formato y mostrar los objetos como cadenas. Esto se logra estableciendo el StringFormat del enlace en una cadena de formato estándar de .NET con un marcador de posición.
-ms.prod: xamarin
-ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: bdd28e1ce6d36a0a025ac43a709af2e38a313526
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d08a89d5394a227e3cee76603e4e97d2cf9495e0
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76940377"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135764"
 ---
 # <a name="xamarinforms-string-formatting"></a>Formato de cadena de Xamarin.Forms
 
@@ -187,4 +190,4 @@ Empero, el siguiente artículo explora la [**Ruta de enlace**](binding-path.md) 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
-- [Capítulo sobre enlace de datos del libro de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Capítulo sobre el enlace de datos del libro Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

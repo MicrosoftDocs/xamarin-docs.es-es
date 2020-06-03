@@ -1,18 +1,21 @@
 ---
 title: Modo de enlace de Xamarin.Forms
-description: En este artículo se explica cómo controlar el flujo de información entre el origen y el destino mediante un modo de enlace, que se especifica con un miembro de la enumeración BindingMode. Todas las propiedades enlazables tienen un modo de enlace predeterminado, que indica el modo en vigor cuando esa propiedad es un destino de enlace de datos.
-ms.prod: xamarin
-ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/01/2018
-ms.openlocfilehash: 3bf1ab647faa4b6c4735585ddfeaeb704d7d3f41
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c14215071a1d9d3ec804c307fa6edbbe4ddcf8e9
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303766"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139781"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modo de enlace de Xamarin.Forms
 
@@ -61,7 +64,7 @@ El modo de enlace se especifica con un miembro de la enumeración [`BindingMode`
 - [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) &ndash; los datos van en ambas direcciones entre el origen y el destino
 - [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) &ndash; los datos van del origen al destino
 - [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; los datos van del destino al origen
-- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; los datos van del origen al destino, pero solo cuando cambia `BindingContext` (novedad de Xamarin.Forms 3.0)
+- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; los datos van del origen al destino, pero solo cuando cambia `BindingContext` (novedad de Xamarin.Forms 3.0)
 
 Todas las propiedades enlazables tienen un modo de enlace predeterminado que se establece cuando se crea la propiedad enlazable, y que está disponible en la propiedad [`DefaultBindingMode`](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) del objeto `BindableProperty`. Este modo de enlace predeterminado indica el modo en vigor cuando esa propiedad es un destino de enlace de datos.
 
@@ -417,7 +420,7 @@ El método `SetProperty` de la clase hace incluso más: compara el valor que se 
 
 En la clase `SampleSettingsViewModel` se definen dos propiedades para el color de fondo: la propiedad `BackgroundNamedColor` es de tipo `NamedColor`, que es una clase que también se incluye en la solución **DataBindingDemos**. La propiedad `BackgroundColor` es de tipo `Color` y se obtiene de la propiedad `Color` del objeto `NamedColor`.
 
-La clase `NamedColor` usa la reflexión de .NET para enumerar todos los campos públicos estáticos en la estructura de `Color` de Xamarin.Forms y almacenarlos con sus nombres en una colección que sea accesible desde la propiedad `All` estática:
+La clase `NamedColor` usa la fijación de .NET para enumerar todos los campos públicos estáticos en la estructura `Color` de Xamarin.Forms y almacenarlos con sus nombres en una colección que sea accesible desde la propiedad `All` estática:
 
 ```csharp
 public class NamedColor : IEquatable<NamedColor>, IComparable<NamedColor>
@@ -684,4 +687,4 @@ En el artículo siguiente verá cómo especificar los [**formatos de cadena**](s
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
-- [Capítulo sobre enlace de datos del libro de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Capítulo sobre el enlace de datos del libro Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

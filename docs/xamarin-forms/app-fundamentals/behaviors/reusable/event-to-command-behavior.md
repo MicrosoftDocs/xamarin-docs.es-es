@@ -1,18 +1,21 @@
 ---
-title: EventToCommandBehavior reutilizable
+title: ''
 description: Los comportamientos se pueden usar para asociar comandos a los controles que no se han diseñado para interactuar con los comandos. En este artículo se explica cómo crear y consumir un comportamiento de Xamarin.Forms para invocar un comando cuando se desencadena un evento.
-ms.prod: xamarin
-ms.assetid: EC7F6556-9776-40B8-9424-A8094482A2F3
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/09/2018
-ms.openlocfilehash: 292a6aaaea4fb0f84138e04c88f001c72ddd096d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 46d1566c89de763a469f30ce8ed2c6ef919f1426
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "68650914"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135803"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>EventToCommandBehavior reutilizable
 
@@ -41,7 +44,7 @@ También se pueden establecer las siguientes propiedades de comportamiento opcio
 
 La clase `EventToCommandBehavior` se deriva de la clase `BehaviorBase<T>`, que a su vez se deriva de la clase [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1). El propósito de la clase `BehaviorBase<T>` es proporcionar una clase base para cualquier comportamiento de Xamarin.Forms que requiera que el elemento [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) del comportamiento se establezca en el control adjunto. Esto garantiza que el comportamiento puede enlazar y ejecutar la interfaz `ICommand` especificada por la propiedad `Command` cuando se consume el comportamiento.
 
-La clase `BehaviorBase<T>` proporciona un método [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) reemplazable que establece el elemento [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) del comportamiento y un método [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) reemplazable que limpia `BindingContext`. Además, la clase almacena una referencia al control adjunto en la propiedad `AssociatedObject`.
+La clase `BehaviorBase<T>` proporciona un método reemplazable [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) method that sets the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the behavior and an overridable [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) que limpia el elemento `BindingContext`. Además, la clase almacena una referencia al control adjunto en la propiedad `AssociatedObject`.
 
 ### <a name="implementing-bindable-properties"></a>Implementación de propiedades enlazables
 
@@ -73,7 +76,7 @@ De forma predeterminada, los argumentos de evento para el evento se pasarán al 
 
 ### <a name="implementing-the-overrides"></a>Implementación de las invalidaciones
 
-La clase `EventToCommandBehavior` invalida los métodos [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) y [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) de la clase `BehaviorBase<T>`, como se muestra en el ejemplo de código siguiente:
+La clase `EventToCommandBehavior` invalida los métodos [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) and [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) de la clase `BehaviorBase<T>`, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 public class EventToCommandBehavior : BehaviorBase<View>
@@ -94,7 +97,7 @@ public class EventToCommandBehavior : BehaviorBase<View>
 }
 ```
 
-El método [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) realiza la instalación mediante una llamada al método `RegisterEvent`, pasando el valor de la propiedad `EventName` como un parámetro. El método [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) realiza la limpieza mediante una llamada al método `DeregisterEvent`, pasando el valor de la propiedad `EventName` como un parámetro.
+El método [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) method performs setup by calling the `RegisterEvent` method, passing in the value of the `EventName` property as a parameter. The [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) realiza una limpieza mediante una llamada al método `DeregisterEvent`, para lo que pasa el valor de la propiedad `EventName` como parámetro.
 
 ### <a name="implementing-the-behavior-functionality"></a>Implementación de la funcionalidad del comportamiento
 
@@ -152,7 +155,7 @@ El método `OnEvent` se ejecuta en respuesta al desencadenamiento del evento que
 
 Después, se ejecuta la interfaz `ICommand` enlazada a datos, y se pasa el parámetro al comando, siempre que el método [`CanExecute`](xref:Xamarin.Forms.Command.CanExecute(System.Object)) devuelva `true`.
 
-Aunque aquí no se muestre, `EventToCommandBehavior` también incluye un método `DeregisterEvent` que ejecuta el método [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)). El método `DeregisterEvent` se usa para localizar y anular el registro del evento definido en la propiedad `EventName`, para limpiar las posibles fugas de memoria.
+Aunque no se muestra aquí, `EventToCommandBehavior` también incluye un método `DeregisterEvent` que se ejecuta mediante la propiedad [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) method. The `DeregisterEvent` method is used to locate and deregister the event defined in the `EventName` para limpiar cualquier posible fuga de memoria.
 
 ## <a name="consuming-the-behavior"></a>Consumo del comportamiento
 

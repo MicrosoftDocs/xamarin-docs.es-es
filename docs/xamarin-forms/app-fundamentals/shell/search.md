@@ -1,20 +1,12 @@
 ---
-title: Búsqueda de Xamarin.Forms Shell
-description: Las aplicaciones de Xamarin.Forms Shell pueden usar la funcionalidad de búsqueda integrada que se proporciona en un cuadro de búsqueda que se puede agregar a la parte superior de cada página.
-ms.prod: xamarin
-ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/18/2019
-ms.openlocfilehash: 9bd4fe5f1a35e2a6f36540cbee13838841b36d92
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75490069"
+title: "Xamarin.Forms Búsqueda en Shell" description: "Xamarin.Forms Las aplicaciones de Shell pueden usar la funcionalidad de búsqueda integrada que se proporciona en un cuadro de búsqueda que se puede agregar en la parte superior de cada página".
+ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
+- "Xamarin.Forms"
+- "Xamarin.Essentials"
+
 ---
-# <a name="xamarinforms-shell-search"></a>Búsqueda de Xamarin.Forms Shell
+
+# <a name="xamarinforms-shell-search"></a>Búsqueda en Xamarin.Forms Shell
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
@@ -63,7 +55,7 @@ public class MonkeySearchHandler : SearchHandler
 
 La invalidación `OnQueryChanged` tiene dos argumentos: `oldValue`, que contiene la consulta de búsqueda anterior, y `newValue`, que contiene la consulta de búsqueda actual. El área de sugerencias de búsqueda se puede actualizar mediante el establecimiento de la propiedad `SearchHandler.ItemsSource` en una colección `IEnumerable` que contiene elementos que coinciden con la consulta de búsqueda actual.
 
-Cuando el usuario selecciona un resultado de búsqueda, se ejecuta la invalidación `OnItemSelected` y se establece la propiedad `SelectedItem`. En este ejemplo, el método dirige a otra página que muestra datos sobre el elemento `Animal` seleccionado. Para más información sobre la navegación, consulte [Navegación en Xamarin.Forms Shell](navigation.md).
+Cuando el usuario selecciona un resultado de búsqueda, se ejecuta la invalidación `OnItemSelected` y se establece la propiedad `SelectedItem`. En este ejemplo, el método dirige a otra página que muestra datos sobre el elemento `Animal` seleccionado. Para obtener más información sobre la navegación, consulte [Navegación en Xamarin.Forms Shell](navigation.md).
 
 > [!NOTE]
 > Se pueden establecer propiedades `SearchHandler` adicionales para controlar la apariencia del cuadro de búsqueda.

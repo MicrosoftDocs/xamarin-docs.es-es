@@ -1,18 +1,21 @@
 ---
-title: Barra de posición de vídeo personalizada
+title: ''
 description: En este artículo se explica cómo implementar una barra de posición personalizada en una aplicación de reproductor de vídeo mediante Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: 6D792264-30FF-46F7-8C1B-2FEF9D277DF4
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/12/2018
-ms.openlocfilehash: 12633b728240c2f90d0265fe7b9efb65ea49bf1f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 97d32a03ee10e2f3b0a7442d1d70dab9236059b4
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "68650644"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135088"
 ---
 # <a name="custom-video-positioning"></a>Barra de posición de vídeo personalizada
 
@@ -342,7 +345,7 @@ El método `SetTimeToEnd` se llama desde los controladores de cambio de propieda
 
 ## <a name="a-custom-slider-for-video"></a>Un control deslizante personalizado para vídeo
 
-Es posible escribir un control personalizado para una barra de posición o para utilizar el `Slider` de Xamarin.Forms o una clase que derive de `Slider`, como la siguiente clase `PositionSlider`. La clase define dos propiedades nuevas denominadas `Duration` y `Position` de tipo `TimeSpan` que están diseñadas para enlazarse a las dos propiedades del mismo nombre en `VideoPlayer`. Tenga en cuenta que el modo de enlace predeterminado de la propiedad `Position` es bidireccional:
+Es posible escribir un control personalizado para una barra de posición o para usar el Xamarin.Forms de `Slider` o una clase que derive de `Slider`, como la siguiente clase `PositionSlider`. La clase define dos propiedades nuevas denominadas `Duration` y `Position` de tipo `TimeSpan` que están diseñadas para enlazarse a las dos propiedades del mismo nombre en `VideoPlayer`. Tenga en cuenta que el modo de enlace predeterminado de la propiedad `Position` es bidireccional:
 
 ```csharp
 namespace FormsVideoLibrary

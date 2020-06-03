@@ -1,18 +1,22 @@
 ---
 title: Resumen del capítulo 1. ¿Cómo encaja Xamarin.Forms?
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 1. ¿Cómo encaja Xamarin.Forms?'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/19/2018
-ms.openlocfilehash: 6dfa473bdfb4c1dd88ca833dbf5011a0bbdec42a
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 1. How does Xamarin.Forms fit in?''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 48b2fb429d206f6582886c94d4d99839d790dc8d
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73032883"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136934"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Resumen del capítulo 1. ¿Cómo encaja Xamarin.Forms?
 
@@ -38,9 +42,9 @@ Xamarin proporciona actualmente herramientas para el destino de las API nativas 
 Los desarrolladores pueden usar la plataforma Xamarin para escribir aplicaciones C# en Mac, iOS o Android de destino. Pero cuando se destina a más de una plataforma, tiene mucho sentido compartir parte del código entre las plataformas de destino. Esto implica separar el programa en código dependiente de la plataforma (por lo general, con la interfaz de usuario) y código independiente de la plataforma, que generalmente solo requiere la plataforma .NET base. Este código independiente de la plataforma puede residir en una biblioteca de clases portable (PCL) o en un proyecto compartido, que a menudo se denomina proyecto de recursos compartidos o SAP.
 
 > [!NOTE]
-> Las bibliotecas de clases portables se han sustituido por las bibliotecas .NET estándar. Todo el código de ejemplo del libro se ha convertido para usar las bibliotecas .NET estándar.
+> Las bibliotecas de clases portables se han sustituido por las bibliotecas .NET estándar. Todo el código de ejemplo del libro se ha convertido para usar bibliotecas .NET Standard.
 
-## <a name="introducing-xamarinforms"></a>Introducción a Xamarin.Forms
+## <a name="introducing-xamarinforms"></a>Presentación de Xamarin.Forms
 
 Cuando el destino son varias plataformas móviles, Xamarin.Forms permite compartir aún más el código. Un único programa escrito para Xamarin.Forms puede tener como destino estas plataformas:
 
@@ -59,15 +63,15 @@ Las API de Xamarin.Forms se asignan a controles nativos en cada plataforma, de m
 
 Las capturas de pantallas de izquierda a derecha muestran un teléfono iPhone y uno Android:
 
-En cada pantalla, la página contiene una [`Label`](xref:Xamarin.Forms.Label) de Xamarin.Forms para mostrar texto, un [`Button`](xref:Xamarin.Forms.Button) para iniciar acciones, una [`Switch`](xref:Xamarin.Forms.Switch) para elegir un valor activado o desactivado y un [`Slider`](xref:Xamarin.Forms.Slider) para especificar un valor dentro de un intervalo continuo. Las cuatro vistas son elementos secundarios de un objeto [`StackLayout`](xref:Xamarin.Forms.StackLayout) en un objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage).
+En cada pantalla, la página contiene una Xamarin.Forms[`Label` de ](xref:Xamarin.Forms.Label) para mostrar texto, un [`Button`](xref:Xamarin.Forms.Button) para iniciar acciones, un [`Switch`](xref:Xamarin.Forms.Switch) para elegir un valor activado o desactivado y un [`Slider`](xref:Xamarin.Forms.Slider) para especificar un valor dentro de un intervalo continuo. Las cuatro vistas son elementos secundarios de un objeto [`StackLayout`](xref:Xamarin.Forms.StackLayout) en un objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage).
 
 También se adjunta a la página una barra de herramientas de Xamarin.Forms que consta de varios objetos [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem). Son visibles como iconos en la parte superior de las pantallas de iOS y Android, y en la parte inferior de la pantalla de Windows 10 Mobile.
 
-Xamarin.Forms también admite XAML, el lenguaje de marcado de aplicaciones extensible (XAML) desarrollado en Microsoft para varias plataformas de aplicaciones. Todos los objetos visuales del programa mostrados anteriormente se definen en XAML, tal como se muestra en el ejemplo [**PlatformVisuals**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter01/PlatformVisuals).
+Xamarin.Forms también admite el lenguaje XAML (lenguaje de marcado de aplicaciones extensible) desarrollado en Microsoft para varias plataformas de aplicaciones. Todos los objetos visuales del programa mostrados anteriormente se definen en XAML, tal como se muestra en el ejemplo [**PlatformVisuals**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter01/PlatformVisuals).
 
-Un programa de Xamarin.Forms puede determinar en qué plataforma se está ejecutando y ejecutar un código diferente en consecuencia. Lo que es más eficaz, los desarrolladores pueden escribir código personalizado para las distintas plataformas y ejecutar ese código desde un programa de Xamarin.Forms de manera independiente de la plataforma. Los desarrolladores también pueden crear controles adicionales escribiendo representadores para cada plataforma.
+Un programa de Xamarin.Forms puede determinar en qué plataforma se está ejecutando y ejecutar código diferente en consecuencia. Lo que es más eficaz, los desarrolladores pueden escribir código personalizado para las distintas plataformas y ejecutar ese código desde un programa de Xamarin.Forms de manera independiente de la plataforma. Los desarrolladores también pueden crear controles adicionales escribiendo representadores para cada plataforma.
 
-Aunque Xamarin.Forms es una buena solución para las aplicaciones de línea de negocio, o para la creación de prototipos, o la realización de una demostración de prueba de concepto rápida, es menos idónea para las aplicaciones que requieren gráficos vectoriales o interacción táctil compleja.
+Aunque Xamarin.Forms es una buena solución para las aplicaciones de línea de negocio, para la creación de prototipos o para la realización de una demostración de prueba de concepto rápida, es menos idónea para las aplicaciones que requieren gráficos vectoriales o interacción táctil compleja.
 
 ## <a name="your-development-environment"></a>Su entorno de desarrollo
 

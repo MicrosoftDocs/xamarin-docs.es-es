@@ -1,18 +1,22 @@
 ---
-title: Resumen del capítulo 3. Profundizar en el texto
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 3. Profundizar en el texto'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/18/2018
-ms.openlocfilehash: 69415b59bbd376330454302981e3216c236a16bb
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 3. Deeper into text''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5423a9f716f384eca107003bdeca69615f8b459f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "72980931"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136908"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Resumen del capítulo 3. Profundizar en el texto
 
@@ -119,7 +123,7 @@ Establezca la propiedad [`FontFamily`](xref:Xamarin.Forms.Label.FontFamily) de `
 
 Establezca la propiedad [`FontSize`](xref:Xamarin.Forms.Label.FontSize) de `Label` en `double` para especificar el alto aproximado de la fuente. Consulte el [capítulo 5, sobre la cuestión de los tamaños](chapter05.md), para obtener más información sobre cómo elegir los tamaños de fuente de forma inteligente.
 
-También puede obtener uno de los distintos tamaños preestablecidos de fuente dependientes de la plataforma. El método [`Device.GetNamedSize`](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,System.Type)) y [overload](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,Xamarin.Forms.Element)) devuelven un valor de tamaño de fuente `double` apropiado para la plataforma basándose en los miembros de la enumeración [`NamedSize`](xref:Xamarin.Forms.NamedSize) ([`Default`](xref:Xamarin.Forms.NamedSize.Default), [`Micro`](xref:Xamarin.Forms.NamedSize.Micro), [`Small`](xref:Xamarin.Forms.NamedSize.Small), [`Medium`](xref:Xamarin.Forms.NamedSize.Medium) y [`Large`](xref:Xamarin.Forms.NamedSize.Large)). El valor devuelto del miembro `Medium` no es necesariamente el mismo que `Default`. El ejemplo [**NamedFontSizes**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) muestra texto con estos tamaños con nombre.
+También puede obtener uno de los distintos tamaños preestablecidos de fuente dependientes de la plataforma. El método estático [`Device.GetNamedSize`](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,System.Type)) y [overload](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,Xamarin.Forms.Element)) devuelven un valor de tamaño de fuente `double` adecuado para la plataforma en función de los miembros de la enumeración [`NamedSize`](xref:Xamarin.Forms.NamedSize) ([`Default`](xref:Xamarin.Forms.NamedSize.Default), [`Micro`](xref:Xamarin.Forms.NamedSize.Micro), [`Small`](xref:Xamarin.Forms.NamedSize.Small), [`Medium`](xref:Xamarin.Forms.NamedSize.Medium) y [`Large`](xref:Xamarin.Forms.NamedSize.Large)). El valor devuelto del miembro `Medium` no es necesariamente el mismo que `Default`. El ejemplo [**NamedFontSizes**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) muestra texto con estos tamaños con nombre.
 
 Establezca la propiedad [`FontAttributes`](xref:Xamarin.Forms.Label.FontAttributes) de `Label` en un miembro de la enumeración de estos [`FontAttributes`](xref:Xamarin.Forms.FontAttributes), [`Bold`](xref:Xamarin.Forms.FontAttributes.Bold), [`Italic`](xref:Xamarin.Forms.FontAttributes.Italic) o [`None`](xref:Xamarin.Forms.FontAttributes.None). Puede combinar los miembros `Bold` y `Italic` con el operador OR bit a bit de C#.
 

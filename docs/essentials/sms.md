@@ -1,18 +1,11 @@
 ---
-title: 'Xamarin.Essentials: SMS'
-description: La clase SMS en Xamarin.Essentials permite que una aplicación abra la aplicación SMS predeterminada con un mensaje especificado para enviar a un destinatario.
-ms.assetid: 81A757F2-6F2A-458F-B9BE-770ADEBFAB58
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 38651b8e29a2119f777fdbcdd82c9a8277c02497
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149909"
+title: ''Xamarin.Essentials: SMS'' description: "La clase Sms de Xamarin.Essentials permite que una aplicación abra la aplicación SMS predeterminada con un mensaje especificado para enviarlo a un destinatario".
+ms.assetid: author: ms.custom: ms.author: ms.date: no-loc:
+- "Xamarin.Forms"
+- "Xamarin.Essentials"
+
 ---
+
 # <a name="xamarinessentials-sms"></a>Xamarin.Essentials: SMS
 
 La clase **SMS** permite que una aplicación abra la aplicación SMS predeterminada con un mensaje especificado para enviar un destinatario.
@@ -23,7 +16,7 @@ La clase **SMS** permite que una aplicación abra la aplicación SMS predetermin
 
 ## <a name="using-sms"></a>Uso de SMS
 
-Agregue una referencia a Xamarin.Essentials en su clase:
+Agregue una referencia a Xamarin.Essentials en la clase:
 
 ```csharp
 using Xamarin.Essentials;

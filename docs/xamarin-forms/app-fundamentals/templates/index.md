@@ -1,18 +1,21 @@
 ---
 title: Plantillas de Xamarin.Forms
 description: En esta guía se explica cómo usar la compatibilidad de plantillas que proporciona Xamarin.Forms. Esta compatibilidad incluye plantillas de control, que definen la estructura visual de controles y páginas personalizados, y plantillas de datos, que definen la presentación de los datos en controles compatibles.
-ms.prod: xamarin
-ms.assetid: 4453C209-C068-47D5-A49B-0ECC95C0FB3B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/13/2020
-ms.openlocfilehash: d5610a37d4700edb9cd2b9d8fb90a7506b66ca68
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 079c9079efdf224db1dee8a60f054439eeee8e8c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75955692"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135933"
 ---
 # <a name="xamarinforms-templates"></a>Plantillas de Xamarin.Forms
 

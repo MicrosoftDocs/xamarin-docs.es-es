@@ -1,20 +1,23 @@
 ---
-title: Convertidor de valores de enlace de Xamarin.Forms
+title: Enlace de convertidores de valores de Xamarin.Forms
 description: En este artículo se explica cómo convertir los valores dentro de un enlace de datos de Xamarin.Forms mediante la implementación de un convertidor de valores (que también se denomina convertidor de enlaces o convertidor de valores de enlace).
-ms.prod: xamarin
-ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: 05ad12de77e8895a23cd364b90abfbfb567ac573
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e1a4faabc8f0703b497062a8c5d587221692dab7
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771620"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139768"
 ---
-# <a name="xamarinforms-binding-value-converters"></a>Convertidor de valores de enlace de Xamarin.Forms
+# <a name="xamarinforms-binding-value-converters"></a>Enlace de convertidores de valores de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -467,4 +470,4 @@ Este es el resultado:
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
-- [Capítulo sobre enlace de datos del libro de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Capítulo sobre el enlace de datos del libro Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

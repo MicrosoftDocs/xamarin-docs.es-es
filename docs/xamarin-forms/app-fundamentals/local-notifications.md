@@ -1,20 +1,23 @@
 ---
 title: Notificaciones locales de Xamarin.Forms
 description: En este artículo se explica cómo enviar y recibir notificaciones locales en Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
-ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 10/10/2019
-ms.openlocfilehash: ef2ef004378212fac593179d7aa38b3688fa82c3
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 40e040f216ddda40931273f4e7f5614964862fe8
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "72371542"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137603"
 ---
-# <a name="local-notifications-in-xamarinforms"></a>Notificaciones locales en Xamarin.Forms
+# <a name="local-notifications-in-xamarinforms"></a>Notificaciones locales de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/local-notifications)
 
@@ -111,7 +114,7 @@ public partial class MainPage : ContentPage
 
 El constructor de clase `MainPage` usa el elemento `DependencyService` de Xamarin.Forms para recuperar una instancia específica de la plataforma de `INotificationManager`. El método `OnScheduleClicked` usa la instancia de `INotificationManager` para programar una nueva notificación. Se llama al método `ShowNotification` desde el controlador de eventos asociado al evento `NotificationReceived` y se inserta un nuevo elemento `Label` en la página cuando se invoca el evento.
 
-Para más información sobre Xamarin.Forms `DependencyService`, consulte [Xamarin.Forms DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md).
+Para obtener más información sobre `DependencyService` de Xamarin.Forms, vea [DependencyService de Xamarin.Forms](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md).
 
 ## <a name="create-the-android-interface-implementation"></a>Creación de la implementación de la interfaz de Android
 
@@ -269,7 +272,7 @@ Android ofrece muchas opciones avanzadas para las notificaciones. Para más info
 
 ## <a name="create-the-ios-interface-implementation"></a>Creación de la implementación de la interfaz de iOS
 
-Para que la aplicación de Xamarin.Forms envíe y reciba notificaciones en iOS, debe proporcionar una implementación de `INotificationManager`.
+Para que la aplicación de Xamarin.Forms envíe y reciba notificaciones en iOS, esta debe proporcionar una implementación de `INotificationManager`.
 
 ### <a name="create-the-iosnotificationmanager-class"></a>Creación de la clase iOSNotificationManager
 
@@ -400,4 +403,4 @@ En iOS, la aplicación recibe automáticamente las notificaciones entrantes sin 
 - [Proyecto de ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/local-notifications)
 - [Notificaciones en Xamarin.Android](~/android/app-fundamentals/notifications/index.md)
 - [Notificaciones en Xamarin.iOS](~/ios/platform/user-notifications/index.md)
-- [Xamarin.Forms Dependency.Service](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md)
+- [Dependency.Service de Xamarin.Forms](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md)

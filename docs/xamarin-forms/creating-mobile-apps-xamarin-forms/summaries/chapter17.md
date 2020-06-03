@@ -1,18 +1,22 @@
 ---
-title: Resumen del capítulo 17. Dominio de la cuadrícula
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 17. Dominio de la cuadrícula'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/07/2017
-ms.openlocfilehash: 37b5e2bbafa816de27390771ae6daa33c74f7651
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 17. Mastering the Grid''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6dd13c0f592831c6488afac6727bcac734e9136a
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70760625"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136726"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Resumen del capítulo 17. Dominio de la cuadrícula
 
@@ -30,7 +34,7 @@ La definición de `Grid` en XAML comienza generalmente con el rellenado de las c
 
 `RowDefinition` tiene una propiedad [`Height`](xref:Xamarin.Forms.RowDefinition.Height) y `ColumnDefinition` tiene una propiedad [`Width`](xref:Xamarin.Forms.ColumnDefinition.Width), ambas de tipo [`GridLength`](xref:Xamarin.Forms.GridLength), una estructura.
 
-En XAML, [`GridLengthTypeConverter`](xref:Xamarin.Forms.GridLengthTypeConverter) convierte las cadenas de texto simples en valores de `GridLength`. En segundo plano, el [constructor `GridLength`](xref:Xamarin.Forms.GridLength.%23ctor(System.Double,Xamarin.Forms.GridUnitType)) crea el valor `GridLength` basándose en un número y un valor de tipo [`GridUnitType`](xref:Xamarin.Forms.GridUnitType), una enumeración con tres miembros:
+En XAML, [`GridLengthTypeConverter`](xref:Xamarin.Forms.GridLengthTypeConverter) convierte las cadenas de texto simples en valores de `GridLength`. En segundo plano, el [`GridLength` constructor](xref:Xamarin.Forms.GridLength.%23ctor(System.Double,Xamarin.Forms.GridUnitType)) crea el valor `GridLength` basándose en un número y un valor de tipo [`GridUnitType`](xref:Xamarin.Forms.GridUnitType), una enumeración con tres miembros:
 
 - [`Absolute`](xref:Xamarin.Forms.GridUnitType.Absolute) &mdash; el ancho o el alto se especifica en unidades independientes del dispositivo (un número en XAML)
 - [`Auto`](xref:Xamarin.Forms.GridUnitType.Auto) &mdash; el alto o ancho se ajusta automáticamente según el contenido de la celda ("auto" en XAML)

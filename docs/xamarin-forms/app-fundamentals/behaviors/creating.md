@@ -1,18 +1,21 @@
 ---
 title: Creación de comportamientos de Xamarin.Forms
 description: Los comportamientos de Xamarin.Forms se crean mediante la derivación de la clase Behavior o Behavior<T>. En este artículo se explica cómo crear y consumir comportamientos de Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: 300C16FE-A7E0-445B-9099-8E93ABB6F73D
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/06/2016
-ms.openlocfilehash: 42ad56a7ae34bcef638ed25bea267dcabd21e20c
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 67db30b5caadce75a41755530db2b245562d0304
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77131091"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135829"
 ---
 # <a name="create-xamarinforms-behaviors"></a>Creación de comportamientos de Xamarin.Forms
 
@@ -58,7 +61,7 @@ Después, el comportamiento se puede consumir si se adjunta a la colección [`Be
 
 ## <a name="creating-a-xamarinforms-behavior"></a>Creación de un comportamiento de Xamarin.Forms
 
-En la aplicación de ejemplo se muestra un elemento `NumericValidationBehavior`, que resalta el valor especificado por el usuario en un control [`Entry`](xref:Xamarin.Forms.Entry) en color rojo, si no es de tipo `double`. El comportamiento se muestra en el ejemplo de código siguiente:
+En la aplicación de ejemplo, se muestra un elemento `NumericValidationBehavior`, que resalta el valor especificado por el usuario en un control [`Entry`](xref:Xamarin.Forms.Entry) en color rojo, si no es del tipo `double`. El comportamiento se muestra en el ejemplo de código siguiente:
 
 ```csharp
 public class NumericValidationBehavior : Behavior<Entry>
@@ -84,7 +87,7 @@ public class NumericValidationBehavior : Behavior<Entry>
 }
 ```
 
-`NumericValidationBehavior` se deriva de la clase [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1), donde `T` es un elemento [`Entry`](xref:Xamarin.Forms.Entry). El método [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) registra un controlador de eventos para el evento [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged), y el método [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) anula el registro del evento `TextChanged` para evitar fugas de memoria. El método `OnEntryTextChanged` proporciona la funcionalidad básica del comportamiento y analiza el valor especificado por el usuario en el elemento `Entry` y establece la propiedad [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) en rojo si el valor no es de tipo `double`.
+`NumericValidationBehavior` se deriva de la clase [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1), donde `T` es un elemento [`Entry`](xref:Xamarin.Forms.Entry). El método [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) method registers an event handler for the [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) event, with the [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) anula el registro del evento `TextChanged` para evitar fugas de memorias. El método `OnEntryTextChanged` proporciona la funcionalidad básica del comportamiento y analiza el valor especificado por el usuario en el elemento `Entry` y establece la propiedad [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) en rojo si el valor no es de tipo `double`.
 
 > [!NOTE]
 > Xamarin.Forms no establece el elemento `BindingContext` de un comportamiento, ya que los comportamientos se pueden compartir y aplicar a varios controles mediante estilos.
@@ -101,7 +104,7 @@ Todos los controles de Xamarin.Forms tienen una colección [`Behaviors`](xref:Xa
 </Entry>
 ```
 
-El control [`Entry`](xref:Xamarin.Forms.Entry) equivalente en C# se muestra en el ejemplo de código siguiente:
+En el siguiente ejemplo de código, se muestra el control [`Entry`](xref:Xamarin.Forms.Entry) equivalente en C#:
 
 ```csharp
 var entry = new Entry { Placeholder = "Enter a System.Double" };
@@ -187,7 +190,7 @@ Para obtener más información sobre los estilos, vea [Estilos](~/xamarin-forms/
 
 ### <a name="removing-a-behavior-from-a-control"></a>Eliminación de un comportamiento de un control
 
-El método [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) se desencadena cuando se quita un comportamiento de un control, y se usa para realizar cualquier limpieza necesaria como cancelar la suscripción de un evento para evitar una fuga de memoria. Pero los comportamientos no se quitan de forma implícita de los controles a menos que un método `Remove` o `Clear` modifique la colección [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) del control. En el ejemplo de código siguiente se muestra cómo quitar un comportamiento específico de la colección `Behaviors` de un control:
+Colección [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) method is fired when a behavior is removed from a control, and is used to perform any required cleanup such as unsubscribing from an event to prevent a memory leak. However, behaviors are not implicitly removed from controls unless the control's [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) collection is modified by a `Remove` or `Clear` method. The following code example demonstrates removing a specific behavior from a control's `Behaviors`:
 
 ```csharp
 var toRemove = entry.Behaviors.FirstOrDefault (b => b is NumericValidationBehavior);
@@ -206,7 +209,7 @@ Además, tenga en cuenta que los comportamientos no se quitan de forma implícit
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se ha explicado cómo crear y consumir comportamientos de Xamarin.Forms. Los comportamientos de Xamarin.Forms se crean mediante la derivación de la clase [`Behavior`](xref:Xamarin.Forms.Behavior) o [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1).
+En este artículo se explica cómo crear y consumir comportamientos de Xamarin.Forms. Los comportamientos de Xamarin.Forms se crean mediante la derivación de la clase [`Behavior`](xref:Xamarin.Forms.Behavior) o [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

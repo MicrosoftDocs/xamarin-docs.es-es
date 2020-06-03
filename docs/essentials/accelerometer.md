@@ -1,18 +1,11 @@
 ---
-title: 'Xamarin.Essentials: Acelerómetro'
-description: La clase Accelerometer en Xamarin.Essentials le permite supervisar el sensor de acelerómetro del dispositivo, que indica la aceleración del dispositivo en un espacio tridimensional.
-ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 04/02/2019
-ms.custom: video
-ms.openlocfilehash: dd99d09f227809bf8834eea9749c4d5379abebdb
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70765048"
+title: ''Xamarin.Essentials: Acelerómetro'' description: "La clase Accelerometer de Xamarin.Essentials permite supervisar el sensor del acelerómetro del dispositivo, que indica la aceleración del dispositivo en un espacio tridimensional".
+ms.assetid: author: ms.author: ms.date: ms.custom: no-loc:
+- "Xamarin.Forms"
+- "Xamarin.Essentials"
+
 ---
+
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: Acelerómetro
 
 La clase **Accelerometer** permite supervisar el sensor del acelerómetro del dispositivo, que indica la aceleración del dispositivo en un espacio tridimensional.
@@ -23,7 +16,7 @@ La clase **Accelerometer** permite supervisar el sensor del acelerómetro del di
 
 ## <a name="using-accelerometer"></a>Uso de Accelerometer
 
-Agregue una referencia a Xamarin.Essentials en su clase:
+Agregue una referencia a Xamarin.Essentials en la clase:
 
 ```csharp
 using Xamarin.Essentials;

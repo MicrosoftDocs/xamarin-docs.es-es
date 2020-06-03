@@ -1,28 +1,31 @@
 ---
 title: Xamarin.Forms Shell
 description: En esta guía se explica cómo usar Xamarin.Forms Shell, que reduce la complejidad de las aplicaciones de Xamarin.Forms al proporcionar las características fundamentales que requieren la mayoría de las aplicaciones.
-ms.prod: xamarin
-ms.assetid: 85B322AA-808F-41B6-953A-5877264AE643
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/28/2019
-ms.openlocfilehash: 20ac6ad748e7056f7f8037a73a95de66b9eae3b6
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0acf00d85c2bfb823ec1cfba099179bb6743117c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "69888921"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138754"
 ---
 # <a name="xamarinforms-shell"></a>Xamarin.Forms Shell
 
 ## <a name="introduction"></a>[Introducción](introduction.md)
 
-Xamarin.Forms Shell reduce la complejidad del desarrollo de aplicaciones móviles al proporcionar las características fundamentales que requieren la mayoría de aplicaciones móviles. Esto incluye una experiencia de usuario de navegación común, un esquema de navegación basado en URI y un controlador de búsqueda integrada.
+Xamarin.Forms Shell reduce la complejidad del desarrollo de aplicaciones móviles al proporcionar las características fundamentales que requieren la mayoría de las aplicaciones móviles. Esto incluye una experiencia de usuario de navegación común, un esquema de navegación basado en URI y un controlador de búsqueda integrada.
 
-## <a name="create-a-xamarinforms-shell-application"></a>[Creación de una aplicación de Xamarin.Forms Shell ](create.md)
+## <a name="create-a-xamarinforms-shell-applicationcreatemd"></a>[Creación de una aplicación de Xamarin.Forms Shell](create.md)
 
-El proceso para crear una aplicación de Xamarin.Forms Shell consiste en crear un archivo XAML que sirva de subclase de la clase `Shell`, establecer la propiedad `MainPage` de la clase `App` de la aplicación en el objeto `Shell` con sublclases y, a continuación, describir la jerarquía visual de la aplicación en la clase `Shell` con subclases.
+El proceso para crear una aplicación de Xamarin.Forms Shell consiste en crear un archivo XAML que sirva de subclase de la clase `Shell`, establecer la propiedad `MainPage` de la clase `App` de la aplicación en el objeto `Shell` con subclases y, después, describir la jerarquía visual de la aplicación en la clase `Shell` con subclases.
 
 ## <a name="flyout"></a>[Control flotante](flyout.md)
 

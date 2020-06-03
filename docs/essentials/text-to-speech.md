@@ -1,18 +1,11 @@
 ---
-title: 'Xamarin.Essentials: Texto a voz'
-description: La clase TextToSpeech en Xamarin.Essentials permite que una aplicación utilice los motores de texto a voz para responder a texto del dispositivo y también para consultar los idiomas disponibles que el motor puede admitir.
-ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: abe591d67ea749de4ae9a2f8dadf4df07712691a
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149724"
+title: ''Xamarin.Essentials: Conversión de texto a voz" description "La clase TextToSpeech de Xamarin.Essentials permite que una aplicación use los motores de texto a voz integrados para responder a texto del dispositivo y también para consultar los idiomas disponibles que el motor puede admitir".
+ms.assetid: author: ms.custom: ms.author: ms.date: no-loc:
+- "Xamarin.Forms"
+- "Xamarin.Essentials"
+
 ---
+
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Texto a voz
 
 La clase **TextToSpeech** permite que una aplicación utilice los motores de texto a voz para responder a texto del dispositivo y también para consultar los idiomas disponibles que el motor puede admitir.
@@ -23,7 +16,7 @@ La clase **TextToSpeech** permite que una aplicación utilice los motores de tex
 
 ## <a name="using-text-to-speech"></a>Uso de Text-to-Speech
 
-Agregue una referencia a Xamarin.Essentials en su clase:
+Agregue una referencia a Xamarin.Essentials en la clase:
 
 ```csharp
 using Xamarin.Essentials;
@@ -121,7 +114,7 @@ Los siguientes son los valores compatibles para estos parámetros:
 
 ### <a name="speech-locales"></a>Configuraciones regionales de voz
 
-Cada plataforma admite distintas configuraciones regionales para responder texto en distintos idiomas y acentos. Las plataformas tienen distintos códigos y formas de especificar la configuración regional, que es la razón por la que Xamarin.Essentials proporciona una clase`Locale` multiplataforma y una manera de hacer consultas con `GetLocalesAsync`.
+Cada plataforma admite distintas configuraciones regionales para responder texto en distintos idiomas y acentos. Las plataformas tienen distintos códigos y formas de especificar la configuración regional, que es la razón por la que Xamarin.Essentials proporciona una clase `Locale` multiplataforma y una manera de hacer consultas con `GetLocalesAsync`.
 
 ```csharp
 public async Task SpeakNow()

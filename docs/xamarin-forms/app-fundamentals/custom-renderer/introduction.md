@@ -1,30 +1,33 @@
 ---
-title: Introducción a los representadores personalizados
-description: En este artículo, se proporciona una introducción a los representadores personalizados y se describe el proceso para crear un representador personalizado.
-ms.prod: xamarin
-ms.assetid: 264314BE-1C5C-4727-A14E-F6F98151CDBD
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/19/2016
-ms.openlocfilehash: ad2868a82f662f45066a6111a1dd3bd2aacad671
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e2bed4d5e8f89efa2997fb085278c4b549870245
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771880"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135326"
 ---
 # <a name="introduction-to-custom-renderers"></a>Introducción a los representadores personalizados
 
 _Los representadores personalizados proporcionan un método eficaz para personalizar la apariencia y el comportamiento de los controles de Xamarin.Forms. Se pueden usar para realizar pequeños cambios de estilo o para una personalización sofisticada del diseño y el comportamiento específicos de una plataforma. En este artículo, se proporciona una introducción a los representadores personalizados y se describe el proceso para crear un representador personalizado._
 
-En [Páginas, diseños y controles](~/xamarin-forms/user-interface/controls/index.md) de Xamarin.Forms, se presenta una API común para describir interfaces de usuario móviles multiplataforma. Cada página, diseño y control se representa de forma distinta en cada plataforma mediante una clase `Renderer` que, a su vez, crea un control nativo (correspondiente a la representación de Xamarin.Forms), lo coloca en la pantalla y agrega el comportamiento especificado en el código compartido.
+En [Páginas, diseños y controles de Xamarin.Forms](~/xamarin-forms/user-interface/controls/index.md), se presenta una API común para describir interfaces de usuario móviles multiplataforma. Cada página, diseño y control se representa de forma distinta en cada plataforma mediante una clase `Renderer` que, a su vez, crea un control nativo (correspondiente a la representación de Xamarin.Forms), lo coloca en la pantalla y agrega el comportamiento especificado en el código compartido.
 
 Los desarrolladores pueden implementar sus propias clases `Renderer` personalizadas para personalizar la apariencia o el comportamiento de un control. Los representadores personalizados para un tipo específico pueden agregarse a un proyecto de aplicación para personalizar el control en un lugar, mientras se permite el comportamiento predeterminado en otras plataformas; también pueden agregarse diferentes representadores personalizados a cada proyecto de aplicación para crear una apariencia distinta en iOS, Android y la Plataforma universal de Windows (UWP). Pero la implementación de una clase de representador personalizado para llevar a cabo una personalización de controles simples suele ser una respuesta compleja. Los efectos simplifican este proceso y suelen usarse para pequeños cambios de estilo. Para obtener más información, consulte [Effects](~/xamarin-forms/app-fundamentals/effects/index.md) (Efectos).
 
 ## <a name="examining-why-custom-renderers-are-necessary"></a>Examinar por qué es necesario usar representadores personalizados
 
-Cambiar la apariencia de un control de Xamarin.Forms, sin usar un representador personalizado, es un proceso de dos pasos en el que se crea un control personalizado mediante subclases y, después, se usa el control personalizado en lugar del control original. En el siguiente ejemplo de código, se muestra cómo crear una subclase del control `Entry`:
+Cambiar la apariencia de un control de Xamarin.Forms sin usar un representador personalizado es un proceso de dos pasos en el que se crea un control personalizado mediante subclases y, después, se usa el control personalizado en lugar del control original. En el siguiente ejemplo de código, se muestra cómo crear una subclase del control `Entry`:
 
 ```csharp
 public class MyEntry : Entry
@@ -75,7 +78,7 @@ En los temas de esta serie, se proporcionarán demostraciones y explicaciones de
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
-Si se incluye un control personalizado en un proyecto de biblioteca de .NET Standard agregado a la solución (es decir, no la biblioteca de .NET Standard creada por la plantilla de proyecto de aplicación de Xamarin.Forms de Visual Studio o Visual Studio para Mac), puede producirse una excepción en iOS al intentar acceder al control personalizado. Si se produce este problema, puede solucionarse mediante la creación de una referencia al control personalizado desde la clase `AppDelegate`:
+Si se incluye un control personalizado en un proyecto de biblioteca de .NET Standard agregado a la solución (es decir, no la biblioteca de .NET Standard creada por la plantilla de proyecto de aplicación de Xamarin.Forms de Visual Studio o Visual Studio para Mac), puede producirse una excepción en iOS al intentar acceder al control personalizado. Si se produce este problema, puede solucionarse mediante la creación de una referencia al control personalizado desde la clase `AppDelegate`:
 
 ```csharp
 var temp = new ClassInPCL(); // in AppDelegate, but temp not used anywhere

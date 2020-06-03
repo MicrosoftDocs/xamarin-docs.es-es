@@ -1,26 +1,29 @@
 ---
-title: Navegación por Xamarin.Forms
+title: Navegación en Xamarin.Forms
 description: En esta guía se explica cómo navegar por las aplicaciones de Xamarin.Forms. Xamarin.Forms proporciona una serie de experiencias de navegación de páginas diferente, en función del tipo de página que se use.
-ms.prod: xamarin
-ms.assetid: BC5D0C6C-D5A9-4B12-A492-ED1F570CEC87
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/01/2017
-ms.openlocfilehash: 682e3bd0ac4cdd651203496dd28586db2cef3165
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8c907cd8a4a1d14b936dee309610bffc67ef363f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "66835262"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137844"
 ---
-# <a name="xamarinforms-navigation"></a>Navegación por Xamarin.Forms
+# <a name="xamarinforms-navigation"></a>Navegación en Xamarin.Forms
 
 _Xamarin.Forms proporciona una serie de experiencias de navegación de páginas diferente, en función del tipo de página que se use._
 
 ![](images/page-types.png "Xamarin.Forms Page Types")
 
-Como alternativa, las aplicaciones de Xamarin.Forms Shell usan una experiencia de navegación basada en URI que no obliga a una jerarquía de navegación del conjunto. Para más información, consulte [Navegación en Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/navigation.md).
+Como alternativa, las aplicaciones de Xamarin.Forms Shell usan una experiencia de navegación basada en URI que no obliga a una jerarquía de navegación del conjunto. Para obtener más información, consulte [Navegación en Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/navigation.md).
 
 ## <a name="hierarchical-navigation"></a>[Navegación jerárquica](hierarchical.md)
 
@@ -36,7 +39,7 @@ La clase [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) proporciona una e
 
 ## <a name="masterdetailpage"></a>[MasterDetailPage](master-detail-page.md)
 
-[`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) de Xamarin.Forms es una página que administra dos páginas de información relacionada: una página maestra que presenta los elementos y una página de detalles que muestra los detalles sobre los elementos de la página maestra.
+[`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) de Xamarin.Forms es una página que administra dos páginas de información relacionada: una página maestra que presenta elementos y una página de detalles que muestra detalles sobre elementos de la página maestra.
 
 ## <a name="modal-pages"></a>[Páginas modales](modal.md)
 

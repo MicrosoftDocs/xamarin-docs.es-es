@@ -1,18 +1,22 @@
 ---
-title: Resumen del capítulo 24. Navegación de páginas
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 24. Navegación de páginas'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/07/2017
-ms.openlocfilehash: fd8e4fc77917fcba9bc61e59ced714ac1cd6fbe9
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 24. Page navigation''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 09622adc269027b589a7345a7d4411c3dcecbf0c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77130847"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136648"
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>Resumen del capítulo 24. Navegación de páginas
 
@@ -129,7 +133,7 @@ Al desplazarse a una nueva página, es posible crear una instancia de la clase d
 
 ### <a name="properties-and-method-calls"></a>Propiedades y llamadas de métodos
 
-En el resto de ejemplos de transferencia de datos se explora el problema de pasar información entre páginas cuando una página lleva a otra y viceversa. En estas explicaciones, la página de *inicio* lleva a la página de *información*, y debe transferir a esta información inicializada. La página de *información* obtiene información adicional del usuario y la transfiere a la página de *inicio*.
+En el resto de ejemplos de transferencia de datos se explora el problema de pasar información entre páginas cuando una página lleva a otra y viceversa. En estas explicaciones, la página de *inicio* lleva a la página de *información*, y debe transferir a esta *información* inicializada. La página de *información* obtiene información adicional del usuario y la transfiere a la página de *inicio*.
 
 La página de *inicio* puede acceder fácilmente a métodos públicos y propiedades de la página de *información* en cuanto crea la instancia de esa página. La página de *información* también puede acceder a métodos públicos y propiedades de la página de *inicio*, pero puede resultar complicado elegir un buen momento para ello. En el ejemplo [**DateTransfer1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/DataTransfer1) se hace esto en su invalidación de `OnDisappearing`. Una desventaja es que la página de *información* tiene que conocer el tipo de la página de *inicio*.
 

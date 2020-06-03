@@ -1,18 +1,11 @@
 ---
-title: 'Xamarin.Essentials: detección de agitaciones'
-description: La clase Accelerometer de Xamarin.Essentials permite detectar movimientos de agitación en el dispositivo.
-ms.assetid: 07513D32-120F-4F12-8757-A47802A8027B
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 05/28/2019
-ms.custom: video
-ms.openlocfilehash: d2aef2c32b3fe2815f1176779a8c28ae8d421ed1
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "67832598"
+title: ''Xamarin.Essentials: Detección de vibraciones'' description: "La clase Accelerometer de Xamarin.Essentials permite detectar movimientos de vibración en el dispositivo".
+ms.assetid: author: ms.author: ms.date: ms.custom: no-loc:
+- "Xamarin.Forms"
+- "Xamarin.Essentials"
+
 ---
+
 # <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: detección de agitaciones
 
 La clase **[Accelerometer](accelerometer.md)** permite supervisar el sensor del acelerómetro del dispositivo, que indica la aceleración del dispositivo en un espacio tridimensional. Además, le permite registrar eventos que se realizarán cuando el usuario agite el dispositivo.
@@ -23,7 +16,7 @@ La clase **[Accelerometer](accelerometer.md)** permite supervisar el sensor del 
 
 ## <a name="using-detect-shake"></a>Uso de la detección de agitaciones
 
-Agregue una referencia a Xamarin.Essentials en su clase:
+Agregue una referencia a Xamarin.Essentials en la clase:
 
 ```csharp
 using Xamarin.Essentials;

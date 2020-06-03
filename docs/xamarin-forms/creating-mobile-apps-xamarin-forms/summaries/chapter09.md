@@ -1,18 +1,22 @@
 ---
-title: Resumen del capítulo 9. Llamadas de API específicas de la plataforma
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 9. Llamadas de API específicas de la plataforma'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/19/2018
-ms.openlocfilehash: 3aec84ec6598a45bb989d4bbc1705fd797382755
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 9. Platform-specific API calls''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e8feb636057f1e11c7df90236dee44697203d51c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "61334568"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136866"
 ---
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>Resumen del capítulo 9. Llamadas de API específicas de la plataforma
 
@@ -40,7 +44,7 @@ En el ejemplo [**PlatInfoSap2**](https://github.com/xamarin/xamarin-forms-book-s
 > [!NOTE] 
 > Las bibliotecas de clases portables se han sustituido por las bibliotecas .NET Standard. Todo el código de ejemplo del libro se ha convertido para usar bibliotecas .NET Standard.
 
-Normalmente, una biblioteca no puede tener acceso a las clases de los proyectos de aplicación. Esta restricción parece evitar que la técnica que se muestra en **PlatInfoSap2** se use en una biblioteca. Sin embargo, Xamarin.Forms contiene una clase denominada [`DependencyService`](xref:Xamarin.Forms.DependencyService) que usa la reflexión de .NET para tener acceso a las clases públicas del proyecto de aplicación desde la biblioteca.
+Normalmente, una biblioteca no puede tener acceso a las clases de los proyectos de aplicación. Esta restricción parece evitar que la técnica que se muestra en **PlatInfoSap2** se use en una biblioteca. Aun así, Xamarin.Forms contiene una clase denominada [`DependencyService`](xref:Xamarin.Forms.DependencyService) que usa la reflexión de .NET para acceder a las clases públicas del proyecto de aplicación desde la biblioteca.
 
 La biblioteca debe definir un elemento `interface` con los miembros que necesita usar en cada plataforma. Después, cada una de las plataformas contiene una implementación de esa interfaz. La clase que implementa la interfaz debe identificarse con un elemento [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute) en el nivel de ensamblado.
 

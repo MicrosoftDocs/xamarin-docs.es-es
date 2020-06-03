@@ -1,18 +1,22 @@
 ---
-title: Resumen del capítulo 20. Asincronía y E/S de archivos
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 20. Asincronía y E/S de archivos'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/18/2018
-ms.openlocfilehash: 283273e6ee28cc5cd1a61169f38bfcd1dd1726d8
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 20. Async and file I/O''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ad71dc5f5389f1676698a761a138b3f76ffa9fa0
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771037"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136687"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Resumen del capítulo 20. Asincronía y E/S de archivos
 
@@ -28,7 +32,7 @@ Los usuarios esperan que las interfaces gráficas de usuario respondan. Esto sig
 Varios programas de ejemplo de este libro han utilizado la clase de [`WebRequest`](xref:System.Net.WebRequest). En esta clase, el método [`BeginGetResponse`](xref:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object)) inicia un subproceso de trabajo, que llama a una función de devolución de llamada cuando está completa. Sin embargo, esa función de devolución de llamada se ejecuta en el subproceso de trabajo, por lo que el programa debe llamar al método [`Device.BeginInvokeOnMainThread`](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) para tener acceso a la interfaz de usuario.
 
 > [!NOTE]
-> Los programas de Xamarin.Forms deben usar [`HttpClient`](xref:System.Net.Http.HttpClient) en lugar de [`WebRequest`](xref:System.Net.WebRequest) para tener acceso a los archivos a través de Internet. `HttpClient` admite operaciones asincrónicas.
+> Los programas de Xamarin.Forms deben usar [`HttpClient`](xref:System.Net.Http.HttpClient) en lugar de [`WebRequest`](xref:System.Net.WebRequest) para acceder a los archivos a través de Internet. `HttpClient` admite operaciones asincrónicas.
 
 Un enfoque más moderno para el procesamiento asincrónico está disponible en .NET y C#. Esto implica las clases [`Task`](xref:System.Threading.Tasks.Task) y [`Task<TResult>`](xref:System.Threading.Tasks.Task`1) y otros tipos en los espacios de nombres [`System.Threading`](xref:System.Threading) y [`System.Threading.Tasks`](xref:System.Threading.Tasks), así como las palabras clave `async` y `await` de C# 5.0. Esto es en lo que se centra este capítulo.
 
@@ -78,12 +82,12 @@ Todas las plataformas compatibles con Xamarin.Forms admiten el almacenamiento lo
 
 Las bibliotecas de Xamarin.iOS y Xamarin.Android incluyen una versión de .NET que Xamarin ha adaptado expresamente para estas dos plataformas. Entre ellas se incluyen las clases de `System.IO` que puede usar para realizar la E/S de archivos con el almacenamiento local de la aplicación en estas dos plataformas.
 
-Sin embargo, si busca estas clases `System.IO` en un PCL de Xamarin.Forms, no las encontrará. El problema es que Microsoft ha renovado por completo la E/S de archivos para la API de Windows Runtime. Los programas que tienen como destino Windows 8.1, Windows Phone 8.1 y la Plataforma universal de Windows no usan `System.IO` para la E/S de archivos.
+Aun así, si busca estas clases `System.IO` en un PCL de Xamarin.Forms, no las encontrará. El problema es que Microsoft ha renovado por completo la E/S de archivos para la API de Windows Runtime. Los programas que tienen como destino Windows 8.1, Windows Phone 8.1 y la Plataforma universal de Windows no usan `System.IO` para la E/S de archivos.
 
 Esto significa que necesitará usar [`DependencyService`](xref:Xamarin.Forms.DependencyService) (que se describe en primer lugar en [**Capítulo 9. Llamadas API específicas de la plataforma**](chapter09.md) para implementar E/S de archivos.
 
 > [!NOTE]
-> Las bibliotecas de clases portátiles se han reemplazado con las bibliotecas de .NET Standard 2.0, y .NET Standard 2.0 admite tipos [`System.IO`](xref:System.IO) para todas las plataformas Xamarin.Forms. Ya no es necesario usar `DependencyService` para la mayoría de las tareas de E/S de archivos. Consulte [Control de archivos en Xamarin.Forms](~/xamarin-forms/data-cloud/data/files.md) para obtener un enfoque más moderno para la E/S de archivos.
+> Las bibliotecas de clases portátiles se han reemplazado por las bibliotecas de .NET Standard 2.0, y .NET Standard 2.0 admite tipos [`System.IO`](xref:System.IO) para todas las plataformas Xamarin.Forms. Ya no es necesario usar `DependencyService` para la mayoría de las tareas de E/S de archivos. Consulte [Control de archivos en Xamarin.Forms](~/xamarin-forms/data-cloud/data/files.md) para obtener un enfoque más moderno para la E/S de archivos.
 
 ### <a name="a-first-shot-at-cross-platform-file-io"></a>Primera captura de E/S de archivos entre plataformas
 
@@ -141,7 +145,7 @@ A continuación se describen los distintos patrones de `Task.Run`.
 
 ### <a name="the-basic-mandelbrot-set"></a>Conjunto de Mandelbrot básico
 
-Para dibujar el conjunto de Mandelbrot en tiempo real, al biblioteca [**Xamarin.Forms.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) tiene una estructura [`Complex`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/Complex.cs) similar a la del espacio de nombres `System.Numerics`.
+Para dibujar el conjunto de Mandelbrot en tiempo real, la biblioteca [ **Xamarin.Forms.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) tiene una estructura [`Complex`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/Complex.cs) similar a la del espacio de nombres `System.Numerics`.
 
 El ejemplo [**MandelbrotSet**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/MandelbrotSet) tiene un método `CalculateMandeblotAsync` en su archivo de código subyacente que calcula el conjunto de Mandelbrot básico en blanco y negro y utiliza [`BmpMaker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/BmpMaker.cs) para colocarlo en un mapa de bits.
 

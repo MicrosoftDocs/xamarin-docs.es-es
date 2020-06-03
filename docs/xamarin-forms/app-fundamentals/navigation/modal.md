@@ -1,18 +1,21 @@
 ---
 title: Páginas modales de Xamarin.Forms
 description: Xamarin.Forms es compatible con las páginas modales. Una página modal anima a los usuarios a completar una tarea autocontenida que no se puede abandonar mientras no se complete o se cancele la tarea. En este artículo se muestra cómo navegar a páginas modales.
-ms.prod: xamarin
-ms.assetid: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/01/2017
-ms.openlocfilehash: 7a4c67f067b73873c3d1de4499abda2703217ddf
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4f6547049f2801e5d15115c0ae80af9a07034731
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70760823"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137831"
 ---
 # <a name="xamarinforms-modal-pages"></a>Páginas modales de Xamarin.Forms
 
@@ -73,7 +76,7 @@ Al invocar [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*), o
 - Se invoca la invalidación de [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) de la página a la que se ha navegado.
 - La tarea `PushAsync` finaliza.
 
-Con todo, el orden exacto en el que se producen estos eventos depende de la plataforma. Para obtener más información, consulte el [capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro sobre Xamarin.Forms de Charles Petzold.
+Con todo, el orden exacto en el que se producen estos eventos depende de la plataforma. Para obtener más información, consulte el [capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro sobre Xamarin.Forms de Charles Petzold.
 
 > [!NOTE]
 > Las llamadas a [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) y las invalidaciones de [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) no se pueden tratar como indicaciones garantizadas de navegación de páginas. Por ejemplo, en iOS, la invalidación de `OnDisappearing` se llama en la página activa cuando la aplicación finaliza.
@@ -99,11 +102,11 @@ Esto hace que la instancia de `ModalPage` se quite de la pila modal y que la nue
 - Se invoca la invalidación de [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) de la página a la que se vuelve, siempre que la plataforma subyacente no sea Android.
 - Se devuelve la tarea `PopModalAsync`.
 
-Con todo, el orden exacto en el que se producen estos eventos depende de la plataforma. Para obtener más información, consulte el [capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro sobre Xamarin.Forms de Charles Petzold.
+Con todo, el orden exacto en el que se producen estos eventos depende de la plataforma. Para obtener más información, consulte el [capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro sobre Xamarin.Forms de Charles Petzold.
 
 ### <a name="disabling-the-back-button"></a>Deshabilitación del botón Atrás
 
-En Android, el usuario siempre puede volver a la página anterior presionando el botón *Atrás* estándar en el dispositivo. Si la página modal requiere que el usuario complete una tarea independiente antes de salir de la página, la aplicación debe deshabilitar el botón *Atrás*. Esto puede realizarse invalidando el método [`Page.OnBackButtonPressed`](xref:Xamarin.Forms.Page.OnBackButtonPressed) en la página modal. Para obtener más información, consulte el [capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro sobre Xamarin.Forms de Charles Petzold.
+En Android, el usuario siempre puede volver a la página anterior presionando el botón *Atrás* estándar en el dispositivo. Si la página modal requiere que el usuario complete una tarea independiente antes de salir de la página, la aplicación debe deshabilitar el botón *Atrás*. Esto puede realizarse invalidando el método [`Page.OnBackButtonPressed`](xref:Xamarin.Forms.Page.OnBackButtonPressed) en la página modal. Para obtener más información, consulte el [capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro sobre Xamarin.Forms de Charles Petzold.
 
 ### <a name="animating-page-transitions"></a>Animación de transiciones de página
 

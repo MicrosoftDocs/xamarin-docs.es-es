@@ -1,18 +1,21 @@
 ---
 title: Enlaces compilados de Xamarin.Forms
 description: En este artículo se explica cómo usar enlaces compilados para mejorar el rendimiento del enlace de datos en las aplicaciones de Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 09/18/2019
-ms.openlocfilehash: 531d9719eb4bf5c23001ebe4260254e13f9989eb
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1f811de95009900016bb8b442265a9a079e0f612
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "72697156"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139761"
 ---
 # <a name="xamarinforms-compiled-bindings"></a>Enlaces compilados de Xamarin.Forms
 
@@ -25,7 +28,7 @@ Los enlaces de datos tienen dos problemas principales:
 1. No hay ninguna validación de las expresiones de enlace en tiempo de compilación. Alternativamente, los enlaces se resuelven en tiempo de ejecución. Por lo tanto, los enlaces no válidos no se detectan hasta el tiempo de ejecución, cuando la aplicación no se comporta según lo esperado o aparecen mensajes de error.
 1. No son rentables. Los enlaces se resuelven en tiempo de ejecución mediante la inspección de objetos de uso general (reflejo); el trabajo adicional que supone llevarlo a cabo varía en función de la plataforma.
 
-Los enlaces compilados mejoran el rendimiento de enlace de datos en las aplicaciones de Xamarin.Forms mediante la resolución de expresiones de enlace en tiempo de compilación en lugar de en tiempo de ejecución. Además, esta validación en tiempo de compilación de expresiones de enlace permite una mejor experiencia de solución de problemas, porque los enlaces no válidos se notifican como errores de compilación.
+Los enlaces compilados mejoran el rendimiento de enlace de datos en las aplicaciones de Xamarin.Forms mediante la resolución de expresiones de enlace en tiempo de compilación, en lugar de en tiempo de ejecución. Además, esta validación en tiempo de compilación de expresiones de enlace permite una mejor experiencia de solución de problemas, porque los enlaces no válidos se notifican como errores de compilación.
 
 El proceso para usar enlaces compilados es el siguiente:
 
@@ -42,7 +45,7 @@ Para usar enlaces compilados, el atributo `x:DataType` debe establecerse en un l
 
 ## <a name="use-compiled-bindings"></a>Uso de enlaces compilados
 
-En la página **Compiled Color Selector** (Selector de colores compilados) se muestra el uso de enlaces compilados entre las vistas de Xamarin.Forms y las propiedades de ViewModel:
+En la página **Compiled Color Selector** (Selector de colores compilados) se muestra el uso de enlaces compilados entre las vistas de Xamarin.Forms y las propiedades de modelo de vista:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

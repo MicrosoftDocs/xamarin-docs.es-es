@@ -1,20 +1,23 @@
 ---
-title: Creación de un elemento DataTemplateSelector de Xamarin.Forms
-description: En este artículo se muestra cómo crear y consumir un elemento DataTemplateSelector, que se puede usar para elegir un plantilla de datos en tiempo de ejecución según el valor de una propiedad enlazada a datos.
-ms.prod: xamarin
-ms.assetid: A4629E8F-2BAF-45CE-A76E-DF225FE8D26C
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: e9a17bff9bd0a23d59faf7602544b25c7ec05a86
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Creación de DataTemplateSelector de Xamarin.Forms
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 74650eb2c52f1da9d0c539b711784896267ed183
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771253"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135959"
 ---
-# <a name="creating-a-xamarinforms-datatemplateselector"></a>Creación de un elemento DataTemplateSelector de Xamarin.Forms
+# <a name="creating-a-xamarinforms-datatemplateselector"></a>Creación de DataTemplateSelector de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
 
@@ -41,7 +44,7 @@ public class PersonDataTemplateSelector : DataTemplateSelector
 
 El método `OnSelectTemplate` devuelve la plantilla adecuada en función del valor de la propiedad `DateOfBirth`. La plantilla que se devuelve es el valor de las propiedades `ValidTemplate` o `InvalidTemplate`, que se establecen cuando se consume `PersonDataTemplateSelector`.
 
-Después, se puede asignar una instancia de la clase de selector de plantilla de datos a propiedades de control de Xamarin.Forms como [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1). Para obtener una lista de las propiedades válidas, vea [Creación de una plantilla de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/creating.md).
+Después, se puede asignar una instancia de la clase de selector de plantilla de datos a propiedades de control de Xamarin.Forms, como [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1). Para obtener una lista de las propiedades válidas, vea [Creación de una plantilla de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/creating.md).
 
 ### <a name="limitations"></a>Limitaciones
 

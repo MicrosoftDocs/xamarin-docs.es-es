@@ -1,18 +1,21 @@
 ---
-title: Introducción a los comportamientos
-description: Los comportamientos permiten agregar funciones a los controles de la interfaz de usuario sin tener que incluirlos en subclases. En su lugar, la función se implementa en una clase de comportamiento y se asocia al control como si fuera parte de este. En este artículo, se proporciona una introducción a los comportamientos.
-ms.prod: xamarin
-ms.assetid: 0DF1EF8C-A212-4142-A3C6-DF760A82A757
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/06/2016
-ms.openlocfilehash: d62ba6b025b2fe9865df8279a5e98eba254bb5a2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d5bee3baa08387a1ed67384ba4089d63aad08d2c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70772049"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135777"
 ---
 # <a name="introduction-to-behaviors"></a>Introducción a los comportamientos
 
@@ -29,7 +32,7 @@ Los comportamientos también permiten escenarios más avanzados. En el contexto 
 
 Xamarin.Forms admite dos estilos de comportamiento:
 
-- **Comportamientos de Xamarin.Forms**: clases que derivan de la clase [`Behavior`](xref:Xamarin.Forms.Behavior) o [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1), donde `T` es el tipo del control en el que tiene que aplicarse el comportamiento. Para obtener más información sobre los comportamientos de Xamarin.Forms, vea [Comportamientos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/behaviors/creating.md) y [Comportamientos reutilizables](~/xamarin-forms/app-fundamentals/behaviors/reusable/index.md).
+- **Comportamientos de Xamarin.Forms** : clases que derivan de la clase [`Behavior`](xref:Xamarin.Forms.Behavior) o [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1), donde `T` es el tipo del control en el que tiene que aplicarse el comportamiento. Para obtener más información sobre los comportamientos de Xamarin.Forms, vea [Comportamientos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/behaviors/creating.md) y [Comportamientos reutilizables](~/xamarin-forms/app-fundamentals/behaviors/reusable/index.md).
 - **Comportamientos asociados**: clases de `static` con una o varias propiedades asociadas. Para obtener más información sobre los comportamientos asociados, vea [Comportamientos asociados](~/xamarin-forms/app-fundamentals/behaviors/attached.md).
 
 Esta guía se centra en los comportamientos de Xamarin.Forms, ya que son el método preferido para la creación de comportamientos.

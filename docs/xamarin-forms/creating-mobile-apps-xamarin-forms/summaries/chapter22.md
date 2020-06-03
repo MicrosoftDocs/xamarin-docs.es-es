@@ -1,24 +1,28 @@
 ---
-title: Resumen del capítulo 22. Animación
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 22. Animación'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/07/2017
-ms.openlocfilehash: 935be5bd6696600644463eb4ec26410b546f42a0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 22. Animation''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2a8a089c210a3fe2f48dbe32bf8cda6179af2a78
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70770994"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136635"
 ---
 # <a name="summary-of-chapter-22-animation"></a>Resumen del capítulo 22. Animación
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22)
 
-Hemos observado que puede crear sus propias animaciones con el temporizador de Xamarin.Forms o `Task.Delay`, pero generalmente es más fácil usar las prestaciones de animación proporcionadas por Xamarin.Forms. Hay tres clases que implementan estas animaciones:
+Ya ha observado que puede crear sus propias animaciones con el temporizador de Xamarin.Forms o `Task.Delay`, pero generalmente es más fácil usar las prestaciones de animación proporcionadas por Xamarin.Forms. Hay tres clases que implementan estas animaciones:
 
 - [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions), el enfoque de alto nivel
 - [`Animation`](xref:Xamarin.Forms.Animation), más versátil, pero más difícil
@@ -118,11 +122,11 @@ En el ejemplo [**CopterAnimation**](https://github.com/xamarin/xamarin-forms-boo
 
 Sin embargo, el aumento progresivo de la propiedad `Rotation` de un elemento podría no funcionar a largo plazo, como se muestra en el ejemplo [**RotationBreakdown**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/RotationBreakdown).
 
-En el ejemplo [**SpinningImage**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/SpinningImage) se usa [`RotateTo`](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))[, `RotateXTo`](xref:Xamarin.Forms.ViewExtensions.RotateXTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))[y `RotateYTo`](xref:Xamarin.Forms.ViewExtensions.RotateYTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) para que parezca como si un mapa de bits está girando en el espacio 3D.
+En el ejemplo [**SpinningImage**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/SpinningImage) se usa [`RotateTo`](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)), [`RotateXTo`](xref:Xamarin.Forms.ViewExtensions.RotateXTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) y [`RotateYTo`](xref:Xamarin.Forms.ViewExtensions.RotateYTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) para que parezca como si un mapa de bits está girando en el espacio 3D.
 
 ### <a name="animating-the-bounds-property"></a>Animar la propiedad enlazada
 
-El único método de extensión de `ViewExtensions` que todavía no se ha mostrado es [`LayoutTo`](xref:Xamarin.Forms.ViewExtensions.LayoutTo(Xamarin.Forms.VisualElement,Xamarin.Forms.Rectangle,System.UInt32,Xamarin.Forms.Easing)), que anima eficazmente la propiedad [`Bounds`](xref:Xamarin.Forms.VisualElement.Bounds) de solo lectura llamando al método [`Layout`](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)). Los derivados `Layout` normalmente llaman a este método, como se tratará en el [**Capítulo 26. CustomLayouts**](chapter26.md).
+El único método de extensión de `ViewExtensions` que todavía no se ha mostrado es [`LayoutTo`](xref:Xamarin.Forms.ViewExtensions.LayoutTo(Xamarin.Forms.VisualElement,Xamarin.Forms.Rectangle,System.UInt32,Xamarin.Forms.Easing)), que anima eficazmente la propiedad [`Bounds`](xref:Xamarin.Forms.VisualElement.Bounds) de solo lectura mediante una llamada al método [`Layout`](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)). Los derivados `Layout` normalmente llaman a este método, como se tratará en el [**Capítulo 26. CustomLayouts**](chapter26.md).
 
 El método `LayoutTo` se debe restringir a propósitos especiales. El programa [**BouncingBox**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/BouncingBox) lo usa para comprimir y expandir un elemento `BoxView` mientras rebota fuera de los lados de una página.
 
@@ -144,11 +148,11 @@ Ya ha visto [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions). Define nueve 
 
 ### <a name="animation-class"></a>Clase Animation
 
-La clase [`Animation`](xref:Xamarin.Forms.AnimationExtensions) tiene un [constructor](xref:Xamarin.Forms.Animation.%23ctor(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Action)) con cinco argumentos para definir los métodos de devolución de llamada y finalización, y los parámetros de la animación.
+La clase [`Animation`](xref:Xamarin.Forms.AnimationExtensions) tiene un [constructor](xref:Xamarin.Forms.Animation.%23ctor(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Action)) con cinco argumentos para definir los métodos de devolución de llamada y finalización y los parámetros de la animación.
 
 Se pueden agregar animaciones secundarias con [`Add`](xref:Xamarin.Forms.Animation.Add(System.Double,System.Double,Xamarin.Forms.Animation)), [`Insert`](xref:Xamarin.Forms.Animation.Insert(System.Double,System.Double,Xamarin.Forms.Animation)), [`WithConcurrent`](xref:Xamarin.Forms.Animation.WithConcurrent(Xamarin.Forms.Animation,System.Double,System.Double)) y la sobrecarga de [`WithConcurrent`](xref:Xamarin.Forms.Animation.WithConcurrent(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Double,System.Double)).
 
-A continuación, el objeto de animación se inicia con una llamada al método [`Commit`](xref:Xamarin.Forms.Animation.Commit(Xamarin.Forms.IAnimatable,System.String,System.UInt32,System.UInt32,Xamarin.Forms.Easing,System.Action{System.Double,System.Boolean},System.Func{System.Boolean})).
+Después, el objeto de animación se inicia con una llamada al método [`Commit`](xref:Xamarin.Forms.Animation.Commit(Xamarin.Forms.IAnimatable,System.String,System.UInt32,System.UInt32,Xamarin.Forms.Easing,System.Action{System.Double,System.Boolean},System.Func{System.Boolean})).
 
 ### <a name="animationextensions-class"></a>Clase AnimationExtensions
 

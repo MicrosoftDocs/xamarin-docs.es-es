@@ -1,20 +1,23 @@
 ---
-title: Configuración de la página Xamarin.Forms Shell
+title: Configuración de la página de Xamarin.Forms Shell
 description: La clase Shell define las propiedades adjuntas que se pueden usar para configurar la apariencia de las páginas en las aplicaciones de Xamarin.Forms Shell. Esto incluye establecer los colores de la página, deshabilitar la barra de navegación y la barra de pestañas y mostrar las vistas en la barra de navegación.
-ms.prod: xamarin
-ms.assetid: 3FC2FBD1-C30B-4408-97B2-B04E3A2E4F03
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/29/2020
-ms.openlocfilehash: 411c87c25701521bf27fbb863b02a90f8e523574
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 102070fc478b42e9fbc0c7d0006197c81a49c9b8
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303790"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137506"
 ---
-# <a name="xamarinforms-shell-page-configuration"></a>Configuración de la página Xamarin.Forms Shell
+# <a name="xamarinforms-shell-page-configuration"></a>Configuración de la página de Xamarin.Forms Shell
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
@@ -30,7 +33,7 @@ La clase `Shell` define las siguientes propiedades adjuntas que pueden usarse pa
 - `TitleColor`, de tipo `Color`, que define el color usado para el título de la página actual.
 - `UnselectedColor`, de tipo `Color`, que define el color usado para el texto y los iconos no seleccionados en el cromo de Shell.
 
-Todas estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que las propiedades pueden ser destinos de los enlaces de datos y se les pueden aplicar estilos mediante XAML. Además, estas propiedades se pueden establecer mediante Hojas de estilo CSS. Para más información, consulte [Propiedades específicas de Xamarin.Forms Shell](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
+Todas estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que las propiedades pueden ser destinos de los enlaces de datos y se les pueden aplicar estilos mediante XAML. Además, estas propiedades se pueden establecer mediante Hojas de estilo CSS. Para obtener más información, consulte [Propiedades específicas de Xamarin.Forms Shell](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
 
 > [!NOTE]
 > También hay propiedades que permiten la definición de los colores de las pestañas. Para obtener más información, vea [Apariencia de las pestañas](tabs.md#tab-appearance).
@@ -84,7 +87,7 @@ Como alternativa, se pueden establecer las propiedades de color con un estilo XA
 </Style>
 ```
 
-Para obtener más información sobre los estilos XAML, vea [Styling Xamarin.Forms Apps using XAML Styles](~/xamarin-forms/user-interface/styles/xaml/index.md) (Aplicación de estilo a aplicaciones Xamarin.Forms mediante XAML).
+Para obtener más información sobre los estilos XAML, vea [Aplicación de estilo a aplicaciones Xamarin.Forms con estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md).
 
 ## <a name="set-page-presentation-mode"></a>Configuración del modo de presentación de la página
 
@@ -194,5 +197,5 @@ Shell respeta la visibilidad de la página, establecida con la propiedad [`IsVis
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Xaminals (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
-- [Aplicación de estilos para aplicaciones Xamarin.Forms con estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)
-- [Xamarin.Forms CSS Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties) (Propiedades específicas de Xamarin.Forms CSS Shell)
+- [Aplicación de estilo a aplicaciones Xamarin.Forms con estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)
+- [Propiedades específicas de Xamarin.Forms CSS Shell](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

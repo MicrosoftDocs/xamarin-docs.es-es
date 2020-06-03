@@ -1,18 +1,21 @@
 ---
-title: Reinicio rápido de Xamarin
-description: En este documento se describe cómo configurar y usar el reinicio rápido de Xamarin para depurar una aplicación iOS.
-ms.prod: xamarin
-ms.assetid: 6BC62A88-9368-41BB-8494-760F2A4805DB
-ms.technology: xamarin-forms
-author: maddyleger1
-ms.author: maleger
-ms.date: 03/16/2020
-ms.openlocfilehash: cc5efffd4c3646fbff9cdb1ad1a30ec614cb4921
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 45b7d0d20c43aa22ebde3a17552f10ceea77a48b
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79429572"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139144"
 ---
 # <a name="xamarin-hot-restart-preview"></a>Reinicio rápido de Xamarin (versión preliminar)
 
@@ -21,7 +24,7 @@ ms.locfileid: "79429572"
 El reinicio rápido de Xamarin permite probar rápidamente los cambios en la aplicación durante el desarrollo, incluidas las ediciones de código de varios archivos, los recursos y las referencias. Inserta los cambios nuevos en el grupo de aplicaciones existente en el destino de depuración, lo que genera un ciclo de compilación e implementación mucho más rápido.
 
 > [!IMPORTANT]
-> En este momento, el reinicio rápido de Xamarin está disponible en la versión estable de Visual Studio 2019 16.5 y es compatible con aplicaciones iOS en las que se usa Xamarin.Forms. La compatibilidad con Visual Studio para Mac y aplicaciones que no son de Xamarin.Forms está en la hoja de ruta.
+> En este momento, el reinicio rápido de Xamarin está disponible en la versión estable de Visual Studio 2019 16.5 y es compatible con aplicaciones iOS en las que se usa Xamarin.Forms. La compatibilidad con Visual Studio para Mac y aplicaciones que no son de Xamarin.Forms está en la hoja de ruta.
 
 ## <a name="requirements"></a>Requisitos
 

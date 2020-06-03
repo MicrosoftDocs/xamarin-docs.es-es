@@ -1,21 +1,24 @@
 ---
 title: Introducción a Xamarin.Essentials
-description: Xamarin.Essentials brinda una API multiplataforma única que funciona con cualquier aplicación iOS, Android o UWP accesible desde código compartido, sin importar cómo se creó la interfaz de usuario.
-ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
-author: jamesmontemagno
-ms.author: jamont
-ms.custom: video
-ms.date: 05/11/2020
-ms.openlocfilehash: 944b01d67fb09f9a21a19fb2ede9eb217d89732a
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+description: Xamarin.Essentials brinda una API multiplataforma única que funciona con cualquier aplicación iOS, Android o UWP accesible desde código compartido, independientemente de cómo se creara la interfaz de usuario.
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.custom: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0c0052b35475522ffb3634ebe22f69f66fe3b22b
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149988"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84129316"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Introducción a Xamarin.Essentials
 
-Xamarin.Essentials brinda una API multiplataforma única que funciona con cualquier aplicación iOS, Android o UWP accesible desde código compartido, sin importar cómo se creó la interfaz de usuario. Para obtener más información sobre los sistemas operativos compatibles, consulte la [guía de compatibilidad con plataformas y características](platform-feature-support.md).
+Xamarin.Essentials brinda una API multiplataforma única que funciona con cualquier aplicación iOS, Android o UWP accesible desde código compartido, independientemente de cómo se creara la interfaz de usuario. Para obtener más información sobre los sistemas operativos compatibles, consulte la [guía de compatibilidad con plataformas y características](platform-feature-support.md).
 
 ## <a name="installation"></a>Instalación
 
@@ -28,7 +31,7 @@ Xamarin.Essentials está disponible como paquete NuGet y se incluye en todos los
     > [!IMPORTANT]
     > Si se agrega a un proyecto de UWP, asegúrese de que en las propiedades del proyecto esté establecida la compilación 16299 u otra posterior.
 
-3. Agregue el paquete NuGet [**Xamarin.Essentials**](https://www.nuget.org/packages/Xamarin.Essentials/) a cada proyecto:
+3. Agregue el paquete NuGet [ **Xamarin.Essentials** ](https://www.nuget.org/packages/Xamarin.Essentials/) a cada proyecto:
 
     <!--markdownlint-disable MD023 -->
     # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
@@ -90,7 +93,7 @@ Xamarin.Essentials está disponible como paquete NuGet y se incluye en todos los
 
 6. Siga las [guías de Xamarin.Essentials](index.md) para poder copiar y pegar fragmentos de código para cada característica.
 
-## <a name="xamarinessentials---cross-platform-apis-for-mobile-apps-video"></a>Xamarin.Essentials : API multiplataformas para Mobile Apps (video)
+## <a name="xamarinessentials---cross-platform-apis-for-mobile-apps-video"></a>Xamarin.Essentials: API multiplataforma para aplicaciones móviles (vídeo).
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Snack-Pack-XamarinEssentials-Cross-Platform-APIs-for-Mobile-Apps/player]
 
@@ -98,6 +101,6 @@ Xamarin.Essentials está disponible como paquete NuGet y se incluye en todos los
 
 Es recomendable que los desarrolladores que trabajan por primera vez con Xamarin visiten [Introducción al desarrollo de Xamarin](~/cross-platform/getting-started/index.md).
 
-Visite el [repositorio GitHub de Xamarin.Essentials](https://github.com/xamarin/Essentials) para ver el código fuente actual, qué viene más adelante, ejecutar ejemplos y clonar el repositorio. Estaremos encantados de recibir cualquier colaboración de la comunidad.
+Visite el [repositorio GitHub de Xamarin.Essentials](https://github.com/xamarin/Essentials) para ver el código fuente actual, descubrir qué viene más adelante, ejecutar ejemplos y clonar el repositorio. Estaremos encantados de recibir cualquier colaboración de la comunidad.
 
 Examine la [documentación de la API](xref:Xamarin.Essentials) para conocer cada característica de Xamarin.Essentials.

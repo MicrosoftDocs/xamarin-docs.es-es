@@ -1,18 +1,22 @@
 ---
-title: Resumen del capítulo 13. Mapas de bits
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 13. Mapas de bits'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/18/2018
-ms.openlocfilehash: e4746ed94a008d382ce15bb9cd7c52365d9ba574
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 13. Bitmaps''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 43caf088ad6cb816f049e7862a287c17839c2170
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76725533"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136778"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Resumen del capítulo 13. Mapas de bits
 
@@ -93,7 +97,7 @@ En [**MadTeaParty**](https://github.com/xamarin/xamarin-forms-book-samples/tree/
 El ejemplo [**ImageBrowser**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser) permite al usuario examinar las imágenes de existencias almacenadas en el sitio web de Xamarin. Se usa la clase [`WebRequest`](xref:System.Net.WebRequest) de .NET para descargar un archivo JSON con la lista de mapas de bits.
 
 > [!NOTE]
-> Los programas de Xamarin.Forms deben usar [`HttpClient`](xref:System.Net.Http.HttpClient) en lugar de [`WebRequest`](xref:System.Net.WebRequest) para tener acceso a los archivos a través de Internet.
+> Los programas de Xamarin.Forms deben usar [`HttpClient`](xref:System.Net.Http.HttpClient) en lugar de [`WebRequest`](xref:System.Net.WebRequest) para acceder a los archivos a través de Internet.
 
 El programa usa un elemento [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) para indicar que algo pasa. A medida que se carga el mapa de bits, la propiedad [`IsLoading`](xref:Xamarin.Forms.Image.IsLoading) de solo lectura `Image` es `true`. La propiedad `IsLoading` está respaldada por una propiedad enlazable, por lo que se desencadena un evento `PropertyChanged` cuando esa propiedad cambia. El programa adjunta un controlador a este evento y usa la configuración actual de `IsLoaded` para establecer la propiedad [`IsRunning`](xref:Xamarin.Forms.ActivityIndicator.IsRunning) de `ActivityIndicator`.
 
@@ -181,7 +185,7 @@ En el ejemplo [**ImageTap**](https://github.com/xamarin/xamarin-forms-book-sampl
 
 ### <a name="toolbars-and-their-icons"></a>Barras de herramientas y sus iconos
 
-Uno de los usos principales de los mapas de bits específicos de la plataforma es la barra de herramientas de Xamarin.Forms, que se construye agregando objetos [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) a la colección [`ToolbarItems`](xref:Xamarin.Forms.Page.ToolbarItems) definida por `Page`. `ToobarItem` se deriva de [`MenuItem`](xref:Xamarin.Forms.MenuItem) del que hereda algunas propiedades.
+Uno de los usos principales de los mapas de bits específicos de la plataforma es la barra de herramientas de Xamarin.Forms, que se construye mediante la adición de objetos [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) a la colección [`ToolbarItems`](xref:Xamarin.Forms.Page.ToolbarItems) definida por `Page`. `ToobarItem` se deriva de [`MenuItem`](xref:Xamarin.Forms.MenuItem) del que hereda algunas propiedades.
 
 Las dos propiedades `ToolbarItem` más importantes son:
 
@@ -193,7 +197,7 @@ El número de elementos `Primary` debe estar limitado a tres o cuatro. Debe incl
 
 `ToolbarItem` activa un evento [`Clicked`](xref:Xamarin.Forms.MenuItem.Clicked) cuando se pulsa, de forma muy parecida a una `Button`. `ToolbarItem` también admite propiedades [`Command`](xref:Xamarin.Forms.MenuItem.Command) y [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter) que se usan a menudo en conexión con MVVM. (Consulte el [Capítulo 18, MVVM](chapter18.md)).
 
-Tanto iOS como Android requieren que una página que muestre una barra de herramientas sea [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) o una página a la que se haya ido mediante `NavigationPage`. El programa [**ToolbarDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo) establece la propiedad `MainPage` de su clase `App` en el constructor [`NavigationPage`](xref:Xamarin.Forms.NavigationPage.%23ctor(Xamarin.Forms.Page)) con un argumento `ContentPage`, y muestra el controlador de eventos y la construcción de una barra de herramientas.
+Tanto iOS como Android requieren que una página que muestre una barra de herramientas sea [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) o una página a la que se haya ido mediante `NavigationPage`. El programa [**ToolbarDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo) establece la propiedad `MainPage` de su clase `App` en el [`NavigationPage` constructor](xref:Xamarin.Forms.NavigationPage.%23ctor(Xamarin.Forms.Page)) con un argumento `ContentPage`, y muestra el controlador de eventos y la construcción de una barra de herramientas.
 
 ### <a name="button-images"></a>Imágenes de botón
 

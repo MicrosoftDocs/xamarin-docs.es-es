@@ -1,18 +1,21 @@
 ---
-title: Invocación de eventos desde efectos
-description: Un efecto puede definir e invocar un evento, señalando cambios en la vista nativa subyacente. En este artículo se muestra cómo implementar seguimiento multitáctil de bajo nivel y cómo se generan eventos que indican actividad táctil.
-ms.prod: xamarin
-ms.assetid: 6A724681-55EB-45B8-9EED-7E412AB19DD2
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/14/2018
-ms.openlocfilehash: cf5a97bca7c827101db951a440863839539c7e48
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 892bffa4027a1a61d6c22cc26d1556fb007432d8
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76725265"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136986"
 ---
 # <a name="invoking-events-from-effects"></a>Invocación de eventos desde efectos
 
@@ -115,7 +118,7 @@ public class TouchActionEventArgs : EventArgs
 
 Una aplicación puede utilizar la propiedad `Id` para el seguimiento de dedos individuales. Observe la propiedad `IsInContact`. Esta propiedad es siempre `true` para eventos `Pressed` y `false` para eventos `Released`. También es siempre `true` para eventos `Moved` en iOS y Android. La propiedad `IsInContact` podría ser `false` para `Moved` eventos en la Plataforma universal de Windows cuando se ejecuta el programa en el escritorio y se mueve el puntero del mouse sin un botón presionado.
 
-Puede usar la clase `TouchEffect` en sus propias aplicaciones mediante la inclusión del archivo en el proyecto de biblioteca de .NET Standard de la solución y mediante la adición de una instancia a la colección de `Effects` de cualquier elemento de Xamarin.Forms. Adjunte un controlador al evento `TouchAction` para obtener los eventos táctiles.
+Puede usar la clase `TouchEffect` en sus propias aplicaciones si incluye el archivo en el proyecto de biblioteca de .NET Standard de la solución y si agrega una instancia a la colección de `Effects` de cualquier elemento de Xamarin.Forms. Adjunte un controlador al evento `TouchAction` para obtener los eventos táctiles.
 
 Para usar `TouchEffect` en su propia aplicación, también necesitará las implementaciones de plataforma incluidas en la solución **TouchTrackingEffectDemos**.
 
@@ -512,7 +515,7 @@ El constructor crea y adjunta el `TouchEffect` y establece la propiedad `Capture
 
 ### <a name="integrating-with-skiasharp"></a>Integración con SkiaSharp
 
-Las siguientes dos demostraciones requieren gráficos y usan SkiaSharp para este propósito. Es posible que desee obtener información acerca de [Using SkiaSharp in Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) (Usar SkiaSharp en Xamarin.Forms) antes de estudiar estos ejemplos. Los dos primeros artículos ("Conceptos básicos de dibujo de SkiaSharp" y "Rutas y líneas de acceso de SkiaSharp") incluyen todo lo que necesitará aquí.
+Las siguientes dos demostraciones requieren gráficos y usan SkiaSharp para este propósito. Es posible que le interese obtener información sobre el [uso de SkiaSharp en Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) antes de estudiar estos ejemplos. Los dos primeros artículos ("Conceptos básicos de dibujo de SkiaSharp" y "Rutas y líneas de acceso de SkiaSharp") incluyen todo lo que necesitará aquí.
 
 La página **Ellipse Drawing** (Dibujo de elipse) le permite dibujar una elipse deslizando el dedo en la pantalla. Dependiendo de cómo mueva el dedo, puede dibujar la elipse desde la esquina superior izquierda a la esquina inferior derecha, o desde cualquier otra esquina hasta la esquina opuesta. La elipse se dibuja con un color aleatorio y una opacidad.
 

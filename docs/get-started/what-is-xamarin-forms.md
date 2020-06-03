@@ -1,21 +1,24 @@
 ---
 title: ¿Qué es Xamarin.Forms?
 description: En este artículo se presentan Xamarin.Forms y las bibliotecas relacionadas.
-ms.prod: xamarin
-ms.assetid: C1E24DB9-3099-4F79-BB88-10AABF7D4614
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 09/18/2019
-ms.openlocfilehash: aaceb6089a5b7e5f0551dafe9ef1fe50d01433d9
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b65be3cd552cf6a4fb094d59c44fa43de3deddcd
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77374028"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139196"
 ---
 # <a name="what-is-xamarinforms"></a>¿Qué es Xamarin.Forms?
 
-[![Capturas de pantallas de la aplicación Xamarin.Forms de ejemplo en iOS y Android](what-is-xamarin-forms-images/xamarin-forms-app-cropped.png)](what-is-xamarin-forms-images/xamarin-forms-app.png#lightbox)
+[![Capturas de pantalla de la aplicación Xamarin.Forms de ejemplo en iOS y Android](what-is-xamarin-forms-images/xamarin-forms-app-cropped.png)](what-is-xamarin-forms-images/xamarin-forms-app.png#lightbox)
 
 Xamarin.Forms es un marco de interfaz de usuario de código abierto. Xamarin.Forms permite a los desarrolladores compilar aplicaciones iOS, Android y Windows desde un único código base compartido.
 
@@ -29,9 +32,9 @@ Xamarin.Forms es para desarrolladores con los siguientes objetivos:
 - Compartir código, pruebas y lógica de negocios entre plataformas.
 - Escribir aplicaciones multiplataforma en C# con Visual Studio.
 
-## <a name="how-xamarinforms-works"></a>Funcionamiento de Xamarin.Forms
+## <a name="how-xamarinforms-works"></a>Cómo funciona Xamarin.Forms
 
-![Diagrama de la arquitectura de Xamarin.Forms](what-is-xamarin-forms-images/xamarin-forms-architecture.png)
+Diagrama de la arquitectura de ![Xamarin.Forms](what-is-xamarin-forms-images/xamarin-forms-architecture.png)
 
 Xamarin.Forms proporciona una API coherente para crear elementos de interfaz de usuario entre plataformas. Esta API se puede implementar en XAML o C#, y admite el enlace de datos para patrones como Model-View-ViewModel (MVVM).
 
@@ -45,9 +48,9 @@ Xamarin.Forms usa Xamarin para ejecutar aplicaciones .NET de forma nativa en tod
 
 Xamarin.Forms tiene un gran ecosistema de paquetes NuGet que agregan diversas funciones a las aplicaciones. En esta sección se describen algunos de los paquetes NuGet usados con frecuencia.
 
-### <a name="xamarinessentials"></a>Xamarin.Essentials
+### Xamarin.Essentials
 
-Xamarin.Essentials es una biblioteca que proporciona API multiplataforma para características de dispositivos nativos. Como el propio Xamarin, Xamarin.Essentials es una abstracción que simplifica el proceso de acceso a utilidades nativas. Algunos ejemplos de las utilidades proporcionadas por Xamarin.Essentials son los siguientes:
+Xamarin.Essentials es una biblioteca que proporciona API multiplataforma para características de dispositivos nativos. Como el propio Xamarin, Xamarin.Essentials es una abstracción que simplifica el proceso de acceso a utilidades nativas. Algunos ejemplos de las utilidades que proporciona Xamarin.Essentials son los siguientes:
 
 - Información del dispositivo
 - Sistema de archivos
@@ -56,17 +59,17 @@ Xamarin.Essentials es una biblioteca que proporciona API multiplataforma para ca
 - Texto a voz
 - Bloqueo de pantalla
 
-Para más información, vea [Xamarin.Essentials](~/essentials/index.md).
+Para obtener más información, vea [Xamarin.Essentials](~/essentials/index.md).
 
 ### <a name="shell"></a>Shell
 
-Xamarin.Forms Shell reduce la complejidad del desarrollo de aplicaciones móviles al proporcionar las características fundamentales que la mayoría de aplicaciones necesita. Algunos ejemplos de características proporcionadas por Shell son los siguientes:
+Xamarin.Forms Shell reduce la complejidad del desarrollo de aplicaciones móviles al proporcionar las características fundamentales que la mayoría de las aplicaciones necesita. Algunos ejemplos de características proporcionadas por Shell son los siguientes:
 
 - Experiencia de navegación común
 - Esquema de navegación basado en URI
 - Controlador de búsqueda integrado
 
-Para más información, vea [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md)
+Para obtener más información, consulte [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).
 
 ### <a name="platform-specifics"></a>Características específicas de las plataformas
 
@@ -83,11 +86,11 @@ Xamarin.Forms incluye soluciones prediseñadas para distintas funcionalidades es
 
 El objeto visual de material de Xamarin.Forms se usa para aplicar reglas de diseño de materiales a aplicaciones de Xamarin.Forms. El objeto visual de material de Xamarin.Forms usa la propiedad Visual para aplicar de forma selectiva representadores personalizados a la interfaz de usuario, lo que da lugar a una aplicación con una apariencia coherente entre iOS y Android.
 
-Para más información, vea [Objeto visual de material de Xamarin.Forms](~/xamarin-forms/user-interface/visual/material-visual.md)
+Para obtener más información, consulte [Objeto visual de material de Xamarin.Forms](~/xamarin-forms/user-interface/visual/material-visual.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Introducción a Xamarin.Forms](~/xamarin-forms/index.yml)
 - [Xamarin.Essentials](~/essentials/index.md)
-- [Shell de Xamarin.Forms](~/xamarin-forms/app-fundamentals/shell/index.md)
+- [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md)
 - [Objeto visual de material de Xamarin.Forms](~/xamarin-forms/user-interface/visual/material-visual.md)

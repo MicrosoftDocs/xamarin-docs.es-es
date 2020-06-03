@@ -1,18 +1,21 @@
 ---
-title: EffectBehavior reutilizable
+title: ''
 description: Los comportamientos son una manera útil de agregar un efecto a un control, quitando el código de control de efecto reutilizable de los archivos de código subyacente. En este artículo se explica cómo crear y consumir un comportamiento de Xamarin.Forms para agregar un efecto a un control.
-ms.prod: xamarin
-ms.assetid: A909B24D-960A-4023-AFF6-4B9256C55ADD
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/06/2016
-ms.openlocfilehash: ca03dce3bd39664a07b7bf56d22d7c2e000e931f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0a105548f869eb448a990a1cc12e6feff4197d48
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771998"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135790"
 ---
 # <a name="reusable-effectbehavior"></a>EffectBehavior reutilizable
 
@@ -32,7 +35,7 @@ Para usar el comportamiento, se deben establecer las propiedades de comportamien
 Para obtener más información sobre los efectos, vea [Efectos](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 > [!NOTE]
-> `EffectBehavior` es una clase personalizada que se puede encontrar en el [ejemplo Comportamiento de un efecto](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior), y que no forma parte de Xamarin.Forms.
+> `EffectBehavior` es una clase personalizada que se puede encontrar en el [ejemplo Comportamiento de un efecto](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior) y que no forma parte de Xamarin.Forms.
 
 ## <a name="creating-the-behavior"></a>Creación del comportamiento
 
@@ -67,7 +70,7 @@ Cuando se consume `EffectBehavior`, la propiedad `Group` se debe establecer en e
 
 ### <a name="implementing-the-overrides"></a>Implementación de las invalidaciones
 
-La clase `EffectBehavior` invalida los métodos [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) y [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) de la clase [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1), como se muestra en el ejemplo de código siguiente:
+La clase `EffectBehavior` invalida los métodos [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) and [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) de la clase [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1), como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 public class EffectBehavior : Behavior<View>
@@ -88,7 +91,7 @@ public class EffectBehavior : Behavior<View>
 }
 ```
 
-El método [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) realiza la instalación mediante una llamada al método `AddEffect`, pasando el control asociado como un parámetro. El método [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) realiza la limpieza mediante una llamada al método `RemoveEffect`, pasando el control asociado como un parámetro.
+El método [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) method performs setup by calling the `AddEffect` method, passing in the attached control as a parameter. The [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) realiza una limpieza mediante una llamada al método `RemoveEffect`, para lo que pasa el control asociado como parámetro.
 
 ### <a name="implementing-the-behavior-functionality"></a>Implementación de la funcionalidad del comportamiento
 

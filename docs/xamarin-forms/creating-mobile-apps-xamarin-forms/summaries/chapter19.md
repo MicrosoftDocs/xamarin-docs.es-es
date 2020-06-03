@@ -1,18 +1,22 @@
 ---
-title: Resumen del capítulo 19 Vistas de colecciones
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 19 Vistas de colecciones'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/18/2018
-ms.openlocfilehash: bffbd2dec4a8494723597ba6e0f0af69e57f3718
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 19. Collection views''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0eafdeffb6783a0ed54fdf23e6d10de24e2b4c6f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73032867"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136700"
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>Resumen del capítulo 19 Vistas de colecciones
 
@@ -97,7 +101,7 @@ En el ejemplo [**NaiveNamedColorList**](https://github.com/xamarin/xamarin-forms
 - [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) &mdash; contiene un objeto `Switch` con un objeto `Label`.
 - [`ViewCell`](xref:Xamarin.Forms.ViewCell) &mdash; puede ser cualquier objeto `View` (probablemente con elementos secundarios).
 
-A continuación, llame a [`SetValue`](xref:Xamarin.Forms.DataTemplate.SetValue(Xamarin.Forms.BindableProperty,System.Object)) y [`SetBinding`](xref:Xamarin.Forms.DataTemplate.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) en el objeto `DataTemplate` para asociar los valores a las propiedades `Cell` o para establecer enlaces de datos en las propiedades `Cell` que hacen referencia a las propiedades de los elementos de la colección `ItemsSource`. Esto se muestra en el ejemplo [**TextCellListCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/TextCellListCode).
+Después, llame a [`SetValue`](xref:Xamarin.Forms.DataTemplate.SetValue(Xamarin.Forms.BindableProperty,System.Object)) y [`SetBinding`](xref:Xamarin.Forms.DataTemplate.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) en el objeto `DataTemplate` para asociar los valores a las propiedades `Cell` o para establecer enlaces de datos en las propiedades `Cell` que hacen referencia a las propiedades de los elementos de la colección `ItemsSource`. Esto se muestra en el ejemplo [**TextCellListCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/TextCellListCode).
 
 A medida que la vista `ListView` muestra cada elemento, se crea un pequeño árbol visual a partir de la plantilla y se establecen enlaces de datos entre el elemento y las propiedades de los elementos de este árbol visual. Puede hacerse una idea de este proceso mediante la instalación de los controladores de los eventos [`ItemAppearing`](xref:Xamarin.Forms.ListView.ItemAppearing) y [`ItemDisappearing`](xref:Xamarin.Forms.ListView.ItemDisappearing) de la vista `ListView`, o bien mediante un constructor [`DataTemplate` ](xref:Xamarin.Forms.DataTemplate.%23ctor(System.Func{System.Object})) que utiliza una función a la que se llama cada vez que se debe crear el árbol visual de un elemento.
 

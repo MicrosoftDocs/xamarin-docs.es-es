@@ -1,18 +1,21 @@
 ---
 title: TabbedPage de Xamarin.Forms
 description: TabbedPage de Xamarin.Forms consta de una lista de pestañas y un área de detalles mayor. Cada pestaña carga contenido en el área de detalles. En este artículo se muestra cómo usar una instancia de TabbedPage para navegar por una colección de páginas.
-ms.prod: xamarin
-ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/07/2019
-ms.openlocfilehash: 986045a4be352da0e439de87fdc70e2958b48d36
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 38389867ba52e63d8310e3b59d7838f58e8cf488
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303808"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137519"
 ---
 # <a name="xamarinforms-tabbedpage"></a>TabbedPage de Xamarin.Forms
 
@@ -56,7 +59,7 @@ Además, [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) define las propiedades si
 Todas estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que se les pueden aplicar estilos y que las propiedades pueden ser los destinos de los enlaces de datos.
 
 > [!WARNING]
-> En un elemento [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), cada objeto [`Page`](xref:Xamarin.Forms.Page) se crea cuando se construye `TabbedPage`. Esto puede dar lugar a una experiencia de usuario deficiente, especialmente si `TabbedPage` es la página raíz de la aplicación. Sin embargo, el shell de Xamarin.Forms permite que las páginas a las que se accede mediante una barra de pestañas se creen a petición, en respuesta a la navegación. Para obtener más información, vea [Shell de Xamarin.Forms](~/xamarin-forms/app-fundamentals/shell/index.md).
+> En un elemento [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), cada objeto [`Page`](xref:Xamarin.Forms.Page) se crea cuando se construye `TabbedPage`. Esto puede dar lugar a una experiencia de usuario deficiente, especialmente si `TabbedPage` es la página raíz de la aplicación. Aun así, Xamarin.Forms Shell permite que las páginas a las que se accede mediante una barra de pestañas se creen a petición, en respuesta a la navegación. Para obtener más información, consulte [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).
 
 ## <a name="populate-a-tabbedpage-with-a-page-collection"></a>Relleno de un elemento TabbedPage con una colección de páginas
 

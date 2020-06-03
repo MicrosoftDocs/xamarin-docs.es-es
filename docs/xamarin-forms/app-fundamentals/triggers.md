@@ -1,18 +1,21 @@
 ---
 title: Desencadenadores de Xamarin.Forms
 description: En este artículo se explica cómo usar desencadenadores de Xamarin.Forms para responder a cambios de la interfaz de usuario con XAML. Los desencadenadores permiten expresar acciones de forma declarativa en XAML que cambian la apariencia de controles en función de eventos o cambios en propiedades.
-ms.prod: xamarin
-ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/17/2020
-ms.openlocfilehash: b4eeb776cafa131f13eb70aca5bd20df6eafa07f
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f92ad47ae883f4b1b413ae5192a9add83045bb77
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82516732"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136960"
 ---
 # <a name="xamarinforms-triggers"></a>Desencadenadores de Xamarin.Forms
 
@@ -316,7 +319,7 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 
 ## <a name="state-triggers"></a>Desencadenadores de estado
 
-Los desencadenadores de estado se han introducido en Xamarin.Forms 4.5 y son un grupo especializado de desencadenadores que definen las condiciones en las que se debe aplicar una clase [`VisualState`](xref:Xamarin.Forms.VisualState). Sin embargo, actualmente son experimentales y solo se pueden usar con la adición de la siguiente línea de código al archivo *App.xaml.cs*:
+Se han introducido desencadenadores de estado en Xamarin.Forms 4.5, que son un grupo especializado de desencadenadores que definen las condiciones en las que se debe aplicar una clase [`VisualState`](xref:Xamarin.Forms.VisualState). Sin embargo, actualmente son experimentales y solo se pueden usar con la adición de la siguiente línea de código al archivo *App.xaml.cs*:
 
 ```csharp
 Device.SetFlags(new string[]{ "StateTriggers_Experimental" });
@@ -335,7 +338,7 @@ Si hay varios desencadenadores activos simultáneamente (por ejemplo, dos desenc
 > [!NOTE]
 > Los desencadenadores de estado se pueden establecer en una clase [`Style`](xref:Xamarin.Forms.Style) o directamente en los elementos.
 
-Para más información sobre los estados visuales, vea [Administrador de estado visual de Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md).
+Para obtener más información sobre los estados visuales, vea [Administrador de estado visual de Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 ### <a name="state-trigger"></a>Desencadenador de estado
 

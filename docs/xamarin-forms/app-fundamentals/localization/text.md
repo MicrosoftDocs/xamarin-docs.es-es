@@ -1,19 +1,22 @@
 ---
 title: Localización de cadenas e imágenes en Xamarin.Forms
 description: Las aplicaciones de Xamarin.Forms se pueden localizar con archivos de recursos de .NET.
-zone_pivot_groups: platform
-ms.prod: xamarin
-ms.assetid: 852B4ED3-2D2D-48A5-A759-A6591F6A1509
-ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 11/01/2019
-ms.openlocfilehash: bf99873d88a69a715cdf7969ad94afd66372b5e3
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+zone_pivot_groups: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: af15dc5a23404a11be6207bef7b4fc3e4bf9fad7
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "74135342"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137610"
 ---
 # <a name="xamarinforms-string-and-image-localization"></a>Localización de cadenas e imágenes de Xamarin.Forms
 
@@ -25,7 +28,7 @@ La localización es el proceso de adaptación de una aplicación para cumplir lo
 
 .NET Framework incluye un mecanismo integrado para localizar aplicaciones con [archivos de recursos resx](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Un archivo de recursos almacena texto y otro contenido como pares de nombre/valor que permiten a la aplicación recuperar el contenido de una clave proporcionada. Los archivos de recursos permiten separar el contenido localizado del código de la aplicación.
 
-El uso de archivos de recursos para localizar aplicaciones de Xamarin.Forms requiere que realice los pasos siguientes:
+El uso de archivos de recursos para localizar aplicaciones de Xamarin.Forms requiere que se realicen los pasos siguientes:
 
 1. [Creación de archivos resx](#create-resx-files) que contengan texto traducido.
 1. [Especificación de la referencia cultural predeterminada](#specify-the-default-culture) en el proyecto compartido.

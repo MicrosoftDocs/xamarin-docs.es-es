@@ -1,20 +1,23 @@
 ---
-title: Propiedades de automatización
-description: Este artículo explica cómo usar la clase AutomationProperties en una aplicación de Xamarin.Forms, para que un lector de pantalla puede leer los elementos en la página.
-ms.prod: xamarin
-ms.assetid: c0bb6893-fd26-47e7-88e5-3c333c9f786c
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/18/2018
-ms.openlocfilehash: 12c6229c1922f0bd4a4d25ca796bcb46141a326c
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: En este artículo se explica cómo usar la clase AutomationProperties en una aplicación de Xamarin.Forms, para que un lector de pantalla puede leer los elementos de la página.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ad6d315ccc5be0a7709164d40685c842b61b90b4
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77131140"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84129992"
 ---
-# <a name="automation-properties-in-xamarinforms"></a>Propiedades de automatización en Xamarin.Forms
+# <a name="automation-properties-in-xamarinforms"></a>Propiedades de automatización de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
@@ -66,7 +69,7 @@ AutomationProperties.SetIsInAccessibleTree(entry, true);
 ```
 
 > [!NOTE]
-> Tenga en cuenta que el método [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) también se puede utilizar para establecer la propiedad adjunta de `AutomationProperties.IsInAccessibleTree`, `entry.SetValue(AutomationProperties.IsInAccessibleTreeProperty, true);`
+> Tenga en cuenta que el método [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) también se puede usar para establecer la propiedad adjunta `AutomationProperties.IsInAccessibleTree`, `entry.SetValue(AutomationProperties.IsInAccessibleTreeProperty, true);`.
 
 <a name="name" />
 
@@ -88,7 +91,7 @@ AutomationProperties.SetName(activityIndicator, "Progress indicator");
 ```
 
 > [!NOTE]
-> Tenga en cuenta que el método [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) también se puede utilizar para establecer la propiedad adjunta de `AutomationProperties.Name`, `activityIndicator.SetValue(AutomationProperties.NameProperty, "Progress indicator");`
+> Tenga en cuenta que el método [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) también se puede usar para establecer la propiedad adjunta `AutomationProperties.Name`, `activityIndicator.SetValue(AutomationProperties.NameProperty, "Progress indicator");`.
 
 <a name="helptext" />
 
@@ -111,7 +114,7 @@ AutomationProperties.SetHelpText(button, "Tap to toggle the activity indicator")
 ```
 
 > [!NOTE]
-> Tenga en cuenta que el método [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) también se puede utilizar para establecer la propiedad adjunta de `AutomationProperties.HelpText`, `button.SetValue(AutomationProperties.HelpTextProperty, "Tap to toggle the activity indicator");`
+> Tenga en cuenta que el método [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) también se puede usar para establecer la propiedad adjunta `AutomationProperties.HelpText`, `button.SetValue(AutomationProperties.HelpTextProperty, "Tap to toggle the activity indicator");`.
 
 En algunas plataformas, para editar controles, como un elemento [`Entry`](xref:Xamarin.Forms.Entry), la propiedad `HelpText` a veces puede omitirse y reemplazarse por el texto de marcador de posición. Por ejemplo, "Escriba aquí su nombre" es un buen candidato para la propiedad [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) que coloca el texto en el control antes de la entrada real del usuario.
 
@@ -137,7 +140,7 @@ AutomationProperties.SetLabeledBy(entry, nameLabel);
 ```
 
 > [!NOTE]
-> Tenga en cuenta que el método [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) también se puede utilizar para establecer la propiedad adjunta de `AutomationProperties.IsInAccessibleTree`, `entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`
+> Tenga en cuenta que el método [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) también se puede usar para establecer la propiedad adjunta `AutomationProperties.IsInAccessibleTree`, `entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`.
 
 ## <a name="accessibility-intricacies"></a>Pormenores relativos a la accesibilidad
 

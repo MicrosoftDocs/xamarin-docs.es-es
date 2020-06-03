@@ -1,18 +1,22 @@
 ---
-title: Resumen del capítulo 16. Enlace de datos
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 16. Enlace de datos'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/18/2018
-ms.openlocfilehash: 2d61413fb1d8c28a3957da53601d0ad682f35518
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 16. Data binding''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ece93730100001e8339a5f50cdb7ac437d96fa62
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771105"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136739"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>Resumen del capítulo 16. Enlace de datos
 
@@ -66,9 +70,9 @@ El programa [**OpacityBindingXaml**](https://github.com/xamarin/xamarin-forms-bo
 
 ## <a name="source-and-bindingcontext"></a>Source y BindingContext
 
-En el ejemplo [**BindingSourceCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingSourceCode) se muestra un enfoque alternativo en el código. Para crear un objeto `Binding`, establezca la propiedad [`Source`](xref:Xamarin.Forms.Binding.Source) en el objeto `Slider` y la propiedad [`Path`](xref:Xamarin.Forms.Binding.Path) en "Value". A continuación, se llama al método [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) de `BindableObject` en el objeto `Label`.
+En el ejemplo [**BindingSourceCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingSourceCode) se muestra un enfoque alternativo en el código. Para crear un objeto `Binding`, establezca la propiedad [`Source`](xref:Xamarin.Forms.Binding.Source) en el objeto `Slider` y la propiedad [`Path`](xref:Xamarin.Forms.Binding.Path) en "Value". Después, se llama al método [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) de `BindableObject` en el objeto `Label`.
 
-También se podría haber utilizado el [ constructor `Binding`](xref:Xamarin.Forms.Binding.%23ctor(System.String,Xamarin.Forms.BindingMode,Xamarin.Forms.IValueConverter,System.Object,System.String,System.Object)) para definir el objeto `Binding`.
+También se podría haber usado el [`Binding` constructor](xref:Xamarin.Forms.Binding.%23ctor(System.String,Xamarin.Forms.BindingMode,Xamarin.Forms.IValueConverter,System.Object,System.String,System.Object)) para definir el objeto `Binding`.
 
 En el ejemplo [**BindingSourceXaml**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingSourceXaml) se muestra la técnica comparable en XAML. La propiedad `Opacity` de `Label` se establece en una extensión de marcado de `Binding` con [`Path`](xref:Xamarin.Forms.Binding.Path) establecido en la propiedad `Value` y [`Source`](xref:Xamarin.Forms.Binding.Source) establecida en una extensión de marcado `x:Reference` insertada.
 

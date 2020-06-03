@@ -1,20 +1,23 @@
 ---
-title: Almacenamiento de datos en una base de datos local de SQLite.NET
-description: En este artículo se explica cómo almacenar datos en una base de datos de SQLite.NET local.
-zone_pivot_groups: platform
-ms.topic: quickstart
-ms.prod: xamarin
-ms.assetid: 5BF901BD-FDE8-4B74-B4AB-418E81745A3B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/01/2019
-ms.openlocfilehash: 2cd4726566e73aece5d0deef90ad1feedefaa2d8
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+zone_pivot_groups: ''
+ms.topic: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2864c7edabde18faec06c2c42042168d3e6c9671
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "71249678"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139807"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Almacenamiento de datos en una base de datos de SQLite.NET local
 

@@ -1,18 +1,22 @@
 ---
-title: Resumen del capítulo 6. Clics de botón
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 6. Clics de botón'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/18/2018
-ms.openlocfilehash: 12c8cdc19f9e6765ca25ade97bcfdbffb7b60381
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 6. Button clicks''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f9bafbf4af2a89acd02d436604e882be87cbde8c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "61334723"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136843"
 ---
 # <a name="summary-of-chapter-6-button-clicks"></a>Resumen del capítulo 6. Clics de botón
 
@@ -52,7 +56,7 @@ Es posible definir controladores de `Clicked` como funciones lambda anónimas, c
 
 ## <a name="distinguishing-views-with-ids"></a>Distinción de las vistas con identificadores
 
-También se pueden distinguir varios objetos `Button` si se establece la propiedad [`StyleId`](xref:Xamarin.Forms.Element.StyleId) o [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) en `string`. Esta propiedad está definida por `Element` pero no se usa en Xamarin.Forms. Está diseñada para utilizarse únicamente por los programas de la aplicación.
+También se pueden distinguir varios objetos `Button` si se establece la propiedad [`StyleId`](xref:Xamarin.Forms.Element.StyleId) o [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) en `string`. Esta propiedad está definida por `Element`, pero no se usa en Xamarin.Forms. Está diseñada para utilizarse únicamente por los programas de la aplicación.
 
 En el ejemplo [**SimplestKeypad**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/SimplestKeypad) se usa el mismo controlador de eventos para las 10 claves numéricas de un teclado numérico y se distingue entre ellas con la propiedad `StyleId`:
 

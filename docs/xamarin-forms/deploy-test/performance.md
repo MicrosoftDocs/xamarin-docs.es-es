@@ -1,20 +1,23 @@
 ---
-title: Mejora del rendimiento de aplicaciones Xamarin.Forms
-description: Existen muchas técnicas para aumentar el rendimiento de aplicaciones de Xamarin.Forms. En conjunto, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación.
-ms.prod: xamarin
-ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/27/2019
-ms.openlocfilehash: 4427d347723284a2f8897612f10857270c9631bf
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Mejora del rendimiento de las aplicaciones de Xamarin.Forms
+description: Existen muchas técnicas para aumentar el rendimiento de las aplicaciones de Xamarin.Forms. En conjunto, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 96b5939fd1f8448d45d1398fd56770f9032de083
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303886"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139118"
 ---
-# <a name="improve-xamarinforms-app-performance"></a>Mejora del rendimiento de aplicaciones Xamarin.Forms
+# <a name="improve-xamarinforms-app-performance"></a>Mejora del rendimiento de las aplicaciones de Xamarin.Forms
 
 > [!VIDEO https://youtube.com/embed/RZvdql3Ev0E]
 
@@ -22,7 +25,7 @@ ms.locfileid: "79303886"
 
 El mal rendimiento de una aplicación se manifiesta de muchas formas. Puede hacer que parezca que una aplicación deja de responder, puede ocasionar un desplazamiento lento y puede reducir la duración de la batería del dispositivo. La optimización del rendimiento conlleva mucho más que la mera implementación de código eficaz. También debe tenerse en cuenta la experiencia de rendimiento de la aplicación del usuario. Por ejemplo, asegurarse de que las operaciones se ejecuten sin evitar que el usuario realice otras actividades puede ayudar a mejorar su experiencia.
 
-Existen varias técnicas para aumentar el rendimiento, y la percepción de rendimiento, de aplicaciones Xamarin.Forms. En conjunto, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación.
+Existen varias técnicas para aumentar el rendimiento (y la percepción del rendimiento) de las aplicaciones Xamarin.Forms. En conjunto, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación.
 
 > [!NOTE]
 > Antes de leer este artículo, debería leer [Rendimiento multiplataforma](~/cross-platform/deploy-test/memory-perf-best-practices.md), donde se explican técnicas no específicas de una plataforma para mejorar el uso de memoria y el rendimiento de las aplicaciones compiladas con la plataforma Xamarin.
@@ -39,7 +42,7 @@ XAMLC está habilitado de forma predeterminada en las nuevas soluciones de Xamar
 
 ## <a name="use-compiled-bindings"></a>Uso de enlaces compilados
 
-Los enlaces compilados mejoran el rendimiento de enlace de datos en las aplicaciones de Xamarin.Forms mediante la resolución de expresiones de enlace en tiempo de compilación en lugar de en tiempo de ejecución con reflexión. La compilación de una expresión de enlace genera código compilado que normalmente resuelve un enlace entre 8 y 20 veces más rápido que usando un enlace clásico. Para obtener más información, vea [Enlaces compilados](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
+Los enlaces compilados mejoran el rendimiento del enlace de datos en las aplicaciones de Xamarin.Forms mediante la resolución de expresiones de enlace en tiempo de compilación, en lugar de en tiempo de ejecución con reflexión. La compilación de una expresión de enlace genera código compilado que normalmente resuelve un enlace entre 8 y 20 veces más rápido que usando un enlace clásico. Para obtener más información, vea [Enlaces compilados](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
 ## <a name="reduce-unnecessary-bindings"></a>Reducción de enlaces innecesarios
 
@@ -49,7 +52,7 @@ No use enlaces para el contenido que se puede establecer fácilmente de forma es
 
 Los representadores rápidos reducen la inflación y los costos de representación de controles de Xamarin.Forms en Android mediante la reducción de la jerarquía de control nativo resultante. Además, esto mejora el rendimiento porque crea menos objetos, lo cual a su vez genera un árbol visual menos complejo y menos uso de memoria.
 
-A partir de Xamarin.Forms 4.0, todas las aplicaciones con destino `FormsAppCompatActivity` usan representadores rápidos de forma predeterminada. Para obtener más información, consulte [Fast Renderers](~/xamarin-forms/internals/fast-renderers.md) (Representadores rápidos).
+A partir de Xamarin.Forms 4.0, todas las aplicaciones con destino `FormsAppCompatActivity` usan representadores rápidos de forma predeterminada. Para obtener más información, consulte [Fast Renderers](~/xamarin-forms/internals/fast-renderers.md) (Representadores rápidos).
 
 ## <a name="enable-startup-tracing-on-android"></a>Habilitación del seguimiento de inicio en Android
 
@@ -201,7 +204,7 @@ Como alternativa, la inyección de dependencia puede optimizarse implementándol
 
 ## <a name="create-shell-applications"></a>Creación de aplicaciones Shell
 
-Las aplicaciones Shell de Xamarin.Forms proporcionan una experiencia de navegación bien fundamentada basada en controles flotantes y pestañas. Si la experiencia de usuario de la aplicación se puede implementar con Shell, es recomendable hacerlo. Las aplicaciones Shell ayudan a evitar una experiencia de inicio deficiente, ya que las páginas se crean bajo demanda en respuesta a la navegación, en lugar de durante el inicio de la aplicación. Esto sucede con las aplicaciones que usan ["TabbedPage"](xref:Xamarin.Forms.TabbedPage). Para obtener más información, vea [Shell de Xamarin.Forms](~/xamarin-forms/app-fundamentals/shell/index.md).
+Las aplicaciones de Xamarin.Forms Shell proporcionan una experiencia de navegación bien fundamentada basada en controles flotantes y pestañas. Si la experiencia de usuario de la aplicación se puede implementar con Shell, es recomendable hacerlo. Las aplicaciones Shell ayudan a evitar una experiencia de inicio deficiente, ya que las páginas se crean bajo demanda en respuesta a la navegación, en lugar de durante el inicio de la aplicación. Esto sucede con las aplicaciones que usan ["TabbedPage"](xref:Xamarin.Forms.TabbedPage). Para obtener más información, consulte [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).
 
 ## <a name="use-collectionview-instead-of-listview"></a>Uso de CollectionView en lugar de ListView
 
@@ -299,7 +302,7 @@ Para obtener más información sobre los dominios de aplicación, vea [Estilos d
 
 ## <a name="use-the-custom-renderer-pattern"></a>Uso del patrón de presentador personalizado
 
-La mayoría de las clases de representador de Xamarin.Forms exponen el método `OnElementChanged`, que se llama cuando se crea un control personalizado de Xamarin.Forms para representar el control nativo correspondiente. Las clases de representador personalizadas, en cada proyecto de la plataforma, invalidan después este método para crear instancias y personalizar el control nativo. El método `SetNativeControl` se usa para crear una instancia del control nativo y este método también asignará la referencia de control a la propiedad `Control`.
+La mayoría de las clases de representador de Xamarin.Forms exponen el método `OnElementChanged`, al que se llama cuando se crea un control personalizado de Xamarin.Forms para representar el control nativo correspondiente. Las clases de representador personalizadas, en cada proyecto de la plataforma, invalidan después este método para crear instancias y personalizar el control nativo. El método `SetNativeControl` se usa para crear una instancia del control nativo y este método también asignará la referencia de control a la propiedad `Control`.
 
 Aun así, en algunos casos se puede llamar al método `OnElementChanged` varias veces. Por lo tanto, para evitar pérdidas de memoria que pueden afectar al rendimiento, debe tener cuidado al crear una instancia de un nuevo control nativo. El enfoque que usar al crear instancias de un nuevo control nativo en un presentador personalizado se muestra en el ejemplo de código siguiente:
 
@@ -324,7 +327,7 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 }
 ```
 
-Solo se debe crear una instancia de un nuevo control nativo una vez, cuando la propiedad `Control` es `null`. Además, solo se debe crear, configurar el control y suscribir los controladores de eventos cuando se adjunta el presentador personalizado a un nuevo elemento de Xamarin.Forms. De forma similar, solo se debe cancelar la suscripción de los controladores de eventos que se han suscrito cuando cambia el elemento al que está asociado el presentador. Adoptar este enfoque facilita crear un presentador personalizado de rendimiento eficaz que no sufra pérdidas de memoria.
+Solo se debe crear una instancia de un nuevo control nativo una vez, cuando la propiedad `Control` es `null`. Además, solo se debe crear el control, configurarlo y suscribir los controladores de eventos cuando se adjunta el presentador personalizado a un nuevo elemento de Xamarin.Forms. De forma similar, solo se debe cancelar la suscripción de los controladores de eventos que se han suscrito cuando cambia el elemento al que está asociado el presentador. Adoptar este enfoque facilita crear un presentador personalizado de rendimiento eficaz que no sufra pérdidas de memoria.
 
 > [!IMPORTANT]
 > El método `SetNativeControl` solo se debe invocar si la propiedad `e.NewElement` no es `null` y la propiedad `Control` es `null`.
@@ -338,7 +341,7 @@ Para más información sobre presentadores personalizados, vea [Personalización
 - [Enlaces compilados](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)
 - [Representadores rápidos](~/xamarin-forms/internals/fast-renderers.md)
 - [Compresión de diseño](~/xamarin-forms/user-interface/layouts/layout-compression.md)
-- [Shell de Xamarin.Forms](~/xamarin-forms/app-fundamentals/shell/index.md)
+- [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md)
 - [CollectionView de Xamarin.Forms](~/xamarin-forms/user-interface/collectionview/index.md)
 - [Rendimiento de ListView](~/xamarin-forms/user-interface/listview/performance.md)
 - [Optimizar los recursos de imagen](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages)

@@ -1,18 +1,21 @@
 ---
 title: Diseño de Xamarin.Forms Shell
-description: Después de un control flotante, el siguiente nivel de navegación en una aplicación de Shell es la barra de pestañas de la parte inferior. Como alternativa, el modelo de navegación para una aplicación puede comenzar con pestañas en la parte inferior y no usar un control flotante. En ambos casos, cuando una pestaña inferior contiene más de una página, las páginas son navegables mediante las pestañas principales.
-ms.prod: xamarin
-ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/06/2019
-ms.openlocfilehash: 0ffcbe99ef9696c5fde501809bea5ddcc7a793a7
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: fa49cdb7944e3ab942ccda611af906e2822b072a
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303850"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139963"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Pestañas de Xamarin.Forms Shell
 
@@ -27,7 +30,7 @@ Como alternativa, el modelo de navegación para una aplicación puede comenzar c
 
 Cada objeto `FlyoutItem` o `TabBar` puede contener uno o varios objetos `Tab`, donde cada objeto `Tab` representa una pestaña en la barra de pestañas inferior. Cada objeto `Tab` puede contener uno o varios objetos `ShellContent`, y cada objeto `ShellContent` mostrará un único objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage). Cuando hay más de un objeto `ShellContent` en un objeto `Tab`, los objetos `ContentPage` serán navegables mediante las pestañas superiores.
 
-Dentro de cada objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage), se puede navegar a objetos `ContentPage` adicionales. Para más información sobre la navegación, consulte [Navegación en Xamarin.Forms Shell](navigation.md).
+Dentro de cada objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage), se puede navegar a objetos `ContentPage` adicionales. Para obtener más información sobre la navegación, consulte [Navegación en Xamarin.Forms Shell](navigation.md).
 
 ## <a name="single-page-application"></a>Aplicación de página única
 
@@ -166,7 +169,7 @@ El elemento secundario de cada objeto `Tab` es un objeto `ShellContent` cuya pro
 </Shell>
 ```
 
-Dentro de cada objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage), se puede navegar a objetos `ContentPage` adicionales. Para más información sobre la navegación, consulte [Navegación en Xamarin.Forms Shell](navigation.md).
+Dentro de cada objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage), se puede navegar a objetos `ContentPage` adicionales. Para obtener más información sobre la navegación, consulte [Navegación en Xamarin.Forms Shell](navigation.md).
 
 > [!NOTE]
 > El [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de cada objeto `ShellContent` se hereda del objeto `Tab` primario.
@@ -293,10 +296,10 @@ En el ejemplo siguiente se muestra un estilo XAML que establece diferentes propi
 </Style>
 ```
 
-Además, también se puede aplicar estilo a las pestañas mediante Hojas de estilos CSS. Para más información, consulte [Propiedades específicas de Xamarin.Forms Shell](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
+Además, también se puede aplicar estilo a las pestañas mediante Hojas de estilos CSS. Para obtener más información, consulte [Propiedades específicas de Xamarin.Forms Shell](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Xaminals (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
-- [Navegación en Xamarin.Forms Shell](navigation.md)
-- [Xamarin.Forms CSS Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties) (Propiedades específicas de Xamarin.Forms CSS Shell)
+- [Navegación de ShellXamarin.Forms](navigation.md)
+- [Propiedades específicas de Xamarin.Forms CSS Shell](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

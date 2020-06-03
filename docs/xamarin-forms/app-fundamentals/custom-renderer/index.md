@@ -1,18 +1,21 @@
 ---
 title: Representadores personalizados de Xamarin.Forms
 description: Los representadores personalizados permiten que los desarrolladores reemplacen la representación de los controles nativos en cada plataforma, para personalizar la apariencia y el comportamiento de los controles de Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/03/2019
-ms.openlocfilehash: 04d40aa4cafe663113957d31bdb8a6463ba58ba5
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: be281f9b7987a8d23ba6ac93f0771e432f277d45
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82516457"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138923"
 ---
 # <a name="xamarinforms-custom-renderers"></a>Representadores personalizados de Xamarin.Forms
 
@@ -24,7 +27,7 @@ Los representadores personalizados proporcionan un método eficaz para personali
 
 ## <a name="renderer-base-classes-and-native-controls"></a>[Clases base y controles nativos del representador](renderers.md)
 
-Todos los controles de Xamarin.Forms tienen un representador que lo acompaña para cada plataforma y que crea una instancia de un control nativo. En este artículo se enumeran las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms.
+Todos los controles de Xamarin.Forms tienen un representador que las acompaña para cada plataforma y que crea una instancia de un control nativo. En este artículo se enumeran las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms.
 
 ## <a name="customizing-an-entry"></a>[Personalización de una entrada](entry.md)
 
@@ -40,11 +43,11 @@ Xamarin.Forms.Maps proporciona una abstracción multiplataforma para mostrar map
 
 ## <a name="customizing-a-listview"></a>[Personalización de la clase ListView](listview.md)
 
-[`ListView`](xref:Xamarin.Forms.ListView) de Xamarin.Forms es una vista que muestra una colección de datos como una lista vertical. En este artículo se muestra cómo crear un representador personalizado que encapsula los controles de lista específica de la plataforma y los diseños de celda nativa, lo que permite tener más control sobre el rendimiento del control de lista nativa.
+Una [`ListView`](xref:Xamarin.Forms.ListView) de Xamarin.Forms es una vista que muestra una colección de datos como una lista vertical. En este artículo se muestra cómo crear un representador personalizado que encapsula los controles de lista específica de la plataforma y los diseños de celda nativa, lo que permite tener más control sobre el rendimiento del control de lista nativa.
 
 ## <a name="customizing-a-viewcell"></a>[Personalización de la clase ViewCell](viewcell.md)
 
-[`ViewCell`](xref:Xamarin.Forms.ViewCell) de Xamarin.Forms es una celda que se puede agregar a [`ListView`](xref:Xamarin.Forms.ListView) o [`TableView`](xref:Xamarin.Forms.TableView), y que contiene una vista definida por el desarrollador. En este artículo se muestra cómo crear un representador personalizado para un `ViewCell` que se hospeda dentro de un control `ListView` de Xamarin.Forms. Esto impide que se llame varias veces a los cálculos de diseño de Xamarin.Forms durante el desplazamiento de `ListView`.
+[`ViewCell`](xref:Xamarin.Forms.ViewCell) de Xamarin.Forms es una celda que se puede agregar a [`ListView`](xref:Xamarin.Forms.ListView) o [`TableView`](xref:Xamarin.Forms.TableView) y que contiene una vista definida por el desarrollador. En este artículo se muestra cómo crear un representador personalizado para un `ViewCell` que se hospeda dentro de un control `ListView` de Xamarin.Forms. Esto impide que se llame varias veces a los cálculos de diseño de Xamarin.Forms durante el desplazamiento de `ListView`.
 
 ## <a name="customizing-a-webview"></a>[Personalización de WebView](hybridwebview.md)
 

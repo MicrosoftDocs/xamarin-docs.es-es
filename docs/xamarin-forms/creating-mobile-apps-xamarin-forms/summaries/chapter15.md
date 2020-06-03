@@ -1,18 +1,22 @@
 ---
-title: Resumen del capítulo 15. La interfaz interactiva
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 15. La interfaz interactiva'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/07/2017
-ms.openlocfilehash: 5f96d2f4b619bbb10bb58e9b1b5dc7007c1ce888
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 15. The interactive interface''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9bb930c2d0e4b6281b1aa48589ea5245eedc1a60
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77131103"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136752"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>Resumen del capítulo 15. La interfaz interactiva
 
@@ -22,7 +26,7 @@ En este capítulo se exploran ocho derivados de `View` que permiten la interacci
 
 ## <a name="view-overview"></a>Información general
 
-Xamarin.Forms contiene 20 clases de las que se pueden crear instancias que se derivan de `View`, pero no `Layout`. Seis de ellas se han tratado en capítulos anteriores:
+Xamarin.Forms contiene 20 clases de las que se pueden crear instancias que se derivan de `View`, pero no `Layout`. Seis de ellas se han tratado en capítulos anteriores:
 
 - `Label`: [**Capítulo 2. Anatomía de una aplicación**](chapter02.md)
 - `BoxView`: [**Capítulo 3. Desplazamiento de la pila**](chapter03.md)
@@ -150,7 +154,7 @@ La clase [`InputView`](xref:Xamarin.Forms.InputView) de la que se derivan `Entry
 
 Indica el tipo de teclado que se muestra. Algunos teclados están optimizados para los URI o números.
 
-La clase `Keyboard` permite definir un teclado con un método [`Keyboard.Create`](xref:Xamarin.Forms.Keyboard.Create(Xamarin.Forms.KeyboardFlags)) estático con un argumento de tipo [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags), una enumeración con las siguientes marcas de bits:
+La clase `Keyboard` permite definir un teclado con un método estático [`Keyboard.Create`](xref:Xamarin.Forms.Keyboard.Create(Xamarin.Forms.KeyboardFlags)) con un argumento de tipo [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags), una enumeración con las siguientes marcas de bits:
 
 - `None` configurado en 0
 - [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) configurado en 1

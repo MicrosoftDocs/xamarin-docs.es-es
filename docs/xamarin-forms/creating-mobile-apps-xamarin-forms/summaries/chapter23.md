@@ -1,18 +1,22 @@
 ---
-title: Resumen del capítulo 23. Desencadenadores y comportamientos
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 23. Desencadenadores y comportamientos'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/07/2017
-ms.openlocfilehash: 8a1274a8447f49ce39f9c92703bbaec9e875b9e9
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 23. Triggers and behaviors''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9a0206354254f79756e29f834c85837240736eca
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70760589"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136661"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Resumen del capítulo 23. Desencadenadores y comportamientos
 
@@ -156,7 +160,7 @@ El ejemplo [**FormattedTextToggle**](https://github.com/xamarin/xamarin-forms-bo
 
 La clase [`ToggleBase`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) de la biblioteca **Xamarin.FormsBook.Toolkit** deriva de `ContentView`, define una propiedad `IsToggled` e incorpora un elemento `ToggleBehavior` para la lógica de alternancia. De este modo, resulta más fácil definir el botón de alternancia en XAML, tal como se muestra en el ejemplo [**TraditionalCheckBox**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox).
 
-[**SwitchCloneDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/SwitchCloneDemo) incluye una clase [`SwitchClone`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter23/SwitchCloneDemo/SwitchCloneDemo/SwitchCloneDemo/SwitchClone.cs) que se deriva de `ToggleBase` y utiliza una clase [`TranslateAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TranslateAction.cs) para construir un botón de alternancia similar a `Switch` de Xamarin.Forms.
+[**SwitchCloneDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/SwitchCloneDemo) incluye una clase [`SwitchClone`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter23/SwitchCloneDemo/SwitchCloneDemo/SwitchCloneDemo/SwitchClone.cs) que se deriva de `ToggleBase` y usa una clase [`TranslateAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TranslateAction.cs) para construir un botón de alternancia similar a `Switch` de Xamarin.Forms.
 
 [`RotateAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RotateAction.cs) en **Xamarin.FormsBook.Toolkit** proporciona una animación que se usa para crear una opción animada en el ejemplo [**LeverToggle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/LeverToggle).
 

@@ -1,26 +1,18 @@
 ---
-title: Personalización de ViewCell
-description: Un ViewCell de Xamarin.Forms es una celda que se puede agregar a ListView o TableView y que contiene una vista definida por el desarrollador. En este artículo se muestra cómo crear un representador personalizado para un ViewCell que se hospeda dentro de un control ListView de Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: 61F378C9-6DEF-436B-ACC3-2324B25D404E
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/07/2016
-ms.openlocfilehash: 5cd0a1ec43f0e56ec1ec72ebd614a7e0a5fa2225
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70998056"
+title: description: "Un ViewCell de Xamarin.Forms es una celda que se puede agregar a ListView o TableView y que contiene una vista definida por el desarrollador. En este artículo se muestra cómo crear un representador personalizado para un ViewCell que se hospeda dentro de un control ListView de Xamarin.Forms".
+ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
+- "Xamarin.Forms"
+- "Xamarin.Essentials"
+
 ---
+
 # <a name="customizing-a-viewcell"></a>Personalización de ViewCell
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
 
 _Un ViewCell de Xamarin.Forms es una celda que se puede agregar a ListView o TableView y que contiene una vista definida por el desarrollador. En este artículo se muestra cómo crear un representador personalizado para un ViewCell que se hospeda dentro de un control ListView de Xamarin.Forms. Esto impide que se llame varias veces a los cálculos de diseño de Xamarin.Forms durante el desplazamiento de ListView._
 
-Todos las celdas de Xamarin.Forms tienen un representador que las acompaña para cada plataforma y que crea una instancia de un control nativo. Cuando una aplicación de Xamarin.Forms representa una [`ViewCell`](xref:Xamarin.Forms.ViewCell), en iOS se crea la instancia de la clase `ViewCellRenderer`, que a su vez crea una instancia del control `UITableViewCell` nativo. En la plataforma de Android, la clase `ViewCellRenderer` crea una instancia de un control `View` nativo. En la Plataforma Universal de Windows (UWP), la clase `ViewCellRenderer` crea una instancia de `DataTemplate` nativa. Para obtener más información sobre las clases de control nativo que se asignan a los controles de Xamarin.Forms y el representador, vea [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) (Controles nativos y clases base del representador).
+Todas las celdas de Xamarin.Forms tienen un representador que las acompaña para cada plataforma y que crea una instancia de un control nativo. Cuando una aplicación de Xamarin.Forms representa un [`ViewCell`](xref:Xamarin.Forms.ViewCell), se crea en iOS la instancia de la clase `ViewCellRenderer`, que a su vez crea una instancia del control `UITableViewCell` nativo. En la plataforma de Android, la clase `ViewCellRenderer` crea una instancia de un control `View` nativo. En la Plataforma universal de Windows (UWP), la clase `ViewCellRenderer` crea una instancia de un elemento `DataTemplate` nativo. Para obtener más información sobre el representador y las clases de control nativo a las que se asignan los controles de Xamarin.Forms, vea [Clases base y controles nativos del representador](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 El siguiente diagrama muestra la relación entre la clase [`ViewCell`](xref:Xamarin.Forms.ViewCell) y los controles nativos correspondientes que la implementan:
 
@@ -32,7 +24,7 @@ El proceso de representación puede aprovecharse para implementar las personaliz
 1. [Consuma](#Consuming_the_Custom_Cell) la celda personalizada de Xamarin.Forms.
 1. [Cree](#Creating_the_Custom_Renderer_on_each_Platform) el representador personalizado para la celda en cada plataforma.
 
-Cada elemento ahora se explicará a su vez, para implementar un representador `NativeCell` que aproveche las ventajas de un diseño específico de la plataforma para cada celda que se hospeda dentro de un control [`ListView`](xref:Xamarin.Forms.ListView) de Xamarin.Forms. Esto impide que se llame varias veces a los cálculos de diseño de Xamarin.Forms durante el desplazamiento de `ListView`.
+Cada elemento ahora se explicará a su vez, para implementar un representador `NativeCell` que aproveche las ventajas de un diseño específico de la plataforma para cada celda que se hospeda dentro de un control Xamarin.Forms[`ListView` de ](xref:Xamarin.Forms.ListView). Esto impide que se llame varias veces a los cálculos de diseño de Xamarin.Forms durante el desplazamiento de `ListView`.
 
 <a name="Creating_the_Custom_Cell" />
 
@@ -146,7 +138,7 @@ public class NativeCellPageCS : ContentPage
 }
 ```
 
-Un control [`ListView`](xref:Xamarin.Forms.ListView) de Xamarin.Forms se usa para mostrar una lista de los datos, que se rellena mediante la propiedad [`ItemSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource). La estrategia de almacenamiento en caché [`RecycleElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) intenta minimizar la velocidad de ejecución y el consumo de memoria de `ListView` mediante el reciclaje de las celdas de la lista. Para obtener más información, vea [Estrategia de almacenamiento en caché](~/xamarin-forms/user-interface/listview/performance.md#caching-strategy).
+Un control Xamarin.Forms[`ListView` de ](xref:Xamarin.Forms.ListView) se usa para mostrar una lista de los datos, que se rellena mediante la propiedad [`ItemSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource). La estrategia de almacenamiento en caché [`RecycleElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) intenta minimizar la velocidad de ejecución y el consumo de memoria de `ListView` mediante el reciclaje de las celdas de la lista. Para obtener más información, vea [Estrategia de almacenamiento en caché](~/xamarin-forms/user-interface/listview/performance.md#caching-strategy).
 
 Cada fila de la lista contiene tres elementos de datos: un nombre, una categoría y un nombre de archivo de imagen. El diseño de cada fila de la lista está definido por el `DataTemplate` al que se hace referencia mediante la propiedad enlazable [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate). `DataTemplate` define que cada fila de datos en la lista será una `NativeCell` que muestra sus propiedades `Name`, `Category` y `ImageFilename` mediante el enlace de datos. Para obtener más información sobre el control `ListView`, vea [ListView de Xamarin.Forms](~/xamarin-forms/user-interface/listview/index.md).
 
@@ -160,7 +152,7 @@ El proceso para crear la clase del representador personalizado es el siguiente:
 
 1. Cree una subclase de la clase `ViewCellRenderer` que represente la celda personalizada.
 1. Invalide el método específico de la plataforma que representa la celda personalizada y escriba una lógica para personalizarla.
-1. Agregue un atributo `ExportRenderer` a la clase de representador personalizada para especificar que se utilizará para representar la celda personalizada de Xamarin.Forms. Este atributo se usa para registrar al representador personalizado con Xamarin.Forms.
+1. Agregue un atributo `ExportRenderer` a la clase de representador personalizada para especificar que se usará para representar la celda personalizada de Xamarin.Forms. Este atributo se usa para registrar al representador personalizado con Xamarin.Forms.
 
 > [!NOTE]
 > Para la mayoría de los elementos de Xamarin.Forms, proporcionar un representador personalizado en cada proyecto de la plataforma es un paso opcional. Si no se registra un representador personalizado, se usará el representador predeterminado de la clase base del control. Con todo, los representadores personalizados son necesarios en cada proyecto de la plataforma al representar un elemento [ViewCell](xref:Xamarin.Forms.ViewCell).
@@ -572,7 +564,7 @@ Se llama al método `GetTemplate` para devolver la celda que se va a representar
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se mostró cómo crear un representador personalizado para un [`ViewCell`](xref:Xamarin.Forms.ViewCell) que se hospeda dentro de un control [`ListView`](xref:Xamarin.Forms.ListView) de Xamarin.Forms. Esto impide que se llame varias veces a los cálculos de diseño de Xamarin.Forms durante el desplazamiento de `ListView`.
+En este artículo se ha mostrado cómo crear un representador personalizado para un [`ViewCell`](xref:Xamarin.Forms.ViewCell) que se hospeda dentro de un control Xamarin.Forms[`ListView` de ](xref:Xamarin.Forms.ListView). Esto impide que se llame varias veces a los cálculos de diseño de Xamarin.Forms durante el desplazamiento de `ListView`.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

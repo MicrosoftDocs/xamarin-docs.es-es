@@ -1,18 +1,21 @@
 ---
 title: Control flotante de Xamarin.Forms Shell
-description: El control flotante es el menú raíz de una aplicación de Shell y es accesible por medio de un icono o al deslizar el dedo desde el lado de la pantalla. El control flotante consta de un encabezado opcional, elementos de control flotante y elementos de menú opcionales.
-ms.prod: xamarin
-ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/22/2020
-ms.openlocfilehash: 5e5c50a9195ceb2716e3ca5306b72654fedc46e8
-ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b336a594fa7525000e119333b56284368a23cc03
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82852470"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84134958"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Control flotante de Xamarin.Forms Shell
 
@@ -22,7 +25,7 @@ El control flotante es el menú raíz de una aplicación de Shell y es accesible
 
 ![Captura de pantalla de un control flotante anotado de Shell](flyout-images/flyout-annotated.png "Control flotante anotado")
 
-Si es necesario, el color de fondo del control flotante se puede establecer [`Color`](xref:Xamarin.Forms.Color) mediante la propiedad enlazable `Shell.FlyoutBackgroundColor`. Esta propiedad también se puede establecer con una hoja de estilo CSS. Para más información, consulte [Propiedades específicas de Xamarin.Forms Shell](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
+Si es necesario, el color de fondo del control flotante se puede establecer [`Color`](xref:Xamarin.Forms.Color) mediante la propiedad enlazable `Shell.FlyoutBackgroundColor`. Esta propiedad también se puede establecer con una hoja de estilo CSS. Para obtener más información, consulte [Propiedades específicas de Xamarin.Forms Shell](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
 
 ## <a name="flyout-icon"></a>Icono de control flotante
 
@@ -642,7 +645,7 @@ En el siguiente código XAML se muestra un ejemplo de definición de estilos pa
 
 Estos estilos se aplicarán automáticamente a objetos `FlyoutItem` y `MenuItem`, sin tener que establecer sus propiedades [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass) en los nombres de clase de estilo.
 
-Además, se pueden definir y aplicar clases de estilo personalizadas a objetos `FlyoutItem` y `MenuItem`. Para más información sobre las clases de estilo, vea [Clases de estilo de Xamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/style-class.md).
+Además, se pueden definir y aplicar clases de estilo personalizadas a objetos `FlyoutItem` y `MenuItem`. Para obtener más información sobre las clases de estilo, vea [Clases de estilo de Xamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/style-class.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

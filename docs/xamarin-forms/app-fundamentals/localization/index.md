@@ -1,24 +1,27 @@
 ---
 title: Localización de Xamarin.Forms
-description: El marco de trabajo de localización integrado de .NET puede usarse para generar aplicaciones multilingües multiplataforma con Xamarin.Forms. Se pueden localizar texto e imágenes y las aplicaciones pueden admitir una dirección de flujo de derecha a izquierda.
-ms.prod: xamarin
-ms.assetid: 97BF843B-BDAA-4CEA-8189-6DB54B291D7F
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/07/2018
-ms.openlocfilehash: b580c6e41aa689ff8fcea698c40d7aaf5f2ca050
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: El marco de localización integrado de .NET puede usarse para compilar aplicaciones multilingües multiplataforma con Xamarin.Forms. Se pueden localizar texto e imágenes y las aplicaciones pueden admitir una dirección de flujo de derecha a izquierda.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: dddb80e8fb683547d2bf6ba0b74e870fe240695c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "74135262"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137571"
 ---
 # <a name="xamarinforms-localization"></a>Localización de Xamarin.Forms
 
-_El marco de trabajo de localización integrado de .NET puede usarse para generar aplicaciones multilingües multiplataforma con Xamarin.Forms._
+_El marco de localización integrado de .NET puede usarse para compilar aplicaciones multilingües multiplataforma con Xamarin.Forms._
 
-## <a name="xamarinforms-string-and-image-localization"></a>[Localización de cadenas e imágenes de Xamarin.Forms](text.md)
+## <a name="xamarinforms-string-and-image-localizationtextmd"></a>[Localización de cadenas e imágenes de Xamarin.Forms](text.md)
 
 El mecanismo integrado para la localización de aplicaciones .NET usa [archivos RESX](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps#resources-in-resx-files) y las clases de los espacios de nombres `System.Resources` y `System.Globalization`. Los archivos RESX que contienen las cadenas traducidas se insertan en el ensamblado de Xamarin.Forms, junto con una clase generada por el compilador que proporciona acceso fuertemente tipado a las traducciones. Después, se puede recuperar el texto traducido en el código.
 

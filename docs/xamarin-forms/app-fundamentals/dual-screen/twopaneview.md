@@ -1,18 +1,21 @@
 ---
 title: Diseño de doble pantalla de Xamarin.Forms
 description: En esta guía se explica cómo usar TwoPaneView de Xamarin.Forms para optimizar la experiencia de la aplicación para dispositivos de doble pantalla como Surface Duo y Surface Neo.
-ms.prod: xamarin
-ms.assetid: 17ee8afa-5e7c-4a4f-a9b6-2aca03f30fe3
-ms.technology: xamarin-forms
-author: davidortinau
-ms.author: daortin
-ms.date: 02/08/2020
-ms.openlocfilehash: 44f7701adbe742828d8ec33dec21c316d11bf93e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 28d4b3da44cc1a022b70c0de0720be747e047f9f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80628285"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138897"
 ---
 # <a name="xamarinforms-dual-screen-layout"></a>Diseño de doble pantalla de Xamarin.Forms
 

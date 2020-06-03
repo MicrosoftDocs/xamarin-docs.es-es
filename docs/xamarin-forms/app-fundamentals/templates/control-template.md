@@ -1,24 +1,27 @@
 ---
 title: Plantillas de control de Xamarin.Forms
 description: Las plantillas de control de Xamarin.Forms definen la estructura visual de los controles personalizados derivados de ContentView y las páginas derivadas de ContentPage.
-ms.prod: xamarin
-ms.assetid: 8B8E2360-6531-44A3-A7C8-9A8808DE9B86
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/13/2020
-ms.openlocfilehash: a73123b89cba932f2e2cb907645f6fe858cf6176
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 44eebed2a49fbdda5504f9a09873f93466d0326c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303844"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84132553"
 ---
 # <a name="xamarinforms-control-templates"></a>Plantillas de control de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
 
-Las plantillas de control de Xamarin.Forms permiten definir la estructura visual de los controles personalizados derivados [`ContentView`](xref:Xamarin.Forms.ContentView) y las páginas derivadas [`ContentPage`](xref:Xamarin.Forms.ContentPage). Las plantillas de control separan la interfaz de usuario (IU) de un control personalizado, o de una página, de la lógica que implementa el control o la página. También se puede insertar contenido adicional en el control personalizado (o en la página) con plantilla en una ubicación predefinida.
+Las plantillas de control de Xamarin.Forms permiten definir la estructura visual de los controles personalizados derivados de [`ContentView`](xref:Xamarin.Forms.ContentView) y las páginas derivadas de [`ContentPage`](xref:Xamarin.Forms.ContentPage). Las plantillas de control separan la interfaz de usuario (IU) de un control personalizado, o de una página, de la lógica que implementa el control o la página. También se puede insertar contenido adicional en el control personalizado (o en la página) con plantilla en una ubicación predefinida.
 
 Por ejemplo, se puede crear una plantilla de control que redefina la interfaz de usuario proporcionada por un control personalizado. La instancia de control personalizada requerida puede consumir entonces la plantilla de control. Como alternativa, se puede crear una plantilla de control que defina cualquier interfaz de usuario común que se usará en varias páginas de una aplicación. La plantilla de control se puede usar en varias páginas, cada una de las cuales sigue mostrando su contenido único.
 
@@ -48,11 +51,11 @@ public class CardView : ContentView
 }
 ```
 
-La clase `CardView`, que se deriva de [`ContentView`](xref:Xamarin.Forms.ContentView), representa un control personalizado que muestra los datos en un diseño de tipo tarjeta. La clase contiene propiedades, que están respaldadas por propiedades enlazables, de los datos que muestra. Sin embargo, la clase `CardView` no define ninguna interfaz de usuario. En su lugar, la interfaz de usuario se definirá con una plantilla de control. Para más información sobre cómo crear controles personalizados derivados `ContentView`, consulte [ContentView de Xamarin.Forms](~/xamarin-forms/user-interface/layouts/contentview.md).
+La clase `CardView`, que se deriva de [`ContentView`](xref:Xamarin.Forms.ContentView), representa un control personalizado que muestra los datos en un diseño de tipo tarjeta. La clase contiene propiedades, que están respaldadas por propiedades enlazables, de los datos que muestra. Sin embargo, la clase `CardView` no define ninguna interfaz de usuario. En su lugar, la interfaz de usuario se definirá con una plantilla de control. Para más información sobre cómo crear controles personalizados derivados de `ContentView`, vea [ContentView de Xamarin.Forms](~/xamarin-forms/user-interface/layouts/contentview.md).
 
 Se crea una plantilla de control con el tipo [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate). Cuando se crea una clase `ControlTemplate`, se combinan los objetos [`View`](xref:Xamarin.Forms.View) para compilar la interfaz de usuario de un control o página personalizados. Una clase `ControlTemplate` solo debe tener un objeto `View` como elemento raíz. Sin embargo, el elemento raíz normalmente contiene otros objetos `View`. La combinación de objetos constituye la estructura visual del control.
 
-Aunque se puede definir una clase [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) en línea, el enfoque habitual para declararla [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) es como un recurso de un diccionario de recursos. Dado que las plantillas de control son recursos, siguen las mismas reglas de ámbito que se aplican a todos los recursos. Por ejemplo, si se declara una plantilla de control en el elemento raíz del archivo XAML de definición de la aplicación, se puede usar en cualquier parte de esta. Si define la plantilla en una página, solo esa página puede usar la plantilla de control. Para más información sobre los recursos, consulte [Diccionarios de recursos de Xamarin.Forms](~/xamarin-forms/xaml/resource-dictionaries.md).
+Aunque se puede definir una clase [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) en línea, el enfoque habitual para declararla [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) es como un recurso de un diccionario de recursos. Dado que las plantillas de control son recursos, siguen las mismas reglas de ámbito que se aplican a todos los recursos. Por ejemplo, si se declara una plantilla de control en el elemento raíz del archivo XAML de definición de la aplicación, se puede usar en cualquier parte de esta. Si define la plantilla en una página, solo esa página puede usar la plantilla de control. Para más información sobre los recursos, vea [Diccionarios de recursos de Xamarin.Forms](~/xamarin-forms/xaml/resource-dictionaries.md).
 
 En el siguiente ejemplo de XAML se muestra una clase [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) para objetos `CardView`:
 
@@ -298,7 +301,7 @@ En el siguiente ejemplo de XAML se muestra un estilo *implicit* que consume el o
 
 En este ejemplo, el estilo *implicit* [`Style`](xref:Xamarin.Forms.Style) se aplica automáticamente a cada objeto `CardView` y se establece la propiedad [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) de cada `CardView` en `CardViewControlTemplate`.
 
-Para más información sobre los estilos, consulte [Estilos de Xamarin.Forms](~/xamarin-forms/user-interface/styles/index.md).
+Para obtener más información sobre los estilos, vea [Estilos de Xamarin.Forms](~/xamarin-forms/user-interface/styles/index.md).
 
 ## <a name="redefine-a-controls-ui"></a>Redefinición de la interfaz de usuario de un control
 

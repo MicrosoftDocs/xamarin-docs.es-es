@@ -1,19 +1,22 @@
 ---
-title: Indexación de la aplicación y vinculación en profundidad
+title: ''
 description: En este artículo se explica cómo usar la indexación de la aplicación y la vinculación en profundidad para que el contenido de las aplicaciones Xamarin.Forms permita efectuar búsquedas en dispositivos iOS y Android.
-ms.prod: xamarin
-ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
-ms.technology: xamarin-forms
-ms.custom: xamu-video
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/28/2018
-ms.openlocfilehash: fcd8333a0623058fceb486183ddb995e85eaf18a
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+ms.custom: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d93f9bbcfafc3cb71d6b71159f6d3368f50c08be
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76940323"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135738"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexación de la aplicación y vinculación en profundidad
 
@@ -36,7 +39,7 @@ Se indexan todas las instancias del elemento `TodoItem` que crea el usuario. A c
 Para obtener más información sobre el uso de una base de datos SQLite, consulte [Bases de datos locales de Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md).
 
 > [!NOTE]
-> La funcionalidad de la indexación de la aplicación y de la vinculación en profundidad de Xamarin.Forms solo está disponible en las plataformas iOS y Android, y requiere como mínimo iOS 9 y API 23, respectivamente.
+> La función de indexación de la aplicación y vinculación en profundidad de Xamarin.Forms solo está disponible en las plataformas iOS y Android y necesita como mínimo iOS 9 y API 23, respectivamente.
 
 ## <a name="setup"></a>Programa de instalación
 
@@ -62,7 +65,7 @@ En la plataforma Android, se deben cumplir los siguientes requisitos previos par
 1. Es necesario haber registrado un sitio web complementario para la aplicación en la consola del desarrollador de Google. Una vez que la aplicación esté asociada a un sitio web, las direcciones URL se pueden indexar de forma que funcionen tanto para el sitio web como para la aplicación. De este modo, podrán aparecer después en los resultados de la búsqueda. Para obtener más información, vea [Indexar aplicaciones en la Búsqueda de Google](https://support.google.com/googleplay/android-developer/answer/6041489) en el sitio web de Google.
 1. La aplicación debe admitir las intenciones de dirección URL HTTP en la clase `MainActivity`, que indican a la indexación de la aplicación los tipos de esquemas de datos de direcciones URL a los que esta puede dar respuesta. Para obtener más información, vea [Configuración del filtro de intención](~/android/platform/app-linking.md#configure-intent-filter).
 
-Una vez cumplidos estos requisitos previos, para usar la indexación de la aplicación y la vinculación en profundidad de Xamarin.Forms en la plataforma Android se requiere la siguiente configuración adicional:
+Una vez cumplidos estos requisitos previos, para usar la indexación de la aplicación y la vinculación en profundidad de Xamarin.Forms en la plataforma Android es necesaria la siguiente configuración adicional:
 
 1. Instale el paquete NuGet [Xamarin.Forms.AppLinks](https://www.nuget.org/packages/Xamarin.Forms.AppLinks/) en el proyecto de la aplicación de Android.
 1. En el archivo **MainActivity.cs**, agregue una declaración para usar el espacio de nombres `Xamarin.Forms.Platform.Android.AppLinks`.
@@ -83,7 +86,7 @@ Al agregar **google-services.json** al proyecto (y al establecer la acción de c
 > [!NOTE]
 > En este artículo, los términos vínculos de aplicación y vínculos profundos suelen usarse indistintamente. Sin embargo, en Android estos términos tienen significados diferentes. En Android, un vínculo profundo es un filtro de intención que permite a los usuarios especificar directamente una actividad concreta en la aplicación. Al hacer clic en un vínculo profundo se puede abrir un cuadro de diálogo de desambiguación, que permite al usuario seleccionar una de las distintas aplicaciones que pueden controlar la dirección URL. Un vínculo de aplicación de Android es un vínculo profundo basado en la dirección URL de su sitio web, que se ha verificado que pertenece al sitio web. Al hacer clic en un vínculo de aplicación, se abre la aplicación si está instalada, sin que se abra un cuadro de diálogo de desambiguación.
 
-Para obtener más información, vea [Deep Link Content with Xamarin.Forms URL Navigation](https://blog.xamarin.com/deep-link-content-with-xamarin-forms-url-navigation/) (Contenido de vínculos profundos con la navegación de direcciones URL Xamarin.Forms) en el blog de Xamarin.
+Para obtener más información, vea [Contenido de vínculos profundos con la navegación de direcciones URL de Xamarin.Forms](https://blog.xamarin.com/deep-link-content-with-xamarin-forms-url-navigation/) en el blog de Xamarin.
 
 ## <a name="indexing-a-page"></a>Indexación de una página
 
@@ -246,7 +249,7 @@ Para obtener más información sobre Handoff, vea la [introducción a Handoff](~
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se ha explicado cómo usar la indexación de la aplicación y la vinculación en profundidad para que el contenido de las aplicaciones Xamarin.Forms permita efectuar búsquedas en dispositivos iOS y Android. La indexación de la aplicación permite a aplicaciones que de lo contrario se olvidarían tras unos pocos usos mantener su pertinencia al aparecer en los resultados de la búsqueda.
+En este artículo se explica cómo usar la indexación de la aplicación y la vinculación en profundidad para que el contenido de las aplicaciones Xamarin.Forms permita efectuar búsquedas en dispositivos iOS y Android. La indexación de la aplicación permite a aplicaciones que de lo contrario se olvidarían tras unos pocos usos mantener su pertinencia al aparecer en los resultados de la búsqueda.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

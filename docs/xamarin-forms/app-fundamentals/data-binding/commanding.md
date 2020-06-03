@@ -1,20 +1,23 @@
 ---
-title: La interfaz de comandos de Xamarin.Forms
+title: Interfaz de comandos de Xamarin.Forms
 description: En este artículo se explica cómo implementar la propiedad Command con enlaces de datos de Xamarin.Forms. La interfaz de comandos proporciona un enfoque alternativo para implementar comandos que se adapta mucho mejor a la arquitectura MVVM.
-ms.prod: xamarin
-ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: 185aebf48b24a6abbdd8f56dbbfc32f6e99f6e63
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 253255f08cec6f08e03df94798c8572f7cf10f30
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75545626"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139729"
 ---
-# <a name="the-xamarinforms-command-interface"></a>La interfaz de comandos de Xamarin.Forms
+# <a name="the-xamarinforms-command-interface"></a>Interfaz de comandos de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -688,7 +691,7 @@ Todos los métodos `execute` llaman a `RefreshCanExecutes`, que llama a `ChangeC
 
 ## <a name="adding-commands-to-existing-views"></a>Adición de comandos a las vistas existentes
 
-Si quiere usar la interfaz de comandos con vistas que no la admiten, puede utilizar un comportamiento de Xamarin.Forms que convierte un evento en un comando. Esto se describe en el artículo [**EventToCommandBehavior reutilizable**](~/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior.md).
+Si quiere emplear la interfaz de comandos con vistas que no la admiten, puede usar un comportamiento de Xamarin.Forms que convierte un evento en un comando. Esto se describe en el artículo [**EventToCommandBehavior reutilizable**](~/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior.md).
 
 ## <a name="asynchronous-commanding-for-navigation-menus"></a>Comandos asincrónicos para menús de navegación
 
@@ -767,4 +770,4 @@ En ocasiones, los enlaces de datos pueden resultar complicados, pero como ha vis
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
-- [Capítulo sobre enlace de datos del libro de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)
+- [Capítulo sobre el enlace de datos del libro Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)

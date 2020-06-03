@@ -1,18 +1,22 @@
 ---
-title: Resumen del capítulo 27. Representadores personalizados
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 27. Representadores personalizados'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/18/2018
-ms.openlocfilehash: fd4014fa4db4e90596c100d454cf0467512240a4
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 27. Custom renderers''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4b0a3e14126dc8c92a1d1b60db7dbb2afd8e8c12
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70760505"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136596"
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>Resumen del capítulo 27. Representadores personalizados
 
@@ -30,10 +34,10 @@ En este capítulo se describe cómo puede escribir sus propios representadores p
 Hay cuatro ensamblados que contienen el código específico de la plataforma de Xamarin.Forms.
 Puede ver el código fuente en GitHub mediante estos vínculos:
 
-- [**Xamarin.Forms.Platform**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform) (muy pequeño)
-- [**Xamarin.Forms.Platform.iOS**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform.iOS)
-- [**Xamarin.Forms.Platform.Android**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform.Android)
-- [**Xamarin.Forms.Platform.UAP**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform.UAP)
+- [ **Xamarin.Forms.Platform**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform) (muy pequeño)
+- [ **Xamarin.Forms.Platform.iOS**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform.iOS)
+- [ **Xamarin.Forms.Platform.Android**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform.Android)
+- [ **Xamarin.Forms.Platform.UAP**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform.UAP)
 
 > [!NOTE]
 > Los ensamblados de `WinRT` mencionados en el libro ya no forman parte de esta solución. 
@@ -83,7 +87,7 @@ La clase [`EllipseView`](https://github.com/xamarin/xamarin-forms-book-samples/b
 
 Los representadores pueden transferir los valores de propiedad establecidos en `View` al objeto nativo invalidando el método `OnElementPropertyChanged` en el representador. Dentro de este método (y dentro de la mayor parte del representador), hay dos propiedades disponibles:
 
-- `Element`, el elemento de Xamarin.Forms
+- `Element`, el elemento Xamarin.Forms
 - `Control`, la vista nativa o el objeto del widget o el control
 
 Los tipos de estas propiedades vienen determinados por los parámetros genéricos de `ViewRenderer`. En este ejemplo, `Element` es de tipo `EllipseView`.

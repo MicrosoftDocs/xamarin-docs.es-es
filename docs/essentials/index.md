@@ -1,26 +1,29 @@
 ---
 title: Xamarin.Essentials
 description: En este documento aparecen vínculos a varias guías en las que se describe Xamarin.Essentials, que brinda a los desarrolladores API multiplataformas para sus aplicaciones móviles.
-ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 02/26/2020
-ms.openlocfilehash: 1d68203e80e0bc28e7060d5873c122db8c2ff960
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 27421ecc8b089321cd2331829d87365f3cf37a65
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80387213"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139469"
 ---
-# <a name="xamarinessentials"></a>Xamarin.Essentials
+# Xamarin.Essentials
 
 Xamarin.Essentials brinda a los desarrolladores API multiplataformas para sus aplicaciones móviles.
 
-Android, iOS y UWP ofrecen API de plataforma y sistema operativo únicas a las que los desarrolladores pueden tener acceso desde C# mediante Xamarin. Xamarin.Essentials brinda una API multiplataforma única que funciona con cualquier aplicación Xamarin.Forms, Android, iOS o UWP accesible desde código compartido, sin importar cómo se creó la interfaz de usuario.
+Android, iOS y UWP ofrecen API de plataforma y sistema operativo únicas a las que los desarrolladores pueden tener acceso desde C# mediante Xamarin. Xamarin.Essentials brinda una API multiplataforma única que funciona con cualquier aplicación Xamarin.Forms, Android, iOS o UWP accesible desde código compartido, independientemente de cómo se creara la interfaz de usuario.
 
-## <a name="get-started-with-xamarinessentials"></a>[Introducción a Xamarin.Essentials](get-started.md?context=xamarin/xamarin-forms)
+## <a name="get-started-with-xamarinessentialsget-startedmdcontextxamarinxamarin-forms"></a>[Introducción a Xamarin.Essentials](get-started.md?context=xamarin/xamarin-forms)
 
-Siga la [guía de introducción](get-started.md) para instalar el paquete NuGet de **Xamarin.Essentials** a los proyectos nuevos o existentes de Xamarin.Forms, Android, iOS o UWP.
+Siga la [guía de introducción](get-started.md) para instalar el paquete NuGet de **Xamarin.Essentials** en los proyectos nuevos o existentes de Xamarin.Forms, Android, iOS o UWP.
 
 ## <a name="feature-guides"></a>Guías de características
 
@@ -73,4 +76,4 @@ Consulte todas las notas de cada versión de Xamarin.Essentials.
 
 ## <a name="api-documentation"></a>[Documentación de la API](xref:Xamarin.Essentials)
 
-Examine la documentación de la API para cada característica de Xamarin.Essentials.
+Examine la documentación de la API para conocer cada característica de Xamarin.Essentials.

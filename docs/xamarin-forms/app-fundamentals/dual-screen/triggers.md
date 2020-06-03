@@ -1,18 +1,21 @@
 ---
 title: Desencadenadores de doble pantalla de Xamarin.Forms
 description: En este artículo se explica cómo usar desencadenadores de doble pantalla de Xamarin.Forms para responder a cambios de la interfaz de usuario con XAML.
-ms.prod: xamarin
-ms.assetid: 2181715D-3995-4E71-9A21-6B892F0B3B59
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/28/2020
-ms.openlocfilehash: 0cce23973c90c89ce90e40651a2646d5f1bdd2c0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: df10327b2ac12d2b119f1ab558d7f27e8c319507
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "78165534"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84131201"
 ---
 # <a name="xamarinforms-dual-screen-triggers"></a>Desencadenadores de doble pantalla de Xamarin.Forms
 

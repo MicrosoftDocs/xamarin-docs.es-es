@@ -1,18 +1,21 @@
 ---
 title: Introducción a Xamarin.Forms Shell
 description: Xamarin.Forms Shell proporciona las características fundamentales que necesitan la mayoría de las aplicaciones, como una experiencia de usuario común de navegación, un esquema de navegación basado en URI y un controlador de búsqueda integrado.
-ms.prod: xamarin
-ms.assetid: 4604DCB5-83DA-458A-8B02-6508A740BE0E
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 09/20/2019
-ms.openlocfilehash: cb2ae3afe9db86d4db603d499ef0e75e7cbbf552
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 29a99161ff2ef2d71b6c803db994522bfe80ed03
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76940402"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138741"
 ---
 # <a name="xamarinforms-shell-introduction"></a>Introducción a Xamarin.Forms Shell
 
@@ -32,7 +35,7 @@ Además, las aplicaciones de Shell se benefician de una mayor velocidad de repre
 
 ## <a name="platform-support"></a>Compatibilidad con la plataforma
 
-El Shell de Xamarin.Forms está totalmente disponible en iOS y Android, pero solo parcialmente disponible en la Plataforma universal de Windows (UWP). Además, Shell es actualmente experimental en UWP y solo se puede usar agregando la siguiente línea de código a la clase `App` en el proyecto de UWP, antes de llamar a `Forms.Init`:
+Xamarin.Forms Shell está totalmente disponible en iOS y Android, pero solo parcialmente disponible en la Plataforma universal de Windows (UWP). Además, Shell es actualmente experimental en UWP y solo se puede usar agregando la siguiente línea de código a la clase `App` en el proyecto de UWP, antes de llamar a `Forms.Init`:
 
 ```csharp
 global::Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");

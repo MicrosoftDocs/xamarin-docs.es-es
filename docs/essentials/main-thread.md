@@ -1,25 +1,17 @@
 ---
-title: 'Xamarin.Essentials: MainThread'
-description: La clase MainThread permite que las aplicaciones ejecuten código en el subproceso de ejecución principal.
-ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 08/20/2019
-ms.openlocfilehash: dfef9fc5d1b8e4acaec8d9e1d653b141b04cead6
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150061"
+title: ''Xamarin.Essentials: MainThread'' description: ms.assetid: author: ms.custom: ms.author: ms.date: no-loc:
+- "Xamarin.Forms"
+- "Xamarin.Essentials"
+
 ---
+
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
 
 La clase **MainThread** permite que las aplicaciones ejecuten código en el subproceso de ejecución principal y determinen si un bloque de código determinado se ejecuta actualmente en el subproceso principal.
 
 ## <a name="background"></a>Fondo
 
-La mayoría de los sistemas operativos, incluidos iOS, Android y Plataforma universal de Windows, usan un modelo de un único subproceso para el código que participa en la interfaz de usuario. Este modelo resulta necesario para serializar de manera adecuada los eventos de la interfaz de usuario, incluidas pulsaciones de teclas y entradas táctiles. Con frecuencia, este subproceso se denomina el _subproceso principal_, el _subproceso de interfaz de usuario_ o el _subproceso de UI_. La desventaja que presenta este modelo es que todo el código que accede a los elementos de la interfaz de usuario se deben ejecutar en el subproceso principal de la aplicación. 
+La mayoría de los sistemas operativos, incluidos iOS, Android y Plataforma universal de Windows, usan un modelo de un único subproceso para el código que participa en la interfaz de usuario. Este modelo resulta necesario para serializar de manera adecuada los eventos de la interfaz de usuario, incluidas pulsaciones de teclas y entradas táctiles. Con frecuencia, este subproceso se denomina el _subproceso principal_, el _subproceso de interfaz de usuario_ o el _subproceso de UI_. La desventaja que presenta este modelo es que todo el código que accede a los elementos de la interfaz de usuario se deben ejecutar en el subproceso principal de la aplicación.
 
 Algunas veces, las aplicaciones deben usar eventos que llamar al controlador de eventos en un subproceso de ejecución secundario. (Es posible que las clases [`Accelerometer`](accelerometer.md), [`Compass`](compass.md), [`Gyroscope`](gyroscope.md), [`Magnetometer`](magnetometer.md) y [`OrientationSensor`](orientation-sensor.md) de Xamarin.Essentials devuelvan información en un subproceso secundario cuando se usa con velocidades más rápidas). Si el controlador de eventos debe acceder a los elementos de la interfaz de usuario, debe ejecutar ese código en el subproceso principal. La clase **MainThread** permite que la aplicación ejecute este código en el subproceso principal.
 
@@ -29,7 +21,7 @@ Algunas veces, las aplicaciones deben usar eventos que llamar al controlador de 
 
 ## <a name="running-code-on-the-main-thread"></a>Ejecución de código en el subproceso principal
 
-Agregue una referencia a Xamarin.Essentials en su clase:
+Agregue una referencia a Xamarin.Essentials en la clase:
 
 ```csharp
 using Xamarin.Essentials;
@@ -60,8 +52,9 @@ MainThread.BeginInvokeOnMainThread(MyMainThreadCode);
 ```
 
 > [!NOTE]
-> Xamarin.Forms tiene un método llamado [`Device.BeginInvokeOnMainThread(Action)`](https://docs.microsoft.com/dotnet/api/xamarin.forms.device.begininvokeonmainthread)
-> que hace lo mismo que `MainThread.BeginInvokeOnMainThread(Action)`. Si bien puede usar cualquier método en una aplicación de Xamarin.Forms, considere si el código de llamada necesita o no una dependencia de Xamarin.Forms. Si no es así, `MainThread.BeginInvokeOnMainThread(Action)` probablemente sea una mejor opción.
+> Xamarin.Forms tiene un método denominado [`Device.BeginInvokeOnMainThread(Action)`](https://docs.microsoft.com/dotnet/api/xamarin.forms.device.begininvokeonmainthread)
+> que hace lo mismo que `MainThread.BeginInvokeOnMainThread(Action)`.
+> Si bien puede usar cualquier método en una aplicación de Xamarin.Forms, considere si el código de llamada necesita una dependencia de Xamarin.Forms. Si no es así, `MainThread.BeginInvokeOnMainThread(Action)` probablemente sea una mejor opción.
 
 ## <a name="determining-if-code-is-running-on-the-main-thread"></a>Determinación de si el código se ejecuta en el subproceso principal
 

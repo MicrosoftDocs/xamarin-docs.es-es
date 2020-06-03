@@ -1,21 +1,24 @@
 ---
-title: Clase App de Xamarin.Forms
-description: En este artículo se explican las características de la clase App predeterminada, lo que incluye una propiedad para establecer la página inicial de la aplicación y un diccionario persistente para almacenar valores simples a lo largo de los cambios de estado del ciclo de vida.
-ms.prod: xamarin
-ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
-ms.technology: xamarin-forms
-ms.custom: video
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/19/2016
-ms.openlocfilehash: aaf2086fd8128d68baa401ab646b31bcbc279545
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Clase de aplicación de Xamarin.Forms
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+ms.custom: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2f4b568809f949d813de86ae88cbe621cfa3161c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303772"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84129693"
 ---
-# <a name="xamarinforms-app-class"></a>Clase App de Xamarin.Forms
+# <a name="xamarinforms-app-class"></a>Clase de aplicación de Xamarin.Forms
 
 La clase base `Application` ofrece las siguientes características, que se exponen en la subclase predeterminada `App` de los proyectos:
 
@@ -110,9 +113,9 @@ Verifique siempre la presencia de la clave antes de acceder para evitar errores 
 El diccionario `Properties` se guarda automáticamente en el dispositivo.
 Los datos agregados al diccionario están disponibles cuando la aplicación vuelve desde el segundo plano o incluso después de su reinicio.
 
-Xamarin.Forms 1.4 ha incorporado un método adicional a la clase `Application` (`SavePropertiesAsync()`) al que se puede llamar para conservar de forma proactiva el diccionario `Properties`. Esto permite guardar propiedades después de actualizaciones importantes en lugar de arriesgarse a que no se serialicen debido a un bloqueo o a su eliminación por parte del sistema operativo.
+Xamarin.Forms 1.4 ha incorporado un método adicional a la clase `Application` (`SavePropertiesAsync()`) al que se puede llamar para conservar de forma proactiva el diccionario `Properties`. Esto permite guardar propiedades después de actualizaciones importantes en lugar de arriesgarse a que no se serialicen debido a un bloqueo o a su eliminación por parte del sistema operativo.
 
-Puede encontrar referencias al uso del diccionario `Properties` en los capítulos [6](https://developer.xamarin.com/r/xamarin-forms/book/chapter06.pdf), [15](https://developer.xamarin.com/r/xamarin-forms/book/chapter15.pdf) y [20](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf) del libro **Creating Mobile Apps with Xamarin.Forms** (Creación de aplicaciones móviles con Xamarin.Forms) y en los [ejemplos](https://github.com/xamarin/xamarin-forms-book-preview-2) asociados.
+Encontrará referencias al uso del diccionario `Properties` en los capítulos [6](https://developer.xamarin.com/r/xamarin-forms/book/chapter06.pdf), [15](https://developer.xamarin.com/r/xamarin-forms/book/chapter15.pdf) y [20](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf) del libro **Creating Mobile Apps with Xamarin.Forms** (Creación de aplicaciones móviles con Xamarin.Forms) y en los [ejemplos](https://github.com/xamarin/xamarin-forms-book-preview-2) asociados.
 
 ## <a name="the-application-class"></a>La clase Application
 
@@ -205,7 +208,7 @@ La página principal del proyecto de UWP debe heredar de `WindowsPage`:
 </forms:WindowsPage>
 ```
 
-El código de C# detrás de la construcción debe llamar a `LoadApplication` para crear una instancia del elemento `App` de Xamarin.Forms. Tenga en cuenta que es recomendable usar explícitamente el espacio de nombres de aplicación para calificar a `App`, dado que las aplicaciones de UWP también tienen su propia clase `App` no relacionada con Xamarin.Forms.
+El código de C# detrás de la construcción debe llamar a `LoadApplication` para crear una instancia del elemento Xamarin.Forms de `App`. Tenga en cuenta que es recomendable usar explícitamente el espacio de nombres de aplicación para calificar a `App`, dado que las aplicaciones de UWP también tienen su propia clase `App` no relacionada con Xamarin.Forms.
 
 ```csharp
 public sealed partial class MainPage
@@ -221,7 +224,7 @@ public sealed partial class MainPage
 
 Tenga en cuenta que `Forms.Init()` debe llamarse desde **App.xaml.cs** en el proyecto UWP.
 
-Para obtener más información, consulte [Proyectos de instalación de Windows](~/xamarin-forms/platform/windows/installation/index.md), donde se incluyen instrucciones para agregar un proyecto UWP a una solución existente de Xamarin.Forms cuyo destino no es UWP.
+Para obtener más información, consulte [Configurar proyectos de Windows](~/xamarin-forms/platform/windows/installation/index.md), donde se incluyen instrucciones para agregar un proyecto UWP a una solución existente de Xamarin.Forms cuyo destino no es UWP.
 
 ## <a name="related-video"></a>Vídeo relacionado
 

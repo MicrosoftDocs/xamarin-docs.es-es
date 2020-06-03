@@ -1,18 +1,22 @@
 ---
-title: Resumen del capítulo 2. Anatomía de una aplicación
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 2. Anatomía de una aplicación'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/17/2018
-ms.openlocfilehash: f900cb1532ba4415127c95b07e777881e1d74994
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 2. Anatomy of an app''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 78da3ed91acea0c056074d712d368de70b251392
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76724999"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136927"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Resumen del capítulo 2. Anatomía de una aplicación
 
@@ -75,9 +79,9 @@ Las secciones **Referencias** de los cinco proyectos de aplicación incluyen ens
 - **Xamarin.Forms.Platform.WinRT.Phone**
 
 > [!NOTE]
-> En las secciones **Referencias** de estos proyectos ya no se enumeran los ensamblados. En su lugar, el archivo de proyecto contiene una etiqueta **PackageReference** que hace referencia al paquete de NuGet de Xamarin.Forms. En la sección **Referencias** de Visual Studio se muestra el paquete de **Xamarin.Forms** en lugar de los ensamblados de Xamarin.Forms.
+> En las secciones **Referencias** de estos proyectos ya no se enumeran los ensamblados. En su lugar, el archivo de proyecto contiene una etiqueta **PackageReference** que hace referencia al paquete NuGet de Xamarin.Forms. En la sección **Referencias** de Visual Studio se muestra el paquete de **Xamarin.Forms** en lugar de los ensamblados de Xamarin.Forms.
 
-Cada uno de los proyectos de aplicación contiene una llamada al método estático `Forms.Init` en el espacio de nombres `Xamarin.Forms`. Este método inicializa la biblioteca de Xamarin.Forms. Se define una versión diferente de `Forms.Init` para cada plataforma. Las llamadas a este método se pueden encontrar en las clases siguientes:
+Cada uno de los proyectos de aplicación contiene una llamada al método estático `Forms.Init` en el espacio de nombres `Xamarin.Forms`. Esto inicializa la biblioteca de Xamarin.Forms. Se define una versión diferente de `Forms.Init` para cada plataforma. Las llamadas a este método se pueden encontrar en las clases siguientes:
 
 - iOS: [`AppDelegate`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.iOS/AppDelegate.cs)
 - Android: [`MainActivity`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Droid/MainActivity.cs)
@@ -183,7 +187,7 @@ Por lo general, estas propiedades no se usan directamente. En su lugar, se propo
 - [`LayoutOptions.EndAndExpand`](xref:Xamarin.Forms.LayoutOptions.EndAndExpand)
 - [`LayoutOptions.FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand)
 
-`HorizontalOptions` y `VerticalOptions` son las propiedades más importantes en el diseño de Xamarin.Forms y se describen con más detalle en el [**Capítulo 4. Desplazamiento de la pila**](chapter04.md).
+`HorizontalOptions` y `VerticalOptions` son las propiedades más importantes en el diseño de Xamarin.Forms y se describen con más detalle en el [**Capítulo 4. Desplazamiento de la pila**](chapter04.md).
 
 Este es el resultado con las propiedades `HorizontalOptions` y `VerticalOptions` de `Label`, ambas establecidas en `LayoutOptions.Center`:
 

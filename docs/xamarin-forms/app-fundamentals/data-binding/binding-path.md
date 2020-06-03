@@ -1,20 +1,23 @@
 ---
-title: Ruta de acceso de enlace de Xamarin.Forms
+title: Enlace de ruta de acceso de Xamarin.Forms
 description: En este artículo se explica cómo usar los enlaces de datos de Xamarin.Forms para acceder a subpropiedades y miembros de colección con la propiedad Path de la clase Binding.
-ms.prod: xamarin
-ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: 79d8df3300b302512a7de4140968dbc4c8e79abc
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0657f39d0584405ea1a6d7611ac789488817770f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76940342"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139749"
 ---
-# <a name="xamarinforms-binding-path"></a>Ruta de acceso de enlace de Xamarin.Forms
+# <a name="xamarinforms-binding-path"></a>Enlace de ruta de acceso de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -157,7 +160,7 @@ Eso muestra el tipo del origen de enlace, o `DataBindingDemos.PathVariationsPage
                       StringFormat='{0}'}" />
 ```
 
-Ahora, se revela que el tipo de la propiedad `Content` es `Xamarin.Forms.StackLayout`. Agregue la propiedad `Children` a `Path` y el tipo es `Xamarin.Forms.ElementCollection'1[Xamarin.Forms.View]`, que es una clase interna para Xamarin.Forms, pero obviamente un tipo de colección. Agregue un índice a lo anterior y el tipo será `Xamarin.Forms.Label`. Continúe de esta manera.
+Ahora, se revela que el tipo de la propiedad `Content` es `Xamarin.Forms.StackLayout`. Agregue la propiedad `Children` a `Path` y el tipo será `Xamarin.Forms.ElementCollection'1[Xamarin.Forms.View]`, que es una clase interna para Xamarin.Forms, pero obviamente un tipo de colección. Agregue un índice a lo anterior y el tipo será `Xamarin.Forms.Label`. Continúe de esta manera.
 
 A medida que Xamarin.Forms procesa la ruta de acceso de enlace, instala un controlador `PropertyChanged` en todos los objetos de la ruta de acceso que implementen la interfaz `INotifyPropertyChanged`. Por ejemplo, el enlace final reacciona ante un cambio en el primer objeto `Label` porque cambia la propiedad `Text`.
 
@@ -166,4 +169,4 @@ Si una propiedad en la ruta de acceso de enlace no implementa `INotifyPropertyCh
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
-- [Capítulo sobre enlace de datos del libro de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Capítulo sobre el enlace de datos del libro Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

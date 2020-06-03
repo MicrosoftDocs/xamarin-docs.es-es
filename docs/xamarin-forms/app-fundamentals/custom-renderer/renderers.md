@@ -1,22 +1,25 @@
 ---
-title: Clases base y controles nativos del representador
-description: Todos los controles de Xamarin.Forms tienen un representador que los acompaña para cada plataforma y que crea una instancia de un control nativo. En este artículo se enumeran las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: A8909AE3-ED0E-4D24-BF96-B49E732E3B93
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/17/2020
-ms.openlocfilehash: 986b1f7dce05451b96a78e4b39b0091309d93973
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+title: ''
+description: Todos los controles de Xamarin.Forms tienen un representador que las acompaña para cada plataforma y que crea una instancia de un control nativo. En este artículo se enumeran las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a56f05f8ff4eb8ece43a9f4f38a669cfdc85c4be
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517475"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135192"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>Clases base y controles nativos del representador
 
-_Todos los controles de Xamarin.Forms tienen un representador que los acompaña para cada plataforma y que crea una instancia de un control nativo. En este artículo se enumeran las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms._
+_Todos los controles de Xamarin.Forms tienen un representador que las acompaña para cada plataforma y que crea una instancia de un control nativo. En este artículo se enumeran las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms._
 
 A excepción de la clase `MapRenderer`, los representadores específicos de la plataforma se pueden encontrar en los espacios de nombres siguientes:
 
@@ -32,7 +35,7 @@ La clase `MapRenderer` se puede encontrar en los espacios de nombres siguientes:
 - **Plataforma universal de Windows (UWP)** : Xamarin.Forms.Maps.UWP
 
 > [!NOTE]
-> Para información sobre cómo crear representadores personalizados para aplicaciones de Shell, consulte [Representadores personalizados de Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/customrenderers.md).
+> Para obtener información sobre cómo crear representadores personalizados para aplicaciones de Shell, consulte [Representadores personalizados de Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/customrenderers.md).
 
 ## <a name="pages"></a>Páginas
 
@@ -116,4 +119,4 @@ En la tabla siguiente se enumeran las clases de representador y control nativo q
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se han enumerado las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms. Todos los controles de Xamarin.Forms tienen un representador que lo acompaña para cada plataforma y que crea una instancia de un control nativo.
+En este artículo se han enumerado las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms. Todos los controles de Xamarin.Forms tienen un representador que las acompaña para cada plataforma y que crea una instancia de un control nativo.

@@ -1,28 +1,31 @@
 ---
-title: Introducción a los efectos
-description: Con los efectos se pueden personalizar los controles nativos de cada plataforma y normalmente se usan para pequeños cambios de estilo. En este artículo se proporciona una introducción a los efectos, se describe el límite entre los efectos y los representadores personalizados, y se describe la clase PlatformEffect.
-ms.prod: xamarin
-ms.assetid: 30CB8615-8F39-4762-BDB7-333D2B57D112
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: e9325c34c645b75f28c7e2070f6bb095780ddb02
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a891ec70f6f83984ed463fe914442758bdf57a2e
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771462"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139313"
 ---
 # <a name="introduction-to-effects"></a>Introducción a los efectos
 
 _Con los efectos se pueden personalizar los controles nativos de cada plataforma y normalmente se usan para pequeños cambios de estilo. En este artículo se proporciona una introducción a los efectos, se describe el límite entre los efectos y los representadores personalizados, y se describe la clase PlatformEffect._
 
-En [Páginas, diseños y controles](~/xamarin-forms/user-interface/controls/index.md) de Xamarin.Forms se presenta una API común para describir interfaces de usuario móviles multiplataforma. Cada página, diseño y control se representan de forma diferente en cada plataforma mediante una clase `Renderer` que, a su vez, crea un control nativo (correspondiente a la representación de Xamarin.Forms), lo organiza en la pantalla y agrega el comportamiento especificado en el código compartido.
+En [Páginas, diseños y controles de Xamarin.Forms](~/xamarin-forms/user-interface/controls/index.md), se presenta una API común para describir interfaces de usuario móviles multiplataforma. Cada página, diseño y control se representa de forma distinta en cada plataforma mediante una clase `Renderer` que, a su vez, crea un control nativo (correspondiente a la representación de Xamarin.Forms), lo coloca en la pantalla y agrega el comportamiento especificado en el código compartido.
 
 Los desarrolladores pueden implementar sus propias clases `Renderer` personalizadas para personalizar la apariencia o el comportamiento de un control. Pero la implementación de una clase de representador personalizado para llevar a cabo una personalización de controles simples suele ser una respuesta compleja. Los efectos simplifican este proceso y permiten que los controles nativos de cada plataforma se puedan personalizar más fácilmente.
 
-Los efectos se crean en proyectos específicos de la plataforma mediante la creación de subclases del control `PlatformEffect`, y después se consumen adjuntándolos a un control adecuado en una biblioteca de .NET Standard de Xamarin.Forms o un proyecto de biblioteca compartida.
+Los efectos se crean en proyectos específicos de la plataforma mediante la creación de subclases del control `PlatformEffect` y, después, se consumen al asociarlos a un control adecuado en una biblioteca de .NET Standard de Xamarin.Forms o un proyecto de biblioteca compartida.
 
 ## <a name="why-use-an-effect-over-a-custom-renderer"></a>¿Por qué usar un efecto en lugar de un representador personalizado?
 
