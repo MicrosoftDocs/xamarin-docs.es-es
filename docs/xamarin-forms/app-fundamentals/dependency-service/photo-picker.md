@@ -1,9 +1,6 @@
 ---
-title: description: "En este artículo, se explica cómo usar la clase DependencyService de Xamarin.Forms para seleccionar una foto de la biblioteca de imágenes del teléfono".
-ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
-- "Xamarin.Forms"
-- "Xamarin.Essentials"
-
+title: "Selección de una foto de la biblioteca de imágenes" description: "En este artículo, se explica cómo usar la clase DependencyService de Xamarin.Forms para seleccionar una foto de la biblioteca de imágenes del teléfono."
+ms.prod: xamarin ms.assetid: 4F51B0E7-6A63-403C-B488-500CCBCE75DD ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/06/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # <a name="picking-a-photo-from-the-picture-library"></a>Seleccionar una foto de la biblioteca de imágenes
@@ -61,7 +58,7 @@ namespace DependencyServiceDemos.iOS
             // Present UIImagePickerController;
             UIWindow window = UIApplication.SharedApplication.KeyWindow;
             var viewController = window.RootViewController;
-            viewController.PresentModalViewController(imagePicker, true);
+            viewController.PresentViewController(imagePicker, true, null);
 
             // Return Task object
             taskCompletionSource = new TaskCompletionSource<Stream>();
@@ -73,7 +70,7 @@ namespace DependencyServiceDemos.iOS
 
 ```
 
-El método `GetImageStreamAsync` crea un elemento `UIImagePickerController` y lo inicializa para seleccionar imágenes desde la biblioteca de fotos. Se necesitan dos controladores de eventos: uno para cuando el usuario seleccione una foto y otro para cuando cancele la visualización de la biblioteca de fotos. Después, `PresentModalViewController` muestra la biblioteca de fotos al usuario.
+El método `GetImageStreamAsync` crea un elemento `UIImagePickerController` y lo inicializa para seleccionar imágenes desde la biblioteca de fotos. Se necesitan dos controladores de eventos: uno para cuando el usuario seleccione una foto y otro para cuando cancele la visualización de la biblioteca de fotos. Después, el método `PresentViewController` muestra la biblioteca de fotos al usuario.
 
 En este momento, el método `GetImageStreamAsync` tiene que devolver un objeto `Task<Stream>` al código que realiza la llamada. Esta tarea solo se completa cuando el usuario termina de interactuar con la biblioteca de fotos y se llama a uno de los controladores de eventos. Para situaciones como esta, la clase [`TaskCompletionSource`](https://msdn.microsoft.com/library/dd449174(v=vs.110).aspx) es esencial. La clase proporciona un objeto `Task` al tipo genérico adecuado para devolver desde el método `GetImageStreamAsync` y, después, se puede enviar una señal a la clase cuando se complete la tarea.
 
@@ -152,7 +149,7 @@ public class MainActivity : FormsAppCompatActivity
 
     protected override void OnCreate(Bundle savedInstanceState)
     {
-        // ... 
+        // ...
         Instance = this;
     }
     // ...

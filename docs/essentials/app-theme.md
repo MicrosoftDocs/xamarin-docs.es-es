@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: Tema de la aplicación'
-description: En este documento se describe la API del tema de la aplicación solicitado en Xamarin.Essentials, que ofrece información sobre el estilo de tema solicitado para la aplicación en ejecución.
-ms.assetid: F6F6D496-A8A9-4B9A-AF1A-370D937E5073
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 01/06/2020
-ms.openlocfilehash: 84c246eb60f4ee561bbf2bcfee6eb587ce601a4a
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150148"
+title: "Xamarin.Essentials: tema de la aplicación" description: "En este documento se describe la API del tema de aplicación solicitado de Xamarin.Essentials, que ofrece información sobre el estilo de tema solicitado para la aplicación en ejecución."
+ms.assetid: F6F6D496-A8A9-4B9A-AF1A-370D937E5073 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 01/06/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-app-theme"></a>Xamarin.Essentials: Tema de la aplicación
 
 La API **RequestedTheme** forma parte de la clase [`AppInfo`](app-information.md) y proporciona información sobre el tema que el sistema solicita para la aplicación en ejecución.
@@ -23,7 +13,7 @@ La API **RequestedTheme** forma parte de la clase [`AppInfo`](app-information.md
 
 ## <a name="using-requestedtheme"></a>Uso de RequestedTheme
 
-Agregue una referencia a Xamarin.Essentials en su clase:
+Agregue una referencia a Xamarin.Essentials en la clase:
 
 ```csharp
 using Xamarin.Essentials;
@@ -58,14 +48,14 @@ Puede obtener más información en la [documentación oficial de Android sobre e
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-Siempre se devolverá Sin especificar en las versiones de iOS anteriores a la 13.0. 
+Siempre se devolverá Sin especificar en las versiones de iOS anteriores a la 13.0.
 
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
 La llamada a `RequestedTheme` se debe realizar en el subproceso de interfaz de usuario o se iniciará una excepción.
 
-Las aplicaciones de UWP respetarán la configuración de App.xaml de UWP en **RequestedTheme**. Si se establece en un tema concreto, Xamarin.Essentials siempre devolverá esta configuración. Para usar el tema dinámico del sistema operativo, quite este nodo de la aplicación y, a continuación, cuando se ejecute la aplicación, devolverá el tema establecido por el usuario en la configuración de Windows (**Configuración > Personalización > Colores > Elija su modo de aplicación predeterminado**).
+Las aplicaciones de UWP respetarán la configuración de App.xaml de UWP en **RequestedTheme**. Si se establece como un tema concreto, Xamarin.Essentials siempre devolverá este valor. Para usar el tema dinámico del sistema operativo, quite este nodo de la aplicación y, a continuación, cuando se ejecute la aplicación, devolverá el tema establecido por el usuario en la configuración de Windows (**Configuración > Personalización > Colores > Elija su modo de aplicación predeterminado**).
 
 Puede obtener más información en la [documentación sobre el tema solicitado en UWP](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.requestedtheme).
 

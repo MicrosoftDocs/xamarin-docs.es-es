@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: Open Browser'
-description: La clase Browser de Xamarin.Essentials permite que una aplicación abra un vínculo web en el explorador optimizado preferido del sistema o en el explorador externo.
-ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 04/02/2019
-ms.custom: video
-ms.openlocfilehash: 715b9872642dfa8d5426c2967c62e82643def34d
-ms.sourcegitcommit: 9ca07644710e5919c7bc684c1ce144471611d5df
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82974479"
+title: "Xamarin.Essentials: apertura del explorador" description: "La clase Browser de Xamarin.Essentials permite que una aplicación abra un vínculo web en el explorador optimizado preferido del sistema o en el explorador externo."
+ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33 author: jamesmontemagno ms.author: jamont ms.date: 04/02/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Explorador
 
 La clase **Browser** permite que una aplicación abra un vínculo web en el explorador optimizado preferido del sistema o en el explorador externo.
@@ -23,7 +13,7 @@ La clase **Browser** permite que una aplicación abra un vínculo web en el expl
 
 ## <a name="using-browser"></a>Uso de Browser
 
-Agregue una referencia a Xamarin.Essentials en su clase:
+Agregue una referencia a Xamarin.Essentials en la clase:
 
 ```csharp
 using Xamarin.Essentials;
@@ -46,7 +36,7 @@ Este método devuelve un valor después de que el usuario _inicie_ el explorador
 
 ## <a name="customization"></a>Personalización
 
-Al usar el explorador preferido por el sistema, tiene disponibles varias opciones de personalización para iOS y Android, por ejemplo, `TitleMode` (solo en Android), preferencias para las opciones de color para la `Toolbar` (en iOS y Android) y `Controls` que se muestran (solo en iOS). 
+Al usar el explorador preferido por el sistema, tiene disponibles varias opciones de personalización para iOS y Android, por ejemplo, `TitleMode` (solo en Android), preferencias para las opciones de color para la `Toolbar` (en iOS y Android) y `Controls` que se muestran (solo en iOS).
 
 Estas opciones se especifican usando `BrowserLaunchOptions` al llamar a `OpenAsync`.
 

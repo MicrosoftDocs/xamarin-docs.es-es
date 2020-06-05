@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Todos los controles de Xamarin.Forms tienen un representador que las acompaña para cada plataforma y que crea una instancia de un control nativo. En este artículo se enumeran las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a56f05f8ff4eb8ece43a9f4f38a669cfdc85c4be
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135192"
+title: "Clases base y controles nativos del representador" description: "Todos los controles de Xamarin.Forms tienen un representador que los acompaña para cada plataforma y que crea una instancia de un control nativo. En este artículo se enumeran las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms."
+ms.prod: xamarin ms.assetid: A8909AE3-ED0E-4D24-BF96-B49E732E3B93 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/17/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="renderer-base-classes-and-native-controls"></a>Clases base y controles nativos del representador
 
 _Todos los controles de Xamarin.Forms tienen un representador que las acompaña para cada plataforma y que crea una instancia de un control nativo. En este artículo se enumeran las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms._
@@ -26,7 +12,10 @@ A excepción de la clase `MapRenderer`, los representadores específicos de la p
 - **iOS**: Xamarin.Forms.Platform.iOS
 - **Android**: Xamarin.Forms.Platform.Android
 - **Android (AppCompat)** : Xamarin.Forms.Platform.Android.AppCompat
+- **Android (FastRenderers)**  - Xamarin.Forms.Platform.Android.FastRenderers
 - **Plataforma universal de Windows (UWP)** : Xamarin.Forms.Platform.UWP
+
+Para obtener más información sobre los representadores rápidos, consulte [Representadores rápidos de Xamarin.Forms](~/xamarin-forms/internals/fast-renderers.md).
 
 La clase `MapRenderer` se puede encontrar en los espacios de nombres siguientes:
 
@@ -54,18 +43,18 @@ En la tabla siguiente se enumeran las clases de representador y control nativo q
 
 En la tabla siguiente se enumeran las clases de representador y control nativo que implementan cada tipo [Layout](~/xamarin-forms/user-interface/controls/layouts.md) de Xamarin.Forms:
 
-|Diseño|Representador|iOS|Android|UWP|
+|Diseño|Representador|iOS|Android|Android (AppCompat)|UWP|
 |--- |--- |--- |--- |--- |
-|[`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter)|ViewRenderer|UIView|Ver|FrameworkElement|
-|[`ContentView`](xref:Xamarin.Forms.ContentView)|ViewRenderer|UIView|Ver|FrameworkElement|
-|[`FlexLayout`](xref:Xamarin.Forms.FlexLayout)|ViewRenderer|UIView|Ver|FrameworkElement|
-|[`Frame`](xref:Xamarin.Forms.Frame)|FrameRenderer|UIView|ViewGroup|Borde|
-|[`ScrollView`](xref:Xamarin.Forms.ScrollView)|ScrollViewRenderer|UIScrollView|ScrollView|ScrollViewer|
-|[`TemplatedView`](xref:Xamarin.Forms.TemplatedView)|ViewRenderer|UIView|Ver|FrameworkElement|
-|[`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)|ViewRenderer|UIView|Ver|FrameworkElement|
-|[`Grid`](xref:Xamarin.Forms.Grid)|ViewRenderer|UIView|Ver|FrameworkElement|
-|[`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)|ViewRenderer|UIView|Ver|FrameworkElement|
-|[`StackLayout`](xref:Xamarin.Forms.StackLayout)|ViewRenderer|UIView|Ver|FrameworkElement|
+|[`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter)|ViewRenderer|UIView|Ver|Ver|FrameworkElement|
+|[`ContentView`](xref:Xamarin.Forms.ContentView)|ViewRenderer|UIView|Ver|Ver|FrameworkElement|
+|[`FlexLayout`](xref:Xamarin.Forms.FlexLayout)|ViewRenderer|UIView|Ver|Ver|FrameworkElement|
+|[`Frame`](xref:Xamarin.Forms.Frame)|FrameRenderer|UIView|ViewGroup|CardView|Borde|
+|[`ScrollView`](xref:Xamarin.Forms.ScrollView)|ScrollViewRenderer|UIScrollView|ScrollView|ScrollView|ScrollViewer|
+|[`TemplatedView`](xref:Xamarin.Forms.TemplatedView)|ViewRenderer|UIView|Ver|Ver|FrameworkElement|
+|[`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)|ViewRenderer|UIView|Ver|Ver|FrameworkElement|
+|[`Grid`](xref:Xamarin.Forms.Grid)|ViewRenderer|UIView|Ver|Ver|FrameworkElement|
+|[`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)|ViewRenderer|UIView|Ver|Ver|FrameworkElement|
+|[`StackLayout`](xref:Xamarin.Forms.StackLayout)|ViewRenderer|UIView|Ver|Ver|FrameworkElement|
 
 ## <a name="views"></a>Vistas
 
@@ -117,6 +106,7 @@ En la tabla siguiente se enumeran las clases de representador y control nativo q
 |[`ImageCell`](xref:Xamarin.Forms.ImageCell)|ImageCellRenderer|UITableViewCell con UIImage|LinearLayout con dos objetos TextView y un objeto ImageView|DataTemplate con un elemento Grid que contiene un control Image y dos TextBlock|
 |[`ViewCell`](xref:Xamarin.Forms.ViewCell)|[ViewCellRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md)|UITableViewCell|Ver|DataTemplate con un elemento ContentPresenter|
 
-## <a name="summary"></a>Resumen
+## <a name="related-links"></a>Vínculos relacionados
 
-En este artículo se han enumerado las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms. Todos los controles de Xamarin.Forms tienen un representador que las acompaña para cada plataforma y que crea una instancia de un control nativo.
+- [Representadores rápidos de Xamarin.Forms](~/xamarin-forms/internals/fast-renderers.md)
+- [Representadores personalizados de Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/customrenderers.md)

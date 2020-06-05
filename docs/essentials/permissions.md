@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: Permisos'
-description: En este documento se describe la clase Permissions en Xamarin.Essentials, que proporciona la capacidad de comprobar y solicitar permisos en tiempo de ejecución.
-ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
-author: jamesmontemagno
-ms.author: jamont
-ms.custom: video
-ms.date: 01/06/2020
-ms.openlocfilehash: fbce02300363c3ec68c35c11afb25342f06f4be1
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150068"
+title: "Xamarin.Essentials: permisos" description: "En este documento se describe la clase Permissions de Xamarin.Essentials, que proporciona la capacidad de comprobar y solicitar permisos en tiempo de ejecución."
+ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57 author: jamesmontemagno ms.author: jamont ms.custom: video ms.date: 01/06/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-permissions"></a>Xamarin.Essentials: Permisos
 
 La clase **Permissions** proporciona la capacidad de comprobar y solicitar permisos en tiempo de ejecución.
@@ -25,7 +15,7 @@ La clase **Permissions** proporciona la capacidad de comprobar y solicitar permi
 
 ## <a name="using-permissions"></a>Uso de permisos
 
-Agregue una referencia a Xamarin.Essentials en su clase:
+Agregue una referencia a Xamarin.Essentials en la clase:
 
 ```csharp
 using Xamarin.Essentials;
@@ -145,7 +135,7 @@ public async Task<PermissionStatus> CheckAndRequestPermissionAsync<T>(T permissi
 
 ## <a name="extending-permissions"></a>Extensión de permisos
 
-La API Permisos se creó para aportar flexibilidad y extensibilidad a las aplicaciones que requieren validación o permisos adicionales que no están incluidos en Xamarin.Essentials. Cree una clase que herede de `BasePermission` e implemente los métodos abstractos necesarios. A continuación
+La API Permissions se creó para aportar flexibilidad y extensibilidad a las aplicaciones que requieren validación o permisos adicionales que no están incluidos en Xamarin.Essentials. Cree una clase que herede de `BasePermission` e implemente los métodos abstractos necesarios. A continuación
 
 ```csharp
 public class MyPermission : BasePermission

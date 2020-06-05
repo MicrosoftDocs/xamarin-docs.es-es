@@ -1,22 +1,8 @@
 ---
-title: Creación de aplicaciones móviles con el libro de Xamarin.Forms
-description: Obtenga información sobre el desarrollo de aplicaciones de Xamarin.Forms con la versión electrónica del libro Creación de aplicaciones móviles con Xamarin.Forms de Charles Petzold.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 77880cd69dd7b8efae0904fa5348d056dba69c2e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136947"
+title: "Libro Creación de aplicaciones móviles con Xamarin.Forms" description: "Obtenga más información sobre el desarrollo de aplicaciones de Xamarin.Forms con la versión electrónica del libro Creación de aplicaciones móviles con Xamarin.Forms de Charles Petzold."
+ms.prod: xamarin ms.assetid: CDE99818-689B-4376-9DC4-C4102AC0F931 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 07/19/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Creación de aplicaciones móviles con el libro de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples)
@@ -29,7 +15,7 @@ El libro se publicó en la primavera de 2016 y no se ha actualizado desde entonc
 
 Descargue su formato de libro electrónico preferido de Microsoft Virtual Academy:
 
-- [**PDF (56Mb)** ](https://aka.ms/xamebook)
+- [**PDF (56Mb)** ](https://aka.ms/xamformsebook)
 
 - [**ePub (151Mb)** ](https://aka.ms/xamebook/epub)
 
@@ -56,41 +42,35 @@ Estos resúmenes también indican que el material del capítulo podría estar [u
 ## <a name="download-chapters-and-summaries"></a>Descargar capítulos y resúmenes
 
 | Capítulo | Texto completo | Resumen |
-| ---
-title: "Creación de aplicaciones móviles con el libro de Xamarin.Forms" description: "Obtenga información sobre el desarrollo de aplicaciones de Xamarin.Forms con la versión electrónica del libro Creación de aplicaciones móviles con Xamarin.Forms de Charles Petzold".
-ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
-- "Xamarin.Forms"
-- "Xamarin.Essentials"
-
----- | --- title: "Creación de aplicaciones móviles con el libro de Xamarin.Forms" description: "Obtenga información sobre el desarrollo de aplicaciones de Xamarin.Forms con la versión electrónica del libro Creación de aplicaciones móviles con Xamarin.Forms de Charles Petzold".
-ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
-- "Xamarin.Forms"
-- "Xamarin.Essentials"
-
--
-title: "Creación de aplicaciones móviles con el libro de Xamarin.Forms" description: "Obtenga información sobre el desarrollo de aplicaciones de Xamarin.Forms con la versión electrónica del libro Creación de aplicaciones móviles con Xamarin.Forms de Charles Petzold".
-ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
-- "Xamarin.Forms"
-- "Xamarin.Essentials"
-
--
-title: "Creación de aplicaciones móviles con el libro de Xamarin.Forms" description: "Obtenga información sobre el desarrollo de aplicaciones de Xamarin.Forms con la versión electrónica del libro Creación de aplicaciones móviles con Xamarin.Forms de Charles Petzold".
-ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
-- "Xamarin.Forms"
-- "Xamarin.Essentials"
-
--
-title: "Creación de aplicaciones móviles con el libro de Xamarin.Forms" description: "Obtenga información sobre el desarrollo de aplicaciones de Xamarin.Forms con la versión electrónica del libro Creación de aplicaciones móviles con Xamarin.Forms de Charles Petzold".
-ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
-- "Xamarin.Forms"
-- "Xamarin.Essentials"
-
-------- | --- title: "Creación de aplicaciones móviles con el libro de Xamarin.Forms" description: "Obtenga información sobre el desarrollo de aplicaciones de Xamarin.Forms con la versión electrónica del libro Creación de aplicaciones móviles con Xamarin.Forms de Charles Petzold".
-ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
-- "Xamarin.Forms"
-- "Xamarin.Essentials"
-
----- | | Capítulo 1. ¿Cómo encaja Xamarin.Forms? | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch01-Apr2016.pdf) | [Resumen](summaries/chapter01.md) | | Capítulo 2. Anatomía de una aplicación | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf) | [Resumen](summaries/chapter02.md) | | Capítulo 3. Profundizar en el texto | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf) | [Resumen](summaries/chapter03.md) | | Capítulo 4. Desplazamiento de la pila | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch04-Apr2016.pdf) | [Resumen](summaries/chapter04.md) | | Capítulo 5. La cuestión de los tamaños | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch05-Apr2016.pdf) | [Resumen](summaries/chapter05.md) | | Capítulo 6. Clics de botón | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf) | [Resumen](summaries/chapter06.md) | | Capítulo 7. XAML o Código | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf) | [Resumen](summaries/chapter07.md) | | Capítulo 8. Código y XAML en armonía | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf) | [Resumen](summaries/chapter08.md) | | Capítulo 9. Llamadas de API específicas de la plataforma | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch09-Apr2016.pdf) | [Resumen](summaries/chapter09.md) | | Capítulo 10. Extensiones de marcado XAML | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch10-Apr2016.pdf) | [Resumen](summaries/chapter10.md) | | Capítulo 11. La infraestructura enlazable | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch11-Apr2016.pdf) | [Resumen](summaries/chapter11.md) | | Chapter 12. Estilos | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch12-Apr2016.pdf) | [Resumen](summaries/chapter12.md) | | Capítulo 13. Mapas de bits | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf) | [Resumen](summaries/chapter13.md) | | Capítulo 14. Diseño absoluto | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch14-Apr2016.pdf) | [Resumen](summaries/chapter14.md) | | Capítulo 15. La interfaz interactiva | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf) | [Resumen](summaries/chapter15.md) | | Capítulo 16. Enlace de datos | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch16-Apr2016.pdf) | [Resumen](summaries/chapter16.md) | | Capítulo 17. Dominio de la cuadrícula | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf) | [Resumen](summaries/chapter17.md) | | Capítulo 18. MVVM | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf) | [Resumen](summaries/chapter18.md) | | Capítulo 19. Vistas de colecciones | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch19-Apr2016.pdf) | [Resumen](summaries/chapter19.md) | | Capítulo 20. Asincronía y E/S de archivos | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) | [Resumen](summaries/chapter20.md) | | Capítulo 21. Transformaciones | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch21-Apr2016.pdf) | [Resumen](summaries/chapter21.md) | | Capítulo 22. Animación | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf) | [Resumen](summaries/chapter22.md) | | Capítulo 23. Desencadenadores y comportamientos | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch23-Apr2016.pdf) | [Resumen](summaries/chapter23.md) | | Capítulo 24. Navegación de páginas | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch24-Apr2016.pdf) | [Resumen](summaries/chapter24.md) | | Capítulo 25. Variedades de páginas | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch25-Apr2016.pdf) | [Resumen](summaries/chapter25.md) | | Capítulo 26. Diseños personalizados | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch26-Apr2016.pdf) | [Resumen](summaries/chapter26.md) | | Capítulo 27. Representadores personalizados | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) | [Resumen](summaries/chapter27.md) | | Capítulo 28. Ubicación y mapas | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch28-Aug2016.pdf) | [Resumen](summaries/chapter28.md) |
+| ------- | ------------- | ------- |
+| Capítulo 1. ¿Cómo encaja Xamarin.Forms? | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch01-Apr2016.pdf) | [Resumen](summaries/chapter01.md) |
+| Capítulo 2. Anatomía de una aplicación | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf) | [Resumen](summaries/chapter02.md) |
+| Capítulo 3. Profundizar en el texto | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf) | [Resumen](summaries/chapter03.md) |
+| Capítulo 4. Desplazamiento de la pila | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch04-Apr2016.pdf) | [Resumen](summaries/chapter04.md) |
+| Capítulo 5. La cuestión de los tamaños | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch05-Apr2016.pdf) | [Resumen](summaries/chapter05.md) |
+| Capítulo 6. Clics de botón | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf) | [Resumen](summaries/chapter06.md) |
+| Capítulo 7. Código XAML o Código | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf) | [Resumen](summaries/chapter07.md) |
+| Capítulo 8. Código y XAML en armonía | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf) | [Resumen](summaries/chapter08.md) |
+| Capítulo 9. Llamadas de API específicas de la plataforma | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch09-Apr2016.pdf) | [Resumen](summaries/chapter09.md) |
+| Capítulo 10. Extensiones de marcado XAML | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch10-Apr2016.pdf) | [Resumen](summaries/chapter10.md) |
+| Capítulo 11. La infraestructura enlazable | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch11-Apr2016.pdf) | [Resumen](summaries/chapter11.md) |
+| Capítulo 12. Estilos | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch12-Apr2016.pdf) | [Resumen](summaries/chapter12.md) |
+| Capítulo 13. Mapas de bits | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf) | [Resumen](summaries/chapter13.md) |
+| Capítulo 14. Diseño absoluto | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch14-Apr2016.pdf) | [Resumen](summaries/chapter14.md) |
+| Capítulo 15. La interfaz interactiva | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf) | [Resumen](summaries/chapter15.md) |
+| Capítulo 16. Enlace de datos | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch16-Apr2016.pdf) | [Resumen](summaries/chapter16.md) |
+| Capítulo 17. Dominio de la cuadrícula | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf) | [Resumen](summaries/chapter17.md) |
+| Capítulo 18. MVVM | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf) | [Resumen](summaries/chapter18.md) |
+| Capítulo 19. Vistas de colección | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch19-Apr2016.pdf) | [Resumen](summaries/chapter19.md) |
+| Capítulo 20. Asincronía y E/S de archivos | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) | [Resumen](summaries/chapter20.md) |
+| Capítulo 21. Transformaciones | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch21-Apr2016.pdf) | [Resumen](summaries/chapter21.md) |
+| Capítulo 22. Animación | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf) | [Resumen](summaries/chapter22.md) |
+| Capítulo 23. Desencadenadores y comportamientos | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch23-Apr2016.pdf) | [Resumen](summaries/chapter23.md) |
+| Capítulo 24. Navegación de páginas | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch24-Apr2016.pdf) | [Resumen](summaries/chapter24.md) |
+| Capítulo 25. Variedades de páginas | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch25-Apr2016.pdf) | [Resumen](summaries/chapter25.md) |
+| Capítulo 26. Diseños personalizados | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch26-Apr2016.pdf) | [Resumen](summaries/chapter26.md) |
+| Capítulo 27. Representadores personalizados | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) | [Resumen](summaries/chapter27.md) |
+| Capítulo 28. Ubicación y mapas | [Descargar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch28-Aug2016.pdf) | [Resumen](summaries/chapter28.md) |
 
 ## <a name="ways-in-which-the-book-is-outdated"></a>Por qué el libro está obsoleto
 

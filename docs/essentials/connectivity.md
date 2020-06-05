@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: Conectividad'
-description: La clase Connectivity en Xamarin.Essentials permite supervisar los cambios en las condiciones de red del dispositivo, revisar el acceso actual a la red y cómo está conectado actualmente.
-ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 01/08/2019
-ms.custom: video
-ms.openlocfilehash: c70510f7b47f93c6119532b6a1c06f6c2e9e56ea
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "67855760"
+title: "Xamarin.Essentials: conectividad" description: "La clase Connectivity de Xamarin.Essentials permite supervisar los cambios en las condiciones de red del dispositivo, comprobar el acceso actual a la red y cómo está conectado actualmente."
+ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49 author: jamesmontemagno ms.author: jamont ms.date: 01/08/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: Conectividad
 
 La clase **Connectivity** permite supervisar los cambios en las condiciones de red del dispositivo, revisar el acceso actual a la red y cómo está conectado actualmente.
@@ -55,7 +45,7 @@ No se requiere configuración adicional.
 
 ## <a name="using-connectivity"></a>Uso de Connectivity
 
-Agregue una referencia a Xamarin.Essentials en su clase:
+Agregue una referencia a Xamarin.Essentials en la clase:
 
 ```csharp
 using Xamarin.Essentials;

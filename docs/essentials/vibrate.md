@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: Vibración'
-description: En este documento se describe la clase Vibration de Xamarin.Essentials, que permite iniciar y detener la funcionalidad de vibración durante un período de tiempo determinado.
-ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: a002cd6ed183ffeafef92cb40d48b2792347714d
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149841"
+title: "Xamarin.Essentials: vibración" description: "En este documento se describe la clase Vibration de Xamarin.Essentials, que permite iniciar y detener la funcionalidad de vibración durante un período de tiempo determinado."
+ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: Vibración
 
 La clase **Vibration** permite iniciar y detener la funcionalidad de vibración durante un período de tiempo determinado.
@@ -55,7 +45,7 @@ No hay diferencias entre las plataformas.
 
 ## <a name="using-vibration"></a>Uso de Vibration
 
-Agregue una referencia a Xamarin.Essentials en su clase:
+Agregue una referencia a Xamarin.Essentials en la clase:
 
 ```csharp
 using Xamarin.Essentials;

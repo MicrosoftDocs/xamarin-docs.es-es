@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: Almacenamiento seguro'
-description: En este documento se describe la clase SecureStorage de Xamarin.Essentials, que ayuda a almacenar pares clave-valor sencillos de manera segura. Describe cómo usar la clase, especificaciones de implementación de la plataforma y limitaciones.
-ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 04/02/2019
-ms.custom: video
-ms.openlocfilehash: 41d9efa66318f4c3f5315351d3c1f51b4e503521
-ms.sourcegitcommit: 44c44ad60c5c880a39006493aedd2d7aa834a27e
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550905"
+title: "Xamarin.Essentials: almacenamiento seguro" description: "En este documento se describe la clase SecureStorage de Xamarin.Essentials, que ayuda a almacenar pares clave-valor sencillos de manera segura. Se describe cómo usar la clase, los detalles de implementación de la plataforma y las limitaciones."
+ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64 author: jamesmontemagno ms.author: jamont ms.date: 04/02/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Almacenamiento seguro
 
 La clase **SecureStorage** ayuda a almacenar pares de clave-valor sencillos de manera segura.
@@ -26,7 +16,7 @@ Para acceder a la funcionalidad **SecureStorage**, se requiere la siguiente conf
 # <a name="android"></a>[Android](#tab/android)
 
 > [!TIP]
-> [Copia de seguridad para aplicaciones](https://developer.android.com/guide/topics/data/autobackup) es una característica de Android 6.0 (nivel de API 23) y versiones posteriores que crea copias de seguridad de los datos de aplicación del usuario (preferencias compartidas, archivos en el almacenamiento interno de la aplicación y otros archivos específicos). Los datos se restauran cuando se reinstala o instala una aplicación en un dispositivo nuevo. Esto puede afectar a `SecureStorage`, que utiliza las preferencias compartidas de las que se creó una copia de seguridad y que no se pueden descifrar cuando se realiza la restauración. Xamarin.Essentials controla automáticamente este caso al quitar la clave para que se pueda restablecer, pero puede dar un paso adicional si deshabilita Copia de seguridad automática.
+> [Copia de seguridad para aplicaciones](https://developer.android.com/guide/topics/data/autobackup) es una característica de Android 6.0 (nivel de API 23) y versiones posteriores que crea copias de seguridad de los datos de aplicación del usuario (preferencias compartidas, archivos en el almacenamiento interno de la aplicación y otros archivos específicos). Los datos se restauran cuando se reinstala o instala una aplicación en un dispositivo nuevo. Esto puede afectar a `SecureStorage`, que utiliza las preferencias compartidas de las que se creó una copia de seguridad y que no se pueden descifrar cuando se realiza la restauración. Xamarin.Essentials controla automáticamente este caso quitando la clave para que se pueda restablecer, pero puede dar un paso adicional deshabilitando Copia de seguridad automática.
 
 ### <a name="enable-or-disable-backup"></a>Habilitación o deshabilitación de copia de seguridad
 Puede elegir deshabilitar Copia de seguridad automática para toda la aplicación al establecer el valor `android:allowBackup` en false en el archivo `AndroidManifest.xml`. Este enfoque solo se recomienda si planea restaurar los datos de otra manera.
@@ -63,7 +53,7 @@ Es posible configurar Copia de seguridad automática para deshabilitar la copia 
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-Cuando desarrolle en el **emulador de iOS**, habilite el derecho **Keychain** y agregue un grupo de acceso de cadena de claves para el identificador de agrupación de la aplicación. 
+Cuando desarrolle en el **emulador de iOS**, habilite el derecho **Keychain** y agregue un grupo de acceso de cadena de claves para el identificador de agrupación de la aplicación.
 
 Abra **Entitlements.plist** en el proyecto de iOS, busque el derecho **Keychain** y habilítelo. Esto agregará automáticamente el identificador de la aplicación como grupo.
 
@@ -80,7 +70,7 @@ No se requiere configuración adicional.
 
 ## <a name="using-secure-storage"></a>Uso de Secure Storage
 
-Agregue una referencia a Xamarin.Essentials en su clase:
+Agregue una referencia a Xamarin.Essentials en la clase:
 
 ```csharp
 using Xamarin.Essentials;
@@ -161,7 +151,7 @@ Los valores cifrados se almacenan en `ApplicationData.Current.LocalSettings`, de
 
 ## <a name="limitations"></a>Limitaciones
 
-Esta API está pensada para almacenar pequeñas cantidades de texto.  El rendimiento puede ser lento si intenta usarla para almacenar grandes cantidades de texto. 
+Esta API está pensada para almacenar pequeñas cantidades de texto.  El rendimiento puede ser lento si intenta usarla para almacenar grandes cantidades de texto.
 
 ## <a name="api"></a>API
 

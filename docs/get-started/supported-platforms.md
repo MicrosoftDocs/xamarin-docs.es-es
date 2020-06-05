@@ -1,40 +1,29 @@
 ---
-title: Plataformas compatibles con Xamarin.Forms
-description: Requisitos de sistema de desarrollo y plataformas para Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/22/2020
-ms.openlocfilehash: 5751983bf4a818e8ee91af98b0c05658efaca8b2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303622"
+title: "Plataformas admitidas para Xamarin.Forms" description: "Requisitos de sistema de desarrollo y plataformas para Xamarin.Forms."
+ms.prod: xamarin ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/22/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
-# <a name="xamarinforms-supported-platforms"></a>Plataformas compatibles con Xamarin.Forms
 
-Las aplicaciones de Xamarin.Forms pueden escribirse para los siguientes sistemas operativos:
+# <a name="xamarinforms-supported-platforms"></a>Plataformas admitidas para Xamarin.Forms
+
+Las aplicaciones en Xamarin.Forms se pueden escribir para los siguientes sistemas operativos:
 
 - iOS 9 o versiones posteriores.
 - Android 4.4 (API 19) o versiones posteriores ([más detalles](#android-platform-support)). Pero se recomienda Android 5.0 (API 21) como la API mínima. Esto garantiza la compatibilidad total con todas las bibliotecas de compatibilidad de Android, a la vez que se destina a la mayoría de los dispositivos Android.
 - Plataforma universal de Windows de Windows 10.
 
-Las aplicaciones Xamarin.Forms para iOS, Android y la plataforma universal de Windows (UWP) se pueden compilar en Visual Studio. Pero se necesita un equipo Mac en red para el desarrollo de iOS con la última versión de Xcode y la versión mínima de macOS que especifica Apple. Para más información, vea [Requisitos de Windows](~/cross-platform/get-started/requirements.md#windows-requirements).
+Las aplicaciones en Xamarin.Forms para iOS, Android y la Plataforma universal de Windows (UWP) se pueden compilar en Visual Studio. Pero se necesita un equipo Mac en red para el desarrollo de iOS con la última versión de Xcode y la versión mínima de macOS que especifica Apple. Para más información, vea [Requisitos de Windows](~/cross-platform/get-started/requirements.md#windows-requirements).
 
-Las aplicaciones Xamarin.Forms para iOS y Android se pueden compilar en Visual Studio para Mac. Para más información, vea [Requisitos de macOS](~/cross-platform/get-started/requirements.md#macos-requirements).
+Las aplicaciones en Xamarin.Forms para iOS y Android se pueden compilar en Visual Studio para Mac. Para más información, vea [Requisitos de macOS](~/cross-platform/get-started/requirements.md#macos-requirements).
 
 > [!NOTE]
-> Para desarrollar aplicaciones con Xamarin.Forms es necesario estar familiarizado con [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md).
+> Para desarrollar aplicaciones con Xamarin.Forms es necesario familiarizarse con [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md).
 
 ## <a name="additional-platform-support"></a>Compatibilidad con plataforma adicional
 
 Xamarin.Forms admite otras plataformas además de iOS, Android y Windows:
 
 - Samsung Tizen
-- macOS
+- macOS 10.13 o posterior
 - GTK#
 - WPF
 
@@ -66,7 +55,7 @@ Además, la versión de compilación o de destino de los proyectos de Android **
 
 ## <a name="deprecated-platforms"></a>Plataformas en desuso
 
-Cuando se usa Xamarin.Forms 3.0 o una versión posterior no se admiten estas plataformas:
+No se admiten estas plataformas cuando se usa Xamarin.Forms 3.0 o una versión más reciente:
 
 - *Windows 8.1 / Windows Phone 8.1 WinRT*
 - *Windows Phone 8 Silverlight*

@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: Map'
-description: La clase Map de Xamarin.Essentials permite que una aplicación abra la aplicación de mapas instalada en una ubicación o marca de posición específica.
-ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 05/26/2020
-ms.custom: video
-ms.openlocfilehash: 16f4a69e2d9216bb2e03fbcb663403d198b42c98
-ms.sourcegitcommit: 6a6cbb62bcf149f9515ee8868679a8a07ce17956
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83862721"
+title: "Xamarin.Essentials: mapa" description: "La clase Map de Xamarin.Essentials permite que una aplicación abra la aplicación instalada de mapas con una ubicación o marca de posición específica."
+ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33 author: jamesmontemagno ms.author: jamont ms.date: 05/26/2020 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-map"></a>Xamarin.Essentials: Asignación
 
 La clase **Map** permite que una aplicación abra la aplicación de mapas instalada en una ubicación o marca de posición específica.
@@ -23,7 +13,7 @@ La clase **Map** permite que una aplicación abra la aplicación de mapas instal
 
 ## <a name="using-map"></a>Uso de Map
 
-Agregue una referencia a Xamarin.Essentials en su clase:
+Agregue una referencia a Xamarin.Essentials en la clase:
 
 ```csharp
 using Xamarin.Essentials;
@@ -142,7 +132,7 @@ public class MapTest
 
 # <a name="android"></a>[Android](#tab/android)
 
-Android usa el esquema `geo:` de URI para iniciar la aplicación de mapas en el dispositivo. Esto podría pedirle al usuario que seleccione de una aplicación existente que admite este esquema de URI.  Xamarin.Essentials se probó con Google Maps, que admite este esquema.
+Android usa el esquema `geo:` de URI para iniciar la aplicación de mapas en el dispositivo. Esto podría pedirle al usuario que seleccione de una aplicación existente que admite este esquema de URI.  Xamarin.Essentials se ha probado con Google Maps, que admite este esquema.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
