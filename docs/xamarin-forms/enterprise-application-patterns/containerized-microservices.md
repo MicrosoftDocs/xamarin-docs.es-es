@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a05090c18039f9d3a7f9376285ce2863e0482903
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139261"
+Título: "microservicios en contenedores" Descripción: "en este capítulo se explica cómo usar microservicios y contenedores para crear aplicaciones en la nube modernas, escalables y confiables".
+MS. Prod: Xamarin ms. AssetID: 5872ad92-04e0-4f1a-9691-79d5602f5683 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="containerized-microservices"></a>Microservicios en contenedores
 
 El desarrollo de aplicaciones cliente-servidor ha provocado un enfoque en la creación de aplicaciones en capas que usan tecnologías específicas en cada nivel. Estas aplicaciones a menudo se denominan aplicaciones *monolíticas* y se empaquetan en el hardware que se ha ajustado previamente para cargas máximas. Los principales inconvenientes de este enfoque de desarrollo son el acoplamiento estrecho entre los componentes de cada nivel, los componentes individuales no se pueden escalar fácilmente y el costo de las pruebas. Una actualización simple puede tener efectos imprevistos en el resto del nivel, por lo que un cambio en un componente de la aplicación requiere que se vuelva a probar y volver a implementar todo el nivel.
@@ -93,11 +79,9 @@ La aplicación de referencia de eShopOnContainers usa Docker para hospedar cuatr
 
 La arquitectura de los servicios back-end de la aplicación de referencia se descompone en varios subsistemas autónomos en forma de los microservicios y contenedores de colaboración. Cada microservicio proporciona un área única de funcionalidad: un servicio de identidad, un servicio de catálogo, un servicio de pedidos y un servicio de cesta.
 
-Cada microservicio tiene su propia base de datos, lo que le permite desacoplarlo por completo de los otros microservicios. Cuando sea necesario, la coherencia entre las bases de datos de diferentes microservicios se logra mediante eventos de nivel de aplicación. Para obtener más información, consulte [comunicación entre microservicios](#communication_between_microservices).
+Cada microservicio tiene su propia base de datos, lo que le permite desacoplarlo por completo de los otros microservicios. Cuando sea necesario, la coherencia entre las bases de datos de diferentes microservicios se logra mediante eventos de nivel de aplicación. Para obtener más información, consulte [comunicación entre microservicios](#communication-between-microservices).
 
 Para obtener más información acerca de la aplicación de referencia, consulte [microservicios de .net: arquitectura para aplicaciones .net en contenedor](https://aka.ms/microservicesebook).
-
-<a name="communication_between_client_and_microservices" />
 
 ## <a name="communication-between-client-and-microservices"></a>Comunicación entre cliente y microservicios
 
@@ -111,8 +95,6 @@ Con la comunicación directa de cliente a microservicio, la aplicación móvil r
 
 > [!TIP]
 > Considere el uso de la comunicación de puerta de enlace de API. La comunicación directa entre el cliente y el microservicio puede tener inconvenientes al compilar una aplicación grande y compleja basada en microservicios, pero es más que adecuada para una aplicación pequeña. Al diseñar una aplicación grande basada en microservicios con decenas de microservicios, considere la posibilidad de usar la comunicación de puerta de enlace de API. Para obtener más información, vea [microservicios de .net: arquitectura para aplicaciones .net en contenedor](https://aka.ms/microservicesebook).
-
-<a name="communication_between_microservices" />
 
 ## <a name="communication-between-microservices"></a>Comunicación entre microservicios
 

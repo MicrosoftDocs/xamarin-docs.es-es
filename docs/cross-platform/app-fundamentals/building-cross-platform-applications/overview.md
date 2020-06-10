@@ -1,17 +1,17 @@
 ---
 title: Información general sobre la creación de aplicaciones multiplataforma
-description: En este documento se proporciona información general de alto nivel sobre la creación de aplicaciones multiplataforma. Describe el valor de, modelos C#de diseño como MVC/MVVM y ius nativas.
+description: En este documento se proporciona información general de alto nivel sobre la creación de aplicaciones multiplataforma. Describe el valor de C#, modelos de diseño como MVC/MVVM y ius nativas.
 ms.prod: xamarin
 ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 7d839e0141f14f4ba86897b128bf2a8c0a79548d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: de8c66e6a89f035b8370a2139361d3e942aa9c09
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016909"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571212"
 ---
 # <a name="building-cross-platform-applications-overview"></a>Información general sobre la creación de aplicaciones multiplataforma
 
@@ -25,9 +25,9 @@ Xamarin no es solo una plataforma de "escritura en todas partes", ya que una de 
 
 A continuación se muestra un resumen de los puntos clave para crear aplicaciones de Xamarin multiplataforma:
 
-- **Use C#**  : escriba las aplicaciones en C#. El código existente escrito C# en se puede migrar a iOS y Android con Xamarin con facilidad y se usa obviamente en aplicaciones de Windows.
+- **Usar c#** : escriba las aplicaciones en c#. El código existente escrito en C# se puede migrar a iOS y Android con Xamarin con facilidad y se usa obviamente en aplicaciones de Windows.
 - **Usar patrones de diseño de MVC o MVVM** : desarrolle la interfaz de usuario de la aplicación mediante el patrón de modelo/vista/controlador. Diseñe su aplicación mediante un enfoque de modelo/vista/controlador o un enfoque de modelo/vista/ViewModel en el que hay una separación clara entre el "modelo" y el resto. Determine qué partes de la aplicación van a usar elementos de interfaz de usuario nativos de cada plataforma (iOS, Android, Windows y Mac) y úselas como guía para dividir la aplicación en dos componentes: "Core" y "User-Interface".
-- **Crear ius nativa** : cada aplicación específica del sistema operativo proporciona un nivel de interfaz de usuario diferente ( C# implementado en con la ayuda de las herramientas de diseño de interfaz de usuario nativas):
+- **Crear ius nativa** : cada aplicación específica del sistema operativo proporciona una capa de interfaz de usuario diferente (implementada en C# con la ayuda de las herramientas de diseño de interfaz de usuario nativas):
 
 1. En iOS, use las API de UIKit para crear aplicaciones de aspecto nativo y, opcionalmente, utilizar el diseñador de iOS de Xamarin para crear visualmente la interfaz de usuario.
 1. En Android, use Android. views para crear aplicaciones de aspecto nativo, aprovechando el diseñador de la interfaz de usuario de Xamarin.
@@ -47,15 +47,15 @@ Para aumentar la cantidad de reutilización del código, puede adoptar component
 
 Algunos de estos componentes se implementan en el caso práctico de *tarea* .
 
- <a name="Separate_Reusable_Code_into_a_Core_Library" />
+ <a name="Separate_Reusable_Code_into_a_Core_Library"></a>
 
 ## <a name="separate-reusable-code-into-a-core-library"></a>Separar el código reutilizable en una biblioteca principal
 
-Al seguir el principio de separación de la responsabilidad mediante la disposición en capas de la arquitectura de la aplicación y, a continuación, la funcionalidad básica que es independiente de la plataforma en una biblioteca principal reutilizable, puede maximizar el uso compartido de código entre plataformas, como en la ilustración siguiente. muestra
+Al seguir el principio de separación de la responsabilidad mediante la disposición en capas de la arquitectura de la aplicación y, a continuación, la funcionalidad básica que es independiente de la plataforma en una biblioteca principal reutilizable, puede maximizar el uso compartido de código entre plataformas, como se muestra en la ilustración siguiente:
 
  ![](overview-images/layers2.png "By following the principle of separation of responsibility by layering your application architecture and then moving core functionality that is platform agnostic into a reusable core library, you can maximize code sharing across platforms")
 
- <a name="Case_Studies" />
+ <a name="Case_Studies"></a>
 
 ## <a name="case-studies"></a>Casos prácticos
 

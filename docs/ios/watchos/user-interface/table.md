@@ -7,21 +7,21 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 522f90c21c46eaf75a730108cc46fc64769795d7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 015f0732e4d8cdf771af3e1d0b3cc3e31b6e806c
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032666"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572276"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Controles de tabla watchos en Xamarin
 
-El control de `WKInterfaceTable` watchos es mucho más sencillo que el homólogo de iOS, pero realiza un rol similar. Crea una lista de desplazamiento de filas que puede tener diseños personalizados y que responden a los eventos de toque.
+El control watchos `WKInterfaceTable` es mucho más sencillo que su homólogo de iOS, pero realiza un rol similar. Crea una lista de desplazamiento de filas que puede tener diseños personalizados y que responden a los eventos de toque.
 
 ![](table-images/table-list-sml.png "Lista de la tabla de inspección") ![](table-images/table-detail-sml.png)
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
-## <a name="adding-a-table"></a>Agregar una tabla
+## <a name="adding-a-table"></a>Adición de tablas
 
 Arrastre el control **tabla** hasta una escena. De forma predeterminada, tendrá el siguiente aspecto (mostrando un solo diseño de fila no especificado):
 
@@ -37,11 +37,11 @@ Para establecer la **clase** para el controlador de filas, seleccione la fila en
 
 [![](table-images/add-row-controller-sml.png "Entering a class name in the Properties pad")](table-images/add-row-controller.png#lightbox)
 
-Una vez establecida la clase para el controlador de la fila, el IDE creará un C# archivo correspondiente en el proyecto. Arrastre los controles (como etiquetas) a la fila y asígneles nombres para que se pueda hacer referencia a ellos en el código.
+Una vez establecida la clase para el controlador de la fila, el IDE creará un archivo de C# correspondiente en el proyecto. Arrastre los controles (como etiquetas) a la fila y asígneles nombres para que se pueda hacer referencia a ellos en el código.
 
 ## <a name="create-and-populate-rows"></a>Crear y rellenar filas
 
-`SetNumberOfRows` crea las clases de controlador de filas para cada fila, utilizando el `Identifier` para seleccionar el correcto. Si asignó un `Identifier` personalizado al controlador de filas, cambie el **valor predeterminado** en el fragmento de código siguiente al identificador que ha usado. El `RowController` *para cada fila* se crea cuando se llama a `SetNumberOfRows` y se muestra la tabla.
+`SetNumberOfRows`crea las clases de controlador de filas para cada fila, utilizando `Identifier` para seleccionar el correcto. Si dio a su controlador de filas un personalizado `Identifier` , cambie el **valor predeterminado** en el fragmento de código que aparece a continuación por el identificador que ha usado. La `RowController` *columna para cada fila* se crea cuando `SetNumberOfRows` se llama a y se muestra la tabla.
 
 ```csharp
 myTable.SetNumberOfRows ((nint)rows.Count, "default");
@@ -61,18 +61,18 @@ for (var i = 0; i < rows.Count; i++) {
 ```
 
 > [!IMPORTANT]
-> El uso de `SetNumberOfRows` y, a continuación, recorrer en bucle el uso de `GetRowController` hace que toda la tabla se envíe al reloj. En las vistas posteriores de la tabla, si necesita agregar o quitar filas específicas, use `InsertRowsAt` y `RemoveRowsAt` para obtener un mejor rendimiento.
+> El uso de `SetNumberOfRows` y, a continuación, recorrer en iteración `GetRowController` el uso de hace que se envíe toda la tabla al reloj. En las vistas posteriores de la tabla, si necesita agregar o quitar filas específicas, use `InsertRowsAt` y `RemoveRowsAt` para mejorar el rendimiento.
 
 ## <a name="respond-to-taps"></a>Responder a los grifos
 
 Puede responder a la selección de filas de dos maneras diferentes:
 
-- Implemente el método `DidSelectRow` en el controlador de la interfaz, o bien
+- Implemente el `DidSelectRow` método en el controlador de interfaz o
 - Cree un segue en el guion gráfico e implemente `GetContextForSegue` si desea que la selección de fila abra otra escena.
 
 ### <a name="didselectrow"></a>DidSelectRow
 
-Para controlar mediante programación la selección de filas, implemente el método `DidSelectRow`. Para abrir una nueva escena, use `PushController` y pase el identificador de la escena y el contexto de datos que se va a usar:
+Para controlar mediante programación la selección de filas, implemente el `DidSelectRow` método. Para abrir una nueva escena, use `PushController` y pase el identificador de la escena y el contexto de datos que se va a usar:
 
 ```csharp
 public override void DidSelectRow (WKInterfaceTable table, nint rowIndex)
@@ -87,9 +87,9 @@ public override void DidSelectRow (WKInterfaceTable table, nint rowIndex)
 ### <a name="getcontextforsegue"></a>GetContextForSegue
 
 Arrastre un segue del guion gráfico desde la fila de la tabla a otra escena (mantenga presionada la tecla **control** mientras arrastra).
-Asegúrese de seleccionar segue y asígnele un identificador en el panel de **propiedades** (por ejemplo, `secondLevel` en el ejemplo siguiente).
+Asegúrese de seleccionar segue y asígnele un identificador en el panel de **propiedades** (por `secondLevel` ejemplo, en el ejemplo siguiente).
 
-En el controlador de interfaz, implemente el método `GetContextForSegue` y devuelva el contexto de datos que se debe proporcionar a la escena presentada por segue.
+En el controlador de interfaz, implemente el `GetContextForSegue` método y devuelva el contexto de datos que se debe proporcionar a la escena presentada por segue.
 
 ```csharp
 public override NSObject GetContextForSegue (string segueIdentifier, WKInterfaceTable table, nint rowIndex)
@@ -101,7 +101,7 @@ public override NSObject GetContextForSegue (string segueIdentifier, WKInterface
 }
 ```
 
-Estos datos se pasan a la escena del guión gráfico de destino en su método `Awake`.
+Estos datos se pasan a la escena del guión gráfico de destino en su `Awake` método.
 
 ## <a name="multiple-row-types"></a>Varios tipos de filas
 
@@ -113,7 +113,7 @@ Si establece la propiedad **Rows** en **3** , se crearán marcadores de posició
 
 ![](table-images/prototype-rows2.png "The prototype rows in the designer")
 
-Para rellenar una tabla con distintos tipos de fila, use el método `SetRowTypes` para especificar el tipo de controlador de filas que se va a utilizar para cada fila de la tabla. Use los identificadores de la fila para especificar qué controlador de filas se debe utilizar para cada fila.
+Para rellenar una tabla con distintos tipos de fila, use el `SetRowTypes` método para especificar el tipo de controlador de filas que se va a utilizar para cada fila de la tabla. Use los identificadores de la fila para especificar qué controlador de filas se debe utilizar para cada fila.
 
 El número de elementos de esta matriz debe coincidir con el número de filas que espera que estén en la tabla:
 
@@ -147,13 +147,13 @@ watchos 3 presentó una nueva característica para las tablas: la capacidad de d
 > [!IMPORTANT]
 > Esta característica solo está disponible actualmente editando el guión gráfico en Xcode Interface Builder.
 
-Para habilitar esta característica, seleccione la `WKInterfaceTable` en la superficie de diseño y marque la opción de **paginación detalle vertical** :
+Para habilitar esta característica, seleccione `WKInterfaceTable` en la superficie de diseño y marque la opción de **paginación detalle vertical** :
 
 ![](table-images/vertical-detail-paging-sml.png "Selecting the Vertical Detail Paging option")
 
-Como se [explica en Apple,](https://developer.apple.com/reference/watchkit/wkinterfacetable#1682023) la navegación por la tabla debe usar objetos segue para que funcione la característica de paginación. Vuelva a escribir el código existente que usa `PushController` para usar objetos segue en su lugar.
+Como se [explica en Apple,](https://developer.apple.com/reference/watchkit/wkinterfacetable#1682023) la navegación por la tabla debe usar objetos segue para que funcione la característica de paginación. Vuelva a escribir el código existente que usa `PushController` para utilizar objetos segue en su lugar.
 
-<a name="add_row_controller" />
+<a name="add_row_controller"></a>
 
 ## <a name="appendix-row-controller-code-example"></a>Apéndice: ejemplo de código del controlador de filas
 
@@ -176,7 +176,7 @@ namespace WatchTablesExtension
 }
 ```
 
-El otro archivo **. Designer.CS** es una definición de clase parcial que contiene las salidas y las acciones que se crean en la superficie del diseñador, como este ejemplo con un control `WKInterfaceLabel`:
+El otro archivo **. Designer.CS** es una definición de clase parcial que contiene las salidas y las acciones que se crean en la superficie del diseñador, como este ejemplo con un `WKInterfaceLabel` control:
 
 ```csharp
 using Foundation;

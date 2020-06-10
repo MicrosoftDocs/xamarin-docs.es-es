@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: b9b4d201e02d60bd6131c8693d9ac6a233e4fe10
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 4e2ff46174d9dbb9171a470c389ffe301f6d0d60
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306216"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569652"
 ---
 # <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Implementación y prueba de aplicaciones de watchos con Xamarin
 
@@ -36,15 +36,15 @@ Tanto si está implementando en una inspección de pruebas como si está cargand
   - [Implemente en un Apple Watch para las pruebas](~/ios/watchos/deploy-test/device.md), o bien
   - [Cargar en la tienda de aplicaciones](~/ios/watchos/deploy-test/appstore.md).
 
-<a name="App_IDs"/>
+<a name="App_IDs"></a>
 
 ## <a name="app-ids"></a>Identificadores de aplicación
 
 Como se describe en las [instrucciones de configuración](~/ios/watchos/get-started/installation.md), los tres proyectos de una aplicación de inspección tienen identificadores de lote relacionados, como:
 
-- Proyecto Unificado de Xamarin. iOS: `com.xamarin.WatchKitCatalog`
-- Proyecto de extensión de WatchKit: `com.xamarin.WatchKitCatalog.watchkitextension`
-- Proyecto de la aplicación de inspección: `com.xamarin.WatchKitCatalog.watchkitapp`
+- Proyecto Unificado de Xamarin. iOS:`com.xamarin.WatchKitCatalog`
+- Proyecto de extensión WatchKit-`com.xamarin.WatchKitCatalog.watchkitextension`
+- Proyecto de la aplicación de inspección:`com.xamarin.WatchKitCatalog.watchkitapp`
 
 Los tres proyectos requieren un perfil de aprovisionamiento de distribución coincidente, ya sea mediante el uso de identificadores de aplicación explícitos para cada uno o un identificador de aplicación comodín.
 
@@ -60,13 +60,13 @@ Tendrá que crear un perfil de aprovisionamiento de distribución para cada iden
 
 ### <a name="wildcard-app-id"></a>IDENTIFICADOR de aplicación comodín
 
-Como alternativa, puede crear un identificador de **aplicación** comodín que coincida con los tres proyectos, como `com.xamarin.*`.
+Como alternativa, puede crear un identificador de **aplicación** comodín que coincida con los tres proyectos, como `com.xamarin.*` .
 
 Tenga en cuenta que algunas características no se pueden usar con un identificador de aplicación comodín (por ejemplo, notificaciones de envío). Si la aplicación requiere estas características, debe crear identificadores de aplicación explícitos.
 
 Para la distribución, solo necesitará crear un perfil de aprovisionamiento de distribución para el identificador de aplicación comodín.
 
-<a name="App_Groups" />
+<a name="App_Groups"></a>
 
 ## <a name="app-groups"></a>Grupos de aplicaciones
 
@@ -78,7 +78,7 @@ Puede usar un grupo de aplicaciones para compartir datos entre la aplicación iO
 
 ### <a name="certificates-identifiers--profiles"></a>Certificados, identificadores & perfiles
 
-Para usar un grupo de aplicaciones, cree una entrada en la pantalla **grupos de aplicaciones** . En el ejemplo siguiente, se asigna un nombre al grupo con el mismo estilo DNS inverso que se usa normalmente para los identificadores de aplicación, pero con el prefijo `group.` (necesario):
+Para usar un grupo de aplicaciones, cree una entrada en la pantalla **grupos de aplicaciones** . En el ejemplo siguiente, se asigna un nombre al grupo con el mismo estilo DNS inverso que se usa normalmente para los identificadores de aplicación, pero con el `group.` prefijo (que es obligatorio):
 
 ![El identificador](images/appgroups-new-sml.png)
 

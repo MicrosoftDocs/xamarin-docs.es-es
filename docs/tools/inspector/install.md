@@ -6,12 +6,12 @@ ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: 19c4a15fb2490c7bace4798b0cb8e062b1379a04
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 39e7a6c86a2d4ab4231a29c0e1014de702af01ac
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306306"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573422"
 ---
 # <a name="inspector-installation-and-requirements"></a>Instalación y requisitos del inspector
 
@@ -33,7 +33,7 @@ ms.locfileid: "79306306"
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="supported-operating-systems"></a>Sistemas operativos compatibles
+### <a name="supported-operating-systems"></a>Sistemas operativos admitidos
 
 - **Mac** -OS X 10,11 o superior
 - **Windows** -Windows 7 o posterior (con Internet Explorer 11 o posterior y .net 4.6.1 o superior)
@@ -45,7 +45,7 @@ ms.locfileid: "79306306"
 
 La inspección de aplicaciones activas está disponible para los clientes empresariales.
 
-<a name="supported-platforms" />
+<a name="supported-platforms"></a>
 
 ### <a name="supported-app-platforms"></a>Plataformas de aplicaciones admitidas
 
@@ -53,16 +53,16 @@ La inspección de aplicaciones activas está disponible para los clientes empres
 |--- |--- |--- |
 |Mac|Solo se admite en Visual Studio para Mac|
 |iOS|Compatible con Visual Studio 2017 y Visual Studio para Mac| El comportamiento del vinculador debe establecerse en **no vincular** (en opciones de proyecto de **compilación de iOS** ) |
-|Android|Compatible con Visual Studio 2017 y Visual Studio para Mac|Debe tener como destino Android > = 4.0.3, con **fastdev** habilitado.<br />Debe usar los emuladores de Google, Visual Studio o Xamarin Android. Es posible que los emuladores de Android 7 no permitan la inspección en este momento.|
+|Android|Compatible con Visual Studio 2017 y Visual Studio para Mac|Debe tener como destino Android >= 4.0.3, con **fastdev** habilitado.<br />Debe usar los emuladores de Google, Visual Studio o Xamarin Android. Es posible que los emuladores de Android 7 no permitan la inspección en este momento.|
 |WPF|Solo se admite en Visual Studio 2017|
 
-<a name="reporting-bugs" />
+<a name="reporting-bugs"></a>
 
 ## <a name="reporting-bugs"></a>Informes de errores
 
 Los errores se deben informar directamente a través de Visual Studio:
 
-- **Ayuda > Enviar comentarios > notificar un problema**
+- **Ayuda > enviar comentarios > notificar un problema**
 
 Incluya toda la información siguiente:
 
@@ -72,12 +72,12 @@ Esta información es fundamental.
 
 Visual Studio para Mac
 
-- **Visual Studio > Acerca de Visual Studio > Mostrar detalles > copiar información**
+- **Visual Studio > acerca de Visual Studio > Mostrar detalles > copiar información**
 - Pegar en informe de errores
 
 Visual Studio
 
-- **Ayuda > Acerca de Visual Studio > copiar información**
+- **Ayuda > acerca de Visual Studio > copiar información**
 - Háganoslo saber la versión del sistema operativo y si está ejecutando Windows de 32 bits o de 64 bits.
 
 ### <a name="log-files"></a>Archivos de registro
@@ -91,7 +91,7 @@ Cliente de inspector
 
 1.4. x también ofrece la posibilidad de seleccionar el archivo de registro en Finder (macOS) o en el explorador (Windows) directamente desde el menú principal:
 
-- **Ayuda > Mostrar archivo de registro**
+- **Ayuda > mostrar archivo de registro**
 
 Visual Studio para Mac
 

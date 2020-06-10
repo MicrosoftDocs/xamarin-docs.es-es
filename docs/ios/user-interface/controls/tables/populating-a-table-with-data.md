@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: d03cb6ec6bc364aa63578cd6e2fbb78dbc7fedda
-ms.sourcegitcommit: 05ba8ffb8b34ec881b89e442323f3edd8de18f2e
+ms.openlocfilehash: 9acdde897a3a700d0138cb67db6735a8cce07120
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83546016"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570835"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Rellenar una tabla con datos en Xamarin. iOS
 
@@ -25,7 +25,7 @@ En esta guía se trata:
 - Agregar un índice
 - Agregar encabezados y pies de página
 
-<a name="Subclassing_UITableViewSource" />
+<a name="Subclassing_UITableViewSource"></a>
 
 ## <a name="subclassing-uitableviewsource"></a>Subclase de UITableViewSource
 
@@ -214,7 +214,7 @@ public class MyCell : UITableViewCell
 
 Puede ver ejemplos de los temas descritos anteriormente en el ejemplo **BasicTable** vinculado a este artículo.
 
-<a name="Adding_an_Index" />
+<a name="Adding_an_Index"></a>
 
 ## <a name="adding-an-index"></a>Agregar un índice
 
@@ -261,7 +261,7 @@ public override string[] SectionIndexTitles (UITableView tableView)
 
 Los índices generalmente se usan solo con el estilo de tabla simple.
 
-<a name="Adding_Headers_and_Footers" />
+<a name="Adding_Headers_and_Footers"></a>
 
 ## <a name="adding-headers-and-footers"></a>Agregar encabezados y pies de página
 

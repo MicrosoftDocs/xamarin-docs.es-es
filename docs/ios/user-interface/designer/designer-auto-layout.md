@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 35a8d3aeb00ac73f944712cb31f913f98bd3b6e8
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 5aa3baa6aba76483866911d905687be6c3a5ae4e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306060"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569834"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Diseño automático con el Xamarin Designer para iOS
 
@@ -30,7 +30,7 @@ En esta guía se da por supuesto que conoce los componentes del diseñador en la
 
 Una restricción es una representación matemática de la relación entre dos elementos de la pantalla. Representar una posición del elemento de la interfaz de usuario como una relación matemática resuelve varios problemas asociados con la codificación rígida de la ubicación de un elemento de la interfaz de usuario. Por ejemplo, si fuera a colocar un botón 20px desde la parte inferior de la pantalla en el modo vertical, la posición del botón quedaría fuera de la pantalla en modo horizontal. Para evitar esto, podríamos establecer una restricción que coloque el borde inferior del botón 20px desde la parte inferior de la vista. La posición del borde del botón se calcularía entonces como *Button. Bottom = View. Bottom-20px*, que colocaría el botón 20px desde la parte inferior de la vista en el modo vertical y horizontal. La capacidad de calcular la ubicación en función de una relación matemática es lo que hace que las restricciones resulten útiles en el diseño de la interfaz de usuario.
 
-Cuando se establece una restricción, se crea un objeto `NSLayoutConstraint` que toma como argumentos los objetos que se van a restringir y las propiedades, o *atributos*, sobre los que actuará la restricción. En el diseñador de iOS, los atributos incluyen bordes como el *izquierdo*, *derecho*, *superior*e *inferior* de un elemento. También incluyen atributos de tamaño como el *alto* y el *ancho*, y la ubicación del punto central, *CenterX* y *CenterY*. Por ejemplo, cuando se agrega una restricción a la posición del límite izquierdo de dos botones, el diseñador genera el código siguiente en segundo plano:
+Cuando se establece una restricción, se crea un `NSLayoutConstraint` objeto que toma como argumentos los objetos que se van a restringir y las propiedades, o *atributos*, sobre los que actuará la restricción. En el diseñador de iOS, los atributos incluyen bordes como el *izquierdo*, *derecho*, *superior*e *inferior* de un elemento. También incluyen atributos de tamaño como el *alto* y el *ancho*, y la ubicación del punto central, *CenterX* y *CenterY*. Por ejemplo, cuando se agrega una restricción a la posición del límite izquierdo de dos botones, el diseñador genera el código siguiente en segundo plano:
 
 ```csharp
 View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, NSLayoutRelation.Equal, Button2, NSLayoutAttribute.Left, 1, 10));
@@ -67,7 +67,7 @@ La barra de herramientas restricciones se ha actualizado y ahora consta de dos p
 
 La ventana emergente del editor de restricciones nos permite agregar y actualizar varias restricciones a la vez para una vista Select. Podemos crear varias restricciones de espaciado, relación de aspecto y alineación, como alinear una vista con los bordes izquierdos de dos vistas.
 
-Para editar restricciones en la vista seleccionada, haga clic en los puntos suspensivos para mostrar la elemento flotante: ![restricciones de edición de elemento flotante](designer-auto-layout-images/constraints-popup.png)
+Para editar restricciones en la vista seleccionada, haga clic en los puntos suspensivos para mostrar el elemento flotante: ![ elemento flotante de edición de restricciones](designer-auto-layout-images/constraints-popup.png)
 
 Al abrir las restricciones elemento flotante, se muestran las restricciones predeterminadas en la vista. Podemos establecer todas las restricciones de espaciado seleccionando **todos los lados** del cuadro combinado en la esquina superior derecha y seleccionar **Borrar todo** para quitarlas.
 
@@ -170,7 +170,7 @@ Para resolver errores de colocación de fotogramas, seleccione el botón **Actua
 
 Esto ajustará automáticamente el marco del elemento para que coincida con las posiciones definidas por los controles.
 
-<a name="modifying-in-code" />
+<a name="modifying-in-code"></a>
 
 ## <a name="modifying-constraints-in-code"></a>Modificar restricciones en el código
 
@@ -201,12 +201,12 @@ Dado el siguiente valor para la restricción en el diseñador de iOS:
 
 En lugar de actualizar de forma instantánea la vista adjunta en respuesta a los cambios de restricción, el motor de diseño automático programa un _paso de diseño diferido_ para un futuro próximo. Durante este paso aplazado, no solo se actualiza la restricción de la vista determinada, las restricciones de cada vista de la jerarquía se vuelven a calcular y actualizar para ajustarse al nuevo diseño.
 
-En cualquier momento, puede programar su propio paso de diseño aplazado mediante una llamada a los métodos `SetNeedsLayout` o `SetNeedsUpdateConstraints` de la vista primaria.
+En cualquier momento, puede programar su propio paso de diseño aplazado mediante una llamada a los `SetNeedsLayout` `SetNeedsUpdateConstraints` métodos o de la vista primaria.
 
 El paso de diseño diferido consta de dos pasos únicos a través de la jerarquía de vistas:
 
-- **El paso de actualización** : en este paso, el motor de diseño automático atraviesa la jerarquía de vistas e invoca el método `UpdateViewConstraints` en todos los controladores de vista y el método de `UpdateConstraints` en todas las vistas.
-- **El paso de diseño** : de nuevo, el motor de diseño automático atraviesa la jerarquía de vistas, pero esta vez invoca el método `ViewWillLayoutSubviews` en todos los controladores de vista y el método `LayoutSubviews` en todas las vistas. El método `LayoutSubviews` actualiza la propiedad `Frame` de cada subvista con el rectángulo calculado por el motor de diseño automático.
+- **Paso de actualización** : en este paso, el motor de diseño automático atraviesa la jerarquía de vistas e invoca el `UpdateViewConstraints` método en todos los controladores de vista y el `UpdateConstraints` método en todas las vistas.
+- **El paso de diseño** : de nuevo, el motor de diseño automático atraviesa la jerarquía de vistas, pero esta vez invoca el `ViewWillLayoutSubviews` método en todos los controladores de vista y el `LayoutSubviews` método en todas las vistas. El `LayoutSubviews` método actualiza la `Frame` propiedad de cada subvista con el rectángulo calculado por el motor de diseño automático.
 
 ### <a name="animating-constraint-changes"></a>Animar cambios de restricciones
 
@@ -222,7 +222,7 @@ View.LayoutIfNeeded();
 UIView.CommitAnimations();
 ```
 
-La clave aquí está llamando al método `LayoutIfNeeded` de la vista primaria dentro del bloque de animación. Esto indica a la vista que dibuje cada "fotograma" de la ubicación o el cambio de tamaño animados. Sin esta línea, la vista simplemente se ajustaría a la versión final sin animar.
+La clave aquí está llamando al `LayoutIfNeeded` método de la vista primaria dentro del bloque de animación. Esto indica a la vista que dibuje cada "fotograma" de la ubicación o el cambio de tamaño animados. Sin esta línea, la vista simplemente se ajustaría a la versión final sin animar.
 
 ## <a name="summary"></a>Resumen
 

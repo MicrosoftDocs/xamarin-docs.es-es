@@ -6,12 +6,12 @@ ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
 author: davidortinau
 ms.author: daortin
 ms.date: 03/27/2017
-ms.openlocfilehash: 84a06e23ec7125892701762ab5bad7b86a8faf90
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 315defe5017e3744013d1babd35f06deed255946
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030266"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84566336"
 ---
 # <a name="part-2---architecture"></a>Parte 2: Arquitectura
 
@@ -23,7 +23,7 @@ Un principio clave de la creación de aplicaciones multiplataforma es crear una 
 
 El resultado natural es una aplicación modelada después de entidades reales o abstractas con capas lógicas independientes. La separación del código en las capas hace que las aplicaciones sean más fáciles de entender, probar y mantener. Se recomienda que el código de cada capa sea físicamente independiente (ya sea en directorios o incluso en proyectos independientes para aplicaciones muy grandes), así como de forma lógica independiente (mediante espacios de nombres).
 
- <a name="Typical_Application_Layers" />
+ <a name="Typical_Application_Layers"></a>
 
 ## <a name="typical-application-layers"></a>Capas de aplicación típicas
 
@@ -38,17 +38,17 @@ En este documento y en los casos prácticos, hacemos referencia a los seis nivel
 
 Es posible que una aplicación no contenga necesariamente todas las capas; por ejemplo, la capa de acceso de servicio no existirá en una aplicación que no tenga acceso a los recursos de red. Una aplicación muy sencilla podría combinar la capa de datos y el nivel de acceso a datos porque las operaciones son extremadamente básicas.
 
- <a name="Common_Mobile_Software_Patterns" />
+ <a name="Common_Mobile_Software_Patterns"></a>
 
 ## <a name="common-mobile-software-patterns"></a>Patrones comunes de software móvil
 
 Los patrones son una manera establecida de capturar soluciones recurrentes a problemas comunes. Hay algunos patrones clave que resultan útiles para entenderse en la creación de aplicaciones móviles que se pueden mantener y comprender.
 
 - **Model, View, ViewModel (MVVM)** : el patrón Model-View-ViewModel es popular con los marcos de trabajo que admiten el enlace de datos, como Xamarin. Forms. Los SDK habilitados para XAML, como Windows Presentation Foundation (WPF) y Silverlight, lo han utilizado. donde el ViewModel actúa como un paso entre los datos (modelo) y la interfaz de usuario (vista) mediante el enlace de datos y los comandos.
-- **Modelo, vista, controlador (MVC)** : un patrón común y a menudo no entendido, MVC se usa con más frecuencia al compilar interfaces de usuario y proporciona una separación entre la definición real de una pantalla de la interfaz de usuario (vista), el motor subyacente que controla la interacción ( Controlador) y los datos que lo rellenan (modelo). En realidad, el modelo es una pieza completamente opcional y, por lo tanto, el núcleo de comprensión de este patrón se encuentra en la vista y el controlador. MVC es un enfoque popular para las aplicaciones de iOS.
-- **Fachada empresarial** : el patrón de administrador de aka proporciona un punto de entrada simplificado para el trabajo complejo. Por ejemplo, en una aplicación de seguimiento de tareas, es posible que tenga una clase `TaskManager` con métodos como `GetAllTasks()`, `GetTask(taskID)`, `SaveTask (task)`, etc. La clase `TaskManager` proporciona una fachada al funcionamiento interno de guardar o recuperar objetos de tareas.
+- **Modelo, vista, controlador (MVC)** : un patrón común y a menudo no entendido, MVC se usa con más frecuencia al compilar interfaces de usuario y proporciona una separación entre la definición real de una pantalla (vista) de la interfaz de usuario, el motor subyacente que controla la interacción (controlador) y los datos que la rellenan (modelo). En realidad, el modelo es una pieza completamente opcional y, por lo tanto, el núcleo de comprensión de este patrón se encuentra en la vista y el controlador. MVC es un enfoque popular para las aplicaciones de iOS.
+- **Fachada empresarial** : el patrón de administrador de aka proporciona un punto de entrada simplificado para el trabajo complejo. Por ejemplo, en una aplicación de seguimiento de tareas, puede tener una `TaskManager` clase con métodos como `GetAllTasks()` , `GetTask(taskID)` , `SaveTask (task)` , etc. La `TaskManager` clase proporciona una fachada al funcionamiento interno de guardar o recuperar objetos de tareas.
 - **Singleton** : el patrón singleton proporciona una manera en la que solo puede existir una única instancia de un objeto determinado. Por ejemplo, al usar SQLite en aplicaciones móviles, solo desea una instancia de la base de datos. Usar el patrón singleton es una manera sencilla de asegurarse de esto.
 - **Proveedor** : modelo acuñó por Microsoft (es decir, similar a la estrategia o inserción de dependencias básica) para fomentar la reutilización de código en aplicaciones de Silverlight, WPF y WinForms. El código compartido se puede escribir en una interfaz o una clase abstracta, y las implementaciones concretas específicas de la plataforma se escriben y se pasan cuando se usa el código.
-- **Async** : no se debe confundir con la palabra clave Async, el patrón Async se usa cuando es necesario ejecutar el trabajo de ejecución prolongada sin mantener la interfaz de usuario o el procesamiento actual. En su forma más sencilla, el patrón Async simplemente describe que las tareas de ejecución prolongada deben iniciarse en otro subproceso (o en una abstracción de subproceso similar, como una tarea) mientras el subproceso actual continúa procesándose y escucha una respuesta del proceso en segundo plano. y, a continuación, actualiza la interfaz de usuario cuando se devuelven los datos y el estado.
+- **Async** : no se debe confundir con la palabra clave Async, el patrón Async se usa cuando es necesario ejecutar el trabajo de ejecución prolongada sin mantener la interfaz de usuario o el procesamiento actual. En su forma más sencilla, el patrón Async simplemente describe que las tareas de ejecución prolongada deben iniciarse en otro subproceso (o en una abstracción de subproceso similar, como una tarea) mientras el subproceso actual continúa procesándose y escucha una respuesta del proceso en segundo plano y, a continuación, actualiza la interfaz de usuario cuando se devuelven los datos y el estado.
 
 Cada uno de los patrones se examinará con más detalle, ya que su uso práctico se ilustra en los casos prácticos. Wikipedia tiene descripciones más detalladas de los patrones [MVVM](https://en.wikipedia.org/wiki/Model–view–viewmodel), [MVC](https://en.wikipedia.org/wiki/Model–view–controller), [Facade](https://en.wikipedia.org/wiki/Facade_pattern), [Singleton](https://en.wikipedia.org/wiki/Singleton_pattern), [estrategia](https://en.wikipedia.org/wiki/Strategy_pattern) y [proveedor](https://en.wikipedia.org/wiki/Provider_model) (y de los [patrones de diseño](https://en.wikipedia.org/wiki/Design_Patterns) generalmente).

@@ -1,39 +1,13 @@
 ---
-title: ''
-description: Se puede hacer referencia directamente a las vistas nativas de iOS, Android y el Plataforma universal de Windows desde Xamarin.Forms los archivos XAML. Las propiedades y los controladores de eventos se pueden establecer en las vistas nativas y pueden interactuar con las Xamarin.Forms vistas. En este artículo se muestra cómo consumir vistas nativas de Xamarin.Forms archivos XAML.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 67994371d3042100503eb3a7c3bc7d117b1c590c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139586"
+title: "vistas nativas en XAML" Descripción: se puede hacer referencia directamente a las vistas nativas de iOS, Android y el Plataforma universal de Windows desde Xamarin.Forms los archivos XAML. Las propiedades y los controladores de eventos se pueden establecer en las vistas nativas y pueden interactuar con las Xamarin.Forms vistas. En este artículo se muestra cómo consumir vistas nativas de Xamarin.Forms archivos XAML.
+MS. Prod: Xamarin ms. AssetID: 7A856D31-B300-409E-9AEB-F8A4DB99B37E ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/23/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="native-views-in-xaml"></a>Vistas nativas en XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
 
 _Se puede hacer referencia directamente a las vistas nativas de iOS, Android y el Plataforma universal de Windows desde Xamarin.Forms los archivos XAML. Las propiedades y los controladores de eventos se pueden establecer en las vistas nativas y pueden interactuar con las Xamarin.Forms vistas. En este artículo se muestra cómo consumir vistas nativas de Xamarin.Forms archivos XAML._
-
-En este artículo se tratan los temas siguientes:
-
-- [Consumir vistas nativas](#consuming) : proceso para consumir una vista nativa desde XAML.
-- [Usar enlaces nativos](#native_bindings) : enlace de datos a y desde las propiedades de las vistas nativas.
-- [Pasar argumentos a vistas nativas](#passing_arguments) : pasar argumentos a constructores de vistas nativas y llamar a métodos de generador de vistas nativas.
-- [Referencia a vistas nativas desde el código](#native_view_code) : recuperación de instancias de vista nativa declaradas en un archivo XAML, desde el archivo de código subyacente.
-- [Subclase de vistas nativas](#subclassing) : subclase de vistas nativas para definir una API compatible con XAML.  
-
-<a name="overview" />
-
-## <a name="overview"></a>Información general
 
 Para insertar una vista nativa en un Xamarin.Forms archivo XAML:
 
@@ -43,11 +17,9 @@ Para insertar una vista nativa en un Xamarin.Forms archivo XAML:
 > [!IMPORTANT]
 > El código XAML compilado debe estar deshabilitado para cualquier página XAML que use vistas nativas. Esto se puede lograr decorando la clase de código subyacente de la página XAML con el `[XamlCompilation(XamlCompilationOptions.Skip)]` atributo. Para obtener más información sobre la compilación de XAML, vea [compilación de XAML en Xamarin.Forms ](~/xamarin-forms/xaml/xamlc.md).
 
-Para hacer referencia a una vista nativa desde un archivo de código subyacente, debe usar un proyecto de recurso compartido (SAP) y ajustar el código específico de la plataforma con directivas de compilación condicional. Para obtener más información, vea [hacer referencia a vistas nativas desde el código](#native_view_code).
+Para hacer referencia a una vista nativa desde un archivo de código subyacente, debe usar un proyecto de recurso compartido (SAP) y ajustar el código específico de la plataforma con directivas de compilación condicional. Para obtener más información, vea [referencia a las vistas nativas desde el código](#refer-to-native-views-from-code).
 
-<a name="consuming" />
-
-## <a name="consuming-native-views"></a>Consumir vistas nativas
+## <a name="consume-native-views"></a>Consumir vistas nativas
 
 En el ejemplo de código siguiente se muestra cómo consumir vistas nativas para cada plataforma a Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage) :
 
@@ -77,12 +49,10 @@ Las propiedades enlazables y las propiedades enlazables asociadas también se pu
 > [!NOTE]
 > Tenga en cuenta que los estilos no se pueden usar con vistas nativas, ya que los estilos solo pueden tener como destino propiedades respaldadas por `BindableProperty` objetos.
 
-Los constructores de widgets de Android normalmente requieren el `Context` objeto Android como argumento, y se puede hacer que esté disponible a través de una propiedad estática en la `MainActivity` clase. Por consiguiente, al crear un widget de Android en XAML, el `Context` objeto se debe pasar generalmente al constructor del widget mediante el `x:Arguments` atributo con una `x:Static` extensión de marcado. Para obtener más información, vea [pasar argumentos a vistas nativas](#passing_arguments).
+Los constructores de widgets de Android normalmente requieren el `Context` objeto Android como argumento, y se puede hacer que esté disponible a través de una propiedad estática en la `MainActivity` clase. Por consiguiente, al crear un widget de Android en XAML, el `Context` objeto se debe pasar generalmente al constructor del widget mediante el `x:Arguments` atributo con una `x:Static` extensión de marcado. Para obtener más información, vea [pasar argumentos a vistas nativas](#pass-arguments-to-native-views).
 
 > [!NOTE]
-> Tenga en cuenta que el nombre de una vista nativa con `x:Name` no es posible en un proyecto de biblioteca de .net Standard o un proyecto de recursos compartidos (SAP). Si lo hace, se generará una variable del tipo nativo, lo que producirá un error de compilación. Sin embargo, las vistas nativas se pueden encapsular en `ContentView` instancias y recuperar en el archivo de código subyacente, siempre que se use un SAP. Para obtener más información, vea [hacer referencia a una vista nativa desde el código](#native_view_code).
-
-<a name="native_bindings" />
+> Tenga en cuenta que el nombre de una vista nativa con `x:Name` no es posible en un proyecto de biblioteca de .net Standard o un proyecto de recursos compartidos (SAP). Si lo hace, se generará una variable del tipo nativo, lo que producirá un error de compilación. Sin embargo, las vistas nativas se pueden encapsular en `ContentView` instancias y recuperar en el archivo de código subyacente, siempre que se use un SAP. Para obtener más información, vea [hacer referencia a la vista nativa desde el código](#refer-to-native-views-from-code).
 
 ## <a name="native-bindings"></a>Enlaces nativos
 
@@ -127,9 +97,7 @@ La página también contiene un conmutador nativo para cada plataforma. Cada con
 
 Los enlaces bidireccionales se admiten automáticamente siempre que la propiedad nativa implementa `INotifyPropertyChanged` , o admite la observación de valor de clave (KVO) en iOS o es `DependencyProperty` en UWP. Sin embargo, muchas vistas nativas no admiten la notificación de cambio de propiedad. Para estas vistas, puede especificar un [`UpdateSourceEventName`](xref:Xamarin.Forms.Binding.UpdateSourceEventName) valor de propiedad como parte de la expresión de enlace. Esta propiedad debe establecerse en el nombre de un evento en la vista nativa que indica cuándo ha cambiado la propiedad de destino. A continuación, cuando cambia el valor del modificador nativo, `Binding` se notifica a la clase que el usuario ha cambiado el valor del modificador y el valor de la `NativeSwitchPageViewModel.IsSwitchOn` propiedad se ha actualizado.
 
-<a name="passing_arguments" />
-
-## <a name="passing-arguments-to-native-views"></a>Pasar argumentos a vistas nativas
+## <a name="pass-arguments-to-native-views"></a>Pasar argumentos a vistas nativas
 
 Los argumentos de constructor se pueden pasar a vistas nativas mediante el `x:Arguments` atributo con una `x:Static` extensión de marcado. Además, se puede llamar a los métodos del generador de vistas nativas ( `public static` métodos que devuelven objetos o valores del mismo tipo que la clase o estructura que define los métodos) especificando el nombre del método mediante el `x:FactoryMethod` atributo y sus argumentos mediante el `x:Arguments` atributo.
 
@@ -200,9 +168,7 @@ Las siguientes capturas de pantallas muestran el resultado de la especificación
 
 Para obtener más información sobre cómo pasar argumentos en XAML, vea [pasar argumentos en XAML](~/xamarin-forms/xaml/passing-arguments.md).
 
-<a name="native_view_code" />
-
-## <a name="referring-to-native-views-from-code"></a>Referencia a vistas nativas desde el código
+## <a name="refer-to-native-views-from-code"></a>Referencia a vistas nativas desde el código
 
 Aunque no es posible asignar un nombre a una vista nativa con el `x:Name` atributo, es posible recuperar una instancia de vista nativa declarada en un archivo XAML de su archivo de código subyacente en un proyecto de acceso compartido, siempre que la vista nativa sea un elemento secundario de un [`ContentView`](xref:Xamarin.Forms.ContentView) que especifique un `x:Name` valor de atributo. Después, dentro de las directivas de compilación condicional en el archivo de código subyacente, debe:
 
@@ -287,9 +253,7 @@ Los botones nativos de iOS y Android comparten el mismo `OnButtonTap` controlado
 
 ![](xaml-images/contentview.png "ContentView Containing a Native Control")
 
-<a name="subclassing" />
-
-## <a name="subclassing-native-views"></a>Subclases de vistas nativas
+## <a name="subclass-native-views"></a>Vistas nativas de subclase
 
 Muchas vistas nativas de iOS y Android no son adecuadas para crear instancias en XAML porque usan métodos, en lugar de propiedades, para configurar el control. La solución a este problema es la subclase de vistas nativas en contenedores que definen una API más compatible con XAML que usa las propiedades para configurar el control y que usa eventos independientes de la plataforma. Las vistas nativas ajustadas se pueden colocar en un proyecto de recursos compartidos (SAP) y encerrarse con directivas de compilación condicional, o bien colocarse en proyectos específicos de la plataforma y se puede hacer referencia a ella desde XAML en un proyecto de biblioteca de .NET Standard.
 
@@ -485,10 +449,6 @@ class MySpinner : Spinner
 ```
 
 La `MySpinner` clase expone `ItemsSource` `SelectedObject` las propiedades y, y un `ItemSelected` evento. Los elementos que muestra la `MySpinner` clase los proporciona el [`Adapter`](xref:Android.Widget.Adapter) asociado a la vista, y los elementos se rellenan en `Adapter` cuando `ItemsSource` se establece la propiedad por primera vez. Cada vez que el elemento seleccionado en la `MySpinner` clase cambia, el `OnBindableSpinnerItemSelected` controlador de eventos actualiza la `SelectedObject` propiedad.
-
-## <a name="summary"></a>Resumen
-
-En este artículo se ha mostrado cómo consumir vistas nativas de Xamarin.Forms archivos XAML. Las propiedades y los controladores de eventos se pueden establecer en las vistas nativas y pueden interactuar con las Xamarin.Forms vistas.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: e12bac1f65981776a7bd650cbc840cc0cdf72892
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 429b15b8e0f2b66b8a0edcdf386ef7778cf4a9ca
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725163"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574124"
 ---
 # <a name="ios-9-compatibility"></a>Compatibilidad con iOS 9
 
@@ -44,9 +44,9 @@ Se recomienda comprobar explícitamente que Visual Studio se ha actualizado a la
 **No** es necesario esperar a las nuevas versiones de los componentes o paquetes Nuget que usa para solucionar los dos problemas mencionados anteriormente.
 Estos problemas se corrigen simplemente volviendo a compilar la aplicación con la versión estable más reciente de Xamarin. iOS.
 
-Del mismo modo, **no** es necesario que los proveedores de componentes y los autores de NuGet envíen nuevas compilaciones solo para corregir los dos problemas mencionados anteriormente. Sin embargo, si un componente o NuGet usa `UICollectionView` o carga vistas de archivos **Xib** , *puede* ser necesaria una actualización para solucionar los problemas de compatibilidad de iOS 9 que se mencionan a continuación.
+Del mismo modo, **no** es necesario que los proveedores de componentes y los autores de NuGet envíen nuevas compilaciones solo para corregir los dos problemas mencionados anteriormente. Sin embargo, si algún componente o NuGet usa `UICollectionView` o carga vistas de archivos **Xib** , *puede* ser necesaria una actualización para solucionar los problemas de compatibilidad de iOS 9 que se mencionan a continuación.
 
-<a name="compat" />
+<a name="compat"></a>
 
 ## <a name="improving-compatibility-in-your-code"></a>Mejorar la compatibilidad en el código
 
@@ -54,7 +54,7 @@ Hay algunos casos de patrones de código que se *usan* para trabajar en versione
 
 ### <a name="uicollectionviewcellcontentview-is-null-in-constructors"></a>UICollectionViewCell. ContentView es null en los constructores
 
-**Motivo:** En iOS 9, el constructor de `initWithFrame:` es necesario ahora, debido a los cambios de comportamiento en iOS 9 como los Estados de la [documentación de UICollectionView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). Si registró una clase para el identificador especificado y se debe crear una nueva celda, la celda se inicializará ahora llamando a su método `initWithFrame:`.
+**Motivo:** En iOS 9 `initWithFrame:` , ahora es necesario el constructor, debido a los cambios de comportamiento en iOS 9 como los Estados de la [documentación de UICollectionView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). Si registró una clase para el identificador especificado y se debe crear una nueva celda, la celda se inicializará ahora llamando a su `initWithFrame:` método.
 
 **Corrección:** Agregue el `initWithFrame:` constructor de la siguiente manera:
 
@@ -70,9 +70,9 @@ Ejemplos relacionados: [MotionGraph](https://github.com/xamarin/monotouch-sample
 
 ### <a name="uiview-fails-to-init-with-coder-when-loading-a-view-from-a-xibnib"></a>UIView no se puede inicializar con el codificador al cargar una vista desde Xib/NIB
 
-**Motivo:** El constructor `initWithCoder:` es el que se llama al cargar una vista desde un archivo Interface Builder Xib. Si este constructor no se exporta, el código no administrado no puede llamar a nuestra versión administrada del mismo. Anteriormente (por ejemplo, en iOS 8), se invocó el constructor `IntPtr` para inicializar la vista.
+**Motivo:** El `initWithCoder:` constructor es el al que se llama cuando se carga una vista desde un archivo Interface Builder Xib. Si este constructor no se exporta, el código no administrado no puede llamar a nuestra versión administrada del mismo. Anteriormente (por ejemplo, en iOS 8), `IntPtr` se invocó el constructor para inicializar la vista.
 
-**Corrección:** Cree y exporte el `initWithCoder:` constructor de la siguiente manera:
+**Corrección:** Cree y exporte el constructor de la siguiente `initWithCoder:` manera:
 
 ```csharp
 [Export ("initWithCoder:")]

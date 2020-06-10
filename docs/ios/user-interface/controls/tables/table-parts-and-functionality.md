@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 0e8014263d417cef39147b440ed3b38155f226bb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: bf023543d3159f5d5baf7f7036a576b8a746cf9e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021854"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572135"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Elementos de tabla y funcionalidad de Xamarin. iOS
 
@@ -21,7 +21,7 @@ Un UITableView puede tener un estilo "agrupado" o "sin formato", y consta de las
 - [Encabezado de sección](#Section_Header)
 - [Celdas](#Cells) (o filas, si lo prefiere)
 - [Pie de sección](#Section_Footer)
-- [Index](#Index)
+- [Índice](#Index)
 - [Modo de edición](#Edit_Features) (incluye ' deslizar rápidamente a eliminar ' y arrastrar Controladores para cambiar el orden de las filas) 
 
 Estas capturas de pantalla muestran cómo se muestran las filas, los encabezados, los pies de página, los controles de edición y el índice de la sección.
@@ -30,32 +30,32 @@ Estas capturas de pantalla muestran cómo se muestran las filas, los encabezados
 
 Estas partes se describen con más detalle a continuación:
 
-<a name="Section_Header" />
+<a name="Section_Header"></a>
 
 ## <a name="section-header"></a>Encabezado de sección
 
 Opcionalmente, las celdas pueden agruparse en secciones, etiquetadas con un encabezado personalizado o etiquetadas con un pie de página. El encabezado se puede establecer con un valor de cadena o se puede proporcionar una vista personalizada para permitir un diseño o estilo diferente.
 
-<a name="Cells" />
+<a name="Cells"></a>
 
 ## <a name="cells"></a>Celdas
 
 Las celdas son el elemento principal de la interfaz de usuario de una tabla. Cuando se implementa correctamente, las celdas se reutilizan para la eficacia de la memoria. Hay cuatro estilos de celda integrados, y puede crear sus propias celdas personalizadas (ya sea en el código o en el diseñador al usar guiones gráficos).
 
-<a name="Section_Footer"/>
+<a name="Section_Footer"></a>
 
 ## <a name="section-footer"></a>Pie de sección
 
 El pie de sección opcional se puede establecer con un valor de cadena, o bien se puede proporcionar una vista personalizada para permitir un diseño o estilo diferente. Los encabezados y pies de página se pueden establecer de forma independiente.
 
-<a name="Index" />
+<a name="Index"></a>
 
 ## <a name="index"></a>Índice
 
 El índice aparece como una franja de caracteres en el borde derecho de la tabla.
 Al tocar o arrastrar en el índice se acelera el desplazamiento a esa parte de la tabla. Un índice es opcional, pero se recomienda que ayude a navegar por listas largas. Normalmente, un índice no se utiliza con el estilo agrupado.
 
-<a name="Edit_Features" />
+<a name="Edit_Features"></a>
 
 ## <a name="editing-mode"></a>Modo de edición
 
@@ -77,7 +77,7 @@ A continuación se muestran las clases principales que se usan para mostrar las 
 A continuación se describe el propósito de cada clase:
 
 - **UITableView** : una vista que contiene una colección de celdas dentro de un contenedor de desplazamiento. La vista de tabla normalmente usa toda la pantalla en una aplicación de iPhone, pero puede existir como parte de una vista más grande en el iPad (o aparecer en un elemento flotante). 
-- **UITableViewCell** : una vista que representa una sola celda (o fila) en una vista de tabla. Hay cuatro tipos de celdas integrados y es posible crear celdas personalizadas en C# o con iOS Designer. 
+- **UITableViewCell** : una vista que representa una sola celda (o fila) en una vista de tabla. Hay cuatro tipos de celdas integrados y es posible crear celdas personalizadas tanto en C# como en el diseñador de iOS. 
 - **UITableViewSource** – Xamarin. iOS: clase abstracta exclusiva que proporciona todos los métodos necesarios para mostrar una tabla, incluido el recuento de filas, la devolución de una vista de celda para cada fila, el control de la selección de filas y muchas otras características opcionales. *Debe* subclase para que funcione UITableView. 
 - **NSIndexPath** : contiene las propiedades de fila y de sección que identifican de forma única la posición de una celda en una tabla. 
 - **UITableViewController** : un UIViewController listo para usar que tiene un UITableView codificado de forma rígida como su vista y accesible a través de la propiedad TableView. 

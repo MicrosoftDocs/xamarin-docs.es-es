@@ -1,22 +1,8 @@
 ---
-title: ''
-description: En este artículo se explica cómo optimizar los Xamarin.Forms diseños de aplicaciones para tabletas, en lugar de teléfonos.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8ce5ba09f89c2bc84b7f6ba722f724ae39c0222e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137946"
+title: "diseño para tabletas y aplicaciones de escritorio" Descripción: "en este artículo se explica cómo optimizar los Xamarin.Forms diseños de aplicaciones para tabletas, en lugar de teléfonos".
+MS. Prod: Xamarin ms. AssetID: D62F472B-4345-4983-8403-659A538B591F ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/01/2016 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="layout-for-tablet-and-desktop-apps"></a>Diseño para tabletas y aplicaciones de escritorio
 
 Xamarin.Formsadmite todos los tipos de dispositivos disponibles en las plataformas compatibles, por lo que además de los teléfonos, las aplicaciones también se pueden ejecutar en:
@@ -27,10 +13,8 @@ Xamarin.Formsadmite todos los tipos de dispositivos disponibles en las plataform
 
 En esta página se describe brevemente:
 
-- los [tipos de dispositivo](#Device_Types)admitidos y
-- Cómo [optimizar](#optimize) los diseños para tabletas en comparación con los teléfonos.
-
-<a name="Device_Types" />
+- los [tipos de dispositivo](#device-types)admitidos y
+- Cómo [optimizar](#optimize-for-tablet-and-desktop) los diseños para tabletas en comparación con los teléfonos.
 
 ## <a name="device-types"></a>Tipos de dispositivos
 
@@ -64,9 +48,7 @@ Se puede cambiar el tamaño de las aplicaciones que se ejecutan en tabletas y es
 
 [![](tablet-images/splitscreen-sml.png "Windows Split Screen Example")](tablet-images/splitscreen.png#lightbox "Windows Split Screen Example")
 
-<a name="optimize" />
-
-## <a name="optimizing-for-tablet-and-desktop"></a>Optimizar para tabletas y equipos de escritorio
+## <a name="optimize-for-tablet-and-desktop"></a>Optimizar para tabletas y equipos de escritorio
 
 Puede ajustar la Xamarin.Forms interfaz de usuario en función de si se usa un dispositivo de teléfono o tableta o escritorio. Esto significa que puede optimizar la experiencia del usuario en dispositivos de gran tamaño, como tabletas y equipos de escritorio.
 
@@ -85,7 +67,7 @@ if (Device.Idiom == TargetIdiom.Phone)
 
 Este enfoque se puede expandir para realizar cambios significativos en los diseños de página individuales o incluso para representar páginas completamente diferentes en pantallas más grandes.
 
-### <a name="leveraging-masterdetailpage"></a>Aprovechar MasterDetailPage
+### <a name="leverage-masterdetailpage"></a>Aprovechar MasterDetailPage
 
 [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)Es ideal para pantallas de mayor tamaño, especialmente en el iPad donde usa [`UISplitViewController`](xref:UIKit.UISplitViewController) para proporcionar una experiencia de iOS nativa.
 

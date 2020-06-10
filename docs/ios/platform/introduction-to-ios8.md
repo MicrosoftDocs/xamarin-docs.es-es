@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 9353cffd924688058c1495b9258cc7f0e0ce7b82
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 1fae83f60f819da9767e14612a7f778dc49ddf52
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306192"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84564635"
 ---
 # <a name="introduction-to-ios-8"></a>Introducción a iOS 8
 
@@ -50,7 +50,7 @@ En el diagrama siguiente se muestra la jerarquía básica de la configuración d
 
 ![](introduction-to-ios8-images/image1.png "This diagram shows the basic hierarchy of the configuration of HomeKit accessories")
 
-Para empezar a trabajar con HomeKit, los desarrolladores deberán asegurarse de que el perfil de aprovisionamiento tenga seleccionado el servicio HomeKit. Apple también ha proporcionado a los desarrolladores un complemento de HomeKit Simulator para Xcode. Esto se puede encontrar en el [Centro para desarrolladores de Apple](https://developer.apple.com/downloads/index.action), en `Hardware IO Tools for Xcode`. 
+Para empezar a trabajar con HomeKit, los desarrolladores deberán asegurarse de que el perfil de aprovisionamiento tenga seleccionado el servicio HomeKit. Apple también ha proporcionado a los desarrolladores un complemento de HomeKit Simulator para Xcode. Se puede encontrar en el [Centro para desarrolladores de Apple](https://developer.apple.com/downloads/index.action), en `Hardware IO Tools for Xcode` . 
 
 Para obtener más información, consulte nuestra guía de [HomeKit](~/ios/platform/homekit.md) .
 
@@ -68,7 +68,7 @@ Las extensiones de aplicación, para simplificar, son una manera de que las apli
 
 El primer paso para crear una extensión de aplicación es definir el punto de extensión correcto, lo que es importante para garantizar el comportamiento y la disponibilidad de las API correctas. Para crear una extensión de aplicación en Visual Studio para Mac, agréguela a una aplicación existente agregando un nuevo proyecto a la solución.
 
-En el cuadro de diálogo **nuevo proyecto** , vaya a **C#**  > **iOS** > **Unified API** > **extensiones**, como se muestra en la siguiente captura de pantalla:
+En el cuadro de diálogo **nuevo proyecto** , vaya a **C#**  >  **iOS**  >  **Unified API**  >  **extensiones**, como se muestra en la siguiente captura de pantalla:
 
 ![](introduction-to-ios8-images/image2.png "Creating a new extension")
 
@@ -91,7 +91,7 @@ Ahora hay dos maneras de usar Touch ID como mecanismo de autenticación en aplic
 
 En primer lugar, ayuda a los servicios de cadena de claves existentes mediante el uso de nuevas listas de claves Access Controls (ACL). Los datos de cadena de claves se pueden desbloquear con la autenticación correcta de la huella digital de los usuarios.
 
-En segundo lugar, LocalAuthentication proporciona dos métodos para autenticar la aplicación localmente. Los desarrolladores deben usar `CanEvaluatePolicy` para determinar si el dispositivo es capaz de aceptar el ID. de Touch y, a continuación, `EvaluatePolicy` para iniciar la operación de autenticación.
+En segundo lugar, LocalAuthentication proporciona dos métodos para autenticar la aplicación localmente. Los desarrolladores deben usar `CanEvaluatePolicy` para determinar si el dispositivo es capaz de aceptar el Touch ID y, a continuación, `EvaluatePolicy` iniciar la operación de autenticación.
 
 Para obtener más información sobre Touch ID e información sobre cómo integrarlo en una aplicación de Xamarin. iOS, consulte [Touch ID and facial ID en las guías de Xamarin. iOS](~/ios/platform/touch-id-face-id.md) .
 
@@ -112,7 +112,7 @@ Para obtener más información, consulte nuestra guía de [entrega](~/ios/platfo
 ## <a name="unified-storyboards"></a>Guiones gráficos unificados
 iOS 8 incluye un nuevo mecanismo más sencillo de usar para crear la interfaz de usuario, el guión gráfico unificado. Con un solo guión gráfico para cubrir todos los tamaños de pantalla de hardware diferentes, se pueden crear vistas rápidas y receptivas en un estilo real "diseñar una vez, usar muchos".
 
-Antes de iOS8, los desarrolladores usaban `UIInterfaceOrientation` para distinguir entre los modos vertical y horizontal, y `UIInterfaceIdiom` para distinguir entre los dispositivos iOS. En iOS8, ya no es necesario crear guiones gráficos independientes para dispositivos iPhone e iPad; la orientación y el dispositivo se determinan mediante el uso de *clases de tamaño*.
+Antes de iOS8, los desarrolladores usaban `UIInterfaceOrientation` para distinguir los modos vertical y horizontal, y `UIInterfaceIdiom` para distinguir entre los dispositivos iOS. En iOS8, ya no es necesario crear guiones gráficos independientes para dispositivos iPhone e iPad; la orientación y el dispositivo se determinan mediante el uso de *clases de tamaño*.
 
 Cada dispositivo se define mediante una clase de tamaño, en el eje vertical y horizontal, y hay dos tipos de clases de tamaño en iOS 8:
 
@@ -132,7 +132,7 @@ Para obtener más información, consulte nuestra guía de [PhotoKit](~/ios/platf
 
 ## <a name="games"></a>Juegos
 
-<a name="scenekit" />
+<a name="scenekit"></a>
 
 ### <a name="scene-kit"></a>Kit de escenas
 
@@ -140,7 +140,7 @@ El kit de escenas es una API de gráficos de escenas 3D que simplifica el trabaj
 
 Para obtener más información, consulte nuestra documentación de [SceneKit](~/ios/platform/gaming/scenekit.md) .
 
-<a name="spritekit" />
+<a name="spritekit"></a>
 
 ### <a name="sprite-kit"></a>Kit de Sprite
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 8efa116a82ba021c2a723dc6ab636f54b6b5af71
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: cc83fa65fd040b30d71a30fb703da866c5d0824c
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940993"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570822"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Trabajar con acciones de fila en Xamarin. iOS
 
@@ -20,28 +20,28 @@ _En esta guía se muestra cómo crear acciones de deslizamiento personalizado pa
 
 ![Mostrar las acciones de deslizar rápidamente en las filas](row-action-images/action02.png)
 
-iOS proporciona dos maneras de realizar acciones en una tabla: `UISwipeActionsConfiguration` y `UITableViewRowAction`.
+iOS proporciona dos maneras de realizar acciones en una tabla: `UISwipeActionsConfiguration` y `UITableViewRowAction` .
 
-`UISwipeActionsConfiguration` se presentó en iOS 11 y se usa para definir un conjunto de acciones que deben realizarse cuando el usuario se desliza rápidamente _en cualquier dirección_ de una fila en una vista de tabla. Este comportamiento es similar al de la aplicación de correo electrónico nativo.
+`UISwipeActionsConfiguration`se presentó en iOS 11 y se usa para definir un conjunto de acciones que deben realizarse cuando el usuario se desliza rápidamente _en cualquier dirección_ de una fila en una vista de tabla. Este comportamiento es similar al de la aplicación de correo electrónico nativo.
 
-La clase `UITableViewRowAction` se utiliza para definir una acción que tendrá lugar cuando el usuario se deslice horizontalmente a la izquierda en una fila de una vista de tabla.
-Por ejemplo, al editar una tabla, deslizar el dedo a la izquierda en una fila muestra un botón **eliminar** de forma predeterminada. Al adjuntar varias instancias de la clase `UITableViewRowAction` a un `UITableView`, se pueden definir varias acciones personalizadas, cada una con su propio texto, formato y comportamiento.
+La `UITableViewRowAction` clase se utiliza para definir una acción que tendrá lugar cuando el usuario se deslice horizontalmente a la izquierda en una fila de una vista de tabla.
+Por ejemplo, al editar una tabla, deslizar el dedo a la izquierda en una fila muestra un botón **eliminar** de forma predeterminada. Al adjuntar varias instancias de la `UITableViewRowAction` clase a un `UITableView` , se pueden definir varias acciones personalizadas, cada una con su propio texto, formato y comportamiento.
 
 ## <a name="uiswipeactionsconfiguration"></a>UISwipeActionsConfiguration
 
-Hay tres pasos necesarios para implementar las acciones de deslizamiento con `UISwipeActionsConfiguration`:
+Hay tres pasos necesarios para implementar las acciones de deslizamiento con `UISwipeActionsConfiguration` :
 
-1. Invalide `GetLeadingSwipeActionsConfiguration` y/o `GetTrailingSwipeActionsConfiguration` métodos. Estos métodos devuelven un `UISwipeActionsConfiguration`.
-2. Cree una instancia del `UISwipeActionsConfiguration` que se va a devolver. Esta clase toma una matriz de `UIContextualAction`.
-3. Cree un `UIContextualAction`.
+1. Reemplace `GetLeadingSwipeActionsConfiguration` los métodos y/o `GetTrailingSwipeActionsConfiguration` . Estos métodos devuelven `UISwipeActionsConfiguration` .
+2. Cree una instancia del `UISwipeActionsConfiguration` que se va a devolver. Esta clase toma una matriz de `UIContextualAction` .
+3. Creará un control `UIContextualAction`.
 
 Estos se explican con mayor detalle en las secciones siguientes.
 
 ### <a name="1-implementing-the-swipeactionsconfigurations-methods"></a>1. implementación de los métodos SwipeActionsConfigurations
 
-`UITableViewController` (y también `UITableViewSource` y `UITableViewDelegate`) contienen dos métodos: `GetLeadingSwipeActionsConfiguration` y `GetTrailingSwipeActionsConfiguration`, que se usan para implementar un conjunto de acciones de deslizar rápidamente en una fila de la vista de tabla. La acción de deslizar rápidamente hace referencia a un dedo desde el lado izquierdo de la pantalla en un idioma que se escribe de izquierda a derecha y desde el lado derecho de la pantalla en un idioma que se escribe de derecha a izquierda.
+`UITableViewController`(y también `UITableViewSource` y `UITableViewDelegate` ) contienen dos métodos: `GetLeadingSwipeActionsConfiguration` y `GetTrailingSwipeActionsConfiguration` , que se usan para implementar un conjunto de acciones de deslizar rápidamente en una fila de la vista de tabla. La acción de deslizar rápidamente hace referencia a un dedo desde el lado izquierdo de la pantalla en un idioma que se escribe de izquierda a derecha y desde el lado derecho de la pantalla en un idioma que se escribe de derecha a izquierda.
 
-En el ejemplo siguiente (del ejemplo [TableSwipeActions](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions) ) se muestra la implementación de la configuración de deslizamiento inicial. Se crean dos acciones a partir de las acciones contextuales, que se explican [a continuación](#create-uicontextualaction). Después, estas acciones se pasan a un [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations)recién inicializado, que se utiliza como valor devuelto.
+En el ejemplo siguiente (del ejemplo [TableSwipeActions](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions) ) se muestra la implementación de la configuración de deslizamiento inicial. Se crean dos acciones a partir de las acciones contextuales, que se explican [a continuación](#create-uicontextualaction). Después, estas acciones se pasan a un recién inicializado [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations) , que se utiliza como valor devuelto.
 
 ```csharp
 public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(UITableView tableView, NSIndexPath indexPath)
@@ -59,11 +59,11 @@ public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(
 }
 ```
 
-<a name="create-uiswipeactionsconfigurations" />
+<a name="create-uiswipeactionsconfigurations"></a>
 
-### <a name="2-instantiate-a-uiswipeactionsconfiguration"></a>2. crear una instancia de un `UISwipeActionsConfiguration`
+### <a name="2-instantiate-a-uiswipeactionsconfiguration"></a>2. crear una instancia de`UISwipeActionsConfiguration`
 
-Cree una instancia de un `UISwipeActionsConfiguration` mediante el método `FromActions` para agregar una nueva matriz de `UIContextualAction`s, como se muestra en el siguiente fragmento de código:
+Cree una instancia `UISwipeActionsConfiguration` de mediante el `FromActions` método para agregar una nueva matriz de `UIContextualAction` s, como se muestra en el siguiente fragmento de código:
 
 ```csharp
 var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualAction[] { flagAction, definitionAction })
@@ -79,15 +79,15 @@ En el caso de los deslizamientos finales, las acciones se mostrarán como se mue
 
 ![Acciones de deslizamiento hacia la derecha mostradas en una fila de la tabla](row-action-images/action04.png)
 
-Este fragmento de código también hace uso de la nueva propiedad `PerformsFirstActionWithFullSwipe`. De forma predeterminada, esta propiedad se establece en true, lo que significa que la primera acción de la matriz se producirá cuando un usuario se deslice por completo en una fila. Si tiene una acción que no es destructiva (por ejemplo, "eliminar", es posible que no sea el comportamiento ideal y, por tanto, debe establecerla en `false`.
+Este fragmento de código también hace uso de la nueva `PerformsFirstActionWithFullSwipe` propiedad. De forma predeterminada, esta propiedad se establece en true, lo que significa que la primera acción de la matriz se producirá cuando un usuario se deslice por completo en una fila. Si tiene una acción que no es destructiva (por ejemplo, "eliminar", es posible que no sea el comportamiento ideal y, por tanto, debe establecerla en `false` .
 
-<a name="create-uicontextualaction" />
+<a name="create-uicontextualaction"></a>
 
-### <a name="create-a-uicontextualaction"></a>Cree un control `UIContextualAction`
+### <a name="create-a-uicontextualaction"></a>Creación de una clase `UIContextualAction`
 
 La acción contextual es donde realmente se crea la acción que se mostrará cuando el usuario Deslice el dedo por una fila de la tabla.
 
-Para inicializar una acción, debe proporcionar un `UIContextualActionStyle`, un título y un `UIContextualActionHandler`. La `UIContextualActionHandler` toma tres parámetros: una acción, la vista en la que se mostró la acción y un controlador de finalización:
+Para inicializar una acción, debe proporcionar un `UIContextualActionStyle` , un título y un `UIContextualActionHandler` . `UIContextualActionHandler`Toma tres parámetros: una acción, la vista en la que se mostró la acción y un controlador de finalización:
 
 ```csharp
 public UIContextualAction ContextualFlagAction(int row)
@@ -113,11 +113,11 @@ public UIContextualAction ContextualFlagAction(int row)
 
 Se pueden editar varias propiedades visuales, como el color de fondo o la imagen de la acción. El fragmento de código anterior muestra cómo agregar una imagen a la acción y establecer el color de fondo en azul.
 
-Una vez creadas las acciones contextuales, pueden usar para inicializar el `UISwipeActionsConfiguration` en el método `GetLeadingSwipeActionsConfiguration`.
+Una vez que se han creado las acciones contextuales, pueden utilizar para inicializar `UISwipeActionsConfiguration` en el `GetLeadingSwipeActionsConfiguration` método.
 
 ## <a name="uitableviewrowaction"></a>UITableViewRowAction
 
-Para definir una o varias acciones de fila personalizadas para un `UITableView`, debe crear una instancia de la clase `UITableViewDelegate` e invalidar el método `EditActionsForRow`. Por ejemplo:
+Para definir una o varias acciones de fila personalizadas para un `UITableView` , deberá crear una instancia de la `UITableViewDelegate` clase e invalidar el `EditActionsForRow` método. Por ejemplo:
 
 ```csharp
 using System;
@@ -161,7 +161,7 @@ namespace BasicTable
 }
 ```
 
-El método estático de `UITableViewRowAction.Create` se usa para crear un nuevo `UITableViewRowAction` que mostrará un botón de **HI** cuando el usuario se deslice horizontalmente a la izquierda en una fila de la tabla. Posteriormente, se crea una nueva instancia de la `TableDelegate` y se adjunta al `UITableView`. Por ejemplo:
+El `UITableViewRowAction.Create` método estático se usa para crear un nuevo `UITableViewRowAction` que mostrará un botón **HI** cuando el usuario se deslice horizontalmente a la izquierda en una fila de la tabla. Después, se crea una nueva instancia de `TableDelegate` y se adjunta a `UITableView` . Por ejemplo:
 
 ```csharp
 TableDelegate tableDelegate;
@@ -177,7 +177,7 @@ Cuando se ejecuta el código anterior y el usuario se desliza a la izquierda en 
 
 [![](row-action-images/action01.png "The Hi button being displayed instead of the Delete button")](row-action-images/action01.png#lightbox)
 
-Si el usuario pulsa el botón **HI** , `Hello World!` se escribirá en la consola de en Visual Studio para Mac o Visual Studio cuando la aplicación se ejecute en el modo de depuración.
+Si el usuario pulsa el botón **HI** , se `Hello World!` escribirá en la consola de Visual Studio para Mac o Visual Studio cuando la aplicación se ejecute en modo de depuración.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

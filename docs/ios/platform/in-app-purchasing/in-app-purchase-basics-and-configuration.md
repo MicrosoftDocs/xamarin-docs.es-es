@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 786afa6967731fb1bd508fa3c835b980639eb282
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 45b7c1081571b52bb8760b4207e3a05a4ffa77ae
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032378"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572317"
 ---
 # <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Conceptos básicos y configuración de compras desde la aplicación en Xamarin. iOS
 
@@ -146,7 +146,7 @@ Hay cinco tipos de productos de compra desde la aplicación que puede ofrecer:
 
  *Actualmente, en este documento solo se tratan los dos primeros tipos de productos (consumibles y no consumibles).*
 
- <a name="Price_Tiers" />
+ <a name="Price_Tiers"></a>
 
 ### <a name="price-tiers"></a>Planes de tarifa
 
@@ -156,7 +156,7 @@ Apple proporciona una matriz de precios para ayudarle a seleccionar el nivel cor
 
  [![](in-app-purchase-basics-and-configuration-images/image10.png "An excerpt of the price matrix August 2012")](in-app-purchase-basics-and-configuration-images/image10.png#lightbox)
 
-En el momento de la escritura (2013 de junio), hay 87 niveles de 0,99 USD a 999,99 USD. La matriz de precios muestra el precio que los clientes pagarán y también el importe que recibirá de Apple: se trata de un descuento del 30% y también de los impuestos locales que se necesitan para recopilar (observe en el ejemplo que los vendedores de Estados Unidos y Canadá reciben 70C para 99C p producto, mientras que los vendedores de Australia solo reciben 63c debido a «bienes &amp; los impuestos sobre los servicios» aplicados al precio de venta).
+En el momento de la escritura (2013 de junio), hay 87 niveles de 0,99 USD a 999,99 USD. La matriz de precios muestra el precio que pagarán los clientes y también el importe que recibirá de Apple: se trata de una carga inferior al 30% y también de los impuestos locales que deben recopilar (observe en el ejemplo que los vendedores de Estados Unidos y Canadá reciben 70C para un producto de 99C, mientras que los vendedores de Australia solo reciben 63c debido a « &amp; impuesto de servicios de bienes»
 
 Los precios del producto pueden actualizarse en cualquier momento, incluidos los cambios de precio programados que se aplican en una fecha futura. En esta captura de pantalla se muestra cómo se agrega un cambio de precio con fecha futura: el precio se cambia temporalmente de nivel 1 a nivel 3 para el mes de septiembre únicamente:
 

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 32beda28cb4db961abcbe74c26d38c70c8188a45
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139235"
+title: "inyección de dependencia" Descripción: "en este capítulo se explica cómo la aplicación móvil eShopOnContainers usa la inserción de dependencias para desacoplar tipos concretos del código que depende de estos tipos".
+MS. Prod: Xamarin ms. AssetID: a150f2d1-06f8-4aed-ab4e-7a847d69f103 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/04/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="dependency-injection"></a>Inserción de dependencias
 
 Normalmente, se invoca un constructor de clase al crear instancias de un objeto y los valores que necesita el objeto se pasan como argumentos al constructor. Este es un ejemplo de inserción de dependencias y, específicamente, se conoce como *inserción de constructores*. Las dependencias que necesita el objeto se insertan en el constructor.
@@ -24,8 +10,6 @@ Normalmente, se invoca un constructor de clase al crear instancias de un objeto 
 Al especificar las dependencias como tipos de interfaz, la inserción de dependencias permite desacoplar los tipos concretos del código que depende de estos tipos. Normalmente usa un contenedor que contiene una lista de registros y asignaciones entre las interfaces y los tipos abstractos, y los tipos concretos que implementan o amplían estos tipos.
 
 También hay otros tipos de inserción de dependencias, como la inserción de un *establecedor de propiedad*y la *inserción de llamadas de método*, pero se suelen considerar. Por lo tanto, este capítulo se centrará únicamente en realizar la inserción de constructores con un contenedor de inserción de dependencias.
-
-<a name="introduction_to_dependency_injection" />
 
 ## <a name="introduction-to-dependency-injection"></a>Introducción a la inserción de dependencias
 
@@ -118,8 +102,6 @@ _container.Register<ProfileViewModel>();
 
 De forma predeterminada, cada registro de clase concreta se configura como una instancia múltiple para que todos los objetos dependientes reciban una nueva instancia. Por lo tanto, cuando `ProfileViewModel` se resuelva el, se creará una nueva instancia de y el contenedor insertará sus dependencias necesarias.
 
-<a name="resolution" />
-
 ## <a name="resolution"></a>Solución
 
 Una vez registrado un tipo, se puede resolver o insertar como una dependencia. Cuando se resuelve un tipo y el contenedor necesita crear una nueva instancia, inserta las dependencias en la instancia.
@@ -136,7 +118,7 @@ En el ejemplo de código siguiente se muestra cómo `RequestProvider` se puede r
 var requestProvider = _container.Resolve<IRequestProvider>();
 ```
 
-En este ejemplo, se pide a TinyIoC que resuelva el tipo concreto para el `IRequestProvider` tipo, junto con las dependencias. Normalmente, `Resolve` se llama al método cuando se requiere una instancia de un tipo específico. Para obtener información sobre cómo controlar la duración de los objetos resueltos, vea [administrar la duración de los objetos resueltos](#managing_the_lifetime_of_resolved_objects).
+En este ejemplo, se pide a TinyIoC que resuelva el tipo concreto para el `IRequestProvider` tipo, junto con las dependencias. Normalmente, `Resolve` se llama al método cuando se requiere una instancia de un tipo específico. Para obtener información sobre cómo controlar la duración de los objetos resueltos, vea [administrar la duración de los objetos resueltos](#managing-the-lifetime-of-resolved-objects).
 
 En el ejemplo de código siguiente se muestra cómo la aplicación móvil eShopOnContainers crea instancias de los tipos de modelo de vista y sus dependencias:
 
@@ -144,12 +126,10 @@ En el ejemplo de código siguiente se muestra cómo la aplicación móvil eShopO
 var viewModel = _container.Resolve(viewModelType);
 ```
 
-En este ejemplo, se pide a TinyIoC que resuelva el tipo de modelo de vista para un modelo de vista solicitado, y el contenedor también resolverá las dependencias. Al resolver el `ProfileViewModel` tipo, las dependencias que se van a resolver son un `ISettingsService` objeto y un `IOrderService` objeto. Dado que los registros de interfaz se usaron al registrar las `SettingsService` `OrderService` clases y, TinyIoC devuelve instancias singleton para las `SettingsService` `OrderService` clases y y, a continuación, las pasa al constructor de la `ProfileViewModel` clase. Para obtener más información sobre cómo la aplicación móvil eShopOnContainers construye modelos de vista y los asocia a las vistas, vea [crear automáticamente un modelo de vista con un localizador de modelo de vista](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
+En este ejemplo, se pide a TinyIoC que resuelva el tipo de modelo de vista para un modelo de vista solicitado, y el contenedor también resolverá las dependencias. Al resolver el `ProfileViewModel` tipo, las dependencias que se van a resolver son un `ISettingsService` objeto y un `IOrderService` objeto. Dado que los registros de interfaz se usaron al registrar las `SettingsService` `OrderService` clases y, TinyIoC devuelve instancias singleton para las `SettingsService` `OrderService` clases y y, a continuación, las pasa al constructor de la `ProfileViewModel` clase. Para obtener más información sobre cómo la aplicación móvil eShopOnContainers construye modelos de vista y los asocia a las vistas, vea [crear automáticamente un modelo de vista con un localizador de modelo de vista](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically-creating-a-view-model-with-a-view-model-locator).
 
 > [!NOTE]
 > El registro y la resolución de tipos con un contenedor supone un costo de rendimiento, que los contenedores usan reflexión para crear todos los tipos, especialmente si se reconstruyen las dependencias para cada navegación de página en la aplicación. Si hay muchas dependencias, o estas son muy amplias, el costo de la creación puede aumentar significativamente.
-
-<a name="managing_the_lifetime_of_resolved_objects" />
 
 ## <a name="managing-the-lifetime-of-resolved-objects"></a>Administrar la duración de los objetos resueltos
 

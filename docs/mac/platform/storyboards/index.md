@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: b27a8d65ebaca6009d8310931b9dac3a4d7e12f3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 395ac62cd4db62c02863e352ed5643958348dcff
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026145"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574395"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Introducción a los guiones gráficos en Xamarin. Mac
 
@@ -24,13 +24,13 @@ Los guiones gráficos permiten desarrollar una interfaz de usuario para la aplic
 
 En este artículo se proporciona una introducción al uso de guiones gráficos para definir la interfaz de usuario de una aplicación de Xamarin. Mac.
 
-<a name="What-are-Storyboards" />
+<a name="What-are-Storyboards"></a>
 
 ## <a name="what-are-storyboards"></a>¿Qué son los guiones gráficos?
 
 Mediante el uso de guiones gráficos, toda la interfaz de usuario de una aplicación de Xamarin. Mac se puede definir en una sola ubicación con toda la navegación entre sus elementos individuales e interfaces de usuario. Los guiones gráficos para Xamarin. Mac funcionan de manera similar a los guiones gráficos de Xamarin. iOS. Sin embargo, contienen un conjunto diferente de _tipos segue_ debido a los diferentes expresiones de interfaz.
 
-<a name="Working-with-Scenes" />
+<a name="Working-with-Scenes"></a>
 
 ### <a name="working-with-scenes"></a>Trabajar con escenas
 
@@ -44,7 +44,7 @@ Cada escena representa un par determinado de vistas y controladores de vistas co
 
 Lo más importante que hay que tener en cuenta es que cada segue representa el flujo de alguna forma de datos entre el elemento especificado de la interfaz de usuario de la aplicación.
 
-<a name="Working-with-View-Controllers" />
+<a name="Working-with-View-Controllers"></a>
 
 ### <a name="working-with-view-controllers"></a>Trabajar con controladores de vista
 
@@ -54,13 +54,13 @@ Los controladores de vista definen las relaciones entre una vista determinada de
 
 De esta manera, cada controlador de vista es un emparejamiento reutilizable e independiente de la representación visual (vista) de la información y la lógica para presentar y controlar esa información.
 
-Dentro de una escena determinada, puede realizar todas las acciones que normalmente habrían controlado los archivos de `.xib` individuales: 
+Dentro de una escena determinada, puede realizar todas las acciones que normalmente se habrían controlado por archivos individuales `.xib` : 
 
 - Coloque subvistas y controles (como botones y cuadros de texto).
 - Defina las posiciones de los elementos y las restricciones de diseño automático.
 - Acciones de conexión y salidas para exponer elementos de la interfaz de usuario al código.
 
-<a name="Working-with-Segues" />
+<a name="Working-with-Segues"></a>
 
 ### <a name="working-with-segues"></a>Trabajar con objetos segue
 
@@ -70,9 +70,9 @@ En macOS, la mayoría de las aplicaciones suelen agrupar sus vistas en la misma 
 
 En función de la contención de las tendencias de macOS, hay situaciones en las que se usan la _presentación objetos segue_ , como ventanas modales, vistas de hoja y popovers.
 
-Al usar la presentación objetos segue, puede invalidar el método `PrepareForSegue` del controlador de vista primario para la presentación a fin de inicializar las variables y y proporcionar los datos al controlador de vistas que se está presentando.
+Al usar la presentación objetos segue, puede invalidar el `PrepareForSegue` método del controlador de vista primario para la presentación a fin de inicializar las variables y y proporcionar los datos al controlador de vistas que se está presentando.
 
-<a name="Design-and-Run-Times" />
+<a name="Design-and-Run-Times"></a>
 
 ### <a name="design-and-run-times"></a>Diseño y tiempo de ejecución
 
@@ -86,19 +86,19 @@ En tiempo de diseño (al diseñar la interfaz de usuario en la Interface Builder
 
 Al definir cada elemento de esta manera, se permite la carga diferida de cada elemento solo cuando sea necesario durante el tiempo de ejecución. En macOS, todo el proceso se diseñó para permitir al desarrollador crear interfaces de usuario complejas y flexibles que requieran un mínimo de código de respaldo para que funcionen, todo ello a la vez que sea tan eficaz como sea posible con los recursos del sistema.
 
-<a name="Storyboard-Quick-Start" />
+<a name="Storyboard-Quick-Start"></a>
 
 ## <a name="storyboard-quick-start"></a>Inicio rápido de guion gráfico
 
 En el [guion gráfico Inicio rápido](~/mac/platform/storyboards/quickstart.md) guía, vamos a crear una aplicación sencilla de Xamarin. Mac que presenta los conceptos clave para trabajar con guiones gráficos para crear una interfaz de usuario. La aplicación de ejemplo constará de una vista dividir que contiene un _área de contenido_ y un _área de inspector_ y presentará una ventana de cuadro de diálogo de preferencias simple. Vamos a usar objetos segue para unir todos los elementos de la interfaz de usuario.
 
-<a name="Working-with-Storyboards" />
+<a name="Working-with-Storyboards"></a>
 
 ## <a name="working-with-storyboards"></a>Trabajo con guiones gráficos
 
 En esta sección se tratan los detalles detallados sobre [Cómo trabajar con guiones gráficos](~/mac/platform/storyboards/indepth.md) en una aplicación de Xamarin. Mac. Vamos a echar un vistazo en profundidad y cómo se componen de los controladores de vista y la vista. A continuación, echaremos un vistazo a cómo se unen las escenas con objetos segue. Por último, echaremos un vistazo a trabajar con tipos de segue personalizados. 
 
-<a name="Complex-Storyboard-Example" />
+<a name="Complex-Storyboard-Example"></a>
 
 ## <a name="complex-storyboard-example"></a>Ejemplo de Storyboard complejo
 
@@ -106,7 +106,7 @@ Para ver un ejemplo de un ejemplo complejo de cómo trabajar con guiones gráfic
 
 El código de SourceWriter se ha comentado completamente y, si están disponibles, se han proporcionado vínculos de métodos o tecnologías clave a información relevante en la documentación de las guías de Xamarin.Mac.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumen
 
@@ -114,7 +114,7 @@ En este artículo se ha examinado rápidamente el trabajo con guiones gráficos 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de Hello, Mac (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac)
+- [Hello, Mac (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Trabajar con Windows](~/mac/user-interface/window.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) (Directrices de interfaz humana de OS X)

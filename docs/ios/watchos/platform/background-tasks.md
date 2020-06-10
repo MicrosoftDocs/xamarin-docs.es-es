@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2017
-ms.openlocfilehash: b688d830ad345a347bf54b3d3bd450eb34fec7d3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0ca65c56a742aaf23874f581b976ef50b3d16192
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028333"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574345"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>Tareas en segundo plano de watchos en Xamarin
 
@@ -24,7 +24,7 @@ Con watchos 3, hay tres formas principales en que una aplicación de inspección
 
 ## <a name="keeping-an-app-up-to-date"></a>Mantener actualizada una aplicación
 
-Antes de analizar todas las formas en que un desarrollador puede mantener actualizados y actualizados la interfaz de usuario y los datos de una aplicación de watchos, en esta sección se examina un conjunto típico de patrones de uso y cómo un usuario puede moverse entre su iPhone y su Apple Watch a lo largo del día según  la hora del día y la actividad que están realizando actualmente (por ejemplo, la conducción).
+Antes de analizar todas las formas en que un desarrollador puede mantener actualizados y actualizados la interfaz de usuario y los datos de una aplicación de watchos, en esta sección se examina un conjunto típico de patrones de uso y cómo un usuario puede moverse entre su iPhone y su Apple Watch a lo largo del día en función de la hora del día y la actividad que están realizando actualmente (por ejemplo, por conducir)
 
 Considere el ejemplo siguiente:
 
@@ -54,7 +54,7 @@ Como se ha indicado anteriormente, el sistema watchos reactiva la aplicación co
 
 Apple recomienda hacer la mayor parte de esta tarea (ya que es un recurso tan limitado a la aplicación) manteniéndola hasta que la aplicación haya finalizado el proceso de actualización.
 
-El sistema entrega estas tareas llamando al nuevo método `HandleBackgroundTasks` del delegado `WKExtensionDelegate`. Por ejemplo:
+El sistema entrega estas tareas llamando al nuevo `HandleBackgroundTasks` método del `WKExtensionDelegate` delegado. Por ejemplo:
 
 ```csharp
 using System;
@@ -86,7 +86,7 @@ Cuando la aplicación ha finalizado la tarea determinada, la devuelve al sistema
 
 [![](background-tasks-images/update03.png "The Task returns to the system by marking it completed")](background-tasks-images/update03.png#lightbox)
 
-<a name="New-Background-Tasks" />
+<a name="New-Background-Tasks"></a>
 
 ## <a name="new-background-tasks"></a>Nuevas tareas en segundo plano
 
@@ -99,27 +99,27 @@ watchos 3 presenta varias tareas en segundo plano que una aplicación puede usar
 
 Estas tareas se tratarán en detalle en las secciones siguientes.
 
-<a name="WKApplicationRefreshBackgroundTask" />
+<a name="WKApplicationRefreshBackgroundTask"></a>
 
 ### <a name="wkapplicationrefreshbackgroundtask"></a>WKApplicationRefreshBackgroundTask
 
-El `WKApplicationRefreshBackgroundTask` es una tarea genérica que se puede programar para que la aplicación se reactivarán en una fecha futura:
+`WKApplicationRefreshBackgroundTask`Es una tarea genérica que se puede programar para que la aplicación se reactivarán en una fecha futura:
 
 [![](background-tasks-images/update04.png "A WKApplicationRefreshBackgroundTask woken at a future date")](background-tasks-images/update04.png#lightbox)
 
-En el tiempo de ejecución de la tarea, la aplicación puede realizar cualquier tipo de procesamiento local, como actualizar una escala de tiempo complicada o capturar algunos datos necesarios con un `NSUrlSession`.
+En el tiempo de ejecución de la tarea, la aplicación puede realizar cualquier tipo de procesamiento local, como actualizar una escala de tiempo complicada o capturar algunos datos necesarios con `NSUrlSession` .
 
-<a name="WKURLSessionRefreshBackgroundTask" />
+<a name="WKURLSessionRefreshBackgroundTask"></a>
 
 ### <a name="wkurlsessionrefreshbackgroundtask"></a>WKURLSessionRefreshBackgroundTask
 
-El sistema enviará un `WKURLSessionRefreshBackgroundTask` cuando los datos hayan finalizado la descarga y estén listos para ser procesados por la aplicación:
+El sistema enviará un `WKURLSessionRefreshBackgroundTask` cuando los datos terminen la descarga y estén listos para ser procesados por la aplicación:
 
 [![](background-tasks-images/update05.png "The WKURLSessionRefreshBackgroundTask when the data has finished downloading")](background-tasks-images/update05.png#lightbox)
 
 Una aplicación no deja de ejecutarse mientras los datos se están descargando en segundo plano. En su lugar, la aplicación programa la solicitud de datos, se suspende y el sistema controla la descarga de los datos, reactivando la aplicación solo cuando se complete la descarga.
 
-<a name="WKSnapshotRefreshBackgroundTask" />
+<a name="WKSnapshotRefreshBackgroundTask"></a>
 
 ### <a name="wksnapshotrefreshbackgroundtask"></a>WKSnapshotRefreshBackgroundTask
 
@@ -127,20 +127,20 @@ En watchos 3, Apple ha agregado el Dock en el que los usuarios pueden anclar sus
 
 [![](background-tasks-images/update06.png "Replacing the Snapshot with the running apps interface")](background-tasks-images/update06.png#lightbox)
 
-Periódicamente, el sistema toma instantáneas de la interfaz de usuario de la aplicación (mediante el envío de una `WKSnapshotRefreshBackgroundTask`) y las usa para rellenar el Dock. watchos ofrece a la aplicación la oportunidad de actualizar su contenido y la interfaz de usuario antes de tomar esta instantánea.
+Periódicamente, el sistema toma instantáneas de la interfaz de usuario de la aplicación (mediante el envío de un `WKSnapshotRefreshBackgroundTask` ) y las usa para rellenar el Dock. watchos ofrece a la aplicación la oportunidad de actualizar su contenido y la interfaz de usuario antes de tomar esta instantánea.
 
 Las instantáneas son muy importantes en watchos 3, ya que funcionan como imágenes de inicio y vista previa de la aplicación. Si el usuario se liquida en una aplicación en el Dock, se expandirá a pantalla completa, entrará en primer plano y comenzará a ejecutarse, por lo que es imperativo que la instantánea esté actualizada:
 
 [![](background-tasks-images/update07.png "If the user settles on an app in the Dock, it will expand to full screen")](background-tasks-images/update07.png#lightbox)
 
-De nuevo, el sistema emitirá una `WKSnapshotRefreshBackgroundTask` para que la aplicación pueda prepararse (mediante la actualización de los datos y la interfaz de usuario) antes de que se tome la instantánea:
+De nuevo, el sistema emitirá una `WKSnapshotRefreshBackgroundTask` para que la aplicación se pueda preparar (mediante la actualización de los datos y la interfaz de usuario) antes de que se tome la instantánea:
 
 [![](background-tasks-images/update08.png "The app can prepare by updating the data and the UI before the snapshot is taken")](background-tasks-images/update08.png#lightbox)
 
 Cuando la aplicación marca el `WKSnapshotRefreshBackgroundTask` completado, el sistema tomará automáticamente una instantánea de la interfaz de usuario de la aplicación.
 
 > [!IMPORTANT]
-> Es importante programar siempre una `WKSnapshotRefreshBackgroundTask` después de que la aplicación haya recibido datos nuevos y haya actualizado su interfaz de usuario, o el usuario no verá la información modificada.
+> Es importante programar siempre una `WKSnapshotRefreshBackgroundTask` después de que la aplicación haya recibido nuevos datos y actualizado su interfaz de usuario, o el usuario no verá la información modificada.
 
 Además, cuando el usuario recibe una notificación de la aplicación y la pulsa para poner la aplicación en primer plano, la instantánea debe estar actualizada, ya que actúa como la pantalla de inicio también:
 
@@ -150,25 +150,25 @@ Si ha transcurrido más de una hora desde que el usuario ha interactuado con una
 
 <!--TODO - Possibly link to Apple's Designing Great Apple Watch Experiences video or add our own version here...-->
 
-<a name="WKWatchConnectivityRefreshBackgroundTask" />
+<a name="WKWatchConnectivityRefreshBackgroundTask"></a>
 
 ### <a name="wkwatchconnectivityrefreshbackgroundtask"></a>WKWatchConnectivityRefreshBackgroundTask
 
-En watchos 3, Apple ha integrado la conectividad de inspección con la API de actualización en segundo plano a través de la nueva `WKWatchConnectivityRefreshBackgroundTask`. Con esta nueva característica, una aplicación de iPhone puede proporcionar datos nuevos a su homólogo de aplicación de inspección, mientras que la aplicación watchos se ejecuta en segundo plano:
+En watchos 3, Apple ha integrado la conectividad de inspección con la API de actualización en segundo plano a través de la nueva `WKWatchConnectivityRefreshBackgroundTask` . Con esta nueva característica, una aplicación de iPhone puede proporcionar datos nuevos a su homólogo de aplicación de inspección, mientras que la aplicación watchos se ejecuta en segundo plano:
 
 [![](background-tasks-images/update10.png "An iPhone app can deliver fresh data to its watch app counterpart, while the watchOS app is running in the background")](background-tasks-images/update10.png#lightbox)
 
 El inicio de una incomplicaciones, el contexto de la aplicación, el envío de un archivo o la actualización de la información del usuario desde la aplicación de iPhone reactivará la aplicación Apple Watch en segundo plano.
 
-Cuando la aplicación de inspección se reactivarán a través de una `WKWatchConnectivityRefreshBackgroundTask` deberá usar los métodos de la API estándar para recibir los datos de la aplicación de iPhone.
+Cuando la aplicación de inspección se reactivarán a través de un `WKWatchConnectivityRefreshBackgroundTask` , tendrá que usar los métodos de API estándar para recibir los datos de la aplicación de iPhone.
 
 [![](background-tasks-images/update11.png "The WKWatchConnectivityRefreshBackgroundTask data flow")](background-tasks-images/update11.png#lightbox)
 
 1. Asegúrese de que la sesión está activada.
-2. Supervise la nueva propiedad `HasContentPending` siempre que el valor sea `true`, la aplicación todavía tenga datos para procesar. Como antes, la aplicación debe mantenerse en la tarea hasta que haya finalizado el procesamiento de todos los datos.
-3. Cuando no haya más datos que procesar (`HasContentPending = false`), marque la tarea completada para devolverla al sistema. Si no lo hace, se agotará el tiempo de ejecución asignado en segundo plano de la aplicación, lo que resultará en un informe de bloqueo.
+2. Supervise la nueva `HasContentPending` propiedad siempre que el valor sea `true` , la aplicación todavía tenga datos para procesar. Como antes, la aplicación debe mantenerse en la tarea hasta que haya finalizado el procesamiento de todos los datos.
+3. Cuando no haya más datos que procesar ( `HasContentPending = false` ), marque la tarea completada para devolverla al sistema. Si no lo hace, se agotará el tiempo de ejecución asignado en segundo plano de la aplicación, lo que resultará en un informe de bloqueo.
 
-<a name="The-Background-API-Lifecycle" />
+<a name="The-Background-API-Lifecycle"></a>
 
 ## <a name="the-background-api-lifecycle"></a>Ciclo de vida de API en segundo plano
 
@@ -179,10 +179,10 @@ Una vez que se colocan todos los elementos de la nueva API de tareas en segundo 
 1. En primer lugar, la aplicación watchos programa una tarea en segundo plano para que se activo como algún punto en el futuro.
 2. El sistema reactivarán la aplicación y envía una tarea.
 3. La aplicación procesa la tarea para completar todo el trabajo necesario.
-4. Como resultado del procesamiento de la tarea, es posible que la aplicación necesite programar más tareas en segundo plano para completar más trabajo en el futuro, como la descarga de más contenido mediante una `NSUrlSession`.
+4. Como resultado del procesamiento de la tarea, es posible que la aplicación necesite programar más tareas en segundo plano para completar más trabajo en el futuro, como la descarga de más contenido mediante `NSUrlSession` .
 5. La aplicación marca la tarea como completada y la devuelve al sistema.
 
-<a name="Using-Resources-Responsibly" />
+<a name="Using-Resources-Responsibly"></a>
 
 ## <a name="using-resources-responsibly"></a>Uso de los recursos de manera responsable
 
@@ -199,7 +199,7 @@ Eche un vistazo al siguiente escenario:
 
 Aunque cada aplicación es diferente, Apple sugiere buscar patrones de uso, como los mostrados anteriormente, para ayudar a conservar los recursos del sistema.
 
-<a name="Implementing-Background-Tasks" />
+<a name="Implementing-Background-Tasks"></a>
 
 ## <a name="implementing-background-tasks"></a>Implementar tareas en segundo plano
 
@@ -217,7 +217,7 @@ El equipo de fútbol favorito del usuario está reproduciendo una gran coinciden
 4. El mismo proceso se repite de nuevo.
 5. Se recibe la última tarea en segundo plano y la aplicación actualiza los datos y la interfaz de usuario de nuevo. Puesto que esta es la puntuación final, no programa para una nueva actualización en segundo plano. 
 
-<a name="Scheduling-for-Background-Update" />
+<a name="Scheduling-for-Background-Update"></a>
 
 ## <a name="scheduling-for-background-update"></a>Programación para la actualización en segundo plano
 
@@ -246,11 +246,11 @@ private void ScheduleNextBackgroundUpdate ()
 }
 ```
 
-Crea un nuevo `NSDate` 30 minutos en el futuro cuando la aplicación quiere ser awoken y crea un `NSMutableDictionary` para contener los detalles de la tarea solicitada. El método `ScheduleBackgroundRefresh` del `SharedExtension` se utiliza para solicitar que se programe la tarea.
+Crea un nuevo `NSDate` 30 minutos en el futuro cuando la aplicación quiere ser awoken y crea un `NSMutableDictionary` para contener los detalles de la tarea solicitada. El `ScheduleBackgroundRefresh` método de `SharedExtension` se usa para solicitar que se programe la tarea.
 
-El sistema devolverá un `NSError` si no pudo programar la tarea solicitada.
+El sistema devolverá `NSError` si no pudo programar la tarea solicitada.
 
-<a name="Processing-the-Update" />
+<a name="Processing-the-Update"></a>
 
 ## <a name="processing-the-update"></a>Procesar la actualización
 
@@ -264,7 +264,7 @@ A continuación, eche un vistazo más de cerca a la ventana de 5 minutos que mue
 4. La aplicación guarda la información actualizada y marca la tarea como completada. El desarrollador puede verse tentado de actualizar la interfaz de usuario de la aplicación en este momento. sin embargo, Apple sugiere programar una tarea de instantánea para controlar ese proceso. Vea [la programación de una actualización de instantánea](#Scheduling-a-Snapshot-Update) a continuación.
 5. La aplicación recibe la tarea de instantáneas, actualiza su interfaz de usuario y marca la tarea como completada. Consulte [Administración de una actualización de instantánea](#Handling-a-Snapshot-Update) a continuación.
 
-<a name="Scheduling-a-NSUrlSession" />
+<a name="Scheduling-a-NSUrlSession"></a>
 
 ## <a name="scheduling-a-nsurlsession"></a>Programación de un NSUrlSession
 
@@ -285,13 +285,13 @@ private void ScheduleURLUpdateSession ()
 }
 ```
 
-Configura y crea una nueva `NSUrlSession`y, a continuación, usa esa sesión para crear una nueva tarea de descarga con el método `CreateDownloadTask`. Llama al método `Resume` de la tarea de descarga para iniciar la sesión.
+Configura y crea una nueva y, `NSUrlSession` a continuación, usa esa sesión para crear una nueva tarea de descarga mediante el `CreateDownloadTask` método. Llama al `Resume` método de la tarea de descarga para iniciar la sesión.
 
-<a name="Handling-Background-Tasks" />
+<a name="Handling-Background-Tasks"></a>
 
 ## <a name="handling-background-tasks"></a>Controlar tareas en segundo plano
 
-Al invalidar el método `HandleBackgroundTasks` del `WKExtensionDelegate`, la aplicación puede controlar las tareas en segundo plano de entrada:
+Al invalidar el `HandleBackgroundTasks` método de `WKExtensionDelegate` , la aplicación puede controlar las tareas en segundo plano de entrada:
 
 ```csharp
 using System;
@@ -347,7 +347,7 @@ namespace MonkeySoccer.MonkeySoccerExtension
 }
 ```
 
-El método `HandleBackgroundTasks` recorre todas las tareas que el sistema ha enviado a la aplicación (en `backgroundTasks`) buscando una `WKUrlSessionRefreshBackgroundTask`. Si se encuentra una, se vuelve a unir a la sesión y se adjunta una `NSUrlSessionDownloadDelegate` para controlar la finalización de la descarga (consulte [Administración de la descarga completada](#Handling-the-Download-Completing) a continuación):
+El `HandleBackgroundTasks` método recorre todas las tareas que el sistema ha enviado a la aplicación (en `backgroundTasks` ) buscando `WKUrlSessionRefreshBackgroundTask` . Si se encuentra una, se vuelve a unir a la sesión y se adjunta un `NSUrlSessionDownloadDelegate` para controlar la finalización de la descarga (vea el apartado sobre [control de la descarga completada](#Handling-the-Download-Completing) a continuación):
 
 ```csharp
 // Create new session
@@ -375,11 +375,11 @@ if (urlTask != null) {
 }
 ```
 
-<a name="Handling-the-Download-Completing" />
+<a name="Handling-the-Download-Completing"></a>
 
 ## <a name="handling-the-download-completing"></a>Control de la descarga completada
 
-La aplicación MonkeySoccer usa el siguiente delegado `NSUrlSessionDownloadDelegate` para controlar la finalización de la descarga y procesar los datos solicitados:
+La aplicación MonkeySoccer usa el siguiente `NSUrlSessionDownloadDelegate` delegado para controlar la finalización de la descarga y procesar los datos solicitados:
 
 ```csharp
 using System;
@@ -420,9 +420,9 @@ namespace MonkeySoccer.MonkeySoccerExtension
 }
 ```
 
-Cuando se inicializa, mantiene un identificador tanto en el `ExtensionDelegate` como en el `WKRefreshBackgroundTask` que lo generó. Invalida el método `DidFinishDownloading` para controlar la finalización de la descarga. A continuación, usa el método `CompleteTask` del `ExtensionDelegate` para informar a la tarea de que se ha completado y quitarlo de la colección de tareas pendientes. Vea [administrar tareas en segundo plano](#Handling-Background-Tasks) anteriormente.
+Cuando se inicializa, mantiene un identificador para `ExtensionDelegate` y el `WKRefreshBackgroundTask` que lo generó. Invalida el `DidFinishDownloading` método para controlar la finalización de la descarga. A continuación, usa el `CompleteTask` método de `ExtensionDelegate` para informar a la tarea de que se ha completado y quitarla de la colección de tareas pendientes. Vea [administrar tareas en segundo plano](#Handling-Background-Tasks) anteriormente.
 
-<a name="Scheduling-a-Snapshot-Update" />
+<a name="Scheduling-a-Snapshot-Update"></a>
 
 ## <a name="scheduling-a-snapshot-update"></a>Programar una actualización de instantánea
 
@@ -451,15 +451,15 @@ private void ScheduleSnapshotUpdate ()
 }
 ```
 
-Al igual que `ScheduleURLUpdateSession` método anterior, crea un nuevo `NSDate` para cuando la aplicación quiere ser awoken y crea un `NSMutableDictionary` para contener los detalles de la tarea solicitada. El método `ScheduleSnapshotRefresh` del `SharedExtension` se utiliza para solicitar que se programe la tarea.
+Al igual `ScheduleURLUpdateSession` que el método anterior, crea un nuevo `NSDate` para cuando la aplicación quiere ser awoken y crea un `NSMutableDictionary` para contener los detalles de la tarea solicitada. El `ScheduleSnapshotRefresh` método de `SharedExtension` se usa para solicitar que se programe la tarea.
 
-El sistema devolverá un `NSError` si no pudo programar la tarea solicitada.
+El sistema devolverá `NSError` si no pudo programar la tarea solicitada.
 
-<a name="Handling-a-Snapshot-Update" />
+<a name="Handling-a-Snapshot-Update"></a>
 
 ## <a name="handling-a-snapshot-update"></a>Controlar una actualización de instantánea
 
-Para controlar la tarea de instantáneas, el método `HandleBackgroundTasks` (consulte [controlar las tareas en segundo plano](#Handling-Background-Tasks) anteriores) se modifica para que sea similar al siguiente:
+Para controlar la tarea de instantáneas, el `HandleBackgroundTasks` método (vea [controlar las tareas en segundo plano](#Handling-Background-Tasks) anteriores) se modifica para que tenga un aspecto similar al siguiente:
 
 ```csharp
 public override void HandleBackgroundTasks (NSSet<WKRefreshBackgroundTask> backgroundTasks)
@@ -502,22 +502,22 @@ public override void HandleBackgroundTasks (NSSet<WKRefreshBackgroundTask> backg
 }
 ```
 
-El método comprueba el tipo de tarea que se está procesando. Si es un `WKSnapshotRefreshBackgroundTask` obtiene acceso a la tarea:
+El método comprueba el tipo de tarea que se está procesando. Si es `WKSnapshotRefreshBackgroundTask` , obtiene acceso a la tarea:
 
 ```csharp
 var snapshotTask = task as WKSnapshotRefreshBackgroundTask;
 ```
 
-El método actualiza la interfaz de usuario y, a continuación, crea un `NSDate` para indicar al sistema Cuándo estará obsoleta la instantánea. Crea una `NSMutableDictionary` con información de usuario para describir la nueva instantánea y marca la tarea de instantáneas como completada con esta información:
+El método actualiza la interfaz de usuario y después crea un `NSDate` para indicar al sistema Cuándo estará obsoleta la instantánea. Crea un `NSMutableDictionary` con información de usuario para describir la nueva instantánea y marca la tarea de instantáneas como completada con esta información:
 
 ```csharp
 // Mark task complete
 snapshotTask.SetTaskCompleted (false, expirationDate, userInfo);
 ```
 
-Además, también indica a la tarea de instantáneas que la aplicación no devuelve el estado predeterminado (en el primer parámetro). Las aplicaciones que no tienen un concepto de estado predeterminado siempre deben establecer esta propiedad en `true`.
+Además, también indica a la tarea de instantáneas que la aplicación no devuelve el estado predeterminado (en el primer parámetro). Las aplicaciones que no tienen un concepto de estado predeterminado siempre deben establecer esta propiedad en `true` .
 
-<a name="Working-Efficiently" />
+<a name="Working-Efficiently"></a>
 
 ## <a name="working-efficiently"></a>Trabajar de forma eficaz
 
@@ -527,7 +527,7 @@ Como se ve en el ejemplo anterior de la ventana de cinco minutos que tardó la a
 
 Esto reduce el impacto que tendrá la aplicación en los recursos de Apple Watch disponibles y en la duración de la batería, y también permite que la aplicación funcione mejor con otras aplicaciones que se ejecutan en el reloj.
 
-<a name="How-Scheduling-Works" />
+<a name="How-Scheduling-Works"></a>
 
 ## <a name="how-scheduling-works"></a>Cómo funciona la programación
 
@@ -541,9 +541,9 @@ Mientras una aplicación está en segundo plano, el sistema impone varios límit
 - Cualquier aplicación que supere sus límites se eliminará con los siguientes códigos de error:
   - **CPU** -0xc51bad01
   - **Hora** : 0xc51bad02
-- El sistema impondrá distintos límites en función del tipo de tarea en segundo plano que ha solicitado que la aplicación realice. Por ejemplo, las tareas de `WKApplicationRefreshBackgroundTask` y `WKURLSessionRefreshBackgroundTask` se proporcionan en tiempos de ejecución ligeramente mayores en otros tipos de tareas en segundo plano.
+- El sistema impondrá distintos límites en función del tipo de tarea en segundo plano que ha solicitado que la aplicación realice. Por ejemplo, `WKApplicationRefreshBackgroundTask` `WKURLSessionRefreshBackgroundTask` las tareas y se proporcionan tiempos de ejecución ligeramente mayores en otros tipos de tareas en segundo plano.
 
-<a name="Complications-and-App-Updates" />
+<a name="Complications-and-App-Updates"></a>
 
 ### <a name="complications-and-app-updates"></a>Complicaciones y actualizaciones de aplicaciones
 
@@ -558,7 +558,7 @@ Si el usuario incluye una de las complicaciones de la aplicación en su superfic
 
 El desarrollador siempre debe esforzarse por crear atractivas complicaciones para que sus aplicaciones adquieran que el usuario las agregue a su superficie de inspección por las razones mencionadas anteriormente.
 
-En watchos 2, las complicaciones fueron la manera principal en que una aplicación recibió tiempo de ejecución mientras estaba en segundo plano. En watchos 3, se garantizará que una aplicación de complicación recibe varias actualizaciones por hora, pero puede usar `WKExtensions` para solicitar más tiempo de ejecución para actualizar sus complicaciones.
+En watchos 2, las complicaciones fueron la manera principal en que una aplicación recibió tiempo de ejecución mientras estaba en segundo plano. En watchos 3, todavía se garantizará que una aplicación de complejidad reciba varias actualizaciones por hora, pero puede usar `WKExtensions` para solicitar más tiempo de ejecución para actualizar sus complicaciones.
 
 Eche un vistazo al código siguiente que se usa para actualizar la complicación desde la aplicación de iPhone conectada:
 
@@ -603,9 +603,9 @@ private void UpdateComplication ()
 }
 ```
 
-Usa la propiedad `RemainingComplicationUserInfoTransfers` del `WCSession` para ver cuántas transferencias de prioridad alta ha dejado la aplicación durante el día y, a continuación, toma medidas en función de ese número. Si la aplicación empieza a ejecutarse bajo transferencias, puede mantener el envío de actualizaciones secundarias y enviar solo información cuando se produce un cambio significativo.
+Usa la `RemainingComplicationUserInfoTransfers` propiedad de `WCSession` para ver el número de transferencias de prioridad alta que la aplicación ha dejado durante el día y, a continuación, toma medidas en función de ese número. Si la aplicación empieza a ejecutarse bajo transferencias, puede mantener el envío de actualizaciones secundarias y enviar solo información cuando se produce un cambio significativo.
 
-<a name="Scheduling-and-Dock" />
+<a name="Scheduling-and-Dock"></a>
 
 ### <a name="scheduling-and-the-dock"></a>Programación y Dock
 
@@ -636,9 +636,9 @@ Puede haber ocasiones en las que el sistema decida que necesita una instantánea
 - Después de una hora de estar en el estado en segundo plano, por lo que la aplicación puede volver al estado predeterminado.
 - Cuando se inicia watchos primero.
 
-<a name="Best-Practices" />
+<a name="Best-Practices"></a>
 
-## <a name="best-practices"></a>Procedimientos recomendados 
+## <a name="best-practices"></a>Prácticas recomendadas 
 
 Apple sugiere las siguientes prácticas recomendadas al trabajar con tareas en segundo plano:
 
@@ -649,13 +649,13 @@ Apple sugiere las siguientes prácticas recomendadas al trabajar con tareas en s
   - Notificaciones.
   - Actualizaciones de complicaciones.
   - Actualizaciones en segundo plano.
-- Utilice `ScheduleBackgroundRefresh` para el tiempo de ejecución en segundo plano de uso general, como:
+- Se usa `ScheduleBackgroundRefresh` para el tiempo de ejecución en segundo plano de uso general, como:
   - Sondeo del sistema para obtener información.
-  - Programar `NSURLSessions` futuros para solicitar datos de fondo. 
+  - Programe el futuro `NSURLSessions` para solicitar datos de fondo. 
   - Transiciones de hora conocidas.
   - Desencadenar actualizaciones de complejidad.
 
-<a name="Snapshot-Best-Practices" />
+<a name="Snapshot-Best-Practices"></a>
 
 ## <a name="snapshot-best-practices"></a>Procedimientos recomendados de instantánea
 
@@ -664,7 +664,7 @@ Al trabajar con actualizaciones de instantáneas, Apple realiza las siguientes s
 - Invalide las instantáneas solo cuando sea necesario, por ejemplo, cuando se produzca un cambio significativo en el contenido.
 - Evite la invalidación de instantáneas de alta frecuencia. Por ejemplo, una aplicación de temporizador no debe actualizar la instantánea cada segundo, solo debería realizarse cuando el temporizador haya finalizado.
 
-<a name="App-Data-Flow" />
+<a name="App-Data-Flow"></a>
 
 ## <a name="app-data-flow"></a>Flujo de datos de la aplicación
 
@@ -672,9 +672,9 @@ Apple sugiere lo siguiente para trabajar con el flujo de datos:
 
 [![](background-tasks-images/update17.png "App Data Flow Diagram")](background-tasks-images/update17.png#lightbox)
 
-Un evento externo (como la conectividad de inspección) activa la aplicación. Esto obliga a la aplicación a actualizar su modelo de datos (que representa el estado actual de las aplicaciones). Como resultado de la modificación del modelo de datos, la aplicación tendrá que actualizar sus complicaciones, solicitar una nueva instantánea, posiblemente iniciar un `NSURLSession` en segundo plano para extraer más datos y programar nuevas actualizaciones en segundo plano.
+Un evento externo (como la conectividad de inspección) activa la aplicación. Esto obliga a la aplicación a actualizar su modelo de datos (que representa el estado actual de las aplicaciones). Como resultado de la modificación del modelo de datos, la aplicación tendrá que actualizar sus complicaciones, solicitar una nueva instantánea, posiblemente iniciar un segundo plano `NSURLSession` para extraer más datos y programar nuevas actualizaciones en segundo plano.
 
-<a name="The-App-Lifecycle" />
+<a name="The-App-Lifecycle"></a>
 
 ## <a name="the-app-lifecycle"></a>Ciclo de vida de la aplicación
 
@@ -683,7 +683,7 @@ Debido al acoplamiento y a la capacidad de anclar aplicaciones favoritas a él, 
 Apple tiene las siguientes sugerencias:
 
 - Asegúrese de que la aplicación finaliza cualquier tarea en segundo plano tan pronto como sea posible al entrar en el modo de activación en primer plano.
-- Asegúrese de finalizar todo el trabajo en primer plano antes de entrar en el fondo llamando a `NSProcessInfo.PerformExpiringActivity`.
+- Asegúrese de finalizar todo el trabajo en primer plano antes de entrar en el fondo llamando a `NSProcessInfo.PerformExpiringActivity` .
 - Al probar una aplicación en el simulador de watchos, no se aplicará ninguno de los presupuestos de tareas para que una aplicación pueda actualizarse tanto como sea necesario para probar correctamente una característica.
 - Pruebe siempre el hardware real Apple Watch para asegurarse de que la aplicación no se está ejecutando más allá de sus presupuestos antes de publicar en iTunes Connect.
 - Apple sugiere mantener el Apple Watch en el cargador durante las pruebas y la depuración.
@@ -691,7 +691,7 @@ Apple tiene las siguientes sugerencias:
 - Compruebe que se han completado todas las tareas de la aplicación.
 - Varíe el número de aplicaciones ancladas en el Dock para probar los escenarios de los mejores y peores casos.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumen
 

@@ -1,22 +1,8 @@
 ---
-title: Genéricos en Xamarin.Forms XAML
-description: Xamarin.FormsXAML proporciona compatibilidad para consumir tipos CLR genéricos especificando las restricciones genéricas como argumentos de tipo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 814e622a822e2eb1cf07f71bfb1da1d6eac5631f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138117"
+title: "genéricos en Xamarin.Forms XAML" Description: " Xamarin.Forms XAML proporciona compatibilidad para consumir tipos CLR genéricos especificando las restricciones genéricas como argumentos de tipo".
+MS. Prod: Xamarin ms. AssetID: 97B73048-4F90-41AD-AB48-8EB804C4998B ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/28/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="generics-in-xamarinforms-xaml"></a>Genéricos en Xamarin.Forms XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
@@ -31,7 +17,7 @@ Los argumentos de tipo se especifican como una cadena y normalmente tienen el pr
 Se pueden especificar varios argumentos de tipo mediante un delimitador de coma. Además, si una restricción genérica usa tipos genéricos, los argumentos de tipo de restricción anidados deben incluirse entre paréntesis.
 
 > [!NOTE]
-> La `x:Type` extensión de marcado proporciona una referencia de tipo de CLR para un tipo genérico y tiene una función similar al `typeof` operador en C#. Para obtener más información, consulte [extensión de marcado x:Type](~/xamarin-forms/xaml/markup-extensions/consuming.md#type).
+> La `x:Type` extensión de marcado proporciona una referencia de tipo de CLR para un tipo genérico y tiene una función similar al `typeof` operador en C#. Para obtener más información, consulte [extensión de marcado x:Type](~/xamarin-forms/xaml/markup-extensions/consuming.md#xtype-markup-extension).
 
 ## <a name="single-primitive-type-argument"></a>Argumento de tipo primitivo único
 
@@ -208,11 +194,11 @@ Se pueden especificar varios argumentos de tipo como argumentos de cadena con pr
 </ContentPage    
 ```
 
-En este ejemplo, `GenericsDemo.Models` se define como el `models` espacio de nombres XAML y `System.Collections.Generic` se define como el `scg` espacio de nombres XAML. La `CollectionView.ItemsSource` propiedad se establece en un `List<T>` que se crea una instancia de con una `KeyValuePair<TKey, TValue>` restricción, con los argumentos de tipo de restricción interna `string` y `Monkey` . La `List<KeyValuePair<string,Monkey>>` colección se inicializa con varios `KeyValuePair` elementos, mediante el constructor no predeterminado `KeyValuePair` , y un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que define la apariencia de cada `Monkey` objeto se establece como la `ItemTemplate` de [`CollectionView`](xref:Xamarin.Forms.CollectionView) . Para obtener información sobre cómo pasar argumentos a un constructor no predeterminado, vea [pasar argumentos de constructor](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments).
+En este ejemplo, `GenericsDemo.Models` se define como el `models` espacio de nombres XAML y `System.Collections.Generic` se define como el `scg` espacio de nombres XAML. La `CollectionView.ItemsSource` propiedad se establece en un `List<T>` que se crea una instancia de con una `KeyValuePair<TKey, TValue>` restricción, con los argumentos de tipo de restricción interna `string` y `Monkey` . La `List<KeyValuePair<string,Monkey>>` colección se inicializa con varios `KeyValuePair` elementos, mediante el constructor no predeterminado `KeyValuePair` , y un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que define la apariencia de cada `Monkey` objeto se establece como la `ItemTemplate` de [`CollectionView`](xref:Xamarin.Forms.CollectionView) . Para obtener información sobre cómo pasar argumentos a un constructor no predeterminado, vea [pasar argumentos de constructor](~/xamarin-forms/xaml/passing-arguments.md#passing-constructor-arguments).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Genéricos en XAML (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
 - [Primitivas del lenguaje XAML 2009](/dotnet/desktop-wpf/xaml-services/types-for-primitives#xaml-2009-language-primitives)
-- [Extensión de marcado x:Type](~/xamarin-forms/xaml/markup-extensions/consuming.md#type)
-- [Pasar argumentos de constructor](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments)
+- [Extensión de marcado x:Type](~/xamarin-forms/xaml/markup-extensions/consuming.md#xtype-markup-extension)
+- [Pasar argumentos de constructor](~/xamarin-forms/xaml/passing-arguments.md#passing-constructor-arguments)

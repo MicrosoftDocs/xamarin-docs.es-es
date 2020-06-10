@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsBoxView
-description: En este artículo se explica cómo usar un rectángulo de color para decoración, gráficos e interacción en una Xamarin.Forms aplicación.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5f915955bff969ef38cdb7a89bf9cecf05401131
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136362"
+title: " Xamarin.Forms BoxView" Description: "en este artículo se explica cómo usar un rectángulo de color para decoración, gráficos e interacción en una Xamarin.Forms aplicación".
+MS. Prod: Xamarin ms. AssetID: 4CBF703D-84A0-4CDF-A433-5926B587782A ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/26/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-boxview"></a>Xamarin.FormsBoxView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview)
@@ -26,17 +12,6 @@ ms.locfileid: "84136362"
 Dado Xamarin.Forms que no tiene un sistema de gráficos vectoriales integrado, `BoxView` ayuda a compensar. Algunos de los programas de ejemplo que se describen en este artículo se usan `BoxView` para representar gráficos. `BoxView`Se puede cambiar el tamaño para que se parezca a una línea de un ancho y un grosor específicos y, a continuación, girar cualquier ángulo mediante la `Rotation` propiedad.
 
 Aunque `BoxView` puede imitar gráficos sencillos, es posible que desee investigar [usando Xamarin.Forms SkiaSharp en](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) para obtener requisitos de gráficos más sofisticados.
-
-En este artículo se tratan los temas siguientes:
-
-- **[Establecer el color y el tamaño](#colorandsize)** &ndash; de BoxView establezca las `BoxView` propiedades.
-- **[Representación de decoraciones](#textdecorations)** &ndash; de texto Utilice un `BoxView` para representar las líneas.
-- **[Enumerar los colores con BoxView](#listingcolors)** &ndash; Mostrar todos los colores del sistema en un `ListView` .
-- **[Reproducir el juego de vida mediante la subclase de BoxView](#subclassing)** &ndash; implemente un autómata de telefonía móvil famoso.
-- **[Crear un reloj digital](#digitalclock)** &ndash; simular una presentación de matriz de puntos.
-- **[Crear un reloj analógico](#analogclock)** &ndash; transformar y animar `BoxView` elementos.
-
-<a name="colorandsize" />
 
 ## <a name="setting-boxview-color-and-size"></a>Establecer el color y el tamaño de BoxView
 
@@ -55,7 +30,7 @@ Las `WidthRequest` `HeightRequest` propiedades y solo desempeñan un rol si `Box
 
 Las `WidthRequest` `HeightRequest` propiedades y se omiten si `BoxView` está *restringido* en el diseño, en cuyo caso el contenedor de diseño impone su propio tamaño en `BoxView` .
 
-Un `BoxView` se puede restringir en una dimensión y sin restricciones en el otro. Por ejemplo, si `BoxView` es un elemento secundario de un elemento vertical `StackLayout` , la dimensión vertical de la `BoxView` no está restringida y su dimensión horizontal está normalmente restringida. Pero hay excepciones para esa dimensión horizontal: Si `BoxView` tiene su `HorizontalOptions` propiedad establecida en un valor distinto de `LayoutOptions.Fill` , la dimensión horizontal tampoco tiene restricciones. También es posible que el `StackLayout` propio tenga una dimensión horizontal sin restricciones, en cuyo caso `BoxView` también se anulará la restricción horizontal.
+Una vista `BoxView` se puede restringir en una dimensión y sin restricciones en la otra. Por ejemplo, si `BoxView` es un elemento secundario de un elemento vertical `StackLayout` , la dimensión vertical de la `BoxView` no está restringida y su dimensión horizontal está normalmente restringida. Pero hay excepciones para esa dimensión horizontal: Si `BoxView` tiene su `HorizontalOptions` propiedad establecida en un valor distinto de `LayoutOptions.Fill` , la dimensión horizontal tampoco tiene restricciones. También es posible que el `StackLayout` propio tenga una dimensión horizontal sin restricciones, en cuyo caso `BoxView` también se anulará la restricción horizontal.
 
 En el ejemplo [**BasicBoxView**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview) se muestra un cuadrado de una pulgada sin restricciones `BoxView` en el centro de su página:
 
@@ -84,8 +59,6 @@ Si las `VerticalOptions` `HorizontalOptions` propiedades y se quitan de la `BoxV
 `BoxView`También puede ser un elemento secundario de `AbsoluteLayout` . En ese caso, la ubicación y el tamaño de `BoxView` se establecen utilizando la `LayoutBounds` propiedad enlazable adjunta. `AbsoluteLayout`Se describe en el artículo [**AbsoluteLayout**](~/xamarin-forms/user-interface/layouts/absolute-layout.md).
 
 Verá ejemplos de todos estos casos en los programas de ejemplo que se indican a continuación.
-
-<a name="textdecorations" />
 
 ## <a name="rendering-text-decorations"></a>Representación de decoraciones de texto
 
@@ -171,8 +144,6 @@ Por último, puede dibujar una línea vertical en un lado de un párrafo de text
     </Label>
 </StackLayout>
 ```
-
-<a name="listingcolors" />
 
 ## <a name="listing-colors-with-boxview"></a>Enumerar los colores con BoxView
 
@@ -305,8 +276,6 @@ Los objetos visuales de programa se describen en el archivo XAML. La `ItemsSourc
 
 Los `NamedColor` objetos se formatean mediante el `ViewCell` objeto que se establece como la plantilla de datos de `ListView` . Esta plantilla incluye una `BoxView` cuya `Color` propiedad está enlazada a la `Color` propiedad del `NamedColor` objeto.
 
-<a name="subclassing" />
-
 ## <a name="playing-the-game-of-life-by-subclassing-boxview"></a>Reproducir el juego de vida mediante la subclase de BoxView
 
 El juego de vida es un autómata de telefonía móvil inventado por mathematician John Conway y popular en las páginas de Ciencias *científicas* de la década de 1970. El [juego de vida del artículo Conway de](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)la Wikipedia proporciona una buena introducción.
@@ -361,8 +330,6 @@ class LifeCell : BoxView
 El programa **GameOfLife** también incluye una `LifeGrid` clase que encapsula gran parte de la lógica del juego y una `MainPage` clase que controla los objetos visuales del programa. Incluyen una superposición que describe las reglas del juego. Este es el programa en acción que muestra un par de cientos `LifeCell` de objetos en la página:
 
 [![Juego de vida](boxview-images/gameoflife-small.png "Juego de vida")](boxview-images/gameoflife-large.png#lightbox "Juego de vida")
-
-<a name="digitalclock" />
 
 ## <a name="creating-a-digital-clock"></a>Crear un reloj digital
 
@@ -599,8 +566,6 @@ public partial class MainPage : ContentPage
 }
 ```
 
-<a name="analogclock" />
-
 ## <a name="creating-an-analog-clock"></a>Crear un reloj analógico
 
 Un reloj de matriz de puntos podría parecer una aplicación obvia de `BoxView` , pero `BoxView` los elementos también son capaces de realizar un reloj analógico:
@@ -782,10 +747,6 @@ public partial class MainPage : ContentPage
 ```
 
 La segunda mano se trata de un poco diferente: se aplica una función de aceleración de animación para que el movimiento parezca mecánico, en lugar de suave. En cada paso, la segunda mano vuelve un poco y, a continuación, supera su destino. Este pequeño fragmento de código agrega mucho al realismo del movimiento.
-
-## <a name="conclusion"></a>Conclusión
-
-Puede `BoxView` parecer sencillo al principio, pero como se ha visto, puede ser bastante versátil y puede casi reproducir objetos visuales que normalmente son posibles únicamente con gráficos vectoriales. Para obtener gráficos más sofisticados, consulte [uso Xamarin.Forms de SkiaSharp en ](~/xamarin-forms/user-interface/graphics/skiasharp/index.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: c049fb0bd05749db30d99603fb9179e710f815f7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: cbbf8194505e9caa09587471020026d495f9f99b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028350"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569715"
 ---
 # <a name="testing-on-apple-watch-devices"></a>Pruebas en dispositivos Apple Watch
 
@@ -22,11 +22,11 @@ Después de haber seguido los [pasos de implementación](~/ios/watchos/deploy-te
 - [Cree perfiles de aprovisionamiento de desarrollo](#profiles)y, a continuación,
 - [Implementar y probar](#testing) en una Apple Watch.
 
-<a name="devices" />
+<a name="devices"></a>
 
 ## <a name="devices"></a>Dispositivos
 
-Probar las aplicaciones de iOS en un iPhone o iPad real siempre requiere que el dispositivo esté registrado en el centro de desarrollo. La lista de dispositivos tiene el siguiente aspecto (haga clic en el signo más **+** para agregar un dispositivo nuevo):
+Probar las aplicaciones de iOS en un iPhone o iPad real siempre requiere que el dispositivo esté registrado en el centro de desarrollo. La lista de dispositivos tiene el siguiente aspecto (haga clic en el signo más **+** para agregar un nuevo dispositivo):
 
 ![](device-images/devices-sml.png "The device list looks like this")
 
@@ -44,7 +44,7 @@ Una vez que se ha agregado el dispositivo de inspección, asegúrese de que est�
 
 No olvide Si edita un perfil de aprovisionamiento existente para descargarlo y volver a instalarlo.
 
-<a name="profiles" />
+<a name="profiles"></a>
 
 ## <a name="development-provisioning-profiles"></a>Perfiles de aprovisionamiento de desarrollo
 
@@ -64,7 +64,7 @@ La lista de perfiles de **aprovisionamiento** mostrará todos los perfiles coinc
 
 ![](device-images/options-selectprofile.png "The Provisioning Profile list")
 
-<a name="testing" />
+<a name="testing"></a>
 
 ## <a name="testing-on-a-watch-device"></a>Pruebas en un dispositivo de inspección
 
@@ -120,7 +120,7 @@ Si estos mensajes aparecen *en la pantalla de inspección* una vez que la aplica
 
 - Los perfiles de aprovisionamiento de desarrollo que se usan para las pruebas no incluían el dispositivo de inspección. o bien, una vez que se ha agregado el reloj a los perfiles de aprovisionamiento, no se han vuelto a descargar ni volver a instalar. Siga las instrucciones para [configurar correctamente los perfiles de aprovisionamiento](#profiles).
 
-- Si el **registro del dispositivo iOS** contiene `The system version is lower than the minimum OS version specified for bundle...Have 8.2; need 8.3`, **el valor** de **info. plist** de la aplicación Watch es incorrecto.
+- Si el **registro del dispositivo iOS** contiene `The system version is lower than the minimum OS version specified for bundle...Have 8.2; need 8.3` , el valor de **info. plist** de la aplicación Watch **MinimumOSVersion** es incorrecto.
   Debe ser **8,2** : Si ha instalado Xcode 6,3, es posible que tenga que editar manualmente el origen para insertar establézcalo en 8,2.
 
 - El archivo **contitles. plist** de la aplicación Watch tiene un derecho habilitado (por ejemplo, grupos de aplicaciones) que no debe tener.

@@ -7,22 +7,22 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 2060e0786b5401b44217318b647dfa7412f934f4
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 6c2b5869f647f65b932b6ec92f359f8a79402c8f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73009873"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569301"
 ---
 # <a name="working-with-property-lists-in-xamarinios"></a>Trabajar con listas de propiedades en Xamarin. iOS
 
 _En este documento se presenta el editor de la lista de propiedades gráficas y avanzadas (. plist) de Visual Studio para Mac para trabajar con info. plist y contitles. plist. Muestra la configuración de iconos e imágenes de inicio para las aplicaciones de iOS desde Visual Studio para Mac._
 
-Visual Studio para Mac incluye un editor gráfico. plist que facilita la edición de las propiedades y capacidades de la aplicación. Visual Studio para Mac tiene dos. plist: `Info.plist` para editar las propiedades e iconos de la aplicación y `Entitlements.plist` para administrar las funcionalidades de la aplicación. En esta guía se presenta info. plist y se proporciona información general sobre cómo trabajar con ellos en Visual Studio para Mac. Para obtener información sobre los derechos. plist, vea la guía [trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) .
+Visual Studio para Mac incluye un editor gráfico. plist que facilita la edición de las propiedades y capacidades de la aplicación. Visual Studio para Mac tiene dos. plist: `Info.plist` para editar las propiedades y los iconos de la aplicación, y `Entitlements.plist` para administrar las funcionalidades de la aplicación. En esta guía se presenta info. plist y se proporciona información general sobre cómo trabajar con ellos en Visual Studio para Mac. Para obtener información sobre los derechos. plist, vea la guía [trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) .
 
 ## <a name="infoplist"></a>Info.plist
 
-La lista de propiedades de información (`Info.plist`) es un archivo de iOS necesario que proporciona información sobre la configuración de la aplicación en el sistema. El editor de `Info.plist` personalizado de Visual Studio para Mac incluye tres paneles controlados por pestañas en la parte inferior izquierda de la ventana del editor:
+La lista de propiedades de información ( `Info.plist` ) es un archivo de iOS necesario que proporciona información sobre la configuración de la aplicación para el sistema. El editor personalizado de Visual Studio para Mac `Info.plist` incluye tres paneles que están controlados por pestañas en la parte inferior izquierda de la ventana del editor:
 
  [![](property-lists-images/tabs.png "The Info.plist editor tabs at the bottom left of the editor window")](property-lists-images/tabs.png#lightbox)
 
@@ -36,7 +36,7 @@ En las tres secciones siguientes se investigan con más detalle las característ
 
 ## <a name="application-panel"></a>Panel de la aplicación
 
-Visual Studio para Mac incluye una interfaz gráfica para editar entradas de `Info.plist` comunes para una aplicación:
+Visual Studio para Mac incluye una interfaz gráfica para editar `Info.plist` entradas comunes para una aplicación:
 
 1. Propiedades de la aplicación
 1. Tipos de dispositivos compatibles
@@ -47,7 +47,7 @@ Visual Studio para Mac incluye una interfaz gráfica para editar entradas de `In
 
 Estos se describen con más detalle en las secciones siguientes.
 
- <a name="iOS_Application_Target" />
+ <a name="iOS_Application_Target"></a>
 
 ### <a name="ios-application-target"></a>Destino de la aplicación iOS
 
@@ -68,11 +68,11 @@ Las secciones de información de **implementación** de dispositivos se muestran
 
 ### <a name="status-bar-styles"></a>Estilos de barra de estado
 
-La sección de estilos de la **barra de estado** es una interfaz gráfica para editar el `UIStatusBarStyle`de una aplicación:
+La sección de estilos de la **barra de estado** es una interfaz gráfica para editar una aplicación `UIStatusBarStyle` :
 
  [![](property-lists-images/status.png "Status Bar Styles")](property-lists-images/status.png#lightbox)
 
- <a name="Icons" />
+ <a name="Icons"></a>
 
 ### <a name="icons-launch-images-and-itunes-artwork"></a>Iconos, imágenes de inicio y material gráfico de iTunes
 
@@ -80,7 +80,7 @@ Puede encontrar información sobre el uso de iconos, imágenes y material gráfi
 
 ### <a name="maps-integration-and-background-modes"></a>Integración de Maps y modos en segundo plano
 
-El `Info.plist` contiene secciones especiales para especificar los modos de integración y de fondo de las asignaciones. La elección de las opciones que desea admitir agregará las propiedades necesarias a la aplicación.
+`Info.plist`Contiene secciones especiales para especificar los modos de integración y de fondo de las asignaciones. La elección de las opciones que desea admitir agregará las propiedades necesarias a la aplicación.
 
  [![](property-lists-images/maps.png "Maps Integration")](property-lists-images/maps.png#lightbox)
 
@@ -96,27 +96,27 @@ El panel avanzado controla los tipos de documentos y los esquemas de dirección 
 
  [![](property-lists-images/image34.png "Advanced Panel")](property-lists-images/image34.png#lightbox)
 
- <a name="Document_Types" />
+ <a name="Document_Types"></a>
 
 ## <a name="document-types"></a>Tipos de documento
 
-En el caso de las aplicaciones que admiten la apertura de tipos específicos de archivos, iOS proporciona la clave de `CFBundleDocumentTypes`. Si queremos que nuestra aplicación admita determinados tipos de archivo conocidos, por ejemplo, archivos PDF, agregaremos el valor PDF a la clave. En esta sección se proporciona una manera cómoda de especificar los datos que se almacenarán en la clave `CFBundleDocumentTypes` en el archivo de `Info.plist`.
+En el caso de las aplicaciones que admiten la apertura de tipos específicos de archivos, iOS proporciona la `CFBundleDocumentTypes` clave. Si queremos que nuestra aplicación admita determinados tipos de archivo conocidos, por ejemplo, archivos PDF, agregaremos el valor PDF a la clave. En esta sección se proporciona una manera cómoda de especificar los datos que se almacenarán en la `CFBundleDocumentTypes` clave del `Info.plist` archivo.
 
 Consulte la documentación sobre el [registro de los tipos de archivo que admite la aplicación](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html) para obtener más información sobre cómo configurar estos valores.
 
 ## <a name="utis"></a>UTI
 
-A veces, una aplicación debe admitir la apertura de un tipo de archivo personalizado. Por ejemplo, es posible que quiera abrir archivos de imagen con una extensión personalizada *. XAM*. Para especificar un tipo de archivo personalizado, vamos a crear un identificador de tipo UTI-universal personalizado con la clave `UIExportedTypeDeclarations`. En la captura de pantalla siguiente se muestra cómo crear un UTI personalizado para la extensión. XAM:
+A veces, una aplicación debe admitir la apertura de un tipo de archivo personalizado. Por ejemplo, es posible que quiera abrir archivos de imagen con una extensión personalizada *. XAM*. Para especificar un tipo de archivo personalizado, vamos a crear un identificador de tipo UTI-universal personalizado con la `UIExportedTypeDeclarations` clave. En la captura de pantalla siguiente se muestra cómo crear un UTI personalizado para la extensión. XAM:
 
  [![](property-lists-images/uti.png "UTIs Editor")](property-lists-images/uti.png#lightbox)
 
-Del mismo modo que el tipo exportado UTI especificar un UTI personalizado específico para la aplicación, el *tipo importado UTI* (clave `UIImportedTypeDeclarations`) especifica tipos personalizados admitidos pero no pertenecientes a la aplicación.
+Del mismo modo que el tipo exportado UTI especificar un UTI personalizado específico para la aplicación, el *tipo importado UTI* ( `UIImportedTypeDeclarations` clave) especifica tipos personalizados admitidos pero no pertenecientes a la aplicación.
 
 Para obtener más información sobre el uso de UTI personalizado, consulte la guía sobre los tipos de archivo de registro de Apple que [admite la aplicación](https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_declare/understand_utis_declare.html#//apple_ref/doc/uid/TP40001319-CH204-SW1) .
 
 ## <a name="custom-urls"></a>Direcciones URL personalizadas
 
-El nombre de un esquema de dirección URL (también denominado Protocolo) es la primera parte de la dirección URL. Por ejemplo, `http://` y `https://` son esquemas de dirección URL comunes. Tiene la opción de crear un esquema de dirección URL personalizado para la aplicación. Los esquemas de URL personalizados se utilizan para comunicarse y enviar datos de un junto a otro con otras aplicaciones. En la captura de pantalla siguiente se muestra la creación de un nuevo esquema de dirección URL personalizado denominado `monkeys://`:
+El nombre de un esquema de dirección URL (también denominado Protocolo) es la primera parte de la dirección URL. Por ejemplo, `http://` y `https://` son esquemas de dirección URL comunes. Tiene la opción de crear un esquema de dirección URL personalizado para la aplicación. Los esquemas de URL personalizados se utilizan para comunicarse y enviar datos de un junto a otro con otras aplicaciones. En la captura de pantalla siguiente se muestra la creación de un nuevo esquema de dirección URL personalizado denominado `monkeys://` :
 
  [![](property-lists-images/url.png "Custom URLs")](property-lists-images/url.png#lightbox)
 
@@ -124,7 +124,7 @@ Para obtener más información sobre la implementación de esquemas de URL perso
 
 ## <a name="source-panel"></a>Panel de código fuente
 
-La pestaña **origen** del archivo `Info.plist` permite agregar o editar valores personalizados. Visual Studio para Mac proporciona una lista de las propiedades más comunes:
+La pestaña **origen** del `Info.plist` archivo permite agregar o editar valores personalizados. Visual Studio para Mac proporciona una lista de las propiedades más comunes:
 
  [![](property-lists-images/image31.png "Adding a new property from a dropdown")](property-lists-images/image31.png#lightbox)
 
@@ -138,7 +138,7 @@ Visual Studio para Mac también detecta el tipo de propiedad, como se muestra a 
 
 Revise los vínculos de [recursos relacionados con las aplicaciones](https://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) de Apple para obtener información adicional sobre las propiedades opcionales.
 
- <a name="Entitlements" />
+ <a name="Entitlements"></a>
 
 ## <a name="summary"></a>Resumen
 

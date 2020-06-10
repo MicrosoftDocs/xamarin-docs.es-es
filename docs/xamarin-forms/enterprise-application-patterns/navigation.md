@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 9b2ee9fb02a8fd18d69e93424dc76bfd54fafc86
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130902"
+title: "navegación de aplicaciones empresariales" Descripción: "en este capítulo se explica cómo la aplicación móvil eShopOnContainers realiza la navegación modelo-primera de la vista en los modelos de vista".
+MS. Prod: Xamarin ms. AssetID: 4cad57b5-7fe4-4527-a988-d9b60c9620b4 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="enterprise-app-navigation"></a>Navegación de aplicación empresarial
 
 Xamarin.Formsincluye compatibilidad con la navegación de páginas, que suele ser el resultado de la interacción del usuario con la interfaz de usuario o desde la propia aplicación como consecuencia de los cambios internos en el estado controlado por lógica. Sin embargo, la navegación puede ser compleja de implementar en aplicaciones que usan el patrón Model-View-ViewModel (MVVM), ya que se deben cumplir los siguientes desafíos:
@@ -55,7 +41,7 @@ public interface INavigationService
 
 Esta interfaz especifica que una clase de implementación debe proporcionar los métodos siguientes:
 
-|Método|Finalidad|
+|Método|Propósito|
 |--- |--- |
 |`InitializeAsync`|Realiza la navegación a una de las dos páginas cuando se inicia la aplicación.|
 |`NavigateToAsync`|Realiza una navegación jerárquica a una página especificada.|
@@ -82,7 +68,7 @@ La `INavigationService` interfaz se resuelve en el `ViewModelBase` constructor d
 NavigationService = ViewModelLocator.Resolve<INavigationService>();
 ```
 
-Esto devuelve una referencia al `NavigationService` objeto almacenado en el contenedor de inserción de dependencias de Autofac, que se crea mediante el `InitNavigation` método en la `App` clase. Para obtener más información, consulte [navegar cuando se inicia la aplicación](#navigating_when_the_app_is_launched).
+Esto devuelve una referencia al `NavigationService` objeto almacenado en el contenedor de inserción de dependencias de Autofac, que se crea mediante el `InitNavigation` método en la `App` clase. Para obtener más información, consulte [navegar cuando se inicia la aplicación](#navigating-when-the-app-is-launched).
 
 La `ViewModelBase` clase almacena la `NavigationService` instancia en una `NavigationService` propiedad, de tipo `INavigationService` . Por lo tanto, todas las clases de modelo de vista, que derivan de la `ViewModelBase` clase, pueden utilizar la `NavigationService` propiedad para tener acceso a los métodos especificados por la `INavigationService` interfaz. Esto evita la sobrecarga de insertar el `NavigationService` objeto del contenedor de inyección de dependencia de Autofac en cada clase de modelo de vista.
 
@@ -129,7 +115,7 @@ public Task NavigateToAsync<TViewModel>(object parameter) where TViewModel�
 }
 ```
 
-Cada método permite que cualquier clase de modelo de vista que se derive de la `ViewModelBase` clase realice navegación jerárquica mediante la invocación del `InternalNavigateToAsync` método. Además, el segundo `NavigateToAsync` método permite especificar los datos de navegación como argumento que se pasa al modelo de vista al que se navega, donde normalmente se usa para realizar la inicialización. Para obtener más información, vea [pasar parámetros durante la navegación](#passing_parameters_during_navigation).
+Cada método permite que cualquier clase de modelo de vista que se derive de la `ViewModelBase` clase realice navegación jerárquica mediante la invocación del `InternalNavigateToAsync` método. Además, el segundo `NavigateToAsync` método permite especificar los datos de navegación como argumento que se pasa al modelo de vista al que se navega, donde normalmente se usa para realizar la inicialización. Para obtener más información, vea [pasar parámetros durante la navegación](#passing-parameters-during-navigation).
 
 El `InternalNavigateToAsync` método ejecuta la solicitud de navegación y se muestra en el ejemplo de código siguiente:
 
@@ -188,16 +174,14 @@ El `InternalNavigateToAsync` método realiza la navegación a un modelo de vista
 - Los modelos de vista se encuentran en un. Espacio de nombres secundario ViewModels.
 - Los nombres de vista se corresponden con los nombres de modelo de vista, con "Model" quitado.
 
-Cuando se crea una instancia de una vista, se asocia con su modelo de vista correspondiente. Para obtener más información sobre cómo se produce esto, vea [crear automáticamente un modelo de vista con un localizador de modelo de vista](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
+Cuando se crea una instancia de una vista, se asocia con su modelo de vista correspondiente. Para obtener más información sobre cómo se produce esto, vea [crear automáticamente un modelo de vista con un localizador de modelo de vista](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically-creating-a-view-model-with-a-view-model-locator).
 
 Si la vista que se va a crear es una `LoginView` , se ajusta dentro de una nueva instancia de la `CustomNavigationView` clase y se asigna a la [`Application.Current.MainPage`](xref:Xamarin.Forms.Application.MainPage) propiedad. De lo contrario, `CustomNavigationView` se recupera la instancia y siempre que no sea NULL, [`PushAsync`](xref:Xamarin.Forms.NavigationPage) se invoca el método para insertar la vista que se va a crear en la pila de navegación. Sin embargo, si la `CustomNavigationView` instancia recuperada es `null` , la vista que se está creando se ajusta dentro de una nueva instancia de la `CustomNavigationView` clase y se asigna a la `Application.Current.MainPage` propiedad. Este mecanismo garantiza que durante la navegación, las páginas se agregan correctamente a la pila de navegación cuando está vacía y cuando contienen datos.
 
 > [!TIP]
 > Considere la posibilidad de almacenar en caché las páginas. El almacenamiento en caché de páginas produce un consumo de memoria para las vistas que no se muestran actualmente. Sin embargo, sin el almacenamiento en caché de páginas, significa que el análisis y la construcción de XAML de la página y su modelo de vista se producirán cada vez que se navega a una nueva página, lo que puede afectar al rendimiento de una página compleja. En el caso de una página bien diseñada que no use un número excesivo de controles, el rendimiento debe ser suficiente. Sin embargo, el almacenamiento en caché de páginas podría ayudar si se producen tiempos de carga de página lentos.
 
-Una vez creada la vista y navegada a, `InitializeAsync` se ejecuta el método del modelo de vista asociado de la vista. Para obtener más información, vea [pasar parámetros durante la navegación](#passing_parameters_during_navigation).
-
-<a name="navigating_when_the_app_is_launched" />
+Una vez creada la vista y navegada a, `InitializeAsync` se ejecuta el método del modelo de vista asociado de la vista. Para obtener más información, vea [pasar parámetros durante la navegación](#passing-parameters-during-navigation).
 
 ### <a name="navigating-when-the-app-is-launched"></a>Navegar cuando se inicia la aplicación
 
@@ -230,9 +214,7 @@ public Task InitializeAsync()
 
 `MainView`Se navega a si la aplicación tiene un token de acceso almacenado en caché, que se usa para la autenticación. De lo contrario, `LoginView` se navega a.
 
-Para obtener más información sobre el contenedor de inserción de dependencias de Autofac, vea [Introducción a la inserción de dependencias](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
-
-<a name="passing_parameters_during_navigation" />
+Para obtener más información sobre el contenedor de inserción de dependencias de Autofac, vea [Introducción a la inserción de dependencias](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction-to-dependency-injection).
 
 ### <a name="passing-parameters-during-navigation"></a>Pasar parámetros durante la navegación
 
@@ -265,8 +247,6 @@ public override async Task InitializeAsync(object navigationData)
 ```
 
 Este método recupera la `Order` instancia que se pasó al modelo de vista durante la operación de navegación y la utiliza para recuperar los detalles de pedido completos de la `OrderService` instancia.
-
-<a name="invoking_navigation_using_behaviors" />
 
 ### <a name="invoking-navigation-using-behaviors"></a>Invocar la navegación mediante comportamientos
 

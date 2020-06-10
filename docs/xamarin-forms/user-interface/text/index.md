@@ -1,22 +1,8 @@
 ---
-title: Texto enXamarin.Forms
-description: Xamarin.Formstiene tres vistas principales para trabajar con texto, y en este artículo se explica cómo usarlas para escribir y mostrar texto en Xamarin.Forms aplicaciones.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 579ff44e9c58d7eea538d5478e99b4c480d44ac0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136193"
+title: "Text in Xamarin.Forms " Description: " Xamarin.Forms tiene tres vistas principales para trabajar con texto, y en este artículo se explica cómo usarlas para escribir y mostrar texto en Xamarin.Forms aplicaciones".
+MS. Prod: Xamarin ms. AssetID: 4DBA7689-E5C8-4583-8FB4-02AB208B4416 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/26/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="text-in-xamarinforms"></a>Texto enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
@@ -25,13 +11,11 @@ _Usar Xamarin.Forms para escribir o mostrar texto._
 
 Xamarin.Formstiene tres vistas principales para trabajar con texto:
 
-- **[Etiqueta](#Label)** &mdash; de para presentar texto de una o varias líneas. Puede mostrar texto con varias opciones de formato en la misma línea.
-- **[Entrada](#Entry)** &mdash; de para escribir texto que solo es una línea. La entrada tiene un modo de contraseña.
-- **[Editor](#Editor)** &mdash; de para escribir texto que podría tomar más de una línea.
+- **[Etiqueta](#label)** &mdash; de para presentar texto de una o varias líneas. Puede mostrar texto con varias opciones de formato en la misma línea.
+- **[Entrada](#entry)** &mdash; de para escribir texto que solo es una línea. La entrada tiene un modo de contraseña.
+- **[Editor](#editor)** &mdash; de para escribir texto que podría tomar más de una línea.
 
-La apariencia del texto se puede cambiar mediante [estilos](#Styles) integrados o personalizados y algunos controles admiten [fuentes](#Fonts)personalizadas.
-
-<a name="Label" />
+La apariencia del texto se puede cambiar mediante [estilos](#styles) integrados o personalizados y algunos controles admiten [fuentes](#fonts)personalizadas.
 
 ## <a name="label"></a>[Label](label.md)
 
@@ -43,8 +27,6 @@ Vea el artículo de la [etiqueta](label.md) para obtener información más detal
 
 Para obtener información sobre cómo personalizar la fuente utilizada en una etiqueta, vea [fuentes](fonts.md).
 
-<a name="Entry" />
-
 ## <a name="entry"></a>[Entrada](entry.md)
 
 `Entry`se usa para aceptar la entrada de texto de una sola línea. `Entry`ofrece control sobre colores y fuentes. `Entry`tiene un modo de contraseña y puede mostrar texto de marcador de posición hasta que se escriba texto.
@@ -55,8 +37,6 @@ Vea el artículo de [entrada](entry.md) para obtener más información.
 
 Tenga en cuenta que, a diferencia `Label` de, `Entry` no puede tener una configuración de fuente personalizada.
 
-<a name="Editor" />
-
 ## <a name="editor"></a>[Editor](editor.md)
 
 `Editor`se usa para aceptar la entrada de texto de varias líneas. `Editor`ofrece control sobre colores y fuentes.
@@ -65,13 +45,9 @@ Tenga en cuenta que, a diferencia `Label` de, `Entry` no puede tener una configu
 
 Vea el artículo sobre el [Editor](editor.md) para obtener más información.
 
-<a name="Fonts" />
-
 ## <a name="fonts"></a>[Fuentes](fonts.md)
 
 Muchos controles admiten diferentes configuraciones de fuente mediante las fuentes integradas en cada plataforma o las fuentes personalizadas que se incluyen con la aplicación. Consulte el artículo [fuentes](fonts.md) para obtener información más detallada.
-
-<a name="Styles" />
 
 ## <a name="styles"></a>[Estilos](styles.md)
 

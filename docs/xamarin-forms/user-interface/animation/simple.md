@@ -1,22 +1,8 @@
 ---
-title: Animaciones simples enXamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a4644094de9c0fcad8f38b7014426a30263dc66f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137454"
+title: "animaciones simples en Xamarin.Forms " Description: "la clase ViewExtensions proporciona métodos de extensión que se pueden usar para construir animaciones simples. En este artículo se muestra cómo crear y cancelar animaciones con la clase ViewExtensions ".
+MS. Prod: Xamarin ms. AssetID: 4A6FAE5A-848F-4CE0-BFA1-22A6309B5225 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/05/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="simple-animations-in-xamarinforms"></a>Animaciones simples enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
@@ -43,9 +29,9 @@ La [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) clase también incluye 
 > [!NOTE]
 > La [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) clase proporciona un [ `LayoutTo` ] (XREF: Xamarin.Forms . ViewExtensions. Layoutto ( Xamarin.Forms . VisualElement, Xamarin.Forms . Rectangle, System. UInt32, Xamarin.Forms . Aceleración)). Sin embargo, este método está pensado para que lo usen los diseños para animar las transiciones entre los Estados de diseño que contienen cambios de tamaño y posición. Por lo tanto, solo lo deben usar las [`Layout`](xref:Xamarin.Forms.Layout) subclases.
 
-Los métodos de extensión de animación de la [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) clase son todos asincrónicos y devuelven un `Task<bool>` objeto. El valor devuelto es `false` si la animación se completa y `true` si se cancela la animación. Por lo tanto, los métodos de animación deben usarse normalmente con el `await` operador, lo que permite determinar fácilmente Cuándo se ha completado una animación. Además, se pueden crear animaciones secuenciales con métodos de animación posteriores que se ejecuten después de que se haya completado el método anterior. Para obtener más información, vea [animaciones compuestas](#compound).
+Los métodos de extensión de animación de la [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) clase son todos asincrónicos y devuelven un `Task<bool>` objeto. El valor devuelto es `false` si la animación se completa y `true` si se cancela la animación. Por lo tanto, los métodos de animación deben usarse normalmente con el `await` operador, lo que permite determinar fácilmente Cuándo se ha completado una animación. Además, se pueden crear animaciones secuenciales con métodos de animación posteriores que se ejecuten después de que se haya completado el método anterior. Para obtener más información, vea [animaciones compuestas](#compound-animations).
 
-Si hay un requisito para permitir que una animación se complete en segundo plano, `await` se puede omitir el operador. En este escenario, los métodos de extensión de animación devolverán rápidamente después de iniciar la animación, con la animación en segundo plano. Esta operación se puede aprovechar al crear animaciones compuestas. Para obtener más información, vea [animaciones compuestas](#composite).
+Si hay un requisito para permitir que una animación se complete en segundo plano, `await` se puede omitir el operador. En este escenario, los métodos de extensión de animación devolverán rápidamente después de iniciar la animación, con la animación en segundo plano. Esta operación se puede aprovechar al crear animaciones compuestas. Para obtener más información, vea [animaciones compuestas](#composite-animations).
 
 Para obtener más información sobre el `await` operador, vea [información general sobre la compatibilidad con Async](~/cross-platform/platform/async.md).
 
@@ -160,8 +146,6 @@ Las capturas de pantallas siguientes muestran el fundido en curso en cada plataf
 
 ![](simple-images/fadeto.png "Fading Animation")
 
-<a name="compound" />
-
 ## <a name="compound-animations"></a>Animaciones compuestas
 
 Una animación compuesta es una combinación secuencial de animaciones y se puede crear con el `await` operador, como se muestra en el ejemplo de código siguiente:
@@ -175,8 +159,6 @@ await image.TranslateTo (0, 0, 1000);       // Move image up
 ```
 
 En este ejemplo, [`Image`](xref:Xamarin.Forms.Image) se traduce en 6 segundos (6000 milisegundos). La conversión de `Image` utiliza cinco animaciones, con el `await` operador que indica que cada animación se ejecuta secuencialmente. Por lo tanto, los métodos de animación subsiguientes se ejecutan después de que el método anterior se haya completado.
-
-<a name="composite" />
 
 ## <a name="composite-animations"></a>Animaciones compuestas
 

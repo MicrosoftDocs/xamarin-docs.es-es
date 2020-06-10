@@ -1,22 +1,8 @@
 ---
-title: Crear un diseño personalizado enXamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 2beb00e0587a0e47a29d6f5628a5d6623514eade
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137337"
+title: "crear un diseño personalizado en Xamarin.Forms " Descripción: "en este artículo se explica cómo escribir una clase de diseño personalizado y se muestra una clase WrapLayout con distinción de orientación que organiza los elementos secundarios horizontalmente por la página y, a continuación, ajusta la presentación de los elementos secundarios posteriores a filas adicionales".
+MS. Prod: Xamarin ms. AssetID: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/29/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Crear un diseño personalizado enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
@@ -66,29 +52,27 @@ Sin embargo, la `Layout` clase intenta restringir el impacto de un cambio en el 
 
 La [`Layout`](xref:Xamarin.Forms.Layout) clase también define un [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) método que tiene un propósito similar al [`InvalidateMeasure`](xref:Xamarin.Forms.VisualElement.InvalidateMeasure) método. El `InvalidateLayout` método se debe invocar cada vez que se realiza un cambio que afecta al modo en que el diseño coloca y ajusta el tamaño de sus elementos secundarios. Por ejemplo, la `Layout` clase invoca el `InvalidateLayout` método cada vez que se agrega o se quita un elemento secundario de un diseño.
 
-[`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout)Se puede invalidar para implementar una memoria caché con el fin de minimizar las invocaciones repetitivas de [ `Measure` ] (XREF: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) de los elementos secundarios del diseño. Al invalidar el `InvalidateLayout` método, se proporcionará una notificación de Cuándo se agregan o quitan elementos secundarios en el diseño. Del mismo modo, el [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) método se puede invalidar para proporcionar una notificación cuando cambia el tamaño de uno de los elementos secundarios del diseño. En el caso de las invalidaciones de método, un diseño personalizado debe responder borrando la memoria caché. Para obtener más información, consulte [calcular y almacenar en caché los datos](#caching).
+[`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout)Se puede invalidar para implementar una memoria caché con el fin de minimizar las invocaciones repetitivas de [ `Measure` ] (XREF: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) de los elementos secundarios del diseño. Al invalidar el `InvalidateLayout` método, se proporcionará una notificación de Cuándo se agregan o quitan elementos secundarios en el diseño. Del mismo modo, el [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) método se puede invalidar para proporcionar una notificación cuando cambia el tamaño de uno de los elementos secundarios del diseño. En el caso de las invalidaciones de método, un diseño personalizado debe responder borrando la memoria caché. Para obtener más información, consulte [calcular y almacenar en caché datos de diseño](#calculate-and-cache-layout-data).
 
 ## <a name="create-a-custom-layout"></a>Crear un diseño personalizado
 
 El proceso para crear un diseño personalizado es el siguiente:
 
-1. Cree una clase que se derive de la clase `Layout<View>`. Para obtener más información, vea [crear un WrapLayout](#creating).
-1. [*opcional*] Agregue propiedades, respaldadas por propiedades enlazables, para los parámetros que se deben establecer en la clase de diseño. Para obtener más información, vea [Agregar propiedades respaldadas por propiedades enlazables](#adding_properties).
-1. Invalide el [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) método para invocar [ `Measure` ] (XREF: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) en todos los elementos secundarios del diseño y devuelven un tamaño solicitado para el diseño. Para obtener más información, vea [invalidar el método de la acción](#onmeasure).
-1. Invalide el [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) método para invocar [ `Layout` ] (XREF: Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . Rectangle)) en todos los elementos secundarios del diseño. Error al invocar [ `Layout` ] (XREF: Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . Rectangle)) en cada elemento secundario de un diseño, el elemento secundario no recibirá nunca un tamaño o una posición correctos y, por lo tanto, el elemento secundario no estará visible en la página. Para obtener más información, vea [invalidar el método LayoutChildren](#layoutchildren).
+1. Cree una clase que se derive de la clase `Layout<View>`. Para obtener más información, vea [crear un WrapLayout](#create-a-wraplayout).
+1. [*opcional*] Agregue propiedades, respaldadas por propiedades enlazables, para los parámetros que se deben establecer en la clase de diseño. Para obtener más información, vea [Agregar propiedades respaldadas por propiedades enlazables](#add-properties-backed-by-bindable-properties).
+1. Invalide el [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) método para invocar [ `Measure` ] (XREF: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) en todos los elementos secundarios del diseño y devuelven un tamaño solicitado para el diseño. Para obtener más información, vea [invalidar el método de la acción](#override-the-onmeasure-method).
+1. Invalide el [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) método para invocar [ `Layout` ] (XREF: Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . Rectangle)) en todos los elementos secundarios del diseño. Error al invocar [ `Layout` ] (XREF: Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . Rectangle)) en cada elemento secundario de un diseño, el elemento secundario no recibirá nunca un tamaño o una posición correctos y, por lo tanto, el elemento secundario no estará visible en la página. Para obtener más información, vea [invalidar el método LayoutChildren](#override-the-layoutchildren-method).
 
     > [!NOTE]
     > Al enumerar los elementos secundarios en [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) y [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) invalida, omita cualquier elemento secundario cuya [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) propiedad esté establecida en `false` . Esto garantizará que el diseño personalizado no deja espacio para los elementos secundarios invisibles.
 
-1. [*opcional*] Invalide el [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) método para recibir una notificación cuando se agreguen o quiten elementos secundarios del diseño. Para obtener más información, vea [invalidar el método InvalidateLayout](#invalidatelayout).
-1. [*opcional*] Invalide el [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) método para recibir una notificación cuando uno de los elementos secundarios del diseño cambie de tamaño. Para obtener más información, vea [invalidar el método OnChildMeasureInvalidated](#onchildmeasureinvalidated).
+1. [*opcional*] Invalide el [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) método para recibir una notificación cuando se agreguen o quiten elementos secundarios del diseño. Para obtener más información, vea [invalidar el método InvalidateLayout](#override-the-invalidatelayout-method).
+1. [*opcional*] Invalide el [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) método para recibir una notificación cuando uno de los elementos secundarios del diseño cambie de tamaño. Para obtener más información, vea [invalidar el método OnChildMeasureInvalidated](#override-the-onchildmeasureinvalidated-method).
 
 > [!NOTE]
-> Tenga en cuenta que la [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) invalidación no se invocará si el tamaño del diseño se rige por su elemento primario, en lugar de sus elementos secundarios. Sin embargo, se invocará la invalidación si una o ambas restricciones son infinitas, o si la clase de diseño tiene valores no predeterminados [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) o de [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) propiedad. Por esta razón, la [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) invalidación no puede depender de los tamaños secundarios obtenidos durante la [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) llamada al método. En su lugar, `LayoutChildren` debe invocar [ `Measure` ] (XREF: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) en los elementos secundarios del diseño, antes de invocar [ `Layout` ] (XREF: Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . Rectangle)). Como alternativa, el tamaño de los elementos secundarios obtenidos en la `OnMeasure` invalidación se puede almacenar en caché para evitar las `Measure` invocaciones posteriores en la `LayoutChildren` invalidación, pero la clase de diseño deberá saber cuándo es necesario obtener los tamaños de nuevo. Para obtener más información, consulte [calcular y almacenar en caché los datos de diseño](#caching).
+> Tenga en cuenta que la [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) invalidación no se invocará si el tamaño del diseño se rige por su elemento primario, en lugar de sus elementos secundarios. Sin embargo, se invocará la invalidación si una o ambas restricciones son infinitas, o si la clase de diseño tiene valores no predeterminados [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) o de [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) propiedad. Por esta razón, la [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) invalidación no puede depender de los tamaños secundarios obtenidos durante la [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) llamada al método. En su lugar, `LayoutChildren` debe invocar [ `Measure` ] (XREF: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) en los elementos secundarios del diseño, antes de invocar [ `Layout` ] (XREF: Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . Rectangle)). Como alternativa, el tamaño de los elementos secundarios obtenidos en la `OnMeasure` invalidación se puede almacenar en caché para evitar las `Measure` invocaciones posteriores en la `LayoutChildren` invalidación, pero la clase de diseño deberá saber cuándo es necesario obtener los tamaños de nuevo. Para obtener más información, consulte [calcular y almacenar en caché datos de diseño](#calculate-and-cache-layout-data).
 
-A continuación, la clase de diseño se puede consumir agregándola a un [`Page`](xref:Xamarin.Forms.Page) y agregando elementos secundarios al diseño. Para obtener más información, vea [consumir WrapLayout](#consuming).
-
-<a name="creating" />
+A continuación, la clase de diseño se puede consumir agregándola a un [`Page`](xref:Xamarin.Forms.Page) y agregando elementos secundarios al diseño. Para obtener más información, vea [consumir The WrapLayout](#consume-the-wraplayout).
 
 ### <a name="create-a-wraplayout"></a>Creación de un WrapLayout
 
@@ -105,8 +89,6 @@ public class WrapLayout : Layout<View>
   ...
 }
 ```
-
-<a name="caching" />
 
 #### <a name="calculate-and-cache-layout-data"></a>Calcular y almacenar en caché datos de diseño
 
@@ -199,8 +181,6 @@ El `GetLayoutData` método realiza las operaciones siguientes:
 - Siempre que haya al menos un elemento secundario visible, calcula el número de filas y columnas necesarias y, a continuación, calcula el tamaño de la celda para los elementos secundarios en función de las dimensiones de `WrapLayout` . Tenga en cuenta que el tamaño de la celda suele ser ligeramente más grande que el tamaño máximo de los elementos secundarios, pero también puede ser menor si el elemento secundario es lo suficientemente amplio como `WrapLayout` para el elemento secundario más amplio o lo suficientemente alto para el elemento secundario más alto.
 - Almacena el nuevo `LayoutData` valor en la memoria caché.
 
-<a name="adding_properties" />
-
 #### <a name="add-properties-backed-by-bindable-properties"></a>Agregar propiedades respaldadas por propiedades enlazables
 
 La `WrapLayout` clase define `ColumnSpacing` `RowSpacing` las propiedades y, cuyos valores se usan para separar las filas y las columnas del diseño, y que están respaldadas por propiedades enlazables. Las propiedades enlazables se muestran en el ejemplo de código siguiente:
@@ -227,9 +207,7 @@ public static readonly BindableProperty RowSpacingProperty = BindableProperty.Cr
   });
 ```
 
-El controlador modificado por la propiedad de cada propiedad enlazable invoca la `InvalidateLayout` invalidación del método para desencadenar un nuevo paso de diseño en `WrapLayout` . Para obtener más información, vea [invalidar el método InvalidateLayout](#invalidatelayout) e [invalidar el método OnChildMeasureInvalidated](#onchildmeasureinvalidated).
-
-<a name="onmeasure" />
+El controlador modificado por la propiedad de cada propiedad enlazable invoca la `InvalidateLayout` invalidación del método para desencadenar un nuevo paso de diseño en `WrapLayout` . Para obtener más información, vea [invalidar el método InvalidateLayout](#override-the-invalidatelayout-method) e [invalidar el método OnChildMeasureInvalidated](#override-the-onchildmeasureinvalidated-method).
 
 #### <a name="override-the-onmeasure-method"></a>Invalidar el método de la acción
 
@@ -250,12 +228,10 @@ protected override SizeRequest OnMeasure(double widthConstraint, double heightCo
 }
 ```
 
-La invalidación invoca el `GetLayoutData` método y construye un `SizeRequest` objeto a partir de los datos devueltos, a la vez que también tiene en cuenta los valores de las `RowSpacing` `ColumnSpacing` propiedades y. Para obtener más información sobre el `GetLayoutData` método, consulte [calcular y almacenar en caché los datos](#caching).
+La invalidación invoca el `GetLayoutData` método y construye un `SizeRequest` objeto a partir de los datos devueltos, a la vez que también tiene en cuenta los valores de las `RowSpacing` `ColumnSpacing` propiedades y. Para obtener más información sobre el `GetLayoutData` método, consulte [calcular y almacenar en caché datos de diseño](#calculate-and-cache-layout-data).
 
 > [!IMPORTANT]
 > [ `Measure` ] (XREF: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) y [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) los métodos no deben solicitar nunca una dimensión infinita devolviendo un [`SizeRequest`](xref:Xamarin.Forms.SizeRequest) valor con una propiedad establecida en `Double.PositiveInfinity` . Sin embargo, al menos uno de los argumentos de restricción en `OnMeasure` puede ser `Double.PositiveInfinity` .
-
-<a name="layoutchildren" />
 
 #### <a name="override-the-layoutchildren-method"></a>Invalidar el método LayoutChildren
 
@@ -304,11 +280,9 @@ La invalidación comienza con una llamada al `GetLayoutData` método y, a contin
 > [!NOTE]
 > Tenga en cuenta que el rectángulo que se pasa al `LayoutChildIntoBoundingRegion` método incluye todo el área en la que puede residir el elemento secundario.
 
-Para obtener más información sobre el `GetLayoutData` método, consulte [calcular y almacenar en caché los datos](#caching).
+Para obtener más información sobre el `GetLayoutData` método, consulte [calcular y almacenar en caché datos de diseño](#calculate-and-cache-layout-data).
 
-<a name="invalidatelayout" />
-
-#### <a name="overridethe-invalidatelayout-method"></a>Overridethe InvalidateLayout, método
+#### <a name="override-the-invalidatelayout-method"></a>Invalidar el método InvalidateLayout
 
 La [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) invalidación se invoca cuando se agregan o quitan elementos secundarios en el diseño, o cuando una de las `WrapLayout` propiedades cambia de valor, como se muestra en el ejemplo de código siguiente:
 
@@ -325,8 +299,6 @@ La invalidación invalida el diseño y descarta toda la información de diseño 
 > [!NOTE]
 > Para detener la [`Layout`](xref:Xamarin.Forms.Layout) clase que invoca al [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) método cada vez que se agrega o se quita un elemento secundario de un diseño, invalide [ `ShouldInvalidateOnChildAdded` ] (XREF: Xamarin.Forms . Layout. ShouldInvalidateOnChildAdded ( Xamarin.Forms . View)) y [ `ShouldInvalidateOnChildRemoved` ] (XREF: Xamarin.Forms . Layout. ShouldInvalidateOnChildRemoved ( Xamarin.Forms . View)) y devuelven `false` . A continuación, la clase de diseño puede implementar un proceso personalizado cuando se agregan o quitan elementos secundarios.
 
-<a name="onchildmeasureinvalidated" />
-
 #### <a name="override-the-onchildmeasureinvalidated-method"></a>Invalidar el método OnChildMeasureInvalidated
 
 La [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) invalidación se invoca cuando uno de los elementos secundarios del diseño cambia de tamaño y se muestra en el ejemplo de código siguiente:
@@ -340,8 +312,6 @@ protected override void OnChildMeasureInvalidated()
 ```
 
 La invalidación invalida el diseño secundario y descarta toda la información de diseño almacenada en caché.
-
-<a name="consuming" />
 
 ### <a name="consume-the-wraplayout"></a>Consumir el WrapLayout
 

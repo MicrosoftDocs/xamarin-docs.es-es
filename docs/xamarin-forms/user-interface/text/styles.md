@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsEstilos de texto
-description: En este artículo se explica cómo aplicar estilos a texto en Xamarin.Forms aplicaciones. Los estilos pueden definirse una vez y usarse en muchas vistas, pero un estilo solo se puede usar con vistas de un tipo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 79a86fd7a2c0f5b82ca4b3e22b3ecedf42c5a0ba
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136154"
+title: " Xamarin.Forms estilos de texto" Descripción: "en este artículo se explica cómo aplicar estilos a texto en Xamarin.Forms aplicaciones. Los estilos pueden definirse una vez y usarse en muchas vistas, pero un estilo solo se puede usar con vistas de un tipo ".
+MS. Prod: Xamarin ms. AssetID: 57C0CFD6-A568-46B8-ADA1-BF25681893CF ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/22/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-text-styles"></a>Xamarin.FormsEstilos de texto
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
@@ -25,8 +11,6 @@ _Aplicar estilo a texto en Xamarin. Forms_
 
 Los estilos se pueden utilizar para ajustar la apariencia de las etiquetas, las entradas y los editores. Los estilos pueden definirse una vez y usarse en muchas vistas, pero un estilo solo se puede usar con vistas de un tipo.
 A los estilos se les puede dar un `Key` y aplicar de forma selectiva mediante la propiedad de un control concreto `Style` .
-
-<a name="Built-In_Styles" />
 
 ## <a name="built-in-styles"></a>Estilos integrados
 
@@ -52,8 +36,6 @@ label.Style = Device.Styles.TitleStyle;
 ```
 
 ![Ejemplo de estilos de dispositivo](styles-images/builtinstyles.png)
-
-<a name="Custom_Styles" />
 
 ## <a name="custom-styles"></a>Estilos personalizados
 
@@ -94,8 +76,6 @@ En XAML:
 Tenga en cuenta que los recursos (incluidos todos los estilos) se definen en `ContentPage.Resources` , que es un elemento del mismo nivel que el conocido `ContentPage.Content` .
 
 ![Ejemplo de estilos personalizados](styles-images/customstyle.png)
-
-<a name="Applying_Styles" />
 
 ## <a name="applying-styles"></a>Aplicar estilos
 

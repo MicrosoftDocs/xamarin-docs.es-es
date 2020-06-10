@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/31/2018
-ms.openlocfilehash: 4cf32bae208efa67acbb08f2e4525e4571b14b16
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: acb0e9ea23d4043a72b9d2688501c576a3d43358
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76723786"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570270"
 ---
 # <a name="firebase-cloud-messaging"></a>Firebase Cloud Messaging
 
 _Firebase Cloud Messaging (FCM) es un servicio que facilita la mensajería entre aplicaciones móviles y aplicaciones de servidor. En este artículo se proporciona información general sobre cómo funciona FCM y se explica cómo configurar Google Services para que la aplicación pueda usar FCM._
 
-[![imagen de Firebase Cloud Messaging Hero](firebase-cloud-messaging-images/preview.png)](firebase-cloud-messaging-images/preview.png#lightbox)
+[![Imagen de Firebase Cloud Messaging Hero](firebase-cloud-messaging-images/preview.png)](firebase-cloud-messaging-images/preview.png#lightbox)
 
 En este tema se proporciona información general de alto nivel sobre cómo Firebase Cloud Messaging enruta los mensajes entre la aplicación de Xamarin. Android y un servidor de aplicaciones, y proporciona un procedimiento paso a paso para adquirir credenciales para que la aplicación pueda usar los servicios de FCM.
 
@@ -32,32 +32,32 @@ Como se muestra en el diagrama siguiente, FCM actúa como intermediario entre lo
 
 Con FCM, los servidores de aplicaciones pueden enviar mensajes a un único dispositivo, a un grupo de dispositivos o a una serie de dispositivos que están suscritos a un tema. Una aplicación cliente puede usar FCM para suscribirse a mensajes de nivel inferior desde un servidor de aplicaciones (por ejemplo, para recibir notificaciones remotas). Para obtener más información sobre los diferentes tipos de mensajes de Firebase, vea [About FCM messages](https://firebase.google.com/docs/cloud-messaging/concept-options).
 
-## <a name="fcm-in-action"></a>Mensajería en la nube Firebase en acción
+## <a name="firebase-cloud-messaging-in-action"></a><a name="fcm-in-action"></a>Mensajería en la nube Firebase en acción
 
 Cuando se envía un mensaje de nivel inferior a una aplicación cliente desde un servidor de aplicaciones, el servidor de aplicaciones envía el mensaje a un *servidor de conexión FCM* proporcionado por Google; el servidor de conexión FCM, a su vez, reenvía el mensaje a un dispositivo que ejecuta la aplicación cliente. Los mensajes se pueden enviar a través de HTTP o [XMPP](https://firebase.google.com/docs/cloud-messaging/xmpp-server-ref) (Protocolo de mensajería y presencia extensible). Dado que las aplicaciones cliente no siempre están conectadas o en ejecución, el servidor de conexión FCM pone en cola y almacena los mensajes, enviándolos a las aplicaciones cliente a medida que se vuelven a conectar y están disponibles. Del mismo modo, FCM pondrá en cola los mensajes ascendentes desde la aplicación cliente al servidor de aplicaciones si el servidor de aplicaciones no está disponible. Para obtener más información sobre los servidores de conexión de FCM, consulte [acerca de Firebase Cloud Messaging Server](https://firebase.google.com/docs/cloud-messaging/server).
 
 FCM usa las credenciales siguientes para identificar el servidor de aplicaciones y la aplicación cliente, y usa estas credenciales para autorizar las transacciones de mensajes a través de FCM:
 
-- <a name="fcm-in-action-sender-id"></a>**Identificador de remitente** &ndash; el *ID* . de remitente es un valor numérico único que se asigna al crear el proyecto Firebase. El identificador del remitente se usa para identificar cada servidor de aplicaciones que puede enviar mensajes a la aplicación cliente. El identificador del remitente también es el número del proyecto; al registrar el proyecto, se obtiene el identificador de remitente de la consola de Firebase. Un ejemplo de un identificador de remitente es `496915549731`.
+- <a name="fcm-in-action-sender-id"></a>**ID.** &ndash; de remitente El *ID* . de remitente es un valor numérico único que se asigna al crear el proyecto Firebase. El identificador del remitente se usa para identificar cada servidor de aplicaciones que puede enviar mensajes a la aplicación cliente. El identificador del remitente también es el número del proyecto; al registrar el proyecto, se obtiene el identificador de remitente de la consola de Firebase. Un ejemplo de un identificador de remitente es `496915549731` .
 
-- <a name="fcm-in-action-api-key"></a>**Clave de api** &ndash; la *clave de API* proporciona al servidor de aplicaciones acceso a Firebase Services; FCM usa esta clave para autenticar el servidor de aplicaciones. Esta credencial también se conoce como la *clave de servidor* o la *clave de API Web*. Un ejemplo de una clave de API es `AJzbSyCTcpfRT1YRqbz-jIwp1h06YdauvewGDzk`.
+- <a name="fcm-in-action-api-key"></a>**Clave** &ndash; de API La *clave de API* proporciona al servidor de aplicaciones acceso a Firebase Services. FCM usa esta clave para autenticar el servidor de aplicaciones. Esta credencial también se conoce como la *clave de servidor* o la *clave de API Web*. Un ejemplo de una clave de API es `AJzbSyCTcpfRT1YRqbz-jIwp1h06YdauvewGDzk` .
 
-- <a name="fcm-in-action-app-id"></a>**Identificador** de la aplicación &ndash; la identidad de la aplicación cliente (independiente de cualquier dispositivo dado) que se registra para recibir mensajes de FCM. Un ejemplo de un identificador de aplicación es `1:415712510732:android:0e1eb7a661af2460`.
+- <a name="fcm-in-action-app-id"></a>IDENTIFICADOR de la **aplicación** &ndash; La identidad de la aplicación cliente (independiente de cualquier dispositivo determinado) que se registra para recibir mensajes de FCM. Un ejemplo de un identificador de aplicación es `1:415712510732:android:0e1eb7a661af2460` .
 
-- <a name="fcm-in-action-registration-token"></a>El **token de registro** &ndash; el token de *registro* (también conocido como *ID. de instancia*) es la identidad FCM de la aplicación cliente en un dispositivo determinado. El token de registro se genera en tiempo de ejecución &ndash; la aplicación recibe un token de registro cuando se registra por primera vez con FCM mientras se ejecuta en un dispositivo. El token de registro autoriza a una instancia de la aplicación cliente (que se ejecuta en ese dispositivo concreto) a recibir mensajes de FCM.
-    Un ejemplo de un token de registro es `fkBQTHxKKhs:AP91bHuEedxM4xFAUn0z ... JKZS` (una cadena muy larga).
+- <a name="fcm-in-action-registration-token"></a>**Token** &ndash; de registro El *token de registro* (también conocido como *ID. de instancia*) es la identidad FCM de la aplicación cliente en un dispositivo determinado. El token de registro se genera en tiempo de ejecución. &ndash; la aplicación recibe un token de registro cuando se registra por primera vez con FCM mientras se ejecuta en un dispositivo. El token de registro autoriza a una instancia de la aplicación cliente (que se ejecuta en ese dispositivo concreto) a recibir mensajes de FCM.
+    Un ejemplo de token de registro es `fkBQTHxKKhs:AP91bHuEedxM4xFAUn0z ... JKZS` (una cadena muy larga).
 
-[La configuración de Firebase Cloud Messaging](#setup_fcm) (más adelante en esta guía) proporciona instrucciones detalladas para crear un proyecto y generar estas credenciales. Al crear un nuevo proyecto en la [consola de Firebase](https://console.firebase.google.com/), se crea un archivo de credenciales denominado **Google-services. JSON** &ndash; agregar este archivo al proyecto de Xamarin. Android, como se explica en [notificaciones remotas con FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
+[La configuración de Firebase Cloud Messaging](#setup_fcm) (más adelante en esta guía) proporciona instrucciones detalladas para crear un proyecto y generar estas credenciales. Al crear un nuevo proyecto en la [consola de Firebase](https://console.firebase.google.com/), se crea un archivo de credenciales denominado **Google-Services. JSON.** &ndash; agregue este archivo al proyecto de Xamarin. Android, como se explica en [notificaciones remotas con FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
 
 En las secciones siguientes se explica cómo se usan estas credenciales cuando las aplicaciones cliente se comunican con los servidores de aplicaciones a través de FCM.
 
-<a name="registration" />
+<a name="registration"></a>
 
 ### <a name="registration-with-fcm"></a>Registro con FCM
 
 Una aplicación cliente debe registrarse primero con FCM antes de que pueda tener lugar la mensajería. La aplicación cliente debe completar los pasos de registro que se muestran en el diagrama siguiente:
 
-[diagrama de pasos de registro de aplicaciones ![](firebase-cloud-messaging-images/02-app-registration-sml.png)](firebase-cloud-messaging-images/02-app-registration.png#lightbox)
+[![Diagrama de pasos de registro de aplicaciones](firebase-cloud-messaging-images/02-app-registration-sml.png)](firebase-cloud-messaging-images/02-app-registration.png#lightbox)
 
 1. La aplicación cliente se pone en contacto con FCM para obtener un token de registro, pasando el identificador del remitente, la clave de API y el identificador de la aplicación a FCM.
 
@@ -93,7 +93,7 @@ Para obtener información detallada sobre cómo recibir mensajes FCM de bajada e
 
 La *mensajería de temas* permite que un servidor de aplicaciones envíe un mensaje a varios dispositivos que hayan participado en un tema determinado. También puede crear y enviar mensajes de tema a través de la GUI de notificaciones de la consola de Firebase. FCM controla el enrutamiento y la entrega de mensajes de tema a los clientes suscritos. Esta característica se puede usar para mensajes tales como alertas meteorológicas, cotizaciones bursátiles y noticias de titulares.
 
-[diagrama de mensajes de ![tema](firebase-cloud-messaging-images/04-topic-messaging-sml.png)](firebase-cloud-messaging-images/04-topic-messaging.png#lightbox)
+[![Diagrama de mensajes de tema](firebase-cloud-messaging-images/04-topic-messaging-sml.png)](firebase-cloud-messaging-images/04-topic-messaging.png#lightbox)
 
 Los pasos siguientes se usan en la mensajería de temas (después de que la aplicación cliente obtenga un token de registro, como se explicó anteriormente):
 
@@ -105,7 +105,7 @@ Los pasos siguientes se usan en la mensajería de temas (después de que la apli
 
 Para obtener más información sobre la mensajería de temas de Firebase, vea el [tema sobre mensajería en Android](https://firebase.google.com/docs/cloud-messaging/android/topic-messaging)de Google.
 
-<a name="setup_fcm" />
+<a name="setup_fcm"></a>
 
 ## <a name="setting-up-firebase-cloud-messaging"></a>Configuración de la mensajería en la nube Firebase
 
@@ -113,28 +113,28 @@ Antes de poder usar FCM Services en la aplicación, debe crear un nuevo proyecto
 
 1. Inicie sesión en la [consola de Firebase](https://console.firebase.google.com/) con su cuenta de Google (es decir, su dirección de Gmail) y haga clic en **crear nuevo proyecto**:
 
-    [![botón Crear nuevo proyecto](firebase-cloud-messaging-images/05-firebase-console-sml.png)](firebase-cloud-messaging-images/05-firebase-console.png#lightbox)
+    [![Botón Crear nuevo proyecto](firebase-cloud-messaging-images/05-firebase-console-sml.png)](firebase-cloud-messaging-images/05-firebase-console.png#lightbox)
 
     Si tiene un proyecto existente, haga clic en **importar un proyecto de Google**.
 
 2. En el cuadro de diálogo **crear un proyecto** , escriba el nombre del proyecto y haga clic en **crear proyecto**. En el ejemplo siguiente, se crea un nuevo proyecto denominado **XamarinFCM** :
 
-    [![cuadro de diálogo crear un proyecto](firebase-cloud-messaging-images/06-create-a-project-sml.png)](firebase-cloud-messaging-images/06-create-a-project.png#lightbox)
+    [![Cuadro de diálogo crear un proyecto](firebase-cloud-messaging-images/06-create-a-project-sml.png)](firebase-cloud-messaging-images/06-create-a-project.png#lightbox)
 
 3. En la **Introducción**a la consola de Firebase, haga clic en **Agregar Firebase a la aplicación Android**:
 
-    [![agregar Firebase a la aplicación de Android](firebase-cloud-messaging-images/07-add-firebase-sml.png)](firebase-cloud-messaging-images/07-add-firebase.png#lightbox)
+    [![Agregar Firebase a una aplicación de Android](firebase-cloud-messaging-images/07-add-firebase-sml.png)](firebase-cloud-messaging-images/07-add-firebase.png#lightbox)
 
 4. En la siguiente pantalla, escriba el nombre del paquete de la aplicación. En este ejemplo, el nombre del paquete es **com. Xamarin. fcmexample**. Este valor debe coincidir con el nombre del paquete de la aplicación Android. También se puede escribir un alias de aplicación en el campo **sobrenombre** de la aplicación:
 
-    [![escribir el ejemplo FCM como el alias de la aplicación](firebase-cloud-messaging-images/08-package-name-sml.png)](firebase-cloud-messaging-images/08-package-name.png#lightbox)
+    [![Escribir el ejemplo de FCM como el alias de la aplicación](firebase-cloud-messaging-images/08-package-name-sml.png)](firebase-cloud-messaging-images/08-package-name.png#lightbox)
 
 5. Si su aplicación usa vínculos dinámicos, invitados o Google auth, también debe especificar el certificado de firma de depuración. Para obtener más información sobre cómo buscar el certificado de firma, consulte [búsqueda de la firma MD5 o SHA1 de su almacén de claves](~/android/deploy-test/signing/keystore-signature.md).
     En este ejemplo, el certificado de firma se deja en blanco.
 
 6. Haga clic en **Agregar aplicación**:
 
-    [![clic en el botón Agregar aplicación](firebase-cloud-messaging-images/09-add-app-sml.png)](firebase-cloud-messaging-images/09-add-app.png#lightbox)
+    [![Hacer clic en el botón Agregar aplicación](firebase-cloud-messaging-images/09-add-app-sml.png)](firebase-cloud-messaging-images/09-add-app.png#lightbox)
 
     Se genera automáticamente una clave de API de servidor y un identificador de cliente para la aplicación. Esta información se empaqueta en un archivo **Google-Services. JSON** que se descarga automáticamente al hacer clic en **Agregar aplicación**.
     Asegúrese de guardar este archivo en un lugar seguro.

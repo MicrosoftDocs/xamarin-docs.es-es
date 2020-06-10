@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: davidortinau
 ms.author: daortin
-ms.openlocfilehash: 84698ab769156726982c4d5a38d5f284bdc30328
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: fc6066155a4171b106e772c1fe6fe7ee3e5c67cf
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73002225"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573513"
 ---
 # <a name="monotouchdialog-json-markup"></a>Marcado JSON de MonoTouch.Dialog
 
@@ -79,7 +79,7 @@ El marcado anterior produce la siguiente interfaz de usuario:
 
  [![](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png "The UI created by the given markup")](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png#lightbox)
 
-Cada elemento del árbol puede contener la propiedad `"id"`. En tiempo de ejecución es posible hacer referencia a secciones individuales o elementos mediante el indexador JsonElement. Así:
+Cada elemento del árbol puede contener la propiedad `"id"` . En tiempo de ejecución es posible hacer referencia a secciones individuales o elementos mediante el indexador JsonElement. Por ejemplo:
 
 ```csharp
 var jsonElement = JsonElement.FromFile ("demo.json");
@@ -89,7 +89,7 @@ var firstSection = jsonElement ["first-section"] as Section;
 var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 ```
 
- <a name="Root_Element_Syntax" />
+ <a name="Root_Element_Syntax"></a>
 
 ## <a name="root-element-syntax"></a>Sintaxis del elemento raíz
 
@@ -98,45 +98,45 @@ El elemento raíz contiene los siguientes valores:
 - `title`
 - `sections` (opcional)
 
-El elemento raíz puede aparecer dentro de una sección como elemento para crear un controlador anidado. En ese caso, la propiedad adicional `"type"` debe establecerse en `"root"`
+El elemento raíz puede aparecer dentro de una sección como elemento para crear un controlador anidado. En ese caso, la propiedad adicional `"type"` se debe establecer en`"root"`
 
- <a name="url" />
+ <a name="url"></a>
 
 ### <a name="url"></a>url
 
-Si se establece la propiedad `"url"`, si el usuario pulsa en este RootElement, el código solicitará un archivo de la dirección URL especificada y hará que el contenido se muestre en la nueva información. Puede utilizar esto para crear una extensión de la interfaz de usuario del servidor en función de lo que el usuario pulse.
+Si `"url"` se establece la propiedad, si el usuario pulsa en este RootElement, el código solicitará un archivo de la dirección URL especificada y hará que el contenido se muestre en la nueva información. Puede utilizar esto para crear una extensión de la interfaz de usuario del servidor en función de lo que el usuario pulse.
 
- <a name="group" />
+ <a name="group"></a>
 
-### <a name="group"></a>grupo
+### <a name="group"></a>group
 
 Si se establece, establece el valor de GroupName para el elemento raíz. Los nombres de grupo se usan para elegir un resumen que se muestra como el valor del elemento raíz de uno de los elementos anidados del elemento. Este es el valor de una casilla o el valor de un botón de radio.
 
- <a name="radioselected" />
+ <a name="radioselected"></a>
 
 ### <a name="radioselected"></a>radioseleccionada
 
 Identifica el elemento de radio que está seleccionado en elementos anidados.
 
- <a name="title" />
+ <a name="title"></a>
 
 ### <a name="title"></a>título
 
 Si está presente, será el título que se usa para el RootElement
 
- <a name="type" />
+ <a name="type"></a>
 
-### <a name="type"></a>tipo
+### <a name="type"></a>type
 
 Debe establecerse en `"root"` cuando aparece en una sección (se usa para anidar controladores).
 
- <a name="sections" />
+ <a name="sections"></a>
 
 ### <a name="sections"></a>secciones
 
 Se trata de una matriz JSON con secciones individuales
 
- <a name="Section_Syntax" />
+ <a name="Section_Syntax"></a>
 
 ## <a name="section-syntax"></a>Sintaxis de la sección
 
@@ -146,36 +146,36 @@ La sección contiene:
 - `footer` (opcional)
 - Matriz `elements`
 
- <a name="header" />
+ <a name="header"></a>
 
 ### <a name="header"></a>header
 
 Si está presente, el texto del encabezado se muestra como un título de la sección.
 
- <a name="footer" />
+ <a name="footer"></a>
 
-### <a name="footer"></a>pie
+### <a name="footer"></a>pie de página
 
 Si está presente, el pie de página se muestra en la parte inferior de la sección.
 
- <a name="elements" />
+ <a name="elements"></a>
 
-### <a name="elements"></a>elementos
+### <a name="elements"></a>Elementos
 
-Se trata de una matriz de elementos. Cada elemento debe contener al menos una clave, la clave `"type"` que se utiliza para identificar el tipo de elemento que se va a crear.
-Algunos de los elementos comparten algunas propiedades comunes, como `"caption"` y `"value"`. Esta es la lista de elementos admitidos:
+Se trata de una matriz de elementos. Cada elemento debe contener al menos una clave, la `"type"` clave que se utiliza para identificar el tipo de elemento que se va a crear.
+Algunos de los elementos comparten algunas propiedades comunes como `"caption"` y `"value"` . Esta es la lista de elementos admitidos:
 
-- `string` elementos (con y sin estilo)
-- líneas de `entry` (normal o contraseña)
-- `boolean` valores (mediante modificadores o imágenes)
+- `string`elementos (con y sin estilo)
+- `entry`líneas (normal o contraseña)
+- `boolean`valores (mediante modificadores o imágenes)
 
 Los elementos de cadena se pueden usar como botones proporcionando un método para invocar cuando el usuario pulsa la celda o el accesorio,
 
- <a name="Rendering_Elements" />
+ <a name="Rendering_Elements"></a>
 
 ## <a name="rendering-elements"></a>Representar elementos
 
-Los elementos de representación se basan en StringElement C# y StyledStringElement y pueden representar la información de varias maneras y es posible representarlas de varias maneras. Los elementos más sencillos se pueden crear de la siguiente manera:
+Los elementos de representación se basan en C# StringElement y StyledStringElement y pueden representar la información de varias maneras y es posible representarlas de varias maneras. Los elementos más sencillos se pueden crear de la siguiente manera:
 
 ```json
 {
@@ -184,7 +184,7 @@ Los elementos de representación se basan en StringElement C# y StyledStringElem
 }
 ```
 
-Esto mostrará una cadena simple con todos los valores predeterminados: fuente, Fondo, color del texto y decoraciones. Es posible enlazar acciones a estos elementos y hacer que se comporten como botones mediante el establecimiento de la propiedad `"ontap"` o de las propiedades `"onaccessorytap"`:
+Esto mostrará una cadena simple con todos los valores predeterminados: fuente, Fondo, color del texto y decoraciones. Es posible enlazar acciones a estos elementos y hacer que se comporten como botones estableciendo la `"ontap"` propiedad o las `"onaccessorytap"` propiedades:
 
 ```json
 {
@@ -194,7 +194,7 @@ Esto mostrará una cadena simple con todos los valores predeterminados: fuente, 
 }
 ```
 
-Lo anterior invocará el método "ShowPhotos" en la clase "Acme. fotolibrary". El `"onaccessorytap"` es similar, pero solo se invocará si el usuario pulsa el accesorio en lugar de puntear en la celda. Para habilitar esta configuración, también debe establecer el accesorio:
+Lo anterior invocará el método "ShowPhotos" en la clase "Acme. fotolibrary". `"onaccessorytap"`Es similar, pero solo se invocará si el usuario pulsa el accesorio en lugar de puntear en la celda. Para habilitar esta configuración, también debe establecer el accesorio:
 
 ```json
 {
@@ -206,14 +206,14 @@ Lo anterior invocará el método "ShowPhotos" en la clase "Acme. fotolibrary". E
 }
 ```
 
-Los elementos de representación pueden mostrar dos cadenas a la vez, una es la leyenda y otra es el valor. La forma en que estas cadenas se representan dependen del estilo, puede establecerse con la propiedad `"style"`. El valor predeterminado mostrará el título a la izquierda y el valor a la derecha. Vea la sección sobre el estilo para obtener más detalles. Los colores se codifican con el símbolo "#" seguido de números hexadecimales que representan los valores de los valores rojo, verde, azul y quizás alfa. El contenido se puede codificar de forma abreviada (3 ó 4 dígitos hexadecimales) que representa valores RGB o RGBA. O el formato largo (6 u 8 dígitos) que representan los valores RGB o RGBA. La versión corta es una abreviatura para escribir el mismo dígito hexadecimal dos veces. Por lo tanto, la constante "#1bc" es interpretará en rojo = 0x11, verde = 0xbb y Blue = 0xcc. Si el valor alfa no está presente, el color es opaco. Algunos ejemplos:
+Los elementos de representación pueden mostrar dos cadenas a la vez, una es la leyenda y otra es el valor. La forma en que estas cadenas se representan dependen del estilo, puede establecerse con la `"style"` propiedad. El valor predeterminado mostrará el título a la izquierda y el valor a la derecha. Vea la sección sobre el estilo para obtener más detalles. Los colores se codifican con el símbolo "#" seguido de números hexadecimales que representan los valores de los valores rojo, verde, azul y quizás alfa. El contenido se puede codificar de forma abreviada (3 ó 4 dígitos hexadecimales) que representa valores RGB o RGBA. O el formato largo (6 u 8 dígitos) que representan los valores RGB o RGBA. La versión corta es una abreviatura para escribir el mismo dígito hexadecimal dos veces. Por lo tanto, la constante "#1bc" es interpretará en rojo = 0x11, verde = 0xbb y Blue = 0xcc. Si el valor alfa no está presente, el color es opaco. He aquí algunos ejemplos:
 
 ```json
 "background": "#f00"
 "background": "#fa08f880"
 ```
 
- <a name="accessory" />
+ <a name="accessory"></a>
 
 ### <a name="accessory"></a>paquete
 
@@ -225,25 +225,25 @@ Determina el tipo de accesorio que se va a mostrar en el elemento de representac
 
 Si el valor no está presente, no se muestra ningún accesorio.
 
- <a name="background" />
+ <a name="background"></a>
 
-### <a name="background"></a>fondo
+### <a name="background"></a>background
 
 La propiedad Background establece el color de fondo de la celda. El valor es una dirección URL a una imagen (en este caso, se invocará el descargador de imágenes asincrónicas y se actualizará el fondo una vez descargada la imagen) o puede ser un color especificado mediante la sintaxis de color.
 
- <a name="caption" />
+ <a name="caption"></a>
 
-### <a name="caption"></a>hayan
+### <a name="caption"></a>caption
 
-Cadena principal que se va a mostrar en el elemento de representación. La fuente y el color se pueden personalizar estableciendo las propiedades `"textcolor"` y `"font"`. La propiedad `"style"` determina el estilo de representación.
+Cadena principal que se va a mostrar en el elemento de representación. La fuente y el color se pueden personalizar mediante el establecimiento de las `"textcolor"` `"font"` propiedades y. La propiedad determina el estilo de representación `"style"` .
 
- <a name="color_and_detailcolor" />
+ <a name="color_and_detailcolor"></a>
 
 ### <a name="color-and-detailcolor"></a>color y detailcolor
 
 Color que se va a usar para el texto principal o el texto detallado.
 
- <a name="detailfont_and_font" />
+ <a name="detailfont_and_font"></a>
 
 ### <a name="detailfont-and-font"></a>detailfont y Font
 
@@ -253,7 +253,7 @@ Las siguientes son especificaciones de fuente válidas:
 - Helvetica
 - "Helvetica-14"
 
- <a name="linebreak" />
+ <a name="linebreak"></a>
 
 ### <a name="linebreak"></a>linebreak
 
@@ -266,9 +266,9 @@ Determina cómo se dividen las líneas. Los valores posibles son:
 - `tail-truncation`
 - `word-wrap`
 
-Tanto `character-wrap` como `word-wrap` se pueden utilizar junto con la propiedad `"lines"` establecida en cero para convertir el elemento de representación en un elemento de varias líneas.
+Tanto `character-wrap` como `word-wrap` se pueden utilizar junto con la `"lines"` propiedad establecida en cero para convertir el elemento de representación en un elemento de varias líneas.
 
- <a name="ontap_and_onaccessorytap" />
+ <a name="ontap_and_onaccessorytap"></a>
 
 ### <a name="ontap-and-onaccessorytap"></a>ONTAP y onaccessorytap
 
@@ -289,13 +289,13 @@ class Foo {
 }
 ```
 
- <a name="lines" />
+ <a name="lines"></a>
 
-### <a name="lines"></a>líneas
+### <a name="lines"></a>lines
 
-Si se establece en cero, hará que el tamaño del elemento sea automático según el contenido de las cadenas contenidas. Para que esto funcione, también debe establecer la propiedad `"linebreak"` en `"character-wrap"` o `"word-wrap"`.
+Si se establece en cero, hará que el tamaño del elemento sea automático según el contenido de las cadenas contenidas. Para que esto funcione, también debe establecer la `"linebreak"` propiedad en `"character-wrap"` o `"word-wrap"` .
 
- <a name="style" />
+ <a name="style"></a>
 
 ### <a name="style"></a>estilo
 
@@ -307,30 +307,30 @@ Los valores posibles son:
 - `"value2"`
 - `"subtitle"`: texto con un subtítulo.
 
- <a name="subtitle" />
+ <a name="subtitle"></a>
 
-### <a name="subtitle"></a>básicas
+### <a name="subtitle"></a>subtitle
 
-Valor que se va a usar para el subtítulo. Se trata de un método abreviado para establecer el estilo en `"subtitle"` y establecer la propiedad `"value"` en una cadena.
+Valor que se va a usar para el subtítulo. Se trata de un acceso directo para establecer el estilo en `"subtitle"` y establecer la `"value"` propiedad en una cadena.
 Esto hace ambas cosas con una sola entrada.
 
- <a name="textcolor" />
+ <a name="textcolor"></a>
 
 ### <a name="textcolor"></a>TextColor
 
 Color que se va a usar para el texto.
 
- <a name="value" />
+ <a name="value"></a>
 
-### <a name="value"></a>valor
+### <a name="value"></a>value
 
-Valor secundario que se va a mostrar en el elemento de representación. El diseño de esto se ve afectado por el valor de `"style"`. La fuente y el color se pueden personalizar estableciendo el `"detailfont"` y el `"detailcolor"`.
+Valor secundario que se va a mostrar en el elemento de representación. El diseño de esto se ve afectado por la `"style"` configuración de. La fuente y el color se pueden personalizar estableciendo `"detailfont"` y `"detailcolor"` .
 
- <a name="Boolean_Elements" />
+ <a name="Boolean_Elements"></a>
 
 ## <a name="boolean-elements"></a>Elementos booleanos
 
-Los elementos booleanos deben establecer el tipo en `"bool"`, pueden contener un `"caption"` para mostrar y el `"value"` se establece en true o false. Si se establecen las propiedades `"on"` y `"off"`, se supone que son imágenes. Las imágenes se resuelven en relación con el directorio de trabajo actual de la aplicación. Si desea hacer referencia a los archivos relativos al paquete, puede usar el `"~"` como un acceso directo para representar el directorio de la agrupación de aplicaciones. Por ejemplo `"~/favorite.png"` será el archivo favorito. png incluido en el archivo de agrupación. Por ejemplo:
+Los elementos booleanos deben establecer el tipo en `"bool"` , pueden contener un `"caption"` para mostrar y el `"value"` está establecido en true o false. Si `"on"` `"off"` se establecen las propiedades y, se supone que son imágenes. Las imágenes se resuelven en relación con el directorio de trabajo actual de la aplicación. Si desea hacer referencia a los archivos relativos al paquete, puede usar `"~"` como un acceso directo para representar el directorio de la agrupación de aplicaciones. Por ejemplo `"~/favorite.png"` , será el archivo favorito. png incluido en el archivo de agrupación. Por ejemplo:
 
 ```json
 { 
@@ -348,17 +348,17 @@ Los elementos booleanos deben establecer el tipo en `"bool"`, pueden contener un
 }
 ```
 
- <a name="type" />
+ <a name="type"></a>
 
-### <a name="type"></a>tipo
+### <a name="type"></a>type
 
-El tipo se puede establecer en `"boolean"` o `"checkbox"`. Si se establece en booleano, usará un UISlider o imágenes (si se establecen `"on"` y `"off"`). Si se establece en CheckBox, se usará una casilla. La propiedad `"group"` se puede utilizar para etiquetar un elemento Boolean como perteneciente a un grupo determinado. Esto resulta útil si la raíz contenedora también tiene una propiedad `"group"`, ya que la raíz resumirá los resultados con un recuento de todos los booleanos (o casillas) que pertenecen al mismo grupo.
+El tipo se puede establecer en `"boolean"` o `"checkbox"` . Si se establece en booleano, utilizará un UISlider o imágenes (si `"on"` `"off"` se establecen ambos y). Si se establece en CheckBox, se usará una casilla. La `"group"` propiedad se puede utilizar para etiquetar un elemento booleano como perteneciente a un grupo determinado. Esto resulta útil si la raíz contenedora también tiene una `"group"` propiedad, ya que la raíz resumirá los resultados con un recuento de todos los booleanos (o casillas) que pertenecen al mismo grupo.
 
- <a name="Entry_Elements" />
+ <a name="Entry_Elements"></a>
 
 ## <a name="entry-elements"></a>Elementos entry
 
-Los elementos de entrada se utilizan para permitir que el usuario escriba datos. El tipo de los elementos de entrada es `"entry"` o `"password"`. La propiedad `"caption"` se establece en el texto que se va a mostrar a la derecha y el `"value"` se establece en el valor inicial para establecer la entrada en. El `"placeholder"` se usa para mostrar una sugerencia al usuario para las entradas vacías (aparece atenuada). A continuación se muestran algunos ejemplos:
+Los elementos de entrada se utilizan para permitir que el usuario escriba datos. El tipo de los elementos de entrada es `"entry"` o `"password"` . La `"caption"` propiedad se establece en el texto que se va a mostrar a la derecha y `"value"` se establece en el valor inicial para establecer la entrada en. `"placeholder"`Se usa para mostrar una sugerencia al usuario para las entradas vacías (aparece atenuada). Estos son algunos ejemplos:
 
 ```json
 {
@@ -387,13 +387,13 @@ Los elementos de entrada se utilizan para permitir que el usuario escriba datos.
 }
 ```
 
- <a name="autocorrect" />
+ <a name="autocorrect"></a>
 
 ### <a name="autocorrect"></a>Autocorrección
 
-Determina el estilo de corrección automática que se va a utilizar para la entrada. Los valores posibles son true o false (o las cadenas `"yes"` y `"no"`).
+Determina el estilo de corrección automática que se va a utilizar para la entrada. Los valores posibles son true o false (o las cadenas `"yes"` y `"no"` ).
 
- <a name="capitalization" />
+ <a name="capitalization"></a>
 
 ### <a name="capitalization"></a>uso de mayúsculas
 
@@ -404,13 +404,13 @@ Estilo de uso de mayúsculas que se va a usar para la entrada. Los valores posib
 - `sentences`
 - `words`
 
- <a name="caption" />
+ <a name="caption"></a>
 
-### <a name="caption"></a>hayan
+### <a name="caption"></a>caption
 
 Título que se va a usar para la entrada.
 
- <a name="keyboard" />
+ <a name="keyboard"></a>
 
 ### <a name="keyboard"></a>teclado
 
@@ -426,13 +426,13 @@ Tipo de teclado que se va a usar para la entrada de datos. Los valores posibles 
 - `twitter`
 - `url`
 
- <a name="placeholder" />
+ <a name="placeholder"></a>
 
-### <a name="placeholder"></a>Falso
+### <a name="placeholder"></a>marcador de posición
 
 El texto de sugerencia que se muestra cuando la entrada tiene un valor vacío.
 
- <a name="return-key" />
+ <a name="return-key"></a>
 
 ### <a name="return-key"></a>Return-Key
 
@@ -450,24 +450,24 @@ La etiqueta utilizada para la tecla RETURN. Los valores posibles son:
 - `send`
 - `yahoo`
 
- <a name="value" />
+ <a name="value"></a>
 
-### <a name="value"></a>valor
+### <a name="value"></a>value
 
 Valor inicial de la entrada.
 
- <a name="Radio_Elements" />
+ <a name="Radio_Elements"></a>
 
 ## <a name="radio-elements"></a>Elementos de radio
 
-Los elementos de radio tienen `"radio"`de tipo. El elemento seleccionado se selecciona mediante la propiedad `radioselected` en el elemento raíz que lo contiene.
-Además, si se establece un valor para la propiedad `"group"`, este botón de radio pertenece a ese grupo.
+Los elementos de radio tienen el tipo `"radio"` . La propiedad selecciona el elemento que está seleccionado `radioselected` en el elemento raíz que lo contiene.
+Además, si se establece un valor para la `"group"` propiedad, este botón de radio pertenece a ese grupo.
 
- <a name="Date_and_Time_Elements" />
+ <a name="Date_and_Time_Elements"></a>
 
 ## <a name="date-and-time-elements"></a>Elementos de fecha y hora
 
-Los tipos de elementos `"datetime"`, `"date"` y `"time"` se utilizan para representar fechas con horas, fechas u horas. Estos elementos toman como parámetros un título y un valor. El valor se puede escribir en cualquier formato admitido por la función DateTime. Parse de .NET. Ejemplo:
+Los tipos de elementos `"datetime"` , `"date"` y `"time"` se utilizan para representar fechas con horas, fechas u horas. Estos elementos toman como parámetros un título y un valor. El valor se puede escribir en cualquier formato admitido por la función DateTime. Parse de .NET. Ejemplo:
 
 ```json
 "header": "Dates and Times",
@@ -488,11 +488,11 @@ Los tipos de elementos `"datetime"`, `"date"` y `"time"` se utilizan para repres
 ]
 ```
 
- <a name="Html/Web_Element" />
+ <a name="Html/Web_Element"></a>
 
 ## <a name="htmlweb-element"></a>HTML/elemento Web
 
-Puede crear una celda que, cuando se Puntee, insertará un UIWebView que representa el contenido de una dirección URL especificada, ya sea local o remota, utilizando el tipo de `"html"`. Las dos únicas propiedades de este elemento son `"caption"` y `"url"`:
+Puede crear una celda que, cuando se Puntee, insertará un UIWebView que representa el contenido de una dirección URL especificada, ya sea local o remota con el `"html"` tipo. Las dos únicas propiedades de este elemento son `"caption"` y `"url"` :
 
 ```json
 {

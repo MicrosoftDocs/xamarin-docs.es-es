@@ -7,20 +7,20 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 01ab48f68656dcabdf2a6cfc286dfcd8850454f8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 68c0fb9e034f432c619bc188553996bd7bacdee8
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030766"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573695"
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>Configuración de la aplicación tvOS en iTunes Connect
 
 _En este artículo se proporciona una guía complementaria a la configuración de iOS de la aplicación en iTunes Connect para las configuraciones específicas de tvOS._
 
-Además de las configuraciones y los valores que necesitará realizar mediante la guía de configuración de iOS de la [aplicación en iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) , en este documento se describen las configuraciones específicas que se requerirán para liberar una aplicación Xamarin. tvOS en la aplicación Apple TV. Restaura.
+Además de las configuraciones y los valores que necesitará realizar mediante la guía de configuración de iOS de la [aplicación en iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) , en este documento se describen las configuraciones específicas que se requerirán para liberar una aplicación Xamarin. tvOS en el App Store de Apple TV.
 
-<a name="Adding-a-tvOS-Release-Version" />
+<a name="Adding-a-tvOS-Release-Version"></a>
 
 ## <a name="adding-a-tvos-release-version"></a>Agregar una versión de lanzamiento de tvOS
 
@@ -34,7 +34,7 @@ Tanto si va a crear una nueva aplicación para su lanzamiento en la App Store de
 Opcionalmente, puede que también necesite:
 
 - [Mantener la información del Game Center](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#game-center)
-- [Mantener la información de compra en la aplicación](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#iap)
+- [Mantenimiento de la información de compra en la aplicación](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#iap)
 
 Una vez completados todos los pasos anteriores, abra el registro de iTunes Connect de la aplicación y seleccione Agregar compatibilidad con tvOS mediante la barra lateral izquierda:
 
@@ -44,7 +44,7 @@ Las pantallas de información específicas de tvOS estarán disponibles para el 
 
 [![](itunes-connect-images/connect02.png "The tvOS specific information screen")](itunes-connect-images/connect02.png#lightbox)
 
-<a name="tvOS-Version-Information" />
+<a name="tvOS-Version-Information"></a>
 
 ## <a name="tvos-version-information"></a>Información de versión de tvOS
 
@@ -64,7 +64,7 @@ Una vez que haya escrito la información necesaria, haga clic en el botón **Gua
 
 [![](itunes-connect-images/connect04.png "tvOS Version Information ready for submission")](itunes-connect-images/connect04.png#lightbox)
 
-<a name="Submitting-for-Review" />
+<a name="Submitting-for-Review"></a>
 
 ## <a name="preparing-to-submit-for-review"></a>Preparación para enviar para revisión
 
@@ -72,7 +72,7 @@ Cuando esté listo para enviar la aplicación de Xamarin. tvOS a la tienda de ap
 
 [![](itunes-connect-images/connect05.png "Submit for Review")](itunes-connect-images/connect05.png#lightbox)
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumen
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/09/2018
-ms.openlocfilehash: 91513936a0223af0e4220154d0fe65ee0a599a4f
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 003ea31c765bd2610e93e0f85fe995606d55022f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305868"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567403"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitaciones de Xamarin. iOS
 
@@ -20,7 +20,7 @@ Puesto que las aplicaciones que usan Xamarin. iOS se compilan en código estáti
 
 Estas son las limitaciones de Xamarin. iOS en comparación con el escritorio mono:
 
- <a name="Limited_Generics_Support" />
+ <a name="Limited_Generics_Support"></a>
 
 ## <a name="limited-generics-support"></a>Compatibilidad con genéricos limitados
 
@@ -30,7 +30,7 @@ La tecnología de [AOT completa](https://www.mono-project.com/docs/advanced/aot/
 
 Algunos de los problemas comunes en los que se ejecutan los desarrolladores son:
 
- <a name="Generic_Subclasses_of_NSObjects_are_limited" />
+ <a name="Generic_Subclasses_of_NSObjects_are_limited"></a>
 
 ### <a name="generic-subclasses-of-nsobjects-are-limited"></a>Las subclases genéricas de NSObjects están limitadas
 
@@ -45,18 +45,18 @@ class Foo<T> : UIView {
 > [!NOTE]
 > Aunque son posibles las subclases genéricas de NSObjects, hay algunas limitaciones. Lea las [subclases genéricas del documento NSObject](~/ios/internals/api-design/nsobject-generics.md) para obtener más información.
 
- <a name="No_Dynamic_Code_Generation" />
+ <a name="No_Dynamic_Code_Generation"></a>
 
 ## <a name="no-dynamic-code-generation"></a>No hay generación de código dinámico
 
-Dado que el kernel de iOS impide que una aplicación genere código de forma dinámica, Xamarin. iOS no admite ningún tipo de generación de código dinámico. Entre ellas se incluyen las siguientes:
+Dado que el kernel de iOS impide que una aplicación genere código de forma dinámica, Xamarin. iOS no admite ningún tipo de generación de código dinámico. Se incluyen los siguientes:
 
 - System. Reflection. Emit no está disponible.
 - No se admite System. Runtime. Remoting.
 - No se admite la creación dinámica de tipos (sin Type. GetType ("mi tipo ' 1")), aunque la búsqueda de tipos existentes (Type. GetType ("System. String"), por ejemplo, funciona correctamente).
 - Las devoluciones de llamada inversas se deben registrar con el Runtime en tiempo de compilación.
 
- <a name="System.Reflection.Emit" />
+ <a name="System.Reflection.Emit"></a>
 
 ### <a name="systemreflectionemit"></a>System.Reflection.Emit
 
@@ -73,7 +73,7 @@ Sin embargo, toda la API de reflexión, incluido Type. GetType ("someClass"), lo
 
 ### <a name="using-delegates-to-call-native-functions"></a>Usar delegados para llamar a funciones nativas
 
-Para llamar a una función nativa a C# través de un delegado, la declaración del delegado se debe decorar con uno de los siguientes atributos:
+Para llamar a una función nativa a través de un delegado de C#, la declaración del delegado se debe decorar con uno de los siguientes atributos:
 
 - [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) (preferido, ya que es multiplataforma y compatible con .net Standard 1.1 +)
 - [MonoNativeFunctionWrapperAttribute](xref:ObjCRuntime.MonoNativeFunctionWrapperAttribute)
@@ -84,24 +84,24 @@ Si no se proporciona uno de estos atributos, se producirá un error de tiempo de
 System.ExecutionEngineException: Attempting to JIT compile method '(wrapper managed-to-native) YourClass/YourDelegate:wrapper_aot_native(object,intptr,intptr)' while running in aot-only mode.
 ```
 
- <a name="Reverse_Callbacks" />
+ <a name="Reverse_Callbacks"></a>
 
 ### <a name="reverse-callbacks"></a>Devoluciones de llamada inversas
 
-En mono estándar es posible pasar C# instancias de delegado a código no administrado en lugar de un puntero a función. Normalmente, el tiempo de ejecución transformaría esos punteros de función en un código thunk pequeño que permite que el código no administrado vuelva a llamar a código administrado.
+En mono estándar es posible pasar instancias de delegado de C# a código no administrado en lugar de un puntero a función. Normalmente, el tiempo de ejecución transformaría esos punteros de función en un código thunk pequeño que permite que el código no administrado vuelva a llamar a código administrado.
 
 En mono, estos puentes se implementan mediante el compilador Just-in-Time. Al usar el compilador de antemano que requiere el iPhone, hay dos limitaciones importantes en este momento:
 
 - Debe marcar todos los métodos de devolución de llamada con [MonoPInvokeCallbackAttribute](xref:ObjCRuntime.MonoPInvokeCallbackAttribute)
 - Los métodos deben ser métodos estáticos, no se admiten los métodos de instancia.
 
-<a name="No_Remoting" />
+<a name="No_Remoting"></a>
 
 ## <a name="no-remoting"></a>Sin comunicación remota
 
 La pila de comunicación remota no está disponible en Xamarin. iOS.
 
- <a name="Runtime_Disabled_Features" />
+ <a name="Runtime_Disabled_Features"></a>
 
 ## <a name="runtime-disabled-features"></a>Características deshabilitadas en tiempo de ejecución
 
@@ -114,7 +114,7 @@ Se han deshabilitado las siguientes características en el tiempo de ejecución 
 - Motor JIT
 - Comprobador de metadatos (ya que no hay JIT)
 
- <a name=".NET_API_Limitations" />
+ <a name=".NET_API_Limitations"></a>
 
 ## <a name="net-api-limitations"></a>Limitaciones de la API de .NET
 

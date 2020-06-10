@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016
-ms.openlocfilehash: 356509fb6f588b96a2a1224879675bbad36f8524
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2aee2a8dc37d6a1a73569322a97cdd0aebfbfa1c
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032135"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574215"
 ---
 # <a name="app-store-changes-in-ios-11"></a>Cambios en la tienda de aplicaciones en iOS 11
 
@@ -50,7 +50,7 @@ Para que las compras desde la aplicación estén disponibles para promocionar, a
 
 ![Sección de promoción de App Store en iTunes Connect](app-store-changes-images/image4.png)
 
-También debe agregar el método `ShouldAddStorePayment` al protocolo `SKPaymentTransactionObserver` en la aplicación.
+También debe agregar el `ShouldAddStorePayment` método al `SKPaymentTransactionObserver` Protocolo en la aplicación.
 
 Para obtener más información sobre las promociones de compras desde la aplicación, consulte la página sobre la [promoción de la compra desde la aplicación](https://developer.apple.com/app-store/promoting-in-app-purchases/) de Apple.
 
@@ -84,7 +84,7 @@ Hay algunos aspectos que se deben tener en cuenta al responder a los usuarios:
 
 Para obtener más información, consulte la página de respuesta de Apple [a las revisiones](https://developer.apple.com/app-store/responding-to-reviews/) .
 
-<a name="Phased_Release"/>
+<a name="Phased_Release"></a>
 
 ## <a name="phased-release"></a>Versión por fases
 

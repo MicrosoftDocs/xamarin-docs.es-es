@@ -1,29 +1,13 @@
 ---
-title: Fuentes enXamarin.Forms
-description: En este artículo se explica cómo especificar la información de fuentes en los controles que muestran texto en Xamarin.Forms aplicaciones.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 3201340c8056fb1a7e36240eb329df14bd960ca3
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136219"
+title: "Fonts in Xamarin.Forms " Description: "en este artículo se explica cómo especificar la información de fuentes en los controles que muestran texto en Xamarin.Forms aplicaciones."
+MS. Prod: Xamarin ms. AssetID: 49DD2249-C575-41AE-AE06-08F890FD6031 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/01/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="fonts-in-xamarinforms"></a>Fuentes enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
 
-En este artículo se describe cómo Xamarin.Forms permite especificar los atributos de fuente (incluido el peso y el tamaño) en los controles que muestran texto. La información de fuente se puede [especificar en el código](#Setting_Font_in_Code) o [especificarse en XAML](#Setting_Font_in_Xaml). También es posible usar una [fuente personalizada](#use-a-custom-font)y [Mostrar iconos de fuente](#display-font-icons).
-
-<a name="Setting_Font_in_Code" />
+En este artículo se describe cómo Xamarin.Forms permite especificar los atributos de fuente (incluido el peso y el tamaño) en los controles que muestran texto. La información de fuente se puede [especificar en el código](#set-the-font-in-code) o [especificarse en XAML](#set-the-font-in-xaml). También es posible usar una [fuente personalizada](#use-a-custom-font)y [Mostrar iconos de fuente](#display-font-icons).
 
 ## <a name="set-the-font-in-code"></a>Establecer la fuente en el código
 
@@ -44,8 +28,6 @@ var about = new Label
 };
 ```
 
-<a name="FontSize" />
-
 ### <a name="font-size"></a>Tamaño de fuente
 
 La `FontSize` propiedad se puede establecer en un valor doble, por ejemplo:
@@ -58,14 +40,12 @@ El valor de tamaño se mide en unidades independientes del dispositivo. Para obt
 
 Xamarin.Formstambién define los campos de la [`NamedSize`](xref:Xamarin.Forms.NamedSize) enumeración que representan tamaños de fuente específicos. Para obtener más información sobre los tamaños de fuente con nombre, vea [tamaños de fuente con nombre](#named-font-sizes).
 
-<a name="FontAttributes" />
-
 ### <a name="font-attributes"></a>Atributos de fuente
 
 Los estilos de fuente, como **Bold** y *Italic* , se pueden establecer en la `FontAttributes` propiedad. Actualmente se admiten los siguientes valores:
 
-- **None**
-- **Poner**
+- **Ninguno**
+- **Bold**
 - **Aplicar**
 
 La `FontAttribute` enumeración se puede usar como se indica a continuación (puede especificar un único atributo o `OR` ambos juntos):
@@ -86,8 +66,6 @@ label.FontSize = Device.RuntimePlatform == Device.iOS ? 24 :
 ```
 
 Una buena fuente de información de fuentes para iOS es [iosfonts.com](http://iosfonts.com).
-
-<a name="Setting_Font_in_Xaml" />
 
 ## <a name="set-the-font-in-xaml"></a>Establecer la fuente en XAML
 

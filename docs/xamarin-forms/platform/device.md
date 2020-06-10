@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsClase de dispositivo
-description: En este artículo se explica cómo usar la Xamarin.Forms clase Device para tener un mayor control sobre la funcionalidad y los diseños en cada plataforma.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 7ee7b2f1bb9d34b0c0e8bdc4ae606d98423c64a9
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138598"
+title: " Xamarin.Forms Device class" Description: "en este artículo se explica cómo usar la Xamarin.Forms clase Device para tener un mayor control sobre la funcionalidad y los diseños en cada plataforma".
+MS. Prod: Xamarin ms. AssetID: 2F304AEC-8612-4833-81E5-B2F3F469B2DF ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/17/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-device-class"></a>Xamarin.FormsClase de dispositivo
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
@@ -68,7 +54,7 @@ La [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) clase es una clase genérica 
 > [!IMPORTANT]
 > Proporcionar un `Platform` valor de atributo incorrecto en la `On` clase no producirá un error. En su lugar, se ejecutará el código sin que se aplique el valor específico de la plataforma.
 
-Como alternativa, `OnPlatform` se puede usar la extensión de marcado en XAML para personalizar la apariencia de la interfaz de usuario en cada plataforma. Para obtener más información, consulte [extensión de marcado](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform)en la plataforma.
+Como alternativa, `OnPlatform` se puede usar la extensión de marcado en XAML para personalizar la apariencia de la interfaz de usuario en cada plataforma. Para obtener más información, consulte [extensión de marcado](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension)en la plataforma.
 
 ## <a name="deviceidiom"></a>Dispositivo. expresión
 
@@ -110,7 +96,7 @@ La [`OnIdiom`](xref:Xamarin.Forms.OnIdiom`1) clase proporciona la misma funciona
 
 La [`OnIdiom`](xref:Xamarin.Forms.OnPlatform`1) clase es una clase genérica en la que se deben crear instancias con un `x:TypeArguments` atributo que coincida con el tipo de destino.
 
-Como alternativa, `OnIdiom` se puede usar la extensión de marcado en XAML para personalizar la apariencia de la interfaz de usuario en función de la expresión del dispositivo en el que se ejecuta la aplicación. Para obtener más información, vea [extensión de marcado en idioma](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom).
+Como alternativa, `OnIdiom` se puede usar la extensión de marcado en XAML para personalizar la apariencia de la interfaz de usuario en función de la expresión del dispositivo en el que se ejecuta la aplicación. Para obtener más información, vea [extensión de marcado en idioma](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom-markup-extension).
 
 ## <a name="deviceflowdirection"></a>Device. FlowDirection
 
@@ -228,7 +214,7 @@ A veces, las aplicaciones utilizan subprocesos en segundo plano para realizar op
 
 La `Device` clase incluye los siguientes `static` métodos que se pueden usar para interactuar con los elementos de la interfaz de usuario de los subprocesos de fondo:
 
-| Método | Argumentos | Devoluciones | Finalidad |
+| Método | Argumentos | Valores devueltos | Propósito |
 |---|---|---|---|
 | `BeginInvokeOnMainThread` | `Action` | `void` | Invoca un `Action` en el subproceso principal y no espera a que se complete. |
 | `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Invoca un elemento `Func<T>` en el subproceso principal y espera a que se complete. |

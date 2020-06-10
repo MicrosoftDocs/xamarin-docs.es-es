@@ -1,9 +1,6 @@
 ---
-Título: las funciones de entradas y salidas lentas de Xamarin.Forms ' Description: ' Xamarin.Forms incluyen una clase de aceleración que permite especificar una función de transferencia que controla cómo las animaciones se aceleran o reducen a medida que se ejecutan. En este artículo se muestra cómo utilizar las funciones de aceleración predefinidas y cómo crear funciones de aceleración personalizadas.
-MS. Prod: MS. AssetID: MS. Technology: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: "funciones de entrada y salida lenta en Xamarin.Forms " Description: " Xamarin.Forms incluye una clase de aceleración que le permite especificar una función de transferencia que controla cómo las animaciones se aceleran o reducen a medida que se ejecutan. En este artículo se muestra cómo utilizar las funciones de aceleración predefinidas y cómo crear funciones de aceleración personalizadas ".
+MS. Prod: Xamarin ms. AssetID: E6F124C7-A161-4C1F-AF40-52F0935E54DE ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/14/2016 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="easing-functions-in-xamarinforms"></a>Funciones de aceleración enXamarin.Forms
@@ -28,7 +25,7 @@ La [`Easing`](xref:Xamarin.Forms.Easing) clase define un número de funciones de
 
 Los `In` `Out` sufijos y indican si el efecto que proporciona la función de aceleración se percibe al principio de la animación, al final o a ambos.
 
-Además, se pueden crear funciones de aceleración personalizadas. Para obtener más información, vea [funciones de aceleración personalizadas](#customeasing).
+Además, se pueden crear funciones de aceleración personalizadas. Para obtener más información, vea [funciones de aceleración personalizadas](#custom-easing-functions).
 
 ## <a name="consuming-an-easing-function"></a>Consumir una función de aceleración
 
@@ -45,8 +42,6 @@ await image.TranslateTo(0, -200, 2000, Easing.BounceOut);
 Al especificar una función de aceleración para una animación, la velocidad de la animación no es lineal y produce el efecto proporcionado por la función de aceleración. Al omitir una función de aceleración al crear una animación, la animación utiliza la [`Linear`](xref:Xamarin.Forms.Easing.Linear) función de aceleración predeterminada, que genera una velocidad lineal.
 
 Para obtener más información sobre el uso de los métodos de extensión de animación en la [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) clase, vea [animaciones simples](~/xamarin-forms/user-interface/animation/simple.md). La clase también puede usar las funciones de aceleración [`Animation`](xref:Xamarin.Forms.Animation) . Para obtener más información, vea [animaciones personalizadas](~/xamarin-forms/user-interface/animation/custom.md).
-
-<a name="customeasing" />
 
 ## <a name="custom-easing-functions"></a>Funciones de aceleración personalizadas
 
