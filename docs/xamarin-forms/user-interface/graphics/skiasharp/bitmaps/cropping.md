@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 6c5e340818b702d79a1157f29c1ecec19bf1db76
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139950"
+title: "recortar mapas de bits de SkiaSharp" Descripción: "Aprenda a usar SkiaSharp para diseñar una interfaz de usuario para enumerador interactivamente un rectángulo de recorte".
+MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 0A79AB27-C69F-4376-8FFE-FF46E4783F30 Author: davidbritch ms. Author: dabritch ms. Date: 07/17/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="cropping-skiasharp-bitmaps"></a>Recortar mapas de bits de SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -79,7 +65,7 @@ class CroppingRectangle
             Rect = rect;
         }
     }
-    
+
     public SKRect Rect { set; get; }
     ···
 }
@@ -108,7 +94,7 @@ class CroppingRectangle
 }
 ```
 
-Esta matriz se utiliza en el método siguiente, que se denomina `HitTest` . El `SKPoint` parámetro es un punto que corresponde a un toque de dedo o un clic del mouse. El método devuelve un índice (0, 1, 2 o 3) que corresponde a la esquina que el dedo o el puntero del mouse tocan, dentro de una distancia dada por el `radius` parámetro: 
+Esta matriz se utiliza en el método siguiente, que se denomina `HitTest` . El `SKPoint` parámetro es un punto que corresponde a un toque de dedo o un clic del mouse. El método devuelve un índice (0, 1, 2 o 3) que corresponde a la esquina que el dedo o el puntero del mouse tocan, dentro de una distancia dada por el `radius` parámetro:
 
 ```csharp
 class CroppingRectangle
@@ -121,7 +107,7 @@ class CroppingRectangle
         for (int index = 0; index < corners.Length; index++)
         {
             SKPoint diff = point - corners[index];
-                
+
             if ((float)Math.Sqrt(diff.X * diff.X + diff.Y * diff.Y) < radius)
             {
                 return index;
@@ -271,7 +257,7 @@ class PhotoCropperCanvasView : SKCanvasView
 
         canvas.Clear(SKColors.Gray);
 
-        // Calculate rectangle for displaying bitmap 
+        // Calculate rectangle for displaying bitmap
         float scale = Math.Min((float)info.Width / bitmap.Width, (float)info.Height / bitmap.Height);
         float x = (info.Width - scale * bitmap.Width) / 2;
         float y = (info.Height - scale * bitmap.Height) / 2;
@@ -330,7 +316,7 @@ class PhotoCropperCanvasView : SKCanvasView
     CroppingRectangle croppingRect;
     SKMatrix inverseBitmapMatrix;
 
-    // Touch tracking 
+    // Touch tracking
     TouchEffect touchEffect = new TouchEffect();
     struct TouchPoint
     {
@@ -384,7 +370,7 @@ class PhotoCropperCanvasView : SKCanvasView
                 if (touchPoints.ContainsKey(args.Id))
                 {
                     TouchPoint touchPoint = touchPoints[args.Id];
-                    croppingRect.MoveCorner(touchPoint.CornerIndex, 
+                    croppingRect.MoveCorner(touchPoint.CornerIndex,
                                             bitmapLocation - touchPoint.Offset);
                     InvalidateSurface();
                 }
@@ -428,10 +414,10 @@ class PhotoCropperCanvasView : SKCanvasView
         get
         {
             SKRect cropRect = croppingRect.Rect;
-            SKBitmap croppedBitmap = new SKBitmap((int)cropRect.Width, 
+            SKBitmap croppedBitmap = new SKBitmap((int)cropRect.Width,
                                                   (int)cropRect.Height);
             SKRect dest = new SKRect(0, 0, cropRect.Width, cropRect.Height);
-            SKRect source = new SKRect(cropRect.Left, cropRect.Top, 
+            SKRect source = new SKRect(cropRect.Left, cropRect.Top,
                                        cropRect.Right, cropRect.Bottom);
 
             using (SKCanvas canvas = new SKCanvas(croppedBitmap))
@@ -533,8 +519,6 @@ photoCropper = new PhotoCropperCanvasView(bitmap, 1.78f);
 
 Verá que el rectángulo de recorte está restringido a una característica de relación de aspecto de 16 a 9 de televisión de alta definición.
 
-<a name="tile-division" />
-
 ## <a name="dividing-a-bitmap-into-tiles"></a>Dividir un mapa de bits en mosaicos
 
 Una Xamarin.Forms versión del rompecabezas 14-15 famoso apareció en el capítulo 22 del libro [_creación de Mobile Apps con Xamarin. Forms_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) y se puede descargar como [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle). Sin embargo, el rompecabezas se vuelve más divertido (y a menudo más desafiante) cuando se basa en una imagen de su propia biblioteca de fotos.
@@ -548,12 +532,12 @@ El archivo **PhotoPuzzlePage1. Xaml** se compone de `Button` :
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SkiaSharpFormsDemos.Bitmaps.PhotoPuzzlePage1"
              Title="Photo Puzzle">
-    
+
     <Button Text="Pick a photo from your library"
-            VerticalOptions="CenterAndExpand" 
+            VerticalOptions="CenterAndExpand"
             HorizontalOptions="CenterAndExpand"
             Clicked="OnPickButtonClicked"/>
-    
+
 </ContentPage>
 ```
 
@@ -587,7 +571,7 @@ A continuación, el método navega a `PhotoPuzzlePage2` , pasando al constructor
 
 Es posible que la foto seleccionada de la biblioteca no esté orientada a medida que aparecía en la biblioteca de fotos, sino que esté girada o en paralelo. (Esto es especialmente un problema con dispositivos iOS). Por ese motivo, `PhotoPuzzlePage2` le permite girar la imagen a una orientación deseada. El archivo XAML contiene tres botones con la etiqueta **90&#x00B0; derecha** (lo que significa el sentido de las agujas del reloj), **90&#x00B0; izquierda** (en sentido contrario a las agujas del reloj) y **listo**.
 
-El archivo de código subyacente implementa la lógica de rotación del mapa de bits que se muestra en el artículo **[crear y dibujar en mapas de bits de SkiaSharp](drawing.md#rotating-bitmaps)**. El usuario puede girar la imagen 90 grados en el sentido de las agujas del reloj o en el sentido contrario a las agujas del reloj: 
+El archivo de código subyacente implementa la lógica de rotación del mapa de bits que se muestra en el artículo **[crear y dibujar en mapas de bits de SkiaSharp](drawing.md#rotating-bitmaps)**. El usuario puede girar la imagen 90 grados en el sentido de las agujas del reloj o en el sentido contrario a las agujas del reloj:
 
 ```csharp
 public partial class PhotoPuzzlePage2 : ContentPage
@@ -763,7 +747,7 @@ Al presionar el botón **aleatorizar** se mezclan todos los mosaicos:
 
 [![Rompecabezas fotográfico 2](cropping-images/PhotoPuzzle2.png "Rompecabezas fotográfico 2")](cropping-images/PhotoPuzzle2-Large.png#lightbox)
 
-Ahora puede volver a colocarlos en el orden correcto. Los mosaicos de la misma fila o columna que el cuadrado en blanco se pueden puntear para moverlos al cuadrado en blanco. 
+Ahora puede volver a colocarlos en el orden correcto. Los mosaicos de la misma fila o columna que el cuadrado en blanco se pueden puntear para moverlos al cuadrado en blanco.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

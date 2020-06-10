@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: 02bd25c4b4e251536dfdabdef109eb659fe3be37
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: bddab35044c2b85b69146a03babd9884784baceb
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032156"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574592"
 ---
 # <a name="new-features-in-mapkit-on-ios-11"></a>Nuevas características de MapKit en iOS 11
 
@@ -25,17 +25,17 @@ iOS 11 agrega las siguientes características nuevas a MapKit:
 
 ![Mapa que muestra marcadores agrupados y el botón brújula](mapkit-images/cyclemap-heading.png)
 
-<a name="clustering" />
+<a name="clustering"></a>
 
 ## <a name="automatically-grouping-markers-while-zooming"></a>Agrupar marcadores automáticamente al hacer zoom
 
 En el ejemplo de MapKit de ejemplo ["Tandm"](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample) se muestra cómo implementar la nueva característica de agrupación en clústeres de anotaciones de iOS 11.
 
-### <a name="1-create-an-mkpointannotation-subclass"></a>1. crear una subclase `MKPointAnnotation`
+### <a name="1-create-an-mkpointannotation-subclass"></a>1. crear una `MKPointAnnotation` subclase
 
-La clase de anotación Point representa cada marcador en el mapa. Se pueden agregar individualmente mediante `MapView.AddAnnotation()` o desde una matriz mediante `MapView.AddAnnotations()`.
+La clase de anotación Point representa cada marcador en el mapa. Se pueden agregar individualmente mediante `MapView.AddAnnotation()` o desde una matriz mediante `MapView.AddAnnotations()` .
 
-Las clases de anotación de puntos no tienen una representación visual, solo son necesarias para representar los datos asociados con el marcador (lo que es más importante, la propiedad `Coordinate`, que es su latitud y longitud en el mapa) y las propiedades personalizadas:
+Las clases de anotaciones de puntos no tienen una representación visual, solo se necesitan para representar los datos asociados con el marcador (lo que es más importante, la `Coordinate` propiedad, que es su latitud y longitud en el mapa) y las propiedades personalizadas:
 
 ```csharp
 public class Bike : MKPointAnnotation
@@ -57,14 +57,14 @@ public class Bike : MKPointAnnotation
 }
 ```
 
-### <a name="2-create-an-mkmarkerannotationview-subclass-for-single-markers"></a>2. crear una subclase `MKMarkerAnnotationView` para marcadores únicos
+### <a name="2-create-an-mkmarkerannotationview-subclass-for-single-markers"></a>2. crear una `MKMarkerAnnotationView` subclase para marcadores únicos
 
 La vista de anotaciones de marcador es la representación visual de cada anotación y tiene un estilo mediante propiedades como:
 
 - **MarkerTintColor** : el color del marcador.
 - **GlyphText** : texto que se muestra en el marcador.
 - **GlyphImage** : establece la imagen que se muestra en el marcador.
-- **DisplayPriority** : determina el orden z (comportamiento de apilamiento) cuando el mapa está abarrotado con marcadores. Use una de `Required`, `DefaultHigh`o `DefaultLow`.
+- **DisplayPriority** : determina el orden z (comportamiento de apilamiento) cuando el mapa está abarrotado con marcadores. Use uno de los de `Required` , `DefaultHigh` o `DefaultLow` .
 
 Para admitir la agrupación en clústeres automática, también debe establecer:
 
@@ -112,8 +112,8 @@ En el [código de ejemplo](https://docs.microsoft.com/samples/xamarin/ios-sample
 
 También debe establecer:
 
-- **DisplayPriority** : determina el orden z (comportamiento de apilamiento) cuando el mapa está abarrotado con marcadores. Use una de `Required`, `DefaultHigh`o `DefaultLow`.
-- **CollisionMode** : `Circle` o `Rectangle`.
+- **DisplayPriority** : determina el orden z (comportamiento de apilamiento) cuando el mapa está abarrotado con marcadores. Use uno de los de `Required` , `DefaultHigh` o `DefaultLow` .
+- **CollisionMode** : `Circle` o `Rectangle` .
 
 ```csharp
 [Register("ClusterView")]
@@ -196,7 +196,7 @@ Cuando se representa el mapa, los marcadores de anotación se agrupan o se repre
 
 Consulte la [sección mapas](~/ios/user-interface/controls/ios-maps/index.md) para obtener más información sobre cómo Mostrar datos con MapKit.
 
-<a name="compass" />
+<a name="compass"></a>
 
 ## <a name="compass-button"></a>Botón brújula
 
@@ -215,13 +215,13 @@ NavigationItem.RightBarButtonItem = new UIBarButtonItem(compass);
 MapView.ShowsCompass = false; // so we don't have two compasses!
 ```
 
-La propiedad `ShowsCompass` se puede utilizar para controlar la visibilidad de la brújula predeterminada dentro de la vista del mapa.
+La `ShowsCompass` propiedad se puede utilizar para controlar la visibilidad de la brújula predeterminada dentro de la vista del mapa.
 
-<a name="scale" />
+<a name="scale"></a>
 
 ## <a name="scale-view"></a>Vista de escala
 
-Agregue la escala en otra parte de la vista mediante el método `MKScaleView.FromMapView()` para obtener una instancia de la vista de escala que se va a agregar en otra parte de la jerarquía de vistas.
+Agregue la escala en otro lugar de la vista mediante el `MKScaleView.FromMapView()` método para obtener una instancia de la vista de escala que se va a agregar en otra parte de la jerarquía de vistas.
 
 ![Vista de escalado superpuesta en un mapa](mapkit-images/scale-sml.png)
 
@@ -233,13 +233,13 @@ View.AddSubview(scale); // constraints omitted for simplicity
 MapView.ShowsScale = false; // so we don't have two scale displays!
 ```
 
-La propiedad `ShowsScale` se puede utilizar para controlar la visibilidad de la brújula predeterminada dentro de la vista del mapa.
+La `ShowsScale` propiedad se puede utilizar para controlar la visibilidad de la brújula predeterminada dentro de la vista del mapa.
 
-<a name="user-tracking" />
+<a name="user-tracking"></a>
 
 ## <a name="user-tracking-button"></a>Botón seguimiento de usuario
 
-El botón de seguimiento del usuario centra el mapa en la ubicación actual del usuario. Use el método `MKUserTrackingButton.FromMapView()` para obtener una instancia del botón, aplicar los cambios de formato y agregar en cualquier parte de la jerarquía de vistas.
+El botón de seguimiento del usuario centra el mapa en la ubicación actual del usuario. Use el `MKUserTrackingButton.FromMapView()` método para obtener una instancia del botón, aplicar los cambios de formato y agregar en cualquier parte de la jerarquía de vistas.
 
 ![Botón de ubicación de usuario superpuesto en un mapa](mapkit-images/user-location-sml.png)
 

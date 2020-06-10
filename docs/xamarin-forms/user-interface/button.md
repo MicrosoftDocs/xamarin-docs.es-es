@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsBotón
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f7309794768c01d4978aa369cd1950d4986938db
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137467"
+title: " Xamarin.Forms Button" Description: "el botón responde a una TAP o click que dirige una aplicación para llevar a cabo una tarea determinada".
+MS. Prod: Xamarin ms. AssetID: 62CAEB63-0800-44F4-9B8C-EE632138C2F5 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/04/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-button"></a>Xamarin.FormsBotón
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
@@ -414,8 +400,6 @@ El resultado es que el `Label` solo gira mientras un dedo está en contacto con 
 
 Este tipo de comportamiento tiene aplicaciones para juegos: un dedo que se mantiene en un `Button` puede hacer que un objeto en pantalla se mueva en una dirección determinada.
 
-<a name="button-appearance" />
-
 ## <a name="button-appearance"></a>Apariencia del botón
 
 `Button`Hereda o define varias propiedades que afectan a su apariencia:
@@ -433,7 +417,7 @@ Este tipo de comportamiento tiene aplicaciones para juegos: un dedo que se manti
 > [!NOTE]
 > La `Button` clase también tiene [`Margin`](xref:Xamarin.Forms.View.Margin) [`Padding`](xref:Xamarin.Forms.Button.Padding) propiedades y que controlan el comportamiento de diseño de `Button` . Para obtener más información, vea [Márgenes y relleno](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
-Los efectos de seis de estas propiedades (excepto `FontFamily` y `FontAttributes` ) se muestran en la página **apariencia del botón** . Otra propiedad, [`Image`](xref:Xamarin.Forms.Button.ImageSource) , se describe en la sección [**uso de mapas de bits con el botón**](#image-button).
+Los efectos de seis de estas propiedades (excepto `FontFamily` y `FontAttributes` ) se muestran en la página **apariencia del botón** . Otra propiedad, [`Image`](xref:Xamarin.Forms.Button.ImageSource) , se describe en la sección [**uso de mapas de bits con el botón**](#using-bitmaps-with-buttons).
 
 Todas las vistas y los enlaces de datos de la página **apariencia del botón** se definen en el archivo XAML:
 
@@ -748,9 +732,7 @@ Este es el programa que se ejecuta en iOS, Android y UWP:
 
 [![Demostración de botón de alternancia](button-images/ToggleButtonDemo.png "Demostración de botón de alternancia")](button-images/ToggleButtonDemo-Large.png#lightbox)
 
-<a name="image-button" />
-
-## <a name="using-bitmaps-with-buttons"></a>Usar mapas de bits con botones
+## <a name="using-bitmaps-with-buttons"></a>Uso de mapas de bits con botones.
 
 La `Button` clase define una [`ImageSource`](xref:Xamarin.Forms.Button.Image) propiedad que permite mostrar una imagen de mapa de bits en `Button` , ya sea solo o en combinación con el texto. También puede especificar cómo se organizan el texto y la imagen.
 

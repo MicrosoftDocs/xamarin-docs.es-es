@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2017
-ms.openlocfilehash: 37695ef93a1005febf12369e7d1defccf6130832
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 41272e25570d9346751d7130ee8b52c6056f7f35
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305802"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84565231"
 ---
 # <a name="application-icons-in-xamarinios"></a>Iconos de aplicación en Xamarin. iOS
 
@@ -22,7 +22,7 @@ Los siguientes temas se tratarán en detalle:
 - [Administración de iconos con catálogos de recursos](#managing) : administración de iconos de aplicación mediante catálogos de recursos.
 - [material gráfico de iTunes](#itunes) : proporcionar la ilustración de iTunes necesaria para el método ad hoc de entrega de la aplicación.
 
-<a name="icon-types" />
+<a name="icon-types"></a>
 
 ## <a name="application-spotlight-and-settings-icons"></a>Iconos de aplicación, Spotlight y configuración
 
@@ -47,7 +47,7 @@ Los siguientes tamaños de recurso de imagen y resoluciones serán necesarios pa
     ||3x|
     |---|---|
     |Icono de aplicación|180x180|
-    |Noticias destacadas|120x120|
+    |Destacados|120x120|
     |Configuración|87x87|
 
 - **iPhone: iOS 7 & 8**
@@ -55,7 +55,7 @@ Los siguientes tamaños de recurso de imagen y resoluciones serán necesarios pa
     ||1x|2x|
     |---|---|---|
     |Icono de aplicación|60 x 60<sup>1</sup>|120x120|
-    |Noticias destacadas|40 x 40<sup>2</sup>|80x80|
+    |Destacados|40 x 40<sup>2</sup>|80x80|
     |Configuración|-|-|
 
 - **iPhone: iOS 5 & 6**
@@ -63,7 +63,7 @@ Los siguientes tamaños de recurso de imagen y resoluciones serán necesarios pa
     ||1x|2x|
     |---|---|---|
     |Icono de aplicación|57x57|114x114|
-    |Noticias destacadas|29x29|58x58|
+    |Destacados|29x29|58x58|
     |Configuración|29x29<sup>3, 4</sup>|58x58<sup>3, 4</sup>|
 
 ### <a name="ipad-icon-sizes"></a>Tamaños de iconos de iPad
@@ -73,15 +73,15 @@ Los siguientes tamaños de recurso de imagen y resoluciones serán necesarios pa
     ||2x (iPad Pro)|
     |---|---|
     |Icono de aplicación|167x167<sup>6</sup>|
-    |Noticias destacadas|120x120<sup>6</sup>|
+    |Destacados|120x120<sup>6</sup>|
     |Configuración|58x58<sup>5</sup>|
 
 - **iPad: iOS 7 & 8**
 
     ||1x|2x|
     |---|---|---|
-    |Icono de aplicación|76x76|152x152|
-    |Noticias destacadas|40x40|80x80|
+    |Icono de aplicación|76x76|152 x 152|
+    |Destacados|40x40|80x80|
     |Configuración|-|-|
 
 - **iPad: iOS 5 & 6**
@@ -89,7 +89,7 @@ Los siguientes tamaños de recurso de imagen y resoluciones serán necesarios pa
     ||1x|2x|
     |---|---|---|
     |Icono de aplicación|72x72|144x144|
-    |Noticias destacadas|50x50|100x100|
+    |Destacados|50x50|100x100|
     |Configuración|29x29<sup>3, 5</sup>|58x58<sup>3, 5</sup>|
 
  1. Tanto Visual Studio para Mac como Xcode ya no admiten la configuración de la imagen 1x para iOS 7.
@@ -101,27 +101,27 @@ Los siguientes tamaños de recurso de imagen y resoluciones serán necesarios pa
 
  Para obtener más información sobre los iconos, consulte la documentación de los [tamaños de imagen y icono](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1) de Apple.
 
-<a name="managing" />
+<a name="managing"></a>
 
 ## <a name="managing-icons-with-asset-catalogs"></a>Administrar iconos con catálogos de recursos
 
-En el caso de los iconos, se puede Agregar un conjunto de imágenes de `AppIcon` especial al archivo de `Assets.xcassets` en el proyecto de la aplicación. Toda la versión de la imagen necesaria para admitir todas las resoluciones se incluye en _xcasset_ y se agrupa. Un editor especial en Visual Studio para Mac permite al desarrollador incluir y configurar estas imágenes de forma gráfica.
+En el caso de los iconos, `AppIcon` se puede Agregar un conjunto de imágenes especial al `Assets.xcassets` archivo en el proyecto de la aplicación. Toda la versión de la imagen necesaria para admitir todas las resoluciones se incluye en _xcasset_ y se agrupa. Un editor especial en Visual Studio para Mac permite al desarrollador incluir y configurar estas imágenes de forma gráfica.
 
 Para usar un catálogo de recursos, siga estos pasos:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Haga doble clic en el archivo `Info.plist` en el **Explorador de soluciones** para abrirlo para su edición.
+1. Haga doble clic en el `Info.plist` archivo en el **Explorador de soluciones** para abrirlo para su edición.
 2. Desplácese hacia abajo hasta la sección **iconos de iPhone** .
 3. Haga clic en el botón **migrar a catálogo de recursos** :
 
     ![](app-icons-images/migrate01.png "Ensure AppIcon is selected")
 
-4. En el **Explorador de soluciones**, haga doble clic en el archivo `Assets.xcassets` para abrirlo para su edición: 
+4. En el **Explorador de soluciones**, haga doble clic en el `Assets.xcassets` archivo para abrirlo para su edición: 
 
     ![](app-icons-images/asset01.png "The Assets.xcassets file in the Solution Explorer")
 
-5. Seleccione `AppIcon` de la lista de recursos para mostrar el `Icon Editor`:
+5. Seleccione `AppIcon` en la lista de recursos para mostrar `Icon Editor` :
 
     ![](app-icons-images/asset02.png "The AppIcon editor")
 
@@ -131,7 +131,7 @@ Para usar un catálogo de recursos, siga estos pasos:
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Haga doble clic en * * info.  \* * archivo en el **Explorador de soluciones**:
+1. Haga doble clic en * * info.  * * archivo en el **Explorador de soluciones**:
 
     ![](app-icons-images/icon01w.png "Select Info.plist")
 
@@ -158,7 +158,7 @@ Para usar un catálogo de recursos, siga estos pasos:
 
 Este es el método preferido de incluir y administrar los recursos de imagen que se usarán para proporcionar iconos de aplicación, de información destacada y de configuración para una aplicación.
 
-<a name="itunes" />
+<a name="itunes"></a>
 
 ## <a name="itunes-artwork"></a>Ilustraciones de iTunes
 
@@ -168,7 +168,7 @@ Para especificar las ilustraciones de iTunes, haga lo siguiente:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Haga doble clic en el archivo `Info.plist` en el **Explorador de soluciones** para abrirlo para su edición.
+1. Haga doble clic en el `Info.plist` archivo en el **Explorador de soluciones** para abrirlo para su edición.
 2. Desplácese a la sección de **material gráfico de iTunes** del editor: 
 
     ![](app-icons-images/itunes01.png "Scroll to the iTunes Artwork section of the editor")
@@ -177,7 +177,7 @@ Para especificar las ilustraciones de iTunes, haga lo siguiente:
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Haga doble clic en el archivo `Info.plist` en el **Explorador de soluciones** para abrirlo para su edición.
+1. Haga doble clic en el `Info.plist` archivo en el **Explorador de soluciones** para abrirlo para su edición.
 
 2. Haga clic en la pestaña **activos visuales** y expanda la **ilustración iTunes**: 
 

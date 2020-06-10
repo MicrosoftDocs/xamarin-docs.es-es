@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: ab89d6e05b42157ededa3bb01cf22d5cdca130ce
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 729c8918230b7fe28b98357b101d935e1ec752ef
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030671"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573539"
 ---
 # <a name="supported-and-unsupported-frameworks-in-tvos"></a>Marcos admitidos y no admitidos en tvOS
 
-<a name="Supported-Frameworks" />
+<a name="Supported-Frameworks"></a>
 
 ## <a name="supported-frameworks"></a>Marcos de trabajo admitidos
 
@@ -40,7 +40,7 @@ Esta es una lista de los marcos de trabajo que proporciona Apple para su uso en 
 - CoreText
 - CoreVideo
 - Darwin
-- Cimiento
+- Foundation
 - GameController
 - GameKit
 - Juegos
@@ -66,14 +66,14 @@ Esta es una lista de los marcos de trabajo que proporciona Apple para su uso en 
 - TVServices (agregado)
 - UIKit
 
-<a name="Unsupported-Frameworks" />
+<a name="Unsupported-Frameworks"></a>
 
 ## <a name="unsupported-frameworks"></a>Marcos de trabajo no admitidos
 
 A continuación se muestra una lista de los marcos de trabajo compatibles con iOS 9 que se han quitado de la compatibilidad con tvOS 9 de Apple y, por lo tanto, no se pueden usar en las aplicaciones de Xamarin. tvOS:
 
 - Cuentas
-- Libreta
+- AddressBook
 - AddressBookUI
 - AssetsLibrary
 - Contactos
@@ -103,7 +103,7 @@ A continuación se muestra una lista de los marcos de trabajo compatibles con iO
 - QuickLook
 - ReplayKit
 - SafariServices
-- Social
+- Redes sociales
 - Twitter
 - Videotoolbox
 - WatchConnectivity

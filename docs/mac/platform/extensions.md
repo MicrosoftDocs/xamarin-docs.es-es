@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 9a9dbb63b78b00a9bcac9d7833530da02890afc6
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 1d1e40de646362e9b573ad7040ab08ba6d01d6e8
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73017297"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571615"
 ---
 # <a name="xamarinmac-extension-support"></a>Compatibilidad con las extensiones de Xamarin.Mac
 
@@ -22,7 +22,7 @@ En Xamarin. Mac 2,10 se agregó compatibilidad con varios puntos de extensión m
 - Compartir
 - Hoy
 
-<a name="Limitations-and-Known-Issues" />
+<a name="Limitations-and-Known-Issues"></a>
 
 ## <a name="limitations-and-known-issues"></a>Limitaciones y problemas conocidos
 
@@ -32,21 +32,21 @@ A continuación se indican las limitaciones y los problemas conocidos que pueden
 - Las extensiones deben estar contenidas en una aplicación host, que cuando se ejecuta una vez con el registro en el sistema. A continuación, se deben habilitar en la sección de **extensión** de **preferencias del sistema**. 
 - Algunos bloqueos de extensión pueden desestabilizar la aplicación host y causar un comportamiento extraño. En concreto, el **buscador** y la sección **hoy** del **centro de notificaciones** pueden quedar "atascados" y dejar de responder. Esto también se ha experimentado en los proyectos de extensión en Xcode y actualmente no está relacionado con Xamarin. Mac. A menudo, esto se puede ver en el registro del sistema (a través de la **consola**, consulte sugerencias para obtener detalles) imprimir mensajes de error repetidos. Parece que se está reiniciando macOS para corregirlo.
 
-<a name="Tips" />
+<a name="Tips"></a>
 
 ## <a name="tips"></a>Sugerencias
 
 Las siguientes sugerencias pueden ser útiles al trabajar con extensiones en Xamarin. Mac:
 
-- Como Xamarin. Mac no es compatible actualmente con las extensiones de depuración, la experiencia de depuración dependerá principalmente de la ejecución y `printf` como las instrucciones. Sin embargo, las extensiones se ejecutan en un proceso de espacio aislado, por lo que `Console.WriteLine` no actuarán como en otras aplicaciones de Xamarin. Mac. Al invocar [`NSLog` directamente](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554) , se generarán mensajes de depuración en el registro del sistema.
-- Cualquier excepción no detectada bloqueará el proceso de extensión, lo que proporciona solo una pequeña cantidad de información útil en el **registro del sistema**. Puede ser útil ajustar el código problemático en un bloque de `try/catch` (excepción) que `NSLog` de antes de volver a producirlo.
-- Se puede tener acceso al **registro del sistema** desde la aplicación de **consola** en **aplicaciones**  > **utilidades**:
+- Como Xamarin. Mac actualmente no admite extensiones de depuración, la experiencia de depuración dependerá principalmente de la ejecución y de las `printf` instrucciones. Sin embargo, las extensiones se ejecutan en un proceso de espacio aislado, por lo que `Console.WriteLine` no actuará como lo hace en otras aplicaciones de Xamarin. Mac. Al invocar [ `NSLog` directamente](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554) , se generarán mensajes de depuración en el registro del sistema.
+- Cualquier excepción no detectada bloqueará el proceso de extensión, lo que proporciona solo una pequeña cantidad de información útil en el **registro del sistema**. Puede ser útil ajustar el código problemático en un `try/catch` bloque (excepción) `NSLog` antes de volver a producirlo.
+- Se puede tener acceso al **registro del sistema** desde la aplicación de **consola** en **aplicaciones**  >  **utilidades**:
 
     [![](extensions-images/extension02.png "The system log")](extensions-images/extension02.png#lightbox)
 - Como se indicó anteriormente, la ejecución de la aplicación host de extensión la registrará en el sistema. Eliminando la agrupación de aplicaciones con el anulación del registro. 
-- Si se registran las versiones "apartadas" de las extensiones de una aplicación, use el siguiente comando para localizarlas (para que se puedan eliminar): `plugin kit -mv`
+- Si se registran las versiones "apartadas" de las extensiones de una aplicación, use el siguiente comando para localizarlas (para que se puedan eliminar):`plugin kit -mv`
 
-<a name="Walkthrough-and-Sample-App" />
+<a name="Walkthrough-and-Sample-App"></a>
 
 ## <a name="walkthrough-and-sample-app"></a>Tutorial y aplicación de ejemplo
 
@@ -54,7 +54,7 @@ Dado que el desarrollador creará y trabajará con las extensiones de Xamarin. M
 
 [Aquí](https://docs.microsoft.com/samples/xamarin/mac-samples/extensionsamples)puede encontrar un proyecto de Xamarin. Mac de ejemplo que contiene pequeños ejemplos funcionales de cada tipo de extensión.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumen
 

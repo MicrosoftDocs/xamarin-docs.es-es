@@ -1,22 +1,8 @@
 ---
-title: ''
-description: En este artículo se presentan los controles que están disponibles en el Xamarin.Forms paquete NuGet de páginas de página.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 093ef4b9b3ae7bde25da276330894bcf4e399145
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134451"
+title: "referencia de controles de páginas de página" Descripción: "en este artículo se presentan los controles que están disponibles en el Xamarin.Forms paquete de NuGet de páginas de página".
+MS. Prod: Xamarin ms. AssetID: 891615D0-E8BD-4ACC-A7F0-4C3725FBCC31 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/01/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="datapages-controls-reference"></a>Referencia de controles de páginas de página
 
 ![](~/media/shared/preview.png "This API is currently in preview")
@@ -36,14 +22,12 @@ Para usar estos controles en XAML, asegúrese de que se ha incluido el espacio d
     x:Class="DataPagesDemo.Detail">
 ```
 
-En los ejemplos siguientes `DynamicResource` se incluyen referencias que deben existir en el Diccionario de recursos del proyecto para que funcione. También hay un ejemplo de cómo crear un [control personalizado](#custom) .
+En los ejemplos siguientes `DynamicResource` se incluyen referencias que deben existir en el Diccionario de recursos del proyecto para que funcione. También hay un ejemplo de cómo crear un [control personalizado](#custom-control-example).
 
 ## <a name="built-in-controls"></a>Controles integrados
 
 * [HeroImage](#heroimage)
 * [ListItem](#listitem)
-
-<a name="heroimage" />
 
 ### <a name="heroimage"></a>HeroImage
 
@@ -69,8 +53,6 @@ El `HeroImage` control tiene cuatro propiedades:
 **iOS**
 
 ![](controls-images/heroimage-light-ios.png "Control HeroImage en iOS") ![](controls-images/heroimage-dark-ios.png "Control HeroImage en iOS")
-
-<a name="listitem" />
 
 ### <a name="listitem"></a>ListItem
 
@@ -134,19 +116,15 @@ Debe ser similar a las capturas de pantallas siguientes con los colores correspo
 
 ![](controls-images/cardview-light-ios.png "Control personalizado CardView en iOS") ![](controls-images/cardview-dark-ios.png "Control personalizado CardView en iOS")
 
-<a name="custom" />
-
 ### <a name="building-the-custom-cardview"></a>Compilar el CardView personalizado
 
-1. [DataView (subclase)](#1)
-2. [Definir fuente, diseño y márgenes](#2)
-3. [Crear estilos para los elementos secundarios del control](#3)
-4. [Crear la plantilla de diseño de control](#4)
-5. [Agregar los recursos específicos del tema](#5)
-6. [Establecer ControlTemplate para la clase CardView](#6)
-7. [Agregar el control a una página](#7)
-
-<a name="1" />
+1. [DataView (subclase)](#1-dataview-subclass)
+2. [Definir fuente, diseño y márgenes](#2-define-font-layout-and-margins)
+3. [Crear estilos para los elementos secundarios del control](#3-create-styles-for-the-controls-children)
+4. [Crear la plantilla de diseño de control](#4-create-the-control-layout-template)
+5. [Agregar los recursos específicos del tema](#5-add-the-theme-specific-resources)
+6. [Establecer ControlTemplate para la clase CardView](#6-set-the-controltemplate-for-the-cardview-class)
+7. [Agregar el control a una página](#7-add-the-control-to-a-page)
 
 #### <a name="1-dataview-subclass"></a>1. subclase DataView
 
@@ -188,13 +166,11 @@ public class CardView : DataView
 }
 ```
 
-<a name="2" />
-
 #### <a name="2-define-font-layout-and-margins"></a>2. definir la fuente, el diseño y los márgenes
 
 El diseñador de controles descifraría estos valores como parte del diseño de la interfaz de usuario para el control personalizado. Cuando se requieren especificaciones específicas de la plataforma, `OnPlatform` se usa el elemento.
 
-Tenga en cuenta que algunos valores hacen referencia a `StaticResource` s: se definirán en el [paso 5](#5).
+Tenga en cuenta que algunos valores hacen referencia a `StaticResource` s: se definirán en el [paso 5](#5-add-the-theme-specific-resources).
 
 ```xml
 <!-- CARDVIEW FONT SIZES -->
@@ -246,8 +222,6 @@ Tenga en cuenta que algunos valores hacen referencia a `StaticResource` s: se de
 </OnPlatform>
 ```
 
-<a name="3" />
-
 #### <a name="3-create-styles-for-the-controls-children"></a>3. crear estilos para los elementos secundarios del control
 
 Haga referencia a todos los elementos definidos sobre para crear los elementos secundarios que se usarán en el control personalizado:
@@ -277,8 +251,6 @@ Haga referencia a todos los elementos definidos sobre para crear los elementos s
     <Setter Property="HeightRequest" Value="165"/>
 </Style>
 ```
-
-<a name="4" />
 
 #### <a name="4-create-the-control-layout-template"></a>4. crear la plantilla de diseño de control
 
@@ -321,8 +293,6 @@ El diseño visual del control personalizado se declara explícitamente en la pla
 </ControlTemplate>
 ```
 
-<a name="5" />
-
 #### <a name="5-add-the-theme-specific-resources"></a>5. agregar los recursos específicos del tema
 
 Dado que se trata de un control personalizado, agregue los recursos que coinciden con el tema que usa el Diccionario de recursos:
@@ -354,11 +324,9 @@ Dado que se trata de un control personalizado, agregue los recursos que coincide
             <Color x:Key="iOSCardViewDetailTextColor">#B5B4B9</Color>
 ```
 
-<a name="6" />
-
 #### <a name="6-set-the-controltemplate-for-the-cardview-class"></a>6. establecer ControlTemplate para la clase CardView
 
-Por último, asegúrese de que la clase de C# creada en el [paso 1](#1) usa la plantilla de control definida en el [paso 4](#4) mediante un `Style` `Setter` elemento.
+Por último, asegúrese de que la clase de C# creada en el [paso 1](#1-dataview-subclass) usa la plantilla de control definida en el [paso 4](#4-create-the-control-layout-template) mediante un `Style` `Setter` elemento.
 
 ```xml
 <Style TargetType="local:CardView">
@@ -367,8 +335,6 @@ Por último, asegúrese de que la clase de C# creada en el [paso 1](#1) usa la p
   <Setter Property="BackgroundColor" Value="{ StaticResource CardViewBackgroundColor }" />
 </Style>
 ```
-
-<a name="7" />
 
 #### <a name="7-add-the-control-to-a-page"></a>7. agregar el control a una página
 

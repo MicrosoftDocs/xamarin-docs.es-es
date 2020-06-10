@@ -1,23 +1,8 @@
 ---
-title: Usar una base de datos de documentos de Azure Cosmos DB enXamarin.Forms
-description: En este artículo se explica cómo usar la biblioteca de cliente de .NET Standard de Azure Cosmos DB para integrar una base de datos de documentos Azure Cosmos DB en una Xamarin.Forms aplicación.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 47b35d394eab339a8e9a1f81880e6de4233f29b6
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127093"
+title: "consumir una base de datos de documentos Azure Cosmos DB en Xamarin.Forms " Descripción: "en este artículo se explica cómo usar la biblioteca de cliente de Azure Cosmos DB .net Standard para integrar una base de datos de documentos Azure Cosmos dB en una Xamarin.Forms aplicación".
+MS. Prod: Xamarin ms. AssetID: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C ms. Technology: Xamarin-Forms ms. Custom: Xamu-video Author: davidbritch ms. Author: dabritch ms. Date: 06/16/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="consume-an-azure-cosmos-db-document-database-in-xamarinforms"></a>Usar una base de datos de documentos de Azure Cosmos DB enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
@@ -120,8 +105,6 @@ Opcionalmente, el `CreateDocumentCollectionIfNotExistsAsync` método también pu
 > [!IMPORTANT]
 > Tenga en cuenta que el `CreateDocumentCollectionIfNotExistsAsync` método creará una nueva colección con un rendimiento reservado, que tiene implicaciones de precios.
 
-<a name="document_query" />
-
 ### <a name="retrieving-document-collection-documents"></a>Recuperación de documentos de colección de documentos
 
 El contenido de una colección de documentos se puede recuperar creando y ejecutando una consulta de documento. Una consulta de documento se crea con el `DocumentClient.CreateDocumentQuery` método:
@@ -160,8 +143,6 @@ var query = client.CreateDocumentQuery<TodoItem>(collectionLink)
 
 Esta consulta recupera todos los documentos de la colección cuya `Done` propiedad es igual a `false` .
 
-<a name="inserting_document" />
-
 ### <a name="inserting-a-document-into-a-document-collection"></a>Insertar un documento en una colección de documentos
 
 Los documentos son contenido JSON definido por el usuario y se pueden insertar en una colección de documentos con el `DocumentClient.CreateDocumentAsync` método:
@@ -191,8 +172,6 @@ public async Task SaveTodoItemAsync(TodoItem item, bool isNewItem = false)
 ```
 
 El `ReplaceDocumentAsync` método especifica un `Uri` argumento que representa el documento de la colección que se debe reemplazar y un `object` argumento que representa los datos de documento actualizados.
-
-<a name="deleting_document" />
 
 ### <a name="deleting-a-document-from-a-document-collection"></a>Eliminar un documento de una colección de documentos
 

@@ -7,38 +7,38 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 05/24/2017
-ms.openlocfilehash: 565441762bc7d9dcf7f73b42a34e3feb0bff86f1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f6e9a9338c0bce628cfd62d1106601ddc7a11490
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025832"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84568638"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Vistas de colección en Xamarin. Mac
 
 _En este artículo se describe cómo trabajar con vistas de colección en una aplicación de Xamarin. Mac. En él se explica cómo crear y mantener vistas de colección en Xcode y Interface Builder y cómo trabajar con ellas mediante programación._
 
-Cuando se trabaja C# con y .net en una aplicación de Xamarin. Mac, el desarrollador tiene acceso a los mismos controles de vista de colección de AppKit que un desarrollador que trabaja en *Objective-C* y *Xcode* . Dado que Xamarin. Mac se integra directamente con Xcode, el desarrollador usa _Interface Builder_ de Xcode para crear y mantener vistas de colección.
+Cuando se trabaja con C# y .NET en una aplicación de Xamarin. Mac, el desarrollador tiene acceso a los mismos controles de la vista de colección de AppKit que un desarrollador que trabaja en *Objective-C* y *Xcode* . Dado que Xamarin. Mac se integra directamente con Xcode, el desarrollador usa _Interface Builder_ de Xcode para crear y mantener vistas de colección.
 
-Un `NSCollectionView` muestra una cuadrícula de subvistas organizadas mediante un `NSCollectionViewLayout`. Cada subvista de la cuadrícula se representa mediante una `NSCollectionViewItem` que administra la carga del contenido de la vista desde un archivo `.xib`.
+Un `NSCollectionView` muestra una cuadrícula de subvistas organizadas mediante `NSCollectionViewLayout` . Cada subvista de la cuadrícula se representa mediante un `NSCollectionViewItem` que administra la carga del contenido de la vista desde un `.xib` archivo.
 
-[![una ejecución de aplicación de ejemplo](collection-view-images/intro01.png)](collection-view-images/intro01.png#lightbox)
+[![Ejecución de una aplicación de ejemplo](collection-view-images/intro01.png)](collection-view-images/intro01.png#lightbox)
 
-En este artículo se describen los conceptos básicos sobre cómo trabajar con vistas de colección en una aplicación de Xamarin. Mac. Se recomienda encarecidamente que trabaje primero en el artículo [Hello, Mac](~/mac/get-started/hello-mac.md) , específicamente en las secciones [Introducción a Xcode y Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) y [salidas y acciones](~/mac/get-started/hello-mac.md#outlets-and-actions) , ya que trata conceptos clave y técnicas que se usan. en este artículo.
+En este artículo se describen los conceptos básicos sobre cómo trabajar con vistas de colección en una aplicación de Xamarin. Mac. Se recomienda encarecidamente que trabaje primero en el artículo [Hello, Mac](~/mac/get-started/hello-mac.md) , específicamente en las secciones [Introducción a Xcode y Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) y [salidas y acciones](~/mac/get-started/hello-mac.md#outlets-and-actions) , ya que trata conceptos clave y técnicas que se usan en este artículo.
 
-Es posible que desee echar un vistazo a la sección [exponer C# clases y métodos a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) , donde se explican los comandos`Register`y`Export`que se usan para conectar las C# clases a Objective-C. objetos y elementos de la interfaz de usuario.
+Es posible que desee echar un vistazo a la sección [exponer clases y métodos de C# a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) , en él se explican `Register` los `Export` comandos y que se usan para conectar las clases de C# a objetos de Objective-C y elementos de la interfaz de usuario.
 
-<a name="About_Collection_Views"/>
+<a name="About_Collection_Views"></a>
 
 ## <a name="about-collection-views"></a>Acerca de las vistas de colección
 
-El objetivo principal de una vista de colección (`NSCollectionView`) es organizar visualmente un grupo de objetos de forma organizada mediante un diseño de vista de colección (`NSCollectionViewLayout`), con cada objeto individual (`NSCollectionViewItem`) obteniendo su propia vista en la colección más grande. Las vistas de colección funcionan mediante el enlace de datos y las técnicas de codificación de valor de clave y, como tal, debe leer la documentación sobre el [enlace de datos y la codificación de valores de clave](~/mac/app-fundamentals/databinding.md) antes de continuar con este artículo.
+El objetivo principal de una vista de colección ( `NSCollectionView` ) es organizar visualmente un grupo de objetos de forma organizada mediante un diseño de vista de colección ( `NSCollectionViewLayout` ), con cada objeto individual ( `NSCollectionViewItem` ) obteniendo su propia vista en la colección más grande. Las vistas de colección funcionan mediante el enlace de datos y las técnicas de codificación de valor de clave y, como tal, debe leer la documentación sobre el [enlace de datos y la codificación de valores de clave](~/mac/app-fundamentals/databinding.md) antes de continuar con este artículo.
 
-La vista de colección no tiene ningún elemento de vista de colección estándar integrado (como un esquema o una vista de tabla), por lo que el desarrollador es responsable de diseñar e implementar una _vista de prototipo_ mediante otros controles AppKit, como campos de imagen, campos de texto, etiquetas, otros. Esta vista de prototipo se usará para mostrar y trabajar con cada elemento administrado por la vista de colección y se almacena en un archivo `.xib`.
+La vista de colección no tiene ningún elemento de vista de colección estándar integrado (como un esquema o una vista de tabla), por lo que el desarrollador es responsable de diseñar e implementar una _vista de prototipo_ mediante otros controles AppKit, como campos de imagen, campos de texto, etiquetas, etc. Esta vista de prototipo se usará para mostrar y trabajar con cada elemento administrado por la vista de colección y se almacena en un `.xib` archivo.
 
 Dado que el desarrollador es responsable de la apariencia de un elemento de vista de colección, la vista de colección no tiene compatibilidad integrada para resaltar un elemento seleccionado en la cuadrícula. En este artículo se tratará la implementación de esta característica.
 
-<a name="Defining_your_Data_Model"/>
+<a name="Defining_your_Data_Model"></a>
 
 ## <a name="defining-the-data-model"></a>Definir el modelo de datos
 
@@ -183,48 +183,48 @@ namespace MacDatabinding
 }
 ```
 
-El modelo de datos de `PersonModel` se usará en el resto de este artículo.
+El `PersonModel` modelo de datos se usará en el resto de este artículo.
 
-<a name="Working_with_a_Collection_View"/>
+<a name="Working_with_a_Collection_View"></a>
 
 ## <a name="working-with-a-collection-view"></a>Trabajar con una vista de colección
 
-El enlace de datos con una vista de colección es muy similar al enlace con una vista de tabla, ya que `NSCollectionViewDataSource` se usa para proporcionar datos para la colección. Dado que la vista de colección no tiene un formato de presentación preestablecido, se requiere más trabajo para proporcionar comentarios de interacción del usuario y realizar un seguimiento de la selección del usuario.
+El enlace de datos con una vista de colección es muy similar al enlace con una vista de tabla, como `NSCollectionViewDataSource` se usa para proporcionar datos para la colección. Dado que la vista de colección no tiene un formato de presentación preestablecido, se requiere más trabajo para proporcionar comentarios de interacción del usuario y realizar un seguimiento de la selección del usuario.
 
-<a name="Creating-the-Cell-Prototype"/>
+<a name="Creating-the-Cell-Prototype"></a>
 
 ### <a name="creating-the-cell-prototype"></a>Crear el prototipo de celda
 
-Dado que la vista de colección no incluye un prototipo de celda predeterminado, el desarrollador deberá agregar uno o varios archivos de `.xib` a la aplicación de Xamarin. Mac para definir el diseño y el contenido de las celdas individuales.
+Dado que la vista de colección no incluye un prototipo de celda predeterminado, el desarrollador deberá agregar uno o varios `.xib` archivos a la aplicación de Xamarin. Mac para definir el diseño y el contenido de las celdas individuales.
 
 Haga lo siguiente:
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar** > **nuevo archivo..** .
-2. Seleccione **Mac** > **Ver controlador**, asígnele un nombre (como `EmployeeItem` en este ejemplo) y haga clic en el botón **nuevo** para crear: 
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar**  >  **nuevo archivo..** .
+2. Seleccione **Mac**  >  **controlador de vista**de Mac y asígnele un nombre (por `EmployeeItem` ejemplo, en este ejemplo) y haga clic en el botón **nuevo** para crear: 
 
     ![Agregar un nuevo controlador de vista](collection-view-images/proto01.png)
 
-    Esto agregará una `EmployeeItem.cs`, `EmployeeItemController.cs` y `EmployeeItemController.xib` archivo a la solución del proyecto.
-3. Haga doble clic en el archivo de `EmployeeItemController.xib` para abrirlo para su edición en el Interface Builder de Xcode.
-4. Agregue un `NSBox`, `NSImageView` y dos controles de `NSLabel` a la vista y colóquelos de la siguiente manera:
+    Esto agregará un `EmployeeItem.cs` `EmployeeItemController.cs` archivo, y `EmployeeItemController.xib` a la solución del proyecto.
+3. Haga doble clic en el `EmployeeItemController.xib` archivo para abrirlo y editarlo en la Interface Builder de Xcode.
+4. Agregue y `NSBox` `NSImageView` dos `NSLabel` controles a la vista y colóquelos de la siguiente manera:
 
     ![Diseñar el diseño del prototipo de celda](collection-view-images/proto02.png)
-5. Abra el **Editor del asistente** y cree una **salida** para la `NSBox` de modo que se pueda usar para indicar el estado de selección de una celda:
+5. Abra el **Editor del asistente** y cree una **salida** para `NSBox` que se pueda usar para indicar el estado de selección de una celda:
 
     ![Exponer el NSBox en una salida](collection-view-images/proto03.png)
 6. Vuelva al **Editor estándar** y seleccione la vista imagen.
-7. En el **Inspector de enlace**, seleccione **enlazar a** > **propietario del archivo** y escriba una **ruta de acceso de clave de modelo** de `self.Person.Icon`:
+7. En el **Inspector de enlace**, seleccione **enlazar al**  >  **propietario del archivo** y escriba una **ruta de acceso de clave de modelo** de `self.Person.Icon` :
 
     ![Enlazar el icono](collection-view-images/proto04.png)
-8. Seleccione la primera etiqueta y, en **el inspector de enlace**, seleccione **enlazar a** > **propietario del archivo** y escriba una **ruta de acceso de clave de modelo** de `self.Person.Name`:
+8. Seleccione la primera etiqueta y, en el **Inspector de enlace**, seleccione **enlazar al**  >  **propietario del archivo** y escriba una **ruta de acceso de clave de modelo** de `self.Person.Name` :
 
     ![Enlazar el nombre](collection-view-images/proto05.png)
-9. Seleccione la segunda etiqueta y, en **el inspector de enlace**, seleccione **enlazar a** > **propietario del archivo** y escriba una **ruta de acceso de clave de modelo** de `self.Person.Occupation`:
+9. Seleccione la segunda etiqueta y, en el **Inspector de enlace**, seleccione **enlazar al**  >  **propietario del archivo** y escriba una **ruta de acceso de clave de modelo** de `self.Person.Occupation` :
 
     ![Enlace de la profesión](collection-view-images/proto06.png)
-10. Guarde los cambios en el archivo de `.xib` y vuelva a Visual Studio para sincronizar los cambios.
+10. Guarde los cambios en el `.xib` archivo y vuelva a Visual Studio para sincronizar los cambios.
 
-Edite el archivo de `EmployeeItemController.cs` y haga que tenga un aspecto similar al siguiente:
+Edite el `EmployeeItemController.cs` archivo y haga que tenga el aspecto siguiente:
 
 ```csharp
 using System;
@@ -344,9 +344,9 @@ namespace MacCollectionNew
 }
 ```
 
-Al examinar este código en detalle, la clase hereda de `NSCollectionViewItem` para que pueda actuar como prototipo de una celda de vista de colección. La propiedad `Person` expone la clase que se usó para enlazar datos a la vista de imagen y a las etiquetas en Xcode. Se trata de una instancia de la `PersonModel` creada anteriormente.
+Al examinar este código en detalle, la clase hereda de `NSCollectionViewItem` para que pueda actuar como prototipo de una celda de vista de colección. La `Person` propiedad expone la clase que se usó para enlazar datos a la vista de imagen y a las etiquetas en Xcode. Se trata de una instancia del `PersonModel` creado anteriormente.
 
-La propiedad `BackgroundColor` es un acceso directo a la `FillColor` del control `NSBox` que se utilizará para mostrar el estado de selección de una celda. Al invalidar la propiedad `Selected` del `NSCollectionViewItem`, el código siguiente establece o borra este estado de selección:
+La `BackgroundColor` propiedad es un acceso directo al `NSBox` del control `FillColor` que se utilizará para mostrar el estado de selección de una celda. Al invalidar la `Selected` propiedad de `NSCollectionViewItem` , el código siguiente establece o borra este estado de selección:
 
 ```csharp
 public override bool Selected
@@ -369,11 +369,11 @@ public override bool Selected
 }
 ```
 
-<a name="Creating-the-Collection-View-Data-Source"/>
+<a name="Creating-the-Collection-View-Data-Source"></a>
 
 ### <a name="creating-the-collection-view-data-source"></a>Crear el origen de datos de la vista de colección
 
-Un origen de datos de vista de colección (`NSCollectionViewDataSource`) proporciona todos los datos de una vista de colección y crea y rellena una celda de vista de colección (mediante el prototipo de `.xib`) según sea necesario para cada elemento de la colección.
+Un origen de datos de vista `NSCollectionViewDataSource` de colección () proporciona todos los datos de una vista de colección y crea y rellena una celda de vista de colección (mediante el `.xib` prototipo) según sea necesario para cada elemento de la colección.
 
 Agregue una nueva clase al proyecto, llámela `CollectionViewDataSource` y haga que tenga un aspecto similar al siguiente:
 
@@ -462,11 +462,11 @@ namespace MacCollectionNew
 }
 ```
 
-Al examinar este código en detalle, la clase hereda de `NSCollectionViewDataSource` y expone una lista de instancias de `PersonModel` a través de su propiedad `Data`.
+Al examinar este código en detalle, la clase hereda de `NSCollectionViewDataSource` y expone una lista de `PersonModel` instancias a través de su `Data` propiedad.
 
-Puesto que esta colección solo tiene una sección, el código invalida el método `GetNumberOfSections` y siempre devuelve `1`. Además, el método de `GetNumberofItems` se invalida en, devuelve el número de elementos de la lista de propiedades de `Data`.
+Puesto que esta colección solo tiene una sección, el código invalida el `GetNumberOfSections` método y siempre devuelve `1` . Además, el `GetNumberofItems` método se invalida en, devuelve el número de elementos de la `Data` lista de propiedades.
 
-Se llama al método `GetItem` siempre que se requiera una nueva celda y tenga el aspecto siguiente:
+`GetItem`Se llama al método siempre que se requiera una nueva celda y tenga el aspecto siguiente:
 
 ```csharp
 public override NSCollectionViewItem GetItem(NSCollectionView collectionView, NSIndexPath indexPath)
@@ -478,21 +478,21 @@ public override NSCollectionViewItem GetItem(NSCollectionView collectionView, NS
 }
 ```
 
-Se llama al método `MakeItem` de la vista de colección para crear o devolver una instancia reutilizable del `EmployeeItemController` y su propiedad `Person` está establecida en el elemento que se muestra en la celda solicitada. 
+`MakeItem`Se llama al método de la vista de colección para crear o devolver una instancia reutilizable de `EmployeeItemController` y su `Person` propiedad se establece en el elemento que se muestra en la celda solicitada. 
 
-El `EmployeeItemController` se debe registrar con el controlador de vista de colección de antemano mediante el código siguiente:
+El `EmployeeItemController` debe registrarse con el controlador de vista de colección de antemano mediante el código siguiente:
 
 ```csharp
 EmployeeCollection.RegisterClassForItem(typeof(EmployeeItemController), "EmployeeCell");
 ``` 
 
-El **identificador** (`EmployeeCell`) usado en la llamada `MakeItem` _debe_ coincidir con el nombre del controlador de vista que se registró con la vista de colección. Este paso se explicará con más detalle a continuación.
+El **identificador** ( `EmployeeCell` ) usado en la `MakeItem` llamada _debe_ coincidir con el nombre del controlador de vista que se registró con la vista de colección. Este paso se explicará con más detalle a continuación.
 
-<a name="Handling-Item-Selection"/>
+<a name="Handling-Item-Selection"></a>
 
 ### <a name="handling-item-selection"></a>Controlar la selección de elementos
 
-Para controlar la selección y la anulación de la selección de los elementos de la colección, se necesitará un `NSCollectionViewDelegate`. Dado que en este ejemplo se usa el tipo de diseño `NSCollectionViewFlowLayout` integrado, se necesitará un `NSCollectionViewDelegateFlowLayout` versión específica de este delegado.
+Para controlar la selección y la anulación de la selección de los elementos de la colección, se `NSCollectionViewDelegate` necesitará un. Dado que este ejemplo utilizará el tipo de `NSCollectionViewFlowLayout` diseño integrado, se `NSCollectionViewDelegateFlowLayout` requerirá una versión específica de este delegado.
 
 Agregue una nueva clase al proyecto, llámela `CollectionViewDelegate` y haga que tenga un aspecto similar al siguiente:
 
@@ -565,9 +565,9 @@ namespace MacCollectionNew
 }
 ``` 
 
-Los métodos `ItemsSelected` y `ItemsDeselected` se invalidan y se usan para establecer o borrar la propiedad `PersonSelected` del controlador de vista que está controlando la vista de colección cuando el usuario selecciona o anula la selección de un elemento. Esto se mostrará en detalle a continuación.
+Los `ItemsSelected` `ItemsDeselected` métodos y se reemplazan y se usan para establecer o borrar la `PersonSelected` propiedad del controlador de vistas que está controlando la vista de colección cuando el usuario selecciona o anula la selección de un elemento. Esto se mostrará en detalle a continuación.
 
-<a name="Creating-the-Collection-View-in-Interface-Builder"/>
+<a name="Creating-the-Collection-View-in-Interface-Builder"></a>
 
 ### <a name="creating-the-collection-view-in-interface-builder"></a>Crear la vista de colección en Interface Builder
 
@@ -575,7 +575,7 @@ Con todas las piezas de soporte técnico necesarias en su lugar, se puede editar
 
 Haga lo siguiente:
 
-1. Haga doble clic en el archivo `Main.Storyboard` en el **Explorador de soluciones** para abrirlo para su edición en Interface Builder de Xcode.
+1. Haga doble clic en el `Main.Storyboard` archivo en el **Explorador de soluciones** para abrirlo para su edición en el Interface Builder de Xcode.
 2. Arrastre una vista de colección a la vista principal y cambie su tamaño para rellenar la vista:
 
     ![Agregar una vista de colección al diseño](collection-view-images/collection01.png)
@@ -587,15 +587,15 @@ Haga lo siguiente:
     ![Agregar restricciones](collection-view-images/collection03.png)
 5. Guarde los cambios y vuelva a Visual Studio para realizar la sincronización.
 
-<a name="Bringing-it-all-Together"/>
+<a name="Bringing-it-all-Together"></a>
 
 ## <a name="bringing-it-all-together"></a>Reunir todo
 
-Ahora se han colocado todas las piezas auxiliares con una clase que actúe como modelo de datos (`PersonModel`), se ha agregado un `NSCollectionViewDataSource` para proporcionar datos, se ha creado un `NSCollectionViewDelegateFlowLayout` para administrar la selección de elementos y se ha agregado un `NSCollectionView` al guion gráfico principal. expuesto como una salida (`EmployeeCollection`).
+Ahora se han colocado todas las piezas auxiliares con una clase que actúe como modelo de datos ( `PersonModel` ), se ha agregado un `NSCollectionViewDataSource` para proporcionar los datos, `NSCollectionViewDelegateFlowLayout` se ha creado un para administrar la selección de elementos y `NSCollectionView` se ha agregado al guion gráfico principal y se ha expuesto como una salida ( `EmployeeCollection` ).
 
 El paso final consiste en editar el controlador de vista que contiene la vista de colección y reunir todas las piezas para rellenar la colección y controlar la selección de elementos.
 
-Edite el archivo de `ViewController.cs` y haga que tenga un aspecto similar al siguiente:
+Edite el `ViewController.cs` archivo y haga que tenga el aspecto siguiente:
 
 ```csharp
 using System;
@@ -736,28 +736,28 @@ namespace MacCollectionNew
 }
 ```
 
-Al echar un vistazo a este código en detalle, se define una propiedad `Datasource` para contener una instancia de la `CollectionViewDataSource` que proporcionará los datos para la vista de colección. Se define una propiedad `PersonSelected` para contener el `PersonModel` que representa el elemento seleccionado actualmente en la vista de colección. Esta propiedad también genera el evento `SelectionChanged` cuando cambia la selección.
+Al examinar este código en detalle, `Datasource` se define una propiedad para que contenga una instancia de `CollectionViewDataSource` que proporcionará los datos para la vista de colección. `PersonSelected`Se define una propiedad para que contenga el `PersonModel` elemento que representa el elemento actualmente seleccionado en la vista de colección. Esta propiedad también genera el `SelectionChanged` evento cuando cambia la selección.
 
-La clase `ConfigureCollectionView` se usa para registrar el controlador de vista que actúa como el prototipo de celda con la vista de colección mediante la siguiente línea:
+La `ConfigureCollectionView` clase se usa para registrar el controlador de vista que actúa como el prototipo de celda con la vista de colección mediante la línea siguiente:
 
 ```csharp
 EmployeeCollection.RegisterClassForItem(typeof(EmployeeItemController), "EmployeeCell");
 ```
 
-Observe que el **identificador** (`EmployeeCell`) usado para registrar el prototipo coincide con el llamado en el método `GetItem` de la `CollectionViewDataSource` definida anteriormente:
+Observe que el **identificador** ( `EmployeeCell` ) que se usa para registrar el prototipo coincide con el llamado en el `GetItem` método del `CollectionViewDataSource` definido anteriormente:
 
 ```csharp
 var item = collectionView.MakeItem("EmployeeCell", indexPath) as EmployeeItemController;
 ...
 ```
 
-Además, el tipo del controlador de vistas **debe** coincidir con el nombre del archivo `.xib` que define el prototipo **exactamente**. En el caso de este ejemplo, `EmployeeItemController` y `EmployeeItemController.xib`.
+Además, el tipo del controlador de vistas **debe** coincidir exactamente con el nombre del `.xib` archivo que define **exactly**el prototipo. En el caso de este ejemplo, `EmployeeItemController` y `EmployeeItemController.xib` .
 
-El diseño real de los elementos de la vista de colección se controla mediante una clase de diseño de vista de colección y se puede cambiar dinámicamente en tiempo de ejecución mediante la asignación de una nueva instancia a la propiedad `CollectionViewLayout`. Al cambiar esta propiedad, se actualiza la apariencia de la vista de colección sin animar el cambio.
+El diseño real de los elementos de la vista de colección se controla mediante una clase de diseño de vista de colección y se puede cambiar dinámicamente en tiempo de ejecución mediante la asignación de una nueva instancia a la `CollectionViewLayout` propiedad. Al cambiar esta propiedad, se actualiza la apariencia de la vista de colección sin animar el cambio.
 
-Apple distribuye dos tipos de diseño integrados con la vista de colección que controlará los usos más habituales: `NSCollectionViewFlowLayout` y `NSCollectionViewGridLayout`. Si el desarrollador requirió un formato personalizado, como la colocación de los elementos en un círculo, puede crear una instancia personalizada de `NSCollectionViewLayout` e invalidar los métodos necesarios para lograr el efecto deseado.
+Apple distribuye dos tipos de diseño integrados con la vista de colección que controlará los usos más habituales: `NSCollectionViewFlowLayout` y `NSCollectionViewGridLayout` . Si el desarrollador requirió un formato personalizado, como la colocación de los elementos en un círculo, puede crear una instancia personalizada de `NSCollectionViewLayout` e invalidar los métodos necesarios para lograr el efecto deseado.
 
-En este ejemplo se usa el diseño de flujo predeterminado para crear una instancia de la clase `NSCollectionViewFlowLayout` y se configura como se indica a continuación:
+En este ejemplo se usa el diseño de flujo predeterminado para crear una instancia de la `NSCollectionViewFlowLayout` clase y configurarla como se indica a continuación:
 
 ```csharp
 var flowLayout = new NSCollectionViewFlowLayout()
@@ -769,9 +769,9 @@ var flowLayout = new NSCollectionViewFlowLayout()
 };
 ```
 
-La propiedad `ItemSize` define el tamaño de cada celda individual de la colección. La propiedad `SectionInset` define los insets del borde de la colección en las que se colocarán las celdas. `MinimumInteritemSpacing` define el espaciado mínimo entre los elementos y `MinimumLineSpacing` define el espaciado mínimo entre las líneas de la colección.
+La `ItemSize` propiedad define el tamaño de cada celda individual de la colección. La `SectionInset` propiedad define los insets del borde de la colección en las que se colocarán las celdas. `MinimumInteritemSpacing`define el espaciado mínimo entre los elementos y `MinimumLineSpacing` define el espaciado mínimo entre las líneas de la colección.
 
-El diseño se asigna a la vista de colección y se adjunta una instancia de la `CollectionViewDelegate` para administrar la selección de elementos:
+El diseño se asigna a la vista de colección y se adjunta una instancia de `CollectionViewDelegate` para administrar la selección de elementos:
 
 ```csharp
 // Setup collection view
@@ -779,7 +779,7 @@ EmployeeCollection.CollectionViewLayout = flowLayout;
 EmployeeCollection.Delegate = new CollectionViewDelegate(this);
 ```
 
-El método `PopulateWithData` crea una nueva instancia del `CollectionViewDataSource`, la rellena con datos, la adjunta a la vista de colección y llama al método `ReloadData` para mostrar los elementos:
+El `PopulateWithData` método crea una nueva instancia de `CollectionViewDataSource` , la rellena con datos, la adjunta a la vista de colección y llama al `ReloadData` método para mostrar los elementos:
 
 ```csharp
 private void PopulateWithData()
@@ -796,7 +796,7 @@ private void PopulateWithData()
 }
 ```
 
-El método `ViewDidLoad` se invalida y llama a los métodos `ConfigureCollectionView` y `PopulateWithData` para mostrar la vista de colección final al usuario:
+El `ViewDidLoad` método se invalida y llama a los `ConfigureCollectionView` `PopulateWithData` métodos y para mostrar la vista de colección final al usuario:
 
 ```csharp
 public override void ViewDidLoad()
@@ -809,11 +809,11 @@ public override void ViewDidLoad()
 }
 ```
 
-<a name="Summary"/>
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se ha realizado una visión detallada del trabajo con las vistas de colección en una aplicación de Xamarin. Mac. En primer lugar, se examinó la exposición C# de una clase a Objective-C mediante el uso de código de clave-valor (KVC) y el valor de clave (KVO). A continuación, se mostró cómo usar una clase compatible con KVO y cómo enlazarla a las vistas de colección del Interface Builder de Xcode. Por último, se ha mostrado cómo interactuar con las vistas C# de colección en el código.
+En este artículo se ha realizado una visión detallada del trabajo con las vistas de colección en una aplicación de Xamarin. Mac. En primer lugar, se examinó la exposición de una clase de C# a Objective-C mediante el uso de código de clave-valor (KVC) y la observación de clave-valor (KVO). A continuación, se mostró cómo usar una clase compatible con KVO y cómo enlazarla a las vistas de colección del Interface Builder de Xcode. Por último, se ha mostrado cómo interactuar con las vistas de colección en el código de C#.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

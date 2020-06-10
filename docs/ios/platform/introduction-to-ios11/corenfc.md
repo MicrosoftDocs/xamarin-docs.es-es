@@ -7,12 +7,12 @@ ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 2e19fd37270d3c96cb175d30dc786a95a01c3fcf
-ms.sourcegitcommit: 2ed3d1c933fce4ce332128f125acb2f23f9e0f1a
+ms.openlocfilehash: 556ea205e9894a2553224da0dc71c00d9bb55a9b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75753016"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84564749"
 ---
 # <a name="core-nfc-in-xamarinios"></a>NFC principal en Xamarin. iOS
 
@@ -31,7 +31,7 @@ Hay algunas restricciones que se deben tener en cuenta:
 
 En esta página se describe la configuración necesaria para usar CoreNFC y se muestra cómo usar la API con el [código de ejemplo "NFCTagReader"](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader).
 
-## <a name="configuration"></a>Configuración de
+## <a name="configuration"></a>Configuración
 
 Para habilitar CoreNFC, debe configurar tres elementos en el proyecto:
 
@@ -63,7 +63,7 @@ La aplicación debe solicitar la funcionalidad de **lectura de etiquetas Near Fi
 
 Cree un nuevo **identificador de aplicación** y asegúrese de que el servicio de **lectura de etiquetas NFC** esté marcado:
 
-[![página nuevo ID. de aplicación del portal para desarrolladores con la lectura de etiquetas NFC seleccionada](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
+[![Página nuevo ID. de aplicación del portal para desarrolladores con la lectura de etiquetas NFC seleccionada](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
 
 Después, debe crear un nuevo perfil de aprovisionamiento para este identificador de aplicación y, después, descargarlo e instalarlo en el equipo Mac de desarrollo.
 
@@ -71,12 +71,12 @@ Después, debe crear un nuevo perfil de aprovisionamiento para este identificado
 
 Una vez configurado el proyecto, agregue `using CoreNFC;` a la parte superior del archivo y siga estos tres pasos para implementar la funcionalidad de lectura de etiquetas NFC:
 
-### <a name="1-implement-infcndefreadersessiondelegate"></a>1. implementar `INFCNdefReaderSessionDelegate`
+### <a name="1-implement-infcndefreadersessiondelegate"></a>1. implementar`INFCNdefReaderSessionDelegate`
 
 La interfaz tiene dos métodos que se van a implementar:
 
-- `DidDetect`: se le llama cuando se lee correctamente una etiqueta.
-- `DidInvalidate`: se le llama cuando se produce un error o se alcanza el tiempo de espera de 60 segundos.
+- `DidDetect`: Se le llama cuando se lee correctamente una etiqueta.
+- `DidInvalidate`: Se le llama cuando se produce un error o se alcanza el tiempo de espera de 60 segundos.
 
 #### <a name="diddetect"></a>DidDetect
 
@@ -96,7 +96,7 @@ public void DidDetect(NFCNdefReaderSession session, NFCNdefMessage[] messages)
 }
 ```
 
-Se puede llamar varias veces a este método (y se puede pasar una matriz de mensajes) si la sesión permite varias lecturas de etiquetas. Esto se establece mediante el tercer parámetro del método `Start` (que se explica en el [paso 2](#step2)).
+Se puede llamar varias veces a este método (y se puede pasar una matriz de mensajes) si la sesión permite varias lecturas de etiquetas. Esto se establece mediante el tercer parámetro del `Start` método (que se explica en el [paso 2](#step2)).
 
 #### <a name="didinvalidate"></a>DidInvalidate
 
@@ -123,9 +123,9 @@ public void DidInvalidate(NFCNdefReaderSession session, NSError error)
 
 Una vez que se ha invalidado una sesión, se debe crear un nuevo objeto de sesión para examinar de nuevo.
 
-<a name="step2" />
+<a name="step2"></a>
 
-### <a name="2-start-an-nfcndefreadersession"></a>2. iniciar un `NFCNdefReaderSession`
+### <a name="2-start-an-nfcndefreadersession"></a>2. iniciar un`NFCNdefReaderSession`
 
 El análisis debe comenzar con una solicitud de usuario, como presionar un botón.
 El código siguiente crea e inicia una sesión de examen:
@@ -135,11 +135,11 @@ Session = new NFCNdefReaderSession(this, null, true);
 Session?.BeginSession();
 ```
 
-Los parámetros del constructor `NFCNdefReaderSession` son los siguientes:
+Los parámetros del `NFCNdefReaderSession` constructor son los siguientes:
 
-- `delegate`: una implementación de `INFCNdefReaderSessionDelegate`. En el código de ejemplo, el delegado se implementa en el controlador de vista de tabla, por lo que `this` se utiliza como parámetro de delegado.
-- `queue`: la cola en la que se administran las devoluciones de llamada. Puede ser `null`, en cuyo caso asegúrese de usar el `DispatchQueue.MainQueue` al actualizar los controles de la interfaz de usuario (como se muestra en el ejemplo).
-- `invalidateAfterFirstRead`: cuando `true`, el examen se detiene después del primer análisis correcto; Cuando el análisis de `false` continuará y se devuelvan varios resultados hasta que se cancele el examen o se alcance el tiempo de espera de 60 segundos.
+- `delegate`: Una implementación de `INFCNdefReaderSessionDelegate` . En el código de ejemplo, el delegado se implementa en el controlador de vista de tabla, por lo `this` que se usa como parámetro de delegado.
+- `queue`: La cola en la que se administran las devoluciones de llamada. Puede ser `null` , en cuyo caso, asegúrese de usar `DispatchQueue.MainQueue` al actualizar los controles de la interfaz de usuario (como se muestra en el ejemplo).
+- `invalidateAfterFirstRead`: Cuando `true` , el examen se detiene después del primer análisis correcto; cuando el examen `false` continúa y se devuelven varios resultados hasta que se cancela el examen o se alcanza el tiempo de espera de 60 segundos.
 
 ### <a name="3-cancel-the-scanning-session"></a>3. cancelar la sesión de examen
 
@@ -147,13 +147,13 @@ El usuario puede cancelar la sesión de detección a través de un botón propor
 
 ![Botón Cancelar durante el examen](corenfc-images/scan-cancel-sml.png)
 
-La aplicación puede cancelar mediante programación el análisis llamando al método `InvalidateSession`:
+La aplicación puede cancelar mediante programación el análisis llamando al `InvalidateSession` método:
 
 ```csharp
 Session.InvalidateSession();
 ```
 
-En ambos casos, se llamará al método `DidInvalidate` del delegado.
+En ambos casos, se `DidInvalidate` llamará al método del delegado.
 
 ## <a name="summary"></a>Resumen
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: 7573e32086c4ba6577bfda701b72bbee0a01536d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 1032e6a180b05337d3dcf849b2b4ad79e6e08bb8
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030826"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573747"
 ---
 # <a name="tvos-application-fundamentals"></a>Aspectos básicos de la aplicación tvOS
 
 _En esta sección se presentan las tareas y los conceptos más comunes que los desarrolladores deben tener en cuenta al escribir aplicaciones de Xamarin. tvOS._
 
-<a name="Xamarin.tvOS-Application-Fundamentals" />
+<a name="Xamarin.tvOS-Application-Fundamentals"></a>
 
 ## <a name="xamarintvos-application-fundamentals"></a>Aspectos básicos de la aplicación Xamarin. tvOS
 
@@ -26,27 +26,27 @@ Los documentos de esta sección proporcionan un conocimiento práctico de los co
 
 Se recomienda encarecidamente que trabaje en la [Guía de inicio rápido Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md) en primer lugar, ya que trata conceptos clave y técnicas que usaremos en cada artículo.
 
-<a name="Working-with-Icons-and-Images" />
+<a name="Working-with-Icons-and-Images"></a>
 
-### <a name="working-with-icons-and-imagesiostvosapp-fundamentalsicons-imagesmd"></a>[Trabajo con iconos e imágenes](~/ios/tvos/app-fundamentals/icons-images.md)
+### <a name="working-with-icons-and-images"></a>[Trabajo con iconos e imágenes](~/ios/tvos/app-fundamentals/icons-images.md)
 
 En este artículo se describe el diseño y el trabajo con iconos e imágenes dentro de una aplicación Xamarin. tvOS.
 
-<a name="Working-with-Navigation-and-Focus" />
+<a name="Working-with-Navigation-and-Focus"></a>
 
-### <a name="working-with-navigation-and-focusiostvosapp-fundamentalsnavigation-focusmd"></a>[Trabajo con navegación y foco](~/ios/tvos/app-fundamentals/navigation-focus.md)
+### <a name="working-with-navigation-and-focus"></a>[Trabajo con navegación y foco](~/ios/tvos/app-fundamentals/navigation-focus.md)
 
 En este artículo se describe el concepto de enfoque y cómo se usa para presentar y controlar la navegación dentro de una aplicación Xamarin. tvOS.
 
-<a name="Resources-and-Data-Storage" />
+<a name="Resources-and-Data-Storage"></a>
 
-### <a name="resources-and-data-storageiostvosapp-fundamentalsresources-data-storagemd"></a>[Recursos y almacenamiento de datos](~/ios/tvos/app-fundamentals/resources-data-storage.md)
+### <a name="resources-and-data-storage"></a>[Recursos y almacenamiento de datos](~/ios/tvos/app-fundamentals/resources-data-storage.md)
 
 A diferencia de los dispositivos iOS, el nuevo Apple TV no proporciona almacenamiento local persistente para las aplicaciones de tvOS. En este artículo se explica cómo trabajar con recursos y el almacenamiento de datos persistentes en una aplicación Xamarin. tvOS.
 
-<a name="Playing-Sound-with-AVAudioPlayer" />
+<a name="Playing-Sound-with-AVAudioPlayer"></a>
 
-### <a name="playing-sound-with-avaudioplayeriostvosapp-fundamentalssoundsmd"></a>[Reproducción de sonidos con AVAudioPlayer](~/ios/tvos/app-fundamentals/sounds.md)
+### <a name="playing-sound-with-avaudioplayer"></a>[Reproducción de sonidos con AVAudioPlayer](~/ios/tvos/app-fundamentals/sounds.md)
 
 En este artículo se muestra cómo usar una clase auxiliar para controlar la reproducción de sonido mediante un AVAudioPlayer en la aplicación Xamarin. tvOS.
 

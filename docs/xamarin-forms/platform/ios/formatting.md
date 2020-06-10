@@ -1,34 +1,18 @@
 ---
-title: ''
-description: En este artículo se explica cómo establecer la apariencia específica de iOS sin usar un Xamarin.Forms representador personalizado.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: eb44b7d756fee4fa4f452b79292effb45ab98154
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138520"
+Título: "agregar formato específico de iOS" Descripción: "en este artículo se explica cómo establecer la apariencia específica de iOS sin usar un Xamarin.Forms representador personalizado".
+MS. Prod: Xamarin ms. AssetID: CE50E207-D092-4D88-8439-1B51F178E7ED ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/29/2016 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="adding-ios-specific-formatting"></a>Agregar formato específico de iOS
 
 Una manera de establecer el formato específico de iOS es crear un [representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) para un control y establecer estilos y colores específicos de la plataforma para cada plataforma.
 
 Otras opciones para controlar el Xamarin.Forms aspecto de la aplicación de iOS incluyen:
 
-- Configurar las opciones de presentación en [ **info. plist**](#info-plist)
-- Establecer estilos de control a través de la [ `UIAppearance` API](#uiappearance)
+- Configurar las opciones de presentación en [ **info. plist**](#customizing-infoplist)
+- Establecer estilos de control a través de la [ `UIAppearance` API](#uiappearance-api)
 
 Estas alternativas se describen a continuación.
-
-<a name="info-plist"/>
 
 ## <a name="customizing-infoplist"></a>Personalización de info. plist
 
@@ -62,8 +46,6 @@ o bien, edite el archivo **info. plist** correspondiente directamente para inclu
 Ahora, cuando se ejecuta la aplicación, la barra de navegación es verde y su texto es blanco (debido al Xamarin.Forms formato) *y* el texto de la barra de estado también está en blanco gracias a la configuración específica de iOS:
 
 ![](theme-images/status-white-sml.png "iOS Theming")
-
-<a name="uiappearance"/>
 
 ## <a name="uiappearance-api"></a>API de UIAppearance
 

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsHasta
-description: El Xamarin.Forms control deslizante es una barra horizontal que el usuario puede manipular para seleccionar un valor doble de un intervalo continuo. En este artículo se explica cómo usar la clase Slider para seleccionar un valor de un intervalo de valores continuos.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1cde999e6781f019b6abceee82caf259e1e5a710
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140158"
+title: " Xamarin.Forms Slider" Description: "el Xamarin.Forms control deslizante es una barra horizontal que el usuario puede manipular para seleccionar un valor doble de un intervalo continuo. En este artículo se explica cómo usar la clase Slider para seleccionar un valor de un intervalo de valores continuos.
+MS. Prod: Xamarin ms. AssetID: 36B1C645-26E0-4874-B6B6-BDBF77662878 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/27/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-slider"></a>Xamarin.FormsHasta
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
@@ -116,7 +102,7 @@ Este es el programa que se ejecuta en dispositivos iOS y Android:
 
 [![Código de control deslizante básico](slider-images/BasicSliderCode.png "Código de control deslizante básico")](slider-images/BasicSliderCode-Large.png#lightbox)
 
-En el segundo `Label` se muestra el texto "(no inicializado)" hasta que `Slider` se manipula, lo que hace que se desencadene el primer `ValueChanged` evento. Tenga en cuenta que el número de posiciones decimales que se muestran es diferente para cada plataforma. Estas diferencias están relacionadas con las implementaciones de la plataforma de `Slider` y se describen más adelante en este artículo en la sección [diferencias de implementación de plataforma](#implementations).
+En el segundo `Label` se muestra el texto "(no inicializado)" hasta que `Slider` se manipula, lo que hace que se desencadene el primer `ValueChanged` evento. Tenga en cuenta que el número de posiciones decimales que se muestran es diferente para cada plataforma. Estas diferencias están relacionadas con las implementaciones de la plataforma de `Slider` y se describen más adelante en este artículo en la sección [diferencias de implementación de plataforma](#platform-implementation-differences).
 
 ### <a name="creating-a-slider-in-xaml"></a>Crear un control deslizante en XAML
 
@@ -210,8 +196,6 @@ En la página de **enlaces del control deslizante básico** se muestra cómo esc
 
 La `Rotation` propiedad de la primera `Label` se enlaza a la `Value` propiedad de `Slider` , como es la `Text` propiedad del segundo `Label` con una `StringFormat` especificación. La página de **enlaces del control deslizante básico** funciona de forma ligeramente diferente a la de las dos páginas anteriores: cuando la página aparece por primera vez, la segunda `Label` muestra la cadena de texto con el valor. Esta es una de las ventajas de usar el enlace de datos. Para mostrar texto sin enlace de datos, tendría que inicializar específicamente la `Text` propiedad de `Label` o simular una activación del evento llamando `ValueChanged` al controlador de eventos desde el constructor de clase.
 
-<a name="precautions" />
-
 ## <a name="precautions"></a>PRECAUCIONES
 
 El valor de la `Minimum` propiedad siempre debe ser menor que el valor de la `Maximum` propiedad. El fragmento de código siguiente hace que `Slider` genere una excepción:
@@ -283,8 +267,6 @@ Si se ha `ValueChanged` adjuntado un controlador de eventos en el momento en que
 ```
 
 Cuando `Minimum` se establece en 10, `Value` también se establece en 10 y `ValueChanged` se desencadena el evento. Esto puede ocurrir antes de que se haya construido el resto de la página y el controlador podría intentar hacer referencia a otros elementos de la página que aún no se han creado. Es posible que desee agregar código al `ValueChanged` controlador que compruebe `null` los valores de otros elementos de la página. O bien, puede establecer el `ValueChanged` controlador de eventos después de `Slider` inicializar los valores.
-
-<a name="implementations" />
 
 ## <a name="platform-implementation-differences"></a>Diferencias de implementación de plataforma
 
@@ -508,7 +490,7 @@ A medida que `Slider` se manipulan los elementos, los `BoxView` `Label` elemento
 
 [![Controles deslizantes de color HSL](slider-images/HslColorSliders.png "Controles deslizantes de color HSL")](slider-images/HslColorSliders-Large.png#lightbox)
 
-El `StringFormat` componente de la `Binding` extensión de marcado se establece para que el formato "F2" muestre dos posiciones decimales. (El formato de cadena en los enlaces de datos se describe en el artículo [formato de cadena](~/xamarin-forms/app-fundamentals/data-binding/string-formatting.md)). Sin embargo, la versión de UWP del programa se limita a los valores 0, 0,1, 0,2,... 0,9 y 1,0. Este es un resultado directo de la implementación de UWP `Slider` tal y como se ha descrito anteriormente en la sección [diferencias de implementación de plataforma](#implementations).
+El `StringFormat` componente de la `Binding` extensión de marcado se establece para que el formato "F2" muestre dos posiciones decimales. (El formato de cadena en los enlaces de datos se describe en el artículo [formato de cadena](~/xamarin-forms/app-fundamentals/data-binding/string-formatting.md)). Sin embargo, la versión de UWP del programa se limita a los valores 0, 0,1, 0,2,... 0,9 y 1,0. Este es un resultado directo de la implementación de UWP `Slider` tal y como se ha descrito anteriormente en la sección [diferencias de implementación de plataforma](#platform-implementation-differences).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

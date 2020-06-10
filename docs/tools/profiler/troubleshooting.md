@@ -6,12 +6,12 @@ ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: davidortinau
 ms.author: daortin
 ms.date: 10/27/2017
-ms.openlocfilehash: 915f7df80e3ae29ab3c598ea95fabbc054e916dd
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5b4b4bdf85ec79a46a4e4c06504eb8b9b85af329
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73019209"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84566962"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Solución de problemas de Xamarin Profiler
 
@@ -25,21 +25,21 @@ El equipo de Xamarin puede ayudar a realizar un seguimiento de los problemas si 
 
 ### <a name="getting-log-outputs"></a>Obtención de salidas de registro
 
-En los registros de Mac se guardan en `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`.
+En, los registros de Mac se guardan en `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log` .
 
-En Windows, estos se guardan en `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` incluya el registro más reciente cada vez que envíe un problema.
+En Windows, estos se guardan para `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` incluir el registro más reciente cada vez que se envía un problema.
 
 Estamos agregando más registros a medida que avanzamos, por lo que esta salida debe crecer y ser más útil con el tiempo.
 
-<a name="gen_mlpd" />
+<a name="gen_mlpd"></a>
 
 ### <a name="generating-mlpd-files"></a>Generar archivos. MLPD
 
 Un archivo **. MLPD** es la salida comprimida del generador de perfiles en tiempo de ejecución de mono. La GUI Xamarin Profiler Lee los datos de un **. MLPD** y los muestra para el usuario. los archivos **. MLPD** son herramientas de depuración útiles para Xamarin porque ayudan a nuestros ingenieros a diagnosticar los problemas que puede tener el generador de perfiles con los datos.
 
-El **. MLPD** de la sesión actual se guarda automáticamente en el directorio de `/tmp` de su Mac y se puede identificar mediante la marca de tiempo. Si activa el registro, el primer resultado será la ruta de acceso al archivo **. MLPD** . El archivo **. MLPD** se guardará normalmente en el directorio a partir de ~/var/Folders...
+El **. MLPD** de la sesión actual se guarda automáticamente en el directorio de su Mac `/tmp` y se puede identificar mediante la marca de tiempo. Si activa el registro, el primer resultado será la ruta de acceso al archivo **. MLPD** . El archivo **. MLPD** se guardará normalmente en el directorio a partir de ~/var/Folders...
 
-También se puede guardar el archivo **. MLPD** para una sesión actual eligiendo **archivo > Guardar como..** . en el menú del generador de perfiles:
+También se puede guardar el archivo **. MLPD** para una sesión actual eligiendo **archivo > guardar como..** . en el menú del generador de perfiles:
 
 **Visual Studio para Mac**:
 
@@ -79,7 +79,7 @@ Normalmente, se debe a que no puede iniciarse en el simulador o en el emulador. 
 
 #### <a name="to-watch-a-specific-thread"></a>Para ver un subproceso concreto
 
-Si tiene un subproceso que desea inspeccionar específicamente, sería idóneo asignar un nombre al subproceso al principio de su creación para obtener `ThreadName` en lugar de `0x0`. Por ejemplo, para establecer el nombre del subproceso como `UI`, puede usar el código siguiente:
+Si tiene un subproceso que desea inspeccionar específicamente, sería idóneo asignar un nombre al subproceso al principio de su creación para obtener en `ThreadName` lugar de `0x0` . Por ejemplo, para establecer el nombre del subproceso como `UI` , podría usar el código siguiente:
 
 ```csharp
 RunOnUiThread (() => {

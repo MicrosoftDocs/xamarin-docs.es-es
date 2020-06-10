@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: e42912add9dd94b9cce16d725a456b1b4da30e35
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 98cedb1cf02f9688581946fa21a2cb40379f606f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022208"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84566180"
 ---
 # <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Trabajar con controladores de vista en dos paneles tvOS en Xamarin
 
@@ -20,7 +20,7 @@ Un controlador de vista en dos paneles presenta y administra un controlador de v
 
 [![](split-views-images/intro01.png "Sample Split View")](split-views-images/intro01.png#lightbox)
 
-<a name="About-Split-View-Controllers" />
+<a name="About-Split-View-Controllers"></a>
 
 ## <a name="about-split-view-controllers"></a>Acerca de los controladores de vista en dos paneles
 
@@ -40,15 +40,15 @@ Apple tiene las siguientes sugerencias para trabajar con controladores de vista 
 - **Conservar la selección principal** : aunque el contenido de la vista de detalle puede cambiar es respuesta a la selección de un usuario en la vista maestra, el contenido de la vista maestra debe corregirse. Además, debe mostrar claramente el elemento seleccionado actualmente en la vista maestra.
 - **Usar un único título unificado** : por lo general, querrá usar un solo título centrado en la vista de detalle, en lugar de un título en la vista de detalle y la vista maestra.
 
-<a name="Split-View-Controllers-and-Storyboards" />
+<a name="Split-View-Controllers-and-Storyboards"></a>
 
 ## <a name="split-view-controllers-and-storyboards"></a>Guiones gráficos y controladores de vista en dos paneles
 
 La manera más sencilla de trabajar con controladores de vista en dos paneles en una aplicación Xamarin. tvOS es agregarlos a la interfaz de usuario de la aplicación mediante el diseñador de iOS.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-1. En el **Panel de solución**, haga doble clic en el archivo `Main.storyboard` y ábralo para su edición.
+1. En el **Panel de solución**, haga doble clic en el `Main.storyboard` archivo y ábralo para su edición.
 1. Arrastre un **controlador de vista en dos paneles** desde el **cuadro de herramientas** y colóquelo en la vista: 
 
     [![](split-views-images/activity01.png "A Split View Controller")](split-views-images/activity01.png#lightbox)
@@ -63,12 +63,12 @@ La manera más sencilla de trabajar con controladores de vista en dos paneles en
 1. Diseñe el contenido de las vistas principal y de detalles: 
 
     [![](split-views-images/activity04.png "Example layout")](split-views-images/activity04.png#lightbox)
-1. Asigne **nombres** en la **pestaña widget** del **Panel de propiedades** para trabajar con los controles de interfaz de C# usuario en el código.
+1. Asigne **nombres** en la **pestaña widget** del **Panel de propiedades** para trabajar con los controles de interfaz de usuario en el código de C#.
 1. Guarde los cambios y vuelva a Visual Studio para Mac.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. En el **Explorador de soluciones**, haga doble clic en el archivo `Main.storyboard` y ábralo para su edición.
+1. En el **Explorador de soluciones**, haga doble clic en el `Main.storyboard` archivo y ábralo para su edición.
 1. Arrastre un **controlador de vista en dos paneles** desde el **cuadro de herramientas** y colóquelo en la vista: 
 
     [![](split-views-images/activity01-vs.png "A Split View Controller")](split-views-images/activity01-vs.png#lightbox)
@@ -83,24 +83,24 @@ La manera más sencilla de trabajar con controladores de vista en dos paneles en
 1. Diseñe el contenido de las vistas principal y de detalles: 
 
     [![](split-views-images/activity04.png "Content layout")](split-views-images/activity04.png#lightbox)
-1. Asigne **nombres** en la **pestaña widget** del **Explorador de propiedades** para trabajar con los controles de interfaz C# de usuario en el código.
+1. Asigne **nombres** en la **pestaña widget** del **Explorador de propiedades** para trabajar con los controles de interfaz de usuario en el código de C#.
 1. Guarde los cambios.
 
 -----
 
 Para obtener más información sobre cómo trabajar con guiones gráficos, vea nuestra [Guía de inicio rápido Hola, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
-<a name="Working-with-Split-View-Controllers" />
+<a name="Working-with-Split-View-Controllers"></a>
 
 ## <a name="working-with-split-view-controllers"></a>Trabajar con controladores de vista en dos paneles
 
 Como se indicó anteriormente, un controlador de vista en dos paneles se suele usar en situaciones en las que se muestra el contenido filtrado al usuario. Las categorías principales se muestran a la izquierda en la vista maestra y los resultados filtrados a la derecha en la vista de detalle en función de la selección del usuario.
 
-<a name="Accessing-Master-and-Detail" />
+<a name="Accessing-Master-and-Detail"></a>
 
 ### <a name="accessing-master-and-detail"></a>Obtener acceso a maestro y detalles
 
-Si necesita tener acceso a los controladores de vista maestra y de detalles mediante programación, use la propiedad `ViewControllers` del controlador de vista en dos paneles. Por ejemplo:
+Si necesita tener acceso a los controladores de vista maestra y de detalles mediante programación, utilice la `ViewControllers` propiedad del controlador de vista en dos paneles. Por ejemplo:
 
 ```csharp
 // Gain access to master and detail view controllers
@@ -110,7 +110,7 @@ var detailController = ViewControllers [1] as DetailViewController;
 
 Se presenta como una matriz, donde el primer elemento (0) del controlador de vista principal y el segundo elemento (1) son los detalles.
 
-<a name="Accessing-Detail-from-Master" />
+<a name="Accessing-Detail-from-Master"></a>
 
 ### <a name="accessing-detail-from-master"></a>Obtener acceso a detalles desde la página maestra
 
@@ -122,7 +122,7 @@ La forma más fácil de hacerlo es exponer una propiedad en la clase de controla
 public DetailViewController DetailController { get; set;}
 ```
 
-En el controlador de vista en dos paneles, invalide el método `ViewDidLoad` y Ate las dos vistas juntas. Por ejemplo:
+En el controlador de vista en dos paneles, invalide el `ViewDidLoad` método y asocie las dos vistas. Por ejemplo:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -142,11 +142,11 @@ public override void ViewDidLoad ()
 
 Puede exponer propiedades y métodos en el controlador de vista de detalle que el maestro pueda utilizar para presentar datos nuevos según sea necesario.
 
-<a name="Showing-and-Hiding-Master" />
+<a name="Showing-and-Hiding-Master"></a>
 
 ### <a name="showing-and-hiding-master"></a>Mostrar y ocultar maestro
 
-Opcionalmente, puede mostrar y ocultar el controlador de vista maestra con la `PreferredDisplayMode` propiedad del controlador de vista en dos paneles. Por ejemplo:
+Opcionalmente, puede mostrar y ocultar el controlador de vista maestra mediante la `PreferredDisplayMode` propiedad del controlador de vista en dos paneles. Por ejemplo:
 
 ```csharp
 // Show hide split view
@@ -157,16 +157,16 @@ if (SplitViewController.DisplayMode == UISplitViewControllerDisplayMode.PrimaryH
 }
 ```
 
-En la enumeración `UISplitViewControllerDisplayMode` se define cómo se presentará el controlador de vista principal como uno de los siguientes:
+La `UISplitViewControllerDisplayMode` enumeración define cómo se presentará el controlador de vista principal como uno de los siguientes:
 
 - **Automatic** -tvOS controlará la presentación de las vistas principal y de detalle.
 - **PrimaryHidden** : oculta el controlador de vista maestra.
 - **AllVisible** : muestra los controladores principal y de vista de detalle en paralelo. Esta es la presentación normal y predeterminada.
 - **PrimaryOverlay** : el controlador de vista de detalle se extiende en y está incluido en el maestro.
 
-Para obtener el estado de presentación actual, use la propiedad `DisplayMode` del controlador de vista en dos paneles.
+Para obtener el estado de presentación actual, use la `DisplayMode` propiedad del controlador de vista en dos paneles.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumen
 

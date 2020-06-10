@@ -1,24 +1,9 @@
 ---
-title: Xamarin.FormsAdministrador de estado visual
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 13dd0a3f5d665e2232e7e6e12edac7cf117dd0ca
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127288"
+title: " Xamarin.Forms Visual State Manager" Description: "use el administrador de estado visual para realizar cambios en los elementos XAML en función de los Estados visuales establecidos desde el código".
+MS. Prod: Xamarin ms. AssetID: 17296F14-640D-484B-A24C-A4E9B7013E4F ms. Technology: Xamarin-Forms ms. Custom: Xamu-video Author: davidbritch ms. Author: dabritch ms. Date: 02/21/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinforms-visual-state-manager"></a>Xamarin.FormsAdministrador de estado visual
+
+# <a name="xamarinforms-visual-state-manager"></a>Administrador de estado visual de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
 
@@ -408,42 +393,14 @@ Ahora todas las `Entry` vistas de esta página responden de la misma manera a su
 
 En la tabla siguiente se enumeran los Estados visuales que se definen en Xamarin.Forms :
 
-| Clase | States | Más información |
-| ----- | ---
-Título: ' Xamarin.Forms Visual State Manager ' Descripción: MS. Prod: MS. AssetID: MS. Technology: MS. Custom: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
---- | ---Título: ' Xamarin.Forms Visual State Manager ' Descripción: MS. Prod: MS. AssetID: MS. Technology: MS. Custom: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: ' Xamarin.Forms Visual State Manager ' Descripción: MS. Prod: MS. AssetID: MS. Technology: MS. Custom: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: ' Xamarin.Forms Visual State Manager ' Descripción: MS. Prod: MS. AssetID: MS. Technology: MS. Custom: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: ' Xamarin.Forms Visual State Manager ' Descripción: MS. Prod: MS. AssetID: MS. Technology: MS. Custom: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: ' Xamarin.Forms Visual State Manager ' Descripción: MS. Prod: MS. AssetID: MS. Technology: MS. Custom: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: ' Xamarin.Forms Visual State Manager ' Descripción: MS. Prod: MS. AssetID: MS. Technology: MS. Custom: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--------- | | `Button` | `Pressed` |  [Estados visuales del botón](~/xamarin-forms/user-interface/button.md#button-visual-states) | | `CheckBox` | `IsChecked` |  [Estados visuales de CheckBox](~/xamarin-forms/user-interface/checkbox.md#checkbox-visual-states) | | `CarouselView`  |  `DefaultItem` `CurrentItem` Estados visuales de,, `PreviousItem` , `NextItem`  |  [CarouselView](~/xamarin-forms/user-interface/carouselview/interaction.md#define-visual-states) | `ImageButton`  |  | `Pressed`  |  [Estados visuales de ImageButton](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) | | `RadioButton` | `IsChecked` |  [Estados visuales de RadioButton](~/xamarin-forms/user-interface/radiobutton.md#radiobutton-visual-states) | | `VisualElement`  |  `Normal` `Disabled` `Focused` `Selected`  |  [Estados comunes](#common-states) ,,, |
+| Class | States | Más información |
+| ----- | ------ | ---------------- |
+| `Button` | `Pressed` | [Estados visuales del botón](~/xamarin-forms/user-interface/button.md#button-visual-states) |
+| `CheckBox` | `IsChecked` | [Estados visuales de la casilla](~/xamarin-forms/user-interface/checkbox.md#checkbox-visual-states) |
+| `CarouselView` | `DefaultItem`, `CurrentItem`, `PreviousItem`, `NextItem` | [Estados visuales de CarouselView](~/xamarin-forms/user-interface/carouselview/interaction.md#define-visual-states) |
+| `ImageButton` | `Pressed` | [Estados visuales de ImageButton](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) |
+| `RadioButton` | `IsChecked` | [Estados visuales de RadioButton](~/xamarin-forms/user-interface/radiobutton.md#radiobutton-visual-states) |
+| `VisualElement` | `Normal`, `Disabled`, `Focused`, `Selected` | [Estados comunes](#common-states) |
 
 Se puede tener acceso a cada uno de estos Estados a través del grupo de Estados visuales denominado `CommonStates` .
 
@@ -626,7 +583,7 @@ Los Estados visuales admiten desencadenadores de estado, que son un grupo especi
 
 Los desencadenadores de estado se agregan a la colección [`StateTriggers`](xref:Xamarin.Forms.VisualState.StateTriggers) de una clase [`VisualState`](xref:Xamarin.Forms.VisualState). Esta colección puede contener un único desencadenador de estado o varios desencadenadores de estado. Se aplicará una clase [`VisualState`](xref:Xamarin.Forms.VisualState) cuando cualquier desencadenador de estado de la colección esté activo.
 
-Al usar desencadenadores de estado para controlar los Estados visuales, Xamarin.Forms usa las siguientes reglas de precedencia para determinar qué desencadenador (y correspondiente [`VisualState`](xref:Xamarin.Forms.VisualState) ) estará activo:
+Al usar desencadenadores de estado para controlar los estados visuales, Xamarin.Forms usa las siguientes reglas de prioridad para determinar qué desencadenador, y la clase [`VisualState`](xref:Xamarin.Forms.VisualState) correspondiente, se activará:
 
 1. Cualquier desencadenador derivado de [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase).
 1. Una clase [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) activada debido a que se cumple la condición [`MinWindowWidth`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowWidth).
@@ -634,9 +591,7 @@ Al usar desencadenadores de estado para controlar los Estados visuales, Xamarin.
 
 Si hay varios desencadenadores activos simultáneamente (por ejemplo, dos desencadenadores personalizados), tiene prioridad el primer desencadenador declarado en el marcado.
 
-Para obtener más información acerca de los desencadenadores de estado, consulte [desencadenadores de estado](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers).
-
-<a name="adaptive-layout" />
+Para obtener más información sobre desencadenadores de estado, vea [Desencadenadores de estado](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers).
 
 ## <a name="use-the-visual-state-manager-for-adaptive-layout"></a>Usar el administrador de estado visual para el diseño adaptable
 

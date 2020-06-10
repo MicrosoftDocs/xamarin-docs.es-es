@@ -1,22 +1,8 @@
 ---
-title: Opciones de diseño enXamarin.Forms
-description: Cada Xamarin.Forms vista tiene las propiedades HorizontalOptions y VerticalOptions, de tipo LayoutOptions. En este artículo se explica el efecto que tiene cada valor de LayoutOptions en la alineación y la expansión de una vista.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 17f4e76f9bef71352cabddfba9397e95bcdd24d3
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138039"
+title: "opciones de diseño en Xamarin.Forms " Description: "cada Xamarin.Forms vista tiene las propiedades HorizontalOptions y VerticalOptions, de tipo LayoutOptions. En este artículo se explica el efecto que tiene cada valor de LayoutOptions en la alineación y la expansión de una vista. "
+MS. Prod: Xamarin ms. AssetID: 7CAB5631-5153-4DEF-8AD7-C6011CE44307 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/10/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="layout-options-in-xamarinforms"></a>Opciones de diseño enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
@@ -52,8 +38,6 @@ Los `StartAndExpand` `CenterAndExpand` valores,, `EndAndExpand` y `FillAndExpand
 
 > [!NOTE]
 > El valor predeterminado de las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) y [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) de una vista es [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill).
-
-<a name="alignment" />
 
 ## <a name="alignment"></a>Alineación
 
@@ -98,9 +82,7 @@ El código da como resultado el diseño que se muestra en las siguientes captura
 
 [![](layout-options-images/alignment.png "Alignment Layout Options")](layout-options-images/alignment-large.png#lightbox "Alignment Layout Options")
 
-<a name="expansion" />
-
-## <a name="expansion"></a>Ampliación
+## <a name="expansion"></a>Expansión
 
 La expansión controla si una vista ocupará más espacio, si está disponible, dentro de [`StackLayout`](xref:Xamarin.Forms.StackLayout) . Si `StackLayout` contiene espacio sin usar (es decir, el valor de `StackLayout` es mayor que el tamaño combinado de todos sus elementos secundarios), el espacio no utilizado se comparte por igual entre todas las vistas secundarias que solicitan la expansión estableciendo sus [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) propiedades o en un [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) campo que utiliza el `AndExpand` sufijo. Tenga en cuenta que cuando se usa todo el espacio de `StackLayout` , las opciones de expansión no tienen ningún efecto.
 

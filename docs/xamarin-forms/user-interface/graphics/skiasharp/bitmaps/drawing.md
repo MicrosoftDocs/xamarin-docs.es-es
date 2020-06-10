@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 593d6a8b30d5ed0e143d1c013849d2bef571f6dc
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140301"
+title: "crear y dibujar en mapas de bits de SkiaSharp" Descripción: "Aprenda a crear mapas de bits de SkiaSharp y, a continuación, dibuje en estos mapas de bits mediante la creación de un lienzo basado en ellos".
+MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 79BD3266-D457-4E50-BDDF-33450035FA0F Author: davidbritch ms. Author: dabritch ms. Date: 07/17/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Crear y dibujar en mapas de bits de SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -341,8 +327,6 @@ El constructor finaliza creando un `SKCanvasView` para mostrar el resultado:
 
 [![Imagen de píxel](drawing-images/PixelizeImage.png "Imagen de píxel")](drawing-images/PixelizeImage-Large.png#lightbox)
 
-<a name="rotating-bitmaps" />
-
 ## <a name="rotating-bitmaps"></a>Rotar mapas de bits
 
 Otra tarea común es rotar mapas de bits. Esto es especialmente útil cuando se recuperan mapas de bits de una biblioteca de fotos de iPhone o iPad. A menos que el dispositivo se haya mantenido en una orientación determinada cuando se tomó la foto, es probable que la imagen esté al revés o a un lado.
@@ -388,7 +372,7 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
 }
 ```
 
-Estos dos métodos se usan en las páginas de **rompecabezas fotográfico** descritas en el artículo [**recortar mapas de bits de SkiaSharp**](cropping.md#tile-division).
+Estos dos métodos se usan en las páginas de **rompecabezas fotográfico** descritas en el artículo [**recortar mapas de bits de SkiaSharp**](cropping.md#cropping-skiasharp-bitmaps).
 
 Un programa que permite al usuario girar un mapa de bits en incrementos de 90 grados solo necesita implementar una función para la rotación de 90 grados. Después, el usuario puede girar en cualquier incremento de 90 grados repitiendo la ejecución de esta función.
 

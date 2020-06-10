@@ -9,8 +9,6 @@ MS. Prod: Xamarin ms. AssetID: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2 ms. Technolo
 
 Es importante tener en cuenta cómo se utilizará la aplicación y cómo se puede incorporar la orientación horizontal para mejorar la experiencia del usuario. Los diseños individuales se pueden diseñar para acomodar varias orientaciones y el mejor uso del espacio disponible. En el nivel de aplicación, el giro se puede deshabilitar o habilitar.
 
-<a name="Controlling_Orientation" />
-
 ## <a name="controlling-orientation"></a>Controlar la orientación
 
 Al usar Xamarin.Forms , el método admitido para controlar la orientación del dispositivo es usar la configuración para cada proyecto individual.
@@ -74,8 +72,6 @@ Tenga en cuenta que las API nativas de Android proporcionan un gran control sobr
 
 En el Plataforma universal de Windows (UWP), las orientaciones admitidas se establecen en el archivo **Package. appxmanifest** . Al abrir el manifiesto, se mostrará un panel de configuración en el que se pueden seleccionar las orientaciones admitidas.
 
-<a name="Reacting_to_Changes_in_Orientation" />
-
 ## <a name="reacting-to-changes-in-orientation"></a>Reaccionar a los cambios de orientación
 
 Xamarin.Formsno ofrece ningún evento nativo para notificar a la aplicación los cambios de orientación en el código compartido. Sin embargo, [Xamarin.Essentials](~/essentials/index.md) contiene una `DeviceDisplay` clase [] que proporciona notificaciones de cambios de orientación.
@@ -120,8 +116,6 @@ y horizontal:
 ![](device-orientation-images/calculator-landscape.png "Calculator Application in Landscape")
 
 Tenga en cuenta que las aplicaciones aprovechan el espacio disponible agregando más funcionalidad en horizontal.
-
-<a name="Responsive_Layout" />
 
 ## <a name="responsive-layout"></a>Diseño dinámico
 

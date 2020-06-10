@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: aeb3d01a3d0f7edbe92c9959073d859fc63486a6
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e166f513a75faaa082e8557dc6f610f014547a25
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031651"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574148"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitarea para iPad en Xamarin. iOS
 
@@ -41,7 +41,7 @@ En este artículo se explican los pasos necesarios para asegurarse de que la apl
 
 **Vídeo de multitarea para iPad**
 
-<a name="Multitasking-QuickStart" />
+<a name="Multitasking-QuickStart"></a>
 
 ## <a name="multitasking-quickstart"></a>Inicio rápido de multitarea
 
@@ -52,13 +52,13 @@ Para admitir la visualización de **diapositivas** o de **vista dividida** , la 
 - Use un guion gráfico con las clases de diseño automático y tamaño para su interfaz de usuario.
 - Compatibilidad con las cuatro orientaciones de dispositivos iOS (vertical, vertical, vertical, horizontal a la izquierda & horizontal derecha).
 
-<a name="Multitasking" />
+<a name="Multitasking"></a>
 
 ## <a name="about-multitasking-for-ipad"></a>Acerca de la multitarea para iPad
 
 iOS 9 ofrece nuevas capacidades de multitarea en iPad con la introducción de _diapositivas_, _vista en dos paneles_ (solo iPad Air 2, iPad Mini 4 y iPad Pro) e _imagen en imagen_. Veremos más detenidamente estas características en las secciones siguientes.
 
-<a name="Slide-Over" />
+<a name="Slide-Over"></a>
 
 ### <a name="slide-over"></a>Deslizar sobre
 
@@ -73,7 +73,7 @@ Lo principal que hay que recordar es que el usuario decide qué dos aplicaciones
 
 La diapositiva solo está disponible en un iPad Pro, iPad Air, iPad Air 2, iPad mini 2, iPad mini 3 o iPad Mini 4. Para obtener más información sobre la preparación de la aplicación para la desactivación, consulte la documentación sobre la adopción de las [mejoras en la multitarea en iPad de](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html#//apple_ref/doc/uid/TP40015145) Apple.
 
-<a name="Split-View" />
+<a name="Split-View"></a>
 
 ### <a name="split-view"></a>Vista dividida
 
@@ -88,7 +88,7 @@ Al igual que la diapositiva, el usuario decide qué dos aplicaciones se van a ej
 
 Para obtener más información sobre la preparación de la aplicación para la vista en dos paneles, consulte la documentación sobre la adopción de las [mejoras en la multitarea en iPad](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html#//apple_ref/doc/uid/TP40015145) de Apple.
 
-<a name="Picture-in-Picture" />
+<a name="Picture-in-Picture"></a>
 
 ### <a name="picture-in-picture"></a>Imagen en imagen
 
@@ -102,17 +102,17 @@ Para que la aplicación muestre el vídeo de PIP en la solicitud del usuario, de
 
 Imagen en imagen solo está disponible en un iPad Pro, iPad Air, iPad Air 2, iPad mini 2, iPad mini 3 o iPad Mini 4. Para obtener más información, consulte la [aplicación de ejemplo PictureInPicture](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9) y la [imagen de Apple en Picture Inicio rápido](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/QuickStartForPictureInPicture.html#//apple_ref/doc/uid/TP40015145-CH14) documentación.
 
-<a name="Supporting-Multitasking-in-your-App" />
+<a name="Supporting-Multitasking-in-your-App"></a>
 
 ## <a name="supporting-multitasking-in-your-app"></a>Compatibilidad con la multitarea en la aplicación
 
 En el caso de las aplicaciones de Xamarin. iOS existentes, la compatibilidad con la multitarea es una tarea transparente siempre y cuando la aplicación ya siga las guías de diseño de Apple y los procedimientos recomendados para iOS 8. Esto significa que la aplicación debe usar guiones gráficos con clases de diseño automático y tamaño para sus diseños de interfaz de usuario (vea nuestra [Introducción a los guiones gráficos unificados](~/ios/user-interface/storyboards/unified-storyboards.md) para obtener más información).
 
-Para estas aplicaciones, se requieren pocos cambios o ningún cambio para admitir la multitarea y para que se comporten correctamente dentro de ella. Si la interfaz de usuario de la aplicación se creó con otros métodos, como el posicionamiento directo y el C# ajuste de tamaño de los elementos de la interfaz de usuario en el código o si se basa en tamaños de pantalla o orientaciones de dispositivo específicos, se necesitará una modificación importante para admitir correctamente la multitarea de iOS 9.
+Para estas aplicaciones, se requieren pocos cambios o ningún cambio para admitir la multitarea y para que se comporten correctamente dentro de ella. Si la interfaz de usuario de la aplicación se creó con otros métodos, como el posicionamiento directo y el ajuste de tamaño de los elementos de la interfaz de usuario en el código de C# o si se basa en tamaños de pantalla o orientaciones de dispositivo específicos, se necesitará una modificación importante para admitir correctamente la multitarea de iOS 9.
 
 Para admitir la multitarea de iOS 9 en cualquier nueva aplicación de Xamarin. iOS, use guiones gráficos con las clases de diseño automático y tamaño para todos los diseños de interfaz de usuario de la aplicación e implemente las instrucciones en las secciones siguientes.
 
-<a name="Screen-Size-Considerations" />
+<a name="Screen-Size-Considerations"></a>
 
 ### <a name="screen-size-and-orientation-considerations"></a>Consideraciones sobre el tamaño y la orientación de la pantalla
 
@@ -126,9 +126,9 @@ En iPad que admiten diapositivas y la vista en dos paneles, puede acabar con las
 
 | **Orientación** | **Aplicación principal** | **Aplicación secundaria** |
 |--- |--- |--- |
-| **Vertical** |75% de la pantalla<br />Horizontal compacta<br />Vertical normal|25% de la pantalla<br />Horizontal compacta<br />Vertical normal|
-| **Horiz** |75% de la pantalla<br />Horizontal normal<br />Vertical normal|25% de la pantalla<br />Horizontal compacta<br />Vertical normal|
-| **Horiz** |50% de la pantalla<br />Horizontal compacta<br />Vertical normal|50% de la pantalla<br />Horizontal compacta<br />Vertical normal|
+| **Retrato** |75% de la pantalla<br />Horizontal compacta<br />Vertical normal|25% de la pantalla<br />Horizontal compacta<br />Vertical normal|
+| **Horizontal** |75% de la pantalla<br />Horizontal normal<br />Vertical normal|25% de la pantalla<br />Horizontal compacta<br />Vertical normal|
+| **Horizontal** |50% de la pantalla<br />Horizontal compacta<br />Vertical normal|50% de la pantalla<br />Horizontal compacta<br />Vertical normal|
 
 En la aplicación de [MuliTask](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) de ejemplo, si se ejecuta en pantalla completa en un iPad en el modo horizontal, presentará la lista y la vista de detalle al mismo tiempo:
 
@@ -138,13 +138,13 @@ Si se ejecuta la misma aplicación en una diapositiva sobre el panel, se diseña
 
 [![](multitasking-images/sizeclasses04.png "Only the list presented when the device is horizontal")](multitasking-images/sizeclasses04.png#lightbox)
 
-Para asegurarse de que la aplicación se comporta correctamente en estas situaciones, debe adoptar las colecciones de rasgos junto con las clases de tamaño y ajustarse a las interfaces `IUIContentContainer` y `IUITraitEnvironment`. Consulte la referencia de la [clase UITraitCollection](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITraitCollection_ClassReference/index.html#//apple_ref/doc/uid/TP40014202) de Apple y la guía de [Introducción a los guiones gráficos unificados](~/ios/user-interface/storyboards/unified-storyboards.md) para obtener más información.
+Para asegurarse de que la aplicación se comporta correctamente en estas situaciones, debe adoptar las colecciones de rasgos junto con las clases de tamaño y ajustarse a las `IUIContentContainer` `IUITraitEnvironment` interfaces y. Consulte la referencia de la [clase UITraitCollection](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITraitCollection_ClassReference/index.html#//apple_ref/doc/uid/TP40014202) de Apple y la guía de [Introducción a los guiones gráficos unificados](~/ios/user-interface/storyboards/unified-storyboards.md) para obtener más información.
 
 Además, ya no puede confiar en los límites de pantalla de los dispositivos para definir el área visible de la aplicación; en su lugar, deberá usar los límites de la ventana de la aplicación. Dado que los límites de la ventana están totalmente bajo el control del usuario, no se pueden ajustar mediante programación ni evitar que el usuario cambie estos límites.
 
-Por último, la aplicación debe usar un archivo de guion gráfico para presentar su pantalla de inicio en lugar de usar un conjunto de archivos de imagen **. png** y admitir las cuatro orientaciones de interfaz (vertical, vertical, vertical, horizontalmente a la izquierda y horizontal derecha) que se deben tener en cuenta para ejecutar en un panel deslizante o en el modo de vista en dos paneles.
+Por último, la aplicación debe usar un archivo de guion gráfico para presentar su pantalla de inicio en lugar de usar un conjunto de archivos de imagen **. png** y admitir las cuatro orientaciones de interfaz (vertical, vertical, vertical, horizontalmente a la izquierda y horizontal derecha) que se deben tener en cuenta para su ejecución en un panel deslizante o en el modo de vista en dos paneles.
 
-<a name="Custom-Hardware-Keyboard-Shortcuts" />
+<a name="Custom-Hardware-Keyboard-Shortcuts"></a>
 
 ### <a name="custom-hardware-keyboard-shortcuts"></a>Métodos abreviados de teclado de hardware personalizado
 
@@ -188,9 +188,9 @@ public void NewEntry() {
 #endregion
 ```
 
-En primer lugar, reemplazamos la propiedad `CanBecomeFirstResponder` y devuelven `true` para que el controlador de vista o vista pueda recibir entradas del teclado. 
+En primer lugar, reemplazamos la `CanBecomeFirstResponder` propiedad y devolvemos `true` para que el controlador de vista o vista pueda recibir entradas del teclado. 
 
-A continuación, se invalida la propiedad `KeyCommands` y se crea un nuevo `UIKeyCommand` para la pulsación de tecla **comando N** . Cuando se activa la pulsación de tecla, llamamos al método `NewEntry` (que exponemos a iOS 9 mediante el comando `Export`) para realizar la acción solicitada.
+A continuación, invalide la `KeyCommands` propiedad y cree un nuevo `UIKeyCommand` para la pulsación de tecla del **comando N** . Cuando se activa la pulsación de tecla, se llama al `NewEntry` método (que se expone a iOS 9 mediante el `Export` comando) para realizar la acción solicitada.
 
 Si ejecutamos esta aplicación en un iPad con un teclado de hardware conectado y el comando Types **-N**de usuario, se agregará una nueva entrada a la lista. Si el usuario mantiene presionada la tecla de **comando** , se mostrará la lista de accesos directos:
 
@@ -198,7 +198,7 @@ Si ejecutamos esta aplicación en un iPad con un teclado de hardware conectado y
 
 Vea la [aplicación](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) de ejemplo para obtener una implementación de ejemplo.
 
-<a name="Resource-Management-Considerations" />
+<a name="Resource-Management-Considerations"></a>
 
 ### <a name="resource-management-considerations"></a>Consideraciones sobre la administración de recursos
 
@@ -220,7 +220,7 @@ Para asegurarse de que la aplicación usa los recursos de forma eficaz, debe hac
 
 Para más información sobre la administración de recursos, consulte la [Guía de eficiencia energética](https://developer.apple.com/library/prerelease/ios/documentation/Performance/Conceptual/EnergyGuide-iOS/index.html#//apple_ref/doc/uid/TP40015243) de Apple para aplicaciones iOS.
 
-<a name="Opting-Out-of-Multitasking" />
+<a name="Opting-Out-of-Multitasking"></a>
 
 ## <a name="opting-out-of-multitasking"></a>No participar en la multitarea
 
@@ -233,7 +233,7 @@ Para que la aplicación de Xamarin. iOS no se ejecute en un panel deslizante o e
 > [!IMPORTANT]
 > Aunque no participar en la multitarea impide que la aplicación se ejecute en la vista de deslizamiento o en la vista en dos paneles, no impide que otra aplicación se ejecute en un gráfico deslizante o se muestre una imagen en el vídeo de la imagen junto con la aplicación.
 
-<a name="Disabling-PIP-Video-Playback" />
+<a name="Disabling-PIP-Video-Playback"></a>
 
 ### <a name="disabling-pip-video-playback"></a>Deshabilitación de la reproducción de vídeo PIP
 
@@ -241,11 +241,11 @@ En la mayoría de los casos, la aplicación debe permitir al usuario reproducir 
 
 Para no participar en la reproducción de vídeo PIP, haga lo siguiente en la aplicación:
 
-- Si usa un `AVPlayerViewController` para mostrar vídeo, establezca la propiedad `AllowsPictureInPicturePlayback` en `false`.
-- Si usa el `AVPlayerLayer` para mostrar el vídeo, no cree instancias de un `AVPictureInPictureController`.
-- Si usa un `WKWebView` para mostrar vídeo, establezca la propiedad `AllowsPictureInPictureMediaPlayback` en `false`.
+- Si usa un `AVPlayerViewController` para mostrar el vídeo, establezca la `AllowsPictureInPicturePlayback` propiedad en `false` .
+- Si usa `AVPlayerLayer` para mostrar el vídeo, no cree instancias de un `AVPictureInPictureController` .
+- Si usa un `WKWebView` para mostrar el vídeo, establezca la `AllowsPictureInPictureMediaPlayback` propiedad en `false` .
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumen
 

@@ -1,22 +1,8 @@
 ---
-title: Buscar datos con Azure Search yXamarin.Forms
-description: En este artículo se muestra cómo usar la biblioteca de búsqueda de Microsoft Azure para integrar Azure Search en una Xamarin.Forms aplicación.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 69962bbb51a493ba2bcaed5d3c9407c5aafe471c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133294"
+title: "buscar datos con Azure Search y Xamarin.Forms " Descripción ": en este artículo se muestra cómo usar la biblioteca de Microsoft Azure Search para integrar Azure Search en una Xamarin.Forms aplicación".
+MS. Prod: Xamarin ms. AssetID: A4AEF233-3672-4174-9DBA-15BEE3030C0B ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/05/2016 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="search-data-with-azure-search-and-xamarinforms"></a>Buscar datos con Azure Search yXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
@@ -39,7 +25,7 @@ La solicitud más común para Azure Search es ejecutar una consulta. Hay dos tip
 
 Las consultas de búsqueda y las consultas de filtro se pueden usar por separado o juntas. Cuando se usan conjuntamente, la consulta de filtro se aplica primero a todo el índice y, a continuación, se realiza la consulta de búsqueda en los resultados de la consulta de filtro.
 
-Azure Search también admite la recuperación de sugerencias basadas en la entrada de búsqueda. Para obtener más información, vea [consultas de sugerencias](#suggestions).
+Azure Search también admite la recuperación de sugerencias basadas en la entrada de búsqueda. Para obtener más información, vea [consultas de sugerencias](#suggestion-queries).
 
 > [!NOTE]
 > Si no tiene una [suscripción a Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), cree una [cuenta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de empezar.
@@ -225,8 +211,6 @@ El `SearchAsync` método devuelve un `DocumentSearchResult` objeto que contiene 
 ![](azure-search-images/search.png "Search Results")
 
 Para obtener más información sobre la búsqueda y el filtrado, consulte [consultar el índice de Azure Search mediante el SDK de .net](/azure/search/search-query-dotnet/).
-
-<a name="suggestions" />
 
 ### <a name="suggestion-queries"></a>Consultas de sugerencias
 

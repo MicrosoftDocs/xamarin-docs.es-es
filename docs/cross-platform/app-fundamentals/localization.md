@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 418c0da2b8fa0e495ae7e6a605c7fde43b6515cb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f496a831c226e377f62e2a6fab8ed328bf1be0b9
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016798"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571081"
 ---
 # <a name="localization"></a>Localización
 
@@ -47,7 +47,7 @@ Con independencia de las plataformas móviles a las que se destina la aplicació
 
 ## <a name="design-considerations"></a>Consideraciones de diseño
 
-La arquitectura de una aplicación para que sea posible localizar su contenido se denomina internacionalización. La internacionalización correcta es algo más que simplemente permitir que se carguen cadenas de idioma diferentes en tiempo de ejecución: una aplicación bien diseñada debe permitir que todos los recursos se cambien en función del idioma y la configuración regional (incluidas imágenes, sonidos y vídeos) y se puedan adaptar formato y diseño para hacer frente a cadenas de tamaño diferentes.
+La arquitectura de una aplicación para que sea posible localizar su contenido se denomina internacionalización. La internacionalización correcta es algo más que simplemente permitir que se carguen cadenas de idioma diferentes en tiempo de ejecución: una aplicación bien diseñada debe permitir que todos los recursos se cambien en función del idioma y la configuración regional (incluidas imágenes, sonidos y vídeos) y puede adaptar el formato y el diseño para hacer frente a cadenas de tamaño diferentes.
 
 En esta sección se describen algunas consideraciones de diseño que se deben tener en cuenta al crear una aplicación internacionalizada.
 
@@ -67,7 +67,7 @@ Los diseños en los que la etiqueta de visualización y el campo de entrada est�
 
 Como norma general, si va a compilar diseños fijos (especialmente elementos en paralelo), permita al menos un 50% más de ancho que las cadenas en inglés que se necesitan para las etiquetas y el texto. Esto no solucionará todos los problemas, pero proporcionará un búfer que funcionará en muchos casos.
 
-### <a name="input-validation"></a>Validación de entrada
+### <a name="input-validation"></a>Validación de entradas
 
 Tenga cuidado con las suposiciones al escribir reglas de validación. Podría parecer que es necesario especificar una entrada de campo de texto para "requerir" al menos tres caracteres en inglés, ya que una sola letra apenas tiene significado. En chino y japonés, sin embargo, un único carácter podría ser una entrada válida y un mensaje de validación "al menos 3 caracteres obligatorios" no tiene sentido para esos idiomas.
 
@@ -110,7 +110,7 @@ double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 
 Para obtener más información, consulte los artículos [análisis de cadenas numéricas](https://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) y análisis de cadenas de [fecha y hora](https://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) de MSDN.
 
-<a name="rtl" />
+<a name="rtl"></a>
 
 ### <a name="right-to-left-rtl-languages"></a>Idiomas de derecha a izquierda (RTL)
 
@@ -124,7 +124,7 @@ Las aplicaciones que admiten estos lenguajes deben usar diseños de pantalla que
 
 Tanto iOS como Android admiten diseños de derecha a izquierda y representación de fuentes, con características integradas que ayudan a realizar los ajustes anteriores. Xamarin. Forms no admite actualmente la representación RTL.
 
-### <a name="sorting"></a>Ordenar
+### <a name="sorting"></a>Ordenación
 
 Los distintos idiomas definen el criterio de ordenación de los alfabetos de forma diferente, incluso cuando utilizan el mismo juego de caracteres.
 
@@ -151,11 +151,11 @@ Hay algunas estrategias que puede usar para probar y asegurarse de que la aplica
 - Presentación localizada: Si va a mostrar un Twitter o una fuente de fotos, debe mostrar los metadatos (por ejemplo, el tiempo invertido) en su propio idioma, incluso si el contenido permanece en el idioma original.
 - Traducción: puede crear una opción de traducción en la aplicación para realizar una traducción automática de los datos entrantes. Esto podría ser automático o a discreción del usuario: solo debe asegurarse de notificar al usuario si se está llevando a cabo, ya que las traducciones del equipo nunca son perfectas.
 
-Esto también podría afectar a los vínculos externos a las pistas de audio o vídeos: al diseñar la aplicación, asegúrese de planear con anterioridad el origen del contenido traducido o de asegurarse de que la interfaz de usuario informará a los usuarios adecuadamente cuando el contenido no se presente en su módulo.
+Esto también podría afectar a los vínculos externos a las pistas de audio o vídeos: al diseñar la aplicación, asegúrese de planear con anterioridad el origen del contenido traducido o de asegurarse de que la interfaz de usuario informará a los usuarios adecuadamente cuando el contenido no se presente en su idioma.
 
 ### <a name="dont-over-translate"></a>No sobretraducción
 
-Es posible que algunas cadenas de la aplicación no necesiten traducir o que, al menos, el traductor tenga especial atención. Algunos ejemplos pueden ser:
+Es posible que algunas cadenas de la aplicación no necesiten traducir o que, al menos, el traductor tenga especial atención. Algunos ejemplos pueden incluir:
 
 - URL: si enumera una dirección URL, puede que sea necesario ajustarla o no mediante el lenguaje. Por ejemplo, facebook.com no requiere traducción que detecte automáticamente el idioma en el sitio principal. Otros sitios tienen contenido específico de la configuración regional y es posible que desee ofrecer una dirección URL diferente, como yahoo.com frente a yahoo.fr o yahoo.it.
 - Números de teléfono, especialmente aquellos con códigos de país o números distintos para los autores de llamadas que hablan un idioma determinado.
@@ -166,7 +166,7 @@ Por último, asegúrese de incluir instrucciones detalladas para el traductor si
 
 ### <a name="formatted-text"></a>Texto con formato
 
-No suele ser un problema con Mobile Apps porque las cadenas no suelen tener un formato enriquecido. Sin embargo, si se requiere texto enriquecido (por ejemplo, formato de negrita o cursiva) en la aplicación, asegúrese de que el traductor sabe cómo introducir el formato, que los archivos de cadenas lo almacenan correctamente y que tienen el formato correcto antes de que se muestren al usuario (es decir, no deje que los códigos de formato se presentan al usuario.
+No suele ser un problema con Mobile Apps porque las cadenas no suelen tener un formato enriquecido. Sin embargo, si se requiere texto enriquecido (por ejemplo, formato de negrita o cursiva) en la aplicación, asegúrese de que el traductor sabe cómo introducir el formato, que los archivos de cadenas lo almacenan correctamente y que tienen el formato correcto antes de que se muestren al usuario (es decir, no deje que los códigos de formato se presenten al usuario).
 
 ## <a name="translation-tips"></a>Sugerencias de traducción
 
@@ -235,7 +235,7 @@ Tendrá que escribir código en la aplicación para evaluar el número que se mu
 
 En ocasiones, los lenguajes basados en latín usan diferentes palabras según el género del sujeto. Si su aplicación conoce el sexo, debe permitir que las cadenas traducidas reflejen esto.
 
-También hay un caso más obvio, incluso en inglés, en el que las cadenas hacen referencia a una persona concreta o a un usuario de la aplicación. Por ejemplo, algunos sitios muestran mensajes como `"Bob commented on his post"`, por lo que necesita cadenas para el sexo macho, hembra, no binaria o desconocido:
+También hay un caso más obvio, incluso en inglés, en el que las cadenas hacen referencia a una persona concreta o a un usuario de la aplicación. Por ejemplo, algunos sitios muestran mensajes como `"Bob commented on his post"` , por lo que necesita cadenas para el sexo macho, hembra, no binaria o desconocido:
 
 **Bueno**:
 

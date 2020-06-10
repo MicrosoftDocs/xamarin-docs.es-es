@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d2e335535b508a6cd5e2f497e2c681152a7e5cda
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130954"
+title: "el patrón Model-View-ViewModel" Description: "en este capítulo se explica cómo la aplicación móvil eShopOnContainers usa el patrón MVVM para separar sin problemas la lógica empresarial y de presentación de la aplicación desde su interfaz de usuario".
+MS. Prod: Xamarin ms. AssetID: dd8c1813-df44-4947-BCEE-1a1ff2334b87 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="the-model-view-viewmodel-pattern"></a>Patrón Model-View-ViewModel
 
 La Xamarin.Forms experiencia del desarrollador normalmente implica la creación de una interfaz de usuario en XAML y, a continuación, la adición de código subyacente que funciona en la interfaz de usuario. A medida que se modifican las aplicaciones y aumentan el tamaño y el ámbito, pueden surgir problemas de mantenimiento complejos. Estos problemas incluyen el acoplamiento estrecho entre los controles de interfaz de usuario y la lógica de negocios, lo que aumenta el costo de realizar modificaciones en la interfaz de usuario y la dificultad de las pruebas unitarias de este tipo de código.
@@ -124,8 +110,6 @@ La construcción y asignación mediante programación del modelo de vista en el 
 ### <a name="creating-a-view-defined-as-a-data-template"></a>Crear una vista definida como una plantilla de datos
 
 Una vista se puede definir como una plantilla de datos y asociarse a un tipo de modelo de vista. Las plantillas de datos se pueden definir como recursos o se pueden definir en línea dentro del control que mostrará el modelo de vista. El contenido del control es la instancia del modelo de vista y la plantilla de datos se usa para representarla visualmente. Esta técnica es un ejemplo de una situación en la que se crea una instancia del modelo de vista en primer lugar, seguida de la creación de la vista.
-
-<a name="automatically_creating_a_view_model_with_a_view_model_locator" />
 
 ### <a name="automatically-creating-a-view-model-with-a-view-model-locator"></a>Crear automáticamente un modelo de vista con un localizador de modelo de vista
 
@@ -279,13 +263,11 @@ En el ejemplo de código siguiente se muestra cómo [`Grid`](xref:Xamarin.Forms.
 
 También se puede definir opcionalmente un parámetro de comando mediante la [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) propiedad. El tipo del argumento esperado se especifica en los `Execute` métodos de `CanExecute` destino y. [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer)Invocará automáticamente el comando de destino cuando el usuario interactúe con el control adjunto. El parámetro de comando, si se proporciona, se pasará como argumento al delegado del comando `Execute` .
 
-<a name="implementing_behaviors" />
-
 ### <a name="implementing-behaviors"></a>Implementar comportamientos
 
 Los comportamientos permiten agregar funcionalidad a los controles de interfaz de usuario sin tener que crear una subclase. En su lugar, la función se implementa en una clase de comportamiento y se asocia al control como si fuera parte de este. Los comportamientos permiten implementar código que normalmente tendría que escribir como código subyacente, ya que interactúa directamente con la API del control, de tal forma que se puede adjuntar de manera concisa al control y empaquetarse para reutilizarlo en más de una vista o aplicación. En el contexto de MVVM, los comportamientos son un enfoque útil para la conexión de controles a comandos.
 
-Un comportamiento que se adjunta a un control a través de las propiedades adjuntas se conoce como un *comportamiento adjunto*. Después, el comportamiento puede usar la API expuesta del elemento al que está adjunto para agregar funcionalidad a ese control, u otros controles, en el árbol visual de la vista. La aplicación móvil eShopOnContainers contiene la `LineColorBehavior` clase, que es un comportamiento adjunto. Para obtener más información sobre este comportamiento, vea [Mostrar errores de validación](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying_validation_errors).
+Un comportamiento que se adjunta a un control a través de las propiedades adjuntas se conoce como un *comportamiento adjunto*. Después, el comportamiento puede usar la API expuesta del elemento al que está adjunto para agregar funcionalidad a ese control, u otros controles, en el árbol visual de la vista. La aplicación móvil eShopOnContainers contiene la `LineColorBehavior` clase, que es un comportamiento adjunto. Para obtener más información sobre este comportamiento, vea [Mostrar errores de validación](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying-validation-errors).
 
 Un Xamarin.Forms comportamiento es una clase que se deriva de la [`Behavior`](xref:Xamarin.Forms.Behavior) [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) clase o, donde `T` es el tipo del control al que se debe aplicar el comportamiento. Estas clases proporcionan `OnAttachedTo` `OnDetachingFrom` métodos y, que se deben invalidar para proporcionar lógica que se ejecutará cuando el comportamiento se adjunte a los controles y se desasocie de ellos.
 

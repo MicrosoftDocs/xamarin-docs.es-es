@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: a4adc692680c0556a3cfb07b1a9f45963a81d199
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0e6edaccb9e0c163ee46c59ed11769476037aa90
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022123"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573552"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Trabajar con controladores de barra de pestañas de tvOS en Xamarin
 
@@ -22,11 +22,11 @@ Para muchos tipos de aplicaciones de tvOS, la navegación principal se presenta 
 
 La barra de pestañas es traslúcida de forma predeterminada y siempre aparece en la parte superior de la pantalla. Cuando está en el foco, una barra de pestañas cubrirá los primeros 140 píxeles de la pantalla, pero se desplazará rápidamente cuando el foco se desplace al área de contenido siguiente.
 
-<a name="Tab-Bars-in-tvOS" />
+<a name="Tab-Bars-in-tvOS"></a>
 
 ## <a name="tab-bars-in-tvos"></a>Barras de pestañas en tvOS
 
-El `UITabViewController` funciona de forma similar y sirve para un propósito similar en tvOS, como en iOS, con las siguientes diferencias clave:
+`UITabViewController`Funciona de forma similar y sirve para un propósito similar en tvOS, como en iOS, con las siguientes diferencias clave:
 
 - A diferencia de la barra de pestañas de iOS que aparece en la parte inferior de la pantalla, las barras de pestañas de tvOS ocupan los primeros 140 píxeles de la pantalla y son translúcidas de forma predeterminada.
 - Cuando el foco sale de la barra de pestañas para el área de contenido, la barra de pestañas se desliza rápidamente sobre la parte superior de la pantalla y se oculta. El usuario puede pulsar el botón de menú una vez o deslizar el dedo hacia arriba en el [control remoto Siri](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote) para volver a mostrar la barra de pestañas.
@@ -43,28 +43,28 @@ Apple tiene las siguientes sugerencias para trabajar con barras de pestañas:
 - **Limite el número de categorías** : para reducir la complejidad y mantener la aplicación administrable, no sobrecargue la barra de pestañas con categorías y asegúrese de que todas las categorías estén visibles y no se llenarán. Los títulos sencillos y cortos funcionan mejor.
 - **No deshabilitar una categoría** : todas las pestañas (categorías) siempre deberían estar visibles y habilitadas en todo momento. Si una pestaña determinada no tiene contenido, proporcione una explicación al usuario por qué. Por ejemplo, la pestaña compras estará vacía si el usuario no ha realizado ninguna compra.
 
-<a name="Tab-Bar-Items" />
+<a name="Tab-Bar-Items"></a>
 
 ## <a name="tab-bar-items"></a>Elementos de la barra de pestañas
 
-Cada categoría (pestaña) de la barra de pestañas se representa mediante un elemento de barra de tabulación (`UITabBarItem`). Apple tiene las siguientes sugerencias para trabajar con elementos de barra de pestañas:
+Cada categoría (pestaña) de la barra de pestañas se representa mediante un elemento de barra de tabulación ( `UITabBarItem` ). Apple tiene las siguientes sugerencias para trabajar con elementos de barra de pestañas:
 
 - **Usar pestañas basadas en texto** : aunque el elemento de barra de pestañas se puede representar como un icono, Apple sugiere el uso de texto solo porque un título conciso es más fácil de interpretar que un icono.
 - **Usar nombres o verbos cortos y significativos** : un elemento de barra de pestañas debe retransmitir claramente el contenido que contiene y funciona mejor cuando se trata de un nombre sencillo (como fotos, películas o música) o verbos (como buscar o reproducir).
 
-<a name="Tab-Bars-and-Storyboards" />
+<a name="Tab-Bars-and-Storyboards"></a>
 
 ## <a name="tab-bars-and-storyboards"></a>Barras de tabulación y guiones gráficos
 
 La manera más sencilla de trabajar con barras de pestañas en una aplicación de Xamarin. tvOS es agregarlas a la interfaz de usuario de la aplicación mediante el diseñador de iOS.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Inicie una **nueva aplicación de** Xamarin. tvOS y seleccione **tvOS** > App > **aplicación con pestañas**: 
+1. Inicie una nueva aplicación de Xamarin. tvOS y **tvOS**seleccione aplicación con  >  **App**  >  **pestañas**de tvOS: 
 
     [![](tab-bars-images/tab02.png "Select Tabbed App")](tab-bars-images/tab02.png#lightbox)
 1. Siga todas las indicaciones para crear una nueva solución de Xamarin. tvOS.
-1. En el **Panel de solución**, haga doble clic en el archivo `Main.storyboard` y ábralo para su edición.
+1. En el **Panel de solución**, haga doble clic en el `Main.storyboard` archivo y ábralo para su edición.
 1. Para cambiar el **icono** o el **título** de una categoría determinada, seleccione el **elemento de barra de pestañas** del **controlador de vista** en el **esquema del documento**:
 
     [![](tab-bars-images/tab03a.png "The Tab Bar Item for the View Controller in the Document Outline")](tab-bars-images/tab03a.png#lightbox)
@@ -79,17 +79,17 @@ La manera más sencilla de trabajar con barras de pestañas en una aplicación d
 
     [![](tab-bars-images/tab05.png "Select Tab")](tab-bars-images/tab05.png#lightbox)
 1. Diseñe el diseño de la interfaz de usuario para cada área de contenido de Caterogies como de costumbre, agregando elementos de interfaz de usuario en el diseñador de iOS.
-1. Exponga los eventos necesarios para trabajar con los controles de interfaz C# de usuario en el código.
-1. Asigne un nombre a todos los controles de interfaz de C# usuario que desee exponer en el código.
+1. Exponga los eventos necesarios para trabajar con los controles de interfaz de usuario en el código de C#.
+1. Asigne un nombre a los controles de interfaz de usuario que desee exponer en el código de C#.
 1. Guarde los cambios.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Inicie una **nueva aplicación de** Xamarin. tvOS y seleccione **tvOS** > App > **aplicación con pestañas**: 
+1. Inicie una nueva aplicación de Xamarin. tvOS y **tvOS**seleccione aplicación con  >  **App**  >  **pestañas**de tvOS: 
 
     [![](tab-bars-images/tab02vs.png "Select Tabbed App")](tab-bars-images/tab02vs.png#lightbox)
 1. Siga todas las indicaciones para crear una nueva solución de Xamarin. tvOS.
-1. En el **Explorador de soluciones**, haga doble clic en el archivo `Main.storyboard` y ábralo para su edición.
+1. En el **Explorador de soluciones**, haga doble clic en el `Main.storyboard` archivo y ábralo para su edición.
 1. Para cambiar el **icono** o el **título** de una categoría determinada, seleccione el **elemento de barra de pestañas** del **controlador de vista** en el **esquema del documento**:
 
     [![](tab-bars-images/tab03avs.png "The View Controller in the Document Outline")](tab-bars-images/tab03avs.png#lightbox)
@@ -104,24 +104,24 @@ La manera más sencilla de trabajar con barras de pestañas en una aplicación d
 
     [![](tab-bars-images/tab05vs.png "Select Tab")](tab-bars-images/tab05vs.png#lightbox)
 1. Diseñe el diseño de la interfaz de usuario para cada área de contenido de Caterogies como de costumbre, agregando elementos de interfaz de usuario en el diseñador de iOS.
-1. Exponga los eventos necesarios para trabajar con los controles de interfaz C# de usuario en el código.
-1. Asigne un nombre a todos los controles de interfaz de C# usuario que desee exponer en el código.
+1. Exponga los eventos necesarios para trabajar con los controles de interfaz de usuario en el código de C#.
+1. Asigne un nombre a los controles de interfaz de usuario que desee exponer en el código de C#.
 1. Guarde los cambios.
 
 -----
 
 > [!IMPORTANT]
-> Aunque es posible asignar eventos como `TouchUpInside` a un elemento de la interfaz de usuario (por ejemplo, un `UIButton`) en el diseñador de iOS, nunca se llamará porque Apple TV no tiene una pantalla táctil ni eventos táctiles de soporte técnico. Siempre debe usar el evento `Primary Action` al crear controladores de eventos para los elementos de la interfaz de usuario de tvOS.
+> Aunque es posible asignar eventos como `TouchUpInside` a un elemento de la interfaz de usuario (como un `UIButton` ) en el diseñador de iOS, nunca se llamará porque Apple TV no tiene una pantalla táctil ni eventos táctiles de soporte técnico. Siempre debe usar el `Primary Action` evento al crear controladores de eventos para los elementos de la interfaz de usuario de tvOS.
 
 Para obtener más información sobre cómo trabajar con guiones gráficos, vea nuestra [Guía de inicio rápido Hola, tvOS](~/ios/tvos/get-started/hello-tvos.md). 
 
-<a name="Working-with-Tab-Bars" />
+<a name="Working-with-Tab-Bars"></a>
 
 ## <a name="working-with-tab-bars"></a>Trabajar con barras de pestañas
 
-Utilice la propiedad `Items` del `UITabBar` para tener acceso a la colección de `UITabBarItems` que contiene como una matriz indizada de cero (0). La propiedad `SelectedItem` devolverá la pestaña (categoría) seleccionada actualmente como `UITabBarItem`.
+Utilice la `Items` propiedad de `UITabBar` para tener acceso a la colección de `UITabBarItems` que contiene como una matriz indizada de cero (0). La `SelectedItem` propiedad devolverá la pestaña (categoría) seleccionada actualmente como `UITabBarItem` .
 
-<a name="Working-with-Tab-Bar-Items" />
+<a name="Working-with-Tab-Bar-Items"></a>
 
 ## <a name="working-with-tab-bar-items"></a>Trabajar con elementos de barra de pestañas
 
@@ -136,9 +136,9 @@ Lo que produciría los siguientes resultados cuando se ejecutó:
 
 [![](tab-bars-images/tab06.png "A Tab Bar Item with badge")](tab-bars-images/tab06.png#lightbox)
 
-Use la propiedad `Title` del `UITabBarItem` para cambiar el título y la propiedad `Image` para cambiar el icono.
+Utilice la `Title` propiedad de `UITabBarItem` para cambiar el título y la `Image` propiedad para cambiar el icono.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumen
 

@@ -7,20 +7,20 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/11/2017
-ms.openlocfilehash: 04d33d986d76daf29fc7392206c62f77d34dd969
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0957220ace9facee590a76953de6dd52be438582
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022021"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570848"
 ---
 # <a name="labels-in-xamarinios"></a>Etiquetas en Xamarin. iOS
 
-El control `UILabel` se usa para mostrar texto de solo lectura y de una sola línea.
+El `UILabel` control se usa para mostrar texto de solo lectura y de una sola línea.
 
 ## <a name="implementing-a-label"></a>Implementar una etiqueta
 
-Se crea una nueva etiqueta creando una instancia de un [`UILabel`](xref:UIKit.UILabel):
+Se crea una nueva etiqueta creando una instancia de [`UILabel`](xref:UIKit.UILabel) :
 
 ```csharp
 UILabel label = new UILabel();
@@ -50,7 +50,7 @@ Las siguientes propiedades se pueden ajustar en el panel de propiedades:
 
 Para obtener información sobre el uso de los saltos de línea en iOS, consulte la receta [truncar y ajustar texto](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text) .
 
-<a name="Formatting_Text_and_Label"/>
+<a name="Formatting_Text_and_Label"></a>
 
 ## <a name="formatting-text-and-label"></a>Aplicar formato a texto y etiqueta
 
@@ -74,9 +74,9 @@ label.AttributedText = new NSAttributedString(
             );
 ```
 
-Para obtener más información sobre cómo aplicar estilos a un texto mediante `NSAttributedString` consulte la receta de [texto de estilo](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) .
+Para obtener más información sobre el estilo de texto, `NSAttributedString` consulte la receta de [texto de estilo](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) .
 
-De forma predeterminada, las etiquetas tienen la `Enabled` establecida en true, pero es posible establecerla en deshabilitado para dar al usuario una sugerencia de que un control determinado está deshabilitado:
+De forma predeterminada, las etiquetas tienen el valor `Enabled` true, pero es posible establecerlo en deshabilitado para dar al usuario una sugerencia de que un control determinado está deshabilitado:
 
 ```csharp
 label.Enabled = false;

@@ -6,16 +6,16 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: 92b08a9cfd725c1114b71fad4f29e6f28cd828b3
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: a044169f86b46abff4158011e99320c528180ffc
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306300"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573890"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Instalación y requisitos de los libros
 
-<a name="install" />
+<a name="install"></a>
 
 ## <a name="download-and-install"></a>Descarga e instalación
 
@@ -37,7 +37,7 @@ ms.locfileid: "79306300"
 
 ## <a name="requirements"></a>Requisitos
 
-#### <a name="supported-operating-systems"></a>Sistemas operativos compatibles
+#### <a name="supported-operating-systems"></a>Sistemas operativos admitidos
 
 - **Mac** -OS X 10,11 o superior
 - **Windows** -Windows 7 o posterior (con Internet Explorer 11 o posterior y .net 4.6.1 o superior)
@@ -48,7 +48,7 @@ ms.locfileid: "79306300"
 |--- |--- |--- |
 |Mac|Solo se admite en Mac|
 |iOS|Compatible con Mac y Windows|Xamarin. iOS 11,0 y Xcode 9,0 o posterior deben instalarse en Mac. La ejecución de libros de iOS en Windows requiere un host de compilación de Mac que ejecute todo lo anterior y el [simulador de iOS remoto](~/tools/ios-simulator/index.md) instalado en Windows.|
-|Android|Compatible con Mac y Windows|Debe usar el emulador de Google, Visual Studio o Xamarin Android con un dispositivo virtual > = 5,0|
+|Android|Compatible con Mac y Windows|Debe usar el emulador de Google, Visual Studio o Xamarin Android con un dispositivo virtual >= 5,0|
 |WPF|Solo se admite en Windows|
 |Consola (.NET Framework)|Compatible con Mac y Windows|
 |Consola (.NET Core)|Compatible con Mac y Windows|
@@ -66,7 +66,7 @@ Adjuntar siempre los archivos de registro de cliente de los libros:
 
 1.4. x también ofrece la posibilidad de seleccionar el archivo de registro en Finder (macOS) o en el explorador (Windows) directamente desde el menú principal:
 
-- **Ayuda > Mostrar archivo de registro**
+- **Ayuda > mostrar archivo de registro**
 
 #### <a name="log-paths-for-workbooks-13-and-earlier"></a>Rutas de acceso de registro para los libros 1,3 y anteriores:
 
@@ -85,15 +85,15 @@ En el menú principal de los libros:
 
 Visual Studio para Mac
 
-- **Visual Studio > Acerca de Visual Studio > Mostrar detalles > copiar información**
+- **Visual Studio > acerca de Visual Studio > Mostrar detalles > copiar información**
 - Pegar en informe de errores
 
 Visual Studio
 
-- **Ayuda > Acerca de Visual Studio > copiar información**
+- **Ayuda > acerca de Visual Studio > copiar información**
 - Háganoslo saber la versión del sistema operativo y si está ejecutando Windows de 32 bits o de 64 bits.
 
-### <a name="samples"></a>Ejemplos
+### <a name="samples"></a>Muestras
 
 Si puede adjuntar o vincular al archivo **. Workbooks** con el que tiene problemas, puede que le resulte más fácil resolver el error.
 
@@ -126,13 +126,13 @@ Si tiene Visual Studio 2017, Abra **instalador de Visual Studio**y busque **Xama
 
 Si instaló libros con un instalador descargado, tendrá que desinstalarlo a través de la página de configuración del sistema de **aplicaciones & características** de Windows 10 o a través de **Agregar o quitar programas** en el panel de control de versiones anteriores de Windows.
 
-> **Iniciar > Configuración > características & de System > apps**
+> **Iniciar > configuración > características & de System > apps**
 
 ![](install-images/windows-remove.png "Xamarin Workbooks as listed in &quot;Apps &amp; features&quot;")
 
 **Siga el procedimiento del Instalador de Visual Studio para asegurarse de que los libros no se vuelvan a instalar sin su conocimiento.**
 
-<a name="uninstall-macos" />
+<a name="uninstall-macos"></a>
 
 ### <a name="macos"></a>macOS
 
@@ -144,7 +144,7 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 El desinstalador detallará los archivos y directorios que se quitarán y pedirá confirmación antes de continuar.
 
-Pase el argumento `-help` al script de `uninstall` para escenarios más avanzados.
+Pase el `-help` argumento al `uninstall` script para escenarios más avanzados.
 
 En el caso de versiones anteriores, debe quitar manualmente lo siguiente:
 
@@ -155,11 +155,11 @@ En el caso de versiones anteriores, debe quitar manualmente lo siguiente:
 
 ## <a name="downgrading"></a>Degradar
 
-El identificador de la agrupación de **/Applications/Xamarin Workbooks. app** cambió de `com.xamarin.Inspector` a `com.xamarin.Workbooks` en la versión 1,4, ya que los libros y el inspector ahora están totalmente divididos.
+El identificador de paquete para los **libros de/Applications/Xamarin. la aplicación** cambió de `com.xamarin.Inspector` a `com.xamarin.Workbooks` en la versión 1,4, ya que los libros y el inspector se han dividido por completo.
 
 Debido a un error en instaladores más antiguos, no es posible degradar las versiones 1,4 o más recientes con los instaladores de 1.3.2 o anteriores.
 
 Para cambiar de 1,4 o posterior a 1.3.2 o anterior:
 
 1. [Desinstalar libros & inspector manualmente](#uninstall-macos)
-2. Ejecutar el instalador de `.pkg` 1.3.2 o anterior
+2. Ejecutar el instalador 1.3.2 o anterior `.pkg`

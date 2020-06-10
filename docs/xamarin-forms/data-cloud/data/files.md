@@ -9,13 +9,11 @@ MS. Prod: Xamarin ms. AssetID: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8 ms. Technolo
 
 _El control de archivos con Xamarin.Forms se puede lograr mediante el uso de código en una biblioteca de .net Standard o mediante el uso de recursos incrustados._
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 Xamarin.Formsel código se ejecuta en varias plataformas, cada una de las cuales tiene su propio sistema de archivos. Anteriormente, esto significaba que las acciones de leer y escribir en archivos se realizaban con mayor facilidad mediante las API de archivo nativas de cada plataforma. Como alternativa, los recursos incrustados son una solución más sencilla para distribuir archivos de datos con una aplicación. Pero, con .NET Standard 2.0, se puede compartir el código de acceso a archivos en bibliotecas de .NET Standard.
 
 Para obtener información sobre cómo controlar archivos de imagen, vea la página [Trabajar con imágenes](~/xamarin-forms/user-interface/images.md).
-
-<a name="Loading_and_Saving_Files" />
 
 ## <a name="saving-and-loading-files"></a>Guardar y cargar archivos
 
@@ -48,8 +46,6 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 Estas operaciones se demuestran en la aplicación de ejemplo, donde se incluye una página que guarda y carga texto:
 
 [![Guardar y cargar texto](files-images/saveandload-sml.png "Guardar y cargar archivos en la aplicación")](files-images/saveandload.png#lightbox "Guardar y cargar archivos en la aplicación")
-
-<a name="Loading_Files_Embedded_as_Resources" />
 
 ## <a name="loading-files-embedded-as-resources"></a>Cargar archivos insertados como recursos
 
@@ -97,8 +93,6 @@ listView.ItemsSource = monkeys;
 
  [![Archivo XML incrustado en la biblioteca estándar de .NET, que se muestra en ListView](files-images/pclxml-sml.png "Archivo XML incrustado en la biblioteca estándar de .NET que se muestra en ListView")](files-images/pclxml.png#lightbox "Archivo XML incrustado en la biblioteca estándar de .NET que se muestra en ListView")
 
-<a name="Embedding_in_Shared_Projects" />
-
 ## <a name="embedding-in-shared-projects"></a>Insertar en proyectos compartidos
 
 Los proyectos compartidos también pueden contener archivos como recursos incrustados; pero, como el contenido de un proyecto compartido se compila en los proyectos a los que se hace referencia, el prefijo usado para los identificadores de recursos del archivo incrustado puede cambiar. Esto quiere decir que el identificador de recurso para cada archivo incrustado puede ser distinto para cada plataforma.
@@ -125,15 +119,11 @@ Stream stream = assembly.GetManifestResourceStream
     (resourcePrefix + "SharedTextResource.txt");
 ```
 
-<a name="Organizing_Resources" />
-
 ### <a name="organizing-resources"></a>Organización de recursos
 
 En los ejemplos anteriores, se da por supuesto que el archivo está insertado en el directorio raíz del proyecto de la biblioteca de .NET Standard, por lo que el identificador de recurso tendría el formato **EspacioDeNombres.NombreDeArchivo.Extensión**, como `WorkingWithFiles.LibTextResource.txt` y `WorkingWithFiles.iOS.SharedTextResource.txt`.
 
 Los recursos incrustados se pueden organizar en carpetas. Cuando un recurso incrustado se coloca en una carpeta, el nombre de carpeta se convierte en parte del identificador de recurso (separado por puntos), de forma que el formato del identificador de recurso se convierte en **EspacioDeNombres.Carpeta.NombreDeArchivo.Extensión**. Al colocar los archivos usados en la aplicación de ejemplo en una carpeta **MyFolder**, los identificadores de recurso correspondientes serían `WorkingWithFiles.MyFolder.LibTextResource.txt` y `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
-
-<a name="Debugging_Embedded_Resources" />
 
 ### <a name="debugging-embedded-resources"></a>Depurar recursos incrustados
 
@@ -156,5 +146,5 @@ En este artículo, se muestran algunas operaciones de archivo sencillas para gua
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [FilesSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
-- [Xamarin.FormsAssembl](https://github.com/xamarin/xamarin-forms-samples)
+- [Ejemplos de Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
 - [Trabajar con el sistema de archivos en Xamarin.iOS](~/ios/app-fundamentals/file-system.md)
