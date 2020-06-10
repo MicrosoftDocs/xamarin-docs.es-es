@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsDesplazar CarouselView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 462948905f40679e2b931d4aa0039308c64a0a8f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136505"
+title: " Xamarin.Forms CarouselView scrolling" Description: "cuando un usuario desliza el dedo para iniciar un desplazamiento, la posición final del desplazamiento se puede controlar para que los elementos se muestren por completo. Además, CarouselView define dos métodos ScrollTo, que desplazan los elementos mediante programación a la vista ".
+MS. Prod: Xamarin ms. AssetID: 92D7B618-07FA-4343-9D0F-212525E92C39 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/28/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-carouselview-scrolling"></a>Xamarin.FormsDesplazar CarouselView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

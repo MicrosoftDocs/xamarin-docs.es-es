@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsAgrupación de CollectionView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 51661d6573d78386f4ca8bfea0063b752295c2d8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136466"
+title: " Xamarin.Forms GROUPING de CollectionView" Description: "CollectionView puede mostrar los datos agrupados correctamente estableciendo su propiedad IsGrouped en true".
+MS. Prod: Xamarin ms. AssetID: 7E494245-FDBD-49D6-B7FA-CEF976EB59BB ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 09/17/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-collectionview-grouping"></a>Xamarin.FormsAgrupación de CollectionView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
@@ -35,7 +21,7 @@ Las capturas de pantallas siguientes muestran una [`CollectionView`](xref:Xamari
 
 [![Captura de pantalla de los datos agrupados en una CollectionView, en iOS y Android](grouping-images/grouped-data.png "CollectionView con datos agrupados")](grouping-images/grouped-data-large.png#lightbox "CollectionView con datos agrupados")
 
-Para obtener más información acerca de las plantillas de datos, consulte [ Xamarin.Forms plantillas de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
+Para obtener más información sobre las plantillas de datos, consulte [Plantillas de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
 ## <a name="group-data"></a>Agrupar datos
 

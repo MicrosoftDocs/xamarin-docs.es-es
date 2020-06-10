@@ -1,22 +1,8 @@
 ---
-title: ''
-description: El Face API toma una expresión facial en una imagen como entrada y devuelve datos que incluyen niveles de confianza en un conjunto de emociones para cada una de las caras de la imagen. En este artículo se explica cómo usar el Face API para reconocer emociones, para clasificar una Xamarin.Forms aplicación.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: ff384605b35f6406b628da99de500b550da811c9
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136063"
+title: "reconocimiento de emociones percibido mediante el Face API" Descripción: "el Face API toma una expresión facial en una imagen como entrada y devuelve datos que incluyen niveles de confianza en un conjunto de emociones para cada rostro de la imagen. En este artículo se explica cómo usar el Face API para reconocer emociones, para clasificar una Xamarin.Forms aplicación ".
+MS. Prod: Xamarin ms. AssetID: 19D36A7C-E8D8-43D1-BE80-48DE6C02879A ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/10/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="perceived-emotion-recognition-using-the-face-api"></a>Reconocimiento de emociones percibido mediante el Face API
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

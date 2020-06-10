@@ -1,22 +1,8 @@
 ---
-title: Usar el inicio de sesión con Apple paraXamarin.Forms
-description: Aprenda a implementar el inicio de sesión con Apple en sus Xamarin.Forms aplicaciones móviles.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: fb37f8fb2d01154bf2e749e685c4e96c12d6bc5e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139495"
+title: "uso de inicio de sesión con Apple para Xamarin.Forms " Descripción: "Obtenga información sobre cómo implementar el inicio de sesión con Apple en sus Xamarin.Forms aplicaciones móviles".
+MS. Prod: Xamarin ms. AssetID: 2E47E7F2-93D4-4CA3-9E66-247466D25E4D ms. Technology: Xamarin-Forms Author: davidortinau ms. Author: daortin ms. Date: 09/10/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="use-sign-in-with-apple-in-xamarinforms"></a>Usar el inicio de sesión con Apple enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/signinwithapple/)

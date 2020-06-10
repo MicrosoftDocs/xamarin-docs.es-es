@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8478db85bd9904ee6c5cfeab9b2af390e7d3096d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139508"
+Título: "específico de la plataforma" Descripción: "las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir y crear características específicas de la plataforma ".
+MS. Prod: Xamarin ms. AssetID: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/01/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="platform-specifics"></a>Características específicas de las plataformas
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
@@ -155,7 +141,7 @@ namespace MyCompany.Forms.PlatformConfiguration.iOS
 }
 ```
 
-La `IsShadowed` propiedad adjunta se usa para agregar el `MyCompany.LabelShadowEffect` efecto a y quitarlo de, el control `Shadow` al que está asociada la clase. Esta propiedad adjunta registra el método `OnIsShadowedPropertyChanged` que se ejecutará cuando cambie el valor de la propiedad. A su vez, este método llama `AttachEffect` al `DetachEffect` método o para agregar o quitar el efecto basado en el valor de la `IsShadowed` propiedad adjunta. El efecto se agrega o se quita del control modificando la colección del control [`Effects`](xref:Xamarin.Forms.Element.Effects) .
+La `IsShadowed` propiedad adjunta se usa para agregar el `MyCompany.LabelShadowEffect` efecto a y quitarlo de, el control `Shadow` al que está asociada la clase. Esta propiedad asociada registra el método `OnIsShadowedPropertyChanged` que se ejecutará cuando cambie el valor de la propiedad. A su vez, este método llama `AttachEffect` al `DetachEffect` método o para agregar o quitar el efecto basado en el valor de la `IsShadowed` propiedad adjunta. El efecto se agrega o se quita del control modificando la colección del control [`Effects`](xref:Xamarin.Forms.Element.Effects) .
 
 > [!NOTE]
 > Tenga en cuenta que el efecto se resuelve especificando un valor que es una concatenación del nombre del grupo de resolución y el identificador único que se especifica en la implementación del efecto. Para obtener más información, vea [crear un efecto](~/xamarin-forms/app-fundamentals/effects/creating.md).
@@ -286,5 +272,5 @@ shadowLabel.On<iOS>().SetIsShadowed(true);
 - [Características específicas de la plataforma Android](~/xamarin-forms/platform/android/index.md)
 - [Características específicas de la plataforma Windows](~/xamarin-forms/platform/windows/index.md)
 - [Personalizar controles con efectos](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [Propiedades adjuntas](~/xamarin-forms/xaml/attached-properties.md)
+- [Propiedades asociadas](~/xamarin-forms/xaml/attached-properties.md)
 - [API de PlatformConfiguration](xref:Xamarin.Forms.PlatformConfiguration)

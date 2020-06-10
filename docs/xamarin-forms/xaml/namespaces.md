@@ -1,22 +1,8 @@
 ---
-title: Espacios de nombres XAML enXamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 7f35342134767ccdadfab086bfa14f6b610b325d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130382"
+title: "espacios de nombres XAML en Xamarin.Forms " Description: "XAML usa el atributo XML xmlns para las declaraciones de espacios de nombres. En este artículo se presenta la sintaxis del espacio de nombres XAML y se muestra cómo declarar un espacio de nombres XAML para tener acceso a un tipo. "
+MS. Prod: Xamarin ms. AssetID: C03B5553-B199-4A19-9F0F-E5BCE1DB268F ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/21/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xaml-namespaces-in-xamarinforms"></a>Espacios de nombres XAML enXamarin.Forms
 
 _XAML usa el atributo XML xmlns para las declaraciones de espacio de nombres. En este artículo se presenta la sintaxis del espacio de nombres XAML y se muestra cómo declarar un espacio de nombres XAML para tener acceso a un tipo._
@@ -41,7 +27,7 @@ XAML usa prefijos para declarar espacios de nombres no predeterminados, con el p
 
 En la tabla siguiente se describen los `x` atributos de espacio de nombres admitidos por Xamarin.Forms :
 
-|Construcción|Description|
+|Construcción|Descripción|
 |--- |--- |
 |`x:Arguments`|Especifica los argumentos de constructor para un constructor no predeterminado o para una declaración de objeto Factory Method.|
 |`x:Class`|Especifica el espacio de nombres y el nombre de clase de una clase definida en XAML. El nombre de clase debe coincidir con el nombre de clase del archivo de código subyacente. Tenga en cuenta que esta construcción solo puede aparecer en el elemento raíz de un archivo XAML.|

@@ -1,23 +1,9 @@
 ---
-title: Patrones de aplicaciones empresariales con Xamarin.Forms libro electrónico
-description: En este libro electrónico se proporcionan instrucciones arquitectónicas para desarrollar aplicaciones empresariales adaptables, mantenibles y comprobables Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: cc0f98d94c76ff63e7a002dfb92b51eae153d7b4
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139404"
+title: "patrones de aplicaciones empresariales que usan Xamarin.Forms libro electrónico" Descripción: "este libro electrónico proporciona instrucciones arquitectónicas para el desarrollo de aplicaciones empresariales adaptables, fáciles de mantener y comprobables Xamarin.Forms ".
+MS. Prod: Xamarin ms. AssetID: 28cfed6c-6175-4223-a8cc-798d40bf0832 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Patrones de aplicaciones empresariales con Xamarin.Forms libro electrónico
+
+# <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Patrones de aplicación empresarial con el libro electrónico de Xamarin.Forms
 
 _Instrucciones arquitectónicas para desarrollar aplicaciones empresariales adaptables, mantenibles y comprobables Xamarin.Forms_
 
@@ -45,7 +31,7 @@ Los contenedores de inserción de dependencias reducen el acoplamiento entre obj
 
 ## <a name="communicating-between-loosely-coupled-components"></a>[Comunicación entre componentes débilmente acoplados](communicating-between-loosely-coupled-components.md)
 
-La Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) clase implementa el patrón de publicación y suscripción, lo que permite la comunicación basada en mensajes entre los componentes que no son convenientes para vincularlos mediante referencias de tipo y objeto. Este mecanismo permite a los publicadores y suscriptores comunicarse sin tener una referencia mutua, lo que ayuda a reducir las dependencias entre los componentes, a la vez que permite que los componentes se desarrollen y prueben de forma independiente.
+La clase [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) de Xamarin.Forms implementa el patrón de publicación y suscripción, lo que permite la comunicación basada en mensajes entre los componentes que no se recomienda vincular mediante referencias de tipo y objeto. Este mecanismo permite a los publicadores y suscriptores comunicarse sin tener una referencia mutua, lo que ayuda a reducir las dependencias entre los componentes, a la vez que permite que los componentes se desarrollen y prueben de forma independiente.
 
 ## <a name="navigation"></a>[Navegación](navigation.md)
 
@@ -59,7 +45,7 @@ Cualquier aplicación que acepte la entrada de los usuarios debe asegurarse de q
 
 En el contexto del patrón Model-View-ViewModel (MVVM), a menudo se necesitará un modelo de vista o modelo para realizar la validación de datos y señalar los errores de validación en la vista para que el usuario pueda corregirlos.
 
-## <a name="configuration-management"></a>[Administración de la configuración](configuration-management.md)
+## <a name="configuration-management"></a>[Administración de configuración](configuration-management.md)
 
 La configuración permite la separación de los datos que configura el comportamiento de una aplicación desde el código, lo que permite cambiar el comportamiento sin volver a compilar la aplicación. La configuración de la aplicación son los datos que una aplicación crea y administra, y la configuración de usuario es la configuración personalizable de una aplicación que afecta al comportamiento de la aplicación y no requiere un reajuste frecuente.
 

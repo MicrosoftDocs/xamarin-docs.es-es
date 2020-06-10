@@ -1,22 +1,7 @@
 ---
-title: ''
-ms.topic: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 9c0403203345ed78fae9f30c623c3e501f24ea0e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135907"
+title: "error de compilación de Android: error inesperado en la tarea LinkAssemblies" MS. topic: solución de problemas de MS. Prod: Xamarin ms. AssetID: EB3BE685-CB72-48E3-89D7-C845E76B9FA2 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/07/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Error de compilación de Android: error inesperado en la tarea LinkAssemblies
 
 Es posible que vea un mensaje de error `The "LinkAssemblies" task failed unexpectedly` al compilar un proyecto de Xamarin. Android que use formularios. Esto sucede cuando el enlazador está activo (normalmente en una compilación de *versión* para reducir el tamaño del paquete de la aplicación). y se produce porque los destinos de Android no se actualizan al marco de trabajo más reciente. (Más información: [ Xamarin.Forms plataformas admitidas](~/get-started/supported-platforms.md#android-platform-support))

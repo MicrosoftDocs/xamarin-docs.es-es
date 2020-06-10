@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsRelativeLayout
-description: En este artículo se explica cómo usar la Xamarin.Forms clase RelativeLayout para crear interfaces de IU que se escalan para ajustarse a cualquier tamaño de pantalla.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f250b109f759bcf6bb7fa4ac0573743ac12c4bc1
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127197"
+title: " Xamarin.Forms RelativeLayout" Descripción: "en este artículo se explica cómo usar la Xamarin.Forms clase RelativeLayout para crear interfaces de IU que se escalen para ajustarse a cualquier tamaño de pantalla".
+MS. Prod: Xamarin ms. AssetID: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/25/2015 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-relativelayout"></a>Xamarin.FormsRelativeLayout
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
@@ -25,7 +11,7 @@ ms.locfileid: "84127197"
 
 [![](relative-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](relative-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
-## <a name="purpose"></a>Finalidad
+## <a name="purpose"></a>Propósito
 
 `RelativeLayout`se puede usar para colocar las vistas en la pantalla en relación con el diseño general o con otras vistas.
 

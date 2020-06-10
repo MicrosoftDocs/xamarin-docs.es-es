@@ -1,22 +1,8 @@
 ---
-title: Iniciar sesión con Apple enXamarin.Forms
-description: Iniciar sesión con Apple proporciona protección de identidad para los usuarios y se puede implementar en escenarios móviles multiplataforma en Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 84c7fdef5d12dfe6fca6294b3125e90761349002
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139456"
+title: "Inicio de sesión con Apple en Xamarin.Forms " Descripción: "Inicio de sesión con Apple proporciona protección de identidad para los usuarios y se puede implementar para escenarios móviles multiplataforma en Xamarin.Forms ".
+MS. Prod: Xamarin ms. AssetID: 414465F8-0CC8-4078-B3D1-F36983069658 ms. Technology: Xamarin-Forms Author: davidortinau ms. Author: daortin ms. Date: 09/10/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="sign-in-with-apple-in-xamarinforms"></a>Iniciar sesión con Apple enXamarin.Forms
 
 Iniciar sesión con Apple presenta un nuevo servicio que proporciona protección de identidad para los usuarios. A partir de iOS 13 Apple requiere que las aplicaciones que usan proveedores de autenticación de terceros también ofrezcan inicio de sesión con Apple. Para obtener instrucciones sobre el uso de esta característica con Xamarin. iOS, [Consulte más información aquí](~/ios/platform/ios13/sign-in.md).

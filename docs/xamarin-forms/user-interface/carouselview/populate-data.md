@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsDatos de CarouselView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1081bfafae8e4d7a7a522414e9b45cde48037f1d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136557"
+title: " Xamarin.Forms CarouselView Data" Description: "CarouselView se rellena con datos estableciendo su propiedad ItemsSource en cualquier colección que implementa IEnumerable".
+MS. Prod: Xamarin ms. AssetID: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/29/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-carouselview-data"></a>Xamarin.FormsDatos de CarouselView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
@@ -103,7 +89,7 @@ En este ejemplo, los [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) d
 > [!NOTE]
 > Los enlaces compilados se pueden habilitar para mejorar el rendimiento del enlace de datos en Xamarin.Forms las aplicaciones. Para obtener más información, vea [Enlaces compilados](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
-Para obtener más información sobre el enlace de datos, consulte [ Xamarin.Forms enlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+Para obtener más información sobre el enlace de datos, consulte [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
 ## <a name="define-item-appearance"></a>Definir la apariencia del elemento
 
@@ -198,7 +184,7 @@ Las siguientes capturas de pantallas muestran el resultado de la plantilla de ca
 
 [![Captura de pantalla de CarouselView donde cada elemento tiene una plantilla, en iOS y Android](populate-data-images/datatemplate.png "Elementos con plantilla en un CarouselView")](populate-data-images/datatemplate-large.png#lightbox "Elementos con plantilla en un CarouselView")
 
-Para obtener más información acerca de las plantillas de datos, consulte [ Xamarin.Forms plantillas de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
+Para obtener más información sobre las plantillas de datos, consulte [Plantillas de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
 ## <a name="choose-item-appearance-at-runtime"></a>Elección de la apariencia del elemento en tiempo de ejecución
 
@@ -482,6 +468,6 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 - [CarouselView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 - [Xamarin.FormsIndicatorView](~/xamarin-forms/user-interface/indicatorview.md)
 - [Xamarin.FormsRefreshView](~/xamarin-forms/user-interface/refreshview.md)
-- [Xamarin.FormsEnlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Xamarin.FormsPlantillas de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Creación de un Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

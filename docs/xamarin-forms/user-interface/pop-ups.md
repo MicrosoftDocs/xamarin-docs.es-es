@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 'Xamarin.Formsproporciona tres elementos de interfaz de usuario de tipo emergente: una alerta, una hoja de acción y un símbolo del sistema. En este artículo se muestra el uso de alertas, hojas de acción y API de mensajes para mostrar cuadros de diálogo que piden a los usuarios preguntas sencillas, guiar a los usuarios a través de tareas y mostrar mensajes.'
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a7ddd9134b7214b84a883e171d7b0cadaba3390b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136323"
+Título: "Mostrar elementos emergentes" Descripción: " Xamarin.Forms proporciona tres elementos de interfaz de usuario de tipo emergente: una alerta, una hoja de acción y un símbolo del sistema. En este artículo se muestra el uso de alertas, hojas de acción y API de mensajes para mostrar cuadros de diálogo que piden a los usuarios preguntas sencillas, guiar a los usuarios a través de las tareas y mostrar los mensajes ".
+MS. Prod: Xamarin ms. AssetID: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/10/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="display-pop-ups"></a>Mostrar elementos emergentes
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)

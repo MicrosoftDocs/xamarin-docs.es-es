@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 52be7641ac3b2983f537e11bccd76f2a5b52574d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130187"
+title: "los modos de mezcla no separables" Description: "usan los modos de mezcla no separables para modificar el matiz, la saturación o la luminosidad".
+MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF Author: davidbritch ms. Author: dabritch ms. Date: 08/23/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="the-non-separable-blend-modes"></a>Modos de mezcla no separables
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -46,125 +32,11 @@ El valor HSL (0, 100, 50) es el valor RGB (FF, 00, 00), que es rojo puro. El val
 Al igual que los demás modos de fusión, los cuatro modos de mezcla no separables implican un destino (que suele ser una imagen de mapa de bits) y un origen, que suele ser un solo color o degradado. Los modos de mezcla combinan los valores de matiz, saturación y luminosidad del destino y el origen:
 
 | Modo de mezcla   | Componentes del origen | Componentes del destino |
-| ---
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------- | ---title: Descripción: MS. Prod: MS. Technology: MS. AssetID: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------------ | ---title: Descripción: MS. Prod: MS. Technology: MS. AssetID: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--------------- | | `Hue`        | Matiz | Saturación y luminosidad | | `Saturation` | Saturación | Matiz y luminosidad | | `Color`      | Matiz y saturación | Luminosidad | | `Luminosity` | Luminosidad | Matiz y saturación | 
+| ------------ | ---------------------- | --------------------------- |
+| `Hue`        | Matiz                    | Saturación y luminosidad   |
+| `Saturation` | Saturación             | Matiz y luminosidad          |
+| `Color`      | Matiz y saturación     | Luminosidad                  | 
+| `Luminosity` | Luminosidad             | Matiz y saturación          | 
 
 Vea la especificación del [**nivel 1 de composición y combinación**](https://www.w3.org/TR/compositing-1/) de W3C para los algoritmos.
 
@@ -325,11 +197,11 @@ Por lo general, no es el caso que desee usar uno de los modos de mezcla no separ
 
 ## <a name="a-matte-for-a-separable-mode"></a>Un mate para un modo separable
 
-Este es uno de los mapas de bits incluidos como un recurso en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . El nombre de archivo es **banana. jpg**:
+Este es uno de los mapas de bits incluidos como un recurso en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . El nombre de archivo es **Banana.jpg**:
 
 ![Monkey de banana](non-separable-images/Banana.jpg "Monkey de banana")
 
-Es posible crear un mate que abarque solo el plátano. También es un recurso en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . El nombre de archivo es **BananaMatte. png**:
+Es posible crear un mate que abarque solo el plátano. También es un recurso en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . El nombre de archivo es **BananaMatte.png**:
 
 ![Mate de banana](non-separable-images/BananaMatte.png "Mate de banana")
 
@@ -337,7 +209,7 @@ Aparte de la forma de banana negro, el resto del mapa de bits es transparente.
 
 La página **azul banana** usa ese mate para modificar el matiz y la saturación de la banana que contiene el Monkey, pero para no cambiar nada más en la imagen. 
 
-En la `BlueBananaPage` clase siguiente, el mapa de bits **banana. jpg** se carga como un campo. El constructor carga el mapa de bits **BananaMatte. png** como el `matteBitmap` objeto, pero no conserva ese objeto más allá del constructor. En su lugar, se crea un tercer mapa de bits denominado `blueBananaBitmap` . `matteBitmap`Se dibuja en `blueBananaBitmap` seguido de un `SKPaint` con su `Color` establecido en Blue y su `BlendMode` establecido en `SKBlendMode.SrcIn` . El `blueBananaBitmap` permanece más transparente pero con una imagen de azul puro sólida de la banana:
+En la `BlueBananaPage` clase siguiente, el mapa de bits **Banana.jpg** se carga como un campo. El constructor carga el **BananaMatte.png** mapa de bits como el `matteBitmap` objeto, pero no conserva ese objeto más allá del constructor. En su lugar, se crea un tercer mapa de bits denominado `blueBananaBitmap` . `matteBitmap`Se dibuja en `blueBananaBitmap` seguido de un `SKPaint` con su `Color` establecido en Blue y su `BlendMode` establecido en `SKBlendMode.SrcIn` . El `blueBananaBitmap` permanece más transparente pero con una imagen de azul puro sólida de la banana:
 
 ```csharp
 public class BlueBananaPage : ContentPage

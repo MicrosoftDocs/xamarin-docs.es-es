@@ -1,22 +1,8 @@
 ---
-title: Crear una Xamarin.Forms aplicación
-description: Xamarin.Formslas aplicaciones admiten la creación de un ResourceDictionary para cada tema y, a continuación, la carga de los recursos con la extensión de marcado DynamicResource.
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 80660ae7d3af0fe5948a5ae4ffdb35d2f9c2a40f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136141"
+title: "temas de una Xamarin.Forms aplicación" Descripción: " Xamarin.Forms las aplicaciones admiten la creación de un ResourceDictionary para cada tema y, a continuación, la carga de los recursos con la extensión de marcado DynamicResource".
+MS. Prod: Xamarin ms. AssetID: BF92AEDD-EF23-4D08-A972-B089066E75F9 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/22/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="theming-a-xamarinforms-application"></a>Crear una Xamarin.Forms aplicación
 
 ## <a name="theme-an-application"></a>[Tema de una aplicación](theming.md)

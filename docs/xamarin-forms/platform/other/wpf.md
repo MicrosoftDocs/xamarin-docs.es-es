@@ -1,23 +1,7 @@
 ---
-title: ''
-description: Xamarin.Formsahora tiene compatibilidad con la versión preliminar para la plataforma WPF
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: bbb9ea950c9f1daa1b5ee4762527d689f3cdd483
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139534"
+title: "configuración de la plataforma WPF" Descripción: " Xamarin.Forms ahora tiene compatibilidad con la versión preliminar de la plataforma WPF" MS. Prod: Xamarin ms. AssetID: 650723F2-4279-4B7B-B0A1-D7F8FF26BF1E ms. Technology: Xamarin-Forms ms. Custom: Xamu-video Author: davidbritch ms. Author: dabritch ms. Date: 04/09/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="wpf-platform-setup"></a>Configuración de la plataforma WPF
 
 ![Vista previa](~/media/shared/preview.png)
@@ -151,7 +135,7 @@ Puede ajustar el tamaño inicial de la ventana en el archivo **MainWindow. Xaml*
 Title="BoxViewClock" Height="450" Width="800"
 ```
 
-## <a name="issues"></a>Problemas
+## <a name="issues"></a>Issues
 
 Se trata de una versión preliminar, por lo que debe esperar que no todo esté listo para la producción. No todos los paquetes NuGet para Xamarin.Forms están preparados para WPF y es posible que algunas características no funcionen por completo.
 

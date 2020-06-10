@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: aaf94536d41da47aec10fc655f9d053b753da5a2
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135972"
+Título: "MasterDetailPage Shadow on iOS" Descripción: "las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores ni efectos personalizados. En este artículo se explica cómo consumir el específico de la plataforma iOS que controla si la página de detalles de un MasterDetailPage tiene una sombra aplicada, al revelar la página maestra ".
+MS. Prod: Xamarin ms. AssetID: FB907EA2-C00A-43A5-84B1-A43584C867A5 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/05/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="masterdetailpage-shadow-on-ios"></a>MasterDetailPage sombra en iOS
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

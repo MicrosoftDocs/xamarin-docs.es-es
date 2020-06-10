@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formsy Azure Cognitive Services
-description: Agregue inteligencia a Xamarin.Forms las aplicaciones con Azure Cognitive Services, incluido el reconocimiento de voz, el corrector ortográfico, la traducción de texto y el reconocimiento de emociones.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 64f5dce9337444a1e910a11a69426964a09ac05a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136024"
+title: " Xamarin.Forms y azure Cognitive Services" Description: "Agregar inteligencia a Xamarin.Forms las aplicaciones con Azure Cognitive Services, incluido el reconocimiento de voz, el corrector ortográfico, la traducción de texto y el reconocimiento de emociones".
+MS. Prod: Xamarin ms. AssetID: 64386A65-FD31-4A1B-A769-91495E57345A ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/27/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-and-azure-cognitive-services"></a>Xamarin.Formsy Azure Cognitive Services
 
 ## <a name="introduction"></a>[Introducción](introduction.md)

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c1939c30cbefdbf8d6546761a8c6ac7199bfff62
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139690"
+title: "los modos de combinación separables" Description: "Use los modos de fusión separables para modificar los colores rojo, verde y azul".
+MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 66D1A537-A247-484E-B5B9-FBCB7838FBE9 Author: davidbritch ms. Author: dabritch ms. Date: 08/23/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="the-separable-blend-modes"></a>Modos de fusión separables
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -151,45 +137,20 @@ Los componentes rojo, verde y azul se administran por separado, por lo que se ha
 En la tabla siguiente se muestran todos los modos de fusión separables con explicaciones breves de lo que hacen. La segunda columna muestra el color de origen que no produce ningún cambio:
 
 | Modo de mezcla   | Sin cambios | Operación |
-| ---
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------- | ---title: Descripción: MS. Prod: MS. Technology: MS. AssetID: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------ | ---title: Descripción: MS. Prod: MS. Technology: MS. AssetID: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------ | | `Plus`       | Negro | Se aclara mediante la adición de colores: SC + DC | | `Modulate`   | Blanco | Se oscurece mediante la multiplicación de colores: SC · DC | | `Screen`     | Negro | Complementa el producto de complementos: SC + DC &ndash; SC · DC | | `Overlay`    | Gris | Inverso de `HardLight` | | `Darken`     | Blanco | Mínimo de colores: mín. (SC, DC) | | `Lighten`    | Negro | Número máximo de colores: Max (SC, DC) | | `ColorDodge` | Negro | Brillante el destino en función del origen | | `ColorBurn`  | Blanco | Oscurece el destino basándose en el origen | | `HardLight`  | Gris | Similar al efecto de la luz severa | | `SoftLight`  | Gris | Similar al efecto de la luz de software | | `Difference` | Negro | Resta el más oscuro de la más clara: ABS (DC &ndash; SC) | | `Exclusion`  | Negro | Similar a `Difference` pero menor contraste | | `Multiply`   | Blanco | Se oscurece mediante la multiplicación de colores: SC · DC |
+| ------------ | --------- | --------- |
+| `Plus`       | Negro     | Se aclara mediante la adición de colores: SC + DC |
+| `Modulate`   | Blanco     | Se oscurece mediante la multiplicación de colores: SC · CD | 
+| `Screen`     | Negro     | Complementa el producto de complementos: SC + DC &ndash; SC · CD |
+| `Overlay`    | Gris      | Inversa de`HardLight` |
+| `Darken`     | Blanco     | Mínimo de colores: mín. (SC, DC) |
+| `Lighten`    | Negro     | Número máximo de colores: máximo (SC, DC) |
+| `ColorDodge` | Negro     | Brillante el destino en función del origen |
+| `ColorBurn`  | Blanco     | Oscurece el destino basándose en el origen | 
+| `HardLight`  | Gris      | Similar al efecto de la luz severa |
+| `SoftLight`  | Gris      | Similar al efecto de la luz de software | 
+| `Difference` | Negro     | Resta el más oscuro de la más clara: ABS (DC &ndash; SC) | 
+| `Exclusion`  | Negro     | Similar a, `Difference` pero menor contraste |
+| `Multiply`   | Blanco     | Se oscurece mediante la multiplicación de colores: SC · CD |
 
 Se pueden encontrar algoritmos más detallados en las especificaciones W3C [**Comfunding and blending Level 1**](https://www.w3.org/TR/compositing-1/) y Skia [**SkBlendMode Reference**](https://skia.org/user/api/SkBlendMode_Reference), aunque la notación de estos dos orígenes no es la misma. Tenga en cuenta que `Plus` normalmente se considera un modo de mezcla Porter-Duff y `Modulate` no forma parte de la especificación del W3C.
 

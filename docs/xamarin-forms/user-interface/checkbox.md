@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCasilla
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8399dde2e4e2c9fb53b38fca2923eb0e3bfc6ce3
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136479"
+Título: " Xamarin.Forms CheckBox" Descripción: "la Xamarin.Forms casilla es un tipo de botón que puede estar activado o vacío. Cuando se activa una casilla, se considera que está activada. Cuando una casilla está vacía, se considera que está desactivada ".
+MS. Prod: Xamarin ms. AssetID: B8B9268B-BCB8-42B9-B08C-C0F22C137238 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/11/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-checkbox"></a>Xamarin.FormsCasilla
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
@@ -161,10 +147,10 @@ En el siguiente ejemplo de XAML se muestra cómo definir un estado visual para e
 
 En este ejemplo, `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) especifica que cuando `CheckBox` se comprueba, su propiedad se `Color` establecerá en verde. `Normal` `VisualState` Especifica que cuando el `CheckBox` está en un estado normal, su `Color` propiedad se establecerá en rojo. Por lo tanto, el efecto general es que el `CheckBox` es rojo cuando está vacío y verde cuando está activado.
 
-Para obtener más información sobre los Estados visuales, consulte [ Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+Para obtener más información sobre los estados visuales, vea [Administrador de estado visual de Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Demostraciones de CheckBox (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
-- [Xamarin.FormsDesencadenadores](~/xamarin-forms/app-fundamentals/triggers.md)
-- [Xamarin.FormsAdministrador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Desencadenadores de Xamarin.Forms](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Administrador de estado visual de Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md)

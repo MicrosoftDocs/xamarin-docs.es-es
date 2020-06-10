@@ -1,23 +1,9 @@
 ---
-title: Xamarin.FormsMaterial visual
-description: Xamarin.FormsEl material visual se puede usar para crear Xamarin.Forms aplicaciones que tengan un aspecto muy idéntico en iOS y Android.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: bba7d77d8cf565b1b2db2c1324e171389c5d0280
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127187"
+title: " Xamarin.Forms Visual material" Description: "el Xamarin.Forms material visual se puede usar para crear Xamarin.Forms aplicaciones que tengan un aspecto muy idéntico en iOS y Android".
+MS. Prod: Xamarin ms. AssetID: B774F68C-EF9E-49E1-B738-CDC64879ADA2 ms. Technology: Xamarin-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 11/25/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinforms-material-visual"></a>Xamarin.FormsMaterial visual
+
+# <a name="xamarinforms-material-visual"></a>Objeto visual de material de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 

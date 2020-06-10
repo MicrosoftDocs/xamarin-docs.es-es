@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsExpansor
-description: El Xamarin.Forms control EXPANDER proporciona un contenedor expansible para hospedar cualquier contenido. El contenido se muestra u oculta al puntear en el encabezado del expansor.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5e9afa0f6d27003891963af5715d5721e3129306
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129589"
+title: " Xamarin.Forms Expander" Description: "el Xamarin.Forms control EXPANDER proporciona un contenedor expansible para hospedar cualquier contenido. El contenido se muestra u oculta al puntear en el encabezado del expansor ".
+MS. Prod: Xamarin ms. AssetID: 381DCB55-522D-4414-B45B-E8DD70AA9985 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/15/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-expander"></a>Xamarin.FormsExpansor
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
@@ -376,5 +362,5 @@ Una aplicación puede entrar en un estado en el que `Expander` la expansión de 
 
 - [Demostraciones de Expander (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
 - [Xamarin.FormsFunciones de aceleración](~/xamarin-forms/user-interface/animation/easing.md)
-- [Xamarin.FormsDesencadenadores](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Desencadenadores de Xamarin.Forms](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Xamarin.FormsDiseños enlazables](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)

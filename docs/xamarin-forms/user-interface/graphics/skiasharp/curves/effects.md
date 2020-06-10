@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f3a5a581ffb4ca2acf1d4209b8b7a744f0daa5eb
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84128061"
+Título: "efectos de la ruta de acceso en SkiaSharp" Descripción: "en este artículo se explican los distintos efectos de la ruta de SkiaSharp que permiten usar las rutas de acceso para el trazado y el relleno, y se demuestra con código de ejemplo".
+MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 95167D1F-A718-405A-AFCC-90E596D422F3 Author: davidbritch ms. Author: dabritch ms. Date: 07/29/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="path-effects-in-skiasharp"></a>Efectos de la ruta de acceso en SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -273,7 +259,7 @@ Intente cambiar la `Style` configuración de `newPaint` a `SKPaintStyle.Stroke` 
 
 El [`SKPathEffect.Create1DPath`](xref:SkiaSharp.SKPathEffect.Create1DPath(SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPath1DPathEffectStyle)) método es conceptualmente similar a `SKPathEffect.CreateDash` , salvo que se especifica una ruta de acceso en lugar de un patrón de guiones y espacios. Esta ruta de acceso se replica varias veces para trazar la línea o curva.
 
-La sintaxis es:
+La sintaxis es la siguiente:
 
 ```csharp
 public static SKPathEffect Create1DPath (SKPath path, Single advance,

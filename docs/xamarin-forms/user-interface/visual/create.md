@@ -1,22 +1,8 @@
 ---
-title: Creación de un Xamarin.Forms representador visual
-description: Cree Xamarin.Forms objetos visuales que se apliquen de forma selectiva a objetos VisualElement, sin tener que ver con las vistas de subclases Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 23edbb007e912d13858686d1c5ec574c9e3349c7
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127146"
+Título: "crear un Xamarin.Forms representador visual" Descripción: "cree Xamarin.Forms objetos visuales que se apliquen de forma selectiva a objetos VisualElement, sin tener que crear vistas de subclases Xamarin.Forms ".
+MS. Prod: Xamarin ms. AssetID: 80BF9C72-AC28-4AAF-9DDD-B60CBDD1CD59 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/12/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="create-a-xamarinforms-visual-renderer"></a>Creación de un Xamarin.Forms representador visual
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
@@ -176,5 +162,5 @@ Las capturas de pantallas siguientes muestran el representado [`Button`](xref:Xa
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Material visual (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
-- [Xamarin.FormsMaterial visual](material-visual.md)
+- [Objeto visual de material de Xamarin.Forms](material-visual.md)
 - [Representadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

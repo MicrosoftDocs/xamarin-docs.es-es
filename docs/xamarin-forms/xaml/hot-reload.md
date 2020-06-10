@@ -1,9 +1,6 @@
 ---
-Título: ' la recarga activa de XAML para Xamarin.Forms ' Descripción: ' vuelve a cargar los cambios en el archivo XAML al instante en la aplicación en ejecución para que no tenga que compilar el Xamarin.Forms proyecto después de cada cambio de XAML. '
-MS. Prod: MS. AssetID: MS. Technology: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: "la recarga activa de XAML para Xamarin.Forms " Description: "vuelve a cargar los cambios en el archivo XAML al instante en la aplicación en ejecución para que no tenga que compilar el Xamarin.Forms proyecto después de cada cambio de XAML".
+MS. Prod: Xamarin ms. AssetID: E220F054-32EE-424C-A7E5-6156BE271519 ms. Technology: Xamarin-Forms Author: maddyleger1 ms. Author: maleger ms. Date: 03/14/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xaml-hot-reload-for-xamarinforms"></a>Recarga activa de XAML paraXamarin.Forms
@@ -18,54 +15,10 @@ La recarga activa de XAML se conecta al flujo de trabajo existente para aumentar
 ## <a name="system-requirements"></a>Requisitos del sistema
 
 | IDE/marco de trabajo | Versión necesaria |
-|---
-Título: ' la recarga activa de XAML para Xamarin.Forms ' Descripción: ' vuelve a cargar los cambios en el archivo XAML al instante en la aplicación en ejecución para que no tenga que compilar el Xamarin.Forms proyecto después de cada cambio de XAML. '
-MS. Prod: MS. AssetID: MS. Technology: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
----|---Título: ' la recarga activa de XAML para Xamarin.Forms ' Descripción: ' vuelve a cargar los cambios en el archivo XAML al instante en la aplicación en ejecución para que no tenga que compilar el Xamarin.Forms proyecto después de cada cambio de XAML. '
-MS. Prod: MS. AssetID: MS. Technology: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: ' la recarga activa de XAML para Xamarin.Forms ' Descripción: ' vuelve a cargar los cambios en el archivo XAML al instante en la aplicación en ejecución para que no tenga que compilar el Xamarin.Forms proyecto después de cada cambio de XAML. '
-MS. Prod: MS. AssetID: MS. Technology: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: ' la recarga activa de XAML para Xamarin.Forms ' Descripción: ' vuelve a cargar los cambios en el archivo XAML al instante en la aplicación en ejecución para que no tenga que compilar el Xamarin.Forms proyecto después de cada cambio de XAML. '
-MS. Prod: MS. AssetID: MS. Technology: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: ' la recarga activa de XAML para Xamarin.Forms ' Descripción: ' vuelve a cargar los cambios en el archivo XAML al instante en la aplicación en ejecución para que no tenga que compilar el Xamarin.Forms proyecto después de cada cambio de XAML. '
-MS. Prod: MS. AssetID: MS. Technology: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: ' la recarga activa de XAML para Xamarin.Forms ' Descripción: ' vuelve a cargar los cambios en el archivo XAML al instante en la aplicación en ejecución para que no tenga que compilar el Xamarin.Forms proyecto después de cada cambio de XAML. '
-MS. Prod: MS. AssetID: MS. Technology: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: ' la recarga activa de XAML para Xamarin.Forms ' Descripción: ' vuelve a cargar los cambios en el archivo XAML al instante en la aplicación en ejecución para que no tenga que compilar el Xamarin.Forms proyecto después de cada cambio de XAML. '
-MS. Prod: MS. AssetID: MS. Technology: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: ' la recarga activa de XAML para Xamarin.Forms ' Descripción: ' vuelve a cargar los cambios en el archivo XAML al instante en la aplicación en ejecución para que no tenga que compilar el Xamarin.Forms proyecto después de cada cambio de XAML. '
-MS. Prod: MS. AssetID: MS. Technology: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
----------| | Visual Studio 2019 | 16,4 o posterior Visual Studio 2019 para Mac | 8,4 o superior Xamarin.Forms | 4,1 o superior
+|------|------------------|
+|Visual Studio 2019 | 16,4 o superior
+Visual Studio 2019 para Mac | 8,4 o superior
+Xamarin.Forms | 4,1 o superior
 
 ## <a name="enable-xaml-hot-reload-for-xamarinforms"></a>Habilitar la recarga activa de XAML paraXamarin.Forms
 

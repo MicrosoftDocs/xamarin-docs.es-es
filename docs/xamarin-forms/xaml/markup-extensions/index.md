@@ -1,22 +1,8 @@
 ---
-title: ''
-description: En el artículo se explica cómo usar Xamarin.Forms las extensiones de marcado XAML para ampliar la eficacia y flexibilidad de XAML, permitiendo que los atributos de elemento se establezcan a partir de orígenes que no sean cadenas de texto literal.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 568cffc335f28b1a47f3278ad061d851ebef84b6
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130395"
+title: "XAML Markup Extensions" Description: "en el artículo se explica cómo usar Xamarin.Forms las extensiones de marcado XAML para ampliar la eficacia y flexibilidad de XAML, permitiendo que los atributos de elemento se establezcan en orígenes distintos de cadenas de texto literal".
+MS. Prod: Xamarin ms. AssetID: EB06C8B7-3FD5-47B7-A09C-A13063BD110F ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/05/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xaml-markup-extensions"></a>Extensiones de marcado XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)

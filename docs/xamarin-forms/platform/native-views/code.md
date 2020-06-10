@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Se puede hacer referencia directamente a las vistas nativas de iOS, Android y UWP desde Xamarin.Forms las páginas creadas con C#. En este artículo se muestra cómo agregar vistas nativas a un Xamarin.Forms diseño creado con C# y cómo invalidar el diseño de vistas personalizadas para corregir el uso de la API de medición.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 18cdeccbdff86a6b20aab4b33db259f1f06ee096
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139599"
+title: "vistas nativas en C#" Descripción: se puede hacer referencia directamente a las vistas nativas de iOS, Android y UWP desde Xamarin.Forms las páginas creadas con C#. En este artículo se muestra cómo agregar vistas nativas a un Xamarin.Forms diseño creado con C# y cómo invalidar el diseño de vistas personalizadas para corregir el uso de la API de medición. "
+MS. Prod: Xamarin ms. AssetID: 230F937C-F914-4B21-8EA1-1A2A9E644769 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/27/2016 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="native-views-in-c"></a>Vistas nativas en C\#
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
@@ -38,9 +24,9 @@ La capacidad de agregar vistas específicas de la plataforma a un Xamarin.Forms 
 
 El uso de estos métodos en un Xamarin.Forms proyecto compartido requiere la importación del espacio de nombres específico de la plataforma adecuado Xamarin.Forms :
 
-- **iOS** : Xamarin.Forms . Plataforma. iOS
-- **Android** : Xamarin.Forms . Plataforma. Android
-- **Plataforma universal de Windows (UWP)** : Xamarin.Forms . Plataforma. UWP
+- **iOS**: Xamarin.Forms.Platform.iOS
+- **Android**: Xamarin.Forms.Platform.Android
+- **Plataforma universal de Windows (UWP)** : Xamarin.Forms.Platform.UWP
 
 ## <a name="adding-platform-specific-views-on-each-platform"></a>Adición de vistas específicas de la plataforma en cada plataforma
 

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsÍndices
-description: Xamarin.FormsRadioButton es un tipo de botón que permite a los usuarios seleccionar una opción de un conjunto. Cada opción está representada por un botón de radio y solo puede seleccionar un botón de radio de un grupo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f7cbd11f98127cb73514112dae785102ff9c51c0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127631"
+title: " Xamarin.Forms RadioButton" Description: " Xamarin.Forms RadioButton es un tipo de botón que permite a los usuarios seleccionar una opción de un conjunto. Cada opción se representa mediante un botón de radio y solo se puede seleccionar un botón de radio de un grupo.
+MS. Prod: Xamarin ms. AssetID: E2AA40E0-69A5-41DF-BFC4-C151CA657451 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/13/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-radiobutton"></a>Xamarin.FormsÍndices
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
@@ -203,7 +189,7 @@ En este ejemplo, la clase [`Style`](xref:Xamarin.Forms.Style) implícita se dest
 
 ![Captura de pantalla de la apariencia de RadioButton establecida por estado visual, en iOS y Android](radiobutton-images/ischecked-visualstate.png "Estados visuales de RadioButton en iOS y Android")
 
-Para obtener más información sobre los Estados visuales, consulte [ Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+Para obtener más información sobre los estados visuales, vea [Administrador de estado visual de Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 ## <a name="disable-a-radiobutton"></a>Deshabilitar un RadioButton
 
@@ -212,5 +198,5 @@ A veces, una aplicación entra en un estado en el que un `RadioButton` que se es
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Demostraciones de RadioButton (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
-- [Xamarin.FormsBotón](~/xamarin-forms/user-interface/button.md)
-- [Xamarin.FormsAdministrador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Botón de Xamarin.Forms](~/xamarin-forms/user-interface/button.md)
+- [Administrador de estado visual de Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md)

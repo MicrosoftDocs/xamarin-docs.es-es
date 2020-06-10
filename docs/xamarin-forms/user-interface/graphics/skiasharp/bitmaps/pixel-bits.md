@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 9018cbe6e41350b22a0f1f91858017531c75a0ac
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135587"
+title: "acceso a los bits de píxeles de mapa de bits de SkiaSharp" Descripción: "Descubra las diversas técnicas de acceso y modificación de los bits de píxeles de mapas de bits de SkiaSharp".
+MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: DBB58522-F816-4A8C-96A5-E0236F16A5C6 Author: davidbritch ms. Author: dabritch ms. Date: 07/11/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>Obtener acceso a bits de píxel de mapa de bits SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -490,30 +476,15 @@ Para permitir que el compilador optimice el código, esta página se ejecutó en
 Esta es una tabla que consolida los tiempos de ejecución en milisegundos:
 
 | API       | Tipo de datos | iOS  | Android | UWP  |
-| ---
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------ | ---title: Descripción: MS. Prod: MS. Technology: MS. AssetID: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descripción: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------ | ----:|---title: Description: MS. Prod: MS. Technology: MS. AssetID: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
-----:| ----:| | SetPixel |           | 3,17 |   10,77 | 3,49 | | Píxeles |           | 0,32 |    1,23 | 0,07 | | GetPixels | byte | 0,09 |    0,24 | 0,10 | |           | uint | 0,06 |    0,26 | 0,05 | |           | SKColor | 0,29 |    0,99 | 0,07 | | SetPixels | byte | 1,33 |    6,78 | 0,11 | |           | uint | 0,14 |    0,69 | 0,06 | |           | SKColor | 0,35 |    1,93 | 0,10 |
+| --------- | --------- | ----:| -------:| ----:|
+| SetPixel  |           | 3,17 |   10,77 | 3.49 |
+| píxeles    |           | 0,32 |    1.23 | 0,07 |
+| GetPixels | byte      | 0,09 |    0.24 | 0,10 |
+|           | uint      | 0.06 |    0.26 | 0,05 |
+|           | SKColor   | 0,29 |    0,99 | 0,07 |
+| SetPixels | byte      | 1.33 |    6,78 | 0,11 |
+|           | uint      | 0.14 |    0.69 | 0.06 |
+|           | SKColor   | 0.35 |    1,93 | 0,10 |
 
 Como se esperaba, `SetPixel` la llamada a 65.536 veces es la forma menos effeicient de establecer los píxeles de un mapa de bits. El rellenado de una `SKColor` matriz y el establecimiento de la `Pixels` propiedad es mucho mejor e incluso se compara de forma favorable con algunas de las `GetPixels` `SetPixels` técnicas y. Trabajar con `uint` valores de píxeles suele ser más rápido que establecer `byte` componentes independientes y convertir el `SKColor` valor en un entero sin signo agrega cierta sobrecarga al proceso.
 

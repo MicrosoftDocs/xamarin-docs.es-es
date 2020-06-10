@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formsy Azure Cognitive Services introducción
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 7c2a63c40d1006c7d83c9dde871e17d4b194bdca
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129719"
+title: " Xamarin.Forms y Azure Cognitive Services Introduction" (descripción): en este artículo se proporciona una introducción a una aplicación de ejemplo que muestra cómo invocar algunas de las API de los servicios cognitivos de Microsoft.
+MS. Prod: Xamarin ms. AssetID: 74121ADB-1322-4C1E-A103-F37257BC7CB0 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/08/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Xamarin.Formsy Azure Cognitive Services introducción
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
@@ -60,7 +46,7 @@ Al hacer clic en el botón de emoticonos de `TodoListPage` , navega hasta el `Ra
 
 El proyecto de código compartido para la aplicación de ejemplo consta de cinco carpetas principales:
 
-|Carpeta|Finalidad|
+|Carpeta|Propósito|
 |--- |--- |
 |Modelos|Contiene las clases de modelo de datos para la aplicación. Esto incluye la `TodoItem` clase, que modela un único elemento de datos utilizado por la aplicación. La carpeta también incluye las clases que se usan para modelar las respuestas JSON devueltas de diferentes API del servicio cognitivo de Microsoft.|
 |Repositorios|Contiene la `ITodoItemRepository` interfaz y la `TodoItemRepository` clase que se utilizan para realizar operaciones de base de datos.|
