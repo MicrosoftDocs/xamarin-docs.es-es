@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formsconceptos avanzados & Internals
-description: Obtenga información sobre los conceptos avanzados y los elementos internos de Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 410aadcb885ed66283eb306cb9aa4c5e764fa8ec
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139040"
+title: " Xamarin.Forms conceptos avanzados & elementos internos" Descripción: "más información sobre los conceptos avanzados y el interior de Xamarin.Forms ".
+MS. Prod: Xamarin ms. AssetID: 2273a31c-4022-42ba-befe-0d23ce2ff3b5 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/20/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-advanced-concepts--internals"></a>Xamarin.Formsconceptos avanzados & Internals
 
 _Obtenga información sobre los conceptos avanzados y los elementos internos de Xamarin.Forms ._
@@ -37,6 +23,6 @@ Xamarin.Formslas marcas experimentales permiten al equipo de ingeniería enviar 
 
 Obtenga información acerca de los representadores rápidos, lo que reduce la inflación y los costos de representación de un Xamarin.Forms control en Android mediante el acoplamiento de la jerarquía de control nativa resultante.
 
-## <a name="source-link"></a>[SourceLink](sourcelink.md)
+## <a name="source-link"></a>[Vínculo de origen](sourcelink.md)
 
 Obtenga información sobre cómo depurar la aplicación en el Xamarin.Forms código fuente.

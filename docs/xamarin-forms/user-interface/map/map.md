@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsControl de mapa
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 32564b48b6d5e7acc619a966af30a086fb56d5e6
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129416"
+title: " Xamarin.Forms control de mapa" Description: "el control de mapa es una vista multiplataforma para mostrar y anotar asignaciones. Usa el control de mapa nativo para cada plataforma, lo que proporciona una experiencia de mapas rápida y familiar para los usuarios ".
+MS. Prod: Xamarin ms. AssetID: 22C99029-0B16-43A6-BF58-26B48C4AED38 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/29/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-map-control"></a>Xamarin.FormsControl de mapa
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

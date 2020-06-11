@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsBarra
-description: Xamarin.FormsBarra es un control de entrada de usuario que se usa para iniciar una búsqueda. El control barra admite texto de marcador de posición, entrada de consulta, ejecución y cancelación. En este artículo se explica cómo usar barra en XAML y en código.
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d8ceb139b1b9cd77aa922f98c80884d5c3e1a474
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127548"
+title: " Xamarin.Forms barra" Descripción: " Xamarin.Forms barra es un control de entrada de usuario que se usa para iniciar una búsqueda. El control barra admite texto de marcador de posición, entrada de consulta, ejecución y cancelación. En este artículo se explica cómo usar barra en XAML y código ".
+MS. Prod: Xamarin ms. AssetID: F5EFEA72-CB23-4DD6-9545-D9BB755AF3CB ms. Technology: Xamarin-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 11/04/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-searchbar"></a>Xamarin.FormsBarra
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)

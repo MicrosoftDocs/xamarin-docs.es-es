@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsHacer
-description: El Xamarin.Forms stepper permite al usuario seleccionar un valor numérico de un intervalo de valores. Consta de dos botones etiquetados con signos menos y más. La manipulación de los dos botones cambia el valor seleccionado incrementalmente.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4f071530fb17de44d8ede786ca1b42f5e11f4f7c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130551"
+title: " Xamarin.Forms stepper" Description: "el Xamarin.Forms stepper permite a un usuario seleccionar un valor numérico de un intervalo de valores. Consta de dos botones etiquetados con signos menos y más. La manipulación de los dos botones cambia el valor seleccionado de forma incremental ".
+MS. Prod: Xamarin ms. AssetID: 62571B3E-D84B-4F52-9FC7-C105D6733B16 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/17/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-stepper"></a>Xamarin.FormsHacer
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)

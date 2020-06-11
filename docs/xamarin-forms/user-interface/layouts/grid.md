@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCuadrícula
-description: La Xamarin.Forms cuadrícula es un diseño que organiza sus elementos secundarios en filas y columnas de celdas.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c4e63d6c1701d9eb247ecb7c52188e5dbc045934
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138078"
+Título: " Xamarin.Forms Grid" Descripción: "la Xamarin.Forms cuadrícula es un diseño que organiza sus elementos secundarios en filas y columnas de celdas".
+MS. Prod: Xamarin ms. AssetID: 762B1802-D185-494C-B643-74EED55882FE ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/15/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-grid"></a>Xamarin.FormsCuadrícula
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)

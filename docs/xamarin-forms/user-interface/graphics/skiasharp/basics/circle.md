@@ -1,22 +1,8 @@
 ---
-title: ''
-description: En este artículo se explican los aspectos básicos del dibujo de SkiaSharp, incluidos los lienzos y los objetos de Paint, en Xamarin.Forms las aplicaciones y se muestra con código de ejemplo.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: fb873102bfb8568b8298a39ea2429fb6c27af175
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137727"
+title: "dibujar un círculo simple en SkiaSharp" Descripción: "en este artículo se explican los aspectos básicos del dibujo de SkiaSharp, incluidos los lienzos y los objetos de Paint, en Xamarin.Forms las aplicaciones y se muestra el código de ejemplo".
+MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: E3A4E373-F65D-45C8-8E77-577A804AC3F8 Author: davidbritch ms. Author: dabritch ms. Date: 03/10/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Dibujar un círculo simple en SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -63,8 +49,8 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El [`SKPaintSurfaceEventArgs`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs) objeto que acompaña al evento tiene dos propiedades:
 
-- [`Info`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Info)de tipo[`SKImageInfo`](xref:SkiaSharp.SKImageInfo)
-- [`Surface`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Surface)de tipo[`SKSurface`](xref:SkiaSharp.SKSurface)
+- [`Info`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Info) de tipo [`SKImageInfo`](xref:SkiaSharp.SKImageInfo)
+- [`Surface`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Surface) de tipo [`SKSurface`](xref:SkiaSharp.SKSurface)
 
 La `SKImageInfo` estructura contiene información sobre la superficie de dibujo, lo que es más importante, el ancho y el alto en píxeles. El `SKSurface` objeto representa la propia superficie de dibujo. En este programa, la superficie de dibujo es una presentación de vídeo, pero en otros programas un `SKSurface` objeto también puede representar un mapa de bits en el que se usa SkiaSharp.
 

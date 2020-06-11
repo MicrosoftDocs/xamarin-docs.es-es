@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4eea7d500876793357113453493fa2fe2ede6cc4
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140025"
+title: "tres formas de dibujar un arco" Descripción: "en este artículo se explica cómo usar SkiaSharp para definir arcos de tres maneras diferentes y se muestra el código de ejemplo".
+MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: F1DA55E4-0182-4388-863C-5C340213BF3C Author: davidbritch ms. Author: dabritch ms. Date: 05/10/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="three-ways-to-draw-an-arc"></a>Tres maneras de dibujar un arco
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -315,7 +301,7 @@ public class InteractivePage : ContentPage
 }
 ```
 
-La clase `TangentArcPage` se deriva de `InteractivePage`. El constructor del archivo [**TangentArcPage.Xaml.CS**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml.cs) es responsable de crear instancias e inicializar la `touchPoints` matriz y de establecer `baseCanvasView` (en `InteractivePage` ) en el objeto al que se ha `SKCanvasView` creado una instancia en el archivo [**TangentArcPage. Xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml) :
+La clase `TangentArcPage` deriva de `InteractivePage`. El constructor del archivo [**TangentArcPage.Xaml.CS**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml.cs) es responsable de crear instancias e inicializar la `touchPoints` matriz y de establecer `baseCanvasView` (en `InteractivePage` ) en el objeto al que se ha `SKCanvasView` creado una instancia en el archivo [**TangentArcPage. Xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml) :
 
 ```csharp
 public partial class TangentArcPage : InteractivePage

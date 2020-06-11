@@ -1,9 +1,6 @@
 ---
-Título: Descripción: ' las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir la plataforma específica de Windows que deshabilita el Xamarin.Forms modo de color heredado.
-MS. Prod: MS. AssetID: MS. Technology: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+Título: "VisualElement modo de color heredado en Windows" Descripción: "las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir la plataforma específica de Windows que deshabilita el Xamarin.Forms modo de color heredado ".
+MS. Prod: Xamarin ms. AssetID: B8759309-07C7-4DCA-A18A-C1A198A7951B ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/24/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="visualelement-legacy-color-mode-on-windows"></a>Modo de color heredado de VisualElement en Windows

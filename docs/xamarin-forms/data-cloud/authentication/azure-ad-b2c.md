@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 64529b81a375ee5a8cc8a96ec557c03401e60495
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130577"
+title: "autenticación de usuarios con Azure Active Directory B2C" Descripción: "Azure Active Directory B2C proporciona administración de identidades en la nube para aplicaciones web y móviles orientadas al consumidor. En este artículo se muestra cómo usar Azure Active Directory B2C para integrar la administración de identidades en una aplicación móvil con la biblioteca de autenticación de Microsoft ".
+MS. Prod: Xamarin ms. AssetID: B0A5DB65-0585-4A00-B908-22CCC286E6B6 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/04/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Autenticación de usuarios con Azure Active Directory B2C
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
@@ -70,7 +56,7 @@ La biblioteca de autenticación de Microsoft espera que la **dirección URL de r
 
 ![URI de redireccionamiento personalizado en la vista de propiedades de la aplicación de Azure](azure-ad-b2c-images/azure-redirect-uri.png)
 
-La dirección URL se usará más adelante en Android **ApplicationManifest. XML** y en iOS **info. plist**.
+La dirección URL se usará más adelante tanto en el **ApplicationManifest.xml** Android como en el archivo **info. plist**de iOS.
 
 En el proyecto de ejemplo, edite el archivo **constants.CS** para establecer el `clientId` campo en el identificador de la **aplicación**. En el código siguiente se muestra cómo se debe establecer este valor si el identificador de la aplicación es `1234abcd` :
 
@@ -286,7 +272,7 @@ namespace TodoAzure.iOS
 
 ### <a name="android"></a>Android
 
-En Android, el esquema de la dirección URL personalizada que se registró con Azure Active Directory B2C debe estar registrado en **archivo AndroidManifest. XML**. MSAL espera que el esquema de la dirección URL se adhiere a un patrón específico, descrito anteriormente en [registrar la aplicación móvil con Azure Active Directory B2C](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). En el ejemplo siguiente se muestra el esquema de la dirección URL personalizada en **archivo AndroidManifest. XML**.
+En Android, el esquema de la dirección URL personalizada que se registró con Azure Active Directory B2C debe estar registrado en el **AndroidManifest.xml**. MSAL espera que el esquema de la dirección URL se adhiere a un patrón específico, descrito anteriormente en [registrar la aplicación móvil con Azure Active Directory B2C](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). En el ejemplo siguiente se muestra el esquema de la dirección URL personalizada en el **AndroidManifest.xml**.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -307,7 +293,7 @@ En Android, el esquema de la dirección URL personalizada que se registró con A
 </manifest>
 ```
 
-La `MainActivity` clase debe modificarse para proporcionar el `UIParent` objeto a la aplicación durante la `OnCreate` llamada. Cuando Azure Active Directory B2C completa la solicitud de autorización, redirige al esquema de URL registrado desde **archivo AndroidManifest. XML**. El esquema de URI registrado hace que Android llame al `OnActivityResult` método con la dirección URL como parámetro de inicio, donde lo procesa el `SetAuthenticationContinuationEventArgs` método.
+La `MainActivity` clase debe modificarse para proporcionar el `UIParent` objeto a la aplicación durante la `OnCreate` llamada. Cuando Azure Active Directory B2C completa la solicitud de autorización, redirige al esquema de URL registrado desde el **AndroidManifest.xml**. El esquema de URI registrado hace que Android llame al `OnActivityResult` método con la dirección URL como parámetro de inicio, donde lo procesa el `SetAuthenticationContinuationEventArgs` método.
 
 ```csharp
 public class MainActivity : FormsAppCompatActivity

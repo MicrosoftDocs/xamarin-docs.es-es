@@ -1,22 +1,8 @@
 ---
-title: Estilos implícitos enXamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 3fb6ea40ced93103ec9cc92fa707f68c674d7826
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139014"
+title: "estilos implícitos en Xamarin.Forms " Description: "un estilo implícito es aquél que usan todos los controles del mismo TargetType, sin necesidad de que cada control haga referencia al estilo".
+MS. Prod: Xamarin ms. AssetID: 02A75F3B-4389-49D4-A2F4-AFD473A4A161 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/30/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="implicit-styles-in-xamarinforms"></a>Estilos implícitos enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)

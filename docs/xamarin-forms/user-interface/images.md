@@ -73,7 +73,7 @@ image.Source = Device.RuntimePlatform == Device.Android
 ```
 
 > [!IMPORTANT]
-> Para usar el mismo nombre de archivo de imagen en todas las plataformas, el nombre debe ser válido en todas las plataformas. Los drawabless de Android tienen restricciones de nomenclatura, solo se permiten letras minúsculas, números, caracteres de subrayado y período, y para la compatibilidad multiplataforma, debe seguir también en todas las demás plataformas. El nombre de archivo **litoral. png** de ejemplo sigue las reglas, pero los ejemplos de nombres de archivo no válidos incluyen "Water Front. png", "litoral. png", "Water-Front. png" y "wåterfront. png".
+> Para usar el mismo nombre de archivo de imagen en todas las plataformas, el nombre debe ser válido en todas las plataformas. Los drawabless de Android tienen restricciones de nomenclatura, solo se permiten letras minúsculas, números, caracteres de subrayado y período, y para la compatibilidad multiplataforma, debe seguir también en todas las demás plataformas. El nombre de archivo de ejemplo **waterfront.png** sigue las reglas, pero los ejemplos de nombres de archivo no válidos incluyen "Water front.png", "WaterFront.png", "water-front.png" y "wåterfront.png".
 
 ### <a name="native-resolutions-retina-and-high-dpi"></a>Resoluciones nativas (retina y alta PPP)
 
@@ -87,7 +87,7 @@ Las imágenes de resolución alternativas de Android deben colocarse en [directo
 
 [![Ubicación de la imagen de varias resoluciones de Android](images-images/xs-highdpisolution-sml.png)](images-images/xs-highdpisolution.png#lightbox)
 
-Los nombres de los archivos de imagen [de UWP se pueden incluir en el sufijo `.scale-xxx` antes de la extensión de archivo](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast), donde `xxx` es el porcentaje de escalado aplicado al activo, por ejemplo, Scale-200. **PNG**. A continuación, se puede hacer referencia a las imágenes en código o XAML sin el modificador de escala, por ejemplo, simplemente **Image. png**. La plataforma seleccionará la escala de recursos más cercana adecuada en función de los PPP actuales de la pantalla.
+Los nombres de los archivos de imagen [de UWP se pueden agregar con el sufijo `.scale-xxx` anterior a la extensión de archivo](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast), donde `xxx` es el porcentaje de escalado aplicado al activo, por ejemplo, **myimage.scale-200.png**. A continuación, se puede hacer referencia a las imágenes en código o XAML sin el modificador de escala, por ejemplo, simplemente **myimage.png**. La plataforma seleccionará la escala de recursos más cercana adecuada en función de los PPP actuales de la pantalla.
 
 ### <a name="additional-controls-that-display-images"></a>Controles adicionales que muestran imágenes
 
@@ -116,7 +116,7 @@ Para insertar una imagen en un proyecto, haga clic con el botón derecho para ag
 
 La **acción de compilación** se puede ver y cambiar en la ventana **propiedades** de un archivo.
 
-En este ejemplo, el identificador de recurso es **WorkingWithImages. Beach. jpg**.
+En este ejemplo, el identificador de recurso es **WorkingWithImages.beach.jpg**.
 El IDE ha generado este valor predeterminado mediante la concatenación del **espacio de nombres predeterminado** para este proyecto con el nombre de archivo, con un punto (.) entre cada valor.
 <!-- https://msdn.microsoft.com/library/ms950960.aspx -->
 
@@ -125,15 +125,15 @@ El IDE ha generado este valor predeterminado mediante la concatenación del **es
 ![](images-images/xs-buildaction.png "Set Build Action: EmbeddedResource")
 
 También se puede ver y cambiar la **acción de compilación** en el panel de **propiedades** de un archivo.
-Este panel muestra el **identificador de recurso** que se usa para hacer referencia al recurso en el código. En la captura de pantalla siguiente, el **identificador de recurso** es **WorkingWithImages. Beach. jpg**.
+Este panel muestra el **identificador de recurso** que se usa para hacer referencia al recurso en el código. En la captura de pantalla siguiente, el **identificador de recurso** es **WorkingWithImages.beach.jpg**.
 El IDE ha generado este valor predeterminado mediante la concatenación del **espacio de nombres predeterminado** para este proyecto con el nombre de archivo, con un punto (.) entre cada valor.
-Este identificador se puede editar en el panel de **propiedades** , pero en estos ejemplos se usará el valor **WorkingWithImages. Beach. jpg** .
+Este identificador se puede editar en el panel de **propiedades** , pero en estos ejemplos se usará el valor **WorkingWithImages.beach.jpg** .
 
 [![Panel de propiedades de recursos incrustados](images-images/xs-embeddedproperties-sml.png)](images-images/xs-embeddedproperties.png#lightbox)
 
 -----
 
-Si coloca imágenes incrustadas en carpetas dentro del proyecto, los nombres de carpeta también se separan por puntos (.) en el identificador de recurso. Al mover la imagen de **Beach. jpg** a una carpeta llamada mis **imágenes** , se produciría un identificador de recurso de **WorkingWithImages. images. Beach. jpg.**
+Si coloca imágenes incrustadas en carpetas dentro del proyecto, los nombres de carpeta también se separan por puntos (.) en el identificador de recurso. Al mover la imagen de **beach.jpg** a una carpeta llamada mis **imágenes** , se produciría un identificador de recurso de **WorkingWithImages.MyImages.beach.jpg**
 
 El código para cargar una imagen incrustada simplemente pasa el **identificador de recurso** al [`ImageSource.FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) método, como se muestra a continuación:
 

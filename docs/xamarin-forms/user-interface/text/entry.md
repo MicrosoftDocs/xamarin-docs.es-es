@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsMovimientos
-description: En este artículo se explica cómo usar la Xamarin.Forms clase entry para aceptar texto de una sola línea o la entrada de contraseña en una aplicación.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5c17d6a106474c4c5b183bd41923533ffc95789b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136206"
+title: " Xamarin.Forms Entry" Description: "en este artículo se explica cómo usar la Xamarin.Forms clase entry para aceptar texto de una sola línea o la entrada de contraseña en una aplicación".
+MS. Prod: Xamarin ms. AssetID: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 09/25/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-entry"></a>Xamarin.FormsMovimientos
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
@@ -200,14 +186,14 @@ Las capturas de pantallas siguientes muestran un [`Entry`](xref:Xamarin.Forms.En
 
 El teclado que se presenta cuando los usuarios interactúan con [`Entry`](xref:Xamarin.Forms.Entry) se puede establecer mediante programación a través de la [`Keyboard`](xref:Xamarin.Forms.InputView.Keyboard) propiedad, en una de las siguientes propiedades de la [`Keyboard`](xref:Xamarin.Forms.Keyboard) clase:
 
-- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat): se usa para texto y lugares en los que los Emoji son útiles.
-- [`Default`](xref:Xamarin.Forms.Keyboard.Default): teclado predeterminado.
-- [`Email`](xref:Xamarin.Forms.Keyboard.Email): se usa al escribir direcciones de correo electrónico.
+- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat): se usa para el texto y los lugares donde los emoji son útiles.
+- [`Default`](xref:Xamarin.Forms.Keyboard.Default): el teclado predeterminado.
+- [`Email`](xref:Xamarin.Forms.Keyboard.Email): se usa al especificar direcciones de correo electrónico.
 - [`Numeric`](xref:Xamarin.Forms.Keyboard.Numeric): se usa al escribir números.
-- [`Plain`](xref:Xamarin.Forms.Keyboard.Plain): se usa al escribir texto, sin [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) especificar ningún parámetro.
-- [`Telephone`](xref:Xamarin.Forms.Keyboard.Telephone): se usa al especificar números de teléfono.
+- [`Plain`](xref:Xamarin.Forms.Keyboard.Plain): se usa al escribir texto, sin ningún [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) especificado.
+- [`Telephone`](xref:Xamarin.Forms.Keyboard.Telephone): se usa al escribir números de teléfono.
 - [`Text`](xref:Xamarin.Forms.Keyboard.Text): se usa al escribir texto.
-- [`Url`](xref:Xamarin.Forms.Keyboard.Url): se usa para especificar rutas de acceso de archivo & direcciones web.
+- [`Url`](xref:Xamarin.Forms.Keyboard.Url) : se usa para especificar las rutas de acceso de archivo y direcciones web.
 
 Esto se puede lograr en XAML de la siguiente manera:
 
@@ -223,18 +209,18 @@ var entry = new Entry { Keyboard = Keyboard.Chat };
 
 Puede encontrar ejemplos de cada teclado en nuestro repositorio de [recetas](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/choose-keyboard-for-entry) .
 
-La [`Keyboard`](xref:Xamarin.Forms.Keyboard) clase también tiene una [`Create`](xref:Xamarin.Forms.Keyboard.Create*) Factory Method que se puede utilizar para personalizar un teclado mediante la especificación de mayúsculas, corrector ortográfico y comportamiento de sugerencias. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags)los valores de enumeración se especifican como argumentos para el método, con un personalizado `Keyboard` que se va a devolver. La enumeración `KeyboardFlags` contiene los valores siguientes:
+La clase [`Keyboard`](xref:Xamarin.Forms.Keyboard) tiene también un patrón de diseño Factory Method [`Create`](xref:Xamarin.Forms.Keyboard.Create*) que puede usarse para personalizar un teclado mediante la especificación del comportamiento de las mayúsculas y minúsculas, el corrector ortográfico y las sugerencias. Los valores de enumeración [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) se especifican como argumentos para el método, con la devolución de un `Keyboard` personalizado. La enumeración `KeyboardFlags` contiene los valores siguientes:
 
 - [`None`](xref:Xamarin.Forms.KeyboardFlags.None): no se agregan características al teclado.
-- [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence): indica que la primera letra de la primera palabra de cada oración introducida se pondrá en mayúsculas automáticamente.
-- [`Spellcheck`](xref:Xamarin.Forms.KeyboardFlags.Spellcheck): indica que se realizará la revisión ortográfica en el texto escrito.
-- [`Suggestions`](xref:Xamarin.Forms.KeyboardFlags.Suggestions): indica que se ofrecerán finalizaciones de palabras en el texto escrito.
-- [`CapitalizeWord`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeWord): indica que la primera letra de cada palabra se pondrá en mayúsculas automáticamente.
-- [`CapitalizeCharacter`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeCharacter): indica que se pone en mayúsculas todos los caracteres automáticamente.
-- [`CapitalizeNone`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeNone): indica que no se producirá ninguna capitalización automática.
-- [`All`](xref:Xamarin.Forms.KeyboardFlags.All): indica que el corrector ortográfico, las finalizaciones de palabras y las mayúsculas de frases se producirán en el texto escrito.
+- [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence): indica que la primera letra de la primera palabra de cada frase se escribirá automáticamente en mayúsculas.
+- [`Spellcheck`](xref:Xamarin.Forms.KeyboardFlags.Spellcheck): indica que se pasará el corrector ortográfico al texto especificado.
+- [`Suggestions`](xref:Xamarin.Forms.KeyboardFlags.Suggestions): indica que se ofrecerán finalizaciones de palabra para el texto especificado.
+- [`CapitalizeWord`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeWord): indica que las primeras letras de todas las palabras se escribirán automáticamente en mayúsculas.
+- [`CapitalizeCharacter`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeCharacter): indica que todos los caracteres se escribirán automáticamente en mayúsculas.
+- [`CapitalizeNone`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeNone): indica que no se producirá ningún uso automático de mayúsculas.
+- [`All`](xref:Xamarin.Forms.KeyboardFlags.All): indica que se pasará el corrector automático, se ofrecerán finalizaciones de palabras y las frases empezarán en mayúsculas en el texto especificado.
 
-En el siguiente ejemplo de código XAML se muestra cómo personalizar el predeterminado [`Keyboard`](xref:Xamarin.Forms.Keyboard) para ofrecer finalizaciones de palabras y poner en mayúsculas todos los caracteres especificados:
+El ejemplo de código XAML siguiente muestra cómo personalizar el [`Keyboard`](xref:Xamarin.Forms.Keyboard) predeterminado para ofrecer finalizaciones de palabras y poner en mayúsculas todos los caracteres especificados:
 
 ```xaml
 <Entry Placeholder="Enter text here">

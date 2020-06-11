@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsSwipeView
-description: Xamarin.FormsSwipeView es un control contenedor que se ajusta alrededor de un elemento de contenido y proporciona elementos de menú contextual que se revelan mediante un gesto de deslizar rápidamente.
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 9c9d0621cdd5bb85690771d8bdfd0060b6a352cb
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136258"
+title: " Xamarin.Forms SwipeView" Descripción: " Xamarin.Forms SwipeView es un control contenedor que se ajusta alrededor de un elemento de contenido y proporciona elementos de menú contextual que se revelan mediante un gesto de deslizar rápidamente".
+MS. Prod: Xamarin ms. AssetID: 602456B5-701B-4948-B454-B1F31283F1CF ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/26/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-swipeview"></a>Xamarin.FormsSwipeView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
@@ -138,9 +124,9 @@ Los elementos de deslizamiento se utilizan para realizar acciones en el `SwipeVi
 
 [![Captura de pantalla de SwipeView deslizar rápidamente los elementos, en iOS y Android](swipeview-images/swipeview-swipeitems.png "SwipeView deslizar rápidamente los elementos")](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView deslizar rápidamente los elementos")
 
-De forma predeterminada, un elemento de deslizamiento se ejecuta cuando el usuario lo puntea. No obstante, este comportamiento se puede modificar. Para obtener más información, consulte el [modo de deslizar rápidamente](#swipe-mode).
+De forma predeterminada, un elemento de deslizamiento se ejecuta cuando el usuario lo puntea. No obstante, se puede modificar este comportamiento. Para obtener más información, consulte el [modo de deslizar rápidamente](#swipe-mode).
 
-Una vez que se ha ejecutado un dedo, se ocultan los elementos de deslizamiento y `SwipeView` se vuelve a mostrar el contenido. No obstante, este comportamiento se puede modificar. Para obtener más información, consulte el [comportamiento de deslizamiento](#swipe-behavior).
+Una vez que se ha ejecutado un dedo, se ocultan los elementos de deslizamiento y `SwipeView` se vuelve a mostrar el contenido. No obstante, se puede modificar este comportamiento. Para obtener más información, consulte el [comportamiento de deslizamiento](#swipe-behavior).
 
 > [!NOTE]
 > El deslizamiento de contenido y el deslizamiento de los elementos se pueden colocar en línea o definirse como recursos.

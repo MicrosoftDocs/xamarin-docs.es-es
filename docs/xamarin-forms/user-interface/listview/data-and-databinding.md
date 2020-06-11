@@ -1,22 +1,8 @@
 ---
-title: ''
-description: En este artículo se explica cómo rellenar Xamarin.Forms ListView con datos y cómo usar el enlace de datos con un control ListView.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 38a895c9064fc012aec35b37eac78bb16ff009a9
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131513"
+title: "ListView Data Sources" Description: "en este artículo se explica cómo rellenar Xamarin.Forms ListView con datos y cómo usar el enlace de datos con un control ListView".
+MS. Prod: Xamarin ms. AssetID: B5571660-1E82-4379-95C3-0725288CF5D9 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/23/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="listview-data-sources"></a>Orígenes de datos de ListView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)

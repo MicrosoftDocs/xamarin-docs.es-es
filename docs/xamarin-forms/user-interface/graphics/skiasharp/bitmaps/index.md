@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1d21fc199dd67471440ca0e3eeaf9a140e7a1967
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140236"
+Título: "SkiaSharp bitmaps" Description: "Obtenga información sobre cómo cargar, guardar, mostrar, crear, dibujar en, animar y obtener acceso a los bits de mapas de bits de SkiaSharp".
+MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 70C19370-157A-4B1B-9532-F77E32AC21BC Author: davidbritch ms. Author: dabritch ms. Date: 07/17/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="skiasharp-bitmaps"></a>Mapas de bits SkiaSharp
 
 Un mapa de bits es una matriz rectangular de datos que corresponden a los píxeles de un dispositivo de pantalla. El área de programación de gráficos asociada a los mapas de bits se denomina a veces _gráficos de tramas_ (con el nombre de las líneas de recorrido de vídeo inicial que se muestran) a diferencia de los _gráficos vectoriales_ de líneas y curvas. 

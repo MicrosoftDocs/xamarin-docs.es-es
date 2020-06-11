@@ -1,23 +1,9 @@
 ---
-title: Xamarin.FormsContentView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 46d2abf895ffe31bd1dc1c22caf36440c54b331c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130122"
+title: " Xamarin.Forms ContentView" Description: "en este artículo se explica cómo usar la clase ContentView para crear un control personalizado, como el ejemplo CardView".
+MS. Prod: Xamarin ms. AssetID: 638402E7-CA44-456B-863B-791F6B6B561D ms. Technology: Xamarin-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 08/14/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinforms-contentview"></a>Xamarin.FormsContentView
+
+# <a name="xamarinforms-contentview"></a>ContentView de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 
@@ -121,7 +107,7 @@ La interfaz de usuario del control personalizado usa `ContentView` como elemento
 
 El `ContentView` elemento establece la `x:Name` propiedad en **this**, que se puede utilizar para tener acceso al objeto enlazado a la `CardView` instancia. Los elementos del diseño establecen enlaces en sus propiedades a los valores definidos en el objeto enlazado.
 
-Para obtener más información sobre el enlace de datos, consulte [ Xamarin.Forms enlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+Para obtener más información sobre el enlace de datos, consulte [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
 > [!NOTE]
 > La `FallbackValue` propiedad proporciona un valor predeterminado en caso de que el enlace sea `null` . Esto también permite que el controlador de [vista previa de XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) de Visual Studio represente el `CardView` control.
@@ -207,11 +193,11 @@ Las capturas de pantallas siguientes muestran una `CardView` instancia estándar
 
 [![Captura de pantalla de ControlTemplate de CardView](contentview-images/cardview-controltemplates-cropped.png)](contentview-images/cardview-controltemplates.png#lightbox)
 
-Para obtener más información acerca de las plantillas de control, consulte [ Xamarin.Forms plantillas de control](~/xamarin-forms/app-fundamentals/templates/control-template.md).
+Para obtener más información sobre las plantillas de control, consulte [Plantillas de control de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 * [Aplicación de ejemplo ContentView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
-* [Xamarin.FormsEnlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+* [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 * [Propiedades enlazables](~/xamarin-forms/xaml/bindable-properties.md).
-* [Xamarin.FormsPlantillas de control](~/xamarin-forms/app-fundamentals/templates/control-template.md)
+* [Plantillas de control de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-template.md)

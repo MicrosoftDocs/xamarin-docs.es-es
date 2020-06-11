@@ -1,22 +1,7 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c35cd6e30e7843cda0431581025aa7440a21cc29
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140054"
+Título: "comunicación entre componentes de acoplamiento flexible" Descripción: "en este capítulo se explica cómo la aplicación móvil eShopOnContainers implementa el patrón de publicación y suscripción, lo que permite la comunicación basada en mensajes entre los componentes que no son convenientes para vincularlos según las referencias de tipo y objeto" MS. Prod: Xamarin ms. AssetID: 1194af33-8a91-48d2-88b5-b84d77f2ce69 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 Xamarin.Forms Xamarin.Essentials
 ---
+
 # <a name="communicating-between-loosely-coupled-components"></a>Comunicación entre componentes débilmente acoplados
 
 El patrón de publicación y suscripción es un patrón de mensajería en el que los publicadores envían mensajes sin tener conocimiento de los destinatarios, que se conocen como suscriptores. Del mismo modo, los suscriptores escuchan mensajes específicos, sin tener conocimiento de ningún publicador.
@@ -25,17 +10,17 @@ Los eventos de .NET implementan el patrón de publicación y suscripción, y son
 
 ## <a name="introduction-to-messagingcenter"></a>Introducción a MessagingCenter
 
-La Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) clase implementa el patrón de publicación y suscripción, lo que permite la comunicación basada en mensajes entre los componentes que no son convenientes para vincularlos mediante referencias de tipo y objeto. Este mecanismo permite a los publicadores y suscriptores comunicarse sin tener una referencia mutua, lo que ayuda a reducir las dependencias entre los componentes, a la vez que permite que los componentes se desarrollen y prueben de forma independiente.
+La clase [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) de Xamarin.Forms implementa el patrón de publicación y suscripción, lo que permite la comunicación basada en mensajes entre los componentes que no se recomienda vincular mediante referencias de tipo y objeto. Este mecanismo permite a los publicadores y suscriptores comunicarse sin tener una referencia mutua, lo que ayuda a reducir las dependencias entre los componentes, a la vez que permite que los componentes se desarrollen y prueben de forma independiente.
 
-La [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) clase proporciona la funcionalidad de publicación y suscripción de multidifusión. Esto significa que puede haber varios publicadores que publican un único mensaje y puede haber varios suscriptores que escuchen el mismo mensaje. En la figura 4-1 se muestra esta relación:
+La clase [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) proporciona la funcionalidad de publicación y suscripción de multidifusión. Esto significa que puede haber varios publicadores que publican un único mensaje y puede haber varios suscriptores que escuchen el mismo mensaje. En la figura 4-1 se muestra esta relación:
 
 ![](communicating-between-loosely-coupled-components-images/messagingcenter.png "Multicast publish-subscribe functionality")
 
 **Figura 4-1:** Funcionalidad de publicación y suscripción de multidifusión
 
-Los publicadores envían mensajes mediante el [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) método, mientras que los suscriptores escuchan mensajes mediante el [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) método. Además, los suscriptores también pueden cancelar la suscripción a suscripciones de mensaje, si es necesario, con el [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) método.
+Los publicadores envían mensajes con el método [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*), mientras que los suscriptores escuchan mensajes con el método [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*). Además, en caso necesario, los suscriptores también pueden cancelar la suscripción a mensajes con el método [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*).
 
-Internamente, la [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) clase utiliza referencias débiles. Esto significa que no mantendrá los objetos activos y permitirá la recolección de elementos no utilizados. Por lo tanto, solo debería ser necesario cancelar la suscripción a un mensaje cuando una clase ya no quiere recibir el mensaje.
+Internamente, la clase [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) utiliza referencias débiles. Esto significa que no mantendrá los objetos activos y permitirá la recolección de elementos no utilizados. Por lo tanto, solo debería ser necesario cancelar la suscripción a un mensaje cuando una clase ya no quiere recibir el mensaje.
 
 La aplicación móvil eShopOnContainers usa la [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) clase para la comunicación entre componentes de acoplamiento flexible. La aplicación define tres mensajes:
 
@@ -75,7 +60,7 @@ En este ejemplo, los mensajes se definen mediante constantes. La ventaja de este
 
 ## <a name="publishing-a-message"></a>Publicar un mensaje
 
-Los publicadores notifican a los suscriptores de un mensaje con una de las [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) sobrecargas. En el ejemplo de código siguiente se muestra cómo publicar el `AddProduct` mensaje:
+Los publicadores informan a los suscriptores de un mensaje con una de las sobrecargas de [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*). En el ejemplo de código siguiente se muestra cómo publicar el `AddProduct` mensaje:
 
 ```csharp
 MessagingCenter.Send(this, MessengerKeys.AddProduct, catalogItem);
@@ -94,7 +79,7 @@ El [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) método publicará el mens
 
 ## <a name="subscribing-to-a-message"></a>Suscribirse a un mensaje
 
-Los suscriptores pueden registrarse para recibir un mensaje mediante una de las [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) sobrecargas. En el ejemplo de código siguiente se muestra cómo la aplicación móvil eShopOnContainers se suscribe y procesa el `AddProduct` mensaje:
+Los suscriptores pueden registrarse para recibir un mensaje mediante una de las sobrecargas de [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*). En el ejemplo de código siguiente se muestra cómo la aplicación móvil eShopOnContainers se suscribe y procesa el `AddProduct` mensaje:
 
 ```csharp
 MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(  
@@ -111,7 +96,7 @@ En este ejemplo, el [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*)
 > [!TIP]
 > Considere la posibilidad de utilizar datos de carga inmutables. No intente modificar los datos de carga desde dentro de un delegado de devolución de llamada porque varios subprocesos podrían tener acceso a los datos recibidos simultáneamente. En este escenario, los datos de carga deben ser inmutables para evitar errores de simultaneidad.
 
-Es posible que un suscriptor no necesite controlar cada instancia de un mensaje publicado y que se pueda controlar mediante los argumentos de tipo genérico que se especifican en el [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) método. En este ejemplo, el suscriptor solo recibirá `AddProduct` los mensajes que se envían desde la `CatalogViewModel` clase, cuyos datos de carga son una `CatalogItem` instancia.
+Es posible que un suscriptor no necesite controlar cada instancia de un mensaje publicado, lo cual se puede controlar mediante los argumentos de tipo genérico que se especifican en el método [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*). En este ejemplo, el suscriptor solo recibirá `AddProduct` los mensajes que se envían desde la `CatalogViewModel` clase, cuyos datos de carga son una `CatalogItem` instancia.
 
 ## <a name="unsubscribing-from-a-message"></a>Cancelar la suscripción de un mensaje
 
@@ -125,7 +110,7 @@ En este ejemplo, la [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscri
 
 ## <a name="summary"></a>Resumen
 
-La Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) clase implementa el patrón de publicación y suscripción, lo que permite la comunicación basada en mensajes entre los componentes que no son convenientes para vincularlos mediante referencias de tipo y objeto. Este mecanismo permite a los publicadores y suscriptores comunicarse sin tener una referencia mutua, lo que ayuda a reducir las dependencias entre los componentes, a la vez que permite que los componentes se desarrollen y prueben de forma independiente.
+La clase [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) de Xamarin.Forms implementa el patrón de publicación y suscripción, lo que permite la comunicación basada en mensajes entre los componentes que no se recomienda vincular mediante referencias de tipo y objeto. Este mecanismo permite a los publicadores y suscriptores comunicarse sin tener una referencia mutua, lo que ayuda a reducir las dependencias entre los componentes, a la vez que permite que los componentes se desarrollen y prueben de forma independiente.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

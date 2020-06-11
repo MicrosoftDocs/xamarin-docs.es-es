@@ -1,22 +1,8 @@
 ---
-title: ''
-description: En este artículo se explica cómo usar SkiaSharp para dibujar líneas con distintos límites de trazo en Xamarin.Forms aplicaciones y cómo hacerlo con código de ejemplo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 87b97ad913e08c42d16bbf055f168c07b9bd60e8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137213"
+Título: "líneas y extremos de trazo" Descripción: "en este artículo se explica cómo usar SkiaSharp para dibujar líneas con distintos límites de trazo en Xamarin.Forms aplicaciones y se muestra el código de ejemplo".
+MS. Prod: Xamarin ms. AssetID: 1F854DDD-5D1B-4DE4-BD2D-584439429FDB ms. Technology: Xamarin-skiasharp Author: davidbritch ms. Author: dabritch ms. Date: 03/10/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="lines-and-stroke-caps"></a>Líneas y extremos de trazo
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

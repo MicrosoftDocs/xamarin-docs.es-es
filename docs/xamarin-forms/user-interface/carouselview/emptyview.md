@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCarouselView EmptyView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a9f952da75e68e9ad39e0a15f57fbd0379233d7e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137402"
+title: " Xamarin.Forms CarouselView EmptyView" Description: "in CarouselView, se puede especificar una vista vacía que proporciona comentarios al usuario cuando no hay datos disponibles para su presentación. La vista vacía puede ser una cadena, una vista o varias vistas ".
+MS. Prod: Xamarin ms. AssetID: C6DEE1A9-63FC-4889-BC77-F401D5D7DF32 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/03/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-carouselview-emptyview"></a>Xamarin.FormsCarouselView EmptyView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
@@ -35,7 +21,7 @@ Los principales escenarios de uso para establecer la propiedad muestran los [`Em
 > [!NOTE]
 > La [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) propiedad se puede establecer en una vista que incluya contenido interactivo si es necesario.
 
-Para obtener más información acerca de las plantillas de datos, consulte [ Xamarin.Forms plantillas de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
+Para obtener más información sobre las plantillas de datos, consulte [Plantillas de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
 ## <a name="display-a-string-when-data-is-unavailable"></a>Mostrar una cadena cuando los datos no estén disponibles
 
@@ -323,5 +309,5 @@ Para más información sobre los selectores de plantilla de datos, consulte [cre
 
 - [CarouselView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 - [Xamarin.FormsPlantillas de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
-- [Xamarin.FormsDiccionarios de recursos](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [Diccionarios de recursos de Xamarin.Forms](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Creación de un Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

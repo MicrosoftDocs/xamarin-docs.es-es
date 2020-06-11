@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsPropiedades enlazables
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 33b3763075b64ea8af615465825313a527d20db2
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138182"
+title: " Xamarin.Forms propiedades enlazables" Descripción: "este artículo proporciona una introducción a las propiedades enlazables y muestra cómo crearlas y consumirlas".
+MS. Prod: Xamarin ms. AssetID: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/16/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-bindable-properties"></a>Xamarin.FormsPropiedades enlazables
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)

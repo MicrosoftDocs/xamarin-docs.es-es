@@ -1,22 +1,8 @@
 ---
-title: ''
-description: En este artículo se explica cómo personalizar ListView en Xamarin.Forms aplicaciones mediante encabezados, pies de página, grupos y celdas de alto variable.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c7fdecdb0ce209c88dbe9e6f4e6e6588ec4fd3fd
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139924"
+title: "apariencia de ListView" Descripción: "en este artículo se explica cómo personalizar ListView en Xamarin.Forms aplicaciones mediante encabezados, pies de página, grupos y celdas de alto variable".
+MS. Prod: Xamarin ms. AssetID: DC8009B0-4371-4D60-885A-5362FC7EE3E5 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/13/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="listview-appearance"></a>Apariencia de ListView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
@@ -276,7 +262,7 @@ XAML:
 
 Todas las filas de un control ListView tienen el mismo alto de forma predeterminada. ListView tiene dos propiedades que se pueden usar para cambiar este comportamiento:
 
-- `HasUnevenRows`&ndash; `true`/`false` valor, las filas tienen altos variables si están establecidas en `true` . Se establece de forma predeterminada en `false`.
+- `HasUnevenRows`&ndash; `true`/`false` valor, las filas tienen altos variables si están establecidas en `true` . Tiene como valor predeterminado `false`.
 - `RowHeight`&ndash;establece el alto de cada fila cuando `HasUnevenRows` es `false` .
 
 Puede establecer el alto de todas las filas estableciendo la `RowHeight` propiedad en `ListView` .

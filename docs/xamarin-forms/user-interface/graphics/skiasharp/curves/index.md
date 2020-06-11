@@ -1,22 +1,8 @@
 ---
-title: ''
-description: En este artículo se explica cómo usar SkiaSharp para dibujar curvas y usar las características de la ruta de acceso en Xamarin.Forms aplicaciones, y se muestra con código de ejemplo.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 7d5a4fc818cef77671b6cabddc56de8234cb858d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127808"
+title: "SkiaSharp Curves and paths" Description: "en este artículo se explica cómo usar SkiaSharp para dibujar curvas y usar las características de la ruta de acceso en Xamarin.Forms aplicaciones, y se muestra el código de ejemplo".
+MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 781937AA-AA1C-469C-AA92-D42D08B58635 Author: davidbritch ms. Author: dabritch ms. Date: 05/24/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="skiasharp-curves-and-paths"></a>Trazados y curvas de SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

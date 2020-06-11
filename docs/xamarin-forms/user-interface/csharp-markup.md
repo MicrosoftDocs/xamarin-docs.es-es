@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsMarcado de C#
-description: El marcado de C# es un conjunto opcional de métodos y clases auxiliares fluidas para simplificar el proceso de creación de interfaces de usuario declarativas Xamarin.Forms en C#.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 939727d3dd8d419cdc020d33d3e7241dcedb8158
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137753"
+Título: " Xamarin.Forms marcado en c#" Descripción: "el marcado de c# es un conjunto opcional de métodos y clases auxiliares fluidas para simplificar el proceso de creación de interfaces de usuario declarativas Xamarin.Forms en C#".
+MS. Prod: Xamarin ms. AssetID: D41B9DCD-5C34-4C2F-B177-FC082AB2E9E0 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/15/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-c-markup"></a>Xamarin.FormsMarcado de C#
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

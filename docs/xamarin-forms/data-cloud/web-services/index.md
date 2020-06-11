@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formsy servicios Web
-description: En esta guía se explica cómo comunicarse con distintos servicios web para proporcionar la funcionalidad de creación, lectura, actualización y eliminación (CRUD) a una Xamarin.Forms aplicación. Entre los temas tratados se incluyen la comunicación con los servicios ASMX, los servicios WCF y los servicios REST.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5b2613b94d2c347d9bc6a94086f869b07ab8a55b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131890"
+Título: " Xamarin.Forms y servicios web" Descripción: "en esta guía se explica cómo comunicarse con distintos servicios web para proporcionar una funcionalidad de creación, lectura, actualización y eliminación (CRUD) a una Xamarin.Forms aplicación. Entre los temas tratados se incluyen la comunicación con los servicios ASMX, los servicios WCF y los servicios REST.
+MS. Prod: Xamarin ms. AssetID: 8B360BDA-E4E3-4A3F-9004-0E35362F49F8 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/27/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-and-web-services"></a>Xamarin.Formsy servicios Web
 
 ## <a name="introduction"></a>[Introducción](introduction.md)

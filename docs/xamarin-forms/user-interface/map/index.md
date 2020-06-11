@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsConectarse
-description: El control de mapa muestra un mapa y requiere Xamarin.Forms . Asigna el paquete NuGet.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 2461ffa8168207e6a57fae005f752be48772a34a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139833"
+title: " Xamarin.Forms map" Description: "el control de mapa muestra un mapa y requiere Xamarin.Forms . Asigna el paquete NuGet ".
+MS. Prod: Xamarin ms. AssetID: B669B5EE-D24C-4C69-93E1-2CA5CC9108B5 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/29/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-map"></a>Xamarin.FormsConectarse
 
 ## <a name="initialization-and-configuration"></a>[Inicialización y configuración](setup.md)

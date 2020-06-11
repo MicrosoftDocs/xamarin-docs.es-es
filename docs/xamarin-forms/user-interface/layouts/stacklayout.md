@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsStackLayout
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f624674cc6d4ba1bdc34a42fb52fb63ff8a7135a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137974"
+title: " Xamarin.Forms StackLayout" Description: "A StackLayout organiza las vistas secundarias en una pila unidimensional, ya sea horizontal o verticalmente".
+MS. Prod: Xamarin ms. AssetID: 6A91EA70-268C-462C-AAAF-F8DA011403F8 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/11/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-stacklayout"></a>Xamarin.FormsStackLayout
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
@@ -273,7 +259,7 @@ public class AlignmentPageCS : ContentPage
 }
 ```
 
-### <a name="expansion"></a>Ampliación
+### <a name="expansion"></a>Expansión
 
 En el siguiente ejemplo de XAML se establecen las preferencias de expansión en cada [`Label`](xref:Xamarin.Forms.Label) de [`StackLayout`](xref:Xamarin.Forms.StackLayout) :
 

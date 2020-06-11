@@ -1,22 +1,8 @@
 ---
-title: ''
-description: En este artículo se muestra cómo consumir un servicio de Protocolo simple de acceso a objetos (SOAP) de WCF desde una Xamarin.Forms aplicación de.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: cf95427807e0179a608b428bc7e02499c9616fe7
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139157"
+title: "consumir un servicio Web de Windows Communication Foundation (WCF)" Descripción: "en este artículo se muestra cómo consumir un servicio de Protocolo simple de acceso a objetos (SOAP) de WCF desde una Xamarin.Forms aplicación".
+MS. Prod: Xamarin ms. AssetID: 5696FF04-EF21-4B7A-8C8B-26DE28B5C0AD ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/28/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>Consumir un servicio Web de Windows Communication Foundation (WCF)
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
@@ -61,7 +47,7 @@ El servicio WCF proporciona las siguientes operaciones:
 
 Para obtener más información sobre el modelo de datos que se usa en la aplicación, vea [modelar los datos](~/xamarin-forms/data-cloud/web-services/introduction.md).
 
-Se debe generar un *proxy* para consumir un servicio WCF, lo que permite que la aplicación se conecte al servicio. El proxy se construye mediante el consumo de metadatos de servicio que definen los métodos y la configuración de servicio asociada. Estos metadatos se exponen en forma de un documento de lenguaje de descripción de servicios web (WSDL) generado por el servicio Web. El proxy se puede compilar mediante el Microsoft WCF Web Service Reference Provider en Visual Studio 2017 para agregar una referencia de servicio para el servicio Web a una biblioteca de .NET Standard. Una alternativa a la creación del proxy mediante el Microsoft WCF Web Service Reference Provider en Visual Studio 2017 es usar la herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe). Para obtener más información, vea [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/).
+Se debe generar un *proxy* para consumir un servicio WCF, lo que permite que la aplicación se conecte al servicio. El proxy se construye mediante el consumo de metadatos de servicio que definen los métodos y la configuración de servicio asociada. Estos metadatos se exponen en forma de un documento de lenguaje de descripción de servicios web (WSDL) generado por el servicio Web. El proxy se puede compilar mediante el Microsoft WCF Web Service Reference Provider en Visual Studio 2017 para agregar una referencia de servicio para el servicio Web a una biblioteca de .NET Standard. Una alternativa a la creación del proxy mediante el Microsoft WCF Web Service Reference Provider en Visual Studio 2017 es usar la herramienta de utilidad de metadatos de ServiceModel (svcutil.exe). Para obtener más información, vea [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/).
 
 Las clases de proxy generadas proporcionan métodos para consumir los servicios web que usan el modelo de diseño del modelo de programación asincrónica (APM). En este patrón, una operación asincrónica se implementa como dos métodos denominados *BeginOperationName* y *EndOperationName*, que comienzan y finalizan la operación asincrónica.
 
@@ -240,7 +226,7 @@ De forma predeterminada, IIS Express solo responderá a las solicitudes a `local
     netsh advfirewall firewall add rule name="TodoWCFService" dir=in protocol=tcp localport=49393 profile=private remoteip=localsubnet action=allow
     ```
 
-1. **Configure IIS Express para aceptar conexiones remotas**. Puede configurar IIS Express editando el archivo de configuración de IIS Express en **[directorio de la solución] \. vs\config\applicationhost.config**. Busque el `site` elemento con el nombre `TodoWCFService` . Debe ser similar al siguiente XML:
+1. **Configure IIS Express para aceptar conexiones remotas**. Puede configurar IIS Express editando el archivo de configuración de IIS Express en **[directorio de la solución] \.vs\config\applicationhost.config**. Busque el `site` elemento con el nombre `TodoWCFService` . Debe ser similar al siguiente XML:
 
     ```xml
     <site name="TodoWCFService" id="2">
@@ -317,4 +303,4 @@ De forma predeterminada, IIS Express solo responderá a las solicitudes a `local
 
 - [TodoWCF (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
 - [Creación de un cliente de Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/how-to-create-a-wcf-client)
-- [Herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
+- [Herramienta de utilidad de metadatos de ServiceModel (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)

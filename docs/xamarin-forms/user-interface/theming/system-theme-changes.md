@@ -1,22 +1,8 @@
 ---
-title: Responder a los cambios de tema del sistema en Xamarin.Forms las aplicaciones
-description: Xamarin.Formslas aplicaciones pueden responder a los cambios de tema del sistema operativo mediante el tipo OnAppTheme y la extensión de marcado DynamicResource.
-ms.assetid: ''
-ms.prod: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 2bb83f4ad5c30adccfc961938df64dda9cef1f6b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140080"
+title: "responder a los cambios de tema del sistema en Xamarin.Forms las aplicaciones" Descripción: " Xamarin.Forms las aplicaciones pueden responder a los cambios de tema del sistema operativo mediante el tipo OnAppTheme y la extensión de marcado DynamicResource".
+MS. AssetID: D10506DD-BAA0-437F-A4AD-882D16E7B60D ms. Prod: Xamarin ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/22/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="respond-to-system-theme-changes-in-xamarinforms-applications"></a>Responder a los cambios de tema del sistema en Xamarin.Forms las aplicaciones
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
@@ -195,4 +181,4 @@ El `AppThemeChangedEventArgs` objeto, que acompaña al `RequestedThemeChanged` e
 - [Extensión de marcado OnAppTheme](~/xamarin-forms/xaml/markup-extensions/consuming.md#onapptheme-markup-extension)
 - [Diccionarios de recursos](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Estilos dinámicos enXamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
-- [Aplicar estilos a las Xamarin.Forms aplicaciones mediante estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)
+- [Aplicación de estilo a aplicaciones Xamarin.Forms con estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)

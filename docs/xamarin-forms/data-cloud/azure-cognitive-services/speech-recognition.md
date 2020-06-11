@@ -1,22 +1,8 @@
 ---
-title: ''
-description: En este artículo se explica cómo usar la API del servicio de voz de Azure para transcribir la voz en el texto de una Xamarin.Forms aplicación.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 171ecc02fda304135e5f535c3e798067595d7047
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139326"
+title: "reconocimiento de voz mediante la API del servicio de voz" Descripción: "en este artículo se explica cómo usar la API del servicio de voz de Azure para transcribir la voz en el texto de una Xamarin.Forms aplicación".
+MS. Prod: Xamarin ms. AssetID: B435FF6B-8785-48D9-B2D9-1893F5A87EA1 ms. Technology: Xamarin-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 01/14/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="speech-recognition-using-azure-speech-service"></a>Reconocimiento de voz con el servicio de voz de Azure
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
@@ -347,7 +333,7 @@ public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompa
 
 La `MainActivity` clase define una referencia estática denominada `Instance` , que es necesaria para el `AndroidMicrophoneService` objeto al solicitar permisos. Invalida el `OnRequestPermissionsResult` método para actualizar el `AndroidMicrophoneService` objeto cuando el usuario aprueba o deniega la solicitud de permisos.
 
-Por último, la aplicación de Android debe incluir el permiso para grabar audio en el archivo **archivo AndroidManifest. XML** :
+Por último, la aplicación de Android debe incluir el permiso para grabar audio en el archivo de **AndroidManifest.xml** :
 
 ```xml
 <manifest ...>

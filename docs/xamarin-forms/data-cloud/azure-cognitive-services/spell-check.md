@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Bing Spell Check realiza la revisión ortográfica contextual del texto, proporcionando sugerencias en línea para palabras mal escritas. En este artículo se explica cómo usar la API de REST de Bing Spell Check para corregir errores ortográficos en una Xamarin.Forms aplicación.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1703f0049408381a86da73fb28696ef8708cc790
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139300"
+title: "corrector ortográfico con el Bing Spell Check API" Description: "Bing Spell Check realiza la revisión ortográfica contextual del texto, proporcionando sugerencias en línea para palabras mal escritas. En este artículo se explica cómo usar la API de REST de Bing Spell Check para corregir errores ortográficos en una Xamarin.Forms aplicación ".
+MS. Prod: Xamarin ms. AssetID: B40EB103-FDC0-45C6-9940-FB4ACDC2F4F9 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/08/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Revisión ortográfica mediante el Bing Spell Check API
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
@@ -173,4 +159,4 @@ En este artículo se explica cómo usar la API de REST de Bing Spell Check para 
 - [Bing Spell Check documentación](/azure/cognitive-services/bing-spell-check/)
 - [Consumo de un servicio web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [Cognitive Services todo (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
-- [Referencia de Bing Spell Check API V7](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/)
+- [Referencia de la API Bing Spell Check v7](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/)

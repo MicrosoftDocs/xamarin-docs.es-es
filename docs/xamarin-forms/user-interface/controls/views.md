@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsVistas
-description: Xamarin.Formslas vistas son los bloques de creación de interfaces de usuario móviles multiplataforma. En este artículo se enumeran las vistas que se incluyen en Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8c15626e405645d28a785c32d276860f9751ea25
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84132384"
+title: " Xamarin.Forms views" Description: " Xamarin.Forms las vistas son los bloques de creación de interfaces de usuario móviles multiplataforma. En este artículo se enumeran las vistas que se incluyen en Xamarin.Forms ".
+MS. Prod: Xamarin ms. AssetID: AC070686-A423-4A98-8BB6-0B9F94C062CC ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/16/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-views"></a>Xamarin.FormsVistas
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
@@ -55,7 +41,7 @@ Las vistas son objetos de la interfaz de usuario, como etiquetas, botones y cont
 | [`Image`](xref:Xamarin.Forms.Image)muestra un mapa de bits. Los mapas de bits se pueden descargar a través de Web, incrustados como recursos en los proyectos comunes de proyecto o plataforma, o bien crearse mediante un `Stream` objeto .net.<br /><br />[Documentación](xref:Xamarin.Forms.Image)  /  de API [Guía](~/xamarin-forms/user-interface/images.md)  /  de [Ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages) de | [![Ejemplo de imagen](views-images/Image.png "Ejemplo de imagen")](views-images/Image-Large.png#lightbox "Ejemplo de imagen")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageDemoPage.xaml) |
 |     |     |
 
-### <a name="map"></a>Mapa
+### <a name="map"></a>Map
 
 |     |     |
 | --- | --- |
@@ -73,7 +59,7 @@ Las vistas son objetos de la interfaz de usuario, como etiquetas, botones y cont
 
 |     |     |
 | --- | --- |
-| [`OpenGLView`](xref:Xamarin.Forms.OpenGLView)muestra los gráficos OpenGL en los proyectos de iOS y Android. No se admite el Plataforma universal de Windows. Los proyectos de iOS y Android requieren una referencia al ensamblado **OpenTK-1,0** o al ensamblado de la versión 1.0.0.0 de **OpenTK** . `OpenGLView`es más fácil de usar en un proyecto compartido; Si se utiliza en una biblioteca de .NET Standard, también se requerirá un servicio de dependencia (como se muestra en el código de ejemplo).<br /><br />Esta es la única instalación de gráficos integrada en Xamarin.Forms , pero una Xamarin.Forms aplicación también puede representar gráficos mediante [`SkiaSharp`](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) o [`UrhoSharp`](~/xamarin-forms/user-interface/graphics/urhosharp.md) .<br /><br />[Documentación de API](xref:Xamarin.Forms.OpenGLView)<br /><br /> | [![Ejemplo de OpenGLView](views-images/OpenGLView.png "Ejemplo de OpenGLView")](views-images/OpenGLView-Large.png#lightbox "Ejemplo de OpenGLView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
+| [`OpenGLView`](xref:Xamarin.Forms.OpenGLView)muestra los gráficos OpenGL en los proyectos de iOS y Android. No se admite el Plataforma universal de Windows. Los proyectos de iOS y Android requieren una referencia al ensamblado **OpenTK-1,0** o al ensamblado de la versión 1.0.0.0 de **OpenTK** . `OpenGLView`es más fácil de usar en un proyecto compartido; Si se utiliza en una biblioteca de .NET Standard, también se requerirá un servicio de dependencia (como se muestra en el código de ejemplo).<br /><br />Esta es la única instalación de gráficos integrada en Xamarin.Forms , pero una Xamarin.Forms aplicación también puede representar gráficos mediante [`SkiaSharp`](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) o [`UrhoSharp`](~/xamarin-forms/user-interface/graphics/urhosharp.md) .<br /><br />[Documentación de la API](xref:Xamarin.Forms.OpenGLView)<br /><br /> | [![Ejemplo de OpenGLView](views-images/OpenGLView.png "Ejemplo de OpenGLView")](views-images/OpenGLView-Large.png#lightbox "Ejemplo de OpenGLView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="webview"></a>WebView
@@ -136,7 +122,7 @@ Las vistas son objetos de la interfaz de usuario, como etiquetas, botones y cont
 | `CheckBox`permite al usuario seleccionar un valor booleano mediante un tipo de botón que puede estar activado o vacío. La `IsChecked` propiedad es el estado de `CheckBox` , y el `CheckedChanged` evento se desencadena cuando cambia el estado.<br /><br />Ejemplo de documentación/ [Guía](~/xamarin-forms/user-interface/checkbox.md)de la API  /  [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos) | [![Ejemplo de CheckBox](views-images/CheckBox.png "Ejemplo de CheckBox")](views-images/CheckBox-Large.png#lightbox "Ejemplo de CheckBox")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CheckBoxPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CheckBoxPage.xaml) |
 |     |     |
 
-### <a name="slider"></a>Control deslizante
+### <a name="slider"></a>Slider
 
 |     |     |
 | --- | --- |
@@ -252,5 +238,5 @@ Estas dos clases se derivan de la [`InputView`](xref:Xamarin.Forms.InputView) cl
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Xamarin.FormsEjemplo de FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
-- [Xamarin.FormsAssembl](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Ejemplos de Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Xamarin.FormsDocumentación de API](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

@@ -3,7 +3,7 @@ title: " Xamarin.Forms representadores rápidos" Description: "en este artículo
 MS. Prod: Xamarin ms. AssetID: 097f87f2-d891-4f3c-BE02-fb7d195a481a ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/28/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
-# <a name="xamarinforms-fast-renderers"></a>Xamarin.FormsRepresentadores rápidos
+# <a name="xamarinforms-fast-renderers"></a>Representadores rápidos de Xamarin.Forms
 
 Tradicionalmente, la mayoría de los representadores de control originales en Android se componen de dos vistas:
 

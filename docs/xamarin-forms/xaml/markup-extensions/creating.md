@@ -1,22 +1,8 @@
 ---
-title: ''
-description: En este artículo se explica cómo definir sus propias Xamarin.Forms extensiones de marcado XAML personalizadas. Una extensión de marcado XAML es una clase que implementa la interfaz IMarkupExtension o IMarkupExtension <T> .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 878ebcaa5249261afac2776a9e7cf47c0c047135
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130538"
+title: "crear extensiones de marcado XAML" Descripción: "en este artículo se explica cómo definir sus propias Xamarin.Forms extensiones de marcado XAML personalizadas. Una extensión de marcado XAML es una clase que implementa la interfaz IMarkupExtension o IMarkupExtension <T> ".
+MS. Prod: Xamarin ms. AssetID: 797C1EF9-1C8E-4208-8610-9B79CCF17D46 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/05/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="creating-xaml-markup-extensions"></a>Creación de extensiones de marcado XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
@@ -25,11 +11,11 @@ En el nivel de programación, una extensión de marcado XAML es una clase que im
 
 También es posible definir sus propias extensiones de marcado XAML personalizadas mediante la derivación de `IMarkupExtension` o `IMarkupExtension<T>` . Use la forma genérica si la extensión de marcado obtiene un valor de un tipo determinado. Este es el caso con varias de las Xamarin.Forms extensiones de marcado:
 
-- `TypeExtension`deriva de`IMarkupExtension<Type>`
-- `ArrayExtension`deriva de`IMarkupExtension<Array>`
-- `DynamicResourceExtension`deriva de`IMarkupExtension<DynamicResource>`
-- `BindingExtension`deriva de`IMarkupExtension<BindingBase>`
-- `ConstraintExpression`deriva de`IMarkupExtension<Constraint>`
+- `TypeExtension` deriva de `IMarkupExtension<Type>`.
+- `ArrayExtension` deriva de `IMarkupExtension<Array>`.
+- `DynamicResourceExtension` deriva de `IMarkupExtension<DynamicResource>`.
+- `BindingExtension` deriva de `IMarkupExtension<BindingBase>`.
+- `ConstraintExpression` deriva de `IMarkupExtension<Constraint>`.
 
 Las dos `IMarkupExtension` interfaces definen solo un método, denominado `ProvideValue` :
 

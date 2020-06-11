@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Una descripción de todos los elementos de la interfaz de usuario que se usan para crear una Xamarin.Forms aplicación. En este artículo se enumeran los grupos de controles que componen la interfaz de usuario de una Xamarin.Forms aplicación.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: e843f0e42f4f66a6ce4e60c2f5d8a233d19f1df6
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136401"
+Título: "referencia de controles" Description: "una descripción de todos los elementos de la interfaz de usuario usados para crear una Xamarin.Forms aplicación. En este artículo se enumeran los grupos de controles que componen la interfaz de usuario de una Xamarin.Forms aplicación ".
+MS. Prod: Xamarin ms. AssetID: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/08/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="controls-reference"></a>Controls Reference (Referencia de controles)
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
@@ -43,4 +29,4 @@ Además de los controles proporcionados con Xamarin.Forms , hay disponibles cont
 
 - [Xamarin.FormsEjemplo de FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 - [Xamarin.FormsJerarquía de clases de controles](~/xamarin-forms/internals/class-hierarchy.md)
-- [Documentación de API](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
+- [Documentación de la API](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

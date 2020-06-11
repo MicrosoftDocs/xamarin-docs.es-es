@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsJerarquía de clases de controles
-description: Los desarrolladores deben estar familiarizados con la jerarquía de tipos que se usan para crear la interfaz de usuario de una Xamarin.Forms aplicación.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 0087e2bb81c7c9204a782519a9eeb9891adc297a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138649"
+title: " Xamarin.Forms controla la jerarquía de clases" Descripción: "los desarrolladores deben estar familiarizados con la jerarquía de tipos que se usan para crear la interfaz de usuario de una Xamarin.Forms aplicación".
+MS. Prod: Xamarin ms. AssetID: C89E6B98-464D-4BBE-BF11-13A5FCBBF420 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/07/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-controls-class-hierarchy"></a>Xamarin.FormsJerarquía de clases de controles
 
 Xamarin.Formsse compone de cientos de tipos, en varios espacios de nombres. Los desarrolladores deben estar familiarizados con la jerarquía de tipos que se usan para crear la interfaz de usuario de una Xamarin.Forms aplicación, que residen en el `Xamarin.Forms` espacio de nombres.

@@ -1,22 +1,8 @@
 ---
-title: Prefijos recomendados del espacio de nombres XAML enXamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 71ae523f40f3f7529c12f853778404e224fbae30
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138143"
+title: "prefijos recomendados del espacio de nombres XAML en Xamarin.Forms " Description: "los autores de controles pueden usar la clase XmlnsPrefixAttribute para especificar un prefijo recomendado para asociarlo a un espacio de nombres XAML, para el uso de XAML".
+MS. Prod: Xamarin ms. AssetID: 7B315BEC-7A35-48F4-A9C7-EF40255E95FF ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/28/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xaml-namespace-recommended-prefixes-in-xamarinforms"></a>Prefijos recomendados del espacio de nombres XAML enXamarin.Forms
 
 Los `XmlnsPrefixAttribute` autores de controles pueden usar la clase para especificar un prefijo recomendado para asociarlo a un espacio de nombres XAML, para el uso de XAML. El prefijo es útil al admitir la serialización del árbol de objetos en XAML o al interactuar con un entorno de diseño que tiene características de edición de XAML. Por ejemplo:

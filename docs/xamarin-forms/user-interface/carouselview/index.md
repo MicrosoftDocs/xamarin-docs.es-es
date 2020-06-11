@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCarouselView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 891f1ff8ad8f254ff3a2805d08d0f7e115bb0fff
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137376"
+title: " Xamarin.Forms CarouselView" Descripción: "CarouselView es una vista para presentar datos en un diseño desplazable, donde los usuarios pueden deslizarse para desplazarse por una colección de elementos".
+MS. Prod: Xamarin ms. AssetID: 5b673347-CDBA-4532-820f-fb5f070c86bc ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/08/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-carouselview"></a>Xamarin.FormsCarouselView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
@@ -25,7 +11,7 @@ ms.locfileid: "84137376"
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView)Es una vista para presentar los datos en un diseño desplazable, donde los usuarios pueden deslizarse para desplazarse por una colección de elementos.
 
-## <a name="data"></a>[Datos](populate-data.md)
+## <a name="data"></a>[Data](populate-data.md)
 
 Un [`CarouselView`](xref:Xamarin.Forms.CarouselView) se rellena con datos estableciendo su [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) propiedad en cualquier colección que implementa `IEnumerable` . La apariencia de cada elemento se puede definir estableciendo la [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) propiedad en [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) .
 
@@ -41,6 +27,6 @@ Se puede tener acceso al elemento mostrado actualmente en un [`CarouselView`](xr
 
 En [`CarouselView`](xref:Xamarin.Forms.CarouselView) , se puede especificar una vista vacía que proporciona comentarios al usuario cuando no hay datos disponibles para mostrar. La vista vacía puede ser una cadena, una vista o varias vistas.
 
-## <a name="scrolling"></a>[Desplazamiento](scrolling.md)
+## <a name="scrolling"></a>[Desplazarse](scrolling.md)
 
 Cuando un usuario desliza el dedo para iniciar un desplazamiento, se puede controlar la posición final del desplazamiento para que los elementos se muestren por completo. Además, [`CarouselView`](xref:Xamarin.Forms.CarouselView) define dos [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos, que desplazan los elementos mediante programación a la vista. Una de las sobrecargas desplaza el elemento en el índice especificado en la vista, mientras que el otro desplaza el elemento especificado a la vista.

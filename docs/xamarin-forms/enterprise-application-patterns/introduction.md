@@ -23,7 +23,7 @@ Una solución eficaz para estos desafíos es particionar una aplicación en comp
 - Promueve la reutilización y una separación limpia de las preocupaciones entre las funcionalidades horizontales de la aplicación, como la autenticación y el acceso a datos, y las funcionalidades verticales, como la funcionalidad empresarial específica de la aplicación. Esto permite administrar las dependencias y las interacciones entre los componentes de la aplicación más fácilmente.
 - Ayuda a mantener una separación de roles, ya que permite que individuos, o equipos, se centren en una tarea específica o en una parte de la funcionalidad de acuerdo con sus conocimientos. En concreto, proporciona una separación más nítida entre la interfaz de usuario y la lógica de negocios de la aplicación.
 
-Sin embargo, hay muchos problemas que se deben resolver al particionar una aplicación en componentes discretos de acoplamiento flexible. Estas incluyen:
+Sin embargo, hay muchos problemas que se deben resolver al particionar una aplicación en componentes discretos de acoplamiento flexible. Se incluyen los siguientes:
 
 - Decidir cómo proporcionar una separación limpia de los aspectos entre los controles de la interfaz de usuario y su lógica. Una de las decisiones más importantes a la hora de crear una Xamarin.Forms aplicación empresarial es si se debe colocar lógica de negocios en archivos de código subyacente, o si se va a crear una separación limpia de los aspectos entre los controles de la interfaz de usuario y su lógica, para que la aplicación sea más fácil de mantener y probar. Para obtener más información, vea [modelo-vista-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
 - Determinar si se va a usar un contenedor de inserción de dependencias. Los contenedores de inserción de dependencias reducen el acoplamiento de dependencias entre los objetos al proporcionar una utilidad para construir instancias de clases con sus dependencias insertadas y administrar su duración en función de la configuración del contenedor. Para obtener más información, consulte [inserción de dependencias](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
@@ -108,7 +108,7 @@ Además, se proporcionan pruebas unitarias para algunas de las clases de la apli
 
 La solución de aplicación móvil eShopOnContainers organiza el código fuente y otros recursos en proyectos. Todos los proyectos utilizan carpetas para organizar el código fuente y otros recursos en categorías. En la tabla siguiente se describen los proyectos que componen la aplicación móvil eShopOnContainers:
 
-|Proyecto|Descripción|
+|Project|Descripción|
 |--- |--- |
 |eShopOnContainers. Core|Este proyecto es el proyecto de biblioteca de clases portable (PCL) que contiene el código compartido y la interfaz de usuario compartida.|
 |eShopOnContainers. Droid|Este proyecto contiene código específico de Android y es el punto de entrada de la aplicación Android.|

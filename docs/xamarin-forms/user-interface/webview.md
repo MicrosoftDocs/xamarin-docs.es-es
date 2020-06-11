@@ -315,11 +315,11 @@ public partial class InAppBrowserXaml : ContentPage
 }
 ```
 
-Eso es todo.
+Ya está.
 
 ![Botones de navegación de vista previa](webview-images/in-app-browser.png)
 
-## <a name="events"></a>Events
+## <a name="events"></a>Eventos
 
 WebView genera los siguientes eventos para ayudarle a responder a los cambios en el estado:
 

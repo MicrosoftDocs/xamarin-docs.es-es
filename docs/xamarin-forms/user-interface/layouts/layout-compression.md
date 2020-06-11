@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 40af5aeaa51025dae70113faa6f7ff83edf43c73
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138034"
+Título: "compresión de diseño" Descripción: "la compresión de diseño quita los diseños especificados del árbol visual para intentar mejorar el rendimiento de la representación de páginas. En este artículo se explica cómo habilitar la compresión del diseño y las ventajas que puede llevar a cabo.
+MS. Prod: Xamarin ms. AssetID: da9e1b26-9d31-4762-94c3-4039f306b7f2 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/13/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="layout-compression"></a>Compresión de diseño
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)

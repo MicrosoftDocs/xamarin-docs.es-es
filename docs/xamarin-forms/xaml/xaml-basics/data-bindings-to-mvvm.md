@@ -1,23 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.custom: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 047cf963394325e8f88759ffe9da7dcf2ca3ad12
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127535"
+Título: "parte 5. Desde enlaces de datos a MVVM "Descripción:" el patrón de MVVM exige una separación entre tres capas de software: la interfaz de usuario de XAML, denominada vista; los datos subyacentes, denominados modelo; y un intermediario entre la vista y el modelo, denominado ViewModel ".
+MS. Prod: Xamarin ms. Custom: video ms. AssetID: 48B37D44-4FB1-41B2-9A5E-6D383B041F81 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/25/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Parte 5. Enlaces de datos a MVVM
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

@@ -1,22 +1,8 @@
 ---
-title: Diseños enlazables enXamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 9d0497c0c0593b54f69bac84307976c4050e9c95
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138247"
+title: "diseños enlazables en Xamarin.Forms " Description: "los diseños enlazables permiten a las clases de diseño generar su contenido enlazando con una colección de elementos, con la opción de establecer la apariencia de cada elemento con un DataTemplate".
+MS. Prod: Xamarin ms. AssetID: 824C3319-20A0-42D0-8632-CDECD98349C3 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/09/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="bindable-layouts-in-xamarinforms"></a>Diseños enlazables enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
@@ -98,7 +84,7 @@ En este ejemplo, se mostrarán todos los elementos de la `TopFollowers` colecci�
 
 ![Diseño enlazable con un DataTemplate](bindable-layouts-images/top-followers.png "Diseño enlazable con una plantilla de datos")
 
-Para obtener más información acerca de las plantillas de datos, consulte [ Xamarin.Forms plantillas de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
+Para obtener más información sobre las plantillas de datos, consulte [Plantillas de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
 ## <a name="choose-item-appearance-at-runtime"></a>Elección de la apariencia del elemento en tiempo de ejecución
 

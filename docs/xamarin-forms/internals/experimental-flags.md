@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formsmarcas experimentales
-description: Xamarin.Formslas marcas experimentales permiten al equipo de ingeniería enviar nuevas características a los usuarios con más rapidez, al mismo tiempo que se pueden cambiar las API de características antes de que pasen a una versión estable.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b548323330ccdce6fb01e83c7e8ab7c2d5307125
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139066"
+title: " Xamarin.Forms marcas experimentales" Descripción: " Xamarin.Forms las marcas experimentales permiten al equipo de ingeniería enviar nuevas características a los usuarios con más rapidez, al tiempo que se pueden cambiar las API de características antes de que pasen a una versión estable".
+MS. Prod: Xamarin ms. AssetID: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/14/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-experimental-flags"></a>Xamarin.Formsmarcas experimentales
 
 Cuando Xamarin.Forms se implementa una nueva característica, a veces se coloca detrás de una marca experimental. Esto permite al equipo de ingeniería proporcionar nuevas características con mayor rapidez, al tiempo que sigue pudiendo cambiar las API de características antes de que pasen a una versión estable. Después, se quita la marca experimental una vez que la característica se mueve a una versión estable.

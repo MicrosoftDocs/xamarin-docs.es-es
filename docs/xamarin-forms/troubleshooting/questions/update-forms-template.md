@@ -1,22 +1,8 @@
 ---
-title: ¿Puedo actualizar la Xamarin.Forms plantilla predeterminada a un paquete de NuGet más reciente?
-ms.topic: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: bdead80671a1ae6539de6614441df7e86863a5a6
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137480"
+title: "¿puedo actualizar la Xamarin.Forms plantilla predeterminada a un paquete NuGet más reciente?"
+MS. topic: solución de problemas de MS. Prod: Xamarin ms. AssetID: 160FBE13-26EB-4B4F-9248-A5CBE58FDD7F ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/25/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-package"></a>¿Puedo actualizar la Xamarin.Forms plantilla predeterminada a un paquete de NuGet más reciente?
 
 En esta guía se usa la Xamarin.Forms plantilla de biblioteca de .net Standard como ejemplo, pero el mismo método general también funcionará para la Xamarin.Forms plantilla de proyecto compartido. Esta guía se ha escrito con el ejemplo de actualización de Xamarin.Forms 1.5.1.6471 a 2.1.0.6529, pero se pueden realizar los mismos pasos para establecer otras versiones como valor predeterminado.

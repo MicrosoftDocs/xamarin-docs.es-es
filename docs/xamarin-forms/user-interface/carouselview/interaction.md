@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsInteracción con CarouselView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 57c501c0f789ce448d8381cbbccb46666cf06305
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137415"
+title: " Xamarin.Forms CarouselView Interaction" Description: "se puede obtener acceso al elemento mostrado actualmente en un CarouselView a través de las propiedades CurrentItem y position".
+MS. Prod: Xamarin ms. AssetID: 854D97E5-D119-4BE2-AE7C-BD428792C992 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/11/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-carouselview-interaction"></a>Xamarin.FormsInteracción con CarouselView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
@@ -346,7 +332,7 @@ Las capturas de pantallas siguientes muestran los `CurrentItem` `PreviousItem` `
 
 [![Captura de pantalla de un CarouselView con Estados visuales, en iOS y Android](interaction-images/visual-states.png "Estados visuales de CarouselView")](interaction-images/visual-states-large.png#lightbox "Estados visuales de CarouselView")
 
-Para obtener más información sobre los Estados visuales, consulte [ Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+Para obtener más información sobre los estados visuales, vea [Administrador de estado visual de Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 ## <a name="clear-the-current-item"></a>Borrar el elemento actual
 
@@ -363,4 +349,4 @@ De forma predeterminada, [`CarouselView`](xref:Xamarin.Forms.CarouselView) permi
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [CarouselView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
-- [Xamarin.FormsAdministrador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Administrador de estado visual de Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md)

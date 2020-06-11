@@ -23,7 +23,7 @@ En Windows, inicie Visual Studio 2019 y, en la ventana Inicio, haga clic en **cr
 
 ![Ventana nueva solución](get-started-with-xaml-images/win/new-solution-2019.png)
 
-En la ventana **crear un nuevo proyecto** , seleccione **móvil** en el menú desplegable **tipo de proyecto** , seleccione la plantilla **aplicación móvil ( Xamarin.Forms )** y haga clic en el botón **siguiente** :
+En la ventana **Crear un proyecto nuevo**, seleccione **Móvil** en la lista desplegable **Tipo de proyecto**, elija la plantilla **Aplicación móvil (Xamarin.Forms)** y haga clic en el botón **Siguiente**:
 
 ![Ventana nuevo proyecto](get-started-with-xaml-images/win/new-project-2019.png)
 

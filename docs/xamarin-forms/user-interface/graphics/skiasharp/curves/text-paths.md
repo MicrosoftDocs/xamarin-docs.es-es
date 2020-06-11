@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b0cbb7d26a2aea02a3255fc75947c20a3d803b86
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131903"
+title: "paths and Text in SkiaSharp" Description: "este artículo explora la intersección de las rutas de acceso y el texto de SkiaSharp y demuestra esto con código de ejemplo".
+MS. Prod: Xamarin ms. AssetID: C14C07F6-4A84-4A8C-BDB4-CD61FBF0F79B ms. Technology: Xamarin-skiasharp Author: davidbritch ms. Author: dabritch ms. Date: 08/01/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="paths-and-text-in-skiasharp"></a>Rutas de acceso y texto en SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsTimePicker
-description: El TimePicker es una Xamarin.Forms vista que permite al usuario seleccionar una hora. En este artículo se explica cómo consumir un TimePicker en una Xamarin.Forms aplicación.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 7c2e6b97f2207ebb6543fb6a720cd430331f989b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138234"
+title: " Xamarin.Forms TimePicker" Description: "el TimePicker es una Xamarin.Forms vista que permite al usuario seleccionar una hora. En este artículo se explica cómo consumir un TimePicker en una Xamarin.Forms aplicación ".
+MS. Prod: Xamarin ms. AssetID: 2E99FB23-B82D-4EB4-AFB3-5002E736E7B2 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/16/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-timepicker"></a>Xamarin.FormsTimePicker
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-timepicker)

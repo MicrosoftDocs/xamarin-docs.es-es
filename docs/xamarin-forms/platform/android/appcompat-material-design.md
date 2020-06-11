@@ -1,22 +1,8 @@
 ---
-title: ''
-description: En este artículo se explica cómo convertir Xamarin.Forms aplicaciones Android existentes para usar AppCompat y el diseño de material.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 24206f6d6764c73f13a4b06fb44fa746f9d353af
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135712"
+title: "incorporación de la descripción de AppCompat y el diseño de material": "en este artículo se explica cómo convertir Xamarin.Forms aplicaciones Android existentes para usar AppCompat y el diseño de material".
+MS. Prod: Xamarin ms. AssetID: 045FBCDF-4D45-48BB-9911-BD3938C87D58 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/27/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="adding-appcompat-and-material-design"></a>Agregar AppCompat y el diseño de material
 
 _Siga estos pasos para convertir Xamarin.Forms aplicaciones Android existentes para usar AppCompat y el diseño de material._
@@ -43,7 +29,7 @@ Asegúrese de que la plataforma de destino del proyecto de Android es Android 6,
 
 Cree los tres archivos siguientes en el proyecto de Android y péguelo en el contenido siguiente. Google proporciona una [Guía de estilo](https://www.google.com/design/spec/style/color.html#color-color-palette) y un [generador de paletas de colores](https://www.materialpalette.com/) para ayudarle a elegir una combinación de colores alternativa para la especificada.
 
-**Resources/Values/colors. XML**
+**Recursos/valores/colors.xml**
 
 ```xml
 <resources>
@@ -54,7 +40,7 @@ Cree los tres archivos siguientes en el proyecto de Android y péguelo en el con
 </resources>
 ```
 
-**Resources/Values/Style. XML**
+**Recursos/valores/style.xml**
 
 ```xml
 <resources>
@@ -72,7 +58,7 @@ Cree los tres archivos siguientes en el proyecto de Android y péguelo en el con
 
 Se debe incluir un estilo adicional en la carpeta **Values-V21** para aplicar propiedades específicas cuando se ejecuta en un círculo de Android y versiones más recientes.
 
-**Resources/Values-V21/Style. XML**
+**Recursos/valores: V21/style.xml**
 
 ```xml
 <resources>
@@ -84,11 +70,11 @@ Se debe incluir un estilo adicional en la carpeta **Values-V21** para aplicar pr
 </resources>
 ```
 
-### <a name="4-update-androidmanifestxml"></a>4. Actualizar archivo AndroidManifest. XML
+### <a name="4-update-androidmanifestxml"></a>4. actualizar AndroidManifest.xml
 
 Para asegurarse de que se usa esta nueva información de tema, establezca tema en el archivo **archivo AndroidManifest** agregando `android:theme="@style/MyTheme"` (deje el resto del código XML tal como estaba).
 
-**Propiedades/archivo AndroidManifest. XML**
+**Propiedades/AndroidManifest.xml**
 
 ```xml
 ...

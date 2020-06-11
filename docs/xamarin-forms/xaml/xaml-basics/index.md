@@ -1,23 +1,8 @@
 ---
-title: Xamarin.FormsConceptos básicos de XAML
-description: En esta guía se explica cómo empezar a trabajar con XAML multiplataforma para dispositivos móviles. XAML permite a los desarrolladores definir interfaces de usuario en Xamarin.Forms aplicaciones con marcado en lugar de código.
-ms.prod: ''
-ms.custom: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8f5f69038f7d5cfe7ad46f013acb1519c4e9569f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138624"
+title: " Xamarin.Forms conceptos básicos de XAML" Descripción: "en esta guía se explica cómo empezar a trabajar con XAML multiplataforma para dispositivos móviles. XAML permite a los desarrolladores definir interfaces de usuario en Xamarin.Forms aplicaciones con marcado en lugar de código ".
+MS. Prod: Xamarin ms. Custom: video ms. AssetID: 67CC2CD6-D10A-4B14-9696-1D3A410EFFBF ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/25/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-xaml-basics"></a>Xamarin.FormsConceptos básicos de XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
@@ -62,7 +47,7 @@ Cuando esté familiarizado con Xamarin.Forms y XML, empiece a leer la [parte 1. 
 
 - [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Crear Mobile Apps libro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
-- [Xamarin.FormsAssembl](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Ejemplos de Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 
 ## <a name="related-video"></a>Vídeo relacionado
 

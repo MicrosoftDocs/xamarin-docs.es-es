@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsIntroducción a servicios Web
-description: En esta guía se proporciona un tutorial de la Xamarin.Forms aplicación de ejemplo que muestra cómo comunicarse con distintos servicios Web. Aunque cada servicio Web utiliza una aplicación de ejemplo independiente, son funcionalmente similares y comparten clases comunes.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d714b4c9d598d8cca26ae992abf3f15df703d11b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139183"
+title: " Xamarin.Forms Web Services Introduction" Description: "esta guía proporciona un tutorial de la Xamarin.Forms aplicación de ejemplo que muestra cómo comunicarse con diferentes servicios Web. Aunque cada servicio Web utiliza una aplicación de ejemplo independiente, son funcionalmente similares y comparten clases comunes ".
+MS. Prod: Xamarin ms. AssetID: A3FEB262-0D79-42E6-8F8B-A565618C490B ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/28/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-web-services-introduction"></a>Xamarin.FormsIntroducción a servicios Web
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
@@ -43,7 +29,7 @@ En cada tema de esta guía se proporciona un vínculo de descarga a una versión
 
 El proyecto de código compartido para cada aplicación de ejemplo consta de tres carpetas principales:
 
-|Carpeta|Finalidad|
+|Carpeta|Propósito|
 |--- |--- |
 |data|Contiene las clases e interfaces utilizadas para administrar los elementos de datos y comunicarse con el servicio Web. Como mínimo, incluye la `TodoItemManager` clase, que se expone a través de una propiedad en la `App` clase para invocar las operaciones del servicio Web.|
 |Modelos|Contiene las clases de modelo de datos para la aplicación. Como mínimo, incluye la `TodoItem` clase, que modela un único elemento de datos utilizado por la aplicación. La carpeta también puede incluir cualquier clase adicional que se use para modelar los datos de usuario.|

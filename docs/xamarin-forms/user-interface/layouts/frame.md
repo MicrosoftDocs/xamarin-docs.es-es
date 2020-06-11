@@ -1,21 +1,6 @@
 ---
-title: Xamarin.FormsGrama
-description: La Xamarin.Forms clase de marco es un diseño que se usa para ajustar una vista o un diseño con un borde que se puede configurar con color, sombra y otras opciones.
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 42192111befbefda7e0f62b7691a8392c2828818
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137194"
+title: " Xamarin.Forms frame" Description: "la Xamarin.Forms clase Frame es un diseño que se usa para ajustar una vista o un diseño con un borde que se puede configurar con color, Shadow y otras opciones".
+MS. Prod: Xamarin ms. AssetID: 4E074714-0928-41C8-A468-B60E23236A8C ms. Technology: Xamarin-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 08/06/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 # <a name="xamarinforms-frame"></a>Xamarin.FormsGrama
 
@@ -189,7 +174,7 @@ Frame circleImageFrame = new Frame
 };
 ```
 
-La imagen del **exterior. jpg** debe agregarse a cada proyecto de la plataforma y la manera en que se logra esto varía según la plataforma. Para obtener más información, vea [imágenes Xamarin.Forms en ](~/xamarin-forms/user-interface/images.md).
+La imagen de **outdoors.jpg** se debe agregar a cada proyecto de plataforma y la manera en que se logra esto varía según la plataforma. Para obtener más información, vea [imágenes Xamarin.Forms en ](~/xamarin-forms/user-interface/images.md).
 
 > [!NOTE]
 > Las esquinas redondeadas se comportan de manera ligeramente diferente en las distintas plataformas. El `Image` objeto `Margin` debe ser la mitad de la diferencia entre el ancho de la imagen y el ancho del marco primario, y debe ser negativo para centrar la imagen uniformemente dentro del `Frame` objeto. Sin embargo, no se garantiza el ancho y el alto solicitados, por lo que `Margin` `HeightRequest` es posible que sea necesario modificar las propiedades, y en `WidthRequest` función del tamaño de la imagen y otras opciones de diseño.

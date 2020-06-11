@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsConmutador
-description: El Xamarin.Forms modificador es un tipo de botón que el usuario puede manipular para alternar entre los Estados de activado y desactivado. En este artículo se explica cómo usar la clase switch para mostrar un elemento de interfaz de usuario de alternancia.
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a5c2583b7632acdfa7d8439dc96b3964fa3cfcab
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136245"
+title: " Xamarin.Forms switch" Description: "The Xamarin.Forms Switch es un tipo de botón que el usuario puede manipular para alternar entre los Estados on y OFF. En este artículo se explica cómo usar la clase switch para mostrar un elemento de interfaz de usuario de alternancia ".
+MS. Prod: Xamarin ms. AssetID: B2F9CC65-481B-4323-8E77-C6BE29C90DE9 ms. Technology: Xamarin-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 07/18/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-switch"></a>Xamarin.FormsConmutador
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
@@ -130,4 +116,4 @@ Una aplicación puede entrar en un estado en el que la `Switch` alternancia no e
 ## <a name="related-links"></a>Vínculos relacionados
 
 * [Cambiar demostraciones](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
-* [Xamarin.FormsDesencadenadores](~/xamarin-forms/app-fundamentals/triggers.md)
+* [Desencadenadores de Xamarin.Forms](~/xamarin-forms/app-fundamentals/triggers.md)

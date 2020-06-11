@@ -1,9 +1,6 @@
 ---
-Título: ' Xamarin.Forms posición de asignación y distancia ' Descripción: ' Xamarin.Forms . El espacio de nombres Maps contiene una estructura position que se usa normalmente al colocar una asignación y sus clavijas, y una estructura de distancia que se puede usar opcionalmente al colocar un mapa.
-MS. Prod: MS. AssetID: MS. Technology: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: " Xamarin.Forms posición y distancia del mapa" Descripción: " Xamarin.Forms . El espacio de nombres Maps contiene un struct de posición que se usa normalmente al colocar una asignación y sus clavijas, y una estructura de distancia que se puede usar opcionalmente al colocar un mapa ".
+MS. Prod: Xamarin ms. AssetID: 2F4EA3D2-1351-40AD-A71D-CF7F1F18F1E8 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/10/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinforms-map-position-and-distance"></a>Xamarin.FormsPosición y distancia del mapa

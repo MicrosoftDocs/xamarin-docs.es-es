@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c8c54f3d3815e418d2f71960dc7733711cb40ae2
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139053"
+title: "los tipos de relleno de ruta de acceso" Description: "en este artículo se examinan los distintos efectos posibles con los tipos de relleno de ruta de SkiaSharp y se muestra con código de ejemplo".
+MS. Prod: Xamarin ms. AssetID: 57103A7A-49A2-46AE-894C-7C2664682644 ms. Technology: Xamarin-skiasharp Author: davidbritch ms. Author: dabritch ms. Date: 03/10/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="the-path-fill-types"></a>Tipos de relleno del trazado
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -29,7 +15,7 @@ Dos contornos en un trazado pueden superponerse y las líneas que componen un so
 
 Tiene un pequeño control sobre esto. El algoritmo de relleno se rige por la [`SKFillType`](xref:SkiaSharp.SKPath.FillType) propiedad de `SKPath` , que se establece en un miembro de la [`SKPathFillType`](xref:SkiaSharp.SKPathFillType) enumeración:
 
-- `Winding`, el valor predeterminado
+- `Winding`, la opción predeterminada
 - `EvenOdd`
 - `InverseWinding`
 - `InverseEvenOdd`

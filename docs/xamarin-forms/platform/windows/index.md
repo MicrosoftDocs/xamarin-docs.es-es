@@ -1,9 +1,6 @@
 ---
-Título: Descripción: ' en este artículo se explica la compatibilidad con la plataforma Windows que está disponible en Xamarin.Forms . '
-MS. Prod: MS. AssetID: MS. Technology: Author: MS. Author: MS. Date: no-LOC:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: "características de la plataforma Windows" Descripción: "en este artículo se explica la compatibilidad con la plataforma Windows que está disponible en Xamarin.Forms ".
+MS. Prod: Xamarin ms. AssetID: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/16/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="windows-platform-features"></a>Características de la plataforma Windows

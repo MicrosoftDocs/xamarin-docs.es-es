@@ -1,24 +1,9 @@
 ---
-title: ''
-description: A todas las vistas que se definen en se Xamarin.Forms puede hacer referencia desde archivos XAML.
-ms.topic: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 445ef85f661d945bda25203f35dea787e64dc9b0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138429"
+title: "controles XAML" Descripción: "se puede hacer referencia a todas las vistas que se definen en Xamarin.Forms desde archivos XAML".
+MS. topic: artículo ms. Prod: Xamarin ms. AssetID: 639BD392-1496-41BB-BB09-7652273AC9D8 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/17/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xaml-controls"></a>Controles XAML
+
+# <a name="xaml-controls"></a>Controles de XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
@@ -34,7 +19,7 @@ A todas las vistas que se definen en se Xamarin.Forms puede hacer referencia des
 | <h3>Expander</h3>Proporciona un contenedor expansible para hospedar cualquier contenido.<p align="center">![Captura de pantalla de un expansor](xaml-controls-images/Expander.png "Expander")</p>[Guíe](~/xamarin-forms/user-interface/expander.md) | <pre>&lt;Expander&gt;<br />    &lt;Expander.Header&gt;<br />        &lt;Label Text=&quot;Baboon&quot; /&gt;<br />    &lt;/Expander.Header&gt;<br />    &lt;Image Source=&quot;Baboon.png&quot;<br />           Aspect=&quot;AspectFill&quot; /&gt;<br />&lt;/Expander&gt;</pre></p> |
 | <h3>Imagen</h3>Muestra un mapa de bits.<p align="center">![Captura de pantalla de una imagen](xaml-controls-images/Image.png "Imagen")</p>[API](xref:Xamarin.Forms.Image)  /  de [Guía](~/xamarin-forms/user-interface/images.md) de | <pre>&lt;Image Source="https://aka.ms/campus.jpg"<br />       Aspect="AspectFit"<br />       HorizontalOptions="Center" /&gt;</pre></p> |
 | <h3>Etiqueta</h3>Muestra una o varias líneas de texto.<p align="center">![Captura de pantalla de una etiqueta](xaml-controls-images/Label.png "Etiqueta")</p>[API](xref:Xamarin.Forms.Label)  /  de [Guía](~/xamarin-forms/user-interface/text/label.md) de | <p valign="center"><pre>&lt;Label Text="Hello, Xamarin.Forms!"<br />       FontSize="Large"<br />       FontAttributes="Italic"<br />       HorizontalTextAlignment="Center" /&gt;</pre></p> |
-| <h3>Mapa</h3>Muestra un mapa.<p align="center">![Captura de pantalla de un mapa](xaml-controls-images/Map.png "Asignación")</p>[API](xref:Xamarin.Forms.Maps.Map)  /  de [Guía](~/xamarin-forms/user-interface/map/index.md) de | <p valign="center"><pre>&lt;maps:Map ItemsSource="{Binding Locations}" /&gt;</pre></p> |
+| <h3>Map</h3>Muestra un mapa.<p align="center">![Captura de pantalla de un mapa](xaml-controls-images/Map.png "Asignación")</p>[API](xref:Xamarin.Forms.Maps.Map)  /  de [Guía](~/xamarin-forms/user-interface/map/index.md) de | <p valign="center"><pre>&lt;maps:Map ItemsSource="{Binding Locations}" /&gt;</pre></p> |
 | <h3>MediaElement</h3>Reproducir vídeo o audio.<p align="center">![Captura de pantalla de un MediaElement](xaml-controls-images/MediaElement.png "MediaELement")</p>[API](xref:Xamarin.Forms.MediaElement)  /  de [Guía](~/xamarin-forms/user-interface/mediaelement.md) de | <p valign="center"><pre>&lt;MediaElement Source="https://sec.ch9.ms/ch9/XamarinShow_mid.mp4"<br />              AutoPlay="True"<br />              ShowsPlaybackControls="True" /&gt;</pre></p> |
 | <h3>WebView</h3>Muestra páginas web o contenido HTML.<p align="center">![Captura de pantalla de un WebView](xaml-controls-images/WebView.png "WebView")</p>[API](xref:Xamarin.Forms.WebView)  /  de [Guía](~/xamarin-forms/user-interface/webview.md) de | <p valign="center"><pre>&lt;WebView Source="https://docs.microsoft.com/xamarin/"<br/>         VerticalOptions="FillAndExpand" /&gt;</pre></p> |
 |     |     |
@@ -56,7 +41,7 @@ A todas las vistas que se definen en se Xamarin.Forms puede hacer referencia des
 |     |     |
 | --- | --- |
 | <h3>CheckBox</h3>Permite la selección de un `boolean` valor.<p align="center">![Captura de pantalla de una casilla](xaml-controls-images/CheckBox.png "CheckBox")</p> [Guíe](~/xamarin-forms/user-interface/checkbox.md) | <p valign="center"><pre>&lt;CheckBox IsChecked="true"<br />          HorizontalOptions="Center"<br />          VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
-| <h3>Control deslizante</h3>Permite la selección de un `double` valor de un intervalo continuo.<p align="center">![Captura de pantalla de un control deslizante](xaml-controls-images/Slider.png "Slider")</p>[API](xref:Xamarin.Forms.Slider)  /  de [Guía](~/xamarin-forms/user-interface/slider.md) de | <p valign="center"><pre>&lt;Slider Minimum="0"<br />        Maximum="100"<br />        VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
+| <h3>Slider</h3>Permite la selección de un `double` valor de un intervalo continuo.<p align="center">![Captura de pantalla de un control deslizante](xaml-controls-images/Slider.png "Slider")</p>[API](xref:Xamarin.Forms.Slider)  /  de [Guía](~/xamarin-forms/user-interface/slider.md) de | <p valign="center"><pre>&lt;Slider Minimum="0"<br />        Maximum="100"<br />        VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>Control de incremento</h3>Permite la selección de un `double` valor de un intervalo incremental.<p align="center">![Captura de pantalla de un stepper](xaml-controls-images/Stepper.png "Control de incremento")</p>[API](xref:Xamarin.Forms.Stepper)  /  de [Guía](~/xamarin-forms/user-interface/stepper.md) de | <p valign="center"><pre>&lt;Stepper Minimum="0"<br />         Maximum="10"<br />         Increment="0.1"<br />         HorizontalOptions="Center"<br />         VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>Modificador</h3>Permite la selección de un `boolean` valor.<p align="center">![Captura de pantalla de un conmutador](xaml-controls-images/Switch.png "Modificador")</p>[API](xref:Xamarin.Forms.Switch)  /  de [Guía](~/xamarin-forms/user-interface/switch.md) de| <p valign="center"><pre>&lt;Switch IsToggled="false"<br />        HorizontalOptions="Center"<br />        VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>DatePicker</h3>Permite seleccionar una fecha.<p align="center">![Captura de pantalla de un DatePicker](xaml-controls-images/DatePicker.png "DatePicker")</p>[API](xref:Xamarin.Forms.DatePicker)  /  de [Guía](~/xamarin-forms/user-interface/datepicker.md) de | <p valign="center"><pre>&lt;DatePicker Format="D"<br/>            VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
@@ -94,5 +79,5 @@ A todas las vistas que se definen en se Xamarin.Forms puede hacer referencia des
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Xamarin.FormsEjemplo de FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
-- [Xamarin.FormsAssembl](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Ejemplos de Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Xamarin.FormsDocumentación de API](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

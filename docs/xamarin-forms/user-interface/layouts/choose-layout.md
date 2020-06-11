@@ -1,22 +1,8 @@
 ---
-title: Elegir un Xamarin.Forms diseño
-description: Xamarin.Formslas clases de diseño permiten organizar y agrupar los controles de interfaz de usuario en la aplicación.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 16a48423d05ce1cede75c0020bf18f4f398f5adc
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138507"
+Título: "elegir un Xamarin.Forms diseño" Descripción: " Xamarin.Forms las clases de diseño permiten organizar y agrupar los controles de interfaz de usuario en la aplicación".
+MS. Prod: Xamarin ms. AssetID: 05A39752-A174-447E-A30D-3CC9EF98CB96 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/21/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="choose-a-xamarinforms-layout"></a>Elegir un Xamarin.Forms diseño
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
@@ -203,7 +189,7 @@ Para obtener más información, vea [ Xamarin.Forms RelativeLayout](relative-lay
 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)Debe considerarse como un diseño especial para usarse solo cuando se puede imponer un tamaño en los elementos secundarios o cuando el tamaño del elemento no afecta a la posición de otros elementos secundarios. Un uso estándar de este diseño es crear una superposición, que abarca la página con otros controles, quizás para impedir que el usuario interactúe con los controles normales de la página.
 
 > [!IMPORTANT]
-> Las `HorizontalOptions` `VerticalOptions` propiedades y no tienen ningún efecto en los elementos secundarios de `AbsoluteLayout` .
+> Las propiedades `HorizontalOptions` y `VerticalOptions` no tienen ningún efecto en los elementos secundarios de un `AbsoluteLayout`.
 
 Dentro de [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) , la [`AbsoluteLayout.LayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) propiedad adjunta se utiliza para especificar la posición horizontal, la posición vertical, el ancho y el alto de un elemento. Además, la [`AbsoluteLayout.LayoutFlags`](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty) propiedad adjunta especifica cómo se interpretarán los límites del diseño.
 
@@ -257,5 +243,5 @@ Además, el rendimiento de la representación de páginas también se puede mejo
 - [Xamarin.FormsFlexLayout](flex-layout.md)
 - [Xamarin.FormsAbsoluteLayout](absolute-layout.md)
 - [Xamarin.FormsRelativeLayout](relative-layout.md)
-- [Optimizar el rendimiento del diseño](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance)
+- [Optimización del rendimiento del diseño](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance)
 - [Compresión de diseño](layout-compression.md)

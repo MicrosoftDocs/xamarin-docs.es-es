@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsDatos de CollectionView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: e381184271d4a7bfa9872d2502d2281b1f3864bf
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134568"
+title: " Xamarin.Forms CollectionView Data" Description: "un CollectionView se rellena con datos estableciendo su propiedad ItemsSource en cualquier colección que implementa IEnumerable".
+MS. Prod: Xamarin ms. AssetID: E1783E34-1C0F-401A-80D5-B2BE5508F5F8 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/29/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-collectionview-data"></a>Xamarin.FormsDatos de CollectionView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
@@ -104,7 +90,7 @@ En este ejemplo, los [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) d
 > [!NOTE]
 > Los enlaces compilados se pueden habilitar para mejorar el rendimiento del enlace de datos en Xamarin.Forms las aplicaciones. Para obtener más información, vea [Enlaces compilados](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
-Para obtener más información sobre el enlace de datos, consulte [ Xamarin.Forms enlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+Para obtener más información sobre el enlace de datos, consulte [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
 ## <a name="define-item-appearance"></a>Definir la apariencia del elemento
 
@@ -192,7 +178,7 @@ Las siguientes capturas de pantallas muestran el resultado de la plantilla de ca
 
 [![Captura de pantalla de CollectionView donde cada elemento tiene una plantilla, en iOS y Android](populate-data-images/datatemplate.png "Elementos con plantilla en una CollectionView")](populate-data-images/datatemplate-large.png#lightbox "Elementos con plantilla en una CollectionView")
 
-Para obtener más información acerca de las plantillas de datos, consulte [ Xamarin.Forms plantillas de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
+Para obtener más información sobre las plantillas de datos, consulte [Plantillas de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
 ## <a name="choose-item-appearance-at-runtime"></a>Elección de la apariencia del elemento en tiempo de ejecución
 
@@ -427,6 +413,6 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 - [CollectionView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [Xamarin.FormsRefreshView](~/xamarin-forms/user-interface/refreshview.md)
 - [Xamarin.FormsSwipeView](~/xamarin-forms/user-interface/swipeview.md)
-- [Xamarin.FormsEnlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Xamarin.FormsPlantillas de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Creación de un Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
