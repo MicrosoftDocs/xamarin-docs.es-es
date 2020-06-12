@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 58fbe6d688ffb506db4316ee29d79a364f849a97
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: b9254afdcb6286edcffc67a1a69af8b049f08b6b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73030427"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573227"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Compatibilidad con IPA en Xamarin.iOS
 
@@ -25,7 +25,7 @@ Además de para publicar una aplicación para su venta a través del App Store d
 
 En cualquier caso, un paquete IPA (un tipo especial de archivo .zip) se puede crear y firmar digitalmente con el perfil de aprovisionamiento de distribución correcto. En este artículo se describen los pasos necesarios para crear el paquete IPA e instalarlo en un dispositivo iOS mediante iTunes en Mac o un PC de Windows.
 
-<a name="iTunesMetadata" />
+<a name="iTunesMetadata"></a>
 
 ## <a name="the-itunesmetadataplist-file"></a>Archivo iTunesMetadata.plist
 
@@ -35,7 +35,7 @@ Las aplicaciones de iOS que se ofrecen a través de la distribución ad hoc o in
 
 También se puede crear un archivo **iTunesMetadata.plist** personalizado para proporcionar información adicional de una distribución. Para obtener más información sobre el contenido de este archivo y sobre cómo crearlo, consulte nuestra documentación sobre [The iTunesMetadata.plist Contents (Contenidos de iTunesMetadata.plist)](~/ios/deploy-test/app-distribution/itunesmetadata.md#iTunesMetadata_contents) y [Creating an iTunesMetadata.plist File (Creación de un archivo iTunesMetadata.plist)](~/ios/deploy-test/app-distribution/itunesmetadata.md#iTunesMetadata_creating).
 
-<a name="iTunesArtwork" />
+<a name="iTunesArtwork"></a>
 
 ## <a name="itunes-artwork"></a>Ilustraciones de iTunes
 
@@ -50,7 +50,7 @@ Para especificar las ilustraciones de iTunes, haga lo siguiente:
 
 Para obtener más información, consulte la documentación de [iTunes Artwork (Ilustraciones de iTunes)](~/ios/app-fundamentals/images-icons/app-icons.md).
 
-<a name="createipa" />
+<a name="createipa"></a>
 
 ## <a name="creating-an-ipa"></a>Creación de un IPA
 
@@ -165,7 +165,7 @@ Una vez que se haya creado y seleccionado el perfil de aprovisionamiento, se hay
 
 -----
 
-<a name="Customizing-the-IPA-Location" />
+<a name="Customizing-the-IPA-Location"></a>
 
 ## <a name="customizing-the-ipa-location"></a>Personalización de la ubicación del IPA
 
@@ -221,7 +221,7 @@ O al siguiente en Mac:
 msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/Builds" /t:Build SingleViewIphone1.sln
 ```
 
-<a name="installipa" />
+<a name="installipa"></a>
 
 ## <a name="installing-an-ipa-using-itunes"></a>Instalación de un IPA mediante iTunes
 
@@ -241,7 +241,7 @@ La nueva aplicación de iOS se muestra en la sección **Mis aplicaciones**, en l
 
 Ahora el usuario puede sincronizar iTunes con su dispositivo para instalar la nueva aplicación de iOS.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumen
 

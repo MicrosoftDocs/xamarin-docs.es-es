@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2018
-ms.openlocfilehash: 6d83afa47c459633506736b2497a82c444352c90
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 8855c80dd7478813408abaf2cfec68d48eced3bc
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303520"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571836"
 ---
 # <a name="troubleshooting-tips"></a>Sugerencias para la solución de problemas
 
@@ -25,7 +25,7 @@ Se incluyen los siguientes:
 2. Registros de implementación de dispositivos.
 3. Salida del registro de depuración de Android.
 
-<a name="Diagnostic_MSBuild_Output" />
+<a name="Diagnostic_MSBuild_Output"></a>
 
 ## <a name="diagnostic-msbuild-output"></a>Salida de MSBuild de diagnóstico
 
@@ -511,7 +511,7 @@ using (var groupData = new JavaList<IDictionary<string, object>> ()) {
 }
 ```
 
-[Este problema se corregirá en futuras versiones.](https://bugzilla.xamarin.com/show_bug.cgi?id=5401).
+[Este problema se corregirá en futuras versiones](https://bugzilla.xamarin.com/show_bug.cgi?id=5401).
 
 ## <a name="unexpected-nullreferenceexceptions"></a>Excepciones NullReferenceException inesperadas
 

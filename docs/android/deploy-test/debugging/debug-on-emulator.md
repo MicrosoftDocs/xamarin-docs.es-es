@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 2bc8f82db29ed3c07c67293a83e6874f0cc6acb2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 36538435066bc94a81f6449774718afe9a5ce7d7
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75556527"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571992"
 ---
 # <a name="debug-on-the-android-emulator"></a>Depuración en Android Emulator
 
@@ -63,7 +63,7 @@ Normalmente, se selecciona el dispositivo virtual **Android\_Accelerated\_x86** 
 
 Para modificar dispositivos virtuales (o crear otros), debe usar [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 
-<a name="launching" />
+<a name="launching"></a>
 
 ## <a name="launching-the-emulator"></a>Inicio del emulador
 
@@ -85,7 +85,7 @@ Cuando se inicie el emulador, Xamarin.Android implementará la aplicación en el
 
 El emulador puede dejarse en ejecución, de modo que no es necesario cerrarlo y esperar a que se reinicie cada vez que se inicie la aplicación. La primera vez que se ejecuta una aplicación de Xamarin.Android en el emulador, se instala el tiempo de ejecución compartido de Xamarin.Android para el nivel de API de destino, seguido de la aplicación. La instalación del tiempo de ejecución puede tardar unos minutos, así que tendrá que esperar. La instalación del tiempo de ejecución tiene lugar solamente cuando se implementa en el emulador la primera aplicación de Xamarin.Android, &ndash;de modo que las posteriores implementaciones serán más rápidas porque solo se copiará la aplicación en el emulador.
 
-<a name="quick-boot" />
+<a name="quick-boot"></a>
 
 ## <a name="quick-boot"></a>Arranque rápido
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 48aba9ead925d3404146795eb9a3e0588d7b600d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 141d268e7a5670f9ba8002ae9edda828538a01a4
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76724701"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571797"
 ---
 # <a name="debugging-xamarinios-apps"></a>Depurar aplicaciones Xamarin.iOS
 
@@ -174,7 +174,7 @@ Esto significa que es casi imposible establecer puntos de interrupción en el c�
 
 Si se produce un error al configurar el depurador, puede habilitar el diagnóstico detallado agregando "-v - v - v" a los argumentos mtouch adicionales en las opciones del proyecto. Esto imprimirá información detallada del error en la consola del dispositivo.
 
- <a name="WiFi_Debugging" />
+ <a name="WiFi_Debugging"></a>
 
 ## <a name="wireless-debugging"></a>Depuración inalámbrica
 
@@ -182,7 +182,7 @@ El valor predeterminado de Xamarin.iOS es depurar la aplicación en los disposit
 
 Para más información sobre la implementación y depuración inalámbricas, consulte la guía sobre [implementación inalámbrica](~/ios/deploy-test/wireless-deployment.md).
 
-<a name="Technical_Details" />
+<a name="Technical_Details"></a>
 
 ## <a name="technical-details"></a>Detalles técnicos
 
@@ -192,7 +192,7 @@ Al inicio, una aplicación que va a ser depurada contacta el depurador y este em
 
 Este depurador suave requiere una combinación cooperativa de depuración cuando se ejecuta en el dispositivo. Esto significa que el binario se generará cuando la depuración sea mayor, a medida que el código se instrumenta para contener código adicional en cada punto de secuencia para dar soporte a la depuración.
 
-<a name="Accessing_the_Console" />
+<a name="Accessing_the_Console"></a>
 
 ## <a name="accessing-the-console"></a>Acceso a la consola
 
@@ -204,7 +204,7 @@ Para los usuarios de Visual Studio, hay algunos registros disponibles en la vent
 
 -----
 
-<a name="Debugging_Mono's_Class_Libraries" />
+<a name="Debugging_Mono's_Class_Libraries"></a>
 
 ## <a name="debugging-monos-class-libraries"></a>Depuración de bibliotecas de clases de Mono
 

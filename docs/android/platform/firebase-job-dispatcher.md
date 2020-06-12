@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2018
-ms.openlocfilehash: 280fe11f935db0a364f3342b22bb9544cdda1e6d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 0ade609997e391e24d4a6da250172efa81a5d490
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020246"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571342"
 ---
 # <a name="firebase-job-dispatcher"></a>Distribuidor de trabajo de Firebase
 
@@ -173,7 +173,7 @@ Es posible personalizar un trabajo. Entre los ejemplos de cómo se puede persona
 
 Cada uno de estos temas se aborda de forma detallada en las secciones siguientes.
 
-<a name="Passing_Parameters_to_a_Job" />
+<a name="Passing_Parameters_to_a_Job"></a>
 
 #### <a name="passing-parameters-to-a-job"></a>Paso de parámetros a un trabajo
 
@@ -201,7 +201,7 @@ public override bool OnStartJob(IJobParameters jobParameters)
 } 
 ```
 
-<a name="Setting_Constraints" />
+<a name="Setting_Constraints"></a>
 
 #### <a name="setting-constraints"></a>Establecimiento de restricciones
 
@@ -220,7 +220,7 @@ Job myJob = dispatcher.NewJobBuilder()
                       .Build();
 ```
 
-<a name="Setting_Job_Triggers" />
+<a name="Setting_Job_Triggers"></a>
 
 `JobTrigger` proporciona instrucciones al sistema operativo sobre cuándo debe iniciarse el trabajo. `JobTrigger` tiene una _ventana en ejecución_ que define una hora programada para el momento en que se debe ejecutar `Job`. La ventana de ejecución tiene un valor para la _ventana de inicio_ y un valor para la _ventana de finalización_. La ventana de inicio es el número de segundos que el dispositivo debe esperar antes de ejecutar el trabajo y el valor de la ventana de finalización es el número máximo de segundos que se debe esperar antes de ejecutar `Job`. 
 
@@ -236,7 +236,7 @@ Job myJob = dispatcher.NewJobBuilder()
 
 El elemento `JobTrigger` predeterminado para un trabajo se representa mediante el valor `Trigger.Now`, que especifica que un trabajo se ejecutará lo antes posible después de la programación.
 
-<a name="Setting_a_RetryStrategy" />
+<a name="Setting_a_RetryStrategy"></a>
 
 #### <a name="setting-a-retrystrategy"></a>Establecimiento de la clase RetryStrategy
 

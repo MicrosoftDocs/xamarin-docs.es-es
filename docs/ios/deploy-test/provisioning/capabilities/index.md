@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: 6250dfa24361601c2b9929d80fec3cc7a18cab2d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: bff3b2a7c1e273c7a03ae341dd663ebc722791eb
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028569"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571745"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Trabajar con capacidades en Xamarin.iOS
 
@@ -113,7 +113,7 @@ Las capacidades se agregan a **Entitlements.plist**. Para agregar capacidades en
 
 -----
 
-<a name="devcenter" />
+<a name="devcenter"></a>
 
 ## <a name="using-the-developer-center"></a>Uso de Developer Center
 
@@ -146,7 +146,7 @@ El uso del Centro para desarrolladores es un proceso de dos pasos en el que se d
 
 9. Haga clic en **Register** (Registrar) y en **Done** (Listo). El identificador de aplicación que acaba de crear debe aparecer en la lista de identificadores de aplicación de iOS.
 
-<a name="provisioningprofile" />
+<a name="provisioningprofile"></a>
 
 ### <a name="creating-a-provisioning-profile"></a>Crear un perfil de aprovisionamiento
 
@@ -188,7 +188,7 @@ Ahora cree un perfil de aprovisionamiento que contenga este identificador de apl
 > [!IMPORTANT]
 > Es posible que también deba establecer claves de derechos en el archivo Entitlement.plist y claves de privacidad en el archivo Info.plist. En la guía [Trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) se proporciona más información sobre estos derechos.
 
-<a name="nextsteps" />
+<a name="nextsteps"></a>
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -197,7 +197,7 @@ Una vez que se ha habilitado una funcionalidad en el servidor, se deben seguir u
 - Use el espacio de nombres del marco en su aplicación.
 - Agregue los derechos necesarios a la aplicación. En la guía [Trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) se proporciona información sobre los derechos necesarios y sobre cómo agregarlos.
 
-<a name="troubleshooting" />
+<a name="troubleshooting"></a>
 
 ## <a name="troubleshooting-capabilities"></a>Solución de problemas relacionados con las capacidades
 
@@ -210,7 +210,7 @@ En la siguiente lista se detallan algunos de los problemas más comunes que pued
 - Asegúrese de que en el archivo info.plist estén establecidas las claves de privacidad correspondientes.
 - En la opción **Firma de lote de iOS** de la aplicación, asegúrese de que **Derechos personalizados** esté establecido en **Entitlements.plist**. Esta _no_ es la configuración predeterminada para las compilaciones de depuración y del simulador de iOS.
 
-<a name="summary" />
+<a name="summary"></a>
 
 ## <a name="summary"></a>Resumen
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 16ae440ec2fe3b5898c8f92d993279ef5e7e9794
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ae3c60699f7e31c66893723ac73248ced9a2d72a
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75607924"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567975"
 ---
 # <a name="ad-hoc-distribution-for-xamarinios-apps"></a>Distribución ad hoc para aplicaciones Xamarin.iOS
 
@@ -30,7 +30,7 @@ La distribución ad hoc requiere que las aplicaciones se aprovisionen mediante u
 
 En esta guía se proporciona información sobre el aprovisionamiento para la distribución ad hoc y sobre la manera de distribuir una aplicación de Xamarin.iOS.
 
-<a name="setup" />
+<a name="setup"></a>
 
 ## <a name="setting-up-for-distribution"></a>Configuración de distribución
 
@@ -41,7 +41,7 @@ En la sección siguiente se describe cómo realizar la configuración con un cer
 > [!NOTE]
 > Solo los agentes de equipo y los administradores pueden crear certificados de distribución y perfiles de aprovisionamiento.
 
-<a name="createcertificate" />
+<a name="createcertificate"></a>
 
 ## <a name="create-a-distribution-certificate"></a>Creación de un certificado de distribución
 
@@ -70,11 +70,11 @@ Como alternativa, se puede solicitar un certificado mediante el cuadro de diálo
 
 2. Después, haga clic en el botón **más (+)** y seleccione **iOS App Store** (App Store de iOS):  [![Selección de App Store de iOS](ad-hoc-distribution-images/selectcert.png)](ad-hoc-distribution-images/selectcert.png#lightbox)
 
-<a name="createprofile" />
+<a name="createprofile"></a>
 
 ## <a name="create-a-distribution-provisioning-profile"></a>Creación de un perfil de aprovisionamiento de distribución
 
-<a name="createappid" />
+<a name="createappid"></a>
 
 ### <a name="create-an-app-id"></a>Creación de un identificador de aplicación
 Al igual que con cualquier otro perfil de aprovisionamiento que cree, se necesita un identificador de aplicación para identificar la aplicación que va a distribuir al dispositivo del usuario. Si aún no lo ha creado, siga estos pasos para hacerlo:
@@ -119,7 +119,7 @@ Es posible que tenga que salir de Visual Studio y hacer que Xcode (en el Mac del
 
 -----
 
-<a name="selectprofile" />
+<a name="selectprofile"></a>
 
 ## <a name="selecting-a-distribution-profile-in-a-xamarinios-project"></a>Selección de un perfil de distribución en un proyecto de Xamarin.iOS
 
@@ -158,7 +158,7 @@ Cuando esté listo para realizar una compilación final de una aplicación de Xa
 
 -----
 
-<a name="adhoc" />
+<a name="adhoc"></a>
 
 ## <a name="ad-hoc-distribution"></a>Distribución ad hoc
 
@@ -166,7 +166,7 @@ Aunque [TestFlight](~/ios/deploy-test/testflight.md) es un medio popular para re
 
 La distribución ad hoc permite a los desarrolladores realizar pruebas beta de las aplicaciones en una amplia gama de dispositivos cuando iTunes Connect no es una opción válida. La distribución ad hoc funciona de forma parecida a la distribución interna y requiere la creación de un archivo IPA, que después se puede distribuir de forma remota, manual o a través de iTunes.
 
-<a name="IPA_Creation" />
+<a name="IPA_Creation"></a>
 
 ### <a name="ipa-support-for-ad-hoc-deployment"></a>Compatibilidad con IPA para la implementación ad hoc
 

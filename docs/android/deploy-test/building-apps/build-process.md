@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2020
-ms.openlocfilehash: bce2b6f29129894ed446100c87b5e92d3572ed2f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 202041614d6a5b632aba6e92a77869effc21bb4f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "78946271"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84568326"
 ---
 # <a name="build-process"></a>Proceso de compilación
 
@@ -35,7 +35,7 @@ El *entorno de tiempo de ejecución compartido* es un par de paquetes de Android
 
 El entorno de tiempo de ejecución compartido se puede deshabilitar en las compilaciones de depuración si se establece la propiedad `$(AndroidUseSharedRuntime)` en `False`.
 
-<a name="Fast_Deployment" />
+<a name="Fast_Deployment"></a>
 
 ### <a name="fast-deployment"></a>Implementación rápida
 
@@ -53,7 +53,7 @@ Normalmente, no es necesario que los usuarios editen manualmente los archivos de
 Puede que los usuarios avanzados quieran realizar operaciones que no se admiten en la interfaz gráfica de usuario del IDE, así que el proceso de compilación se puede personalizar mediante la edición directa del archivo de proyecto.
 En esta página solo se documentan las características y personalizaciones específicas de Xamarin.Android; se pueden realizar muchas más cosas con los elementos, las propiedades y los destinos normales de MSBuild.
 
-<a name="Build_Targets" />
+<a name="Build_Targets"></a>
 
 ## <a name="build-targets"></a>Compilar destinos
 
@@ -726,7 +726,7 @@ Las propiedades del recurso controlan la generación del archivo `Resource.desig
 
   El valor predeterminado es `Resources`. Cambie este valor a `res` con estructuras de proyectos de Java.
 
-<a name="Signing_Properties" />
+<a name="Signing_Properties"></a>
 
 ### <a name="signing-properties"></a>Propiedades de firma
 
@@ -845,7 +845,7 @@ Para usar el almacén de claves generado anteriormente, use el grupo de propieda
 </PropertyGroup>
 ```
 
-<a name="Build_Actions" />
+<a name="Build_Actions"></a>
 
 ## <a name="build-actions"></a>Acciones de compilación
 
@@ -865,7 +865,7 @@ Indica que el archivo de diseño debe tener código subyacente generado en caso 
 <AndroidBoundLayout Include="Resources\layout\Main.axml" />
 ```
 
-<a name="AndroidEnvironment" />
+<a name="AndroidEnvironment"></a>
 
 ### <a name="androidenvironment"></a>AndroidEnvironment
 
@@ -968,7 +968,7 @@ A partir de Xamarin.Android 5.1, si se intenta usar la acción de compilación `
 
 Los archivos con una acción de compilación *LinkDescription* se usan para [controlan el comportamiento del enlazador](~/cross-platform/deploy-test/linker.md).
 
-<a name="ProguardConfiguration" />
+<a name="ProguardConfiguration"></a>
 
 ### <a name="proguardconfiguration"></a>ProguardConfiguration
 

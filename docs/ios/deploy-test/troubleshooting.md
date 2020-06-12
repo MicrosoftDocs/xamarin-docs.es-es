@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: 1c8eddcf16c8513852c21babf34d81c9a3290406
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: b27608642ed04216b10767d37d26699a0aef7f3e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028431"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573773"
 ---
 # <a name="xamarinios-testing-and-deployment---troubleshooting"></a>Solución de problemas de pruebas e implementación de Xamarin.iOS
 
@@ -60,7 +60,7 @@ A veces, las pruebas no funcionan tan bien como se había planeado.  Los siguien
 
 - Solo pueden enviarse dos compilaciones para cada revisión por día. Como el cambio de versión fuerza una revisión, esto significa que los números de versión solo pueden cambiarse dos veces al día.
 
-<a name="Automatically_copy_app_bundles_back_to_Windows" />
+<a name="Automatically_copy_app_bundles_back_to_Windows"></a>
 
 ## <a name="automatically-copy-app-bundles-back-to-windows"></a>Copia automática de lotes de aplicaciones .app en Windows
 

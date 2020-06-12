@@ -1,11 +1,11 @@
 ---
 ms.topic: include
-ms.openlocfilehash: 9cee898775fd10a924f14abfe913fe4dfff940f5
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 0cdb59433499ec5a8f20735b936e2c8b55c44d33
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70206244"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570140"
 ---
 Xamarin se puede instalar como parte de una _nueva_ instalación de Visual Studio 2019, con los pasos siguientes:
 
@@ -29,7 +29,7 @@ Xamarin se puede instalar como parte de una _nueva_ instalación de Visual Studi
 
     ![Ubicación del botón Inicio](~/get-started/installation/windows-images/vs2019-launch.png)
 
-<a name="vs2019" />
+<a name="vs2019"></a>
 
 ### <a name="adding-xamarin-to-visual-studio-2019"></a>Adición de Xamarin a Visual Studio 2019
 

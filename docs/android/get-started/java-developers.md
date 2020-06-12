@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2018
-ms.openlocfilehash: b9c6694ea49607b839a3658e5cc8bac5fb529c85
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: eed18890c185ccd35d728176348c9fac481407e1
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75728062"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571407"
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin para desarrolladores de Java
 
@@ -86,7 +86,7 @@ Además, Xamarin le permite [aprovechar los recursos de Java existentes](#intero
 >
 > Algunas características mencionadas en esta página (como la palabra clave `var` en C#) están disponibles en versiones más recientes de Java (p. ej., [`var` en Java 10](https://developer.oracle.com/java/jdk-10-local-variable-type-inference.html)), pero siguen si estar a disposición de los desarrolladores de Android.
 
-<a name="fundamentals" />
+<a name="fundamentals"></a>
 
 ## <a name="going-from-java-to-c-development"></a>Pasar del desarrollo en Java al desarrollo en C#
 
@@ -155,7 +155,7 @@ En este ejemplo de código, `FindViewById` obtiene una referencia al control `Te
 Para obtener más información sobre los genéricos, vea el tema [Genéricos](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/index).
 Tenga en cuenta que existen algunas limitaciones en la compatibilidad de Xamarin.Android con las clases genéricas de C#; para más información, vea [Limitaciones](~/android/internals/limitations.md).
 
-<a name="oopfeatures" />
+<a name="oopfeatures"></a>
 
 ## <a name="object-oriented-programming-features"></a>Características de la programación orientada a objetos
 
@@ -293,7 +293,7 @@ Sin embargo, hay algunas diferencias entre Java y C# en cómo declarar métodos 
 
 Para obtener más información sobre la compatibilidad de C# con el polimorfismo, vea el tema [Polimorfismo](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/polymorphism).
 
-<a name="lambdas" />
+<a name="lambdas"></a>
 
 ## <a name="lambda-expressions"></a>Expresiones lambda
 
@@ -323,7 +323,7 @@ En este ejemplo, el código de la expresión lambda (el código encerrado entre 
 
 Para obtener más información sobre C# y las expresiones lambda, vea el tema [Expresiones lambda](https://docs.microsoft.com/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions).
 
-<a name="events" />
+<a name="events"></a>
 
 ## <a name="event-handling"></a>Control de eventos
 
@@ -371,7 +371,7 @@ Es importante recordar que se puede anular la suscripción de un delegado (con e
 
 Normalmente, las expresiones lambda se usan para declarar controladores de eventos en el código de Xamarin.Android. Esta forma abreviada de declarar controladores de eventos puede parecer críptica al principio, pero ahorra una gran cantidad de tiempo al leer y escribir código. Cuando se familiarice más, se habituará a reconocer este patrón, que ocurre con frecuencia en el código de Xamarin.Android, y podrá dedicar más tiempo a pensar en la lógica de negocios de su aplicación y menos tiempo a repasar la sobrecarga sintáctica.
 
-<a name="async" />
+<a name="async"></a>
 
 ## <a name="asynchronous-programming"></a>Programación asincrónica
 
@@ -406,7 +406,7 @@ Mientras tanto, el subproceso de la interfaz de usuario de la aplicación puede 
 Para obtener una introducción a `async`/`await` en C#, vea el tema [Programación asincrónica con Async y Await](https://docs.microsoft.com/dotnet/csharp/async).
 Para más información sobre la compatibilidad de Xamarin con las características de la programación asincrónica, vea [Información general sobre la compatibilidad con Async](~/cross-platform/platform/async.md).
 
-<a name="keywords" />
+<a name="keywords"></a>
 
 ## <a name="keyword-differences"></a>Diferencias de palabras claves
 
@@ -454,7 +454,7 @@ Además, hay muchas palabras clave que son exclusivas de C# y que no tienen hom�
 |[value](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|Hace referencia al valor que el código de cliente desea asignar a una propiedad.|
 |[virtual](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/virtual)|Permite la invalidación de un método en una clase derivada.|
 
-<a name="interop" />
+<a name="interop"></a>
 
 ## <a name="interoperating-with-existing-java-code"></a>Interoperación con código de Java existente
 

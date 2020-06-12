@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 620a7edd4467a5a2bae60bbd82d0e1460c9f0040
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 63365ebc12089ced7de621b3a510996fa66119ce
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73021412"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571966"
 ---
 # <a name="xamarinandroid-performance"></a>Rendimiento de Xamarin.Android
 
@@ -38,7 +38,7 @@ Existen varias técnicas para aumentar el rendimiento, y la percepción de rendi
 > [!NOTE]
 > Antes de leer este artículo, debería leer [Rendimiento multiplataforma](~/cross-platform/deploy-test/memory-perf-best-practices.md), donde se explican técnicas no específicas de una plataforma para mejorar el uso de memoria y el rendimiento de las aplicaciones compiladas con la plataforma Xamarin.
 
-<a name="optimizelayout" />
+<a name="optimizelayout"></a>
 
 ## <a name="optimize-layout-hierarchies"></a>Optimizar las jerarquías de diseño
 
@@ -119,7 +119,7 @@ Este diseño tiene tres niveles de profundidad y desperdicia recursos si se infl
 
 La jerarquía de tres niveles anterior se ha reducido a una jerarquía de dos niveles y una sola instancia [`RelativeLayout`](xref:Android.Widget.RelativeLayout) ha reemplazado a dos instancias [`LinearLayout`](xref:Android.Widget.LinearLayout). Se obtendrá un aumento considerable del rendimiento cuando se infle el diseño de cada fila [`ListView`](xref:Android.Widget.ListView).
 
-<a name="optimizelistviews" />
+<a name="optimizelistviews"></a>
 
 ## <a name="optimize-list-views"></a>Optimizar las vistas de lista
 
@@ -132,7 +132,7 @@ Los usuarios esperan un desplazamiento sin problemas y unos tiempos de carga rá
 
 Colectivamente, estas técnicas facilitan que las instancias de [`ListView`](xref:Android.Widget.ListView) se desplacen sin problemas.
 
-<a name="reuserowviews" />
+<a name="reuserowviews"></a>
 
 ### <a name="reuse-row-views"></a>Volver a usar vistas de fila
 
@@ -157,7 +157,7 @@ Cuando el usuario se desplaza, la [`ListView`](xref:Android.Widget.ListView) lla
 
 Para más información, vea [Row View Re-Use (Reutilización de vista de lista)](~/android/user-interface/layouts/list-view/populating.md#row-view-re-use) en [Populating a ListView with Data (Relleno de una ListView con datos)](~/android/user-interface/layouts/list-view/populating.md).
 
-<a name="removeeventhandlers" />
+<a name="removeeventhandlers"></a>
 
 ## <a name="remove-event-handlers-in-activities"></a>Quitar controladores de eventos de actividades
 
@@ -186,7 +186,7 @@ Cuando la actividad sale del estado de ejecución, se llama a `OnPause`. En la i
 App.Current.Service1.Updated -= service1UpdateHandler;
 ```
 
-<a name="limitservices" />
+<a name="limitservices"></a>
 
 ## <a name="limit-the-lifespan-of-services"></a>Limitar la duración de los servicios
 
@@ -194,7 +194,7 @@ Cuando se inicia un servicio, Android mantiene el proceso de ese servicio en eje
 
 Se puede limitar la duración de un servicio mediante un `IntentService`, que se cierra a sí mismo una vez controlado el propósito que lo inició.
 
-<a name="releaseresources" />
+<a name="releaseresources"></a>
 
 ## <a name="release-resources-when-notified"></a>Liberar recursos cuando se notifique
 
@@ -212,7 +212,7 @@ Además, cuando el proceso de la aplicación está almacenado en caché, la devo
 
 Se debería responder a las notificaciones mediante la liberación de recursos según el nivel recibido.
 
-<a name="releaseresourcesuihidden" />
+<a name="releaseresourcesuihidden"></a>
 
 ## <a name="release-resources-when-the-user-interface-is-hidden"></a>Liberar recursos cuando se oculte la interfaz de usuario
 
@@ -220,7 +220,7 @@ Libere recursos usados por la interfaz de usuario de la aplicación cuando el us
 
 Para recibir una notificación cuando el usuario salga de la interfaz de usuario, implemente la devolución de llamada [`OnTrimMemory`](xref:Android.App.Activity.OnTrimMemory*) en las clases `Activity` y escuche al nivel [`TrimMemoryUiHidden`](xref:Android.Content.ComponentCallbacks2.TrimMemoryUiHidden), que indica que la interfaz de usuario está oculta. Esta notificación se recibirá solo cuando *todos* los componentes de la interfaz de usuario de la aplicación estén ocultos. La liberación de recursos de la interfaz de usuario cuando se recibe esta notificación garantiza que si el usuario vuelve desde otra actividad de la aplicación, los recursos de la interfaz de usuario seguirán estando disponibles para reanudar rápidamente la actividad.
 
-<a name="optimizeimages" />
+<a name="optimizeimages"></a>
 
 ## <a name="optimize-image-resources"></a>Optimizar los recursos de imagen
 
@@ -228,7 +228,7 @@ Las imágenes son uno de los recursos con más consumo usados por las aplicacion
 
 Para más información, vea [Optimizar los recursos de imagen](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages) en la guía [Rendimiento multiplataforma](~/cross-platform/deploy-test/memory-perf-best-practices.md).
 
-<a name="disposeimages" />
+<a name="disposeimages"></a>
 
 ## <a name="dispose-of-unused-image-resources"></a>Eliminar recursos de imágenes sin usar
 
@@ -245,7 +245,7 @@ using (Bitmap smallPic = BitmapFactory.DecodeByteArray(smallImageByte, 0, smallI
 
 Para más información sobre la liberación de recursos desechables, vea [Release IDisposable Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable) (Liberar los recursos de IDisposable).  
 
-<a name="avoidfloats" />
+<a name="avoidfloats"></a>
 
 ## <a name="avoid-floating-point-arithmetic"></a>Evitar la aritmética de punto flotante
 
@@ -254,7 +254,7 @@ En los dispositivos Android, la aritmética de punto flotante es aproximadamente
 > [!NOTE]
 > Incluso para la aritmética de enteros, algunas CPU carecen de capacidades de división de hardware. Por lo tanto, la división de enteros y las operaciones de módulo se suelen realizar en el software.
 
-<a name="dismissdialogs" />
+<a name="dismissdialogs"></a>
 
 ## <a name="dismiss-dialogs"></a>Cuadros de diálogo Dismiss (Descartar)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 9b9db3e6ae081a02d2b2297e70c216015dceade6
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 854fecd7945c1090b475b3571678388b8e1cf127
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73026547"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573240"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Distribución interna para aplicaciones Xamarin.iOS
 
@@ -31,13 +31,13 @@ También es importante tener en cuenta que el programa empresarial:
 
 Todas las aplicaciones deben estar firmadas por Apple.
 
-<a name="testing" />
+<a name="testing"></a>
 
 ## <a name="testing-your-application"></a>Probar la aplicación
 
 La prueba de la aplicación se lleva a cabo mediante la distribución ad hoc. Para obtener más información sobre la prueba, siga los pasos de la guía [Distribución ad hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md). Tenga en cuenta que solo puede probar en un máximo de 100 dispositivos.
 
-<a name="setup" />
+<a name="setup"></a>
 
 ## <a name="getting-set-up-for-distribution"></a>Configuración de distribución
 
@@ -47,7 +47,7 @@ Los certificados del programa para desarrolladores empresariales de Apple durar�
 
 Es importante tener en cuenta que no se pueden renovar los certificados expirados y, en su lugar, tendrá que reemplazar el certificado expirado por uno nuevo, tal como se detalla [a continuación](#certificate).
 
-<a name="certificate" />
+<a name="certificate"></a>
 
 ## <a name="creating-a-distribution-certificate"></a>Creación de un certificado de distribución
 
@@ -84,11 +84,11 @@ Como alternativa, se puede solicitar un certificado mediante el cuadro de diálo
 
    [![](in-house-distribution-images/selectcert.png "Select iOS App Store")](in-house-distribution-images/selectcert.png#lightbox)
 
-<a name="profile" />
+<a name="profile"></a>
 
 ## <a name="creating-a-distribution-provisioning-profile"></a>Creación de un perfil de aprovisionamiento de distribución
 
-<a name="appid" />
+<a name="appid"></a>
 
 ### <a name="creating-an-app-id"></a>Creación de un identificador de aplicación
 
@@ -134,7 +134,7 @@ Es posible que tenga que salir de Visual Studio y hacer que Xcode (en el equipo 
 
 -----
 
-<a name="inhouse" />
+<a name="inhouse"></a>
 
 ## <a name="distributing-your-app-in-house"></a>Distribución interna de la aplicación
 

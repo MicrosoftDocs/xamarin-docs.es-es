@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: 73c4e992fae1a2d525670604d98f277fe4fde794
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ee8ff58566732c6a86a339d3080c7243be4b4a4e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303604"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572200"
 ---
 # <a name="app-store-distribution"></a>Distribución a través del App Store
 
@@ -30,7 +30,7 @@ Distribución de una aplicación: al igual que al desarrollar una aplicación, e
 > [!IMPORTANT]
 > Para usar iTunes Connect y, por lo tanto, publicar una aplicación en App Store, **debe** formar parte de un programa para desarrolladores individual o empresarial de Apple. Si es miembro de un programa para desarrolladores **empresariales** de Apple no podrá seguir los pasos de esta página.
 
-<a name="provisioning" />
+<a name="provisioning"></a>
 
 ## <a name="provisioning-an-app-for-app-store-distribution"></a>Aprovisionamiento de una aplicación para su distribución en el App Store
 
@@ -44,7 +44,7 @@ Puede seleccionar el **identificador de la aplicación** y los **dispositivos** 
 > [!NOTE]
 > Solo los agentes de equipo y los administradores pueden crear certificados de distribución y perfiles de aprovisionamiento.
 
-<a name="creatingcertificate" />
+<a name="creatingcertificate"></a>
 
 ## <a name="creating-a-distribution-certificate"></a>Creación de un certificado de distribución
 
@@ -73,11 +73,11 @@ Como alternativa, se puede solicitar un certificado mediante el cuadro de diálo
 
 3. Según los privilegios del equipo, se generará la identidad de firma, tal como se muestra a continuación, o bien es posible que tenga que esperar hasta que un administrador o agente de equipo la apruebe:  [![](images/generated.png "Se genera la identidad de firma y aparece un cuadro de diálogo")](images/generated.png#lightbox)
 
-<a name="creatingprofile" />
+<a name="creatingprofile"></a>
 
 ## <a name="creating-a-distribution-profile"></a>Creación de un perfil de distribución
 
-<a name="creatingappid" />
+<a name="creatingappid"></a>
 
 ### <a name="creating-an-app-id"></a>Creación de un identificador de aplicación
 
@@ -131,7 +131,7 @@ Una vez que tenga los componentes necesarios para crear un perfil de distribuci�
 
 -----
 
-<a name="selectprofile" />
+<a name="selectprofile"></a>
 
 ## <a name="selecting-a-distribution-profile-in-a-xamarinios-project"></a>Selección de un perfil de distribución en un proyecto de Xamarin.iOS
 
@@ -171,7 +171,7 @@ Cuando esté listo para realizar una compilación final de una aplicación de Xa
 
 -----
 
-<a name="itunesconnect" />
+<a name="itunesconnect"></a>
 
 ## <a name="configuring-your-application-in-itunes-connect"></a>Configuración de la aplicación en iTunes Connect
 
@@ -181,7 +181,7 @@ La aplicación de Xamarin.iOS deberá estar correctamente instalada y configurad
 
 Para obtener información más detallada, vea la documentación [Configuración de una aplicación en iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md).
 
-<a name="submitting" />
+<a name="submitting"></a>
 
 ## <a name="submitting-an-app-to-itunes-connect"></a>Envío de una aplicación a iTunes Connect
 
@@ -189,7 +189,7 @@ Una vez que la aplicación está firmada con el perfil de aprovisionamiento de d
 
 Para más información sobre la publicación de aplicaciones en el App Store, vea [Publicación en el App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md).
 
-<a name="windows" />
+<a name="windows"></a>
 
 ## <a name="automatically-copy-app-bundles-back-to-windows"></a>Copia automática de lotes de aplicaciones .app en Windows
 

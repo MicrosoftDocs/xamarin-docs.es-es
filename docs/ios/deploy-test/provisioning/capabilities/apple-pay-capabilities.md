@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 54fcc3bb683f6ca4515d807da5c3345cf71a2df3
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 4f8e45aab8b6c92cb72a5d7cde35458c7b64b816
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303712"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573214"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Capacidades de Apple Pay en Xamarin.iOS
 
@@ -28,7 +28,7 @@ Al aprovisionar una nueva aplicación mediante el Centro para desarrolladores, h
 
 En los siguientes pasos se le guiará por el proceso de creación de los elementos anteriores:
 
-<a name="merchantid" />
+<a name="merchantid"></a>
 
 ## <a name="create-merchant-id"></a>Crear un identificador de comerciante
 
@@ -48,7 +48,7 @@ Gracias a los identificadores de comerciante, Apple Pay sabe que puede aceptar p
 
     ![Confirmación del identificador de comerciante](apple-pay-capabilities-images/image59.png)
 
-<a name="appid" />
+<a name="appid"></a>
 
 ## <a name="create-an-app-id-with-the-apple-pay-capability-that-includes-the-merchant-id"></a>Crear un identificador de aplicación con la capacidad de Apple Pay que incluya el identificador de comerciante
 
@@ -91,7 +91,7 @@ Gracias a los identificadores de comerciante, Apple Pay sabe que puede aceptar p
 
 Este Id. de aplicación ya puede usarse para generar, o volver a generar, un nuevo perfil de aprovisionamiento, como se explica en la guía [Trabajar con capacidades](~/ios/deploy-test/provisioning/capabilities/index.md).
 
-<a name="certificate" />
+<a name="certificate"></a>
 
 ## <a name="create-a-certificate-for-your-merchant-id"></a>Crear un certificado para el identificador de comerciante
 

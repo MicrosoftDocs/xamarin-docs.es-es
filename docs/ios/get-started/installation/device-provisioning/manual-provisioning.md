@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2020
-ms.openlocfilehash: 04cb1b9303e571b2a10cdfa621dcd312162e2893
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 9333750432395d008a5454e293648f4e594ae112
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303754"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571693"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Aprovisionamiento manual de Xamarin.iOS
 
@@ -51,13 +51,13 @@ El perfil de desarrollador contiene certificados, sus claves asociadas y los per
 > [!WARNING]
 > La pérdida del certificado y de las claves asociadas puede causar muchos problemas, ya que requerirá que se revoquen los certificados existentes y se vuelvan a aprovisionar los dispositivos asociados, incluidos los registrados para la implementación ad hoc. Después de configurar correctamente los certificados de desarrollo, exporte una copia de seguridad y almacénelos en un lugar seguro. Para obtener más información sobre cómo hacerlo, consulte la sección sobre la exportación y la importación de certificados y perfiles de la guía [Maintaining Certificates](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) (Mantener certificados) en la documentación de Apple.
 
-<a name="provisioning" />
+<a name="provisioning"></a>
 
 ## <a name="provision-an-ios-device-for-development"></a>Aprovisionamiento de un dispositivo iOS para el desarrollo
 
 Ahora que ha establecido su identidad con Apple y tiene un certificado de desarrollo, debe configurar un perfil de aprovisionamiento y las entidades necesarias para poder implementar una aplicación en un dispositivo Apple. El dispositivo debe ejecutar una versión de iOS compatible con Xcode. Por ello, puede ser necesario actualizar el dispositivo, Xcode o ambos.
 
-<a name="adddevice" />
+<a name="adddevice"></a>
 
 ## <a name="add-a-device"></a>Agregación de un dispositivo
 
@@ -83,7 +83,7 @@ Al crear un perfil de aprovisionamiento para el desarrollo, hay que indicar qué
 
 Repita los pasos anteriores para todos los dispositivos iOS que se vayan a usar para probar o depurar una aplicación de Xamarin.iOS.
 
-<a name="provisioningprofile" />
+<a name="provisioningprofile"></a>
 
 ## <a name="create-a-development-provisioning-profile"></a>Creación de un perfil de aprovisionamiento de desarrollo
 
@@ -122,7 +122,7 @@ Para crear manualmente un perfil de aprovisionamiento para el desarrollo, haga l
 
 7. También puede hacer clic en **Descargar** en la página siguiente para descargar el perfil de aprovisionamiento en el equipo Mac.
 
-<a name="download" />
+<a name="download"></a>
 
 ## <a name="download-provisioning-profiles-in-visual-studio"></a>Descarga de perfiles de aprovisionamiento en Visual Studio
 

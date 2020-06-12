@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 284705973f9c0ec606572170f7e927ed4745ddd1
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 263c48c5006ba0060756e1050497c38dfb7c8eae
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73030232"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567780"
 ---
 # <a name="linking-xamarinios-apps"></a>Vincular aplicaciones Xamarin.iOS
 
@@ -22,7 +22,7 @@ El enlazador usa análisis estáticos para determinar las diferentes rutas de c�
 
 Como el enlazador es una herramienta estática, no puede marcar los tipos de inclusión y los métodos llamados mediante reflexión ni crear instancias de forma dinámica. Existen varias opciones para encontrar una solución alternativa a esta limitación.
 
-<a name="Linker_Behavior" />
+<a name="Linker_Behavior"></a>
 
 ## <a name="linker-behavior"></a>Comportamiento del enlazador
 
@@ -56,7 +56,7 @@ Deshabilitar la vinculación garantizará que no se realice ninguna modificació
 
 Esto se corresponde con la opción *-nolink* cuando se usa la herramienta de línea de comandos mtouch.
 
-<a name="Link_SDK_assemblies_only" />
+<a name="Link_SDK_assemblies_only"></a>
 
 ### <a name="link-sdk-assemblies-only"></a>Vincular solo ensamblados de SDK
 
@@ -66,7 +66,7 @@ Esta es la opción más sencilla, ya que no requiere ningún cambio en el códig
 
 Esto se corresponde con la opción *-linksdk* cuando se usa la herramienta de línea de comandos mtouch.
 
-<a name="Link_all_assemblies" />
+<a name="Link_all_assemblies"></a>
 
 ### <a name="link-all-assemblies"></a>Vincular todos los ensamblados
 
@@ -74,13 +74,13 @@ Al vincular todo el contenido, el enlazador puede usar el conjunto completo de s
 
 Esto se corresponde con la opción *-linkall* cuando se usa la herramienta de línea de comandos **mtouch**.
 
-<a name="Controlling_the_Linker" />
+<a name="Controlling_the_Linker"></a>
 
 ## <a name="controlling-the-linker"></a>Controlar la enlazador
 
 Cuando se usa el enlazador, en ocasiones, se eliminará código al que puede haber llamado de forma dinámica, incluso indirectamente. Para esos casos, el enlazador ofrece algunas características y opciones que permiten tener un mayor control de sus acciones.
 
-<a name="Preserving_Code" />
+<a name="Preserving_Code"></a>
 
 ### <a name="preserving-code"></a>Conservar el código
 
@@ -108,7 +108,7 @@ public sealed class PreserveAttribute : System.Attribute {
 
 No importa realmente en qué espacio de nombres se defina, ya que el enlazador busca este atributo por el nombre de tipo.
 
- <a name="Skipping_Assemblies" />
+ <a name="Skipping_Assemblies"></a>
 
 ### <a name="skipping-assemblies"></a>Omitir ensamblados
 
@@ -130,7 +130,7 @@ Si desea que el enlazador omita varios ensamblados, incluya varios argumentos `l
 
 No hay interfaz de usuario para usar esta opción, pero se puede ofrecer en el cuadro de diálogo Opciones del proyecto de Visual Studio para Mac o en el panel Propiedades del proyecto de Visual Studio, en el campo de texto **Argumentos mtouch adicionales**. (P. ej., *--linkskip=mscorlib* no vincularía mscorlib.dll, pero sí los ensamblados de la solución).
 
-<a name="Disabling_Link_Away" />
+<a name="Disabling_Link_Away"></a>
 
 ### <a name="disabling-link-away"></a>Deshabilitar "Link Away"
 

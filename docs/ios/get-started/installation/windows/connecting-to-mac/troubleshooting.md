@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 40f99fb4e7e44e0a3dc499dc603e66620b890eaa
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 311e0a84cfc71421c0992ffcecde975429eb7d3a
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75886572"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572174"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Solucionar problemas de conexión del host de compilación de Xamarin.iOS
 
@@ -82,7 +82,7 @@ El host de compilación de Xamarin de versiones anteriores de Xamarin.iOS ya no 
     ssh amyb@10.1.8.95
     ```
 
-    <a name="stepnine" />
+    <a name="stepnine"></a>
 
 9. Si **el paso 8 se realiza correctamente**, puede intentar ejecutar un comando simple como `ls` en la conexión:
 
@@ -112,7 +112,7 @@ El host de compilación de Xamarin de versiones anteriores de Xamarin.iOS ya no 
 
 12. Si se produce un error en el paso 8 y también **se produce un error en el paso 10**, es probable que el problema se deba a que el proceso del servidor SSH del equipo Mac no se está ejecutando o no está configurado para permitir que el usuario actual inicie sesión. En este caso, asegúrese de comprobar de nuevo la configuración del inicio de sesión remoto del paso 2 antes de investigar posibilidades más complicadas.
 
-<a name="knownissues" />
+<a name="knownissues"></a>
 
 ### <a name="known-issues-and-limitations"></a>Problemas y limitaciones conocidos
 
@@ -135,7 +135,7 @@ Causa conocida:
 
 - **Error [52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** : este problema puede darse en Xamarin 4.1 si **Shell de inicio de sesión**, en el menú contextual **Opciones avanzadas** del usuario de Mac, en **Preferencias del sistema&gt; Usuarios &amp; Grupos** , está establecido en otro valor que no sea **/bin/bash**. A partir de Xamarin 4.2, este caso corresponde al mensaje de error "No se pudo conectar". **Solución alternativa**: revierta el valor del **shell de inicio de sesión** al original predeterminado de **/bin/bash**.
 
-<a name="tryagain" />
+<a name="tryagain"></a>
 
 #### <a name="couldnt-connect-to-macbuildhostlocal-please-try-again"></a>"Couldn't connect to MacBuildHost.local. Please try again." (Credenciales no válidas. Vuelva a intentarlo.)
 
@@ -179,7 +179,7 @@ Causas notificadas:
 
     8. Deshabilite y vuelva a habilitar el **inicio de sesión remoto** en **Preferencias del sistema &gt; Compartir &gt; Inicio de sesión remoto** para reiniciar el servidor SSH.
 
-<a name="clearing" />
+<a name="clearing"></a>
 
 #### <a name="clearing-the-broker-idb-build-and-designer-agents-on-the-mac"></a>Desactivar los agentes de Broker, IDB, compilación y diseñador en el equipo Mac
 
@@ -260,7 +260,7 @@ Si la ventana de salida no incluye suficiente información para diagnosticar el 
 
     [![](troubleshooting-images/troubleshooting-image14.png "Click the Layout Mode drop-down menu and select Thread")](troubleshooting-images/troubleshooting-image14.png#lightbox)
 
-<a name="verboselogs" />
+<a name="verboselogs"></a>
 
 #### <a name="verbose-log-files"></a>Archivos de registro detallados
 
@@ -340,7 +340,7 @@ Este problema puede ocurrir si se produce un error cuando Visual Studio actualiz
 
 De este modo, se borrará la caché de componentes de MEF de Visual Studio para solucionar los problemas relacionados con daños en la caché.
 
-<a name="errors" />
+<a name="errors"></a>
 
 ### <a name="errors-due-to-existing-build-host-processes-on-the-mac"></a>Errores debidos a los procesos de host de compilación existentes en el equipo Mac
 

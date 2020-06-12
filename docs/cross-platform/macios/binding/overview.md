@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: be2f7f555b76d472f7a66d95e661bb2f5884c58f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ca83f6ced2e9c2f5380d3bf760e00d613cb0acb0
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76725346"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570978"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Introducción a los enlaces de Objective-C
 
@@ -21,7 +21,7 @@ El enlace de una biblioteca de Objective-C para su uso con Xamarin consta de tre
 
 1. Escriba una "definición de API" de C# para describir cómo se expone la API nativa en .NET y cómo se asigna a la base de Objective-C subyacente. Para ello se emplean construcciones de C# estándar como `interface` y varios **atributos** de enlace (consulte este [ejemplo sencillo](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
 
-2. Cuando haya escrito la "definición de API" en C#, debe compilarla para generar un ensamblado "de enlace". Para ello se puede usar la [**línea de comandos**](#commandline) o un [**proyecto de enlace**](#bindingproject) de Visual Studio para Mac o Visual Studio.
+2. Cuando haya escrito la "definición de API" en C#, debe compilarla para generar un ensamblado "de enlace". Para ello se puede usar la [**línea de comandos**](#command-line-bindings) o un [**proyecto de enlace**](#bindingproject) de Visual Studio para Mac o Visual Studio.
 
 3. Ese "enlace" se agrega entonces al proyecto de aplicación de Xamarin, por lo que puede acceder a la funcionalidad nativa mediante la API que ha definido.
    El proyecto de enlace es completamente independiente de los proyectos de aplicación.
@@ -30,8 +30,6 @@ El enlace de una biblioteca de Objective-C para su uso con Xamarin consta de tre
    > El paso 1 se puede automatizar con la ayuda de [**Objective Sharpie**](#objectivesharpie). Esta utilidad examina la API de Objective-C y genera una "definición de API" de C# propuesta. Puede personalizar los archivos creados con Objective Sharpie y usarlos en un proyecto de enlace (o en la línea de comandos) para crear el ensamblado de enlace. Objective Sharpie no crea enlaces por sí solo, es simplemente una parte opcional del proceso más grande.
 
 También puede leer más detalles técnicos de [cómo funciona](#howitworks), lo que le ayudará a escribir sus enlaces.
-
-<a name="Command_Line_Bindings" /><a name="commandline" />
 
 ## <a name="command-line-bindings"></a>Enlaces de línea de comandos
 
@@ -51,7 +49,7 @@ bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 
 El comando anterior generará el archivo `cocos2d.dll` en el directorio actual y contendrá la biblioteca completamente enlazada que puede usar en el proyecto. Esta es la herramienta que usa Visual Studio para Mac para crear los enlaces si se utiliza un proyecto de enlace (descrito [a continuación](#bindingproject)).
 
-<a name="bindingproject" />
+<a name="bindingproject"></a>
 
 ## <a name="binding-project"></a>Proyecto de enlace
 
@@ -59,7 +57,7 @@ Un proyecto de enlace se puede crear en Visual Studio para Mac o Visual Studio
 
 Siga esta [guía de introducción](~/cross-platform/macios/binding/objective-c-libraries.md#Getting_Started) para ver cómo crear y usar un proyecto de enlace para producir un enlace.
 
-<a name="objectivesharpie" />
+<a name="objectivesharpie"></a>
 
 ## <a name="objective-sharpie"></a>Objective Sharpie
 
@@ -67,7 +65,7 @@ Objective Sharpie es otra herramienta de línea de comandos independiente que ay
 
 Lea los [documentos de Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md) para aprender a analizar bibliotecas nativas, marcos nativos y CocoaPods en definiciones de API que se pueden crear en enlaces.
 
-<a name="howitworks" />
+<a name="howitworks"></a>
 
 ## <a name="how-binding-works"></a>Funcionamiento del enlace
 

@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: jondouglas
 ms.author: jodou
 ms.date: 02/13/2020
-ms.openlocfilehash: faab613d88a7f59d1095021d2b21faf9223ae33b
-ms.sourcegitcommit: 3fb407841dbe46b8b23573f08591228b7c0e2726
+ms.openlocfilehash: a776dbb2ecfaf0942d79c2b403c13f98cdc7c2e2
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488915"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571979"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>Aceleración de hardware para el rendimiento del emulador (Hyper-V y HAXM)
 
@@ -53,7 +53,7 @@ Para obtener la mejor experiencia en Windows, se recomienda usar WHPX para acele
 
 Para obtener información sobre cómo iniciar y depurar con Android Emulator, vea [Depuración en Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md).
 
-<a name="hyper-v-win" />
+<a name="hyper-v-win"></a>
 
 ## <a name="accelerating-with-hyper-v"></a>Aceleración con Hyper-V
 
@@ -138,7 +138,7 @@ Si el hardware es compatible con HAXM, puede comprobar si HAXM ya está instalad
 
 Si el equipo es compatible con HAXM pero HAXM no está instalado, siga los pasos de la sección siguiente para instalar HAXM.
 
-<a name="install-haxm-win" />
+<a name="install-haxm-win"></a>
 
 ### <a name="installing-haxm"></a>Instalación de HAXM
 
@@ -181,7 +181,7 @@ Se recomienda el uso de la plataforma Hypervisor para la aceleración de Android
 
 Para obtener información sobre cómo iniciar y depurar con Android Emulator, vea [Depuración en Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md).
 
-<a name="hypervisor" />
+<a name="hypervisor"></a>
 
 ## <a name="accelerating-with-the-hypervisor-framework"></a>Aceleración con la plataforma Hypervisor
 
@@ -195,7 +195,7 @@ Si el equipo Mac cumple estos criterios, Android Emulator usará automáticament
 
 Si el equipo Mac no admite la plataforma Hypervisor, puede usar HAXM para la aceleración de Android Emulator (el proceso se describe a continuación).
 
-<a name="haxm-mac" />
+<a name="haxm-mac"></a>
 
 ## <a name="accelerating-with-haxm"></a>Aceleración con HAXM
 
@@ -229,7 +229,7 @@ Puede comprobar si HAXM ya está instalado mediante los pasos siguientes:
 
 Si HAXM no está instalado, siga los pasos de la sección siguiente para instalar HAXM.
 
-<a name="install-haxm-mac" />
+<a name="install-haxm-mac"></a>
 
 ### <a name="installing-haxm"></a>Instalación de HAXM
 

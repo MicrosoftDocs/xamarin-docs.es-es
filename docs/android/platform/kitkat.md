@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 43061272f3d3486926f38af792ee3b9df0c53670
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 7a3fd9e22bcf037ec669c77ac919035b0d04b942
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027241"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567936"
 ---
 # <a name="kitkat-features"></a>Características de KitKat
 
@@ -38,7 +38,7 @@ Para desarrollar aplicaciones de Xamarin.Android con KitKat es preciso instalar 
 
 [![Selección de Android 4.4 en el Administrador de SDK](kitkat-images/api19.png)](kitkat-images/api19.png#lightbox)
 
-<a name="Migrating_Your_App_to_KitKat" />
+<a name="Migrating_Your_App_to_KitKat"></a>
 
 ## <a name="migrating-your-app-to-kitkat"></a>Migración de la aplicación a KitKat
 
@@ -97,7 +97,7 @@ KitKat simplifica la mensajería para el usuario agregando todo el contenido de 
 
 [WebView](xref:Android.Webkit.WebView) se renovó radicalmente en KitKat. El cambio más importante consiste en mayor seguridad para cargar el contenido en un objeto `WebView`. Aunque la mayoría de las aplicaciones que tienen como destino versiones anteriores de API deberían funcionar según lo previsto, se recomienda muy especialmente probar las aplicaciones que usan la clase `WebView`. Para obtener más información sobre las API de WebView afectadas, consulte la documentación [Migración a WebView en Android 4.4](https://developer.android.com/guide/webapps/migrating.html) de Android.
 
-<a name="user_experience" />
+<a name="user_experience"></a>
 
 ## <a name="user-experience"></a>Experiencia del usuario
 
@@ -310,7 +310,7 @@ En la captura de pantalla siguiente se nuestra el tema anterior con barras de na
 
 [![Captura de pantalla de ejemplo de la aplicación con barras de navegación y estado translúcidas](kitkat-images/theme.png)](kitkat-images/theme.png#lightbox)
 
-<a name="user_content" />
+<a name="user_content"></a>
 
 ## <a name="user-content"></a>Contenido del usuario
 
@@ -505,7 +505,7 @@ La llamada a `Print` carga la interfaz de usuario de impresión, que enumera las
 
 [![Captura de pantalla de PrintHtmlActivity que muestra el menú Guardar como PDF](kitkat-images/print2.png)](kitkat-images/print2.png#lightbox)
 
-<a name="hardware" />
+<a name="hardware"></a>
 
 ## <a name="hardware"></a>Hardware
 
@@ -639,7 +639,7 @@ Al reiniciar el dispositivo, se restablece el número de pasos en 0. La aplicaci
 > [!NOTE]
 > Mientras que la API para la detección y el recuento de pasos se incluye con KitKat, no todos los teléfonos están equipados con el sensor. Puede comprobar si el sensor está disponible ejecutando `PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);` o comprobar que el valor devuelto de `GetDefaultSensor` no es `null`.
 
-<a name="developer_tools" />
+<a name="developer_tools"></a>
 
 ## <a name="developer-tools"></a>Herramientas de desarrollo
 

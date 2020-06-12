@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018
-ms.openlocfilehash: 5f0b72772a386aa71d4ceec25b88546930b06f4f
-ms.sourcegitcommit: 51006a4eed7bf99b563df6fc1cea9074d0218448
+ms.openlocfilehash: 2676565a62b4b9d4414e9a69737b287bcc992c0b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166344"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572018"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar una aplicación para su lanzamiento
 
@@ -35,7 +35,7 @@ Para compilar la aplicación para lanzamiento, siga estos pasos:
 
 Cada uno de estos pasos se describe con más detalle a continuación.
 
-<a name="Specify_the_Application_Icon" />
+<a name="Specify_the_Application_Icon"></a>
 
 ## <a name="specify-the-application-icon"></a>Especificar el icono de la aplicación
 
@@ -65,7 +65,7 @@ En estos ejemplos, `@drawable/icon` hace referencia a un archivo de icono que se
 
 Normalmente, `using Android.App` se declara en la parte superior de **AssemblyInfo.cs** (el espacio de nombres del atributo `Application` es `Android.App`); sin embargo, puede que necesite agregar esta instrucción `using` si todavía no está presente.
 
-<a name="Versioning" />
+<a name="Versioning"></a>
 
 ## <a name="version-the-application"></a>Versión de la aplicación
 
@@ -89,7 +89,7 @@ Estos valores se pueden establecer en la sección **Compilar > Aplicación de An
 
 -----
 
-<a name="shrink_apk" />
+<a name="shrink_apk"></a>
 
 ## <a name="shrink-the-apk"></a>Reducir el APK
 
@@ -158,11 +158,11 @@ ProGuard está deshabilitado de forma predeterminada. La opción **Habilitar Pro
 
 Para obtener más información sobre cómo usar la herramienta ProGuard, consulte [ProGuard](~/android/deploy-test/release-prep/proguard.md).
 
-<a name="protect_app" />
+<a name="protect_app"></a>
 
 ## <a name="protect-the-application"></a>Proteger la aplicación
 
-<a name="Disable_Debugging" />
+<a name="Disable_Debugging"></a>
 
 ### <a name="disable-debugging"></a>Deshabilitar la depuración
 
@@ -183,7 +183,7 @@ El manifiesto de Android contiene el atributo `android:debuggable`, que controla
 
 Tenga en cuenta que las compilaciones de depuración establecen automáticamente algunos permisos para que la depuración sea más sencilla (como **Internet** y **ReadExternalStorage**). Sin embargo, las compilaciones de versión solo utilizan los permisos que usted configure explícitamente. Si al cambiar a la compilación de versión, la aplicación pierde un permiso que estaba disponible en la compilación de depuración, compruebe que ha habilitado explícitamente este permiso en la lista **Permisos necesarios** como se describe en [Permisos](~/android/app-fundamentals/permissions.md). 
 
-<a name="dotfuscator" id="dotfuscator" />
+<a name="dotfuscator" id="dotfuscator"></a>
 
 ### <a name="application-protection-with-dotfuscator"></a>Protección de aplicaciones con Dotfuscator
 
@@ -208,7 +208,7 @@ Una vez que lo haya configurado, Dotfuscator CE protegerá automáticamente toda
 
 -----
 
-<a name="bundle" />
+<a name="bundle"></a>
 
 ### <a name="bundle-assemblies-into-native-code"></a>Empaquetar ensamblados en código nativo
 
@@ -218,7 +218,7 @@ Esta opción requiere una licencia empresarial y solo está disponible cuando es
 
 Tenga en cuenta que la opción **Bundle into Native Code (Agrupar en código nativo)** *no* implica que los ensamblados se compilen en código nativo. La [**compilación AOT**](#aot) no se puede usar para compilar ensamblados en código nativo.
 
-<a name="aot" />
+<a name="aot"></a>
 
 ### <a name="aot-compilation"></a>Compilación AOT
 
@@ -233,7 +233,7 @@ El _Compilador de optimización de LLVM_ creará un código compilado más peque
 > [!NOTE]
 > La opción **Compilador de optimización de LLVM** necesita una licencia Enterprise.  
 
-<a name="Set_Packaging_Properties" />
+<a name="Set_Packaging_Properties"></a>
 
 ## <a name="set-packaging-properties"></a>Establecer las propiedades de empaquetado
 
@@ -279,7 +279,7 @@ Ahora puede generar un lote de aplicaciones siguiendo el [flujo de archivo](#arc
 
 Para obtener más información sobre los lotes de aplicaciones para Android, vea [Acerca de los paquetes Android App Bundle](https://developer.android.com/guide/app-bundle/).
 
-<a name="Compile" />
+<a name="Compile"></a>
 
 ## <a name="compile"></a>Compile
 
@@ -295,7 +295,7 @@ Cuando haya concluido todos los pasos anteriores, compile la aplicación (selecc
 
 -----
 
-<a name="archive" />
+<a name="archive"></a>
 
 ## <a name="archive-for-publishing"></a>Archivo para la publicación
 

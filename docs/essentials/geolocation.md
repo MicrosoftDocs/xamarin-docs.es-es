@@ -179,7 +179,7 @@ En la tabla siguiente se describe la precisión por plataforma:
 | iOS | ~0 |
 | UWP | <= 10 |
 
-<a name="calculate-distance" />
+<a name="calculate-distance"></a>
 
 ## <a name="detecting-mock-locations"></a>Detección de ubicaciones ficticias
 Algunos dispositivos pueden devolver una ubicación ficticia desde el proveedor o desde una aplicación que proporciona ubicaciones ficticias. Puede detectarlo usando `IsFromMockProvider` en cualquier [`Location`](xref:Xamarin.Essentials.Location).

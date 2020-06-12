@@ -6,18 +6,18 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: f99b64b67f4f1cabf3a5884fabb1301e5ee39eee
-ms.sourcegitcommit: 06043f6a5628a7326ac6690eb62ead8e4780f4a7
+ms.openlocfilehash: d21394b3c33b3f415cbe45ae13c84cabab1ec30b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82738794"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571043"
 ---
 # <a name="cross-platform-performance"></a>Rendimiento multiplataforma
 
 El mal rendimiento de una aplicación se manifiesta de muchas formas. Puede hacer que parezca que una aplicación deja de responder, puede ocasionar un desplazamiento lento y puede reducir la duración de la batería. La optimización del rendimiento conlleva mucho más que la mera implementación de código eficaz. También debe tenerse en cuenta la experiencia de rendimiento de la aplicación del usuario. Por ejemplo, asegurarse de que las operaciones se ejecuten sin evitar que el usuario realice otras actividades puede ayudar a mejorar su experiencia.
 
-<a name="profiler" />
+<a name="profiler"></a>
 
 ## <a name="use-the-profiler"></a>Usar el generador de perfiles
 
@@ -31,7 +31,7 @@ Al generar perfiles de una aplicación, estos son los procedimientos recomendado
 - Lo ideal sería generar perfiles en varios dispositivos, ya que la toma de medidas de rendimiento en un dispositivo no siempre muestra las características de rendimiento de otros dispositivos. Como mínimo, la generación de perfiles debe realizarse en un dispositivo con la menor especificación prevista.
 - Cierre las demás aplicaciones para garantizar la medición del impacto total de la aplicación cuyo perfil se está generando, y no del de las otras.
 
-<a name="idisposable" />
+<a name="idisposable"></a>
 
 ## <a name="release-idisposable-resources"></a>Liberar los recursos de IDisposable
 
@@ -89,7 +89,7 @@ La clase `StreamReader` implementa `IDisposable` y el bloque `finally` llama al 
 
 Para más información, vea [Interfaz IDisposable](xref:System.IDisposable).
 
-<a name="events" />
+<a name="events"></a>
 
 ## <a name="unsubscribe-from-events"></a>Cancelar la suscripción a eventos
 
@@ -160,14 +160,14 @@ public class Subscriber : IDisposable
 
 El campo `handler` mantiene la referencia al método anónimo y se usa para la suscripción a eventos y su cancelación.
 
-<a name="weakreferences" />
+<a name="weakreferences"></a>
 
 ## <a name="use-weak-references-to-prevent-immortal-objects"></a>Usar referencias débiles para evitar objetos inmortales
 
 > [!NOTE]
 > Los desarrolladores de iOS deben revisar la documentación sobre cómo [evitar referencias circulares en iOS](~/ios/deploy-test/performance.md#avoid-strong-circular-references) para asegurarse de que sus aplicaciones usan memoria de forma eficaz.
 
-<a name="lazy" />
+<a name="lazy"></a>
 
 ## <a name="delay-the-cost-of-creating-objects"></a>Retrasar el consumo de recursos de la creación de objetos
 
@@ -209,7 +209,7 @@ La inicialización diferida se produce la primera vez que se accede a la propied
 
 Para más información sobre la inicialización diferida, vea [Lazy Initialization (Inicialización diferida)](https://msdn.microsoft.com/library/dd997286(v=vs.110).aspx).
 
-<a name="async" />
+<a name="async"></a>
 
 ## <a name="implement-asynchronous-operations"></a>Implementar operaciones asincrónicas
 
@@ -248,7 +248,7 @@ Las operaciones de larga ejecución también deberían permitir la cancelación.
 
 Para más información, vea [Información general sobre la compatibilidad con Async](~/cross-platform/platform/async.md).
 
-<a name="sgen" />
+<a name="sgen"></a>
 
 ## <a name="use-the-sgen-garbage-collector"></a>Usar el recolector de elementos no utilizados SGen
 
@@ -282,7 +282,7 @@ Para reducir la presión sobre el recolector de elementos no utilizados, siga es
 - Libere de forma explícita recursos como secuencias, conexiones de red, bloques grandes de memoria y archivos una vez que ya no sean necesarios. Para más información, vea [Liberar los recursos de IDisposable](#idisposable).
 - Elimine del Registro los controladores de eventos una vez que ya no sean necesarios para que los objetos se puedan recopilar. Para más información, vea [Cancelar la suscripción a eventos](#events).
 
-<a name="linker" />
+<a name="linker"></a>
 
 ## <a name="reduce-the-size-of-the-application"></a>Reducir el tamaño de la aplicación
 
@@ -335,7 +335,7 @@ Los siguientes pasos pueden usarse para reducir aún más el tamaño del archivo
 Las aplicaciones de Android también se pueden dividir en un APK independiente para cada ABI ("arquitectura").
 Obtenga más información en la entrada de blog: [How To Keep Your Android App Size Down](https://montemagno.com/how-to-keep-your-android-app-size-down/) (Cómo reducir el tamaño de una aplicación de Android).
 
-<a name="optimizeimages" />
+<a name="optimizeimages"></a>
 
 ## <a name="optimize-image-resources"></a>Optimizar los recursos de imagen
 
@@ -343,7 +343,7 @@ Las imágenes son uno de los recursos con más consumo usados por las aplicacion
 
 Independientemente de la resolución de la imagen, mostrar recursos de imagen puede aumentar considerablemente la superficie de memoria de la aplicación. Por tanto, solo se deberían crear cuando fuera necesario y deberían liberarse en cuanto la aplicación no los necesitara.
 
-<a name="activationperiod" />
+<a name="activationperiod"></a>
 
 ## <a name="reduce-the-application-activation-period"></a>Reducir el período de activación de la aplicación
 
@@ -353,7 +353,7 @@ Antes de que una aplicación muestre su interfaz de usuario inicial, debe propor
 
 Durante el período de activación, las aplicaciones ejecutan lógica de activación, que suele incluir la carga y el procesamiento de los recursos. El período de activación se puede reducir asegurándose de que los recursos necesarios estén empaquetados en la aplicación en lugar de recuperarse de forma remota. Por ejemplo, en algunas circunstancias puede ser adecuado durante el período de activación cargar datos de marcador de posición almacenados localmente. Luego, una vez que aparece la interfaz de usuario inicial y el usuario puede interactuar con la aplicación, se pueden reemplazar los datos de marcador de posición progresivamente desde un origen remoto. Además, la lógica de activación de la aplicación solo debe realizar el trabajo necesario para que el usuario pueda empezar a usar la aplicación. Esto puede ayudar si retrasa la carga de ensamblados adicionales, ya que los ensamblados se cargan la primera vez que se usan.
 
-<a name="webservicecommunication" />
+<a name="webservicecommunication"></a>
 
 ## <a name="reduce-web-service-communication"></a>Reducir la comunicación con servicios web
 
