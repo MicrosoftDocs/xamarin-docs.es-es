@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 50e28291d72550264e3806c0911f59a57c6d8bf0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136336"
+title: "Personalización de una página de contenido" description: "Un ContentPage es un elemento visual que muestra una vista única y ocupa la mayor parte de la pantalla. En este artículo se muestra cómo crear un representador personalizado para la página ContentPage, lo que permite que los desarrolladores reemplacen la representación nativa de forma predeterminada con su propia personalización específica de la plataforma."
+ms.prod: xamarin ms.assetid: A4E61D93-73D9-4668-8D1C-DB6FC2491822 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/29/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="customizing-a-contentpage"></a>Personalización de una página de contenido
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
@@ -31,13 +17,11 @@ El siguiente diagrama muestra la relación entre la clase [`ContentPage`](xref:X
 
 El proceso de representación puede aprovecharse para implementar las personalizaciones específicas de la plataforma creando un representador personalizado para una [`ContentPage`](xref:Xamarin.Forms.ContentPage) en cada plataforma. Para hacerlo, siga este procedimiento:
 
-1. [Cree](#Creating_the_Xamarin.Forms_Page) una página de Xamarin.Forms.
-1. [Consuma](#Consuming_the_Xamarin.Forms_Page) la página de Xamarin.Forms.
-1. [Cree](#Creating_the_Page_Renderer_on_each_Platform) el representador personalizado para la página en cada plataforma.
+1. [Cree](#creating-the-xamarinforms-page) una página de Xamarin.Forms.
+1. [Consuma](#consuming-the-xamarinforms-page) la página de Xamarin.Forms.
+1. [Cree](#creating-the-page-renderer-on-each-platform) el representador personalizado para la página en cada plataforma.
 
 Ahora se analizará en detalle cada elemento, para implementar un `CameraPage` que proporciona una fuente de la cámara en vivo y la capacidad de capturar una foto.
-
-<a name="Creating_the_Xamarin.Forms_Page" />
 
 ## <a name="creating-the-xamarinforms-page"></a>Creación de la página Xamarin.Forms
 
@@ -78,8 +62,6 @@ public class CameraPageCS : ContentPage
 
 Una instancia de la `CameraPage` se usará para mostrar la fuente de la cámara en directo en cada plataforma. La personalización del control se llevará a cabo en el representador personalizado, por lo que no se requiere ninguna implementación adicional en la clase `CameraPage`.
 
-<a name="Consuming_the_Xamarin.Forms_Page" />
-
 ## <a name="consuming-the-xamarinforms-page"></a>Consumo de la página de Xamarin.Forms
 
 La aplicación de Xamarin.Forms debe mostrar la `CameraPage` vacía. Esto se produce cuando se pulsa un botón en la instancia de `MainPage`, lo que a su vez ejecuta el método `OnTakePhotoButtonClicked`, como se muestra en el siguiente ejemplo de código:
@@ -92,8 +74,6 @@ async void OnTakePhotoButtonClicked (object sender, EventArgs e)
 ```
 
 Este código simplemente se desplaza a la `CameraPage`, en la que representadores personalizados personalizarán el aspecto de la página en cada plataforma.
-
-<a name="Creating_the_Page_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-page-renderer-on-each-platform"></a>Creación del representador de página en cada plataforma
 

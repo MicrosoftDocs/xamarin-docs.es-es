@@ -9,7 +9,7 @@ MS. Prod: Xamarin ms. AssetID: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8 ms. Technolo
 
 _El control de archivos con Xamarin.Forms se puede lograr mediante el uso de código en una biblioteca de .net Standard o mediante el uso de recursos incrustados._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 Xamarin.Formsel código se ejecuta en varias plataformas, cada una de las cuales tiene su propio sistema de archivos. Anteriormente, esto significaba que las acciones de leer y escribir en archivos se realizaban con mayor facilidad mediante las API de archivo nativas de cada plataforma. Como alternativa, los recursos incrustados son una solución más sencilla para distribuir archivos de datos con una aplicación. Pero, con .NET Standard 2.0, se puede compartir el código de acceso a archivos en bibliotecas de .NET Standard.
 
@@ -61,7 +61,7 @@ Para insertar un archivo en un ensamblado de **.NET Standard**, cree o agregue u
 
 -----
 
-`GetManifestResourceStream` se usa para acceder al archivo incrustado mediante su **identificador de recurso**. De forma predeterminada, el identificador de recurso es el nombre de archivo con el prefijo del espacio de nombres predeterminado para el proyecto en el que está incrustado; en este caso, el ensamblado es **WorkingWithFiles** y el nombre de archivo es **LibTextResource. txt**, por lo que el identificador de recurso es `WorkingWithFiles.LibTextResource.txt` .
+`GetManifestResourceStream` se usa para acceder al archivo incrustado mediante su **identificador de recurso**. De forma predeterminada, el identificador de recurso es el nombre de archivo con el prefijo del espacio de nombres predeterminado para el proyecto en el que está incrustado; en este caso, el ensamblado es **WorkingWithFiles** y el nombre de archivo es **LibTextResource.txt**, por lo que el identificador de recurso es `WorkingWithFiles.LibTextResource.txt` .
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;

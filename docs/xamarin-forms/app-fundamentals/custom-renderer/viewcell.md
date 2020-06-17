@@ -1,9 +1,6 @@
 ---
-title: description: "Un ViewCell de Xamarin.Forms es una celda que se puede agregar a ListView o TableView y que contiene una vista definida por el desarrollador. En este artículo se muestra cómo crear un representador personalizado para un ViewCell que se hospeda dentro de un control ListView de Xamarin.Forms".
-ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
-- "Xamarin.Forms"
-- "Xamarin.Essentials"
-
+title: "Personalización de ViewCell" description: "Un ViewCell de Xamarin.Forms es una celda que se puede agregar a ListView o TableView y que contiene una vista definida por el desarrollador. En este artículo se muestra cómo crear un representador personalizado para un ViewCell que se hospeda dentro de un control ListView de Xamarin.Forms."
+ms.prod: xamarin ms.assetid: 61F378C9-6DEF-436B-ACC3-2324B25D404E ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/07/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # <a name="customizing-a-viewcell"></a>Personalización de ViewCell
@@ -20,13 +17,11 @@ El siguiente diagrama muestra la relación entre la clase [`ViewCell`](xref:Xama
 
 El proceso de representación puede aprovecharse para implementar las personalizaciones específicas de la plataforma creando un representador personalizado para una [`ViewCell`](xref:Xamarin.Forms.ViewCell) en cada plataforma. Para hacerlo, siga este procedimiento:
 
-1. [Cree](#Creating_the_Custom_Cell) una celda personalizada de Xamarin.Forms.
-1. [Consuma](#Consuming_the_Custom_Cell) la celda personalizada de Xamarin.Forms.
-1. [Cree](#Creating_the_Custom_Renderer_on_each_Platform) el representador personalizado para la celda en cada plataforma.
+1. [Cree](#creating-the-custom-cell) una celda personalizada de Xamarin.Forms.
+1. [Consuma](#consuming-the-custom-cell) la celda personalizada de Xamarin.Forms.
+1. [Cree](#creating-the-custom-renderer-on-each-platform) el representador personalizado para la celda en cada plataforma.
 
 Cada elemento ahora se explicará a su vez, para implementar un representador `NativeCell` que aproveche las ventajas de un diseño específico de la plataforma para cada celda que se hospeda dentro de un control Xamarin.Forms[`ListView` de ](xref:Xamarin.Forms.ListView). Esto impide que se llame varias veces a los cálculos de diseño de Xamarin.Forms durante el desplazamiento de `ListView`.
-
-<a name="Creating_the_Custom_Cell" />
 
 ## <a name="creating-the-custom-cell"></a>Creación de la celda personalizada
 
@@ -62,8 +57,6 @@ public class NativeCell : ViewCell
 ```
 
 La clase `NativeCell` se crea en el proyecto de biblioteca de .NET Standard y define la API para la celda personalizada. La celda personalizada expone las propiedades `Name`, `Category` y `ImageFilename` que se pueden mostrar mediante el enlace de datos. Para más información sobre el enlace de datos, consulte [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) (Aspectos básicos del enlace de datos).
-
-<a name="Consuming_the_Custom_Cell" />
 
 ## <a name="consuming-the-custom-cell"></a>Consumo de la celda personalizada
 
@@ -143,8 +136,6 @@ Un control Xamarin.Forms[`ListView` de ](xref:Xamarin.Forms.ListView) se usa par
 Cada fila de la lista contiene tres elementos de datos: un nombre, una categoría y un nombre de archivo de imagen. El diseño de cada fila de la lista está definido por el `DataTemplate` al que se hace referencia mediante la propiedad enlazable [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate). `DataTemplate` define que cada fila de datos en la lista será una `NativeCell` que muestra sus propiedades `Name`, `Category` y `ImageFilename` mediante el enlace de datos. Para obtener más información sobre el control `ListView`, vea [ListView de Xamarin.Forms](~/xamarin-forms/user-interface/listview/index.md).
 
 Ahora se puede agregar un representador personalizado a cada proyecto de aplicación para personalizar el diseño específico de la plataforma para cada celda.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>Creación del representador personalizado en cada plataforma
 
