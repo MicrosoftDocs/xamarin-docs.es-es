@@ -9,7 +9,7 @@ MS. Prod: Xamarin ms. AssetID: 68330242-92C5-46F1-B1E3-2395D8823B0C ms. Technolo
 
 _La API de traductor de Microsoft se puede usar para traducir la voz y el texto a través de una API de REST. En este artículo se explica cómo usar Microsoft Translator Text API para traducir texto de un idioma a otro en una Xamarin.Forms aplicación._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 La API de traductor tiene dos componentes:
 

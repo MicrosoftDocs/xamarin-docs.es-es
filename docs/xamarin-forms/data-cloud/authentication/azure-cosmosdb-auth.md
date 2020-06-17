@@ -9,7 +9,7 @@ MS. Prod: Xamarin ms. AssetID: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D ms. Technolo
 
 _Azure Cosmos DB bases de datos de documentos admiten colecciones con particiones, que pueden abarcar varios servidores y particiones, a la vez que admiten un almacenamiento y un rendimiento ilimitados. En este artículo se explica cómo combinar el control de acceso con colecciones con particiones, de modo que un usuario solo pueda tener acceso a sus propios documentos en una Xamarin.Forms aplicación._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 Se debe especificar una clave de partición al crear una colección con particiones, y los documentos con la misma clave de partición se almacenarán en la misma partición. Por lo tanto, si se especifica la identidad del usuario como una clave de partición, se generará una colección con particiones que solo almacenará documentos para ese usuario. Esto también garantiza que el Azure Cosmos DB base de datos de documentos se escalará a medida que aumente el número de usuarios y elementos.
 

@@ -1,9 +1,6 @@
 ---
-title: ''Xamarin.Essentials: Detección de vibraciones'' description: "La clase Accelerometer de Xamarin.Essentials permite detectar movimientos de vibración en el dispositivo".
-ms.assetid: author: ms.author: ms.date: ms.custom: no-loc:
-- "Xamarin.Forms"
-- "Xamarin.Essentials"
-
+title: "Xamarin.Essentials: Detección de vibraciones'' description: "La clase Accelerometer de Xamarin.Essentials permite detectar movimientos de vibración en el dispositivo."
+ms.assetid: 07513D32-120F-4F12-8757-A47802A8027B author: jamesmontemagno ms.author: jamont ms.date: 05/28/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: detección de agitaciones

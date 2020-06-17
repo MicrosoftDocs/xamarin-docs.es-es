@@ -1,22 +1,8 @@
 ---
-title: ''
-description: En este artículo se explica cómo usar el gesto de pulsar para la detección de pulsaciones en una aplicación de Xamarin.Forms. La detección de pulsaciones se implementa con la clase TapGestureRecognizer.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 0470419dd5070424c362dec8d4b1978507985783
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137623"
+title: "Adición de un reconocedor de gesto de pulsar" description: "En este artículo se explica cómo usar el gesto de pulsar para la detección de pulsaciones en una aplicación de Xamarin.Forms. La detección de pulsaciones se implementa con la clase TapGestureRecognizer."
+ms.prod: xamarin ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/21/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="adding-a-tap-gesture-recognizer"></a>Adición de un reconocedor de gesto de pulsar
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)
@@ -40,8 +26,6 @@ tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
 ```
 
 Cuando se establece [`NumberOfTapsRequired`](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) por encima de uno, el controlador de eventos solo se ejecuta si las pulsaciones se producen dentro de un período de tiempo concreto (que no se puede configurar). Si la segunda pulsación (o las posteriores) no se producen dentro de ese período, se omiten y se reinicia el "recuento de pulsaciones".
-
-<a name="Using_Xaml" />
 
 ## <a name="using-xaml"></a>Uso de Xaml
 

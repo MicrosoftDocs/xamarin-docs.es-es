@@ -7,7 +7,7 @@ zone_pivot_groups: plataforma ms. Prod: Xamarin ms. AssetID: 84769ff1-72fd-4c44-
 
 _Vea los Xamarin.Forms diseños que se representan a medida que escribe._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 El previsor de XAML muestra el aspecto que Xamarin.Forms tendrá la página XAML en iOS y Android. Cuando realice cambios en el código XAML, verá que se muestra una vista previa de inmediato junto con el código. El previsor de XAML está disponible en Visual Studio y Visual Studio para Mac.
 
@@ -83,7 +83,7 @@ if (!DesignMode.IsDesignModeEnabled)
 
 Esta propiedad es útil si Inicializa una biblioteca en el constructor de páginas que no se puede ejecutar en tiempo de diseño.
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 
 Compruebe los problemas siguientes y los [foros de Xamarin](https://forums.xamarin.com/categories/xamarin-forms), si el visor de vista previa no funciona.
 

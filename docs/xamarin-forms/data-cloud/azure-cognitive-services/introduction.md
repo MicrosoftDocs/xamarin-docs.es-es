@@ -9,7 +9,7 @@ MS. Prod: Xamarin ms. AssetID: 74121ADB-1322-4C1E-A103-F37257BC7CB0 ms. Technolo
 
 _Microsoft Cognitive Services son un conjunto de API, SDK y servicios disponibles para que los desarrolladores puedan hacer que sus aplicaciones sean más inteligentes mediante la adición de características como el reconocimiento facial, el reconocimiento de voz y la comprensión de lenguajes. En este artículo se proporciona una introducción a la aplicación de ejemplo que muestra cómo invocar algunas de las API de los servicios cognitivos de Microsoft._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 El ejemplo adjunto es una aplicación de lista de tareas que proporciona funcionalidad para:
 

@@ -1,9 +1,6 @@
 ---
-title: ''Xamarin.Essentials: Solución de problemas'' description: "En este documento se describe cómo solucionar los problemas encontrados al desarrollar con la biblioteca Xamarin.Essentials".
-ms.assetid: author: ms.author: ms.date: no-loc:
-- "Xamarin.Forms"
-- "Xamarin.Essentials"
-
+title: "Xamarin.Essentials: Solución de problemas'' description: "En este documento se describe cómo solucionar los problemas encontrados al desarrollar con la biblioteca Xamarin.Essentials".
+ms.assetid: 2E474FAF-F841-4E3C-B815-F7ABD8EE3361 author: jamesmontemagno ms.author: jamont ms.date: 01/06/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # <a name="xamarinessentials-troubleshooting"></a>Xamarin.Essentials: Solución de problemas

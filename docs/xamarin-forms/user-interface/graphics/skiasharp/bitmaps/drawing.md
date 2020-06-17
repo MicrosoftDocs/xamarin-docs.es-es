@@ -188,7 +188,7 @@ Esta mejora de rendimiento es el motivo por el `SkiaSharp` que los mapas de bits
 
 No es necesario crear un nuevo mapa de bits para dibujar en él. También puede dibujar en un mapa de bits existente.
 
-La página **Moustache de Monkey** usa su constructor para cargar la imagen de **MonkeyFace. png** . A continuación, crea un `SKCanvas` objeto basado en dicho mapa de bits y usa `SKPaint` `SKPath` objetos y para dibujar un Moustache en él:
+La página **Moustache de Monkey** utiliza su constructor para cargar la imagen de **MonkeyFace.png** . A continuación, crea un `SKCanvas` objeto basado en dicho mapa de bits y usa `SKPaint` `SKPath` objetos y para dibujar un Moustache en él:
 
 ```csharp
 public partial class MonkeyMoustachePage : ContentPage

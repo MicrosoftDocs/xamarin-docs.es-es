@@ -1,22 +1,8 @@
 ---
-title: Creación de una plantilla de datos de Xamarin.Forms
-description: Las plantillas de datos se pueden crear insertadas, en un objeto ResourceDictionary, o bien a partir de un tipo personalizado o un tipo de celda de Xamarin.Forms adecuado. En este artículo se explora cada una de las técnicas.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 3e91d6f091870fe9203e67eda1454b8062383deb
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139937"
+title: "Creación de una plantilla de datos de Xamarin.Forms" description: "Las plantillas de datos se pueden crear insertadas, en un objeto ResourceDictionary, o bien a partir de un tipo personalizado o un tipo de celda de Xamarin.Forms adecuado. En este artículo se explora cada una de las técnicas."
+ms.prod: xamarin ms.assetid: CFF4AB5E-9069-461C-84D8-F9F6C38510AB ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 09/11/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="creating-a-xamarinforms-datatemplate"></a>Creación de una plantilla de datos de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
@@ -25,15 +11,13 @@ _Las plantillas de datos se pueden crear insertadas, en un objeto ResourceDictio
 
 Un escenario de uso común para un elemento [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) es mostrar datos de una colección de objetos en un control [`ListView`](xref:Xamarin.Forms.ListView). La apariencia de los datos de cada celda del control [`ListView`](xref:Xamarin.Forms.ListView) se puede administrar mediante el establecimiento de la propiedad [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) en un elemento [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Se pueden usar varias técnicas para realizar esta acción:
 
-- [Creación de una plantilla de datos insertada](#inline).
-- [Creación de una plantilla de datos con un tipo](#type).
-- [Creación de una plantilla de datos como un recurso](#resource).
+- [Creación de una plantilla de datos insertada](#creating-an-inline-datatemplate).
+- [Creación de una plantilla de datos con un tipo](#creating-a-datatemplate-with-a-type).
+- [Creación de una plantilla de datos como un recurso](#creating-a-datatemplate-as-a-resource).
 
 Independientemente de la técnica que se use, el resultado es que la apariencia de cada celda del control [`ListView`](xref:Xamarin.Forms.ListView) se define mediante un elemento [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), como se muestra en las capturas de pantalla siguientes:
 
 ![](creating-images/data-template-appearance.png "ListView with a DataTemplate")
-
-<a name="inline" />
 
 ## <a name="creating-an-inline-datatemplate"></a>Creación de una plantilla de datos insertada
 
@@ -114,8 +98,6 @@ public class WithDataTemplatePageCS : ContentPage
 ```
 
 En C#, el elemento [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) insertado se crea mediante una sobrecarga del constructor que especifica un argumento `Func`.
-
-<a name="type" />
 
 ## <a name="creating-a-datatemplate-with-a-type"></a>Creación de una plantilla de datos con un tipo
 
@@ -220,8 +202,6 @@ public class PersonCellCS : ViewCell
 
 > [!NOTE]
 > Tenga en cuenta que Xamarin.Forms también incluye tipos de celda que se pueden usar para mostrar datos simples en celdas [`ListView`](xref:Xamarin.Forms.ListView). Para obtener más información, vea [Apariencia de una celda](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md).
-
-<a name="resource" />
 
 ## <a name="creating-a-datatemplate-as-a-resource"></a>Creación de una plantilla de datos con un recurso
 

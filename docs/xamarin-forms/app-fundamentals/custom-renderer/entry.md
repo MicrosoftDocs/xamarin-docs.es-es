@@ -1,22 +1,8 @@
 ---
-title: ''
-description: El control Entry de Xamarin.Forms permite que se edite una sola línea de texto. En este artículo se muestra cómo crear un representador personalizado para el control Entry, lo que permite que los desarrolladores reemplacen la representación nativa de forma predeterminada con su propia personalización específica de la plataforma.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 61bd66fd25b7aea3e5be346f79e63d410164b002
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138988"
+title: "Personalización de una entrada" description: "El control Entry de Xamarin.Forms permite que se edite una sola línea de texto. En este artículo se muestra cómo crear un representador personalizado para el control Entry, lo que permite que los desarrolladores reemplacen la representación nativa de forma predeterminada con su propia personalización específica de la plataforma."
+ms.prod: xamarin ms.assetid: 7B5DD10D-0411-424F-88D8-8A474DF16D8D ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/26/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="customizing-an-entry"></a>Personalización de una entrada
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
@@ -31,16 +17,14 @@ El siguiente diagrama muestra la relación entre el control [`Entry`](xref:Xamar
 
 El proceso de representación puede aprovecharse para implementar las personalizaciones específicas de la plataforma creando un representador personalizado para el control [`Entry`](xref:Xamarin.Forms.Entry) en cada plataforma. Para hacerlo, siga este procedimiento:
 
-1. [Cree](#Creating_the_Custom_Entry_Control) un control personalizado de Xamarin.Forms.
-1. [Consuma](#Consuming_the_Custom_Control) el control personalizado de Xamarin.Forms.
-1. [Cree](#Creating_the_Custom_Renderer_on_each_Platform) el representador personalizado para el control en cada plataforma.
+1. [Cree](#creating-the-custom-entry-control) un control personalizado de Xamarin.Forms.
+1. [Consuma](#consuming-the-custom-control) el control personalizado de Xamarin.Forms.
+1. [Cree](#creating-the-custom-renderer-on-each-platform) el representador personalizado para el control en cada plataforma.
 
 Ahora se analizará en detalle cada elemento, para implementar un control [`Entry`](xref:Xamarin.Forms.Entry) que tiene un color de fondo diferente en cada plataforma.
 
 > [!IMPORTANT]
 > En este artículo se explica cómo crear un representador personalizado simple. Empero, no es necesario crear un representador personalizado para implementar un `Entry` que tiene un color de fondo diferente en cada plataforma. Esto puede realizarse más fácilmente usando la clase [`Device`](xref:Xamarin.Forms.Device) o la extensión de marcado `OnPlatform`, para proporcionar los valores específicos de la plataforma. Para obtener más información, vea [Providing Platform-Specific Values](~/xamarin-forms/platform/device.md#provide-platform-specific-values) (Proporcionar valores específicos de la plataforma) y [OnPlatform Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension) (Extensión de marcado OnPlatform).
-
-<a name="Creating_the_Custom_Entry_Control" />
 
 ## <a name="creating-the-custom-entry-control"></a>Creación de un control Entry personalizado
 
@@ -53,8 +37,6 @@ public class MyEntry : Entry
 ```
 
 El control `MyEntry` se crea en el proyecto de biblioteca de .NET Standard y es simplemente un control [`Entry`](xref:Xamarin.Forms.Entry). La personalización del control se llevará a cabo en el representador personalizado, por lo que no se requiere ninguna implementación adicional en el control `MyEntry`.
-
-<a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>Uso del control personalizado
 
@@ -98,8 +80,6 @@ public class MainPage : ContentPage
 Este código crea una instancia de un nuevo objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage) que mostrará un [`Label`](xref:Xamarin.Forms.Label) y un control `MyEntry` centrado tanto vertical como horizontalmente en la página.
 
 Ahora se puede agregar un representador personalizado a cada proyecto de aplicación para personalizar la apariencia del control en cada plataforma.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>Creación del representador personalizado en cada plataforma
 

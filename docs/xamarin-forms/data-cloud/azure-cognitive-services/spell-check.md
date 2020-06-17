@@ -9,7 +9,7 @@ MS. Prod: Xamarin ms. AssetID: B40EB103-FDC0-45C6-9940-FB4ACDC2F4F9 ms. Technolo
 
 _Bing Spell Check realiza la revisión ortográfica contextual del texto, proporcionando sugerencias en línea para palabras mal escritas. En este artículo se explica cómo usar la API de REST de Bing Spell Check para corregir errores ortográficos en una Xamarin.Forms aplicación._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 La API de REST de Bing Spell Check tiene dos modos operativos y se debe especificar un modo al realizar una solicitud a la API:
 

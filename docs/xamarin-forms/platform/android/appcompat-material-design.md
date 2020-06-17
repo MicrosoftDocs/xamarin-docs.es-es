@@ -10,7 +10,7 @@ _Siga estos pasos para convertir Xamarin.Forms aplicaciones Android existentes p
 <!-- source https://gist.github.com/jassmith/a3b2a543f99126782936
 https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ -->
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 En estas instrucciones se explica cómo actualizar las Xamarin.Forms aplicaciones Android existentes para usar la biblioteca AppCompat y habilitar el diseño de material en la versión de Android de las Xamarin.Forms aplicaciones.
 

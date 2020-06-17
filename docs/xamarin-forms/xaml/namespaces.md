@@ -7,7 +7,7 @@ MS. Prod: Xamarin ms. AssetID: C03B5553-B199-4A19-9F0F-E5BCE1DB268F ms. Technolo
 
 _XAML usa el atributo XML xmlns para las declaraciones de espacio de nombres. En este artículo se presenta la sintaxis del espacio de nombres XAML y se muestra cómo declarar un espacio de nombres XAML para tener acceso a un tipo._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 Hay dos declaraciones de espacios de nombres XAML que siempre están dentro del elemento raíz de un archivo XAML. El primero define el espacio de nombres predeterminado, tal y como se muestra en el siguiente ejemplo de código XAML:
 

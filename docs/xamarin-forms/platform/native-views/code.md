@@ -9,7 +9,7 @@ MS. Prod: Xamarin ms. AssetID: 230F937C-F914-4B21-8EA1-1A2A9E644769 ms. Technolo
 
 _Se puede hacer referencia directamente a las vistas nativas de iOS, Android y UWP desde Xamarin.Forms las páginas creadas con C#. En este artículo se muestra cómo agregar vistas nativas a un Xamarin.Forms diseño creado con C# y cómo invalidar el diseño de vistas personalizadas para corregir el uso de la API de medición._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 Cualquier Xamarin.Forms control que permita `Content` establecer o que tenga una `Children` colección puede agregar vistas específicas de la plataforma. Por ejemplo, un iOS `UILabel` se puede agregar directamente a la [`ContentView.Content`](xref:Xamarin.Forms.ContentView.Content) propiedad o a la [`StackLayout.Children`](xref:Xamarin.Forms.Layout`1.Children) colección. Sin embargo, tenga en cuenta que esta funcionalidad requiere el uso de `#if` definiciones en Xamarin.Forms soluciones de proyecto compartidas y no está disponible en las Xamarin.Forms soluciones de biblioteca de .net Standard.
 

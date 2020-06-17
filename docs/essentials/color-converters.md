@@ -1,21 +1,8 @@
 ---
-title: Convertidores de colores de Xamarin.Essentials
-description: La clase ColorConverters de Xamarin.Essentials ofrece varios métodos auxiliares y de extensión para trabajar con System.Drawing.Color.
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-ms.custom: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 57b85a909855594c70bfd529d7a794b4bd7bca7e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130226"
+title: "Xamarin.Essentials: Convertidores de colores" description: "La clase ColorConverters de Xamarin.Essentials ofrece varios métodos auxiliares y de extensión para trabajar con System.Drawing.Color."
+ms.assetid: B10428D6-89E2-4714-A39F-7E6E626391B2 author: jamesmontemagno ms.author: jamont ms.date: 01/06/2020 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-color-converters"></a>Xamarin.Essentials: convertidores de color
 
 La clase **ColorConverters** de Xamarin.Essentials ofrece varios métodos auxiliares para System.Drawing.Color.

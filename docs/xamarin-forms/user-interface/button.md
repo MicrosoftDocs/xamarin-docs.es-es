@@ -764,9 +764,9 @@ A estos se les proporcionó una **acción de compilación** de **AndroidResource
 
 En el proyecto de UWP, los mapas de bits se pueden almacenar en cualquier parte del proyecto, pero normalmente se almacenan en una carpeta personalizada o en la carpeta de **recursos** existentes. El proyecto de UWP contiene estos mapas de bits:
 
-- Mapa de bits cuadrado de 48 píxeles almacenado como **/assets/MonkeyFace.Scale-100.png**
-- Mapa de bits cuadrado de 96 píxeles almacenado como **/assets/MonkeyFace.Scale-200.png**
-- Mapa de bits cuadrado de 192 píxeles almacenado como **/assets/MonkeyFace.Scale-400.png**
+- Mapa de bits cuadrado de 48 píxeles almacenado como **/Assets/MonkeyFace.scale-100.png**
+- Mapa de bits cuadrado de 96 píxeles almacenado como **/Assets/MonkeyFace.scale-200.png**
+- Mapa de bits cuadrado de 192 píxeles almacenado como **/Assets/MonkeyFace.scale-400.png**
 
 Se les ha dado una **acción de compilación** de **contenido**.
 

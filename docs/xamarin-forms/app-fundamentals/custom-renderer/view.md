@@ -1,21 +1,6 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: e565a2bcddf292d37bc3dd07a8edbbabec709d8a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133567"
+title: "Implementación de una vista" description: "En este artículo se muestra cómo crear un representador personalizado para un control personalizado de Xamarin.Forms que se usa para mostrar una secuencia de vídeo de vista previa de la cámara del dispositivo."
+ms.prod: xamarin ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 05/10/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 # <a name="implementing-a-view"></a>Implementación de una vista
 
@@ -31,13 +16,11 @@ El siguiente diagrama muestra la relación entre la clase [`View`](xref:Xamarin.
 
 El proceso de representación puede usarse para implementar personalizaciones específicas de plataforma al crear un representador personalizado para una clase [`View`](xref:Xamarin.Forms.View) en cada plataforma. Para hacerlo, siga este procedimiento:
 
-1. [Cree](#Creating_the_Custom_Control) un control personalizado de Xamarin.Forms.
-1. [Consuma](#Consuming_the_Custom_Control) el control personalizado de Xamarin.Forms.
-1. [Cree](#Creating_the_Custom_Renderer_on_each_Platform) el representador personalizado para el control en cada plataforma.
+1. [Cree](#creating-the-custom-control) un control personalizado de Xamarin.Forms.
+1. [Consuma](#consuming-the-custom-control) el control personalizado de Xamarin.Forms.
+1. [Cree](#creating-the-custom-renderer-on-each-platform) el representador personalizado para el control en cada plataforma.
 
 Ahora se analizará en detalle cada elemento, para implementar un representador `CameraPreview` que muestre una secuencia de vídeo de vista previa de la cámara del dispositivo. Pulsar en la secuencia de vídeo la detendrá e iniciará.
-
-<a name="Creating_the_Custom_Control" />
 
 ## <a name="creating-the-custom-control"></a>Creación de un control personalizado
 
@@ -60,8 +43,6 @@ public class CameraPreview : View
 ```
 
 El control personalizado `CameraPreview` se crea en el proyecto de biblioteca de .NET Standard y define la API del control. El control personalizado expone una propiedad `Camera` que se usa para controlar si se debe mostrar la secuencia de vídeo desde la cámara delantera o trasera del dispositivo. Si no se especifica un valor para la propiedad `Camera` cuando se crea el control, el valor predeterminado es especificar la cámara trasera.
-
-<a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>Uso del control personalizado
 
@@ -108,8 +89,6 @@ public class MainPageCS : ContentPage
 Se usará una instancia del control personalizado `CameraPreview` para mostrar la secuencia de vídeo de vista previa de la cámara del dispositivo. Aparte de especificar opcionalmente un valor para la propiedad `Camera`, la personalización del control se llevará a cabo en el representador personalizado.
 
 Ahora se puede agregar un representador personalizado a cada proyecto de aplicación para crear controles de vista previa de cámara específicos de la plataforma.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>Creación del representador personalizado en cada plataforma
 

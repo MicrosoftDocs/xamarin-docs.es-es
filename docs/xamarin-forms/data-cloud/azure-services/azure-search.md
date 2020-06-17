@@ -9,7 +9,7 @@ MS. Prod: Xamarin ms. AssetID: A4AEF233-3672-4174-9DBA-15BEE3030C0B ms. Technolo
 
 _Azure Search es un servicio en la nube que proporciona capacidades de indexación y consulta para los datos cargados. Esto elimina los requisitos de infraestructura y las complejidades del algoritmo de búsqueda tradicionalmente asociadas a la implementación de la funcionalidad de búsqueda en una aplicación. En este artículo se muestra cómo usar la biblioteca de búsqueda de Microsoft Azure para integrar Azure Search en una Xamarin.Forms aplicación._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 Los datos se almacenan en Azure Search como índices y documentos. Un *Índice* es un almacén de datos que el servicio de Azure Search puede buscar y es conceptualmente similar a una tabla de base de datos. Un *documento* es una unidad única de datos en los que se pueden realizar búsquedas en un índice y es conceptualmente similar a una fila de base de datos. Al cargar documentos y enviar consultas de búsqueda a Azure Search, se realizan solicitudes a un índice específico en el servicio de búsqueda.
 

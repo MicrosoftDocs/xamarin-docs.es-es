@@ -1,21 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Firebase
-ms.openlocfilehash: 6b91884124f6c6dac366e30b8437a5f6e06ee162
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133333"
+title: "Envío y recepción de notificaciones push con Azure Notification Hubs y Xamarin.Forms" description: "En este artículo se explica cómo usar Azure Notification Hubs para enviar notificaciones push multiplataforma a aplicaciones de Xamarin.Forms."
+ms.prod: xamarin ms.assetid: 07D13195-3A0D-4C95-ACF0-143A9084973C ms.technology: xamarin-forms author: profexorgeek ms.author: jusjohns ms.date: 11/27/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials, Firebase]
 ---
+
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Envío y recepción de notificaciones push con Azure Notification Hubs y Xamarin.Forms
 
 [![Descarga de ejemplo](~/media/shared/download.png)Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
@@ -26,7 +13,7 @@ Integre Azure Notification Hubs en las aplicaciones móviles con estos pasos:
 
 1. [Configure los servicios de notificaciones push y el centro de notificaciones de Azure](#set-up-push-notification-services-and-azure-notification-hub).
 1. [Entienda como se usan las plantillas y las etiquetas](#register-templates-and-tags-with-the-azure-notification-hub).
-1. [Cree una aplicación multiplataforma de Xamarin.Forms](#xamarinforms-application-functionality).
+1. [Cree una aplicación de Xamarin.Forms multiplataforma](#xamarinforms-application-functionality).
 1. [Configure el proyecto nativo de Android para notificaciones push](#configure-the-android-application-for-notifications).
 1. [Configure el proyecto nativo de iOS para notificaciones push](#configure-ios-for-notifications).
 1. [Pruebe notificaciones mediante el centro de notificaciones de Azure](#test-notifications-in-the-azure-portal).
@@ -279,7 +266,7 @@ La notificación local y el ejemplo `Intent` requieren que el usuario realice la
 > [!NOTE]
 > La aplicación Android solo recibe notificaciones push si se ejecuta en primer o en segundo plano. Para recibir notificaciones push cuando el elemento `Activity` principal no se esté ejecutando, debe implementar un servicio que esté fuera del ámbito de este ejemplo. Para obtener más información, vea [Creación de servicios de Android](/xamarin/android/app-fundamentals/services/).
 
-### <a name="add-incoming-notifications-to-the-xamarinforms-ui"></a>Incorporación de notificaciones entrantes a la interfaz de usuario de Xamarin.Forms
+### <a name="add-incoming-notifications-to-the-xamarinforms-ui"></a>Adición de notificaciones entrantes a la interfaz de usuario de Xamarin.Forms
 
 La clase `MainActivity` necesita obtener permiso para controlar las notificaciones y administrar los datos de los mensajes entrantes. En el siguiente código se muestra la implementación completa de `MainActivity`:
 
@@ -358,14 +345,14 @@ El método `OnCreate` usa un método auxiliar denominado `IsPlayServiceAvailable
 
 ## <a name="configure-ios-for-notifications"></a>Configuración de iOS para recibir notificaciones
 
-Para configurar la aplicación iOS para recibir notificaciones, siga este proceso:
+El proceso de configuración de la aplicación iOS para recibir notificaciones es el siguiente:
 
 1. Configure el **identificador de agrupación** del archivo `Info.plist` para que coincida con el valor usado en el perfil de aprovisionamiento.
 1. Agregue la opción **Habilitar notificaciones push** al archivo `Entitlements.plist`.
 1. Agregue el paquete NuGet `Xamarin.Azure.NotificationHubs.iOS` al proyecto.
 1. [Regístrese](#register-for-notifications-with-apns) para recibir notificaciones en APNS.
 1. [Registre](#register-with-azure-notification-hub-and-subscribe-to-tags) la aplicación en el centro de notificaciones de Azure y suscríbase a las etiquetas.
-1. [Agregue](#add-apns-notifications-to-xamarinforms-ui) las notificaciones de APNS a la interfaz de usuario de Xamarin.Forms.
+1. [Agregue](#add-apns-notifications-to-xamarinforms-ui) notificaciones de APNS a la interfaz de usuario de Xamarin.Forms.
 
 En la siguiente captura de pantalla, se muestra la opción **Habilitar notificaciones push** seleccionada en el archivo `Entitlements.plist` en Visual Studio:
 
@@ -471,7 +458,7 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
 > [!NOTE]
 > Se puede producir un error al registrarse para recibir notificaciones remotas en situaciones como la ausencia de conexión de red. Puede optar por invalidar el método `FailedToRegisterForRemoveNotifications` para controlar el error de registro.
 
-### <a name="add-apns-notifications-to-xamarinforms-ui"></a>Incorporación de notificaciones de APNS a la interfaz de usuario de Xamarin.Forms
+### <a name="add-apns-notifications-to-xamarinforms-ui"></a>Adición de notificaciones de APNS a la interfaz de usuario de Xamarin.Forms
 
 Cuando un dispositivo recibe una notificación remota, iOS llama al método `ReceivedRemoteNotification`. El JSON del mensaje entrante se convierte en un objeto `NSDictionary` y el método `ProcessNotification` extrae valores del diccionario y los envía a la instancia de `MainPage` de Xamarin.Forms. El método `ReceivedRemoteNotifications` se invalida para llamar a `ProcessNotification`, como se muestra en el siguiente código:
 

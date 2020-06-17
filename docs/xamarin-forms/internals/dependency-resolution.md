@@ -291,7 +291,7 @@ Cuando [`DependencyService.Resolve<T>`](xref:Xamarin.Forms.DependencyService.Res
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Resolución de dependencias mediante contenedores (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)
-- [Inserción de dependencias](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)
+- [Inserción de dependencia](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)
 - [Implementación de un reproductor de vídeo](~/xamarin-forms/app-fundamentals/custom-renderer/video-player/index.md)
 - [Invocar eventos a partir de efectos](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)
 - [Seleccionar una foto de la biblioteca de imágenes](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

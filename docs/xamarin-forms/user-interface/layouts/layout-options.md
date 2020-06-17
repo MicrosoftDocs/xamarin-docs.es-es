@@ -9,7 +9,7 @@ MS. Prod: Xamarin ms. AssetID: 7CAB5631-5153-4DEF-8AD7-C6011CE44307 ms. Technolo
 
 _Cada Xamarin.Forms vista tiene las propiedades HorizontalOptions y VerticalOptions, de tipo LayoutOptions. En este artículo se explica el efecto que tiene cada valor de LayoutOptions en la alineación y la expansión de una vista._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 La [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) estructura encapsula dos preferencias de diseño:
 

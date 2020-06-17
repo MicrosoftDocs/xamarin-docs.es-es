@@ -1,21 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5ccd5a610ad41c0160a6778a63a367376bd200b3
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134022"
+title: "Instalación de la versión preliminar de Xamarin en Windows" description: "En este documento se describe cómo instalar una versión preliminar de Xamarin en Visual Studio 2019 mediante el canal de versión preliminar."
+ms.prod: xamarin ms.assetid: 9F730444-06E8-4B3F-8A19-CA95CD484FFA author: conceptdev ms.author: crdun ms.date: 03/20/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="installing-xamarin-preview-on-windows"></a>Instalación de la versión preliminar de Xamarin en Windows
 
 En Visual Studio 2019 y Visual Studio 2017 no se admiten los canales alfa, beta ni estable de la misma manera que en versiones anteriores. En su lugar, hay solo dos opciones:

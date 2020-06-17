@@ -1,22 +1,8 @@
 ---
-title: Enlaces compilados de Xamarin.Forms
-description: En este artículo se explica cómo usar enlaces compilados para mejorar el rendimiento del enlace de datos en las aplicaciones de Xamarin.Forms.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1f811de95009900016bb8b442265a9a079e0f612
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139761"
+title: "Xamarin.Forms: Enlaces compilados" description: "En este artículo se explica cómo usar enlaces compilados para mejorar el rendimiento del enlace de datos en las aplicaciones de Xamarin.Forms."
+ms.prod: xamarin ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 09/18/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinforms-compiled-bindings"></a>Enlaces compilados de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
@@ -73,7 +59,7 @@ En la página **Compiled Color Selector** (Selector de colores compilados) se mu
 </ContentPage>
 ```
 
-El elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) raíz crea una instancia de `HslColorViewModel` e inicializa la propiedad `Color` dentro de las etiquetas de elemento de propiedad para la propiedad [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext). El elemento `StackLayout` raíz también define el atributo `x:DataType` como el tipo ViewModel, lo cual indica que todas las expresiones de enlace en la jerarquía de vistas `StackLayout` raíz se compilarán. Esto se puede comprobar cambiando cualquiera de las expresiones de enlace para enlazar a una propiedad ViewModel inexistente, lo cual generará a un error de compilación. Aunque en este ejemplo se establece el atributo `x:DataType` en un literal de cadena, también se puede establecer en un tipo con la extensión de marcado `x:Type`. Para obtener más información acerca de la extensión de marcado `x:Type`, consulte [x:Type Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#type) (Extensión de marcado x:Type).
+El elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) raíz crea una instancia de `HslColorViewModel` e inicializa la propiedad `Color` dentro de las etiquetas de elemento de propiedad para la propiedad [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext). El elemento `StackLayout` raíz también define el atributo `x:DataType` como el tipo ViewModel, lo cual indica que todas las expresiones de enlace en la jerarquía de vistas `StackLayout` raíz se compilarán. Esto se puede comprobar cambiando cualquiera de las expresiones de enlace para enlazar a una propiedad ViewModel inexistente, lo cual generará a un error de compilación. Aunque en este ejemplo se establece el atributo `x:DataType` en un literal de cadena, también se puede establecer en un tipo con la extensión de marcado `x:Type`. Para obtener más información acerca de la extensión de marcado `x:Type`, consulte [x:Type Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#xtype-markup-extension) (Extensión de marcado x:Type).
 
 > [!IMPORTANT]
 > El atributo `x:DataType` puede volver a definirse en cualquier punto de una jerarquía de vistas.
@@ -127,7 +113,7 @@ En la página **Compiled Color List** (Lista de colores compilados) se muestra e
 
 La propiedad [`ListView.ItemsSource`](xref:Xamarin.Forms.ListView) está establecida en la propiedad `NamedColor.All` estática. La clase `NamedColor` usa la fijación de .NET para enumerar todos los campos públicos estáticos en la estructura de [`Color`](xref:Xamarin.Forms.Color) y almacenarlos con sus nombres en una colección que sea accesible desde la propiedad `All` estática. Por lo tanto, `ListView` se rellena con todas las instancias de `NamedColor`. Para cada elemento de `ListView`, el contexto de enlace para el elemento está establecido en un objeto `NamedColor`. Los elementos [`BoxView`](xref:Xamarin.Forms.BoxView) y [`Label`](xref:Xamarin.Forms.Label) de [`ViewCell`](xref:Xamarin.Forms.ViewCell) están enlazados a propiedades `NamedColor`.
 
-Tenga en cuenta que [`x:DataType``NamedColor` define el atributo `DataTemplate` para ser del tipo `DataTemplate`, lo cual indica que todas las expresiones de enlace en la jerarquía de vistas ](xref:Xamarin.Forms.DataTemplate) se compilarán. Esto se puede comprobar cambiando cualquiera de las expresiones de enlace para enlazar a una propiedad `NamedColor` inexistente, lo cual generará a un error de compilación.  Aunque en este ejemplo se establece el atributo `x:DataType` en un literal de cadena, también se puede establecer en un tipo con la extensión de marcado `x:Type`. Para obtener más información acerca de la extensión de marcado `x:Type`, consulte [x:Type Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#type) (Extensión de marcado x:Type).
+Tenga en cuenta que [`x:DataType``NamedColor` define el atributo `DataTemplate` para ser del tipo `DataTemplate`, lo cual indica que todas las expresiones de enlace en la jerarquía de vistas ](xref:Xamarin.Forms.DataTemplate) se compilarán. Esto se puede comprobar cambiando cualquiera de las expresiones de enlace para enlazar a una propiedad `NamedColor` inexistente, lo cual generará a un error de compilación.  Aunque en este ejemplo se establece el atributo `x:DataType` en un literal de cadena, también se puede establecer en un tipo con la extensión de marcado `x:Type`. Para obtener más información acerca de la extensión de marcado `x:Type`, consulte [x:Type Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#xtype-markup-extension) (Extensión de marcado x:Type).
 
 Cuando la aplicación se ejecuta por primera vez, [`ListView`](xref:Xamarin.Forms.ListView) se rellena con instancias de `NamedColor`. Cuando un elemento de `ListView` está seleccionado, la propiedad [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) se establece en el color del elemento seleccionado en `ListView`:
 
@@ -163,7 +149,7 @@ Una estructuración cuidadosa de atributos `x:DataType`, por lo tanto, puede con
 
 El elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) raíz establece el atributo `x:DataType` para ser del tipo `HslColorViewModel`, lo cual indica que todas las expresiones de enlace en la jerarquía de vistas `StackLayout` se compilarán. Sin embargo, el `StackLayout` interno redefine el atributo `x:DataType` en `null` con la expresión de marcado `x:Null`. Por lo tanto, las expresiones de enlace dentro del `StackLayout` interno usan enlaces clásicos. Solo [`BoxView`](xref:Xamarin.Forms.BoxView), dentro de la jerarquía de vistas `StackLayout` raíz, utiliza enlaces compilados.
 
-Para obtener más información acerca de la expresión de marcado `x:Null`, consulte [x:Null Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#null) (Extensión de marcado x:Null).
+Para obtener más información acerca de la expresión de marcado `x:Null`, consulte [x:Null Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#xnull-markup-extension) (Extensión de marcado x:Null).
 
 ## <a name="performance"></a>Rendimiento
 

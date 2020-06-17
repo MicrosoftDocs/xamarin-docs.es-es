@@ -1,31 +1,15 @@
 ---
-title: Ciclo de vida de la aplicación Xamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 3793a54f04b2c028752e18e2a5a238c275c2958a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129680"
+title: "Xamarin.Forms: Ciclo de vida de la aplicación" description: "En este artículo se explica cómo responder al ciclo de vida de la aplicación, por ejemplo, los métodos de ciclo de vida, los eventos de notificación de página y los eventos de navegación modal."
+ms.prod: xamarin ms.assetid: 69B416CF-B243-4790-AB29-F030B32465BE ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 05/31/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinforms-app-lifecycle"></a>Ciclo de vida de la aplicación Xamarin.Forms
 
 La clase base [`Application`](xref:Xamarin.Forms.Application) proporciona las características siguientes:
 
-- [Métodos de ciclo de vida](#Lifecycle_Methods) `OnStart`, `OnSleep` y `OnResume`.
-- [Eventos de navegación de página](#page) [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing) y [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing).
-- [Eventos de navegación modal](#modal) `ModalPushing`, `ModalPushed`, `ModalPopping` y `ModalPopped`.
-
-<a name="Lifecycle_Methods" />
+- [Métodos de ciclo de vida](#lifecycle-methods) `OnStart`, `OnSleep` y `OnResume`.
+- [Eventos de navegación de página](#page-navigation-events) [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing) y [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing).
+- [Eventos de navegación modal](#modal-navigation-events) `ModalPushing`, `ModalPushed`, `ModalPopping` y `ModalPopped`.
 
 ## <a name="lifecycle-methods"></a>Métodos de ciclo de vida
 
@@ -58,9 +42,7 @@ protected override void OnResume()
 > [!IMPORTANT]
 > En Android, se llama al método `OnStart` por rotación y también cuando la aplicación se inicia por primera vez si la actividad principal carece de `ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation` en el atributo `[Activity()]`.
 
-<a name="page" />
-
-## <a name="page-notification-events"></a>Eventos de notificación de página
+## <a name="page-navigation-events"></a>Eventos de navegación de página
 
 Hay dos eventos en la clase [`Application`](xref:Xamarin.Forms.Application) que proporcionan notificaciones de páginas que aparecen y desaparecen:
 
@@ -71,8 +53,6 @@ Estos eventos pueden usarse en escenarios en los que quiera realizar un seguimie
 
 > [!NOTE]
 > Los eventos [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing) y [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing) se generan a partir de la clase base [`Page`](xref:Xamarin.Forms.Page) inmediatamente después de los eventos [`Page.Appearing`](xref:Xamarin.Forms.Page.Appearing) y [`Page.Disappearing`](xref:Xamarin.Forms.Page.Disappearing), respectivamente.
-
-<a name="modal" />
 
 ## <a name="modal-navigation-events"></a>Eventos de navegación modal
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 0fa717a775ff2f1ace9e248a8afde8d373e8a1f8
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 00c9c2e9f39943960d35c30602935ed109639cf4
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76724349"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567741"
 ---
 # <a name="working-with-jni-and-xamarinandroid"></a>Trabajo con JNI y Xamarin.Android
 
@@ -277,7 +277,7 @@ Los [métodos de instancia](#_Instance_Methods) usan [JNIEnv.GetMethodID](xref:A
 
 El enlace de métodos es posiblemente más que la invocación de método. El enlace de métodos también incluye permitir que se invalide (para métodos abstractos y no finales) o se implemente (para métodos de interfaz) un método. En la sección [Herencia e interfaces admitidas](#_Supporting_Inheritance,_Interfaces_1) se tratan las complejidades de admitir métodos virtuales y de interfaz.
 
-<a name="_Static_Methods_1" />
+<a name="_Static_Methods_1"></a>
 
 #### <a name="static-methods"></a>Métodos estáticos
 
@@ -395,7 +395,7 @@ public Integer (int value)
 
 Los métodos [JNIEnv.CreateInstance](xref:Android.Runtime.JNIEnv.CreateInstance*) son asistentes para realizar un elemento `JNIEnv.FindClass`, `JNIEnv.GetMethodID`, `JNIEnv.NewObject` y `JNIEnv.DeleteGlobalReference` en el valor devuelto desde `JNIEnv.FindClass`. Para obtener más información, vea la siguiente sección.
 
-<a name="_Supporting_Inheritance,_Interfaces_1" />
+<a name="_Supporting_Inheritance,_Interfaces_1"></a>
 
 ### <a name="supporting-inheritance-interfaces"></a>Herencia e interfaces admitidas
 
@@ -1049,7 +1049,7 @@ IntPtr lrefString = JNIEnv.CallObjectMethod(instance, methodID);
 Java.Lang.String value = Java.Lang.Object.GetObject<Java.Lang.String>( lrefString, JniHandleOwnership.TransferLocalRef);
 ```
 
-<a name="_Looking_up_Java_Types" />
+<a name="_Looking_up_Java_Types"></a>
 
 ## <a name="looking-up-java-types"></a>Búsqueda de tipos de Java
 
@@ -1057,7 +1057,7 @@ Para buscar un campo o método en JNI, el tipo declarativo del campo o método d
 
 Nota: A diferencia de todos los demás métodos `JNIEnv` que devuelven instancias de objeto `FindClass`, devuelve una referencia global, no una referencia local.
 
-<a name="_Instance_Fields" />
+<a name="_Instance_Fields"></a>
 
 ## <a name="instance-fields"></a>Campos de instancia
 
@@ -1123,7 +1123,7 @@ donde *Tipo* es el tipo del campo:
 
 - [JNIEnv.SetField](xref:Android.Runtime.JNIEnv.SetField*))   &ndash; escritura del valor de los campos de instancia `double`.
 
-<a name="_Static_Fields" />
+<a name="_Static_Fields"></a>
 
 ## <a name="static-fields"></a>Campos estáticos
 
@@ -1187,7 +1187,7 @@ donde *Tipo* es el tipo del campo:
 
 - [JNIEnv. SetStaticField](xref:Android.Runtime.JNIEnv.SetStaticField*))   &ndash; escritura del valor de los campos estáticos `double`.
 
-<a name="_Instance_Methods" />
+<a name="_Instance_Methods"></a>
 
 ## <a name="instance-methods"></a>Métodos de instancia
 
@@ -1253,7 +1253,7 @@ donde `*` es el tipo de valor devuelto del método. La invocación del método n
 
 - [JNIEnv.CallNonvirtualDoubleMethod](xref:Android.Runtime.JNIEnv.CallNonvirtualDoubleMethod*) &ndash; invocación no virtual de un método que devuelve un valor `double`.
 
-<a name="_Static_Methods" />
+<a name="_Static_Methods"></a>
 
 ## <a name="static-methods"></a>Métodos estáticos
 
@@ -1287,7 +1287,7 @@ donde `*` es el tipo de valor devuelto del método.
 
 - [JNIEnv.CallStaticDoubleMethod](xref:Android.Runtime.JNIEnv.CallStaticDoubleMethod*) &ndash; invocación de un método estático que devuelve un valor `double`.
 
-<a name="JNI_Type_Signatures" />
+<a name="JNI_Type_Signatures"></a>
 
 ## <a name="jni-type-signatures"></a>Signaturas de tipo de JNI
 
@@ -1307,7 +1307,7 @@ La signatura de tipo de JNI sería:
 
 En general, se recomienda *encarecidamente* usar el comando `javap` para determinar las firmas de JNI. Por ejemplo, la signatura de tipo de JNI del método [java.lang.Thread.State.valueOf(String)](https://developer.android.com/reference/java/lang/Thread.State.html#valueOf(java.lang.String)) es "(Ljava/lang/String;)Ljava/lang/Thread$State;", mientras que la signatura de tipo de JNI del método [java.lang.Thread.State.values](https://developer.android.com/reference/java/lang/Thread.State.html#values) es "()[Ljava/lang/Thread$State;". Esté atento a los signos de punto y coma al final; estos *forman* parte de la signatura de tipo de JNI.
 
-<a name="_JNI_Type_References" />
+<a name="_JNI_Type_References"></a>
 
 ## <a name="jni-type-references"></a>Referencias de tipo de JNI
 
@@ -1333,7 +1333,7 @@ Las referencias de tipo integradas son un solo carácter, usado para hacer refer
 - `"Z"` para  `bool` .
 - `"V"` para los tipos de valor devuelto del método `void`.
 
-<a name="_Simplified_Type_References_1" />
+<a name="_Simplified_Type_References_1"></a>
 
 ### <a name="simplified-type-references"></a>Referencias de tipo simplificadas
 

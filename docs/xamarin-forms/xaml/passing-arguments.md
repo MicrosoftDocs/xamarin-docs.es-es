@@ -9,7 +9,7 @@ MS. Prod: Xamarin ms. AssetID: 8F3B267F-499E-4D79-9193-FCA99F199519 ms. Technolo
 
 _En este artículo se muestra el uso de los atributos XAML que se pueden usar para pasar argumentos a constructores no predeterminados, para llamar a métodos de generador y para especificar el tipo de un argumento genérico._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 A menudo es necesario crear instancias de objetos con constructores que requieran argumentos o mediante una llamada a un método de creación estático. Esto se puede lograr en XAML mediante el uso de los `x:Arguments` `x:FactoryMethod` atributos y:
 

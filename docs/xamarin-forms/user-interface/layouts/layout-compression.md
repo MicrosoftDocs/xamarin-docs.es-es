@@ -9,7 +9,7 @@ MS. Prod: Xamarin ms. AssetID: da9e1b26-9d31-4762-94c3-4039f306b7f2 ms. Technolo
 
 _La compresión de diseño quita los diseños especificados del árbol visual para intentar mejorar el rendimiento de la representación de páginas. En este artículo se explica cómo habilitar la compresión del diseño y las ventajas que puede llevar a cabo._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 Xamarin.Formsrealiza el diseño mediante dos series de llamadas a métodos recursivos:
 

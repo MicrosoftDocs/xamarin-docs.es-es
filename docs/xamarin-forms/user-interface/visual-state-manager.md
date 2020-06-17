@@ -393,7 +393,7 @@ Ahora todas las `Entry` vistas de esta página responden de la misma manera a su
 
 En la tabla siguiente se enumeran los Estados visuales que se definen en Xamarin.Forms :
 
-| Class | States | Más información |
+| Clase | States | Más información |
 | ----- | ------ | ---------------- |
 | `Button` | `Pressed` | [Estados visuales del botón](~/xamarin-forms/user-interface/button.md#button-visual-states) |
 | `CheckBox` | `IsChecked` | [Estados visuales de la casilla](~/xamarin-forms/user-interface/checkbox.md#checkbox-visual-states) |

@@ -94,7 +94,7 @@ LoadApplication(new YOUR_NAMESPACE.App());
 
 305. Agregue los recursos locales (por ejemplo, archivos de imagen) de los proyectos de plataforma existentes que son necesarios.
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 
 ### <a name="target-invocation-exception-when-using-compile-with-net-native-tool-chain"></a>"Excepción de invocación de destino" cuando se usa "compilar con .NET Native cadena de herramientas"
 

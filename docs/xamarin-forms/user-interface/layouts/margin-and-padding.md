@@ -7,7 +7,7 @@ MS. Prod: Xamarin ms. AssetID: BEB096BB-51DF-410F-B0F1-D235287B0F4A ms. Technolo
 
 _Las propiedades margin y padding controlan el comportamiento de diseño cuando se representa un elemento en la interfaz de usuario. En este artículo se muestra la diferencia entre las dos propiedades y cómo establecerlas._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 Margin y padding son conceptos de diseño relacionados:
 

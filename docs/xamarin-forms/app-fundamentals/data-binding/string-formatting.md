@@ -1,22 +1,8 @@
 ---
-title: Formato de cadena de Xamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d08a89d5394a227e3cee76603e4e97d2cf9495e0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135764"
+title: "Xamarin.Forms: Formato de cadena" description: "En este artículo se explica cómo usar enlaces de datos de Xamarin.Forms para dar formato y mostrar los objetos como cadenas. Esto se logra al establecer el StringFormat del enlace en una cadena de formato estándar de .NET con un marcador de posición."
+ms.prod: xamarin ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/05/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinforms-string-formatting"></a>Formato de cadena de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

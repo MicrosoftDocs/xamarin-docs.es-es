@@ -9,7 +9,7 @@ MS. Prod: Xamarin ms. AssetID: B0A5DB65-0585-4A00-B908-22CCC286E6B6 ms. Technolo
 
 _Azure Active Directory B2C proporciona administración de identidades en la nube para aplicaciones web y móviles orientadas al consumidor. En este artículo se muestra cómo usar Azure Active Directory B2C para integrar la administración de identidades en una aplicación móvil con la biblioteca de autenticación de Microsoft._
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 Azure Active Directory B2C (ADB2C) es un servicio de administración de identidades para aplicaciones orientadas al consumidor. Permite a los usuarios iniciar sesión en su aplicación mediante sus cuentas de redes sociales existentes o credenciales personalizadas, como el correo electrónico o el nombre de usuario, y la contraseña. Las cuentas de credenciales personalizadas se conocen como cuentas _locales_ .
 
@@ -331,6 +331,6 @@ Ejecute la aplicación en un dispositivo físico o virtual. Al pulsar el botón 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [AzureADB2CAuth (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
-- [Azure Active Directory B2C](/azure/active-directory-b2c/)
+- [Azure Active Directory B2C](/azure/active-directory-b2c/)
 - [Biblioteca de autenticación de Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client)
 - [Documentación de la biblioteca de autenticación de Microsoft](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki)

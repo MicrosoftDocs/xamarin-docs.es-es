@@ -95,7 +95,7 @@ La [`Style`](xref:SkiaSharp.SKPaint.Style) propiedad indica que desea *trazar* u
 - [`Stroke`](xref:SkiaSharp.SKPaintStyle.Stroke)
 - [`StrokeAndFill`](xref:SkiaSharp.SKPaintStyle.StrokeAndFill)
 
-El valor predeterminado es `Fill`. Utilice la tercera opción para trazar la línea y rellenar el interior con el mismo color.
+De manera predeterminada, es `Fill`. Utilice la tercera opción para trazar la línea y rellenar el interior con el mismo color.
 
 Establezca la [`Color`](xref:SkiaSharp.SKPaint.Color) propiedad en un valor de tipo [`SKColor`](xref:SkiaSharp.SKColor) . Una manera de obtener un `SKColor` valor es convertir un Xamarin.Forms `Color` valor en un `SKColor` valor mediante el método de extensión [`ToSKColor`](xref:SkiaSharp.Views.Forms.Extensions.ToSKColor*) . La [`Extensions`](xref:SkiaSharp.Views.Forms.Extensions) clase del `SkiaSharp.Views.Forms` espacio de nombres incluye otros métodos que convierten entre Xamarin.Forms valores y valores de SkiaSharp.
 

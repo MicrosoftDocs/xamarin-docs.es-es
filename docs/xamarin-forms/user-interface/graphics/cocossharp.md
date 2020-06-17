@@ -12,7 +12,7 @@ _CocosSharp se puede usar para agregar una representación precisa de la forma, 
 
 **Evolucione 2016: cocos # inXamarin.Forms**
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 CocosSharp es una tecnología flexible y eficaz para mostrar gráficos, leer entradas táctiles, reproducir audio y administrar contenido. En esta guía se explica cómo agregar CocosSharp a una Xamarin.Forms aplicación.
 

@@ -1,22 +1,8 @@
 ---
-title: Página de carrusel de Xamarin.Forms
-description: CarouselPage de Xamarin.Forms es una página que los usuarios pueden deslizar de lado a lado para navegar por páginas de contenido, a modo de galería. En este artículo se muestra cómo usar CarouselPage para navegar por una colección de páginas.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4d0cebe98b66f3596e72624efed90e965b942bfc
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137532"
+title: "Xamarin.Forms: Página de carrusel" description: "CarouselPage de Xamarin.Forms es una página que los usuarios pueden deslizar de lado a lado para navegar por páginas de contenido, a modo de galería. En este artículo se muestra cómo usar CarouselPage para navegar por una colección de páginas."
+ms.prod: xamarin ms.assetid: 2D14FC9D-DF5F-427E-9006-2AAE61ECF8DC ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/01/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinforms-carousel-page"></a>Página de carrusel de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpage)
@@ -51,15 +37,13 @@ Para obtener más información sobre la instancia de [`CarouselPage`](xref:Xamar
 
 Para crear una instancia de [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) se pueden usar dos métodos:
 
-- [Rellenar](#Populating_a_CarouselPage_with_a_Page_Collection) la instancia de `CarouselPage` con una colección de instancias secundarias de [`ContentPage`](xref:Xamarin.Forms.ContentPage).
-- [Asignar](#Populating_a_CarouselPage_with_a_Template) una colección a la propiedad [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) y asignar un elemento [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) a la propiedad [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) para devolver instancias de [`ContentPage`](xref:Xamarin.Forms.ContentPage) para objetos de la colección.
+- [Rellenar](#populate-a-carouselpage-with-a-page-collection) la instancia de `CarouselPage` con una colección de instancias secundarias de [`ContentPage`](xref:Xamarin.Forms.ContentPage).
+- [Asignar](#populate-a-carouselpage-with-a-template) una colección a la propiedad [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) y asignar un elemento [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) a la propiedad [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) para devolver instancias de [`ContentPage`](xref:Xamarin.Forms.ContentPage) para objetos de la colección.
 
 Con ambos métodos, `CarouselPage` muestra a su vez cada página, con una interacción de deslizamiento que pasa a la página siguiente que se va a mostrar.
 
 > [!NOTE]
 > Una instancia de [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) solo se puede rellenar con instancias de [`ContentPage`](xref:Xamarin.Forms.ContentPage), o derivados de `ContentPage`.
-
-<a name="Populating_a_CarouselPage_with_a_Page_Collection" />
 
 ### <a name="populate-a-carouselpage-with-a-page-collection"></a>Relleno de CarouselPage con una colección de páginas
 
@@ -148,8 +132,6 @@ public class MainPageCS : CarouselPage
 ```
 
 Cada [`ContentPage`](xref:Xamarin.Forms.ContentPage) muestra simplemente un elemento [`Label`](xref:Xamarin.Forms.Label) para un color determinado y un elemento [`BoxView`](xref:Xamarin.Forms.BoxView) de ese color.
-
-<a name="Populating_a_CarouselPage_with_a_Template" />
 
 ### <a name="populate-a-carouselpage-with-a-template"></a>Relleno de CarouselPage con una plantilla
 

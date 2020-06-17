@@ -1,9 +1,6 @@
 ---
-title: ''Xamarin.Essentials: Conversión de texto a voz" description "La clase TextToSpeech de Xamarin.Essentials permite que una aplicación use los motores de texto a voz integrados para responder a texto del dispositivo y también para consultar los idiomas disponibles que el motor puede admitir".
-ms.assetid: author: ms.custom: ms.author: ms.date: no-loc:
-- "Xamarin.Forms"
-- "Xamarin.Essentials"
-
+title: "Xamarin.Essentials: Conversión de texto a voz" description "La clase TextToSpeech de Xamarin.Essentials permite que una aplicación use los motores de texto a voz integrados para responder a texto del dispositivo y también para consultar los idiomas disponibles que el motor puede admitir."
+ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Texto a voz

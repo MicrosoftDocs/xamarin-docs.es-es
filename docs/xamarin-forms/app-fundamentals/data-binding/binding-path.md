@@ -1,22 +1,8 @@
 ---
-title: Enlace de ruta de acceso de Xamarin.Forms
-description: En este artículo se explica cómo usar los enlaces de datos de Xamarin.Forms para acceder a subpropiedades y miembros de colección con la propiedad Path de la clase Binding.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 0657f39d0584405ea1a6d7611ac789488817770f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139749"
+title: "Xamarin.Forms: Ruta de acceso de enlace" description: "En este artículo se explica cómo usar los enlaces de datos de Xamarin.Forms para acceder a subpropiedades y miembros de colección con la propiedad Path de la clase Binding."
+ms.prod: xamarin ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/05/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinforms-binding-path"></a>Enlace de ruta de acceso de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
@@ -127,7 +113,7 @@ El cuarto control `Label` hace algo similar pero para la referencia cultural aso
 </Label>
 ```
 
-Vea [Pasar argumentos de constructor](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments) para obtener más información sobre cómo especificar argumentos de constructor en XAML.
+Vea [Pasar argumentos de constructor](~/xamarin-forms/xaml/passing-arguments.md#passing-constructor-arguments) para obtener más información sobre cómo especificar argumentos de constructor en XAML.
 
 El último ejemplo es similar al segundo, salvo que hace referencia a uno de los elementos secundarios del elemento `StackLayout`:
 

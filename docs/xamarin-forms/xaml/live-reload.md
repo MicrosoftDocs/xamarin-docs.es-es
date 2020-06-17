@@ -112,7 +112,7 @@ No. De hecho, puede incluso iniciar todos los destinos de aplicación admitidos 
 * Los elementos que contienen AutomationId pueden producir un error de recarga.
 * La edición de XAML durante la depuración de UWP puede producir un bloqueo en tiempo de ejecución. Solución alternativa: use **iniciar sin depurar (Ctrl + F5)** en lugar de **iniciar depuración (F5)**.
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 
 ### <a name="error-codes"></a>Códigos de error
 

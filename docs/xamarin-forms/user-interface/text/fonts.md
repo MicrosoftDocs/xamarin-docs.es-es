@@ -44,7 +44,7 @@ Xamarin.Formstambién define los campos de la [`NamedSize`](xref:Xamarin.Forms.N
 
 Los estilos de fuente, como **Bold** y *Italic* , se pueden establecer en la `FontAttributes` propiedad. Actualmente se admiten los siguientes valores:
 
-- **Ninguno**
+- **None**
 - **Bold**
 - **Aplicar**
 
@@ -102,7 +102,7 @@ La [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#provide-platfor
 
 Xamarin.Formsdefine los campos de la [`NamedSize`](xref:Xamarin.Forms.NamedSize) enumeración que representan tamaños de fuente concretos. En la tabla siguiente se muestran los `NamedSize` miembros y sus tamaños predeterminados en iOS, Android y el plataforma universal de Windows (UWP):
 
-| Miembro | iOS | Android | UWP |
+| Member | iOS | Android | UWP |
 | --- | --- | --- | --- |
 | `Default` | 16 | 14 | 14 |
 | `Micro` | 11 | 10 | 15,667 |

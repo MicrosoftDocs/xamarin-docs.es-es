@@ -33,7 +33,7 @@ Use [la clase base ImageCirclePlugin's de James Montemagno](https://github.com/j
 
 Actualmente, los controles de SkiaSharp solo se admiten cuando se realiza una vista previa en iOS. No se representarán en la versión preliminar de Android.
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 
 ### <a name="check-your-xamarinforms-version"></a>Comprobar la Xamarin.Forms versión
 Asegúrese de que tiene instalado al menos Xamarin.Forms 3,6. Puede actualizar su Xamarin.Forms versión en NuGet.

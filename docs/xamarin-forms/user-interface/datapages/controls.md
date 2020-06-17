@@ -34,7 +34,7 @@ En los ejemplos siguientes `DynamicResource` se incluyen referencias que deben e
 El `HeroImage` control tiene cuatro propiedades:
 
 * Texto
-* Detail (Detalle)
+* Detalle
 * ImageSource
 * Aspecto
 
@@ -60,8 +60,8 @@ El `ListItem` diseño del control es similar a las filas nativas de la tabla o l
 
 Hay cinco propiedades:
 
-* Título
-* Detail (Detalle)
+* Title
+* Detalle
 * ImageSource
 * PlaceholdImageSource
 * Aspecto
@@ -93,7 +93,7 @@ El objetivo de este `CardView` control personalizado es similar al CardView nati
 Contendrá tres propiedades:
 
 * Texto
-* Detail (Detalle)
+* Detalle
 * ImageSource
 
 El objetivo es un control personalizado que se parecerá al código siguiente (tenga en cuenta que `xmlns:local` se requiere un personalizado que haga referencia al ensamblado actual):

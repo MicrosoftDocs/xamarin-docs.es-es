@@ -1,29 +1,14 @@
 ---
-title: Clase de aplicación de Xamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 2f4b568809f949d813de86ae88cbe621cfa3161c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129693"
+title: "Xamarin.Forms: Clase App" description: "En este artículo se explican las características de la clase App predeterminada, lo que incluye una propiedad para establecer la página inicial de la aplicación y un diccionario persistente para almacenar valores simples a lo largo de los cambios de estado del ciclo de vida."
+ms.prod: xamarin ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D ms.technology: xamarin-forms ms.custom: video author: davidbritch ms.author: dabritch ms.date: 02/19/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinforms-app-class"></a>Clase de aplicación de Xamarin.Forms
 
 La clase base `Application` ofrece las siguientes características, que se exponen en la subclase predeterminada `App` de los proyectos:
 
 * Una propiedad `MainPage`, que es donde se establece la página inicial de la aplicación.
-* Un [diccionario](#Properties_Dictionary)`Properties` persistente para almacenar valores simples a lo largo de los cambios de estado del ciclo de vida.
+* Un [diccionario](#properties-dictionary)`Properties` persistente para almacenar valores simples a lo largo de los cambios de estado del ciclo de vida.
 * Una propiedad estática `Current` que contiene una referencia al objeto de aplicación actual.
 
 También expone [Métodos del ciclo de vida](~/xamarin-forms/app-fundamentals/app-lifecycle.md) como `OnStart`, `OnSleep` y `OnResume`, así como eventos de navegación modales.
@@ -76,8 +61,6 @@ public class App : Xamarin.Forms.Application
     }
 }
 ```
-
-<a name="Properties_Dictionary" />
 
 ## <a name="properties-dictionary"></a>Diccionario de propiedades
 

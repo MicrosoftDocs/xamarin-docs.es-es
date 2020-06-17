@@ -1,22 +1,8 @@
 ---
-title: Páginas modales de Xamarin.Forms
-description: Xamarin.Forms es compatible con las páginas modales. Una página modal anima a los usuarios a completar una tarea autocontenida que no se puede abandonar mientras no se complete o se cancele la tarea. En este artículo se muestra cómo navegar a páginas modales.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4f6547049f2801e5d15115c0ae80af9a07034731
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137831"
+title: "Xamarin.Forms: Páginas modales" description: "Xamarin.Forms proporciona compatibilidad con las páginas modales. Una página modal anima a los usuarios a completar una tarea autocontenida que no se puede abandonar mientras no se complete o se cancele la tarea. En este artículo se muestra cómo navegar a páginas modales."
+ms.prod: xamarin ms.assetid: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/01/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinforms-modal-pages"></a>Páginas modales de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
@@ -25,8 +11,8 @@ _Xamarin.Forms es compatible con las páginas modales. Una página modal anima a
 
 En este artículo se tratan los siguientes temas:
 
-- [Realizar la navegación](#Performing_Navigation): insertar páginas en la pila modal, sacar páginas de la pila modal, deshabilitar el botón Atrás y animar las transiciones de página.
-- [Pasar datos al navegar](#Passing_Data_when_Navigating): pasar datos a través de un constructor de página y de un `BindingContext`.
+- [Realizar la navegación](#performing-navigation): insertar páginas en la pila modal, sacar páginas de la pila modal, deshabilitar el botón Atrás y animar las transiciones de página.
+- [Pasar datos al navegar](#passing-data-when-navigating): pasar datos a través de un constructor de página y de un `BindingContext`.
 
 ## <a name="overview"></a>Información general
 
@@ -38,18 +24,14 @@ Para volver a la página anterior, la aplicación mostrará la página actual de
 
 ![](modal-images/popping.png "Popping a Page from the Modal Stack")
 
-<a name="Performing_Navigation" />
-
 ## <a name="performing-navigation"></a>Realizar la navegación
 
-Los métodos de navegación modal se exponen mediante la propiedad [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) en cualquier tipo [`Page`](xref:Xamarin.Forms.Page) derivado. Estos métodos proporcionan la capacidad de [insertar páginas modales](#Pushing_Pages_to_the_Modal_Stack) en la pila modal, y [sacar páginas modales](#Popping_Pages_from_the_Modal_Stack) de la pila modal.
+Los métodos de navegación modal se exponen mediante la propiedad [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) en cualquier tipo [`Page`](xref:Xamarin.Forms.Page) derivado. Estos métodos proporcionan la capacidad de [insertar páginas modales](#pushing-pages-to-the-modal-stack) en la pila modal, y [sacar páginas modales](#popping-pages-from-the-modal-stack) de la pila modal.
 
 La propiedad [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) también expone una propiedad [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) desde la que se pueden obtener las páginas modales de la pila modal. Pero no existe el concepto de realizar una manipulación de pila modal o extraer la página raíz de la navegación modal. Esto se debe a que estas operaciones no se admiten de forma universal en las plataformas subyacentes.
 
 > [!NOTE]
 > No es necesaria una instancia de [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) para realizar la navegación de páginas modal.
-
-<a name="Pushing_Pages_to_the_Modal_Stack" />
 
 ### <a name="pushing-pages-to-the-modal-stack"></a>Inserción de páginas en la pila modal
 
@@ -80,8 +62,6 @@ Con todo, el orden exacto en el que se producen estos eventos depende de la plat
 
 > [!NOTE]
 > Las llamadas a [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) y las invalidaciones de [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) no se pueden tratar como indicaciones garantizadas de navegación de páginas. Por ejemplo, en iOS, la invalidación de `OnDisappearing` se llama en la página activa cuando la aplicación finaliza.
-
-<a name="Popping_Pages_from_the_Modal_Stack" />
 
 ### <a name="popping-pages-from-the-modal-stack"></a>Sacar páginas de la pila modal
 
@@ -127,8 +107,6 @@ async void OnDismissButtonClicked (object sender, EventArgs args)
 ```
 
 Al establecer el parámetro `boolean` en `false`, la animación de transición de página se deshabilita, mientras que al establecer el parámetro en `true`, la animación de transición de página se habilita, siempre que la plataforma subyacente lo admita. Sin embargo, los métodos de inserción y extracción que carecen de este parámetro habilitan la animación de manera predeterminada.
-
-<a name="Passing_Data_when_Navigating" />
 
 ## <a name="passing-data-when-navigating"></a>Pasar datos al navegar
 

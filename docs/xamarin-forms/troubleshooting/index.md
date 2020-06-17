@@ -2,7 +2,7 @@
 Título: "solución de problemas" Descripción: "condiciones de error comunes y cómo resolverlos" MS. topic: solución de problemas de MS. Prod: Xamarin ms. AssetID: 63291951-7375-4CBF-BCC3-2E4AD157A2C8 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/25/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
-# <a name="troubleshooting"></a>Solución de problemas
+# <a name="troubleshooting"></a>Solucionar problemas
 
 _Condiciones de error comunes y cómo resolverlas_
 

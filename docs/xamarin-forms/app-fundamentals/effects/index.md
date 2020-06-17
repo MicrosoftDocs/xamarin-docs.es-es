@@ -1,22 +1,8 @@
 ---
-title: Efectos de Xamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a6206d2c561df74a01b7d7408e8d542f1e2189d3
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139339"
+title: "Xamarin.Forms: Efectos" description: "Con los efectos se pueden personalizar los controles nativos de cada plataforma sin necesidad de recurrir a la implementación de un representador personalizado."
+ms.prod: xamarin ms.assetid: 8AF168A7-4CD9-4603-B961-15B8B1543784 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/01/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinforms-effects"></a>Efectos de Xamarin.Forms
 
 _Las interfaces de usuario de Xamarin.Forms se representan mediante los controles nativos de la plataforma de destino, lo que permite que las aplicaciones de Xamarin.Forms conserven la apariencia adecuada para cada plataforma. Con los efectos se pueden personalizar los controles nativos de cada plataforma sin tener que recurrir a la implementación de un representador personalizado._

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: En este artículo se explica cómo implementar una aplicación de reproductor de vídeo mediante Xamarin.Forms.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 08bfb86f040bfbce834df5a5d98231afae92e78d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133773"
+title: "Implementación de un reproductor de vídeo" description: "En este artículo se explica cómo implementar una aplicación de reproductor de vídeo mediante Xamarin.Forms."
+ms.prod: xamarin ms.assetid: 0CE9BEE7-4F81-4A00-B9B3-5E2535CD3050 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 02/12/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="implementing-a-video-player"></a>Implementación de un reproductor de vídeo
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
