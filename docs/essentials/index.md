@@ -1,22 +1,35 @@
 ---
-title: "Xamarin.Essentials" description: "En este documento aparecen vínculos a varias guías en las que se describe Xamarin.Essentials, que brinda API multiplataformas a los desarrolladores para sus aplicaciones móviles."
-ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A author: jamesmontemagno ms.author: jamont ms.date: 02/26/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Xamarin.Essentials
+description: 'title: "Xamarin.Essentials" description: "En este documento aparecen vínculos a varias guías en las que se describe Xamarin.Essentials, que brinda API multiplataformas a los desarrolladores para sus aplicaciones móviles."'
+ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 02/26/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 27421ecc8b089321cd2331829d87365f3cf37a65
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84139469"
 ---
-
 # Xamarin.Essentials
 
-Xamarin.Essentials brinda a los desarrolladores API multiplataformas para sus aplicaciones móviles.
+ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A author: jamesmontemagno ms.author: jamont ms.date: 02/26/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
-Android, iOS y UWP ofrecen API de plataforma y sistema operativo únicas a las que los desarrolladores pueden tener acceso desde C# mediante Xamarin. Xamarin.Essentials brinda una API multiplataforma única que funciona con cualquier aplicación Xamarin.Forms, Android, iOS o UWP accesible desde código compartido, independientemente de cómo se creara la interfaz de usuario.
+Xamarin.Essentials brinda a los desarrolladores API multiplataformas para sus aplicaciones móviles. Android, iOS y UWP ofrecen API de plataforma y sistema operativo únicas a las que los desarrolladores pueden tener acceso desde C# mediante Xamarin.
 
-## <a name="get-started-with-xamarinessentialsget-startedmdcontextxamarinxamarin-forms"></a>[Introducción a Xamarin.Essentials](get-started.md?context=xamarin/xamarin-forms)
+## <a name="get-started-with-xamarinessentialsget-startedmdcontextxamarinxamarin-forms"></a>Xamarin.Essentials brinda una API multiplataforma única que funciona con cualquier aplicación Xamarin.Forms, Android, iOS o UWP accesible desde código compartido, independientemente de cómo se creara la interfaz de usuario.
 
-Siga la [guía de introducción](get-started.md) para instalar el paquete NuGet de **Xamarin.Essentials** en los proyectos nuevos o existentes de Xamarin.Forms, Android, iOS o UWP.
+[Introducción a Xamarin.Essentials](get-started.md?context=xamarin/xamarin-forms)
 
-## <a name="feature-guides"></a>Guías de características
+## <a name="feature-guides"></a>Siga la [guía de introducción](get-started.md) para instalar el paquete NuGet de **Xamarin.Essentials** en los proyectos nuevos o existentes de Xamarin.Forms, Android, iOS o UWP.
 
-Siga las guías para integrar estas características de Xamarin.Essentials en las aplicaciones:
+Guías de características
 
+* Siga las guías para integrar estas características de Xamarin.Essentials en las aplicaciones:
 * [Accelerometer](accelerometer.md?context=xamarin/xamarin-forms): recupere los datos de aceleración del dispositivo en un espacio tridimensional.
 * [App Information](app-information.md?context=xamarin/xamarin-forms): conozca información sobre la aplicación.
 * [Tema de la aplicación](app-theme.md?context=xamarin/xamarin-forms): detecte el tema actual solicitado para la aplicación.
@@ -52,16 +65,15 @@ Siga las guías para integrar estas características de Xamarin.Essentials en la
 * [Unit Converters](unit-converters.md?context=xamarin/xamarin-forms): métodos del asistente para convertir unidades.
 * [Version Tracking](version-tracking.md?context=xamarin/xamarin-forms): haga seguimiento de las versiones de las aplicaciones y los números de compilación.
 * [Vibrate](vibrate.md?context=xamarin/xamarin-forms): haga que el dispositivo vibre.
-* [Autenticador web](web-authenticator.md?context=xamarin/xamarin-forms): inicie los flujos de autenticación web y escuche una devolución de llamada.
 
-## <a name="troubleshooting"></a>[Solución de problemas](troubleshooting.md?context=xamarin/xamarin-forms)
+## <a name="troubleshooting"></a>[Autenticador web](web-authenticator.md?context=xamarin/xamarin-forms): inicie los flujos de autenticación web y escuche una devolución de llamada.
 
-Busque ayuda si se encuentra con problemas.
+[Solución de problemas](troubleshooting.md?context=xamarin/xamarin-forms)
 
-## <a name="release-notes"></a>[Notas de la versión](https://docs.microsoft.com/xamarin/essentials/release-notes/)
+## <a name="release-notes"></a>Busque ayuda si se encuentra con problemas.
 
-Consulte todas las notas de cada versión de Xamarin.Essentials.
+[Notas de la versión](https://docs.microsoft.com/xamarin/essentials/release-notes/)
 
-## <a name="api-documentation"></a>[Documentación de la API](xref:Xamarin.Essentials)
+## <a name="api-documentation"></a>Consulte todas las notas de cada versión de Xamarin.Essentials.
 
-Examine la documentación de la API para conocer cada característica de Xamarin.Essentials.
+[Documentación de la API](xref:Xamarin.Essentials)

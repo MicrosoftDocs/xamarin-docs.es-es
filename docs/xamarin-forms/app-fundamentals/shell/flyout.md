@@ -1,8 +1,22 @@
 ---
-title: "Xamarin.Forms: Control flotante de shell" description: "El control flotante es el menú raíz de una aplicación de shell y es accesible por medio de un icono o al deslizar el dedo desde el lado de la pantalla. El control flotante consta de un encabezado opcional, elementos de control flotante y elementos de menú opcionales."
-ms.prod: xamarin ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/22/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Control flotante de Xamarin.Forms Shell
+description: El control flotante es el menú raíz de una aplicación de Shell y es accesible por medio de un icono o al deslizar el dedo desde el lado de la pantalla. El control flotante consta de un encabezado opcional, elementos de control flotante y elementos de menú opcionales.
+ms.prod: xamarin
+ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/10/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1a1d47b2b37fa532b3e2a64ada5f367e612f557d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946265"
 ---
-
 # <a name="xamarinforms-shell-flyout"></a>Control flotante de Xamarin.Forms Shell
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

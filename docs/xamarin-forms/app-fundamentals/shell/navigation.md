@@ -1,8 +1,22 @@
 ---
-title: "Xamarin.Forms: Navegación de shell" description: "Xamarin.Forms: Las aplicaciones de shell pueden usar una experiencia de navegación basada en el URI que permite desplazarse a cualquier página de la aplicación, sin necesidad de seguir una jerarquía de navegación establecida."
-ms.prod: xamarin ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/02/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'title: "Xamarin.Forms: Navegación de shell" description: "Xamarin.Forms: Las aplicaciones de shell pueden usar una experiencia de navegación basada en el URI que permite desplazarse a cualquier página de la aplicación, sin necesidad de seguir una jerarquía de navegación establecida."'
+description: 'ms.prod: xamarin ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/02/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/02/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e67d49f300a8a98ec5685c33abf98f5b2ded08ed
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84132397"
 ---
-
 # <a name="xamarinforms-shell-navigation"></a>Navegación en Xamarin.Forms Shell
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

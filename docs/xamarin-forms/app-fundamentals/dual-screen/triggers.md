@@ -1,8 +1,22 @@
 ---
-title: "Desencadenadores de doble pantalla de Xamarin.Forms" description: "En este artículo se explica cómo usar desencadenadores de doble pantalla de Xamarin.Forms para responder a cambios de la interfaz de usuario con XAML."
-ms.prod: xamarin ms.assetid: 2181715D-3995-4E71-9A21-6B892F0B3B59 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 02/28/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'title: "Desencadenadores de doble pantalla de Xamarin.Forms" description: "En este artículo se explica cómo usar desencadenadores de doble pantalla de Xamarin.Forms para responder a cambios de la interfaz de usuario con XAML."'
+description: 'ms.prod: xamarin ms.assetid: 2181715D-3995-4E71-9A21-6B892F0B3B59 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 02/28/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 2181715D-3995-4E71-9A21-6B892F0B3B59
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/28/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: df10327b2ac12d2b119f1ab558d7f27e8c319507
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84131201"
 ---
-
 # <a name="xamarinforms-dual-screen-triggers"></a>Desencadenadores de doble pantalla de Xamarin.Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

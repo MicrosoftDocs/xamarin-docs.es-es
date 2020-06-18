@@ -1,8 +1,22 @@
 ---
-title: "Personalización de un anclado de mapa" description: "En este artículo se explica cómo crear un representador personalizado para el control de mapa, que muestra un mapa nativo con una marca y una vista personalizadas de los datos de marca en cada plataforma."
-ms.prod: xamarin ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/06/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'title: "Personalización de un anclado de mapa" description: "En este artículo se explica cómo crear un representador personalizado para el control de mapa, que muestra un mapa nativo con una marca y una vista personalizadas de los datos de marca en cada plataforma."'
+description: 'ms.prod: xamarin ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/06/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/06/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 06ff88f1d4f272d9b77737d2168418c007afe8bc
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573903"
 ---
-
 # <a name="customizing-a-map-pin"></a>Personalización de un anclado de mapa
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)

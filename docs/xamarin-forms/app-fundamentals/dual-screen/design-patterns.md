@@ -1,8 +1,22 @@
 ---
-title: "Xamarin.Forms: Modelos de diseño de doble pantalla" description: "En esta guía se explica cómo Xamarin.Forms admite diversos patrones de diseño optimizados para los dispositivos de doble pantalla."
-ms.prod: xamarin ms.assetid: 3176d792-6dba-4e00-b463-497c58678ee9 ms.technology: xamarin-forms author: davidortinau ms.author: daortin ms.date: 02/08/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'title: "Xamarin.Forms: Modelos de diseño de doble pantalla" description: "En esta guía se explica cómo Xamarin.Forms admite diversos patrones de diseño optimizados para los dispositivos de doble pantalla."'
+description: 'ms.prod: xamarin ms.assetid: 3176d792-6dba-4e00-b463-497c58678ee9 ms.technology: xamarin-forms author: davidortinau ms.author: daortin ms.date: 02/08/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 3176d792-6dba-4e00-b463-497c58678ee9
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
+ms.date: 02/08/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 277fb67eeea465239d9340e755240288286d2359
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84138793"
 ---
-
 # <a name="xamarinforms-dual-screen-design-patterns"></a>Modelos de diseño de doble pantalla de Xamarin.Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

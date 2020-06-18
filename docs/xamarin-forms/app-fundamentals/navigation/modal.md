@@ -1,8 +1,22 @@
 ---
-title: "Xamarin.Forms: Páginas modales" description: "Xamarin.Forms proporciona compatibilidad con las páginas modales. Una página modal anima a los usuarios a completar una tarea autocontenida que no se puede abandonar mientras no se complete o se cancele la tarea. En este artículo se muestra cómo navegar a páginas modales."
-ms.prod: xamarin ms.assetid: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/01/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'title: "Xamarin.Forms: Páginas modales" description: "Xamarin.Forms proporciona compatibilidad con las páginas modales.'
+description: 'Una página modal anima a los usuarios a completar una tarea autocontenida que no se puede abandonar mientras no se complete o se cancele la tarea. En este artículo se muestra cómo navegar a páginas modales." ms.prod: xamarin ms.assetid: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/01/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/01/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: aecab26efaed9815ec6916877b5f42297821582c
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569613"
 ---
-
 # <a name="xamarinforms-modal-pages"></a>Páginas modales de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)

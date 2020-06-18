@@ -1,8 +1,22 @@
 ---
-title: "Creación de DataTemplateSelector de Xamarin.Forms" description: "En este artículo se muestra cómo crear y consumir un elemento DataTemplateSelector, que se puede usar para elegir un plantilla de datos en tiempo de ejecución según el valor de una propiedad enlazada a datos."
-ms.prod: xamarin ms.assetid: A4629E8F-2BAF-45CE-A76E-DF225FE8D26C ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/08/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'title: "Creación de DataTemplateSelector de Xamarin.Forms" description: "En este artículo se muestra cómo crear y consumir un elemento DataTemplateSelector, que se puede usar para elegir un plantilla de datos en tiempo de ejecución según el valor de una propiedad enlazada a datos."'
+description: 'ms.prod: xamarin ms.assetid: A4629E8F-2BAF-45CE-A76E-DF225FE8D26C ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/08/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: A4629E8F-2BAF-45CE-A76E-DF225FE8D26C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/08/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 74650eb2c52f1da9d0c539b711784896267ed183
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84135959"
 ---
-
 # <a name="creating-a-xamarinforms-datatemplateselector"></a>Creación de DataTemplateSelector de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)

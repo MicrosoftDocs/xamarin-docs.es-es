@@ -1,8 +1,21 @@
 ---
-title: "Xamarin.Essentials: Convertidores de colores" description: "La clase ColorConverters de Xamarin.Essentials ofrece varios métodos auxiliares y de extensión para trabajar con System.Drawing.Color."
-ms.assetid: B10428D6-89E2-4714-A39F-7E6E626391B2 author: jamesmontemagno ms.author: jamont ms.date: 01/06/2020 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Convertidores de colores de Xamarin.Essentials
+description: La clase ColorConverters de Xamarin.Essentials ofrece varios métodos auxiliares y de extensión para trabajar con System.Drawing.Color.
+ms.assetid: B10428D6-89E2-4714-A39F-7E6E626391B2
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 01/06/2020
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ff6a5bed600f45dcd48867596a7fc8aa45decb82
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802444"
 ---
-
 # <a name="xamarinessentials-color-converters"></a>Xamarin.Essentials: convertidores de color
 
 La clase **ColorConverters** de Xamarin.Essentials ofrece varios métodos auxiliares para System.Drawing.Color.
@@ -70,9 +83,9 @@ El método `ToSystemColor` se aplica a Android.Graphics.Color, UIKit.UIColor y W
 
 ## <a name="api"></a>API
 
-- [Código fuente de los convertidores de color](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Types/ColorConverters.shared.cs)
+- [Código fuente de los convertidores de color](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Types/ColorConverters.shared.cs)
 - [Documentación sobre la API de los convertidores de color](xref:Xamarin.Essentials.ColorConverters)
-- [Color fuente de las extensiones de color](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Types/ColorConverters.shared.cs)
+- [Color fuente de las extensiones de color](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Types/ColorConverters.shared.cs)
 - [Documentación sobre la API de las extensiones de color](xref:Xamarin.Essentials.ColorExtensions)
 
 ## <a name="related-video"></a>Vídeo relacionado

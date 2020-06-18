@@ -1,8 +1,22 @@
 ---
-title: "Clases base y controles nativos del representador" description: "Todos los controles de Xamarin.Forms tienen un representador que los acompaña para cada plataforma y que crea una instancia de un control nativo. En este artículo se enumeran las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms."
-ms.prod: xamarin ms.assetid: A8909AE3-ED0E-4D24-BF96-B49E732E3B93 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/17/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'title: "Clases base y controles nativos del representador" description: "Todos los controles de Xamarin.Forms tienen un representador que los acompaña para cada plataforma y que crea una instancia de un control nativo.'
+description: 'En este artículo se enumeran las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms." ms.prod: xamarin ms.assetid: A8909AE3-ED0E-4D24-BF96-B49E732E3B93 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/17/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: A8909AE3-ED0E-4D24-BF96-B49E732E3B93
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/17/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9f6eff831f3eb653e281dd9ee750bae7f7dfda06
+ms.sourcegitcommit: 2105091f2eeb7844b19ae94708a6ab07e3e79bce
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84198387"
 ---
-
 # <a name="renderer-base-classes-and-native-controls"></a>Clases base y controles nativos del representador
 
 _Todos los controles de Xamarin.Forms tienen un representador que las acompaña para cada plataforma y que crea una instancia de un control nativo. En este artículo se enumeran las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms._

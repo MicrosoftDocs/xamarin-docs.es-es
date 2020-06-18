@@ -1,8 +1,20 @@
 ---
-title: "Xamarin.Essentials: Compatibilidad con plataformas y características" description: "Xamarin.Essentials brinda una API multiplataforma única que funciona con cualquier aplicación iOS, Android o UWP accesible desde código compartido, independientemente de cómo se creó la interfaz de usuario."
-ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4 author: jamesmontemagno ms.author: jamont ms.date: 08/20/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'title: "Xamarin.Essentials: Compatibilidad con plataformas y características" description: "Xamarin.Essentials brinda una API multiplataforma única que funciona con cualquier aplicación iOS, Android o UWP accesible desde código compartido, independientemente de cómo se creó la interfaz de usuario."'
+description: 'ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4 author: jamesmontemagno ms.author: jamont ms.date: 08/20/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 08/20/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b052e03f3ca57229988a29b7d3f38f5fa7bb6f97
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84137181"
 ---
-
 # <a name="platform-support"></a>Compatibilidad de la plataforma
 
 Xamarin.Essentials admite las siguientes plataformas y sistemas operativos:

@@ -1,8 +1,22 @@
 ---
-title: "Xamarin.Forms: Enlaces relativos" description: "En este artículo se explica cómo crear enlaces relativos mediante el uso de la extensión de marcado RelativeSource para establecer el origen de enlace en relación con la posición del destino de enlace."
-ms.prod: xamarin ms.assetid: CC64BB1D-8303-46B1-94B6-4EF2F20317A8 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/04/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'title: "Xamarin.Forms: Enlaces relativos" description: "En este artículo se explica cómo crear enlaces relativos mediante el uso de la extensión de marcado RelativeSource para establecer el origen de enlace en relación con la posición del destino de enlace."'
+description: 'ms.prod: xamarin ms.assetid: CC64BB1D-8303-46B1-94B6-4EF2F20317A8 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/04/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: CC64BB1D-8303-46B1-94B6-4EF2F20317A8
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/04/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8d4e2696e6027f07b7b8e638cd1e0f1d65a5503d
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84139716"
 ---
-
 # <a name="xamarinforms-relative-bindings"></a>Enlaces relativos de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

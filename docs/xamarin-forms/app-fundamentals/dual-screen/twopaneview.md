@@ -1,8 +1,22 @@
 ---
-title: "Diseño de doble pantalla de Xamarin.Forms" description: "En esta guía se explica cómo usar TwoPaneView de Xamarin.Forms para optimizar la experiencia de la aplicación para dispositivos de doble pantalla como Surface Duo y Surface Neo."
-ms.prod: xamarin ms.assetid: 17ee8afa-5e7c-4a4f-a9b6-2aca03f30fe3 ms.technology: xamarin-forms author: davidortinau ms.author: daortin ms.date: 02/08/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'title: "Diseño de doble pantalla de Xamarin.Forms" description: "En esta guía se explica cómo usar TwoPaneView de Xamarin.Forms para optimizar la experiencia de la aplicación para dispositivos de doble pantalla como Surface Duo y Surface Neo."'
+description: 'ms.prod: xamarin ms.assetid: 17ee8afa-5e7c-4a4f-a9b6-2aca03f30fe3 ms.technology: xamarin-forms author: davidortinau ms.author: daortin ms.date: 02/08/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 17ee8afa-5e7c-4a4f-a9b6-2aca03f30fe3
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
+ms.date: 02/08/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 28d4b3da44cc1a022b70c0de0720be747e047f9f
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84138897"
 ---
-
 # <a name="xamarinforms-dual-screen-layout"></a>Diseño de doble pantalla de Xamarin.Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

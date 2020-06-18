@@ -1,8 +1,22 @@
 ---
-title: "Xamarin.Forms: Página maestra y de detalles" description: "MasterDetailPage de Xamarin.Forms es una página que administra dos páginas relacionadas de información: una página maestra que presenta elementos y una página de detalles que presenta detalles sobre los elementos de la página maestra. En este artículo se explica cómo usar una instancia de MasterDetailPage y cómo navegar entre sus páginas de información."
-ms.prod: xamarin ms.assetid: 119945E3-58B8-4630-A3D2-8B561529D53B ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/01/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'title: "Xamarin.Forms: Página maestra y de detalles" description: "MasterDetailPage de Xamarin.Forms es una página que administra dos páginas relacionadas de información: una página maestra que presenta elementos y una página de detalles que presenta detalles sobre los elementos de la página maestra.'
+description: 'En este artículo se explica cómo usar una instancia de MasterDetailPage y cómo navegar entre sus páginas de información." ms.prod: xamarin ms.assetid: 119945E3-58B8-4630-A3D2-8B561529D53B ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/01/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 119945E3-58B8-4630-A3D2-8B561529D53B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/01/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c751a1843479f1e98739964631999dfdb0e3b634
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569639"
 ---
-
 # <a name="xamarinforms-master-detail-page"></a>Página maestra y de detalles de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)

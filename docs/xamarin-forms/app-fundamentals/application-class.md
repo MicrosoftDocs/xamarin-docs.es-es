@@ -1,8 +1,23 @@
 ---
-title: "Xamarin.Forms: Clase App" description: "En este artículo se explican las características de la clase App predeterminada, lo que incluye una propiedad para establecer la página inicial de la aplicación y un diccionario persistente para almacenar valores simples a lo largo de los cambios de estado del ciclo de vida."
-ms.prod: xamarin ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D ms.technology: xamarin-forms ms.custom: video author: davidbritch ms.author: dabritch ms.date: 02/19/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'title: "Xamarin.Forms: Clase App" description: "En este artículo se explican las características de la clase App predeterminada, lo que incluye una propiedad para establecer la página inicial de la aplicación y un diccionario persistente para almacenar valores simples a lo largo de los cambios de estado del ciclo de vida."'
+description: 'ms.prod: xamarin ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D ms.technology: xamarin-forms ms.custom: video author: davidbritch ms.author: dabritch ms.date: 02/19/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
+ms.technology: xamarin-forms
+ms.custom: video
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/19/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1e761830fb08662a82a8bf98b4544aafaa6eccf7
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573357"
 ---
-
 # <a name="xamarinforms-app-class"></a>Clase de aplicación de Xamarin.Forms
 
 La clase base `Application` ofrece las siguientes características, que se exponen en la subclase predeterminada `App` de los proyectos:

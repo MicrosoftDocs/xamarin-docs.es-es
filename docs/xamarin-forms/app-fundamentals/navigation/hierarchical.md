@@ -1,8 +1,22 @@
 ---
-title: "Navegación jerárquica" description: "En este artículo se muestra cómo usar la clase NavigationPage para realizar la navegación en una pila de páginas en la que el último en entrar es el primero en salir (LIFO)."
-ms.prod: xamarin ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/10/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'title: "Navegación jerárquica" description: "En este artículo se muestra cómo usar la clase NavigationPage para realizar la navegación en una pila de páginas en la que el último en entrar es el primero en salir (LIFO)."'
+description: 'ms.prod: xamarin ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/10/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ec35b03e7e96f0730813918bdd96e1408cfabde7
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571498"
 ---
-
 # <a name="hierarchical-navigation"></a>Navegación jerárquica
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)

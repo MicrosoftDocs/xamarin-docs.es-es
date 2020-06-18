@@ -1,8 +1,22 @@
 ---
-title: "Xamarin.Forms: TabbedPage" description: "TabbedPage de Xamarin.Forms consta de una lista de pestañas y un área de detalles mayor. Cada pestaña carga contenido en el área de detalles. En este artículo se muestra cómo usar una instancia de TabbedPage para navegar por una colección de páginas."
-ms.prod: xamarin ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/07/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'title: "Xamarin.Forms: TabbedPage" description: "TabbedPage de Xamarin.Forms consta de una lista de pestañas y un área de detalles mayor. Cada pestaña carga contenido en el área de detalles.'
+description: 'En este artículo se muestra cómo usar una instancia de TabbedPage para navegar por una colección de páginas." ms.prod: xamarin ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/07/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 38389867ba52e63d8310e3b59d7838f58e8cf488
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84137519"
 ---
-
 # <a name="xamarinforms-tabbedpage"></a>TabbedPage de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)

@@ -1,8 +1,22 @@
 ---
-title: "Xamarin.Forms: Ejemplos" description: "Las aplicaciones de ejemplo y las demostraciones de código de Xamarin.Forms le ayudan a empezar a trabajar y comprender los conceptos de Xamarin.Forms."
-ms.prod: xamarin ms.assetid: AB986E8E-E831-4E0A-9F1D-6C3D88F35E9C ms.technology: xamarin-forms author: profexorgeek ms.author: jusjohns ms.date: 12/27/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'title: "Xamarin.Forms: Ejemplos" description: "Las aplicaciones de ejemplo y las demostraciones de código de Xamarin.Forms le ayudan a empezar a trabajar y comprender los conceptos de Xamarin.Forms."'
+description: 'ms.prod: xamarin ms.assetid: AB986E8E-E831-4E0A-9F1D-6C3D88F35E9C ms.technology: xamarin-forms author: profexorgeek ms.author: jusjohns ms.date: 12/27/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: AB986E8E-E831-4E0A-9F1D-6C3D88F35E9C
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 12/27/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 896b5880b92cecc7bd9eb360306d902ff0f876c5
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84135946"
 ---
-
 # <a name="xamarinforms-samples"></a>Ejemplos de Xamarin.Forms
 
 Las aplicaciones de ejemplo y las demostraciones de código de Xamarin.Forms le ayudan a empezar a trabajar y comprender los conceptos de Xamarin.Forms.

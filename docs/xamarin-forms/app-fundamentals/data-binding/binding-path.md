@@ -1,8 +1,22 @@
 ---
-title: "Xamarin.Forms: Ruta de acceso de enlace" description: "En este artículo se explica cómo usar los enlaces de datos de Xamarin.Forms para acceder a subpropiedades y miembros de colección con la propiedad Path de la clase Binding."
-ms.prod: xamarin ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/05/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'title: "Xamarin.Forms: Ruta de acceso de enlace" description: "En este artículo se explica cómo usar los enlaces de datos de Xamarin.Forms para acceder a subpropiedades y miembros de colección con la propiedad Path de la clase Binding."'
+description: 'ms.prod: xamarin ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/05/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/05/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a0ac8a568c3e8c46fa7e53112461aa0bff5684ae
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570796"
 ---
-
 # <a name="xamarinforms-binding-path"></a>Enlace de ruta de acceso de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
