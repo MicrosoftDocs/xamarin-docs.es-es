@@ -1,8 +1,22 @@
 ---
-Título: "manipulaciones táctiles": "en este artículo se explica cómo usar transformaciones de matriz para implementar la función táctil de arrastrar, reducir y girar, y se demuestra esto con código de ejemplo".
-MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: A0B8DD2D-7392-4EC5-BFB0-6209407AD650 Author: davidbritch ms. Author: dabritch ms. Date: 09/14/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Manipulaciones táctiles
+description: En este artículo se explica cómo usar transformaciones de matriz para implementar la función táctil de arrastrar, reducir y girar, y se muestra con código de ejemplo.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/14/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f5738f376e2a814ef1af455178c2e68135184402
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140171"
 ---
-
 # <a name="touch-manipulations"></a>Manipulaciones táctiles
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

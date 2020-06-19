@@ -1,8 +1,22 @@
 ---
-title: "la ubicación y el color de la barra de herramientas TabbedPage en Android" Descripción: "las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores ni efectos personalizados. En este artículo se explica cómo consumir el específico de la plataforma Android que establece la posición y el color de la barra de herramientas en un TabbedPage ".
-MS. Prod: Xamarin ms. AssetID: A5C68D6A-9A5F-42EE-845D-1E5B0CB1544E ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/10/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Selección de ubicación y color de la barra de herramientas TabbedPage en Android
+description: Las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir el específico de la plataforma Android que establece la posición y el color de la barra de herramientas en un TabbedPage.
+ms.prod: xamarin
+ms.assetid: A5C68D6A-9A5F-42EE-845D-1E5B0CB1544E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f5a2be4bd61056a42593fc45e1abdd3679795bc0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139989"
 ---
-
 # <a name="tabbedpage-toolbar-placement-and-color-on-android"></a>Selección de ubicación y color de la barra de herramientas TabbedPage en Android
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms aplicaciones de estilo" Descripción: "en esta guía se explica cómo aplicar estilo a Xamarin.Forms las aplicaciones mediante estilos XAML y cómo usar hojas de estilo CSS".
-MS. Prod: Xamarin ms. AssetID: EABF5072-B89B-4356-B7B3-1C6B40358926 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/28/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Aplicación de estilos Xamarin.Forms
+description: En esta guía se explica cómo aplicar estilo a Xamarin.Forms las aplicaciones mediante el uso de estilos XAML y el uso de hojas de estilo CSS.
+ms.prod: xamarin
+ms.assetid: EABF5072-B89B-4356-B7B3-1C6B40358926
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/28/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8775793c2d9ae1ba6e1eba38fe48647b43056bf8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140119"
 ---
-
 # <a name="styling-xamarinforms-apps"></a>Aplicación de estilos Xamarin.Forms
 
 ## <a name="styling-xamarinforms-apps-using-xaml-stylesxamlindexmd"></a>[Aplicación de estilo a aplicaciones Xamarin.Forms con estilos XAML](xaml/index.md)

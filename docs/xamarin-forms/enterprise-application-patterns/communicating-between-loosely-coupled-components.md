@@ -1,7 +1,22 @@
 ---
-Título: "comunicación entre componentes de acoplamiento flexible" Descripción: "en este capítulo se explica cómo la aplicación móvil eShopOnContainers implementa el patrón de publicación y suscripción, lo que permite la comunicación basada en mensajes entre los componentes que no son convenientes para vincularlos según las referencias de tipo y objeto" MS. Prod: Xamarin ms. AssetID: 1194af33-8a91-48d2-88b5-b84d77f2ce69 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 Xamarin.Forms Xamarin.Essentials
+title: Comunicación entre componentes débilmente acoplados
+description: 'En este capítulo se explica el modo en que la aplicación móvil eShopOnContainers implementa el patrón de publicación y suscripción, lo que permite la comunicación basada en mensajes entre los componentes que no se recomienda vincular mediante referencias de tipo y objeto. '
+ms.prod: xamarin
+ms.assetid: 1194af33-8a91-48d2-88b5-b84d77f2ce69
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c35cd6e30e7843cda0431581025aa7440a21cc29
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140054"
 ---
-
 # <a name="communicating-between-loosely-coupled-components"></a>Comunicación entre componentes débilmente acoplados
 
 El patrón de publicación y suscripción es un patrón de mensajería en el que los publicadores envían mensajes sin tener conocimiento de los destinatarios, que se conocen como suscriptores. Del mismo modo, los suscriptores escuchan mensajes específicos, sin tener conocimiento de ningún publicador.

@@ -1,8 +1,22 @@
 ---
-title: "animar mapas de bits de SkiaSharp" Descripción: "Obtenga información sobre cómo realizar la animación de mapas de bits mediante una visualización secuencial de una serie de mapas de bits y la representación de archivos GIF animados".
-MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD Author: davidbritch ms. Author: dabritch ms. Date: 07/12/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Animar mapas de bits SkiaSharp
+description: Obtenga información sobre cómo realizar la animación de mapas de bits mediante la presentación secuencial de una serie de mapas de bits y la representación de archivos GIF animados.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/12/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 763f44c26d653aa32429b2aa764989e18e8b8078
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139976"
 ---
-
 # <a name="animating-skiasharp-bitmaps"></a>Animar mapas de bits SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

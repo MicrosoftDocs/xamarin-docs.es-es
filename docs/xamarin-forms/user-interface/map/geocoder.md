@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms mapa geocodificación" Descripción: "en este artículo se explica cómo codificar y descodificar geocodificaciones de datos de mapas geocode mediante Xamarin.Forms . Asigna la clase de Geocoder. "
-MS. Prod: Xamarin ms. AssetID: DE7DB31A-8921-4614-8B49-DAEF1E7B03B3 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/22/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsGeocodificación de mapas
+description: En este artículo se explica cómo codificar y descodificar datos de mapas geocode mediante el Xamarin.Forms . Asigna la clase de Geocoder.
+ms.prod: xamarin
+ms.assetid: DE7DB31A-8921-4614-8B49-DAEF1E7B03B3
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/22/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: fe099235857f6bd0531539e3aa84e41bf59b50ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139872"
 ---
-
 # <a name="xamarinforms-map-geocoding"></a>Xamarin.FormsGeocodificación de mapas
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

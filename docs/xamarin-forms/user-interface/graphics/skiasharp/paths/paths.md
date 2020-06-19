@@ -1,8 +1,22 @@
 ---
-title: "conceptos básicos de la ruta de acceso en SkiaSharp" Descripción: "en este artículo se explora el objeto SKPath de SkiaSharp para combinar líneas y curvas conectadas y se muestra el código de ejemplo".
-MS. Prod: Xamarin ms. AssetID: A7EDA6C2-3921-4021-89F3-211551E430F1 ms. Technology: Xamarin-skiasharp Author: davidbritch ms. Author: dabritch ms. Date: 03/10/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Conceptos básicos de la ruta de acceso en SkiaSharp
+description: En este artículo se explora el objeto SkiaSharp SKPath para combinar líneas y curvas conectadas, y se muestra con código de ejemplo.
+ms.prod: xamarin
+ms.assetid: A7EDA6C2-3921-4021-89F3-211551E430F1
+ms.technology: xamarin-skiasharp
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6ceac2d866e67af5cf3496fcf8c072ae83ecfe38
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140249"
 ---
-
 # <a name="path-basics-in-skiasharp"></a>Conceptos básicos de la ruta de acceso en SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

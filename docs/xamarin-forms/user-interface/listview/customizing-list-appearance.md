@@ -1,8 +1,22 @@
 ---
-title: "apariencia de ListView" Descripción: "en este artículo se explica cómo personalizar ListView en Xamarin.Forms aplicaciones mediante encabezados, pies de página, grupos y celdas de alto variable".
-MS. Prod: Xamarin ms. AssetID: DC8009B0-4371-4D60-885A-5362FC7EE3E5 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/13/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Apariencia de ListView
+description: En este artículo se explica cómo personalizar ListView en Xamarin.Forms aplicaciones mediante encabezados, pies de página, grupos y celdas de alto variable.
+ms.prod: xamarin
+ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/13/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c7fdecdb0ce209c88dbe9e6f4e6e6588ec4fd3fd
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139924"
 ---
-
 # <a name="listview-appearance"></a>Apariencia de ListView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)

@@ -1,8 +1,22 @@
 ---
-title: "consumo de las extensiones de marcado XAML" Descripción: "en este artículo se explica cómo usar Xamarin.Forms las extensiones de marcado XAML para mejorar la eficacia y flexibilidad de XAML, permitiendo que los atributos de elemento se establezcan desde diversos orígenes".
-MS. Prod: Xamarin ms. AssetID: CE686893-609C-4EC3-9225-6C68D2A9F79C ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/21/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Consumo de extensiones de marcado XAML
+description: En este artículo se explica cómo usar Xamarin.Forms las extensiones de marcado XAML para mejorar la eficacia y flexibilidad de XAML, permitiendo que los atributos de elemento se establezcan desde diversos orígenes.
+ms.prod: xamarin
+ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/17/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e1429c3f39e37dc552d7f6ca8767058e5aec853b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84903119"
 ---
-
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de extensiones de marcado XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
@@ -18,7 +32,7 @@ Las extensiones de marcado XAML ayudan a mejorar la eficacia y flexibilidad de X
 - [`OnIdiom`](#onidiom-markup-extension): Personalice la apariencia de la interfaz de usuario en función de la expresión del dispositivo en el que se ejecuta la aplicación.
 - [`DataTemplate`](#datatemplate-markup-extension): convierte un tipo en un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) .
 - [`FontImage`](#fontimage-markup-extension): muestra un icono de fuente en cualquier vista que puede mostrar un `ImageSource` .
-- [`OnAppTheme`](#onapptheme-markup-extension): consumir un recurso basado en el tema del sistema actual.
+- [`AppThemeBinding`](#appthemebinding-markup-extension): consumir un recurso basado en el tema del sistema actual.
 
 Históricamente, las extensiones de marcado XAML adicionales se han admitido en otras implementaciones de XAML y también se admiten en Xamarin.Forms . Estos se describen con más detalle en otros artículos:
 
@@ -566,60 +580,55 @@ Esta es la ejecución del programa:
 
 Para obtener información sobre cómo mostrar los iconos de fuente especificando los datos del icono de fuente de un `FontImageSource` objeto, vea [Mostrar iconos de fuentes](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons).
 
-## <a name="onapptheme-markup-extension"></a>Extensión de marcado OnAppTheme
+## <a name="appthemebinding-markup-extension"></a>Extensión de marcado AppThemeBinding
 
-La `OnAppTheme` extensión de marcado le permite especificar el recurso que se va a consumir, como una imagen o un color, basándose en el tema del sistema actual. Proporciona la misma funcionalidad que la `OnAppTheme<T>` clase, pero con una representación más concisa.
+La `AppThemeBinding` extensión de marcado le permite especificar el recurso que se va a consumir, como una imagen o un color, basándose en el tema del sistema actual.
 
 > [!IMPORTANT]
-> La `OnAppTheme` extensión de marcado tiene requisitos mínimos de sistema operativo. Para obtener más información, consulte [responder a los cambios de tema del sistema en Xamarin.Forms las aplicaciones](~/xamarin-forms/user-interface/theming/system-theme-changes.md).
+> La `AppThemeBinding` extensión de marcado tiene requisitos mínimos de sistema operativo. Para obtener más información, consulte [responder a los cambios de tema del sistema en Xamarin.Forms las aplicaciones](~/xamarin-forms/user-interface/theming/system-theme-changes.md).
 
-La clase `OnAppThemeExtension` admite la extensión de marcado `OnAppTheme`, que define las siguientes propiedades:
+La clase `AppThemeBindingExtension` admite la extensión de marcado `AppThemeBinding`, que define las siguientes propiedades:
 
 - `Default`, de tipo `object` , que se establece en el recurso que se va a usar de forma predeterminada.
 - `Light`, de tipo `object` , que se establece en el recurso que se va a usar cuando el dispositivo esté usando su tema claro.
 - `Dark`, de tipo `object` , que se establece en el recurso que se va a usar cuando el dispositivo esté usando su tema oscuro.
 - `Value`, de tipo `object` , que devuelve el recurso que está utilizando actualmente la extensión de marcado.
-- `Converter`de tipo `IValueConverter` , que se puede establecer en una `IValueConverter` implementación de.
-- `ConverterParameter`de tipo `object` , que se puede establecer en un valor que se va a pasar a la `IValueConverter` implementación.
 
 > [!NOTE]
-> El analizador de XAML permite abreviar la clase `OnAppThemeExtension` como `OnAppTheme`.
+> El analizador de XAML permite abreviar la clase `AppThemeBindingExtension` como `AppBindingTheme`.
 
-La `Default` propiedad es la propiedad de contenido de `OnAppThemeExtension` . Por lo tanto, para las expresiones de marcado XAML expresadas con llaves, puede eliminar la `Default=` parte de la expresión siempre que sea el primer argumento.
+La `Default` propiedad es la propiedad de contenido de `AppThemeBindingExtension` . Por lo tanto, para las expresiones de marcado XAML expresadas con llaves, puede eliminar la `Default=` parte de la expresión siempre que sea el primer argumento.
 
-La página de **demostración de OnAppTheme** muestra cómo usar la `OnAppTheme` extensión de marcado:
+La página de **demostración de AppThemeBinding** muestra cómo usar la `AppThemeBinding` extensión de marcado:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MarkupExtensions.OnAppThemeDemoPage"
-             Title="OnAppTheme Demo">
+             x:Class="MarkupExtensions.AppThemeBindingDemoPage"
+             Title="AppThemeBinding Demo">
     <ContentPage.Resources>
 
         <Style x:Key="labelStyle"
                TargetType="Label">
             <Setter Property="TextColor"
-                    Value="{OnAppTheme Black, Light=Blue, Dark=Teal}" />
+                    Value="{AppThemeBinding Black, Light=Blue, Dark=Teal}" />
         </Style>
 
     </ContentPage.Resources>
     <StackLayout Margin="20">
         <Label Text="This text is green in light mode, and red in dark mode."
-               TextColor="{OnAppTheme Light=Green, Dark=Red}" />
+               TextColor="{AppThemeBinding Light=Green, Dark=Red}" />
         <Label Text="This text is black by default, blue in light mode, and teal in dark mode."
-               Style="{DynamicResource labelStyle}" />
+               Style="{StaticResource labelStyle}" />
     </StackLayout>
 </ContentPage>
 ```
 
 En este ejemplo, el color del texto de la primera [`Label`](xref:Xamarin.Forms.Label) se establece en verde cuando el dispositivo usa su tema claro y se establece en rojo cuando el dispositivo está usando su tema oscuro. La segunda `Label` tiene su [`TextColor`](xref:Xamarin.Forms.Label.TextColor) propiedad establecida a través de [`Style`](xref:Xamarin.Forms.Style) . De `Style` forma predeterminada, se establece el color del texto de `Label` en negro, en azul cuando el dispositivo usa el tema claro y en verde azulado cuando el dispositivo usa su tema oscuro.
 
-> [!NOTE]
-> [`Style`](xref:Xamarin.Forms.Style)Que utiliza la extensión de `OnAppTheme` marcado debe aplicarse a un control con la `DynamicResource` extensión de marcado, de modo que la interfaz de usuario de la aplicación se actualice cuando cambie el tema del sistema.
-
 Esta es la ejecución del programa:
 
-![Demostración de OnAppTheme](consuming-images/onappthemedemo.png "Demostración de OnAppTheme")
+![Demostración de AppThemeBinding](consuming-images/appthemebindingdemo.png "Demostración de AppThemeBinding")
 
 ## <a name="define-markup-extensions"></a>Definir extensiones de marcado
 
