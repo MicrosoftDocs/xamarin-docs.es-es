@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms en los proyectos nativos de Xamarin" Description: "en este artículo se explica cómo consumir páginas derivadas de ContentPage que se agregan directamente a proyectos de Xamarin Native y cómo navegar entre ellas".
-MS. Prod: Xamarin ms. AssetID: f343fc21-dfb1-4364-a332-9da6705d36bc ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/19/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Formsen proyectos nativos de Xamarin
+description: En este artículo se explica cómo consumir páginas derivadas de ContentPage que se agregan directamente a proyectos de Xamarin Native y cómo navegar entre ellas.
+ms.prod: xamarin
+ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/19/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9fb741a03d1c8dd2a8754120d0b46567d8889a0b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84132280"
 ---
-
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin.Formsen proyectos nativos de Xamarin
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)

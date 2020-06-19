@@ -1,8 +1,22 @@
 ---
-title: "guardar mapas de bits de SkiaSharp en archivos" Descripción: "Explore los distintos formatos de archivo admitidos por SkiaSharp para guardar mapas de bits en la biblioteca de fotos del usuario".
-MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C Author: davidbritch ms. Author: dabritch ms. Date: 07/10/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Guardar mapas de bits de SkiaSharp en archivos
+description: Explore los distintos formatos de archivo admitidos por SkiaSharp para guardar mapas de bits en la biblioteca de fotos del usuario.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 01f4fcf1953658af44d2a8996913860a3b605abf
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138663"
 ---
-
 # <a name="saving-skiasharp-bitmaps-to-files"></a>Guardar mapas de bits de SkiaSharp en archivos
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

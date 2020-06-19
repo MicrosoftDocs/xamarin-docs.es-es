@@ -1,15 +1,29 @@
 ---
-title: "traducción de texto mediante la API de traductor" Descripción: "la API de Microsoft Translator se puede usar para traducir voz y texto a través de una API de REST. En este artículo se explica cómo usar Microsoft Translator Text API para traducir texto de un idioma a otro en una Xamarin.Forms aplicación ".
-MS. Prod: Xamarin ms. AssetID: 68330242-92C5-46F1-B1E3-2395D8823B0C ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/08/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Traducción de texto mediante la API de traductor
+description: La API de traductor de Microsoft se puede usar para traducir la voz y el texto a través de una API de REST. En este artículo se explica cómo usar Microsoft Translator Text API para traducir texto de un idioma a otro en una Xamarin.Forms aplicación.
+ms.prod: xamarin
+ms.assetid: 68330242-92C5-46F1-B1E3-2395D8823B0C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/08/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f0f43f8f2113b6bd0a800ed3e0bd96b641575b1c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139287"
 ---
-
 # <a name="text-translation-using-the-translator-api"></a>Traducción de texto mediante la API de traductor
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _La API de traductor de Microsoft se puede usar para traducir la voz y el texto a través de una API de REST. En este artículo se explica cómo usar Microsoft Translator Text API para traducir texto de un idioma a otro en una Xamarin.Forms aplicación._
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 La API de traductor tiene dos componentes:
 

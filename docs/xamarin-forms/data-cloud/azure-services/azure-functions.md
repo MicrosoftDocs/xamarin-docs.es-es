@@ -1,6 +1,21 @@
 ---
-title: "Azure Functions con Xamarin.Forms " Description: "Get Started with Azure Functions using Xamarin.Forms ."
-MS. Prod: Xamarin ms. AssetID: 2F311A60-A6FC-4051-B938-AEF32086642F autor: conceptdev ms. Author: crdun ms. Custom: vídeo ms. Date: 04/02/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Azure Functions conXamarin.Forms
+description: Introducción a Azure Functions mediante Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 2F311A60-A6FC-4051-B938-AEF32086642F
+author: conceptdev
+ms.author: crdun
+ms.custom: video
+ms.date: 04/02/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 420cead8a43f35815110eb7ce3b183f10bb3ccd4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84197570"
 ---
 # <a name="get-started-with-azure-functions"></a>Introducción a Azure Functions
 

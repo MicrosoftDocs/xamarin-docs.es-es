@@ -1,8 +1,22 @@
 ---
-title: "diseños enlazables en Xamarin.Forms " Description: "los diseños enlazables permiten a las clases de diseño generar su contenido enlazando con una colección de elementos, con la opción de establecer la apariencia de cada elemento con un DataTemplate".
-MS. Prod: Xamarin ms. AssetID: 824C3319-20A0-42D0-8632-CDECD98349C3 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/09/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Diseños enlazables enXamarin.Forms
+description: Los diseños enlazables permiten a las clases de diseño generar su contenido enlazando con una colección de elementos, con la opción de establecer la apariencia de cada elemento con un DataTemplate.
+ms.prod: xamarin
+ms.assetid: 824C3319-20A0-42D0-8632-CDECD98349C3
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/09/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9d0497c0c0593b54f69bac84307976c4050e9c95
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138247"
 ---
-
 # <a name="bindable-layouts-in-xamarinforms"></a>Diseños enlazables enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)

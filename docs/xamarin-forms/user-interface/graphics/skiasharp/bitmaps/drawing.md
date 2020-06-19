@@ -1,8 +1,22 @@
 ---
-title: "crear y dibujar en mapas de bits de SkiaSharp" Descripción: "Aprenda a crear mapas de bits de SkiaSharp y, a continuación, dibuje en estos mapas de bits mediante la creación de un lienzo basado en ellos".
-MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 79BD3266-D457-4E50-BDDF-33450035FA0F Author: davidbritch ms. Author: dabritch ms. Date: 07/17/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Crear y dibujar en mapas de bits de SkiaSharp
+description: Aprenda a crear mapas de bits de SkiaSharp y, a continuación, dibuje en estos mapas de bits mediante la creación de un lienzo basado en ellos.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/17/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c045e297beca675c0582efc2f75b1d6b2bcedcf8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573300"
 ---
-
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Crear y dibujar en mapas de bits de SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

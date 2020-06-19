@@ -1,8 +1,22 @@
 ---
-title: "validación en aplicaciones empresariales" Descripción: "en este capítulo se explica cómo la aplicación móvil eShopOnContainers realiza la validación de los datos proporcionados por el usuario. Esto incluye la especificación de reglas de validación, la activación de la validación y la visualización de errores de validación. "
-MS. Prod: Xamarin ms. AssetID: 56e4f0fc-48d9-4033-91ec-173bb46a5e4d ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Validación en aplicaciones empresariales
+description: En este capítulo se explica cómo la aplicación móvil eShopOnContainers realiza la validación de los datos proporcionados por el usuario. Esto incluye la especificación de reglas de validación, la activación de la validación y la visualización de errores de validación.
+ms.prod: xamarin
+ms.assetid: 56e4f0fc-48d9-4033-91ec-173bb46a5e4d
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a4b82552956ab0e75d0a76a14ce7c919c744e09a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84565335"
 ---
-
 # <a name="validation-in-enterprise-apps"></a>Validación en aplicaciones empresariales
 
 Cualquier aplicación que acepte la entrada de los usuarios debe asegurarse de que la entrada es válida. Una aplicación podría, por ejemplo, comprobar la entrada que solo contiene caracteres de un intervalo determinado, es de una longitud determinada o coincide con un formato determinado. Sin validación, un usuario puede proporcionar datos que provocan un error en la aplicación. La validación aplica las reglas de negocios y evita que un atacante Inserte datos malintencionados.

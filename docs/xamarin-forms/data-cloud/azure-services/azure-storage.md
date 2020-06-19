@@ -1,8 +1,22 @@
 ---
-title: "Store and Access Data in Azure Storage from Xamarin.Forms " Description: "Azure Storage es una solución escalable de almacenamiento en la nube que se puede usar para almacenar datos estructurados y no estructurados. En este artículo se explica cómo usar Xamarin.Forms para almacenar datos binarios y de texto en Azure Storage y cómo obtener acceso a los datos. "
-MS. Prod: Xamarin ms. AssetID: 5B10D37B-839B-4CD0-9C65-91014A93F3EB ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/28/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Almacenar y obtener acceso a los datos de Azure Storage desdeXamarin.Forms
+description: Azure Storage es una solución de almacenamiento en la nube escalable que se puede usar para almacenar datos estructurados y no estructurados. En este artículo se explica cómo usar Xamarin.Forms para almacenar datos binarios y de texto en Azure Storage y cómo obtener acceso a los datos.
+ms.prod: xamarin
+ms.assetid: 5B10D37B-839B-4CD0-9C65-91014A93F3EB
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/28/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a69edd3bf014809cc479dcb7cba0e430dcefbe5b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84564685"
 ---
-
 # <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Almacenar y obtener acceso a los datos de Azure Storage desdeXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)

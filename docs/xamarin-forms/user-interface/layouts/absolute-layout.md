@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms AbsoluteLayout" Descripción: "en este artículo se explica cómo usar la Xamarin.Forms clase AbsoluteLayout para crear interfaces de IU perfectas en píxeles. Esta clase coloca y ajusta el tamaño de los elementos secundarios en proporción con su propio tamaño y posición, o con valores absolutos. "
-MS. Prod: Xamarin ms. AssetID: 01A5CCE0-AD45-4806-84FD-72C007005B38 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/25/2015 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsAbsoluteLayout
+description: En este artículo se explica cómo usar la Xamarin.Forms clase AbsoluteLayout para crear interfaces de IU perfectas en píxeles. Esta clase coloca y ajusta el tamaño de los elementos secundarios en proporción con su propio tamaño y posición, o con valores absolutos.
+ms.prod: xamarin
+ms.assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/25/2015
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 110b01d6482fbe3e23a772c90194b6bf40d54877
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570536"
 ---
-
 # <a name="xamarinforms-absolutelayout"></a>Xamarin.FormsAbsoluteLayout
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)

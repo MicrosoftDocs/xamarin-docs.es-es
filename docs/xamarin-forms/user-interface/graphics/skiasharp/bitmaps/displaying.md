@@ -1,8 +1,22 @@
 ---
-Título: "Mostrar mapas de bits de SkiaSharp" Descripción: "Obtenga información sobre cómo mostrar mapas de bits de SkiaSharp en tamaños de píxeles y expandirlos para rellenar los rectángulos mientras se conserva la relación de aspecto".
-MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9 Author: davidbritch ms. Author: dabritch ms. Date: 07/17/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Mostrar mapas de bits SkiaSharp
+description: Obtenga información sobre cómo mostrar mapas de bits de SkiaSharp en tamaños de píxeles y expandidos para rellenar rectángulos mientras se conserva la relación de aspecto.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/17/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b0fecac02c44e3ba721dd4625e7bee264c6869d0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84134763"
 ---
-
 # <a name="displaying-skiasharp-bitmaps"></a>Mostrar mapas de bits SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

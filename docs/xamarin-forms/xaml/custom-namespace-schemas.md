@@ -1,8 +1,22 @@
 ---
-title: "esquemas de espacios de nombres personalizados XAML en Xamarin.Forms " Description: "un esquema de espacio de nombres personalizado de XAML se puede definir con la clase XmlnsDefinitionAttribute, que especifica una asignación entre una dirección URL personalizada y uno o varios espacios de nombres CLR. El esquema de espacio de nombres personalizado se puede usar en las declaraciones de espacios de nombres XAML ".
-MS. Prod: Xamarin ms. AssetID: FDF201A1-8C35-4569-A728-F9B0A0C5B31A ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/21/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Esquemas de espacios de nombres personalizados XAML enXamarin.Forms
+description: Un esquema de espacio de nombres personalizado XAML se puede definir con la clase XmlnsDefinitionAttribute, que especifica una asignación entre una dirección URL personalizada y uno o varios espacios de nombres CLR. El esquema de espacio de nombres personalizado se puede usar en las declaraciones de espacio de nombres XAML.
+ms.prod: xamarin
+ms.assetid: FDF201A1-8C35-4569-A728-F9B0A0C5B31A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/21/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 41a95b1a82ab8aa1f6938e5a2bcdebcef368e72d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138169"
 ---
-
 # <a name="xaml-custom-namespace-schemas-in-xamarinforms"></a>Esquemas de espacios de nombres personalizados XAML enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)

@@ -1,13 +1,27 @@
 ---
-title: "espacios de nombres XAML en Xamarin.Forms " Description: "XAML usa el atributo XML xmlns para las declaraciones de espacios de nombres. En este artículo se presenta la sintaxis del espacio de nombres XAML y se muestra cómo declarar un espacio de nombres XAML para tener acceso a un tipo. "
-MS. Prod: Xamarin ms. AssetID: C03B5553-B199-4A19-9F0F-E5BCE1DB268F ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/21/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Espacios de nombres XAML enXamarin.Forms
+description: XAML usa el atributo XML xmlns para las declaraciones de espacio de nombres. En este artículo se presenta la sintaxis del espacio de nombres XAML y se muestra cómo declarar un espacio de nombres XAML para tener acceso a un tipo.
+ms.prod: xamarin
+ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/21/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7f35342134767ccdadfab086bfa14f6b610b325d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84130382"
 ---
-
 # <a name="xaml-namespaces-in-xamarinforms"></a>Espacios de nombres XAML enXamarin.Forms
 
 _XAML usa el atributo XML xmlns para las declaraciones de espacio de nombres. En este artículo se presenta la sintaxis del espacio de nombres XAML y se muestra cómo declarar un espacio de nombres XAML para tener acceso a un tipo._
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 Hay dos declaraciones de espacios de nombres XAML que siempre están dentro del elemento raíz de un archivo XAML. El primero define el espacio de nombres predeterminado, tal y como se muestra en el siguiente ejemplo de código XAML:
 

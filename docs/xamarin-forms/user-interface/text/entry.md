@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms Entry" Description: "en este artículo se explica cómo usar la Xamarin.Forms clase entry para aceptar texto de una sola línea o la entrada de contraseña en una aplicación".
-MS. Prod: Xamarin ms. AssetID: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 09/25/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsMovimientos
+description: En este artículo se explica cómo usar la Xamarin.Forms clase entry para aceptar texto de una sola línea o la entrada de contraseña en una aplicación.
+ms.prod: xamarin
+ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/25/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5c17d6a106474c4c5b183bd41923533ffc95789b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136206"
 ---
-
 # <a name="xamarinforms-entry"></a>Xamarin.FormsMovimientos
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)

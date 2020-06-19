@@ -1,8 +1,22 @@
 ---
-Título: "preceder al desarrollo de aplicaciones empresariales" Descripción: "este capítulo proporciona un prefacio a los patrones de aplicaciones empresariales mediante Xamarin.Forms ".
-MS. Prod: Xamarin ms. AssetID: fbf32a44-1d33-4e16-A904-dc7ee5991e7c ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Preceder al desarrollo de aplicaciones empresariales
+description: En este capítulo se proporciona un prefijo a los patrones de aplicaciones empresariales mediante Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: fbf32a44-1d33-4e16-a904-dc7ee5991e7c
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6ea63fc483025fc6f9b0c7f379b6dfdc6ca30de8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198084"
 ---
-
 # <a name="preface-to-enterprise-app-development"></a>Preceder al desarrollo de aplicaciones empresariales
 
 En este libro electrónico se proporcionan instrucciones sobre la creación de aplicaciones empresariales multiplataforma con Xamarin.Forms . Xamarin.Formses un kit de herramientas de interfaz de usuario multiplataforma que permite a los desarrolladores crear fácilmente diseños de interfaz de usuario nativa que se pueden compartir entre plataformas, como iOS, Android y el Plataforma universal de Windows (UWP). Proporciona una solución completa para aplicaciones de negocio a empleado (B2E), de negocio a negocio (B2B) y de negocio a consumidor (B2C), lo que proporciona la capacidad de compartir código en todas las plataformas de destino y ayudar a reducir el costo total de propiedad (TCO).

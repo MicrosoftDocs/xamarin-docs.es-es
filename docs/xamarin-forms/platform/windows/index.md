@@ -1,8 +1,22 @@
 ---
-title: "características de la plataforma Windows" Descripción: "en este artículo se explica la compatibilidad con la plataforma Windows que está disponible en Xamarin.Forms ".
-MS. Prod: Xamarin ms. AssetID: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/16/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Características de la plataforma Windows
+description: En este artículo se explica la compatibilidad con la plataforma Windows que está disponible en Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/16/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 52246ce5d54ba97e91777f598f25c187901f89c4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137779"
 ---
-
 # <a name="windows-platform-features"></a>Características de la plataforma Windows
 
 El desarrollo Xamarin.Forms de aplicaciones para plataformas Windows requiere Visual Studio. La [Página plataformas compatibles](~/get-started/supported-platforms.md) contiene más información sobre los requisitos previos.

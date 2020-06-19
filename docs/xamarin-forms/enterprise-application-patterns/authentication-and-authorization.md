@@ -1,8 +1,22 @@
 ---
-title: "autenticación y autorización" Descripción: "en este capítulo se explica cómo la aplicación móvil eShopOnContainers realiza la autenticación y la autorización en los microservicios en contenedor".
-MS. Prod: Xamarin ms. AssetID: e3f27b4c-f7f5-4839-A48C-30bcb919c59e ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/08/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Autenticación y autorización
+description: En este capítulo se explica cómo la aplicación móvil eShopOnContainers realiza la autenticación y la autorización en los microservicios en contenedores.
+ms.prod: xamarin
+ms.assetid: e3f27b4c-f7f5-4839-a48c-30bcb919c59e
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/08/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8b712b2a5d7eeb2ee5e71047b9e6c460eb10d72a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573838"
 ---
-
 # <a name="authentication-and-authorization"></a>Autenticación y autorización
 
 La autenticación es el proceso de obtención de credenciales de identificación, como el nombre y la contraseña de un usuario, y la validación de esas credenciales en una autoridad. Si las credenciales son válidas, la entidad que envía las credenciales se considera una identidad autenticada. Una vez que se ha autenticado una identidad, un proceso de autorización determina si esa identidad tiene acceso a un recurso determinado.

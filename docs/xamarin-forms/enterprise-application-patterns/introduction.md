@@ -1,8 +1,22 @@
 ---
-title: "Introducción al desarrollo de aplicaciones empresariales" Descripción: "en este capítulo se proporciona una introducción al desarrollo de aplicaciones empresariales y se presenta la aplicación móvil eShopOnContainers".
-MS. Prod: Xamarin ms. AssetID: cbce0659-FA03-447A-86ec-140438143230 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Introducción al desarrollo de aplicaciones empresariales
+description: En este capítulo se proporciona una introducción al desarrollo de aplicaciones empresariales y se presenta la aplicación móvil eShopOnContainers.
+ms.prod: xamarin
+ms.assetid: cbce0659-fa03-447a-86ec-140438143230
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e78e7c3056d4f1e22114819f54c1df261aec70e1
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198115"
 ---
-
 # <a name="introduction-to-enterprise-app-development"></a>Introducción al desarrollo de aplicaciones empresariales
 
 Independientemente de la plataforma, los desarrolladores de aplicaciones empresariales se enfrentan a varios desafíos:

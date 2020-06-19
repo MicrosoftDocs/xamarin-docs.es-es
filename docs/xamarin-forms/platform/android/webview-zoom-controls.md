@@ -1,8 +1,22 @@
 ---
-title: "vista previa del zoom en Android" Descripción: "las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir el específico de la plataforma Android que habilita el zoom en un WebView ".
-MS. Prod: Xamarin ms. AssetID: DC1A3762-6A42-4298-929C-445F416C3E60 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/09/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Zoom de WebView en Android
+description: Las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir el específico de la plataforma Android que habilita el zoom en un WebView.
+ms.prod: xamarin
+ms.assetid: DC1A3762-6A42-4298-929C-445F416C3E60
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/09/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9264bdf4ab5644b1cdfa0c37f1c7cacd3ae4ed0a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128341"
 ---
-
 # <a name="webview-zoom-on-android"></a>Zoom de WebView en Android
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

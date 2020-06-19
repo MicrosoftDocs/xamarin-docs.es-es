@@ -1,8 +1,22 @@
 ---
-title: "conceptos básicos de mapas de bits en SkiaSharp" Description: "en este artículo se explica cómo cargar mapas de bits en SkiaSharp desde varios orígenes y mostrarlos en Xamarin.Forms aplicaciones, y se muestra con código de ejemplo".
-MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 32C95DFF-9065-42D7-966C-D3DBD16906B3 Author: davidbritch ms. Author: dabritch ms. Date: 07/17/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Conceptos básicos de mapas de bits en SkiaSharp
+description: En este artículo se explica cómo cargar mapas de bits en SkiaSharp desde varios orígenes y mostrarlos en Xamarin.Forms aplicaciones, y cómo hacerlo con código de ejemplo.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/17/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1e4c170f818dc62640b1cd72ec3b70f48d227d93
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137743"
 ---
-
 # <a name="bitmap-basics-in-skiasharp"></a>Conceptos básicos de mapas de bits en SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

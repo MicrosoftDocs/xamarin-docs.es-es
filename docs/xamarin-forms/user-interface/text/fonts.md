@@ -1,8 +1,22 @@
 ---
-title: "Fonts in Xamarin.Forms " Description: "en este artículo se explica cómo especificar la información de fuentes en los controles que muestran texto en Xamarin.Forms aplicaciones."
-MS. Prod: Xamarin ms. AssetID: 49DD2249-C575-41AE-AE06-08F890FD6031 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/01/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Fuentes enXamarin.Forms
+description: En este artículo se explica cómo especificar la información de fuentes en los controles que muestran texto en Xamarin.Forms aplicaciones.
+ms.prod: xamarin
+ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/01/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a657915edb41573f9637128b4c88233d58a5909a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572213"
 ---
-
 # <a name="fonts-in-xamarinforms"></a>Fuentes enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)

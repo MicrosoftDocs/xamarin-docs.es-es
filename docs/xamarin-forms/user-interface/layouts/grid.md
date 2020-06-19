@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms Grid" Descripción: "la Xamarin.Forms cuadrícula es un diseño que organiza sus elementos secundarios en filas y columnas de celdas".
-MS. Prod: Xamarin ms. AssetID: 762B1802-D185-494C-B643-74EED55882FE ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/15/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsCuadrícula
+description: La Xamarin.Forms cuadrícula es un diseño que organiza sus elementos secundarios en filas y columnas de celdas.
+ms.prod: xamarin
+ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/15/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9d2e697a07e033fd7c3c8d3efffa1d67f6c097c3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946346"
 ---
-
 # <a name="xamarinforms-grid"></a>Xamarin.FormsCuadrícula
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
@@ -274,6 +288,21 @@ grid.Children.Add(bottomRight, 1, 2, 1, 2); // second column, second row
 
 > [!NOTE]
 > Además, las vistas secundarias se pueden agregar a un [`Grid`](xref:Xamarin.Forms.Grid) con [`AddHorizontal`](xref:Xamarin.Forms.Grid.IGridList`1.AddHorizontal*) los [`AddVertical`](xref:Xamarin.Forms.Grid.IGridList`1.AddVertical*) métodos y, que agregan elementos secundarios a una sola fila o a una sola columna `Grid` . `Grid`A continuación, se expande en filas o columnas a medida que se realizan estas llamadas, así como colocar automáticamente los elementos secundarios en las celdas correctas.
+
+### <a name="simplify-row-and-column-definitions"></a>Simplificar definiciones de filas y columnas
+
+En XAML, se pueden especificar las características de fila y columna de una [`Grid`](xref:Xamarin.Forms.Grid) mediante una sintaxis simplificada que evita tener que [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) definir [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) objetos y para cada fila y columna. En su lugar, [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) las [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) propiedades y se pueden establecer en cadenas que contengan valores delimitados por comas [`GridUnitType`](xref:Xamarin.Forms.GridUnitType) , de los que los convertidores de tipos estén integrados en Xamarin.Forms Create `RowDefinition` y `ColumnDefinition` Objects:
+
+```xaml
+<Grid RowDefinitions="1*, Auto, 25, 14, 20"
+      ColumnDefinitions="*, 2*, Auto, 300">
+    ...
+</Grid>
+```
+
+En este ejemplo, [`Grid`](xref:Xamarin.Forms.Grid) tiene cinco filas y cuatro columnas. Las filas tercero, y quinta se establecen en altos absolutos, con el ajuste automático del tamaño de la segunda fila con su contenido. A continuación, el alto restante se asigna a la primera fila.
+
+La columna y se establece en un ancho absoluto, con el ajuste automático del tamaño de la tercera columna en su contenido. El ancho restante se asigna proporcionalmente entre la primera y la segunda columna en función del número antes de la estrella. En este ejemplo, el ancho de la segunda columna es dos veces el de la primera columna (porque `*` es idéntico a `1*` ).
 
 ## <a name="space-between-rows-and-columns"></a>Espacio entre filas y columnas
 

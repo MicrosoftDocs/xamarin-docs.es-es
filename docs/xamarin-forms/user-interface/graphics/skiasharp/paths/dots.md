@@ -1,8 +1,22 @@
 ---
-title: "puntos y guiones en SkiaSharp" Descripción: "en este artículo se explica cómo dominar las complejidades del dibujo de líneas de puntos y guiones en SkiaSharp, y se muestra en el código de ejemplo".
-MS. Prod: Xamarin ms. AssetID: 8E9BCC13-830C-458C-9FC8-ECB4EAE66078 ms. Technology: Xamarin-skiasharp Author: davidbritch ms. Author: dabritch ms. Date: 03/10/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Puntos y guiones en SkiaSharp
+description: En este artículo se explica cómo dominar las complejidades del dibujo de líneas de puntos y guiones en SkiaSharp, y se muestra con código de ejemplo.
+ms.prod: xamarin
+ms.assetid: 8E9BCC13-830C-458C-9FC8-ECB4EAE66078
+ms.technology: xamarin-skiasharp
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8698bacd7257df431b12166c749f5826e8d6fd3c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138456"
 ---
-
 # <a name="dots-and-dashes-in-skiasharp"></a>Puntos y guiones en SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

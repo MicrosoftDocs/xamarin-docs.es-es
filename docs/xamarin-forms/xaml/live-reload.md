@@ -1,8 +1,23 @@
 ---
-title: "Xamarin Live Reload (versión preliminar)" Description: "vea los cambios en el código XAML reflejados en directo, sin necesidad de otra compilación e implementación".
-MS. Prod: Xamarin ms. AssetID: 4917273d-32f9-401A-A52C-5cfb53a2170d ms. Technology: Xamarin-Forms Author: pierceboggan ms. Author: piboggan robots: noindex ms. Date: 10/26/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Recarga en vivo de Xamarin (versión preliminar)
+description: Vea los cambios en el código XAML reflejado en directo, sin necesidad de otro compilar e implementar.
+ms.prod: xamarin
+ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
+ms.technology: xamarin-forms
+author: pierceboggan
+ms.author: piboggan
+robots: noindex
+ms.date: 10/26/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b67594e2675c774512f3bf64f2e91ef10dbff444
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84134217"
 ---
-
 # <a name="xamarin-live-reload-preview"></a>Recarga en vivo de Xamarin (versión preliminar)
 
 > [!NOTE]
@@ -112,7 +127,7 @@ No. De hecho, puede incluso iniciar todos los destinos de aplicación admitidos 
 * Los elementos que contienen AutomationId pueden producir un error de recarga.
 * La edición de XAML durante la depuración de UWP puede producir un bloqueo en tiempo de ejecución. Solución alternativa: use **iniciar sin depurar (Ctrl + F5)** en lugar de **iniciar depuración (F5)**.
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 ### <a name="error-codes"></a>Códigos de error
 

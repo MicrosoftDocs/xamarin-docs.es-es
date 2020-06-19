@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms views" Description: " Xamarin.Forms las vistas son los bloques de creación de interfaces de usuario móviles multiplataforma. En este artículo se enumeran las vistas que se incluyen en Xamarin.Forms ".
-MS. Prod: Xamarin ms. AssetID: AC070686-A423-4A98-8BB6-0B9F94C062CC ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/16/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsVistas
+description: Xamarin.Formslas vistas son los bloques de creación de interfaces de usuario móviles multiplataforma. En este artículo se enumeran las vistas que se incluyen en Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/16/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8c15626e405645d28a785c32d276860f9751ea25
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84132384"
 ---
-
 # <a name="xamarinforms-views"></a>Xamarin.FormsVistas
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)

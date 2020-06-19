@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms ContentView" Description: "en este artículo se explica cómo usar la clase ContentView para crear un control personalizado, como el ejemplo CardView".
-MS. Prod: Xamarin ms. AssetID: 638402E7-CA44-456B-863B-791F6B6B561D ms. Technology: Xamarin-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 08/14/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: ContentView de Xamarin.Forms
+description: En este artículo se explica cómo usar la clase ContentView para crear un control personalizado, como el CardView de ejemplo.
+ms.prod: xamarin
+ms.assetid: 638402E7-CA44-456B-863B-791F6B6B561D
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 08/14/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 46d2abf895ffe31bd1dc1c22caf36440c54b331c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84130122"
 ---
-
 # <a name="xamarinforms-contentview"></a>ContentView de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)

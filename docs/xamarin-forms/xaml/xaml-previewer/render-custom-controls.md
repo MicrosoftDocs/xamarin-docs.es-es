@@ -1,8 +1,22 @@
 ---
-title: "representar controles personalizados en el previsor de XAML" Descripción: "en este artículo se describe cómo mostrar los controles personalizados en el previsor de XAML".
-MS. Prod: Xamarin ms. AssetID: 4D795372-CB8F-48F4-B63D-845E44B261F7 ms. Technology: Xamarin-Forms Author: maddyleger1 ms. Author: maleger ms. Date: 03/27/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Representar controles personalizados en el previsor de XAML
+description: En este artículo se describe cómo mostrar los controles personalizados en la vista previa de XAML.
+ms.prod: xamarin
+ms.assetid: 4D795372-CB8F-48F4-B63D-845E44B261F7
+ms.technology: xamarin-forms
+author: maddyleger1
+ms.author: maleger
+ms.date: 03/27/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4f20a0586aee998c10372c60c96577321e697aad
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137272"
 ---
-
 # <a name="render-custom-controls-in-the-xaml-previewer"></a>Representar controles personalizados en el previsor de XAML
 
 _A veces, los controles personalizados no funcionan como se esperaba en la vista previa de XAML. Siga las instrucciones de este artículo para conocer las limitaciones de la vista previa de los controles personalizados._

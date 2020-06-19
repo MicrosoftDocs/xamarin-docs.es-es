@@ -1,8 +1,22 @@
 ---
-title: "iniciar la aplicación de asignación nativa desde Xamarin.Forms " Descripción: "la aplicación de mapas nativos en cada plataforma se puede iniciar desde una Xamarin.Forms aplicación mediante la Xamarin.Essentials clase de iniciador".
-MS. Prod: Xamarin ms. AssetID: 5CF7CD67-3F20-4D80-B99E-D35A5FD1019A ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/30/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Inicie la aplicación de asignación nativa desdeXamarin.Forms
+description: La aplicación de mapas nativos en cada plataforma se puede iniciar desde una Xamarin.Forms aplicación mediante la Xamarin.Essentials clase iniciador.
+ms.prod: xamarin
+ms.assetid: 5CF7CD67-3F20-4D80-B99E-D35A5FD1019A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/30/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c135d5dd02bba5102f5a93132f079526c84865d5
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84129343"
 ---
-
 # <a name="launch-the-native-map-app-from-xamarinforms"></a>Inicie la aplicación de asignación nativa desdeXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

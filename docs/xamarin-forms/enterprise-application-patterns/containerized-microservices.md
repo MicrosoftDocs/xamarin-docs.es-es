@@ -1,8 +1,22 @@
 ---
-Título: "microservicios en contenedores" Descripción: "en este capítulo se explica cómo usar microservicios y contenedores para crear aplicaciones en la nube modernas, escalables y confiables".
-MS. Prod: Xamarin ms. AssetID: 5872ad92-04e0-4f1a-9691-79d5602f5683 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Microservicios en contenedores
+description: En este capítulo se explica cómo usar microservicios y contenedores para crear aplicaciones en la nube modernas, escalables y confiables.
+ms.prod: xamarin
+ms.assetid: 5872ad92-04e0-4f1a-9691-79d5602f5683
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3ebd3940cbd61342977bde60addc773460a08854
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84569574"
 ---
-
 # <a name="containerized-microservices"></a>Microservicios en contenedores
 
 El desarrollo de aplicaciones cliente-servidor ha provocado un enfoque en la creación de aplicaciones en capas que usan tecnologías específicas en cada nivel. Estas aplicaciones a menudo se denominan aplicaciones *monolíticas* y se empaquetan en el hardware que se ha ajustado previamente para cargas máximas. Los principales inconvenientes de este enfoque de desarrollo son el acoplamiento estrecho entre los componentes de cada nivel, los componentes individuales no se pueden escalar fácilmente y el costo de las pruebas. Una actualización simple puede tener efectos imprevistos en el resto del nivel, por lo que un cambio en un componente de la aplicación requiere que se vuelva a probar y volver a implementar todo el nivel.

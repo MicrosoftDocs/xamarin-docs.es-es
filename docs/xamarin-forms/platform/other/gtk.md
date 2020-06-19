@@ -1,7 +1,22 @@
 ---
-Título: "configuración de la plataforma GTK #" Descripción: " Xamarin.Forms ahora tiene compatibilidad con vista previa para la plataforma GTK #" MS. Prod: Xamarin ms. AssetID: 3417FB95-3E4B-47DA-85D0-F34832747236 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/10/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Configuración de la plataforma GTK #'
+description: 'Xamarin.Formsahora tiene compatibilidad con vista previa para la plataforma GTK #'
+ms.prod: xamarin
+ms.assetid: 3417FB95-3E4B-47DA-85D0-F34832747236
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a5635da9f7c083609ce1e0f120d0613fff9bd77b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198107"
 ---
-
 # <a name="gtk-platform-setup"></a>Configuración de la plataforma GTK #
 
 ![Vista previa](~/media/shared/preview.png)

@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms WebView" Descripción: "en este artículo se explica cómo usar la Xamarin.Forms clase WebView para presentar documentos y contenido Web local o de red a los usuarios".
-MS. Prod: Xamarin ms. AssetID: E44F5D0F-DB8E-46C7-8789-114F1652A6C5 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/06/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsWebView
+description: En este artículo se explica cómo usar la Xamarin.Forms clase WebView para presentar documentos y contenido Web local o de red a los usuarios.
+ms.prod: xamarin
+ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/06/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9b07e044e55f99a7a183e55c566bf59dbd082655
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198167"
 ---
-
 # <a name="xamarinforms-webview"></a>Xamarin.FormsWebView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
@@ -319,7 +333,7 @@ Ya está.
 
 ![Botones de navegación de vista previa](webview-images/in-app-browser.png)
 
-## <a name="events"></a>Eventos
+## <a name="events"></a>Events
 
 WebView genera los siguientes eventos para ayudarle a responder a los cambios en el estado:
 
@@ -416,7 +430,7 @@ Para `WebView` que funcione, debe asegurarse de que los permisos se establecen p
 - **Android** &ndash; solo se requiere `INTERNET` cuando se muestra el contenido de la red. El contenido local no requiere ningún permiso especial.
 - **iOS** &ndash; no requiere ningún permiso especial.
 
-## <a name="layout"></a>Layout
+## <a name="layout"></a>Diseño
 
 A diferencia de la mayoría de las demás Xamarin.Forms vistas, `WebView` requiere que `HeightRequest` y `WidthRequest` estén especificados cuando se incluyen en StackLayout o RelativeLayout. Si no se especifican esas propiedades, `WebView` no se representará.
 

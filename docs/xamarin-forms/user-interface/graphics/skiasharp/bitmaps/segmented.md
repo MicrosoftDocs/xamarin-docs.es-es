@@ -1,8 +1,22 @@
 ---
-Título: "presentación segmentada de mapas de bits de SkiaSharp" Descripción: "Mostrar un mapa de bits de SkiaSharp de modo que se ajuste cierto área y algunas áreas no."
-MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 79AE2033-C41C-4447-95A6-76D22E913D19 Author: davidbritch ms. Author: dabritch ms. Date: 07/17/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Presentación segmentada de mapas de bits SkiaSharp
+description: Mostrar un mapa de bits de SkiaSharp para que se ajuste alguna área y algunas áreas no.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 79AE2033-C41C-4447-95A6-76D22E913D19
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/17/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5c3909271580d0568d7c603de0d434ff5b3f3bc4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138676"
 ---
-
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>Presentación segmentada de mapas de bits SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

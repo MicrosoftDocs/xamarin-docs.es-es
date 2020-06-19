@@ -1,7 +1,22 @@
 ---
-title: " Xamarin.Forms preguntas más frecuentes" MS. topic: solución de problemas de MS. Prod: Xamarin ms. AssetID: 89364175-53BA-4A09-B3E2-44AC67DD971C ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/25/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsPreguntas más frecuentes
+ms.topic: troubleshooting
+ms.prod: xamarin
+ms.assetid: 89364175-53BA-4A09-B3E2-44AC67DD971C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/25/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: edd6cfefe18ff3d5cc97ec58f3bce867f11df7c8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135881"
 ---
-
 # <a name="xamarinforms-frequently-asked-questions"></a>Xamarin.FormsPreguntas más frecuentes
 
 ## <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-packageupdate-forms-templatemd"></a>[¿Puedo actualizar la Xamarin.Forms plantilla predeterminada a un paquete de NuGet más reciente?](update-forms-template.md)

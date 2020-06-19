@@ -1,8 +1,22 @@
 ---
-title: "SkiaSharp Blend modes" Description: "use Blend Modes to define lo que sucede cuando los objetos gráficos se apilan entre sí".
-MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: CE1B222E-A2D0-4016-A532-EC1E59EE3D6B Author: davidbritch ms. Author: dabritch ms. Date: 08/23/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Modos de combinación de SkiaSharp
+description: Use los modos de mezcla para definir lo que ocurre cuando los objetos gráficos se apilan entre sí.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: CE1B222E-A2D0-4016-A532-EC1E59EE3D6B
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b5b03779b9f0847621456b25582fb8ea04f8386d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84131708"
 ---
-
 # <a name="skiasharp-blend-modes"></a>Modos de combinación de SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

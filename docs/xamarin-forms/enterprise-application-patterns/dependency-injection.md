@@ -1,8 +1,22 @@
 ---
-title: "inyección de dependencia" Descripción: "en este capítulo se explica cómo la aplicación móvil eShopOnContainers usa la inserción de dependencias para desacoplar tipos concretos del código que depende de estos tipos".
-MS. Prod: Xamarin ms. AssetID: a150f2d1-06f8-4aed-ab4e-7a847d69f103 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 11/04/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Inserción de dependencias
+description: En este capítulo se explica cómo la aplicación móvil eShopOnContainers usa la inserción de dependencias para desacoplar tipos concretos del código que depende de estos tipos.
+ms.prod: xamarin
+ms.assetid: a150f2d1-06f8-4aed-ab4e-7a847d69f103
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/04/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 99cac3c597cf1d7351d3214ce59fd0a0a0a46400
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572356"
 ---
-
 # <a name="dependency-injection"></a>Inserción de dependencias
 
 Normalmente, se invoca un constructor de clase al crear instancias de un objeto y los valores que necesita el objeto se pasan como argumentos al constructor. Este es un ejemplo de inserción de dependencias y, específicamente, se conoce como *inserción de constructores*. Las dependencias que necesita el objeto se insertan en el constructor.

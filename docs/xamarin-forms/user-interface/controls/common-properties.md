@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms propiedades de control comunes, métodos y eventos" Descripción: "en este artículo se describen las propiedades, los métodos y los eventos comunes definidos en la clase VisualElement, que se suelen usar en las clases derivadas".
-MS. Prod: Xamarin ms. AssetID: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D ms. Technology: Xamarin-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 08/21/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Formspropiedades, métodos y eventos de controles comunes
+description: En este artículo se describen las propiedades, los métodos y los eventos comunes definidos en la clase VisualElement, que se suelen usar en las clases derivadas.
+ms.prod: xamarin
+ms.assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 08/21/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: deb894cccd5b6a2a9d908ef8967de91f00e7d297
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136427"
 ---
-
 # <a name="xamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Formspropiedades, métodos y eventos de controles comunes
 
 La Xamarin.Forms `VisualElement` clase es la clase base para la mayoría de los controles utilizados en una Xamarin.Forms aplicación. La `VisualElement` clase define muchas [propiedades](#properties), [métodos](#methods)y [eventos](#events) que se usan en las clases derivadas.
@@ -199,7 +213,7 @@ public void Unfocus ()
 
 El elemento ya debe tener el foco para que este método funcione.
 
-## <a name="events"></a>Eventos
+## <a name="events"></a>Events
 
 Los eventos siguientes están disponibles en la `VisualElement` clase. Para obtener una lista completa, vea [ Xamarin.Forms VisualElement Events](xref:Xamarin.Forms.VisualElement#events).
 

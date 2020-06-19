@@ -1,8 +1,22 @@
 ---
-title: "selección de elementos de TimePicker en iOS" Descripción: "las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir el específico de la plataforma iOS que controla cuándo se produce la selección de elementos en un TimePicker ".
-MS. Prod: Xamarin ms. AssetID: 554AC877-8698-4B8C-A676-80DD64305A06 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/15/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Selección de elementos de TimePicker en iOS
+description: Las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir el específico de la plataforma iOS que controla cuándo se produce la selección de elementos en un TimePicker.
+ms.prod: xamarin
+ms.assetid: 554AC877-8698-4B8C-A676-80DD64305A06
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/15/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 009482c8f1e90aaa2f592ea04d8fd4f0f31324e8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137025"
 ---
-
 # <a name="timepicker-item-selection-on-ios"></a>Selección de elementos de TimePicker en iOS
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

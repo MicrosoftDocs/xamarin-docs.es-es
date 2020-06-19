@@ -1,8 +1,22 @@
 ---
-title: "la recarga activa de XAML para Xamarin.Forms " Description: "vuelve a cargar los cambios en el archivo XAML al instante en la aplicación en ejecución para que no tenga que compilar el Xamarin.Forms proyecto después de cada cambio de XAML".
-MS. Prod: Xamarin ms. AssetID: E220F054-32EE-424C-A7E5-6156BE271519 ms. Technology: Xamarin-Forms Author: maddyleger1 ms. Author: maleger ms. Date: 03/14/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Recarga activa de XAML paraXamarin.Forms
+description: Vuelva a cargar los cambios en el archivo XAML al instante en la aplicación en ejecución para que no tenga que compilar el Xamarin.Forms proyecto después de cada cambio de XAML.
+ms.prod: xamarin
+ms.assetid: E220F054-32EE-424C-A7E5-6156BE271519
+ms.technology: xamarin-forms
+author: maddyleger1
+ms.author: maleger
+ms.date: 03/14/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0655739c95ba58b8d93aae6d3987d54bd0582c7b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127457"
 ---
-
 # <a name="xaml-hot-reload-for-xamarinforms"></a>Recarga activa de XAML paraXamarin.Forms
 
 La recarga activa de XAML se conecta al flujo de trabajo existente para aumentar su productividad y ahorrar tiempo. Sin la recarga activa de XAML, debe compilar e implementar la aplicación cada vez que quiera ver un cambio de XAML. Con la recarga activa, al guardar el archivo XAML, los cambios se reflejan en directo en la aplicación en ejecución. Además, se mantendrán el estado y los datos de navegación, lo que le permitirá iterar rápidamente en la interfaz de usuario sin perder su lugar en la aplicación. Por lo tanto, con la recarga activa de XAML, pasará menos tiempo recompilando e implementando sus aplicaciones para validar los cambios de la interfaz de usuario.
@@ -61,7 +75,7 @@ La recarga activa de XAML admite la depuración simultánea en Visual Studio y V
 * [Sugerencias y trucos para la recarga activa de XAML](https://devblogs.microsoft.com/xamarin/tips-tricks-xaml-hot-reload/)
 * [Recarga activa de XAML para Xamarin.Forms en profundidad: el programa Xamarin](https://www.youtube.com/watch?v=crhjjPjzknk)
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 
 * Si no se puede inicializar la recarga activa de XAML:
   * Actualice su Xamarin.Forms versión.

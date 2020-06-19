@@ -1,8 +1,22 @@
 ---
-Título: "transparencia SkiaSharp" Descripción: "usar transparencia para combinar varios objetos en una sola escena".
-MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: B62F9487-C30E-4C63-BAB1-4C091FF50378 Author: davidbritch ms. Author: dabritch ms. Date: 08/23/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Transparencia SkiaSharp
+description: Use la transparencia para combinar varios objetos en una sola escena.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: B62F9487-C30E-4C63-BAB1-4C091FF50378
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 735aae1b9d94865bd34450861bd6c57b08c420c2
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84134724"
 ---
-
 # <a name="skiasharp-transparency"></a>Transparencia SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

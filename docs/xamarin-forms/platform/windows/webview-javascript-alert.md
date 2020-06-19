@@ -1,8 +1,22 @@
 ---
-title: "WebView JavaScript Alerts on Windows" Descripción: "las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir el específico de la plataforma de Windows que permite a un WebView mostrar las alertas de JavaScript en un cuadro de diálogo de mensaje de UWP.
-MS. Prod: Xamarin ms. AssetID: 95A153A1-72A0-4C0B-A452-ACE966BB12CB ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/24/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Alertas de JavaScript de WebView en Windows
+description: Las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir el específico de la plataforma de Windows que permite a un WebView mostrar las alertas de JavaScript en un cuadro de diálogo de mensaje de UWP.
+ms.prod: xamarin
+ms.assetid: 95A153A1-72A0-4C0B-A452-ACE966BB12CB
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b7d039d26895b50f937392941e42a92a6e51f322
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137493"
 ---
-
 # <a name="webview-javascript-alerts-on-windows"></a>Alertas de JavaScript de WebView en Windows
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

@@ -1,8 +1,22 @@
 ---
-title: "indicador de actividad en Xamarin.Forms " Description: "el control ActivityIndicator indica a los usuarios que la aplicación está ocupada en una actividad prolongada, sin ofrecer ninguna indicación de progreso. En este artículo se explica cómo usar ActivityIndicator en XAML y código ".
-MS. Prod: Xamarin ms. AssetID: 4CEED02D-5CA3-4C3A-B7ED-3193FC272261 ms. Technology: Xamarin-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 07/10/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Indicador de actividad enXamarin.Forms
+description: El control ActivityIndicator indica a los usuarios que la aplicación está ocupada en una actividad prolongada, sin indicar ningún progreso. En este artículo se explica cómo usar una ActivityIndicator en XAML y en el código.
+ms.prod: xamarin
+ms.assetid: 4CEED02D-5CA3-4C3A-B7ED-3193FC272261
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 07/10/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a83885175a44f2174db343abf4591f8777041d39
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136518"
 ---
-
 # <a name="xamarinforms-activityindicator"></a>Xamarin.FormsActivityIndicator
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 

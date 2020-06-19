@@ -1,8 +1,22 @@
 ---
-Título: "referencia de controles" Description: "una descripción de todos los elementos de la interfaz de usuario usados para crear una Xamarin.Forms aplicación. En este artículo se enumeran los grupos de controles que componen la interfaz de usuario de una Xamarin.Forms aplicación ".
-MS. Prod: Xamarin ms. AssetID: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/08/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Controls Reference (Referencia de controles)
+description: Una descripción de todos los elementos de la interfaz de usuario que se usan para crear una Xamarin.Forms aplicación. En este artículo se enumeran los grupos de controles que componen la interfaz de usuario de una Xamarin.Forms aplicación.
+ms.prod: xamarin
+ms.assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/08/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e843f0e42f4f66a6ce4e60c2f5d8a233d19f1df6
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136401"
 ---
-
 # <a name="controls-reference"></a>Controls Reference (Referencia de controles)
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)

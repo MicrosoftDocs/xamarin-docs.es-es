@@ -1,8 +1,22 @@
 ---
-title: "SwipeView dedo modo de transición en iOS" Descripción: "las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir la plataforma específica de iOS que controla la transición que se usa al abrir un SwipeView.
-MS. Prod: Xamarin ms. AssetID: C667F24C-BAD8-47E0-9285-D3546BEF703B ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/11/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SwipeView deslizar el modo de transición en iOS
+description: Las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir la plataforma específica de iOS que controla la transición que se usa al abrir un SwipeView.
+ms.prod: xamarin
+ms.assetid: C667F24C-BAD8-47E0-9285-D3546BEF703B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/11/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4b2030461025c1cd647595a1ecc22c5589e99fef
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137051"
 ---
-
 # <a name="swipeview-swipe-transition-mode-on-ios"></a>SwipeView deslizar el modo de transición en iOS
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

@@ -1,8 +1,23 @@
 ---
-title: "controles XAML" Descripción: "se puede hacer referencia a todas las vistas que se definen en Xamarin.Forms desde archivos XAML".
-MS. topic: artículo ms. Prod: Xamarin ms. AssetID: 639BD392-1496-41BB-BB09-7652273AC9D8 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/17/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Controles de XAML
+description: A todas las vistas que se definen en se Xamarin.Forms puede hacer referencia desde archivos XAML.
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: 639BD392-1496-41BB-BB09-7652273AC9D8
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/17/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 445ef85f661d945bda25203f35dea787e64dc9b0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138429"
 ---
-
 # <a name="xaml-controls"></a>Controles de XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)

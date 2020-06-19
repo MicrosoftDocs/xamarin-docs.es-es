@@ -1,8 +1,22 @@
 ---
-title: "recortar mapas de bits de SkiaSharp" Descripción: "Aprenda a usar SkiaSharp para diseñar una interfaz de usuario para enumerador interactivamente un rectángulo de recorte".
-MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 0A79AB27-C69F-4376-8FFE-FF46E4783F30 Author: davidbritch ms. Author: dabritch ms. Date: 07/17/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Recortar mapas de bits de SkiaSharp
+description: Obtenga información sobre cómo usar SkiaSharp para diseñar una interfaz de usuario para enumerador un rectángulo de recorte interactivamente.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/17/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d613c4f73c0a377a599b0137ce2f2b557c04ad6a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572343"
 ---
-
 # <a name="cropping-skiasharp-bitmaps"></a>Recortar mapas de bits de SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

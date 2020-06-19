@@ -1,8 +1,22 @@
 ---
-title: "TabbedPage barra de pestañas translúcidas en iOS" Descripción: "las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir la plataforma específica de iOS que establece el modo translucidez de la barra de pestañas en un TabbedPage ".
-MS. Prod: Xamarin ms. AssetID: 9581AE81-9557-47AD-8B07-25A1AC5F055B ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/16/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: TabbedPage barra de pestañas translúcidas en iOS
+description: Las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir la plataforma específica de iOS que establece el modo translucidez de la barra de pestañas en un TabbedPage.
+ms.prod: xamarin
+ms.assetid: 9581AE81-9557-47AD-8B07-25A1AC5F055B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/16/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8127191aab80d81fc2e532e3d5e14931b834eeae
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137038"
 ---
-
 # <a name="tabbedpage-translucent-tab-bar-on-ios"></a>TabbedPage barra de pestañas translúcidas en iOS
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms Distribution layout" Description: "de forma predeterminada, un CollectionView mostrará sus elementos en una lista vertical. Sin embargo, se pueden especificar listas y cuadrículas verticales y horizontales. "
-MS. Prod: Xamarin ms. AssetID: 5FE78207-1BD6-4706-91EF-B13932321FC9 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/22/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsDiseño de CollectionView
+description: De forma predeterminada, una CollectionView mostrará sus elementos en una lista vertical. Sin embargo, se pueden especificar listas y cuadrículas verticales y horizontales.
+ms.prod: xamarin
+ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/22/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 425eb7abc14fb941dbfc28219907d98558cbfabb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137441"
 ---
-
 # <a name="xamarinforms-collectionview-layout"></a>Xamarin.FormsDiseño de CollectionView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)

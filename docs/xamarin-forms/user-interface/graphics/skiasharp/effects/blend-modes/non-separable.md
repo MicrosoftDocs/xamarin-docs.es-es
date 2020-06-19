@@ -1,8 +1,22 @@
 ---
-title: "los modos de mezcla no separables" Description: "usan los modos de mezcla no separables para modificar el matiz, la saturación o la luminosidad".
-MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF Author: davidbritch ms. Author: dabritch ms. Date: 08/23/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Modos de mezcla no separables
+description: Use los modos de mezcla no separables para modificar el matiz, la saturación o la luminosidad.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 52be7641ac3b2983f537e11bccd76f2a5b52574d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84130187"
 ---
-
 # <a name="the-non-separable-blend-modes"></a>Modos de mezcla no separables
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

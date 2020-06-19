@@ -1,15 +1,29 @@
 ---
-title: " Xamarin.Forms y Azure Cognitive Services Introduction" (descripción): en este artículo se proporciona una introducción a una aplicación de ejemplo que muestra cómo invocar algunas de las API de los servicios cognitivos de Microsoft.
-MS. Prod: Xamarin ms. AssetID: 74121ADB-1322-4C1E-A103-F37257BC7CB0 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/08/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Formsy Azure Cognitive Services introducción
+description: En este artículo se proporciona una introducción a una aplicación de ejemplo que muestra cómo invocar algunas de las API de los servicios cognitivos de Microsoft.
+ms.prod: xamarin
+ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/08/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7c2a63c40d1006c7d83c9dde871e17d4b194bdca
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84129719"
 ---
-
 # <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Xamarin.Formsy Azure Cognitive Services introducción
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Microsoft Cognitive Services son un conjunto de API, SDK y servicios disponibles para que los desarrolladores puedan hacer que sus aplicaciones sean más inteligentes mediante la adición de características como el reconocimiento facial, el reconocimiento de voz y la comprensión de lenguajes. En este artículo se proporciona una introducción a la aplicación de ejemplo que muestra cómo invocar algunas de las API de los servicios cognitivos de Microsoft._
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 El ejemplo adjunto es una aplicación de lista de tareas que proporciona funcionalidad para:
 

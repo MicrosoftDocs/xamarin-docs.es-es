@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms asignaciones de mapa": "en este artículo se explica cómo crear PIN en un Xamarin.Forms mapa".
-MS. Prod: Xamarin ms. AssetID: F8FC081B-A811-4FBB-B8F8-30D6FD36BD40 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/23/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsAnclajes de mapa
+description: En este artículo se explica cómo crear PIN en un Xamarin.Forms mapa.
+ms.prod: xamarin
+ms.assetid: F8FC081B-A811-4FBB-B8F8-30D6FD36BD40
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/23/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5e22888291a430863b8e45ee21d359a5acec750f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138442"
 ---
-
 # <a name="xamarinforms-map-pins"></a>Xamarin.FormsAnclajes de mapa
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

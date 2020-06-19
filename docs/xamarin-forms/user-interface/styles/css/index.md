@@ -1,6 +1,22 @@
 ---
-title: "el estilo de Xamarin.Forms aplicaciones con hojas de estilo CSS (CSS)" Description: " Xamarin.Forms admite el estilo de los elementos visuales mediante hojas de estilo CSS (CSS)".
-MS. Prod: Xamarin ms. AssetID: C89D57A6-DAB9-4C42-963F-26D67627DDC2 ms. Technology: Xamarin-Forms ms. Custom: Xamu-video Author: davidbritch ms. Author: dabritch ms. Date: 04/17/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Aplicación de estilos a Xamarin.Forms aplicaciones mediante hojas de estilo CSS (CSS)
+description: Xamarin.Formsadmite el estilo de los elementos visuales mediante Hojas de estilo CSS (CSS).
+ms.prod: xamarin
+ms.assetid: C89D57A6-DAB9-4C42-963F-26D67627DDC2
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/20/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9375c4078c75d8e4788cb31a3d6a6a3a10100f49
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946240"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Aplicación de estilos a Xamarin.Forms aplicaciones mediante hojas de estilo CSS (CSS)
 
@@ -145,6 +161,12 @@ El argumento para el `StyleSheet.FromReader` método es el `TextReader` que ha l
 CSS usa selectores para determinar los elementos de destino. Los estilos con selectores coincidentes se aplican consecutivamente, en orden de definición. Los estilos definidos en un elemento específico siempre se aplican en último lugar. Para obtener más información sobre los selectores admitidos, vea [Referencia del selector](#selector-reference).
 
 CSS utiliza las propiedades para aplicar estilo a un elemento seleccionado. Cada propiedad tiene un conjunto de valores posibles y algunas propiedades pueden afectar a cualquier tipo de elemento, mientras que otros se aplican a grupos de elementos. Para obtener más información sobre las propiedades admitidas, vea [referencia de propiedades](#property-reference).
+
+Las hojas de estilo secundarias siempre invalidan las hojas de estilo primarias si establecen las mismas propiedades. Por lo tanto, se siguen las siguientes reglas de precedencia al aplicar estilos que establecen las mismas propiedades:
+
+- Un estilo definido en los recursos de la aplicación se sobrescribirá con un estilo definido en los recursos de la página, si establecen las mismas propiedades.
+- Un estilo definido en los recursos de página se sobrescribirá con un estilo definido en los recursos del control, si establecen las mismas propiedades.
+- Un estilo definido en los recursos de la aplicación se sobrescribirá con un estilo definido en los recursos del control, si establecen las mismas propiedades.
 
 > [!IMPORTANT]
 > No se admiten las variables CSS.

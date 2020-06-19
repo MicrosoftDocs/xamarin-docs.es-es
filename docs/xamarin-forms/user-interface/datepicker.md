@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms DatePicker" Description: "el DatePicker es una Xamarin.Forms vista que permite al usuario seleccionar una fecha. En este artículo se explica cómo consumir un DatePicker en una Xamarin.Forms aplicación ".
-MS. Prod: Xamarin ms. AssetID: 68E8EF8A-42E7-4939-8ABE-64D060E609D9 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/04/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsDatePicker
+description: DatePicker es una Xamarin.Forms vista que permite al usuario seleccionar una fecha. En este artículo se explica cómo consumir un DatePicker en una Xamarin.Forms aplicación.
+ms.prod: xamarin
+ms.assetid: 68E8EF8A-42E7-4939-8ABE-64D060E609D9
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5c1de52e2a173e7d9a366d8fd7cbd63998b3a6d1
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137363"
 ---
-
 # <a name="xamarinforms-datepicker"></a>Xamarin.FormsDatePicker
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker)

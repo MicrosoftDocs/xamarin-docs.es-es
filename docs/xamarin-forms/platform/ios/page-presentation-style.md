@@ -1,8 +1,22 @@
 ---
-title: "estilo de presentación de página modal en iOS" Descripción: "las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir la plataforma específica de iOS que establece el estilo de presentación de una página modal.
-MS. Prod: Xamarin ms. AssetID: C791F7CF-330A-44BA-987A-4CFCCBB9278B ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/02/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Estilo de presentación de página modal en iOS
+description: Las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir la plataforma específica de iOS que establece el estilo de presentación de una página modal.
+ms.prod: xamarin
+ms.assetid: C791F7CF-330A-44BA-987A-4CFCCBB9278B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/02/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2abc255964df35fbdfeb4191911c57df9be99fd9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128016"
 ---
-
 # <a name="modal-page-presentation-style-on-ios"></a>Estilo de presentación de página modal en iOS
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

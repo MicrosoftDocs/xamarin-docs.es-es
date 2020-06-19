@@ -1,8 +1,22 @@
 ---
-title: "modo de entrada de teclado en pantalla de Android" Descripción: "las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo utilizar el específico de la plataforma Android que establece el modo de funcionamiento de un área de entrada de teclado en pantalla.
-MS. Prod: Xamarin ms. AssetID: AFCDC92F-F61E-42F6-904B-50B5C4949970 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/10/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Modo de entrada de teclado de software en Android
+description: Las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo utilizar el específico de la plataforma Android que establece el modo de funcionamiento de un área de entrada de teclado en pantalla.
+ms.prod: xamarin
+ms.assetid: AFCDC92F-F61E-42F6-904B-50B5C4949970
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c62d09c7d7848d9f62c018caa1698bb53a2a39a8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128720"
 ---
-
 # <a name="soft-keyboard-input-mode-on-android"></a>Modo de entrada de teclado de software en Android
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

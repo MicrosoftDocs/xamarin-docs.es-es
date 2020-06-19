@@ -1,8 +1,22 @@
 ---
-title: "agregar datos a la colección de elementos de un selector" Descripción: "la vista selector es un control para seleccionar un elemento de texto de una lista de datos. En este artículo se explica cómo rellenar un selector con datos agregándolo a la colección de elementos y cómo responder a la selección de elementos por parte del usuario ".
-MS. Prod: Xamarin ms. AssetID: 3C840F64-A430-457D-A4B2-3D7AF46F9DBE ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/26/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Adición de datos a la colección de elementos de un selector
+description: La vista selector es un control para seleccionar un elemento de texto de una lista de datos. En este artículo se explica cómo rellenar un selector con datos agregándolo a la colección de elementos y cómo responder a la selección de elementos por parte del usuario.
+ms.prod: xamarin
+ms.assetid: 3C840F64-A430-457D-A4B2-3D7AF46F9DBE
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/26/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8872c6748ba778a2622d82803d580c781bd282cd
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139638"
 ---
-
 # <a name="adding-data-to-a-pickers-items-collection"></a>Adición de datos a la colección de elementos de un selector
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)

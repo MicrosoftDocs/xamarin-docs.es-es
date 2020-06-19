@@ -1,8 +1,22 @@
 ---
-title: "The SkiaSharp linear gradiente" Description: "Descubra cómo trazar líneas o rellenar áreas con degradados compuestos de una mezcla gradual de dos colores".
-MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 20A2A8C4-FEB7-478D-BF57-C92E26117B6A Author: davidbritch ms. Author: dabritch ms. Date: 08/23/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: El degradado lineal SkiaSharp
+description: Descubra cómo trazar líneas o rellenar áreas con degradados compuestos de una mezcla gradual de dos colores.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 20A2A8C4-FEB7-478D-BF57-C92E26117B6A
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 43aa429046c1b0f72a1cbe6a5b921da9b8907a49
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84132228"
 ---
-
 # <a name="the-skiasharp-linear-gradient"></a>El degradado lineal SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,13 +1,28 @@
 ---
-title: "vista previa de XAML para Xamarin.Forms " Description: "en este artículo se explica cómo usar el previsor de XAML para ver los Xamarin.Forms diseños que se representan a medida que escribe. El previsor de XAML está disponible en Visual Studio 2019 y Visual Studio 2019 para Mac.
-zone_pivot_groups: plataforma ms. Prod: Xamarin ms. AssetID: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2 ms. Technology: Xamarin-Forms Author: maddyleger1 ms. Author: maleger ms. Date: 03/16/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Vista previa de XAML paraXamarin.Forms
+description: En este artículo se explica cómo usar el previsor de XAML para ver los Xamarin.Forms diseños que se representan a medida que escribe. El previsor de XAML está disponible en Visual Studio 2019 y Visual Studio 2019 para Mac.
+zone_pivot_groups: platform
+ms.prod: xamarin
+ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
+ms.technology: xamarin-forms
+author: maddyleger1
+ms.author: maleger
+ms.date: 03/16/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6916d5fde688c5b1162f12db0d36bc3ca27156d8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137324"
 ---
-
 # <a name="xaml-previewer-for-xamarinforms"></a>Vista previa de XAML paraXamarin.Forms
 
 _Vea los Xamarin.Forms diseños que se representan a medida que escribe._
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 El previsor de XAML muestra el aspecto que Xamarin.Forms tendrá la página XAML en iOS y Android. Cuando realice cambios en el código XAML, verá que se muestra una vista previa de inmediato junto con el código. El previsor de XAML está disponible en Visual Studio y Visual Studio para Mac.
 

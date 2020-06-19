@@ -1,8 +1,22 @@
 ---
-Título: "agregar formato específico de iOS" Descripción: "en este artículo se explica cómo establecer la apariencia específica de iOS sin usar un Xamarin.Forms representador personalizado".
-MS. Prod: Xamarin ms. AssetID: CE50E207-D092-4D88-8439-1B51F178E7ED ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 01/29/2016 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Agregar formato específico de iOS
+description: En este artículo se explica cómo establecer la apariencia específica de iOS sin usar un Xamarin.Forms representador personalizado.
+ms.prod: xamarin
+ms.assetid: CE50E207-D092-4D88-8439-1B51F178E7ED
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/29/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 062dd77f1dc7b82f16bfbc6d46e44d4adeb73350
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84564711"
 ---
-
 # <a name="adding-ios-specific-formatting"></a>Agregar formato específico de iOS
 
 Una manera de establecer el formato específico de iOS es crear un [representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) para un control y establecer estilos y colores específicos de la plataforma para cada plataforma.

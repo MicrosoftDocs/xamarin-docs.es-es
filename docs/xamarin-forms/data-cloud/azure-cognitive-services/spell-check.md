@@ -1,15 +1,29 @@
 ---
-title: "corrector ortográfico con el Bing Spell Check API" Description: "Bing Spell Check realiza la revisión ortográfica contextual del texto, proporcionando sugerencias en línea para palabras mal escritas. En este artículo se explica cómo usar la API de REST de Bing Spell Check para corregir errores ortográficos en una Xamarin.Forms aplicación ".
-MS. Prod: Xamarin ms. AssetID: B40EB103-FDC0-45C6-9940-FB4ACDC2F4F9 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/08/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Revisión ortográfica mediante el Bing Spell Check API
+description: Bing Spell Check realiza la revisión ortográfica contextual del texto, proporcionando sugerencias en línea para palabras mal escritas. En este artículo se explica cómo usar la API de REST de Bing Spell Check para corregir errores ortográficos en una Xamarin.Forms aplicación.
+ms.prod: xamarin
+ms.assetid: B40EB103-FDC0-45C6-9940-FB4ACDC2F4F9
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/08/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1703f0049408381a86da73fb28696ef8708cc790
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139300"
 ---
-
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Revisión ortográfica mediante el Bing Spell Check API
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Bing Spell Check realiza la revisión ortográfica contextual del texto, proporcionando sugerencias en línea para palabras mal escritas. En este artículo se explica cómo usar la API de REST de Bing Spell Check para corregir errores ortográficos en una Xamarin.Forms aplicación._
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 La API de REST de Bing Spell Check tiene dos modos operativos y se debe especificar un modo al realizar una solicitud a la API:
 

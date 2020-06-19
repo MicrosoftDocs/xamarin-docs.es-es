@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms Slider" Description: "el Xamarin.Forms control deslizante es una barra horizontal que el usuario puede manipular para seleccionar un valor doble de un intervalo continuo. En este artículo se explica cómo usar la clase Slider para seleccionar un valor de un intervalo de valores continuos.
-MS. Prod: Xamarin ms. AssetID: 36B1C645-26E0-4874-B6B6-BDBF77662878 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/27/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsHasta
+description: El Xamarin.Forms control deslizante es una barra horizontal que el usuario puede manipular para seleccionar un valor doble de un intervalo continuo. En este artículo se explica cómo usar la clase Slider para seleccionar un valor de un intervalo de valores continuos.
+ms.prod: xamarin
+ms.assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/27/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9fc61dcac588f49fc1df7ee96792cf55bdfa46c5
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572044"
 ---
-
 # <a name="xamarinforms-slider"></a>Xamarin.FormsHasta
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)

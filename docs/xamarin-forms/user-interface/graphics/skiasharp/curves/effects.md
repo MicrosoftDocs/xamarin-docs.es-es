@@ -1,8 +1,22 @@
 ---
-Título: "efectos de la ruta de acceso en SkiaSharp" Descripción: "en este artículo se explican los distintos efectos de la ruta de SkiaSharp que permiten usar las rutas de acceso para el trazado y el relleno, y se demuestra con código de ejemplo".
-MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 95167D1F-A718-405A-AFCC-90E596D422F3 Author: davidbritch ms. Author: dabritch ms. Date: 07/29/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Efectos de la ruta de acceso en SkiaSharp
+description: En este artículo se explican los distintos efectos de la ruta de SkiaSharp que permiten usar las rutas de acceso para el trazado y el relleno, y se muestra con código de ejemplo.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/29/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f3a5a581ffb4ca2acf1d4209b8b7a744f0daa5eb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128061"
 ---
-
 # <a name="path-effects-in-skiasharp"></a>Efectos de la ruta de acceso en SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

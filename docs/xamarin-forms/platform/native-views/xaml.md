@@ -1,8 +1,22 @@
 ---
-title: "vistas nativas en XAML" Descripción: se puede hacer referencia directamente a las vistas nativas de iOS, Android y el Plataforma universal de Windows desde Xamarin.Forms los archivos XAML. Las propiedades y los controladores de eventos se pueden establecer en las vistas nativas y pueden interactuar con las Xamarin.Forms vistas. En este artículo se muestra cómo consumir vistas nativas de Xamarin.Forms archivos XAML.
-MS. Prod: Xamarin ms. AssetID: 7A856D31-B300-409E-9AEB-F8A4DB99B37E ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/23/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Vistas nativas en XAML
+description: Se puede hacer referencia directamente a las vistas nativas de iOS, Android y el Plataforma universal de Windows desde Xamarin.Forms los archivos XAML. Las propiedades y los controladores de eventos se pueden establecer en las vistas nativas y pueden interactuar con las Xamarin.Forms vistas. En este artículo se muestra cómo consumir vistas nativas de Xamarin.Forms archivos XAML.
+ms.prod: xamarin
+ms.assetid: 7A856D31-B300-409E-9AEB-F8A4DB99B37E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/23/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0d6aa84a886d450d1dc42ec31edf16380b795404
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84564646"
 ---
-
 # <a name="native-views-in-xaml"></a>Vistas nativas en XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)

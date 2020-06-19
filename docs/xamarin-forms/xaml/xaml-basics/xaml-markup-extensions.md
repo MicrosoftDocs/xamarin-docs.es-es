@@ -1,8 +1,22 @@
 ---
-Título: "parte 3. Extensiones de marcado XAML "Description:" las extensiones de marcado XAML constituyen una característica importante de XAML que permiten establecer propiedades en objetos o valores a los que se hace referencia indirectamente desde otros orígenes ".
-MS. Prod: Xamarin ms. Technology: Xamarin-Forms ms. AssetID: F4A37564-B18B-42FF-B841-9A1949895AB6 Author: davidbritch ms. Author: dabritch ms. Date: 03/27/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Parte 3. Extensiones de marcado XAML
+description: Las extensiones de marcado XAML constituyen una característica importante de XAML que permite establecer las propiedades en objetos o valores a los que se hace referencia indirectamente desde otros orígenes.
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/27/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3fcea963b253ea34601a36434007f18d925975eb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84131344"
 ---
-
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensiones de marcado XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

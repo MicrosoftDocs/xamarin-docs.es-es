@@ -1,8 +1,22 @@
 ---
-title: "crear un diseño personalizado en Xamarin.Forms " Descripción: "en este artículo se explica cómo escribir una clase de diseño personalizado y se muestra una clase WrapLayout con distinción de orientación que organiza los elementos secundarios horizontalmente por la página y, a continuación, ajusta la presentación de los elementos secundarios posteriores a filas adicionales".
-MS. Prod: Xamarin ms. AssetID: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/29/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Crear un diseño personalizado enXamarin.Forms
+description: En este artículo se explica cómo escribir una clase de diseño personalizada y se muestra una clase WrapLayout con distinción de orientación que organiza sus elementos secundarios horizontalmente por la página y, a continuación, ajusta la presentación de los elementos secundarios posteriores a filas adicionales.
+ms.prod: xamarin
+ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/29/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2c1a958bd4cb56096f554acf26756019eeb0693c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572239"
 ---
-
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Crear un diseño personalizado enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
@@ -15,7 +29,7 @@ Cada elemento visual es responsable de determinar su propio tamaño preferido, l
 
 Se requiere un conocimiento exhaustivo de los Xamarin.Forms ciclos de diseño e invalidación para crear un diseño personalizado. Ahora se analizarán estos ciclos.
 
-## <a name="layout"></a>Layout
+## <a name="layout"></a>Diseño
 
 El diseño comienza en la parte superior del árbol visual con una página y continúa a través de todas las ramas del árbol visual para abarcar todos los elementos visuales de una página. Los elementos que son elementos primarios de otros elementos son responsables de ajustar el tamaño y la posición de sus elementos secundarios en relación con ellos mismos.
 
@@ -401,6 +415,6 @@ El número de columnas de cada fila depende del tamaño de la fotografía, el an
 - [WrapLayout (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [Diseños personalizados](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
 - [Crear diseños personalizados en Xamarin.Forms (vídeo)](https://www.youtube.com/watch?v=sxjOqNZFhKU)
-- [Layout\<T>](xref:Xamarin.Forms.Layout`1)
+- [Diseño\<T>](xref:Xamarin.Forms.Layout`1)
 - [Diseño](xref:Xamarin.Forms.Layout)
 - [VisualElement](xref:Xamarin.Forms.VisualElement)

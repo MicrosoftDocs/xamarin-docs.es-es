@@ -1,8 +1,22 @@
 ---
-title: "el patrón Model-View-ViewModel" Description: "en este capítulo se explica cómo la aplicación móvil eShopOnContainers usa el patrón MVVM para separar sin problemas la lógica empresarial y de presentación de la aplicación desde su interfaz de usuario".
-MS. Prod: Xamarin ms. AssetID: dd8c1813-df44-4947-BCEE-1a1ff2334b87 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Patrón Model-View-ViewModel
+description: En este capítulo se explica cómo la aplicación móvil eShopOnContainers usa el patrón MVVM para separar sin problemas la lógica empresarial y de presentación de la aplicación desde su interfaz de usuario.
+ms.prod: xamarin
+ms.assetid: dd8c1813-df44-4947-bcee-1a1ff2334b87
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c07fc9f42c4175b4e4569ab95a951b24c130c4f3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572057"
 ---
-
 # <a name="the-model-view-viewmodel-pattern"></a>Patrón Model-View-ViewModel
 
 La Xamarin.Forms experiencia del desarrollador normalmente implica la creación de una interfaz de usuario en XAML y, a continuación, la adición de código subyacente que funciona en la interfaz de usuario. A medida que se modifican las aplicaciones y aumentan el tamaño y el ámbito, pueden surgir problemas de mantenimiento complejos. Estos problemas incluyen el acoplamiento estrecho entre los controles de interfaz de usuario y la lógica de negocios, lo que aumenta el costo de realizar modificaciones en la interfaz de usuario y la dificultad de las pruebas unitarias de este tipo de código.

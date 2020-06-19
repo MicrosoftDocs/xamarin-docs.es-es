@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms CarouselView Data" Description: "CarouselView se rellena con datos estableciendo su propiedad ItemsSource en cualquier colección que implementa IEnumerable".
-MS. Prod: Xamarin ms. AssetID: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/29/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsDatos de CarouselView
+description: Un CarouselView se rellena con datos estableciendo su propiedad ItemsSource en cualquier colección que implementa IEnumerable.
+ms.prod: xamarin
+ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/29/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1081bfafae8e4d7a7a522414e9b45cde48037f1d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136557"
 ---
-
 # <a name="xamarinforms-carouselview-data"></a>Xamarin.FormsDatos de CarouselView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

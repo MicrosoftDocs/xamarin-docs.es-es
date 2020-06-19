@@ -1,8 +1,22 @@
 ---
-Título: "propiedades adjuntas" Descripción: "este artículo proporciona una introducción a las propiedades adjuntas y muestra cómo crearlas y consumirlas".
-MS. Prod: Xamarin ms. AssetID: 6E9DCDC3-A0E4-46A6-BAA9-4FEB6DF8A5A8 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/02/2016 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Propiedades adjuntas
+description: En este artículo se proporciona una introducción a las propiedades adjuntas y se muestra cómo crearlas y consumirlas.
+ms.prod: xamarin
+ms.assetid: 6E9DCDC3-A0E4-46A6-BAA9-4FEB6DF8A5A8
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/02/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1f26a4415a75b2b02fd7d6893e366ef81156f077
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138195"
 ---
-
 # <a name="attached-properties"></a>Propiedades adjuntas
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)

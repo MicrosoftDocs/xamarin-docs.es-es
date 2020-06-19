@@ -1,8 +1,22 @@
 ---
-Título: "administración de configuración" Descripción: "en este capítulo se explica cómo la aplicación móvil eShopOnContainers implementa la administración de configuración para proporcionar la configuración de usuario y la configuración de la aplicación".
-MS. Prod: Xamarin ms. AssetID: 50d6e780-e768-47f8-9361-3af11e56b87b ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 08/07/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Administración de la configuración
+description: En este capítulo se explica cómo la aplicación móvil eShopOnContainers implementa la administración de configuración para proporcionar la configuración de la aplicación y la configuración de usuario.
+ms.prod: xamarin
+ms.assetid: 50d6e780-e768-47f8-9361-3af11e56b87b
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f6f61503f619c08ed3e4eae2adf6ddb2c474f99f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84571485"
 ---
-
 # <a name="configuration-management"></a>Administración de la configuración
 
 La configuración permite la separación de los datos que configura el comportamiento de una aplicación desde el código, lo que permite cambiar el comportamiento sin volver a compilar la aplicación. Hay dos tipos de configuración: la configuración de la aplicación y la configuración de usuario.

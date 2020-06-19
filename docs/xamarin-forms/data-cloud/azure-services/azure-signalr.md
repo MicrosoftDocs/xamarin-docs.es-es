@@ -1,7 +1,21 @@
 ---
-title: "Azure Signalr Service con Xamarin.Forms " Description: "Introducción a Azure signalr Service y Azure Functions con Xamarin.Forms " MS. Prod: Xamarin ms. AssetID: 1B9A69EF-C200-41BF-B098-D978D7F9CD8F autor: profexorgeek ms. Author: jusjohns ms. date: 06/07/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Azure Signalr Service conXamarin.Forms
+description: Introducción a Azure Signalr Service y Azure Functions conXamarin.Forms
+ms.prod: xamarin
+ms.assetid: 1B9A69EF-C200-41BF-B098-D978D7F9CD8F
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 06/07/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ffa44beb68dc845a64d8bf2a9f86f6d7e56df8f9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139443"
 ---
-
 # <a name="azure-signalr-service-with-xamarinforms"></a>Azure Signalr Service conXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresignalr/)
@@ -284,7 +298,7 @@ void AddMessage(string message)
 }
 ```
 
-## <a name="test-the-application"></a>Prueba de la aplicación
+## <a name="test-the-application"></a>Probar la aplicación
 
 La aplicación Signalr chat se puede probar en iOS, Android y UWP siempre que tenga:
 

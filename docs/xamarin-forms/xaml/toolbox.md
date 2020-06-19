@@ -1,6 +1,21 @@
 ---
-title: "editar Xamarin.Forms XAML mediante el cuadro de herramientas" Descripción: "el cuadro de herramientas XAML contiene todos los controles y diseños integrados, que se pueden arrastrar directamente a un archivo XAML abierto".
-MS. Prod: Xamarin ms. AssetID: 513D1247-8AD0-4611-8660-1D277CD369E1 ms. Technology: Xamarin-Forms Author: conceptdev ms. Author: crdun ms. Date: 08/29/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Editar Xamarin.Forms XAML mediante el cuadro de herramientas
+description: El cuadro de herramientas XAML contiene todos los controles y diseños integrados, que se pueden arrastrar directamente a un archivo XAML abierto.
+ms.prod: xamarin
+ms.assetid: 513D1247-8AD0-4611-8660-1D277CD369E1
+ms.technology: xamarin-forms
+author: conceptdev
+ms.author: crdun
+ms.date: 08/29/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 76d6a6f39692445f208f250ca7f6141a1e1ad450
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198002"
 ---
 # <a name="xamarinforms-xaml-toolbox"></a>Xamarin.FormsCuadro de herramientas XAML
 

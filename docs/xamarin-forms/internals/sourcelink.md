@@ -1,8 +1,23 @@
 ---
-title: "Source Link with Xamarin.Forms " Description: "en este artículo se explica cómo usar el vínculo de origen para depurar en Xamarin.Forms ".
-zone_pivot_groups: "plataforma" MS. Prod: Xamarin ms. AssetID: 1E13FCD9-5607-46E8-80E4-87A58B389BEB ms. Technology: Xamarin-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 09/26/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Vínculo de origen conXamarin.Forms
+description: En este artículo se explica cómo usar el vínculo de origen para depurar en Xamarin.Forms .
+zone_pivot_groups: platform
+ms.prod: xamarin
+ms.assetId: 1E13FCD9-5607-46E8-80E4-87A58B389BEB
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 09/26/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 57db314538c42ef9d58691ba16ab68371ff092b7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138334"
 ---
-
 # <a name="source-link-with-xamarinforms"></a>Vínculo de origen conXamarin.Forms
 
 Xamarin.FormsLos paquetes NuGet incluyen asignaciones de vínculo de origen. El vínculo de origen asigna las bibliotecas compiladas, contenidas en un paquete NuGet, a un repositorio de código fuente. Visual Studio descargará los archivos de código fuente durante la depuración y permitirá a los desarrolladores recorrer el código y habilitar la depuración de paquetes sin compilar desde el origen.

@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms SwipeView" Descripción: " Xamarin.Forms SwipeView es un control contenedor que se ajusta alrededor de un elemento de contenido y proporciona elementos de menú contextual que se revelan mediante un gesto de deslizar rápidamente".
-MS. Prod: Xamarin ms. AssetID: 602456B5-701B-4948-B454-B1F31283F1CF ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 03/26/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsSwipeView
+description: Xamarin.FormsSwipeView es un control contenedor que se ajusta alrededor de un elemento de contenido y proporciona elementos de menú contextual que se revelan mediante un gesto de deslizar rápidamente.
+ms.prod: xamarin
+ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/26/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9c9d0621cdd5bb85690771d8bdfd0060b6a352cb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136258"
 ---
-
 # <a name="xamarinforms-swipeview"></a>Xamarin.FormsSwipeView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

@@ -1,8 +1,22 @@
 ---
-title: "reconocimiento de voz mediante la API del servicio de voz" Descripción: "en este artículo se explica cómo usar la API del servicio de voz de Azure para transcribir la voz en el texto de una Xamarin.Forms aplicación".
-MS. Prod: Xamarin ms. AssetID: B435FF6B-8785-48D9-B2D9-1893F5A87EA1 ms. Technology: Xamarin-Forms Author: profexorgeek ms. Author: jusjohns ms. Date: 01/14/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Reconocimiento de voz mediante la API del servicio Speech
+description: En este artículo se explica cómo usar la API del servicio de voz de Azure para transcribir la voz en el texto de una Xamarin.Forms aplicación.
+ms.prod: xamarin
+ms.assetid: B435FF6B-8785-48D9-B2D9-1893F5A87EA1
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 01/14/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 171ecc02fda304135e5f535c3e798067595d7047
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139326"
 ---
-
 # <a name="speech-recognition-using-azure-speech-service"></a>Reconocimiento de voz con el servicio de voz de Azure
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
@@ -448,7 +462,7 @@ Por último, el **paquete de UWP. appxmanifest** debe especificar que la aplicac
 
 [![Captura de pantalla del manifiesto en Visual Studio 2019](speech-recognition-images/package-manifest-cropped.png)](speech-recognition-images/package-manifest.png#lightbox "Captura de pantalla del manifiesto en Visual Studio 2019")
 
-## <a name="test-the-application"></a>Prueba de la aplicación
+## <a name="test-the-application"></a>Probar la aplicación
 
 Ejecute la aplicación y haga clic en el botón **transcribir** . La aplicación debe solicitar acceso al micrófono e iniciar el proceso de transcripción. `ActivityIndicator`Se animará, mostrando que la transcripción está activa. A medida que hable, la aplicación transmitirá los datos de audio al recurso de Azure Speech Services, que responderá con el texto transformado. El texto `Label` transformado aparecerá en el elemento a medida que se reciba.
 

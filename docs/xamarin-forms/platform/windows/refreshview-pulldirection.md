@@ -1,8 +1,22 @@
 ---
-Título: "dirección de extracción RefreshView en Windows" Descripción: "las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir el específico de la plataforma de Windows que permite cambiar la dirección de extracción de un RefreshView.
-MS. Prod: Xamarin ms. AssetID: 407A862B-281E-4384-9696-C0655830B84D ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 09/20/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Dirección de extracción de RefreshView en Windows
+description: Las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir el específico de la plataforma de Windows que permite cambiar la dirección de extracción de un RefreshView.
+ms.prod: xamarin
+ms.assetid: 407A862B-281E-4384-9696-C0655830B84D
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/20/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 46a1b4d00b9eea276b9a3b3d5bffbdac3d31e0ef
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136583"
 ---
-
 # <a name="refreshview-pull-direction-on-windows"></a>Dirección de extracción de RefreshView en Windows
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

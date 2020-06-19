@@ -1,8 +1,22 @@
 ---
-title: "acceso a los bits de píxeles de mapa de bits de SkiaSharp" Descripción: "Descubra las diversas técnicas de acceso y modificación de los bits de píxeles de mapas de bits de SkiaSharp".
-MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: DBB58522-F816-4A8C-96A5-E0236F16A5C6 Author: davidbritch ms. Author: dabritch ms. Date: 07/11/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Obtener acceso a bits de píxel de mapa de bits SkiaSharp
+description: Descubra las diversas técnicas para obtener acceso y modificar los bits de píxeles de los mapas de bits de SkiaSharp.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/11/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9018cbe6e41350b22a0f1f91858017531c75a0ac
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135587"
 ---
-
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>Obtener acceso a bits de píxel de mapa de bits SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

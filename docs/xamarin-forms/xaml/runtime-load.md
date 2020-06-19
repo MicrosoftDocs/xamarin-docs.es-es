@@ -1,15 +1,29 @@
 ---
-title: "la carga de XAML en tiempo de ejecución en Xamarin.Forms " Description: "XAML se puede cargar y analizar en tiempo de ejecución con los métodos de extensión LoadFromXaml".
-MS. Prod: Xamarin ms. AssetID: 25F73FBF-2DD3-468E-A2D8-0897414F0F4A ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/12/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Cargar XAML en tiempo de ejecución enXamarin.Forms
+description: XAML se puede cargar y analizar en tiempo de ejecución con los métodos de extensión LoadFromXaml.
+ms.prod: xamarin
+ms.assetid: 25F73FBF-2DD3-468E-A2D8-0897414F0F4A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/12/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d750aa84a48ad4c8015a619d819134cefc63c3d9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139378"
 ---
-
 # <a name="loading-xaml-at-runtime-in-xamarinforms"></a>Cargar XAML en tiempo de ejecución enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
 
 El [`Xamarin.Forms.Xaml`](xref:Xamarin.Forms.Xaml) espacio de nombres incluye dos [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) métodos de extensión que se pueden usar para cargar y analizar XAML en tiempo de ejecución.
 
-## <a name="background"></a>Información previa
+## <a name="background"></a>Fondo
 
 Cuando Xamarin.Forms se construye una clase XAML, [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) se llama indirectamente al método. Esto se debe a que el archivo de código subyacente de una clase XAML llama al `InitializeComponent` método desde su constructor:
 

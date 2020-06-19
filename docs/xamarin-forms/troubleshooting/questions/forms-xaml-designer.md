@@ -1,8 +1,22 @@
 ---
-title: "¿por qué no funciona el diseñador XAML de Visual Studio para Xamarin.Forms los archivos XAML?"
-MS. topic: solución de problemas de MS. Prod: Xamarin ms. AssetID: cab2eefb-c52f-4d81-866e-8f1feabbdd64 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/25/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: ¿Por qué no funciona el diseñador XAML de Visual Studio para Xamarin.Forms los archivos XAML?
+ms.topic: troubleshooting
+ms.prod: xamarin
+ms.assetid: cab2eefb-c52f-4d81-866e-8f1feabbdd64
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/25/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9f9cf570da0d8e078d1d05e74dc0f65994080c6c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135894"
 ---
-
 # <a name="why-doesnt-the-visual-studio-xaml-designer-work-for-xamarinforms-xaml-files"></a>¿Por qué no funciona el diseñador XAML de Visual Studio para Xamarin.Forms los archivos XAML?
 
 Xamarin.Formsno admite actualmente los diseñadores visuales para los archivos XAML. Por este motivo, al intentar abrir un archivo XAML de formularios en el diseñador de la *interfaz* de usuario XAML de Visual Studio o en el diseñador de la *interfaz de usuario XAML con codificación*, se produce el siguiente mensaje de error:

@@ -1,8 +1,22 @@
 ---
-title: "usar datos de tiempo de diseño con el vista previa de XAML" Descripción: "en este artículo se explica cómo usar los datos de tiempo de diseño para mostrar los diseños con gran cantidad de datos en el visor de vista previa de XAML sin ejecutar la aplicación".
-MS. Prod: Xamarin ms. AssetID: 0F608019-5951-4BE6-80E0-9EEE1733D642 ms. Technology: Xamarin-Forms Author: maddyleger1 ms. Author: maleger ms. Date: 03/27/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Usar datos de tiempo de diseño con el vista previa de XAML
+description: En este artículo se explica cómo usar los datos de tiempo de diseño para mostrar los diseños con gran cantidad de datos en el visor de vista previa de XAML sin ejecutar la aplicación.
+ms.prod: xamarin
+ms.assetid: 0F608019-5951-4BE6-80E0-9EEE1733D642
+ms.technology: xamarin-forms
+author: maddyleger1
+ms.author: maleger
+ms.date: 03/27/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 182256fd572a370a7b322898b1e24ade12e971fd
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127388"
 ---
-
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usar datos de tiempo de diseño con el vista previa de XAML
 
 _Algunos diseños son difíciles de visualizar sin datos. Use estas sugerencias para sacar el máximo partido de las páginas con gran cantidad de datos en el visor de vistas previas de XAML._
@@ -122,7 +136,7 @@ La ventaja es que puede enlazar con el modelo real que piensa usar.
 
 Si no desea agregar datos de tiempo de diseño a controles individuales, puede configurar un almacén de datos ficticios para enlazar a la página. Consulte la entrada de blog de James Montemagno [sobre cómo agregar datos en tiempo de diseño](https://montemagno.com/xamarin-forms-design-time-data-tips-best-practices/) para ver cómo enlazar a un ViewModel estático en XAML.
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 
 ### <a name="requirements"></a>Requisitos
 

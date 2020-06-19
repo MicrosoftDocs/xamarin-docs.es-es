@@ -1,8 +1,22 @@
 ---
-title: "resolución de dependencia en Xamarin.Forms " Description: "en este artículo se explica cómo insertar un método de resolución de dependencias en Xamarin.Forms para que el contenedor de inserción de dependencias de una aplicación controle la creación y la duración de los representadores, los efectos y las implementaciones de DependencyService personalizados.
-MS. Prod: Xamarin ms. AssetID: 491B87DC-14CB-4ADC-AC6C-40A7627B2524 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/27/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Resolución de dependencias Xamarin.Forms
+description: En este artículo se explica cómo insertar un método de resolución de dependencias en Xamarin.Forms para que el contenedor de inserción de dependencias de una aplicación controle la creación y la duración de los representadores personalizados, los efectos y las implementaciones de DependencyService.
+ms.prod: xamarin
+ms.assetid: 491B87DC-14CB-4ADC-AC6C-40A7627B2524
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/27/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ae30b4a4b75906613baf8a2568548c8890ccb33a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139092"
 ---
-
 # <a name="dependency-resolution-in-xamarinforms"></a>Resolución de dependencias Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)

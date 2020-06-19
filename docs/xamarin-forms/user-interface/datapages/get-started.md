@@ -1,8 +1,22 @@
 ---
-title: "Introducción con las páginas de datos" Descripción: "en este artículo se explica cómo empezar a crear una página simple controlada por datos con las páginas de datos Xamarin.Forms ".
-MS. Prod: Xamarin ms. AssetID: 6416E5FA-6384-4298-BAA1-A89381E47210 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/01/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Introducción con páginas de páginas
+description: En este artículo se explica cómo empezar a crear una página simple controlada por datos mediante el uso de páginas de datos Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 6416E5FA-6384-4298-BAA1-A89381E47210
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/01/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: bb08d359048d53639a700cc5ff526f26d6b077b6
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84571472"
 ---
-
 # <a name="getting-started-with-datapages"></a>Introducción con páginas de páginas
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/Pages/DataPagesDemo)
@@ -165,7 +179,7 @@ SetBinding (TitleProperty, new DataSourceBinding ("title"));
 
 Es un poco más trabajo crear temas desde cero, pero las versiones preliminares futuras harán que esto sea más fácil.
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 ## <a name="could-not-load-file-or-assembly-xamarinformsthemelight-or-one-of-its-dependencies"></a>No se pudo cargar el archivo o ensamblado ' Xamarin.Forms . Theme. Light ' o una de sus dependencias
 

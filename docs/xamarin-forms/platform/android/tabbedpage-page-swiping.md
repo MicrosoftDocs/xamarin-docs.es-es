@@ -1,8 +1,22 @@
 ---
-title: "TabbedPage página deslizante en Android" Descripción: "las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo utilizar el específico de la plataforma Android que permite deslizar rápidamente con un gesto de dedo horizontal entre las páginas de un TabbedPage.
-MS. Prod: Xamarin ms. AssetID: D1C09CCB-7246-41A4-8BD2-FA6FABCF1C72 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 07/10/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Página deslizante de TabbedPage en Android
+description: Las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir el específico de la plataforma Android que permite deslizar rápidamente con un gesto de dedo horizontal entre las páginas de un TabbedPage.
+ms.prod: xamarin
+ms.assetid: D1C09CCB-7246-41A4-8BD2-FA6FABCF1C72
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 61c0137788303363769fdec80a16542e2d8bea5e
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128614"
 ---
-
 # <a name="tabbedpage-page-swiping-on-android"></a>Página deslizante de TabbedPage en Android
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

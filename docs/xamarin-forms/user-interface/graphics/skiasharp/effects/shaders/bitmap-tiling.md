@@ -1,8 +1,22 @@
 ---
-Título: "SkiaSharp Bitmap Tileing" Description: "mosaico de un área usando mapas de bits repetidos horizontal y verticalmente".
-MS. Prod: Xamarin ms. Technology: Xamarin-skiasharp ms. AssetID: 9ED14E07-4DC8-4B03-8A33-772838BF51EA Author: davidbritch ms. Author: dabritch ms. Date: 08/23/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Mosaico de mapa de bits SkiaSharp
+description: Colocar en mosaico un área con mapas de bits repetidos horizontal y verticalmente.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 9ED14E07-4DC8-4B03-8A33-772838BF51EA
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6a28dd20eb8978334365ac217df1241e5288fd28
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137434"
 ---
-
 # <a name="skiasharp-bitmap-tiling"></a>Mosaico de mapa de bits SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

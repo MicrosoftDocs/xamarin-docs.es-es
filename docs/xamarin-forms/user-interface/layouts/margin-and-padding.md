@@ -1,13 +1,27 @@
 ---
-title: "margin and padding" Description: "las propiedades margin y padding controlan el comportamiento de diseño cuando se representa un elemento en la interfaz de usuario. En este artículo se muestra la diferencia entre las dos propiedades y cómo establecerlas ".
-MS. Prod: Xamarin ms. AssetID: BEB096BB-51DF-410F-B0F1-D235287B0F4A ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 04/27/2016 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Margen y relleno
+description: Las propiedades margin y padding controlan el comportamiento de diseño cuando se representa un elemento en la interfaz de usuario. En este artículo se muestra la diferencia entre las dos propiedades y cómo establecerlas.
+ms.prod: xamarin
+ms.assetid: BEB096BB-51DF-410F-B0F1-D235287B0F4A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/27/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6ae4116be99f076a7afd5ed9c2823bc12f445e18
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137999"
 ---
-
 # <a name="margin-and-padding"></a>Margen y relleno
 
 _Las propiedades margin y padding controlan el comportamiento de diseño cuando se representa un elemento en la interfaz de usuario. En este artículo se muestra la diferencia entre las dos propiedades y cómo establecerlas._
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 Margin y padding son conceptos de diseño relacionados:
 

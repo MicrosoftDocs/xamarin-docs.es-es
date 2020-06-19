@@ -1,8 +1,22 @@
 ---
-title: "diseño para tabletas y aplicaciones de escritorio" Descripción: "en este artículo se explica cómo optimizar los Xamarin.Forms diseños de aplicaciones para tabletas, en lugar de teléfonos".
-MS. Prod: Xamarin ms. AssetID: D62F472B-4345-4983-8403-659A538B591F ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/01/2016 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Diseño para tabletas y aplicaciones de escritorio
+description: En este artículo se explica cómo optimizar los Xamarin.Forms diseños de aplicaciones para tabletas, en lugar de teléfonos.
+ms.prod: xamarin
+ms.assetid: D62F472B-4345-4983-8403-659A538B591F
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/01/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0ecbc850960465296dc4047277bdafe78ac800a4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573253"
 ---
-
 # <a name="layout-for-tablet-and-desktop-apps"></a>Diseño para tabletas y aplicaciones de escritorio
 
 Xamarin.Formsadmite todos los tipos de dispositivos disponibles en las plataformas compatibles, por lo que además de los teléfonos, las aplicaciones también se pueden ejecutar en:

@@ -1,8 +1,22 @@
 ---
-Título: "tamaño de fuente de entrada en iOS" Descripción: "las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo usar la plataforma específica de iOS que escala el tamaño de fuente de una entrada ".
-MS. Prod: Xamarin ms. AssetID: E8881D4E-902B-4397-A43E-916B2885EC87 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/24/2018 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Tamaño de fuente de entrada en iOS
+description: Las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo usar la plataforma específica de iOS que escala el tamaño de fuente de una entrada.
+ms.prod: xamarin
+ms.assetid: E8881D4E-902B-4397-A43E-916B2885EC87
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 57498811d8789d8ef9ef775f8f39f141b77659c8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138533"
 ---
-
 # <a name="entry-font-size-on-ios"></a>Tamaño de fuente de entrada en iOS
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

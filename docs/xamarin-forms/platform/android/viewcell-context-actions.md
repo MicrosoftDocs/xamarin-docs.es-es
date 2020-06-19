@@ -1,8 +1,22 @@
 ---
-title: "ViewCell context Actions on Android" Descripción: "las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo utilizar el específico de la plataforma Android que habilita el modo heredado de acciones de contexto de ViewCell.
-MS. Prod: Xamarin ms. AssetID: 8BD71B10-5037-443F-9975-B941CE393E5A ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 09/24/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Acciones de contexto ViewCell en Android
+description: 'Las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir la plataforma Android: específica que habilita el modo heredado de acciones de contexto ViewCell.'
+ms.prod: xamarin
+ms.assetid: 8BD71B10-5037-443F-9975-B941CE393E5A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/24/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 053697921f1adacc102e9e9bee9dd17f8d44526b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128562"
 ---
-
 # <a name="viewcell-context-actions-on-android"></a>Acciones de contexto ViewCell en Android
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

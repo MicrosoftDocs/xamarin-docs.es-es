@@ -1,15 +1,29 @@
 ---
-title: "Passing arguments in XAML" Description: "en este artículo se muestra el uso de los atributos XAML que se pueden usar para pasar argumentos a constructores no predeterminados, para llamar a métodos de generador y para especificar el tipo de un argumento genérico".
-MS. Prod: Xamarin ms. AssetID: 8F3B267F-499E-4D79-9193-FCA99F199519 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/25/2016 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Paso de argumentos en XAML
+description: En este artículo se muestra el uso de los atributos XAML que se pueden usar para pasar argumentos a constructores no predeterminados, para llamar a métodos de generador y para especificar el tipo de un argumento genérico.
+ms.prod: xamarin
+ms.assetid: 8F3B267F-499E-4D79-9193-FCA99F199519
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/25/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 84d8901b7f8dee8ffd6c3ba22d30c76b456555f0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84571511"
 ---
-
 # <a name="passing-arguments-in-xaml"></a>Paso de argumentos en XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
 
 _En este artículo se muestra el uso de los atributos XAML que se pueden usar para pasar argumentos a constructores no predeterminados, para llamar a métodos de generador y para especificar el tipo de un argumento genérico._
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 A menudo es necesario crear instancias de objetos con constructores que requieran argumentos o mediante una llamada a un método de creación estático. Esto se puede lograr en XAML mediante el uso de los `x:Arguments` `x:FactoryMethod` atributos y:
 

@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms CarouselView Interaction" Description: "se puede obtener acceso al elemento mostrado actualmente en un CarouselView a través de las propiedades CurrentItem y position".
-MS. Prod: Xamarin ms. AssetID: 854D97E5-D119-4BE2-AE7C-BD428792C992 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/11/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsInteracción con CarouselView
+description: Se puede tener acceso al elemento mostrado actualmente en un CarouselView a través de las propiedades CurrentItem y position.
+ms.prod: xamarin
+ms.assetid: 854D97E5-D119-4BE2-AE7C-BD428792C992
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/11/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 57c501c0f789ce448d8381cbbccb46666cf06305
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137415"
 ---
-
 # <a name="xamarinforms-carouselview-interaction"></a>Xamarin.FormsInteracción con CarouselView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)

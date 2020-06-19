@@ -1,8 +1,23 @@
 ---
-title: " Xamarin.Forms Visual State Manager" Description: "use el administrador de estado visual para realizar cambios en los elementos XAML en función de los Estados visuales establecidos desde el código".
-MS. Prod: Xamarin ms. AssetID: 17296F14-640D-484B-A24C-A4E9B7013E4F ms. Technology: Xamarin-Forms ms. Custom: Xamu-video Author: davidbritch ms. Author: dabritch ms. Date: 02/21/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Administrador de estado visual de Xamarin.Forms
+description: Use el administrador de estado visual para realizar cambios en los elementos XAML en función de los Estados visuales establecidos desde el código.
+ms.prod: xamarin
+ms.assetid: 17296F14-640D-484B-A24C-A4E9B7013E4F
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/19/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3dda730446ec2b4268f42ee5af853400b33565d9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946236"
 ---
-
 # <a name="xamarinforms-visual-state-manager"></a>Administrador de estado visual de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
@@ -400,6 +415,7 @@ En la tabla siguiente se enumeran los Estados visuales que se definen en Xamarin
 | `CarouselView` | `DefaultItem`, `CurrentItem`, `PreviousItem`, `NextItem` | [Estados visuales de CarouselView](~/xamarin-forms/user-interface/carouselview/interaction.md#define-visual-states) |
 | `ImageButton` | `Pressed` | [Estados visuales de ImageButton](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) |
 | `RadioButton` | `IsChecked` | [Estados visuales de RadioButton](~/xamarin-forms/user-interface/radiobutton.md#radiobutton-visual-states) |
+| `Switch` | `On`, `Off` | [Cambiar Estados visuales](~/xamarin-forms/user-interface/switch.md#switch-visual-states) |
 | `VisualElement` | `Normal`, `Disabled`, `Focused`, `Selected` | [Estados comunes](#common-states) |
 
 Se puede tener acceso a cada uno de estos Estados a través del grupo de Estados visuales denominado `CommonStates` .

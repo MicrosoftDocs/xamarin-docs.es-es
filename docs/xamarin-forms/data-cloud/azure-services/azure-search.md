@@ -1,15 +1,29 @@
 ---
-title: "buscar datos con Azure Search y Xamarin.Forms " Descripción ": en este artículo se muestra cómo usar la biblioteca de Microsoft Azure Search para integrar Azure Search en una Xamarin.Forms aplicación".
-MS. Prod: Xamarin ms. AssetID: A4AEF233-3672-4174-9DBA-15BEE3030C0B ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/05/2016 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Buscar datos con Azure Search yXamarin.Forms
+description: En este artículo se muestra cómo usar la biblioteca de búsqueda de Microsoft Azure para integrar Azure Search en una Xamarin.Forms aplicación.
+ms.prod: xamarin
+ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/05/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 33675fbb644c5967726fee29b3e235247aec633a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84565362"
 ---
-
 # <a name="search-data-with-azure-search-and-xamarinforms"></a>Buscar datos con Azure Search yXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 
 _Azure Search es un servicio en la nube que proporciona capacidades de indexación y consulta para los datos cargados. Esto elimina los requisitos de infraestructura y las complejidades del algoritmo de búsqueda tradicionalmente asociadas a la implementación de la funcionalidad de búsqueda en una aplicación. En este artículo se muestra cómo usar la biblioteca de búsqueda de Microsoft Azure para integrar Azure Search en una Xamarin.Forms aplicación._
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 Los datos se almacenan en Azure Search como índices y documentos. Un *Índice* es un almacén de datos que el servicio de Azure Search puede buscar y es conceptualmente similar a una tabla de base de datos. Un *documento* es una unidad única de datos en los que se pueden realizar búsquedas en un índice y es conceptualmente similar a una fila de base de datos. Al cargar documentos y enviar consultas de búsqueda a Azure Search, se realizan solicitudes a un índice específico en el servicio de búsqueda.
 

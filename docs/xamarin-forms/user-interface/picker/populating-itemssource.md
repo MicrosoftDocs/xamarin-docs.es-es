@@ -1,8 +1,22 @@
 ---
-title: "configuración de la propiedad ItemsSource de un selector" Descripción: "la vista selector es un control para seleccionar un elemento de texto de una lista de datos. En este artículo se explica cómo rellenar un selector con datos estableciendo la propiedad ItemsSource y cómo responder a la selección de elementos por parte del usuario ".
-MS. Prod: Xamarin ms. AssetID: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/26/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Configuración de la propiedad ItemsSource de un selector
+description: La vista selector es un control para seleccionar un elemento de texto de una lista de datos. En este artículo se explica cómo rellenar un selector con datos estableciendo la propiedad ItemsSource y cómo responder a la selección de elementos por parte del usuario.
+ms.prod: xamarin
+ms.assetid: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/26/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8c4fc732082a77a2e471465af448a487862b513c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136297"
 ---
-
 # <a name="setting-a-pickers-itemssource-property"></a>Configuración de la propiedad ItemsSource de un selector
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)

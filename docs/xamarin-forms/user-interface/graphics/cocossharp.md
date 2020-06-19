@@ -1,7 +1,22 @@
 ---
-title: "Using CocosSharp in Xamarin.Forms " Description: "CocosSharp se puede usar para agregar una representación precisa de la forma, la imagen y el texto a una aplicación para visualización avanzada" MS. Prod: Xamarin ms. AssetID: E0F404D5-5C6B-4288-92EC-78996C674E4E ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 05/03/2016 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Usar CocosSharp enXamarin.Forms
+description: CocosSharp se puede usar para agregar una representación precisa de la forma, la imagen y el texto a una aplicación para visualización avanzada
+ms.prod: xamarin
+ms.assetid: E0F404D5-5C6B-4288-92EC-78996C674E4E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/03/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a3183997eb229fd3548a1afeccf82670cf651a71
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84565309"
 ---
-
 # <a name="using-cocossharp-in-xamarinforms"></a>Usar CocosSharp enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/CocosSharpForms)
@@ -12,7 +27,7 @@ _CocosSharp se puede usar para agregar una representación precisa de la forma, 
 
 **Evolucione 2016: cocos # inXamarin.Forms**
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 CocosSharp es una tecnología flexible y eficaz para mostrar gráficos, leer entradas táctiles, reproducir audio y administrar contenido. En esta guía se explica cómo agregar CocosSharp a una Xamarin.Forms aplicación.
 

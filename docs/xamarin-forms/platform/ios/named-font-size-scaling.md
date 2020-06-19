@@ -1,8 +1,22 @@
 ---
-title: "escalado de accesibilidad para tamaños de fuente con nombre en iOS" Descripción: "las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo utilizar el específico de la plataforma iOS que deshabilita el escalado de accesibilidad para los tamaños de fuente con nombre. "
-MS. Prod: Xamarin ms. AssetID: B443BAF6-E6F6-4A0E-80B5-CAACE6B550EF ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/28/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Escalado de accesibilidad para tamaños de fuente con nombre en iOS
+description: Las características específicas de la plataforma permiten consumir funcionalidad que solo está disponible en una plataforma específica, sin necesidad de implementar representadores o efectos personalizados. En este artículo se explica cómo consumir el tipo específico de la plataforma iOS que deshabilita el escalado de accesibilidad para los tamaños de fuente con nombre.
+ms.prod: xamarin
+ms.assetid: B443BAF6-E6F6-4A0E-80B5-CAACE6B550EF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/28/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9aa29ba4d8e6bda9126ec211af1b4febebd5bab9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128276"
 ---
-
 # <a name="accessibility-scaling-for-named-font-sizes-on-ios"></a>Escalado de accesibilidad para tamaños de fuente con nombre en iOS
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

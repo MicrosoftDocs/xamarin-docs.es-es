@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms pages" Description: "en este artículo se presentan Xamarin.Forms las páginas de datos, que proporcionan una API para enlazar de forma rápida y sencilla un origen de datos a las vistas pregeneradas".
-MS. Prod: Xamarin ms. AssetID: DF16EAEE-DB78-42CA-9C59-51D9D6CB6B95 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 12/01/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsPáginas de página
+description: En este artículo se presentan Xamarin.Forms las páginas de datos, que proporcionan una API para enlazar de forma rápida y sencilla un origen de datos a vistas precompiladas.
+ms.prod: xamarin
+ms.assetid: DF16EAEE-DB78-42CA-9C59-51D9D6CB6B95
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/01/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7d99870dd975d0996ffcd05d4aef153f3515ec9e
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84134321"
 ---
-
 # <a name="xamarinforms-datapages"></a>Xamarin.FormsPáginas de página
 
 ![](~/media/shared/preview.png "This API is currently in preview")

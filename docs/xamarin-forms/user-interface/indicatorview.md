@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms IndicatorView" Descripción: "IndicatorView es un control que muestra los indicadores que representan el número de elementos y la posición actual, en un CarouselView".
-MS. Prod: Xamarin ms. AssetID: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/27/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsIndicatorView
+description: IndicatorView es un control que muestra los indicadores que representan el número de elementos y la posición actual, en un CarouselView.
+ms.prod: xamarin
+ms.assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/27/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e4c7d528cc61bb71fc495c830780ea4245ff3d87
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946382"
 ---
-
 # <a name="xamarinforms-indicatorview"></a>Xamarin.FormsIndicatorView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
@@ -12,12 +26,6 @@ MS. Prod: Xamarin ms. AssetID: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2 ms. Technolo
 `IndicatorView`Es un control que muestra los indicadores que representan el número de elementos y la posición actual en un `CarouselView` :
 
 [![Captura de pantalla de CarouselView y IndicatorView en iOS y Android](indicatorview-images/circles.png "Círculos IndicatorView")](indicatorview-images/circles-large.png#lightbox "Círculos IndicatorView")
-
-`IndicatorView`está disponible en Xamarin.Forms 4,4 en las plataformas iOS y Android, y en 4,5 en el plataforma universal de Windows. Sin embargo, actualmente es experimental y solo se puede usar agregando la siguiente línea de código a la `AppDelegate` clase en iOS, o bien a la `MainActivity` clase en Android, antes de llamar a `Forms.Init` :
-
-```csharp
-Forms.SetFlags("IndicatorView_Experimental");
-```
 
 `IndicatorView` define las siguientes propiedades:
 

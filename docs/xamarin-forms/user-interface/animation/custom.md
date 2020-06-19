@@ -1,8 +1,22 @@
 ---
-title: "animaciones personalizadas en Xamarin.Forms " Description: "en este artículo se muestra cómo usar la clase de animación de Xamarin. Forms para crear y cancelar animaciones, sincronizar varias animaciones y crear animaciones personalizadas que animan las propiedades que no animan los métodos de animación existentes".
-MS. Prod: Xamarin ms. AssetID: 03B2E3FC-E720-4D45-B9A0-711081FC1907 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 02/10/2019 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Animaciones personalizadas enXamarin.Forms
+description: En este artículo se muestra cómo usar la clase de animación de Xamarin. Forms para crear y cancelar animaciones, sincronizar varias animaciones y crear animaciones personalizadas que animan las propiedades que no animan los métodos de animación existentes.
+ms.prod: xamarin
+ms.assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/10/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 573f18de0d7593d832505eb6bb2b492caea024a1
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946109"
 ---
-
 # <a name="custom-animations-in-xamarinforms"></a>Animaciones personalizadas enXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)

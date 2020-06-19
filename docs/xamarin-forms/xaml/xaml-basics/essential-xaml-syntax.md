@@ -1,8 +1,22 @@
 ---
-Título: "parte 2. Sintaxis XAML básica "Description:" en este artículo se explican las características esenciales de la sintaxis XAML de los elementos de propiedad y las propiedades adjuntas.
-MS. Prod: Xamarin ms. AssetID: 4022F1DC-3802-4635-A553-688ABD3F0D5A ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 10/25/2017 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Parte 2. Sintaxis XAML esencial
+description: En este artículo se explican las características esenciales de la sintaxis XAML de los elementos de propiedad y de las propiedades adjuntas.
+ms.prod: xamarin
+ms.assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/25/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c400bb342568a0399e2a582496f85ead273b6994
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572187"
 ---
-
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintaxis XAML esencial
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

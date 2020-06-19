@@ -1,12 +1,28 @@
 ---
-title: "configuración de la plataforma WPF" Descripción: " Xamarin.Forms ahora tiene compatibilidad con la versión preliminar de la plataforma WPF" MS. Prod: Xamarin ms. AssetID: 650723F2-4279-4B7B-B0A1-D7F8FF26BF1E ms. Technology: Xamarin-Forms ms. Custom: Xamu-video Author: davidbritch ms. Author: dabritch ms. Date: 04/09/2020 no-LOC: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Configuración de la plataforma WPF
+description: Xamarin.Formstiene compatibilidad con la versión preliminar para la plataforma WPF.
+ms.prod: xamarin
+ms.assetid: 650723F2-4279-4B7B-B0A1-D7F8FF26BF1E
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/20/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 774ae964643b9b78f424d96b3dd382f244205dcf
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946330"
 ---
-
 # <a name="wpf-platform-setup"></a>Configuración de la plataforma WPF
 
 ![Vista previa](~/media/shared/preview.png)
 
-Xamarin.Formsahora tiene compatibilidad con vista previa para el Windows Presentation Foundation (WPF). En este artículo se muestra cómo agregar un proyecto de WPF a una Xamarin.Forms solución.
+Xamarin.Formstiene compatibilidad con la versión preliminar de Windows Presentation Foundation (WPF), en .NET Framework y en .NET Core 3. En este artículo se muestra cómo agregar un proyecto de WPF que tiene como destino .NET Framework a una Xamarin.Forms solución.
 
 > [!IMPORTANT]
 > Xamarin.Formsla comunidad proporciona compatibilidad con WPF. Para obtener más información, consulte [ Xamarin.Forms compatibilidad con plataformas](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
@@ -24,6 +40,9 @@ Siga estas instrucciones para agregar una aplicación de WPF que se ejecutará e
     ![Agregar un nuevo proyecto de WPF](wpf-images/add-project.png "Agregar un nuevo proyecto de WPF")
 
     Presione el botón **siguiente** .
+
+    > [!NOTE]
+    > Xamarin.Forms4,7 incluye compatibilidad con aplicaciones de WPF que se ejecutan en .NET Core 3.
 
 3. En la ventana **configurar el nuevo proyecto** , escriba un nombre para el proyecto con una extensión de **WPF** , por ejemplo, **BoxViewClock. WPF**. Haga clic en el botón **examinar** , seleccione la carpeta **BoxViewClock** y presione **Seleccionar carpeta** para colocar el proyecto de WPF en el mismo directorio que los demás proyectos de la solución:
 
