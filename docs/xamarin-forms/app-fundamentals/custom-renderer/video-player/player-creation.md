@@ -1,8 +1,22 @@
 ---
-title: "Creación de reproductores de vídeo de plataforma" description: "En este artículo se explica cómo implementar un representador personalizado de reproductor de vídeo en cada plataforma mediante Xamarin.Forms."
-ms.prod: xamarin ms.assetid: EEE2FB9B-EB73-4A3F-A859-7A1D4808E149 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 02/12/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Creación de reproductores de vídeo de plataforma
+description: En este artículo se explica cómo implementar un representador personalizado de reproductor de vídeo en cada plataforma mediante Xamarin.Forms.
+ms.prod: xamarin
+ms.assetid: EEE2FB9B-EB73-4A3F-A859-7A1D4808E149
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/12/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d026ecc3288da155aefb0f68ee0c70721106c0da
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84133749"
 ---
-
 # <a name="creating-the-platform-video-players"></a>Creación de reproductores de vídeo de plataforma
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

@@ -1,8 +1,21 @@
 ---
-title: "Instrucciones de configuración de firewall para Xamarin" description: "En este documento se proporciona una lista de hosts que se deben permitir en el firewall para que Xamarin funcione en un entorno corporativo."
-ms.prod: xamarin ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6 author: conceptdev ms.author: crdun ms.date: 07/17/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Instrucciones de configuración del firewall para Xamarin
+description: En este documento se proporciona una lista de hosts que se deben permitir en la lista blanca del firewall para que Xamarin funcione en un entorno corporativo.
+ms.prod: xamarin
+ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6
+author: conceptdev
+ms.author: crdun
+ms.date: 07/17/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 71b2754d19d00b7bf4860acd96bfb7ad8dec4ce5
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84132996"
 ---
-
 # <a name="xamarin-firewall-configuration-instructions"></a>Instrucciones de configuración de firewall para Xamarin
 
 _Lista de los hosts que se deben permitir en el firewall para que la plataforma de Xamarin funcione en la empresa._

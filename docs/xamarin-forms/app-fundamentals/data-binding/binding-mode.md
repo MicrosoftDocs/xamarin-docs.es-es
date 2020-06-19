@@ -1,8 +1,22 @@
 ---
-title: "Xamarin.Forms: Modo de enlace" description: "En este artículo se explica cómo controlar el flujo de información entre el origen y el destino mediante un modo de enlace, que se especifica con un miembro de la enumeración BindingMode. Todas las propiedades enlazables tienen un modo de enlace predeterminado, que indica el modo en vigor cuando esa propiedad es un destino de enlace de datos."
-ms.prod: xamarin ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 05/01/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Modo de enlace de Xamarin.Forms
+description: En este artículo se explica cómo controlar el flujo de información entre el origen y el destino mediante un modo de enlace, que se especifica con un miembro de la enumeración BindingMode. Todas las propiedades enlazables tienen un modo de enlace predeterminado, que indica el modo en vigor cuando esa propiedad es un destino de enlace de datos.
+ms.prod: xamarin
+ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/01/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c14215071a1d9d3ec804c307fa6edbbe4ddcf8e9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139781"
 ---
-
 # <a name="xamarinforms-binding-mode"></a>Modo de enlace de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

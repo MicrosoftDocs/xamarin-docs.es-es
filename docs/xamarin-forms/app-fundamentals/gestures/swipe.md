@@ -1,8 +1,22 @@
 ---
-title: "Adición de un reconocedor de gesto de deslizar rápidamente" description: "En este artículo se explica cómo reconocer un gesto de deslizar rápidamente que se produce en una vista."
-ms.prod: xamarin ms.assetid: 164976C2-1429-49FB-9EB6-621E2681C19B ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 08/14/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Agregar un reconocedor de gesto de deslizar rápidamente
+description: En este artículo se explica cómo reconocer un gesto de deslizar rápidamente que se produce en una vista.
+ms.prod: xamarin
+ms.assetid: 164976C2-1429-49FB-9EB6-621E2681C19B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/14/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 03663803313c870a3361c6e1ffc85cf1f8999068
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137896"
 ---
-
 # <a name="adding-a-swipe-gesture-recognizer"></a>Agregar un reconocedor de gesto de deslizar rápidamente
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)

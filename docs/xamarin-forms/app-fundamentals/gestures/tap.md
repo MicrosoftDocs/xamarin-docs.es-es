@@ -1,8 +1,22 @@
 ---
-title: "Adición de un reconocedor de gesto de pulsar" description: "En este artículo se explica cómo usar el gesto de pulsar para la detección de pulsaciones en una aplicación de Xamarin.Forms. La detección de pulsaciones se implementa con la clase TapGestureRecognizer."
-ms.prod: xamarin ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/21/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Adición de un reconocedor de gesto de pulsar
+description: En este artículo se explica cómo usar el gesto de pulsar para la detección de pulsaciones en una aplicación de Xamarin.Forms. La detección de pulsaciones se implementa con la clase TapGestureRecognizer.
+ms.prod: xamarin
+ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/21/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1f5b476ac83f801b4ccded3e18bb601c06e0d0ef
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570614"
 ---
-
 # <a name="adding-a-tap-gesture-recognizer"></a>Adición de un reconocedor de gesto de pulsar
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)

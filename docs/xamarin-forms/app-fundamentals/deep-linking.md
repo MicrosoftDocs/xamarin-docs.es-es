@@ -1,8 +1,23 @@
 ---
-title: "Indexación de la aplicación y vinculación en profundidad" description: "En este artículo se explica cómo usar la indexación de la aplicación y la vinculación en profundidad para que el contenido de las aplicaciones Xamarin.Forms permita efectuar búsquedas en dispositivos iOS y Android."
-ms.prod: xamarin ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226 ms.technology: xamarin-forms ms.custom: xamu-video author: davidbritch ms.author: dabritch ms.date: 11/28/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Indexación de la aplicación y vinculación en profundidad
+description: En este artículo se explica cómo usar la indexación de la aplicación y la vinculación en profundidad para que el contenido de las aplicaciones Xamarin.Forms permita efectuar búsquedas en dispositivos iOS y Android.
+ms.prod: xamarin
+ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/28/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c7f5979b93ff35b14ec7c13418a4565604f46bd7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570653"
 ---
-
 # <a name="application-indexing-and-deep-linking"></a>Indexación de la aplicación y vinculación en profundidad
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)

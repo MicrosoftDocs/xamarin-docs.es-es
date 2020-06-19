@@ -1,8 +1,22 @@
 ---
-title: "Introducción a los representadores personalizados" description: "En este artículo, se proporciona una introducción a los representadores personalizados y se describe el proceso para crear un representador personalizado."
-ms.prod: xamarin ms.assetid: 264314BE-1C5C-4727-A14E-F6F98151CDBD ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/19/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Introducción a los representadores personalizados
+description: En este artículo, se proporciona una introducción a los representadores personalizados y se describe el proceso para crear un representador personalizado.
+ms.prod: xamarin
+ms.assetid: 264314BE-1C5C-4727-A14E-F6F98151CDBD
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/19/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e2bed4d5e8f89efa2997fb085278c4b549870245
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135326"
 ---
-
 # <a name="introduction-to-custom-renderers"></a>Introducción a los representadores personalizados
 
 _Los representadores personalizados proporcionan un método eficaz para personalizar la apariencia y el comportamiento de los controles de Xamarin.Forms. Se pueden usar para realizar pequeños cambios de estilo o para una personalización sofisticada del diseño y el comportamiento específicos de una plataforma. En este artículo, se proporciona una introducción a los representadores personalizados y se describe el proceso para crear un representador personalizado._

@@ -1,8 +1,24 @@
 ---
-title: "Almacenamiento de datos en una base de datos de SQLite.NET local" description: "En este artículo se explica cómo almacenar datos en una base de datos de SQLite.NET local."
-zone_pivot_groups: platform ms.topic: quickstart ms.prod: xamarin ms.assetid: 5BF901BD-FDE8-4B74-B4AB-418E81745A3B ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/01/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Almacenamiento de datos en una base de datos local de SQLite.NET
+description: En este artículo se explica cómo almacenar datos en una base de datos de SQLite.NET local.
+zone_pivot_groups: platform
+ms.topic: quickstart
+ms.prod: xamarin
+ms.assetid: 5BF901BD-FDE8-4B74-B4AB-418E81745A3B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/01/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2864c7edabde18faec06c2c42042168d3e6c9671
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139807"
 ---
-
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Almacenamiento de datos en una base de datos de SQLite.NET local
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)

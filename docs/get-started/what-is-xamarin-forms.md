@@ -1,9 +1,21 @@
 ---
-title: "¿Qué es Xamarin.Forms?"
-description: "En este artículo se presentan Xamarin.Forms y las bibliotecas relacionadas."
-ms.prod: xamarin ms.assetid: C1E24DB9-3099-4F79-BB88-10AABF7D4614 author: profexorgeek ms.author: jusjohns ms.date: 05/28/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: ¿Qué es Xamarin.Forms?
+description: En este artículo se presentan Xamarin.Forms y las bibliotecas relacionadas.
+ms.prod: xamarin
+ms.assetid: C1E24DB9-3099-4F79-BB88-10AABF7D4614
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 05/28/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: eb76da9be7fcb227c465c0a046b967b2f70b1cfb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198305"
 ---
-
 # <a name="what-is-xamarinforms"></a>¿Qué es Xamarin.Forms?
 
 [![Capturas de pantalla de la aplicación Xamarin.Forms de ejemplo en iOS y Android](what-is-xamarin-forms-images/xamarin-forms-app-cropped.png)](what-is-xamarin-forms-images/xamarin-forms-app.png#lightbox)

@@ -1,8 +1,21 @@
 ---
-title: "Xamarin.Essentials: MainThread" description: "La clase MainThread permite que las aplicaciones ejecuten código en el subproceso de ejecución principal."
-ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 08/20/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: MainThread'
+description: La clase MainThread permite que las aplicaciones ejecuten código en el subproceso de ejecución principal.
+ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 08/20/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 82c54a72d0e0bc991644295f05136f89fd280d7f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802274"
 ---
-
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
 
 La clase **MainThread** permite que las aplicaciones ejecuten código en el subproceso de ejecución principal y determinen si un bloque de código determinado se ejecuta actualmente en el subproceso principal.
@@ -100,7 +113,7 @@ La clase `MainThread` incluye los siguientes métodos `static` adicionales, que 
 
 ## <a name="api"></a>API
 
-- [Código fuente de MainThread](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/MainThread)
+- [Código fuente de MainThread](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/MainThread)
 - [Documentación de API de MainThread](xref:Xamarin.Essentials.MainThread)
 
 ## <a name="related-video"></a>Vídeo relacionado

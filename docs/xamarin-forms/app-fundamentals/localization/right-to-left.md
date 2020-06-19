@@ -1,8 +1,23 @@
 ---
-title: "Localización de derecha a izquierda" description: "La localización de derecha a izquierda agrega compatibilidad para la dirección de flujo de derecha a izquierda para las aplicaciones de Xamarin.Forms."
-ms.prod: xamarin ms.assetid: 90E0CB16-C42A-4CC8-A70E-0C2CFB64A429 ms.technology: xamarin-forms ms.custom: xamu-video author: davidbritch ms.author: dabritch ms.date: 05/07/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Localización de derecha a izquierda
+description: La localización de derecha a izquierda agrega compatibilidad para la dirección de flujo de derecha a izquierda para las aplicaciones de Xamarin.Forms.
+ms.prod: xamarin
+ms.assetid: 90E0CB16-C42A-4CC8-A70E-0C2CFB64A429
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/07/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 212674472706a36c66436a3955ab7b988f8e246b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137558"
 ---
-
 # <a name="right-to-left-localization"></a>Localización de derecha a izquierda
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)

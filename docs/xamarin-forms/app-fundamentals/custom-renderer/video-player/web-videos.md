@@ -1,8 +1,22 @@
 ---
-title: "Reproducción de un vídeo web" description: "En este artículo se explica cómo reproducir vídeos web en una aplicación de reproductor de vídeo mediante Xamarin.Forms."
-ms.prod: xamarin ms.assetid: 75781A10-865D-4BA8-8D6B-E3DA012922BC ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 02/12/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Reproducción de un vídeo web
+description: En este artículo se explica cómo reproducir vídeos web en una aplicación de reproductor de vídeo mediante Xamarin.Forms.
+ms.prod: xamarin
+ms.assetid: 75781A10-865D-4BA8-8D6B-E3DA012922BC
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/12/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b4269b768d6dd9a0eadbbe557f701f8a43b74c99
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84133684"
 ---
-
 # <a name="playing-a-web-video"></a>Reproducción de un vídeo web
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

@@ -1,8 +1,22 @@
 ---
-title: "Introducción a los comportamientos" description: "Los comportamientos permiten agregar funciones a los controles de la interfaz de usuario sin tener que incluirlos en subclases. En su lugar, la función se implementa en una clase de comportamiento y se asocia al control como si fuera parte de este. En este artículo, se proporciona una introducción a los comportamientos."
-ms.prod: xamarin ms.assetid: 0DF1EF8C-A212-4142-A3C6-DF760A82A757 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/06/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Introducción a los comportamientos
+description: Los comportamientos permiten agregar funciones a los controles de la interfaz de usuario sin tener que incluirlos en subclases. En su lugar, la función se implementa en una clase de comportamiento y se asocia al control como si fuera parte de este. En este artículo, se proporciona una introducción a los comportamientos.
+ms.prod: xamarin
+ms.assetid: 0DF1EF8C-A212-4142-A3C6-DF760A82A757
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/06/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d5bee3baa08387a1ed67384ba4089d63aad08d2c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135777"
 ---
-
 # <a name="introduction-to-behaviors"></a>Introducción a los comportamientos
 
 _Los comportamientos permiten agregar funciones a los controles de la interfaz de usuario sin tener que incluirlos en subclases. En su lugar, la función se implementa en una clase de comportamiento y se asocia al control como si fuera parte de este. En este artículo, se proporciona una introducción a los comportamientos._

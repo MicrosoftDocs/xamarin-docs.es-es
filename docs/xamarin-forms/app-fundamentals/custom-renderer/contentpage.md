@@ -1,8 +1,22 @@
 ---
-title: "Personalización de una página de contenido" description: "Un ContentPage es un elemento visual que muestra una vista única y ocupa la mayor parte de la pantalla. En este artículo se muestra cómo crear un representador personalizado para la página ContentPage, lo que permite que los desarrolladores reemplacen la representación nativa de forma predeterminada con su propia personalización específica de la plataforma."
-ms.prod: xamarin ms.assetid: A4E61D93-73D9-4668-8D1C-DB6FC2491822 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/29/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Personalización de una página de contenido
+description: Un ContentPage es un elemento visual que muestra una vista única y ocupa la mayor parte de la pantalla. En este artículo se muestra cómo crear un representador personalizado para la página ContentPage, lo que permite que los desarrolladores reemplacen la representación nativa de forma predeterminada con su propia personalización específica de la plataforma.
+ms.prod: xamarin
+ms.assetid: A4E61D93-73D9-4668-8D1C-DB6FC2491822
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/29/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ca9a541c3d152d1b84ed682881c395f2199b9eaf
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84574397"
 ---
-
 # <a name="customizing-a-contentpage"></a>Personalización de una página de contenido
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
