@@ -10,12 +10,12 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7638a7a9bb272d1f1904c3e446cdf0b7838c27bd
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 719713368971b0b278cd4a4a9721e863a17ae16d
+ms.sourcegitcommit: 34fa3086c55b1e01838419c930f839c20662c362
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/18/2020
-ms.locfileid: "84947350"
+ms.locfileid: "84990783"
 ---
 # <a name="xamarinforms-shapes-ellipse"></a>Xamarin.FormsFormas: elipse
 
@@ -50,5 +50,5 @@ En el siguiente ejemplo de XAML se muestra cómo dibujar un círculo:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapedemos/)
+- [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.FormsColocar](index.md)

@@ -10,12 +10,12 @@ ms.date: 06/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 86ad823466470033c458ad44a404e8ab667c1b95
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 28bcbed3a03a2abbec42a619062579419a3063a4
+ms.sourcegitcommit: 8a18471b3d96f3f726b66f9bc50a829f1c122f29
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/18/2020
-ms.locfileid: "84903082"
+ms.locfileid: "84988205"
 ---
 # <a name="respond-to-system-theme-changes-in-xamarinforms-applications"></a>Responder a los cambios de tema del sistema en Xamarin.Forms las aplicaciones
 
@@ -135,13 +135,16 @@ La `RequestedTheme` propiedad devuelve un `OSAppTheme` miembro de enumeración. 
 
 ## <a name="set-the-current-user-theme"></a>Establecer el tema del usuario actual
 
-El tema que utiliza la aplicación se puede establecer con la `Application.UserTheme` propiedad, que es de tipo `OSAppTheme` :
+El tema que utiliza la aplicación se puede establecer con la `Application.UserAppTheme` propiedad, que es de tipo `OSAppTheme` , independientemente del tema del sistema que esté operativo actualmente:
 
 ```csharp
 Application.Current.UserAppTheme = OSAppTheme.Dark;
 ```
 
-En este ejemplo, la aplicación se establece para usar el tema definido para el modo de sistema oscuro.
+En este ejemplo, la aplicación está configurada para usar el tema definido para el modo oscuro del sistema, independientemente de qué tema del sistema esté operativo actualmente.
+
+> [!NOTE]
+> Establezca la `UserAppTheme` propiedad en `OSAppTheme.Unspecified` como predeterminada en el tema del sistema operativo.
 
 ## <a name="react-to-theme-changes"></a>Reaccionar a cambios de tema
 

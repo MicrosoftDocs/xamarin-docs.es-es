@@ -10,12 +10,12 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e558c510fa71f4d8f33b70b7dcb7e9a9334c6a84
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 48d68d2597986a941a6ac3a8df0d99f09f421e62
+ms.sourcegitcommit: 34fa3086c55b1e01838419c930f839c20662c362
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/18/2020
-ms.locfileid: "84947365"
+ms.locfileid: "84990885"
 ---
 # <a name="xamarinforms-shapes-path"></a>Xamarin.FormsFormas: ruta de acceso
 
@@ -91,7 +91,7 @@ Para obtener más información sobre las geometrías, vea [ Xamarin.Forms geomet
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapedemos/)
+- [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.FormsColocar](index.md)
 - [Xamarin.FormsGeometrías de formas](geometries.md)
 - [Xamarin.FormsTransformaciones de ruta de acceso](path-transforms.md)

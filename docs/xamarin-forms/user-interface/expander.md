@@ -10,12 +10,12 @@ ms.date: 04/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5e9afa0f6d27003891963af5715d5721e3129306
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 33659dd52452c575c403d0a25b24f17daf9e3f17
+ms.sourcegitcommit: 8a18471b3d96f3f726b66f9bc50a829f1c122f29
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/18/2020
-ms.locfileid: "84129589"
+ms.locfileid: "84988212"
 ---
 # <a name="xamarinforms-expander"></a>Xamarin.FormsExpansor
 
@@ -45,7 +45,6 @@ El `Expander` control define las siguientes propiedades:
 - `ForceUpdateSizeCommand`, de tipo `ICommand` , que define el comando que se ejecuta cuando se fuerza la actualización del tamaño de `Expander` . Esta propiedad utiliza el `OneWayToSource` modo de enlace.
 - `Header`, de tipo [`View`](xref:Xamarin.Forms.View) , que define el contenido del encabezado.
 - `IsExpanded`, de tipo `bool` , que determina si `Expander` se expande. Esta propiedad utiliza el `TwoWay` modo de enlace y tiene un valor predeterminado de `false` .
-- `Spacing`, de tipo `double` , que representa el espacio entre el encabezado y su contenido. El valor predeterminado de esta propiedad es 0.
 - `State`, de tipo `ExpanderState` , que representa el estado de `Expander` . Esta propiedad utiliza el `OneWayToSource` modo de enlace.
 
 Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
@@ -224,51 +223,18 @@ La `IsExpanded` propiedad se convierte `true` `Expander` en cuando se puntea el 
 
 Para obtener más información acerca de los desencadenadores, vea [ Xamarin.Forms desencadenadores](~/xamarin-forms/app-fundamentals/triggers.md).
 
-## <a name="define-the-space-between-header-and-content"></a>Definir el espacio entre el encabezado y el contenido
-
-De forma predeterminada, el contenido de un `Expander` aparece directamente debajo de su encabezado. Sin embargo, este comportamiento se puede cambiar estableciendo la `Spacing` propiedad en un `double` valor que representa el espacio vacío entre el contenido y su encabezado:
-
-```xaml
-<Expander Spacing="50"
-          IsExpanded="true">
-    <Expander.Header>
-        <Label Text="Baboon"
-               FontAttributes="Bold"
-               FontSize="Medium" />
-    </Expander.Header>
-    <Grid Padding="10">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
-        <Image Source="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
-               Aspect="AspectFill"
-               HeightRequest="120"
-               WidthRequest="120" />
-        <Label Grid.Column="1"
-               Text="Baboons are African and Arabian Old World monkeys belonging to the genus Papio, part of the subfamily Cercopithecinae."
-               FontAttributes="Italic" />
-    </Grid>
-</Expander>
-```
-
-En este ejemplo, el `Expander` contenido muestra unidades independientes del dispositivo 50 debajo del encabezado:
-
-![Captura de pantalla de un expansor con un conjunto de espaciado, en iOS y Android](expander-images/expander-spacing.png "Expansor con espacio establecido en iOS y Android")
-
 ## <a name="embed-an-expander-in-an-expander"></a>Insertar un expansor en un expansor
 
 El contenido de `Expander` se puede establecer en otro `Expander` control para habilitar varios niveles de expansión. En el código XAML siguiente `Expander` se muestra un cuyo contenido es otro `Expander` objeto:
 
 ```xaml
-<Expander Spacing="10">
+<Expander>
     <Expander.Header>
         <Label Text="{Binding Name}"
                FontAttributes="Bold"
                FontSize="Medium" />
     </Expander.Header>
-    <Expander Padding="10"
-              Spacing="10">
+    <Expander Padding="10">
         <Expander.Header>
             <Label Text="{Binding Location}"
                    FontSize="Medium" />
