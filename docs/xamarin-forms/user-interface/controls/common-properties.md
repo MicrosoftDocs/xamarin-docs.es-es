@@ -6,16 +6,16 @@ ms.assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 08/21/2019
+ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: deb894cccd5b6a2a9d908ef8967de91f00e7d297
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f3ab70dc20dda78e3acf400cf51d0ee9df84ff93
+ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136427"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104331"
 ---
 # <a name="xamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Formspropiedades, métodos y eventos de controles comunes
 
@@ -23,7 +23,7 @@ La Xamarin.Forms `VisualElement` clase es la clase base para la mayoría de los 
 
 ## <a name="properties"></a>Propiedades
 
-Las siguientes propiedades están disponibles en `VisualElement` las instancias de. Para obtener una lista completa, consulte las propiedades de la [API de VisualElement](xref:Xamarin.Forms.VisualElement#properties).
+Las siguientes propiedades están disponibles en los [`VisualElement`](xref:Xamarin.Forms.VisualElement) objetos.
 
 ### [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX)
 
@@ -44,6 +44,10 @@ La `Behaviors` propiedad es `List` de `Behavior` objetos. Los comportamientos pe
 ### [`Bounds`](xref:Xamarin.Forms.VisualElement.Bounds)
 
 La `Bounds` propiedad es un objeto de solo lectura `Rectangle` que representa el espacio ocupado por el control. El `Bounds` valor de la propiedad se asigna durante el ciclo de diseño. `Rectangle` `struct` Contiene propiedades y métodos útiles para probar la intersección y la contención de rectángulos. Para obtener más información, consulte la [ Xamarin.Forms API de rectángulo](xref:Xamarin.Forms.Rectangle).
+
+### `Clip`
+
+La `Clip` propiedad es un `Geometry` objeto que define el contorno del contenido de un elemento. Para definir un clip, use un `Geometry` objeto como `EllipseGeometry` para establecer la propiedad del elemento `Clip` . Solo se verá el área que está dentro de la región de la geometría. Para obtener más información, vea [geometrías de clip](~/xamarin-forms/user-interface/shapes/geometries.md#clip-geometries).
 
 ### [`Effects`](xref:Xamarin.Forms.Element.Effects)
 
@@ -213,7 +217,7 @@ public void Unfocus ()
 
 El elemento ya debe tener el foco para que este método funcione.
 
-## <a name="events"></a>Events
+## <a name="events"></a>Eventos
 
 Los eventos siguientes están disponibles en la `VisualElement` clase. Para obtener una lista completa, vea [ Xamarin.Forms VisualElement Events](xref:Xamarin.Forms.VisualElement#events).
 
@@ -268,4 +272,4 @@ El comportamiento es indefinido cuando el valor mínimo es mayor que el valor ab
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-* [Documentación de la API de VisualElement](xref:Xamarin.Forms.VisualElement)
+- [API de VisualElement](xref:Xamarin.Forms.VisualElement)

@@ -10,18 +10,18 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 48d68d2597986a941a6ac3a8df0d99f09f421e62
-ms.sourcegitcommit: 34fa3086c55b1e01838419c930f839c20662c362
+ms.openlocfilehash: cb2e3ea68f181f0a6e6392c012db221ef35d65bd
+ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990885"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104300"
 ---
 # <a name="xamarinforms-shapes-path"></a>Xamarin.FormsFormas: ruta de acceso
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
 
 La `Path` clase se deriva de la `Shape` clase y se puede usar para dibujar curvas y formas complejas. Estas curvas y formas suelen describirse mediante `Geometry` objetos. Para obtener información sobre las propiedades que la `Path` clase hereda de la `Shape` clase, vea [ Xamarin.Forms formas](index.md).
 
@@ -36,7 +36,7 @@ Para obtener más información sobre las transformaciones, vea [ Xamarin.Forms t
 
 ## <a name="create-a-path"></a>Crear una ruta de acceso
 
-En el siguiente ejemplo de XAML se muestra cómo dibujar un polígono usando una sintaxis abreviada especial:
+En el siguiente ejemplo de XAML se muestra cómo dibujar un polígono usando una sintaxis abreviada especial conocida como sintaxis de marcado de trazados:
 
 ```xaml
 <Path Data="M 10,50 L 200,70"
@@ -48,7 +48,12 @@ En el siguiente ejemplo de XAML se muestra cómo dibujar un polígono usando una
       WidthRequest="100" />
 ```
 
-La `Data` cadena comienza con el comando "moveTo", indicado por `M` , que establece un punto de inicio para la ruta de acceso. Los parámetros de datos de ruta de acceso distinguen mayúsculas de minúsculas. La letra mayúscula `M` indica una ubicación absoluta para el punto inicial. Un minúscula `m` indicaría coordenadas relativas. `L`es el comando de línea, que crea una línea recta desde el punto inicial hasta el punto final especificado.
+La `Data` cadena comienza con el comando "moveTo", indicado por `M` , que establece un punto de inicio para la ruta de acceso. `L`es el comando de línea, que crea una línea recta desde el punto inicial hasta el punto final especificado.
+
+> [!NOTE]
+> La sintaxis de marcado de rutas de acceso solo está disponible en XAML.
+
+Para obtener más información sobre la sintaxis de marcado de trazados, vea [ Xamarin.Forms Sintaxis de marcado de trazados](path-markup-syntax.md).
 
 ## <a name="path-geometry"></a>Geometría de trazado
 
@@ -91,7 +96,8 @@ Para obtener más información sobre las geometrías, vea [ Xamarin.Forms geomet
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [ShapeDemos (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
 - [Xamarin.FormsColocar](index.md)
-- [Xamarin.FormsGeometrías de formas](geometries.md)
+- [Xamarin.FormsGeometrías](geometries.md)
+- [Xamarin.FormsSintaxis de marcado de trazados](path-markup-syntax.md)
 - [Xamarin.FormsTransformaciones de ruta de acceso](path-transforms.md)

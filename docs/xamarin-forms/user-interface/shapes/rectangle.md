@@ -10,18 +10,18 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a0d528948ae8a57fc7c702d8a4ce3d3ec2eda15a
-ms.sourcegitcommit: 34fa3086c55b1e01838419c930f839c20662c362
+ms.openlocfilehash: da9649a4abb2cb65930d98576eda81739b711886
+ms.sourcegitcommit: d86b7a18cf8b1ef28cd0fe1d311f1c58a65101a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990827"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85101374"
 ---
 # <a name="xamarinforms-shapes-rectangle"></a>Xamarin.FormsFormas: rectángulo
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
 
 La `Rectangle` clase se deriva de la `Shape` clase y se puede usar para dibujar rectángulos. Para obtener información sobre las propiedades que la `Rectangle` clase hereda de la `Shape` clase, vea [ Xamarin.Forms formas](index.md).
 
@@ -51,5 +51,5 @@ En el siguiente ejemplo de XAML se muestra cómo dibujar un rectángulo relleno 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [ShapeDemos (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
 - [Xamarin.FormsColocar](index.md)

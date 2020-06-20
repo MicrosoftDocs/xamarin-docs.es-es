@@ -10,18 +10,18 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5814bb73f843031d672df0573775abb002fd3644
-ms.sourcegitcommit: 34fa3086c55b1e01838419c930f839c20662c362
+ms.openlocfilehash: c0abf7b30192ac9183c28e89d7917ea8d08dfc4f
+ms.sourcegitcommit: d86b7a18cf8b1ef28cd0fe1d311f1c58a65101a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990807"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85101332"
 ---
 # <a name="xamarinforms-shapes-path-transforms"></a>Xamarin.FormsFormas: transformaciones de trazado
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
 
 `Transform`Define cómo transformar un `Path` objeto de un espacio de coordenadas en otro. Esta asignación se describe mediante una transformación `Matrix` , que es una colección de tres filas con tres columnas de `double` valores.
 
@@ -352,5 +352,5 @@ En este ejemplo, la `Matrix` propiedad se especifica como una cadena delimitada 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [ShapeDemos (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
 - [Xamarin.FormsColocar](index.md)

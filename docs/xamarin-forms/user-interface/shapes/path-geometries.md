@@ -1,6 +1,6 @@
 ---
-title: 'Xamarin.FormsFormas: geometrías'
-description: Xamarin.Formslas clases Geometry permiten describir la geometría de una forma 2D.
+title: 'Xamarin.FormsFormas: geometrías de trazado'
+description: Xamarin.FormsLas clases de geometría de trazado permiten describir la geometría de una forma 2D.
 ms.prod: xamarin
 ms.assetid: 07DE3D66-1820-4642-BDDF-84146D40C99D
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 05fcd1ada62bffa4829ad422ee5eda36d9d75ae3
-ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
+ms.openlocfilehash: 5718b0594581928e6f00e11a15163d176615378f
+ms.sourcegitcommit: d86b7a18cf8b1ef28cd0fe1d311f1c58a65101a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104249"
+ms.locfileid: "85101889"
 ---
-# <a name="xamarinforms-shapes-geometries"></a>Xamarin.FormsFormas: geometrías
+# <a name="xamarinforms-shapes-path-geometries"></a>Xamarin.FormsFormas: geometrías de trazado
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
@@ -189,29 +189,6 @@ En el ejemplo siguiente se muestra cómo combinar las geometrías en un `Geometr
 ```
 
 En este ejemplo, `EllipseGeometry` se combinan cuatro objetos con las mismas coordenadas x-radio e y, pero con distintas coordenadas de centro. Esto crea cuatro círculos superpuestos, cuyos interiores se rellenan de color naranja con la `EvenOdd` regla de relleno.
-
-## <a name="clip-geometries"></a>Geometrías de clip
-
-La [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase tiene una `Clip` propiedad, de tipo `Geometry` , que define el contorno del contenido de un elemento. Cuando la `Clip` propiedad se establece en un `Geometry` objeto, solo se verá el área que está dentro de la región de `Geometry` .
-
-En el ejemplo siguiente se muestra cómo usar un `Geometry` objeto como la región de recorte de un [`Image`](xref:Xamarin.Forms.Image) :
-
-```xaml
-<Image Source="monkeyface.png">
-    <Image.Clip>
-        <EllipseGeometry RadiusX="100"
-                         RadiusY="100"
-                         Center="180,180" />
-    </Image.Clip>
-</Image>
-```
-
-En este ejemplo, un `EllipseGeometry` con `RadiusX` `RadiusY` los valores y de 100 y un `Center` valor de (180.180) se establece en la `Clip` propiedad de [`Image`](xref:Xamarin.Forms.Image) . Solo se mostrará la parte de la imagen que se encuentra dentro del área de la elipse:
-
-![Recortar una imagen con un EllipseGeometry](geometries-images/clip-ellipsegeometry.png "Recortar una imagen con un EllipseGeometry")
-
-> [!NOTE]
-> Las geometrías simples, las geometrías de trazado y las geometrías compuestas se pueden usar para recortar [`VisualElement`](xref:Xamarin.Forms.VisualElement) objetos.
 
 ## <a name="other-features"></a>Otras características
 
