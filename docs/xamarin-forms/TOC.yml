@@ -234,6 +234,8 @@
               href: app-fundamentals/data-binding/relative-bindings.md
             - name: Conmutación por recuperación de enlaces
               href: app-fundamentals/data-binding/binding-fallbacks.md
+            - name: Enlaces múltiples
+              href: app-fundamentals/data-binding/multibinding.md
             - name: Interfaz de comandos
               href: app-fundamentals/data-binding/commanding.md
             - name: Enlaces compilados
@@ -355,7 +357,7 @@
       items:
         - name: Información general
           href: user-interface/index.yml
-        - name: 'Marcado de C#'
+        - name: Marcado de C#
           href: user-interface/csharp-markup.md
         - name: Referencia de controles
           items:
@@ -535,6 +537,30 @@
               href: user-interface/text/fonts.md
             - name: Gráficos con SkiaSharp
               href: user-interface/graphics/skiasharp/index.md
+            - name: Formas
+              items:
+                - name: Información general
+                  href: user-interface/shapes/index.md
+                - name: Ellipse
+                  href: user-interface/shapes/ellipse.md
+                - name: Geometrías
+                  href: user-interface/shapes/geometries.md
+                - name: Línea
+                  href: user-interface/shapes/line.md
+                - name: Rutas de acceso
+                  items:
+                    - name: Ruta de acceso
+                      href: user-interface/shapes/path.md
+                    - name: Sintaxis de marcado de ruta de acceso
+                      href: user-interface/shapes/path-markup-syntax.md
+                    - name: Transformaciones de ruta de acceso
+                      href: user-interface/shapes/path-transforms.md
+                - name: Polígono
+                  href: user-interface/shapes/polygon.md
+                - name: Polilínea
+                  href: user-interface/shapes/polyline.md
+                - name: Rectángulo
+                  href: user-interface/shapes/rectangle.md
             - name: Pantalla de presentación
               href: user-interface/splashscreen.md
             - name: Estilos
@@ -768,7 +794,7 @@
           items:
             - name: Vistas nativas en XAML
               href: platform/native-views/xaml.md
-            - name: 'Vistas nativas en C#'
+            - name: Vistas nativas en C#
               href: platform/native-views/code.md
         - name: Inicio de sesión con Apple
           href: platform/sign-in-with-apple/index.md
@@ -782,7 +808,7 @@
         - name: Otras plataformas
           href: platform/other/index.md
           items:
-            - name: 'GTK#'
+            - name: GTK#
               href: platform/other/gtk.md
             - name: Mac
               href: platform/other/mac.md

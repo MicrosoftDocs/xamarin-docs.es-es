@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/20/2019
-ms.openlocfilehash: b3f96f342679d8be6d2f8fbc0ad5962ca675d2a5
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: ce7df59d41efdd2d151fd2ea73cf26b40ee7fa10
+ms.sourcegitcommit: 834466c9d9cf35e9659e467ce0123e5f5ade6138
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71213808"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85129914"
 ---
 # <a name="multiple-windows-for-ipad"></a>Varias ventanas para iPad
 
@@ -20,7 +20,7 @@ iOS 13 ahora admite Windows en paralelo para la misma aplicación en iPad. Esto 
 
 ## <a name="project-configuration"></a>Configuración del proyecto
 
-Para configurar el proyecto para varias ventanas, modifique el `info.plist` `NSUserActivityTypes` para que indique a iOS que la aplicación controlará las actividades de este `UIApplicationSceneManifest` tipo y `UIApplicationSupportsMultipleScenes` para habilitar varias ventanas `UISceneConfigurations` y asociar el escena con un guion gráfico.
+Para configurar el proyecto para varias ventanas, modifique la `info.plist` instrucción para que `NSUserActivityTypes` indique a iOS que la aplicación controlará las actividades de este tipo y `UIApplicationSceneManifest` para habilitar `UIApplicationSupportsMultipleScenes` varias ventanas y `UISceneConfigurations` asociar la escena a un guion gráfico.
 
 ```xml
 <key>NSUserActivityTypes</key>
@@ -58,7 +58,7 @@ Con la aplicación abierta y en ejecución en un iPad, hay algunas maneras de ab
 
 Las interacciones adicionales para entrar en un modo de varias ventanas están disponibles en la aplicación.
 
-**Arrastre desde la aplicación** : Use una interacción de arrastre dentro de la aplicación para `NSUserActivity` iniciar un nuevo igual que arrastrar el icono de la aplicación en ejemplos anteriores.
+**Arrastre desde la aplicación** : Use una interacción de arrastre dentro de la aplicación para iniciar un nuevo `NSUserActivity` igual que arrastrar el icono de la aplicación en ejemplos anteriores.
 
 Cuando se usa una [interacción de arrastrar y colocar][0], se crea `NSUserActivity` y se asocian los datos que se van a pasar a la nueva ventana que se solicita a iOS que se abra automáticamente.
 
@@ -79,14 +79,14 @@ public UIDragItem [] GetItemsForBeginningDragSession (UICollectionView collectio
 }
 ```
 
-En el código anterior, el `selectedPhoto` objeto de modelo tiene un método para devolver `NSUserActivity` un `OpenDetailUserActivity()`llamado. Cuando se completa el movimiento de arrastre, `UIDragItem` el con `userActivity` presenta a través `NSItemProvider`de.
+En el código anterior, el `selectedPhoto` objeto de modelo tiene un método para devolver un `NSUserActivity` llamado `OpenDetailUserActivity()` . Cuando se completa el movimiento de arrastre, el `UIDragItem` con presenta `userActivity` a través de `NSItemProvider` .
 
 **Acciones explícitas** : los gestos de usuario en botones o vínculos ofrecen la posibilidad de abrir una nueva ventana.
 
-Desde el `UIApplication` , puede iniciar un nuevo `UISceneSession` mediante una `RequestSceneSessionActivation`llamada a. Si ya existe una escena existente, debe utilizarla. De forma predeterminada, se creará una nueva escena.
+Desde el `UIApplication` , puede iniciar un nuevo `UISceneSession` mediante una llamada a `RequestSceneSessionActivation` . Si ya existe una escena existente, debe utilizarla. De forma predeterminada, se creará una nueva escena.
 
 ```csharp
-pubic void ItemSelected(UICollectionView collectionView, NSIndexPath indexPath)
+public void ItemSelected(UICollectionView collectionView, NSIndexPath indexPath)
 {
     var userActivity = selectedPhoto.OpenDetailUserActivity ();
 
@@ -99,7 +99,7 @@ pubic void ItemSelected(UICollectionView collectionView, NSIndexPath indexPath)
 }
 ```
 
-En este ejemplo `userActivity` , es el único valor `RequestSceneSessionActivation` que se pasa al método para abrir una nueva ventana de la aplicación basándose en una acción explícita del usuario; en este `UICollectionView`caso, `ItemSelected` un controlador de.
+En este ejemplo, `userActivity` es el único valor que se pasa al `RequestSceneSessionActivation` método para abrir una nueva ventana de la aplicación basándose en una acción explícita del usuario; en este caso, un `ItemSelected` controlador de `UICollectionView` .
 
 ## <a name="related-links"></a>Vínculos relacionados
 
