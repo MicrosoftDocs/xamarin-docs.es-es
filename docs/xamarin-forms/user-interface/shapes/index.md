@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 13c79d7597325a3bf8dbabfa2983d55a92309c4b
-ms.sourcegitcommit: dc49ba58510eeb52048a866e5d3daf5f1f68fbd2
+ms.openlocfilehash: fdab7d422040aee5a00b16bb1e301f917b0c4883
+ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85130887"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243768"
 ---
 # <a name="xamarinforms-shapes"></a>Xamarin.FormsColocar
 
@@ -97,7 +97,82 @@ En este ejemplo, un `Path` objeto dibuja un corazón. Las `Path` `WidthRequest` 
 
 ![Formas de ajuste](images/aspect.png "Formas de ajuste")
 
+## <a name="draw-dashed-shapes"></a>Dibujar formas discontinuas
+
+`Shape`los objetos tienen una `StrokeDashArray` propiedad, de tipo `DoubleCollection` . Esta propiedad representa una colección de `double` valores que indican el modelo de guiones y espacios que se usan para esquematizar una forma. Un `DoubleCollection` es `ObservableCollection` de `double` valores. Cada `double` de la colección especifica la longitud de un guión o un espacio. El primer elemento de la colección, que se encuentra en el índice 0, especifica la longitud de un guión. El segundo elemento de la colección, que se encuentra en el índice 1, especifica la longitud de un intervalo. Por lo tanto, los objetos con un valor de índice par especifican guiones, mientras que los objetos con un valor de índice impar especifican huecos.
+
+`Shape`los objetos también tienen una `StrokeDashOffset` propiedad, de tipo `double` , que especifica la distancia dentro del patrón de guiones donde comienza un guión. Si no se establece esta propiedad, se producirá `Shape` un contorno sólido.
+
+Las formas de guiones se pueden dibujar mediante el establecimiento de las `StrokeDashArray` `StrokeDashOffset` propiedades y. La `StrokeDashArray` propiedad se debe establecer en uno o más `double` valores, donde cada par está delimitado por una sola coma y/o uno o varios espacios. Por ejemplo, "0,5 1,0" y "0.5, 1.0" son válidos.
+
+En el siguiente ejemplo de XAML se muestra cómo dibujar un rectángulo discontinuo:
+
+```xaml
+<Rectangle Fill="DarkBlue"
+           Stroke="Red"
+           StrokeThickness="4"
+           StrokeDashArray="1,1"
+           StrokeDashOffset="6"
+           WidthRequest="150"
+           HeightRequest="50"
+           HorizontalOptions="Start" />
+```
+
+En este ejemplo, se dibuja un rectángulo relleno con un trazo discontinuo:
+
+![Rectángulo discontinuo](images/dashed-rectangle.png "Línea discontinua")
+
+## <a name="control-line-ends"></a>Extremos de la línea de control
+
+Una línea tiene tres partes: el extremo inicial, el cuerpo de la línea y el extremo final. Los extremos inicial y final describen la forma al principio y al final de una línea, o segmento.
+
+`Shape`los objetos tienen una `StrokeLineCap` propiedad, de tipo `PenLineCap` , que describe la forma en el principio y el final de una línea, o segmento. La enumeración `PenLineCap` define los miembros siguientes:
+
+- `Flat`, que representa un extremo que no se extiende más allá del último punto de la línea. Esto es comparable a ningún extremo de línea y es el valor predeterminado de la `StrokeLineCap` propiedad.
+- `Square`, que representa un rectángulo que tiene un alto igual al grosor de la línea y una longitud igual a la mitad del grosor de la línea.
+- `Round`, que representa un semicírculo que tiene un diámetro igual al grosor de la línea.
+
+> [!IMPORTANT]
+> La `StrokeLineCap` propiedad no tiene ningún efecto si se establece en una forma que no tiene ningún punto inicial o final. Por ejemplo, esta propiedad no tiene ningún efecto si se establece en `Ellipse` , o `Rectangle` .
+
+En el siguiente código XAML se muestra cómo establecer la `StrokeLineCap` propiedad:
+
+```xaml
+<Line X1="0"
+      Y1="20"
+      X2="300"
+      Y2="20"
+      StrokeLineCap="Round"
+      Stroke="Red"
+      StrokeThickness="12" />
+```
+
+En este ejemplo, la línea roja se redondea al principio y al final de la línea:
+
+![Extremos de línea](images/linecap.png "Extremos de línea")
+
+## <a name="control-line-joins"></a>Combinaciones de línea de control
+
+`Shape`los objetos tienen una `StrokeLineJoin` propiedad, de tipo `PenLineJoin` , que especifica el tipo de combinación que se usa en los vértices de la forma. La enumeración `PenLineJoin` define los miembros siguientes:
+
+- `Miter`, que representa los vértices angulares normales. Este es el valor predeterminado de la propiedad `StrokeLineJoin`.
+- `Bevel`, que representa los vértices biselados.
+- `Round`, que representa los vértices redondeados.
+
+En el siguiente código XAML se muestra cómo establecer la `StrokeLineJoin` propiedad:
+
+```xaml
+<Polyline Points="20 20,250 50,20 120"
+          Stroke="DarkBlue"
+          StrokeThickness="20"
+          StrokeLineJoin="Round" />
+```
+
+En este ejemplo, la polilínea azul oscuro tiene combinaciones redondeadas en sus vértices:
+
+![Combinaciones de líneas](images/linejoin.png "Combinaciones de líneas")
+
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ShapeDemos (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Colores enXamarin.Forms](~/xamarin-forms/user-interface/colors.md)
