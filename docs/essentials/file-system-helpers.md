@@ -1,8 +1,21 @@
 ---
-title: "Xamarin.Essentials: aplicaciones auxiliares de sistema de archivos" description: "La clase FileSystem de Xamarin.Essentials contiene una serie de aplicaciones auxiliares para buscar la caché y los directorios de datos de la aplicación y abrir archivos dentro del paquete de aplicación."
-ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: Asistentes del sistema de archivos'
+description: La clase FileSystem de Xamarin.Essentials contiene una serie de aplicaciones auxiliares para buscar la caché y los directorios de datos de la aplicación y abrir archivos dentro del paquete de aplicación.
+ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5fafc24d9c4bd35d4ef0010ae4530341316c878a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802363"
 ---
-
 # <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: Asistentes del sistema de archivos
 
 La clase **FileSystem** contiene una serie de aplicaciones auxiliares para buscar la caché y los directorios de datos de la aplicación y abrir archivos dentro del paquete de aplicación.
@@ -70,7 +83,7 @@ Agregue cualquier archivo a la raíz del proyecto de UWP y marque la acción de 
 
 ## <a name="api"></a>API
 
-- [Código fuente de las aplicaciones auxiliares de sistema de archivos](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/FileSystem)
+- [Código fuente de las aplicaciones auxiliares de sistema de archivos](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/FileSystem)
 - [Documentación de API para FileSystem](xref:Xamarin.Essentials.FileSystem)
 
 ## <a name="related-video"></a>Vídeo relacionado

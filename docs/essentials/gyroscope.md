@@ -1,8 +1,20 @@
 ---
-title: "Xamarin.Essentials: Giroscopio" description: "La clase Gyroscope de Xamarin.Essentials permite supervisar el sensor de giroscopio del dispositivo, que mide la rotación sobre los tres ejes principales del dispositivo."
-ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1 author: jamesmontemagno ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: Giroscopio'
+description: La clase Gyroscope de Xamarin.Essentials permite supervisar el sensor de giroscopio del dispositivo, que mide la rotación sobre los tres ejes principales del dispositivo.
+ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5a085ac5bd18e660339443ea33fe552dd86259cb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802303"
 ---
-
 # <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials: Giroscopio
 
 La clase **Gyroscope** permite supervisar el sensor de giroscopio del dispositivo, que es la rotación sobre los tres ejes principales del dispositivo.
@@ -66,5 +78,5 @@ public class GyroscopeTest
 
 ## <a name="api"></a>API
 
-- [Código fuente de Gyroscope](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Gyroscope)
+- [Código fuente de Gyroscope](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Gyroscope)
 - [Documentación de API para Gyroscope](xref:Xamarin.Essentials.Gyroscope)

@@ -1,8 +1,21 @@
 ---
-title: "Xamarin.Essentials: información de la aplicación" description: "En este documento se describe la clase AppInfo de Xamarin.Essentials, que proporciona información sobre la aplicación. Por ejemplo, muestra el nombre de la aplicación y la versión."
-ms.assetid: 15924FCB-19E0-45B2-944E-E94FD7AE12FA author: jamesmontemagno ms.author: jamont ms.date: 01/29/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: Información de la aplicación:'
+description: En este documento se describe la clase AppInfo de Xamarin.Essentials, que proporciona información sobre la aplicación. Por ejemplo, muestra el nombre de la aplicación y la versión.
+ms.assetid: 15924FCB-19E0-45B2-944E-E94FD7AE12FA
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 01/29/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1a8673e7c405660355e3a849e6ef1709fd2980a4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802519"
 ---
-
 # <a name="xamarinessentials-app-information"></a>Xamarin.Essentials: Información de la aplicación:
 
 La clase **AppInfo** proporciona información sobre la aplicación.
@@ -81,7 +94,7 @@ La información sobre la aplicación se extrae de `Package.appxmanifest` para es
 
 ## <a name="api"></a>API
 
-- [Código fuente de AppInfo](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/AppInfo)
+- [Código fuente de AppInfo](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/AppInfo)
 - [Documentación de API para AppInfo](xref:Xamarin.Essentials.AppInfo)
 
 ## <a name="related-video"></a>Vídeo relacionado

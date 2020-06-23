@@ -1,13 +1,27 @@
 ---
-title: "Xamarin.Forms: Conmutación por recuperación de enlaces" description: "En este artículo se explica cómo hacer que los enlaces sean más sólidos mediante la definición de los valores de reserva que se usarán si se produce un error de enlace."
-ms.prod: xamarin ms.assetid: 637ACD9D-3E5D-4014-86DE-A77D1FEF238A ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 08/16/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Conmutación por recuperación de enlaces de Xamarin.Forms
+description: En este artículo se explica cómo hacer que los enlaces sean más sólidos mediante la definición de los valores de reserva que se usarán si se produce un error de enlace.
+ms.prod: xamarin
+ms.assetid: 637ACD9D-3E5D-4014-86DE-A77D1FEF238A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/16/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2c5ce10aa0a1137ad4e4832d5dc931c902b82810
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946213"
 ---
-
 # <a name="xamarinforms-binding-fallbacks"></a>Conmutación por recuperación de enlaces de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-En ocasiones, los enlaces de datos producen errores, porque no se puede resolver el origen de enlace o porque el enlace se realiza correctamente pero devuelve un valor `null`. Si bien estos escenarios se pueden controlar con los convertidores de valor, u otro código adicional, los enlaces de datos pueden hacerse más sólidos mediante la definición de valores de reserva para su uso si se produce un error en el proceso de enlace. Esto puede realizarse mediante la definición de las propiedades [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) y [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) en una expresión de enlace. Dado que estas propiedades residen en la clase [`BindingBase`](xref:Xamarin.Forms.BindingBase), pueden usarse con enlaces, con enlaces compilados y con la extensión de marcado `Binding`.
+En ocasiones, los enlaces de datos producen errores, porque no se puede resolver el origen de enlace o porque el enlace se realiza correctamente pero devuelve un valor `null`. Si bien estos escenarios se pueden controlar con los convertidores de valor, u otro código adicional, los enlaces de datos pueden hacerse más sólidos mediante la definición de valores de reserva para su uso si se produce un error en el proceso de enlace. Esto puede realizarse mediante la definición de las propiedades [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) y [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) en una expresión de enlace. Dado que estas propiedades residen en la clase [`BindingBase`](xref:Xamarin.Forms.BindingBase), pueden usarse con enlaces, enlaces múltiples, enlaces compilados y la extensión de marcado `Binding`.
 
 > [!NOTE]
 > El uso de las propiedades [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) y [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) en una expresión de enlace es opcional.

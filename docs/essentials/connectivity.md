@@ -1,8 +1,21 @@
 ---
-title: "Xamarin.Essentials: conectividad" description: "La clase Connectivity de Xamarin.Essentials permite supervisar los cambios en las condiciones de red del dispositivo, comprobar el acceso actual a la red y cómo está conectado actualmente."
-ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49 author: jamesmontemagno ms.author: jamont ms.date: 01/08/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: Conectividad'
+description: La clase Connectivity de Xamarin.Essentials permite supervisar los cambios en las condiciones de red del dispositivo, comprobar el acceso actual a la red y cómo está conectado actualmente.
+ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 01/08/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 056992b06e012845755aa02b2076a1bb80c6f176
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802418"
 ---
-
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: Conectividad
 
 La clase **Connectivity** permite supervisar los cambios en las condiciones de red del dispositivo, revisar el acceso actual a la red y cómo está conectado actualmente.
@@ -105,7 +118,7 @@ Es importante tener en cuenta que puede que `NetworkAccess` informe `Internet`, 
 
 ## <a name="api"></a>API
 
-* [Código fuente de Connectivity](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Connectivity)
+* [Código fuente de Connectivity](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Connectivity)
 * [Documentación de API de Connectivity](xref:Xamarin.Essentials.Connectivity)
 
 ## <a name="related-video"></a>Vídeo relacionado

@@ -1,7 +1,22 @@
 ---
-title: "Resumen del capítulo 16. Enlace de datos" description: "Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 16. Enlace de datos" ms.prod: xamarin ms.technology: xamarin-forms ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6 author: davidbritch ms.author: dabritch ms.date: 07/18/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Resumen del capítulo 16. Enlace de datos
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 16. Enlace de datos'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/18/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ece93730100001e8339a5f50cdb7ac437d96fa62
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136739"
 ---
-
 # <a name="summary-of-chapter-16-data-binding"></a>Resumen del capítulo 16. Enlace de datos
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16)

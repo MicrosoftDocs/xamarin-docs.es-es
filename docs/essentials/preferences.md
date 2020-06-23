@@ -1,8 +1,21 @@
 ---
-title: "Xamarin.Essentials: preferencias" description: "En este documento se describe la clase Preferences de Xamarin.Essentials, que guarda las preferencias de la aplicación en un almacén de clave y valor. Se describe cómo usar la clase y los tipos de datos que se pueden almacenar."
-ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF author: jamesmontemagno ms.author: jamont ms.date: 01/15/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: Preferencias'
+description: En este documento se describe la clase Preferences de Xamarin.Essentials, que guarda las preferencias de la aplicación en un almacén de clave y valor. Se describe cómo usar la clase y los tipos de datos que se pueden almacenar.
+ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 01/15/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: acc0c48776c7a91e9e5a060928564bc6e0c1d775
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801821"
 ---
-
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferencias
 
 La clase **Preferences** ayuda a almacenar las preferencias de la aplicación en un almacén de clave y valor.
@@ -104,7 +117,7 @@ Cuando se almacena una cadena, esta API está pensada para almacenar pequeñas c
 
 ## <a name="api"></a>API
 
-- [Código fuente de Preferences](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Preferences)
+- [Código fuente de Preferences](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Preferences)
 - [Documentación de API para Preferences](xref:Xamarin.Essentials.Preferences)
 
 ## <a name="related-video"></a>Vídeo relacionado

@@ -1,8 +1,21 @@
 ---
-title: "Xamarin.Essentials: apertura del explorador" description: "La clase Browser de Xamarin.Essentials permite que una aplicación abra un vínculo web en el explorador optimizado preferido del sistema o en el explorador externo."
-ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33 author: jamesmontemagno ms.author: jamont ms.date: 04/02/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Xamarin.Essentials Apertura de Browser
+description: La clase Browser de Xamarin.Essentials permite que una aplicación abra un vínculo web en el explorador optimizado preferido del sistema o en el explorador externo.
+ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 04/02/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 997c6b66b5dba43eb440130f3f58d31a5a274815
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802244"
 ---
-
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Explorador
 
 La clase **Browser** permite que una aplicación abra un vínculo web en el explorador optimizado preferido del sistema o en el explorador externo.
@@ -84,7 +97,7 @@ El explorador predeterminado del usuario se usará siempre, independientemente d
 
 ## <a name="api"></a>API
 
-- [Código fuente de Browser](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Browser)
+- [Código fuente de Browser](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Browser)
 - [Documentación de API para Browser](xref:Xamarin.Essentials.Browser)
 
 ## <a name="related-video"></a>Vídeo relacionado

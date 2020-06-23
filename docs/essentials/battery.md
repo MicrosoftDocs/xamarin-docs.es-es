@@ -1,8 +1,21 @@
 ---
-title: "Xamarin.Essentials: batería" description: "En este documento se describe la clase Battery de Xamarin.Essentials, que permite comprobar la información de la batería del dispositivo y supervisar los cambios."
-ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43 author: jamesmontemagno ms.author: jamont ms.date: 01/22/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: Batería'
+description: En este documento se describe la clase Battery de Xamarin.Essentials, que permite comprobar la información de la batería del dispositivo y supervisar los cambios.
+ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 01/22/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3138db09c2a3d343f36aa48f561930df47f48ae6
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802482"
 ---
-
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: Batería
 
 La clase **Battery** le permite comprobar la información sobre la batería del dispositivo y supervisar los cambios. Además, ofrece información sobre el estado de ahorro de energía del dispositivo, que indica si este se está ejecutando en el modo de bajo consumo. Las aplicaciones deben evitar el procesamiento en segundo plano si el estado de ahorro de energía del dispositivo está activado.
@@ -171,7 +184,7 @@ No hay diferencias entre las plataformas.
 
 ## <a name="api"></a>API
 
-- [Código fuente de Battery](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Battery)
+- [Código fuente de Battery](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Battery)
 - [Documentación de API para Battery](xref:Xamarin.Essentials.Battery)
 
 ## <a name="related-video"></a>Vídeo relacionado

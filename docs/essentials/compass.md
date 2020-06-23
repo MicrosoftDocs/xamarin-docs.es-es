@@ -1,8 +1,21 @@
 ---
-title: "Xamarin.Essentials: brújula" description: "En este documento se describe la clase Compass de Xamarin.Essentials, que permite supervisar la dirección del norte magnético del dispositivo."
-ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: Brújula'
+description: En este documento se describe la clase Compass de Xamarin.Essentials, que permite supervisar la dirección del norte magnético del dispositivo.
+ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f85c6c1d262606ce75131e6ba39f326526bb8eb7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802466"
 ---
-
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials: Brújula
 
 La clase **Compass** permite supervisar la dirección del norte magnético del dispositivo.
@@ -87,7 +100,7 @@ Esto solo se aplica a la plataforma Android; el parámetro se ignora en iOS y UW
 
 ## <a name="api"></a>API
 
-- [Código fuente de Compass](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Compass)
+- [Código fuente de Compass](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Compass)
 - [Documentación de API para Compass](xref:Xamarin.Essentials.Compass)
 
 ## <a name="related-video"></a>Vídeo relacionado

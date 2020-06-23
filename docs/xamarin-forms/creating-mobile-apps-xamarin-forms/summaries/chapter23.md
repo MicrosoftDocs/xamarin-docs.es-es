@@ -1,7 +1,22 @@
 ---
-title: "Resumen del capítulo 23. Desencadenadores y comportamientos" description: "Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 23. Desencadenadores y comportamientos" ms.prod: xamarin ms.technology: xamarin-forms ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261 author: davidbritch ms.author: dabritch ms.date: 11/07/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Resumen del capítulo 23. Desencadenadores y comportamientos
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 23. Desencadenadores y comportamientos'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9a0206354254f79756e29f834c85837240736eca
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136661"
 ---
-
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Resumen del capítulo 23. Desencadenadores y comportamientos
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)

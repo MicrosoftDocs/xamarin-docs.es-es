@@ -1,8 +1,22 @@
 ---
-title: "Personalización de ViewCell" description: "Un ViewCell de Xamarin.Forms es una celda que se puede agregar a ListView o TableView y que contiene una vista definida por el desarrollador. En este artículo se muestra cómo crear un representador personalizado para un ViewCell que se hospeda dentro de un control ListView de Xamarin.Forms."
-ms.prod: xamarin ms.assetid: 61F378C9-6DEF-436B-ACC3-2324B25D404E ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/07/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Personalización de ViewCell
+description: ViewCell de Xamarin.Forms es una celda que se puede agregar a ListView o TableView y que contiene una vista definida por el desarrollador. En este artículo se muestra cómo crear un representador personalizado para un ViewCell que se hospeda dentro de un control ListView de Xamarin.Forms.
+ms.prod: xamarin
+ms.assetid: 61F378C9-6DEF-436B-ACC3-2324B25D404E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/07/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c908da816352e8b3790ded0bef932e1485170abd
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573877"
 ---
-
 # <a name="customizing-a-viewcell"></a>Personalización de ViewCell
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)

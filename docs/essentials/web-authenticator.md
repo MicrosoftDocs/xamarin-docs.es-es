@@ -1,8 +1,20 @@
 ---
-title: "Xamarin.Essentials: autenticador web" description: "En este documento se describe la clase WebAuthenticator de Xamarin.Essentials, que permite iniciar flujos de autenticación basados en explorador que permanecen atentos a una devolución de llamada a la aplicación."
-ms.assetid: 3D95371E-5D59-440E-8D31-F3C04E493DC1 author: redth ms.author: jodick ms.date: 03/26/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: Autenticador web'
+description: En este documento se describe la clase WebAuthenticator de Xamarin.Essentials, que permite iniciar flujos de autenticación basados en explorador que permanecen atentos a una devolución de llamada a la aplicación.
+ms.assetid: 3D95371E-5D59-440E-8D31-F3C04E493DC1
+author: redth
+ms.author: jodick
+ms.date: 03/26/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 578e750afd718c684d70217355629a0286d2b028
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801886"
 ---
-
 # <a name="xamarinessentials-web-authenticator"></a>Xamarin.Essentials: Autenticador web
 
 La clase **WebAuthenticator** permite iniciar flujos basados en explorador que escuchan una devolución de llamada a una dirección URL específica registrada en la aplicación.
@@ -220,6 +232,6 @@ Consulte el [ejemplo del controlador completo](https://github.com/xamarin/Essent
 -----
 ## <a name="api"></a>API
 
-- [Código fuente de WebAuthenticator](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/WebAuthenticator)
+- [Código fuente de WebAuthenticator](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/WebAuthenticator)
 - [Documentación de la API de WebAuthenticator](xref:Xamarin.Essentials.WebAuthenticator)
 - [Ejemplo de servidor de ASP.NET Core](https://github.com/xamarin/Essentials/blob/develop/Samples/Sample.Server.WebAuthenticator/)

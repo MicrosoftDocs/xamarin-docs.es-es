@@ -1,8 +1,22 @@
 ---
-title: "Xamarin.Forms: Representadores personalizados de Shell" description: "Xamarin.Forms: Las aplicaciones de Shell son muy personalizables mediante las propiedades y los métodos que exponen las distintas clases de Shell. Aun así, también es posible crear un representador personalizado de Shell cuando se requieren personalizaciones más sofisticadas específicas de la plataforma."
-ms.prod: xamarin ms.assetid: 3B1A6AE8-1D1E-4C34-B9AB-48F4444FEF32 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 05/06/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Representadores personalizados de Xamarin.Forms Shell
+description: Las aplicaciones de Xamarin.Forms Shell son muy personalizables mediante las propiedades y los métodos que exponen las distintas clases de Shell. Sin embargo, también es posible crear a un representador personalizado de Shell cuando se requieren personalizaciones más sofisticadas específicas de la plataforma.
+ms.prod: xamarin
+ms.assetid: 3B1A6AE8-1D1E-4C34-B9AB-48F4444FEF32
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/06/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 321539f877a86804245d27a2d76d1edeb1abd1e9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137792"
 ---
-
 # <a name="xamarinforms-shell-custom-renderers"></a>Representadores personalizados de Xamarin.Forms Shell
 
 Una de las ventajas de las aplicaciones de Xamarin.Forms Shell es que su apariencia y comportamiento es muy personalizable mediante las propiedades y los métodos que exponen las distintas clases de Shell. Sin embargo, también es posible crear a un representador personalizado de Shell cuando se requieren personalizaciones más sofisticadas específicas de la plataforma. Al igual que con otros representadores personalizados, se puede agregar un representador personalizado de Shell a solo un proyecto de plataforma para personalizar la apariencia y el comportamiento, mientras se permite el comportamiento predeterminado en la otra plataforma; o se puede agregar un representador personalizado de Shell diferente a cada proyecto de plataforma para personalizar la apariencia y el comportamiento en iOS y Android.

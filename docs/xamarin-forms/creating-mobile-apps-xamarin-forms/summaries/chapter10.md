@@ -1,7 +1,22 @@
 ---
-title: "Resumen del capítulo 10. Extensiones de marcado XAML" description: "Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 10. Extensiones de marcado XAML" ms.prod: xamarin ms.technology: xamarin-forms ms.assetid: 575EAE55-BD4D-470F-A583-3D065FA102E2 author: davidbritch ms.author: dabritch ms.date: 07/19/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Resumen del capítulo 10. Extensiones de marcado XAML
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 10. Extensiones de marcado XAML'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 575EAE55-BD4D-470F-A583-3D065FA102E2
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8f23034df684e778677e4f2e480e1c41807536fb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136817"
 ---
-
 # <a name="summary-of-chapter-10-xaml-markup-extensions"></a>Resumen del capítulo 10. Extensiones de marcado XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10)

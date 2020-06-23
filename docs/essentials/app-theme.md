@@ -1,8 +1,21 @@
 ---
-title: "Xamarin.Essentials: tema de la aplicación" description: "En este documento se describe la API del tema de aplicación solicitado de Xamarin.Essentials, que ofrece información sobre el estilo de tema solicitado para la aplicación en ejecución."
-ms.assetid: F6F6D496-A8A9-4B9A-AF1A-370D937E5073 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 01/06/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: Tema de la aplicación'
+description: En este documento se describe la API del tema de aplicación solicitado de Xamarin.Essentials, que ofrece información sobre el estilo de tema solicitado para la aplicación en ejecución.
+ms.assetid: F6F6D496-A8A9-4B9A-AF1A-370D937E5073
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 01/06/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: eca052c82ae3333feb0437b8a4e24bc6b97b836d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802508"
 ---
-
 # <a name="xamarinessentials-app-theme"></a>Xamarin.Essentials: Tema de la aplicación
 
 La API **RequestedTheme** forma parte de la clase [`AppInfo`](app-information.md) y proporciona información sobre el tema que el sistema solicita para la aplicación en ejecución.
@@ -63,7 +76,7 @@ Puede obtener más información en la [documentación sobre el tema solicitado e
 
 ## <a name="api"></a>API
 
-- [Código fuente de AppInfo](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/AppInfo)
+- [Código fuente de AppInfo](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/AppInfo)
 - [Documentación de API para AppInfo](xref:Xamarin.Essentials.AppInfo)
 
 ## <a name="related-video"></a>Vídeo relacionado

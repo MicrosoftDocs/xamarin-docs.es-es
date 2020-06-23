@@ -1,8 +1,21 @@
 ---
-title: "Xamarin.Essentials: correo electrónico" description: "La clase Email de Xamarin.Essentials permite que una aplicación abra la aplicación de correo electrónico predeterminada con información especificada en la que se incluye el asunto, el cuerpo y los destinatarios (PARA, CC, CCO)."
-ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 08/20/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: Correo electrónico'
+description: La clase Email de Xamarin.Essentials permite que una aplicación abra la aplicación de correo electrónico predeterminada con información especificada en la que se incluye el asunto, el cuerpo y los destinatarios (PARA, CC, CCO).
+ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 08/20/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: eba2b6decc74c63e6b2790287842e6cc9b237bd2
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802369"
 ---
-
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: Correo electrónico
 
 La clase **Email** permite que una aplicación abra la aplicación de correo electrónico predeterminada con información especificada incluido el asunto, el cuerpo y los destinatarios (PARA, CC, CCO).
@@ -95,7 +108,7 @@ No todos los clientes de correo electrónico admiten el envío de datos adjuntos
 
 ## <a name="api"></a>API
 
-- [Código fuente de Email](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
+- [Código fuente de Email](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Email)
 - [Documentación de API para Email](xref:Xamarin.Essentials.Email)
 
 ## <a name="related-video"></a>Vídeo relacionado

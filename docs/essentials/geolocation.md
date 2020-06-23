@@ -1,8 +1,21 @@
 ---
-title: "Xamarin.Essentials: geolocalización" description: "En este documento se describe la clase Geolocation de Xamarin.Essentials, que proporciona las API para recuperar las coordenadas de geolocalización actuales del dispositivo."
-ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 03/13/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: Geolocalización'
+description: En este documento se describe la clase Geolocation de Xamarin.Essentials, que proporciona las API para recuperar las coordenadas de geolocalización actuales del dispositivo.
+ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 03/13/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f54c31afef691d316cbc3108792ab3158359c47c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802322"
 ---
-
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocalización
 
 La clase **Geolocation** proporciona las API para recuperar las coordenadas de geolocalización actuales del dispositivo.
@@ -231,7 +244,7 @@ En UWP, la altitud se devuelve en metros. Vea la documentación de [AltitudeRefe
 
 ## <a name="api"></a>API
 
-- [Código fuente de Geolocation](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geolocation)
+- [Código fuente de Geolocation](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Geolocation)
 - [Documentación de API para Geolocation](xref:Xamarin.Essentials.Geolocation)
 
 ## <a name="related-video"></a>Vídeo relacionado

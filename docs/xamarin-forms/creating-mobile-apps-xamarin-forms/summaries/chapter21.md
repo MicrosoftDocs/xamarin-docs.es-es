@@ -1,7 +1,22 @@
 ---
-title: "Resumen del capítulo 21. Transformaciones" description: "Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 21. Transformaciones" ms.prod: xamarin ms.technology: xamarin-forms ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9 author: davidbritch ms.author: dabritch ms.date: 11/07/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Resumen del capítulo 21. Transformaciones
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 21. Transformaciones'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 32393108f84ea3a57079c86b6a9a8e628ceca03a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136674"
 ---
-
 # <a name="summary-of-chapter-21-transforms"></a>Resumen del capítulo 21. Transformaciones
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21)

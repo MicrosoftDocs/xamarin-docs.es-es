@@ -1,7 +1,22 @@
 ---
-title: "Resumen del capítulo 5. La cuestión de los tamaños" description: "Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 5. La cuestión de los tamaños" ms.prod: xamarin ms.technology: xamarin-forms ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF author: davidbritch ms.author: dabritch ms.date: 07/19/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Resumen del capítulo 5. La cuestión de los tamaños
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 5. La cuestión de los tamaños'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 37403cfe9f37972c20fb074db5e30cc54b60fea9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136882"
 ---
-
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>Resumen del capítulo 5. La cuestión de los tamaños
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05)

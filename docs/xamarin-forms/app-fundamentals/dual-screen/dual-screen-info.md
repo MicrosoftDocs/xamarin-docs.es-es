@@ -1,8 +1,22 @@
 ---
-title: "Capacidades de dispositivos de doble pantalla de Xamarin.Forms" description: "En esta guía se explica cómo usar la clase DualScreenInfo de Xamarin.Forms para optimizar la experiencia de la aplicación para dispositivos de doble pantalla como Surface Duo y Surface Neo."
-ms.prod: xamarin ms.assetid: dd5eb074-f4cb-4ab4-b47d-76f862ac7cfa ms.technology: xamarin-forms author: davidortinau ms.author: daortin ms.date: 02/08/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Capacidades de dispositivos de doble pantalla de Xamarin.Forms
+description: En esta guía se explica cómo usar la clase DualScreenInfo de Xamarin.Forms para optimizar la experiencia de la aplicación para dispositivos de doble pantalla como Surface Duo y Surface Neo.
+ms.prod: xamarin
+ms.assetid: dd5eb074-f4cb-4ab4-b47d-76f862ac7cfa
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
+ms.date: 05/19/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 12f3ac86d2418c6516d000371753fc8ae65d557c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946356"
 ---
-
 # <a name="xamarinforms-dual-screen-device-capabilities"></a>Capacidades de dispositivos de doble pantalla de Xamarin.Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
@@ -18,15 +32,15 @@ La clase `DualScreenInfo` permite determinar en qué panel se encuentra la vista
 - `IsLandscape` indica si el dispositivo está en posición horizontal. Esto resulta útil porque las API de orientación nativas no notifican correctamente la orientación cuando una aplicación se distribuye en dos pantallas.
 - `SpanMode` indica si el diseño está en modo de alto, de ancho o de un solo panel.
 
-Además, se desencadena un evento `PropertyChanged` cuando cambia alguna propiedad.
+Además, el evento `PropertyChanged` se desencadena cuando cambian las propiedades, y el evento `HingeAngleChanged` se desencadena cuando cambia el ángulo de la bisagra.
 
-## <a name="poll-hinge-angle-on-android"></a>Sondeo del angulo de bisagra en Android
+## <a name="poll-hinge-angle-on-android-and-uwp"></a>Sondeo del angulo de bisagra en Android y UWP
 
-La siguiente propiedad está disponible al acceder a `DualScreenInfo` desde el proyecto de la plataforma Android:
+El método siguiente está disponible cuando se tiene acceso a `DualScreenInfo` desde proyectos de la plataforma Android y UWP:
 
 - `GetHingeAngleAsync` recupera el ángulo actual de la bisagra del dispositivo. Al usar el simulador, se puede establecer el valor de HingeAngle si se modifica el sensor de presión.
 
-Esta propiedad se puede usar desde un representador personalizado de Android:
+Este método se puede invocar desde los representadores personalizados en Android y UWP. En el código siguiente se muestra un ejemplo de representador personalizado de Android:
 
 ```csharp
 public class HingeAngleLabelRenderer : Xamarin.Forms.Platform.Android.FastRenderers.LabelRenderer

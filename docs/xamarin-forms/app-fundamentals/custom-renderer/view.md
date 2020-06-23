@@ -1,6 +1,21 @@
 ---
-title: "Implementación de una vista" description: "En este artículo se muestra cómo crear un representador personalizado para un control personalizado de Xamarin.Forms que se usa para mostrar una secuencia de vídeo de vista previa de la cámara del dispositivo."
-ms.prod: xamarin ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 05/10/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Implementación de una vista
+description: En este artículo se explica cómo crear un representador personalizado para un control personalizado de Xamarin.Forms que se usa para mostrar una secuencia de vídeo en vista previa desde la cámara del dispositivo.
+ms.prod: xamarin
+ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c239955a093120c3a16ea3236946eb645ea9a4b4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570809"
 ---
 # <a name="implementing-a-view"></a>Implementación de una vista
 

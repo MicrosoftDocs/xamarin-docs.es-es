@@ -1,8 +1,21 @@
 ---
-title: "Xamarin.Essentials: Conversión de texto a voz" description "La clase TextToSpeech de Xamarin.Essentials permite que una aplicación use los motores de texto a voz integrados para responder a texto del dispositivo y también para consultar los idiomas disponibles que el motor puede admitir."
-ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: Texto a voz'
+description: La clase TextToSpeech de Xamarin.Essentials permite que una aplicación use los motores de texto a voz integrados para responder a texto del dispositivo y también para consultar los idiomas disponibles que el motor puede admitir.
+ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 452a54637c270f80c2e1add4d6cadedbb4b27077
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801834"
 ---
-
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Texto a voz
 
 La clase **TextToSpeech** permite que una aplicación utilice los motores de texto a voz para responder a texto del dispositivo y también para consultar los idiomas disponibles que el motor puede admitir.
@@ -139,7 +152,7 @@ public async Task SpeakNow()
 
 ## <a name="api"></a>API
 
-- [Código fuente de TextToSpeech](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/TextToSpeech)
+- [Código fuente de TextToSpeech](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/TextToSpeech)
 - [Documentación de TextToSpeech API](xref:Xamarin.Essentials.TextToSpeech)
 
 ## <a name="related-video"></a>Vídeo relacionado

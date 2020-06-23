@@ -1,7 +1,22 @@
 ---
-title: "Resumen del capítulo 24. Navegación de página" description: "Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 24. Navegación de página" ms.prod: xamarin ms.technology: xamarin-forms ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23 author: davidbritch ms.author: dabritch ms.date: 11/07/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Resumen del capítulo 24. Navegación de páginas
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 24. Navegación de páginas'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 09622adc269027b589a7345a7d4411c3dcecbf0c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136648"
 ---
-
 # <a name="summary-of-chapter-24-page-navigation"></a>Resumen del capítulo 24. Navegación de páginas
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24)

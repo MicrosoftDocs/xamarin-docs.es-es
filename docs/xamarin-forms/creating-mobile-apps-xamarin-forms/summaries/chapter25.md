@@ -1,7 +1,22 @@
 ---
-title: "Resumen del capítulo 25. Variedades de páginas" description: "Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 25. Variedades de páginas" ms.prod: xamarin ms.technology: xamarin-forms ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89 author: davidbritch ms.author: dabritch ms.date: 11/07/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Resumen del capítulo 25. Variedades de páginas
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 25. Variedades de páginas'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e66fb50b8d537ee0267457d5b0ab0f417813e676
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136622"
 ---
-
 # <a name="summary-of-chapter-25-page-varieties"></a>Resumen del capítulo 25. Variedades de páginas
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25)

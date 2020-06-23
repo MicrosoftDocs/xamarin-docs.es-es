@@ -1,7 +1,22 @@
 ---
-title: "Resumen del capítulo 17. Dominio de la cuadrícula" description: "Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 17. Dominio de la cuadrícula" ms.prod: xamarin ms.technology: xamarin-forms ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1 author: davidbritch ms.author: dabritch ms.date: 11/07/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Resumen del capítulo 17. Dominio de la cuadrícula
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 17. Dominio de la cuadrícula'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6dd13c0f592831c6488afac6727bcac734e9136a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136726"
 ---
-
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Resumen del capítulo 17. Dominio de la cuadrícula
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)

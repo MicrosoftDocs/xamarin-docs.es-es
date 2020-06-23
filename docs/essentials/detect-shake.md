@@ -1,8 +1,21 @@
 ---
-title: "Xamarin.Essentials: Detección de vibraciones'' description: "La clase Accelerometer de Xamarin.Essentials permite detectar movimientos de vibración en el dispositivo."
-ms.assetid: 07513D32-120F-4F12-8757-A47802A8027B author: jamesmontemagno ms.author: jamont ms.date: 05/28/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: detección de agitaciones'
+description: La clase Accelerometer de Xamarin.Essentials permite detectar movimientos de vibración en el dispositivo.
+ms.assetid: 07513D32-120F-4F12-8757-A47802A8027B
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 05/28/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4fd4c7d0e3ffe04ebbb936cff0992272a9085649
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802428"
 ---
-
 # <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: detección de agitaciones
 
 La clase **[Accelerometer](accelerometer.md)** permite supervisar el sensor del acelerómetro del dispositivo, que indica la aceleración del dispositivo en un espacio tridimensional. Además, le permite registrar eventos que se realizarán cuando el usuario agite el dispositivo.
@@ -68,7 +81,7 @@ La API para la detección de agitaciones usa lecturas sin procesar del aceleróm
 
 ## <a name="api"></a>API
 
-- [Código fuente de Accelerometer](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Accelerometer)
+- [Código fuente de Accelerometer](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Accelerometer)
 - [Documentación de API de Accelerometer](xref:Xamarin.Essentials.Accelerometer)
 
 ## <a name="related-video"></a>Vídeo relacionado

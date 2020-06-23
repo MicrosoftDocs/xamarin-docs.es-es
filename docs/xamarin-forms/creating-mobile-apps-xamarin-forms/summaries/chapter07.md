@@ -1,7 +1,22 @@
 ---
-title: "Resumen del capítulo 7. XAML frente a código" description: "Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 7. XAML frente a código" ms.prod: xamarin ms.technology: xamarin-forms ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B author: davidbritch ms.author: dabritch ms.date: 07/19/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Resumen del capítulo 7. XAML o código
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 7. XAML o código'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0b92988e1e838072fca0d8a284455a62db05e757
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136869"
 ---
-
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>Resumen del capítulo 7. XAML o código
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)

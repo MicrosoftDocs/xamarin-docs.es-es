@@ -1,7 +1,22 @@
 ---
-title: "Resumen del capítulo 9. Llamadas de API específicas de la plataforma" description: "Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 9. Llamadas de API específicas de la plataforma" ms.prod: xamarin ms.technology: xamarin-forms ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D author: davidbritch ms.author: dabritch ms.date: 07/19/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Resumen del capítulo 9. Llamadas de API específicas de la plataforma
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 9. Llamadas de API específicas de la plataforma'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e8feb636057f1e11c7df90236dee44697203d51c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136866"
 ---
-
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>Resumen del capítulo 9. Llamadas de API específicas de la plataforma
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)

@@ -1,8 +1,21 @@
 ---
-title: "Xamarin.Essentials: uso compartido" description: "La clase Share de Xamarin.Essentials permite que una aplicación comparta datos como texto y vínculos web con otras aplicaciones del dispositivo."
-ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665 author: jamesmontemagno ms.author: jamont ms.date: 01/06/2020 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: Compartir'
+description: La clase Share de Xamarin.Essentials permite que una aplicación comparta datos como texto y vínculos web con otras aplicaciones del dispositivo.
+ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 01/06/2020
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ef4c9961e7e1fac20084247f4c85e87b79bcc427
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801938"
 ---
-
 # <a name="xamarinessentials-share"></a>Xamarin.Essentials: Compartir
 
 La clase **Share** permite que una aplicación comparta datos como texto y vínculos web con otras aplicaciones del dispositivo.
@@ -102,7 +115,7 @@ await Share.RequestAsync(new ShareFileRequest
 
 ## <a name="api"></a>API
 
-- [Código fuente de Share](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Share)
+- [Código fuente de Share](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Share)
 - [Documentación de API para Share](xref:Xamarin.Essentials.Share)
 
 ## <a name="related-video"></a>Vídeo relacionado

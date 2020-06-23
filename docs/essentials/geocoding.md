@@ -1,8 +1,21 @@
 ---
-title: "Xamarin.Essentials: geocodificación" description: "La clase Geocoding de Xamarin.Essentials proporciona las API para codificar geográficamente una marca de posición en coordenadas de posición e invertir las coordenadas de código geográfico a una marca de posición."
-ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90 author: jamesmontemagno ms.author: jamont ms.date: 05/28/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: Codificación geográfica'
+description: La clase Geocoding de Xamarin.Essentials proporciona las API para codificar geográficamente una marca de posición en coordenadas de posición e invertir las coordenadas de código geográfico a una marca de posición.
+ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 05/28/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 66383e441435b5f4bdb48224c9ab602f28072b3d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802336"
 ---
-
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: Codificación geográfica
 
 La clase **Geocoding** proporciona API para geocodificar una marca de posición en coordenadas de posición e invertir las coordenadas de código geográfico a una marca de posición.
@@ -113,7 +126,7 @@ Las clases [`Location`](xref:Xamarin.Essentials.Location) y [`LocationExtensions
 
 ## <a name="api"></a>API
 
-- [Código fuente de Geocoding](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geocoding)
+- [Código fuente de Geocoding](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Geocoding)
 - [Documentación de API para Geocoding](xref:Xamarin.Essentials.Geocoding)
 
 ## <a name="related-video"></a>Vídeo relacionado

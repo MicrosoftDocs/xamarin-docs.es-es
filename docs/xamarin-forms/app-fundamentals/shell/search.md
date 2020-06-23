@@ -1,8 +1,22 @@
 ---
-title: "Xamarin.Forms: Búsqueda en Shell" description: "Xamarin.Forms: Las aplicaciones de Shell pueden usar la funcionalidad de búsqueda integrada que se proporciona en un cuadro de búsqueda que se puede agregar en la parte superior de cada página."
-ms.prod: xamarin ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/18/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Búsqueda en Xamarin.Forms Shell
+description: Las aplicaciones de Xamarin.Forms Shell pueden usar la funcionalidad de búsqueda integrada que se proporciona en un cuadro de búsqueda que se puede agregar en la parte superior de cada página.
+ms.prod: xamarin
+ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/18/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: cc5e0c4cb8b474a1b7e23b476b0c5125eb2ba298
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138091"
 ---
-
 # <a name="xamarinforms-shell-search"></a>Búsqueda en Xamarin.Forms Shell
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

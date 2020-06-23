@@ -1,8 +1,22 @@
 ---
-title: "Xamarin.Forms: Enlace de datos" description: "El enlace de datos es la técnica que consiste en vincular las propiedades de dos objetos para que los cambios en una propiedad se reflejen automáticamente en la otra propiedad. El enlace de datos es una parte integral de la arquitectura de aplicación Modelo-Vista-Modelo de vista (MVVM)."
-ms.prod: xamarin ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/23/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Enlace de datos de Xamarin.Forms
+description: El enlace de datos es la técnica que consiste en vincular las propiedades de dos objetos para que los cambios en una propiedad se reflejen automáticamente en la otra propiedad. El enlace de datos es una parte integral de la arquitectura de aplicación Model-View-ViewModel (MVVM).
+ms.prod: xamarin
+ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/21/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9abbe60865cbf5fb9082b5f4882c27fe095b36ac
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946460"
 ---
-
 # <a name="xamarinforms-data-binding"></a>Enlace de datos de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
@@ -55,6 +69,10 @@ Use enlaces relativos para establecer el origen de enlace en relación con la po
 ## <a name="binding-fallbacks"></a>[Conmutación por recuperación de enlaces](binding-fallbacks.md)
 
 Fortalezca los enlaces de datos mediante la definición de valores de reserva para usarlos si se produce un error en el proceso de enlace.
+
+## <a name="multi-bindings"></a>[Enlaces múltiples](multibinding.md)
+
+Adjunte una colección de objetos [`Binding`](xref:Xamarin.Forms.Binding) asociados a una única propiedad de destino de enlace.
 
 ## <a name="the-command-interface"></a>[Interfaz de comandos](commanding.md)
 
