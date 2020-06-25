@@ -10,12 +10,12 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 943636ac82163c3c575577bb4c56f6433cf73339
-ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
+ms.openlocfilehash: d2eb0ac68bf754e45ffcd2a1c77e4347bb3bcf4c
+ms.sourcegitcommit: 8f6cc5208f675c8cfb645bd9ffb0fc1f8ea71411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85132961"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326203"
 ---
 # <a name="xamarinforms-shapes-path-markup-syntax"></a>Xamarin.FormsFormas: sintaxis de marcado de trazados
 
@@ -35,7 +35,7 @@ La sintaxis de marcado de trazados se compone de un `FillRule` valor opcional y 
 
 En esta sintaxis:
 
-- *fillRule* es un opcional `Xamarin.Forms.Shapes.FillRule` que especifica si la geometría debe usar `EvenOdd` o `Nonzero` `FillRule` . `F0`Especifica la `EvenOdd` regla de relleno, mientras `F1` que especifica la `Nonzero` regla de relleno.
+- *fillRule* es un opcional `Xamarin.Forms.Shapes.FillRule` que especifica si la geometría debe usar `EvenOdd` o `Nonzero` `FillRule` . `F0`Especifica la `EvenOdd` regla de relleno, mientras `F1` que especifica la `Nonzero` regla de relleno. Para obtener más información sobre las reglas de relleno, consulte [ Xamarin.Forms formas: rellenar reglas](fillrules.md).
 -  *figureDescription* representa una figura compuesta por un comando de movimiento, comandos de dibujo y un comando de cierre opcional. Un comando de movimiento especifica el punto inicial de la figura. Los comandos Draw describen el contenido de la figura y el comando opcional Close cierra la figura.
 
 En el ejemplo anterior, la sintaxis de marcado de trazados especifica un punto de inicio mediante el comando move ( `M` ), una serie de líneas rectas con el comando line ( `L` ) y cierra la ruta de acceso con el comando CLOSE ( `Z` ).
@@ -172,3 +172,4 @@ Además, también puede usar la notación científica sin distinción entre may�
 
 - [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.FormsGeometrías](geometries.md)
+- [Xamarin.FormsFormas: reglas de relleno](fillrules.md)

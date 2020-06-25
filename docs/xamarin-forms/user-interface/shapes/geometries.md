@@ -10,12 +10,12 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c3b869d10d454453172065b30eb7ce32da81c8ce
-ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
+ms.openlocfilehash: 412b0255dafcbd752c7b350ddc25ecd13f8f98d8
+ms.sourcegitcommit: 8f6cc5208f675c8cfb645bd9ffb0fc1f8ea71411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85133040"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326187"
 ---
 # <a name="xamarinforms-shapes-geometries"></a>Xamarin.FormsFormas: geometrías
 
@@ -37,7 +37,7 @@ Las clases de geometría simples son `EllipseGeometry` , `LineGeometry` y `Recta
 
 Una geometría de elipse representa la geometría o una elipse o un círculo, y se define mediante un punto central, un radio x y un radio y.
 
-La `EllipseGeometry` clase define las siguientes propiedades:
+La clase `EllipseGeometry` define las propiedades siguientes:
 
 - `Center`, de tipo `Point` , que representa el punto central de la geometría.
 - `RadiusX`, de tipo `double` , que representa el valor del radio x de la geometría. El valor predeterminado de esta propiedad es 0,0.
@@ -65,7 +65,7 @@ En este ejemplo, el centro de `EllipseGeometry` se establece en (50, 50) y los r
 
 Una geometría de línea representa la geometría de una línea y se define especificando el punto inicial de la línea y el punto final.
 
-La `LimeGeometry` clase define las siguientes propiedades:
+La clase `LimeGeometry` define las propiedades siguientes:
 
 - `StartPoint`, de tipo `Point` , que representa el punto inicial de la línea.
 - `EndPoint`, de tipo `Point` , que representa el punto final de la línea.
@@ -90,7 +90,7 @@ En este ejemplo, `LineGeometry` se dibuja un de (10, 20) a (100.130).
 
 Una geometría de rectángulo representa un rectángulo y se define con una `Rect` estructura que especifica su posición relativa y su alto y ancho.
 
-La `RectangleGeometry` clase define las siguientes propiedades:
+La clase `RectangleGeometry` define las propiedades siguientes:
 
 - `Rect`, de tipo `FormsRect` , que representa las dimensiones del rectángulo.
 
@@ -114,7 +114,7 @@ La posición y las dimensiones del rectángulo se definen mediante una `Rect` es
 
 Una geometría de trazado describe una forma compleja que puede estar formada por arcos, curvas, elipses, líneas y rectángulos.
 
-La `PathGeometry` clase define las siguientes propiedades:
+La clase `PathGeometry` define las propiedades siguientes:
 
 - `Figures`, de tipo `PathFigureCollection` , que representa la colección de `PathFigure` objetos que describen el contenido de la ruta de acceso.
 - `FillRule`, de tipo `FillRule` , que determina cómo se combinan las áreas de intersección contenidas en la geometría. El valor predeterminado de esta propiedad es `FillRule.EvenOdd`.
@@ -123,6 +123,8 @@ La `PathGeometry` clase define las siguientes propiedades:
 > La `Figures` propiedad es `ContentProperty` de la `PathGeometry` clase y, por tanto, no es necesario establecer explícitamente desde XAML.
 
 Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+
+Para obtener más información acerca de la `FillRule` enumeración, consulte [ Xamarin.Forms formas: rellenar reglas](fillrules.md).
 
 Un `PathGeometry` objeto se compone de una colección de `PathFigure` objetos, cada uno de `PathFigure` los cuales describe una forma en la geometría. Cada una de ellas `PathFigure` se compone de uno o varios `PathSegment` objetos, cada uno de los cuales describe un segmento de la forma. Hay muchos tipos de segmentos:
 
@@ -226,3 +228,4 @@ La `GeometryHelper` clase proporciona los siguientes métodos auxiliares:
 
 - [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.FormsColocar](index.md)
+- [Xamarin.FormsFormas: reglas de relleno](fillrules.md)
