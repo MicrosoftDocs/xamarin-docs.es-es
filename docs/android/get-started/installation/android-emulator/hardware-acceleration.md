@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: jondouglas
 ms.author: jodou
 ms.date: 02/13/2020
-ms.openlocfilehash: a776dbb2ecfaf0942d79c2b403c13f98cdc7c2e2
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 2a9260bc782d2b19e6fd74356738276e1648dcf2
+ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571979"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104347"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>Aceleración de hardware para el rendimiento del emulador (Hyper-V y HAXM)
 
@@ -142,9 +142,9 @@ Si el equipo es compatible con HAXM pero HAXM no está instalado, siga los pasos
 
 ### <a name="installing-haxm"></a>Instalación de HAXM
 
-En la página de [Intel Hardware Accelerated Execution Manager](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager) hay disponibles paquetes de instalación de HAXM para Windows. Siga estos pasos para descargar e instalar HAXM:
+En la página de versiones de GitHub [Intel Hardware Accelerated Execution Manager](https://github.com/intel/haxm/releases) hay disponibles paquetes de instalación de HAXM para Windows. Siga estos pasos para descargar e instalar HAXM:
 
-1. En el sitio web de Intel, descargue la última versión del instalador del [motor de virtualización de HAXM](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager/) para Windows. La ventaja de descargar el instalador de HAXM directamente desde el sitio web de Intel es que se asegura de que esté usando la versión más reciente.
+1. En el sitio web de Intel, descargue la última versión del instalador del [motor de virtualización de HAXM](https://github.com/intel/haxm/releases) para Windows. La ventaja de descargar el instalador de HAXM directamente desde el sitio web de Intel es que se asegura de que esté usando la versión más reciente.
 
 2. Ejecute **intelhaxm-android.exe** para iniciar el instalador de HAXM. Acepte los valores predeterminados en los cuadros de diálogo del instalador:
 

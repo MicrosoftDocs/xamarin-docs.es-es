@@ -6,12 +6,12 @@ ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2019
-ms.openlocfilehash: d5898f9c6ee30eb1f12bf6480b93a609e762e6ea
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 84c5a72f887f38c5efcee09cfc19986093db226e
+ms.sourcegitcommit: d86b7a18cf8b1ef28cd0fe1d311f1c58a65101a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75886598"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85101343"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Simulador de iOS remoto para Windows
 
@@ -23,7 +23,7 @@ El simulador de iOS remoto para Windows permite probar sus aplicaciones en un si
 
 El simulador de iOS remoto para Windows se instala automáticamente como parte de Xamarin en Visual Studio 2019 y Visual Studio 2017. En él, siga estos pasos:
 
-1. [Emparejar Visual Studio 2019 con un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. [Empareje Visual Studio 2019 con un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. En Visual Studio, inicie la depuración de un proyecto de iOS o tvOS. El simulador de iOS remoto para Windows aparecerá en la máquina con Windows.
 
 Vea [este vídeo](deploy.md) para ver una guía paso a paso.

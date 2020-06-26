@@ -6,13 +6,13 @@ ms.assetid: E73AE622-664C-4A90-B5B2-BD47D0E7A1A7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/16/2020
-ms.openlocfilehash: 2fc5db2ddb456c9c5c6160b7fc7ce501488722de
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.date: 06/18/2020
+ms.openlocfilehash: dfe6da8a76b447bf0c2a6c0a3bea9823e498d5e4
+ms.sourcegitcommit: 8a18471b3d96f3f726b66f9bc50a829f1c122f29
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84947139"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84988191"
 ---
 # <a name="xamarinforms-multi-bindings"></a>Enlaces múltiples de Xamarin.Forms
 
@@ -53,15 +53,16 @@ public class AllTrueMultiConverter : IMultiValueConverter
     {
         if (values == null || !targetType.IsAssignableFrom(typeof(bool)))
         {
-            // Return UnsetValue to use the binding FallbackValue
-            return BindableProperty.UnsetValue;
+            return false;
+            // Alternatively, return BindableProperty.UnsetValue to use the binding FallbackValue
         }
 
         foreach (var value in values)
         {
             if (!(value is bool b))
             {
-                return BindableProperty.UnsetValue;
+                return false;
+                // Alternatively, return BindableProperty.UnsetValue to use the binding FallbackValue
             }
             else if (!b)
             {
@@ -106,7 +107,7 @@ El método `Convert` devuelve un elemento `object` que representa un valor conve
 - `null` para indicar que el convertidor no puede realizar la conversión y que el enlace usará `TargetNullValue`.
 
 > [!IMPORTANT]
-> El método `Convert` de un convertidor de varios valores debe controlar los problemas anticipados devolviendo `BindableProperty.UnsetValue`. Los objetos `MultiBinding` que reciben este valor deben definir un elemento [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue).
+> Un objeto `MultiBinding` que recibe `BindableProperty.UnsetValue` de un método `Convert` debe definir su propiedad [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue). De forma similar, un objeto `MultiBinding` que recibe `null` de un método `Convert` debe definir su propiedad [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue).
 
 El método `ConvertBack` convierte un valor de destino de enlace en valores de enlace de origen. Este método acepta cuatro argumentos:
 
@@ -120,9 +121,6 @@ El método `ConvertBack` devuelve una matriz de valores, de tipo `object[]`, que
 - `BindableProperty.UnsetValue` en la posición `i` para indicar que el convertidor no puede proporcionar un valor para el enlace de origen en el índice `i`, y que no se establecerá ningún valor en él.
 - `Binding.DoNothing` en la posición `i` para indicar que no se va a establecer ningún valor en el enlace de origen en el índice `i`.
 - `null` para indicar que el convertidor no puede realizar la conversión o que no admite la conversión en esta dirección.
-
-> [!IMPORTANT]
-> El método `ConvertBack` de un convertidor de varios valores debe controlar los problemas anticipados devolviendo `null`.
 
 ## <a name="consume-a-imultivalueconverter"></a>Consumo de un elemento IMultiValueConverter
 
@@ -142,8 +140,7 @@ Un elemento `IMultiValueConverter` se consume creando una instancia de él en un
 
     <CheckBox>
         <CheckBox.IsChecked>
-            <MultiBinding Converter="{StaticResource AllTrueConverter}"
-                          FallbackValue="false">
+            <MultiBinding Converter="{StaticResource AllTrueConverter}">
                 <Binding Path="Employee.IsOver16" />
                 <Binding Path="Employee.HasPassedTest" />
                 <Binding Path="Employee.IsSuspended"
@@ -154,7 +151,7 @@ Un elemento `IMultiValueConverter` se consume creando una instancia de él en un
 </ContentPage>    
 ```
 
-En este ejemplo, el objeto `MultiBinding` usa la instancia de `AllTrueMultiConverter` para establecer la propiedad [`CheckBox.IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) en `true`, siempre que los tres objetos [`Binding`](xref:Xamarin.Forms.Binding) se evalúen como `true`. De lo contrario, la propiedad `CheckBox.IsChecked` se establece en `false`. Se define un elemento [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) porque `AllTrueMultiConverter` puede devolver `BindableProperty.UnsetValue`.
+En este ejemplo, el objeto `MultiBinding` usa la instancia de `AllTrueMultiConverter` para establecer la propiedad [`CheckBox.IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) en `true`, siempre que los tres objetos [`Binding`](xref:Xamarin.Forms.Binding) se evalúen como `true`. De lo contrario, la propiedad `CheckBox.IsChecked` se establece en `false`.
 
 De forma predeterminada, la propiedad [`CheckBox.IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) utiliza un enlace [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay). Por lo tanto, el método `ConvertBack` de la instancia de `AllTrueMultiConverter` se ejecuta cuando el usuario no ha desactivado [`CheckBox`](xref:Xamarin.Forms.CheckBox), que establece los valores de enlace de origen en el valor de la propiedad `CheckBox.IsChecked`.
 
@@ -187,7 +184,7 @@ Para obtener más información sobre el formato de cadena en Xamarin.Forms, vea 
 
 Los enlaces de datos se pueden fortalecer mediante la definición de valores de reserva para usarlos si se produce un error en el proceso de enlace. Esto puede realizarse opcionalmente mediante la definición de las propiedades [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) y [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) en un objeto `MultiBinding`.
 
-Un elemento `MultiBinding` usará su [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) cuando una instancia de `IMultiValueConverter` devuelve `BindableProperty.UnsetValue`, lo que indica que el convertidor no produjo un valor. Un elemento `MultiBinding` usará su [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) cuando una instancia de `IMultiValueConverter` devuelve `null`, lo que indica que el convertidor no puede realizar la conversión.
+Un objeto `MultiBinding` usará su valor [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) cuando el método `Convert` de una instancia de `IMultiValueConverter` devuelva `BindableProperty.UnsetValue`, lo que indica que el convertidor no generó un valor. Un objeto `MultiBinding` usará su valor [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) cuando el método `Convert` de una instancia de `IMultiValueConverter` devuelva `null`, lo que indica que el convertidor no puede realizar la conversión.
 
 Para obtener más información sobre las reservas de enlace, consulte [Reservas de enlace de Xamarin.Forms](binding-fallbacks.md).
 
@@ -210,10 +207,8 @@ Los objetos `MultiBinding` se pueden anidar para que se evalúen varios objetos 
 
     <CheckBox>
         <CheckBox.IsChecked>
-            <MultiBinding Converter="{StaticResource AnyTrueConverter}"
-                          FallbackValue="false">
-                <MultiBinding Converter="{StaticResource AllTrueConverter}"
-                              FallbackValue="false">
+            <MultiBinding Converter="{StaticResource AnyTrueConverter}">
+                <MultiBinding Converter="{StaticResource AllTrueConverter}">
                     <Binding Path="Employee.IsOver16" />
                     <Binding Path="Employee.HasPassedTest" />
                     <Binding Path="Employee.IsSuspended" Converter="{StaticResource InverterConverter}" />                        
@@ -242,8 +237,7 @@ Los objetos `MultiBinding` admiten enlaces relativos, lo cual proporciona la cap
                       IsExpanded="{Binding IsExpanded, Source={RelativeSource TemplatedParent}}"
                       BackgroundColor="{Binding CardColor}">
                 <Expander.IsVisible>
-                    <MultiBinding Converter="{StaticResource AllTrueConverter}"
-                                  FallbackValue="false">
+                    <MultiBinding Converter="{StaticResource AllTrueConverter}">
                         <Binding Path="IsExpanded" />
                         <Binding Path="IsEnabled" />
                     </MultiBinding>
