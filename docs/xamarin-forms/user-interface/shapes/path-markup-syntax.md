@@ -10,24 +10,23 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d2eb0ac68bf754e45ffcd2a1c77e4347bb3bcf4c
-ms.sourcegitcommit: 8f6cc5208f675c8cfb645bd9ffb0fc1f8ea71411
+ms.openlocfilehash: 68b7f4a245a60df1723f5a6442f30dc2b1a15932
+ms.sourcegitcommit: 91b4d2f93687fadec5c3f80aadc8f7298d911624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85326203"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85794978"
 ---
 # <a name="xamarinforms-shapes-path-markup-syntax"></a>Xamarin.FormsFormas: sintaxis de marcado de trazados
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 Xamarin.Formsla sintaxis de marcado de trazados le permite especificar de forma compacta las geometrías de ruta de acceso en XAML. La sintaxis se especifica como un valor de cadena para la `Path.Data` propiedad:
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Data="M13.908992,16.207977 L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983Z" />
 ```
 
@@ -35,8 +34,8 @@ La sintaxis de marcado de trazados se compone de un `FillRule` valor opcional y 
 
 En esta sintaxis:
 
-- *fillRule* es un opcional `Xamarin.Forms.Shapes.FillRule` que especifica si la geometría debe usar `EvenOdd` o `Nonzero` `FillRule` . `F0`Especifica la `EvenOdd` regla de relleno, mientras `F1` que especifica la `Nonzero` regla de relleno. Para obtener más información sobre las reglas de relleno, consulte [ Xamarin.Forms formas: rellenar reglas](fillrules.md).
--  *figureDescription* representa una figura compuesta por un comando de movimiento, comandos de dibujo y un comando de cierre opcional. Un comando de movimiento especifica el punto inicial de la figura. Los comandos Draw describen el contenido de la figura y el comando opcional Close cierra la figura.
+- *fillRule* es un opcional `Xamarin.Forms.Shapes.FillRule` que especifica si la geometría debe usar `EvenOdd` o `Nonzero` `FillRule` . `F0`se utiliza para especificar la `EvenOdd` regla de relleno, mientras `F1` que se usa para especificar la `Nonzero` regla de relleno. Para obtener más información sobre las reglas de relleno, consulte [ Xamarin.Forms formas: rellenar reglas](fillrules.md).
+- *figureDescription* representa una figura compuesta por un comando de movimiento, comandos de dibujo y un comando de cierre opcional. Un comando de movimiento especifica el punto inicial de la figura. Los comandos Draw describen el contenido de la figura y el comando opcional Close cierra la figura.
 
 En el ejemplo anterior, la sintaxis de marcado de trazados especifica un punto de inicio mediante el comando move ( `M` ), una serie de líneas rectas con el comando line ( `L` ) y cierra la ruta de acceso con el comando CLOSE ( `Z` ).
 
@@ -66,7 +65,7 @@ Un comando de dibujo puede constar de varios comandos de forma. Están disponibl
 - Curva Bézier cuadrática suavizada ( `T` o `t` ).
 - Arco elíptico ( `A` o `a` ).
 
-Cada comando Draw se especifica con una letra mayúscula o minúscula. Cuando accedes a más de un comando del mismo tipo de forma secuencial, puedes omitir la entrada de comando duplicada. Por ejemplo, `L 100,200 300,400` es equivalente a `L 100, 200 L 300,400` .
+Cada comando Draw se especifica con una letra que no distingue mayúsculas de minúsculas. Cuando accedes a más de un comando del mismo tipo de forma secuencial, puedes omitir la entrada de comando duplicada. Por ejemplo, `L 100,200 300,400` es equivalente a `L 100,200 L 300,400` .
 
 ### <a name="line-command"></a>Comando de línea
 
@@ -150,7 +149,7 @@ En esta sintaxis:
 - `sweepDirectionFlag`debe establecerse en 1 si el arco se dibuja en una dirección de ángulo positivo; de lo contrario, establézcalo en 0.
 - `endPoint`es un [`Point`](xref:Xamarin.Forms.Point) en el que se dibuja el arco.
 
-`A150,150 0 1,0 150,-150`es un ejemplo de un comando de arco elíptico válido.
+`A 150,150 0 1,0 150,-150`es un ejemplo de un comando de arco elíptico válido.
 
 ## <a name="close-command"></a>Comando de cierre
 
@@ -171,5 +170,5 @@ Además, también puede usar la notación científica sin distinción entre may�
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsGeometrías](geometries.md)
+- [Xamarin.FormsFormas: geometrías](geometries.md)
 - [Xamarin.FormsFormas: reglas de relleno](fillrules.md)

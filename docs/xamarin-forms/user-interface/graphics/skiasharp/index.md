@@ -9,16 +9,16 @@ ms.date: 09/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 855bd0d357950b019487b3ea05e379915f54b9d4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: da00aafb9f659d8af119e00476a9a243a2f91023
+ms.sourcegitcommit: 91b4d2f93687fadec5c3f80aadc8f7298d911624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127639"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85795068"
 ---
 # <a name="skiasharp-graphics-in-xamarinforms"></a>Gráficos de SkiaSharpXamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Uso de SkiaSharp para gráficos 2D en las Xamarin.Forms aplicaciones_
 
@@ -34,7 +34,7 @@ En esta guía se da por supuesto que está familiarizado con la Xamarin.Forms pr
 
 SkiaSharp para Xamarin.Forms se empaqueta como un paquete NuGet. Después de crear una Xamarin.Forms solución en Visual Studio o Visual Studio para Mac, puede usar el administrador de paquetes NuGet para buscar el paquete **SkiaSharp. views. Forms** y agregarlo a la solución. Si comprueba la sección **referencias** de cada proyecto después de agregar SkiaSharp, puede ver que se han agregado varias bibliotecas **SkiaSharp** a cada uno de los proyectos de la solución.
 
-Si su Xamarin.Forms aplicación tiene como destino iOS, use la página de propiedades del proyecto para cambiar el destino de implementación mínimo a ios 8,0.
+Si su Xamarin.Forms aplicación tiene como destino iOS, edite su archivo **info. plist** para cambiar el destino de implementación mínimo a iOS 8,0.
 
 En cualquier página de C# que use SkiaSharp, querrá incluir una `using` Directiva para el [`SkiaSharp`](xref:SkiaSharp) espacio de nombres, que engloba todas las clases, estructuras y enumeraciones SkiaSharp que usará en la programación de gráficos. También querrá una `using` Directiva para el [`SkiaSharp.Views.Forms`](xref:SkiaSharp.Views.Forms) espacio de nombres para las clases específicas de Xamarin.Forms . Se trata de un espacio de nombres mucho más pequeño, con la clase más importante [`SKCanvasView`](xref:SkiaSharp.Views.Forms.SKCanvasView) . Esta clase se deriva de la Xamarin.Forms `View` clase y hospeda la salida de los gráficos de SkiaSharp.
 

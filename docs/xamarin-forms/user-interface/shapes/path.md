@@ -6,22 +6,22 @@ ms.assetid: B29486F4-9A5E-4588-ABDF-7EB1E69B9AE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/16/2020
+ms.date: 06/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 384dcef3c2b480166f17e91d547f8cda39c83dc0
-ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
+ms.openlocfilehash: c0cd0e1939e443bc2c4a1ead8d0a29462ce04a68
+ms.sourcegitcommit: 91b4d2f93687fadec5c3f80aadc8f7298d911624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85132975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85795051"
 ---
 # <a name="xamarinforms-shapes-path"></a>Xamarin.FormsFormas: ruta de acceso
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 La `Path` clase se deriva de la `Shape` clase y se puede usar para dibujar curvas y formas complejas. Estas curvas y formas suelen describirse mediante `Geometry` objetos. Para obtener información sobre las propiedades que la `Path` clase hereda de la `Shape` clase, vea [ Xamarin.Forms formas](index.md).
 
@@ -36,42 +36,43 @@ Para obtener más información sobre las transformaciones, vea [ Xamarin.Forms t
 
 ## <a name="create-a-path"></a>Crear una ruta de acceso
 
-En el siguiente ejemplo de XAML se muestra cómo dibujar un polígono usando una sintaxis abreviada especial conocida como sintaxis de marcado de trazados:
+Para dibujar un trazado, cree un `Path` objeto y establezca su `Data` propiedad. Hay dos técnicas para establecer la `Data` propiedad:
+
+- Puede establecer un valor de cadena para `Data` en XAML mediante la sintaxis de marcado de trazados. Con este enfoque, el `Path.Data` valor está consumiendo un formato de serialización para los gráficos. Normalmente, no edite este valor de cadena manualmente después de crearlo. En su lugar, se usan las herramientas de diseño para manipular los datos y se exportan como un fragmento de cadena que puede utilizar la `Data` propiedad.
+- Puede establecer la `Data` propiedad en un `Geometry` objeto. Puede ser un objeto específico `Geometry` o una `GeometryGroup` que actúa como un contenedor que puede combinar varios objetos Geometry en un solo objeto.
+
+### <a name="create-a-path-with-path-markup-syntax"></a>Crear una ruta de acceso con sintaxis de marcado de trazados
+
+En el siguiente ejemplo de XAML se muestra cómo dibujar un triángulo mediante la sintaxis de marcado de trazados:
 
 ```xaml
-<Path Data="M 10,50 L 200,70"
+<Path Data="M 10,100 L 100,100 100,50Z"
       Stroke="Black"
-      StrokeThickness="1"
       Aspect="Uniform"
-      HorizontalOptions="Start"
-      HeightRequest="100"
-      WidthRequest="100" />
+      HorizontalOptions="Start" />
 ```
 
-La `Data` cadena comienza con el comando "moveTo", indicado por `M` , que establece un punto de inicio para la ruta de acceso. `L`es el comando de línea, que crea una línea recta desde el punto inicial hasta el punto final especificado.
+La `Data` cadena comienza con el comando move, indicado por `M` , que establece un punto de inicio absoluto para la ruta de acceso. `L`es el comando de línea, que crea una línea recta desde el punto inicial hasta el punto final especificado. `Z`es el comando cerrar, que crea una línea que conecta el punto actual con el punto inicial. El resultado es un triángulo:
+
+![Triángulo de trazado](path-images/triangle.png "Triángulo de trazado")
 
 > [!NOTE]
 > La sintaxis de marcado de rutas de acceso solo está disponible en XAML.
 
 Para obtener más información sobre la sintaxis de marcado de trazados, vea [ Xamarin.Forms Sintaxis de marcado de trazados](path-markup-syntax.md).
 
-## <a name="path-geometry"></a>Geometría de trazado
+### <a name="create-a-path-with-geometry-objects"></a>Crear una ruta de acceso con objetos Geometry
 
-Las curvas y formas se pueden describir mediante `Geometry` objetos, que se utilizan para establecer la `Path` propiedad del objeto `Data` .
+Las curvas y formas se pueden describir mediante `Geometry` objetos, que se utilizan para establecer la `Path` propiedad del objeto `Data` . Hay una variedad de `Geometry` objetos entre los que elegir. Las `EllipseGeometry` `LineGeometry` clases, y `RectangleGeometry` describen formas relativamente simples. Para crear formas más complejas o crear curvas, use `PathGeometry` .
 
-Hay una variedad de `Geometry` objetos entre los que elegir. Las `EllipseGeometry` `LineGeometry` clases, y `RectangleGeometry` describen formas relativamente simples. Para crear formas más complejas o crear curvas, use `PathGeometry` .
+`PathGeometry`los objetos se componen de uno o varios `PathFigure` objetos. Cada `PathFigure` objeto representa una forma diferente. Cada `PathFigure` objeto se compone de uno o varios `PathSegment` objetos, cada uno de los cuales representa una parte de conexión de la forma. Los tipos de segmento incluyen las `LineSegment` `BezierSegment` clases, y `ArcSegment` .
 
-`PathGeometry`los objetos se componen de uno o varios `PathFigure` objetos. Cada `PathFigure` objeto representa una forma diferente. Cada `PathFigure` objeto se compone de uno o varios `PathSegment` objetos, cada uno de los cuales representa una parte de conexión de la forma. Entre los tipos de segmentos se incluyen los siguientes: `LineSegment` , `BezierSegment` y `ArcSegment` .
-
-En el ejemplo siguiente, `Path` se usa para dibujar un triángulo:
+En el siguiente ejemplo de XAML se muestra cómo dibujar un triángulo mediante un `PathGeometry` objeto:
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Aspect="Uniform"
-      HorizontalOptions="Start"
-      HeightRequest="100"
-      WidthRequest="100">
+      HorizontalOptions="Start">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -91,6 +92,10 @@ En el ejemplo siguiente, `Path` se usa para dibujar un triángulo:
     </Path.Data>
 </Path>
 ```
+
+En este ejemplo, el punto inicial del triángulo es (10.100). Un segmento de línea se dibuja de (10.100) a (100.100) y de (100.100) a (100, 50). A continuación, se conectan los segmentos primero y último, porque la `PathFigure.IsClosed` propiedad está establecida en `true` . El resultado es un triángulo:
+
+![Triángulo de trazado](path-images/triangle.png "Triángulo de trazado")
 
 Para obtener más información sobre las geometrías, vea [ Xamarin.Forms geometrías](geometries.md).
 
