@@ -7,14 +7,17 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 328633bc58f17216c071a2b2cd779704da2bbf74
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: c36159984f314ecbf90f98df6472eee2149eee92
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569418"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853169"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Tutorial: enlazar una biblioteca de Objective-C de iOS
+
+> [!IMPORTANT]
+> Actualmente estamos investigando el uso de enlaces personalizados en la plataforma Xamarin. Lleve a cabo [**esta encuesta**](https://www.surveymonkey.com/r/KKBHNLT) para informar sobre los esfuerzos futuros de desarrollo.
 
 _En este artículo se proporciona un tutorial práctico para crear un enlace de Xamarin. iOS para una biblioteca de Objective-C existente, InfColorPicker. En él se tratan temas como la compilación de una biblioteca de Objective-C estática, el enlace y el uso del enlace en una aplicación de Xamarin. iOS._
 
@@ -274,7 +277,7 @@ Se creará la solución y se incluirán dos archivos predeterminados:
 
 1. En el menú **archivo** , seleccione **nuevo**  >  **proyecto...**:
 
-    ![Iniciar un nuevo proyecto](walkthrough-images/bind01vs.png "Iniciar un nuevo proyecto")
+    ![Inicio de un nuevo proyecto](walkthrough-images/bind01vs.png "Inicio de un nuevo proyecto")
 
 1. En el cuadro de diálogo nuevo proyecto, seleccione **Visual C# > iPhone & iPad > biblioteca de enlaces de iOS (Xamarin)**:
 
@@ -670,7 +673,7 @@ Primero se obtiene una instancia de `InfColorPickerController` a través de un m
 
 [![](walkthrough-images/run01.png "Running the Application")](walkthrough-images/run01.png#lightbox)
 
-Felicidades. En este punto, ha creado y enlazado correctamente una biblioteca de Objective-C para su uso en una aplicación de Xamarin. iOS. A continuación, vamos a obtener información sobre el uso de delegados débiles.
+¡Enhorabuena! En este punto, ha creado y enlazado correctamente una biblioteca de Objective-C para su uso en una aplicación de Xamarin. iOS. A continuación, vamos a obtener información sobre el uso de delegados débiles.
 
 ### <a name="implementing-a-weak-delegate"></a>Implementar un delegado débil
 

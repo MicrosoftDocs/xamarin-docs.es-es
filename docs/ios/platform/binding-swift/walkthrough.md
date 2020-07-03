@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: enlazar una biblioteca SWIFT de iOS'
+title: 'Tutorial: Enlace de una biblioteca Swift de iOS'
 description: En este artículo se proporciona un tutorial práctico para crear un enlace de Xamarin. iOS para un marco de trabajo de SWIFT existente, Gigya. Trata temas como la compilación de un marco de trabajo de SWIFT, el enlace y el uso del enlace en una aplicación de Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: B563ADE9-D0E3-4BC3-A288-66D2296BE706
@@ -7,26 +7,29 @@ ms.technology: xamarin-ios
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
-ms.openlocfilehash: b650f86a1bba62d5db7463875de3398db9c33842
-ms.sourcegitcommit: b751605179bef8eee2df92cb484011a7dceb6fda
+ms.openlocfilehash: 3c63b1a4ed58b0efcc510085934a5380e6049ae7
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77497987"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853149"
 ---
-# <a name="walkthrough-bind-an-ios-swift-library"></a>Tutorial: enlazar una biblioteca SWIFT de iOS
+# <a name="walkthrough-bind-an-ios-swift-library"></a>Tutorial: Enlace de una biblioteca Swift de iOS
 
-Xamarin permite a los desarrolladores de dispositivos móviles crear experiencias móviles multiplataforma con Visual Studio C#y. Puede usar los componentes del SDK de la plataforma iOS de la caja. Pero en muchos casos, también quiere usar los SDK de terceros desarrollados para esa plataforma, que Xamarin permite hacer a través de los enlaces. Para incorporar un marco de trabajo de Objective-C de terceros a la aplicación de Xamarin. iOS, debe crear un enlace de Xamarin. iOS para poder usarlo en sus aplicaciones.
+> [!IMPORTANT]
+> Actualmente estamos investigando el uso de enlaces personalizados en la plataforma Xamarin. Lleve a cabo [**esta encuesta**](https://www.surveymonkey.com/r/KKBHNLT) para informar sobre los esfuerzos futuros de desarrollo.
+
+Xamarin permite a los desarrolladores de dispositivos móviles crear experiencias móviles nativas multiplataforma con Visual Studio y C#. Puede usar los componentes del SDK de la plataforma iOS de la caja. Pero en muchos casos, también quiere usar los SDK de terceros desarrollados para esa plataforma, que Xamarin permite hacer a través de los enlaces. Para incorporar un marco de trabajo de Objective-C de terceros a la aplicación de Xamarin. iOS, debe crear un enlace de Xamarin. iOS para poder usarlo en sus aplicaciones.
 
 La plataforma iOS, junto con sus lenguajes y herramientas nativos, están evolucionando constantemente y SWIFT es una de las áreas más dinámicas en el mundo del desarrollo de iOS. Hay una serie de SDK de terceros, que ya se han migrado de Objective-C a SWIFT y nos presenta nuevos desafíos. Aunque el proceso de enlace de SWIFT es similar a Objective-C, requiere pasos adicionales y valores de configuración para compilar y ejecutar correctamente una aplicación de Xamarin. iOS que sea aceptable para el AppStore.
 
 El objetivo de este documento es describir un enfoque de alto nivel para abordar este escenario y proporcionar una guía paso a paso detallada con un ejemplo sencillo.
 
-## <a name="background"></a>Información previa
+## <a name="background"></a>Fondo
 
 En la versión 2014, la característica SWIFT fue introducida inicialmente por Apple en y ahora está en la versión 5,1 con la adopción de marcos de terceros que crecen con rapidez. Tiene algunas opciones para enlazar un marco de trabajo de SWIFT y este documento describe el enfoque mediante el encabezado de la interfaz generada por Objective-C. La herramienta Xcode crea automáticamente el encabezado cuando se crea un marco de trabajo, y se usa como una manera de comunicarse desde el mundo administrado al mundo SWIFT.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Para completar este tutorial, necesita:
 
@@ -37,11 +40,11 @@ Para completar este tutorial, necesita:
 
 ## <a name="build-a-native-library"></a>Crear una biblioteca nativa
 
-El primer paso es crear un marco de trabajo de SWIFT nativo con el encabezado Objective-C habilitado. El marco de trabajo lo proporciona normalmente un desarrollador de terceros y tiene el encabezado insertado en el paquete en el siguiente directorio: **\<frameworkname >. Framework/headers/\<FrameworkName >-SWIFT. h**.
+El primer paso es crear un marco de trabajo de SWIFT nativo con el encabezado Objective-C habilitado. El marco de trabajo lo proporciona normalmente un desarrollador de terceros y tiene el encabezado incrustado en el paquete en el directorio siguiente: ** \<FrameworkName> . Framework/headers/ \<FrameworkName> -SWIFT. h**.
 
-Este encabezado expone las interfaces públicas, que se usarán para crear los metadatos de enlace de Xamarin. C# iOS y generar las clases que exponen los miembros de la plataforma SWIFT. Si el encabezado no existe o tiene una interfaz pública incompleta (por ejemplo, no ve clases o miembros) tiene dos opciones:
+Este encabezado expone las interfaces públicas, que se usarán para crear los metadatos de enlace de Xamarin. iOS y generar clases de C# que exponen los miembros de la plataforma SWIFT. Si el encabezado no existe o tiene una interfaz pública incompleta (por ejemplo, no ve clases o miembros) tiene dos opciones:
 
-- Actualice el código fuente de SWIFT para generar el encabezado y marcar los miembros necesarios con `@objc` atributo
+- Actualice el código fuente de SWIFT para generar el encabezado y marcar los miembros necesarios con el `@objc` atributo.
 - Compilar un marco de proxy donde se controla la interfaz pública y el proxy todas las llamadas al marco subyacente
 
 En este tutorial, se describe el segundo enfoque, ya que tiene menos dependencias en el código fuente de terceros, que no siempre está disponible. Otro motivo para evitar el primer enfoque es el esfuerzo adicional necesario para admitir futuros cambios de marco. Una vez que empiece a agregar cambios al código fuente de terceros, es responsable de dar soporte a estos cambios y, potencialmente, combinarlos con cada actualización futura.
@@ -66,15 +69,15 @@ Como ejemplo, en este tutorial se crea un enlace para el [SDK de Gigya SWIFT](ht
 
 1. Asegúrese de que la opción no **Insertar** esté seleccionada, que se controlará más adelante manualmente:
 
-    [![opción donotembed de Xcode](walkthrough-images/xcode-donotembed-option.png)](walkthrough-images/xcode-donotembed-option.png#lightbox)
+    [![Xcode donotembed, opción](walkthrough-images/xcode-donotembed-option.png)](walkthrough-images/xcode-donotembed-option.png#lightbox)
 
 1. Asegúrese de que la opción de configuración de compilación **siempre inserta las bibliotecas estándar de SWIFT**, lo que incluye las bibliotecas de SWIFT con el marco de trabajo establecido en no. Se controlará más adelante de forma manual, que SWIFT dylibs se incluye en el paquete final:
 
-    [![Xcode siempre inserta una opción false](walkthrough-images/xcode-alwaysembedfalse-option.png)](walkthrough-images/xcode-alwaysembedfalse-option.png#lightbox)
+    [![Xcode siempre inserta la opción false](walkthrough-images/xcode-alwaysembedfalse-option.png)](walkthrough-images/xcode-alwaysembedfalse-option.png#lightbox)
 
 1. Asegúrese de que la opción **Habilitar Bitcode** está establecida en **no**. A partir de ahora, Xamarin. iOS no incluye Bitcode, mientras que Apple requiere que todas las bibliotecas admitan las mismas arquitecturas:
 
-    [![opción de habilitación de Bitcode de Xcode](walkthrough-images/xcode-enablebitcodefalse-option.png)](walkthrough-images/xcode-enablebitcodefalse-option.png#lightbox)
+    [![Xcode enable Bitcode false (opción)](walkthrough-images/xcode-enablebitcodefalse-option.png)](walkthrough-images/xcode-enablebitcodefalse-option.png#lightbox)
 
     Para comprobar que el marco resultante tiene la opción Bitcode deshabilitada, ejecute el siguiente comando de terminal en el marco de trabajo:
 
@@ -84,11 +87,11 @@ Como ejemplo, en este tutorial se crea un enlace para el [SDK de Gigya SWIFT](ht
 
     La salida debe estar vacía; de lo contrario, querrá revisar la configuración del proyecto para la configuración específica.
 
-1. Asegúrese de que la opción **nombre de encabezado de interfaz generada por Objective-C** esté habilitada y especifique un nombre de encabezado. El nombre predeterminado es **\<FrameworkName >-SWIFT. h**:
+1. Asegúrese de que la opción **nombre de encabezado de interfaz generada por Objective-C** esté habilitada y especifique un nombre de encabezado. El nombre predeterminado es ** \<FrameworkName> -SWIFT. h**:
 
-    [![la opción de encabezado objectice de Xcode-c habilitada](walkthrough-images/xcode-objcheaderenabled-option.png)](walkthrough-images/xcode-objcheaderenabled-option.png#lightbox)
+    [![Xcode objectice-c encabezado de la opción habilitada](walkthrough-images/xcode-objcheaderenabled-option.png)](walkthrough-images/xcode-objcheaderenabled-option.png#lightbox)
 
-1. Exponga los métodos deseados y márquelos con `@objc` atributo y aplique las reglas adicionales que se definen a continuación. Si compila el marco de trabajo sin este paso, el encabezado Objective-C generado estará vacío y Xamarin. iOS no podrá tener acceso a los miembros de la plataforma SWIFT. Exponga la lógica de inicialización del SDK de Gigya SWIFT subyacente mediante la creación de un nuevo archivo SWIFT **SwiftFrameworkProxy. SWIFT** y la definición del código siguiente:
+1. Exponga los métodos deseados y márquelos con el `@objc` atributo y aplique las reglas adicionales que se definen a continuación. Si compila el marco de trabajo sin este paso, el encabezado Objective-C generado estará vacío y Xamarin. iOS no podrá tener acceso a los miembros de la plataforma SWIFT. Exponga la lógica de inicialización del SDK de Gigya SWIFT subyacente mediante la creación de un nuevo archivo SWIFT **SwiftFrameworkProxy. SWIFT** y la definición del código siguiente:
 
     ```swift
     import Foundation
@@ -111,9 +114,9 @@ Como ejemplo, en este tutorial se crea un enlace para el [SDK de Gigya SWIFT](ht
     Algunas notas importantes sobre el código anterior:
 
     - Importe el módulo Gigya aquí del SDK de Gigya de terceros original y ahora puede tener acceso a cualquier miembro del marco.
-    - Marque la clase SwiftFrameworkProxy con el atributo `@objc` especificando un nombre; de lo contrario, se generará un nombre ilegible único, como `_TtC19SwiftFrameworkProxy19SwiftFrameworkProxy`. El nombre de tipo debe estar claramente definido porque se usará más adelante por su nombre.
-    - Herede la clase de proxy de `NSObject`, de lo contrario, no se generará en el archivo de encabezado Objective-C.
-    - Marque todos los miembros que se van a exponer como `public`.
+    - Marque la clase SwiftFrameworkProxy con el `@objc` atributo especificando un nombre; de lo contrario, se generará un nombre no ilegible único, como `_TtC19SwiftFrameworkProxy19SwiftFrameworkProxy` . El nombre de tipo debe estar claramente definido porque se usará más adelante por su nombre.
+    - Heredar la clase de proxy de `NSObject` ; de lo contrario, no se generará en el archivo de encabezado Objective-C.
+    - Marque todos los miembros que se van a exponer como `public` .
 
 1. Cambie la configuración de compilación del esquema de **Debug** a **Release**. Para ello, abra el cuadro de diálogo de **destino de > Xcode > editar esquema** y establezca la opción de **configuración de compilación** en **Release**:
 
@@ -200,7 +203,7 @@ Como ejemplo, en este tutorial se crea un enlace para el [SDK de Gigya SWIFT](ht
 
 ## <a name="prepare-metadata"></a>Preparar metadatos
 
-En este momento, debe tener el marco con el encabezado de la interfaz generada por Objective-C listo para que lo consuma un enlace de Xamarin. iOS.  El siguiente paso consiste en preparar las interfaces de definición de API, que se usan en un proyecto de C# enlace para generar clases. Estas definiciones pueden crearse de forma manual o automática mediante la herramienta [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) y el archivo de encabezado generado. Use Sharpie para generar los metadatos:
+En este momento, debe tener el marco con el encabezado de la interfaz generada por Objective-C listo para que lo consuma un enlace de Xamarin. iOS.  El siguiente paso consiste en preparar las interfaces de definición de API, que se usan en un proyecto de enlace para generar clases de C#. Estas definiciones pueden crearse de forma manual o automática mediante la herramienta [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) y el archivo de encabezado generado. Use Sharpie para generar los metadatos:
 
 1. Descargue la herramienta [Sharpie de objetivo](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) más reciente desde el sitio web de descargas oficiales e instálelo mediante el asistente. Una vez completada la instalación, puede ejecutar el comando Sharpie para comprobarlo:
 
@@ -223,7 +226,7 @@ En este momento, debe tener el marco con el encabezado de la interfaz generada p
         [write] StructsAndEnums.cs
     ```
 
-    La herramienta generará C# los metadatos de cada miembro de Objective-C expuesto, que tendrá un aspecto similar al código siguiente. Como puede ver, podría definirse manualmente porque tiene un formato legible y una asignación de miembros directos:
+    La herramienta generará metadatos de C# para cada miembro de Objective-C expuesto, que tendrá un aspecto similar al código siguiente. Como puede ver, podría definirse manualmente porque tiene un formato legible y una asignación de miembros directos:
 
     ```csharp
     [Export ("initForApiKey:")]
@@ -249,7 +252,7 @@ El siguiente paso consiste en crear un proyecto de enlace de Xamarin. iOS con la
 
     ![metadatos de la estructura del proyecto de Visual Studio](walkthrough-images/visualstudio-project-structure-metadata.png)
 
-    Los propios metadatos describen cada clase y miembro de Objective-C C# expuesto mediante el lenguaje. Puede ver la definición del encabezado Objective-C original junto con la C# declaración:
+    Los propios metadatos describen cada clase y miembro de Objective-C expuesto con el lenguaje C#. Puede ver la definición del encabezado Objective-C original junto con la declaración de C#:
 
     ```csharp
     // @interface SwiftFrameworkProxy : NSObject
@@ -262,7 +265,7 @@ El siguiente paso consiste en crear un proyecto de enlace de Xamarin. iOS con la
     }
     ```
 
-    Aunque es un código válido C# , no se usa tal cual, sino que se usa en las herramientas de Xamarin. iOS para generar C# clases basadas en esta definición de metadatos. Como resultado, en lugar de la interfaz SwiftFrameworkProxy se obtiene una C# clase con el mismo nombre, del que se pueden crear instancias de su código de Xamarin. iOS. Esta clase obtiene los métodos, las propiedades y otros miembros definidos por los metadatos, a los que se C# llamará de una manera.
+    Aunque es un código C# válido, no se usa tal cual, sino que se usa en las herramientas de Xamarin. iOS para generar clases de C# basadas en esta definición de metadatos. Como resultado, en lugar de la interfaz SwiftFrameworkProxy obtiene una clase de C# con el mismo nombre, al que se puede crear una instancia del código de Xamarin. iOS. Esta clase obtiene los métodos, las propiedades y otros miembros definidos por los metadatos, a los que se llamará en un modo de C#.
 
 1. Agregue una referencia nativa al marco FAT anterior generado, así como a cada una de las dependencias de ese marco. En este caso, agregue las referencias nativas de SwiftFrameworkProxy y Gigya Framework al proyecto de enlace:
 
@@ -294,9 +297,9 @@ El siguiente paso consiste en crear un proyecto de enlace de Xamarin. iOS con la
         L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/ -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos -Wl,-rpath -Wl,@executable_path/Frameworks
         ```
 
-        Las dos primeras opciones (las `-L ...` ) indican al compilador nativo dónde encontrar las bibliotecas de SWIFT. El compilador nativo omitirá las bibliotecas que no tienen la arquitectura correcta, lo que significa que es posible pasar la ubicación de las bibliotecas del simulador y las bibliotecas de dispositivos al mismo tiempo, de modo que funcione tanto en el simulador como en las compilaciones de dispositivo ( las rutas de acceso solo son correctas para iOS; para tvOS y watchos, deben actualizarse. Una desventaja es que este enfoque requiere que la Xcode correcta esté en/Application/Xcode.app, si el consumidor de la biblioteca de enlace tiene Xcode en una ubicación diferente, no funcionará. La solución alternativa consiste en agregar estas opciones en los argumentos Mtouch adicionales en las opciones de compilación de iOS del proyecto ejecutable (`--gcc_flags -L... -L...`). La tercera opción hace que el vinculador nativo almacene la ubicación de las bibliotecas SWIFT en el archivo ejecutable, de modo que el sistema operativo pueda encontrarlos.
+        Las dos primeras opciones (las dos  `-L ...`   ) indican al compilador nativo dónde encontrar las bibliotecas de SWIFT. El compilador nativo omitirá las bibliotecas que no tienen la arquitectura correcta, lo que significa que es posible pasar la ubicación de las bibliotecas del simulador y las bibliotecas de dispositivos al mismo tiempo, de modo que funcione tanto para el simulador como para las compilaciones de dispositivos (estas rutas de acceso solo son correctas para iOS; para tvOS y watchos, deben actualizarse). Una desventaja es que este enfoque requiere que la Xcode correcta esté en/Application/Xcode.app, si el consumidor de la biblioteca de enlace tiene Xcode en una ubicación diferente, no funcionará. La solución alternativa consiste en agregar estas opciones en los argumentos Mtouch adicionales en las opciones de compilación de iOS del proyecto ejecutable ( `--gcc_flags -L... -L...` ). La tercera opción hace que el vinculador nativo almacene la ubicación de las bibliotecas SWIFT en el archivo ejecutable, de modo que el sistema operativo pueda encontrarlos.
 
-1. La acción final es crear la biblioteca y asegurarse de que no tiene ningún error de compilación. A menudo, encontrará que los metadatos de los enlaces generados por Objective Sharpie se anotarán con la `[Verify]` atributo. Estos atributos indican que debe comprobar que Objective Sharpie hizo lo correcto comparando el enlace con la declaración de Objective-C original (que se proporcionará en un Comentario sobre la declaración enlazada). Puede obtener más información acerca de los miembros marcados con el atributo mediante [el siguiente vínculo](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify). Una vez compilado el proyecto, se puede usar en una aplicación de Xamarin. iOS.
+1. La acción final es crear la biblioteca y asegurarse de que no tiene ningún error de compilación. A menudo, encontrará que los enlaces de metadatos generados por Objective Sharpie se anotarán con el  `[Verify]`   atributo. Estos atributos indican que debe comprobar que Objective Sharpie hizo lo correcto comparando el enlace con la declaración de Objective-C original (que se proporcionará en un Comentario sobre la declaración enlazada). Puede obtener más información acerca de los miembros marcados con el atributo mediante [el siguiente vínculo](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify). Una vez compilado el proyecto, se puede usar en una aplicación de Xamarin. iOS.
 
 ## <a name="consume-the-binding-library"></a>Usar la biblioteca de enlaces
 
@@ -334,11 +337,11 @@ El último paso es usar la biblioteca de enlace de Xamarin. iOS en una aplicaci�
     }
     ```
 
-1. Ejecute la aplicación, en la salida de depuración debería ver la siguiente línea: `Gigya initialized with domain: us1.gigya.com`. Haga clic en el botón para activar el flujo de autenticación:
+1. Ejecute la aplicación y, en la salida de depuración, debería ver la línea siguiente: `Gigya initialized with domain: us1.gigya.com` . Haga clic en el botón para activar el flujo de autenticación:
 
-    [resultado del proxy de ![SWIFT](walkthrough-images/swiftproxy-result.png)](walkthrough-images/swiftproxy-result.png#lightbox)
+    [![resultado del proxy SWIFT](walkthrough-images/swiftproxy-result.png)](walkthrough-images/swiftproxy-result.png#lightbox)
 
-Felicidades. Ha creado correctamente una aplicación Xamarin. iOS y una biblioteca de enlaces, que consume un marco de trabajo SWIFT. La aplicación anterior se ejecutará correctamente en iOS 12.2 + porque, a partir de esta versión de iOS, [Apple presentó la estabilidad de ABI](https://swift.org/blog/swift-5-1-released/) y cada iOS a partir de la versión 12.2 + incluye bibliotecas en tiempo de ejecución de SWIFT, que podrían usarse para ejecutar la aplicación compilada con SWIFT 5.1 +. Si necesita agregar compatibilidad con versiones anteriores de iOS, hay que realizar algunos pasos más:
+¡Enhorabuena! Ha creado correctamente una aplicación Xamarin. iOS y una biblioteca de enlaces, que consume un marco de trabajo SWIFT. La aplicación anterior se ejecutará correctamente en iOS 12.2 + porque, a partir de esta versión de iOS, [Apple presentó la estabilidad de ABI](https://swift.org/blog/swift-5-1-released/) y cada iOS a partir de la versión 12.2 + incluye bibliotecas en tiempo de ejecución de SWIFT, que podrían usarse para ejecutar la aplicación compilada con SWIFT 5.1 +. Si necesita agregar compatibilidad con versiones anteriores de iOS, hay que realizar algunos pasos más:
 
 1. Con el fin de agregar compatibilidad con iOS 12,1 y versiones anteriores, desea enviar dylibss SWIFT específicos que se usan para compilar el marco de trabajo. Use el paquete de NuGet [Xamarin. iOS. SwiftRuntimeSupport](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/) para procesar y copiar las bibliotecas necesarias con el IPA. Agregue la referencia de NuGet al proyecto de destino y vuelva a compilar la aplicación. No se requieren pasos adicionales, el paquete NuGet instalará tareas específicas, que se ejecutan con el proceso de compilación, identifican los dylibss de SWIFT necesarios y los empaquetan con el IPA final.
 
