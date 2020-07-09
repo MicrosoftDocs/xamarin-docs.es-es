@@ -405,6 +405,32 @@
                   href: user-interface/map/native-map-app.md
             - name: MediaElement
               href: user-interface/mediaelement.md
+            - name: Formas
+              items:
+                - name: Información general
+                  href: user-interface/shapes/index.md
+                - name: Ellipse
+                  href: user-interface/shapes/ellipse.md
+                - name: Reglas de relleno
+                  href: user-interface/shapes/fillrules.md
+                - name: Geometrías
+                  href: user-interface/shapes/geometries.md
+                - name: Línea
+                  href: user-interface/shapes/line.md
+                - name: Rutas de acceso
+                  items:
+                    - name: Ruta de acceso
+                      href: user-interface/shapes/path.md
+                    - name: Sintaxis de marcado de ruta de acceso
+                      href: user-interface/shapes/path-markup-syntax.md
+                    - name: Transformaciones de ruta de acceso
+                      href: user-interface/shapes/path-transforms.md
+                - name: Polígono
+                  href: user-interface/shapes/polygon.md
+                - name: Polilínea
+                  href: user-interface/shapes/polyline.md
+                - name: Rectángulo
+                  href: user-interface/shapes/rectangle.md
             - name: WebView
               href: user-interface/webview.md
         - name: Inicio de comandos
@@ -537,32 +563,6 @@
               href: user-interface/text/fonts.md
             - name: Gráficos con SkiaSharp
               href: user-interface/graphics/skiasharp/index.md
-            - name: Formas
-              items:
-                - name: Información general
-                  href: user-interface/shapes/index.md
-                - name: Ellipse
-                  href: user-interface/shapes/ellipse.md
-                - name: Reglas de relleno
-                  href: user-interface/shapes/fillrules.md
-                - name: Geometrías
-                  href: user-interface/shapes/geometries.md
-                - name: Línea
-                  href: user-interface/shapes/line.md
-                - name: Rutas de acceso
-                  items:
-                    - name: Ruta de acceso
-                      href: user-interface/shapes/path.md
-                    - name: Sintaxis de marcado de ruta de acceso
-                      href: user-interface/shapes/path-markup-syntax.md
-                    - name: Transformaciones de ruta de acceso
-                      href: user-interface/shapes/path-transforms.md
-                - name: Polígono
-                  href: user-interface/shapes/polygon.md
-                - name: Polilínea
-                  href: user-interface/shapes/polyline.md
-                - name: Rectángulo
-                  href: user-interface/shapes/rectangle.md
             - name: Pantalla de presentación
               href: user-interface/splashscreen.md
             - name: Estilos
