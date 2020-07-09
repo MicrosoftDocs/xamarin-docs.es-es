@@ -7,14 +7,17 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/20/2017
-ms.openlocfilehash: 060c4759d39bc3b8c424ce46dc615644540fe9c2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: bcfc5778ed4e5486d188f4eefbd32811792b44e5
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027663"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85852977"
 ---
 # <a name="naming-parameters-with-javadoc"></a>Asignación de nombres de parámetros con Javadoc
+
+> [!IMPORTANT]
+> Estamos investigando el uso de enlaces personalizados en la plataforma Xamarin. Realice [**esta encuesta**](https://www.surveymonkey.com/r/KKBHNLT) para informar de esfuerzos de desarrollo futuros.
 
 _En este artículo se explica cómo recuperar nombres de parámetros en un proyecto de enlace de Java mediante el uso del Javadoc generado a partir del proyecto de Java._
 

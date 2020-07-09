@@ -7,14 +7,17 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 2a88888b2306589930ad6386fb69bbd3b48924b7
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 5439e213c0016ea01935d617f5f6b5a3edf3eee8
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571381"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853005"
 ---
 # <a name="java-bindings-metadata"></a>Metadatos de enlaces Java
+
+> [!IMPORTANT]
+> Estamos investigando el uso de enlaces personalizados en la plataforma Xamarin. Realice [**esta encuesta**](https://www.surveymonkey.com/r/KKBHNLT) para informar de esfuerzos de desarrollo futuros.
 
 _El código de C# de Xamarin.Android llama a las bibliotecas de Java a través de enlaces, que son un mecanismo que abstrae los detalles de bajo nivel que se especifican en Java Native Interface (JNI). Xamarin.Android proporciona una herramienta que genera estos enlaces. Esta herramienta permite al desarrollador controlar cómo se crea un enlace mediante metadatos, lo que permite usar procedimientos como la modificación de espacios de nombres y el cambio de nombre de miembros. En este documento se explica cómo funcionan los metadatos, se resumen los atributos que admiten los metadatos y se explica cómo resolver los problemas de enlaces modificando estos metadatos._
 

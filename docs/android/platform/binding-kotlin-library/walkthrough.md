@@ -7,14 +7,17 @@ ms.technology: xamarin-android
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
-ms.openlocfilehash: cbd7c796cd13aa45dc107bddf06ca44d6adbdf9d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: af926b518c55bd0d6c73180e512dd669e93778f7
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77519689"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853067"
 ---
 # <a name="walkthrough-bind-an-android-kotlin-library"></a>Tutorial: Enlace de una biblioteca de Kotlin en Android
+
+> [!IMPORTANT]
+> Estamos investigando el uso de enlaces personalizados en la plataforma Xamarin. Realice [**esta encuesta**](https://www.surveymonkey.com/r/KKBHNLT) para informar de esfuerzos de desarrollo futuros.
 
 Xamarin permite a los desarrolladores de dispositivos móviles crear aplicaciones móviles nativas multiplataforma con Visual Studio y C#. Puede usar los componentes del SDK de la plataforma Android de forma integrada, pero en muchos casos también preferirá usar los SDK de terceros escritos para esa plataforma: Xamarin permite hacerlo por medio de enlaces. Para incorporar un marco de Android de terceros a la aplicación de Xamarin.Android, debe crear un enlace de Xamarin.Android para poder usarlo en sus aplicaciones.
 

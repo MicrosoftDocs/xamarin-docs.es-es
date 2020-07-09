@@ -7,14 +7,17 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 0c273797d7512f062260e49e0f71fdd1132f037b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 3ec01d9322d4b6706fccd0959ae5944f71e82664
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76723808"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853021"
 ---
 # <a name="troubleshooting-bindings"></a>Solución de problemas de enlaces
+
+> [!IMPORTANT]
+> Estamos investigando el uso de enlaces personalizados en la plataforma Xamarin. Realice [**esta encuesta**](https://www.surveymonkey.com/r/KKBHNLT) para informar de esfuerzos de desarrollo futuros.
 
 _En este artículo se resumen varios errores comunes que pueden producirse al generar enlaces, junto con posibles causas y formas sugeridas de resolverlos._
 

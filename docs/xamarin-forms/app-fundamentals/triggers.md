@@ -10,12 +10,12 @@ ms.date: 04/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f92ad47ae883f4b1b413ae5192a9add83045bb77
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a287ff28ab62fcfcc00c88858cf3595ba2fa5118
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136960"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853140"
 ---
 # <a name="xamarinforms-triggers"></a>Desencadenadores de Xamarin.Forms
 
@@ -319,11 +319,7 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 
 ## <a name="state-triggers"></a>Desencadenadores de estado
 
-Se han introducido desencadenadores de estado en Xamarin.Forms 4.5, que son un grupo especializado de desencadenadores que definen las condiciones en las que se debe aplicar una clase [`VisualState`](xref:Xamarin.Forms.VisualState). Sin embargo, actualmente son experimentales y solo se pueden usar con la adición de la siguiente línea de código al archivo *App.xaml.cs*:
-
-```csharp
-Device.SetFlags(new string[]{ "StateTriggers_Experimental" });
-```
+Los desencadenadores de estado son un conjunto especializado de desencadenadores que definen las condiciones en las que se debe aplicar [`VisualState`](xref:Xamarin.Forms.VisualState). 
 
 Los desencadenadores de estado se agregan a la colección [`StateTriggers`](xref:Xamarin.Forms.VisualState.StateTriggers) de una clase [`VisualState`](xref:Xamarin.Forms.VisualState). Esta colección puede contener un único desencadenador de estado o varios desencadenadores de estado. Se aplicará una clase [`VisualState`](xref:Xamarin.Forms.VisualState) cuando cualquier desencadenador de estado de la colección esté activo.
 
