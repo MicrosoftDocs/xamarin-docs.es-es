@@ -10,16 +10,16 @@ ms.date: 06/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 28bcbed3a03a2abbec42a619062579419a3063a4
-ms.sourcegitcommit: 8a18471b3d96f3f726b66f9bc50a829f1c122f29
+ms.openlocfilehash: b451fe004ca21c8770658f31c9c38253e073c259
+ms.sourcegitcommit: 82eabb0eaa4a674897aa6d5e64efb91fd580c330
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84988205"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100188"
 ---
 # <a name="respond-to-system-theme-changes-in-xamarinforms-applications"></a>Responder a los cambios de tema del sistema en Xamarin.Forms las aplicaciones
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
 
 Los dispositivos suelen incluir temas claros y oscuros, que hacen referencia a un amplio conjunto de preferencias de apariencia que se pueden establecer en el nivel del sistema operativo. Las aplicaciones deben respetar estos temas del sistema y responder inmediatamente cuando cambia el tema del sistema.
 
@@ -46,7 +46,7 @@ En las siguientes capturas de pantallas se muestran páginas con tema, para tema
 
 Los recursos de los temas claros y oscuros se pueden usar con la `AppThemeBinding` extensión de marcado y los `SetAppThemeColor` métodos de `SetOnAppTheme<T>` extensión y. Con estos enfoques, los recursos se aplican automáticamente en función del valor del tema del sistema actual. Además, los objetos que consumen estos recursos se actualizan automáticamente si cambia el tema del sistema mientras se ejecuta una aplicación.
 
-### <a name="appthemebinding-markup-extension"></a>Extensión de marcado AppThemeBinding
+### <a name="appthemebinding-markup-extension"></a>AppThemeBinding (extensión de marcado)
 
 La `AppThemeBinding` extensión de marcado le permite consumir un recurso, como una imagen o un color, basándose en el tema del sistema actual:
 
@@ -159,9 +159,12 @@ Application.Current.RequestedThemeChanged += (s, a) =>
 
 El `AppThemeChangedEventArgs` objeto, que acompaña al `RequestedThemeChanged` evento, tiene una propiedad única denominada `RequestedTheme` , de tipo `OSAppTheme` . Esta propiedad se puede examinar para detectar el tema del sistema solicitado.
 
+> [!IMPORTANT]
+> Para responder a los cambios de tema en Android, debe incluir la `ConfigChanges.UiMode` marca en el `Activity` atributo de la `MainActivity` clase.
+
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [SystemThemes (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
-- [Extensión de marcado AppThemeBinding](~/xamarin-forms/xaml/markup-extensions/consuming.md#appthemebinding-markup-extension)
+- [AppThemeBinding (extensión de marcado)](~/xamarin-forms/xaml/markup-extensions/consuming.md#appthemebinding-markup-extension)
 - [Diccionarios de recursos](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Aplicación de estilo a aplicaciones Xamarin.Forms con estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)
