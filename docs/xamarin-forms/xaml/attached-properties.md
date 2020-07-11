@@ -10,12 +10,12 @@ ms.date: 06/02/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1f26a4415a75b2b02fd7d6893e366ef81156f077
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1277b3cd875c1b4e05e45202a8e30ef2ff93972a
+ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138195"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226799"
 ---
 # <a name="attached-properties"></a>Propiedades adjuntas
 
@@ -44,6 +44,9 @@ Al crear una propiedad adjunta para su uso en otros tipos, la clase en la que se
 
 Una propiedad adjunta se puede crear mediante la declaración `public static readonly` de una propiedad de tipo [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . La propiedad enlazable debe establecerse en el valor devuelto de uno de los [ `BindableProperty.CreateAttached` ] (XREF: Xamarin.Forms . BindableProperty. CreateAttached (System. String, System. Type, System. Type, System. Object, Xamarin.Forms . BindingMode, Xamarin.Forms . BindableProperty. ValidateValueDelegate, Xamarin.Forms . BindableProperty. BindingPropertyChangedDelegate, Xamarin.Forms . BindableProperty. BindingPropertyChangingDelegate, Xamarin.Forms . BindableProperty. CoerceValueDelegate, Xamarin.Forms . Sobrecargas del método BindableProperty. CreateDefaultValueDelegate)). La declaración debe estar dentro del cuerpo de la clase propietaria, pero fuera de las definiciones de miembros.
 
+> [!IMPORTANT]
+> La Convención de nomenclatura para las propiedades adjuntas es que el identificador de la propiedad adjunta debe coincidir con el nombre de propiedad especificado en el `CreateAttached` método, con la propiedad "Property" anexada.
+
 En el código siguiente se muestra un ejemplo de una propiedad adjunta:
 
 ```csharp
@@ -51,7 +54,7 @@ public static readonly BindableProperty HasShadowProperty =
   BindableProperty.CreateAttached ("HasShadow", typeof(bool), typeof(ShadowEffect), false);
 ```
 
-Esto crea una propiedad adjunta denominada `HasShadow` , de tipo `bool` . La propiedad es propiedad de la `ShadowEffect` clase y su valor predeterminado es `false` . La Convención de nomenclatura para las propiedades adjuntas es que el identificador de la propiedad adjunta debe coincidir con el nombre de propiedad especificado en el `CreateAttached` método, con la propiedad "Property" anexada. Por lo tanto, en el ejemplo anterior, el identificador de la propiedad adjunta es `HasShadowProperty` .
+Esto crea una propiedad adjunta denominada `HasShadowProperty` , de tipo `bool` . La propiedad es propiedad de la `ShadowEffect` clase y su valor predeterminado es `false` .
 
 Para obtener más información sobre cómo crear propiedades enlazables, incluidos los parámetros que se pueden especificar durante la creación, vea [crear una propiedad enlazable](~/xamarin-forms/xaml/bindable-properties.md#consume-a-bindable-property).
 

@@ -9,12 +9,12 @@ ms.date: 06/07/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ffa44beb68dc845a64d8bf2a9f86f6d7e56df8f9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4ef1f9aadd93c971adb66ede442796c2b72c2c9a
+ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139443"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226838"
 ---
 # <a name="azure-signalr-service-with-xamarinforms"></a>Azure Signalr Service conXamarin.Forms
 
@@ -298,7 +298,7 @@ void AddMessage(string message)
 }
 ```
 
-## <a name="test-the-application"></a>Probar la aplicación
+## <a name="test-the-application"></a>Prueba de la aplicación
 
 La aplicación Signalr chat se puede probar en iOS, Android y UWP siempre que tenga:
 
@@ -310,7 +310,7 @@ Una vez que se completen estos pasos y se ejecute la aplicación, al hacer clic 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-* [Creación de aplicaciones móviles en tiempo real con Xamarin y Signalr](https://mybuild.techcommunity.microsoft.com/sessions/77333/)
+* [Creación de aplicaciones móviles en tiempo real con Xamarin y Signalr](https://www.youtube.com/watch?v=AlqZ1LpUXeg)
 * [Introducción a SignalR](/aspnet/signalr/overview/getting-started/introduction-to-signalr)
 * [Introducción a Azure Functions](/azure/azure-functions/functions-overview)
 * [Documentación de Azure Functions](/azure/azure-functions/)

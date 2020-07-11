@@ -10,12 +10,12 @@ ms.date: 01/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 33b3763075b64ea8af615465825313a527d20db2
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7d83728edc161a89b381330884e86f09b7788e3d
+ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138182"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226786"
 ---
 # <a name="xamarinforms-bindable-properties"></a>Xamarin.FormsPropiedades enlazables
 
@@ -55,6 +55,9 @@ Como mínimo, se debe especificar un identificador al crear [`BindableProperty`]
 - Tipo del objeto propietario.
 - Valor predeterminado de la propiedad. Esto garantiza que la propiedad siempre devuelve un valor predeterminado determinado cuando no está establecido y puede ser diferente del valor predeterminado para el tipo de la propiedad. El valor predeterminado se restaurará cuando [ `ClearValue` ] (XREF: Xamarin.Forms . BindableObject. ClearValue ( Xamarin.Forms . BindableProperty)) en la propiedad enlazable.
 
+> [!IMPORTANT]
+> La Convención de nomenclatura para las propiedades enlazables es que el identificador de la propiedad enlazable debe coincidir con el nombre de propiedad especificado en el `Create` método, con la propiedad "Property" anexada. 
+
 En el código siguiente se muestra un ejemplo de una propiedad enlazable, con un identificador y valores para los cuatro parámetros necesarios:
 
 ```csharp
@@ -62,7 +65,7 @@ public static readonly BindableProperty EventNameProperty =
   BindableProperty.Create ("EventName", typeof(string), typeof(EventToCommandBehavior), null);
 ```
 
-Esto crea una [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instancia denominada `EventName` , de tipo `string` . La propiedad es propiedad de la `EventToCommandBehavior` clase y su valor predeterminado es `null` . La Convención de nomenclatura para las propiedades enlazables es que el identificador de la propiedad enlazable debe coincidir con el nombre de propiedad especificado en el `Create` método, con la propiedad "Property" anexada. Por lo tanto, en el ejemplo anterior, el identificador de la propiedad enlazable es `EventNameProperty` .
+Esto crea una [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instancia denominada `EventNameProperty` , de tipo `string` . La propiedad es propiedad de la `EventToCommandBehavior` clase y su valor predeterminado es `null` .
 
 Opcionalmente, al crear una [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instancia de, se pueden especificar los parámetros siguientes:
 
