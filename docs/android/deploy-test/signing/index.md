@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/02/2018
-ms.openlocfilehash: c6a606bf326d1e59398ab77c51b1de5ed3e497e0
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 66d2f66f0118e84778b25fc0e872099439510ce2
+ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571537"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226851"
 ---
 # <a name="signing-the-android-application-package"></a>Firmar el paquete de aplicación de Android
 
@@ -20,7 +20,7 @@ En [Preparar una aplicación para su lanzamiento](~/android/deploy-test/release-
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-En [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive) (Archivo para publicar), el cuadro de diálogo **Canal de distribución** ofrece dos opciones para la distribución. Seleccione **Ad-Hoc** (Ad hoc):
+En [Archivo para publicar](~/android/deploy-test/release-prep/index.md#archive), el cuadro de diálogo **Canal de distribución** ofrece dos opciones para la distribución: Seleccione **Ad-Hoc** (Ad hoc):
 
 [![Cuadro de diálogo Canal de distribución](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
@@ -46,7 +46,7 @@ Para usar un certificado existente, haga clic en el botón **Importar** y, despu
 
 [![Identidad de firma ad hoc](images/vs/02-ad-hoc-signing-identity-vs-sml.png)](images/vs/02-ad-hoc-signing-identity-vs.png#lightbox)
 
-Se muestra el cuadro de diálogo **Create Android Key Store** (Crear almacén de claves de Android). Úselo para crear un certificado de firma que se pueda usar para firmar aplicaciones de Android. Escriba la información necesaria (resaltada en rojo), como se muestra en este cuadro de diálogo:
+Se muestra el cuadro de diálogo **Create Android Key Store** (Crear almacén de claves de Android). Úselo para crear un certificado de firma que se pueda emplear para firmar aplicaciones de Android. Escriba la información necesaria (resaltada en rojo), como se muestra en este cuadro de diálogo:
 
 [![Cuadro de diálogo Create Android Key Store (Crear almacén de claves de Android)](images/vs/03-create-android-key-store-vs-sml.png)](images/vs/03-create-android-key-store-vs.png#lightbox)
 
@@ -62,8 +62,10 @@ Por ejemplo, mediante el uso de **chimp** como alias, los pasos anteriores podr�
 
 **C:\\Usuarios\\*NOMBRE DE USUARIO*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore**
 
-> [!NOTE]
-> Debe crear una copia de seguridad del archivo de almacén de claves y la contraseña resultantes en un lugar seguro, ya que no se incluye en la solución. Si pierde el archivo (por ejemplo, porque ha cambiado de equipo o porque ha reinstalado Windows), no podrá firmar la aplicación con el mismo certificado que las versiones anteriores.
+> [!IMPORTANT]
+> La carpeta AppData está oculta de forma predeterminada y es posible que tenga que mostrarla para tener acceso a ella.
+>
+> Además, debe crear una copia de seguridad del archivo de almacén de claves y la contraseña resultantes en un lugar seguro, ya que no se incluye en la solución. Si pierde el archivo (por ejemplo, porque ha cambiado de equipo o porque ha reinstalado Windows), no podrá firmar la aplicación con el mismo certificado que las versiones anteriores.
 
 Para obtener más información sobre el almacén de claves, consulte [Finding your Keystore's MD5 or SHA1 Signature](~/android/deploy-test/signing/keystore-signature.md) (Buscar la firma MD5 o SHA1 del almacén de claves).
 
