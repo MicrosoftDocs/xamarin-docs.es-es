@@ -10,12 +10,12 @@ ms.date: 02/01/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0ecbc850960465296dc4047277bdafe78ac800a4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8c53b1e58ad97f7d0e17972a2b232c16e05ecc1a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573253"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934893"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Diseño para tabletas y aplicaciones de escritorio
 
@@ -43,7 +43,7 @@ Para proporcionar una experiencia de inicio agradable y asegurarse de que se uti
 Antes de iOS 9, todas las aplicaciones requerían la pantalla completa en el dispositivo, pero algunos iPad ahora pueden realizar varias [tareas de pantalla dividida](~/ios/platform/multitasking.md).
 Esto significa que la aplicación podría ocupar simplemente una columna delgada en el lateral de la pantalla, el 50% del ancho de la pantalla o toda la pantalla.
 
-[![](tablet-images/ipad-sml.png "iPad Split Screen Example")](tablet-images/ipad.png#lightbox "iPad Split Screen Example")
+[![Ejemplo de pantalla dividida de iPad](tablet-images/ipad-sml.png)](tablet-images/ipad.png#lightbox "Ejemplo de pantalla dividida de iPad")
 
 La funcionalidad de pantalla dividida significa que debe diseñar la aplicación para que funcione bien con tan solo 320 píxeles de ancho o hasta 1366 píxeles de ancho.
 
@@ -60,7 +60,7 @@ Para admitir tabletas y equipos de escritorio que ejecuten Windows, deberá usar
 
 Se puede cambiar el tamaño de las aplicaciones que se ejecutan en tabletas y escritorios de Windows a dimensiones arbitrarias, además de ejecutarse en pantalla completa.
 
-[![](tablet-images/splitscreen-sml.png "Windows Split Screen Example")](tablet-images/splitscreen.png#lightbox "Windows Split Screen Example")
+[![Ejemplo de pantalla dividida de Windows](tablet-images/splitscreen-sml.png)](tablet-images/splitscreen.png#lightbox "Ejemplo de pantalla dividida de Windows")
 
 ## <a name="optimize-for-tablet-and-desktop"></a>Optimizar para tabletas y equipos de escritorio
 

@@ -10,16 +10,16 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f97e6930f543f47383e2b8da09b36573bd3192d0
-ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
+ms.openlocfilehash: 9d79f232a77972b6abbce23ba65d9c277b090311
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85243755"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935452"
 ---
 # <a name="xamarinforms-shapes-line"></a>Xamarin.FormsFormas: línea
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -55,7 +55,7 @@ En el siguiente ejemplo de XAML se muestra cómo dibujar una línea:
 
 En este ejemplo, se dibuja una línea diagonal roja desde (40, 0) a (0120):
 
-![Línea](line-images/line.png "Línea")
+![Line](line-images/line.png "Línea")
 
 Dado que `X1` las `Y1` propiedades,, `X2` y `Y2` tienen valores predeterminados de 0, es posible dibujar algunas líneas con la sintaxis mínima:
 

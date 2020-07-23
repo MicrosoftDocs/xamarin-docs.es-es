@@ -6,12 +6,12 @@ ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 5992e8df3080bb35fd123483e5ffb5e64f268b1a
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 8f7ec5175895a31746710fad9ea7372052b698ff
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76724764"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936492"
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Introducción al desarrollo de juegos con Xamarin
 
@@ -34,7 +34,7 @@ Un juego típico requiere un movimiento constante o un cambio para que se produz
 
 El siguiente es un diagrama de un bucle de juego sencillo:
 
-![](images/image1.png "This is a diagram of a simple game loop")
+![Este es un diagrama de un bucle de juego sencillo](images/image1.png)
 
 Las tecnologías que se describen a continuación abstraerán el bucle while real, pero a pesar de esta abstracción, el concepto de actualizaciones de cada fotograma estará presente.
 
@@ -67,7 +67,7 @@ Muchos juegos requieren matemáticas más avanzadas que las aplicaciones que no 
 
 Si está familiarizado con el plano cartesiano, que usa las coordenadas X e Y para colocar objetos, sabrá lo suficiente como para empezar a trabajar con el desarrollo de juegos. A continuación se muestra un plano cartesiano con un puntero Y apuntando hacia arriba:
 
-![](images/image2.png "This shows a Cartesian plane with positive Y pointing upward")
+![Muestra un plano cartesiano con un puntero Y apuntando hacia arriba](images/image2.png)
 
 > [!IMPORTANT]
 > Algunos motores o API usan un sistema de coordenadas en el que al aumentar el valor Y de un objeto se desactivará, mientras que otros sistemas utilizarán un sistema de coordenadas donde el Y positivo esté activo. Tenga esto en cuenta si va a mover entre sistemas.
@@ -86,7 +86,7 @@ Algunas canalizaciones de contenido pueden ser muy rápidas y no requieren ning�
 El desarrollo de juegos presenta nuevos roles y títulos para las personas implicadas en el proceso. La mayoría de los desarrolladores de juegos no pueden satisfacer el amplio conjunto de conocimientos necesarios para lanzar un juego completo, por lo que existe una serie de disciplinas. Tenga en cuenta que esta no es una lista completa de las áreas de desarrollo, solo algunas de las más comunes.
 
 - **Programador** : la mayoría de las personas que lean este artículo entrarán en esta categoría. El rol de un programador en el desarrollo de juegos es similar al rol de un programador en una aplicación que no es de juego. Las responsabilidades incluyen la escritura de lógica para controlar el flujo de un juego, el desarrollo de sistemas para tareas comunes en el contexto de un proyecto determinado, la adición y visualización de contenido, y, por supuesto, la corrección de errores.
-- **artista 2D** : los artistas 2D son responsables de la creación de *recursos 2D*. Estos incluyen archivos de imagen para la GUI, los objetos, los entornos y los caracteres del juego. Si el juego que está desarrollando es 3D, es posible que los artistas de 2D no sean responsables de los entornos y los caracteres. Puede encontrar un arte gratuito del juego en [http://opengameart.org/](http://opengameart.org/) .
+- **artista 2D** : los artistas 2D son responsables de la creación de *recursos 2D*. Estos incluyen archivos de imagen para la GUI, los objetos, los entornos y los caracteres del juego. Si el juego que está desarrollando es 3D, es posible que los artistas de 2D no sean responsables de los entornos y los caracteres. Puede encontrar arte gratuito para su juego en [http://opengameart.org/](http://opengameart.org/) .
 - **artistas en 3D** : los artistas 3D son responsables de la creación de *recursos 3D*. Estos incluyen modelos 3D para entornos, caracteres y propiedades (mobiliario, plantas y otros objetos inanimados). Algunos equipos diferencian entre los artistas 3D y los animadores 3D en función del tamaño del equipo. Puede encontrar una imagen en 3D gratis para su juego en [http://opengameart.org/](http://opengameart.org/) .
 - **Diseñador de juegos** : los diseñadores de juegos son responsables de definir cómo se reproduce el juego. Esto puede incluir decisiones de alto nivel, como la configuración del juego, el objetivo general del juego y cómo progresa un jugador a través del juego. Los diseñadores de juegos también pueden participar en decisiones muy detalladas, como la asignación de entradas a acciones, la definición de coeficientes para el movimiento o los niveles y el diseño de nivel. Tenga en cuenta que el término *Diseñador* puede hacer referencia a un diseñador de juegos o a un diseñador visual dependiendo del contexto.
 - **Diseñador de sonido** : los diseñadores de sonido son responsables de los recursos de audio de un juego. Algunos equipos pueden diferenciar entre los individuos responsables de crear efectos y comparadores de sonido, mientras que los equipos más pequeños pueden tener una sola persona responsable de todo el audio.
@@ -121,11 +121,11 @@ A continuación se incluyen ejemplos importantes de juegos con monogame:
 
 FEZ:
 
-![](images/image7.png "FEZ")
+![FEZ](images/image7.png)
 
 Bastión
 
-![](images/image8.jpg "Bastion")
+![Bastion](images/image8.jpg)
 
 Para empezar a trabajar con monogame, diríjase a nuestras [guías de monogame](~/graphics-games/monogame/index.md).
 
@@ -133,7 +133,7 @@ Para empezar a trabajar con monogame, diríjase a nuestras [guías de monogame](
 
 UrhoSharp es un motor 3D y 2D de alto nivel multiplataforma que se puede usar para crear escenas animadas 3D y 2D para las aplicaciones mediante geometrías, materiales, luces y cámaras.
 
-![](images/urhosharp.gif "UrhoSharp is a cross-platform high-level 3D and 2D engine that can be used to create animated 3D and 2D scenes")
+![UrhoSharp es un motor 3D y 2D de alto nivel multiplataforma que se puede usar para crear escenas animadas 3D y 2D.](images/urhosharp.gif)
 
 Consulte las [guías de UrhoSharp](~/graphics-games/urhosharp/index.md) para empezar a trabajar.
 
@@ -141,9 +141,9 @@ Consulte las [guías de UrhoSharp](~/graphics-games/urhosharp/index.md) para emp
 
 Las tecnologías resaltadas anteriormente son solo un ejemplo de las tecnologías disponibles. Otras tecnologías importantes incluyen:
 
-- **Sprite kit** : Xamarin proporciona compatibilidad con el juego de juegos de Sprite de Apple, que le proporciona acceso a toda la funcionalidad de la API nativa. Dado que el kit de Sprite es una tecnología creada por Apple, proporciona una integración profunda con el resto del ecosistema de iOS. Por supuesto, el kit de Sprite no es multiplataforma, por lo que no se puede usar en Android. Para obtener más información sobre el uso del kit de Sprite, consulte esta entrada: [https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
-- **Kit de escenas** : Xamarin también proporciona compatibilidad con el marco de escenas del kit de Apple, que simplifica la implementación de gráficos 3D en aplicaciones iOS. El kit de escenas también es una tecnología que Apple proporciona, por lo que tiene tanto la integración como las consideraciones específicas de la plataforma mencionadas anteriormente para el kit de Sprite. Para obtener más información sobre el kit de escenas, consulte esta entrada: [https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
-- **OpenTK:** OpenTK (que se encuentra en Open Tool Kit) proporciona acceso OpenGL de bajo nivel al hardware de iOS, Apple y Mac. Para obtener más información sobre OpenTK, vea la Página principal en: [https://opentk.net/](https://opentk.net/)
+- **Sprite kit** : Xamarin proporciona compatibilidad con el juego de juegos de Sprite de Apple, que le proporciona acceso a toda la funcionalidad de la API nativa. Dado que el kit de Sprite es una tecnología creada por Apple, proporciona una integración profunda con el resto del ecosistema de iOS. Por supuesto, el kit de Sprite no es multiplataforma, por lo que no se puede usar en Android. Para obtener más información sobre el uso del kit de Sprite, vea esta publicación:[https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
+- **Kit de escenas** : Xamarin también proporciona compatibilidad con el marco de escenas del kit de Apple, que simplifica la implementación de gráficos 3D en aplicaciones iOS. El kit de escenas también es una tecnología que Apple proporciona, por lo que tiene tanto la integración como las consideraciones específicas de la plataforma mencionadas anteriormente para el kit de Sprite. Para obtener más información sobre el kit de escenas, consulte esta publicación:[https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
+- **OpenTK:** OpenTK (que se encuentra en Open Tool Kit) proporciona acceso OpenGL de bajo nivel al hardware de iOS, Apple y Mac. Para obtener más información sobre OpenTK, vea la Página principal en:[https://opentk.net/](https://opentk.net/)
 
 ## <a name="related-links"></a>Vínculos relacionados
 
