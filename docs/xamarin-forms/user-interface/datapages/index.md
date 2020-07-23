@@ -10,16 +10,16 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7d99870dd975d0996ffcd05d4aef153f3515ec9e
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5e1ea94e42e98609b3f77f0198e125b94e2b437d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134321"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86928840"
 ---
 # <a name="xamarinforms-datapages"></a>Xamarin.FormsPáginas de página
 
-![](~/media/shared/preview.png "This API is currently in preview")
+![Esta API está actualmente en versión preliminar](~/media/shared/preview.png)
 
 > [!IMPORTANT]
 > Las páginas de página requieren una Xamarin.Forms referencia de tema que se va a representar. Esto implica la instalación de [ Xamarin.Forms . Paquete NuGet Theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) en el proyecto, seguido de [ Xamarin.Forms . Theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) o [ Xamarin.Forms . Paquetes NuGet Theme. Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
@@ -30,7 +30,7 @@ Las páginas de datos proporcionan una API para enlazar de forma rápida y senci
 
 Para ver cómo funciona la demo de la ponencia de evolución, consulte la [Guía de introducción](get-started.md).
 
-[![](images/demo-sml.png "DataPages Sample Application")](images/demo.png#lightbox "DataPages Sample Application")
+[![Aplicación de ejemplo de páginas de página](images/demo-sml.png)](images/demo.png#lightbox "Aplicación de ejemplo de páginas de página")
 
 ## <a name="introduction"></a>Introducción
 
