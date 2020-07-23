@@ -11,12 +11,12 @@ ms.date: 11/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c7f5979b93ff35b14ec7c13418a4565604f46bd7
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d2bd0bf696e652e95e0feb88cca7cf685b14433b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84570653"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936505"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexación de la aplicación y vinculación en profundidad
 
@@ -32,7 +32,7 @@ La indexación de la aplicación y la vinculación en profundidad de Xamarin.For
 
 La aplicación de ejemplo muestra una aplicación de lista de tareas pendientes en la que los datos se almacenan en una base de datos SQLite local, tal como aparece en las siguientes capturas de pantalla:
 
-![](deep-linking-images/screenshots.png "TodoList Application")
+![Aplicación de lista de tareas pendientes](deep-linking-images/screenshots.png)
 
 Se indexan todas las instancias del elemento `TodoItem` que crea el usuario. A continuación, se puede usar una búsqueda específica de la plataforma para localizar los datos indexados de la aplicación. Cuando el usuario pulsa un resultado de la búsqueda de la aplicación, esta se inicia, se navega al elemento `TodoItemPage` y se muestra el elemento `TodoItem` al que se hace referencia desde el vínculo profundo.
 
@@ -141,7 +141,7 @@ Esto agrega la instancia [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) a la 
 
 Una vez que la instancia [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) se ha registrado para la indexación, esta puede aparecer en los resultados de la búsqueda. La siguiente captura de pantalla muestra el contenido indexado que aparece en los resultados de la búsqueda en la plataforma iOS:
 
-![](deep-linking-images/ios-search.png "Indexed Content in Search Results on iOS")
+![Contenido indexado en los resultados de la búsqueda en iOS](deep-linking-images/ios-search.png)
 
 ## <a name="de-registering-indexed-content"></a>Anulación del registro del contenido indexado
 

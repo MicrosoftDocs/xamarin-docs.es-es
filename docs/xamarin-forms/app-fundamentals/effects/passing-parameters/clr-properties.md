@@ -1,6 +1,6 @@
 ---
-title: 'title: "Pasar parámetros de efecto como propiedades de Common Language Runtime" description: "Las propiedades de Common Language Runtime (CLR) se pueden usar para definir parámetros de efecto que no responden a los cambios de propiedades en tiempo de ejecución.'
-description: 'En este artículo se muestra cómo usar propiedades CLR para pasar parámetros a un efecto." ms.prod: xamarin ms.assetid: 4B50466C-5DBD-45DD-B1E6-BE9524C92F27 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 08/05/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Pasar parámetros de efecto como propiedades de Common Language Runtime
+description: Las propiedades de Common Language Runtime (CLR) se pueden usar para definir parámetros de efecto que no responden a los cambios de propiedades en tiempo de ejecución. En este artículo se muestra cómo usar propiedades CLR para pasar parámetros a un efecto.
 ms.prod: xamarin
 ms.assetid: 4B50466C-5DBD-45DD-B1E6-BE9524C92F27
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 08/05/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 37d870509e034f4c23afba60fa055965ed9df4de
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 24468e88d39283d2b8282fe0cb9b59f33fcef2f0
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84138871"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936700"
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>Pasar parámetros de efecto como propiedades de Common Language Runtime
 
@@ -33,11 +33,11 @@ Después, se pueden pasar parámetros al efecto mediante la especificación de v
 
 En la aplicación de ejemplo se muestra un elemento `ShadowEffect` que agrega una sombra al texto mostrado por un control [`Label`](xref:Xamarin.Forms.Label). El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
-![](clr-properties-images/shadow-effect.png "Shadow Effect Project Responsibilities")
+![Responsabilidades del proyecto de efecto de sombra](clr-properties-images/shadow-effect.png)
 
 `LabelShadowEffect` personaliza un control [`Label`](xref:Xamarin.Forms.Label) en el elemento `HomePage` en cada proyecto específico de la plataforma. Los parámetros se pasan a cada elemento `LabelShadowEffect` a través de las propiedades de la clase `ShadowEffect`. Cada clase `LabelShadowEffect` se deriva de la clase `PlatformEffect` para cada plataforma. Como resultado, se agrega una sombra al texto mostrado por el control `Label`, como se muestra en las capturas de pantalla siguientes:
 
-![](clr-properties-images/screenshots.png "Shadow Effect on each Platform")
+![Efecto de sombra en cada plataforma](clr-properties-images/screenshots.png)
 
 ## <a name="creating-effect-parameters"></a>Creación de parámetros de efecto
 
