@@ -10,12 +10,12 @@ ms.date: 05/09/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e1590d0a4f9716541f18bc4f50a2c480c5e4478a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 47770b4f57da530677dead051fc657ab24e776f5
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84129784"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933814"
 ---
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Accesibilidad del teclado en Xamarin.Forms
 
@@ -56,7 +56,7 @@ De forma predeterminada, el orden de tabulación de los controles es el mismo or
 
 La captura de pantalla siguiente muestra el orden de tabulación predeterminado para este ejemplo de código:
 
-![](keyboard-images/default-tab-order.png "Default Row-based Tab Order")
+![Orden de tabulación basado en filas predeterminado](keyboard-images/default-tab-order.png)
 
 Aquí, el orden de tabulación está basado en filas y es el orden en el cual los controles se indican en el XAML. Por lo tanto, al presionar la tecla TAB se navega por instancias [`Entry`](xref:Xamarin.Forms.Entry) de nombre, seguidas por instancias `Entry` de apellido. Sin embargo, una experiencia más intuitiva sería usar una navegación por tabulación de la columna en primer lugar, para que al presionar la tecla TAB se navegara por los pares de nombre y apellido. Esto puede lograrse mediante la especificación del orden de tabulación de los controles de entrada.
 
@@ -113,7 +113,7 @@ El siguiente ejemplo de XAML muestra la propiedad `TabIndex` establecida en los 
 
 La captura de pantalla siguiente muestra el orden de tabulación para este ejemplo de código:
 
-![](keyboard-images/correct-tab-order.png "Column-based Tab Order")
+![Orden de tabulación basado en columnas](keyboard-images/correct-tab-order.png)
 
 Aquí, el orden de tabulación está basado en columnas. Por lo tanto, al presionar la tecla TAB se navega por pares [`Entry`](xref:Xamarin.Forms.Entry) de nombre y apellido.
 

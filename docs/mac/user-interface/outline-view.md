@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: be867aa38b3e5ecda869784b31732cc4fb5e9503
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 7f1ae2ecfa7d6dbed56b8009593fc172615fd051
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84565529"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86928801"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Esquematizar vistas en Xamarin. Mac
 
@@ -22,7 +22,7 @@ Cuando se trabaja con C# y .NET en una aplicación de Xamarin. Mac, tiene acceso
 
 Una vista de esquema es un tipo de tabla que permite al usuario expandir o contraer filas de datos jerárquicos. Al igual que una vista de tabla, una vista de esquema muestra los datos de un conjunto de elementos relacionados, con filas que representan elementos individuales y columnas que representan los atributos de esos elementos. A diferencia de una vista de tabla, los elementos de una vista de esquema no están en una lista plana, sino que se organizan en una jerarquía, como los archivos y las carpetas de una unidad de disco duro.
 
-[![](outline-view-images/populate03.png "An example app run")](outline-view-images/populate03.png#lightbox)
+[![Ejecución de una aplicación de ejemplo](outline-view-images/populate03.png)](outline-view-images/populate03.png#lightbox)
 
 En este artículo, trataremos los aspectos básicos del trabajo con las vistas de esquema en una aplicación de Xamarin. Mac. Se recomienda encarecidamente que trabaje primero en el artículo [Hello, Mac](~/mac/get-started/hello-mac.md) , específicamente en las secciones [Introducción a Xcode y Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) y [salidas y acciones](~/mac/get-started/hello-mac.md#outlets-and-actions) , ya que trata conceptos clave y técnicas que vamos a usar en este artículo.
 
@@ -50,23 +50,23 @@ Dado que una vista de esquema comparte gran parte del comportamiento y la funcio
 
 Cuando se crea una nueva aplicación de Cocoa de Xamarin. Mac, se obtiene una ventana en blanco de forma predeterminada. Esta ventana se define en un `.storyboard` archivo que se incluye automáticamente en el proyecto. Para editar el diseño de Windows, en el **Explorador de soluciones**, haga doble clic en el `Main.storyboard` archivo:
 
-[![](outline-view-images/edit01.png "Selecting the main storyboard")](outline-view-images/edit01.png#lightbox)
+[![Seleccionar el guión gráfico principal](outline-view-images/edit01.png)](outline-view-images/edit01.png#lightbox)
 
 Se abrirá el diseño de ventana en la Interface Builder de Xcode:
 
-[![](outline-view-images/edit02.png "Editing the UI in Xcode")](outline-view-images/edit02.png#lightbox)
+[![Edición de la interfaz de usuario en Xcode](outline-view-images/edit02.png)](outline-view-images/edit02.png#lightbox)
 
 Escriba `outline` en el cuadro **de búsqueda del inspector** de la biblioteca para que sea más fácil encontrar los controles de la vista de esquema:
 
-[![](outline-view-images/edit03.png "Selecting an Outline View from the Library")](outline-view-images/edit03.png#lightbox)
+[![Seleccionar una vista de esquema de la biblioteca](outline-view-images/edit03.png)](outline-view-images/edit03.png#lightbox)
 
 Arrastre una vista de esquema en el controlador de vista en el editor de la **interfaz**, haga que rellene el área de contenido del controlador de vista y establézcalo en donde se reduzca y crezca con la ventana del **Editor de restricciones**:
 
-[![](outline-view-images/edit04.png "Editing the constraints")](outline-view-images/edit04.png#lightbox)
+[![Editar las restricciones](outline-view-images/edit04.png)](outline-view-images/edit04.png#lightbox)
 
 Seleccione la vista esquema en la **jerarquía** de la interfaz y las siguientes propiedades están disponibles en el **Inspector de atributos**:
 
-[![](outline-view-images/edit05.png "The Attribute Inspector")](outline-view-images/edit05.png#lightbox)
+[![Inspector de atributo](outline-view-images/edit05.png)](outline-view-images/edit05.png#lightbox)
 
 - **Columna de esquema** : columna de la tabla en la que se muestran los datos jerárquicos.
 - **Columna de esquema autoguardado** : Si `true` es, la columna de esquema se guardará y restaurará automáticamente entre las ejecuciones de la aplicación.
@@ -101,7 +101,7 @@ Seleccione la vista esquema en la **jerarquía** de la interfaz y las siguientes
 
 Seleccione una columna de la tabla en la jerarquía de la **interfaz** y las siguientes propiedades estarán disponibles en el **Inspector de atributos**:
 
-[![](outline-view-images/edit06.png "The Attribute Inspector")](outline-view-images/edit06.png#lightbox)
+[![Inspector de atributo](outline-view-images/edit06.png)](outline-view-images/edit06.png#lightbox)
 
 - **Título** : establece el título de la columna.
 - **Alineación** : establece la alineación del texto dentro de las celdas.
@@ -119,19 +119,19 @@ Vamos a seleccionar cada columna en la vista de tabla y asignaremos a la primera
 
 Seleccione una vista de celda de tabla ( `NSTableViewCell` ) en la **jerarquía** de la interfaz y las siguientes propiedades están disponibles en el **Inspector de atributos**:
 
-[![](outline-view-images/edit07.png "The Attribute Inspector")](outline-view-images/edit07.png#lightbox)
+[![Inspector de atributo](outline-view-images/edit07.png)](outline-view-images/edit07.png#lightbox)
 
 Estas son todas las propiedades de una vista estándar. También tiene la opción de cambiar el tamaño de las filas de esta columna aquí.
 
 Seleccione una celda de vista de tabla (de forma predeterminada, es `NSTextField` ) en la **jerarquía** de la interfaz y las siguientes propiedades están disponibles en el inspector de **atributos**:
 
-[![](outline-view-images/edit08.png "The Attribute Inspector")](outline-view-images/edit08.png#lightbox)
+[![Inspector de atributo](outline-view-images/edit08.png)](outline-view-images/edit08.png#lightbox)
 
 Tendrá todas las propiedades de un campo de texto estándar para establecer aquí. De forma predeterminada, se usa un campo de texto estándar para mostrar los datos de una celda de una columna.
 
 Seleccione una vista de celda de tabla ( `NSTableFieldCell` ) en la **jerarquía** de la interfaz y las siguientes propiedades están disponibles en el **Inspector de atributos**:
 
-[![](outline-view-images/edit09.png "The Attribute Inspector")](outline-view-images/edit09.png#lightbox)
+[![Inspector de atributo](outline-view-images/edit09.png)](outline-view-images/edit09.png#lightbox)
 
 La configuración más importante aquí es:
 
@@ -145,7 +145,7 @@ La configuración más importante aquí es:
 
 Seleccione la vista de celda de tabla ( `NSTableFieldCell` ) en la parte inferior de una columna de tabla de la jerarquía de la **interfaz**:
 
-[![](outline-view-images/edit11.png "Selecting the table cell view")](outline-view-images/edit10.png#lightbox)
+[![Seleccionar la vista de celda de tabla](outline-view-images/edit11.png)](outline-view-images/edit10.png#lightbox)
 
 Esto le permite editar la vista de celda de tabla utilizada como _patrón_ base para todas las celdas creadas para la columna especificada.
 
@@ -159,14 +159,14 @@ El proceso es el mismo para cualquier elemento de la vista de esquema que desee 
 
 1. Cambie al **Editor de asistentes** y asegúrese de que el `ViewController.h` archivo está seleccionado:
 
-    [![](outline-view-images/edit11.png "Selecting the correct .h file")](outline-view-images/edit11.png#lightbox)
+    [![Seleccionar el archivo. h correcto](outline-view-images/edit11.png)](outline-view-images/edit11.png#lightbox)
 2. Seleccione la vista de esquema en la jerarquía de la **interfaz**, haga clic en el control y arrástrela hasta el `ViewController.h` archivo.
 3. Cree una **salida** para la vista de esquema denominada `ProductOutline` :
 
-    [![](outline-view-images/edit13.png "Configuring an Outlet")](outline-view-images/edit13.png#lightbox)
+    [![Configuración de una salida](outline-view-images/edit13.png)](outline-view-images/edit13.png#lightbox)
 4. Cree **salidas** para las columnas de las tablas, también denominadas `ProductColumn` y `DetailsColumn` :
 
-    [![](outline-view-images/edit14.png "Configuring an Outlet")](outline-view-images/edit14.png#lightbox)
+    [![Configuración de una salida](outline-view-images/edit14.png)](outline-view-images/edit14.png#lightbox)
 5. Guarde los cambios y vuelva a Visual Studio para Mac sincronizar con Xcode.
 
 A continuación, escribiremos el código para mostrar algunos datos del esquema cuando se ejecute la aplicación.
@@ -179,7 +179,7 @@ Con nuestra vista de esquema diseñada en Interface Builder y expuesta a través
 
 En primer lugar, vamos a crear una nueva `Product` clase para almacenar la información de las filas y grupos de subproductos individuales. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione **General**  >  **clase vacía**general, escriba `Product` para el **nombre** y haga clic en el botón **nuevo** :
 
-[![](outline-view-images/populate01.png "Creating an empty class")](outline-view-images/populate01.png#lightbox)
+[![Crear una clase vacía](outline-view-images/populate01.png)](outline-view-images/populate01.png#lightbox)
 
 Haga que el `Product.cs` archivo tenga el aspecto siguiente:
 
@@ -390,11 +390,11 @@ public override void AwakeFromNib ()
 
 Si ejecutamos la aplicación, se muestra lo siguiente:
 
-[![](outline-view-images/populate02.png "The collapsed view")](outline-view-images/populate02.png#lightbox)
+[![La vista contraída](outline-view-images/populate02.png)](outline-view-images/populate02.png#lightbox)
 
 Si expandimos un nodo en la vista de esquema, tendrá un aspecto similar al siguiente:
 
-[![](outline-view-images/populate03.png "The expanded view")](outline-view-images/populate03.png#lightbox)
+[![Vista expandida](outline-view-images/populate03.png)](outline-view-images/populate03.png#lightbox)
 
 <a name="Sorting_by_Column"></a>
 
@@ -402,7 +402,7 @@ Si expandimos un nodo en la vista de esquema, tendrá un aspecto similar al sigu
 
 Vamos a permitir que el usuario ordene los datos en el esquema haciendo clic en un encabezado de columna. En primer lugar, haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo en Interface Builder. Seleccione la `Product` columna, escriba `Title` para la **clave de ordenación**, `compare:` para el **selector** y seleccione `Ascending` para el **pedido**:
 
-[![](outline-view-images/sort01.png "Setting the sort key order")](outline-view-images/sort01.png#lightbox)
+[![Establecer el orden de las claves de ordenación](outline-view-images/sort01.png)](outline-view-images/sort01.png#lightbox)
 
 Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
 
@@ -435,7 +435,7 @@ El `Sort` método nos permite ordenar los datos en el origen de datos basándose
 
 Si ejecutamos la aplicación y hacemos clic en los encabezados de columna, las filas se ordenarán por esa columna:
 
-[![](outline-view-images/sort02.png "Example of sorted output")](outline-view-images/sort02.png#lightbox)
+[![Ejemplo de salida ordenada](outline-view-images/sort02.png)](outline-view-images/sort02.png#lightbox)
 
 <a name="Row_Selection"></a>
 
@@ -443,7 +443,7 @@ Si ejecutamos la aplicación y hacemos clic en los encabezados de columna, las f
 
 Si desea permitir que el usuario seleccione una sola fila, haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo en Interface Builder. Seleccione la vista esquema en la **jerarquía** de la interfaz y desactive la casilla **múltiple** en el **Inspector de atributos**:
 
-[![](outline-view-images/select01.png "The Attribute Inspector")](outline-view-images/select01.png#lightbox)
+[![Inspector de atributo](outline-view-images/select01.png)](outline-view-images/select01.png#lightbox)
 
 Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
 
@@ -465,7 +465,7 @@ Esto permitirá al usuario seleccionar cualquier fila única en la vista de esqu
 
 Si desea permitir que el usuario seleccione varias filas, haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo en Interface Builder. Seleccione la vista esquema en la **jerarquía** de la interfaz y active la casilla **múltiple** en el **Inspector de atributos**:
 
-[![](outline-view-images/select02.png "The Attribute Inspector")](outline-view-images/select02.png#lightbox)
+[![Inspector de atributo](outline-view-images/select02.png)](outline-view-images/select02.png#lightbox)
 
 Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
 
@@ -487,7 +487,7 @@ Esto permitirá al usuario seleccionar cualquier fila única en la vista de esqu
 
 Si desea permitir que el usuario escriba un carácter con la vista de esquema seleccionada y seleccionar la primera fila que contiene ese carácter, haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo en Interface Builder. Seleccione la vista esquema en la **jerarquía** de la interfaz y active la casilla **tipo Select** en el **Inspector de atributos**:
 
-[![](outline-view-images/type01.png "Editing the row type")](outline-view-images/type01.png#lightbox)
+[![Editar el tipo de fila](outline-view-images/type01.png)](outline-view-images/type01.png#lightbox)
 
 Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
 
@@ -515,7 +515,7 @@ El `GetNextTypeSelectMatch` método toma el determinado `searchString` y devuelv
 
 Si desea permitir que el usuario arrastre columnas de reordenación en la vista de esquema, haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo en Interface Builder. Seleccione la vista esquema en la **jerarquía** de la interfaz y active la casilla **reordenación** en el **Inspector de atributos**:
 
-[![](outline-view-images/reorder01.png "The Attribute Inspector")](outline-view-images/reorder01.png#lightbox)
+[![Inspector de atributo](outline-view-images/reorder01.png)](outline-view-images/reorder01.png#lightbox)
 
 Si asignamos un valor a la propiedad **autosave** y comprobamos el campo de **información de columna** , los cambios que se realicen en el diseño de la tabla se guardarán automáticamente y se restaurarán la próxima vez que se ejecute la aplicación.
 
@@ -534,7 +534,7 @@ El `ShouldReorder` método debe devolver `true` para cualquier columna que desee
 
 Si ejecutamos la aplicación, podemos arrastrar encabezados de columna para reordenar las columnas:
 
-[![](outline-view-images/reorder02.png "Example of reordering columns")](outline-view-images/reorder02.png#lightbox)
+[![Ejemplo de reordenación de columnas](outline-view-images/reorder02.png)](outline-view-images/reorder02.png#lightbox)
 
 <a name="Editing_Cells"></a>
 
@@ -596,7 +596,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 
 Ahora, Si ejecutamos la aplicación, el usuario puede editar las celdas en la vista de tabla:
 
-[![](outline-view-images/editing01.png "An example of editing cells")](outline-view-images/editing01.png#lightbox)
+[![Ejemplo de edición de celdas](outline-view-images/editing01.png)](outline-view-images/editing01.png#lightbox)
 
 <a name="Using_Images_in_Outline_Views"></a>
 

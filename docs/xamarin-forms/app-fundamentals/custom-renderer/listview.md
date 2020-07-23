@@ -10,12 +10,12 @@ ms.date: 11/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: dc28cdaf78c72c219706a30c30af7f90ae7c4eec
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8892a49f2d7d93f8310293bc70d5e1acdfabe3f5
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84569626"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937090"
 ---
 # <a name="customizing-a-listview"></a>Personalización de una ListView
 
@@ -27,7 +27,7 @@ Todas las vistas de Xamarin.Forms tienen un representador que las acompaña para
 
 El siguiente diagrama muestra la relación entre el control [`ListView`](xref:Xamarin.Forms.ListView) y los controles nativos correspondientes que lo implementan:
 
-![](listview-images/listview-classes.png "Relationship Between the ListView Control and the Implementing Native Controls")
+![Relación entre el control ListView y los controles nativos de implementación](listview-images/listview-classes.png)
 
 El proceso de representación puede aprovecharse para implementar las personalizaciones específicas de la plataforma creando un representador personalizado para una [`ListView`](xref:Xamarin.Forms.ListView) en cada plataforma. Para hacerlo, siga este procedimiento:
 
@@ -152,11 +152,11 @@ El proceso para crear la clase del representador personalizado es el siguiente:
 
 El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
-![](listview-images/solution-structure.png "NativeListView Custom Renderer Project Responsibilities")
+![Responsabilidades de proyecto del representador personalizado de NativeListView](listview-images/solution-structure.png)
 
 El control personalizado `NativeListView` se representa mediante clases de representador específicas de la plataforma, que se derivan de la clase `ListViewRenderer` de cada plataforma. Esto da lugar a que cada control personalizado `NativeListView` se represente con diseños de celda nativos y controles de lista específicos de la plataforma, como se muestra en las siguientes capturas de pantalla:
 
-![](listview-images/screenshots.png "NativeListView on each Platform")
+![NativeListView en cada plataforma](listview-images/screenshots.png)
 
 La clase `ListViewRenderer` expone el método `OnElementChanged`, al que se llama cuando se crea el control personalizado de Xamarin.Forms para representar el control nativo correspondiente. Este método toma un parámetro `ElementChangedEventArgs` que contiene propiedades `OldElement` y `NewElement`. Estas propiedades representan al elemento de Xamarin.Forms al que *estaba* asociado el representador y al elemento de Xamarin.Forms al que *está* asociado el representador, respectivamente. En la aplicación de ejemplo, la propiedad `OldElement` es `null` y la propiedad `NewElement` contiene una referencia a la instancia de `NativeListView`.
 

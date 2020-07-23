@@ -10,16 +10,16 @@ ms.date: 02/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6fa03cf5c18e21ce5ca9e7ea907f50c8de6f3e6c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1a3b9db435de49c438f458d1c4d85d3f81bbf749
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573266"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930694"
 ---
 # <a name="layout-options-in-xamarinforms"></a>Opciones de diseño enXamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
 
 _Cada Xamarin.Forms vista tiene las propiedades HorizontalOptions y VerticalOptions, de tipo LayoutOptions. En este artículo se explica el efecto que tiene cada valor de LayoutOptions en la alineación y la expansión de una vista._
 
@@ -94,7 +94,7 @@ Content = new StackLayout
 
 El código da como resultado el diseño que se muestra en las siguientes capturas de pantallas:
 
-[![](layout-options-images/alignment.png "Alignment Layout Options")](layout-options-images/alignment-large.png#lightbox "Alignment Layout Options")
+[![Opciones de diseño de alineación](layout-options-images/alignment.png)](layout-options-images/alignment-large.png#lightbox "Opciones de diseño de alineación")
 
 ## <a name="expansion"></a>Expansión
 
@@ -147,7 +147,7 @@ Content = new StackLayout
 
 El código da como resultado el diseño que se muestra en las siguientes capturas de pantallas:
 
-[![](layout-options-images/expansion.png "Expansion Layout Options")](layout-options-images/expansion-large.png#lightbox "Expansion Layout Options")
+[![Opciones de diseño de expansión](layout-options-images/expansion.png)](layout-options-images/expansion-large.png#lightbox "Opciones de diseño de expansión")
 
 Cada [`Label`](xref:Xamarin.Forms.Label) ocupa la misma cantidad de espacio dentro de [`StackLayout`](xref:Xamarin.Forms.StackLayout) . Aun así, solo el último elemento `Label`, que establece su propiedad [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) en [`FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand), tiene un tamaño diferente. Además, cada uno `Label` está separado por un rojo pequeño [`BoxView`](xref:Xamarin.Forms.BoxView) , lo que permite que el espacio que `Label` ocupa se vea fácilmente.
 

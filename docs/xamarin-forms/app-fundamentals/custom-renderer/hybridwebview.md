@@ -10,12 +10,12 @@ ms.date: 03/31/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8c83742896af4a22bcff327df82c1b14ff983bb2
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e0653e46d2c349e05df8716e5114de8f631cab1a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138975"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939547"
 ---
 # <a name="customizing-a-webview"></a>Personalización de WebView
 
@@ -27,7 +27,7 @@ Todas las vistas de Xamarin.Forms tienen un representador que las acompaña para
 
 El siguiente diagrama muestra la relación entre la clase [`View`](xref:Xamarin.Forms.View) y los controles nativos correspondientes que la implementan:
 
-![](hybridwebview-images/webview-classes.png "Relationship Between the WebView Class and its Implementing Native Classes")
+![Relación entre la clase WebView y sus clases nativas de implementación](hybridwebview-images/webview-classes.png)
 
 El proceso de representación se puede usar para implementar personalizaciones de plataforma mediante la creación de un representador personalizado para un objeto [`WebView`](xref:Xamarin.Forms.WebView) en cada plataforma. Para hacerlo, siga este procedimiento:
 
@@ -155,11 +155,11 @@ El proceso para crear la clase del representador personalizado es el siguiente:
 
 El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
-![](hybridwebview-images/solution-structure.png "HybridWebView Custom Renderer Project Responsibilities")
+![Responsabilidades de proyecto del representador personalizado de HybridWebView](hybridwebview-images/solution-structure.png)
 
 El control personalizado `HybridWebView` se representa mediante clases de representador de la plataforma, que se derivan de la clase `WkWebViewRenderer` en iOS y de la clase `WebViewRenderer` en Android y UWP. Esto da lugar a que cada control personalizado `HybridWebView` se represente con controles web, como se muestra en las capturas de pantalla siguientes:
 
-![](hybridwebview-images/screenshots.png "HybridWebView on each Platform")
+![HybridWebView en cada plataforma](hybridwebview-images/screenshots.png)
 
 Las clases `WkWebViewRenderer` y `WebViewRenderer` exponen el método `OnElementChanged`, al que se llama cuando se crea el control personalizado de Xamarin.Forms para representar el control web nativo correspondiente. Este método toma un parámetro `VisualElementChangedEventArgs` que contiene propiedades `OldElement` y `NewElement`. Estas propiedades representan al elemento de Xamarin.Forms al que *estaba* asociado el representador y al elemento de Xamarin.Forms al que *está* asociado el representador, respectivamente. En la aplicación de ejemplo, la propiedad `OldElement` es `null` y la propiedad `NewElement` contiene una referencia a la instancia de `HybridWebView`.
 

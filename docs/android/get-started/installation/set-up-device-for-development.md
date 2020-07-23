@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 72e0a2adc79796b3df7b6fb4eca62448f1a1a7a4
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 0b0bfc650ffa271a7616d7c6e6a436fafa2664c8
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79510736"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932605"
 ---
 # <a name="set-up-device-for-development"></a>Configurar el dispositivo para el desarrollo
 
@@ -77,7 +77,7 @@ El paso final consiste en conectar el dispositivo al equipo. La manera más senc
 
 Recibirá un mensaje para confiar en el equipo en el dispositivo si no lo ha utilizado antes para depuración. También puede activar **Permitir siempre desde este ordenador** para evitar que le salga este aviso cada vez que conecte el dispositivo.
 
-![](set-up-device-for-development-images/trust-computer-for-usb-debugging.png "Google USB")
+![USB de Google](set-up-device-for-development-images/trust-computer-for-usb-debugging.png)
 
 ## <a name="alternate-connection-via-wifi"></a>Conexión alternativa a través de Wi-Fi
 
@@ -149,7 +149,7 @@ Todos los demás dispositivos Android deben usar el [controlador USB de su fabri
 
 Para instalar el paquete del **controlador USB de Google**, inicie Android SDK Manager y expanda la carpeta **Extras**, como se ve en la captura de pantalla siguiente:
 
-![](set-up-device-for-development-images/google-usb-driver.png "Google USB driver selected")
+![Controlador USB de Google seleccionado](set-up-device-for-development-images/google-usb-driver.png)
 
 Active el cuadro del **controlador USB de Google** y haga clic en el botón **Aplicar cambios**.
 Los archivos del controlador se descargan en la siguiente ubicación:

@@ -6,12 +6,12 @@ ms.assetid: F0A5A9BB-86CD-44C9-8EE8-74D1E5E74A30
 author: davidortinau
 ms.author: daortin
 ms.date: 07/25/2018
-ms.openlocfilehash: 5744bb9947b196ee319535729338bcf64a5cd09e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: ac8e4b2eef0905ba50cb24b9eb035d50a05dd84a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016762"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932253"
 ---
 # <a name="nuget-multiplatform-library-projects-nugetizer-3000"></a>Proyectos de biblioteca de múltiples plataformas NuGet (Nugetizer 3000)
 
@@ -19,13 +19,13 @@ _Cree paquetes NuGet automáticamente para compartir código entre plataformas m
 
 Es posible crear automáticamente paquetes NuGet para compartir código entre plataformas mediante _Nugetizer 3000_. Esto hace posible la creación de paquetes NuGet a partir de proyectos de biblioteca existentes o mediante la creación de un nuevo **proyecto de biblioteca multiplataforma**.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Nugetizer 3000 se incluye con Visual Studio para Mac &ndash; buscar el tipo de proyecto Library **> biblioteca Mulitplatform** en el **archivo > Nueva** ventana:
+Nugetizer 3000 está incluido en Visual Studio para Mac &ndash; Buscar el tipo de proyecto biblioteca **> biblioteca Mulitplatform** en el **archivo > nueva** ventana:
 
-[![](images/mulitplatform-library-sml.png "Create new Multiplatform Library window")](images/mulitplatform-library.png#lightbox)
+[![Crear nueva ventana biblioteca multiplataforma](images/mulitplatform-library-sml.png)](images/mulitplatform-library.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Para usar Nugetizer 3000 en Visual Studio, [Descargue y ejecute el instalador de VSIX](https://bit.ly/nugetizer-2017).
 

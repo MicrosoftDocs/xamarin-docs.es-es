@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: de4b6e8b95eed33e7fb38baf51a0da73cef313c0
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: bfa2a74bf9cd30fb7b9888ecd7339a80fe472c9e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574150"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939092"
 ---
 # <a name="introduction-to-ios-9"></a>Introducción a iOS 9
 
 _En este artículo se presentan todas las API y características nuevas y modificadas disponibles en iOS 9 para desarrolladores de Xamarin. iOS._
 
-![](images/ios9-sml.png "The iOS 9 logo")
+![El logotipo de iOS 9](images/ios9-sml.png)
 
 Apple ha agregado varias API y servicios nuevos en iOS 9 junto con muchas mejoras en las características existentes.
 
@@ -145,7 +145,7 @@ Para obtener más información, consulte [Touch ID and facial ID en Xamarin. iOS
 
 ## <a name="right-to-left-language-support"></a>Compatibilidad con idiomas de derecha a izquierda
 
-En iOS 9, Apple ha facilitado la presentación de una interfaz de usuario volteada con más facilidad que nunca, ya que proporciona compatibilidad total con los idiomas de derecha a izquierda. Entre estas estructuras se incluyen las siguientes:
+En iOS 9, Apple ha facilitado la presentación de una interfaz de usuario volteada con más facilidad que nunca, ya que proporciona compatibilidad total con los idiomas de derecha a izquierda. Incluye lo siguiente:
 
 - Los controles estándar de [UIKit](xref:UIKit) se voltearán de derecha a izquierda en función de la configuración regional y de idioma de los dispositivos iOS.
 - La clase [UIView](xref:UIKit.UIView) proporciona atributos que permiten definir cómo debe aparecer una vista determinada cuando se voltea de derecha a izquierda.

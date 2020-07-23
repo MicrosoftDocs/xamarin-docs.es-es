@@ -10,22 +10,22 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9a59f65655772768860ce29128f14a48641abc26
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 71e64f7b8286f22040a802336e9be756d932c0cd
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134282"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936544"
 ---
 # <a name="basic-animation-in-skiasharp"></a>Animación básica en SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Descubra cómo animar los gráficos de SkiaSharp_
 
 Puede animar los gráficos de SkiaSharp en Xamarin.Forms haciendo `PaintSurface` que el método se llame periódicamente, cada vez que dibuje los gráficos de un modo ligeramente distinto. Esta es una animación que se muestra más adelante en este artículo con círculos concéntricos que aparentemente se expanden desde el centro:
 
-![](animation-images/animationexample.png "Several concentric circles seemingly expanding from the center")
+![Algunos círculos concéntricos se expandan aparentemente desde el centro](animation-images/animationexample.png)
 
 La página de la **elipse pulsating** del programa [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) anima los dos ejes de una elipse para que parezca ser pulsating e incluso puede controlar la velocidad de esta Pulsation. El archivo [**PulsatingEllipsePage. Xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) crea una instancia Xamarin.Forms `Slider` de y un `Label` para mostrar el valor actual del control deslizante. Se trata de una manera común de integrar un `SKCanvasView` con otras Xamarin.Forms vistas:
 
@@ -144,7 +144,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El método calcula un radio máximo basado en el tamaño del área de presentación y un radio mínimo basado en el radio máximo. El `scale` valor se anima entre 0 y 1 y de nuevo a 0, por lo que el método utiliza ese para calcular una `xRadius` y `yRadius` que va entre `minRadius` y `maxRadius` . Estos valores se usan para dibujar y rellenar una elipse:
 
-[![](animation-images/pulsatingellipse-small.png "Triple screenshot of the Pulsating Ellipse page")](animation-images/pulsatingellipse-large.png#lightbox "Triple screenshot of the Pulsating Ellipse page")
+[![Captura de pantalla triple de la página de la elipse pulsating](animation-images/pulsatingellipse-small.png)](animation-images/pulsatingellipse-large.png#lightbox "Captura de pantalla triple de la página de la elipse pulsating")
 
 Observe que el `SKPaint` objeto se crea en un `using` bloque. Al igual que muchas clases SkiaSharp `SKPaint` derivan de `SKObject` , que deriva de `SKNativeObject` , que implementa la [`IDisposable`](xref:System.IDisposable) interfaz. `SKPaint`invalida el `Dispose` método para liberar recursos no administrados.
 
@@ -247,7 +247,7 @@ public class ExpandingCirclesPage : ContentPage
 
 El resultado es que la imagen tiene el mismo aspecto cuando `t` es igual a 0 que cuando `t` es igual a 1 y los círculos parecen continuar expandiendo siempre:
 
-[![](animation-images/expandingcircles-small.png "Triple screenshot of the Expanding Circles page")](animation-images/expandingcircles-large.png#lightbox "Triple screenshot of the Expanding Circles page")
+[![Captura de pantalla triple de la página de círculos en expansión](animation-images/expandingcircles-small.png)](animation-images/expandingcircles-large.png#lightbox "Captura de pantalla triple de la página de círculos en expansión")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

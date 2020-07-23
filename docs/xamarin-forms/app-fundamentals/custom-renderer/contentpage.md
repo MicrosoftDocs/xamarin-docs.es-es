@@ -10,12 +10,12 @@ ms.date: 11/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ca9a541c3d152d1b84ed682881c395f2199b9eaf
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: adbceca38fca2cbe65c739f0d7fe26f18bdf5450
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84574397"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939859"
 ---
 # <a name="customizing-a-contentpage"></a>Personalización de una página de contenido
 
@@ -27,7 +27,7 @@ Todos los controles de Xamarin.Forms tienen un representador que las acompaña p
 
 El siguiente diagrama muestra la relación entre la clase [`ContentPage`](xref:Xamarin.Forms.ContentPage) y los controles nativos correspondientes que la implementan:
 
-![](contentpage-images/contentpage-classes.png "Relationship Between ContentPage Class and Implementing Native Controls")
+![Relación entre la clase ContentPage y los controles nativos de implementación](contentpage-images/contentpage-classes.png)
 
 El proceso de representación puede aprovecharse para implementar las personalizaciones específicas de la plataforma creando un representador personalizado para una [`ContentPage`](xref:Xamarin.Forms.ContentPage) en cada plataforma. Para hacerlo, siga este procedimiento:
 
@@ -102,13 +102,13 @@ El proceso para crear la clase del representador personalizado es el siguiente:
 
 El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
-![](contentpage-images/solution-structure.png "CameraPage Custom Renderer Project Responsibilities")
+![Responsabilidades del proyecto de representador personalizado CameraPage](contentpage-images/solution-structure.png)
 
 Las clases `CameraPageRenderer` del representador específico de la plataforma, que se derivan de la clase `PageRenderer` para esa plataforma, representan la instancia `CameraPage`. Esto da como resultado que cada instancia de `CameraPage` se represente con una fuente de la cámara en directo, como se muestra en las siguientes capturas de pantalla:
 
-![](contentpage-images/screenshots.png "CameraPage on each Platform")
+![CameraPage en cada plataforma](contentpage-images/screenshots.png)
 
-La clase `PageRenderer` expone el método `OnElementChanged`, al que se llama cuando se crea la página de Xamarin.Forms para representar el control nativo correspondiente. Este método toma un parámetro `ElementChangedEventArgs` que contiene propiedades `OldElement` y `NewElement`. Estas propiedades representan el elemento de Xamarin.Forms al que *estaba* asociado el representador y el elemento de Xamarin.Forms al que *está* asociado el representador, respectivamente. En la aplicación de ejemplo, la propiedad `OldElement` es `null` y la propiedad `NewElement` contiene una referencia a la instancia de `CameraPage`.
+La clase `PageRenderer` expone el método `OnElementChanged`, al que se llama cuando se crea la página de Xamarin.Forms para representar el control nativo correspondiente. Este método toma un parámetro `ElementChangedEventArgs` que contiene propiedades `OldElement` y `NewElement`. Estas propiedades representan al elemento de Xamarin.Forms al que *estaba* asociado el representador y al elemento de Xamarin.Forms al que *está* asociado el representador, respectivamente. En la aplicación de ejemplo, la propiedad `OldElement` es `null` y la propiedad `NewElement` contiene una referencia a la instancia de `CameraPage`.
 
 El lugar para realizar la personalización de páginas nativas es una versión reemplazada del método `OnElementChanged` en la clase `CameraPageRenderer`. Se puede obtener una referencia a la instancia de la página de Xamarin.Forms que se representa mediante la propiedad `Element`.
 

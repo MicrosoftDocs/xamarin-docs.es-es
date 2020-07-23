@@ -10,16 +10,16 @@ ms.date: 09/12/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cdede547e3ef7cf9f7b6d89751c7476a2ce66d3d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 05a001d3b49f38b2cb5306d8a19a08b4f8392425
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84129017"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935569"
 ---
 # <a name="customizing-listview-cell-appearance"></a>Personalizar el aspecto de las celdas de ListView
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
 
 La Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) clase se usa para presentar listas desplazables, que se pueden personalizar mediante el uso de `ViewCell` elementos. Un `ViewCell` elemento puede mostrar texto e imágenes, indicar un estado verdadero/falso y recibir datos proporcionados por el usuario.
 
@@ -37,7 +37,7 @@ Los [`SwitchCell`](~/xamarin-forms/user-interface/tableview.md#switchcell) [`Ent
 
 [`TextCell`](xref:Xamarin.Forms.TextCell)es una celda para mostrar texto, opcionalmente con una segunda línea como texto detallado. En la captura de pantalla siguiente se muestran `TextCell` los elementos de iOS y Android:
 
-![](customizing-cell-appearance-images/text-cell-default.png "Default TextCell Example")
+![Ejemplo de TextCell predeterminado](customizing-cell-appearance-images/text-cell-default.png)
 
 TextCells se representan como controles nativos en tiempo de ejecución, por lo que el rendimiento es muy bueno en comparación con un personalizado `ViewCell` . Los TextCells son personalizables, lo que le permite establecer las siguientes propiedades:
 
@@ -48,7 +48,7 @@ TextCells se representan como controles nativos en tiempo de ejecución, por lo 
 
 La siguiente captura de pantalla muestra `TextCell` los elementos con propiedades de color personalizadas:
 
-![](customizing-cell-appearance-images/text-cell-custom.png "Custom TextCell Example")
+![Ejemplo de TextCell personalizado](customizing-cell-appearance-images/text-cell-custom.png)
 
 ### <a name="imagecell"></a>ImageCell
 

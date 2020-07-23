@@ -6,12 +6,12 @@ ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
 author: davidortinau
 ms.author: daortin
 ms.date: 04/20/2017
-ms.openlocfilehash: 30158056b8adbdd5aba4cc311220a22502ea9968
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 058904236e100a670e8a38417dcaec805178d6d2
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016787"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936815"
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>Creación de un NuGet a partir de proyectos de biblioteca existentes
 
@@ -21,17 +21,17 @@ Las bibliotecas PCL o .NET Standard existentes se pueden convertir en paquetes N
 
 2. Vaya a la sección **paquete de NuGet > metadatos** y escriba toda la [información necesaria](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) en la pestaña **General** :
 
-   [![](existing-library-images/existing-metadata-sml.png "Enter required metadata")](existing-library-images/existing-metadata.png#lightbox)
+   [![Especificar los metadatos necesarios](existing-library-images/existing-metadata-sml.png)](existing-library-images/existing-metadata.png#lightbox)
 
 3. Opcionalmente, [agregue metadatos adicionales](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) en la pestaña **detalles** .
 
 4. Una vez configurados los metadatos, puede hacer clic con el botón derecho en el proyecto y elegir **crear paquete Nuget** y el archivo de paquete Nuget **. nupkg** se guardará en la carpeta **/bin/** (debug o release, en función de la configuración).
 
-   ![](existing-library-images/create-nuget-package.png "Choose Create NuGet Package from the right-click menu")
+   ![Elija crear paquete NuGet en el menú contextual.](existing-library-images/create-nuget-package.png)
 
 5. Para crear el paquete NuGet en _cada_ compilación o implementación, vaya a la sección **paquete Nuget > compilación** y marque **la casilla crear un paquete Nuget al compilar el proyecto**:
 
-    [![](existing-library-images/existing-tickbox-sml.png "Tick to create a NuGet package")](existing-library-images/existing-tickbox.png#lightbox)
+    [![Paso para crear un paquete NuGet](existing-library-images/existing-tickbox-sml.png)](existing-library-images/existing-tickbox.png#lightbox)
 
 > [!NOTE]
 > La generación del paquete NuGet puede ralentizar el proceso de compilación. Si este cuadro no está marcado, todavía puede generar un paquete NuGet manualmente en cualquier momento en el menú contextual del proyecto (que se muestra en el paso 4 anterior).
@@ -42,7 +42,7 @@ Los paquetes NuGet también son archivos ZIP, por lo que es posible inspeccionar
 
 En esta captura de pantalla se muestra el contenido de un NuGet basado en PCL: solo se incluye un ensamblado PCL:
 
-![](existing-library-images/nuget-output.png "Files contained in the NuGet package")
+![Archivos contenidos en el paquete NuGet](existing-library-images/nuget-output.png)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -10,18 +10,18 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cc0f98d94c76ff63e7a002dfb92b51eae153d7b4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1d993afa7163beb0b24e496b0c876d903f2396e7
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139404"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934295"
 ---
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Patrones de aplicación empresarial con el libro electrónico de Xamarin.Forms
 
 _Instrucciones arquitectónicas para desarrollar aplicaciones empresariales adaptables, mantenibles y comprobables Xamarin.Forms_
 
-![](images/cover-sml.png "Enterprise Application Patterns using Xamarin.Forms eBook")
+![Patrones de aplicación empresarial con el libro electrónico de Xamarin.Forms](images/cover-sml.png)
 
 En este libro electrónico se proporcionan instrucciones sobre cómo implementar el patrón Model-View-ViewModel (MVVM), la inserción de dependencias, la navegación, la validación y la administración de configuración, a la vez que se mantiene el acoplamiento flexible. Además, también hay instrucciones sobre cómo realizar la autenticación y la autorización con IdentityServer, el acceso a los datos de microservicios en contenedor y las pruebas unitarias.
 
@@ -59,7 +59,7 @@ Cualquier aplicación que acepte la entrada de los usuarios debe asegurarse de q
 
 En el contexto del patrón Model-View-ViewModel (MVVM), a menudo se necesitará un modelo de vista o modelo para realizar la validación de datos y señalar los errores de validación en la vista para que el usuario pueda corregirlos.
 
-## <a name="configuration-management"></a>[Administración de configuración](configuration-management.md)
+## <a name="configuration-management"></a>[Administración de la configuración](configuration-management.md)
 
 La configuración permite la separación de los datos que configura el comportamiento de una aplicación desde el código, lo que permite cambiar el comportamiento sin volver a compilar la aplicación. La configuración de la aplicación son los datos que una aplicación crea y administra, y la configuración de usuario es la configuración personalizable de una aplicación que afecta al comportamiento de la aplicación y no requiere un reajuste frecuente.
 

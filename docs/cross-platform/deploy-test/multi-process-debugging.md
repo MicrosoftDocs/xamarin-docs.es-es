@@ -6,12 +6,12 @@ ms.assetid: 852F8AB1-F9E2-4126-9C8A-12500315C599
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: fb96dab2d9979a365964d4993d9c7fc7fee299f5
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f27a95481bc590814b6031cbdd9fc9606fe0e19f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73016546"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932527"
 ---
 # <a name="multi-process-debugging"></a>Depuración de varios procesos
 
@@ -33,28 +33,28 @@ De forma predeterminada, Visual Studio para Mac mostrará un proyecto individual
 
 Para iniciar y depurar varios procesos en Visual Studio para Mac, es necesario crear una _configuración de soluciones_. Una configuración de soluciones describe qué proyectos de una solución deben incluirse al iniciar una sesión de depuración con un clic en el botón **Iniciar** o al pulsar &#8984;&#8617; (**Cmd-Entrar**). La captura de pantalla siguiente es un ejemplo de una solución en Visual Studio para Mac que tiene varias configuraciones de soluciones:
 
-![](multi-process-debugging-images/mpd01-xs.png "A solution with multiple solution configurations")
+![Una solución con varias configuraciones de soluciones](multi-process-debugging-images/mpd01-xs.png)
 
 ### <a name="parts-of-the-debug-toolbar"></a>Partes de la barra de herramientas de depuración
 
 La barra de herramientas de depuración ha cambiado para permitir que se pueda seleccionar una configuración de soluciones a través de un menú emergente. En esta captura de pantalla se muestran las partes de la barra de herramientas de depuración:
 
-![](multi-process-debugging-images/mpd02-xs.png "The parts of the debug toolbar")
+![Las partes de la barra de herramientas de depuración](multi-process-debugging-images/mpd02-xs.png)
 
 1. **Configuración de soluciones**: para establecer la configuración de soluciones, haga clic en la configuración de soluciones, en la barra de herramientas de depuración, y seleccione la configuración en el menú emergente:
 
-    ![](multi-process-debugging-images/mpd03-xs.png "A sample popup with solution configurations")
+    ![Un menú emergente de ejemplo con configuraciones de soluciones](multi-process-debugging-images/mpd03-xs.png)
 
 2. **Destino de compilación**: identifica el destino de compilación para los proyectos. Esto no ha cambiado con relación a versiones anteriores de Visual Studio para Mac.
 3. **Destinos de dispositivo**: esta opción permite seleccionar los dispositivos en los que se va a ejecutar la solución. Es posible identificar un dispositivo o un emulador individual para cada proyecto:
 
-    ![](multi-process-debugging-images/mpd04-xs.png "Popup showing the devices for a project")
+    ![Menú emergente que muestra los dispositivos para un proyecto](multi-process-debugging-images/mpd04-xs.png)
 
 ### <a name="multiple-debug-pads"></a>Múltiples paneles de depuración
 
 Cuando se inicia la configuración de soluciones múltiples, algunos de los paneles de Visual Studio para Mac aparecerán varias veces, una para cada proceso. Por ejemplo, en la captura de pantalla siguiente se muestran dos paneles de **Resultado de la aplicación** para una solución que está ejecutando dos proyectos:
 
-![](multi-process-debugging-images/mpd05-xs.png "Output Pad for a solution configuration")
+![Panel de resultados para una configuración de soluciones](multi-process-debugging-images/mpd05-xs.png)
 
 ### <a name="multiple-processes-and-the-_active-thread_"></a>Varios procesos y el _subproceso activo_
 
@@ -64,7 +64,7 @@ Para solucionar este problema, Visual Studio para Mac solo mostrará la informac
 
 El **panel de subproceso** mostrará la información de todos los procesos y subprocesos que se encuentran bajo comprobación en la configuración de soluciones y proporcionará indicaciones visuales sobre cuál es el subproceso activo:
 
-![](multi-process-debugging-images/mpd06-xs.png "Thread pad for a solution configuration")
+![Panel de subprocesos para una configuración de soluciones](multi-process-debugging-images/mpd06-xs.png)
 
 Los subprocesos se agrupan por el proceso que los hospeda. El nombre del proyecto y el identificador del subproceso activo se muestran en negrita, y aparece una flecha hacia la derecha en el medianil junto al subproceso activo. En la captura de pantalla anterior, el **subproceso n.º 1** en el **proceso con identificador 48703** (**FirstProject**) es el subproceso activo.
 
@@ -88,7 +88,7 @@ Si solo uno de los proyectos tuviera establecido un punto de interrupción, úni
 
 Para pausar o reanudar un proceso, haga clic con el botón derecho en el proceso y seleccione **Pausar** o **Reanudar** en el menú contextual:
 
-![](multi-process-debugging-images/mpd08-xs.png "Pause or resume in the Thread pad")
+![Pausar o reanudar en el panel de subproceso](multi-process-debugging-images/mpd08-xs.png)
 
 La apariencia de la barra de herramientas de depuración cambiará según el estado de los proyectos que se están depurando. Cuando se ejecuten varios proyectos, la barra de herramientas de depuración mostrará los botones **Pausar** y **Reanudar** en los casos en que haya al menos un proyecto que se esté ejecutando y un proyecto en pausa:
 
@@ -110,7 +110,7 @@ Para crear una nueva configuración de soluciones en Xamaring Studio:
 
 1. Abra el cuadro de diálogo **Opciones de solución** en Visual Studio para Mac y seleccione **Ejecutar > Configuraciones**:
 
-    ![](multi-process-debugging-images/mpd10-xs.png "Solution Configuration in the Solution Options dialog")
+    ![Configuración de soluciones en el cuadro de diálogo Opciones de solución](multi-process-debugging-images/mpd10-xs.png)
 
 2. Haga clic en el botón **Nuevo**, escriba el nombre de la nueva configuración de soluciones y haga clic en **Crear**. La nueva configuración de soluciones aparecerá en la ventana **Configuraciones**:
 
@@ -118,7 +118,7 @@ Para crear una nueva configuración de soluciones en Xamaring Studio:
 
 3. Seleccione la nueva configuración de ejecución en la lista de configuraciones. En el cuadro de diálogo **Opciones de solución** se mostrará cada proyecto de la solución. Marque cada proyecto que debe iniciarse al iniciar una sesión de depuración:
 
-    ![](multi-process-debugging-images/mpd12-xs.png "Selecting the project to start")
+    ![Seleccionar el proyecto que debe iniciarse](multi-process-debugging-images/mpd12-xs.png)
 
 La configuración de soluciones **MultipleProjects** aparecerá ahora en la **barra de herramientas de depuración**, lo que permite que un desarrollador depure simultáneamente los dos proyectos.
 

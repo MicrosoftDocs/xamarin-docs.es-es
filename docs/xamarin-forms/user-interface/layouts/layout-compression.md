@@ -10,16 +10,16 @@ ms.date: 12/13/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 40af5aeaa51025dae70113faa6f7ff83edf43c73
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5fa9c7592ecd2cb314ce12d7e303677447a5e104
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138034"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931175"
 ---
 # <a name="layout-compression"></a>Compresión de diseño
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
 
 _La compresión de diseño quita los diseños especificados del árbol visual para intentar mejorar el rendimiento de la representación de páginas. En este artículo se explica cómo habilitar la compresión del diseño y las ventajas que puede llevar a cabo._
 
@@ -36,7 +36,7 @@ El resultado del proceso de diseño es una jerarquía de controles nativos. Sin 
 
 Por ejemplo, considere el siguiente botón de la aplicación de ejemplo para iniciar sesión en Facebook:
 
-![](layout-compression-images/facebook-button.png "Facebook Button")
+![Botón de Facebook](layout-compression-images/facebook-button.png)
 
 Este botón se especifica como un control personalizado con la siguiente jerarquía de vistas XAML:
 
@@ -60,7 +60,7 @@ Este botón se especifica como un control personalizado con la siguiente jerarqu
 
 La jerarquía de vista anidada resultante se puede examinar con [Xamarin inspector](~/tools/inspector/index.md). En Android, la jerarquía de vistas anidadas contiene 17 vistas:
 
-![](layout-compression-images/no-compression.png "View Hierarchy for Facebook Button")
+![Botón ver jerarquía para Facebook](layout-compression-images/no-compression.png)
 
 La compresión de diseño, que está disponible para Xamarin.Forms las aplicaciones en las plataformas iOS y Android, pretende aplanar el anidamiento de la vista quitando los diseños especificados del árbol visual, lo que puede mejorar el rendimiento de la representación de páginas. La ventaja de rendimiento que se entrega varía en función de la complejidad de una página, la versión del sistema operativo que se está usando y el dispositivo en el que se ejecuta la aplicación. Sin embargo, las mejoras de rendimiento más importantes se apreciarán en los dispositivos más antiguos.
 
@@ -101,7 +101,7 @@ En el caso del botón Facebook, la compresión de diseño se puede habilitar en 
 
 En Android, esto da como resultado una jerarquía de vista anidada de 14 vistas:
 
-![](layout-compression-images/layout-compression.png "View Hierarchy for Facebook Button with Layout Compression")
+![Ver jerarquía para el botón de Facebook con compresión de diseño](layout-compression-images/layout-compression.png)
 
 En comparación con la jerarquía de vista anidada original de 17 vistas, esto representa una reducción en el número de vistas de 17%. Aunque esta reducción puede parecer insignificante, la reducción de la vista en toda la página puede ser más significativa.
 
@@ -111,7 +111,7 @@ Los representadores rápidos reducen los costos de inflación y representación 
 
 En el caso del botón de Facebook de la aplicación de ejemplo, la combinación de la compresión de diseño y los representadores rápidos produce una jerarquía de vistas anidadas de 8 vistas:
 
-![](layout-compression-images/layout-compression-with-fast-renderers.png "View Hierarchy for Facebook Button with Layout Compression and Fast Renderers")
+![Ver jerarquía para el botón de Facebook con compresión de diseño y representadores rápidos](layout-compression-images/layout-compression-with-fast-renderers.png)
 
 En comparación con la jerarquía de vista anidada original de 17 vistas, esto representa una reducción del 52%.
 

@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0db20620870340386ccd0cedf7f98cb2975527ba
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 88761472c4beae3f40f2ca6852eea4db8276c4c9
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128056"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930687"
 ---
 # <a name="large-page-titles-on-ios"></a>Títulos de páginas grandes en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esta plataforma específica de iOS se usa para mostrar el título de la página como un título grande en la barra de navegación de un [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) , para los dispositivos que usan iOS 11 o superior. Un título grande se alinea a la izquierda y usa una fuente mayor, y pasa a un título estándar a medida que el usuario comienza a desplazar el contenido, de modo que el estado real de la pantalla se utiliza de forma eficaz. Sin embargo, en la orientación horizontal, el título volverá al centro de la barra de navegación para optimizar el diseño del contenido. Se consume en XAML estableciendo la `NavigationPage.PrefersLargeTitles` propiedad adjunta en un `boolean` valor:
 
@@ -100,7 +100,7 @@ switch (On<iOS>().LargeTitleDisplay())
 
 El resultado es que `LargeTitleDisplayMode` se aplica un especificado a [`Page`](xref:Xamarin.Forms.Page) , que controla el comportamiento del título grande:
 
-![](page-large-title-images/large-title.png "Blur Effect Platform-Specific")
+![Efecto de desenfoque específico de la plataforma](page-large-title-images/large-title.png)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

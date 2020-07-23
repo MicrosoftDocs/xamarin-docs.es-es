@@ -6,12 +6,12 @@ ms.assetid: D8BC4906-805F-4AFB-8D1A-88B7BF87E17F
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 925e08c600c695640c927ada26df376a252b3927
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b1c32d76f4f25298a8f0643e2e29707df7775736
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016725"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939258"
 ---
 # <a name="creating-new-platform-specific-library-projects-for-nuget"></a>Crear nuevos proyectos de biblioteca específica de la plataforma para NuGet
 
@@ -27,33 +27,33 @@ Se crean y compilan varios ensamblados en un único paquete NuGet. Los estándar
 
 2. Elija **biblioteca multiplataforma** en la sección **biblioteca de > multiplataforma** :
 
-    [![](platform-specific-images/mulitplatform-library-sml.png "Configure multi-platform library for a single code base")](platform-specific-images/multiplatform-library.png#lightbox)
+    [![Configurar la biblioteca multiplataforma para un solo código base](platform-specific-images/mulitplatform-library-sml.png)](platform-specific-images/multiplatform-library.png#lightbox)
 
 3. Escriba un **nombre** y una **Descripción**, y elija específico de la **plataforma**:
 
-    [![](platform-specific-images/specific-configure-sml.png "Configure platform-specific library for iOS and Android")](platform-specific-images/specific-configure.png#lightbox)
+    [![Configuración de una biblioteca específica de la plataforma para iOS y Android](platform-specific-images/specific-configure-sml.png)](platform-specific-images/specific-configure.png#lightbox)
 
 4. Complete el asistente. Los proyectos siguientes se agregan a la solución:
 
     - **Proyecto de Android** : el código específico de Android se puede agregar opcionalmente a este proyecto.
     - **proyecto de iOS** : el código específico de iOS se puede agregar opcionalmente a este proyecto.
     - **Proyecto de NuGet** : no se agrega ningún código a este proyecto. Hace referencia a otros proyectos y contiene la configuración de metadatos para la salida del paquete NuGet.
-    - **Proyecto compartido** : se debe agregar código común a este proyecto, incluido el código específico de la plataforma dentro de las directivas de compilador de `#if`.
+    - **Proyecto compartido** : se debe agregar código común a este proyecto, incluido el código específico de la plataforma dentro de las `#if` directivas de compilador.
 
 5. Haga clic con el botón derecho en el proyecto de NuGet, elija **Opciones**y, a continuación, abra la sección **paquetes NuGet > metadatos** y escriba los [metadatos necesarios](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) (así como cualquier metadato opcional):
 
-    [![](platform-specific-images/specific-metadata-sml.png "Enter required metadata")](platform-specific-images/specific-metadata.png#lightbox)
+    [![Especificar los metadatos necesarios](platform-specific-images/specific-metadata-sml.png)](platform-specific-images/specific-metadata.png#lightbox)
 
 6. También en la ventana **Opciones del proyecto** , abra la sección **ensamblados de referencia** y elija qué perfiles de PCL admitirá la biblioteca compartida a través de "cebo and switch":
 
-    ![](platform-specific-images/specific-reference-assemblies.png "Also in the Project Options window, open the Reference Assemblies section and choose   which PCL profiles the shared library will support via bait and switch")
+    ![También en la ventana Opciones del proyecto, abra la sección de ensamblados de referencia y elija qué perfiles de PCL admitirá la biblioteca compartida a través del cebo y el conmutador.](platform-specific-images/specific-reference-assemblies.png)
 
     > [!NOTE]
     > "Cebo and switch" significa que los ensamblados PCL solo contendrán la API expuesta por la biblioteca (no puede contener el código específico de la plataforma). Cuando se agrega NuGet a un proyecto de Xamarin, las bibliotecas compartidas se compilarán en la PCL, pero los ensamblados específicos de la plataforma contienen el código que se usa realmente en el proyecto de iOS o Android.
 
 7. Haga clic con el botón derecho en el proyecto y elija **crear paquete Nuget** (o compilar o implementar la solución) y el archivo de paquete Nuget **. nupkg** se guardará en la carpeta **/bin/** (debug o release, en función de la configuración).
 
-    ![](platform-specific-images/create-nuget-package.png "NuGet package file will be saved in the bin folder either Debug or Release, depending on configuration")
+    ![El archivo de paquete NuGet se guardará en la carpeta bin Debug o release, en función de la configuración.](platform-specific-images/create-nuget-package.png)
 
 ## <a name="verifying-the-output"></a>Comprobación del resultado
 
@@ -61,7 +61,7 @@ Los paquetes NuGet también son archivos ZIP, por lo que es posible inspeccionar
 
 En esta captura de pantalla se muestra el contenido de un NuGet específico de la plataforma que admite iOS y Android, y con dos ensamblados de referencia seleccionados:
 
-![](platform-specific-images/nuget-output.png "Files contained in the NuGet package")
+![Archivos contenidos en el paquete NuGet](platform-specific-images/nuget-output.png)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

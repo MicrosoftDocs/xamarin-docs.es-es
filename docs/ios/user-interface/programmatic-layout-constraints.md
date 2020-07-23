@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 81ad57119ff7271094966cf9b0c372876646f81b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d8dcf64f9a905557bea69402bcaf7fcfb51fb10b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573435"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86928580"
 ---
 # <a name="programmatic-layout-constraints-in-xamarinios"></a>Restricciones de diseño mediante programación en Xamarin. iOS
 
@@ -67,9 +67,9 @@ OrangeView.TrailingAnchor.ConstraintEqualTo (margins.TrailingAnchor).Active = tr
 OrangeView.HeightAnchor.ConstraintEqualTo (OrangeView.WidthAnchor, 2.0f);
 ```
 
-Una restricción de diseño típica se puede expresar simplemente como una expresión lineal. Considere el ejemplo siguiente:
+Una restricción de diseño típica se puede expresar simplemente como una expresión lineal. Tome el ejemplo siguiente:
 
-[![](programmatic-layout-constraints-images/graph01.png "A Layout Constraint expressed as a linear expression")](programmatic-layout-constraints-images/graph01.png#lightbox)
+[![Una restricción de diseño expresada como una expresión lineal](programmatic-layout-constraints-images/graph01.png)](programmatic-layout-constraints-images/graph01.png#lightbox)
 
 Que se convertiría en la siguiente línea de código de C# usando delimitadores de diseño:
 

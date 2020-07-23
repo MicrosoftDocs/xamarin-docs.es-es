@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 41254fb6aac176cd796fba851478b31f774553d2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 6fa1357adc9cf2f545fbcdf3a30fef70280593bb
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73023455"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938026"
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>Tutorial: usar la herramienta Instruments de Apple
 
@@ -27,19 +27,19 @@ En primer lugar, descargue el [ejemplo MemoryDemo](https://docs.microsoft.com/sa
 2. Cargue la aplicación en el dispositivo eligiendo el elemento de menú **Ejecutar > Upload to Device (Cargar en el dispositivo)** .
 3. Elija la plantilla **Asignaciones** (icono naranja con cuadro blanco).
 
-    ![](walkthrough-apples-instrument-images/00-allocations-tempate.png "Choose the Allocations template")
+    ![Selección de la plantilla Asignaciones](walkthrough-apples-instrument-images/00-allocations-tempate.png)
 
 4. Seleccione la aplicación **Memory Demo** en la lista **Choose a profiling template for: (Elegir una plantilla de generación de perfiles para:)** en la parte superior de la ventana. Primero haga clic en el dispositivo iOS para expandir el menú que muestra las aplicaciones instaladas.
 
-    ![](walkthrough-apples-instrument-images/01-mem-demo.png "Select the Memory Demo application")
+    ![Selección de la aplicación Memory Demo](walkthrough-apples-instrument-images/01-mem-demo.png)
 
 5. Pulse el botón **Elegir** (extremo inferior derecho de la ventana) para iniciar **Instruments**. Esta plantilla mostrará dos elementos en el panel superior: Asignaciones y VM Tracker (Seguimiento de VM).
 
 6. Pulse el botón **Grabar** (círculo rojo del extremo superior izquierdo) de Instruments, lo que iniciará la aplicación.
 
-7. Seleccione la fila **VM Tracker** (Seguimiento de VM) del panel superior (ahora que la aplicación se está ejecutando, contiene dos secciones: Dirty y Resident Size). En el panel **Inspector**, elija la opción **Show Display Settings (Mostrar configuración de pantalla)** (el icono de engranaje) y luego active la casilla **Automatic Snapshotting (Creación automática de instantáneas)** del extremo inferior derecho de esta captura de pantalla:
+7. Seleccione la fila **VM Tracker (Seguimiento de VM)** del panel superior (ahora que la aplicación se está ejecutando, contiene dos secciones: Dirty y Resident Size). En el panel **Inspector**, elija la opción **Show Display Settings (Mostrar configuración de pantalla)** (el icono de engranaje) y luego active la casilla **Automatic Snapshotting (Creación automática de instantáneas)** del extremo inferior derecho de esta captura de pantalla:
 
-    ![](walkthrough-apples-instrument-images/02-auto-snapshot.png "Choose the Show Display Settings option the gear icon then tick the Automatic Snapshotting checkbox")
+    ![Seleccione la opción para mostrar la configuración de pantalla en el icono de engranaje y luego active la casilla de creación automática de instantáneas](walkthrough-apples-instrument-images/02-auto-snapshot.png)
 
 8. Seleccione la fila **Asignaciones** del panel superior (ahora que la aplicación se está ejecutando indicará *All Heap and Anonymous VM*)
 9. En el panel **Inspector**, elija la opción **Show Display Settings (Mostrar configuración de pantalla)** (el icono de engranaje) y luego haga clic en el botón **Mark Generation (Generación de marca)** para establecer una línea de base. Aparecerá un pequeño indicador rojo en la escala de tiempo de la parte superior de la ventana
@@ -50,15 +50,15 @@ En primer lugar, descargue el [ejemplo MemoryDemo](https://docs.microsoft.com/sa
 
 14. Observe que el nodo **&lt;no objeto>** muestra un aumento excesivo de la memoria. Haga clic en la flecha situada junto a este nodo para ver más detalles. Haga clic con el botón derecho en el seguimiento de la pila para agregar **Ubicación de origen** al panel:
 
-    ![](walkthrough-apples-instrument-images/03-mem-growth.png "Add Source Location to the pane")
+    ![Adición de la ubicación de origen al panel](walkthrough-apples-instrument-images/03-mem-growth.png)
 
 15. Ordene por **Tamaño** y muestre la vista **Extended Detail** (Más detalles):
 
-    ![](walkthrough-apples-instrument-images/04-extended-detail.png "Sort by Size and display the  Extended Detail view")
+    ![Orden por tamaño y representación de la lista con más detalles](walkthrough-apples-instrument-images/04-extended-detail.png)
 
 16. Haga clic en la entrada deseada en la pila de llamadas para ver el código relacionado:
 
-    ![](walkthrough-apples-instrument-images/05-related-code.png "Viewing the related code")
+    ![Visualización del código relacionado](walkthrough-apples-instrument-images/05-related-code.png)
 
 En este caso, se crea una nueva imagen y se almacena en una colección para cada celda; no se reutilizan las celdas de la vista de colección existentes.
 
@@ -83,7 +83,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 
 Ahora, cuando se ejecuta la aplicación, se reduce enormemente el uso de memoria: el **Crecimiento** entre generaciones ahora se mide en k (kilobytes) en lugar de MB (megabytes), como se hacía antes de corregir el código:
 
-![](walkthrough-apples-instrument-images/06-reduced-memory.png "Showing the app memory usage")
+![Representación de la utilización de memoria de la aplicación](walkthrough-apples-instrument-images/06-reduced-memory.png)
 
 El código mejorado está disponible en el [ejemplo MemoryDemo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) de la solución **posterior** en Visual Studio para Mac.
 

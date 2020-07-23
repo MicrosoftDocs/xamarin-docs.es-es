@@ -10,18 +10,18 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 725f892a667b4e89d55266abcf69e5394b09b6a5
-ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
+ms.openlocfilehash: b4369fdb7c5a35d6b9a192d9222fd82670b7e3f3
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85243853"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933593"
 ---
 # <a name="xamarinforms-shapes-ellipse"></a>Xamarin.FormsFormas: elipse
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 La `Ellipse` clase se deriva de la `Shape` clase y se puede usar para dibujar elipses y círculos. Para obtener información sobre las propiedades que la `Ellipse` clase hereda de la `Shape` clase, vea [ Xamarin.Forms formas](index.md).
 
@@ -58,7 +58,7 @@ En el siguiente ejemplo de XAML se muestra cómo dibujar un círculo:
 
 En este ejemplo, se dibuja un círculo rojo con dimensiones 150 x 150 (unidades independientes del dispositivo):
 
-![Círculo](ellipse-images/circle.png "Circle")
+![Circle](ellipse-images/circle.png "Circle")
 
 Para obtener información sobre cómo dibujar una elipse discontinua, vea [dibujar formas con guiones](index.md#draw-dashed-shapes).
 

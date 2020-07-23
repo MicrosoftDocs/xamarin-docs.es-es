@@ -10,12 +10,12 @@ ms.date: 01/19/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e2bed4d5e8f89efa2997fb085278c4b549870245
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0eb768f5d6cabbb41b07a5aad33269fc0f493237
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135326"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939534"
 ---
 # <a name="introduction-to-custom-renderers"></a>Introducción a los representadores personalizados
 
@@ -59,7 +59,7 @@ El prefijo de espacio de nombres `local` puede ser cualquier texto. Pero los val
 
 Después, el control personalizado `MyEntry` se representa en cada plataforma, con un fondo gris, como se muestra en las capturas de pantalla siguientes:
 
-![](introduction-images/screenshots.png "MyEntry Custom Control on each Platform")
+![Control personalizado MyEntry en cada plataforma](introduction-images/screenshots.png)
 
 El cambio del color de fondo del control en cada plataforma se ha obtenido simplemente mediante la creación de subclases del control. Pero los resultados que pueden obtenerse con esta técnica son limitados, ya que no es posible aprovechar las mejoras y personalizaciones específicas de cada plataforma. Cuando sea necesario usarlos, tendrán que implementarse representadores personalizados.
 

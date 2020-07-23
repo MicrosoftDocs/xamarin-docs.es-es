@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 98cedb1cf02f9688581946fa21a2cb40379f606f
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 56b9f82fcc15afc8c75012b204588b4da65a32c4
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84566180"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939742"
 ---
 # <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Trabajar con controladores de vista en dos paneles tvOS en Xamarin
 
 Un controlador de vista en dos paneles presenta y administra un controlador de vista principal y de detalles en paralelo, en la pantalla al mismo tiempo. Los controladores de vista en dos paneles se usan para presentar contenido persistente y enfocable en la vista maestra (la sección más pequeña a la izquierda) y los detalles relacionados en la vista de detalle (la sección más grande de la derecha).
 
-[![](split-views-images/intro01.png "Sample Split View")](split-views-images/intro01.png#lightbox)
+[![Vista de división de ejemplo](split-views-images/intro01.png)](split-views-images/intro01.png#lightbox)
 
 <a name="About-Split-View-Controllers"></a>
 
@@ -28,7 +28,7 @@ Como se indicó anteriormente, un controlador de vista en dos paneles administra
 
 Además, el controlador de vista maestra se puede ocultar o mostrar según sea necesario: 
 
-[![](split-views-images/intro02.png "The Master View Controller hidden")](split-views-images/intro02.png#lightbox)
+[![El controlador de vista principal está oculto](split-views-images/intro02.png)](split-views-images/intro02.png#lightbox)
 
 Los controladores de vistas divididas suelen usarse para presentar una lista de contenido filtrable, con las categorías de la vista maestra y los resultados filtrados en la vista de detalle. Normalmente, se presenta como una vista de tabla a la izquierda y una [vista de colección](~/ios/tvos/user-interface/collection-views.md) a la derecha.
 
@@ -51,18 +51,18 @@ La manera más sencilla de trabajar con controladores de vista en dos paneles en
 1. En el **Panel de solución**, haga doble clic en el `Main.storyboard` archivo y ábralo para su edición.
 1. Arrastre un **controlador de vista en dos paneles** desde el **cuadro de herramientas** y colóquelo en la vista: 
 
-    [![](split-views-images/activity01.png "A Split View Controller")](split-views-images/activity01.png#lightbox)
+    [![Un controlador de vista en dos paneles](split-views-images/activity01.png)](split-views-images/activity01.png#lightbox)
 1. De forma predeterminada, iOS Designer instalará un controlador de navegación y un controlador de vista en la vista maestra. Si esto no se ajusta a los requisitos de la aplicación, simplemente elimínelos.
 1. Si quita la vista maestra predeterminada, arrastre un nuevo controlador de vista a la superficie de diseño: 
 
-    [![](split-views-images/activity02.png "A View Controller")](split-views-images/activity02.png#lightbox)
+    [![Un controlador de vista](split-views-images/activity02.png)](split-views-images/activity02.png#lightbox)
 1. Control: haga clic y arrastre desde el controlador de vista en dos paneles al nuevo controlador de vista maestra. 
 1. Seleccione **maestra** en el **menú emergente**: 
 
-    [![](split-views-images/activity03.png "Select Master from the Popup Menu")](split-views-images/activity03.png#lightbox)
+    [![Seleccionar maestro en el menú emergente](split-views-images/activity03.png)](split-views-images/activity03.png#lightbox)
 1. Diseñe el contenido de las vistas principal y de detalles: 
 
-    [![](split-views-images/activity04.png "Example layout")](split-views-images/activity04.png#lightbox)
+    [![Diseño de ejemplo](split-views-images/activity04.png)](split-views-images/activity04.png#lightbox)
 1. Asigne **nombres** en la **pestaña widget** del **Panel de propiedades** para trabajar con los controles de interfaz de usuario en el código de C#.
 1. Guarde los cambios y vuelva a Visual Studio para Mac.
 
@@ -71,18 +71,18 @@ La manera más sencilla de trabajar con controladores de vista en dos paneles en
 1. En el **Explorador de soluciones**, haga doble clic en el `Main.storyboard` archivo y ábralo para su edición.
 1. Arrastre un **controlador de vista en dos paneles** desde el **cuadro de herramientas** y colóquelo en la vista: 
 
-    [![](split-views-images/activity01-vs.png "A Split View Controller")](split-views-images/activity01-vs.png#lightbox)
+    [![Un controlador de vista en dos paneles](split-views-images/activity01-vs.png)](split-views-images/activity01-vs.png#lightbox)
 1. De forma predeterminada, el diseñador de iOS agregará un controlador de navegación y un controlador de vista en la vista maestra. Si esto no se ajusta a los requisitos de la aplicación, simplemente elimínelos.
 1. Si quita la vista maestra predeterminada, arrastre un nuevo controlador de vista a la superficie de diseño: 
 
-    [![](split-views-images/activity02-vs.png "A View Controller")](split-views-images/activity02-vs.png#lightbox)
+    [![Un controlador de vista](split-views-images/activity02-vs.png)](split-views-images/activity02-vs.png#lightbox)
 1. Control: haga clic y arrastre desde el controlador de vista en dos paneles al nuevo controlador de vista maestra. 
 1. Seleccione **maestra** en el **menú emergente**: 
 
-    [![](split-views-images/activity03-vs.png "Select Master from the Popup Menu")](split-views-images/activity03-vs.png#lightbox)
+    [![Seleccionar maestro en el menú emergente](split-views-images/activity03-vs.png)](split-views-images/activity03-vs.png#lightbox)
 1. Diseñe el contenido de las vistas principal y de detalles: 
 
-    [![](split-views-images/activity04.png "Content layout")](split-views-images/activity04.png#lightbox)
+    [![Diseño de contenido](split-views-images/activity04.png)](split-views-images/activity04.png#lightbox)
 1. Asigne **nombres** en la **pestaña widget** del **Explorador de propiedades** para trabajar con los controles de interfaz de usuario en el código de C#.
 1. Guarde los cambios.
 

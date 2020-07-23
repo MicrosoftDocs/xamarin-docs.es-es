@@ -10,12 +10,12 @@ ms.date: 12/07/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c908da816352e8b3790ded0bef932e1485170abd
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: bb6167eae394b41583195911bfac9d691e48d361
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573877"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929381"
 ---
 # <a name="customizing-a-viewcell"></a>Personalización de ViewCell
 
@@ -27,7 +27,7 @@ Todas las celdas de Xamarin.Forms tienen un representador que las acompaña para
 
 El siguiente diagrama muestra la relación entre la clase [`ViewCell`](xref:Xamarin.Forms.ViewCell) y los controles nativos correspondientes que la implementan:
 
-![](viewcell-images/viewcell-classes.png "Relationship Between the ViewCell Control and the Implementing Native Controls")
+![Relación entre el control ViewCell y los controles nativos de implementación](viewcell-images/viewcell-classes.png)
 
 El proceso de representación puede aprovecharse para implementar las personalizaciones específicas de la plataforma creando un representador personalizado para una [`ViewCell`](xref:Xamarin.Forms.ViewCell) en cada plataforma. Para hacerlo, siga este procedimiento:
 
@@ -164,11 +164,11 @@ El proceso para crear la clase del representador personalizado es el siguiente:
 
 El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
-![](viewcell-images/solution-structure.png "NativeCell Custom Renderer Project Responsibilities")
+![Responsabilidades del proyecto de representador personalizado NativeCell](viewcell-images/solution-structure.png)
 
 Las clases del representador específico de la plataforma, que se derivan de la clase `ViewCellRenderer` para cada plataforma, representan la celda personalizada `NativeCell`. Esto da como resultado que cada celda personalizada `NativeCell` se represente con diseño específico de la plataforma, como se muestra en las siguientes capturas de pantalla:
 
-![](viewcell-images/screenshots.png "NativeCell on each Platform")
+![NativeCell en cada plataforma](viewcell-images/screenshots.png)
 
 La clase `ViewCellRenderer` expone métodos específicos de la plataforma para representar la celda personalizada. Estos son el método `GetCell` en la plataforma iOS, el método `GetCellCore` en la plataforma Android y el método `GetTemplate` en UWP.
 

@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 69594924f26afff133d8f211199cac44e66254d9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 22d54b1726858b1f46cf312f4962091374385704
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128034"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936830"
 ---
 # <a name="page-status-bar-visibility-on-ios"></a>Visibilidad de la barra de estado de la página en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esta plataforma específica de iOS se usa para establecer la visibilidad de la barra de estado en un [`Page`](xref:Xamarin.Forms.Page) e incluye la capacidad de controlar el modo en que la barra de estado entra o sale de `Page` . Se consume en XAML estableciendo la `Page.PrefersStatusBarHidden` propiedad adjunta en un valor de la `StatusBarHiddenMode` enumeración y, opcionalmente, la `Page.PreferredStatusBarUpdateAnimation` propiedad adjunta en un valor de la `UIStatusBarAnimation` enumeración:
 
@@ -47,7 +47,7 @@ El `Page.On<iOS>` método especifica que este específico de la plataforma solo 
 
 El resultado es que se puede establecer la visibilidad de la barra de estado en una [`Page`](xref:Xamarin.Forms.Page) :
 
-![](page-status-bar-visibility-images/hide-status-bar.png "Status Bar Visibility Platform-Specific")
+![Información específica de la plataforma de visibilidad de la barra de estado](page-status-bar-visibility-images/hide-status-bar.png)
 
 > [!NOTE]
 > En [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) , el valor de `StatusBarHiddenMode` enumeración especificado también actualizará la barra de estado en todas las páginas secundarias. En todos los demás [`Page`](xref:Xamarin.Forms.Page) tipos derivados de, el `StatusBarHiddenMode` valor de enumeración especificado solo actualizará la barra de estado en la página actual.

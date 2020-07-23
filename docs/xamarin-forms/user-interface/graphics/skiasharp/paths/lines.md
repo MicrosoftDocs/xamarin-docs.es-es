@@ -10,22 +10,22 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 87b97ad913e08c42d16bbf055f168c07b9bd60e8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 644e6ab4acffa7acf2d86733d68fed8db07a752a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137213"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932371"
 ---
 # <a name="lines-and-stroke-caps"></a>Líneas y extremos de trazo
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Aprenda a usar SkiaSharp para dibujar líneas con distintos extremos de trazo_
 
 En SkiaSharp, la representación de una sola línea es muy diferente de la representación de una serie de líneas rectas conectadas. Sin embargo, incluso cuando se dibujan líneas individuales, a menudo es necesario asignar a las líneas un ancho de trazo determinado. A medida que estas líneas se vuelven más anchas, la apariencia de los extremos de las líneas también es importante. La apariencia del final de la línea se denomina extremo del *trazo*:
 
-![](lines-images/strokecapsexample.png "The three stroke caps options")
+![Las tres opciones de extremos de trazo](lines-images/strokecapsexample.png)
 
 Para dibujar líneas individuales, `SKCanvas` define un [`DrawLine`](xref:SkiaSharp.SKCanvas.DrawLine(System.Single,System.Single,System.Single,System.Single,SkiaSharp.SKPaint)) método simple cuyos argumentos indican las coordenadas inicial y final de la línea con un `SKPaint` objeto:
 
@@ -97,7 +97,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Para cada miembro de la `SKStrokeCap` enumeración, el controlador dibuja dos líneas, una con un grosor de trazo de 50 píxeles y otra línea situada en la parte superior con un grosor de trazo de dos píxeles. Esta segunda línea pretende ilustrar el inicio y el final geométrico de la línea, independientemente del grosor de la línea y un extremo del trazo:
 
-[![](lines-images/strokecaps-small.png "Triple screenshot of the Stroke Caps page")](lines-images/strokecaps-large.png#lightbox "Triple screenshot of the Stroke Caps page")
+[![Captura de pantalla triple de la página de extremos de trazo](lines-images/strokecaps-small.png)](lines-images/strokecaps-large.png#lightbox "Captura de pantalla triple de la página de extremos de trazo")
 
 Como puede ver, los `Square` `Round` topes de trazo y extienden eficazmente la longitud de la línea a la mitad del ancho del trazo al principio de la línea y de nuevo al final. Esta extensión es importante cuando es necesario determinar las dimensiones de un objeto gráfico representado.
 
@@ -231,7 +231,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Las capturas de pantallas muestran una variedad de `Picker` selecciones:
 
-[![](lines-images/multiplelines-small.png "Triple screenshot of the Multiple Lines page")](lines-images/multiplelines-large.png#lightbox "Triple screenshot of the Multiple Lines page")
+[![Captura de pantalla triple de la página de varias líneas](lines-images/multiplelines-small.png)](lines-images/multiplelines-large.png#lightbox "Captura de pantalla triple de la página de varias líneas")
 
 El iPhone de la izquierda muestra cómo el `SKPointMode.Points` miembro de enumeración hace que `DrawPoints` represente cada uno de los puntos de la `SKPoint` matriz como un cuadrado si el extremo de línea es `Butt` o `Square` . Los círculos se representan si el extremo de línea es `Round` .
 

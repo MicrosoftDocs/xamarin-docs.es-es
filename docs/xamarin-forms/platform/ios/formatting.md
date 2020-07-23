@@ -10,12 +10,12 @@ ms.date: 01/29/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 062dd77f1dc7b82f16bfbc6d46e44d4adeb73350
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4381b1fbe7b38c2695bce645903d599bdb792fc2
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84564711"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937441"
 ---
 # <a name="adding-ios-specific-formatting"></a>Agregar formato específico de iOS
 
@@ -42,11 +42,11 @@ nav.BarTextColor = Color.White;
 
 El resultado se muestra en el siguiente fragmento de código de pantalla. Tenga en cuenta que los elementos de la barra de estado son negros (esto no se puede establecer en Xamarin.Forms porque es una característica específica de la plataforma).
 
-![](theme-images/status-default-sml.png "iOS Theming")
+![iOS](theme-images/status-default-sml.png)
 
 Idealmente, la barra de estado también podría ser algo que podamos realizar directamente en el proyecto de iOS. Agregue las siguientes entradas al archivo **info. plist** para forzar que la barra de estado esté en blanco:
 
-![](theme-images/info-plist.png "iOS Info.plist Entries")
+![Entradas de iOS info. plist](theme-images/info-plist.png)
 
 o bien, edite el archivo **info. plist** correspondiente directamente para incluir:
 
@@ -59,7 +59,7 @@ o bien, edite el archivo **info. plist** correspondiente directamente para inclu
 
 Ahora, cuando se ejecuta la aplicación, la barra de navegación es verde y su texto es blanco (debido al Xamarin.Forms formato) *y* el texto de la barra de estado también está en blanco gracias a la configuración específica de iOS:
 
-![](theme-images/status-white-sml.png "iOS Theming")
+![iOS](theme-images/status-white-sml.png)
 
 ## <a name="uiappearance-api"></a>API de UIAppearance
 
@@ -88,7 +88,7 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 De forma predeterminada, el icono de la barra de pestañas seleccionada en un[`TabbedPage`](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)
 sería azul:
 
-![](theme-images/tabbar-default.png "Default iOS Tab Bar Icon in TabbedPage")
+![Icono predeterminado de la barra de pestañas de iOS en TabbedPage](theme-images/tabbar-default.png)
 
 Para cambiar este comportamiento, establezca la `UITabBar.Appearance` propiedad:
 
@@ -98,7 +98,7 @@ UITabBar.Appearance.SelectedImageTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); 
 
 Esto hace que la pestaña seleccionada sea verde:
 
-![](theme-images/tabbar-custom.png "Green iOS Tab Bar Icon in TabbedPage")
+![Icono verde de la barra de pestañas de iOS en TabbedPage](theme-images/tabbar-custom.png)
 
 El uso de esta API le permite personalizar la apariencia delXamarin.Forms
 `TabbedPage`en iOS con muy poco código. Consulte la [receta personalización de pestañas](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs) para obtener más información sobre el uso de un representador personalizado para establecer una fuente específica para la pestaña.
@@ -113,7 +113,7 @@ UISwitch.Appearance.OnTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); // green
 
 Estas dos capturas de pantalla muestran el `UISwitch` control predeterminado a la izquierda y la versión personalizada (valor `Appearance` ) de la derecha en el [ejemplo de todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo):
 
-![](theme-images/switch-default.png "Color de UISwitch predeterminado") ![](theme-images/switch-custom.png "Color de UISwitch personalizado")
+![Color de UISwitch predeterminado](theme-images/switch-default.png) ![Color de UISwitch personalizado](theme-images/switch-custom.png)
 
 ### <a name="other-controls"></a>Otros controles
 

@@ -1,6 +1,6 @@
 ---
-title: 'title: "Creación de una plantilla de datos de Xamarin.Forms" description: "Las plantillas de datos se pueden crear insertadas, en un objeto ResourceDictionary, o bien a partir de un tipo personalizado o un tipo de celda de Xamarin.Forms adecuado.'
-description: 'En este artículo se explora cada una de las técnicas." ms.prod: xamarin ms.assetid: CFF4AB5E-9069-461C-84D8-F9F6C38510AB ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 09/11/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Creación de una plantilla de datos de Xamarin.Forms
+description: Las plantillas de datos se pueden crear insertadas, en un objeto ResourceDictionary, o bien a partir de un tipo personalizado o un tipo de celda de Xamarin.Forms adecuado. En este artículo se explora cada una de las técnicas.
 ms.prod: xamarin
 ms.assetid: CFF4AB5E-9069-461C-84D8-F9F6C38510AB
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 09/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3054180a9deb1357357c90db7b7fbdd8058b6773
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 9ed7e485adbc13862ff6fb6af9b02c43cc6a1f10
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84565504"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935647"
 ---
 # <a name="creating-a-xamarinforms-datatemplate"></a>Creación de una plantilla de datos de Xamarin.Forms
 
@@ -31,7 +31,7 @@ Un escenario de uso común para un elemento [`DataTemplate`](xref:Xamarin.Forms.
 
 Independientemente de la técnica que se use, el resultado es que la apariencia de cada celda del control [`ListView`](xref:Xamarin.Forms.ListView) se define mediante un elemento [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), como se muestra en las capturas de pantalla siguientes:
 
-![](creating-images/data-template-appearance.png "ListView with a DataTemplate")
+![Objeto ListView con un elemento DataTemplate](creating-images/data-template-appearance.png)
 
 ## <a name="creating-an-inline-datatemplate"></a>Creación de una plantilla de datos insertada
 

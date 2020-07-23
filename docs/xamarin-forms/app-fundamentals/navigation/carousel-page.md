@@ -1,6 +1,6 @@
 ---
-title: 'title: "Xamarin.Forms: Página de carrusel" description: "CarouselPage de Xamarin.Forms es una página que los usuarios pueden deslizar de lado a lado para navegar por páginas de contenido, a modo de galería.'
-description: 'En este artículo se muestra cómo usar CarouselPage para navegar por una colección de páginas." ms.prod: xamarin ms.assetid: 2D14FC9D-DF5F-427E-9006-2AAE61ECF8DC ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/01/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Página de carrusel de Xamarin.Forms
+description: CarouselPage de Xamarin.Forms es una página que los usuarios pueden deslizar de lado a lado para navegar por páginas de contenido, a modo de galería. En este artículo se muestra cómo usar CarouselPage para navegar por una colección de páginas.
 ms.prod: xamarin
 ms.assetid: 2D14FC9D-DF5F-427E-9006-2AAE61ECF8DC
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 896f652d69bca0f186e53185926ee5c46d87fa7c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: c234af1a5d47446149c92a71e9ce592dc0366b8f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570679"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937467"
 ---
 # <a name="xamarinforms-carousel-page"></a>Página de carrusel de Xamarin.Forms
 
@@ -28,15 +28,15 @@ _CarouselPage de Xamarin.Forms es una página que los usuarios pueden deslizar d
 
 En las capturas de pantalla siguientes se muestra un elemento [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) en cada plataforma:
 
-![](carousel-page-images/thirdpage.png "CarouselPage Third Item")
+![Tercer elemento de CarouselPage](carousel-page-images/thirdpage.png)
 
 El diseño de un elemento [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) es idéntico en todas las plataformas. Para navegar por las páginas, hay que deslizar de derecha a izquierda para avanzar en la colección y de izquierda a derecha para retroceder en la colección. Las capturas de pantalla siguientes muestran la primera página de una instancia de [`CarouselPage`](xref:Xamarin.Forms.CarouselPage):
 
-![](carousel-page-images/firstpage.png "CarouselPage First Item")
+![Primer elemento de CarouselPage](carousel-page-images/firstpage.png)
 
 Al deslizar de derecha a izquierda se pasa a la segunda página, como se muestra en las capturas de pantalla siguientes:
 
-![](carousel-page-images/secondpage.png "CarouselPage Second Item")
+![Segundo elemento de CarouselPage](carousel-page-images/secondpage.png)
 
 Al volver a deslizar de derecha a izquierda se pasa a la tercera página, mientras que al deslizar de izquierda a derecha se vuelve a la página anterior.
 

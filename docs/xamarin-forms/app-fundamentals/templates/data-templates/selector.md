@@ -1,6 +1,6 @@
 ---
-title: 'title: "Creación de DataTemplateSelector de Xamarin.Forms" description: "En este artículo se muestra cómo crear y consumir un elemento DataTemplateSelector, que se puede usar para elegir un plantilla de datos en tiempo de ejecución según el valor de una propiedad enlazada a datos."'
-description: 'ms.prod: xamarin ms.assetid: A4629E8F-2BAF-45CE-A76E-DF225FE8D26C ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/08/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Creación de DataTemplateSelector de Xamarin.Forms
+description: En este artículo se muestra cómo crear y consumir un elemento DataTemplateSelector, que se puede usar para elegir un plantilla de datos en tiempo de ejecución según el valor de una propiedad enlazada a datos.
 ms.prod: xamarin
 ms.assetid: A4629E8F-2BAF-45CE-A76E-DF225FE8D26C
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 03/08/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 74650eb2c52f1da9d0c539b711784896267ed183
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 7cbeeb9a0eed37ec109b2e71c46e3f04cd08822d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84135959"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936453"
 ---
 # <a name="creating-a-xamarinforms-datatemplateselector"></a>Creación de DataTemplateSelector de Xamarin.Forms
 
@@ -94,7 +94,7 @@ En tiempo de ejecución, [`ListView`](xref:Xamarin.Forms.ListView) llama al mét
 
 En las capturas de pantalla siguientes se muestra el resultado de la aplicación de `PersonDataTemplateSelector` por parte de [`ListView`](xref:Xamarin.Forms.ListView) a cada objeto de la colección subyacente:
 
-![](selector-images/data-template-selector.png "ListView with a Data Template Selector")
+![Objeto ListView con un selector de plantillas de datos](selector-images/data-template-selector.png)
 
 Cualquier objeto `Person` que tenga un valor de propiedad `DateOfBirth` mayor o igual a 1980 se muestra en color verde, y los demás objetos se muestran en color rojo.
 

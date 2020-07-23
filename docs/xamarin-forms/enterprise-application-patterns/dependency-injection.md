@@ -10,12 +10,12 @@ ms.date: 11/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 99cac3c597cf1d7351d3214ce59fd0a0a0a46400
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8aea3ad36f6c35e9faf2771fc6b54c378c304afb
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572356"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933606"
 ---
 # <a name="dependency-injection"></a>Inserción de dependencias
 
@@ -62,7 +62,7 @@ Hay muchos contenedores de inserción de dependencias disponibles, con la aplica
 
 En TinyIoC, el `TinyIoCContainer` tipo proporciona el contenedor de inserción de dependencias. En la figura 3-1 se muestran las dependencias al usar este contenedor, que crea una instancia de un `IOrderService` objeto y lo inserta en la `ProfileViewModel` clase.
 
-![](dependency-injection-images/dependencyinjection.png "Dependencies example when using dependency injection")
+![Ejemplo de dependencias al usar la inserción de dependencias](dependency-injection-images/dependencyinjection.png)
 
 **Figura 3-1:** Dependencias cuando se usa la inserción de dependencias
 
@@ -116,7 +116,7 @@ _container.Register<ProfileViewModel>();
 
 De forma predeterminada, cada registro de clase concreta se configura como una instancia múltiple para que todos los objetos dependientes reciban una nueva instancia. Por lo tanto, cuando `ProfileViewModel` se resuelva el, se creará una nueva instancia de y el contenedor insertará sus dependencias necesarias.
 
-## <a name="resolution"></a>Solución
+## <a name="resolution"></a>Resolución
 
 Una vez registrado un tipo, se puede resolver o insertar como una dependencia. Cuando se resuelve un tipo y el contenedor necesita crear una nueva instancia, inserta las dependencias en la instancia.
 

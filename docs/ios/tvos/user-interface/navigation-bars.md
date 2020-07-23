@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 0d5ec4bc10747a287def3fd9a83a703d2ec4b2a2
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 0f3c91e175e5ccdefeaf3d6c9c83e9eb3e012e14
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572382"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935400"
 ---
 # <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Trabajar con barras de navegación de tvOS en Xamarin
 
 Las barras de navegación se pueden agregar a la parte superior de las vistas para mostrar un título y botones de barra de navegación opcionales. Normalmente se usan cuando el usuario ha navegado desde una página principal, como una vista de tabla, una colección o un menú a una vista, que muestra los detalles del elemento seleccionado.
 
-[![](navigation-bars-images/navbar01.png "Sample Navigation Bar")](navigation-bars-images/navbar01.png#lightbox)
+[![Barra de navegación de ejemplo](navigation-bars-images/navbar01.png)](navigation-bars-images/navbar01.png#lightbox)
 
 Además del título (que se muestra en el centro), las barras de navegación pueden contener uno o varios botones de barra de navegación ( `UIBarButtonItem` ) a la izquierda y a la derecha de la barra.
 
@@ -36,16 +36,16 @@ La manera más sencilla de trabajar con barras de navegación en una aplicación
 1. En el **Panel de solución**, haga doble clic en `Main.storyboard` archivo y ábralo para su edición.
 1. Arrastre una **barra de navegación** desde el **cuadro de herramientas** y colóquela en la vista de la parte superior de la pantalla:
 
-    [![](navigation-bars-images/navbar02.png "A Navigation Bar")](navigation-bars-images/navbar02.png#lightbox)
+    [![Una barra de navegación](navigation-bars-images/navbar02.png)](navigation-bars-images/navbar02.png#lightbox)
 1. Haga doble clic en la **barra de navegación** para seleccionar el **elemento de navegación**. En la pestaña **Widget** del **Panel de propiedades**, puede establecer el **título**:
 
-    [![](navigation-bars-images/navbar03.png "Set the Title")](navigation-bars-images/navbar03.png#lightbox)
+    [![Establecer el título](navigation-bars-images/navbar03.png)](navigation-bars-images/navbar03.png#lightbox)
 1. A continuación, puede agregar uno o varios **elementos de botón de barra** a cualquier extremo de la barra:
 
-    [![](navigation-bars-images/navbar04.png "A Bar Button Item")](navigation-bars-images/navbar04.png#lightbox)
+    [![Un elemento de botón de barra](navigation-bars-images/navbar04.png)](navigation-bars-images/navbar04.png#lightbox)
 1. Por último, conecte los **elementos del botón de barra** a las acciones en la pestaña **eventos** del **Explorador de propiedades**:
 
-    [![](navigation-bars-images/navbar05.png "A Bar Button Item Action")](navigation-bars-images/navbar05.png#lightbox)
+    [![Una acción de elemento de botón de barra](navigation-bars-images/navbar05.png)](navigation-bars-images/navbar05.png#lightbox)
 1. Guarde los cambios.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
@@ -53,16 +53,16 @@ La manera más sencilla de trabajar con barras de navegación en una aplicación
 1. En el **Explorador de soluciones**, haga doble clic en `Main.storyboard` archivo y ábralo para su edición.
 1. Arrastre una **barra de navegación** desde el **cuadro de herramientas** y colóquela en la vista de la parte superior de la pantalla:
 
-    [![](navigation-bars-images/navbar02-vs.png "A Navigation Bar")](navigation-bars-images/navbar02-vs.png#lightbox)
+    [![Una barra de navegación](navigation-bars-images/navbar02-vs.png)](navigation-bars-images/navbar02-vs.png#lightbox)
 1. Haga doble clic en la **barra de navegación** para seleccionar el **elemento de navegación**. En la pestaña **Widget** del **Explorador de propiedades**, puede establecer el **título**:
 
-    [![](navigation-bars-images/navbar03-vs.png "Set the Title")](navigation-bars-images/navbar03-vs.png#lightbox)
+    [![Establecer el título](navigation-bars-images/navbar03-vs.png)](navigation-bars-images/navbar03-vs.png#lightbox)
 1. A continuación, puede agregar uno o varios **elementos de botón de barra** a cualquier extremo de la barra:
 
-    [![](navigation-bars-images/navbar04-vs.png "A Bar Button Items")](navigation-bars-images/navbar04-vs.png#lightbox)
+    [![Elementos de botón de barra](navigation-bars-images/navbar04-vs.png)](navigation-bars-images/navbar04-vs.png#lightbox)
 1. Por último, conecte los **elementos del botón de barra** a las acciones en la pestaña **eventos** del **Explorador de propiedades**:
 
-    [![](navigation-bars-images/navbar05-vs.png "A Bar Button Item Actions")](navigation-bars-images/navbar05-vs.png#lightbox)
+    [![Acciones de un elemento de botón de barra](navigation-bars-images/navbar05-vs.png)](navigation-bars-images/navbar05-vs.png#lightbox)
 1. Guarde los cambios.
 
 -----

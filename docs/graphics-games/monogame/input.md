@@ -1,38 +1,38 @@
 ---
-title: Referencia de GamePad MonoGame
-description: Este documento describe GamePad, una clase multiplataforma para tener acceso a dispositivos de entrada en MonoGame. Describe cómo leer la entrada desde el controlador para juegos y proporciona código de ejemplo.
+title: Referencia del controlador para juegos de monojuego
+description: En este documento se describe el controlador de juegos, una clase multiplataforma para acceder a dispositivos de entrada en monogame. Describe cómo leer la entrada del controlador de juegos y proporciona código de ejemplo.
 ms.prod: xamarin
 ms.assetid: 1F71F3E8-2397-4C6A-8163-6731ECFB7E03
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 235166b78dfbd4998086a2925a54137f1922f5d1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 11b1cfda435e97b09f9d1eded22f11f912d1783d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61385699"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934035"
 ---
-# <a name="monogame-gamepad-reference"></a>Referencia de GamePad MonoGame
+# <a name="monogame-gamepad-reference"></a>Referencia del controlador para juegos de monojuego
 
-_GamePad es una clase estándar y multiplataforma para tener acceso a dispositivos de entrada en MonoGame._
+_El controlador de juegos es una clase estándar multiplataforma para acceder a dispositivos de entrada en monogame._
 
-`GamePad` puede usarse para leer la entrada desde dispositivos de entrada en varias plataformas de MonoGame. Esta guía muestra cómo trabajar con la clase de controlador para juegos. Puesto que cada dispositivo de entrada es diferente en el diseño y el número de botones que proporciona, esta guía incluye diagramas que muestran las diversas asignaciones de dispositivo.
+`GamePad`se puede usar para leer la entrada de dispositivos de entrada en varias plataformas monogame. En esta guía se muestra cómo trabajar con la clase de controlador de juegos. Puesto que cada dispositivo de entrada difiere en el diseño y el número de botones que proporciona, esta guía incluye diagramas que muestran las diversas asignaciones de dispositivos.
 
-## <a name="gamepad-as-a-replacement-for-xbox360gamepad"></a>GamePad como sustituto de Xbox360GamePad
+## <a name="gamepad-as-a-replacement-for-xbox360gamepad"></a>Controlador para juegos como reemplazo de Xbox360GamePad
 
-La API de XNA original proporcionado el `Xbox360GamePad` clase para leer la entrada desde un dispositivo de juego en la consola Xbox 360 o PC. MonoGame ha reemplazado con un `GamePad` clase puesto que no se puede usar controladores de Xbox 360 en la mayoría de las plataformas de MonoGame (por ejemplo, iOS o en Xbox One). A pesar de que el cambio de nombre, el uso de la `GamePad` clase es similar a la `Xbox360GamePad` clase.
+La API XNA original ofrecía la `Xbox360GamePad` clase para leer la entrada de un dispositivo de juego en la consola Xbox 360 o PC. Monogame lo ha reemplazado por una `GamePad` clase, ya que los controladores de Xbox 360 no se pueden usar en la mayoría de las plataformas monogame (como iOS o Xbox One). A pesar del cambio de nombre, el uso de la `GamePad` clase es similar a la `Xbox360GamePad` clase.
 
-## <a name="reading-input-from-gamepad"></a>Leer la entrada de GamePad
+## <a name="reading-input-from-gamepad"></a>Lectura de la entrada desde el controlador de juegos
 
-La `GamePad` clase proporciona una forma estandarizada de leer la entrada en cualquier plataforma MonoGame. Proporciona información a través de dos métodos:
+La `GamePad` clase proporciona una forma estandarizada de leer la entrada en cualquier plataforma monogame. Proporciona información a través de dos métodos:
 
-- `GetState` : devuelve el estado actual de los botones del controlador, sticks analógicas y cruceta.
-- `GetCapabilities` : devuelve información acerca de las capacidades de hardware, como si el controlador tiene ciertos botones o admite la vibración.
+- `GetState`: devuelve el estado actual de los botones del controlador, los palos analógicos y el panel d.
+- `GetCapabilities`: devuelve información acerca de las capacidades de hardware, por ejemplo, si el controlador tiene determinados botones o admite vibraciones.
 
-### <a name="example-moving-a-character"></a>Ejemplo: Mover un carácter
+### <a name="example-moving-a-character"></a>Ejemplo: mover un carácter
 
-El código siguiente muestra cómo puede utilizarse el stick thumb izquierdo para mover un carácter estableciendo su `XVelocity` y `YVelocity` propiedades. Este código supone que `characterInstance` es una instancia de un objeto que tiene `XVelocity` y `YVelocity` propiedades:
+En el código siguiente se muestra cómo se puede usar el control Thumb izquierdo para desplace un carácter mediante el establecimiento de sus `XVelocity` `YVelocity` propiedades y. En este código se supone que `characterInstance` es una instancia de un objeto que tiene `XVelocity` `YVelocity` las propiedades y:
 
 ```csharp
 // In Update, or some code called every frame:
@@ -42,11 +42,11 @@ characterInstance.XVelocity = gamePadState.ThumbSticks.Left.X * characterInstanc
 characterInstance.YVelocity = gamePadState.ThumbSticks.Left.Y * characterInstance.MaxSpeed;
 ```
 
-### <a name="example-detecting-pushes"></a>Ejemplo: Detectar inserciones
+### <a name="example-detecting-pushes"></a>Ejemplo: detectar inserciones
 
-`GamePadState` Proporciona información sobre el estado actual del controlador, por ejemplo, si se presiona un botón determinado. Algunas acciones, como hacer que un carácter de salto, requieran la comprobación si se ha presionado el botón (no estaba inactivo último fotograma, pero está fuera de este marco de servicio) o liberados (era hacia abajo del último fotograma, pero no hacia abajo de este marco).
+`GamePadState`proporciona información sobre el estado actual del controlador, por ejemplo, si se presiona un botón determinado. Ciertas acciones, como realizar un salto de carácter, requieren comprobar si el botón se insertó (no se deshizo el último fotograma, pero está inactivo en este fotograma) o se liberó (era el último fotograma, pero no hacia abajo).
 
-Para realizar este tipo de lógica, las variables locales que almacenan el fotograma anterior `GamePadState` y el marco actual `GamePadState` debe crearse. El ejemplo siguiente muestra cómo almacenar y usar el marco anterior `GamePadState` implementar saltar:
+Para realizar este tipo de lógica, deben crearse las variables locales que almacenan el fotograma anterior `GamePadState` y el actual `GamePadState` . En el ejemplo siguiente se muestra cómo almacenar y usar el del fotograma anterior `GamePadState` para implementar el salto:
 
 ```csharp
 // At class scope:
@@ -70,9 +70,9 @@ currentGamePadState.Buttons.A == ButtonState.Pressed
 }
 ```
 
-### <a name="example-checking-for-buttons"></a>Ejemplo: Comprobación de los botones
+### <a name="example-checking-for-buttons"></a>Ejemplo: buscar botones
 
-`GetCapabilities` puede usarse para comprobar si un controlador tiene cierto hardware, como un botón determinado o stick analógico. El código siguiente muestra cómo comprobar si los botones B e Y en un controlador en un juego que requiere la presencia de los dos botones:
+`GetCapabilities`se puede usar para comprobar si un controlador tiene cierto hardware, como un botón o un stick analógico determinados. En el código siguiente se muestra cómo comprobar los botones B e y en un controlador de un juego que requiere la presencia de ambos botones:
 
 ```csharp
 var capabilities = GamePad.GetCapabilities(PlayerIndex.One);
@@ -86,49 +86,49 @@ if(!hasBButton || !hasXButton)
 
 ## <a name="ios"></a>iOS
 
-aplicaciones de iOS admiten la entrada de dispositivo de juego inalámbrica.
+las aplicaciones de iOS admiten la entrada del controlador de juego inalámbrico.
 
 > [!IMPORTANT]
-> Los paquetes de NuGet para MonoGame 3.5 no incluyen compatibilidad con dispositivos de juego inalámbricos. Con la clase de controlador para juegos en iOS requiere compilar MonoGame 3.5 desde el origen o mediante los archivos binarios de NuGet 3.6 de MonoGame.
+> Los paquetes NuGet para monogame 3,5 no incluyen compatibilidad con los controladores de juegos inalámbricos. El uso de la clase de controlador para juegos en iOS requiere la compilación de monogame 3,5 desde el origen o el uso de los binarios de NuGet de monogame 3,6.
 
-### <a name="ios-game-controller"></a>Controlador de juego de iOS
+### <a name="ios-game-controller"></a>Dispositivo de juego iOS
 
-La `GamePad` clase devuelve las propiedades que se leen los controladores inalámbricos. Las propiedades en el `GamePad` proporcionan buena cobertura para el estándar de iOS hardware del controlador, tal como se muestra en el diagrama siguiente:
+La `GamePad` clase devuelve propiedades leídas de los controladores inalámbricos. Las propiedades de `GamePad` proporcionan una buena cobertura para el hardware del controlador iOS estándar, tal y como se muestra en el diagrama siguiente:
 
-![](input-images/image1.png "Las propiedades en el controlador para juegos proporcionan buena cobertura de iOS estándar hardware del controlador, tal como se muestra en este diagrama")
+![Las propiedades del controlador de juegos proporcionan una buena cobertura para el hardware del controlador iOS estándar, tal como se muestra en este diagrama.](input-images/image1.png)
 
 ## <a name="apple-tv"></a>Apple TV
 
-Juegos de Apple TV pueden usar el Siri Remote o inalámbrica de juego para la entrada.
+Apple TV Games puede usar los controladores de juegos remotos o inalámbricos de Siri para la entrada.
 
 ### <a name="siri-remote"></a>Siri remoto
 
-*Siri Remote* es el dispositivo de entrada nativo para Apple TV. Aunque se pueden leer valores del repositorio remoto Siri a través de eventos (como se muestra en el [guía Siri Remote y Bluetooth controladores](~/ios/tvos/platform/remote-bluetooth.md)), el `GamePad` clase puede devolver valores desde el servidor remoto de Siri.
+*Siri Remote* es el dispositivo de entrada nativo de Apple TV. Aunque los valores del control remoto Siri se pueden leer a través de eventos (como se muestra en la [Guía de controladores remotos y Bluetooth de Siri](~/ios/tvos/platform/remote-bluetooth.md)), la `GamePad` clase puede devolver valores del remoto Siri.
 
-Tenga en cuenta que `GamePad` solo puede leer la entrada en el botón play y toque superficie:
+Tenga en cuenta que `GamePad` solo puede leer la entrada del botón reproducir y la superficie táctil:
 
-![](input-images/image2.png "Tenga en cuenta que GamePad solo puede leer la entrada en el botón play y toque superficie")
+![Tenga en cuenta que el controlador de juegos solo puede leer entradas del botón reproducir y la superficie táctil](input-images/image2.png)
 
-Desde la entrada táctil, movimiento expuesta se lee a través de la `DPad` propiedad, el movimiento de los valores se notifican mediante la `ButtonState` clase. En otras palabras, solo están disponibles como valores `ButtonState.Pressed` o `ButtonState.Released`, en lugar de valores numéricos o de gestos.
+Dado que el movimiento de la superficie táctil se lee a través de la `DPad` propiedad, los valores de movimiento se informan mediante la `ButtonState` clase. En otras palabras, los valores solo están disponibles como `ButtonState.Pressed` o `ButtonState.Released` , en contraposición a valores numéricos o gestos.
 
-### <a name="apple-tv-game-controller"></a>Dispositivo de juego de TV de Apple
+### <a name="apple-tv-game-controller"></a>Controlador de juegos de Apple TV
 
-Dispositivos de juego para Apple TV se comportan exactamente igual para los controladores de juego para aplicaciones iOS. Para obtener más información, consulte el [iOS dispositivos de juego](#ios-game-controller) sección. 
+Los dispositivos de juego para Apple TV se comportan de forma idéntica a los dispositivos de juego para aplicaciones iOS. Para obtener más información, vea la sección sobre el [dispositivo de juego iOS](#ios-game-controller) . 
 
 ## <a name="xbox-one"></a>Xbox One
 
-La consola Xbox One admite leer la entrada desde un dispositivo de juego Xbox One.
+La consola Xbox One admite la lectura de entrada desde un dispositivo de juego Xbox One.
 
-### <a name="xbox-one-game-controller"></a>Dispositivo de juego de Xbox One
+### <a name="xbox-one-game-controller"></a>Dispositivo de juego Xbox One
 
-El dispositivo de juego Xbox One es el dispositivo de entrada más comunes para Xbox One. La `GamePad` clase proporciona los valores de entrada desde el hardware del dispositivo de juego.
+La controladora Xbox One Game es el dispositivo de entrada más común para la Xbox One. La `GamePad` clase proporciona valores de entrada del hardware del controlador de juego.
 
-![](input-images/image3.png "La clase de controlador para juegos proporciona valores de entrada desde el hardware del dispositivo de juego")
+![La clase de controlador para juegos proporciona valores de entrada del hardware del dispositivo de juego](input-images/image3.png)
 
 ## <a name="summary"></a>Resumen
 
-Esta guía proporciona información general sobre MonoGame `GamePad` clase, cómo implementar la lógica de lectura de entrada y los diagramas de common `GamePad` implementaciones.
+En esta guía se proporciona información general sobre la clase de monogame `GamePad` , cómo implementar la lógica de lectura de entrada y diagramas de `GamePad` implementaciones comunes.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MonoGame GamePad](http://www.monogame.net/documentation/?page=T_Microsoft_Xna_Framework_Input_GamePad)
+- [Controlador para juegos de monojuego](http://www.monogame.net/documentation/?page=T_Microsoft_Xna_Framework_Input_GamePad)

@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/24/2018
-ms.openlocfilehash: 78751f53808ffa62589fdc57fe4cf59912849e00
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b7b94ce0aba8d61b057b3e649cdd646ee08fcc05
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73010839"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933099"
 ---
 # <a name="introduction-to-backgrounding-in-ios"></a>Introducción al procesamiento en segundo plano en iOS
 
 iOS regula el procesamiento en segundo plano de manera muy estrecha y ofrece tres enfoques para implementarlo:
 
 - **Registrar una tarea en segundo plano** : Si una aplicación necesita completar una tarea importante, puede pedir a iOS que interrumpa la tarea cuando la aplicación pase a segundo plano. Por ejemplo, es posible que una aplicación necesite terminar el registro de un usuario o terminar de descargar un archivo grande.
-- **Registrarse como una aplicación necesaria** para el fondo: una aplicación se puede registrar como un tipo específico de aplicación que conoce los requisitos de fondo específicos, como *Audio* , *VoIP* , *accesorio externo* , *NewsStand* , y *Ubicación* . Estas aplicaciones tienen privilegios de procesamiento en segundo plano continuos, siempre y cuando realicen tareas que estén dentro de los parámetros del tipo de aplicación registrado.
+- **Registrarse como una aplicación necesaria** para el fondo: una aplicación se puede registrar como un tipo específico de aplicación que tenga requisitos de fondo conocidos, como *Audio* , *VoIP* , *accesorio externo* , *NewsStand* y *Ubicación* . Estas aplicaciones tienen privilegios de procesamiento en segundo plano continuos, siempre y cuando realicen tareas que estén dentro de los parámetros del tipo de aplicación registrado.
 - **Habilitar actualizaciones en segundo plano** : las aplicaciones pueden desencadenar actualizaciones en segundo plano con *supervisión de regiones* o mediante la escucha de *cambios de ubicación significativos* . A partir de iOS 7, las aplicaciones también se pueden registrar para actualizar el contenido en segundo plano mediante la *captura en segundo plano* o las *notificaciones remotas* .
 
 ## <a name="application-states-and-application-delegate-methods"></a>Estados de aplicación y métodos de delegado de aplicación
@@ -28,7 +28,7 @@ Antes de profundizar en el código para el procesamiento en segundo plano en iOS
 
 El ciclo de vida de la aplicación de iOS es una colección de Estados y métodos de la aplicación para moverse entre ellos. Una aplicación realiza una transición entre Estados en función del comportamiento del usuario y de los requisitos de fondo de la aplicación. El movimiento se ilustra en el siguiente diagrama:
 
- [![](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png "Application States and Application Delegate Methods diagram")](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png#lightbox)
+ [![Diagrama de los Estados de aplicación y métodos de delegado de aplicación](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png)](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png#lightbox)
 
 - **No se está ejecutando** : la aplicación todavía no se ha iniciado en el dispositivo.
 - En **ejecución/activa** : la aplicación está en la pantalla y está ejecutando código en primer plano.
@@ -41,17 +41,17 @@ Desde la introducción de la compatibilidad con la multitarea, iOS no suele fina
 
 ## <a name="application-lifecycle-methods"></a>Métodos de ciclo de vida de la aplicación
 
-Cuando una aplicación cambia el estado, iOS notifica a la aplicación a través de métodos de evento de la clase `AppDelegate`:
+Cuando una aplicación cambia el estado, iOS notifica a la aplicación a través de los métodos de evento de la `AppDelegate` clase:
 
-- `OnActivated`: se llama la primera vez que se inicia la aplicación y cada vez que la aplicación vuelve a estar en primer plano. Este es el lugar donde se coloca el código que debe ejecutarse cada vez que se abre la aplicación.
-- `OnResignActivation`: Si el usuario recibe una interrupción, como una llamada de texto o de teléfono, se llama a este método y la aplicación se desactiva temporalmente. Si el usuario acepta la llamada de teléfono, la aplicación se enviará al fondo.
-- `DidEnterBackground`: se llama cuando la aplicación entra en el estado de fondo, este método proporciona a una aplicación unos cinco segundos para prepararse para una posible terminación. Use esta vez para guardar los datos y las tareas de usuario, y para quitar información confidencial de la pantalla.
-- `WillEnterForeground`: cuando un usuario vuelve a una aplicación de fondo o suspendida y lo inicia en primer plano, se llama a `WillEnterForeground`. Este es el momento de preparar la aplicación para que se ponga en primer plano rehidratar cualquier estado guardado durante la `DidEnterBackground`.  se llamará a `OnActivated` inmediatamente después de que se complete este método.
-- `WillTerminate`: la aplicación se cierra y se destruye su proceso. Solo se llama a este método si la multitarea no está disponible en el dispositivo o en la versión del sistema operativo, si hay poca memoria o si el usuario finaliza manualmente una aplicación en el fondo. Tenga en cuenta que las aplicaciones suspendidas que se terminan no llamarán a `WillTerminate`.
+- `OnActivated`: Se llama la primera vez que se inicia la aplicación y cada vez que la aplicación vuelve a estar en primer plano. Este es el lugar donde se coloca el código que debe ejecutarse cada vez que se abre la aplicación.
+- `OnResignActivation`-Si el usuario recibe una interrupción, como una llamada de texto o de teléfono, se llama a este método y la aplicación se desactiva temporalmente. Si el usuario acepta la llamada de teléfono, la aplicación se enviará al fondo.
+- `DidEnterBackground`-Se llama cuando la aplicación entra en el estado de fondo, este método proporciona a una aplicación unos cinco segundos para prepararse para una posible terminación. Use esta vez para guardar los datos y las tareas de usuario, y para quitar información confidencial de la pantalla.
+- `WillEnterForeground`-Cuando un usuario vuelve a una aplicación de fondo o suspendida y lo inicia en primer plano, se `WillEnterForeground` llama a. Este es el momento de preparar la aplicación para que se ponga en primer plano rehidratar cualquier estado guardado durante `DidEnterBackground` .  `OnActivated`se llamará inmediatamente después de que se complete este método.
+- `WillTerminate`-La aplicación se cierra y se destruye su proceso. Solo se llama a este método si la multitarea no está disponible en el dispositivo o en la versión del sistema operativo, si hay poca memoria o si el usuario finaliza manualmente una aplicación en el fondo. Tenga en cuenta que las aplicaciones suspendidas que se terminan no llamarán `WillTerminate` .
 
 En el diagrama siguiente se muestra cómo encajan los Estados de la aplicación y los métodos del ciclo de vida:
 
- [![](introduction-to-backgrounding-in-ios-images/image2.png "This diagram illustrates how the application states and lifecycle methods fit together")](introduction-to-backgrounding-in-ios-images/image2.png#lightbox)
+ [![En este diagrama se muestra cómo se ajustan los Estados de la aplicación y los métodos del ciclo de vida](introduction-to-backgrounding-in-ios-images/image2.png)](introduction-to-backgrounding-in-ios-images/image2.png#lightbox)
 
 ## <a name="user-controls-for-backgrounding-in-ios"></a>Controles de usuario para el procesamiento en segundo plano en iOS
 
@@ -61,7 +61,7 @@ iOS 7 presentó varias características para ofrecer a los usuarios más control
 
 El conmutador de aplicaciones es una característica de control importante incluida en iOS 7. Se inicia haciendo doble punteo en el botón **Inicio** y muestra las aplicaciones cuyos procesos están activos:
 
- [![](introduction-to-backgrounding-in-ios-images/app-switcher-.png "Moving between apps using the App Switcher")](introduction-to-backgrounding-in-ios-images/app-switcher-.png#lightbox)
+ [![Moverse entre aplicaciones mediante el conmutador de aplicaciones](introduction-to-backgrounding-in-ios-images/app-switcher-.png)](introduction-to-backgrounding-in-ios-images/app-switcher-.png#lightbox)
 
 Con el conmutador de aplicaciones, los usuarios pueden desplazarse a través de instantáneas de todas las aplicaciones en el fondo y en suspensión. Al puntear en una aplicación, se inicia en primer plano. Al pasar el dedo hacia arriba, se quita la aplicación del fondo, terminando el proceso. Veremos más detenidamente el conmutador de aplicaciones en la [demostración del ciclo de vida](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md) de la aplicación de iOS en la sección siguiente.
 
@@ -74,8 +74,8 @@ iOS 7 aumenta el control del usuario sobre el ciclo de vida de la aplicación, y
 
 Los usuarios pueden cambiar esta configuración Si navega a **configuración > General > actualización de la aplicación en segundo plano** y edita los privilegios de fondo de una aplicación seleccionada. Si la actualización de la aplicación en segundo plano está establecida en desactivado, la aplicación se suspenderá inmediatamente al entrar en segundo plano y evitará que realice cualquier procesamiento en segundo plano:
 
- [![](introduction-to-backgrounding-in-ios-images/settings-.png "Background App Refresh Settings")](introduction-to-backgrounding-in-ios-images/settings-.png#lightbox)
+ [![Configuración de actualización de la aplicación en segundo plano](introduction-to-backgrounding-in-ios-images/settings-.png)](introduction-to-backgrounding-in-ios-images/settings-.png#lightbox)
 
-Los desarrolladores pueden comprobar el estado de la aplicación de actualización en segundo plano con la API de `BackgroundRefreshStatus`. Para obtener un ejemplo, consulte la [receta comprobar la configuración de la actualización en segundo plano](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/check_background_refresh_setting).
+Los desarrolladores pueden comprobar el estado de la aplicación de actualización en segundo plano con la `BackgroundRefreshStatus` API. Para obtener un ejemplo, consulte la [receta comprobar la configuración de la actualización en segundo plano](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/check_background_refresh_setting).
 
 Hemos tratado los aspectos básicos del ciclo de vida de la aplicación de iOS y las características para controlar el ciclo de vida de la aplicación. A continuación, vamos a ver el ciclo de vida de la aplicación de iOS en acción.

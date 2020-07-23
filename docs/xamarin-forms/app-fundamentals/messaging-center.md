@@ -1,6 +1,6 @@
 ---
-title: 'title: "Xamarin.Forms: MessagingCenter" description: "La clase MessagingCenter de Xamarin.Forms implementa el patrón de publicación y suscripción, lo que permite la comunicación basada en mensajes entre los componentes que no se recomienda vincular mediante referencias de tipo y objeto."'
-description: 'ms.prod: xamarin ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 10/08/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: MessagingCenter de Xamarin.Forms
+description: La clase MessagingCenter de Xamarin.Forms implementa el patrón de publicación y suscripción, lo que permite la comunicación basada en mensajes entre los componentes que no se recomienda vincular mediante referencias de tipo y objeto.
 ms.prod: xamarin
 ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 10/08/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d1407c3c948afe764854cbd99f5c29332f7041aa
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: c817936c77764b95842226b9a9a31c26667d6d0f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84137545"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937454"
 ---
 # <a name="xamarinforms-messagingcenter"></a>MessagingCenter de Xamarin.Forms
 
@@ -29,7 +29,7 @@ La clase [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) de Xamarin.Form
 
 La clase [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) proporciona la funcionalidad de publicación y suscripción de multidifusión. Esto significa que puede haber varios publicadores que publican un único mensaje, y puede haber varios suscriptores que escuchen el mismo mensaje:
 
-![](messaging-center-images/messaging-center.png "Multicast publish-subscribe functionality")
+![Funcionalidad de publicación y suscripción de multidifusión](messaging-center-images/messaging-center.png)
 
 Los publicadores envían mensajes con el método [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*), mientras que los suscriptores escuchan mensajes con el método [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*). Además, en caso necesario, los suscriptores también pueden cancelar la suscripción a mensajes con el método [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*).
 

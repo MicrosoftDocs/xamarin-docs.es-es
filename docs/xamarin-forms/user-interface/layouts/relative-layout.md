@@ -10,26 +10,26 @@ ms.date: 11/25/2015
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f250b109f759bcf6bb7fa4ac0573743ac12c4bc1
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e9c6bc604368f36646260d6a3766cc5417a1ff52
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127197"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937792"
 ---
 # <a name="xamarinforms-relativelayout"></a>Xamarin.FormsRelativeLayout
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 `RelativeLayout`se utiliza para colocar y ajustar el tamaño de las vistas en relación con las propiedades de las vistas de diseño o del mismo nivel. A diferencia `AbsoluteLayout` de, no `RelativeLayout` tiene el concepto de delimitador móvil y no tiene medios para colocar elementos en relación con los bordes inferior o derecho del diseño. `RelativeLayout`permite colocar elementos fuera de sus propios límites.
 
-[![](relative-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](relative-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
+[![Xamarin.FormsDiseños](relative-layout-images/layouts-sml.png)](relative-layout-images/layouts.png#lightbox "[! Operador. Diseños de NO-LOC (Xamarin. Forms)]")
 
 ## <a name="purpose"></a>Propósito
 
 `RelativeLayout`se puede usar para colocar las vistas en la pantalla en relación con el diseño general o con otras vistas.
 
-![](relative-layout-images/flag.png "RelativeLayout Exploration")
+![Exploración de RelativeLayout](relative-layout-images/flag.png)
 
 ## <a name="usage"></a>Uso
 
@@ -133,7 +133,7 @@ layout.Children.Add (blueBox, Constraint.RelativeToView (redBox, (Parent, siblin
 
 Esto genera el siguiente resultado, con la posición del cuadro azul determinada en _relación_ con la posición del cuadro rojo:
 
-![](relative-layout-images/red-blue-box.png "RelativeLayout with Red and Blue BoxViews")
+![RelativeLayout con BoxViews rojo y azul](relative-layout-images/red-blue-box.png)
 
 ### <a name="sizing"></a>Ajuste de tamaño
 
@@ -226,7 +226,7 @@ Title="RelativeLayout">
 
 El código anterior da como resultado el siguiente diseño:
 
-![](relative-layout-images/relative.png "Complex RelativeLayout")
+![RelativeLayout complejos](relative-layout-images/relative.png)
 
 Observe que `RelativeLayouts` los elementos están anidados porque, en algunos casos, el anidamiento de diseños puede ser más fácil que presentar todos los elementos dentro del mismo diseño. Observe también que algunos elementos son `RelativeToView` , ya que permite un diseño más sencillo y intuitivo cuando las relaciones entre las vistas posicionan la guía.
 

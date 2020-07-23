@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5554341493b52d20c946a4bcfe2d1230e4a02759
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3efcd5cd7c2d00e9d646c937863fd7e55d17f240
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135576"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929888"
 ---
 # <a name="button-padding-and-shadows-on-android"></a>Relleno de botones y sombras en Android
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esta plataforma Android controla si Xamarin.Forms los botones usan los valores predeterminados de relleno y sombra de los botones de Android. Se consume en XAML estableciendo [`Button.UseDefaultPadding`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultPaddingProperty) y [`Button.UseDefaultShadow`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultShadowProperty) las propiedades adjuntas en `boolean` valores:
 
@@ -49,7 +49,7 @@ El `Button.On<Android>` método especifica que este específico de la plataforma
 
 El resultado es que los Xamarin.Forms botones pueden usar los valores predeterminados de relleno y sombra de los botones de Android:
 
-![](button-padding-shadow-images/button-padding-and-shadow.png "Default Padding and Shadow Values on Android Buttons")
+![Valores de relleno y sombra predeterminados en botones de Android](button-padding-shadow-images/button-padding-and-shadow.png)
 
 Tenga en cuenta que en la captura de pantalla anterior cada una [`Button`](xref:Xamarin.Forms.Button) tiene definiciones idénticas, salvo que el lado derecho `Button` usa los valores predeterminados de relleno y sombra de los botones de Android.
 

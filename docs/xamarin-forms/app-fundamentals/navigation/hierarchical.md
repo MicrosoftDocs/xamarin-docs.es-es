@@ -1,6 +1,6 @@
 ---
-title: 'title: "Navegación jerárquica" description: "En este artículo se muestra cómo usar la clase NavigationPage para realizar la navegación en una pila de páginas en la que el último en entrar es el primero en salir (LIFO)."'
-description: 'ms.prod: xamarin ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/10/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Navegación jerárquica
+description: En este artículo se muestra cómo utilizar la clase NavigationPage para realizar la navegación en una pila de páginas en la que el último en entrar es el primero en salir (LIFO).
 ms.prod: xamarin
 ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ec35b03e7e96f0730813918bdd96e1408cfabde7
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 0d6a18ec55b49da2b668ccc183646d5e4dde5849
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571498"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937233"
 ---
 # <a name="hierarchical-navigation"></a>Navegación jerárquica
 
@@ -25,11 +25,11 @@ _La clase NavigationPage proporciona una experiencia de navegación jerárquica 
 
 Para pasar de una página a otra, una aplicación insertará una página nueva en la pila de navegación, donde se convertirá en la página activa, tal como se muestra en el diagrama siguiente.
 
-![](hierarchical-images/pushing.png "Pushing a Page to the Navigation Stack")
+![Inserción de una página en la pila de navegación](hierarchical-images/pushing.png)
 
 Para volver a la página anterior, la aplicación mostrará la página actual de la pila de navegación y la nueva página de nivel superior se convertirá en la página activa, tal como se muestra en el diagrama siguiente:
 
-![](hierarchical-images/popping.png "Popping a Page from the Navigation Stack")
+![Sacar una página de la pila de navegación](hierarchical-images/popping.png)
 
 La propiedad [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) expone los métodos de navegación en cualquiera de los tipos derivados de [`Page`](xref:Xamarin.Forms.Page). Estos métodos proporcionan la capacidad para insertar páginas en la pila de navegación, sacar páginas de la pila de navegación y manipular la pila.
 
@@ -37,7 +37,7 @@ La propiedad [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) expo
 
 En la navegación jerárquica, se usa la clase [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) para navegar por una pila de objetos [`ContentPage`](xref:Xamarin.Forms.ContentPage). En las siguientes capturas de pantalla, se muestran los componentes principales de la `NavigationPage` en cada plataforma:
 
-![](hierarchical-images/navigationpage-components.png "NavigationPage Components")
+![Componentes de NavigationPage](hierarchical-images/navigationpage-components.png)
 
 El diseño de una [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) depende de la plataforma:
 
@@ -63,7 +63,7 @@ public App ()
 
 Esto hace que la instancia [`ContentPage`](xref:Xamarin.Forms.ContentPage) de `Page1Xaml` se inserte en la pila de navegación, donde se convertirá en la página activa y en la página raíz de la aplicación. Esto se muestra en las capturas de pantalla siguientes:
 
-![](hierarchical-images/mainpage.png "Root Page of Navigation Stack")
+![Página raíz de la pila de navegación](hierarchical-images/mainpage.png)
 
 > [!NOTE]
 > La propiedad [`RootPage`](xref:Xamarin.Forms.NavigationPage.RootPage) de una instancia de [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) permite acceder a la primera página de la pila de navegación.
@@ -81,7 +81,7 @@ async void OnNextPageButtonClicked (object sender, EventArgs e)
 
 Esto hace que la instancia de `Page2Xaml` se inserte en la pila de navegación, donde se convertirá en la página activa. Esto se muestra en las capturas de pantalla siguientes:
 
-![](hierarchical-images/secondpage.png "Page Pushed onto Navigation Stack")
+![Página insertada en la pila de navegación](hierarchical-images/secondpage.png)
 
 Al invocar el método [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*), ocurre lo siguiente:
 
@@ -181,7 +181,7 @@ public MainPage (string date)
 
 A continuación, se establece la propiedad [`Label.Text`](xref:Xamarin.Forms.Label.Text) para que los datos se muestren en la página, como se muestra en las capturas de pantalla siguientes:
 
-![](hierarchical-images/passing-data-constructor.png "Data Passed Through a Page Constructor")
+![Datos pasados a través de un constructor de página](hierarchical-images/passing-data-constructor.png)
 
 ### <a name="passing-data-through-a-bindingcontext"></a>Pasar datos a través de un objeto BindingContext
 
@@ -267,7 +267,7 @@ public class SecondPageCS : ContentPage
 
 A continuación, una serie de controles [`Label`](xref:Xamarin.Forms.Label) muestran los datos en la página, como se muestra en las capturas de pantalla siguientes:
 
-![](hierarchical-images/passing-data-bindingcontext.png "Data Passed Through a BindingContext")
+![Datos pasados a través de un objeto BindingContext](hierarchical-images/passing-data-bindingcontext.png)
 
 Para más información sobre el enlace de datos, consulte [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) (Aspectos básicos del enlace de datos).
 
@@ -277,11 +277,11 @@ La propiedad [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) expo
 
 El método [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) inserta una página especificada en la pila de navegación antes de una página existente especificada, como se muestra en el diagrama siguiente:
 
-![](hierarchical-images/insert-page-before.png "Inserting a Page in the Navigation Stack")
+![Inserción de una página en la pila de navegación](hierarchical-images/insert-page-before.png)
 
 El método [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) quita la página especificada de la pila de navegación, como se muestra en el diagrama siguiente:
 
-![](hierarchical-images/remove-page.png "Removing a Page from the Navigation Stack")
+![Quitar una página de la pila de navegación](hierarchical-images/remove-page.png)
 
 Estos métodos permiten una experiencia de navegación personalizada, como sustituir una página de inicio de sesión por una página nueva, después de iniciar sesión correctamente. El ejemplo de código siguiente muestra esta situación:
 

@@ -10,16 +10,16 @@ ms.date: 04/02/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1f7a0d04d1e7b6abc9931c05c0e46ef49f8ba09c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: aa600974cdf25f8f85d9152edc4a377334cc8c78
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138468"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936557"
 ---
 # <a name="consume-an-aspnet-web-service-asmx"></a>Consumo de un servicio web ASP.NET (ASMX)
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
 
 _ASMX proporciona la capacidad de compilar servicios web que envían mensajes mediante el Protocolo simple de acceso a objetos (SOAP). SOAP es un protocolo independiente de la plataforma e independiente del lenguaje para crear y obtener acceso a servicios Web. No es necesario que los consumidores de un servicio ASMX sepan nada sobre la plataforma, el modelo de objetos o el lenguaje de programación usado para implementar el servicio. Solo necesitan saber cómo enviar y recibir mensajes SOAP. En este artículo se muestra cómo consumir un servicio SOAP de ASMX desde una Xamarin.Forms aplicación._
 
@@ -34,7 +34,7 @@ SOAP puede operar a través de varios protocolos de transporte, incluidos HTTP, 
 
 En este ejemplo se incluyen las aplicaciones móviles que se ejecutan en dispositivos físicos o emulados, y un servicio de ASMX que proporciona métodos para obtener, agregar, editar y eliminar datos. Cuando se ejecutan las aplicaciones móviles, se conectan al servicio ASMX hospedado localmente, tal como se muestra en la siguiente captura de pantalla:
 
-![](asmx-images/portal.png "Sample Application")
+![Aplicación de ejemplo](asmx-images/portal.png)
 
 > [!NOTE]
 > En iOS 9 y versiones posteriores, la seguridad de transporte de aplicaciones (ATS) exige conexiones seguras entre recursos de Internet (como el servidor back-end de la aplicación) y la aplicación, lo que evita la divulgación accidental de información confidencial. Dado que ATS está habilitado de forma predeterminada en las aplicaciones compiladas para iOS 9, todas las conexiones estarán sujetas a los requisitos de seguridad de ATS. Si las conexiones no cumplen estos requisitos, se producirá un error con una excepción.
@@ -118,7 +118,7 @@ static TodoItem FromASMXServiceTodoItem (ASMXService.TodoItem item)
 
 Este método recupera los datos del tipo generado por el proxy `TodoItem` y lo establece en la instancia que se acaba de crear `TodoItem` .
 
-### <a name="retrieve-data"></a>Recuperar datos
+### <a name="retrieve-data"></a>Recuperación de datos
 
 La `ISoapService` interfaz espera que el `RefreshDataAsync` método devuelva un `Task` con la colección de elementos. Sin embargo, el `TodoService.GetTodoItemsAsync` método devuelve void. Para satisfacer el patrón de interfaz, debe llamar a `GetTodoItemsAsync` , esperar a `GetTodoItemsCompleted` que se desencadene el evento y rellenar la colección. Esto le permite devolver una colección válida a la interfaz de usuario.
 

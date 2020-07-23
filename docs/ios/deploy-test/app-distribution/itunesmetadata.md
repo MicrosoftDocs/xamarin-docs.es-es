@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 65a89afb3f301fd88ac4819bb8c3658a2be5e29d
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 76f5a10720505796e30079d6be3506bc66636f7e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573201"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938130"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>Archivo iTunesMetadata.plist en aplicaciones Xamarin.iOS
 
@@ -300,26 +300,26 @@ Haga lo siguiente:
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el archivo de proyecto de Xamarin.iOS y seleccione **Agregar** > **Nuevo archivo…** .
 2. En el cuadro de diálogo Nuevo archivo, seleccione **iOS** > **Lista de propiedades**:
 
-    ![](itunesmetadata-images/image01.png "Select iOS Property List")
+    ![Selección de la lista de propiedades de iOS](itunesmetadata-images/image01.png)
 3. Escriba `iTunesMetadata` para el **Nombre** y haga clic en el botón **Nuevo**.
 4. Haga doble clic en el archivo `iTunesMetadata.plist` en el **Explorador de soluciones** para abrirlo para su edición:
 
-    ![](itunesmetadata-images/image02.png "The iTunesMetadata.plist editor")
+    ![Editor de iTunesMetadata.plist](itunesmetadata-images/image02.png)
 5. Haga clic en el **+** verde para crear una nueva entrada y escriba `UIRequiredDeviceCapabilities` como nombre de clave:
 
-    ![](itunesmetadata-images/image03.png "Create a new entry and enter UIRequiredDeviceCapabilities as the key name")
+    ![Cree una entrada y escriba UIRequiredDeviceCapabilities como el nombre de clave](itunesmetadata-images/image03.png)
 6. Haga clic en el tipo de valor **Cadena** y seleccione **Diccionario** en la lista emergente:
 
-    ![](itunesmetadata-images/image04.png "Select Dictionary from the popup list")
+    ![Seleccione el diccionario en la lista emergente](itunesmetadata-images/image04.png)
 7. Haga clic en el control situado a la izquierda del nombre de la propiedad para mostrar las entradas del diccionario:
 
-    ![](itunesmetadata-images/image05.png "Reveal the dictionary entries")
+    ![Muestre las entradas del diccionario](itunesmetadata-images/image05.png)
 8. Haga clic en el texto **Agregar nueva entrada** y luego haga clic en el **+** verde para agregar una entrada al diccionario:
 
-    ![](itunesmetadata-images/image06.png "Add an entry to the dictionary")
+    ![Agregue una entrada al diccionario](itunesmetadata-images/image06.png)
 9. Escriba `armv7` para el nombre de clave, seleccione un tipo de **booleano** y escriba **Sí** como valor:
 
-    ![](itunesmetadata-images/image07.png "Enter armv7 for the key name, select a type of Boolean and enter Yes as the value")
+    ![Escriba armv7 para el nombre de clave, seleccione un tipo de booleano y escriba Sí como valor](itunesmetadata-images/image07.png)
 10. Repita los pasos anteriores hasta que haya rellenado el archivo `iTunesMetadata.plist` con todos los pares clave-valor necesarios (vea la sección anterior [Contenido de iTunesMetadata.plist](#iTunesMetadata_contents) para obtener más información).
 
 11. Guarde los cambios en el archivo plist.

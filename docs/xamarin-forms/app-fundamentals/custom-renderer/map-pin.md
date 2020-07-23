@@ -1,6 +1,6 @@
 ---
-title: 'title: "Personalización de un anclado de mapa" description: "En este artículo se explica cómo crear un representador personalizado para el control de mapa, que muestra un mapa nativo con una marca y una vista personalizadas de los datos de marca en cada plataforma."'
-description: 'ms.prod: xamarin ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/06/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Personalización de un anclado de mapa
+description: En este artículo se explica cómo crear un representador personalizado para el control de mapa, que muestra un mapa nativo con una marca personalizada y una vista personalizada de los datos de marca en cada plataforma.
 ms.prod: xamarin
 ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 06ff88f1d4f272d9b77737d2168418c007afe8bc
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 4a9dca7556e9e08915e7e8915a0c01cd1ce6f676
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573903"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935725"
 ---
 # <a name="customizing-a-map-pin"></a>Personalización de un anclado de mapa
 
@@ -27,7 +27,7 @@ Todas las vistas de Xamarin.Forms tienen un representador que las acompaña para
 
 El siguiente diagrama muestra la relación entre la clase [`Map`](xref:Xamarin.Forms.Maps.Map) y los controles nativos correspondientes que la implementan:
 
-![](map-pin-images/map-classes.png "Relationship Between the Map Control and the Implementing Native Controls")
+![Relación entre el control de mapa y los controles nativos de implementación](map-pin-images/map-classes.png)
 
 El proceso de representación puede usarse para implementar personalizaciones específicas de plataforma al crear un representador personalizado para una clase [`Map`](xref:Xamarin.Forms.Maps.Map) en cada plataforma. Para hacerlo, siga este procedimiento:
 
@@ -135,13 +135,13 @@ El proceso de creación de la clase de representador personalizada es el siguien
 
 El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
-![](map-pin-images/solution-structure.png "CustomMap Custom Renderer Project Responsibilities")
+![Responsabilidades del proyecto de representador personalizado CustomMap](map-pin-images/solution-structure.png)
 
 Las clases del representador específico de la plataforma, que se derivan de la clase `MapRenderer` para cada plataforma, representan el control `CustomMap`. Esto da como resultado que cada control `CustomMap` se represente con controles específicos de la plataforma, como se muestra en las siguientes capturas de pantalla:
 
-![](map-pin-images/screenshots.png "CustomMap on each Platform")
+![CustomMap en cada plataforma](map-pin-images/screenshots.png)
 
-La clase `MapRenderer` expone el método `OnElementChanged`, al que se llama cuando se crea el mapa personalizado de Xamarin.Forms para representar el control nativo correspondiente. Este método toma un parámetro `ElementChangedEventArgs` que contiene propiedades `OldElement` y `NewElement`. Estas propiedades representan el elemento de Xamarin.Forms al que *estaba* asociado el representador y el elemento de Xamarin.Forms al que *está* asociado el representador, respectivamente. En la aplicación de ejemplo, la propiedad `OldElement` es `null` y la propiedad `NewElement` contiene una referencia a la instancia de `CustomMap`.
+La clase `MapRenderer` expone el método `OnElementChanged`, al que se llama cuando se crea el mapa personalizado de Xamarin.Forms para representar el control nativo correspondiente. Este método toma un parámetro `ElementChangedEventArgs` que contiene propiedades `OldElement` y `NewElement`. Estas propiedades representan al elemento de Xamarin.Forms al que *estaba* asociado el representador y al elemento de Xamarin.Forms al que *está* asociado el representador, respectivamente. En la aplicación de ejemplo, la propiedad `OldElement` es `null` y la propiedad `NewElement` contiene una referencia a la instancia de `CustomMap`.
 
 El lugar para realizar la personalización de controles nativos es una versión reemplazada del método `OnElementChanged` en cada clase de representador específica de la plataforma. Una referencia con tipo para el control nativo que se usa en la plataforma puede obtenerse a través de la propiedad `Control`. Además, mediante la propiedad Xamarin.Forms se puede obtener una referencia al control de `Element` que se representa.
 
@@ -174,7 +174,7 @@ En las secciones siguientes se describe la implementación de cada clase de repr
 
 Las siguientes capturas de pantalla muestran el mapa antes y después de la personalización:
 
-![](map-pin-images/map-layout-ios.png "Map Control Before and After Customization")
+![Control de mapa antes y después de la personalización](map-pin-images/map-layout-ios.png)
 
 En iOS la marca se denomina *anotación* y puede ser una imagen personalizada o una marca definida por el sistema de varios colores. Opcionalmente las anotaciones pueden mostrar una *llamada*, que se muestra en respuesta a que el usuario seleccione la anotación. La llamada muestra las propiedades `Label` y `Address` de la instancia `Pin`, con vistas adicionales a la derecha y a la izquierda. En la captura de pantalla anterior, la vista adicional izquierda es la imagen de un mono y la vista adicional derecha es el botón *Información*.
 
@@ -347,7 +347,7 @@ Para obtener más información sobre cómo personalizar una instancia de `MKMapV
 
 Las siguientes capturas de pantalla muestran el mapa antes y después de la personalización:
 
-![](map-pin-images/map-layout-android.png "Map Control Before and After Customization")
+![Control de mapa antes y después de la personalización](map-pin-images/map-layout-android.png)
 
 En Android la marca se denomina *marcador* y puede ser una imagen personalizada o un marcador definido por el sistema de varios colores. Los marcadores pueden mostrar una *ventana de información*, que se muestra en la respuesta para el usuario que pulsa en el marcador. Muestra la ventana de información de las propiedades `Label` y `Address` de la instancia `Pin` y se pueden personalizar para incluir otro tipo de contenido. Con todo, solo una ventana de información puede mostrarse al mismo tiempo.
 
@@ -510,7 +510,7 @@ Para obtener más información sobre cómo personalizar una instancia de `MapVie
 
 Las siguientes capturas de pantalla muestran el mapa antes y después de la personalización:
 
-![](map-pin-images/map-layout-uwp.png "Map Control Before and After Customization")
+![Control de mapa antes y después de la personalización](map-pin-images/map-layout-uwp.png)
 
 En la UWP la marca se denomina *icono de mapa* y puede ser una imagen personalizada o la imagen predeterminada definida por el sistema. Un icono de mapa puede mostrar un `UserControl`, que se muestra en la respuesta para el usuario que pulsa en el icono de mapa. El `UserControl` puede mostrar cualquier contenido, incluyendo las propiedades `Label` y `Address` de la instancia `Pin`.
 

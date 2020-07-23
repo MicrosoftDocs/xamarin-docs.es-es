@@ -10,22 +10,22 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6ceac2d866e67af5cf3496fcf8c072ae83ecfe38
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a7a4e8c4467438d1f732508a15bee7045310109b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140249"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931227"
 ---
 # <a name="path-basics-in-skiasharp"></a>Conceptos básicos de la ruta de acceso en SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explore el objeto SKPath de SkiaSharp para combinar líneas y curvas conectadas_
 
 Una de las características más importantes de la ruta de acceso de gráficos es la capacidad de definir cuándo deben conectarse varias líneas y cuándo no deben estar conectadas. La diferencia puede ser significativa, ya que la parte superior de estos dos triángulos muestra:
 
-![](paths-images/connectedlinesexample.png "Two triangles showing the difference between connected and disconnected lines")
+![Dos triángulos que muestran la diferencia entre las líneas conectadas y desconectadas](paths-images/connectedlinesexample.png)
 
 El objeto encapsula una ruta de acceso de gráficos [`SKPath`](xref:SkiaSharp.SKPath) . Una ruta de acceso es una colección de uno o varios *contornos*. Cada contorno es una colección de líneas rectas y curvas *conectadas* . Los contornos no están conectados entre sí, pero pueden superponerse visualmente. A veces, un solo contorno puede superponerse.
 
@@ -104,7 +104,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El primer contorno consta de una llamada al uso de las [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo(System.Single,System.Single)) coordenadas X e y en lugar de un `SKPoint` valor, seguido de tres llamadas a [`LineTo`](xref:SkiaSharp.SKPath.LineTo(System.Single,System.Single)) para dibujar los tres lados del triángulo. El segundo contorno solo tiene dos llamadas a `LineTo` , pero finaliza el contorno con una llamada a [`Close`](xref:SkiaSharp.SKPath.Close) , que cierra el contorno. La diferencia es importante:
 
-[![](paths-images/twotrianglecontours-small.png "Triple screenshot of the Two Triangle Contours page")](paths-images/twotrianglecontours-large.png#lightbox "Triple screenshot of the Two Triangle Contours page")
+[![Captura de pantalla triple de la página de contornos de dos triángulos](paths-images/twotrianglecontours-small.png)](paths-images/twotrianglecontours-large.png#lightbox "Captura de pantalla triple de la página de contornos de dos triángulos")
 
 Como puede ver, el primer contorno es obviamente una serie de tres líneas conectadas, pero el extremo no se conecta con el principio. Las dos líneas se superponen en la parte superior. Obviamente, el segundo contorno está cerrado y se ha realizado con una menor cantidad de `LineTo` llamadas porque el `Close` método agrega automáticamente una línea final para cerrar el contorno.
 
@@ -194,7 +194,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Esta es la ejecución del programa:
 
-[![](paths-images/strokejoins-small.png "Triple screenshot of the Stroke Joins page")](paths-images/strokejoins-large.png#lightbox "Triple screenshot of the Stroke Joins page")
+[![Captura de pantalla triple de la página de combinaciones de trazo](paths-images/strokejoins-small.png)](paths-images/strokejoins-large.png#lightbox "Captura de pantalla triple de la página de combinaciones de trazo")
 
 La unión angular se compone de un punto nítido en el que se conectan las líneas. Cuando dos líneas se unen en un ángulo pequeño, la unión angular puede llegar a ser bastante larga. Para evitar combinaciones en ángulo excesivamente largas, la longitud de la unión angular está limitada por el valor de la [`StrokeMiter`](xref:SkiaSharp.SKPaint.StrokeMiter) propiedad de `SKPaint` . Una unión angular que supera esta longitud se corta y se convierte en una unión biselada.
 

@@ -10,16 +10,16 @@ ms.date: 12/05/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 33675fbb644c5967726fee29b3e235247aec633a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 29e73f4051eda9117663992af9e710483e4b772b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84565362"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934100"
 ---
 # <a name="search-data-with-azure-search-and-xamarinforms"></a>Buscar datos con Azure Search yXamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 
 _Azure Search es un servicio en la nube que proporciona capacidades de indexación y consulta para los datos cargados. Esto elimina los requisitos de infraestructura y las complejidades del algoritmo de búsqueda tradicionalmente asociadas a la implementación de la funcionalidad de búsqueda en una aplicación. En este artículo se muestra cómo usar la biblioteca de búsqueda de Microsoft Azure para integrar Azure Search en una Xamarin.Forms aplicación._
 
@@ -44,7 +44,7 @@ Azure Search también admite la recuperación de sugerencias basadas en la entra
 > [!NOTE]
 > Si no tiene una [suscripción a Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), cree una [cuenta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de empezar.
 
-## <a name="setup"></a>Configurar
+## <a name="setup"></a>Instalación
 
 El proceso para integrar Azure Search en una Xamarin.Forms aplicación es el siguiente:
 
@@ -222,7 +222,7 @@ Esta consulta de filtro se aplica a todo el índice y quita los documentos de lo
 
 El `SearchAsync` método devuelve un `DocumentSearchResult` objeto que contiene los resultados de la consulta. Este objeto se enumera, con cada `Document` objeto que se crea como un `Monkey` objeto y se agrega a `Monkeys` `ObservableCollection` para su presentación. Las capturas de pantallas siguientes muestran los resultados de las consultas de búsqueda devueltos desde Azure Search:
 
-![](azure-search-images/search.png "Search Results")
+![Resultados de la búsqueda](azure-search-images/search.png)
 
 Para obtener más información sobre la búsqueda y el filtrado, consulte [consultar el índice de Azure Search mediante el SDK de .net](/azure/search/search-query-dotnet/).
 
@@ -272,7 +272,7 @@ El efecto general es que los 10 resultados principales del índice se devolverá
 
 El `SuggestAsync` método devuelve un `DocumentSuggestResult` objeto que contiene los resultados de la consulta. Este objeto se enumera, con cada `Document` objeto que se crea como un `Monkey` objeto y se agrega a `Monkeys` `ObservableCollection` para su presentación. Las capturas de pantallas siguientes muestran los resultados de sugerencias devueltos por Azure Search:
 
-![](azure-search-images/suggest.png "Suggestion Results")
+![Resultados de la sugerencia](azure-search-images/suggest.png)
 
 Tenga en cuenta que en la aplicación de ejemplo, el `SuggestAsync` método solo se invoca cuando el usuario finaliza la entrada de un término de búsqueda. Sin embargo, también se puede usar para admitir consultas de búsqueda Autocompletar mediante la ejecución de en cada KeyPress.
 

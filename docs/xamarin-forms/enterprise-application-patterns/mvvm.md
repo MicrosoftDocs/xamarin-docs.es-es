@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c07fc9f42c4175b4e4569ab95a951b24c130c4f3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cc0528e7696130a772e93be67526ea9d6b10373f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572057"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936531"
 ---
 # <a name="the-model-view-viewmodel-pattern"></a>Patrón Model-View-ViewModel
 
@@ -27,7 +27,7 @@ El patrón Model-View-ViewModel (MVVM) ayuda a separar sin problemas la lógica 
 
 Hay tres componentes principales en el patrón MVVM: el modelo, la vista y el modelo de vista. Cada una de ellas sirve para un propósito distinto. En la figura 2-1 se muestran las relaciones entre los tres componentes.
 
-![](mvvm-images/mvvm.png "The MVVM pattern")
+![Patrón MVVM](mvvm-images/mvvm.png)
 
 **Figura 2-1**: patrón MVVM
 

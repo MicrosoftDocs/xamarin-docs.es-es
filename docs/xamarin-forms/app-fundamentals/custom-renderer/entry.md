@@ -10,12 +10,12 @@ ms.date: 11/26/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d28a9079d27310dde0e5ea5bf80c83895bbcf1d4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d5a5dc7de2835038079a1bdf8af5be44a173f86e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84571576"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939833"
 ---
 # <a name="customizing-an-entry"></a>Personalización de una entrada
 
@@ -27,7 +27,7 @@ Todos los controles de Xamarin.Forms tienen un representador que las acompaña p
 
 El siguiente diagrama muestra la relación entre el control [`Entry`](xref:Xamarin.Forms.Entry) y los controles nativos correspondientes que lo implementan:
 
-![](entry-images/entry-classes.png "Relationship Between Entry Control and Implementing Native Controls")
+![Relación entre el control Entry y los controles nativos de implementación](entry-images/entry-classes.png)
 
 El proceso de representación puede aprovecharse para implementar las personalizaciones específicas de la plataforma creando un representador personalizado para el control [`Entry`](xref:Xamarin.Forms.Entry) en cada plataforma. Para hacerlo, siga este procedimiento:
 
@@ -108,11 +108,11 @@ El proceso para crear la clase del representador personalizado es el siguiente:
 
 El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
-![](entry-images/solution-structure.png "MyEntry Custom Renderer Project Responsibilities")
+![Responsabilidades del proyecto de representador personalizado MyEntry](entry-images/solution-structure.png)
 
 Las clases `MyEntryRenderer` del representador específico de la plataforma, que se derivan de la clase `EntryRenderer` para cada plataforma, representan el control `MyEntry`. Esto da como resultado que cada control `MyEntry` se represente con un color de fondo específico de la plataforma, como se muestra en las siguientes capturas de pantalla:
 
-![](entry-images/screenshots.png "MyEntry Control on each Platform")
+![Control MyEntry en cada plataforma](entry-images/screenshots.png)
 
 La clase `EntryRenderer` expone el método `OnElementChanged`, al que se llama cuando se crea el control de Xamarin.Forms para representar el control nativo correspondiente. Este método toma un parámetro `ElementChangedEventArgs` que contiene propiedades `OldElement` y `NewElement`. Estas propiedades representan al elemento de Xamarin.Forms al que *estaba* asociado el representador y al elemento de Xamarin.Forms al que *está* asociado el representador, respectivamente. En la aplicación de ejemplo, la propiedad `OldElement` es `null` y la propiedad `NewElement` contiene una referencia al control de `MyEntry`.
 

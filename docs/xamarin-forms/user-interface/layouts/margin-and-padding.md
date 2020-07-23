@@ -10,12 +10,12 @@ ms.date: 04/27/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6ae4116be99f076a7afd5ed9c2823bc12f445e18
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b8ba915f3bc701b6a100d206dc791f9572fa594b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137999"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936622"
 ---
 # <a name="margin-and-padding"></a>Margen y relleno
 
@@ -30,7 +30,7 @@ Margin y padding son conceptos de diseño relacionados:
 
 En el siguiente diagrama se ilustran los dos conceptos:
 
-[![](margin-and-padding-images/margins-and-padding-sml.png "Margins and Padding Concepts")](margin-and-padding-images/margins-and-padding.png#lightbox "Margins and Padding Concepts")
+[![Conceptos de márgenes y relleno](margin-and-padding-images/margins-and-padding-sml.png)](margin-and-padding-images/margins-and-padding.png#lightbox "Conceptos de márgenes y relleno")
 
 Tenga en cuenta que [`Margin`](xref:Xamarin.Forms.View.Margin) los valores son aditivos. Por consiguiente, si dos elementos adyacentes especifican un margen de 20 píxeles, la distancia entre los elementos será de 40 píxeles. Además, los márgenes y el relleno son aditivos cuando se aplican ambos, en que la distancia entre un elemento y cualquier contenido será el margen más el relleno.
 
@@ -75,5 +75,5 @@ En este artículo se ha mostrado la diferencia entre las [`Margin`](xref:Xamarin
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Márgen](xref:Xamarin.Forms.View.Margin)
-- [Espaciado interno](xref:Xamarin.Forms.Layout.Padding)
+- [Relleno](xref:Xamarin.Forms.Layout.Padding)
 - [Thickness](xref:Xamarin.Forms.Thickness)

@@ -10,16 +10,16 @@ ms.date: 05/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8d7ae5eb16b8a94f16b6eca013b4ec7a93f427bd
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 972a5ac99ff775ea7301f803c333d8239ae7f193
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198130"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938195"
 ---
 # <a name="consume-a-restful-web-service"></a>Consumo de un servicio web RESTful
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
 _La integración de un servicio Web en una aplicación es un escenario común. En este artículo se muestra cómo consumir un servicio web RESTful desde una Xamarin.Forms aplicación._
 
@@ -43,7 +43,7 @@ La simplicidad de REST ha ayudado a convertirlo en el método principal para ten
 
 Cuando se ejecute la aplicación de ejemplo, se conectará a un servicio REST hospedado localmente, como se muestra en la siguiente captura de pantalla:
 
-![](rest-images/portal.png "Sample Application")
+![Aplicación de ejemplo](rest-images/portal.png)
 
 > [!NOTE]
 > En iOS 9 y versiones posteriores, la seguridad de transporte de aplicaciones (ATS) exige conexiones seguras entre recursos de Internet (como el servidor back-end de la aplicación) y la aplicación, lo que evita la divulgación accidental de información confidencial. Dado que ATS está habilitado de forma predeterminada en las aplicaciones compiladas para iOS 9, todas las conexiones estarán sujetas a los requisitos de seguridad de ATS. Si las conexiones no cumplen estos requisitos, se producirá un error con una excepción.
@@ -59,7 +59,7 @@ El servicio REST se escribe utilizando ASP.NET Core y proporciona las operacione
 |Obtención de una lista de tareas pendientes|GET|/api/todoitems/|
 |Crear un nuevo elemento de tareas pendientes|POST|/api/todoitems/|Un TodoItem con formato JSON|
 |Actualizar una tarea pendiente|PUT|/api/todoitems/|Un TodoItem con formato JSON|
-|Eliminar una tarea pendiente|Delete|/api/todoitems/{id}|
+|Eliminar una tarea pendiente|DELETE|/api/todoitems/{id}|
 
 La mayoría de los URI incluyen el `TodoItem` identificador de la ruta de acceso. Por ejemplo, para eliminar el `TodoItem` cuyo identificador es `6bb8a868-dba1-4f1a-93b7-24ebce87e243` , el cliente envía una solicitud DELETE a `http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243` . Para obtener más información sobre el modelo de datos utilizado en la aplicación de ejemplo, vea [modelar los datos](~/xamarin-forms/data-cloud/web-services/introduction.md).
 

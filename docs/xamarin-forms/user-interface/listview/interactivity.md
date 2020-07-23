@@ -10,16 +10,16 @@ ms.date: 09/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5142965216b328172ae7fa04cdc0c13590f5ff38
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 287b116d9ba2cb84e4e196fff080b8212e4eca3b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139893"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938416"
 ---
 # <a name="listview-interactivity"></a>Interactividad de ListView
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
 
 La Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) clase admite la interacción del usuario con los datos que presenta.
 
@@ -48,7 +48,7 @@ Cuando se ha seleccionado un elemento y [`SelectionMode`](xref:Xamarin.Forms.Lis
 
 Las capturas de pantallas siguientes muestran un [`ListView`](xref:Xamarin.Forms.ListView) con el modo de selección predeterminado:
 
-![](interactivity-images/selection-default.png "ListView with Selection Enabled")
+![ListView con la selección habilitada](interactivity-images/selection-default.png)
 
 ### <a name="disable-selection"></a>Deshabilitar selección
 
@@ -66,7 +66,7 @@ var listView = new ListView { ... SelectionMode = ListViewSelectionMode.None };
 
 A menudo, los usuarios quieren tomar medidas en un elemento de un `ListView` . Por ejemplo, considere una lista de correos electrónicos en la aplicación de correo. En iOS, puede deslizar rápidamente para eliminar un mensaje:
 
-![](interactivity-images/context-default.png "ListView with Context Actions")
+![ListView con acciones de contexto](interactivity-images/context-default.png)
 
 Las acciones de contexto se pueden implementar en C# y XAML. A continuación encontrará guías específicas para ambos, pero primero echemos un vistazo a algunos detalles de implementación clave para ambos.
 
@@ -181,11 +181,11 @@ listView.RefreshControlColor = Color.Red;
 
 Las siguientes capturas de pantallas muestran la incorporación de cambios a la actualización cuando el usuario extrae:
 
-![](interactivity-images/refresh-start.png "ListView Pull to Refresh In-Progress")
+![Incorporación de cambios de ListView a la actualización en curso](interactivity-images/refresh-start.png)
 
 Las siguientes capturas de pantallas muestran la extracción a la actualización después de que el usuario haya lanzado la extracción, con el control de número que se muestra mientras [`ListView`](xref:Xamarin.Forms.ListView) se está actualizando:
 
-![](interactivity-images/refresh-in-progress.png "ListView Pull to Refresh Complete")
+![Incorporación de cambios de ListView a actualización completada](interactivity-images/refresh-in-progress.png)
 
 [`ListView`](xref:Xamarin.Forms.ListView)activa el [`Refreshing`](xref:Xamarin.Forms.ListView.Refreshing) evento para iniciar la actualización y la [`IsRefreshing`](xref:Xamarin.Forms.ListView.IsRefreshing) propiedad se establecerá en `true` . El código necesario para actualizar el contenido del `ListView` debería ejecutarse a continuación por el controlador de eventos para el `Refreshing` evento, o por el método ejecutado por [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand) . Una vez que `ListView` se actualiza, la `IsRefreshing` propiedad debe establecerse en `false` , o [`EndRefresh`](xref:Xamarin.Forms.ListView.EndRefresh) se debe llamar al método para indicar que la actualización se ha completado.
 

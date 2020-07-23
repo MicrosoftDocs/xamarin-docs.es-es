@@ -10,22 +10,22 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1e4c170f818dc62640b1cd72ec3b70f48d227d93
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 440a078857a940f57f5700a18f91fc8b25bdfae8
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137743"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937207"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>Conceptos básicos de mapas de bits en SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Cargar mapas de bits de varios orígenes y mostrarlos._
 
 La compatibilidad de los mapas de bits en SkiaSharp es bastante extensa. En este artículo solo se tratan los aspectos básicos de &mdash; Cómo cargar mapas de bits y cómo mostrarlos:
 
-![](bitmaps-images/basicbitmaps-small.png "The display of two bitmaps")
+![La presentación de dos mapas de bits](bitmaps-images/basicbitmaps-small.png)
 
 En la sección [mapas de bits de SkiaSharp](../bitmaps/index.md)se puede encontrar una exploración mucho más profunda de los mapas de bits.
 
@@ -208,7 +208,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El mapa de bits se ajusta a las dimensiones del rectángulo, por lo que el Monkey se ajusta horizontalmente en estas capturas de pantallas:
 
-[![](bitmaps-images/basicbitmaps-small.png "A triple screenshot of the Basic Bitmaps page")](bitmaps-images/basicbitmaps-large.png#lightbox "A triple screenshot of the Basic Bitmaps page")
+[![Captura de pantalla triple de la página de mapas de bits básicos](bitmaps-images/basicbitmaps-small.png)](bitmaps-images/basicbitmaps-large.png#lightbox "Captura de pantalla triple de la página de mapas de bits básicos")
 
 La tercera imagen &mdash; que solo puede ver si ejecuta el programa y carga una foto desde su propia biblioteca de imágenes &mdash; también se muestra dentro de un rectángulo, pero el tamaño y la posición del rectángulo se ajustan para mantener la relación de aspecto del mapa de bits. Este cálculo es un poco más complicado porque requiere calcular un factor de escala basado en el tamaño del mapa de bits y el rectángulo de destino, y centrar el rectángulo en esa área:
 

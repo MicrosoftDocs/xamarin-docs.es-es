@@ -10,16 +10,16 @@ ms.date: 04/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2abc255964df35fbdfeb4191911c57df9be99fd9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 20bf6d3d8c802c1d4919cd16885d3939cb0102aa
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128016"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930629"
 ---
 # <a name="modal-page-presentation-style-on-ios"></a>Estilo de presentación de página modal en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esta plataforma específica de iOS se usa para establecer el estilo de presentación de una página modal y, además, se puede usar para mostrar páginas modales con fondos transparentes. Se consume en XAML estableciendo la `Page.ModalPresentationStyle` propiedad Bindable en un `UIModalPresentationStyle` valor de enumeración:
 
@@ -60,7 +60,7 @@ Además, `GetModalPresentationStyle` se puede usar el método para recuperar el 
 
 El resultado es que se puede establecer el estilo de Presentación modal en un [`Page`](xref:Xamarin.Forms.Page) :
 
-[![](page-presentation-style-images/modal-presentation-style-small.png "Modal Presentation Styles")](page-presentation-style-images/modal-presentation-style-large.png#lightbox "Modal Presentation Styles")
+[![Estilos de presentación modales](page-presentation-style-images/modal-presentation-style-small.png)](page-presentation-style-images/modal-presentation-style-large.png#lightbox "Estilos de presentación modales")
 
 > [!NOTE]
 > Las páginas que usan este tipo específico de la plataforma para establecer el estilo de Presentación modal deben usar la navegación modal. Para obtener más información, vea [ Xamarin.Forms páginas modales](~/xamarin-forms/app-fundamentals/navigation/modal.md).

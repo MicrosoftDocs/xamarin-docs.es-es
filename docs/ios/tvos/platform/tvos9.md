@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: 99565d7e61e8e8c1d28b67a6a6d25979c79fa387
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 2a883c85eede7f7600e5716dded71f3c90f49026
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84566167"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939755"
 ---
 # <a name="introduction-to-tvos-9"></a>Introducción a tvOS 9
 
@@ -35,7 +35,7 @@ las aplicaciones tvOS que se ejecutan en Apple TV tienen las siguientes funciona
 - Grupos de aplicaciones
 - Modos en segundo plano
 - Protección de datos
-- Centro de juegos
+- Game Center
 - Dispositivos de juego
 - iCloud
 - Compras desde la aplicación
@@ -90,7 +90,7 @@ Siri Remote está disponible actualmente en los siguientes países:
 
 Todos los demás países recibirán el control remoto de Apple TV, que reemplaza el botón de Siri por un botón de búsqueda que muestra la pantalla de búsqueda predeterminada con entrada de texto para realizar búsquedas:
 
-[![](tvos9-images/remote02.png "Siri Remote")](tvos9-images/remote02.png#lightbox)
+[![Siri remoto](tvos9-images/remote02.png)](tvos9-images/remote02.png#lightbox)
 
 Para obtener más información, consulte la documentación de [Siri Remote and Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md) .
 
@@ -154,7 +154,7 @@ Para obtener más información, consulte la documentación sobre [Cómo trabajar
 
 La pantalla principal de Apple TV muestra todas las aplicaciones que están instaladas y proporciona una forma de acceder a las preferencias del usuario:
 
-[![](tvos9-images/home01.png "The Home Screen")](tvos9-images/home01.png#lightbox)
+[![La pantalla principal](tvos9-images/home01.png)](tvos9-images/home01.png#lightbox)
 
 El usuario navega por una cuadrícula de iconos de la aplicación mediante gestos táctiles en el Siri remoto con el foco para seleccionar una aplicación e iniciarla. El icono de la aplicación es la primera oportunidad de crear una gran impresión para el usuario potencial y debe comunicar el propósito de la aplicación de un vistazo.
 
@@ -168,7 +168,7 @@ Para obtener más información, consulte la documentación sobre [Cómo trabajar
 
 Si el usuario ha colocado la aplicación Xamarin. tvOS en la fila superior de la pantalla de inicio de Apple TV, se mostrará una imagen de estante superior grande cuando el usuario seleccione la aplicación. Esta imagen debe resaltar las características de la aplicación o proporcionar vínculos directos a su contenido.
 
-[![](tvos9-images/topshelf01.png "The Top Shelf")](tvos9-images/topshelf01.png#lightbox)
+[![Estante superior](tvos9-images/topshelf01.png)](tvos9-images/topshelf01.png#lightbox)
 
 La imagen de estante superior se puede proporcionar como un único archivo o estático, o bien se `.png` `.lsr` puede crear dinámicamente en tiempo de ejecución como una sola fila de elementos que pueden recibir el foco.
 

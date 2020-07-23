@@ -10,16 +10,16 @@ ms.date: 04/12/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e8d11add988828fa4e26d3f6728dd0b4319b3630
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 020319761ba1274495b7595a0d18435f98a5f990
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133307"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937181"
 ---
 # <a name="matrix-transforms-in-skiasharp"></a>Transformaciones de matriz en SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Profundice en las transformaciones de SkiaSharp con la matriz de transformación versátil_
 
@@ -27,7 +27,7 @@ Todas las transformaciones aplicadas al `SKCanvas` objeto se consolidan en una s
 
 Como ha visto, puede usar transformaciones en SkiaSharp sin conocer la matriz de transformación, pero la matriz de transformación es importante desde una perspectiva teórica, y es fundamental al usar transformaciones para modificar las rutas de acceso o para administrar la entrada táctil compleja, que se muestran en este artículo y en la siguiente.
 
-![](matrix-images/matrixtransformexample.png "A bitmap subjected to an affine transform")
+![Mapa de bits sometido a una transformación afín](matrix-images/matrixtransformexample.png)
 
 La matriz de transformación actual aplicada a `SKCanvas` está disponible en cualquier momento mediante el acceso a la propiedad de solo lectura [`TotalMatrix`](xref:SkiaSharp.SKCanvas.TotalMatrix) . Puede establecer una nueva matriz de transformación mediante el [`SetMatrix`](xref:SkiaSharp.SKCanvas.SetMatrix(SkiaSharp.SKMatrix)) método, y puede restaurar la matriz de transformación a los valores predeterminados llamando a [`ResetMatrix`](xref:SkiaSharp.SKCanvas.ResetMatrix) .
 
@@ -407,7 +407,7 @@ public class PathTransformPage : ContentPage
 
 Aparece en la esquina superior izquierda del lienzo:
 
-[![](matrix-images/pathtransform-small.png "Triple screenshot of the Path Transform page")](matrix-images/pathtransform-large.png#lightbox "Triple screenshot of the Path Transform page")
+[![Captura de pantalla triple de la página transformación de trazado](matrix-images/pathtransform-small.png)](matrix-images/pathtransform-large.png#lightbox "Captura de pantalla triple de la página transformación de trazado")
 
 El constructor de este programa aplica la matriz a la ruta de acceso con la siguiente llamada:
 
@@ -593,7 +593,7 @@ public partial class ShowAffineMatrixPage : ContentPage
 
 En la pantalla de iOS siguiente se muestra el mapa de bits cuando la página se carga por primera vez, mientras que las otras dos pantallas la muestran después de alguna manipulación:
 
-[![](matrix-images/showaffinematrix-small.png "Triple screenshot of the Show Affine Matrix page")](matrix-images/showaffinematrix-large.png#lightbox "Triple screenshot of the Show Affine Matrix page")
+[![Captura de pantalla triple de la página Mostrar matriz afín](matrix-images/showaffinematrix-small.png)](matrix-images/showaffinematrix-large.png#lightbox "Captura de pantalla triple de la página Mostrar matriz afín")
 
 Aunque parezca que los puntos táctiles arrastran las esquinas del mapa de bits, eso es solo una ilusión. La matriz calculada a partir de los puntos táctiles transforma el mapa de bits para que las esquinas coincidan con los puntos de toque.
 

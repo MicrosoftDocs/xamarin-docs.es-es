@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f6f61503f619c08ed3e4eae2adf6ddb2c474f99f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6def31ebfe2a619f1d5db1e0fba071494afbcd3e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84571485"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931968"
 ---
 # <a name="configuration-management"></a>Administración de la configuración
 
@@ -124,7 +124,7 @@ Cada vez que `BaseEndpoint` se establece la propiedad, `UpdateEndpoint` se llama
 
 En la aplicación móvil eShopOnContainers, `SettingsView` expone dos configuraciones de usuario. Esta configuración permite configurar si la aplicación debe recuperar datos de microservicios que se implementan como contenedores de Docker, o si la aplicación debe recuperar datos de servicios ficticios que no requieren una conexión a Internet. Al elegir recuperar datos de microservicios en contenedor, se debe especificar una dirección URL de punto de conexión base para los microservicios. En la figura 7-1 `SettingsView` se muestra el momento en que el usuario ha elegido recuperar datos de microservicios en contenedores.
 
-![](configuration-management-images/settings-endpoint.png "User settings exposed by the eShopOnContainers mobile app")
+![Configuración de usuario expuesta por la aplicación móvil eShopOnContainers](configuration-management-images/settings-endpoint.png)
 
 **Figura 7-1**: configuración de usuario expuesta por la aplicación móvil eShopOnContainers
 

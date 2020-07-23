@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 263c48c5006ba0060756e1050497c38dfb7c8eae
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 7769e3d02acc9f1522c6028f88f37c1f522866af
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84567780"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936765"
 ---
 # <a name="linking-xamarinios-apps"></a>Vincular aplicaciones Xamarin.iOS
 
@@ -30,7 +30,7 @@ Como el enlazador es una herramienta estática, no puede marcar los tipos de inc
 
 Se puede personalizar el proceso de vinculación mediante la lista desplegable del comportamiento del enlazador en **Opciones del proyecto**. Para acceder a este menú, haga doble clic en el proyecto de iOS y vaya a **Compilación de iOS > Opciones del enlazador**, como se ilustra a continuación:
 
-[![](linker-images/image1.png "Linker Options")](linker-images/image1.png#lightbox)
+[![Opciones del enlazador](linker-images/image1.png)](linker-images/image1.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -40,10 +40,10 @@ Haga lo siguiente:
 
 1. Haga clic con el botón derecho en el **nombre del proyecto** en el **Explorador de soluciones** y seleccione **Propiedades**:
 
-    ![](linker-images/linking01w.png "Right-click on the Project Name in the Solution Explorer and select Properties")
+    ![Haga clic con el botón derecho en el nombre del proyecto en el Explorador de soluciones y seleccione Propiedades](linker-images/linking01w.png)
 2. En **Propiedades del proyecto**, seleccione **Compilación de iOS**:
 
-    ![](linker-images/linking02w.png "Select IOS Build")
+    ![Seleccione Compilación de iOS](linker-images/linking02w.png)
 3. Siga las instrucciones siguientes para cambiar las opciones de vinculación.
 
 -----

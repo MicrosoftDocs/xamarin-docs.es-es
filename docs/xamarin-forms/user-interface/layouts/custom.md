@@ -10,18 +10,18 @@ ms.date: 03/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2c1a958bd4cb56096f554acf26756019eeb0693c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b3063a644a48a8796b03b1a6acedbbcbfc7acbf7
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572239"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934269"
 ---
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Crear un diseño personalizado enXamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
-_Xamarin. Forms define cinco clases de diseño: StackLayout, AbsoluteLayout, RelativeLayout, Grid y FlexLayout, y cada una de ellas organiza sus elementos secundarios de manera diferente. Sin embargo, a veces es necesario organizar el contenido de la página mediante un diseño no proporcionado por Xamarin.Forms . En este artículo se explica cómo escribir una clase de diseño personalizada y se muestra una clase WrapLayout con distinción de orientación que organiza sus elementos secundarios horizontalmente por la página y, a continuación, ajusta la presentación de los elementos secundarios posteriores a filas adicionales._
+_Xamarin.Formsdefine cinco clases de diseño: StackLayout, AbsoluteLayout, RelativeLayout, Grid y FlexLayout, y cada una de ellas organiza sus elementos secundarios de manera diferente. Sin embargo, a veces es necesario organizar el contenido de la página mediante un diseño no proporcionado por Xamarin.Forms . En este artículo se explica cómo escribir una clase de diseño personalizada y se muestra una clase WrapLayout con distinción de orientación que organiza sus elementos secundarios horizontalmente por la página y, a continuación, ajusta la presentación de los elementos secundarios posteriores a filas adicionales._
 
 En Xamarin.Forms , todas las clases de diseño se derivan de la [`Layout<T>`](xref:Xamarin.Forms.Layout`1) clase y restringen el tipo genérico a [`View`](xref:Xamarin.Forms.View) y sus tipos derivados. A su vez, la `Layout<T>` clase se deriva de la [`Layout`](xref:Xamarin.Forms.Layout) clase, que proporciona el mecanismo para colocar y ajustar el tamaño de los elementos secundarios.
 
@@ -29,7 +29,7 @@ Cada elemento visual es responsable de determinar su propio tamaño preferido, l
 
 Se requiere un conocimiento exhaustivo de los Xamarin.Forms ciclos de diseño e invalidación para crear un diseño personalizado. Ahora se analizarán estos ciclos.
 
-## <a name="layout"></a>Diseño
+## <a name="layout"></a>Layout
 
 El diseño comienza en la parte superior del árbol visual con una página y continúa a través de todas las ramas del árbol visual para abarcar todos los elementos visuales de una página. Los elementos que son elementos primarios de otros elementos son responsables de ajustar el tamaño y la posición de sus elementos secundarios en relación con ellos mismos.
 
@@ -40,7 +40,7 @@ La [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase define un [ `Measur
 
 Este ciclo garantiza que todos los elementos visuales de la página reciban llamadas a los `Measure` `Layout` métodos y. El proceso se muestra en el diagrama siguiente:
 
-![](custom-images/layout-cycle.png "Xamarin.Forms Layout Cycle")
+![Xamarin.FormsCiclo de diseño](custom-images/layout-cycle.png)
 
 > [!NOTE]
 > Tenga en cuenta que los ciclos de diseño también pueden producirse en un subconjunto del árbol visual si algo cambia para afectar al diseño. Esto incluye los elementos que se agregan o quitan de una colección, como en [`StackLayout`](xref:Xamarin.Forms.StackLayout) , un cambio en la [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) propiedad de un elemento o un cambio en el tamaño de un elemento.
@@ -60,7 +60,7 @@ Los elementos se invalidan mediante la invocación del [`InvalidateMeasure`](xre
 
 La [`Layout`](xref:Xamarin.Forms.Layout) clase establece un controlador para el [`MeasureInvalidated`](xref:Xamarin.Forms.VisualElement.MeasureInvalidated) evento en cada elemento secundario agregado a su `Content` propiedad o `Children` colección y Desasocia el controlador cuando se quita el elemento secundario. Por lo tanto, todos los elementos del árbol visual que tienen elementos secundarios se avisan cuando uno de sus elementos secundarios cambia de tamaño. En el diagrama siguiente se muestra cómo un cambio en el tamaño de un elemento en el árbol visual puede producir cambios que se rellenen en el árbol:
 
-![](custom-images/invalidation.png "Invalidation in the Visual Tree")
+![Invalidación en el árbol visual](custom-images/invalidation.png)
 
 Sin embargo, la `Layout` clase intenta restringir el impacto de un cambio en el tamaño de un elemento secundario en el diseño de una página. Si el diseño tiene restricciones de tamaño, un cambio de tamaño secundario no afecta a nada más alto que el diseño primario en el árbol visual. Sin embargo, normalmente un cambio en el tamaño de un diseño afecta al modo en que el diseño organiza sus elementos secundarios. Por lo tanto, cualquier cambio en el tamaño de un diseño iniciará un ciclo de diseño para el diseño y el diseño recibirá las llamadas a sus [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) métodos y.
 
@@ -400,13 +400,13 @@ async Task<ImageList> GetImageListAsync()
 
 Cuando aparece la página que contiene el `WrapLayout` , la aplicación de ejemplo obtiene acceso de forma asincrónica a un archivo JSON remoto que contiene una lista de fotografías, crea un [`Image`](xref:Xamarin.Forms.Image) elemento para cada foto y lo agrega a `WrapLayout` . El resultado es el aspecto que se muestra en las capturas de pantalla siguientes:
 
-![](custom-images/portait-screenshots.png "Sample Application Portrait Screenshots")
+![Capturas de pantallas verticales de aplicación de ejemplo](custom-images/portait-screenshots.png)
 
 Las siguientes capturas de pantallas muestran el `WrapLayout` después de que se haya girado a la orientación horizontal:
 
-![](custom-images/landscape-ios.png "Sample iOS Application Landscape Screenshot")
-![](custom-images/landscape-android.png "Sample Android Application Landscape Screenshot")
-![](custom-images/landscape-uwp.png "Sample UWP Application Landscape Screenshot")
+![Ejemplo de captura de pantalla de escenario de aplicación de iOS de ejemplo ejemplo de captura de pantalla de ejemplo de aplicación ](custom-images/landscape-ios.png)
+ ![ ](custom-images/landscape-android.png)
+ ![ para UWP](custom-images/landscape-uwp.png)
 
 El número de columnas de cada fila depende del tamaño de la fotografía, el ancho de la pantalla y el número de píxeles por unidad independiente del dispositivo. Los [`Image`](xref:Xamarin.Forms.Image) elementos cargan las fotos de forma asincrónica y, por lo tanto, la `WrapLayout` clase recibirá llamadas frecuentes a su [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) método, ya que cada `Image` elemento recibe un nuevo tamaño basado en la foto cargada.
 
@@ -415,6 +415,6 @@ El número de columnas de cada fila depende del tamaño de la fotografía, el an
 - [WrapLayout (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [Diseños personalizados](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
 - [Crear diseños personalizados en Xamarin.Forms (vídeo)](https://www.youtube.com/watch?v=sxjOqNZFhKU)
-- [Diseño\<T>](xref:Xamarin.Forms.Layout`1)
+- [Layout\<T>](xref:Xamarin.Forms.Layout`1)
 - [Diseño](xref:Xamarin.Forms.Layout)
 - [VisualElement](xref:Xamarin.Forms.VisualElement)

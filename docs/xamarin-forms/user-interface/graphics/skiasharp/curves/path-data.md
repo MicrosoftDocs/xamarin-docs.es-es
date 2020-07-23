@@ -10,22 +10,22 @@ ms.date: 05/24/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 680c924280f8f3a6080b2fcc1968ecaf308f33a0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2571375e7ad28acbf367870b5c48e19d3a7525e7
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138065"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931292"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Datos de la ruta de acceso SVG en SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Definir rutas de acceso mediante cadenas de texto en el formato de gráficos vectoriales escalables_
 
 La [`SKPath`](xref:SkiaSharp.SKPath) clase admite la definición de objetos path completos a partir de cadenas de texto en un formato establecido por la especificación de gráficos de vectores escalables (SVG). Más adelante en este artículo veremos cómo puede representar una ruta de acceso completa, como esta, en una cadena de texto:
 
-![](path-data-images/pathdatasample.png "A sample path defined with SVG path data")
+![Una ruta de acceso de ejemplo definida con datos de ruta de acceso de SVG](path-data-images/pathdatasample.png)
 
 SVG es un lenguaje de programación de gráficos basado en XML para páginas Web. Dado que SVG debe permitir que las rutas de acceso se definan en el marcado en lugar de una serie de llamadas de función, el estándar SVG incluye una manera muy concisa de especificar una ruta de acceso de gráficos completa como una cadena de texto.
 
@@ -222,7 +222,7 @@ public class PathDataHelloPage : ContentPage
 
 La ruta de acceso rellena el lienzo, que es más razonable cuando se ve en modo horizontal:
 
-[![](path-data-images/pathdatahello-small.png "Triple screenshot of the Path Data Hello page")](path-data-images/pathdatahello-large.png#lightbox "Triple screenshot of the Path Data Hello page")
+[![Captura de pantalla triple de la página de datos de la ruta de acceso](path-data-images/pathdatahello-small.png)](path-data-images/pathdatahello-large.png#lightbox "Captura de pantalla triple de la página de datos de la ruta de acceso")
 
 La página **path Data CAT** es similar. Los objetos path y Paint se definen como campos en la [`PathDataCatPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) clase:
 
@@ -293,7 +293,7 @@ public class PathDataCatPage : ContentPage
 
 Esta es la ejecución del programa:
 
-[![](path-data-images/pathdatacat-small.png "Triple screenshot of the Path Data Cat page")](path-data-images/pathdatacat-large.png#lightbox "Triple screenshot of the Path Data Cat page")
+[![Captura de pantalla triple de la página path Data CAT](path-data-images/pathdatacat-small.png)](path-data-images/pathdatacat-large.png#lightbox "Captura de pantalla triple de la página path Data CAT")
 
 Normalmente, cuando un `SKPath` objeto se define como un campo, los contornos de la ruta de acceso se deben definir en el constructor u otro método. Sin embargo, al usar los datos de la ruta de acceso de SVG, habrá visto que la ruta de acceso se puede especificar completamente en la definición de campo.
 
@@ -430,7 +430,7 @@ public class PrettyAnalogClockPage : ContentPage
 
 Sin embargo, se hace algo especial con la segunda mano. Dado que el reloj se actualiza cada 16 milisegundos, la `Millisecond` propiedad del `DateTime` valor puede usarse potencialmente para animar una segunda mano de barrido en lugar de una que se mueve en saltos discretos de segundo a segundo. Pero este código no permite que el movimiento sea suave. En su lugar, usa las Xamarin.Forms [`SpringIn`](xref:Xamarin.Forms.Easing.SpringIn) [`SpringOut`](xref:Xamarin.Forms.Easing.SpringOut) funciones de aceleración de animación y para un tipo diferente de movimiento. Estas funciones de entradas y salidas lentas hacen que la segunda mano se mueva en una jerkier, &mdash; sacando un poco antes de que se mueva y, después, se desplace ligeramente por encima de su destino, un efecto que desafortunadamente no se puede reproducir en estas capturas de pantallas estáticas:
 
-[![](path-data-images/prettyanalogclock-small.png "Triple screenshot of the Pretty Analog Clock page")](path-data-images/prettyanalogclock-large.png#lightbox "Triple screenshot of the Pretty Analog Clock page")
+[![Captura de pantalla triple de la página del reloj análogo](path-data-images/prettyanalogclock-small.png)](path-data-images/prettyanalogclock-large.png#lightbox "Captura de pantalla triple de la página del reloj análogo")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

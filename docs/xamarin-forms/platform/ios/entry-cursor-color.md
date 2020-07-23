@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4d934fd2155a6a088dd543658555bf104b38f302
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 501210f669c7d62eddaf7ebe3b4ebf19614589a7
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138546"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936349"
 ---
 # <a name="entry-cursor-color-on-ios"></a>Color del cursor de entrada en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esta plataforma específica de iOS establece el color del cursor de un [`Entry`](xref:Xamarin.Forms.Entry) en un color especificado. Se consume en XAML estableciendo la [`Entry.CursorColor`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.CursorColorProperty) propiedad Bindable en [`Color`](xref:Xamarin.Forms.Color) :
 
@@ -47,7 +47,7 @@ El `Entry.On<iOS>` método especifica que este específico de la plataforma solo
 
 El resultado es que el color del cursor de un [`Entry`](xref:Xamarin.Forms.Entry) se puede establecer en un específico [`Color`](xref:Xamarin.Forms.Color) :
 
-![](entry-cursor-color-images/entry-cursorcolor.png "Entry Cursor Color")
+![Color del cursor de entrada](entry-cursor-color-images/entry-cursorcolor.png)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

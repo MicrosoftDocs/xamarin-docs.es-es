@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: f05e763df58e6fafc4d4ed1d4007979859670c28
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 84a764054567bc504b3432a503a1072362e374dd
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76725467"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938494"
 ---
 # <a name="signing-xamarinmac-apps-with-a-developer-id"></a>Firma de aplicaciones Xamarin.Mac con un identificador de desarrollador
 
@@ -24,23 +24,23 @@ Obtenga más información sobre [Identificador del desarrollador y equipo select
 
 Para compilar una aplicación para la implementación directamente en los usuarios (NO a través de Mac App Store), establezca que la **configuración de firma** use el **identificador de desarrollador**. Asegúrese de editar la configuración de **lanzamiento**.
 
- [![](signing-images/config02.png "The Mac Signing options")](signing-images/config02.png#lightbox)
+ [![Las opciones de la firma de Mac](signing-images/config02.png)](signing-images/config02.png#lightbox)
 
 ## <a name="build"></a>Compilar
 
 Antes de compilar, asegúrese de que ha seleccionado la configuración correcta y elija crear un paquete de instalación en la configuración de **Mac Build** (Compilación de Mac):
 
-[![](signing-images/config03.png "The build options")](signing-images/config03.png#lightbox)
+[![Las opciones de compilación](signing-images/config03.png)](signing-images/config03.png#lightbox)
 
 Al compilar la aplicación, se le solicitará al desarrollador que use los dos certificados:
 
- [![](signing-images/image57.png "Allowing keychain access")](signing-images/image57.png#lightbox)
+ [![Permitir el acceso a llaves](signing-images/image57.png)](signing-images/image57.png#lightbox)
 
- [![](signing-images/image58.png "Allowing keychain access")](signing-images/image58.png#lightbox)
+ [![Permitir el acceso a llaves](signing-images/image58.png)](signing-images/image58.png#lightbox)
 
 Una vez que se ha compilado la aplicación, el desarrollador puede hacer clic con el botón derecho en el proyecto y seleccionar **Abrir carpeta contenedora** para buscar el archivo de paquete (en el directorio `bin/Release`). Este archivo de paquete incluye un instalador para la aplicación, por lo que se puede distribuir a cualquier usuario de macOS para su instalación.
 
- [![](signing-images/image59.png "Selecting the app package in Finder")](signing-images/image59.png#lightbox)
+ [![Seleccionar el paquete de aplicación en el buscador](signing-images/image59.png)](signing-images/image59.png#lightbox)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cef3c2369bb4aee81a52ddd27d6ad732d7544dfa
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: df79a9b6a7b0ab44d4fcf03f12a7b4d8aabd0a82
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573851"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939274"
 ---
 # <a name="accessing-remote-data"></a>Acceso a datos remotos
 
@@ -54,7 +54,7 @@ La `CatalogService` clase se utiliza para administrar el proceso de recuperació
 
 En la figura 10-1 se muestra la interacción de las clases que leen los datos del catálogo del microservicio de catálogo para que los muestre el `CatalogView` .
 
-[![](accessing-remote-data-images/catalogdata.png "Retrieving data from the catalog microservice")](accessing-remote-data-images/catalogdata-large.png#lightbox "Retrieving data from the catalog microservice")
+[![Recuperación de datos del microservicio de catálogo](accessing-remote-data-images/catalogdata.png)](accessing-remote-data-images/catalogdata-large.png#lightbox "Recuperación de datos del microservicio de catálogo")
 
 **Figura 10-1**: recuperación de datos del microservicio de catálogo
 
@@ -159,7 +159,7 @@ La `BasketService` clase se utiliza para administrar el proceso de recuperación
 
 En la figura 10-2 se muestra la interacción de las clases que envían los datos de la cesta mostrados por el `BasketView` microservicio de la cesta.
 
-[![](accessing-remote-data-images/basketdata.png "Sending data to the basket microservice")](accessing-remote-data-images/basketdata-large.png#lightbox "Sending data to the basket microservice")
+[![Envío de datos al microservicio de la cesta](accessing-remote-data-images/basketdata.png)](accessing-remote-data-images/basketdata-large.png#lightbox "Envío de datos al microservicio de la cesta")
 
 **Figura 10-2**: envío de datos al microservicio de la cesta
 
@@ -232,7 +232,7 @@ Este método usa una instancia de la `RedisBasketRepository` clase para conserva
 
 En la figura 10-3 se muestran las interacciones de las clases que eliminan los datos de la cesta del microservicio de la cesta para `CheckoutView` .
 
-![](accessing-remote-data-images/checkoutdata.png "Deleteing data from the basket microservice")
+![Eliminación de datos del microservicio de cesta](accessing-remote-data-images/checkoutdata.png)
 
 **Figura 10-3**: eliminación de datos del microservicio de la cesta
 
@@ -372,7 +372,7 @@ La estrategia de reintentos debe ajustarse para que coincida con los requisitos 
 > [!NOTE]
 > Una estrategia de reintento agresiva con un retraso mínimo entre los intentos y un gran número de reintentos podría degradar un servicio remoto que se está ejecutando cerca o por la capacidad. Además, esta estrategia de reintento también podría afectar a la capacidad de respuesta de la aplicación si está intentando realizar una operación con errores continuamente.
 
-Si todavía se produce un error en una solicitud después de un número de reintentos, es mejor para la aplicación evitar que las solicitudes posteriores vayan al mismo recurso y notifique un error. Después, después de un período establecido, la aplicación puede realizar una o varias solicitudes al recurso para ver si son correctas. Para más información, consulte [Circuit Breaker Pattern](#circuit-breaker-pattern) (Patrón Circuit Breaker).
+Si todavía se produce un error en una solicitud después de un número de reintentos, es mejor para la aplicación evitar que las solicitudes posteriores vayan al mismo recurso y notifique un error. Después, después de un período establecido, la aplicación puede realizar una o varias solicitudes al recurso para ver si son correctas. Para obtener más información, consulte [patrón de disyuntor](#circuit-breaker-pattern).
 
 > [!TIP]
 > Nunca implemente un mecanismo de reintento infinito. Use un número finito de reintentos o implemente [el patrón de disyuntor para](/azure/architecture/patterns/circuit-breaker/) permitir que un servicio se recupere.

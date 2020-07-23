@@ -1,6 +1,6 @@
 ---
-title: 'title: "Pasar parámetros de efecto como propiedades adjuntas" description: "Las propiedades adjuntas se pueden usar para definir los parámetros de efecto que responden a los cambios de propiedades en tiempo de ejecución.'
-description: 'En este artículo se muestra cómo usar las propiedades adjuntas para pasar parámetros a un efecto y cambiar un parámetro en tiempo de ejecución." ms.prod: xamarin ms.assetid: DFCDCB9F-17DD-4117-BD53-B4FB206BB387 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 08/05/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Pasar parámetros de efecto como propiedades adjuntas
+description: Las propiedades adjuntas se pueden usar para definir los parámetros de efecto que responden a los cambios de propiedades en tiempo de ejecución. En este artículo se muestra cómo usar las propiedades adjuntas para pasar parámetros a un efecto y cambiar un parámetro en tiempo de ejecución.
 ms.prod: xamarin
 ms.assetid: DFCDCB9F-17DD-4117-BD53-B4FB206BB387
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 08/05/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cf03d0c32d80d7a1821e323acdc84a351413efec
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 71238775e9cc9d3e32ab9c9287e5b52c759ca9eb
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84138884"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939937"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Pasar parámetros de efecto como propiedades adjuntas
 
@@ -38,11 +38,11 @@ Después, se pueden pasar parámetros al efecto mediante la adición de las prop
 
 En la aplicación de ejemplo se muestra un elemento `ShadowEffect` que agrega una sombra al texto mostrado por un control [`Label`](xref:Xamarin.Forms.Label). Además, el color de la sombra se puede cambiar en tiempo de ejecución. El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
-![](attached-properties-images/shadow-effect.png "Shadow Effect Project Responsibilities")
+![Responsabilidades del proyecto de efecto de sombra](attached-properties-images/shadow-effect.png)
 
 `LabelShadowEffect` personaliza un control [`Label`](xref:Xamarin.Forms.Label) en el elemento `HomePage` en cada proyecto específico de la plataforma. Los parámetros se pasan a cada elemento `LabelShadowEffect` a través de las propiedades adjuntas de la clase `ShadowEffect`. Cada clase `LabelShadowEffect` se deriva de la clase `PlatformEffect` para cada plataforma. Como resultado, se agrega una sombra al texto mostrado por el control `Label`, como se muestra en las capturas de pantalla siguientes:
 
-![](attached-properties-images/screenshots.png "Shadow Effect on each Platform")
+![Efecto de sombra en cada plataforma](attached-properties-images/screenshots.png)
 
 ## <a name="creating-effect-parameters"></a>Creación de parámetros de efecto
 

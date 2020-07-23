@@ -10,16 +10,16 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f0f43f8f2113b6bd0a800ed3e0bd96b641575b1c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 38c7f11ecf65a2a9ec9ef54b5beb270f51d24dda
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139287"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929953"
 ---
 # <a name="text-translation-using-the-translator-api"></a>Traducción de texto mediante la API de traductor
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _La API de traductor de Microsoft se puede usar para traducir la voz y el texto a través de una API de REST. En este artículo se explica cómo usar Microsoft Translator Text API para traducir texto de un idioma a otro en una Xamarin.Forms aplicación._
 
@@ -143,7 +143,7 @@ La respuesta de la API se devuelve en formato XML. Los siguientes datos XML mues
 
 En la aplicación de ejemplo, la respuesta XML se analiza en una `XDocument` instancia de, con el valor raíz de XML que se devuelve al método de llamada para su presentación, tal y como se muestra en las siguientes capturas de pantalla:
 
-![](text-translation-images/text-translation.png "Text Translation to German")
+![Conversión de texto en alemán](text-translation-images/text-translation.png)
 
 ## <a name="summary"></a>Resumen
 
