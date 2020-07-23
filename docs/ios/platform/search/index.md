@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: ec63407189b635a9586b02e848647518aaf0170f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d95261a3b884507d3fc4a68018d57c5d3e3a2c84
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031561"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939417"
 ---
 # <a name="search-apis-in-xamarinios"></a>Buscar API en Xamarin. iOS
 
@@ -22,7 +22,7 @@ La búsqueda se ha ampliado en iOS 9 para proporcionar nuevas formas de acceder 
 
 Además, las nuevas API de búsqueda facilitan la integración de la búsqueda en la aplicación sin una experiencia de implementación de búsqueda anterior. Por este motivo, Apple notifica que normalmente tarda unas horas en hacer que el contenido de una aplicación de iOS 9 se pueda buscar de forma universal mediante la búsqueda de aplicaciones.
 
-[![](images/intro01.png "An example of iOS 9 app content universally searchable using App Search")](images/intro01.png#lightbox)
+[![Un ejemplo de contenido de la aplicación de iOS 9 que se pueden buscar universalmente mediante la búsqueda de aplicaciones](images/intro01.png)](images/intro01.png#lightbox)
 
 La búsqueda de aplicaciones se compone de tres API independientes:
 
@@ -36,7 +36,7 @@ La búsqueda de aplicaciones se compone de tres API independientes:
 
 Decidir cuál de estos métodos implementar depende de los tipos de interacción proporcionados por la aplicación y el tipo de contenido que presenta.
 
-Utilice las siguientes directrices:
+Use estas directrices:
 
 - [**NSUserActivity**](nsuseractivity.md) : Use este marco de trabajo para proporcionar la búsqueda de contenido público y privado y también la búsqueda de puntos de navegación dentro de la aplicación.
 
@@ -64,7 +64,7 @@ Apple proporciona las siguientes sugerencias sobre el contenido y las acciones q
 Los principales avances en iOS 10 proporcionan varias mejoras en la búsqueda de aplicaciones, como:
 
 - **Micromecenazgo popularidad de vínculos profundos (con privacidad diferencial)** : proporciona una manera de promover el contenido de una aplicación vinculada en profundidad en los resultados de la búsqueda.
-- **Búsqueda en la aplicación** : Use la nueva clase de `CSSearchQuery` para proporcionar una capacidad de búsqueda de Spotlight en la aplicación similar a la forma en que funcionan las aplicaciones mail, messages y Notes.
+- **Búsqueda en la aplicación** : Use la nueva `CSSearchQuery` clase para proporcionar una capacidad de búsqueda de contenido destacado en la aplicación similar a la forma en que funcionan las aplicaciones mail, messages y Notes.
 - **Continuación** de la búsqueda: permite que un usuario inicie una búsqueda en Spotlight o Safari, abra una aplicación y continúe con la búsqueda.
 - **Visualización de los resultados de la validación** : la herramienta de validación de la [API de búsqueda de aplicaciones](https://search.developer.apple.com/appsearch-validation-tool) de Apple ahora muestra una representación visual del marcado de un sitio web y de la vinculación profunda al realizar pruebas.
 - **Uso compartido de imágenes de aplicación de mensajes** : permite que las imágenes de la aplicación populares que se proporcionan para compartir mensajes (a través de una extensión de aplicación de mensajes) aparezcan en búsquedas de Spotlight.
@@ -78,7 +78,7 @@ iOS 10 presenta nuevas formas de impulsar la interacción con una aplicación, y
 - El conmutador de aplicación
 - La pantalla de bloqueo
 - CarPlay
-- Asignaciones
+- Maps
 - Interacciones de Siri
 - Sugerencias de QuickType 
 

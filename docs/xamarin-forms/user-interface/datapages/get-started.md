@@ -10,25 +10,25 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bb08d359048d53639a700cc5ff526f26d6b077b6
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 325aa7be9e8a1eb6da816ef4ec6403c2882c6ed4
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84571472"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86928918"
 ---
 # <a name="getting-started-with-datapages"></a>Introducción con páginas de páginas
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/Pages/DataPagesDemo)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/Pages/DataPagesDemo)
 
-![](~/media/shared/preview.png "This API is currently in preview")
+![Esta API está actualmente en versión preliminar](~/media/shared/preview.png)
 
 > [!IMPORTANT]
 > Las páginas de página requieren una Xamarin.Forms referencia de tema que se va a representar. Esto implica la instalación de [ Xamarin.Forms . Paquete NuGet Theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) en el proyecto, seguido de [ Xamarin.Forms . Theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) o [ Xamarin.Forms . Paquetes NuGet Theme. Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
 
 Para empezar a crear una página simple controlada por datos mediante la vista previa de las páginas de datos, siga los pasos que se indican a continuación. En esta demostración se usa un estilo codificado ("Events") en las compilaciones de vista previa que solo funciona con el formato JSON específico en el código.
 
-[![](get-started-images/demo-sml.png "DataPages Sample Application")](get-started-images/demo.png#lightbox "DataPages Sample Application")
+[![Aplicación de ejemplo de páginas de página](get-started-images/demo-sml.png)](get-started-images/demo.png#lightbox "Aplicación de ejemplo de páginas de página")
 
 ## <a name="1-add-nuget-packages"></a>1. agregar paquetes NuGet
 
@@ -140,7 +140,7 @@ A continuación se muestra un ejemplo de los datos JSON del origen de la demostr
 
 Los pasos anteriores deben dar lugar a una página de datos de trabajo:
 
-[![](get-started-images/demo-sml.png "DataPages Sample Application")](get-started-images/demo.png#lightbox "DataPages Sample Application")
+[![Aplicación de ejemplo de páginas de página](get-started-images/demo-sml.png)](get-started-images/demo.png#lightbox "Aplicación de ejemplo de páginas de página")
 
 Esto funciona porque el estilo predefinido **"eventos"** existe en el paquete NuGet de tema claro y tiene estilos definidos que coinciden con el origen de datos (por ejemplo, "title", "Image", "Presenter").
 
@@ -169,7 +169,7 @@ El estilo heredado puede invalidarse mediante la especificación de una plantill
 
 Al proporcionar un `DataTemplate` código, se invalida el `StyleClass` y, en su lugar, se usa el diseño predeterminado para `ListItemControl` .
 
-[![](get-started-images/custom-sml.png "DataPages Sample Application")](get-started-images/custom.png#lightbox "DataPages Sample Application")
+[![Aplicación de ejemplo de páginas de página](get-started-images/custom-sml.png)](get-started-images/custom.png#lightbox "Aplicación de ejemplo de páginas de página")
 
 Los desarrolladores que prefieren C# a XAML pueden crear enlaces de origen de datos también (Recuerde incluir una `using Xamarin.Forms.Pages;` instrucción):
 

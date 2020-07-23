@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: c3998424c8f4e9482a41e2891e65f0d13d8ac2f3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b1ba548135cedd951d7f0a349f273b29182839d1
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73009189"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86928684"
 ---
 # <a name="multi-touch-finger-tracking-in-xamarinios"></a>Seguimiento de dedo multitáctil en Xamarin. iOS
 
@@ -20,9 +20,9 @@ _En este documento se muestra cómo realizar un seguimiento de los eventos táct
 
 Hay ocasiones en las que una aplicación multitáctil necesita realizar un seguimiento de los dedos individuales mientras se mueven simultáneamente en la pantalla. Una aplicación típica es un programa de pintado de dedos. Quiere que el usuario pueda dibujar con un solo dedo, pero también para dibujar varios dedos a la vez. A medida que el programa procesa varios eventos táctiles, debe distinguir entre estos dedos.
 
-Cuando un dedo toca primero la pantalla, iOS crea un objeto de [`UITouch`](xref:UIKit.UITouch) para ese dedo. Este objeto se mantiene igual que el dedo se mueve en la pantalla y, a continuación, se eleva de la pantalla, momento en el que se elimina el objeto. Para realizar un seguimiento de los dedos, un programa debe evitar almacenar este objeto de `UITouch` directamente. En su lugar, puede utilizar la propiedad [`Handle`](xref:Foundation.NSObject.Handle) de tipo `IntPtr` para identificar de forma única estos objetos `UITouch`.
+Cuando un dedo toca primero la pantalla, iOS crea un [`UITouch`](xref:UIKit.UITouch) objeto para ese dedo. Este objeto se mantiene igual que el dedo se mueve en la pantalla y, a continuación, se eleva de la pantalla, momento en el que se elimina el objeto. Para realizar un seguimiento de los dedos, un programa debe evitar almacenar este `UITouch` objeto directamente. En su lugar, puede usar la [`Handle`](xref:Foundation.NSObject.Handle) propiedad de tipo `IntPtr` para identificar de forma única estos `UITouch` objetos.
 
-Casi siempre, un programa que realiza un seguimiento de los dedos individuales mantiene un diccionario para el seguimiento táctil. Para un programa iOS, la clave del diccionario es el valor `Handle` que identifica un dedo determinado. El valor del diccionario depende de la aplicación. En el programa de [pintura](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) , cada trazo de dedo (de toque a lanzamiento) se asocia a un objeto que contiene toda la información necesaria para representar la línea dibujada con ese dedo. El programa define una clase de `FingerPaintPolyline` pequeña para este propósito:
+Casi siempre, un programa que realiza un seguimiento de los dedos individuales mantiene un diccionario para el seguimiento táctil. Para un programa iOS, la clave del diccionario es el `Handle` valor que identifica un dedo determinado. El valor del diccionario depende de la aplicación. En el programa de [pintura](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) , cada trazo de dedo (de toque a lanzamiento) se asocia a un objeto que contiene toda la información necesaria para representar la línea dibujada con ese dedo. El programa define una `FingerPaintPolyline` clase pequeña para este propósito:
 
 ```csharp
 class FingerPaintPolyline
@@ -40,25 +40,25 @@ class FingerPaintPolyline
 }
 ```
 
-Cada Polyline tiene un color, un ancho de trazo y un objeto de [`CGPath`](xref:CoreGraphics.CGPath) de gráficos de iOS para acumular y representar varios puntos de la línea mientras se dibujan.
+Cada Polyline tiene un color, un ancho de trazo y un [`CGPath`](xref:CoreGraphics.CGPath) objeto de gráficos de iOS para acumular y representar varios puntos de la línea a medida que se dibujan.
 
-Todo el resto del código que se muestra a continuación se encuentra en un `UIView` derivado denominado `FingerPaintCanvasView`. Esa clase mantiene un diccionario de objetos de tipo `FingerPaintPolyline` durante el tiempo en el que uno o varios dedos dibujan activamente:
+Todo el resto del código que se muestra a continuación se encuentra en un `UIView` derivado denominado `FingerPaintCanvasView` . Esa clase mantiene un diccionario de objetos de tipo `FingerPaintPolyline` en el momento en el que se dibujan activamente con uno o varios dedos:
 
 ```csharp
 Dictionary<IntPtr, FingerPaintPolyline> inProgressPolylines = new Dictionary<IntPtr, FingerPaintPolyline>();
 ```
 
-Este diccionario permite a la vista obtener rápidamente la información `FingerPaintPolyline` asociada a cada dedo en función de la propiedad `Handle` del objeto `UITouch`.
+Este diccionario permite a la vista obtener rápidamente la `FingerPaintPolyline` información asociada a cada dedo en función de la `Handle` propiedad del `UITouch` objeto.
 
-La clase `FingerPaintCanvasView` también mantiene un objeto `List` para las polilíneas que se han completado:
+La `FingerPaintCanvasView` clase también mantiene un `List` objeto para las polilíneas que se han completado:
 
 ```csharp
 List<FingerPaintPolyline> completedPolylines = new List<FingerPaintPolyline>();
 ```
 
-Los objetos de este `List` están en el mismo orden en que se dibujaron.
+Los objetos de esta `List` se encuentran en el mismo orden en que se dibujaron.
 
-`FingerPaintCanvasView` invalida cinco métodos definidos por `View`:
+`FingerPaintCanvasView`invalida cinco métodos definidos por `View` :
 
 - [`TouchesBegan`](xref:UIKit.UIResponder.TouchesBegan(Foundation.NSSet,UIKit.UIEvent))
 - [`TouchesMoved`](xref:UIKit.UIResponder.TouchesMoved(Foundation.NSSet,UIKit.UIEvent))
@@ -66,9 +66,9 @@ Los objetos de este `List` están en el mismo orden en que se dibujaron.
 - [`TouchesCancelled`](xref:UIKit.UIResponder.TouchesCancelled(Foundation.NSSet,UIKit.UIEvent))
 - [`Draw`](xref:UIKit.UIView.Draw(CoreGraphics.CGRect))
 
-Las diversas invalidaciones de `Touches` acumulan los puntos que componen las polilíneas.
+Las distintas `Touches` invalidaciones acumulan los puntos que componen las polilíneas.
 
-La invalidación [`Draw`] dibuja las polilíneas completadas y después las polilíneas en curso:
+La `Draw` invalidación [] dibuja las polilíneas completadas y después las polilíneas en curso:
 
 ```csharp
 public override void Draw(CGRect rect)
@@ -102,7 +102,7 @@ public override void Draw(CGRect rect)
 }
 ```
 
-Cada una de las invalidaciones de `Touches` notifica potencialmente las acciones de varios dedos, indicadas por uno o varios objetos `UITouch` almacenados en el argumento `touches` al método. El `TouchesBegan` reemplaza el bucle a través de estos objetos. Para cada objeto `UITouch`, el método crea e inicializa un nuevo objeto `FingerPaintPolyline`, incluido el almacenamiento de la ubicación inicial del dedo obtenido del método `LocationInView`. Este objeto `FingerPaintPolyline` se agrega al Diccionario de `InProgressPolylines` mediante la propiedad `Handle` del objeto `UITouch` como clave de diccionario:
+Cada una de las `Touches` invalidaciones puede notificar potencialmente las acciones de varios dedos, indicadas por uno o más `UITouch` objetos almacenados en el `touches` argumento para el método. El `TouchesBegan` bucle invalida a través de estos objetos. Para cada `UITouch` objeto, el método crea e inicializa un nuevo `FingerPaintPolyline` objeto, incluido el almacenamiento de la ubicación inicial del dedo obtenido a partir del `LocationInView` método. Este `FingerPaintPolyline` objeto se agrega al `InProgressPolylines` Diccionario utilizando la `Handle` propiedad del `UITouch` objeto como clave de diccionario:
 
 ```csharp
 public override void TouchesBegan(NSSet touches, UIEvent evt)
@@ -125,9 +125,9 @@ public override void TouchesBegan(NSSet touches, UIEvent evt)
 }
 ```
 
-El método finaliza mediante una llamada a `SetNeedsDisplay` para generar una llamada a la invalidación de `Draw` y para actualizar la pantalla.
+El método finaliza llamando `SetNeedsDisplay` a para generar una llamada a la `Draw` invalidación y actualizar la pantalla.
 
-Cuando el dedo o los dedos se mueven en la pantalla, el `View` obtiene varias llamadas a su invalidación de `TouchesMoved`. Esta invalidación se repite de forma similar a través de los objetos `UITouch` almacenados en el argumento `touches` y agrega la ubicación actual del dedo a la ruta de acceso de los gráficos:
+Cuando el dedo o los dedos se mueven en la pantalla, `View` obtiene varias llamadas a su `TouchesMoved` invalidación. Esta invalidación se repite de forma similar a través de los `UITouch` objetos almacenados en el `touches` argumento y agrega la ubicación actual del dedo a la ruta de acceso de los gráficos:
 
 ```csharp
 public override void TouchesMoved(NSSet touches, UIEvent evt)
@@ -143,9 +143,9 @@ public override void TouchesMoved(NSSet touches, UIEvent evt)
 }
 ```
 
-La colección `touches` contiene solo los objetos `UITouch` de los dedos que se han despasado desde la última llamada a `TouchesBegan` o `TouchesMoved`. Si alguna vez necesita `UITouch` objetos correspondientes a *todos* los dedos que actualmente están en contacto con la pantalla, la información está disponible a través de la propiedad `AllTouches` del argumento `UIEvent` en el método.
+La `touches` colección contiene solo los `UITouch` objetos de los dedos que se han despasado desde la última llamada a `TouchesBegan` o a `TouchesMoved` . Si alguna vez necesita `UITouch` objetos correspondientes a *todos* los dedos que se encuentran actualmente en contacto con la pantalla, la información está disponible a través `AllTouches` de la propiedad del `UIEvent` argumento en el método.
 
-La invalidación de `TouchesEnded` tiene dos trabajos. Debe agregar el último punto a la ruta de acceso de los gráficos y transferir el objeto de `FingerPaintPolyline` del Diccionario de `inProgressPolylines` a la lista de `completedPolylines`:
+La `TouchesEnded` invalidación tiene dos trabajos. Debe agregar el último punto a la ruta de acceso de los gráficos y transferir el `FingerPaintPolyline` objeto del `inProgressPolylines` Diccionario a la `completedPolylines` lista:
 
 ```csharp
 public override void TouchesEnded(NSSet touches, UIEvent evt)
@@ -166,7 +166,7 @@ public override void TouchesEnded(NSSet touches, UIEvent evt)
 }
 ```
 
-La invalidación de `TouchesCancelled` se controla simplemente abandonando el objeto `FingerPaintPolyline` en el diccionario:
+La `TouchesCancelled` invalidación se controla simplemente abandonando el `FingerPaintPolyline` objeto en el diccionario:
 
 ```csharp
 public override void TouchesCancelled(NSSet touches, UIEvent evt)
@@ -183,7 +183,7 @@ public override void TouchesCancelled(NSSet touches, UIEvent evt)
 
 Por completo, este procesamiento permite que el programa de [pintura](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) realice un seguimiento de los dedos individuales y dibuje los resultados en la pantalla:
 
-[![](touch-tracking-images/image01.png "Tracking individual fingers and drawing the results on the screen")](touch-tracking-images/image01.png#lightbox)
+[![Seguimiento de dedos individuales y dibujo de los resultados en la pantalla](touch-tracking-images/image01.png)](touch-tracking-images/image01.png#lightbox)
 
 Ahora ha visto cómo puede realizar el seguimiento de los dedos individuales en la pantalla y distinguirlos.
 

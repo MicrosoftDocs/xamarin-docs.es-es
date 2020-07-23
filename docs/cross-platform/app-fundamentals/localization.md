@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: f496a831c226e377f62e2a6fab8ed328bf1be0b9
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: dab6d1ff573f0f74b3b230732aa4669ba9fda0d5
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571081"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934867"
 ---
 # <a name="localization"></a>Localización
 
@@ -59,7 +59,7 @@ Las cadenas alemanas (por ejemplo,) pueden ser muy largas; a veces, una palabra 
 
 Compare las longitudes de cadena para algunos elementos de la pantalla principal de iOS en inglés, alemán y japonés:
 
-[![](localization-images/language-compare-sml.png "German vs Japanese string length")](localization-images/language-compare.png#lightbox)
+[![Longitud de cadena de alemán frente a Japonés](localization-images/language-compare-sml.png)](localization-images/language-compare.png#lightbox)
 
 Tenga en cuenta que la **configuración** en inglés (8 caracteres) requiere 13 caracteres para la traducción alemana, pero solo 2 caracteres en japonés.
 
