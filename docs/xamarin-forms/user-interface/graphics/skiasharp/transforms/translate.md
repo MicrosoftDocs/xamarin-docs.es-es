@@ -19,7 +19,7 @@ ms.locfileid: "86938481"
 ---
 # <a name="the-translate-transform"></a>Transformación de traslación
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Obtenga información sobre cómo usar la transformación traducir para desplazar los gráficos de SkiaSharp_
 

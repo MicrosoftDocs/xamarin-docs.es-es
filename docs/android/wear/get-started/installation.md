@@ -1,5 +1,5 @@
 ---
-title: 'Instalación y configuración del desgaste del SO onXamarin. Android '
+title: 'Instalación y configuración del sistema operativo de desgaste en Xamarin. Android '
 description: Este artículo le guía a través de los pasos de instalación y los detalles de configuración necesarios para preparar el equipo y los dispositivos para el desarrollo del desgaste de Android. Al final de este artículo, tendrá una instalación operativa de Xamarin. Android desgaste integrada en Visual Studio para Mac o Microsoft Visual Studio y estará listo para empezar a crear su primera aplicación de trabajo de Xamarin. Android.
 ms.prod: xamarin
 ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 83ec214ae1838959355e99322ce5a809ead004fa
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: ea54dcd1df800df1df855fc6b7efedecfda1a24f
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028727"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996869"
 ---
-# <a name="setup-and-installation"></a>Configuración e instalación
+# <a name="install-and-setup-wear-os-on-xamarinandroid"></a>Instalar y configurar el desgaste del SO en Xamarin. Android
 
 _Este artículo le guía a través de los pasos de instalación y los detalles de configuración necesarios para preparar el equipo y los dispositivos para el desarrollo del desgaste de Android. Al final de este artículo, tendrá una instalación operativa de Xamarin. Android desgaste integrada en Visual Studio para Mac o Microsoft Visual Studio y estará listo para empezar a crear su primera aplicación de trabajo de Xamarin. Android._
 
@@ -22,13 +22,13 @@ _Este artículo le guía a través de los pasos de instalación y los detalles d
 
 Lo siguiente es necesario para crear aplicaciones de desgaste de Android basadas en Xamarin:
 
-- Se requiere **Visual Studio o Visual Studio para Mac** &ndash; la comunidad de visual Studio 2017 o posterior.
+- **Visual Studio o Visual Studio para Mac** &ndash; Se requiere Visual Studio 2017 Community o posterior.
 
-- **Xamarin. android** &ndash; Xamarin. Android 4,17 o posterior debe estar instalado y configurado con Visual Studio o Visual Studio para Mac.
+- **Xamarin. Android** &ndash; xamarin. Android 4,17 o posterior debe estar instalado y configurado con Visual Studio o Visual Studio para Mac.
 
 - **Android SDK** -Android SDK 5.0.1 (API 21) o posterior debe instalarse a través del administrador de Android SDK.
 
-- El **Kit para desarrolladores de Java** &ndash; desarrollo de Xamarin Android requiere [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) si está desarrollando para el nivel de API 24 o superior (JDK 1,8 también admite niveles de API anteriores a 24).
+- Kit para desarrolladores de **Java** &ndash; El desarrollo de Xamarin Android requiere [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) si está desarrollando para el nivel de API 24 o superior (JDK 1,8 también es compatible con los niveles de API anteriores a 24).
 
 Puede seguir usando [JDK 1,7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) si está desarrollando específicamente para el nivel de API 23 o una versión anterior.
 
@@ -37,7 +37,7 @@ Puede seguir usando [JDK 1,7](https://www.oracle.com/technetwork/java/javase/dow
 
 ## <a name="installation"></a>Instalación
 
-Después de haber instalado Xamarin. Android, realice los pasos siguientes para que esté listo para compilar y probar aplicaciones de desgaste de Android: 
+Después de haber instalado Xamarin. Android, realice los pasos siguientes para que esté listo para compilar y probar aplicaciones de desgaste de Android:
 
 1. Instale las herramientas y el Android SDK necesarios.
 2. Configurar un dispositivo de prueba.
@@ -45,15 +45,15 @@ Después de haber instalado Xamarin. Android, realice los pasos siguientes para 
 
 Estos pasos se describen en las secciones siguientes.
 
-### <a name="install-android-sdk-and-tools"></a>Instalación de Android SDK y herramientas 
+### <a name="install-android-sdk-and-tools"></a>Instalación de Android SDK y herramientas
 
-Inicie el **Administrador de Android SDK**: 
+Inicie el **Administrador de Android SDK**:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![Cómo iniciar el administrador de Android SDK en Visual Studio](installation-images/vs/sdk-menu.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Cómo iniciar el administrador de Android SDK en Visual Studio para Mac](installation-images/xs/sdk-menu.png)
 
@@ -65,13 +65,13 @@ Asegúrese de que tiene instalados los siguientes Android SDK y herramientas:
 - Android 4.4 W (API20), o
 - Android 5.0.1 (API21) o superior.
 
-Si no tiene instaladas las herramientas y el SDK más recientes, descargue las herramientas de SDK *y* los bits de API necesarios (puede que tenga que desplazarse un poco para encontrarlos &ndash; la selección de la API se muestra a continuación): 
+Si no tiene instaladas las herramientas y el SDK más recientes, descargue las herramientas de SDK *y* los bits de API necesarios (puede que tenga que desplazarse un poco para encontrarlos; &ndash; la selección de la API se muestra a continuación):
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![Captura de pantalla del administrador de SDK de ejemplo de la habilitación de componentes de Android 5.0.1](installation-images/vs/sdk-select.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Captura de pantalla del administrador de SDK de ejemplo para habilitar los componentes de Android 4,4 y 5.0.1](installation-images/xs/sdk-select.png)
 
@@ -79,17 +79,17 @@ Si no tiene instaladas las herramientas y el SDK más recientes, descargue las h
 
 ## <a name="configuration"></a>Configuración
 
-Antes de poder usar probar la aplicación, debe configurar un emulador de desgaste de Android o un dispositivo de desgaste de Android real. 
+Antes de poder usar probar la aplicación, debe configurar un emulador de desgaste de Android o un dispositivo de desgaste de Android real.
 
 ### <a name="android-wear-emulator"></a>Emulador de uso de Android
 
 Antes de poder usar un emulador de desgaste de Android, debe configurar un dispositivo virtual Android de desgaste de Android (AVD) con el **Administrador del emulador de Google**:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![Cómo iniciar el administrador de Android Emulator desde Visual Studio](installation-images/vs/emulator-menu.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Cómo iniciar el administrador de Android Emulator desde Visual Studio para Mac](installation-images/xs/emulator-menu.png)
 
@@ -107,9 +107,9 @@ Siga las instrucciones [Hello, desgaste](~/android/wear/get-started/hello-wear.m
 
 ## <a name="packaging-your-app"></a>Empaquetar la aplicación
 
-Las aplicaciones de desgaste de Android siempre se distribuyen con una aplicación de teléfono Android complementaria. 
+Las aplicaciones de desgaste de Android siempre se distribuyen con una aplicación de teléfono Android complementaria.
 
-Al agregar la aplicación de desgaste de Android como referencia a la aplicación principal de Android, se supone que es un proyecto de desgaste de Android y generará automáticamente el XML y los metadatos necesarios. Además, comprobará que los números de versión y paquete coinciden para que pueda enviar fácilmente sus aplicaciones a Google Play. 
+Al agregar la aplicación de desgaste de Android como referencia a la aplicación principal de Android, se supone que es un proyecto de desgaste de Android y generará automáticamente el XML y los metadatos necesarios. Además, comprobará que los números de versión y paquete coinciden para que pueda enviar fácilmente sus aplicaciones a Google Play.
 
 Para más información sobre las aplicaciones de desgaste de empaquetado, consulte [trabajar con empaquetado](~/android/wear/deploy-test/packaging.md).
 

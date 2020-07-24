@@ -10,12 +10,12 @@ ms.date: 02/17/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2a222c3ee2234904cce94b52a14654728a1aa6d1
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ae3759c1e111906b82596af80d4bdcffd5d23305
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140132"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938533"
 ---
 # <a name="global-styles-in-xamarinforms"></a>Estilos globales enXamarin.Forms
 
@@ -65,7 +65,7 @@ En el ejemplo de código siguiente se muestra una página XAML `buttonStyle` que
 
 El resultado es el aspecto que se muestra en las capturas de pantalla siguientes:
 
-[![](application-images/application-styles-1.png "Global Styles Example")](application-images/application-styles-1-large.png#lightbox "Global Styles Example")
+[![Ejemplo de estilos globales](application-images/application-styles-1.png)](application-images/application-styles-1-large.png#lightbox "Ejemplo de estilos globales")
 
 Para obtener información sobre cómo crear estilos en la de una página [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) , vea [estilos explícitos](~/xamarin-forms/user-interface/styles/explicit.md) y [estilos implícitos](~/xamarin-forms/user-interface/styles/implicit.md).
 
@@ -103,7 +103,7 @@ Los estilos inferiores de la jerarquía de vistas tienen prioridad sobre las def
 
 El original `buttonStyle` , definido en el nivel de la aplicación, se reemplaza por la `buttonStyle` instancia definida en el nivel de página. Además, el estilo de nivel de página se reemplaza por el nivel de control `buttonStyle` . Por lo tanto, las [`Button`](xref:Xamarin.Forms.Button) instancias se muestran con texto azul, tal como se muestra en las siguientes capturas de pantalla:
 
-[![](application-images/application-styles-2.png "Overriding Styles Example")](application-images/application-styles-2-large.png#lightbox "Overriding Styles Example")
+[![Ejemplo de reemplazo de estilos](application-images/application-styles-2.png)](application-images/application-styles-2-large.png#lightbox "Ejemplo de reemplazo de estilos")
 
 ## <a name="create-a-global-style-in-c35"></a>Crear un estilo global en C&#35;
 

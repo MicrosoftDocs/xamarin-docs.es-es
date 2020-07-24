@@ -10,12 +10,12 @@ ms.date: 09/12/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 931b8d0946f1af5e697e581a04c0feefb31ba2d3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4fee695a20cae26537beb30513423492114e5c77
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131929"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936258"
 ---
 # <a name="path-information-and-enumeration"></a>Enumeración e información de trazado
 
@@ -29,7 +29,7 @@ A veces resulta útil determinar la longitud total de todas las líneas y curvas
 
 En ocasiones, también resulta útil obtener todas las operaciones de dibujo y los puntos que componen una ruta de acceso. En primer lugar, es posible que este recurso parezca innecesario: Si el programa ha creado la ruta de acceso, el programa ya conoce el contenido. Sin embargo, ha visto que las rutas de acceso también pueden crearse mediante efectos de trazado y convirtiendo [cadenas de texto en rutas](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)de [acceso](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) . También puede obtener todas las operaciones de dibujo y los puntos que componen estas rutas de acceso. Una posibilidad es aplicar una transformación algorítmica a todos los puntos, por ejemplo, para ajustar el texto alrededor de un hemisferio:
 
-![](information-images/pathenumerationsample.png "Text wrapped on a hemisphere")
+![Texto ajustado en un hemisferio](information-images/pathenumerationsample.png)
 
 ## <a name="getting-the-path-length"></a>Obtención de la longitud de la ruta de acceso
 
@@ -115,7 +115,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 La `Length` propiedad del objeto recién creado `SKPathMeasure` obtiene la longitud de la ruta de acceso. La longitud de la ruta de acceso se divide por el `baseTextWidth` valor (que es el ancho del texto basándose en un tamaño de texto de 10) y, a continuación, se multiplica por el tamaño de texto base de 10. El resultado es un nuevo tamaño de texto para mostrar el texto a lo largo de la ruta de acceso:
 
-[![](information-images/pathlength-small.png "Triple screenshot of the Path Length page")](information-images/pathlength-large.png#lightbox "Triple screenshot of the Path Length page")
+[![Captura de pantalla triple de la página longitud de la ruta de acceso](information-images/pathlength-small.png)](information-images/pathlength-large.png#lightbox "Captura de pantalla triple de la página longitud de la ruta de acceso")
 
 Como la curva de Bézier es más larga o más corta, puede ver el cambio de tamaño del texto.
 
@@ -141,7 +141,7 @@ Los miembros de la [`SKPathMeasureMatrixFlags`](xref:SkiaSharp.SKPathMeasureMatr
 
 La página de la **media de UNICYCLE** anima una figura de palo en un UNICYCLE que parece moverse hacia delante y hacia atrás a lo largo de una curva Bézier cúbica:
 
-[![](information-images/unicyclehalfpipe-small.png "Triple screenshot of the Unicycle Half-Pipe page")](information-images/unicyclehalfpipe-large.png#lightbox "Triple screenshot of the Unicycle Half-Pipe page")
+[![Captura de pantalla triple de la página de la media de UNICYCLE](information-images/unicyclehalfpipe-small.png)](information-images/unicyclehalfpipe-large.png#lightbox "Captura de pantalla triple de la página de la media de UNICYCLE")
 
 El `SKPaint` objeto que se usa para contornear la media canalización y UNICYCLE se define como un campo en la `UnicycleHalfPipePage` clase. También se define el `SKPath` objeto de UNICYCLE:
 
@@ -252,7 +252,7 @@ Sin embargo, el verbo problemático es `Close` . Este comando dibuja una línea 
 
 A veces es conveniente aplicar una transformación algorítmica a una ruta de acceso para crear un formato incorrecto de alguna manera:
 
-![](information-images/pathenumerationsample.png "Text wrapped on a hemisphere")
+![Texto ajustado en un hemisferio](information-images/pathenumerationsample.png)
 
 La mayoría de estas letras se componen de líneas rectas, pero estas líneas rectas parecen torcidas en curvas. ¿Cómo es posible?
 
@@ -441,7 +441,7 @@ Observe que el método conserva el primer punto de cada contorno en la variable 
 
 En el ejemplo **GlobularText** se usa este método de extensión para ajustar aparentemente el texto alrededor de un hemisferio en un efecto 3D:
 
-[![](information-images/globulartext-small.png "Triple screenshot of the Globular Text page")](information-images/globulartext-large.png#lightbox "Triple screenshot of the Globular Text page")
+[![Captura de pantalla triple de la página de texto globular](information-images/globulartext-small.png)](information-images/globulartext-large.png#lightbox "Captura de pantalla triple de la página de texto globular")
 
 El [`GlobularTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) constructor de clase realiza esta transformación. Crea un `SKPaint` objeto para el texto y, a continuación, obtiene un `SKPath` objeto a partir del `GetTextPath` método. Esta es la ruta de acceso que se pasa al `CloneWithTransform` método de extensión junto con una función de transformación:
 

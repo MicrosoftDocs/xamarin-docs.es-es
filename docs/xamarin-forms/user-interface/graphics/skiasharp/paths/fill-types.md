@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c8c54f3d3815e418d2f71960dc7733711cb40ae2
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e82572d88e380997fb2435179dba824c1b3f0c2f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139053"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936193"
 ---
 # <a name="the-path-fill-types"></a>Tipos de relleno del trazado
 
@@ -25,7 +25,7 @@ _Descubra los distintos efectos posibles con los tipos de relleno de ruta de Ski
 
 Dos contornos en un trazado pueden superponerse y las líneas que componen un solo contorno pueden superponerse. Es posible que se rellenen las áreas incluidas, pero es posible que no desee rellenar todas las áreas delimitadas. Este es un ejemplo:
 
-![](fill-types-images/filltypeexample.png "Five-pointed star partially filles")
+![Estrella de cinco puntas se rellena parcialmente](fill-types-images/filltypeexample.png)
 
 Tiene un pequeño control sobre esto. El algoritmo de relleno se rige por la [`SKFillType`](xref:SkiaSharp.SKPath.FillType) propiedad de `SKPath` , que se establece en un miembro de la [`SKPathFillType`](xref:SkiaSharp.SKPathFillType) enumeración:
 
@@ -173,7 +173,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Normalmente, el tipo de relleno de trazado debe afectar solo a los rellenos y no a los trazos, pero los dos `Inverse` modos afectan tanto a los rellenos como a los trazos. En el caso de los rellenos, los dos `Inverse` tipos rellenan áreas de forma opuesta para que el área fuera de la estrella se rellene. En el caso de los trazos, los dos `Inverse` tipos colorean todo, excepto el trazo. El uso de estos tipos de relleno inversos puede producir algunos efectos impares, como se muestra en la captura de pantalla de iOS:
 
-[![](fill-types-images/fivepointedstar-small.png "Triple screenshot of the Five-Pointed Star page")](fill-types-images/fivepointedstar-large.png#lightbox "Triple screenshot of the Five-Pointed Star page")
+[![Captura de pantalla triple de la página de estrella de cinco puntas](fill-types-images/fivepointedstar-small.png)](fill-types-images/fivepointedstar-large.png#lightbox "Captura de pantalla triple de la página de estrella de cinco puntas")
 
 En la captura de pantalla de Android se muestran los efectos típicos pares-impares y de bobinado, pero el orden del trazo y del relleno también afecta a los resultados.
 
@@ -226,7 +226,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Se trata de una imagen interesante creada con un código mínimo:
 
-[![](fill-types-images/overlappingcircles-small.png "Triple screenshot of the Overlapping Circles page")](fill-types-images/overlappingcircles-large.png#lightbox "Triple screenshot of the Overlapping Circles page")
+[![Captura de pantalla triple de la página círculos superpuestos](fill-types-images/overlappingcircles-small.png)](fill-types-images/overlappingcircles-large.png#lightbox "Captura de pantalla triple de la página círculos superpuestos")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

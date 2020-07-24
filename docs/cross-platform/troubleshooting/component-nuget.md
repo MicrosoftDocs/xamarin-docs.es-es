@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: f81df8ac253e53b16c3ab09bf80d66a7b6324854
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: b9b771efe338fbcc250aa6e7a83b73f35269d3bf
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571524"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996817"
 ---
 # <a name="updating-component-references-to-nuget"></a>Actualización de referencias de componentes a NuGet
 
@@ -27,7 +27,7 @@ Hay disponible una lista de [bibliotecas y complementos](https://github.com/xama
 
 ## <a name="manually-removing-component-references"></a>Quitar manualmente las referencias a componentes
 
-La versión 15,6 de Visual Studio y 7,4 de Visual Studio para Mac ya no admite componentes en el proyecto. 
+La versión 15,6 de Visual Studio y 7,4 de Visual Studio para Mac ya no admite componentes en el proyecto.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -37,7 +37,7 @@ Si carga un proyecto en Visual Studio, se muestra el cuadro de diálogo siguient
 
 Para quitar un componente del proyecto:
 
-1. Abra el archivo **.csproj**. Para ello, haga clic con el botón derecho en el nombre del proyecto y seleccione **descargar el proyecto**. 
+1. Abra el archivo **.csproj**. Para ello, haga clic con el botón derecho en el nombre del proyecto y seleccione **descargar el proyecto**.
 
 2. Vuelva a hacer clic con el botón derecho en el proyecto descargado y seleccione **Editar {your-Project-Name}. csproj**.
 
@@ -151,7 +151,7 @@ Si la pestaña **ensamblados** de la página de información de componentes cont
 
 Tenga en cuenta que la pestaña **paquetes** probablemente estará vacía:
 
-![](component-nuget-images/packages-tab-empty-sml.png)
+![Pestaña Paquetes](component-nuget-images/packages-tab-empty-sml.png)
 
 _Puede contener dependencias de NuGet, pero se pueden omitir._
 
@@ -174,12 +174,12 @@ Haga clic con el botón derecho en el componente de la solución y elija **quita
 
 Esto eliminará el componente y las referencias. Esto interrumpirá la compilación hasta que agregue el paquete de NuGet equivalente para reemplazarlo.
 
-#### <a name="add-the-nuget-package"></a>Adición del paquete de NuGet
+#### <a name="add-the-nuget-package"></a>Incorporación del paquete NuGet
 
 1. Haga clic con el botón derecho en el nodo **paquetes** y elija **agregar paquetes.**...
 2. Busque el reemplazo de NuGet por nombre o autor:
 
-    ![](component-nuget-images/nuget-search-sml.png)
+    ![Búsqueda de NuGet](component-nuget-images/nuget-search-sml.png)
 
 3. Presione **Agregar paquete**.
 

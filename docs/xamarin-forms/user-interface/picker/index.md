@@ -10,12 +10,12 @@ ms.date: 02/26/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 50f605f4ad9839521fd4169531ad46d197f20dbf
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5e3153e796f26ef150dccc79d8ea6f90127c6a26
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139675"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938689"
 ---
 # <a name="xamarinforms-picker"></a>Xamarin.FormsSelector
 
@@ -38,15 +38,15 @@ Todas las propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.F
 
 [`Picker`](xref:Xamarin.Forms.Picker)No muestra ningún dato cuando se muestra por primera vez. En su lugar, el valor de su [`Title`](xref:Xamarin.Forms.Picker.Title) propiedad se muestra como un marcador de posición en las plataformas iOS y Android:
 
-[![](images/picker-initial.png "Initial Picker Display")](images/picker-initial-large.png#lightbox "Initial Picker Display")
+[![Presentación inicial del selector](images/picker-initial.png)](images/picker-initial-large.png#lightbox "Presentación inicial del selector")
 
 Cuando [`Picker`](xref:Xamarin.Forms.Picker) obtiene el foco, se muestran sus datos y el usuario puede seleccionar un elemento:
 
-[![](images/picker-selection.png "Picker Selecting an Item")](images/picker-selection-large.png#lightbox "Picker Selecting an Item")
+[![Selector seleccionar un elemento](images/picker-selection.png)](images/picker-selection-large.png#lightbox "Selector seleccionar un elemento")
 
 [`Picker`](xref:Xamarin.Forms.Picker)Desencadena un [`SelectedIndexChanged`](xref:Xamarin.Forms.Picker.SelectedIndexChanged) evento cuando el usuario selecciona un elemento. A continuación, se muestra el elemento seleccionado `Picker` :
 
-![](images/picker-after-selection.png "Picker after Selection")
+![Selector después de la selección](images/picker-after-selection.png)
 
 Hay dos técnicas para rellenar un [`Picker`](xref:Xamarin.Forms.Picker) con datos:
 

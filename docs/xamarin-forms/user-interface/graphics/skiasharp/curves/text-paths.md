@@ -10,12 +10,12 @@ ms.date: 08/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b0cbb7d26a2aea02a3255fc75947c20a3d803b86
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e0964ad7d2bf517a6a4c7cf7965c346629716166
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131903"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936024"
 ---
 # <a name="paths-and-text-in-skiasharp"></a>Rutas de acceso y texto en SkiaSharp
 
@@ -29,7 +29,7 @@ Ya ha visto que puede trazar los contornos de los caracteres de texto, así como
 
 Además de usar un efecto de trazado para trazar un contorno de carácter, también puede crear efectos de trazado basados en una ruta de acceso que se deriva de una cadena de caracteres, e incluso puede combinar los dos efectos:
 
-![](text-paths-images/pathsandtextsample.png "Text Path Effect")
+![Efecto de la ruta de acceso de texto](text-paths-images/pathsandtextsample.png)
 
 En el artículo anterior sobre los efectos de la [**ruta de acceso**](effects.md), vio cómo el [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,SkiaSharp.SKRect,System.Single)) método de `SKPaint` puede obtener un contorno de una ruta de trazo. También puede usar este método con las rutas de acceso que se derivan de los contornos de caracteres.
 
@@ -49,7 +49,7 @@ El `GetTextPath` método es outkill si simplemente desea rellenar o trazar la ru
 
 Una de estas tareas es el recorte. La página **texto de recorte** crea un trazado de recorte basado en el carácter que se describe en la palabra "Code". Esta ruta de acceso se ajusta al tamaño de la página para recortar un mapa de bits que contiene una imagen del código fuente del **texto de recorte** :
 
-[![](text-paths-images/clippingtext-small.png "Triple screenshot of the Clipping Text page")](text-paths-images/clippingtext-large.png#lightbox "Triple screenshot of the Clipping Text page")
+[![Captura de pantalla triple de la página texto de recorte](text-paths-images/clippingtext-small.png)](text-paths-images/clippingtext-large.png#lightbox "Captura de pantalla triple de la página texto de recorte")
 
 El [`ClippingTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs) constructor de clase carga el mapa de bits que se almacena como un recurso incrustado en la carpeta **multimedia** de la solución:
 
@@ -129,7 +129,7 @@ Una vez que se establece el trazado de recorte, se puede mostrar el mapa de bits
 
 La página efecto de la **ruta de acceso de texto** convierte un solo carácter de y comercial en un trazado para crear un efecto de trazado 1D. A continuación, se usa un objeto Paint con este efecto de trazado para trazar el contorno de una versión mayor del mismo carácter:
 
-[![](text-paths-images/textpatheffect-small.png "Triple screenshot of the Text Path Effect page")](text-paths-images/textpatheffect-large.png#lightbox "Triple screenshot of the Text Path Effect page")
+[![Captura de pantalla triple de la página efecto de la ruta de acceso de texto](text-paths-images/textpatheffect-small.png)](text-paths-images/textpatheffect-large.png#lightbox "Captura de pantalla triple de la página efecto de la ruta de acceso de texto")
 
 Gran parte del trabajo en la [`TextPathEffectPath`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) clase se produce en los campos y en el constructor. Los dos `SKPaint` objetos definidos como campos se utilizan para dos propósitos diferentes: el primero (con nombre `textPathPaint` ) se usa para convertir el símbolo de y comercial con un `TextSize` de 50 en una ruta de acceso para el efecto de la ruta de acceso 1D. El segundo ( `textPaint` ) se usa para mostrar la versión más grande de la y comercial con ese efecto de trazado. Por ese motivo, el `Style` de este segundo objeto Paint se establece en `Stroke` , pero la `StrokeWidth` propiedad no se establece porque esa propiedad no es necesaria cuando se usa un efecto de ruta 1D:
 
@@ -274,7 +274,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 `PaintSurface`A continuación, el controlador crea una nueva ruta de acceso denominada `outlinePath` . Esto se convierte en la ruta de acceso de destino en la llamada a `GetFillPath` . La `StrokeWidth` propiedad de 25 causas es `outlinePath` describir el contorno de una ruta de acceso de 25 píxeles de trazado de los caracteres de texto. Esta ruta de acceso se muestra en rojo con un ancho de trazo de 5:
 
-[![](text-paths-images/characteroutlineoutlines-small.png "Triple screenshot of the Character Outline Outlines page")](text-paths-images/characteroutlineoutlines-large.png#lightbox "Triple screenshot of the Character Outline Outlines page")
+[![Captura de pantalla triple de la página contornos del esquema de caracteres](text-paths-images/characteroutlineoutlines-small.png)](text-paths-images/characteroutlineoutlines-large.png#lightbox "Captura de pantalla triple de la página contornos del esquema de caracteres")
 
 Mire atentamente y verá superposiciones donde el contorno de la ruta de acceso crea una esquina aguda. Estos son los artefactos normales de este proceso.
 
@@ -327,7 +327,7 @@ public class CircularTextPage : ContentPage
 
 `TextSize` `textPaint` A continuación, se ajusta la propiedad de para que el ancho del texto coincida con la circunferencia del círculo:
 
-[![](text-paths-images/circulartext-small.png "Triple screenshot of the Circular Text page")](text-paths-images/circulartext-large.png#lightbox "Triple screenshot of the Circular Text page")
+[![Captura de pantalla triple de la página de texto circular](text-paths-images/circulartext-small.png)](text-paths-images/circulartext-large.png#lightbox "Captura de pantalla triple de la página de texto circular")
 
 El texto en sí también se ha elegido como circular: la palabra "círculo" es el asunto de la oración y el objeto de una frase de preposicional.
 

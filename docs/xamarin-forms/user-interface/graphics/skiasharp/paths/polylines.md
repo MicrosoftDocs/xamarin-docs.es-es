@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b435e99180791b64e0a8ad975527fb3cb5316b7d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8ffa7ab7c9d2cebb9854ed155c3a00fe65e497c9
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140223"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936141"
 ---
 # <a name="polylines-and-parametric-equations"></a>Polilíneas y ecuaciones paramétricas
 
@@ -25,7 +25,7 @@ _Usar SkiaSharp para representar cualquier línea que pueda definir con ecuacion
 
 En la sección [**curvas y trazados de SkiaSharp**](../curves/index.md) de esta guía, verá los distintos métodos que [`SKPath`](xref:SkiaSharp.SKPath) define para representar determinados tipos de curvas. Sin embargo, a veces es necesario dibujar un tipo de curva que no es compatible directamente con `SKPath` . En tal caso, puede usar una polilínea (una colección de líneas conectadas) para dibujar cualquier curva que pueda definir matemáticamente. Si hace que las líneas sean lo suficientemente pequeñas y suficientemente numerosas, el resultado será similar a una curva. Este espiral es en realidad 3.600 pequeñas líneas:
 
-![](polylines-images/spiralexample.png "A spiral")
+![Espiral](polylines-images/spiralexample.png)
 
 Por lo general, es mejor definir una curva en términos de un par de ecuaciones paramétricas. Se trata de ecuaciones de coordenadas X e y que dependen de una tercera variable, a la que a veces se le llama `t` para el tiempo. Por ejemplo, las ecuaciones paramétricas siguientes definen un círculo con un radio de 1 centrado en el punto (0,0) para *t* de 0 a 1:
 
@@ -120,7 +120,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El resultado también se denomina *espiral aritmética* porque el desplazamiento entre cada bucle es constante:
 
-[![](polylines-images/archimedeanspiral-small.png "Triple screenshot of the Archimedean Spiral page")](polylines-images/archimedeanspiral-large.png#lightbox "Triple screenshot of the Archimedean Spiral page")
+[![Captura de pantalla triple de la página de espiral de Archimedean](polylines-images/archimedeanspiral-small.png)](polylines-images/archimedeanspiral-large.png#lightbox "Captura de pantalla triple de la página de espiral de Archimedean")
 
 Observe que `SKPath` se crea en un `using` bloque. Esto `SKPath` consume más memoria que los `SKPath` objetos de los programas anteriores, lo que sugiere que un `using` bloque es más adecuado para eliminar los recursos no administrados.
 

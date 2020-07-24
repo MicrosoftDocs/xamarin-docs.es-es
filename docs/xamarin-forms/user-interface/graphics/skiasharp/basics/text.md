@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ee97ee2aae11e4e54a0d25e80ffd7bce301fa2f3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a98c7210f2e71f6f26d53da3555f3f9b5e016952
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137688"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935985"
 ---
 # <a name="integrating-text-and-graphics"></a>Integración de texto y gráficos
 
@@ -25,7 +25,7 @@ _Vea cómo determinar el tamaño de la cadena de texto representada para integra
 
 En este artículo se muestra cómo medir texto, escalar el texto a un tamaño determinado e integrar texto con otros gráficos:
 
-![](text-images/textandgraphicsexample.png "Text surrounded by rectangles")
+![Texto rodeado por rectángulos](text-images/textandgraphicsexample.png)
 
 Esa imagen también incluye un rectángulo redondeado. La `Canvas` clase SkiaSharp incluye [`DrawRect`](xref:SkiaSharp.SKCanvas.DrawRect*) métodos para dibujar un rectángulo y [`DrawRoundRect`](xref:SkiaSharp.SKCanvas.DrawRoundRect*) métodos para dibujar un rectángulo con esquinas redondeadas. Estos métodos permiten definir el rectángulo como un `SKRect` valor o de otras maneras.
 
@@ -126,7 +126,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 A continuación, el resto del método es directa. Crea otro `SKPaint` objeto para los bordes y llama `DrawRoundRect` dos veces. La segunda llamada usa un rectángulo inflado por otros 10 píxeles. La primera llamada especifica un radio de esquina de 20 píxeles. El segundo tiene un radio de esquina de 30 píxeles, por lo que parece ser paralelo:
 
- [![](text-images/framedtext-small.png "Triple screenshot of the Framed Text page")](text-images/framedtext-large.png#lightbox "Triple screenshot of the Framed Text page")
+ [![Captura de pantalla triple de la página texto con marco](text-images/framedtext-small.png)](text-images/framedtext-large.png#lightbox "Captura de pantalla triple de la página texto con marco")
 
 Puede girar el teléfono o el simulador lateralmente para ver el tamaño de los fotogramas y el texto.
 
@@ -134,7 +134,7 @@ Si solo necesita centrar texto en la pantalla, puede hacerlo aproximadamente sin
 
 El texto se puede tratar de forma muy similar a cualquier otro objeto gráfico. Una opción sencilla es mostrar el contorno de los caracteres de texto:
 
-[![](text-images/outlinedtext-small.png "Triple screen shot of the Outlined Text page")](text-images/outlinedtext-large.png#lightbox "Triple screenshot of the Outlined Text page")
+[![Captura de pantalla triple de la página de texto esquematizada](text-images/outlinedtext-small.png)](text-images/outlinedtext-large.png#lightbox "Captura de pantalla triple de la página de texto esquematizada")
 
 Esto se consigue simplemente cambiando la propiedad normal `Style` del `SKPaint` objeto de su configuración predeterminada de `SKPaintStyle.Fill` a `SKPaintStyle.Stroke` y especificando un ancho de trazo. El `PaintSurface` controlador de la página de **texto esquematizada** muestra cómo se hace:
 

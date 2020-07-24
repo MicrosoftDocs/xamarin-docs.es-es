@@ -10,12 +10,12 @@ ms.date: 02/26/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8c4fc732082a77a2e471465af448a487862b513c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a15ca2e11dabb73054f5f0a1dc3f79342d8ce7f5
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136297"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938611"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>Configuración de la propiedad ItemsSource de un selector
 
@@ -178,7 +178,7 @@ detailsLabel.SetBinding(Label.TextProperty, "SelectedMonkey.Details");
 
 Los [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) datos de la propiedad se enlazan a la `SelectedMonkey` propiedad del modelo de vista conectado, que es de tipo `Monkey` . Por lo tanto, cuando el usuario selecciona un elemento en [`Picker`](xref:Xamarin.Forms.Picker) , la `SelectedMonkey` propiedad se establecerá en el `Monkey` objeto seleccionado. Los `SelectedMonkey` datos del objeto se muestran en la interfaz de usuario por las [`Label`](xref:Xamarin.Forms.Label) [`Image`](xref:Xamarin.Forms.Image) vistas y:
 
-![](populating-itemssource-images/monkeys.png "Picker Item Selection")
+![Selección de elementos de selector](populating-itemssource-images/monkeys.png)
 
 > [!NOTE]
 > Tenga en cuenta que las [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) propiedades y admiten enlaces bidireccionales de forma predeterminada.

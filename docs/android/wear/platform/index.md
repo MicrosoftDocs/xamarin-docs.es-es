@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 71c31bc9c1fde34a4b9a6dc90d28218ae7b13f5a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d60cc4a8730c765b0e1ee8f06237250afdcefa05
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030343"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996744"
 ---
-# <a name="platform-features"></a>Características de la plataforma
+# <a name="wear-os-platform-features-with-xamarinandroid"></a>Desgaste de las características de la plataforma del sistema operativo con Xamarin. Android
 
 Los documentos de esta sección cubren características específicas del desgaste de Android. Aquí encontrará un tema en el que se describe cómo crear un WatchFace.
 
-## <a name="creating-a-watch-faceandroidwearplatformcreating-a-watchfacemd"></a>[Creación de una esfera del reloj](~/android/wear/platform/creating-a-watchface.md)
+## <a name="creating-a-watch-face"></a>[Creación de una esfera del reloj](~/android/wear/platform/creating-a-watchface.md)
 
 Un tutorial paso a paso para implementar un servicio de reloj de observación personalizado para el desgaste de Android. Se proporcionan instrucciones para la creación de un servicio de caras de supervisión digital de bajada y, después, se agrega más código para crear una esfera de aspecto analógico con características adicionales.

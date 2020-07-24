@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9b8f743b2c3d7f4b38feb4cfc5015b1113620562
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1161600ad9b587c30ef28be1828fdb9e3b94f665
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137103"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938559"
 ---
 # <a name="scrollview-content-touches-on-ios"></a>El contenido de ScrollView se toca en iOS
 
@@ -60,7 +60,7 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 
 El resultado es que [`ScrollView`](xref:Xamarin.Forms.ScrollView) puede deshabilitar el retraso de la recepción de contenido que recibe los toques, de modo que en este escenario [`Slider`](xref:Xamarin.Forms.Slider) reciba el gesto en lugar de la [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) Página de [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) :
 
-[![](scrollview-content-touches-images/scrollview-delay-content-touches.png "ScrollView Delay Content Touches Platform-Specific")](scrollview-content-touches-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Platform-Specific")
+[![El contenido de retraso de ScrollView toca la plataforma específica](scrollview-content-touches-images/scrollview-delay-content-touches.png)](scrollview-content-touches-images/scrollview-delay-content-touches-large.png#lightbox "El contenido de retraso de ScrollView toca la plataforma específica")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

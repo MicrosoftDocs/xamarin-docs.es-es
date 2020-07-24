@@ -10,16 +10,16 @@ ms.date: 05/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 939727d3dd8d419cdc020d33d3e7241dcedb8158
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 279df31eeda506d6780533bac8ae190f799424a3
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137753"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936037"
 ---
 # <a name="xamarinforms-c-markup"></a>Xamarin.FormsMarcado de C#
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 
@@ -231,7 +231,7 @@ new Label { Text = "Tap Me" }
 
 Dado que un reconocedor de gestos es un `BindableObject` , puede utilizar los `Bind` `BindCommand` métodos de extensión y al inicializarlo. También puede inicializar tipos de reconocedor de gestos personalizados con el `Gesture<TGestureElement, TGestureRecognizer>` método de extensión.
 
-## <a name="layout"></a>Diseño
+## <a name="layout"></a>Layout
 
 El marcado de C# incluye una serie de métodos de extensión de diseño que admiten la colocación de vistas en diseños y contenido en vistas:
 

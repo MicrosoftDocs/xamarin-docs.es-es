@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 93b4dba3e8543bd2cc2a4f2187f617aae5daff77
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d8ca0dfb533dc5fb0b7442b85de41dcf7c18fec8
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137077"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938546"
 ---
 # <a name="slider-thumb-tap-on-ios"></a>Puntear en el control deslizante de iOS
 
@@ -48,7 +48,7 @@ El `Slider.On<iOS>` método especifica que este específico de la plataforma sol
 
 El resultado es que una pulsación en la [`Slider`](xref:Xamarin.Forms.Slider) barra puede trasladar el `Slider` control de posición y establecer la [`Slider.Value`](xref:Xamarin.Forms.Slider.Value) propiedad:
 
-![](slider-thumb-images/slider-updateontap.png "Slider Update on Tap enabled")
+![Actualización del control deslizante en TAP habilitada](slider-thumb-images/slider-updateontap.png)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

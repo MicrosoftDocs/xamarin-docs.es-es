@@ -19,7 +19,7 @@ ms.locfileid: "86935569"
 ---
 # <a name="customizing-listview-cell-appearance"></a>Personalizar el aspecto de las celdas de ListView
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
 
 La Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) clase se usa para presentar listas desplazables, que se pueden personalizar mediante el uso de `ViewCell` elementos. Un `ViewCell` elemento puede mostrar texto e imágenes, indicar un estado verdadero/falso y recibir datos proporcionados por el usuario.
 

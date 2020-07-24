@@ -1,18 +1,18 @@
 ---
 title: Uso de datos en una aplicación iOS
-description: En este documento se describe el ejemplo DataAccess_Adv, que muestra cómo recopilar datos proporcionados por el usuario y realizar operaciones de creación, lectura, actualización y eliminación (CRUD) en una aplicación Xamarin. iOS.
+description: En este documento se describe el ejemplo de DataAccess_Adv, que muestra cómo recopilar datos proporcionados por el usuario y realizar operaciones de creación, lectura, actualización y eliminación (CRUD) en una aplicación de Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: 2CB8150E-CD2C-4E97-8605-1EE8CBACFEEC
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2016
-ms.openlocfilehash: 060e4b8e7856e0024e6d236652c2b04c1da16f66
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c888c132748c4212b1e52413647614ca83897d75
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73008248"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938520"
 ---
 # <a name="using-data-in-an-ios-app"></a>Uso de datos en una aplicación iOS
 
@@ -20,25 +20,25 @@ En el ejemplo **DataAccess_Adv** se muestra una aplicación de trabajo que permi
 
 Después de agregar algunos datos, las pantallas de la aplicación tienen el siguiente aspecto en iOS:
 
- ![](using-data-in-an-app-images/image9.png "iOS sample list")
+ ![lista de ejemplos de iOS](using-data-in-an-app-images/image9.png)
 
- ![](using-data-in-an-app-images/image10.png "iOS sample detail")
+ ![detalle de ejemplo de iOS](using-data-in-an-app-images/image10.png)
 
 El proyecto de iOS se muestra a continuación: el código que se muestra en esta sección se encuentra en el directorio **ORM** :
 
- ![](using-data-in-an-app-images/image13.png "iOS project tree")
+ ![árbol del proyecto de iOS](using-data-in-an-app-images/image13.png)
 
 El código de la interfaz de usuario nativa para ViewControllers en iOS está fuera del ámbito de este documento.
 Consulte la guía [iOS Working with tables and Cells (trabajar con tablas y celdas](~/ios/user-interface/controls/tables/index.md) ) para obtener más información sobre los controles de interfaz de usuario.
 
-## <a name="read"></a>Leer
+## <a name="read"></a>Lectura
 
 Hay un par de operaciones de lectura en el ejemplo:
 
 - Lectura de la lista
 - Leer registros individuales
 
-Los dos métodos de la clase `StockDatabase` son:
+Los dos métodos de la `StockDatabase` clase son:
 
 ```csharp
 public IEnumerable<Stock> GetStocks ()
@@ -55,11 +55,11 @@ public Stock GetStock (int id)
 }
 ```
 
-iOS representa los datos de manera diferente como `UITableView`.
+iOS representa los datos de manera diferente como `UITableView` .
 
 ## <a name="create-and-update"></a>Crear y actualizar
 
-Para simplificar el código de la aplicación, se proporciona un único método Save que realiza una inserción o una actualización dependiendo de si se ha establecido PrimaryKey. Dado que la propiedad `Id` se marca con un atributo de `[PrimaryKey]` no debe establecerla en el código.
+Para simplificar el código de la aplicación, se proporciona un único método Save que realiza una inserción o una actualización dependiendo de si se ha establecido PrimaryKey. Dado `Id` que la propiedad está marcada con un `[PrimaryKey]` atributo, no debe establecerla en el código.
 Este método detectará si el valor se ha guardado previamente (comprobando la propiedad de clave principal) e inserta o actualiza el objeto en consecuencia:
 
 ```csharp
@@ -81,8 +81,8 @@ Una buena aplicación multiplataforma implementa tanto como sea posible la valid
 
 ## <a name="delete"></a>Eliminar
 
-A diferencia de los métodos `Insert` y `Update`, el método `Delete<T>` solo puede aceptar el valor de clave principal en lugar de un objeto de `Stock` completo.
-En este ejemplo, se pasa un objeto `Stock` al método, pero solo la propiedad ID se pasa al método `Delete<T>`.
+A diferencia de `Insert` los `Update` métodos y, el `Delete<T>` método solo puede aceptar el valor de clave principal en lugar de un `Stock` objeto completo.
+En este ejemplo, `Stock` se pasa un objeto al método, pero solo la propiedad ID se pasa al `Delete<T>` método.
 
 ```csharp
 public int DeleteStock(Stock stock)
@@ -99,11 +99,11 @@ Algunas aplicaciones se incluyen con una base de datos que ya se ha rellenado co
 Puede hacerlo fácilmente en la aplicación móvil si envía un archivo de base de datos de SQLite existente a la aplicación y lo copia en un directorio de escritura antes de tener acceso a él. Dado que SQLite es un formato de archivo estándar que se usa en muchas plataformas, hay una serie de herramientas disponibles para crear un archivo de base de datos de SQLite:
 
 - **Extensión** de la administración de SQLite de SQLite: funciona en Mac y Windows y genera archivos que son compatibles con iOS y Android.
-- **Línea de comandos** : vea [www.SQLite.org/SQLite.html](https://www.sqlite.org/sqlite.html) .
+- **Línea de comandos** : consulte [www.SQLite.org/sqlite.html](https://www.sqlite.org/sqlite.html) .
 
-Al crear un archivo de base de datos para su distribución con la aplicación, tenga cuidado con el nombre de las tablas y columnas para asegurarse de que coinciden con lo que espera el código, especialmente si usa SQLite.NET, lo C# que esperará que los nombres coincidan con sus clases y propiedades ( o los atributos personalizados asociados).
+Al crear un archivo de base de datos para su distribución con la aplicación, tenga cuidado con la nomenclatura de tablas y columnas para asegurarse de que coinciden con lo que espera el código, especialmente si usa SQLite.NET, lo que esperará que los nombres coincidan con las clases y las propiedades de C# (o los atributos personalizados asociados).
 
-En el caso de iOS, incluya el archivo SQLite en la aplicación y asegúrese de que está marcado con la **acción de compilación: contenido**. Coloque el código en el `FinishedLaunching` para copiar el archivo en un directorio de escritura *antes* de llamar a los métodos de datos. En el código siguiente se copiará una base de datos existente denominada **Data. SQLite**, solo si aún no existe.
+En el caso de iOS, incluya el archivo SQLite en la aplicación y asegúrese de que está marcado con la **acción de compilación: contenido**. Coloque el código en `FinishedLaunching` para copiar el archivo en un directorio de escritura *antes* de llamar a los métodos de datos. En el código siguiente se copiará una base de datos existente denominada **Data. SQLite**, solo si aún no existe.
 
 ```csharp
 // Copy the database across (if it doesn't exist)

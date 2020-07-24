@@ -1,18 +1,18 @@
 ---
 title: System. Data en Xamarin. iOS
-description: En este documento se describe cómo usar System. Data y mono. Data. SQLite. dll para tener acceso a los datos de SQLite en una aplicación de Xamarin. iOS.
+description: En este documento se describe cómo usar System. Data y Mono.Data.Sqlite.dll para tener acceso a los datos de SQLite en una aplicación de Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: 736d70aebcf861b5557d5f076a42ff0a3dcfc043
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: eb3453c3475fdc2e309a888a1aa1318eccc59228
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569963"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938741"
 ---
 # <a name="systemdata-in-xamarinios"></a>System. Data en Xamarin. iOS
 
@@ -34,7 +34,7 @@ El programa siguiente crea una base de `Documents/mydb.db3` datos de en y, si la
 
 En primer lugar, haga clic con el botón derecho en el nodo **referencias** y elija **Editar referencias...** a continuación, seleccione `System.Data` y `Mono.Data.Sqlite` :
 
-[![](system.data-images/edit-references-sml.png "Adding new references")](system.data-images/edit-references.png#lightbox)
+[![Agregar nuevas referencias](system.data-images/edit-references-sml.png)](system.data-images/edit-references.png#lightbox)
 
 ### <a name="sample-code"></a>Código de ejemplo
 
@@ -139,7 +139,7 @@ Falta alguna funcionalidad en **System. Data** y **mono. Data. SQLite** .
 
 ### <a name="systemdata"></a>System.Data
 
-La funcionalidad que falta en **System. Data. dll** consta de:
+La funcionalidad que falta en **System.Data.dll** consta de:
 
 - Cualquier cosa que requiera [System. CodeDom](xref:System.CodeDom) (por ejemplo,  [System. Data. TypedDataSetGenerator](xref:System.Data.TypedDataSetGenerator) )
 - Compatibilidad con archivos de configuración XML (por ejemplo,  [System. Data. Common. DbProviderConfigurationHandler](xref:System.Data.Common.DbProviderConfigurationHandler) )
@@ -152,7 +152,7 @@ La funcionalidad que falta en **System. Data. dll** consta de:
 
 ### <a name="monodatasqlite"></a>Mono. Data. SQLite
 
-Mientras tanto, **mono. Data. SQLite. dll** no sufrió ningún cambio en el código fuente, sino que puede hospedarse en varios problemas en *tiempo de ejecución* desde que `Mono.Data.Sqlite.dll` enlaza SQLite 3,5. iOS 8, mientras tanto, se incluye con SQLite 3.8.5. Basta con decir que algunas cosas han cambiado entre las dos versiones.
+Mientras tanto, los **Mono.Data.Sqlite.dll** no sufrieron cambios en el código fuente, sino que pueden hospedarse en varios problemas en *tiempo de ejecución* , ya que `Mono.Data.Sqlite.dll` enlaza SQLite 3,5. iOS 8, mientras tanto, se incluye con SQLite 3.8.5. Basta con decir que algunas cosas han cambiado entre las dos versiones.
 
 La versión anterior de iOS se incluye con las siguientes versiones de SQLite:
 

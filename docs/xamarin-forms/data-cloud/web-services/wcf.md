@@ -10,12 +10,12 @@ ms.date: 03/28/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cf95427807e0179a608b428bc7e02499c9616fe7
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cee301178880a62695f4208161965b01bb6f522e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139157"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938598"
 ---
 # <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>Consumir un servicio Web de Windows Communication Foundation (WCF)
 
@@ -41,7 +41,7 @@ Hay diferencias entre los servicios Web de ASP.NET (ASMX) y WCF, pero WCF admite
 
 La solución de aplicación de ejemplo incluye un servicio WCF que se puede ejecutar localmente y se muestra en la siguiente captura de pantalla:
 
-![](wcf-images/portal.png "Sample Application")
+![Aplicación de ejemplo](wcf-images/portal.png)
 
 > [!NOTE]
 > En iOS 9 y versiones posteriores, la seguridad de transporte de aplicaciones (ATS) exige conexiones seguras entre recursos de Internet (como el servidor back-end de la aplicación) y la aplicación, lo que evita la divulgación accidental de información confidencial. Dado que ATS está habilitado de forma predeterminada en las aplicaciones compiladas para iOS 9, todas las conexiones estarán sujetas a los requisitos de seguridad de ATS. Si las conexiones no cumplen estos requisitos, se producirá un error con una excepción.
@@ -136,7 +136,7 @@ static TodoItem FromWCFServiceTodoItem (TodoWCFService.TodoItem item)
 
 Este método simplemente recupera los datos del tipo generado por el proxy `TodoItem` y los establece en la instancia recién creada `TodoItem` .
 
-### <a name="retrieve-data"></a>Recuperar datos
+### <a name="retrieve-data"></a>Recuperación de datos
 
 Los `TodoServiceClient.BeginGetTodoItems` `TodoServiceClient.EndGetTodoItems` métodos y se usan para llamar a la `GetTodoItems` operación proporcionada por el servicio Web. Estos métodos asincrónicos se encapsulan en un `Task` objeto, tal y como se muestra en el ejemplo de código siguiente:
 
