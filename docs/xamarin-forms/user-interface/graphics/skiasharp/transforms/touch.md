@@ -10,12 +10,12 @@ ms.date: 09/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f5738f376e2a814ef1af455178c2e68135184402
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6de2caf95d4ce983f7e97e0bc017932df534aedb
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140171"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931864"
 ---
 # <a name="touch-manipulations"></a>Manipulaciones táctiles
 
@@ -25,7 +25,7 @@ _Usar transformaciones de matriz para implementar la función táctil de arrastr
 
 En entornos multitáctiles, como los de los dispositivos móviles, los usuarios suelen usar los dedos para manipular los objetos en la pantalla. Los gestos comunes, como un arrastre de un dedo y un toque de dos dedos, pueden mover y escalar objetos, o incluso girarlos. Estos gestos se implementan generalmente mediante matrices de transformación, y en este artículo se muestra cómo hacerlo.
 
-![](touch-images/touchmanipulationsexample.png "A bitmap subjected to translation, scaling, and rotation")
+![Mapa de bits que se somete a traslación, escala y giro](touch-images/touchmanipulationsexample.png)
 
 Todos los ejemplos que se muestran aquí usan el Xamarin.Forms efecto de seguimiento de toque que se muestra en el artículo [**invocación de eventos a partir de efectos**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md).
 
@@ -920,7 +920,7 @@ public partial class TouchManipulationPage : ContentPage
 
 El `PaintSurface` controlador finaliza mostrando un `MatrixDisplay` objeto que muestra la matriz táctil acumulada:
 
-[![](touch-images/touchmanipulation-small.png "Triple screenshot of the Touch Manipulation page")](touch-images/touchmanipulation-large.png#lightbox "Triple screenshot of the Touch Manipulation page")
+[![Captura de pantalla triple de la página de manipulación táctil](touch-images/touchmanipulation-small.png)](touch-images/touchmanipulation-large.png#lightbox "Captura de pantalla triple de la página de manipulación táctil")
 
 ## <a name="manipulating-multiple-bitmaps"></a>Manipular varios mapas de bits
 
@@ -1058,7 +1058,7 @@ public partial class BitmapScatterViewPage : ContentPage
 
 El código recorre en bucle la colección y muestra la pila de mapas de bits desde el principio de la colección hasta el final:
 
-[![](touch-images/bitmapscatterview-small.png "Triple screenshot of the Bitmap Scatter View page")](touch-images/bitmapscatterview-large.png#lightbox "Triple screenshot of the Bitmap Scatter View page")
+[![Captura de pantalla triple de la página de vista dispersión de mapa de bits](touch-images/bitmapscatterview-small.png)](touch-images/bitmapscatterview-large.png#lightbox "Captura de pantalla triple de la página de vista dispersión de mapa de bits")
 
 ## <a name="single-finger-scaling"></a>Escalado de un solo dedo
 

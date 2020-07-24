@@ -10,12 +10,12 @@ ms.date: 05/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ff384605b35f6406b628da99de500b550da811c9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ac7b90fb3e70fd07fcafe78a68136338469862e0
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136063"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936375"
 ---
 # <a name="perceived-emotion-recognition-using-the-face-api"></a>Reconocimiento de emociones percibido mediante el Face API
 
@@ -36,7 +36,7 @@ Se debe obtener una clave de API para usar el Face API. Esto puede obtenerse en 
 
 Para obtener más información sobre el Face API, vea [face API](/azure/cognitive-services/face/overview/).
 
-## <a name="authentication"></a>Authentication
+## <a name="authentication"></a>Autenticación
 
 Cada solicitud realizada al Face API requiere una clave de API que debe especificarse como el valor del `Ocp-Apim-Subscription-Key` encabezado. En el ejemplo de código siguiente se muestra cómo agregar la clave de API al `Ocp-Apim-Subscription-Key` encabezado de una solicitud:
 
@@ -178,7 +178,7 @@ emotionResultLabel.Text = faces.FirstOrDefault().FaceAttributes.Emotion.ToRanked
 
 En la captura de pantalla siguiente se muestra el resultado del proceso de reconocimiento de emociones en la aplicación de ejemplo:
 
-![](emotion-recognition-images/emotion-recognition.png "Emotion Recognition")
+![Reconocimiento de emociones](emotion-recognition-images/emotion-recognition.png)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

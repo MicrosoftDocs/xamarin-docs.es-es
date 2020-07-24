@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 17ccc67b2976b93fbb290a1d2425168cab50228e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 497096e7f422e8337498339737ab304b0d896dfe
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84568794"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939001"
 ---
 # <a name="watchos-troubleshooting"></a>Solución de problemas de watchos
 
@@ -36,7 +36,7 @@ Esta página contiene información adicional y soluciones alternativas para los 
 <a name="deploy"></a>
 
 - Las versiones anteriores de Visual Studio para Mac muestran incorrectamente uno de los iconos de **AppleCompanionSettings** como 88x88 píxeles; Esto da como resultado un **error de icono que falta** si intenta enviar a la tienda de aplicaciones.
-    Este icono debe ser 87x87 píxeles (29 unidades para **@3x** pantallas retinas). No se puede corregir en Visual Studio para Mac: edite el recurso de imagen en Xcode o edite manualmente el archivo **Contents. JSON** .
+    Este icono debe ser 87x87 píxeles (29 unidades para **@3x** pantallas retinas). No se puede corregir en Visual Studio para Mac: edite el recurso de imagen en Xcode o edite manualmente el **Contents.jsen** el archivo.
 
 - Si info. plist del proyecto de extensión de Watch **> ID. de agrupación de WKApp** no está [configurado correctamente](~/ios/watchos/get-started/project-references.md) para que coincida con el **identificador de lote**de la aplicación de inspección, el depurador no podrá conectarse y Visual Studio para Mac esperará con el mensaje *"esperando a que se conecte el depurador"*.
 
@@ -47,12 +47,12 @@ Esta página contiene información adicional y soluciones alternativas para los 
 - No se pueden agregar dos `WKNotificationControllers` a un guion gráfico.
     Solución alternativa: el `notificationCategory` elemento en el XML del guión gráfico siempre se inserta con el mismo `id` . Para evitar este problema, puede agregar dos (o más) controladores de notificaciones, abrir el archivo de guion gráfico en un editor de texto y, a continuación, cambiar manualmente el `id` elemento para que sea único.
 
-    [![](troubleshooting-images/duplicate-id-sml.png "Opening the storyboard file in a text editor and manually change the id element to be unique")](troubleshooting-images/duplicate-id.png#lightbox)
+    [![Abrir el archivo de guion gráfico en un editor de texto y cambiar manualmente el elemento ID para que sea único](troubleshooting-images/duplicate-id-sml.png)](troubleshooting-images/duplicate-id.png#lightbox)
 
 - Es posible que vea el error "no se ha compilado la aplicación" al intentar iniciar la aplicación. Esto ocurre después de una **limpieza** cuando el proyecto de inicio se establece en el proyecto de extensión de inspección.
     La solución consiste en seleccionar **Compilar > volver a generar todo** y, a continuación, volver a iniciar la aplicación.
 
-### <a name="visual-studio"></a>Visual Studio
+### <a name="visual-studio"></a>Programa para la mejora
 
 La compatibilidad con el diseñador de iOS para el kit de inspección *requiere* que la solución se configure correctamente. Si no se establecen las referencias del proyecto (vea [cómo establecer referencias](~/ios/watchos/get-started/project-references.md)), la superficie de diseño no funcionará correctamente.
 
@@ -74,7 +74,7 @@ Es fácil quitar el canal alfa en Mac OS X mediante la aplicación de **vista pr
 
 2. El cuadro de diálogo que aparece incluirá una casilla **alfa** si hay un canal alfa.
 
-    ![](troubleshooting-images/remove-alpha-sml.png "The dialog that appears will include an Alpha checkbox if an alpha channel is present")
+    ![El cuadro de diálogo que aparece incluirá una casilla alfa si hay un canal alfa presente](troubleshooting-images/remove-alpha-sml.png)
 
 3. *Desmarque* la casilla **alfa** y **guarde** el archivo en la ubicación correcta.
 
@@ -91,15 +91,15 @@ Es fácil quitar el canal alfa en Mac OS X mediante la aplicación de **vista pr
 
 1. Abra la aplicación de inspección **interface. Storyboard** en **Xcode Interface Builder**.
 
-    ![](troubleshooting-images/add-6.png "Opening the storyboard in Xcode Interface Builder")
+    ![Abrir el guion gráfico en Xcode Interface Builder](troubleshooting-images/add-6.png)
 
 2. Arrastre un nuevo `InterfaceController` al guion gráfico:
 
-    ![](troubleshooting-images/add-1.png "A InterfaceController")
+    ![Un InterfaceController](troubleshooting-images/add-1.png)
 
 3. Ahora puede arrastrar controles al controlador de interfaz (por ejemplo, etiquetas y botones), pero no puede crear salidas ni acciones todavía, porque no hay ningún archivo de encabezado **. h** . Los pasos siguientes harán que se cree el archivo de encabezado **. h** necesario.
 
-    ![](troubleshooting-images/add-2.png "A button in the layout")
+    ![Botón en el diseño](troubleshooting-images/add-2.png)
 
 4. Cierre el guión gráfico y vuelva a Visual Studio para Mac. Cree un nuevo archivo de C# **MyInterfaceController.CS** (o cualquier nombre que desee) en el proyecto de **extensión de aplicación de inspección** (no en la propia aplicación de inspección donde se encuentra el guion gráfico). Agregue el código siguiente (actualizando el espacio de nombres, className y el nombre del constructor):
 
@@ -158,34 +158,34 @@ Es fácil quitar el canal alfa en Mac OS X mediante la aplicación de **vista pr
     > [!TIP]
     > También puede hacer que este archivo sea un nodo secundario del primer archivo arrastrándolo al otro archivo de C# en el Panel de solución de Visual Studio para Mac. A continuación, aparecerá de la siguiente manera:
 
-    ![](troubleshooting-images/add-5.png "The Solution pad")
+    ![El panel de solución](troubleshooting-images/add-5.png)
 
 6. Seleccione compilar **> compilar todo** para que la sincronización de Xcode reconozca la nueva clase (a través del `Register` atributo) que usamos.
 
 7. Vuelva a abrir el guion gráfico haciendo clic con el botón derecho en el archivo de guion gráfico de la aplicación de inspección y seleccionando **abrir con > Xcode Interface Builder**:
 
-    ![](troubleshooting-images/add-6.png "Opening the storyboard in Interface Builder")
+    ![Abrir el guion gráfico en Interface Builder](troubleshooting-images/add-6.png)
 
 8. Seleccione el nuevo controlador de interfaz y asígnele el className que definió anteriormente, por ejemplo,. `MyInterfaceController`.
     Si todo ha funcionado correctamente, debe aparecer automáticamente en la lista desplegable **clase:** y puede seleccionarlo desde allí.
 
-    ![](troubleshooting-images/add-4.png "Setting a custom class")
+    ![Establecer una clase personalizada](troubleshooting-images/add-4.png)
 
 9. Elija la vista **Editor de asistentes** en Xcode (el icono con dos círculos superpuestos) para que pueda ver el guión gráfico y el código en paralelo:
 
-    ![](troubleshooting-images/add-7.png "The Assistant Editor toolbar item")
+    ![El elemento de la barra de herramientas del editor de asistentes](troubleshooting-images/add-7.png)
 
     Cuando el foco esté en el panel de código, asegúrese de consultar el archivo de encabezado **. h** y, si no hace clic con el botón derecho en la barra de ruta de navegación y selecciona el archivo correcto (**MyInterfaceController. h**)
 
-    ![](troubleshooting-images/add-8.png "Select MyInterfaceController")
+    ![Seleccionar MyInterfaceController](troubleshooting-images/add-8.png)
 
 10. Ahora puede crear salidas y acciones mediante **Ctrl + arrastre** desde el guión gráfico hasta el archivo de encabezado **. h** .
 
-    ![](troubleshooting-images/add-9.png "Creating outlets and actions")
+    ![Creación de salidas y acciones](troubleshooting-images/add-9.png)
 
     Cuando suelte el arrastre, se le pedirá que seleccione si desea crear una salida o una acción y elegir su nombre:
 
-    ![](troubleshooting-images/add-a.png "The outlet and an action dialog")
+    ![Cuadro de diálogo de salida y acción](troubleshooting-images/add-a.png)
 
 11. Una vez que se guardan los cambios de guion gráfico y se cierra Xcode, vuelva a Visual Studio para Mac. Detectará los cambios en el archivo de encabezado y agregará código automáticamente al archivo **. Designer.CS** :
 
@@ -257,7 +257,7 @@ Los argumentos restantes se explican a continuación:
 
 ### <a name="--sdkroot"></a>--SDKRoot
 
-Obligatorio. Especifica la ruta de acceso a Xcode (6,2 o posterior).
+Necesario. Especifica la ruta de acceso a Xcode (6,2 o posterior).
 
 Ejemplo:
 

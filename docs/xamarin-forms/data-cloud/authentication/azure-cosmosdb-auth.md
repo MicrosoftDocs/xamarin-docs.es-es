@@ -10,12 +10,12 @@ ms.date: 06/16/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7e1fb6342db4c97ea6946db366d356267c8c1b90
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 05547e960ba1ea141a830396f803dfc265283627
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84570562"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936466"
 ---
 # <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Autentique a los usuarios con una base de datos de documentos Azure Cosmos DB yXamarin.Forms
 
@@ -36,7 +36,7 @@ Al exponer una clave maestra, se abre una Cosmos DB cuenta a la posibilidad de q
 
 Un enfoque típico para solicitar, generar y entregar tokens de recursos a una aplicación móvil es usar un agente de token de recurso. En el diagrama siguiente se muestra información general de alto nivel sobre cómo la aplicación de ejemplo usa un agente de token de recursos para administrar el acceso a los datos de la base de datos de documentos:
 
-![](azure-cosmosdb-auth-images/documentdb-authentication.png "Document Database Authentication Process")
+![Proceso de autenticación de base de datos de documentos](azure-cosmosdb-auth-images/documentdb-authentication.png)
 
 El agente de token de recursos es un servicio de API Web de nivel intermedio, hospedado en Azure App Service, que posee la clave maestra de la cuenta de Cosmos DB. La aplicación de ejemplo usa el agente de tokens de recursos para administrar el acceso a los datos de la base de datos de documentos como se indica a continuación:
 
@@ -51,7 +51,7 @@ El agente de token de recursos es un servicio de API Web de nivel intermedio, ho
 
 Para obtener más información acerca de la creación de particiones Cosmos DB, consulte [partición y escalado en Azure Cosmos dB](/azure/cosmos-db/partition-data/). Para obtener más información sobre el control de acceso de Cosmos DB, consulte [proteger el acceso a los datos de Cosmos dB](/azure/cosmos-db/secure-access-to-data/) y [el control de acceso en la API de SQL](/rest/api/documentdb/access-control-on-documentdb-resources/).
 
-## <a name="setup"></a>Configurar
+## <a name="setup"></a>Programa de instalación
 
 El proceso para integrar el agente de token de recursos en una Xamarin.Forms aplicación es el siguiente:
 
@@ -85,7 +85,7 @@ El proceso para hospedar el agente de token de recursos en Azure App Service es 
 
     En la captura de pantalla siguiente se muestra esta configuración:
 
-    [![](azure-cosmosdb-auth-images/azure-web-app-settings.png "App Service Web App Settings")](azure-cosmosdb-auth-images/azure-web-app-settings-large.png#lightbox "App Service Web App Settings")
+    [![App Service la configuración de la aplicación Web](azure-cosmosdb-auth-images/azure-web-app-settings.png)](azure-cosmosdb-auth-images/azure-web-app-settings-large.png#lightbox "App Service la configuración de la aplicación Web")
 
 1. Publique la solución de agente de tokens de recursos en la aplicación Web de Azure App Service.
 
@@ -102,7 +102,7 @@ El proceso para crear una aplicación de Facebook para realizar la autenticació
 
   En la captura de pantalla siguiente se muestra esta configuración:
 
-  ![](azure-cosmosdb-auth-images/facebook-oauth-settings.png "Facebook Login OAuth Settings")
+  ![Configuración de OAuth de inicio de sesión de Facebook](azure-cosmosdb-auth-images/facebook-oauth-settings.png)
 
 Para obtener más información, consulte [registrar la aplicación con Facebook](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-nameregister-aregister-your-application-with-facebook).
 
@@ -117,7 +117,7 @@ El proceso para configurar la autenticación de App Service Easy es el siguiente
 
     En la captura de pantalla siguiente se muestra esta configuración:
 
-    [![](azure-cosmosdb-auth-images/app-service-authentication-settings.png "App Service Web App Authentication Settings")](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "App Service Web App Authentication Settings")
+    [![App Service la configuración de autenticación de aplicaciones Web](azure-cosmosdb-auth-images/app-service-authentication-settings.png)](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "App Service la configuración de autenticación de aplicaciones Web")
 
 También se debe configurar la aplicación Web de App Service para comunicarse con la aplicación de Facebook para habilitar el flujo de autenticación. Para ello, seleccione el proveedor de identidades de Facebook y escriba los valores de **ID. de aplicación** y secreto de la **aplicación** en la configuración de la aplicación de Facebook en el centro para desarrolladores de Facebook. Para obtener más información, consulte [Agregar información de Facebook a la aplicación](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application).
 
@@ -144,7 +144,7 @@ var auth = new Xamarin.Auth.WebRedirectAuthenticator(
 
 Esto hace que se inicie un flujo de autenticación de OAuth entre Azure App Service y Facebook, que muestra la página de inicio de sesión de Facebook:
 
-![](azure-cosmosdb-auth-images/login.png "Facebook Login")
+![Inicio de sesión de Facebook](azure-cosmosdb-auth-images/login.png)
 
 Para cancelar el inicio de sesión, presione el botón **Cancelar** en iOS o presione el botón **atrás** en Android, en cuyo caso el usuario permanece sin autenticar y la interfaz de usuario del proveedor de identidades se quita de la pantalla.
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: bd5217173e00de7d09e4ec14a5acf4d6a8389b10
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: fbd6e4a3b1c5cdb45a057f1ed664a0d5e71e224d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574449"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937896"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Introducción a OpenTK en Xamarin. Mac
 
 OpenTK (el kit de herramientas abierto) es una biblioteca de C# avanzada y de bajo nivel que facilita el trabajo con OpenGL, OpenCL y Openic. OpenTK se puede usar para juegos, aplicaciones científicas u otros proyectos que requieran gráficos 3D, audio o funcionalidad de cálculo. En este artículo se ofrece una breve introducción al uso de OpenTK en una aplicación de Xamarin. Mac.
 
-[![](opentk-images/intro01.png "An example app run")](opentk-images/intro01.png#lightbox)
+[![Ejecución de una aplicación de ejemplo](opentk-images/intro01.png)](opentk-images/intro01.png#lightbox)
 
 En este artículo, trataremos los aspectos básicos de OpenTK en una aplicación de Xamarin. Mac. Se recomienda encarecidamente que trabaje primero en el artículo [Hello, Mac](~/mac/get-started/hello-mac.md) , específicamente en las secciones [Introducción a Xcode y Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) y [salidas y acciones](~/mac/get-started/hello-mac.md#outlets-and-actions) , ya que trata conceptos clave y técnicas que vamos a usar en este artículo.
 
@@ -54,11 +54,11 @@ Como introducción rápida al uso de OpenTK en una aplicación de Xamarin. Mac, 
 
 Inicie Visual Studio para Mac y cree una nueva solución de Xamarin. Mac. Seleccione **Mac**  >  **aplicación**Mac general aplicación de  >  **General**  >  **coco**:
 
-[![](opentk-images/sample01.png "Adding a new Cocoa App")](opentk-images/sample01.png#lightbox)
+[![Adición de una nueva aplicación de coco](opentk-images/sample01.png)](opentk-images/sample01.png#lightbox)
 
 Escriba `MacOpenTK` como **nombre del proyecto**:
 
-[![](opentk-images/sample02.png "Setting the project name")](opentk-images/sample02.png#lightbox)
+[![Establecer el nombre del proyecto](opentk-images/sample02.png)](opentk-images/sample02.png#lightbox)
 
 Haga clic en el botón **crear** para compilar el nuevo proyecto.
 
@@ -70,7 +70,7 @@ Antes de poder usar Open TK en una aplicación de Xamarin. Mac, debe incluir una
 
 Active la casilla de verificación `OpenTK` y haga clic en el botón **Aceptar** :
 
-[![](opentk-images/sample03.png "Editing the project references")](opentk-images/sample03.png#lightbox)
+[![Editar las referencias del proyecto](opentk-images/sample03.png)](opentk-images/sample03.png#lightbox)
 
 <a name="Using_OpenTK"></a>
 
@@ -297,7 +297,7 @@ Pasamos la velocidad de fotogramas deseada en la que queremos que se actualice l
 
 Vamos a ejecutar la aplicación y ver la salida:
 
-[![](opentk-images/intro01.png "A sample of the apps output")](opentk-images/intro01.png#lightbox)
+[![Un ejemplo de la salida de las aplicaciones](opentk-images/intro01.png)](opentk-images/intro01.png#lightbox)
 
 Si se cambia el tamaño de la ventana, la vista de juego también residirá y se cambiará el tamaño del triángulo y también se actualizará en tiempo real.
 

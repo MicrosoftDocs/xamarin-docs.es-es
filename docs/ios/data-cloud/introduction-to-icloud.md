@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/09/2016
-ms.openlocfilehash: 843a6212be44778f9637de631398a56a1d633a69
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 6588747fb806c858f5bc7b024980ae0d0771c60e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016982"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938793"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Usar iCloud con Xamarin. iOS
 
@@ -49,15 +49,15 @@ Para configurar correctamente una aplicación para tener acceso a iCloud:
 
 - **Crear un nuevo identificador de aplicación** : para crear un identificador de aplicación, siga los pasos descritos en la [sección aprovisionamiento de tecnologías de la tienda de la guía de aprovisionamiento de dispositivos](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)y asegúrese de comprobar **iCloud** como servicio permitido:
 
- [![](introduction-to-icloud-images/icloud-sml.png "Check iCloud as an allowed service")](introduction-to-icloud-images/icloud.png#lightbox)
+ [![Comprobar iCloud como servicio permitido](introduction-to-icloud-images/icloud-sml.png)](introduction-to-icloud-images/icloud.png#lightbox)
 
 - **Crear un nuevo perfil de aprovisionamiento** : para crear un perfil de aprovisionamiento, siga los pasos descritos en la [Guía de aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) .
 
-- **Agregue el identificador del contenedor a contitles. plist** : el formato del identificador del contenedor es `TeamID.BundleID`. Para obtener más información, consulte la guía [trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) .
+- **Agregue el identificador del contenedor a contitles. plist** : el formato del identificador del contenedor es `TeamID.BundleID` . Para obtener más información, consulte la guía [trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) .
 
 - **Configurar las propiedades del proyecto** : en el archivo info. plist, asegúrese de que el **identificador de paquete** coincide con el **identificador de paquete** establecido al [crear un identificador de aplicación](~/ios/deploy-test/provisioning/capabilities/index.md). La firma del lote de iOS usa un **Perfil de aprovisionamiento** que contiene un identificador de aplicación con el App Service iCloud y el archivo de **derechos personalizados** seleccionado. Todo esto se puede hacer en Visual Studio en el panel Propiedades del proyecto.
 
-- **Habilitar icloud en el dispositivo** : vaya a **Configuración > iCloud** y asegúrese de que el dispositivo está conectado.
+- **Habilitar icloud en el dispositivo** : vaya a **configuración > iCloud** y asegúrese de que el dispositivo está conectado.
 Seleccione y active la opción **documentos & datos** .
 
 - **Debe usar un dispositivo para probar iCloud** ; no funcionará en el simulador.
@@ -81,7 +81,7 @@ En el ejemplo **iCloudKeyValue** se muestra cómo funciona. En el código de eje
 
 En esta captura de pantalla se muestra el ejemplo en uso. Cuando se reciben notificaciones de cambios de iCloud, se imprimen en la vista de texto desplazable en la parte inferior de la pantalla y se actualizan en los campos de entrada.
 
- [![](introduction-to-icloud-images/icloud-kv-arrows.png "The flow of messages between devices")](introduction-to-icloud-images/icloud-kv-arrows.png#lightbox)
+ [![El flujo de mensajes entre dispositivos](introduction-to-icloud-images/icloud-kv-arrows.png)](introduction-to-icloud-images/icloud-kv-arrows.png#lightbox)
 
 ### <a name="setting-and-retrieving-data"></a>Establecer y recuperar datos
 
@@ -116,8 +116,8 @@ store.Synchronize();
 
 ### <a name="observing-changes"></a>Observar cambios
 
-Una aplicación también puede recibir notificaciones cuando iCloud cambia los valores agregando un observador al `NSNotificationCenter.DefaultCenter`.
-El siguiente código de **KeyValueViewController.cs** `ViewWillAppear` método muestra cómo escuchar esas notificaciones y crear una lista de las claves que se han cambiado:
+Una aplicación también puede recibir notificaciones cuando iCloud cambia los valores agregando un observador a `NSNotificationCenter.DefaultCenter` .
+El siguiente código del método **KeyValueViewController.CS** `ViewWillAppear` muestra cómo realizar escuchas para esas notificaciones y crear una lista de las claves que se han cambiado:
 
 ```csharp
 keyValueNotification =
@@ -147,15 +147,15 @@ Las posibles razones de cambio son: ServerChange (0), InitialSyncChange (1) o Qu
 
 el almacenamiento de documentos de iCloud está diseñado para administrar los datos que son importantes para la aplicación (y para el usuario). Se puede usar para administrar archivos y otros datos que la aplicación necesita para ejecutarse, al mismo tiempo que proporciona funciones de copia de seguridad y uso compartido basadas en iCloud en todos los dispositivos del usuario.
 
-En este diagrama se muestra cómo encaja todo. Cada dispositivo tiene datos guardados en el almacenamiento local (UbiquityContainer) y el demonio de iCloud del sistema operativo se encarga de enviar y recibir datos en la nube. Todo el acceso a los archivos de UbiquityContainer debe realizarse a través de FilePresenter/FileCoordinator para evitar el acceso simultáneo. La clase `UIDocument` implementa las para usted; en este ejemplo se muestra cómo usar UIDocument.
+En este diagrama se muestra cómo encaja todo. Cada dispositivo tiene datos guardados en el almacenamiento local (UbiquityContainer) y el demonio de iCloud del sistema operativo se encarga de enviar y recibir datos en la nube. Todo el acceso a los archivos de UbiquityContainer debe realizarse a través de FilePresenter/FileCoordinator para evitar el acceso simultáneo. La `UIDocument` clase las implementa para usted; en este ejemplo se muestra cómo usar UIDocument.
 
- [![](introduction-to-icloud-images/icloud-overview.png "The document storage overview")](introduction-to-icloud-images/icloud-overview.png#lightbox)
+ [![Información general de almacenamiento de documentos](introduction-to-icloud-images/icloud-overview.png)](introduction-to-icloud-images/icloud-overview.png#lightbox)
 
-En el ejemplo iCloudUIDoc se implementa una subclase `UIDocument` simple que contiene un solo campo de texto. El texto se representa en una `UITextView` y las ediciones se propagan mediante iCloud a otros dispositivos con un mensaje de notificación que aparece en rojo. En el código de ejemplo no se tratan características de iCloud más avanzadas, como la resolución de conflictos.
+En el ejemplo iCloudUIDoc se implementa una `UIDocument` subclase simple que contiene un solo campo de texto. El texto se representa en una `UITextView` y las ediciones se propagan mediante iCloud a otros dispositivos con un mensaje de notificación que aparece en rojo. En el código de ejemplo no se tratan características de iCloud más avanzadas, como la resolución de conflictos.
 
 En esta captura de pantalla se muestra la aplicación de ejemplo: después de cambiar el texto y presionar **UpdateChangeCount** , el documento se sincroniza a través de icloud con otros dispositivos.
 
- [![](introduction-to-icloud-images/iclouduidoc.png "This screenshot shows the sample application after changing the text and pressing UpdateChangeCount")](introduction-to-icloud-images/iclouduidoc.png#lightbox)
+ [![En esta captura de pantalla se muestra la aplicación de ejemplo después de cambiar el texto y presionar UpdateChangeCount](introduction-to-icloud-images/iclouduidoc.png)](introduction-to-icloud-images/iclouduidoc.png#lightbox)
 
 Hay cinco partes en el ejemplo iCloudUIDoc:
 
@@ -163,25 +163,25 @@ Hay cinco partes en el ejemplo iCloudUIDoc:
 
 1. **Crear una subclase UIDocument** : cree una clase para intermediar entre el almacenamiento de icloud y los objetos del modelo.
 
-1. **Buscar y abrir documentos de icloud** : Use `NSFileManager` y `NSPredicate` para buscar documentos de icloud y abrirlos.
+1. **Buscar y abrir documentos de icloud** : use `NSFileManager` y `NSPredicate` para buscar documentos de icloud y abrirlos.
 
-1. **Mostrar documentos de icloud** : exponga las propiedades del `UIDocument` para que pueda interactuar con los controles de interfaz de usuario.
+1. **Mostrar documentos de icloud** : exponga las propiedades de `UIDocument` para que pueda interactuar con los controles de interfaz de usuario.
 
 1. **Guardar documentos de icloud** : Asegúrese de que los cambios realizados en la interfaz de usuario se guardan en el disco y en iCloud.
 
 Todas las operaciones de iCloud se ejecutan (o se deben ejecutar) de forma asincrónica para que no se bloqueen mientras esperan que suceda algo. Verá tres maneras diferentes de lograrlo en el ejemplo:
 
- **Subprocesos: en** `AppDelegate.FinishedLaunching` la llamada inicial a `GetUrlForUbiquityContainer` se realiza en otro subproceso para evitar el bloqueo del subproceso principal.
+ **Subprocesos** : en `AppDelegate.FinishedLaunching` la llamada inicial a, `GetUrlForUbiquityContainer` se realiza en otro subproceso para evitar el bloqueo del subproceso principal.
 
- **NotificationCenter** : registro de notificaciones cuando se completan operaciones asincrónicas como `NSMetadataQuery.StartQuery`.
+ **NotificationCenter** : registro para las notificaciones cuando se completan las operaciones asincrónicas `NSMetadataQuery.StartQuery` .
 
- **Controladores de finalización** : pasar métodos para que se ejecuten al finalizar operaciones asincrónicas como `UIDocument.Open`.
+ **Controladores de finalización** : pasar métodos para que se ejecuten al finalizar operaciones asincrónicas como `UIDocument.Open` .
 
 ### <a name="accessing-the-ubiquitycontainer"></a>Acceso a UbiquityContainer
 
 El primer paso en el uso del almacenamiento de documentos de iCloud es determinar si iCloud está habilitado y, en ese caso, la ubicación del "contenedor ubicuidad" (el directorio donde se almacenan los archivos habilitados para iCloud en el dispositivo).
 
-Este código está en el método `AppDelegate.FinishedLaunching` del ejemplo.
+Este código está en el `AppDelegate.FinishedLaunching` método del ejemplo.
 
 ```csharp
 // GetUrlForUbiquityContainer is blocking, Apple recommends background thread or your UI will freeze
@@ -275,7 +275,7 @@ En este caso, el modelo de datos es muy simple: un solo campo de texto. El model
 
 ### <a name="finding-and-opening-icloud-documents"></a>Buscar y abrir documentos de iCloud
 
-La aplicación de ejemplo solo se ocupa de un único archivo-test. txt, por lo que el código de **AppDelegate.CS** crea una `NSPredicate` y `NSMetadataQuery` para buscar específicamente ese nombre de archivo. El `NSMetadataQuery` se ejecuta de forma asincrónica y envía una notificación cuando finaliza. el observador de notificaciones llama a `DidFinishGathering`, detiene la consulta y llama a LoadDocument, que usa el método `UIDocument.Open` con un controlador de finalización para intentar cargar el archivo y mostrarlo en un `MonkeyDocumentViewController`.
+La aplicación de ejemplo solo se ocupa de un solo archivo test.txt, por lo que el código de **AppDelegate.CS** crea `NSPredicate` y `NSMetadataQuery` para buscar específicamente ese nombre de archivo. El `NSMetadataQuery` se ejecuta de forma asincrónica y envía una notificación cuando finaliza. `DidFinishGathering`lo llama el observador de notificación, detiene la consulta y llama a LoadDocument, que usa el `UIDocument.Open` método con un controlador de finalización para intentar cargar el archivo y mostrarlo en un `MonkeyDocumentViewController` .
 
 ```csharp
 string monkeyDocFilename = "test.txt";
@@ -341,7 +341,7 @@ void LoadDocument (NSMetadataQuery metadataQuery)
 
 Mostrar un UIDocument no debe ser diferente a cualquier otra clase de modelo: las propiedades se muestran en los controles de interfaz de usuario, posiblemente editados por el usuario y, a continuación, se escriben de nuevo en el modelo.
 
-En el ejemplo **iCloudUIDoc\MonkeyDocumentViewController.CS** se muestra el texto de MonkeyDocument en un `UITextView`. `ViewDidLoad` escucha la notificación enviada en el método `MonkeyDocument.LoadFromContents`. se llama a `LoadFromContents` cuando iCloud tiene nuevos datos para el archivo, de modo que la notificación indica que el documento se ha actualizado.
+En el ejemplo **iCloudUIDoc\MonkeyDocumentViewController.CS** se muestra el texto de MonkeyDocument en un `UITextView` . `ViewDidLoad`Escucha la notificación enviada en el `MonkeyDocument.LoadFromContents` método. `LoadFromContents`se llama a cuando iCloud tiene nuevos datos para el archivo, de modo que la notificación indica que el documento se ha actualizado.
 
 ```csharp
 NSNotificationCenter.DefaultCenter.AddObserver (this,
@@ -365,7 +365,7 @@ void DataReloaded (NSNotification notification)
 
 ### <a name="saving-icloud-documents"></a>Guardar documentos de iCloud
 
-Para agregar un UIDocument a iCloud, puede llamar a `UIDocument.Save` directamente (solo para nuevos documentos) o bien, puede trasladar un archivo existente mediante `NSFileManager.DefaultManager.SetUbiquitious`. En el código de ejemplo se crea un nuevo documento directamente en el contenedor ubicuidad con este código (hay dos controladores de finalización aquí, uno para la operación `Save` y otro para el abierto):
+Para agregar un UIDocument a iCloud, puede llamar `UIDocument.Save` directamente a (solo para nuevos documentos) o bien, para trasladar un archivo existente mediante `NSFileManager.DefaultManager.SetUbiquitious` . En el código de ejemplo se crea un nuevo documento directamente en el contenedor ubicuidad con este código (hay dos controladores de finalización aquí, uno para la `Save` operación y otro para el abierto):
 
 ```csharp
 var docsFolder = Path.Combine (iCloudUrl.Path, "Documents"); // NOTE: Documents folder is user-accessible in Settings
@@ -390,7 +390,7 @@ if (saveSuccess) {
 }
 ```
 
-Los cambios posteriores en el documento no se "guardan" directamente; en su lugar, se indica al `UIDocument` que ha cambiado con `UpdateChangeCount`y se programa automáticamente una operación de guardar en disco:
+Los cambios posteriores en el documento no se "guardan" directamente; en su lugar, se indica al `UIDocument` que ha cambiado con y `UpdateChangeCount` se programará automáticamente una operación de guardar en el disco:
 
 ```csharp
 doc.UpdateChangeCount (UIDocumentChangeKind.Done);
@@ -400,13 +400,13 @@ doc.UpdateChangeCount (UIDocumentChangeKind.Done);
 
 Los usuarios pueden administrar los documentos de iCloud en el directorio **documentos** del "contenedor ubicuidad" fuera de la aplicación mediante la configuración; pueden ver la lista de archivos y pasar el dedo a la eliminación. El código de aplicación debe ser capaz de controlar la situación en la que el usuario elimina los documentos. No almacene datos internos de aplicaciones en el directorio **documentos** .
 
- [![](introduction-to-icloud-images/icloudstorage.png "Managing iCloud Documents workflow")](introduction-to-icloud-images/icloudstorage.png#lightbox)
+ [![Flujo de trabajo de administración de documentos iCloud](introduction-to-icloud-images/icloudstorage.png)](introduction-to-icloud-images/icloudstorage.png#lightbox)
 
 Los usuarios también recibirán advertencias diferentes cuando intenten quitar una aplicación habilitada para iCloud de su dispositivo, para informarles del estado de los documentos de iCloud relacionados con la aplicación.
 
- [![](introduction-to-icloud-images/icloud-delete1.png "Sample dialog when the user attempts to remove an iCloud-enabled application from their device")](introduction-to-icloud-images/icloud-delete1.png#lightbox)
+ [![Cuadro de diálogo de ejemplo cuando el usuario intenta quitar una aplicación habilitada para iCloud de su dispositivo](introduction-to-icloud-images/icloud-delete1.png)](introduction-to-icloud-images/icloud-delete1.png#lightbox)
 
- [![](introduction-to-icloud-images/icloud-delete2.png "Sample dialog when the user attempts to remove an iCloud-enabled application from their device")](introduction-to-icloud-images/icloud-delete2.png#lightbox)
+ [![Cuadro de diálogo de ejemplo cuando el usuario intenta quitar una aplicación habilitada para iCloud de su dispositivo](introduction-to-icloud-images/icloud-delete2.png)](introduction-to-icloud-images/icloud-delete2.png#lightbox)
 
 ## <a name="icloud-backup"></a>Copia de seguridad de iCloud
 
@@ -415,7 +415,7 @@ Apple proporciona [directrices de almacenamiento de datos de iOS](https://develo
 
 La consideración más importante es si la aplicación almacena archivos grandes que no son generados por el usuario (por ejemplo, una aplicación de lector de revista que almacena cientos más megabytes de contenido por problema). Apple prefiere que no almacene este tipo de datos donde se realizará la copia de seguridad en iCloud y rellene innecesariamente la cuota de iCloud del usuario.
 
-Las aplicaciones que almacenan grandes cantidades de datos de este tipo deben almacenarse en uno de los directorios de usuario de los que no se ha realizado ninguna copia de seguridad (por ejemplo, Caches o tmp) o use `NSFileManager.SetSkipBackupAttribute` para aplicar una marca a esos archivos para que iCloud los omita durante las operaciones de copia de seguridad.
+Las aplicaciones que almacenan grandes cantidades de datos de este tipo deben almacenarse en uno de los directorios de usuario de los que no se ha realizado ninguna copia de seguridad (por ejemplo, Almacena en caché o tmp) o usar `NSFileManager.SetSkipBackupAttribute` para aplicar una marca a esos archivos para que iCloud los omita durante las operaciones de copia de seguridad.
 
 ## <a name="summary"></a>Resumen
 
@@ -431,4 +431,4 @@ Por último, incluye una breve explicación sobre cómo la incorporación de cop
 - [Código de ejemplo del Seminario de iCloud](https://github.com/xamarin/Seminars/tree/master/2012-03-22-iCloud)
 - [Diapositivas del Seminario de iCloud](https://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
 - [iCloud NSUbiquitousKeyValueStore](https://developer.apple.com/library/prerelease/ios/)
-- [Almacenamiento de iCloud](https://support.apple.com/kb/HT4847)
+- [Almacenamiento en iCloud](https://support.apple.com/kb/HT4847)

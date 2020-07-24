@@ -10,12 +10,12 @@ ms.date: 01/22/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d62e533d127294c77c0779c20fd9c78ef2231200
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2a46d099520103ba6f1552d5bda3f619c07b743d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135725"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86928528"
 ---
 # <a name="authenticate-a-restful-web-service"></a>Autenticación de un servicio web RESTful
 
@@ -31,11 +31,11 @@ La autenticación básica es el mecanismo de autenticación más sencillo admiti
 
 - Si un servicio web recibe una solicitud de un recurso protegido, rechaza la solicitud con un código de Estado HTTP 401 (acceso denegado) y establece el encabezado de respuesta WWW-Authenticate, tal como se muestra en el diagrama siguiente:
 
-![](rest-images/basic-authentication-fail.png "Basic Authentication Failing")
+![Error de autenticación básica](rest-images/basic-authentication-fail.png)
 
 - Si un servicio web recibe una solicitud de un recurso protegido, con el `Authorization` encabezado establecido correctamente, el servicio web responde con un código de Estado HTTP 200, lo que indica que la solicitud se ha realizado correctamente y que la información solicitada se encuentra en la respuesta. Este escenario se muestra en el diagrama siguiente:
 
-![](rest-images/basic-authentication-success.png "Basic Authentication Succeeding")
+![Autenticación básica correcta](rest-images/basic-authentication-success.png)
 
 > [!NOTE]
 > La autenticación básica solo se debe usar a través de una conexión HTTPS. Cuando se usa a través de una conexión HTTP, el `Authorization` encabezado se puede descodificar fácilmente si un atacante captura el tráfico http.

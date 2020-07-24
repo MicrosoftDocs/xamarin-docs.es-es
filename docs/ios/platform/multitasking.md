@@ -8,18 +8,18 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: e166f513a75faaa082e8557dc6f610f014547a25
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: b86f3a159a144f02ea13663bfddb41ed0100f740
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574148"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931409"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitarea para iPad en Xamarin. iOS
 
 _iOS 9 admite dos aplicaciones que se ejecutan al mismo tiempo, usando la vista de diapositiva o de división. También admite la reproducción de vídeo de imagen._
 
-![](multitasking-images/about02-sml.png "Ejemplo de pantalla dividida") ![](multitasking-images/about03-sml.png "Ejemplo de imagen en imagen")
+![Ejemplo de pantalla dividida](multitasking-images/about02-sml.png) ![Ejemplo de imagen en imagen](multitasking-images/about03-sml.png)
 
 iOS 9 agrega compatibilidad con la multitarea para ejecutar dos aplicaciones al mismo tiempo en hardware de iPad específico. La multitarea se admite a través de las siguientes características:
 
@@ -64,7 +64,7 @@ iOS 9 ofrece nuevas capacidades de multitarea en iPad con la introducción de _d
 
 La característica de deslizamiento permite al usuario elegir una segunda aplicación y mostrarla en un pequeño panel deslizante para proporcionar una interacción rápida. El panel deslizante es temporal y se cerrará cuando el usuario vuelva a trabajar con la aplicación principal de nuevo.
 
-[![](multitasking-images/about01.png "The Slide Over panel")](multitasking-images/about01.png#lightbox)
+[![El panel deslizante](multitasking-images/about01.png)](multitasking-images/about01.png#lightbox)
 
 Lo principal que hay que recordar es que el usuario decide qué dos aplicaciones se ejecutarán en paralelo y que el desarrollador no tiene ningún control sobre este proceso. Como resultado, hay algunas cosas que debe hacer para asegurarse de que la aplicación de Xamarin. iOS se ejecuta correctamente en un panel deslizante:
 
@@ -79,7 +79,7 @@ La diapositiva solo está disponible en un iPad Pro, iPad Air, iPad Air 2, iPad 
 
 En el hardware de iPad compatible (solo iPad Air 2, iPad Mini 4 y iPad Pro), el usuario puede elegir una segunda aplicación y ejecutarla en paralelo con la aplicación que se está ejecutando en el modo de pantalla dividida. El usuario puede controlar el porcentaje de la pantalla principal que ocupa cada aplicación arrastrando un divisor en pantalla.
 
-[![](multitasking-images/about02.png "The Split View")](multitasking-images/about02.png#lightbox)
+[![Vista en dos paneles](multitasking-images/about02.png)](multitasking-images/about02.png#lightbox)
 
 Al igual que la diapositiva, el usuario decide qué dos aplicaciones se van a ejecutar en paralelo y de nuevo, el desarrollador no tiene ningún control sobre este proceso. Como resultado, la vista en dos paneles coloca requisitos similares en una aplicación de Xamarin. iOS:
 
@@ -94,7 +94,7 @@ Para obtener más información sobre la preparación de la aplicación para la v
 
 La nueva característica de imagen en imagen (también conocida como _PIP_) permite al usuario ver un vídeo en una ventana pequeña y flotante que el usuario puede colocar en cualquier parte de la pantalla sobre otras aplicaciones en ejecución.
 
-[![](multitasking-images/about03.png "An example Picture in Picture floating window")](multitasking-images/about03.png#lightbox)
+[![Imagen de ejemplo en una ventana flotante de imagen](multitasking-images/about03.png)](multitasking-images/about03.png#lightbox)
 
 Al igual que con las vistas de diapositiva y de división, el usuario tiene control total sobre la visualización de un vídeo en el modo de imagen. Si la función principal de la aplicación es ver vídeo, necesitará alguna modificación para que se comporte correctamente en el modo PIP. De lo contrario, no es necesario realizar ningún cambio para admitir PIP.
 
@@ -118,7 +118,7 @@ Para admitir la multitarea de iOS 9 en cualquier nueva aplicación de Xamarin. i
 
 Antes de iOS 9, podría diseñar la aplicación con tamaños y orientaciones de pantalla específicos del dispositivo. Dado que una aplicación ahora puede ejecutarse en un panel desplazable o en el modo de vista en dos paneles, puede encontrarse en ejecución en una clase de tamaño horizontal compacta o normal en iPad, independientemente de la orientación física o el tamaño de pantalla del dispositivo.
 
-[![](multitasking-images/sizeclasses01.png "Screen Size and Orientation Considerations")](multitasking-images/sizeclasses01.png#lightbox)
+[![Consideraciones sobre el tamaño y la orientación de la pantalla](multitasking-images/sizeclasses01.png)](multitasking-images/sizeclasses01.png#lightbox)
 
 En un iPad, una aplicación de pantalla completa tiene clases de tamaño horizontal y vertical normal. Todos los iPhone, pero iPhone 6 Plus y iPhone 6S Plus, tienen clases de tamaño compacto en ambas direcciones en cualquier orientación. Los dispositivos iPhone 6 Plus y iPhone 6S Plus en modo horizontal tienen una clase de tamaño horizontal normal y una clase de tamaño vertical compacto (muy similar a un iPad mini).
 
@@ -126,17 +126,17 @@ En iPad que admiten diapositivas y la vista en dos paneles, puede acabar con las
 
 | **Orientación** | **Aplicación principal** | **Aplicación secundaria** |
 |--- |--- |--- |
-| **Retrato** |75% de la pantalla<br />Horizontal compacta<br />Vertical normal|25% de la pantalla<br />Horizontal compacta<br />Vertical normal|
+| **Vertical** |75% de la pantalla<br />Horizontal compacta<br />Vertical normal|25% de la pantalla<br />Horizontal compacta<br />Vertical normal|
 | **Horizontal** |75% de la pantalla<br />Horizontal normal<br />Vertical normal|25% de la pantalla<br />Horizontal compacta<br />Vertical normal|
 | **Horizontal** |50% de la pantalla<br />Horizontal compacta<br />Vertical normal|50% de la pantalla<br />Horizontal compacta<br />Vertical normal|
 
 En la aplicación de [MuliTask](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) de ejemplo, si se ejecuta en pantalla completa en un iPad en el modo horizontal, presentará la lista y la vista de detalle al mismo tiempo:
 
-[![](multitasking-images/sizeclasses03.png "The list and the detail view presented at the same time")](multitasking-images/sizeclasses03.png#lightbox)
+[![La lista y la vista de detalle presentada al mismo tiempo](multitasking-images/sizeclasses03.png)](multitasking-images/sizeclasses03.png#lightbox)
 
 Si se ejecuta la misma aplicación en una diapositiva sobre el panel, se diseña como una clase de tamaño horizontal compacta y muestra solo la lista:
 
-[![](multitasking-images/sizeclasses04.png "Only the list presented when the device is horizontal")](multitasking-images/sizeclasses04.png#lightbox)
+[![Solo la lista que aparece cuando el dispositivo es horizontal](multitasking-images/sizeclasses04.png)](multitasking-images/sizeclasses04.png#lightbox)
 
 Para asegurarse de que la aplicación se comporta correctamente en estas situaciones, debe adoptar las colecciones de rasgos junto con las clases de tamaño y ajustarse a las `IUIContentContainer` `IUITraitEnvironment` interfaces y. Consulte la referencia de la [clase UITraitCollection](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITraitCollection_ClassReference/index.html#//apple_ref/doc/uid/TP40014202) de Apple y la guía de [Introducción a los guiones gráficos unificados](~/ios/user-interface/storyboards/unified-storyboards.md) para obtener más información.
 
@@ -154,11 +154,11 @@ Ahora, con iOS 9, las aplicaciones pueden crear sus propios métodos abreviados 
 
 La **pestaña de comandos** abrirá un conmutador de aplicación que permite al usuario cambiar rápidamente entre las aplicaciones del teclado, de forma muy parecida a la Mac OS:
 
-[![](multitasking-images/keyboard01.png "The app switcher")](multitasking-images/keyboard01.png#lightbox)
+[![El conmutador de aplicación](multitasking-images/keyboard01.png)](multitasking-images/keyboard01.png#lightbox)
 
 Si una aplicación de iOS 9 incluye métodos abreviados de teclado, el usuario puede mantener presionadas las teclas **comando**, **opción** o **control** para mostrarlas en un elemento emergente:
 
-[![](multitasking-images/keyboard02.png "The keyboard shortcuts popup")](multitasking-images/keyboard02.png#lightbox)
+[![Menú emergente de métodos abreviados de teclado](multitasking-images/keyboard02.png)](multitasking-images/keyboard02.png#lightbox)
 
 #### <a name="defining-custom-keyboard-shortcuts"></a>Definición de métodos abreviados de teclado personalizados
 
@@ -194,7 +194,7 @@ A continuación, invalide la `KeyCommands` propiedad y cree un nuevo `UIKeyComma
 
 Si ejecutamos esta aplicación en un iPad con un teclado de hardware conectado y el comando Types **-N**de usuario, se agregará una nueva entrada a la lista. Si el usuario mantiene presionada la tecla de **comando** , se mostrará la lista de accesos directos:
 
-[![](multitasking-images/keyboard03.png "The keyboard shortcuts popup")](multitasking-images/keyboard03.png#lightbox)
+[![Menú emergente de métodos abreviados de teclado](multitasking-images/keyboard03.png)](multitasking-images/keyboard03.png#lightbox)
 
 Vea la [aplicación](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) de ejemplo para obtener una implementación de ejemplo.
 
@@ -228,7 +228,7 @@ Aunque Apple recomienda que todas las aplicaciones de iOS 9 admitan la multitare
 
 Para que la aplicación de Xamarin. iOS no se ejecute en un panel deslizante o en el modo de vista en dos paneles, edite el archivo **info. plist** del proyecto y active la casilla **requiere pantalla completa**:
 
-[![](multitasking-images/fullscreen01.png "Opting Out of Multitasking")](multitasking-images/fullscreen01.png#lightbox)
+[![No participar en la multitarea](multitasking-images/fullscreen01.png)](multitasking-images/fullscreen01.png#lightbox)
 
 > [!IMPORTANT]
 > Aunque no participar en la multitarea impide que la aplicación se ejecute en la vista de deslizamiento o en la vista en dos paneles, no impide que otra aplicación se ejecute en un gráfico deslizante o se muestre una imagen en el vídeo de la imagen junto con la aplicación.

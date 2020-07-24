@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/28/2017
-ms.openlocfilehash: c42b41f9b853fba58ef70b8bd2f8ab20a3369647
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 1f5f9e13607d672a6fdec5ed8fb116466973a260
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569260"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938039"
 ---
 # <a name="localization-in-xamarinios"></a>Localización en Xamarin. iOS
 
@@ -173,9 +173,9 @@ Para localizar una imagen en iOS:
     UIImage.FromBundle("flag");
     ```
 
-2. Coloque el archivo de imagen predeterminado **Flag. png** en **base. lproj** (el directorio nativo del lenguaje de desarrollo).
+2. Coloque el archivo de imagen predeterminado **flag.png** en **base. lproj** (el directorio nativo del lenguaje de desarrollo).
 
-3. Opcionalmente, coloque las versiones localizadas de la imagen en las carpetas **. lproj** para cada idioma (por ejemplo, **es. lproj**, **ja. lproj**). Use el mismo nombre de archivo **Flag. png** en cada directorio de idioma.
+3. Opcionalmente, coloque las versiones localizadas de la imagen en las carpetas **. lproj** para cada idioma (por ejemplo, **es. lproj**, **ja. lproj**). Use el mismo nombre de archivo **flag.png** en cada directorio de idioma.
 
 Si una imagen no está presente para un idioma determinado, iOS revertirá a la carpeta de idioma nativo predeterminado y cargará la imagen desde allí.
 
@@ -255,9 +255,9 @@ iOS proporciona varias características que le ayudarán a crear aplicaciones co
 
 Las capturas de pantallas siguientes muestran el [ejemplo de tarea localizada](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) en árabe y hebreo (aunque se ha escrito en inglés en los campos):
 
-[![](images/rtl-ar-sml.png "Localization in Arabic")](images/rtl-ar.png#lightbox "Arabic")
+[![Localización en Árabe](images/rtl-ar-sml.png)](images/rtl-ar.png#lightbox "Árabe")
 
-[![](images/rtl-he-sml.png "Localization in Hebrew")](images/rtl-he.png#lightbox "Hebrew")
+[![Localización en hebreo](images/rtl-he-sml.png)](images/rtl-he.png#lightbox "Hebreo")
 
 iOS invierte automáticamente el `UINavigationController` y los demás controles se colocan dentro `UIStackView` o se alinean con el diseño automático.
 El texto RTL se localiza mediante archivos **. Strings** de la misma manera que el texto LTR.
@@ -270,7 +270,7 @@ El ejemplo [tasky (localizado en código)](https://github.com/conceptdev/xamarin
 
 ### <a name="project-structure"></a>Estructura del proyecto
 
-![](images/solution-code.png "Resources tree")
+![Árbol de recursos](images/solution-code.png)
 
 ### <a name="localizablestrings-file"></a>Archivo. Strings localizable
 
@@ -311,7 +311,7 @@ El directorio **base. lproj** contiene el guión gráfico y también debe conten
 
 Los demás directorios de lenguaje contienen un archivo **. Strings localizable** para cualquier recurso de cadena al que se hace referencia en el código, así como un archivo **archivo mainstoryboard. Strings** que contiene traducciones para el texto del guión gráfico.
 
-![](images/solution-storyboard.png "Resources tree")
+![Árbol de recursos](images/solution-storyboard.png)
 
 Los directorios de idioma deben contener una copia de las imágenes que se han localizado, para invalidar el presente en **base. lproj**.
 
@@ -324,7 +324,7 @@ Al crear y editar controles en un guión gráfico, seleccione cada control y com
 
 A menudo, este valor de cadena tiene un formato como "NF3-H8-xmR", como se muestra en la siguiente captura de pantalla:
 
-![](images/xs-designer-localization-id.png "Xcode view of Storyboard localization")
+![Vista de Xcode de la localización de guiones gráficos](images/xs-designer-localization-id.png)
 
 Este valor se usa en el archivo **. Strings** para asignar el texto traducido automáticamente a cada control.
 
@@ -347,7 +347,7 @@ En el ejemplo **archivo mainstoryboard. Strings** siguiente puede ver que `UITex
 > [!IMPORTANT]
 > El uso de un guion gráfico con clases de tamaño puede dar lugar a traducciones que no aparecen en la aplicación. Las [notas de la versión de Xcode de Apple](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html) indican que un guión gráfico o Xib no se adaptarán correctamente si se cumplen tres cosas: usa clases de tamaño, la localización base y el destino de compilación se establecen en universal, y la compilación tiene como destino iOS 7,0. La solución consiste en duplicar el archivo de cadenas de guion gráfico en dos archivos idénticos: **archivo mainstoryboard ~ iPhone. Strings** y **archivo mainstoryboard ~ iPad. Strings**, tal como se muestra en la siguiente captura de pantalla:
 >
-> ![](images/xs-dup-strings.png "Strings files")
+> ![Archivos de cadenas](images/xs-dup-strings.png)
 
 <a name="appstore"></a>
 

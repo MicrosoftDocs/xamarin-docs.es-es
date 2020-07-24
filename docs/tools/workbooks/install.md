@@ -6,12 +6,12 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: a044169f86b46abff4158011e99320c528180ffc
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 99ecf661679f02bda6cfffa6093bd4a904676bce
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573890"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939352"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Instalación y requisitos de los libros
 
@@ -37,7 +37,7 @@ ms.locfileid: "84573890"
 
 ## <a name="requirements"></a>Requisitos
 
-#### <a name="supported-operating-systems"></a>Sistemas operativos admitidos
+#### <a name="supported-operating-systems"></a>Sistemas operativos compatibles
 
 - **Mac** -OS X 10,11 o superior
 - **Windows** -Windows 7 o posterior (con Internet Explorer 11 o posterior y .net 4.6.1 o superior)
@@ -88,12 +88,12 @@ Visual Studio para Mac
 - **Visual Studio > acerca de Visual Studio > Mostrar detalles > copiar información**
 - Pegar en informe de errores
 
-Visual Studio
+Programa para la mejora
 
 - **Ayuda > acerca de Visual Studio > copiar información**
 - Háganoslo saber la versión del sistema operativo y si está ejecutando Windows de 32 bits o de 64 bits.
 
-### <a name="samples"></a>Muestras
+### <a name="samples"></a>Ejemplos
 
 Si puede adjuntar o vincular al archivo **. Workbooks** con el que tiene problemas, puede que le resulte más fácil resolver el error.
 
@@ -128,7 +128,7 @@ Si instaló libros con un instalador descargado, tendrá que desinstalarlo a tra
 
 > **Iniciar > configuración > características & de System > apps**
 
-![](install-images/windows-remove.png "Xamarin Workbooks as listed in &quot;Apps &amp; features&quot;")
+![Xamarin Workbooks como se muestra &quot; en &amp; características de aplicaciones&quot;](install-images/windows-remove.png)
 
 **Siga el procedimiento del Instalador de Visual Studio para asegurarse de que los libros no se vuelvan a instalar sin su conocimiento.**
 

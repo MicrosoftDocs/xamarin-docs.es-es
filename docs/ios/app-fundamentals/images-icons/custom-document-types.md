@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/23/2017
-ms.openlocfilehash: ac8ee96d6183f9a62233d217c75b03da15605bd2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 09fc582182729d3d8e17b85ac0a3ecc4bdcfce7e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73004222"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939820"
 ---
 # <a name="custom-document-icons-in-xamarinios"></a>Iconos de documentos personalizados en Xamarin. iOS
 
@@ -20,26 +20,26 @@ _En este artículo se describe cómo incluir y administrar un recurso de imagen 
 
 Si una aplicación de Xamarin. iOS admite la carga de un tipo de documento concreto, el desarrollador puede proporcionar iconos que el sistema usará cuando encuentre el tipo de documento, como cuando un usuario mantiene presionados los datos adjuntos en la *aplicación de correo* como se muestra aquí:
 
- [![](custom-document-types-images/17.png "An example of document type icons")](custom-document-types-images/17.png#lightbox)
+ [![Ejemplo de iconos de tipo de documento](custom-document-types-images/17.png)](custom-document-types-images/17.png#lightbox)
 
-El desarrollador puede agregar información de tipo de documento para un formato de archivo que la aplicación es capaz de abrir incluyendo entradas de diccionario para la cadena de `CFBundleTypeName` y la matriz de `LSItemContentTypes` en el `Info.plist`de la aplicación. Los iconos del tipo de documento van en la matriz de `CFBundleTypeIconFiles`. Si no se proporciona un icono de documento, iOS derivará uno del icono de la aplicación.
+El desarrollador puede agregar información de tipo de documento para un formato de archivo que la aplicación es capaz de abrir incluyendo entradas del diccionario para la `CFBundleTypeName` cadena y la `LSItemContentTypes` matriz en la de la aplicación `Info.plist` . Los iconos del tipo de documento van en la `CFBundleTypeIconFiles` matriz. Si no se proporciona un icono de documento, iOS derivará uno del icono de la aplicación.
 Se pueden proporcionar iconos para varios tamaños, optimizados para las distintas resoluciones de dispositivo. 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Para asignar estos valores en Visual Studio para Mac, use la sección **tipos de documento** en la pestaña **Opciones avanzadas** del editor de `Info.plist` para agregar el tipo de documento y asignarle iconos de imagen. Por ejemplo, esta es una captura de pantalla que muestra el registro para la compatibilidad con PDF:
+Para asignar estos valores en Visual Studio para Mac, use la sección **tipos de documento** en la pestaña **avanzadas** del `Info.plist` Editor para agregar el tipo de documento y asignarle iconos de imagen. Por ejemplo, esta es una captura de pantalla que muestra el registro para la compatibilidad con PDF:
 
- [![](custom-document-types-images/18.png "The Document Types section under the Advanced tab on the `Info.plist` editor")](custom-document-types-images/18.png#lightbox)
+ [![La sección tipos de documento de la pestaña Opciones avanzadas del editor de ' info. plist '](custom-document-types-images/18.png)](custom-document-types-images/18.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Para asignar estos valores en Visual Studio, use la sección **tipos de documento** en la pestaña **Opciones avanzadas** de la `Info.plist`:
+Para asignar estos valores en Visual Studio, use la sección **tipos de documento** en la pestaña **Opciones avanzadas** de la `Info.plist` :
 
- ![](custom-document-types-images/doc01w.png "Open the Document Types section under the Advanced tab")
+ ![Abra la sección tipos de documento en la pestaña Opciones avanzadas.](custom-document-types-images/doc01w.png)
 
 Haga clic en el botón **Agregar tipo de documento** y rellene los campos obligatorios:
 
-![](custom-document-types-images/doc02w.png "The Add Document Type form")
+![Formulario agregar tipo de documento](custom-document-types-images/doc02w.png)
 
 -----
 

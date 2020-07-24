@@ -19,7 +19,7 @@ ms.locfileid: "86936830"
 ---
 # <a name="page-status-bar-visibility-on-ios"></a>Visibilidad de la barra de estado de la página en iOS
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esta plataforma específica de iOS se usa para establecer la visibilidad de la barra de estado en un [`Page`](xref:Xamarin.Forms.Page) e incluye la capacidad de controlar el modo en que la barra de estado entra o sale de `Page` . Se consume en XAML estableciendo la `Page.PrefersStatusBarHidden` propiedad adjunta en un valor de la `StatusBarHiddenMode` enumeración y, opcionalmente, la `Page.PreferredStatusBarUpdateAnimation` propiedad adjunta en un valor de la `UIStatusBarAnimation` enumeración:
 

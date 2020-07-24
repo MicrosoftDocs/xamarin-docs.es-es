@@ -6,12 +6,12 @@ ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 1f2fce14f1839e3d9aff4c68dc0dffc0e8059e6c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: dfb03815f8642519cecf49ab7b626b9575821af1
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766813"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937636"
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>Dibujo de gráficos 3D con vértices en monogame
 
@@ -21,11 +21,11 @@ Los usuarios que hayan leído la [Guía sobre los modelos de representación](~/
 
 Para ayudar a visualizar cómo se usan los vértices para crear objetos 3D, veamos la siguiente esfera:
 
-![](part2-images/image1.png "Para ayudar a visualizar cómo se usan los vértices para crear objetos 3D, tenga en cuenta esta esfera")
+![Para ayudar a visualizar cómo se usan los vértices para crear objetos 3D, tenga en cuenta esta esfera](part2-images/image1.png)
 
 Como se indicó anteriormente, la esfera se compone claramente de varios triángulos. Podemos ver el modelo de alambres de la esfera para ver cómo se conectan los vértices a los triángulos de forma:
 
-![](part2-images/image2.png "Ver el modelo de alambre de la esfera para ver cómo se conectan los vértices a los triángulos del formulario")
+![Ver el modelo de alambre de la esfera para ver cómo se conectan los vértices a los triángulos del formulario](part2-images/image2.png)
 
 En este tutorial se tratarán los siguientes temas:
 
@@ -38,17 +38,17 @@ En este tutorial se tratarán los siguientes temas:
 
 El proyecto terminado contendrá un plano inferior que se dibujará con una matriz de vértices:
 
-![](part2-images/image3.png "El proyecto terminado contendrá un plano inferior que se dibujará con una matriz de vértices.")
+![El proyecto terminado contendrá un plano inferior que se dibujará con una matriz de vértices.](part2-images/image3.png)
 
-## <a name="creating-a-project"></a>Crear un proyecto
+## <a name="creating-a-project"></a>Creación de un proyecto
 
 En primer lugar, se descargará un proyecto que servirá como punto de partida. Usaremos el proyecto de modelos [que se puede encontrar aquí](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelrenderingmg/).
 
 Una vez descargado y descomprimido, abra y ejecute el proyecto. Esperamos ver seis modelos de robot que se dibujan en pantalla:
 
-![](part2-images/image4.png "Seis modelos de robot que se dibujan en pantalla")
+![Seis modelos de robot que se dibujan en pantalla](part2-images/image4.png)
 
-Al final de este proyecto, se combinará nuestra propia representación de vértices personalizada con el robot `Model`, por lo que no vamos a eliminar el código de representación del robot. En su lugar, simplemente borraremos la `Game1.Draw` llamada para quitar el dibujo de 6 robots por ahora. Para ello, abra el archivo **Game1.CS** y busque el `Draw` método. Modifíquelo para que contenga el código siguiente:
+Al final de este proyecto, se combinará nuestra propia representación de vértices personalizada con el robot `Model` , por lo que no vamos a eliminar el código de representación del robot. En su lugar, simplemente borraremos la `Game1.Draw` llamada para quitar el dibujo de 6 robots por ahora. Para ello, abra el archivo **Game1.CS** y busque el `Draw` método. Modifíquelo para que contenga el código siguiente:
 
 ```csharp
 protected override void Draw(GameTime gameTime)
@@ -60,7 +60,7 @@ protected override void Draw(GameTime gameTime)
 
 Esto hará que el juego muestre una pantalla azul vacía:
 
-![](part2-images/image5.png "Esto hará que el juego muestre una pantalla azul vacía")
+![Esto hará que el juego muestre una pantalla azul vacía](part2-images/image5.png)
 
 ## <a name="creating-the-vertices"></a>Crear los vértices
 
@@ -75,12 +75,12 @@ Hasta ahora hemos hablado de los vértices en sentido general, pero monogame pro
 
 El nombre de cada tipo indica los componentes que contiene. Por ejemplo, `VertexPositionColor` contiene valores para la posición y el color. Echemos un vistazo a cada uno de los componentes:
 
-- Posición: todos los tipos de vértice `Position` incluyen un componente. Los `Position` valores definen dónde se encuentra el vértice en el espacio 3D (X, y y Z).
-- Color: los vértices pueden especificar opcionalmente un valor para realizar un `Color` matiz personalizado.
+- Posición: todos los tipos de vértice incluyen un `Position` componente. Los `Position` valores definen dónde se encuentra el vértice en el espacio 3D (X, y y Z).
+- Color: los vértices pueden especificar opcionalmente un `Color` valor para realizar un matiz personalizado.
 - Normal: las normales definen el modo de cara de la superficie del objeto. Las normales son necesarias si la representación de un objeto con iluminación desde la dirección en la que se enfrenta una superficie afecta a la cantidad de luz que recibe. Normalmente, las normales se especifican como un *Vector de unidad* : un vector 3D que tiene una longitud de 1.
 - Texture: textura hace referencia a las coordenadas de textura, es decir, qué parte de una textura debe aparecer en un vértice determinado. Los valores de textura son necesarios si se representa un objeto 3D con una textura. Las coordenadas de textura son coordenadas normalizadas, lo que significa que los valores se encuentran entre 0 y 1. Veremos las coordenadas de textura con más detalle más adelante en esta guía.
 
-Nuestro plano servirá como planta y querrámos aplicar una textura al realizar la representación, por lo que usaremos el tipo para definir los `VertexPositionTexture` vértices.
+Nuestro plano servirá como planta y querrámos aplicar una textura al realizar la representación, por lo que usaremos el `VertexPositionTexture` tipo para definir los vértices.
 
 En primer lugar, vamos a agregar un miembro a nuestra clase Game1:
 
@@ -88,7 +88,7 @@ En primer lugar, vamos a agregar un miembro a nuestra clase Game1:
 VertexPositionTexture[] floorVerts;
 ```
 
-A continuación, defina nuestros vértices en `Game1.Initialize`. Tenga en cuenta que la plantilla proporcionada a la que se hace referencia anteriormente en `Game1.Initialize` este artículo no contiene un método, por lo que necesitamos `Game1`agregar el método completo a:
+A continuación, defina nuestros vértices en `Game1.Initialize` . Tenga en cuenta que la plantilla proporcionada a la que se hace referencia anteriormente en este artículo no contiene un `Game1.Initialize` método, por lo que necesitamos agregar el método completo a `Game1` :
 
 ```csharp
 protected override void Initialize ()
@@ -107,7 +107,7 @@ protected override void Initialize ()
 
 Para que le resulte más fácil ver el aspecto que tendrán los vértices, tenga en cuenta el siguiente diagrama:
 
-![](part2-images/image6.png "Para que le resulte más fácil visualizar el aspecto de los vértices, tenga en cuenta este diagrama")
+![Para que le resulte más fácil visualizar el aspecto de los vértices, tenga en cuenta este diagrama](part2-images/image6.png)
 
 Necesitamos confiar en nuestro diagrama para visualizar los vértices hasta que terminemos de implementar el código de representación.
 
@@ -115,7 +115,7 @@ Necesitamos confiar en nuestro diagrama para visualizar los vértices hasta que 
 
 Ahora que tenemos las posiciones de la geometría definida, podemos escribir nuestro código de representación.
 
-En primer lugar, es necesario definir una `BasicEffect` instancia de que contendrá los parámetros para la representación, como la posición y la iluminación. Para ello, agregue un `BasicEffect` miembro a la `Game1` clase siguiente, donde se `floorVerts` define el campo:
+En primer lugar, es necesario definir una `BasicEffect` instancia de que contendrá los parámetros para la representación, como la posición y la iluminación. Para ello, agregue un `BasicEffect` miembro a la `Game1` clase siguiente, donde `floorVerts` se define el campo:
 
 ```csharp
 ...
@@ -124,7 +124,7 @@ VertexPositionTexture[] floorVerts;
 BasicEffect effect;
 ```
 
-A continuación, modifique `Initialize` el método para definir el efecto:
+A continuación, modifique el `Initialize` método para definir el efecto:
 
 ```csharp
 protected override void Initialize ()
@@ -186,7 +186,7 @@ void DrawGround()
 }
 ```
 
-Tendremos que llamar `DrawGround` a `Game1.Draw`en:
+Tendremos que llamar a `DrawGround` en `Game1.Draw` :
 
 ```csharp
 protected override void Draw (GameTime gameTime)
@@ -201,13 +201,13 @@ protected override void Draw (GameTime gameTime)
 
 La aplicación mostrará lo siguiente cuando se ejecute:
 
-![](part2-images/image7.png "La aplicación mostrará esto cuando se ejecute")
+![La aplicación mostrará esto cuando se ejecute](part2-images/image7.png)
 
 Echemos un vistazo a algunos de los detalles del código anterior.
 
 ### <a name="view-and-projection-properties"></a>Propiedades de vista y proyección
 
-Las `View` propiedades `Projection` y controlan cómo se ve la escena. Vamos a modificar este código más adelante cuando se vuelva a agregar el código de representación del modelo. En concreto `View` , controla la ubicación y la orientación de la cámara `Projection` y controla el *campo de la vista* (que se puede utilizar para acercar la cámara).
+Las `View` `Projection` propiedades y controlan cómo se ve la escena. Vamos a modificar este código más adelante cuando se vuelva a agregar el código de representación del modelo. En concreto, `View` controla la ubicación y la orientación de la cámara y `Projection` controla el *campo de la vista* (que se puede utilizar para acercar la cámara).
 
 ### <a name="techniques-and-passes"></a>Técnicas y pases
 
@@ -215,11 +215,11 @@ Una vez que se han asignado propiedades en nuestro efecto, podemos realizar la r
 
 No vamos a cambiar la `CurrentTechnique` propiedad en este tutorial, pero los juegos más avanzados pueden tener un solo efecto que puede dibujar de maneras diferentes (por ejemplo, cómo se aplica el valor de color). Cada uno de estos modos de representación se puede representar como una técnica que se puede asignar antes de la representación. Además, cada técnica puede requerir varios pasos para que se representen correctamente. Los efectos pueden necesitar varios pases si se representan objetos visuales complejos, como una superficie o un pelo brillante.
 
-Lo importante es tener en cuenta que el `foreach` bucle permite que el mismo C# código represente cualquier efecto independientemente de la complejidad del subyacente `BasicEffect`.
+Lo importante es tener en cuenta que el `foreach` bucle permite que el mismo código de C# represente cualquier efecto independientemente de la complejidad del subyacente `BasicEffect` .
 
 ### <a name="drawuserprimitives"></a>DrawUserPrimitives
 
-`DrawUserPrimitives`es donde se representan los vértices. El primer parámetro indica al método cómo hemos organizado nuestros vértices. Se han estructurado de modo que cada triángulo esté definido por tres vértices ordenados, por lo `PrimitiveType.TriangleList` que usamos el valor.
+`DrawUserPrimitives`es donde se representan los vértices. El primer parámetro indica al método cómo hemos organizado nuestros vértices. Se han estructurado de modo que cada triángulo esté definido por tres vértices ordenados, por lo que usamos el `PrimitiveType.TriangleList` valor.
 
 El segundo parámetro es la matriz de vértices que se definió anteriormente.
 
@@ -231,9 +231,9 @@ Por último, se especifica el número de triángulos que se van a representar. N
 
 En este punto, la aplicación representa un plano blanco (en perspectiva). A continuación, agregaremos una textura al proyecto que se usará al representar nuestro plano.
 
-Para simplificar las cosas, agregaremos el. png directamente a nuestro proyecto en lugar de usar la herramienta de canalización monogame. Para ello, descargue [este archivo. png](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true) en el equipo. Una vez descargado, haga clic con el botón derecho en la carpeta de **contenido** en el panel de solución y seleccione **Agregar > Agregar archivos..** .. Si trabaja en Android, esta carpeta se encuentra en la carpeta **activos** del proyecto específico de Android. En el caso de iOS, esta carpeta estará en la raíz del proyecto de iOS. Navegue hasta la ubicación donde se guarda el archivo de **cuadros de ajedrez. png** y selecciónelo. Seleccione esta copia para copiar el archivo en el directorio.
+Para simplificar las cosas, agregaremos el. png directamente a nuestro proyecto en lugar de usar la herramienta de canalización monogame. Para ello, descargue [este archivo. png](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true) en el equipo. Una vez descargado, haga clic con el botón derecho en la carpeta de **contenido** en el panel de solución y seleccione **Agregar>agregar archivos..** .. Si trabaja en Android, esta carpeta se encuentra en la carpeta **activos** del proyecto específico de Android. En el caso de iOS, esta carpeta estará en la raíz del proyecto de iOS. Navegue hasta la ubicación donde se guarda **checkerboard.png** y seleccione este archivo. Seleccione esta copia para copiar el archivo en el directorio.
 
-A continuación, agregaremos el código para crear `Texture2D` la instancia. En primer lugar, `Texture2D` agregue como miembro de `Game1` en la `BasicEffect` instancia de:
+A continuación, agregaremos el código para crear la `Texture2D` instancia. En primer lugar, agregue `Texture2D` como miembro de `Game1` en la `BasicEffect` instancia de:
 
 ```csharp
 ...
@@ -261,7 +261,7 @@ protected override void LoadContent()
 }
 ```
 
-A continuación, modifique `DrawGround` el método. La única modificación necesaria es `effect.TextureEnabled` asignar a `true` y establecer `effect.Texture` en `checkerboardTexture`:
+A continuación, modifique el `DrawGround` método. La única modificación necesaria es asignar `effect.TextureEnabled` a `true` y establecer `effect.Texture` en `checkerboardTexture` :
 
 ```csharp
 void DrawGround()
@@ -333,13 +333,13 @@ protected override void Initialize ()
 
 Si ejecutamos el código, podemos ver que nuestro plano ahora muestra un patrón de tablero de ajedrez:
 
-![](part2-images/image8.png "El plano muestra ahora un patrón de tablero de ajedrez")
+![El plano muestra ahora un patrón de tablero de ajedrez](part2-images/image8.png)
 
 ## <a name="modifying-texture-coordinates"></a>Modificar coordenadas de textura
 
 Monogame usa coordenadas de textura normalizadas, que son coordenadas entre 0 y 1, en lugar de entre 0 y el ancho o alto de la textura. El diagrama siguiente puede ayudarle a visualizar las coordenadas normalizadas:
 
-![](part2-images/image9.png "Este diagrama puede ayudar a visualizar coordenadas normalizadas.")
+![Este diagrama puede ayudar a visualizar coordenadas normalizadas.](part2-images/image9.png)
 
 Las coordenadas de textura normalizadas permiten el cambio de tamaño de las texturas sin necesidad de volver a escribir el código ni volver a crear los modelos (como los archivos. FBX). Esto es posible porque las coordenadas normalizadas representan una relación en lugar de píxeles específicos. Por ejemplo, (1,1) siempre representará la esquina inferior derecha, independientemente del tamaño de la textura.
 
@@ -376,11 +376,11 @@ protected override void Initialize ()
 
 Esto da como resultado que la textura se repita 20 veces:
 
-![](part2-images/image10.png "Esto hace que la textura se repita 20 veces")
+![Esto hace que la textura se repita 20 veces](part2-images/image10.png)
 
 ## <a name="rendering-vertices-with-models"></a>Representar vértices con modelos
 
-Ahora que nuestro plano se representa correctamente, podemos volver a agregar los modelos para verlos todos juntos. En primer lugar, volveremos a agregar el código del modelo `Game1.Draw` a nuestro método (con las posiciones modificadas):
+Ahora que nuestro plano se representa correctamente, podemos volver a agregar los modelos para verlos todos juntos. En primer lugar, volveremos a agregar el código del modelo a nuestro `Game1.Draw` método (con las posiciones modificadas):
 
 ```csharp
 protected override void Draw(GameTime gameTime)
@@ -410,7 +410,7 @@ Texture2D checkerboardTexture;
 Vector3 cameraPosition = new Vector3(0, 10, 10);
 ```
 
-A continuación, quite la `cameraPosition` variable local del método:`DrawModel`
+A continuación, quite la `cameraPosition` variable local del `DrawModel` método:
 
 ```csharp
 void DrawModel(Vector3 modelPosition)
@@ -432,7 +432,7 @@ void DrawModel(Vector3 modelPosition)
             ...
 ```
 
-De forma similar, `cameraPosition` Quite la variable local del método:`DrawGround`
+De forma similar, quite la `cameraPosition` variable local del `DrawGround` método:
 
 ```csharp
 void DrawGround()
@@ -449,7 +449,7 @@ void DrawGround()
 
 Ahora, Si ejecutamos el código, podremos ver ambos modelos y el suelo al mismo tiempo:
 
-![](part2-images/image11.png "Los modelos y el suelo se muestran al mismo tiempo")
+![Los modelos y el suelo se muestran al mismo tiempo](part2-images/image11.png)
 
 Si se modifica la posición de la cámara (por ejemplo, al aumentar su valor X, que en este caso mueve la cámara hacia la izquierda), podemos ver que el valor afecta tanto al suelo como a los modelos:
 
@@ -459,11 +459,11 @@ Vector3 cameraPosition = new Vector3(15, 10, 10);
 
 Este código da como resultado lo siguiente:
 
-![](part2-images/image3.png "Este código genera esta vista")
+![Este código genera esta vista](part2-images/image3.png)
 
 ## <a name="summary"></a>Resumen
 
-En este tutorial se ha mostrado cómo usar una matriz de vértices para realizar una representación personalizada. En este caso, hemos creado un plano inferior mediante la combinación de la representación basada en vértices con una textura `BasicEffect`y, pero el código presentado aquí sirve como base para cualquier representación 3D. También mostramos que la representación basada en vértices se puede mezclar con modelos de la misma escena.
+En este tutorial se ha mostrado cómo usar una matriz de vértices para realizar una representación personalizada. En este caso, hemos creado un plano inferior mediante la combinación de la representación basada en vértices con una textura y `BasicEffect` , pero el código presentado aquí sirve como base para cualquier representación 3D. También mostramos que la representación basada en vértices se puede mezclar con modelos de la misma escena.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

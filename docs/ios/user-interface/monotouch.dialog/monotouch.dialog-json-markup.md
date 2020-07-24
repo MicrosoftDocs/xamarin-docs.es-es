@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: davidortinau
 ms.author: daortin
-ms.openlocfilehash: fc6066155a4171b106e772c1fe6fe7ee3e5c67cf
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 023a85451ca83df6c15e8b3bbc3169f2884a0a46
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573513"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936570"
 ---
 # <a name="monotouchdialog-json-markup"></a>Marcado JSON de MonoTouch.Dialog
 
@@ -77,7 +77,7 @@ Comencemos con un ejemplo. El siguiente es un archivo JSON completo que se puede
 
 El marcado anterior produce la siguiente interfaz de usuario:
 
- [![](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png "The UI created by the given markup")](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png#lightbox)
+ [![La interfaz de usuario creada por el marcado especificado](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png)](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png#lightbox)
 
 Cada elemento del árbol puede contener la propiedad `"id"` . En tiempo de ejecución es posible hacer referencia a secciones individuales o elementos mediante el indexador JsonElement. Por ejemplo:
 
@@ -120,7 +120,7 @@ Identifica el elemento de radio que está seleccionado en elementos anidados.
 
  <a name="title"></a>
 
-### <a name="title"></a>título
+### <a name="title"></a>title
 
 Si está presente, será el título que se usa para el RootElement
 
@@ -148,7 +148,7 @@ La sección contiene:
 
  <a name="header"></a>
 
-### <a name="header"></a>header
+### <a name="header"></a>encabezado
 
 Si está presente, el texto del encabezado se muestra como un título de la sección.
 
@@ -297,7 +297,7 @@ Si se establece en cero, hará que el tamaño del elemento sea automático segú
 
  <a name="style"></a>
 
-### <a name="style"></a>estilo
+### <a name="style"></a>style
 
 El estilo determina el tipo de estilo de celda que se utilizará para representar el contenido y se corresponden con los valores de la enumeración UITableViewCellStyle.
 Los valores posibles son:
@@ -330,7 +330,7 @@ Valor secundario que se va a mostrar en el elemento de representación. El dise�
 
 ## <a name="boolean-elements"></a>Elementos booleanos
 
-Los elementos booleanos deben establecer el tipo en `"bool"` , pueden contener un `"caption"` para mostrar y el `"value"` está establecido en true o false. Si `"on"` `"off"` se establecen las propiedades y, se supone que son imágenes. Las imágenes se resuelven en relación con el directorio de trabajo actual de la aplicación. Si desea hacer referencia a los archivos relativos al paquete, puede usar `"~"` como un acceso directo para representar el directorio de la agrupación de aplicaciones. Por ejemplo `"~/favorite.png"` , será el archivo favorito. png incluido en el archivo de agrupación. Por ejemplo:
+Los elementos booleanos deben establecer el tipo en `"bool"` , pueden contener un `"caption"` para mostrar y el `"value"` está establecido en true o false. Si `"on"` `"off"` se establecen las propiedades y, se supone que son imágenes. Las imágenes se resuelven en relación con el directorio de trabajo actual de la aplicación. Si desea hacer referencia a los archivos relativos al paquete, puede usar `"~"` como un acceso directo para representar el directorio de la agrupación de aplicaciones. Por ejemplo `"~/favorite.png"` , será el favorite.png que se encuentra en el archivo de agrupación. Por ejemplo:
 
 ```json
 { 

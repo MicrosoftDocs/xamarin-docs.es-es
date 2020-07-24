@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ce28a9ef2d5cbf4bdf1c12a85ea64ac9bb8bee8b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 44504ed47ca5ea94ed22c9569f8674ca0e63d89a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137012"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937870"
 ---
 # <a name="visualelement-blur-on-ios"></a>VisualElement desenfoque en iOS
 
@@ -49,7 +49,7 @@ El `BoxView.On<iOS>` método especifica que este específico de la plataforma so
 
 El resultado es que [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) se aplica un especificado a la [`BoxView`](xref:Xamarin.Forms.BoxView) instancia de, que desenfoca el [`Image`](xref:Xamarin.Forms.Image) superpuesto por debajo de él:
 
-![](applying-blur-images/blur-effect.png "Blur Effect Platform-Specific")
+![Efecto de desenfoque específico de la plataforma](applying-blur-images/blur-effect.png)
 
 > [!NOTE]
 > Al agregar un efecto de desenfoque a un [`VisualElement`](xref:Xamarin.Forms.VisualElement) , los eventos de toque seguirán recibiendo `VisualElement` .

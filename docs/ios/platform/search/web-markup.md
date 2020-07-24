@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 3d5db2f060b59fc689bea99141342b0447ac8933
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: cd9e5e3fc604fc6e6993b10424a209aa6c382a10
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031527"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935062"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Buscar con marcado Web en Xamarin. iOS
 
@@ -20,12 +20,12 @@ En el caso de las aplicaciones que proporcionan acceso a su contenido a través 
 
 Si la aplicación de iOS ya admite la vinculación profunda móvil y el sitio web presentó vínculos profundos al contenido dentro de la aplicación, _Applebot_ web Crawler de Apple indexará este contenido y lo agregará automáticamente a su índice de nube:
 
-[![](web-markup-images/webmarkup01.png "Cloud Index overview")](web-markup-images/webmarkup01.png#lightbox)
+[![Información general de Cloud index](web-markup-images/webmarkup01.png)](web-markup-images/webmarkup01.png#lightbox)
 
 Apple mostrará estos resultados en los resultados de búsqueda de Spotlight y de la búsqueda de Safari.
 Si el usuario pulsa uno de estos resultados (y tiene la aplicación instalada), se le dirigirá al contenido de la aplicación:
 
-[![](web-markup-images/webmarkup02.png "Deep linking from a website in search results")](web-markup-images/webmarkup02.png#lightbox)
+[![Vínculos profundos desde un sitio web en los resultados de la búsqueda](web-markup-images/webmarkup02.png)](web-markup-images/webmarkup02.png#lightbox)
 
 ## <a name="enabling-web-content-indexing"></a>Habilitar la indización de contenido web
 
@@ -87,7 +87,7 @@ Para obtener más información, consulte la documentación de los vínculos de l
 
 ## <a name="opening-deep-links"></a>Abrir vínculos profundos
 
-Debe agregar compatibilidad para abrir y Mostrar vínculos profundos en la aplicación de Xamarin. iOS. Edite el archivo **AppDelegate.CS** e invalide el método `OpenURL` para controlar el formato de la dirección URL personalizada. Por ejemplo:
+Debe agregar compatibilidad para abrir y Mostrar vínculos profundos en la aplicación de Xamarin. iOS. Edite el archivo **AppDelegate.CS** e invalide el `OpenURL` método para controlar el formato de la dirección URL personalizada. Por ejemplo:
 
 ```csharp
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
@@ -113,7 +113,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 }
 ```
 
-En el código anterior, buscamos una dirección URL que contenga `/appname` y pasando el valor de `query` (`123` en este ejemplo) a un controlador de vista personalizado en nuestra aplicación para mostrar el contenido solicitado al usuario.
+En el código anterior, buscamos una dirección URL que contenga `/appname` y pasando el valor de `query` ( `123` en este ejemplo) a un controlador de vista personalizado en nuestra aplicación para mostrar el contenido solicitado al usuario.
 
 ## <a name="providing-rich-results-with-structured-data"></a>Proporcionar resultados enriquecidos con datos estructurados
 
@@ -152,16 +152,16 @@ La misma información se puede representar en el formato JSON-LD del esquema.
 
 A continuación se muestra un ejemplo de metadatos del sitio web que proporcionan resultados de búsqueda enriquecidos al usuario final:
 
-[![](web-markup-images/deeplink01.png "Rich search results via Structured Data Markup")](web-markup-images/deeplink01.png#lightbox)
+[![Resultados de búsqueda enriquecidas mediante marcado de datos estructurados](web-markup-images/deeplink01.png)](web-markup-images/deeplink01.png#lightbox)
 
 Apple admite actualmente los siguientes tipos de esquema de schema.org:
 
 - AggregateRating
 - ImageObject
 - InteractionCount
-- Aporta
+- Ofertas
 - Organización
-- Rangoprecio
+- PriceRange
 - Receta
 - SearchAction
 

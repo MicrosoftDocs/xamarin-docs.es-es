@@ -10,12 +10,12 @@ ms.date: 04/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0b1a47d4dcc92fca4d280708a2cbbe9374c17da8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: de5ebf086af7fa8d7c6360bf3a1f48f57b834e44
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573305"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938442"
 ---
 # <a name="device-orientation"></a>Orientación del dispositivo
 
@@ -123,11 +123,11 @@ protected override void OnSizeAllocated(double width, double height)
 
 Una vez que se ha detectado un cambio en la orientación del dispositivo, puede que desee agregar o quitar vistas adicionales de la interfaz de usuario o de la interfaz de usuario para reaccionar ante el cambio en el espacio disponible. Por ejemplo, considere la calculadora integrada en cada plataforma en vertical:
 
-![](device-orientation-images/calculator-portrait.png "Calculator Application in Portrait")
+![Aplicación de calculadora en vertical](device-orientation-images/calculator-portrait.png)
 
 y horizontal:
 
-![](device-orientation-images/calculator-landscape.png "Calculator Application in Landscape")
+![Aplicación de calculadora en horizontal](device-orientation-images/calculator-landscape.png)
 
 Tenga en cuenta que las aplicaciones aprovechan el espacio disponible agregando más funcionalidad en horizontal.
 
@@ -147,11 +147,11 @@ Las reglas anteriores también se aplican al implementar interfaces para varios 
 
 Considere la siguiente aplicación, que se muestra en vertical:
 
-![](device-orientation-images/photo-stack-portrait.png "Photo Application in Portrait")
+![Aplicación fotográfica en vertical](device-orientation-images/photo-stack-portrait.png)
 
 y horizontal:
 
-![](device-orientation-images/photo-stack-landscape.png "Photo Application in Landscape")
+![Aplicación fotográfica en horizontal](device-orientation-images/photo-stack-landscape.png)
 
 Esto se logra con el código XAML siguiente:
 
@@ -221,11 +221,11 @@ Tenga en cuenta lo siguiente:
 
 Considere la siguiente aplicación, que se muestra en vertical:
 
-![](device-orientation-images/photo-abs-portrait.png "Photo Application in Portrait")
+![Aplicación fotográfica en vertical](device-orientation-images/photo-abs-portrait.png)
 
 y horizontal:
 
-![](device-orientation-images/photo-abs-landscape.png "Photo Application in Landscape")
+![Aplicación fotográfica en horizontal](device-orientation-images/photo-abs-landscape.png)
 
 Esto se logra con el código XAML siguiente:
 
@@ -273,11 +273,11 @@ Tenga en cuenta lo siguiente:
 
 Considere la siguiente aplicación, que se muestra en vertical:
 
-![](device-orientation-images/photo-rel-portrait.png "Photo Application in Portrait")
+![Aplicación fotográfica en vertical](device-orientation-images/photo-rel-portrait.png)
 
 y horizontal:
 
-![](device-orientation-images/photo-rel-landscape.png "Photo Application in Landscape")
+![Aplicación fotográfica en horizontal](device-orientation-images/photo-rel-landscape.png)
 
 Esto se logra con el código XAML siguiente:
 
@@ -364,11 +364,11 @@ Tenga en cuenta lo siguiente:
 
 Considere la siguiente aplicación, que se muestra en vertical:
 
-![](device-orientation-images/photo-grid-portrait.png "Photo Application in Portrait")
+![Aplicación fotográfica en vertical](device-orientation-images/photo-grid-portrait.png)
 
 y horizontal:
 
-![](device-orientation-images/photo-grid-landscape.png "Photo Application in Landscape")
+![Aplicación fotográfica en horizontal](device-orientation-images/photo-grid-landscape.png)
 
 Esto se logra con el código XAML siguiente:
 

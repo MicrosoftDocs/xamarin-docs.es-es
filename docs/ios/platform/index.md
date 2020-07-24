@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: bcf293b29d6ddca10ab60ae061491b60f1e30520
-ms.sourcegitcommit: b751605179bef8eee2df92cb484011a7dceb6fda
+ms.openlocfilehash: a70095c5897163d3699d03ec42c33826f6d40419
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77495642"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997155"
 ---
 # <a name="ios-platform-features-overview"></a>Información general sobre las características de la plataforma iOS
 
@@ -20,9 +20,9 @@ En esta página se enumeran las versiones recientes de iOS y se resaltan algunos
 
 ## <a name="ios-releases"></a>versiones de iOS
 
-|  |  |
+| Release | Descripción |
 |-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Introducción a iOS 13](~/ios/platform/ios13/index.md) | En este documento se describe Xamarin. iOS 13.|
+| [Introducción a iOS 13](~/ios/platform/ios13/index.md) | En este documento se describe Xamarin. iOS 13.|
 | [Introducción a iOS 12](~/ios/platform/introduction-to-ios12/index.md) | En este documento se describen las características de iOS 12 que se pueden usar al compilar aplicaciones de Xamarin. iOS.|
 | [Introducción a iOS 11](~/ios/platform/introduction-to-ios11/index.md) | En este documento se describen las características nuevas y actualizadas de iOS 11 y Xcode 9, como ARKit, Core ML, Core NFC, arrastrar y colocar, MapKit, PDFKit, SiriKit y Vision. Se vincula a las guías que describen cómo usar estas características con Xamarin. iOS. |
 | [Introducción a iOS 10](~/ios/platform/introduction-to-ios10/index.md) | iOS 10 incluye varias API y servicios nuevos que le permiten desarrollar aplicaciones con nuevas características y funcionalidades. Con iOS 10, las aplicaciones tienen nuevas capacidades, como la extensión de mapas, mensajes, teléfono y Siri. En esta sección se muestra muestra para aprovechar las ventajas de estas características en una aplicación de Xamarin. iOS. |
@@ -41,7 +41,7 @@ La nueva API de CallKit en iOS 10 proporciona una manera para que las aplicacion
 
 ## <a name="contacts-and-contactsui"></a>[Contacts y ContactsUI](~/ios/platform/contacts.md)
 
-Con la introducción de iOS 9, Apple ha publicado dos nuevos marcos de trabajo, `Contacts` y `ContactsUI`, que reemplazan los marcos de interfaz de usuario existentes de libreta de direcciones y de libreta de direcciones usados por iOS 8 y versiones anteriores.
+Con la introducción de iOS 9, Apple ha lanzado dos nuevos marcos de trabajo, `Contacts` y `ContactsUI` , que reemplazan los marcos de interfaz de usuario de la libreta de direcciones y la libreta de direcciones existentes usados por iOS 8 y versiones anteriores.
 
 ## <a name="document-picker"></a>[Selector de documentos](~/ios/platform/document-picker.md)
 
@@ -53,7 +53,7 @@ iOS tiene dos aplicaciones relacionadas con el calendario integradas: la aplicac
 
 ## <a name="ios-extensions"></a>[extensiones de iOS](~/ios/platform/extensions.md)
 
-Las extensiones, como se introdujeron en iOS 8, son `UIViewControllers` especializadas que se presentan en iOS dentro de contextos estándar, como en el **centro de notificaciones**, como tipos de teclado personalizados solicitados por el usuario para realizar entradas especializadas u otros contextos, como editar una fotografía en la que la extensión puede proporcionar filtros de efectos especiales.
+Las extensiones, tal y como se introdujeron en iOS 8, están especializadas `UIViewControllers` que se presentan mediante iOS dentro de contextos estándar, como en el **centro de notificaciones**, como tipos de teclado personalizados solicitados por el usuario para realizar entradas especializadas u otros contextos, como editar una fotografía en la que la extensión puede proporcionar filtros de efectos especiales.
 
 ## <a name="graphics-and-animation-in-ios"></a>[Gráficos y animación en iOS](~/ios/platform/graphics-animation-ios/index.md)
 
@@ -99,7 +99,7 @@ Photo kit es un nuevo marco que permite que las aplicaciones consulten la biblio
 
 ## <a name="request-app-review"></a>[Solicitar revisión de la aplicación](~/ios/platform/request-app-review.md)
 
-Como novedad de iOS 10,3, el método de `RequestReview()` permite que una aplicación de iOS solicite al usuario que califique o revise. Cuando se llama a este método en una aplicación de envío que el usuario ha instalado desde la tienda de aplicaciones, iOS 10 tratará todo el proceso de evaluación y valoración del desarrollador. Dado que este proceso se rige por la Directiva de App Store, es posible que se muestre una alerta.
+Novedad de iOS 10,3, el `RequestReview()` método permite que una aplicación de iOS solicite al usuario que califique o revise. Cuando se llama a este método en una aplicación de envío que el usuario ha instalado desde la tienda de aplicaciones, iOS 10 tratará todo el proceso de evaluación y valoración del desarrollador. Dado que este proceso se rige por la Directiva de App Store, es posible que se muestre una alerta.
 
 ## <a name="search-apis"></a>[API de búsqueda](~/ios/platform/search/index.md)
 
@@ -139,11 +139,11 @@ iOS 10 y macOS Sierra mejora la compatibilidad con los formatos de píxeles de r
 
 ## <a name="binding-objective-c"></a>[Enlace de Objective-C](binding-objective-c/index.md)
 
-Cuando se trabaja en iOS, pueden darse casos en los que se desea consumir una biblioteca de Objective-C de terceros. En esas situaciones, puede usar los proyectos de enlace de MonoTouch para crear C# un enlace a las bibliotecas nativas de Objective-C. El proyecto usa las mismas herramientas que usamos para traer las API de iOS C#. En este documento se describe cómo enlazar API de Objective-C.
+Cuando se trabaja en iOS, pueden darse casos en los que se desea consumir una biblioteca de Objective-C de terceros. En esas situaciones, puede usar los proyectos de enlace de MonoTouch para crear un enlace de C# a las bibliotecas nativas de Objective-C. El proyecto usa las mismas herramientas que se usan para traer las API de iOS a C#. En este documento se describe cómo enlazar API de Objective-C.
 
-## <a name="bind-ios-swift-libraries"></a>[Enlazar bibliotecas SWIFT de iOS](binding-swift/index.md)
+## <a name="bind-ios-swift-libraries"></a>[Enlazar bibliotecas Swift de iOS](binding-swift/index.md)
 
-En este documento se describe cómo C# crear enlaces a código SWIFT, lo que permite consumir bibliotecas nativas y CocoaPods en una aplicación Xamarin. iOS.
+En este documento se describe cómo crear enlaces de C# para el código SWIFT, lo que permite consumir bibliotecas nativas y CocoaPods en una aplicación de Xamarin. iOS.
 
 ## <a name="referencing-native-libraries"></a>[Referencia a bibliotecas nativas](native-interop.md)
 

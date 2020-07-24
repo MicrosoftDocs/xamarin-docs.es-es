@@ -6,12 +6,12 @@ ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
 author: davidortinau
 ms.author: daortin
 ms.date: 07/18/2018
-ms.openlocfilehash: b8be06b9da4561ffc0d628b53f8daf639b5e3179
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 1a71b84d1068fef1730196bafb0f0d7e2a948c5c
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571107"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936921"
 ---
 # <a name="shared-projects-code-sharing"></a>Uso compartido de código de proyectos compartidos
 
@@ -27,7 +27,7 @@ Si ha usado la vinculación de archivos en el pasado para compartir código entr
 
 A diferencia de la mayoría de los demás tipos de proyecto, un proyecto compartido no tiene ningún resultado (en formato DLL), sino que el código se compila en cada proyecto que hace referencia a él. Esto se muestra en el diagrama siguiente: conceptualmente, todo el contenido del proyecto compartido se "copia en" cada proyecto que hace referencia y se compila como si formara parte de ellos.
 
-![](shared-projects-images/sharedassetproject.png "Shared Project architecture")
+![Arquitectura de proyecto compartido](shared-projects-images/sharedassetproject.png)
 
 El código de un proyecto compartido puede contener directivas de compilador que habilitarán o deshabilitarán secciones de código dependiendo del proyecto de aplicación que use el código, que se sugiere en los cuadros plataforma de color del diagrama.
 
@@ -57,7 +57,7 @@ Para que un proyecto compartido sea útil, es necesario que haga referencia al m
 
 La adición de una referencia a un proyecto compartido se realiza de la misma manera que hace referencia a un proyecto de biblioteca normal. Esta captura de pantalla muestra un proyecto de Xamarin. iOS que hace referencia a un proyecto compartido.
 
-![](shared-projects-images/xs-reference.png "Project reference to Shared Project")
+![Referencia del proyecto a un proyecto compartido](shared-projects-images/xs-reference.png)
 
 Una vez que otra biblioteca o aplicación hace referencia al proyecto compartido, puede compilar la solución y ver los errores en el código. Cuando _dos o más_ proyectos hacen referencia al proyecto compartido, aparece un menú en la parte superior izquierda del editor de código fuente que muestra elegir qué proyectos hacen referencia a este archivo.
 
@@ -67,7 +67,7 @@ Al hacer clic con el botón derecho en un proyecto compartido y elegir **Opcione
 
 A continuación se muestra la pantalla **Opciones** : el **nombre** del proyecto y el **espacio de nombres predeterminado** son los dos únicos valores que normalmente cambiará.
 
-![](shared-projects-images/xs-sharedprojectoptions.png "Shared Project Options")
+![Opciones de proyecto compartido](shared-projects-images/xs-sharedprojectoptions.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -87,13 +87,13 @@ En Visual Studio 2017, seleccione la plantilla **proyecto compartido** y, a cont
 
 También puede Agregar un nuevo proyecto compartido a una solución existente; para ello, haga clic con el botón derecho en el archivo de solución y elija **agregar > nuevo proyecto**. Un nuevo proyecto compartido tiene el aspecto que se muestra a continuación (después de que se haya agregado un archivo de clase). Observe que no hay referencias ni nodos de componentes. no se admiten para los proyectos compartidos.
 
-![](shared-projects-images/vs-empty.png "Empty Shared Project")
+![Proyecto compartido vacío](shared-projects-images/vs-empty.png)
 
 Para que un proyecto compartido sea útil, es necesario que haga referencia al menos a un proyecto que permita la compilación (por ejemplo, una aplicación o biblioteca de iOS o Android, o un proyecto de PCL). Un proyecto compartido no se compila cuando no tiene nada que haga referencia a él, por lo que no se resaltarán los errores de sintaxis (o cualquier otro) hasta que otra cosa haya hecho referencia a él.
 
 La adición de una referencia a un proyecto compartido se realiza de la misma manera que hace referencia a un proyecto de biblioteca normal. Esta captura de pantalla muestra un proyecto de Xamarin. iOS que hace referencia a un proyecto compartido.
 
-![](shared-projects-images/vs-reference.png "Project reference to Shared Project")
+![Referencia del proyecto a un proyecto compartido](shared-projects-images/vs-reference.png)
 
 Una vez que otra biblioteca o aplicación hace referencia al proyecto compartido, puede compilar la solución y ver los errores en el código. Cuando _dos o más_ proyectos hacen referencia al proyecto compartido, se muestra un menú en la parte superior izquierda del editor de código fuente para ver qué proyectos hacen referencia al archivo de código actual.
 
@@ -103,7 +103,7 @@ Al seleccionar un proyecto compartido, hay menos opciones de configuración en e
 
 El panel **propiedades** se muestra a continuación: el **espacio de nombres raíz** es el único valor que puede cambiar.
 
-![](shared-projects-images/vs-sharedprojectproperties.png "Shared Project Properties")
+![Propiedades del proyecto compartido](shared-projects-images/vs-sharedprojectproperties.png)
 
 -----
 
@@ -117,11 +117,11 @@ La estructura de la solución completa se muestra a continuación (en Visual Stu
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-![](shared-projects-images/xs-examplesolution.png "Visual Studio for Mac solution")
+![Visual Studio para Mac solución](shared-projects-images/xs-examplesolution.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-![](shared-projects-images/vs-examplesolution.png "Visual Studio solution")
+![Solución de Visual Studio](shared-projects-images/vs-examplesolution.png)
 
 -----
 
@@ -129,7 +129,7 @@ Se puede navegar por el proyecto Windows Phone desde Visual Studio para Mac, aun
 
 A continuación se muestran las aplicaciones en ejecución:
 
-![](shared-projects-images/example.png "iOS, Android, Windows Phone examples")
+![ejemplos de iOS, Android, Windows Phone](shared-projects-images/example.png)
 
 ## <a name="summary"></a>Resumen
 

@@ -10,16 +10,16 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 86b526fff305b195221aca3fb6a86ad0823cb145
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e206c89de278c8b85848294e76e4431825eaee85
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84569405"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938962"
 ---
 # <a name="datapages-controls-reference"></a>Referencia de controles de páginas de página
 
-![](~/media/shared/preview.png "This API is currently in preview")
+![Esta API está actualmente en versión preliminar](~/media/shared/preview.png)
 
 > [!IMPORTANT]
 > Las páginas de página requieren una Xamarin.Forms referencia de tema que se va a representar. Esto implica la instalación de [ Xamarin.Forms . Paquete NuGet Theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) en el proyecto, seguido de [ Xamarin.Forms . Theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) o [ Xamarin.Forms . Paquetes NuGet Theme. Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
@@ -62,11 +62,11 @@ El `HeroImage` control tiene cuatro propiedades:
 
 **Android**
 
-![](controls-images/heroimage-light-android.png "Control HeroImage en Android") ![](controls-images/heroimage-dark-android.png "Control HeroImage en Android")
+![Control HeroImage en Android](controls-images/heroimage-light-android.png) ![Control HeroImage en Android](controls-images/heroimage-dark-android.png)
 
 **iOS**
 
-![](controls-images/heroimage-light-ios.png "Control HeroImage en iOS") ![](controls-images/heroimage-dark-ios.png "Control HeroImage en iOS")
+![Control HeroImage en iOS](controls-images/heroimage-light-ios.png) ![Control HeroImage en iOS](controls-images/heroimage-dark-ios.png)
 
 ### <a name="listitem"></a>ListItem
 
@@ -94,11 +94,11 @@ Estas capturas de pantallas muestran `ListItem` en las plataformas iOS y Android
 
 **Android**
 
-![](controls-images/listitem-light-android.png "Control ListItem en Android") ![](controls-images/listitem-dark-android.png "Control ListItem en Android")
+![Control ListItem en Android](controls-images/listitem-light-android.png) ![Control ListItem en Android](controls-images/listitem-dark-android.png)
 
 **iOS**
 
-![](controls-images/listitem-light-ios.png "Control ListItem en iOS") ![](controls-images/listitem-dark-ios.png "Control ListItem en iOS")
+![Control ListItem en iOS](controls-images/listitem-light-ios.png) ![Control ListItem en iOS](controls-images/listitem-dark-ios.png)
 
 ## <a name="custom-control-example"></a>Ejemplo de control personalizado
 
@@ -124,11 +124,11 @@ Debe ser similar a las capturas de pantallas siguientes con los colores correspo
 
 **Android**
 
-![](controls-images/cardview-light-android.png "Control personalizado CardView en Android") ![](controls-images/cardview-dark-android.png "Control personalizado CardView en Android")
+![Control personalizado CardView en Android](controls-images/cardview-light-android.png) ![Control personalizado CardView en Android](controls-images/cardview-dark-android.png)
 
 **iOS**
 
-![](controls-images/cardview-light-ios.png "Control personalizado CardView en iOS") ![](controls-images/cardview-dark-ios.png "Control personalizado CardView en iOS")
+![Control personalizado CardView en iOS](controls-images/cardview-light-ios.png) ![Control personalizado CardView en iOS](controls-images/cardview-dark-ios.png)
 
 ### <a name="building-the-custom-cardview"></a>Compilar el CardView personalizado
 

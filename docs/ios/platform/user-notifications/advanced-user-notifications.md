@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: 75ee2c4df9c7f54fa0200272ebc1e9682622ab31
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: edf224428103c318307f3a05dc79e1e8d286f512
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031448"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935126"
 ---
 # <a name="advanced-user-notifications-in-xamarinios"></a>Notificaciones de usuario avanzadas en Xamarin. iOS
 
@@ -61,7 +61,7 @@ Como novedad de iOS 10, la API de IU de notificaciones de usuario permite a una 
 
 ## <a name="adding-media-attachments"></a>Agregar datos adjuntos de multimedia
 
-Uno de los elementos más comunes que se comparten entre los usuarios son las fotos, por lo que iOS 10 agregó la capacidad de adjuntar un elemento multimedia (por ejemplo, una fotografía) directamente a una notificación, donde se presentará y estará disponible para el usuario junto con el resto del conteo de la notificación. NT.
+Uno de los elementos más comunes que se comparten entre los usuarios son las fotos, por lo que iOS 10 agregó la capacidad de adjuntar un elemento multimedia (como una fotografía) directamente a una notificación, donde se presentará y estará disponible para el usuario junto con el resto del contenido de la notificación.
 
 Sin embargo, debido a los tamaños implicados en el envío de incluso una imagen pequeña, el hecho de adjuntarlo a una carga de notificación remota resulta poco práctico. Para controlar esta situación, el desarrollador puede usar la nueva extensión de servicio en iOS 10 para descargar la imagen de otro origen (por ejemplo, un almacén de datos de CloudKit) y adjuntarla al contenido de la notificación antes de que se muestre al usuario.
 
@@ -79,9 +79,9 @@ Para que una extensión de servicio pueda modificar una notificación remota, su
 
 Eche un vistazo a la siguiente información general del proceso:
 
-[![](advanced-user-notifications-images/extension02.png "Adding Media Attachments process")](advanced-user-notifications-images/extension02.png#lightbox)
+[![Proceso de agregar datos adjuntos de multimedia](advanced-user-notifications-images/extension02.png)](advanced-user-notifications-images/extension02.png#lightbox)
 
-Una vez que la notificación remota se entrega al dispositivo (a través de APNs), la extensión de servicio puede descargar la imagen necesaria a través de cualquier medio que desee (por ejemplo, un `NSURLSession`) y después de recibir la imagen, puede modificar el contenido de la notificación y mostrarla en el usuario.
+Una vez que la notificación remota se entrega al dispositivo (a través de APNs), la extensión de servicio puede descargar la imagen necesaria a través de los medios deseados (como un `NSURLSession` ) y, después de recibir la imagen, puede modificar el contenido de la notificación y mostrarla al usuario.
 
 A continuación se ofrece un ejemplo de cómo se puede controlar este proceso en el código:
 
@@ -134,11 +134,11 @@ namespace MonkeyNotification
 }
 ```
 
-Cuando se recibe la notificación de APNs, se lee la dirección personalizada de la imagen desde el contenido y el archivo se descarga del servidor. A continuación, se crea un `UNNotificationAttachement` con un identificador único y la ubicación local de la imagen (como un `NSUrl`). Se crea una copia modificable del contenido de la notificación y se agregan los datos adjuntos del elemento multimedia. Por último, la notificación se muestra al usuario mediante una llamada a la `contentHandler`.
+Cuando se recibe la notificación de APNs, se lee la dirección personalizada de la imagen desde el contenido y el archivo se descarga del servidor. A continuación, `UNNotificationAttachement` se crea un con un identificador único y la ubicación local de la imagen (como un `NSUrl` ). Se crea una copia modificable del contenido de la notificación y se agregan los datos adjuntos del elemento multimedia. Por último, la notificación se muestra al usuario mediante una llamada a `contentHandler` .
 
 Una vez que se han agregado datos adjuntos a una notificación, el sistema asume el movimiento y la administración del archivo.
 
-Además de las notificaciones remotas presentadas anteriormente, también se admiten datos adjuntos de medios de las notificaciones locales, donde se crea el `UNNotificationAttachement` y se adjunta a la notificación junto con su contenido.
+Además de las notificaciones remotas presentadas anteriormente, también se admiten datos adjuntos de medios de las notificaciones locales, donde `UNNotificationAttachement` se crea y adjunta a la notificación junto con su contenido.
 
 Las notificaciones en iOS 10 admiten archivos adjuntos de imágenes (estáticas y GIF), audio o vídeo y el sistema mostrará automáticamente la interfaz de usuario personalizada correcta para cada uno de estos tipos de datos adjuntos cuando se presente la notificación al usuario.
 
@@ -155,7 +155,7 @@ Para admitir la interacción del usuario con una notificación de usuario, se de
 
 Cuando se presenta al usuario una notificación de usuario con una interfaz de usuario personalizada, tendrá los siguientes elementos:
 
-[![](advanced-user-notifications-images/customui01.png "A User Notification with a Custom UI elements")](advanced-user-notifications-images/customui01.png#lightbox)
+[![Una notificación de usuario con elementos de interfaz de usuario personalizados](advanced-user-notifications-images/customui01.png)](advanced-user-notifications-images/customui01.png#lightbox)
 
 Si el usuario interactúa con las acciones personalizadas (presentadas debajo de la notificación), la interfaz de usuario se puede actualizar para proporcionar los comentarios del usuario como lo que sucedió cuando invocó una acción determinada.
 
@@ -165,38 +165,38 @@ Para implementar una interfaz de usuario de notificación de usuario personaliza
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Abra la solución de la aplicación en Visual Studio para Mac.
-2. Haga clic con el botón derecho en el nombre de la solución en el **Panel de solución** y seleccione **Agregar** > **Agregar nuevo proyecto**.
-3. Seleccione **extensiones de > de** **iOS** > extensiones de **contenido de notificación** y haga clic en el botón **siguiente** : 
+2. Haga clic con el botón derecho en el nombre de la solución en el **Panel de solución** y seleccione **Agregar**  >  **Agregar nuevo proyecto**.
+3. Seleccione **iOS**  >  **extensiones**  >  de iOS**extensiones de contenido de notificación** y haga clic en el botón **siguiente** : 
 
-    [![](advanced-user-notifications-images/notify01.png "Select Notification Content Extensions")](advanced-user-notifications-images/notify01.png#lightbox)
+    [![Seleccionar extensiones de contenido de notificación](advanced-user-notifications-images/notify01.png)](advanced-user-notifications-images/notify01.png#lightbox)
 4. Escriba un **nombre** para la extensión y haga clic en el botón **siguiente** : 
 
-    [![](advanced-user-notifications-images/notify02.png "Enter a Name for the extension")](advanced-user-notifications-images/notify02.png#lightbox)
+    [![Escriba un nombre para la extensión](advanced-user-notifications-images/notify02.png)](advanced-user-notifications-images/notify02.png#lightbox)
 5. Ajuste el **nombre del proyecto** o el **nombre** de la solución si es necesario y haga clic en el botón **crear** : 
 
-    [![](advanced-user-notifications-images/notify03.png "Adjust the Project Name and/or Solution Name")](advanced-user-notifications-images/notify03.png#lightbox)
+    [![Ajustar el nombre del proyecto o el nombre de la solución](advanced-user-notifications-images/notify03.png)](advanced-user-notifications-images/notify03.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Abra la solución de la aplicación en Visual Studio para Mac.
-2. Haga clic con el botón derecho en el nombre de la solución en el **Explorador de soluciones** y seleccione **Agregar > nuevo proyecto..** ..
-3. Seleccione **extensiones C# de Visual > iOS > extensión de contenido de notificación**:
+2. Haga clic con el botón derecho en el nombre de la solución en el **Explorador de soluciones** y seleccione **Agregar > nuevo proyecto..**..
+3. Seleccione **Visual C# > extensiones de iOS > extensión de contenido de notificación**:
 
-    [![](advanced-user-notifications-images/notify01.w157-sml.png "Select Notification Content Extensions")](advanced-user-notifications-images/notify01.w157.png#lightbox)
+    [![Seleccionar extensiones de contenido de notificación](advanced-user-notifications-images/notify01.w157-sml.png)](advanced-user-notifications-images/notify01.w157.png#lightbox)
 4. Escriba un **nombre** para la extensión y haga clic en el botón **Aceptar** .
 
 -----
 
 Cuando se agrega la extensión de contenido de notificación a la solución, se crearán tres archivos en el proyecto de la extensión:
 
-1. `NotificationViewController.cs`: este es el controlador de vista principal de la extensión de contenido de notificación.
-2. `MainInterface.storyboard`, donde el desarrollador diseña la interfaz de usuario visible para la extensión de contenido de notificación en el diseñador de iOS.
-3. `Info.plist`: controla la configuración de la extensión de contenido de notificación.
+1. `NotificationViewController.cs`: Este es el controlador de vista principal de la extensión de contenido de notificación.
+2. `MainInterface.storyboard`-Donde el desarrollador diseña la interfaz de usuario visible para la extensión de contenido de notificación en el diseñador de iOS.
+3. `Info.plist`: Controla la configuración de la extensión de contenido de notificación.
 
-El archivo de `NotificationViewController.cs` predeterminado tiene el aspecto siguiente:
+El `NotificationViewController.cs` archivo predeterminado tiene el aspecto siguiente:
 
 ```csharp
 using System;
@@ -240,67 +240,67 @@ namespace MonkeyChatNotifyExtension
 }
 ```
 
-Se llama al método `DidReceiveNotification` cuando el usuario expande la notificación para que la extensión de contenido de notificación pueda rellenar la interfaz de usuario personalizada con el contenido de la `UNNotification`. En el ejemplo anterior, se ha agregado una etiqueta a la vista, expuesto al código con el nombre `label` y se usa para mostrar el cuerpo de la notificación.
+`DidReceiveNotification`Se llama al método cuando el usuario expande la notificación para que la extensión de contenido de notificación pueda rellenar la interfaz de usuario personalizada con el contenido de `UNNotification` . En el ejemplo anterior, se ha agregado una etiqueta a la vista, expuesto al código con el nombre `label` y se usa para mostrar el cuerpo de la notificación.
 
 ### <a name="setting-the-notification-content-extensions-categories"></a>Establecimiento de las categorías de la extensión de contenido de notificación
 
-Se debe informar al sistema sobre cómo buscar la extensión de contenido de notificación de la aplicación en función de las categorías específicas a las que responde. Haga lo siguiente:
+Se debe informar al sistema sobre cómo buscar la extensión de contenido de notificación de la aplicación en función de las categorías específicas a las que responde. Siga estos pasos:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Haga doble clic en el archivo de `Info.plist` de la extensión en el **Panel de solución** para abrirlo para su edición.
-2. Cambie a la vista de **código fuente** .
-3. Expanda la tecla `NSExtension`.
-4. Agregue la clave de `UNNotificationExtensionCategory` como una **cadena** de tipo con el valor de la categoría a la que pertenece la extensión (en este ejemplo, ' invitación de evento): 
+1. Haga doble clic en el archivo de la extensión `Info.plist` en el **Panel de solución** para abrirlo para su edición.
+2. Cambie a la vista **Código fuente**.
+3. Expanda la `NSExtension` clave.
+4. Agregue la `UNNotificationExtensionCategory` clave como **cadena** de tipo con el valor de la categoría a la que pertenece la extensión (en este ejemplo, ' invitación de evento]): 
 
-    [![](advanced-user-notifications-images/customui02.png "Add the UNNotificationExtensionCategory key")](advanced-user-notifications-images/customui02.png#lightbox)
+    [![Agregar la clave UNNotificationExtensionCategory](advanced-user-notifications-images/customui02.png)](advanced-user-notifications-images/customui02.png#lightbox)
 5. Guarde los cambios.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Haga doble clic en el archivo de `Info.plist` de la extensión en el **Explorador de soluciones** para abrirlo para su edición.
-2. Expanda la tecla `NSExtension`.
-3. Agregue la clave de `UNNotificationExtensionCategory` como una **cadena** de tipo con el valor de la categoría a la que pertenece la extensión (en este ejemplo, ' invitación de evento): 
+1. Haga doble clic en el archivo de la extensión `Info.plist` en el **Explorador de soluciones** para abrirlo para su edición.
+2. Expanda la `NSExtension` clave.
+3. Agregue la `UNNotificationExtensionCategory` clave como **cadena** de tipo con el valor de la categoría a la que pertenece la extensión (en este ejemplo, ' invitación de evento]): 
 
-    [![](advanced-user-notifications-images/customui02w.png "Add the UNNotificationExtensionCategory key")](advanced-user-notifications-images/customui02w.png#lightbox)
+    [![Agregar la clave UNNotificationExtensionCategory](advanced-user-notifications-images/customui02w.png)](advanced-user-notifications-images/customui02w.png#lightbox)
 4. Guarde los cambios.
 
 -----
 
-Las categorías de extensión de contenido de notificación (`UNNotificationExtensionCategory`) utilizan los mismos valores de categoría que se usan para registrar acciones de notificación. En la situación en la que la aplicación usará la misma interfaz de usuario para varias categorías, cambie el `UNNotificationExtensionCategory` a la **matriz** de tipos y proporcione todas las categorías necesarias. Por ejemplo:
+Las categorías de extensión de contenido de notificación ( `UNNotificationExtensionCategory` ) utilizan los mismos valores de categoría que se usan para registrar acciones de notificación. En la situación en la que la aplicación usará la misma interfaz de usuario para varias categorías, cambie `UNNotificationExtensionCategory` a la **matriz** de tipos y proporcione todas las categorías necesarias. Por ejemplo:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-[![](advanced-user-notifications-images/customui03.png "Notification Content Extension Categories")](advanced-user-notifications-images/customui03.png#lightbox)
+[![Categorías de extensión de contenido de notificación](advanced-user-notifications-images/customui03.png)](advanced-user-notifications-images/customui03.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![](advanced-user-notifications-images/customui03w.png "Notification Content Extension Categories")](advanced-user-notifications-images/customui03w.png#lightbox)
+[![Categorías de extensión de contenido de notificación](advanced-user-notifications-images/customui03w.png)](advanced-user-notifications-images/customui03w.png#lightbox)
 
 -----
 
 ### <a name="hiding-the-default-notification-content"></a>Ocultar el contenido de notificación predeterminado
 
-En la situación en la que la interfaz de usuario de notificaciones personalizadas mostrará el mismo contenido que la notificación predeterminada (título, subtítulo y cuerpo mostrados automáticamente en la parte inferior de la interfaz de usuario de notificaciones), esta información predeterminada se puede ocultar agregando el `UNNotificationExtensionDefaultContentHidden` clave para la clave de `NSExtensionAttributes` como tipo **Boolean** con un valor de `YES` en el archivo `Info.plist` de la extensión:
+En caso de que la interfaz de usuario de notificaciones personalizadas muestre el mismo contenido que la notificación predeterminada (título, subtítulo y cuerpo mostrados automáticamente en la parte inferior de la interfaz de usuario de notificaciones), esta información predeterminada se puede ocultar agregando la `UNNotificationExtensionDefaultContentHidden` clave a la `NSExtensionAttributes` clave como tipo **booleano** con un valor de `YES` en el archivo de la extensión `Info.plist` :
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-[![](advanced-user-notifications-images/customui04.png "Finding default information")](advanced-user-notifications-images/customui04.png#lightbox)
+[![Buscar información predeterminada](advanced-user-notifications-images/customui04.png)](advanced-user-notifications-images/customui04.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![](advanced-user-notifications-images/customui04w.png "Finding default information")](advanced-user-notifications-images/customui04w.png#lightbox)
+[![Buscar información predeterminada](advanced-user-notifications-images/customui04w.png)](advanced-user-notifications-images/customui04w.png#lightbox)
 
 -----
 
 ### <a name="designing-the-custom-ui"></a>Diseñar la interfaz de usuario personalizada
 
-Para diseñar la interfaz de usuario personalizada de la extensión de contenido de notificación, haga doble clic en el archivo `MainInterface.storyboard` para abrirlo y editarlo en el diseñador de iOS, y arrastre los elementos que necesite para compilar la interfaz deseada (como `UILabels` y `UIImageViews`).
+Para diseñar la interfaz de usuario personalizada de la extensión de contenido de notificación, haga doble clic en el `MainInterface.storyboard` archivo para abrirlo y editarlo en el diseñador de iOS, y arrastre los elementos que necesite para compilar la interfaz deseada (como `UILabels` y `UIImageViews` ).
 
 > [!NOTE]
 > A partir de iOS 12, una extensión de contenido de notificación puede incluir controles interactivos como botones y campos de texto. Para obtener más información, consulte la documentación sobre las [notificaciones interactivas en iOS 12](~/ios/platform/introduction-to-ios12/notifications/interactive.md) .
 
-Una vez que se ha diseñado la interfaz de usuario y los controles C# necesarios expuestos al código, abra el`NotificationViewController.cs`para editar y modificar el método de`DidReceiveNotification`para rellenar la interfaz de usuario cuando el usuario expande la notificación. Por ejemplo:
+Una vez que se ha diseñado la interfaz de usuario y los controles necesarios expuestos al código de C#, Abra `NotificationViewController.cs` para editar y modifique el `DidReceiveNotification` método para rellenar la interfaz de usuario cuando el usuario expande la notificación. Por ejemplo:
 
 ```csharp
 using System;
@@ -357,19 +357,19 @@ namespace MonkeyChatNotifyExtension
 
 ### <a name="setting-the-content-area-size"></a>Establecer el tamaño del área de contenido
 
-Para ajustar el tamaño del área de contenido que se muestra al usuario, el código siguiente establece la propiedad `PreferredContentSize` del método `ViewDidLoad` en el tamaño deseado. También se puede ajustar este tamaño aplicando restricciones a la vista en el diseñador de iOS, se deja al desarrollador elegir el método que mejor se adapte a ellos.
+Para ajustar el tamaño del área de contenido que se muestra al usuario, el código siguiente establece la `PreferredContentSize` propiedad del `ViewDidLoad` método en el tamaño deseado. También se puede ajustar este tamaño aplicando restricciones a la vista en el diseñador de iOS, se deja al desarrollador elegir el método que mejor se adapte a ellos.
 
 Dado que el sistema de notificación ya se está ejecutando antes de que se invoque la extensión de contenido de notificación, el área de contenido se iniciará con un tamaño completo y se animará hasta el tamaño solicitado cuando se presente al usuario.
 
-Para eliminar este efecto, edite el archivo de `Info.plist` de la extensión y establezca la clave de `UNNotificationExtensionInitialContentSizeRatio` de la `NSExtensionAttributes` clave en el tipo **número** con un valor que represente la relación deseada. Por ejemplo:
+Para eliminar este efecto, edite el `Info.plist` archivo de la extensión y establezca la `UNNotificationExtensionInitialContentSizeRatio` clave de la `NSExtensionAttributes` clave en el tipo **número** con un valor que represente la relación deseada. Por ejemplo:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-[![](advanced-user-notifications-images/customui05.png "The UNNotificationExtensionInitialContentSizeRatio key")](advanced-user-notifications-images/customui05.png#lightbox)
+[![La clave UNNotificationExtensionInitialContentSizeRatio](advanced-user-notifications-images/customui05.png)](advanced-user-notifications-images/customui05.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![](advanced-user-notifications-images/customui05w.png "The UNNotificationExtensionInitialContentSizeRatio key")](advanced-user-notifications-images/customui05w.png#lightbox)
+[![La clave UNNotificationExtensionInitialContentSizeRatio](advanced-user-notifications-images/customui05w.png)](advanced-user-notifications-images/customui05w.png#lightbox)
 
 -----
 
@@ -377,7 +377,7 @@ Para eliminar este efecto, edite el archivo de `Info.plist` de la extensión y e
 
 Dado que los datos adjuntos multimedia (como se muestra en la sección anterior [Agregar datos adjuntos de multimedia](#adding-media-attachments) ) forman parte de la carga de notificación, se puede acceder a ellos y mostrarlos en la extensión de contenido de notificación del mismo modo que lo harían en la interfaz de usuario de notificación predeterminada.
 
-Por ejemplo, si la interfaz de usuario personalizada anterior incluía un `UIImageView` que C# se expuso al código, se podría usar el código siguiente para rellenarlo desde con los datos adjuntos multimedia:
+Por ejemplo, si la interfaz de usuario personalizada anterior incluía un `UIImageView` elemento que se expuso al código de C#, se podría usar el código siguiente para rellenarlo desde con los datos adjuntos multimedia:
 
 ```csharp
 using System;
@@ -440,7 +440,7 @@ namespace MonkeyChatNotifyExtension
 }
 ```
 
-Dado que el sistema administra los datos adjuntos multimedia, está fuera del espacio aislado de la aplicación. La extensión debe informar al sistema de que desea tener acceso al archivo llamando al método `StartAccessingSecurityScopedResource`. Cuando la extensión se realiza con el archivo, debe llamar al `StopAccessingSecurityScopedResource` para liberar su conexión.
+Dado que el sistema administra los datos adjuntos multimedia, está fuera del espacio aislado de la aplicación. La extensión necesita informar al sistema de que desea tener acceso al archivo mediante una llamada al `StartAccessingSecurityScopedResource` método. Cuando la extensión se realiza con el archivo, debe llamar a `StopAccessingSecurityScopedResource` para liberar su conexión.
 
 ### <a name="adding-custom-actions-to-a-custom-ui"></a>Agregar acciones personalizadas a una interfaz de usuario personalizada
 
@@ -453,7 +453,7 @@ Además de las acciones personalizadas, la extensión de contenido de notificaci
 
 Las extensiones de contenido de notificación también tienen la capacidad de actualizar su interfaz de usuario cuando el usuario invoca una de las acciones personalizadas, como mostrar una fecha como aceptada cuando el usuario pulsa el botón **Aceptar** acción personalizada. Además, las extensiones de contenido de notificación pueden indicar al sistema que retrase el descartado de la interfaz de usuario de notificación para que el usuario pueda ver el efecto de la acción antes de que se cierre la notificación.
 
-Esto se hace implementando una segunda versión del método `DidReceiveNotification` que incluye un controlador de finalización. Por ejemplo:
+Esto se hace implementando una segunda versión del `DidReceiveNotification` método que incluye un controlador de finalización. Por ejemplo:
 
 ```csharp
 using System;
@@ -527,7 +527,7 @@ namespace myApp {
 }
 ```
 
-Al agregar el controlador de `Server.PostEventResponse` al método `DidReceiveNotification` de la extensión de contenido de notificación, la extensión *debe* administrar todas las acciones personalizadas. La extensión también puede reenviar las acciones personalizadas a la aplicación contenedora cambiando el `UNNotificationContentExtensionResponseOption`. Por ejemplo:
+Al agregar el `Server.PostEventResponse` controlador al `DidReceiveNotification` método de la extensión de contenido de notificación, la extensión *debe* administrar todas las acciones personalizadas. La extensión también puede reenviar las acciones personalizadas a la aplicación contenedora mediante el cambio de `UNNotificationContentExtensionResponseOption` . Por ejemplo:
 
 ```csharp
 // Close Notification
@@ -676,7 +676,7 @@ namespace MonkeyChatNotifyExtension
 }
 ```
 
-Este código crea una nueva acción de entrada de texto y la agrega a la categoría de la extensión (en el método `MakeExtensionCategory`). En el método de invalidación `DidReceive`, controla el usuario que escribe texto con el siguiente código:
+Este código crea una nueva acción de entrada de texto y la agrega a la categoría de la extensión (en el `MakeExtensionCategory` método). En el `DidReceive` método de invalidación, controla el usuario que escribe texto con el código siguiente:
 
 ```csharp
 // Is text input?

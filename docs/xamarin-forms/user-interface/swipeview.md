@@ -10,16 +10,16 @@ ms.date: 03/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9c9d0621cdd5bb85690771d8bdfd0060b6a352cb
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 94fa094f579ad33947f1cc89e0d36c862c824472
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136258"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938949"
 ---
 # <a name="xamarinforms-swipeview"></a>Xamarin.FormsSwipeView
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
 
@@ -147,7 +147,7 @@ Una vez que se ha ejecutado un dedo, se ocultan los elementos de deslizamiento y
 
 ## <a name="swipe-items"></a>Deslizar rápidamente los elementos
 
-Las `LeftItems` `RightItems` colecciones,, `TopItems` y `BottomItems` son de tipo `SwipeItems` . La `SwipeItems` clase define las siguientes propiedades:
+Las `LeftItems` `RightItems` colecciones,, `TopItems` y `BottomItems` son de tipo `SwipeItems` . La clase `SwipeItems` define las propiedades siguientes:
 
 - `Mode`, de tipo `SwipeMode` , que indica el efecto de una interacción de deslizar rápidamente. Para obtener más información sobre el modo de deslizar rápidamente, vea el [modo de deslizar rápidamente](#swipe-mode).
 - `SwipeBehaviorOnInvoked`, de tipo `SwipeBehaviorOnInvoked` , que indica cómo `SwipeView` se comporta una vez que se invoca un elemento de deslizamiento. Para obtener más información sobre el comportamiento de los deslizamientos, vea [deslizar el comportamiento](#swipe-behavior).

@@ -10,12 +10,12 @@ ms.date: 04/05/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 61ae651a2402204f69f642235d74d8d641b47988
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 074b782bfc5458cf89e593913b6f31de633ffd73
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139027"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938156"
 ---
 # <a name="finger-painting-in-skiasharp"></a>Pintado con el dedo en SkiaSharp
 
@@ -25,7 +25,7 @@ _Use los dedos para pintar en el lienzo._
 
 Un `SKPath` objeto se puede actualizar y mostrar continuamente. Esta característica permite usar una ruta de acceso para dibujar interactivamente, como en un programa de pintado de dedos.
 
-![](finger-paint-images/fingerpaintsample.png "An exercise in finger painting")
+![Un ejercicio en el dibujo de dedos](finger-paint-images/fingerpaintsample.png)
 
 La compatibilidad táctil en no Xamarin.Forms permite el seguimiento de dedos individuales en la pantalla, por lo que se ha Xamarin.Forms desarrollado un efecto de seguimiento táctil para proporcionar soporte técnico táctil adicional. Este efecto se describe en el artículo [**invocación de eventos a partir de efectos**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). Las [**demostraciones de efectos de seguimiento táctil de**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) programas de ejemplo incluyen dos páginas que usan SkiaSharp, incluido un programa de pintado de dedos.
 
@@ -168,7 +168,7 @@ public partial class FingerPaintPage : ContentPage
 
 Las pinturas de dedos solo están limitadas por su talento:
 
-[![](finger-paint-images/fingerpaint-small.png "Triple screenshot of the Finger Paint page")](finger-paint-images/fingerpaint-large.png#lightbox "Triple screenshot of the Finger Paint page")
+[![Captura de pantalla triple de la página Finger Paint (Dibujo con los dedos)](finger-paint-images/fingerpaint-small.png)](finger-paint-images/fingerpaint-large.png#lightbox "Captura de pantalla triple de la página Finger Paint (Dibujo con los dedos)")
 
 Ahora ha visto cómo dibujar líneas y cómo definir curvas mediante ecuaciones paramétricas. Una sección posterior sobre [**curvas y trazados de SkiaSharp**](../curves/index.md) cubre los distintos tipos de curvas que `SKPath` admite. Pero un requisito previo útil es una exploración de [**transformaciones de SkiaSharp**](../transforms/index.md).
 

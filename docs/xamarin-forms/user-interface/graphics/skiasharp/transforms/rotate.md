@@ -10,12 +10,12 @@ ms.date: 03/23/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 520c4c3b61049bf17c2c964523714db196da6839
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 533cb607cc2c47bf108d5e03733f31ebfc2fe475
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84132189"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934139"
 ---
 # <a name="the-rotate-transform"></a>Transformación de rotación
 
@@ -25,7 +25,7 @@ _Explore los efectos y las animaciones posibles con la transformación girar Ski
 
 Con la transformación girar, los objetos de gráficos SkiaSharp se rompen libremente de la restricción de alineación con los ejes horizontal y vertical:
 
-![](rotate-images/rotateexample.png "Text rotated around a center")
+![Texto girado en torno a un centro](rotate-images/rotateexample.png)
 
 Para girar un objeto gráfico alrededor del punto (0,0), SkiaSharp admite un [`RotateDegrees`](xref:SkiaSharp.SKCanvas.RotateDegrees(System.Single)) método y un [`RotateRadians`](xref:SkiaSharp.SKCanvas.RotateRadians(System.Single)) método:
 
@@ -63,7 +63,7 @@ using (SKPaint textPaint = new SKPaint
 
 Dado que la rotación se centra alrededor de la esquina superior izquierda del lienzo, para la mayoría de los ángulos establecidos en este programa, el texto se gira fuera de la pantalla:
 
-[![](rotate-images/basicrotate-small.png "Triple screenshot of the Basic Rotate page")](rotate-images/basicrotate-large.png#lightbox "Triple screenshot of the Basic Rotate page")
+[![Captura de pantalla triple de la página girar básica](rotate-images/basicrotate-small.png)](rotate-images/basicrotate-large.png#lightbox "Captura de pantalla triple de la página girar básica")
 
 Con mucha frecuencia, querrá girar algo centrado alrededor de un punto de pivote especificado mediante estas versiones de los [`RotateDegrees`](xref:SkiaSharp.SKCanvas.RotateDegrees(System.Single,System.Single,System.Single)) [`RotateRadians`](xref:SkiaSharp.SKCanvas.RotateRadians(System.Single,System.Single,System.Single)) métodos y:
 
@@ -91,7 +91,7 @@ using (SKPaint textPaint = new SKPaint
 
 Ahora el texto gira alrededor del punto que se usa para colocar el texto, que es el centro horizontal de la línea base del texto:
 
-[![](rotate-images/centeredrotate-small.png "Triple screenshot of the Centered Rotate page")](rotate-images/centeredrotate-large.png#lightbox "Triple screenshot of the Centered Rotate page")
+[![Captura de pantalla triple de la página giro centrado](rotate-images/centeredrotate-small.png)](rotate-images/centeredrotate-large.png#lightbox "Captura de pantalla triple de la página giro centrado")
 
 Al igual que con la versión centrada del `Scale` método, la versión centrada de la `RotateDegrees` llamada es un acceso directo. Este es el método:
 
@@ -145,7 +145,7 @@ Conceptualmente, las dos transformaciones se aplican en el orden opuesto al modo
 
 Normalmente hay varias maneras de combinar la rotación y la traslación. La página **texto girado** crea la siguiente pantalla:
 
-[![](rotate-images/rotatedtext-small.png "Triple screenshot of the Rotated Text page")](rotate-images/rotatedtext-large.png#lightbox "Triple screenshot of the Rotated Text page")
+[![Captura de pantalla triple de la página de texto girado](rotate-images/rotatedtext-small.png)](rotate-images/rotatedtext-large.png#lightbox "Captura de pantalla triple de la página de texto girado")
 
 Este es el `PaintSurface` controlador de la [`RotatedTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/RotatedTextPage.cs) clase:
 
@@ -369,7 +369,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El reloj es ciertamente funcional, aunque las manos son bastante brutas:
 
-[![](rotate-images/uglyanalogclock-small.png "Triple screenshot of the Ugly Analog Clock Text page")](rotate-images/uglyanalogclock-large.png#lightbox "Triple screenshot of the Ugly Analog page")
+[![Captura de pantalla triple de la página de texto del reloj análogo desagradable](rotate-images/uglyanalogclock-small.png)](rotate-images/uglyanalogclock-large.png#lightbox "Captura de pantalla triple de la página analógica desagradable")
 
 Para obtener un reloj más atractivo, consulte el artículo [**datos de la ruta de acceso SVG en SkiaSharp**](../curves/path-data.md).
 

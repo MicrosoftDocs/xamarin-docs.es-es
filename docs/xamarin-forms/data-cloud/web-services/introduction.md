@@ -10,12 +10,12 @@ ms.date: 02/28/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d714b4c9d598d8cca26ae992abf3f15df703d11b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cd9815c6448efae0bb0af982c8807c47263ae13e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139183"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938218"
 ---
 # <a name="xamarinforms-web-services-introduction"></a>Xamarin.FormsIntroducción a servicios Web
 
@@ -34,8 +34,8 @@ En todos los casos, las tareas se almacenan en un back-end al que se tiene acces
 
 Cuando se inicia la aplicación, se muestra una página que muestra las tareas recuperadas del servicio Web y permite al usuario crear una nueva tarea. Al hacer clic en una tarea, la aplicación se desplaza a una segunda página en la que se puede editar, guardar, eliminar e decir la tarea. A continuación se muestra la aplicación final:
 
-![](introduction-images/app-example-1.png "Todo application - first page")
-![](introduction-images/app-example-2.png "Todo application - second page")
+![Aplicación todo: primera página tarea ](introduction-images/app-example-1.png)
+ ![ pendiente-segunda página](introduction-images/app-example-2.png)
 
 En cada tema de esta guía se proporciona un vínculo de descarga a una versión *diferente* de la aplicación que muestra un tipo específico de back-end de servicios Web. Descargue el código de ejemplo correspondiente en la página relacionada con cada estilo de servicio Web.
 

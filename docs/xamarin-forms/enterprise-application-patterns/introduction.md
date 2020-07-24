@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e78e7c3056d4f1e22114819f54c1df261aec70e1
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 665971607d8c67f77ad5172778cddcd97bf79841
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198115"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932631"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>Introducción al desarrollo de aplicaciones empresariales
 
@@ -65,7 +65,7 @@ En esta guía se incluye una aplicación de ejemplo, eShopOnContainers, que es u
 
 En la figura 1-1 se proporciona información general de alto nivel sobre la arquitectura de la aplicación de ejemplo.
 
-![](introduction-images/architecture.png "eShopOnContainers high-level architecture")
+![arquitectura de alto nivel de eShopOnContainers](introduction-images/architecture.png)
 
 **Figura 1-1**: arquitectura de alto nivel de eShopOnContainers
 
@@ -92,7 +92,7 @@ Para obtener información sobre la implementación de los servicios back-end, co
 
 Esta guía se centra en la creación de aplicaciones empresariales multiplataforma con Xamarin.Forms y usa la aplicación móvil eShopOnContainers como ejemplo. En la figura 1-2 se muestran las páginas de la aplicación móvil eShopOnContainers que proporcionan la funcionalidad descrita anteriormente.
 
-[![](introduction-images/screenshots.png "The eShopOnContainers mobile app")](introduction-images/screenshots-large.png#lightbox "The eShopOnContainers mobile app")
+[![La aplicación móvil eShopOnContainers](introduction-images/screenshots.png)](introduction-images/screenshots-large.png#lightbox "La aplicación móvil eShopOnContainers")
 
 **Figura 1-2**: la aplicación móvil eShopOnContainers
 
@@ -122,7 +122,7 @@ Además, se proporcionan pruebas unitarias para algunas de las clases de la apli
 
 La solución de aplicación móvil eShopOnContainers organiza el código fuente y otros recursos en proyectos. Todos los proyectos utilizan carpetas para organizar el código fuente y otros recursos en categorías. En la tabla siguiente se describen los proyectos que componen la aplicación móvil eShopOnContainers:
 
-|Project|Descripción|
+|Proyecto|Descripción|
 |--- |--- |
 |eShopOnContainers. Core|Este proyecto es el proyecto de biblioteca de clases portable (PCL) que contiene el código compartido y la interfaz de usuario compartida.|
 |eShopOnContainers. Droid|Este proyecto contiene código específico de Android y es el punto de entrada de la aplicación Android.|

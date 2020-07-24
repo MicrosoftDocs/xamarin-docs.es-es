@@ -6,12 +6,12 @@ ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 06a3197cfcd3b49538cfa5fa97e40a9f50c7a244
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 164c059b60c1b5b2aadb2cb348c6b5407da63928
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84655103"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934711"
 ---
 # <a name="introduction-to-web-services"></a>Introducción a los servicios web
 
@@ -293,7 +293,7 @@ La dirección URL del servicio web puede ser un recurso de origen remoto hospeda
 file:///Users/myUserName/projects/MyProjectName/service.wsdl
 ```
 
-[![](images/add-webreference-dialog.png "The web service URL can either be a hosted remote source or local file system resource accessible via the file path prefix")](images/add-webreference-dialog.png#lightbox)
+[![La dirección URL del servicio web puede ser un recurso de origen remoto hospedado o del sistema de archivos local accesible a través del prefijo de la ruta de acceso del archivo](images/add-webreference-dialog.png)](images/add-webreference-dialog.png#lightbox)
 
 Esto genera el proxy en la carpeta de referencias de servicio o web del proyecto. Dado que un proxy se genera código, no debe modificarse.
 

@@ -6,12 +6,12 @@ ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 6cd5acb529d617c72d8c9e1bd642a831f90b2e8c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 976d0882c5875c1d3e1c8f0ea1732de08df8e07f
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73013741"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996180"
 ---
 # <a name="missing-visual-studio-extensions-after-installation"></a>Faltan extensiones de Visual Studio después de la instalación
 
@@ -33,7 +33,7 @@ En determinadas situaciones, el instalador de Xamarin podría desactivar automá
 
 4. Asegúrese de que la opción **Xamarin for Visual Studio 2013** esté establecida en Install:
 
-    ![](missing-vs-extensions-images/installer.png "Enable Xamarin for Visual Studio 2013 installation option")
+    ![Habilitar Xamarin para la opción de instalación de Visual Studio 2013](missing-vs-extensions-images/installer.png)
 
 5. Continúe con el resto del Asistente para la instalación.
 
@@ -45,7 +45,7 @@ En determinadas situaciones, el instalador de Xamarin podría desactivar automá
 
     Si las extensiones están instaladas correctamente (para la versión 3.1.228), habrá 60 elementos en la carpeta:
 
-    ![](missing-vs-extensions-images/folder.png "List of 'Xamarin\3.1.228.0' folder contents in Explorer")
+    ![Lista del contenido de la carpeta Xamarin\3.1.228.0 en el explorador](missing-vs-extensions-images/folder.png)
 
 2. Después de confirmar que el contenido de la carpeta es correcto, indíquele a Visual Studio que intente configurar las extensiones de nuevo:
 
@@ -65,7 +65,7 @@ En determinadas situaciones, el instalador de Xamarin podría desactivar automá
 
     * Xamarin para Visual Studio
 
-2. En el Explorador, elimine los archivos restantes de las carpetas de extensión de Xamarin Visual Studio (todas las versiones, incluidas **Archivos de programa** y **Archivos de programa (x86)** ):
+2. En el explorador, elimine los archivos restantes de las carpetas de extensión de Visual Studio de Xamarin (todas las versiones, incluidos los archivos de **programa** y **los archivos de programa (x86)**):
 
     `C:\Program Files*\Microsoft Visual Studio 1*.0\Common7\IDE\Extensions\Xamarin`
 
@@ -77,11 +77,11 @@ En determinadas situaciones, el instalador de Xamarin podría desactivar automá
 
 5. Busque esta clave:
 
-    _HKEY\_LOCAL\_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\SharedDlls_
+    _HKEY \_ local \_ MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\SharedDlls_
 
 6. Busque y elimine las entradas que coincidan con este patrón:
 
-    _C:\Archivos de programa\*\Microsoft Visual Studio 1\*. 0 \ Common7\IDE\Extensions\Xamarin_
+    _C:\Archivos de programa \* \Microsoft Visual Studio 1 \* . 0 \ Common7\IDE\Extensions\Xamarin_
 
 7. Busque esta clave:
 
@@ -91,7 +91,7 @@ En determinadas situaciones, el instalador de Xamarin podría desactivar automá
 
     _Mono.VisualStudio.Shell,1.0_
 
-9. Reinicie el equipo.
+9. Reinicie.
 
 10. Vuelva a instalar la versión estable actual de Xamarin desde [VisualStudio.com](https://visualstudio.com/xamarin).
 

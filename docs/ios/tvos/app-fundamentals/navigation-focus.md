@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 69886a0da53d419a0c40bdf34f91d301c9efe504
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d9e8d91b03a5a82373012da215bd29a747e67d3e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573721"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939456"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Trabajar con la navegación y el foco de tvOS en Xamarin
 
@@ -20,7 +20,7 @@ _En este artículo se describe el concepto de enfoque y cómo se usa para presen
 
 En este artículo se describe el concepto de [enfoque](#Focus-and-Selection) y cómo se usa para controlar la [navegación](#Navigation) en una interfaz de usuario de la aplicación Xamarin. tvOS. Veremos cómo los controles de navegación tvOS integrados usan el foco, el resaltado y la selección para proporcionar la navegación de la interfaz de usuario de la aplicación Xamarin. tvOS.
 
-[![](navigation-focus-images/intro01.png "tvOS apps User Interface Navigation")](navigation-focus-images/intro01.png#lightbox)
+[![Navegación por la interfaz de usuario de tvOS apps](navigation-focus-images/intro01.png)](navigation-focus-images/intro01.png#lightbox)
 
 A continuación, echaremos un vistazo a cómo se puede usar el enfoque con imágenes de [Parallax](#Focus-and-Parallax) y *capas* para proporcionar pistas visuales para el estado de navegación actual al usuario final.
 
@@ -34,7 +34,7 @@ Los usuarios de la aplicación de Xamarin. tvOS no interactuarán con su interfa
 
 Una aplicación tvOS correcta implementa la navegación de forma que admite sin problemas el propósito de la aplicación y la estructura de los datos que presenta sin llamar la atención a la propia navegación. Diseñe la navegación para que se sienta natural y familiar sin dominar la interfaz de usuario o dibujar el foco fuera del contenido y de la experiencia del usuario de las aplicaciones.
 
-[![](navigation-focus-images/nav01.png "The tvOS settings app")](navigation-focus-images/nav01.png#lightbox)
+[![La aplicación de configuración de tvOS](navigation-focus-images/nav01.png)](navigation-focus-images/nav01.png#lightbox)
 
 Mientras se usa Apple TV, el usuario suele navegar por un conjunto de pantallas apiladas, cada una de las cuales presenta un conjunto de contenido determinado. A su vez, cada nueva pantalla puede conducir a una o varias pantallas secundarias de contenido mediante controles de interfaz de usuario estándar como [botones](~/ios/tvos/user-interface/buttons.md), [barras de pestañas](~/ios/tvos/user-interface/tab-bars.md), tablas, [vistas de colección](~/ios/tvos/user-interface/collection-views.md) o [vistas divididas](~/ios/tvos/user-interface/split-views.md).
 
@@ -57,7 +57,7 @@ Apple sugiere tener en cuenta lo siguiente al diseñar la navegación de la apli
 
 En Apple TV, se considera que una imagen, un botón o cualquier otro elemento de la interfaz de usuario está _en el foco_ cuando es el destino de la navegación actual.
 
-[![](navigation-focus-images/focus01.png "Focus and Selection example")](navigation-focus-images/focus01.png#lightbox)
+[![Ejemplo de enfoque y selección](navigation-focus-images/focus01.png)](navigation-focus-images/focus01.png#lightbox)
 
 A diferencia de los dispositivos iOS en los que el usuario está interactuando directamente con los elementos de la pantalla táctil del dispositivo, los usuarios interactúan con los elementos de tvOS desde el salón mediante el uso remoto de Siri. Para presentar y controlar esta interacción del usuario, Apple TV usa un modelo basado en el _enfoque_ .
 
@@ -134,7 +134,7 @@ Sin embargo, puede haber ocasiones, debido a la necesidades del diseño de la in
 
 Tome el siguiente diseño de la interfaz de usuario para obtener un ejemplo:
 
- [![](navigation-focus-images/guide01.png "Working with Focus Guides example")](navigation-focus-images/guide01.png#lightbox)
+ [![Ejemplo de cómo trabajar con guías de enfoque](navigation-focus-images/guide01.png)](navigation-focus-images/guide01.png#lightbox)
 
 Dado que el botón **más información** no está en una cuadrícula horizontal y vertical con el botón **comprar** , el usuario no podrá tener acceso a él. Sin embargo, esto se puede corregir fácilmente mediante una _Guía de enfoque_ para proporcionar sugerencias de movimiento al motor de foco. 
 
@@ -164,9 +164,9 @@ public override void ViewDidLoad ()
 
 En primer lugar, `UIFocusGuide` se crea un nuevo y se agrega a la colección de guía de diseño de la vista mediante el `AddLayoutGuide` método.
 
-Después, los delimitadores superior, izquierdo, ancho y alto de la guía de enfoque se ajustan en relación con los botones **más información** y **comprar** para colocarlos entre ellos. Vea:
+Después, los delimitadores superior, izquierdo, ancho y alto de la guía de enfoque se ajustan en relación con los botones **más información** y **comprar** para colocarlos entre ellos. Consulte:
 
-[![](navigation-focus-images/guide02.png "Example Focus Guide")](navigation-focus-images/guide02.png#lightbox)
+[![Guía de enfoque de ejemplo](navigation-focus-images/guide02.png)](navigation-focus-images/guide02.png#lightbox)
 
 También es importante tener en cuenta que las nuevas restricciones se activan a medida que se crean estableciendo su `Active` propiedad en `true` :
 

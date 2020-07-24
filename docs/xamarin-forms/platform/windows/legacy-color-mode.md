@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3bcbee04edbeebf3949673a53edde4200856f5c6
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f1c438ec182119ffda1fe73916cbd8e971d421ab
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84132116"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929706"
 ---
 # <a name="visualelement-legacy-color-mode-on-windows"></a>Modo de color heredado de VisualElement en Windows
 
@@ -53,7 +53,7 @@ El `VisualElement.On<Windows>` método especifica que este específico de la pla
 
 El resultado es que el modo de color heredado se puede deshabilitar, de modo que los colores establecidos en una vista por parte del usuario permanezcan incluso cuando la vista esté deshabilitada:
 
-![](legacy-color-mode-images/legacy-color-mode-disabled.png "Legacy color mode disabled")
+![Modo de color heredado deshabilitado](legacy-color-mode-images/legacy-color-mode-disabled.png)
 
 > [!NOTE]
 > Al establecer [`VisualStateGroup`](xref:Xamarin.Forms.VisualStateGroup) en una vista, el modo de color heredado se omite por completo. Para obtener más información sobre los Estados visuales, consulte [el Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).

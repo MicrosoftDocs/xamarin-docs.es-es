@@ -10,12 +10,12 @@ ms.date: 04/14/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 91a639b2d3c2f6a8437a09a70808dc6d793ba76b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b4c6569acbade7edf64c9aaf54237ebaa342ea54
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131760"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936648"
 ---
 # <a name="non-affine-transforms"></a>Transformaciones no afines
 
@@ -27,7 +27,7 @@ La traslación, la escala, la rotación y el sesgo se clasifican como transforma
 
 Sin embargo, SkiaSharp también es capaz de realizar transformaciones no afines, que tienen la capacidad de transformar un rectángulo en cualquier cuadrangular convexa:
 
-![](non-affine-images/nonaffinetransformexample.png "A bitmap transformed into a convex quadrilateral")
+![Un mapa de bits transformado en una cuadrangular convexa](non-affine-images/nonaffinetransformexample.png)
 
 Una cuadrangular convexa es una figura de cuatro caras con ángulos interiores siempre inferior a 180 grados y lados que no se cruzan.
 
@@ -99,7 +99,7 @@ Ahora use esta transformación para representar un cuadrado de 100 píxeles situ
 
 Cuando x es 100, el denominador z ' es 2, por lo que las coordenadas x e y se reducen de forma eficaz. El lado derecho del cuadro se vuelve más corto que el lado izquierdo:
 
-![](non-affine-images/nonaffinetransform.png "A box subjected to a non-affine transform")
+![Cuadro sometido a una transformación no afín](non-affine-images/nonaffinetransform.png)
 
 La `Persp` parte de estos nombres de celda hace referencia a "Perspective" porque el escorzo sugiere que el cuadro ahora está inclinado con el lado derecho más allá del visor.
 
@@ -233,7 +233,7 @@ public partial class TestPerspectivePage : ContentPage
 
 Estas son algunas imágenes de ejemplo:
 
-[![](non-affine-images/testperspective-small.png "Triple screenshot of the Test Perspective page")](non-affine-images/testperspective-large.png#lightbox "Triple screenshot of the Test Perspective page")
+[![Captura de pantalla triple de la página perspectiva de pruebas](non-affine-images/testperspective-small.png)](non-affine-images/testperspective-large.png#lightbox "Captura de pantalla triple de la página perspectiva de pruebas")
 
 Al experimentar con los controles deslizantes, observará que los valores más allá de 0,0066 o inferiores a 0,0066 hacen que la imagen se corte repentinamente y sea incoherente. El mapa de bits que se transforma tiene un cuadrado de 300 píxeles. Se transforma en relación con su centro, por lo que las coordenadas del intervalo del mapa de bits van de – 150 a 150. Recuerde que el valor de z ' es:
 
@@ -245,7 +245,7 @@ Por lo general, no estará configurando `Persp0` y `Persp1` de forma aislada. Ta
 
 Una transformación no afín es una *transformación de inclinación*. Este tipo de transformación no afín conserva las dimensiones globales de un rectángulo, pero un lado:
 
-![](non-affine-images/tapertransform.png "A box subjected to a taper transform")
+![Un cuadro sometido a una transformación de cónica](non-affine-images/tapertransform.png)
 
 La [`TaperTransform`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransform.cs) clase realiza un cálculo generalizado de una transformación no afín basada en estos parámetros:
 
@@ -397,13 +397,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Estos son algunos ejemplos:
 
-[![](non-affine-images/tapertransform-small.png "Triple screenshot of the Taper Transform page")](non-affine-images/tapertransform-large.png#lightbox "Triple screenshot of the Taper Transform page")
+[![Captura de pantalla triple de la página transformación de cónica](non-affine-images/tapertransform-small.png)](non-affine-images/tapertransform-large.png#lightbox "Captura de pantalla triple de la página transformación de cónica")
 
 Otro tipo de transformaciones no afines generalizadas es la rotación 3D, que se muestra en el siguiente artículo, [**rotaciones 3D**](3d-rotation.md).
 
 La transformación no afín puede transformar un rectángulo en cualquier cuadrangular convexa. Esto se muestra en la página **Mostrar matriz no afín** . Es muy similar a la página **Mostrar matriz afín** del artículo [**transformaciones de matriz**](matrix.md) , excepto que tiene un cuarto `TouchPoint` objeto para manipular la cuarta esquina del mapa de bits:
 
-[![](non-affine-images/shownonaffinematrix-small.png "Triple screenshot of the Show Non-Affine Matrix page")](non-affine-images/shownonaffinematrix-large.png#lightbox "Triple screenshot of the Show Non-Affine Matrix page")
+[![Captura de pantalla triple de la página Mostrar matriz no afín](non-affine-images/shownonaffinematrix-small.png)](non-affine-images/shownonaffinematrix-large.png#lightbox "Captura de pantalla triple de la página Mostrar matriz no afín")
 
 Siempre que no intente crear un ángulo interior de una de las esquinas del mapa de bits superior a 180 grados, o hacer que dos lados se crucen entre sí, el programa calcula correctamente la transformación mediante este método de la [`ShowNonAffineMatrixPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) clase:
 

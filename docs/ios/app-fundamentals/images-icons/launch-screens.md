@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: a2f15c8385b7df7afc3f04e033a085cb00bc9005
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: b4191ae3c25ee5d2eeccd44377177d7d0df6f19e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573864"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937376"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Pantallas de inicio para aplicaciones de Xamarin. iOS
 
@@ -191,34 +191,34 @@ Para obtener más información sobre cómo crear una pantalla de inicio con un g
 
 Al actualizar una aplicación existente para usar guiones gráficos para sus pantallas de inicio, haga clic con el botón derecho en el **nombre del proyecto** en el **Explorador de soluciones** y seleccione **Agregar**  >  **nuevo archivo..**.. Seleccione **iOS**  >  **pantalla de inicio** de iOS y haga clic en el botón **nuevo** :
 
-![](launch-screens-images/storyboard02.png "Select an iOS Launch Screen")
+![Selección de una pantalla de inicio de iOS](launch-screens-images/storyboard02.png)
 
 A continuación, haga doble clic `Info.plist` en el archivo en el **Explorador de soluciones** para abrirlo para su edición. En **pantalla de inicio**, seleccione el nuevo archivo de guion gráfico creado anteriormente.
 
-![](launch-screens-images/storyboard09.png "Select the new Storyboard file created above")
+![Seleccione el nuevo archivo de guion gráfico creado anteriormente](launch-screens-images/storyboard09.png)
 
 Para usar el nuevo guión gráfico como una pantalla de inicio, haga lo siguiente:
 
 1. Haga doble clic en el `Info.plist` archivo en el **Explorador de soluciones** para abrirlo para su edición.
 2. Desplácese hasta la sección **imágenes de inicio universal** del editor, abra el menú desplegable de la **pantalla de inicio** y seleccione el nombre del guión gráfico creado anteriormente: 
 
-    ![](launch-screens-images/storyboard08.png "Setting the launch screen to the storyboard")
+    ![Establecimiento de la pantalla de inicio en el guión gráfico](launch-screens-images/storyboard08.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Haga clic con el botón derecho en el nombre del proyecto en el **Explorador de soluciones** y seleccione **Agregar**  >  **nuevo archivo..**.: 
 
-    ![](launch-screens-images/image012.png "Add new file")
+    ![Agregar un nuevo archivo](launch-screens-images/image012.png)
 2. Escriba un nombre para la pantalla de inicio y haga clic en el botón **Agregar** : 
 
-    ![](launch-screens-images/image013.png "Enter a name for the launch screen")
+    ![Escriba un nombre para la pantalla de inicio](launch-screens-images/image013.png)
 3. En el **Explorador de soluciones**, haga doble clic en el archivo de guion gráfico recién creado para abrirlo y editarlo.
 4. Asegúrese de que la **clase size** esté establecida en **any: any** y la **vista como** sea **genérica**: 
 
-    ![](launch-screens-images/image016.png "Ensure that the Size Class is set to any:any and the View As is Generic")
+    ![Asegúrese de que la clase de tamaño está establecida en any: any y la vista como es genérica](launch-screens-images/image016.png)
 5. Ensamble la pantalla de inicio de clases de tamaño, elementos de interfaz de usuario simples (como `UIImageView` ) e imágenes que haya incluido en el paquete de la aplicación: 
 
-    ![](launch-screens-images/image017.png "Assembly the launch screen in the iOS Designer")
+    ![Ensamblado de la pantalla de inicio en el diseñador de iOS](launch-screens-images/image017.png)
 6. Guarde los cambios en el guion gráfico.
 
 -----

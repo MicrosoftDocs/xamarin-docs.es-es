@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 13d1709f77b312dbdf357c8ce1871727b2073fef
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 5d10f1def56d73c6837587bbbd47299d208a345a
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574436"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997480"
 ---
 # <a name="building-modern-macos-apps"></a>Creación de aplicaciones modernas de macOS
 
@@ -24,7 +24,7 @@ _En este artículo se tratan varias sugerencias, características y técnicas qu
 
 Un aspecto moderno incluirá una ventana moderna y un aspecto de la barra de herramientas, como la aplicación de ejemplo que se muestra a continuación:
 
-[![](modern-cocoa-apps-images/content08.png "An example of a modern Mac app UI")](modern-cocoa-apps-images/content08.png#lightbox)
+[![Un ejemplo de una interfaz de usuario de la aplicación Mac moderna](modern-cocoa-apps-images/content08.png)](modern-cocoa-apps-images/content08.png#lightbox)
 
 <a name="Enabling-Full-Sized-Content-Views"></a>
 
@@ -64,7 +64,7 @@ namespace MacModern
 
 Esta característica también se puede habilitar en la Interface Builder de Xcode seleccionando la ventana y comprobando la **vista de contenido de tamaño completo**:
 
-[![](modern-cocoa-apps-images/content01.png "Editing the main storyboard in Xcode's Interface Builder")](modern-cocoa-apps-images/content01.png#lightbox)
+[![Edición del guión gráfico principal en la Interface Builder de Xcode](modern-cocoa-apps-images/content01.png)](modern-cocoa-apps-images/content01.png#lightbox)
 
 Cuando se usa una vista de contenido de tamaño completo, el desarrollador puede tener que desplazar el contenido debajo del título y las áreas de la barra de herramientas para que el contenido específico (como etiquetas) no se deslice debajo de ellos.
 
@@ -145,11 +145,11 @@ topConstraint.Active = true;
 
 Una ventana de macOS normal incluye una barra de título estándar en las ejecuciones, junto con el borde superior de la ventana. Si la ventana también incluye una barra de herramientas, se mostrará en esta área de la barra de título:
 
-[![](modern-cocoa-apps-images/content02.png "A standard Mac Toolbar")](modern-cocoa-apps-images/content02.png#lightbox)
+[![Barra de herramientas estándar de Mac](modern-cocoa-apps-images/content02.png)](modern-cocoa-apps-images/content02.png#lightbox)
 
 Cuando se usa una barra de herramientas optimizada, el área de título desaparece y la barra de herramientas se desplaza hacia arriba en la posición de la barra de título, en línea con los botones cerrar, minimizar y maximizar de la ventana:
 
-[![](modern-cocoa-apps-images/content03.png "A streamlined Mac Toolbar")](modern-cocoa-apps-images/content03.png#lightbox)
+[![Barra de herramientas Mac simplificada](modern-cocoa-apps-images/content03.png)](modern-cocoa-apps-images/content03.png#lightbox)
 
 La barra de herramientas simplificada se habilita invalidando el `ViewWillAppear` método de `NSViewController` y haciéndolo similar al siguiente:
 
@@ -163,7 +163,7 @@ public override void ViewWillAppear ()
 }
 ```
 
-Este efecto se usa normalmente para _las aplicaciones_ de la caja de zapatos (una aplicación de ventana) como mapas, calendario, notas y preferencias del sistema. 
+Este efecto se usa normalmente para _las aplicaciones_ de la caja de zapatos (una aplicación de ventana) como mapas, calendario, notas y preferencias del sistema.
 
 <a name="Using-Accessory-View-Controllers"></a>
 
@@ -171,22 +171,22 @@ Este efecto se usa normalmente para _las aplicaciones_ de la caja de zapatos (un
 
 En función del diseño de la aplicación, el desarrollador también podría querer complementar el área de la barra de título con un controlador de vista de accesorio que aparece justo debajo del área de la barra de título y herramientas para proporcionar controles contextuales al usuario en función de la actividad en la que están participando actualmente:
 
-[![](modern-cocoa-apps-images/content04.png "An example Accessory View Controller")](modern-cocoa-apps-images/content04.png#lightbox)
+[![Un controlador de vista accesorio de ejemplo](modern-cocoa-apps-images/content04.png)](modern-cocoa-apps-images/content04.png#lightbox)
 
 El controlador de vista de accesorio se desenfocará automáticamente y el sistema cambiará su tamaño sin intervención del desarrollador.
 
 Para agregar un controlador de vista de accesorio, haga lo siguiente:
 
 1. Haga doble clic en el archivo `Main.storyboard` en el **Explorador de soluciones** para abrirlo para su edición.
-2. Arrastre un **controlador de vista personalizado** a la jerarquía de la ventana: 
+2. Arrastre un **controlador de vista personalizado** a la jerarquía de la ventana:
 
-    [![](modern-cocoa-apps-images/content05.png "Adding a new Custom View Controller")](modern-cocoa-apps-images/content05.png#lightbox)
-3. Diseño de la interfaz de usuario de la vista de accesorio: 
+    [![Agregar un nuevo controlador de vista personalizado](modern-cocoa-apps-images/content05.png)](modern-cocoa-apps-images/content05.png#lightbox)
+3. Diseño de la interfaz de usuario de la vista de accesorio:
 
-    [![](modern-cocoa-apps-images/content06.png "Designing the new view")](modern-cocoa-apps-images/content06.png#lightbox)
-4. Exponga la vista de accesorio como una **salida** y cualquier otra **acción** o **salida** para su interfaz de usuario: 
+    [![Diseñar la nueva vista](modern-cocoa-apps-images/content06.png)](modern-cocoa-apps-images/content06.png#lightbox)
+4. Exponga la vista de accesorio como una **salida** y cualquier otra **acción** o **salida** para su interfaz de usuario:
 
-    [![](modern-cocoa-apps-images/content07.png "Adding the required OUtlet")](modern-cocoa-apps-images/content07.png#lightbox)
+    [![Adición de la salida necesaria](modern-cocoa-apps-images/content07.png)](modern-cocoa-apps-images/content07.png#lightbox)
 5. Guarde los cambios.
 6. Vuelva a Visual Studio para Mac para sincronizar los cambios.
 
@@ -248,7 +248,7 @@ Dado que macOS ahora está totalmente localizado, las `Left` propiedades y han `
 
 Además, el sistema macOS puede agregar controladores de vista de accesorio a la ventana de la aplicación. Por ejemplo, para crear ventanas con pestañas en las que varias de las ventanas de la aplicación se combinan en una ventana virtual:
 
-[![](modern-cocoa-apps-images/content08.png "An example of a tabbed Mac Window")](modern-cocoa-apps-images/content08.png#lightbox)
+[![Ejemplo de una ventana de Mac con pestañas](modern-cocoa-apps-images/content08.png)](modern-cocoa-apps-images/content08.png#lightbox)
 
 Normalmente, el desarrollador deberá realizar una acción limitada usar ventanas con pestañas en sus aplicaciones de Xamarin. Mac, el sistema las administrará automáticamente de la siguiente manera:
 
@@ -302,7 +302,7 @@ namespace MacModern
 
             // Display
             controller.ShowWindow (this);
-        } 
+        }
         #endregion
     }
 }
@@ -430,7 +430,7 @@ Además, Apple sugiere el uso de vistas respaldadas por capas en lugar de agrega
 
 La copia de seguridad de capas se puede habilitar estableciendo el valor `WantsLayer` de `NSView` en `true` o dentro del Interface Builder de Xcode en el **Inspector de efectos** de la vista comprobando el **nivel de animación principal**:
 
-[![](modern-cocoa-apps-images/content09.png "The View Effects Inspector")](modern-cocoa-apps-images/content09.png#lightbox)
+[![Inspector de efectos de la vista](modern-cocoa-apps-images/content09.png)](modern-cocoa-apps-images/content09.png#lightbox)
 
 <a name="Redrawing-Views-with-Layers"></a>
 
@@ -496,7 +496,7 @@ namespace MacModern
         {
             base.UpdateLayer ();
 
-            // Draw view 
+            // Draw view
             Layer.BackgroundColor = NSColor.Red.CGColor;
         }
         #endregion
@@ -571,7 +571,7 @@ namespace MacModern
         {
             // Return required pasteboard writer
             ...
-            
+
             // Pasteboard writer failed
             return null;
         }
@@ -733,7 +733,7 @@ El estático `NSTableViewRowAction.FromStyle` se usa para crear una nueva acció
 
 <a name="Scroll-View-Enhancements"></a>
 
-## <a name="scroll-view-enhancements"></a>Mejoras de la vista de desplazamiento 
+## <a name="scroll-view-enhancements"></a>Mejoras de la vista de desplazamiento
 
 Cuando se usa una vista de desplazamiento ( `NSScrollView` ) directamente o como parte de otro control (como `NSTableView` ), el contenido de la vista de desplazamiento se puede deslizar bajo las áreas de título y de la barra de herramientas en una aplicación de Xamarin. Mac con un aspecto moderno y vistas.
 
@@ -760,9 +760,9 @@ Para obtener más información, consulte la [Guía de internacionalización y lo
 
 <a name="Implementing-Base-Internationalization"></a>
 
-### <a name="implementing-base-internationalization"></a>Implementación de la internacionalización base 
+### <a name="implementing-base-internationalization"></a>Implementación de la internacionalización base
 
-Mediante la implementación de la internacionalización base, el desarrollador puede proporcionar un único archivo de guion gráfico para representar la interfaz de usuario de la aplicación y separar todas las cadenas orientadas al usuario. 
+Mediante la implementación de la internacionalización base, el desarrollador puede proporcionar un único archivo de guion gráfico para representar la interfaz de usuario de la aplicación y separar todas las cadenas orientadas al usuario.
 
 Cuando el desarrollador crea el archivo de guion gráfico (o archivos) inicial que define la interfaz de usuario de la aplicación, se creará en la internacionalización base (el lenguaje que habla el desarrollador).
 
@@ -792,7 +792,7 @@ Apple recomienda hacer lo siguiente:
 
 Apple ha proporcionado varias características en Interface Builder de Xcode que el desarrollador puede usar al diseñar o editar la interfaz de usuario de una aplicación para admitir la localización. La sección **dirección del texto** del **Inspector de atributos** permite al desarrollador proporcionar sugerencias sobre cómo se debe usar y actualizar la dirección en una vista de selección basada en texto (como `NSTextField` ):
 
-[![](modern-cocoa-apps-images/content10.png "The Text Direction options")](modern-cocoa-apps-images/content10.png#lightbox)
+[![Opciones de dirección de texto](modern-cocoa-apps-images/content10.png)](modern-cocoa-apps-images/content10.png#lightbox)
 
 Hay tres valores posibles para la **dirección del texto**:
 
@@ -851,7 +851,7 @@ var button2 = NSButton.CreateButton (myTitle, myImage, () => {
 
 Las aplicaciones modernas de macOS pueden adoptar una nueva apariencia de interfaz oscura que funciona bien para la creación de imágenes, edición o presentación de aplicaciones:
 
-[![](modern-cocoa-apps-images/content11.png "An example of a dark Mac Window UI")](modern-cocoa-apps-images/content11.png#lightbox)
+[![Ejemplo de una interfaz de usuario de ventana Mac oscura](modern-cocoa-apps-images/content11.png)](modern-cocoa-apps-images/content11.png#lightbox)
 
 Esto puede hacerse agregando una línea de código antes de que se presente la ventana. Por ejemplo:
 
@@ -865,7 +865,7 @@ namespace MacModern
     public partial class ViewController : NSViewController
     {
         ...
-    
+
         #region Override Methods
         public override void ViewWillAppear ()
         {
@@ -898,7 +898,7 @@ Los guiones gráficos permiten al desarrollador no solo diseñar los elementos i
 
 Los controladores permiten al desarrollador recopilar elementos en una unidad de composición y objetos segue abstraer y quitar el "código de adherencia" típico necesario para moverse por la jerarquía de vistas:
 
-[![](modern-cocoa-apps-images/content12.png "Editing the UI in Xcode's Interface Builder")](modern-cocoa-apps-images/content12.png#lightbox)
+[![Edición de la interfaz de usuario en la Interface Builder de Xcode](modern-cocoa-apps-images/content12.png)](modern-cocoa-apps-images/content12.png#lightbox)
 
 Para obtener más información, consulte la documentación [Introducción a los guiones gráficos](~/mac/platform/storyboards/index.md) .
 

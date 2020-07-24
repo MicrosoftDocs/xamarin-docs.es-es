@@ -6,12 +6,12 @@ ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: davidortinau
 ms.author: daortin
 ms.date: 10/27/2017
-ms.openlocfilehash: 5b4b4bdf85ec79a46a4e4c06504eb8b9b85af329
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 93c3f4dcb56710c72cdc61c25aa6481fbd27582e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84566962"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934919"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Solución de problemas de Xamarin Profiler
 
@@ -43,11 +43,11 @@ También se puede guardar el archivo **. MLPD** para una sesión actual eligiend
 
 **Visual Studio para Mac**:
 
-![](troubleshooting-images/image17.png "Saving .mlpd file in Visual Studio for Mac")
+![Guardando archivo. MLPD en Visual Studio para Mac](troubleshooting-images/image17.png)
 
 **Visual Studio**:
 
-![](troubleshooting-images/image17-vs.png "Saving .mlpd file in Visual Studio")
+![Guardar el archivo. MLPD en Visual Studio](troubleshooting-images/image17-vs.png)
 
 Es importante tener en cuenta que **. MLPD** contiene mucha información y el tamaño del archivo será grande.
 
@@ -73,7 +73,7 @@ Compruebe la siguiente configuración para resolver este procedimiento:
 
 Si se ejecuta este cuadro de error al usar el generador de perfiles en Visual Studio:
 
-![](troubleshooting-images/error.png "Error box when using the profiler in Visual Studio")
+![Cuadro de error al usar el generador de perfiles en Visual Studio](troubleshooting-images/error.png)
 
 Normalmente, se debe a que no puede iniciarse en el simulador o en el emulador. Intente ejecutar la aplicación normalmente, corrija los problemas que proporciona y, a continuación, intente volver a usar el generador de perfiles.
 

@@ -10,12 +10,12 @@ ms.date: 04/14/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3706139a2c15d01af67203c2bd09b281de80ed52
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 855fde62483dcbc6f8769e7a8eb66d84aadfe1da
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140210"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934984"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>Rotaciones 3D en SkiaSharp
 
@@ -25,7 +25,7 @@ _Use transformaciones no afines para girar objetos 2D en el espacio 3D._
 
 Una aplicación común de las transformaciones no afines es simular el giro de un objeto 2D en el espacio 3D:
 
-![](3d-rotation-images/3drotationsexample.png "A text string rotated in 3D space")
+![Una cadena de texto girada en el espacio 3D](3d-rotation-images/3drotationsexample.png)
 
 Este trabajo implica trabajar con giros tridimensionales y, a continuación, derivar una transformación no afín `SKMatrix` que realiza estos giros 3D.
 
@@ -412,7 +412,7 @@ public partial class Rotation3DPage : ContentPage
 
 Al experimentar con el cuarto control deslizante, observará que la configuración de profundidad diferente no mueve el objeto más allá del visor, sino que modifica la extensión del efecto de perspectiva:
 
-[![](3d-rotation-images/rotation3d-small.png "Triple screenshot of the Rotation 3D page")](3d-rotation-images/rotation3d-large.png#lightbox "Triple screenshot of the Rotation 3D page")
+[![Captura de pantalla triple de la página 3D de rotación](3d-rotation-images/rotation3d-small.png)](3d-rotation-images/rotation3d-large.png#lightbox "Captura de pantalla triple de la página 3D de rotación")
 
 La **rotación animada 3D** también utiliza `SKMatrix44` para animar una cadena de texto en un espacio 3D. El `textPaint` conjunto de objetos como un campo se utiliza en el constructor para determinar los límites del texto:
 
@@ -536,7 +536,7 @@ public class AnimatedRotation3DPage : ContentPage
 
 Este giro 3D está rodeado de varias transformaciones 2D para descartar el centro de giro al centro de la pantalla, y para escalar el tamaño de la cadena de texto de modo que tenga el mismo ancho que la pantalla:
 
-[![](3d-rotation-images/animatedrotation3d-small.png "Triple screenshot of the Animated Rotation 3D page")](3d-rotation-images/animatedrotation3d-large.png#lightbox "Triple screenshot of the Animated Rotation 3D page")
+[![Captura de pantalla triple de la página 3D de rotación animada](3d-rotation-images/animatedrotation3d-small.png)](3d-rotation-images/animatedrotation3d-large.png#lightbox "Captura de pantalla triple de la página 3D de rotación animada")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

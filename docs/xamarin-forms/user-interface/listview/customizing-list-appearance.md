@@ -10,12 +10,12 @@ ms.date: 12/13/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c7fdecdb0ce209c88dbe9e6f4e6e6588ec4fd3fd
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: be8dd5d29aebf29395885d650fbd28082013d0d1
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139924"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929169"
 ---
 # <a name="listview-appearance"></a>Apariencia de ListView
 
@@ -114,7 +114,7 @@ Este código XAML realiza las siguientes acciones:
 
 En la siguiente captura de pantalla se muestra la interfaz de usuario resultante:
 
-![](customizing-list-appearance-images/grouping-depth.png "ListView Grouping Example")
+![Ejemplo de agrupación de ListView](customizing-list-appearance-images/grouping-depth.png)
 
 ### <a name="customizing-grouping"></a>Personalización de la agrupación
 
@@ -163,7 +163,7 @@ Es posible que un control ListView presente un encabezado y un pie de página qu
 
 Puede establecer `Header` y/o `Footer` en un `string` valor, o puede establecerlos en un diseño más complejo. También hay `HeaderTemplate` propiedades y `FooterTemplate` que permiten crear diseños más complejos para el encabezado y el pie de página que admiten el enlace de datos.
 
-Para crear un encabezado/pie de página básico, solo tiene que establecer las propiedades de encabezado o de pie de página en el texto que desea mostrar. En el código:
+Para crear un encabezado/pie de página básico, solo tiene que establecer las propiedades de encabezado o de pie de página en el texto que desea mostrar. Mediante código:
 
 ```csharp
 ListView HeaderList = new ListView()
@@ -183,7 +183,7 @@ En XAML:
 </ListView>
 ```
 
-![](customizing-list-appearance-images/header-default.png "ListView with Header and Footer")
+![ListView con encabezado y pie de página](customizing-list-appearance-images/header-default.png)
 
 Para crear un encabezado y un pie de página personalizados, defina las vistas de encabezado y pie de página:
 
@@ -204,7 +204,7 @@ Para crear un encabezado y un pie de página personalizados, defina las vistas d
 </ListView.Footer>
 ```
 
-![](customizing-list-appearance-images/header-custom.png "ListView with Customized Header and Footer")
+![ListView con encabezado y pie de página personalizados](customizing-list-appearance-images/header-custom.png)
 
 ## <a name="scrollbar-visibility"></a>Visibilidad de la barra de desplazamiento
 
@@ -235,7 +235,7 @@ XAML:
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="Default" />
 ```
 
-![](customizing-list-appearance-images/separator-default.png "ListView with Default Row Separators")
+![ListView con separadores de filas predeterminados](customizing-list-appearance-images/separator-default.png)
 
 None (Ninguna):
 
@@ -251,7 +251,7 @@ XAML:
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="None" />
 ```
 
-![](customizing-list-appearance-images/separator-none.png "ListView without Row Separators")
+![ListView sin separadores de filas](customizing-list-appearance-images/separator-none.png)
 
 También puede establecer el color de la línea de separación a través de la `SeparatorColor` propiedad:
 
@@ -267,7 +267,7 @@ XAML:
 <ListView x:Name="SeparatorDemoListView" SeparatorColor="Green" />
 ```
 
-![](customizing-list-appearance-images/separator-custom.png "ListView with Green Row Separators")
+![ListView con separadores de filas verdes](customizing-list-appearance-images/separator-custom.png)
 
 > [!NOTE]
 > Si se establece cualquiera de estas propiedades en Android después de cargar, se produce `ListView` una gran penalización del rendimiento.
@@ -295,7 +295,7 @@ XAML:
 <ListView x:Name="RowHeightDemoListView" RowHeight="100" />
 ```
 
-![](customizing-list-appearance-images/height-custom.png "ListView with Fixed Row Height")
+![ListView con alto de fila fijo](customizing-list-appearance-images/height-custom.png)
 
 ### <a name="uneven-rows"></a>Filas desiguales
 
@@ -313,7 +313,7 @@ XAML:
 <ListView x:Name="RowHeightDemoListView" HasUnevenRows="true" />
 ```
 
-![](customizing-list-appearance-images/height-uneven.png "ListView with Uneven Rows")
+![ListView con filas desiguales](customizing-list-appearance-images/height-uneven.png)
 
 ### <a name="resize-rows-at-runtime"></a>Cambiar el tamaño de las filas en tiempo de ejecución
 
@@ -334,7 +334,7 @@ void OnImageTapped (object sender, EventArgs args)
 
 El `OnImageTapped` controlador de eventos se ejecuta en respuesta a un [`Image`](xref:Xamarin.Forms.Image) objeto en una celda que se está punteando y aumenta el tamaño del que `Image` se muestra en la celda para que se pueda ver fácilmente.
 
-![](customizing-list-appearance-images/dynamic-row-resizing.png "ListView with Runtime Row Resizing")
+![ListView con cambio de tamaño de filas en tiempo de ejecución](customizing-list-appearance-images/dynamic-row-resizing.png)
 
 > [!WARNING]
 > El uso excesivo del cambio de tamaño de las filas en tiempo de ejecución puede degradar el rendimiento.

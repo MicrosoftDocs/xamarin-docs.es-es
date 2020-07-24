@@ -10,12 +10,12 @@ ms.date: 08/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8b712b2a5d7eeb2ee5e71047b9e6c460eb10d72a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5550ea7a355492f724459449f3b37cdcb8d05b1e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573838"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932150"
 ---
 # <a name="authentication-and-authorization"></a>Autenticación y autorización
 
@@ -23,7 +23,7 @@ La autenticación es el proceso de obtención de credenciales de identificación
 
 Hay muchos enfoques para la integración de la autenticación y la autorización en una Xamarin.Forms aplicación que se comunica con una aplicación web MVC de ASP.net, que incluye el uso de ASP.net Core identidad, proveedores de autenticación externos como Microsoft, Google, Facebook o Twitter, y middleware de autenticación. La aplicación móvil eShopOnContainers realiza la autenticación y la autorización con un microservicio de identidad en contenedor que usa IdentityServer 4. La aplicación móvil solicita tokens de seguridad de IdentityServer, ya sea para autenticar a un usuario o para tener acceso a un recurso. Para que IdentityServer emita tokens en nombre de un usuario, el usuario debe iniciar sesión en IdentityServer. Sin embargo, IdentityServer no proporciona una interfaz de usuario ni una base de datos para la autenticación. Por lo tanto, en la aplicación de referencia eShopOnContainers, se utiliza ASP.NET Core identidad para este propósito.
 
-## <a name="authentication"></a>Authentication
+## <a name="authentication"></a>Autenticación
 
 La autenticación es necesaria cuando una aplicación necesita conocer la identidad del usuario actual. El mecanismo principal de ASP.NET Core para identificar usuarios es el sistema de pertenencia ASP.NET Core identidad, que almacena información de usuario en un almacén de datos configurado por el desarrollador. Normalmente, este almacén de datos será un almacén de EntityFramework, aunque se pueden usar almacenes personalizados o paquetes de terceros para almacenar información de identidad en Azure Storage, Azure Cosmos DB u otras ubicaciones.
 
@@ -42,7 +42,7 @@ La combinación de OpenID Connect y OAuth 2,0 combina los dos aspectos fundament
 
 En las aplicaciones que usan la comunicación directa de cliente a microservicio, como la aplicación de referencia eShopOnContainers, se puede usar un microservicio de autenticación dedicado que actúe como servicio de token de seguridad (STS) para autenticar a los usuarios, como se muestra en la figura 9-1. Para obtener más información acerca de la comunicación directa de cliente a microservicio, consulte [comunicación entre cliente y microservicios](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md#communication-between-client-and-microservices).
 
-![](authentication-and-authorization-images/authentication.png "Authentication by a dedicated authentication microservice")
+![Autenticación mediante un microservicio de autenticación dedicado](authentication-and-authorization-images/authentication.png)
 
 **Figura 9-1:** Autenticación mediante un microservicio de autenticación dedicado
 
@@ -224,7 +224,7 @@ Para que IdentityServer emita tokens en nombre de un usuario, el usuario debe in
 
 La aplicación móvil eShopOnContainers se autentica con IdentityServer con el flujo de autenticación híbrida, que se muestra en la figura 9-2.
 
-![](authentication-and-authorization-images/sign-in.png "High-level overview of the sign-in process")
+![Información general de alto nivel del proceso de inicio de sesión](authentication-and-authorization-images/sign-in.png)
 
 **Figura 9-2:** Información general de alto nivel del proceso de inicio de sesión
 
@@ -232,7 +232,7 @@ Se realiza una solicitud de inicio de sesión a `<base endpoint>:5105/connect/au
 
 La aplicación móvil eShopOnContainers cierra la sesión de IdentityServer mediante el envío de una solicitud a `<base endpoint>:5105/connect/endsession` , con parámetros adicionales. Después del cierre de sesión, IdentityServer responde enviando un URI de redireccionamiento de cierre de sesión a la aplicación móvil. En la figura 9-3 se ilustra este proceso.
 
-![](authentication-and-authorization-images/sign-out.png "High-level overview of the sign-out process")
+![Información general de alto nivel del proceso de cierre de sesión](authentication-and-authorization-images/sign-out.png)
 
 **Figura 9-3:** Información general de alto nivel del proceso de cierre de sesión
 
@@ -288,7 +288,7 @@ Este método crea el URI para el [extremo de autorización](https://identityserv
 
 El URI devuelto se almacena en la `LoginUrl` propiedad de la `LoginViewModel` clase. Cuando la `IsLogin` propiedad se convierte `true` [`WebView`](xref:Xamarin.Forms.WebView) en, `LoginView` se hace visible en el. Los `WebView` datos enlazan su [`Source`](xref:Xamarin.Forms.WebView.Source) propiedad a la `LoginUrl` propiedad de la `LoginViewModel` clase y, por tanto, realiza una solicitud de inicio de sesión a IdentityServer cuando la `LoginUrl` propiedad está establecida en el extremo de autorización de IdentityServer. Cuando IdentityServer recibe esta solicitud y el usuario no está autenticado, se `WebView` le redirigirá a la página de inicio de sesión configurada, que se muestra en la figura 9-4.
 
-![](authentication-and-authorization-images/login.png "Login page displayed by the WebView")
+![Página de inicio de sesión que muestra la vista Web](authentication-and-authorization-images/login.png)
 
 **Figura 9-4:** Página de inicio de sesión que muestra la vista Web
 
@@ -409,7 +409,7 @@ Si un usuario no autorizado intenta tener acceso a un controlador o una acción 
 
 IdentityServer se puede integrar en el flujo de trabajo de autorización para que los tokens de acceso proporcionen autorización de control. Este enfoque se muestra en la figura 9-5.
 
-![](authentication-and-authorization-images/authorization.png "Authorization by access token")
+![Autorización por token de acceso](authentication-and-authorization-images/authorization.png)
 
 **Figura 9-5:** Autorización por token de acceso
 

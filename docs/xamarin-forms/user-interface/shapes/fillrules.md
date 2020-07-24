@@ -21,7 +21,7 @@ ms.locfileid: "86937298"
 
 ![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 Varias Xamarin.Forms clases Shapes tienen `FillRule` propiedades, de tipo `FillRule` . Estas incluyen `Polygon` , `Polyline` y `GeometryGroup` .
 

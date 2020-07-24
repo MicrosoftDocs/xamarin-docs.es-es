@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a05de34089fdf6ad90740067b88edea0b62f55a7
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4f30b8be762e23f84a90595a56912587cc3aa838
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134659"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934256"
 ---
 # <a name="unit-testing-enterprise-apps"></a>Pruebas unitarias de aplicaciones empresariales
 
@@ -55,7 +55,7 @@ public class OrderDetailViewModel : ViewModelBase
 
 La `OrderDetailViewModel` clase tiene una dependencia en el `IOrderService` tipo que el contenedor resuelve cuando crea una instancia de un `OrderDetailViewModel` objeto. Sin embargo, en lugar de crear un `OrderService` objeto para la prueba unitaria de la `OrderDetailViewModel` clase, en su lugar, reemplace el `OrderService` objeto por un simulacro para el propósito de las pruebas. En la figura 10-1 se muestra esta relación.
 
-![](unit-testing-images/unittesting.png "Classes that implement the IOrderService interface")
+![Clases que implementan la interfaz IOrderService](unit-testing-images/unittesting.png)
 
 **Figura 10-1:** Clases que implementan la interfaz IOrderService
 

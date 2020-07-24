@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 395ac62cd4db62c02863e352ed5643958348dcff
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 8b911be4b1bf547a9a1ad5d6b795894ddba3c26d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574395"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939066"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Introducción a los guiones gráficos en Xamarin. Mac
 
@@ -20,7 +20,7 @@ _En este artículo se proporciona una introducción al uso de guiones gráficos 
 
 Los guiones gráficos permiten desarrollar una interfaz de usuario para la aplicación de Xamarin. Mac que no solo incluye las definiciones y los controles de la ventana, sino que también contiene los vínculos entre las distintas ventanas (a través de objetos segue) y los Estados de vista.
 
-[![](images/intro01.png "A sample UI in Xcode")](images/intro01.png#lightbox)
+[![Una interfaz de usuario de ejemplo en Xcode](images/intro01.png)](images/intro01.png#lightbox)
 
 En este artículo se proporciona una introducción al uso de guiones gráficos para definir la interfaz de usuario de una aplicación de Xamarin. Mac.
 
@@ -36,11 +36,11 @@ Mediante el uso de guiones gráficos, toda la interfaz de usuario de una aplicac
 
 Como se indicó anteriormente, un guion gráfico define toda la interfaz de usuario de una aplicación determinada dividida en una información general funcional de _los controladores de vista_. En el Interface Builder de Xcode, cada uno de estos controladores reside en su propia _escena_.
 
-[![](images/intro02.png "An example view controller")](images/intro02.png#lightbox)
+[![Un controlador de vista de ejemplo](images/intro02.png)](images/intro02.png#lightbox)
 
 Cada escena representa un par determinado de vistas y controladores de vistas con un conjunto de líneas (denominado objetos segue) que conectan cada escena en la interfaz de usuario, con lo que se muestran sus relaciones. Algunos objetos segue definen cómo un controlador de vista contiene una o varias vistas secundarias o controladores de vista. Otros objetos segue, definen las transiciones entre el controlador de vista (como mostrar un elemento flotante o un cuadro de diálogo). 
 
-[![](images/intro03.png "A sample segue")](images/intro03.png#lightbox)
+[![Un segue de ejemplo](images/intro03.png)](images/intro03.png#lightbox)
 
 Lo más importante que hay que tener en cuenta es que cada segue representa el flujo de alguna forma de datos entre el elemento especificado de la interfaz de usuario de la aplicación.
 
@@ -50,7 +50,7 @@ Lo más importante que hay que tener en cuenta es que cada segue representa el f
 
 Los controladores de vista definen las relaciones entre una vista determinada de la información dentro de una aplicación Mac y el modelo de datos que proporciona esa información. Cada escena de nivel superior del guión gráfico representa un controlador de vista en el código de la aplicación de Xamarin. Mac.
 
-[![](images/intro04.png "An example slips view controller")](images/intro04.png#lightbox)
+[![Un controlador de vista Slip de ejemplo](images/intro04.png)](images/intro04.png#lightbox)
 
 De esta manera, cada controlador de vista es un emparejamiento reutilizable e independiente de la representación visual (vista) de la información y la lógica para presentar y controlar esa información.
 

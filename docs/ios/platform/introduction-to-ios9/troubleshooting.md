@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 2d554fa2f967a966195007ea67c48506eaac1e79
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 435fe894e4082f7eddf37d100bb8b2d2ed3a166f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570887"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938013"
 ---
 # <a name="xamarinios-9--troubleshooting"></a>Xamarin. iOS 9: solución de problemas
 
@@ -32,7 +32,7 @@ Si ha instalado Xcode 7 (o superior), reemplazará automáticamente todos los si
 
 En Xcode, seleccione el menú de **Xcode** y luego **preferencias...**  >  **Descargas**:
 
-[![](troubleshooting-images/ios8.png "iOS 8 Simulators Downloads")](troubleshooting-images/ios8.png#lightbox)
+[![Descargas de simuladores de iOS 8](troubleshooting-images/ios8.png)](troubleshooting-images/ios8.png#lightbox)
 
 Haga clic en el botón **comprobar e instalar ahora** para volver a instalar los simuladores de iOS 8.
 
@@ -139,26 +139,26 @@ Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScr
 
 Al intentar ejecutar la versión de iOS 9 de la aplicación de Xamarin. iOS en un hardware de iOS real, es posible que aparezca un mensaje que indica que la cuenta de desarrollador no ha sido de confianza en el dispositivo. Por ejemplo:
 
-[![](troubleshooting-images/untrusted01.png "Untrusted Enterprise Developer alert")](troubleshooting-images/untrusted01.png#lightbox)
+[![Alerta para desarrolladores empresariales que no son de confianza](troubleshooting-images/untrusted01.png)](troubleshooting-images/untrusted01.png#lightbox)
 
 Para solucionar este problema, haga lo siguiente:
 
 1. Inicie Xcode (la versión beta más reciente) en el equipo Mac de desarrollo.
 2. Seleccione **dispositivos** en el menú **ventana** para abrir la ventana dispositivos: 
 
-    [![](troubleshooting-images/untrusted02.png "The Devices Window")](troubleshooting-images/untrusted02.png#lightbox)
+    [![La ventana dispositivos](troubleshooting-images/untrusted02.png)](troubleshooting-images/untrusted02.png#lightbox)
 3. En el panel lateral **dispositivos** , seleccione el dispositivo, haga clic con el botón derecho y seleccione **Mostrar perfiles de aprovisionamiento..**.: 
 
-    [![](troubleshooting-images/untrusted03.png "SShow Provisioning Profiles")](troubleshooting-images/untrusted03.png#lightbox)
+    [![SShow perfiles de aprovisionamiento](troubleshooting-images/untrusted03.png)](troubleshooting-images/untrusted03.png#lightbox)
 4. Seleccione cada perfil de aprovisionamiento actualmente en el dispositivo y haga clic en el **-** botón para eliminarlo: 
 
-    [![](troubleshooting-images/untrusted04.png "Deleting a provisioning profile")](troubleshooting-images/untrusted04.png#lightbox)
+    [![Eliminación de un perfil de aprovisionamiento](troubleshooting-images/untrusted04.png)](troubleshooting-images/untrusted04.png#lightbox)
 5. En el menú de **Xcode** , seleccione **preferencias...** y **cuentas**: 
 
-    [![](troubleshooting-images/untrusted05.png "Xcode account preferences")](troubleshooting-images/untrusted05.png#lightbox)
+    [![Preferencias de la cuenta de Xcode](troubleshooting-images/untrusted05.png)](troubleshooting-images/untrusted05.png#lightbox)
 6. Haga clic en el botón **Ver detalles..** . y, a continuación, haga clic en el botón **descargar todo** : 
 
-    [![](troubleshooting-images/untrusted06.png "Download all profiles")](troubleshooting-images/untrusted06.png#lightbox)
+    [![Descargar todos los perfiles](troubleshooting-images/untrusted06.png)](troubleshooting-images/untrusted06.png#lightbox)
 7. Una vez finalizada la actualización de la lista, haga clic en el botón **listo** y cierre la ventana Preferencias.
 8. Quite la versión existente de la aplicación de Xamarin. iOS que estaba intentando probar desde el dispositivo iOS.
 9. Vuelva a Visual Studio para Mac, realice una compilación limpia e intente volver a ejecutar la aplicación en el dispositivo.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: cc83fa65fd040b30d71a30fb703da866c5d0824c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 40640f903ad82c5f154dbb74307c0003d7271561
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570822"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936609"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Trabajar con acciones de fila en Xamarin. iOS
 
@@ -33,7 +33,7 @@ Hay tres pasos necesarios para implementar las acciones de deslizamiento con `UI
 
 1. Reemplace `GetLeadingSwipeActionsConfiguration` los métodos y/o `GetTrailingSwipeActionsConfiguration` . Estos métodos devuelven `UISwipeActionsConfiguration` .
 2. Cree una instancia del `UISwipeActionsConfiguration` que se va a devolver. Esta clase toma una matriz de `UIContextualAction` .
-3. Creará un control `UIContextualAction`.
+3. Crear un control `UIContextualAction`.
 
 Estos se explican con mayor detalle en las secciones siguientes.
 
@@ -175,7 +175,7 @@ table.Delegate = tableDelegate;
 
 Cuando se ejecuta el código anterior y el usuario se desliza a la izquierda en una fila de la tabla, se muestra el botón **HI** en lugar del botón **Delete** que se muestra de forma predeterminada:
 
-[![](row-action-images/action01.png "The Hi button being displayed instead of the Delete button")](row-action-images/action01.png#lightbox)
+[![Se muestra el botón HI en lugar del botón delete](row-action-images/action01.png)](row-action-images/action01.png#lightbox)
 
 Si el usuario pulsa el botón **HI** , se `Hello World!` escribirá en la consola de Visual Studio para Mac o Visual Studio cuando la aplicación se ejecute en modo de depuración.
 

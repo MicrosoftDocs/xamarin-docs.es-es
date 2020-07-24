@@ -10,12 +10,12 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 76724ff17613fcebe35cb68518a1c932eee8aad7
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: fb4d1e28fded70005ef23eb4f7540eccd2fba372
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128731"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939313"
 ---
 # <a name="page-lifecycle-events-on-android"></a>Eventos del ciclo de vida de la página en Android
 
@@ -58,7 +58,7 @@ El `Application.Current.On<Android>` método especifica que este específico de 
 
 El resultado es que los [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) [`Appearing`](xref:Xamarin.Forms.Page.Appearing) eventos de página y no se activarán en la pausa y la reanudación de la aplicación, respectivamente, y que si se mostró el teclado en pantalla cuando se pausó la aplicación, también se mostrará cuando se reanude la aplicación:
 
-[![](page-lifecycle-events-images/keyboard-on-resume.png "Lifecycle Events Platform-Specific")](page-lifecycle-events-images/keyboard-on-resume-large.png#lightbox "Lifecycle Events Platform-Specific")
+[![Eventos de ciclo de vida específicos de la plataforma](page-lifecycle-events-images/keyboard-on-resume.png)](page-lifecycle-events-images/keyboard-on-resume-large.png#lightbox "Eventos de ciclo de vida específicos de la plataforma")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

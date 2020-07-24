@@ -10,12 +10,12 @@ ms.date: 11/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 89f0182bfebc4d018eb083904595f0fbb211e3ba
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b13ec7ab079dcf7069b5f4b0dccbb52faf25f927
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573383"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933801"
 ---
 # <a name="simple-animations-in-xamarinforms"></a>Animaciones simples enXamarin.Forms
 
@@ -66,7 +66,7 @@ Este código anima la [`Image`](xref:Xamarin.Forms.Image) instancia rotando hast
 
 Las capturas de pantallas siguientes muestran la rotación en curso en cada plataforma:
 
-![](simple-images/rotateto.png "Rotation Animation")
+![Animación de rotación](simple-images/rotateto.png)
 
 > [!NOTE]
 > Además de [ `RotateTo` ] (XREF: Xamarin.Forms . ViewExtensions. Rotato ( Xamarin.Forms . VisualElement, System. Double, System. UInt32, Xamarin.Forms . Aceleración)), también hay [ `RotateXTo` ] (XREF: Xamarin.Forms . ViewExtensions. RotateXTo ( Xamarin.Forms . VisualElement, System. Double, System. UInt32, Xamarin.Forms . Aceleración) y [ `RotateYTo` ] (XREF: Xamarin.Forms . ViewExtensions. RotateYTo ( Xamarin.Forms . VisualElement, System. Double, System. UInt32, Xamarin.Forms . Aceleración)) que animan las [`RotationX`](xref:Xamarin.Forms.VisualElement.RotationX) [`RotationY`](xref:Xamarin.Forms.VisualElement.RotationY) propiedades y, respectivamente.
@@ -83,7 +83,7 @@ Este código anima la [`Image`](xref:Xamarin.Forms.Image) instancia rotando 360 
 
 Las capturas de pantallas siguientes muestran la rotación relativa en curso en cada plataforma:
 
-![](simple-images/relrotateto.png "Relative Rotation Animation")
+![Animación de rotación relativa](simple-images/relrotateto.png)
 
 ### <a name="scaling"></a>Ampliación
 
@@ -97,7 +97,7 @@ Este código anima la [`Image`](xref:Xamarin.Forms.Image) instancia escalando ha
 
 Las capturas de pantallas siguientes muestran el escalado en curso en cada plataforma:
 
-![](simple-images/scaleto.png "Scaling Animation")
+![Animación de escalado](simple-images/scaleto.png)
 
 > [!NOTE]
 > Además del [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) método, también hay `ScaleXTo` `ScaleYTo` métodos y que animan las [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) propiedades y, respectivamente.
@@ -126,7 +126,7 @@ await image.RotateTo(360, 2000);
 
 Para girar la [`Image`](xref:Xamarin.Forms.Image) instancia alrededor del centro del diseño, las [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX) propiedades y [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY) deben establecerse en valores relativos al ancho y alto del `Image` . En este ejemplo, el centro de `Image` se define para que esté en el centro del diseño, por lo que el `AnchorX` valor predeterminado de 0,5 no requiere un cambio. Sin embargo, la `AnchorY` propiedad se redefine para que sea un valor desde la parte superior del `Image` hasta el punto central del diseño. Esto garantiza que `Image` realiza un giro completo de 360 grados alrededor del punto central del diseño, tal como se muestra en las siguientes capturas de pantallas:
 
-![](simple-images/rotate-anchors.png "Rotation Animation with Anchors")
+![Animación de rotación con delimitadores](simple-images/rotate-anchors.png)
 
 ### <a name="translation"></a>Traducción
 
@@ -140,7 +140,7 @@ Este código anima la [`Image`](xref:Xamarin.Forms.Image) instancia mediante su 
 
 Las capturas de pantallas siguientes muestran la traducción en curso en cada plataforma:
 
-![](simple-images/translateto.png "Translation Animation")
+![Animación de traducción](simple-images/translateto.png)
 
 > [!NOTE]
 > Si un elemento se coloca inicialmente fuera de la pantalla y, a continuación, se convierte en la pantalla, después de la conversión, el diseño de entrada del elemento permanece fuera de la pantalla y el usuario no puede interactuar con él. Por lo tanto, se recomienda disponer de una vista en su posición final y, a continuación, realizar las traducciones necesarias.
@@ -158,7 +158,7 @@ Este código anima la [`Image`](xref:Xamarin.Forms.Image) instancia mediante una
 
 Las capturas de pantallas siguientes muestran el fundido en curso en cada plataforma:
 
-![](simple-images/fadeto.png "Fading Animation")
+![Animación de difuminado](simple-images/fadeto.png)
 
 ## <a name="compound-animations"></a>Animaciones compuestas
 
@@ -218,7 +218,7 @@ En este ejemplo, la `Task.WhenAll` llamada al método contiene tres tareas, cada
 
 En las siguientes capturas de pantallas se muestran varias rotaciones en curso en cada plataforma:
 
-![](simple-images/multiple-rotations.png "Composite Animation")
+![Animación compuesta](simple-images/multiple-rotations.png)
 
 ## <a name="canceling-animations"></a>Cancelar animaciones
 

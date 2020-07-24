@@ -1,6 +1,6 @@
 ---
-title: Herencia de estilo enXamarin.Forms
-description: Los estilos pueden heredar de otros estilos para reducir la duplicación y habilitar la reutilización. En este artículo se explica cómo realizar la herencia de estilo en una Xamarin.Forms aplicación.
+title: 'Herencia de estilo en:::no-loc(Xamarin.Forms):::'
+description: 'Los estilos pueden heredar de otros estilos para reducir la duplicación y habilitar la reutilización. En este artículo se explica cómo realizar la herencia de estilo en una :::no-loc(Xamarin.Forms)::: aplicación.'
 ms.prod: xamarin
 ms.assetid: 67A3A39C-8CC0-446D-8162-FFA73582D3B8
 ms.technology: xamarin-forms
@@ -8,16 +8,16 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
 no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 80cc419ae098f4a0cbbd782785c0ec5ba03fa703
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+- ':::no-loc(Xamarin.Forms):::'
+- ':::no-loc(Xamarin.Essentials):::'
+ms.openlocfilehash: 9b374987ce7741c82c433b2e35261c3a23ef778f
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138962"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996752"
 ---
-# <a name="style-inheritance-in-xamarinforms"></a>Herencia de estilo enXamarin.Forms
+# <a name="style-inheritance-in-no-locxamarinforms"></a>Herencia de estilo en:::no-loc(Xamarin.Forms):::
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
@@ -25,9 +25,9 @@ _Los estilos pueden heredar de otros estilos para reducir la duplicación y habi
 
 ## <a name="style-inheritance-in-xaml"></a>Herencia de estilo en XAML
 
-La herencia de estilo se realiza estableciendo la [`Style.BasedOn`](xref:Xamarin.Forms.Style.BasedOn) propiedad en un existente [`Style`](xref:Xamarin.Forms.Style) . En XAML, esto se logra estableciendo la `BasedOn` propiedad en una `StaticResource` extensión de marcado que hace referencia a un creado previamente `Style` . En C#, esto se consigue estableciendo la `BasedOn` propiedad en una `Style` instancia de.
+La herencia de estilo se realiza estableciendo la [`Style.BasedOn`](xref::::no-loc(Xamarin.Forms):::.Style.BasedOn) propiedad en un existente [`Style`](xref::::no-loc(Xamarin.Forms):::.Style) . En XAML, esto se logra estableciendo la `BasedOn` propiedad en una `StaticResource` extensión de marcado que hace referencia a un creado previamente `Style` . En C#, esto se consigue estableciendo la `BasedOn` propiedad en una `Style` instancia de.
 
-Los estilos que heredan de un estilo base pueden incluir [`Setter`](xref:Xamarin.Forms.Setter) instancias de nuevas propiedades o usarse para invalidar estilos del estilo base. Además, los estilos que heredan de un estilo base deben tener como destino el mismo tipo o un tipo que se derive del tipo de destino del estilo base. Por ejemplo, si un estilo base tiene como [`View`](xref:Xamarin.Forms.View) destino instancias, los estilos basados en el estilo base pueden tener como destino `View` instancias o tipos que derivan de la `View` clase, como [`Label`](xref:Xamarin.Forms.Label) instancias de y [`Button`](xref:Xamarin.Forms.Button) .
+Los estilos que heredan de un estilo base pueden incluir [`Setter`](xref::::no-loc(Xamarin.Forms):::.Setter) instancias de nuevas propiedades o usarse para invalidar estilos del estilo base. Además, los estilos que heredan de un estilo base deben tener como destino el mismo tipo o un tipo que se derive del tipo de destino del estilo base. Por ejemplo, si un estilo base tiene como [`View`](xref::::no-loc(Xamarin.Forms):::.View) destino instancias, los estilos basados en el estilo base pueden tener como destino `View` instancias o tipos que derivan de la `View` clase, como [`Label`](xref::::no-loc(Xamarin.Forms):::.Label) instancias de y [`Button`](xref::::no-loc(Xamarin.Forms):::.Button) .
 
 En el código siguiente se muestra la herencia de estilo *explícita* en una página XAML:
 
@@ -65,9 +65,9 @@ En el código siguiente se muestra la herencia de estilo *explícita* en una pá
 </ContentPage>
 ```
 
-Las `baseStyle` instancias de destino [`View`](xref:Xamarin.Forms.View) y establecen las [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) propiedades y. `baseStyle`No se establece directamente en ningún control. En su lugar, `labelStyle` y `buttonStyle` heredan de él y establecen valores de propiedades enlazables adicionales. `labelStyle`Y `buttonStyle` se aplican a las [`Label`](xref:Xamarin.Forms.Label) instancias y la [`Button`](xref:Xamarin.Forms.Button) instancia, estableciendo sus [`Style`](xref:Xamarin.Forms.NavigableElement.Style) propiedades. El resultado es el aspecto que se muestra en las capturas de pantalla siguientes:
+Las `baseStyle` instancias de destino [`View`](xref::::no-loc(Xamarin.Forms):::.View) y establecen las [`HorizontalOptions`](xref::::no-loc(Xamarin.Forms):::.View.HorizontalOptions) [`VerticalOptions`](xref::::no-loc(Xamarin.Forms):::.View.VerticalOptions) propiedades y. `baseStyle`No se establece directamente en ningún control. En su lugar, `labelStyle` y `buttonStyle` heredan de él y establecen valores de propiedades enlazables adicionales. `labelStyle`Y `buttonStyle` se aplican a las [`Label`](xref::::no-loc(Xamarin.Forms):::.Label) instancias y la [`Button`](xref::::no-loc(Xamarin.Forms):::.Button) instancia, estableciendo sus [`Style`](xref::::no-loc(Xamarin.Forms):::.NavigableElement.Style) propiedades. El resultado es el aspecto que se muestra en las capturas de pantalla siguientes:
 
-[![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png#lightbox)
+[![Captura de pantalla de herencia de estilo](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png#lightbox)
 
 > [!NOTE]
 > Un estilo implícito se puede derivar de un estilo explícito, pero no se puede derivar un estilo explícito de un estilo implícito.
@@ -113,7 +113,7 @@ En este ejemplo, `labelStyle` y `buttonStyle` son recursos de nivel de control, 
 
 ## <a name="style-inheritance-in-c35"></a>Herencia de estilo en C&#35;
 
-En el ejemplo de código siguiente se muestra la página de C# equivalente, donde [`Style`](xref:Xamarin.Forms.Style) las instancias se asignan directamente a las [`Style`](xref:Xamarin.Forms.NavigableElement.Style) propiedades de los controles necesarios:
+En el ejemplo de código siguiente se muestra la página de C# equivalente, donde [`Style`](xref::::no-loc(Xamarin.Forms):::.Style) las instancias se asignan directamente a las [`Style`](xref::::no-loc(Xamarin.Forms):::.NavigableElement.Style) propiedades de los controles necesarios:
 
 ```csharp
 public class StyleInheritancePageCS : ContentPage
@@ -156,13 +156,13 @@ public class StyleInheritancePageCS : ContentPage
 }
 ```
 
-Las `baseStyle` instancias de destino [`View`](xref:Xamarin.Forms.View) y establecen las [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) propiedades y. `baseStyle`No se establece directamente en ningún control. En su lugar, `labelStyle` y `buttonStyle` heredan de él y establecen valores de propiedades enlazables adicionales. `labelStyle`Y `buttonStyle` se aplican a las [`Label`](xref:Xamarin.Forms.Label) instancias y la [`Button`](xref:Xamarin.Forms.Button) instancia, estableciendo sus [`Style`](xref:Xamarin.Forms.NavigableElement.Style) propiedades.
+Las `baseStyle` instancias de destino [`View`](xref::::no-loc(Xamarin.Forms):::.View) y establecen las [`HorizontalOptions`](xref::::no-loc(Xamarin.Forms):::.View.HorizontalOptions) [`VerticalOptions`](xref::::no-loc(Xamarin.Forms):::.View.VerticalOptions) propiedades y. `baseStyle`No se establece directamente en ningún control. En su lugar, `labelStyle` y `buttonStyle` heredan de él y establecen valores de propiedades enlazables adicionales. `labelStyle`Y `buttonStyle` se aplican a las [`Label`](xref::::no-loc(Xamarin.Forms):::.Label) instancias y la [`Button`](xref::::no-loc(Xamarin.Forms):::.Button) instancia, estableciendo sus [`Style`](xref::::no-loc(Xamarin.Forms):::.NavigableElement.Style) propiedades.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Estilos básicos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 - [Trabajar con estilos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
-- [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
-- [Estilo](xref:Xamarin.Forms.Style)
-- [Setter](xref:Xamarin.Forms.Setter)
+- [ResourceDictionary](xref::::no-loc(Xamarin.Forms):::.ResourceDictionary)
+- [Estilo](xref::::no-loc(Xamarin.Forms):::.Style)
+- [Setter](xref::::no-loc(Xamarin.Forms):::.Setter)

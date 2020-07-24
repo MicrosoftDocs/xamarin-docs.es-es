@@ -7,25 +7,25 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 015f0732e4d8cdf771af3e1d0b3cc3e31b6e806c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 0358e1570a5e38e008894a7eb9b6ca1985a0fed0
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572276"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997259"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Controles de tabla watchos en Xamarin
 
 El control watchos `WKInterfaceTable` es mucho más sencillo que su homólogo de iOS, pero realiza un rol similar. Crea una lista de desplazamiento de filas que puede tener diseños personalizados y que responden a los eventos de toque.
 
-![](table-images/table-list-sml.png "Lista de la tabla de inspección") ![](table-images/table-detail-sml.png)
+![Mostrar detalles de ](table-images/table-list-sml.png) tabla de inspección de tabla de inspección ![](table-images/table-detail-sml.png)
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 ## <a name="adding-a-table"></a>Adición de tablas
 
 Arrastre el control **tabla** hasta una escena. De forma predeterminada, tendrá el siguiente aspecto (mostrando un solo diseño de fila no especificado):
 
-[![](table-images/add-table-sml.png "Adding a table")](table-images/add-table.png#lightbox)
+[![Agregar una tabla](table-images/add-table-sml.png)](table-images/add-table.png#lightbox)
 
 Asigne un nombre a la tabla en el cuadro **nombre** del panel de **propiedades** , de modo que se pueda hacer referencia a ella en el código.
 
@@ -35,7 +35,7 @@ La tabla incluye automáticamente una sola fila, representada por un controlador
 
 Para establecer la **clase** para el controlador de filas, seleccione la fila en el **esquema del documento** y escriba un nombre de clase en el panel de **propiedades** :
 
-[![](table-images/add-row-controller-sml.png "Entering a class name in the Properties pad")](table-images/add-row-controller.png#lightbox)
+[![Escribir un nombre de clase en el panel de propiedades](table-images/add-row-controller-sml.png)](table-images/add-row-controller.png#lightbox)
 
 Una vez establecida la clase para el controlador de la fila, el IDE creará un archivo de C# correspondiente en el proyecto. Arrastre los controles (como etiquetas) a la fila y asígneles nombres para que se pueda hacer referencia a ellos en el código.
 
@@ -107,11 +107,11 @@ Estos datos se pasan a la escena del guión gráfico de destino en su `Awake` m�
 
 De forma predeterminada, el control de tabla tiene un solo tipo de fila que se puede diseñar. Para agregar más filas ' plantillas ', use el cuadro **filas** del panel de **propiedades** para crear más controladores de filas:
 
-![](table-images/prototype-rows1.png "Setting the number of Prototype rows")
+![Establecer el número de filas de prototipo](table-images/prototype-rows1.png)
 
 Si establece la propiedad **Rows** en **3** , se crearán marcadores de posición de fila adicionales para arrastrar controles. Para cada fila, establezca el nombre de **clase** en el panel de **propiedades** para asegurarse de que se crea la clase de controlador de filas.
 
-![](table-images/prototype-rows2.png "The prototype rows in the designer")
+![Filas de prototipo en el diseñador](table-images/prototype-rows2.png)
 
 Para rellenar una tabla con distintos tipos de fila, use el `SetRowTypes` método para especificar el tipo de controlador de filas que se va a utilizar para cada fila de la tabla. Use los identificadores de la fila para especificar qué controlador de filas se debe utilizar para cada fila.
 
@@ -142,14 +142,14 @@ for (var i = 0; i < rows.Count; i++) {
 
 watchos 3 presentó una nueva característica para las tablas: la capacidad de desplazarse por las páginas de detalles relacionadas con cada fila, sin tener que volver a la tabla y elegir otra fila. Las pantallas de detalles se pueden desplazar hacia arriba y hacia abajo, o mediante el Digital Crown.
 
-![](table-images/table-scroll-sml.png "Ejemplo de paginación de detalles vertical") ![](table-images/table-detail-sml.png)
+![Ejemplo de paginación de detalles vertical](table-images/table-scroll-sml.png) ![Detalle de paginación vertical](table-images/table-detail-sml.png)
 
 > [!IMPORTANT]
 > Esta característica solo está disponible actualmente editando el guión gráfico en Xcode Interface Builder.
 
 Para habilitar esta característica, seleccione `WKInterfaceTable` en la superficie de diseño y marque la opción de **paginación detalle vertical** :
 
-![](table-images/vertical-detail-paging-sml.png "Selecting the Vertical Detail Paging option")
+![Seleccionar la opción de paginación de detalles verticales](table-images/vertical-detail-paging-sml.png)
 
 Como se [explica en Apple,](https://developer.apple.com/reference/watchkit/wkinterfacetable#1682023) la navegación por la tabla debe usar objetos segue para que funcione la característica de paginación. Vuelva a escribir el código existente que usa `PushController` para utilizar objetos segue en su lugar.
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 57d7ef3578fd2f71e078e730de29c241b1b7fed7
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: a74996c0390191a4fef8d20ba3f46d0e2578d17a
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937844"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997181"
 ---
 # <a name="document-picker-in-xamarinios"></a>Selector de documentos en Xamarin. iOS
 
-El selector de documentos permite que los documentos se compartan entre las aplicaciones. Estos documentos pueden almacenarse en iCloud o en otro directorio de la aplicación. Los documentos se comparten mediante el conjunto de [extensiones de proveedor de documentos](~/ios/platform/extensions.md) que el usuario ha instalado en su dispositivo. 
+El selector de documentos permite que los documentos se compartan entre las aplicaciones. Estos documentos pueden almacenarse en iCloud o en otro directorio de la aplicación. Los documentos se comparten mediante el conjunto de [extensiones de proveedor de documentos](~/ios/platform/extensions.md) que el usuario ha instalado en su dispositivo.
 
 Debido a la dificultad de mantener los documentos sincronizados entre las aplicaciones y la nube, estos presentan una determinada cantidad de complejidad necesaria.
 
@@ -227,14 +227,14 @@ Al usar la Unión de la aplicación ya no tiene que abrir un origen de datos par
 En iOS 8 se han agregado las siguientes características nuevas `NSMetadataQuery` :
 
 - `NSMetatadataQuery`Ahora puede mostrar los documentos no locales almacenados en la nube.
-- Se han agregado nuevas API para tener acceso a la información de metadatos en los documentos basados en la nube. 
+- Se han agregado nuevas API para tener acceso a la información de metadatos en los documentos basados en la nube.
 - Hay una nueva `NSUrl_PromisedItems` API que tendrá acceso a los atributos de archivo de los archivos que pueden o no tener su contenido disponible localmente.
 - Use el `GetPromisedItemResourceValue` método para obtener información sobre un archivo determinado o use el `GetPromisedItemResourceValues` método para obtener información sobre más de un archivo a la vez.
 
 Se han agregado dos nuevas marcas de coordinación de archivos para trabajar con los metadatos:
 
-- `NSFileCoordinatorReadImmediatelyAvailableMetadataOnly` 
-- `NSFileCoordinatorWriteContentIndependentMetadataOnly` 
+- `NSFileCoordinatorReadImmediatelyAvailableMetadataOnly`
+- `NSFileCoordinatorWriteContentIndependentMetadataOnly`
 
 Con las marcas anteriores, no es necesario que el contenido del archivo de documento esté disponible localmente para que se usen.
 
@@ -251,7 +251,7 @@ using ObjCRuntime;
 using System.IO;
 
 #region Static Properties
-public const string TestFilename = "test.txt"; 
+public const string TestFilename = "test.txt";
 #endregion
 
 #region Computed Properties
@@ -361,7 +361,7 @@ public void CreateNewDocument() {
     var docPath = Path.Combine (docsFolder, TestFilename);
     var ubiq = new NSUrl (docPath, false);
 
-    // Create new document at path 
+    // Create new document at path
     Console.WriteLine ("Creating Document at:" + ubiq.AbsoluteString);
     Document = new GenericTextDocument (ubiq);
 
@@ -421,7 +421,7 @@ Apple cree que la mejor experiencia de usuario al enumerar los documentos de una
 
 Antes de iOS 8, la visualización de las vistas previas de documento requería una implementación personalizada. Novedad de iOS 8 son atributos del sistema de archivos que permiten al desarrollador trabajar rápidamente con miniaturas de documentos.
 
-#### <a name="retrieving-document-thumbnails"></a>Recuperar miniaturas de documentos 
+#### <a name="retrieving-document-thumbnails"></a>Recuperar miniaturas de documentos
 
 Al llamar a `GetPromisedItemResourceValue` los `GetPromisedItemResourceValues` métodos o, `NSUrl_PromisedItems` se devuelve la API, a `NSUrlThumbnailDictionary` . La única clave que se encuentra actualmente en este diccionario es `NSThumbnial1024X1024SizeKey` y su correspondiente `UIImage` .
 
@@ -433,7 +433,7 @@ Con los aspectos básicos del trabajo con documentos basados en iCloud, junto co
 
 ## <a name="enabling-icloud-in-xamarin"></a>Habilitar iCloud en Xamarin
 
-Antes de que el selector de documentos se pueda usar en una aplicación de Xamarin. iOS, la compatibilidad con iCloud debe estar habilitada tanto en la aplicación como a través de Apple. 
+Antes de que el selector de documentos se pueda usar en una aplicación de Xamarin. iOS, la compatibilidad con iCloud debe estar habilitada tanto en la aplicación como a través de Apple.
 
 Los pasos siguientes le guiarán en el proceso de aprovisionamiento de iCloud.
 
@@ -445,11 +445,11 @@ La guía [trabajar con capacidades](~/ios/deploy-test/provisioning/capabilities/
 
 Los pasos siguientes le guiarán en el proceso de configuración de la aplicación para iCloud:
 
-Haga lo siguiente:
+Siga estos pasos:
 
 1. Abra el proyecto en Visual Studio para Mac o Visual Studio.
 2. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione Opciones.
-3. En el cuadro de diálogo Opciones, seleccione **aplicación de iOS**, asegúrese de que el **identificador de paquete** coincide con el que se definió en ID. de **aplicación** creado anteriormente para la aplicación. 
+3. En el cuadro de diálogo Opciones, seleccione **aplicación de iOS**, asegúrese de que el **identificador de paquete** coincide con el que se definió en ID. de **aplicación** creado anteriormente para la aplicación.
 4. Seleccione **firma de lote de iOS**, seleccione la **identidad del desarrollador** y el **Perfil de aprovisionamiento** que creó anteriormente.
 5. Haga clic en el botón **Aceptar** para guardar los cambios y cerrar el cuadro de diálogo.
 6. Haga clic con el botón secundario en `Entitlements.plist` el **Explorador de soluciones** para abrirlo en el editor.
@@ -486,7 +486,7 @@ namespace DocPicker
     public partial class AppDelegate : UIApplicationDelegate
     {
         #region Static Properties
-        public const string TestFilename = "test.txt"; 
+        public const string TestFilename = "test.txt";
         #endregion
 
         #region Computed Properties
@@ -599,7 +599,7 @@ namespace DocPicker
             var docPath = Path.Combine (docsFolder, TestFilename);
             var ubiq = new NSUrl (docPath, false);
 
-            // Create new document at path 
+            // Create new document at path
             Console.WriteLine ("Creating Document at:" + ubiq.AbsoluteString);
             Document = new GenericTextDocument (ubiq);
 
@@ -689,15 +689,15 @@ namespace DocPicker
                 CheckingForiCloud = false;
 
             })).Start();
-                
+
         }
-        
+
         // This method is invoked when the application is about to move from active to inactive state.
         // OpenGL applications should use this method to pause.
         public override void OnResignActivation (UIApplication application)
         {
         }
-        
+
         // This method should be used to release shared resources and it should store the application state.
         // If your application supports background execution this method is called instead of WillTerminate
         // when the user quits.
@@ -729,7 +729,7 @@ namespace DocPicker
                 Console.WriteLine ("Error: {0}", e.Message);
             }
         }
-        
+
         // This method is called as part of the transition from background to active state.
         public override void WillEnterForeground (UIApplication application)
         {
@@ -758,7 +758,7 @@ namespace DocPicker
             }
 
         }
-        
+
         // This method is called when the application is about to terminate. Save data, if needed.
         public override void WillTerminate (UIApplication application)
         {
@@ -827,7 +827,7 @@ Desde allí, el documento está disponible para que la segunda aplicación se ab
 
 En iOS 8, una aplicación puede obtener acceso a documentos fuera de su propio contenedor de aplicaciones con facilidad:
 
- [![](document-picker-images/image32.png "Discovering Documents Outside of an App's Container")](document-picker-images/image32.png#lightbox)
+ [![Detectar documentos fuera del contenedor de una aplicación](document-picker-images/image32.png)](document-picker-images/image32.png#lightbox)
 
 Mediante el nuevo selector de documentos de iCloud ( `UIDocumentPickerViewController` ), una aplicación de iOS puede detectar directamente el contenedor de la aplicación y acceder a él. `UIDocumentPickerViewController`Proporciona un mecanismo para que el usuario conceda acceso y edite esos documentos detectados a través de permisos.
 
@@ -1024,7 +1024,7 @@ Para trasladar un documento a una ubicación externa, haga lo siguiente:
 
 1. En primer lugar, cree un nuevo documento en una ubicación local o temporal.
 1. Cree un `NSUrl` que apunte al nuevo documento.
-1. Abra un nuevo controlador de selector de documentos y páselo `NSUrl` con el modo de `MoveToService` . 
+1. Abra un nuevo controlador de selector de documentos y páselo `NSUrl` con el modo de `MoveToService` .
 1. Una vez que el usuario elige una nueva ubicación, el documento se mueve de la ubicación actual a la nueva.
 1. Se escribirá un documento de referencia en el contenedor de la aplicación de la aplicación para que la aplicación de creación siga accediendo al archivo.
 
@@ -1083,7 +1083,7 @@ En el diagrama siguiente se muestra el flujo de datos cuando se trabaja con marc
 Se produce el siguiente proceso:
 
 1. La aplicación está a punto de escribir el fondo y debe conservar su estado. Llama `NSUrl` a para crear un marcador en un archivo en un almacenamiento alternativo.
-1. `NSUrl`llama a la extensión del proveedor de archivos para obtener una dirección URL persistente para el documento. 
+1. `NSUrl`llama a la extensión del proveedor de archivos para obtener una dirección URL persistente para el documento.
 1. La extensión del proveedor de archivos devuelve la dirección URL como una cadena a `NSUrl` .
 1. `NSUrl`Agrupa la dirección URL en un marcador y la devuelve a la aplicación.
 1. Cuando la aplicación deja de estar en segundo plano y necesita restaurar el estado, pasa el marcador a `NSUrl` .
@@ -1116,7 +1116,7 @@ En Mac OS X Yosemite, Apple no proporciona la compatibilidad con versiones anter
 Después de migrar la cuenta de un usuario a la unidad de iCloud, solo los dispositivos que usan la unidad de iCloud podrán propagar los cambios a los documentos en dichos dispositivos.
 
 > [!IMPORTANT]
-> Los desarrolladores deben tener en cuenta que las nuevas características que se describen en este artículo solo están disponibles si la cuenta del usuario se ha migrado a la unidad iCloud. 
+> Los desarrolladores deben tener en cuenta que las nuevas características que se describen en este artículo solo están disponibles si la cuenta del usuario se ha migrado a la unidad iCloud.
 
 ## <a name="summary"></a>Resumen
 

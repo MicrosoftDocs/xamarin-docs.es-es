@@ -1,6 +1,6 @@
 ---
-title: 'Xamarin.FormsFormas: transformaciones de trazado'
-description: Una Xamarin.Forms transformación define cómo transformar un objeto de ruta de acceso de un espacio de coordenadas a otro.
+title: ':::no-loc(Xamarin.Forms):::Formas: transformaciones de trazado'
+description: 'Una :::no-loc(Xamarin.Forms)::: transformación define cómo transformar un objeto de ruta de acceso de un espacio de coordenadas a otro.'
 ms.prod: xamarin
 ms.assetid: 07DE3D66-1820-4642-BDDF-84146D40C99D
 ms.technology: xamarin-forms
@@ -8,31 +8,31 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/02/2020
 no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 41de95c452212dce77d6365265e4813170c9b9b9
-ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
+- ':::no-loc(Xamarin.Forms):::'
+- ':::no-loc(Xamarin.Essentials):::'
+ms.openlocfilehash: 30036fdde589fdc5d47735c215196b52a32dd732
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853048"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997441"
 ---
-# <a name="xamarinforms-shapes-path-transforms"></a>Xamarin.FormsFormas: transformaciones de trazado
+# <a name="no-locxamarinforms-shapes-path-transforms"></a>:::no-loc(Xamarin.Forms):::Formas: transformaciones de trazado
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 `Transform`Define cómo transformar un `Path` objeto de un espacio de coordenadas en otro. Cuando se aplica una transformación a un `Path` objeto, cambia el modo en que el objeto se representa en la interfaz de usuario.
 
-Las transformaciones se pueden clasificar en cuatro clasificaciones generales: giro, escala, sesgo y traslación. Xamarin.Formsdefine una clase para cada una de estas clasificaciones de transformación:
+Las transformaciones se pueden clasificar en cuatro clasificaciones generales: giro, escala, sesgo y traslación. :::no-loc(Xamarin.Forms):::define una clase para cada una de estas clasificaciones de transformación:
 
 - `RotateTransform`, que gira un `Path` según un especificado `Angle` .
 - `ScaleTransform`, que escala un `Path` objeto según los `ScaleX` valores y especificados `ScaleY` .
 - `SkewTransform`, que sesga un `Path` objeto especificando `AngleX` y `AngleY` cantidades.
 - `TranslateTransform`, que mueve un `Path` objeto especificando `X` y `Y` cantidades.
 
-Xamarin.Formstambién proporciona las siguientes clases para crear transformaciones más complejas:
+:::no-loc(Xamarin.Forms):::también proporciona las siguientes clases para crear transformaciones más complejas:
 
 - `TransformGroup`, que representa una transformación compuesta compuesta por varios objetos transform.
 - `CompositeTransform`, que aplica varias operaciones de transformación a un `Path` objeto.
@@ -52,7 +52,7 @@ La `RotateTransform` clase, que deriva de la `Transform` clase, define las sigui
 - `CenterX`, de tipo `double` , representa la coordenada x del punto central de rotación. El valor predeterminado de esta propiedad es 0,0.
 - `CenterY`, de tipo `double` , representa la coordenada y del punto central de rotación. El valor predeterminado de esta propiedad es 0,0.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por [`BindableProperty`](xref::::no-loc(Xamarin.Forms):::.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
 
 Las `CenterX` `CenterY` propiedades y especifican el punto sobre el que `Path` se gira el objeto. Este punto central se expresa en el espacio de coordenadas del objeto que se transforma. De forma predeterminada, la rotación se aplica a (0,0), que es la esquina superior izquierda del `Path` objeto.
 
@@ -86,7 +86,7 @@ La `ScaleTransform` clase, que deriva de la `Transform` clase, define las siguie
 - `CenterX`, de tipo `double` , que representa la coordenada x del punto central de esta transformación. El valor predeterminado de esta propiedad es 0,0.
 - `CenterY`, de tipo `double` , que representa la coordenada y del punto central de esta transformación. El valor predeterminado de esta propiedad es 0,0.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por [`BindableProperty`](xref::::no-loc(Xamarin.Forms):::.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
 
 El valor de `ScaleX` y `ScaleY` tiene un gran impacto en el escalado resultante:
 
@@ -131,7 +131,7 @@ La `SkewTransform` clase, que deriva de la `Transform` clase, define las siguien
 - `CenterX`, de tipo `double` , que representa la coordenada x del centro de la transformación. El valor predeterminado de esta propiedad es 0,0.
 - `CenterY`, de tipo `double` , que representa la coordenada y del centro de la transformación. El valor predeterminado de esta propiedad es 0,0.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por [`BindableProperty`](xref::::no-loc(Xamarin.Forms):::.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
 
 Para predecir el efecto de una transformación de sesgo, tenga en cuenta que `AngleX` sesga los valores del eje x en relación con el sistema de coordenadas original. Por lo tanto, para un `AngleX` de 30, el eje y gira 30 grados a través del origen y sesga los valores en x por 30 grados desde ese origen. Del mismo modo, un `AngleY` de 30 sesga los valores y del `Path` objeto en 30 grados desde el origen.
 
@@ -167,7 +167,7 @@ La `TranslateTransform` clase, que deriva de la `Transform` clase, define las si
 - `X`, de tipo `double` , que representa la distancia que se va a desplace a lo largo del eje x. El valor predeterminado de esta propiedad es 0,0.
 - `Y`, de tipo `double` , que representa la distancia que se va a desplace a lo largo del eje y. El valor predeterminado de esta propiedad es 0,0.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por [`BindableProperty`](xref::::no-loc(Xamarin.Forms):::.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
 
 `X`Los valores negativos mueven un objeto a la izquierda, mientras que los valores positivos mueven un objeto a la derecha. `Y`Los valores negativos mueven un objeto hacia arriba, mientras que los valores positivos mueven un objeto hacia abajo.
 
@@ -191,13 +191,13 @@ En este ejemplo, el `Path` objeto se mueve 50 unidades independientes del dispos
 
 ## <a name="multiple-transforms"></a>Varias transformaciones
 
-Xamarin.Formstiene dos clases que admiten la aplicación de varias transformaciones a un `Path` objeto. Estos son `TransformGroup` , y `CompositeTransform` . Una `TransformGroup` realiza transformaciones en cualquier orden deseado, mientras que `CompositeTransform` realiza transformaciones en un orden concreto.
+:::no-loc(Xamarin.Forms):::tiene dos clases que admiten la aplicación de varias transformaciones a un `Path` objeto. Estos son `TransformGroup` , y `CompositeTransform` . Una `TransformGroup` realiza transformaciones en cualquier orden deseado, mientras que `CompositeTransform` realiza transformaciones en un orden concreto.
 
 ### <a name="transform-groups"></a>Transformar grupos
 
 Los grupos de transformación representan transformaciones compuestas compuestas de varios `Transform` objetos.
 
-La `TransformGroup` clase, que deriva de la `Transform` clase, define una `Children` propiedad, de tipo `TransformCollection` , que representa una colección de `Transform` objetos. Esta propiedad está respaldada por un [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, lo que significa que puede ser el destino de los enlaces de datos y con estilo.
+La `TransformGroup` clase, que deriva de la `Transform` clase, define una `Children` propiedad, de tipo `TransformCollection` , que representa una colección de `Transform` objetos. Esta propiedad está respaldada por un [`BindableProperty`](xref::::no-loc(Xamarin.Forms):::.BindableProperty) objeto, lo que significa que puede ser el destino de los enlaces de datos y con estilo.
 
 El orden de las transformaciones es importante en una transformación compuesta que utiliza la `TransformGroup` clase. Por ejemplo, si primero se gira, después se realiza la escala y después se traduce, se obtiene un resultado diferente que si primero se traslada, después se gira y luego se escala. Un orden de razón es importante es que las transformaciones como la rotación y el escalado se llevan a cabo en relación con el origen del sistema de coordenadas. El escalado de un objeto que está centrado en el origen genera un resultado diferente para escalar un objeto que se ha quitado del origen. Del mismo modo, la rotación de un objeto que está centrado en el origen genera un resultado diferente que la rotación de un objeto que se ha quitado del origen.
 
@@ -238,7 +238,7 @@ La `CompositeTransform` clase, que deriva de la `Transform` clase, define las si
 - `TranslateX`, de tipo `double` , que representa la distancia que se va a desplace a lo largo del eje x. El valor predeterminado de esta propiedad es 0,0.
 - `TranslateY`, de tipo `double` , que representa la distancia que se va a desplace a lo largo del eje y. El valor predeterminado de esta propiedad es 0,0.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por [`BindableProperty`](xref::::no-loc(Xamarin.Forms):::.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
 
 Un `CompositeTransform` aplica las transformaciones en este orden:
 
@@ -294,13 +294,41 @@ Las `OffsetX` `OffsetY` propiedades y se denominan así porque especifican la ca
 
 Además, el `Matrix` struct expone una serie de métodos que se pueden usar para manipular los valores de la matriz, incluidos `Append` , `Invert` , `Multiply` `Prepend` y muchos más.
 
-En la tabla siguiente se muestra la estructura de una Xamarin.Forms matriz:
+En la tabla siguiente se muestra la estructura de una :::no-loc(Xamarin.Forms)::: matriz:
 
-| | | |
-|---------|---------|-----|
-| M11     | M12     | 0,0 |
-| M21     | M22     | 0,0 |
-| OffsetX | OffsetY | 1.0 |
+:::row:::
+    :::column:::
+        M11
+    :::column-end:::
+    :::column:::
+        M12
+    :::column-end:::
+    :::column:::
+        0,0
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        M21
+    :::column-end:::
+    :::column:::
+        M22
+    :::column-end:::
+    :::column:::
+        0,0
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        OffsetX
+    :::column-end:::
+    :::column:::
+        OffsetY
+    :::column-end:::
+    :::column:::
+        1.0
+    :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > Una matriz de transformación afín tiene su columna final igual a (0, 0, 1), por lo que solo es necesario especificar los miembros de las dos primeras columnas.
@@ -309,7 +337,7 @@ Al manipular los valores de la matriz, puede girar, escalar, sesgar y trasladar 
 
 ## <a name="custom-transforms"></a>Transformaciones personalizadas
 
-La `MatrixTransform` clase, que se deriva de la `Transform` clase, define una `Matrix` propiedad, de tipo `Matrix` , que representa la matriz que define la transformación. Esta propiedad está respaldada por un [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, lo que significa que puede ser el destino de los enlaces de datos y con estilo.
+La `MatrixTransform` clase, que se deriva de la `Transform` clase, define una `Matrix` propiedad, de tipo `Matrix` , que representa la matriz que define la transformación. Esta propiedad está respaldada por un [`BindableProperty`](xref::::no-loc(Xamarin.Forms):::.BindableProperty) objeto, lo que significa que puede ser el destino de los enlaces de datos y con estilo.
 
 Cualquier transformación que puede describir con un `TranslateTransform` objeto, `ScaleTransform` , `RotateTransform` o `SkewTransform` se puede describir igualmente mediante un `MatrixTransform` . Sin embargo, `TranslateTransform` las `ScaleTransform` clases,, `RotateTransform` y `SkewTransform` son más fáciles de conceptualizar que establecer los componentes de vector en un `Matrix` . Por lo tanto, la `MatrixTransform` clase se utiliza normalmente para crear transformaciones personalizadas que no se proporcionan mediante las `RotateTransform` `ScaleTransform` clases,, `SkewTransform` o `TranslateTransform` .
 
@@ -336,7 +364,7 @@ En el ejemplo siguiente se muestra cómo transformar un `Path` objeto mediante `
 
 En este ejemplo, el `Path` objeto se ajusta, se sesga y se desplaza en las dimensiones X e y.
 
-Como alternativa, se puede escribir en una forma simplificada que usa un convertidor de tipos integrado en Xamarin.Forms :
+Como alternativa, se puede escribir en una forma simplificada que usa un convertidor de tipos integrado en :::no-loc(Xamarin.Forms)::: :
 
 ```xaml
 <Path Stroke="Black"
@@ -364,4 +392,4 @@ Además, el ejemplo anterior se puede simplificar aún más si se especifican lo
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsColocar](index.md)
+- [:::no-loc(Xamarin.Forms):::Colocar](index.md)

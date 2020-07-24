@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: c73be27ed82a643b01528ccba3887f59beeceb53
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 91ead74f1ae26e10046b1e57d722e84014546108
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574059"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929030"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Solución de problemas de aplicaciones de tvOS compiladas con Xamarin
 
@@ -47,7 +47,7 @@ Para solucionar este problema, haga lo siguiente:
 1. En Visual Studio para Mac, haga clic con el botón derecho en el archivo de proyecto de Xamarin. tvOS en el **Explorador de soluciones** y seleccione **Opciones**.
 2. Seleccione **compilar tvOS** y asegúrese de que está en la configuración de **lanzamiento** : 
 
-    [![](troubleshooting-images/ts01.png "Select tvOS Build options")](troubleshooting-images/ts01.png#lightbox)
+    [![Seleccionar las opciones de compilación de tvOS](troubleshooting-images/ts01.png)](troubleshooting-images/ts01.png#lightbox)
 3. Agregue `--bitcode=asmonly` al campo **argumentos de Mtouch adicionales** y haga clic en el botón **Aceptar** .
 4. Vuelva a compilar la aplicación en la configuración de **lanzamiento** .
 
@@ -125,7 +125,7 @@ Vuelva a compilar la aplicación para su lanzamiento y vuelva a enviarla a iTune
 
 Si usa una biblioteca de terceros (por ejemplo, monogame) y se produce un error en la compilación de la versión con una larga serie de mensajes de error que acaban en `Task "MTouch" execution -- FAILED` , pruebe `-gcc_flags="-framework OpenAL"` a agregar a sus **argumentos táctiles adicionales**:
 
-[![](troubleshooting-images/mtouch01.png "Task MTouch execution")](troubleshooting-images/mtouch01.png#lightbox)
+[![Ejecución de la tarea MTouch](troubleshooting-images/mtouch01.png)](troubleshooting-images/mtouch01.png#lightbox)
 
 También debe incluir `--bitcode=asmonly` en los **argumentos táctiles adicionales**, tener las opciones del vinculador establecidas para **vincular todo** y realizar una compilación limpia.
 
@@ -138,7 +138,7 @@ Si recibe un mensaje con el formato "ITMS-90471 error. Falta el icono grande "al
 
 ### <a name="invalid-bundle--an-app-that-supports-game-controllers-must-also-support-the-apple-tv-remote"></a>Agrupación no válida: una aplicación que admita controladores de juegos también debe admitir Apple TV Remote
 
-o bien 
+o 
 
 ### <a name="invalid-bundle--apple-tv-apps-with-the-gamecontroller-framework-must-include-the-gcsupportedgamecontrollers-key-in-the-apps-infoplist"></a>Paquete no válido: las aplicaciones de Apple TV con el marco GameController deben incluir la clave GCSupportedGameControllers en el archivo info. plist de la aplicación.
 
@@ -150,7 +150,7 @@ _Se han detectado uno o más problemas con la entrega reciente para "nombre de a
 
 _Agrupación no válida: una aplicación que admita controladores de juego también debe ser compatible con Apple TV Remote._
 
-o bien 
+o 
 
 _Paquete no válido: las aplicaciones de Apple TV con el marco GameController deben incluir la clave GCSupportedGameControllers en info. plist de la aplicación._
 

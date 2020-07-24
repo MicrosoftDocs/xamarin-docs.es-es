@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 918030120e6b7d0e22abdf5ea3e57f3849b86616
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 0af77464f849971050246a1676f89fe4702737e8
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572577"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997298"
 ---
 # <a name="contacts-and-contactsui-in-xamarinios"></a>Contactos y ContactsUI en Xamarin. iOS
 
@@ -27,7 +27,7 @@ Los dos nuevos marcos de trabajo contienen la siguiente funcionalidad:
 
 - [**ContactsUI**](#contactsui) : proporciona elementos de interfaz de usuario de Xamarin. iOS para mostrar, editar, seleccionar y crear contactos en dispositivos iOS.
 
-[![](contacts-images/add01.png "An example Contact Sheet on an iOS device")](contacts-images/add01.png#lightbox)
+[![Una hoja de contacto de ejemplo en un dispositivo iOS](contacts-images/add01.png)](contacts-images/add01.png#lightbox)
 
 > [!IMPORTANT]
 > Los `AddressBook` marcos de trabajo y existentes que `AddressBookUI` usan iOS 8 (y anteriores) han quedado desusados en iOS 9 y deben reemplazarse por los nuevos `Contacts` marcos de trabajo y lo `ContactsUI` antes posible para cualquier aplicación de Xamarin. iOS existente. Las nuevas aplicaciones deben escribirse en los nuevos marcos de trabajo.
@@ -46,7 +46,7 @@ El marco Contacts proporciona acceso a Xamarin. iOS a la información de contact
 
 La `CNContact` clase proporciona acceso seguro para subprocesos y de solo lectura a las propiedades de un contacto como el nombre, la dirección o los números de teléfono. `CNContact`funciones como `NSDictionary` y contienen varias colecciones de propiedades de solo lectura (como direcciones o números de teléfono):
 
-[![](contacts-images/contactobjects.png "Contact Object overview")](contacts-images/contactobjects.png#lightbox)
+[![Información general sobre objetos de contacto](contacts-images/contactobjects.png)](contacts-images/contactobjects.png#lightbox)
 
 En el caso de las propiedades que pueden tener varios valores (como la dirección de correo electrónico o los números de teléfono), se representarán como una matriz de `NSLabeledValue` objetos. `NSLabeledValue`es una tupla segura para subprocesos que consta de un conjunto de solo lectura de etiquetas y valores en los que la etiqueta define el valor para el usuario (por ejemplo, un correo electrónico doméstico o de trabajo). El marco de contactos proporciona una selección de etiquetas predefinidas (a través de las `CNLabelKey` `CNLabelPhoneNumberKey` clases estáticas y) que se pueden usar en la aplicación o la opción de definir etiquetas personalizadas para sus necesidades.
 
@@ -110,7 +110,7 @@ else
 
 Si este código se ejecuta en un dispositivo iOS 9, se agregará un nuevo contacto a la colección del usuario. Por ejemplo:
 
-[![](contacts-images/add01.png "A new contact added to the user's collection")](contacts-images/add01.png#lightbox)
+[![Un nuevo contacto agregado a la colección del usuario](contacts-images/add01.png)](contacts-images/add01.png#lightbox)
 
 ### <a name="contact-formatting-and-localization"></a>Ponerse en contacto con el formato y la localización
 
@@ -193,7 +193,7 @@ if (!contact.IsKeyAvailable(CNContactOption.PostalAddresses)) {
 
 Un usuario puede tener distintos orígenes de información de contacto para una sola persona en su base de datos de contactos (como iCloud, Facebook o Google Mail). En las aplicaciones de iOS y OS X, esta información de contacto se vinculará automáticamente y se mostrará al usuario como un solo _contacto unificado_:
 
-[![](contacts-images/unified01.png "Unified Contacts overview")](contacts-images/unified01.png#lightbox)
+[![Información general sobre contactos unificados](contacts-images/unified01.png)](contacts-images/unified01.png#lightbox)
 
 Este contacto unificado es una vista temporal y en memoria de la información de contacto de los vínculos a la que se le dará su propio identificador único (que debe usarse para volver a capturar el contacto si es necesario). De forma predeterminada, el marco de contactos devolverá un contacto unificado siempre que sea posible.
 
@@ -258,11 +258,11 @@ Cada vez que se modifica un contacto, el almacén de contactos envía un `CNCont
 
 Los contactos de un usuario pueden existir localmente en el dispositivo del usuario o como contactos sincronizados con el dispositivo desde una o varias cuentas de servidor (como Facebook o Google). Cada grupo de contactos tiene su propio _contenedor_ y un contacto determinado solo puede existir en un contenedor.
 
-[![](contacts-images/containers01.png "Containers and Groups overview")](contacts-images/containers01.png#lightbox)
+[![Información general sobre contenedores y grupos](contacts-images/containers01.png)](contacts-images/containers01.png#lightbox)
 
 Algunos contenedores permiten organizar los contactos en uno o varios _grupos_ o _subgrupos_. Este comportamiento depende de la memoria auxiliar de un contenedor determinado. Por ejemplo, iCloud solo tiene un contenedor, pero puede tener muchos grupos (pero no subgrupos). Microsoft Exchange, por otro lado, no admite grupos, pero puede tener varios contenedores (uno para cada carpeta de Exchange).
 
-[![](contacts-images/containers02.png "Overlap within Containers and Groups")](contacts-images/containers02.png#lightbox)
+[![Superposición dentro de contenedores y grupos](contacts-images/containers02.png)](contacts-images/containers02.png#lightbox)
 
 <a name="contactsui"></a>
 

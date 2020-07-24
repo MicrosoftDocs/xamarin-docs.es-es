@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 584b398deafd233fdbe6b24189a2047ae712fdcf
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 01f95641a0cf65341479c51b2f6314a0ef3ea2de
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573526"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939079"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Trabajar con el subproceso de interfaz de usuario en Xamarin. iOS
 
@@ -36,7 +36,7 @@ El `InvokeOnMainThread` método se define en `NSObject` , por lo que se puede ll
 
 Durante la depuración de aplicaciones de Xamarin. iOS, se producirá un error si el código intenta tener acceso a un control de interfaz de usuario desde el subproceso equivocado. Esto le ayuda a realizar un seguimiento y corregir estos problemas con el método InvokeOnMainThread. Esto solo ocurre durante la depuración y no produce un error en las compilaciones de versión. El mensaje de error aparecerá de la siguiente manera:
 
- ![](ui-thread-images/image10.png "UI Thread Execution")
+ ![Ejecución del subproceso de interfaz de usuario](ui-thread-images/image10.png)
 
  <a name="Background_Thread_Example"></a>
 

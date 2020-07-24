@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 82b739697705ac4c90390a36405d755a5f523159
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 9e33f843d836ed5b66ed36397c9367dc671c51ed
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028405"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996258"
 ---
 # <a name="working-with-watchos-localization-in-xamarin"></a>Trabajar con la localización de watchos en Xamarin
 
 _Adaptación de las aplicaciones de watchos para varios idiomas_
 
-![](localization-images/both-languages-sml.png "Apple Watch displaying localized content")
+![Apple Watch Mostrar contenido localizado](localization-images/both-languages-sml.png)
 
 las aplicaciones de watchos se localizan mediante los métodos estándar de iOS:
 
@@ -35,7 +35,7 @@ El texto y los recursos localizados serán *diferentes* en la aplicación inspec
 
 ## <a name="watch-app"></a>Aplicación de inspección
 
-La aplicación de inspección contiene el guion gráfico que describe la interfaz de usuario de la aplicación. Los controles (como `Label` y `Image`) que admiten la localización tienen un **identificador de localización**.
+La aplicación de inspección contiene el guion gráfico que describe la interfaz de usuario de la aplicación. Los controles (como `Label` y `Image` ) que admiten la localización tienen un **identificador de localización**.
 
 Cada directorio **. lproj** específico del idioma debe contener archivos **. Strings** con las traducciones para cada elemento (mediante el **identificador de localización**), así como las imágenes a las que hace referencia el guión gráfico.
 
@@ -48,7 +48,7 @@ La extensión también debe contener directorios **. lproj** específicos del id
 ## <a name="globalizing-the-watch-solution"></a>Globalización de la solución Watch
 
 La globalización es el proceso de convertir una aplicación en localizable.
-En el caso de las aplicaciones de inspección, esto significa diseñar el guión gráfico con diferentes longitudes de texto en mente, asegurándose de que cada diseño de pantalla se ajuste correctamente según el texto que se muestre. También debe asegurarse de que las cadenas a las que se hace referencia en el código de la extensión de inspección se pueden traducir con el método `LocalizedString`.
+En el caso de las aplicaciones de inspección, esto significa diseñar el guión gráfico con diferentes longitudes de texto en mente, asegurándose de que cada diseño de pantalla se ajuste correctamente según el texto que se muestre. También debe asegurarse de que las cadenas a las que se hace referencia en el código de la extensión de inspección se pueden traducir mediante el `LocalizedString` método.
 
 ### <a name="watch-app"></a>Aplicación de inspección
 
@@ -56,21 +56,21 @@ De forma predeterminada, la aplicación de inspección no está configurada para
 
 1. Cree el directorio **base. lproj** y mueva la **interfaz. Storyboard** a él.
 
-2. Cree **\<los directorios >. lproj de idioma** para cada idioma que desee admitir.
+2. Cree directorios ** \<language> . lproj** para cada idioma que desee admitir.
 
 3. Los directorios **. lproj** deben contener un archivo de texto **interface. Strings** (el nombre de archivo debe coincidir con el nombre de storboard). También puede colocar cualquier imagen que requiera localización en estos directorios.
 
 El proyecto de la aplicación de inspección tiene este aspecto una vez realizados estos cambios (solo se han agregado archivos de idioma en inglés y español):
 
-  ![](localization-images/watchapp-solution.png "The watch app project with English and Spanish language files")
+  ![El proyecto de aplicación de Watch con archivos de idioma inglés y español](localization-images/watchapp-solution.png)
 
 #### <a name="storyboard-text"></a>Texto de guion gráfico
 
 Al editar el guion gráfico, seleccione cada elemento y observe el **identificador de localización** que aparece en el panel de **propiedades** :
 
-  [![](localization-images/storyboard-sml.png "The Localization ID that appears in the Properties pad")](localization-images/storyboard.png#lightbox)
+  [![El identificador de localización que aparece en el panel de propiedades.](localization-images/storyboard-sml.png)](localization-images/storyboard.png#lightbox)
 
-En la carpeta **base. lproj** , cree pares clave-valor, como se muestra a continuación, donde la clave está formada por el **identificador de localización** y un nombre de propiedad en el control, unida por un punto (`.`).
+En la carpeta **base. lproj** , cree pares de clave-valor, como se muestra a continuación, donde la clave está formada por el **identificador de localización** y un nombre de propiedad en el control, unida por un punto ( `.` ).
 
 ```csharp
 "AgC-eL-Hgc.title" = "WatchL10nEN"; // interface controller title
@@ -81,25 +81,25 @@ En la carpeta **base. lproj** , cree pares clave-valor, como se muestra a contin
 "39.text" = "Second screen";
 ```
 
-Observe que en este ejemplo un **identificador de localización** puede ser una cadena de número simple (por ejemplo, "0", "1", etc.) o una cadena más compleja (por ejemplo, "AgC-el-HGC"). `Label` controles tienen una propiedad `Text` y `Button`s tienen una propiedad `Title`, que se refleja en la forma en que se establecen sus valores localizados. Asegúrese de usar el nombre de la propiedad en minúsculas tal como se muestra en el ejemplo anterior.
+Observe que en este ejemplo un **identificador de localización** puede ser una cadena de número simple (por ejemplo, "0", "1", etc.) o una cadena más compleja (por ejemplo, "AgC-el-HGC"). `Label`los controles tienen una `Text` propiedad y `Button` tienen una `Title` propiedad, que se refleja en la forma en que se establecen sus valores localizados. Asegúrese de usar el nombre de la propiedad en minúsculas tal como se muestra en el ejemplo anterior.
 
 Cuando se representa el guión gráfico en el reloj, los valores correctos se extraen automáticamente y se muestran según el idioma seleccionado por el usuario.
 
 #### <a name="storyboard-images"></a>Imágenes de guion gráfico
 
-La solución de ejemplo también incluye una imagen **gradient@2x.png** en cada carpeta de idioma. Esta imagen puede ser diferente para cada idioma (por ejemplo, puede tener texto incrustado que necesita traducir o usar iconografía localizadas).
+La solución de ejemplo también incluye una **gradient@2x.png** imagen en cada carpeta de idioma. Esta imagen puede ser diferente para cada idioma (por ejemplo, puede tener texto incrustado que necesita traducir o usar iconografía localizadas).
 
 Solo tiene que establecer la propiedad **imagen** de la imagen en el guión gráfico y la imagen correcta se representará en el reloj según el idioma seleccionado por el usuario.
 
-![](localization-images/storyboard-image.png "Set the images Image property in the storyboard")
+![Establecer la propiedad de imagen images en el guión gráfico](localization-images/storyboard-image.png)
 
-Nota: dado que todos los relojes de Apple tienen pantallas de retina, solo se necesita la versión **@2x** de la imagen. No es necesario especificar **@2x** en el guión gráfico.
+Nota: dado que todos los relojes de Apple tienen pantallas de retina, solo **@2x** se necesita la versión de la imagen. No es necesario especificar **@2x** en el guion gráfico.
 
 ### <a name="watch-extension"></a>Ver extensión
 
-La extensión Watch requiere una estructura de directorio similar para admitir la localización; sin embargo, no hay ningún guion gráfico. Las cadenas localizadas en la extensión son solo las a C# las que hace referencia el código.
+La extensión Watch requiere una estructura de directorio similar para admitir la localización; sin embargo, no hay ningún guion gráfico. Las cadenas traducidas de la extensión son solo aquellas a las que hace referencia el código de C#.
 
-![](localization-images/watchextension-solution.png "The watch extension directory structure to support localization")
+![La estructura de directorios de la extensión de inspección para admitir la localización](localization-images/watchextension-solution.png)
 
 #### <a name="strings-in-code"></a>Cadenas en el código
 
@@ -112,7 +112,7 @@ El archivo **localizable. Strings** tiene una estructura ligeramente diferente a
 "Bed time" = "Bed time!"; // night
 ```
 
-El método `NSBundle.MainBundle.LocalizedString` se usa para resolver cadenas en sus homólogos traducidos, tal y como se muestra en el código siguiente.
+El `NSBundle.MainBundle.LocalizedString` método se usa para resolver cadenas en sus homólogos traducidos, tal y como se muestra en el código siguiente.
 
 ```csharp
 var display = "Breakfast time";
@@ -125,13 +125,13 @@ displayText.SetText (localizedDisplay);
 
 Las imágenes que se rellenan mediante código se pueden establecer de dos maneras.
 
-1. Puede cambiar un control de `Image` estableciendo su valor en el nombre de cadena de una imagen que ya existe en la aplicación de inspección, por ejemplo,
+1. Puede cambiar un `Image` control estableciendo su valor en el nombre de cadena de una imagen que ya existe en la aplicación de inspección, por ejemplo,
 
     ```csharp
     displayImage.SetImage("gradient"); // image in Watch App (as shown above)
     ```
 
-2. Puede desplace una imagen de la extensión a la inspección mediante `FromBundle` y la aplicación elegirá automáticamente la imagen correcta para la selección de idioma del usuario. En la solución de ejemplo hay una imagen **language@2x.png** en cada carpeta de idioma y se muestra en `DetailController` mediante el código siguiente:
+2. Puede desplace una imagen de la extensión a la inspección mediante `FromBundle` y la aplicación elegirá automáticamente la imagen correcta para la selección de idioma del usuario. En la solución de ejemplo hay una imagen **language@2x.png** en cada carpeta de lenguaje y se muestra en `DetailController` mediante el código siguiente:
 
     ```csharp
     using (var image = UIImage.FromBundle ("language")) {
@@ -139,7 +139,7 @@ Las imágenes que se rellenan mediante código se pueden establecer de dos maner
     }
     ```
 
-    Tenga en cuenta que no es necesario especificar el **@2x** al hacer referencia al nombre de archivo de la imagen.
+    Tenga en cuenta que no es necesario especificar al **@2x** hacer referencia al nombre de archivo de la imagen.
 
 El segundo método también es aplicable si se descarga una imagen de un servidor remoto para representarla en el reloj; sin embargo, en este caso, debe asegurarse de que la imagen que descarga está adaptada correctamente según las preferencias del usuario.
 
@@ -185,7 +185,7 @@ Las cadenas de idioma de Spansish (traducción de la máquina):
 "Bed time" = "la hora de dormir"; // night
 ```
 
-## <a name="testing"></a>Pruebas
+## <a name="testing"></a>Prueba
 
 El método para cambiar las preferencias de idioma difiere entre el simulador y los dispositivos físicos.
 
@@ -193,13 +193,13 @@ El método para cambiar las preferencias de idioma difiere entre el simulador y 
 
 En el simulador, seleccione el idioma que se va a probar con la aplicación de **configuración** de iOS (el icono de engranajes grises en la pantalla principal del simulador).
 
-  ![](localization-images/sim-settings-sml.png "The iOS Settings app Localization settings")
+  ![Configuración de la localización de la aplicación configuración de iOS](localization-images/sim-settings-sml.png)
 
 ### <a name="watch-device"></a>Ver dispositivo
 
 Al realizar pruebas con un reloj, cambie el idioma del reloj en la aplicación **Apple Watch** en el iPhone emparejado.
 
-  ![](localization-images/phone-settings-sml.png "Change the watch's language in the Apple Watch app on the paired iPhone")
+  ![Cambiar el idioma del reloj en la aplicación Apple Watch en el iPhone emparejado](localization-images/phone-settings-sml.png)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

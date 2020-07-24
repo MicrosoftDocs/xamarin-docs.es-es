@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
-ms.openlocfilehash: 67e66d5d8f1023c0e7561791ff29ed2952ac040b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 6508f7ec48d10196b47e0b51fc30e54e3c3668a6
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571017"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930564"
 ---
 # <a name="binding-objective-c-libraries"></a>Enlace de bibliotecas de Objective-C
 
@@ -39,14 +39,14 @@ Puede usar el proyecto de [ejemplo enlace de iOS](https://github.com/xamarin/mon
 La forma más fácil de crear un enlace es crear un proyecto de enlace de Xamarin. iOS.
 Puede hacerlo desde Visual Studio para Mac seleccionando el tipo de proyecto, la biblioteca de **> de iOS > biblioteca de enlaces**:
 
-[![](objective-c-libraries-images/00-sml.png "Do this from Visual Studio for Mac by selecting the project type, iOS Library Bindings Library")](objective-c-libraries-images/00.png#lightbox)
+[![Para ello, seleccione el tipo Visual Studio para Mac de proyecto, biblioteca de enlaces de la biblioteca de iOS](objective-c-libraries-images/00-sml.png)](objective-c-libraries-images/00.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 La forma más fácil de crear un enlace es crear un proyecto de enlace de Xamarin. iOS.
 Para ello, puede hacerlo desde Visual Studio en Windows. para ello, seleccione el tipo de proyecto, **Visual C# > biblioteca de enlaces de > de iOS (iOS)**:
 
-[![](objective-c-libraries-images/00vs-sml.png "iOS Bindings Library iOS")](objective-c-libraries-images/00vs.png#lightbox)
+[![Biblioteca de enlaces de iOS iOS](objective-c-libraries-images/00vs-sml.png)](objective-c-libraries-images/00vs.png#lightbox)
 
 > [!IMPORTANT]
 > Nota: los proyectos de enlace para **Xamarin. Mac** solo se admiten en Visual Studio para Mac.
@@ -104,7 +104,7 @@ Para generar un enlace completo, normalmente se tratan cuatro componentes:
 
 En este gráfico se muestra la relación entre los archivos:
 
- [![](objective-c-libraries-images/screen-shot-2012-02-08-at-3.33.07-pm.png "This chart shows the relationship between the files")](objective-c-libraries-images/screen-shot-2012-02-08-at-3.33.07-pm.png#lightbox)
+ [![Este gráfico muestra la relación entre los archivos](objective-c-libraries-images/screen-shot-2012-02-08-at-3.33.07-pm.png)](objective-c-libraries-images/screen-shot-2012-02-08-at-3.33.07-pm.png#lightbox)
 
 El archivo de definición de API solo contendrá espacios de nombres y definiciones de interfaz (con cualquier miembro que una interfaz pueda contener) y no debe contener clases, enumeraciones, delegados o Structs. El archivo de definición de la API es simplemente el contrato que se usará para generar la API.
 
@@ -135,7 +135,7 @@ Al compilar la biblioteca se generará el enlace nativo.
 Para completar este enlace, debe agregar la biblioteca nativa al proyecto.  Puede hacerlo agregando la biblioteca nativa al proyecto, arrastrando y colocando la biblioteca nativa desde Finder en el proyecto en el explorador de soluciones, o haciendo clic con el botón derecho en el proyecto y eligiendo **Agregar**  >  **Agregar archivos** para seleccionar la biblioteca nativa.
 Las bibliotecas nativas por Convención comienzan con la palabra "lib" y terminan con la extensión ". a". Al hacerlo, Visual Studio para Mac agregará dos archivos: el archivo. a y un archivo de C# rellenado automáticamente que contiene información acerca de lo que contiene la biblioteca nativa:
 
- [![](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png "Native libraries by convention start with the word lib and end with the extension .a")](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png#lightbox)
+ [![Las bibliotecas nativas por Convención comienzan con la palabra lib y terminan con la extensión.](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png)](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png#lightbox)
 
 El contenido del `libMagicChord.linkwith.cs` archivo incluye información sobre cómo se puede usar esta biblioteca e indica al IDE que empaquete este binario en el archivo dll resultante:
 
@@ -207,7 +207,7 @@ Al exportar un tipo de referencia, con la [`[Export]`](~/cross-platform/macios/b
 
 <a name="Binding_Properties"></a>
 
-### <a name="binding-properties"></a>Propiedades de enlace
+### <a name="binding-properties"></a>Propiedades de los enlaces
 
 Al igual que los métodos, las propiedades de Objective-C se enlazan mediante el método[`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)
 Attribute y se asignan directamente a las propiedades de C#. Al igual que los métodos, las propiedades se pueden decorar con el[`[Static]`](~/cross-platform/macios/binding/binding-types-reference.md#StaticAttribute)

@@ -10,16 +10,16 @@ ms.date: 01/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 44df710df0272afe3c6f6911381af1a88c8cf923
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d245ebbf42333ad822e0d6ed8569cc8193f1b478
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140288"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936713"
 ---
 # <a name="xamarinforms-carouselview-layout"></a>Xamarin.FormsDiseño de CarouselView
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
@@ -30,7 +30,7 @@ ms.locfileid: "84140288"
 
 Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que las propiedades pueden ser destinos de enlaces de datos.
 
-De forma predeterminada, un mostrará [`CarouselView`](xref:Xamarin.Forms.CarouselView) sus elementos en una orientación horizontal. Se mostrará un solo elemento en la pantalla, con gestos de deslizar rápidamente, lo que da como resultado la navegación hacia delante y hacia atrás a través de la colección de elementos. Sin embargo, también es posible una orientación vertical. Esto se debe [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) a que la propiedad es de tipo `LinearItemsLayout` , que hereda de la [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) clase. La `ItemsLayout` clase define las siguientes propiedades:
+De forma predeterminada, un mostrará [`CarouselView`](xref:Xamarin.Forms.CarouselView) sus elementos en una orientación horizontal. Se mostrará un solo elemento en la pantalla, con gestos de deslizar rápidamente, lo que da como resultado la navegación hacia delante y hacia atrás a través de la colección de elementos. Sin embargo, también es posible una orientación vertical. Esto se debe [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) a que la propiedad es de tipo `LinearItemsLayout` , que hereda de la [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) clase. La clase `ItemsLayout` define las propiedades siguientes:
 
 - [`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation), de tipo [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) , especifica la dirección en la que [`CarouselView`](xref:Xamarin.Forms.CarouselView) se expande a medida que se agregan elementos.
 - [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment), de tipo [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) , especifica cómo se alinean los puntos de ajuste con los elementos.

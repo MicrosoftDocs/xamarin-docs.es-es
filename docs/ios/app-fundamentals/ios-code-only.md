@@ -7,30 +7,30 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: 42a2694239fdd55efa91b7fa30be8a10cafb4cc5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: edd49cc891a86d3323bab319ab811e85f9148640
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73010321"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997103"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Creación de interfaces de usuario de iOS en código en Xamarin. iOS
 
-La interfaz de usuario de una aplicación de iOS es como un escaparate; normalmente, la aplicación obtiene una ventana, pero puede rellenar la ventana con tantos objetos como sea necesario, y los objetos y las disposiciones se pueden cambiar en función de lo que la aplicación quiera mostrar. Los objetos de este escenario, lo que el usuario ve, se denominan "vistas". Para compilar una sola pantalla en una aplicación, las vistas se apilan entre sí en una jerarquía de vistas de contenido y la jerarquía se administra mediante un solo controlador de vista. Las aplicaciones con varias pantallas tienen varias jerarquías de vistas de contenido, cada una con su propio controlador de vistas. La aplicación coloca las vistas en la ventana para crear una jerarquía de vistas de contenido diferente basándose en la pantalla en la que se encuentra el usuario.
+La interfaz de usuario de una aplicación de iOS es como un escaparate; normalmente, la aplicación obtiene una ventana, pero puede rellenar la ventana con tantos objetos como sea necesario, y los objetos y las disposiciones se pueden cambiar en función de lo que la aplicación quiera mostrar. Los objetos de este escenario, lo que el usuario ve, se denominan "vistas". Para compilar una sola pantalla en una aplicación, las vistas se apilan unas sobre otras en una jerarquía de vistas de contenido, que esta, a su vez, se administra a través de un controlador de vistas único. Las aplicaciones con varias pantallas tienen varias jerarquías de vistas de contenido, cada una con su propio controlador de vistas. La aplicación coloca las vistas en la ventana para crear una jerarquía de vistas de contenido diferente basándose en la pantalla en la que se encuentra el usuario.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 En el diagrama siguiente se muestran las relaciones entre la ventana, las vistas, las subvistas y el controlador de vistas que, de forma conjunta, proporcionan la interfaz de usuario a la pantalla del dispositivo:
 
-[![](ios-code-only-images/image9.png "This diagram illustrates the relationships between the Window, Views, Subviews, and View Controller")](ios-code-only-images/image9.png#lightbox)
+[![En este diagrama se muestran las relaciones entre la ventana, las vistas, las subvistas y el controlador de vista.](ios-code-only-images/image9.png)](ios-code-only-images/image9.png#lightbox)
 
 Estas jerarquías de vistas se pueden construir mediante el [Xamarin Designer para iOS](~/ios/user-interface/designer/index.md) en Visual Studio, pero es conveniente tener una comprensión fundamental de cómo trabajar completamente en el código. Este artículo le guía a través de algunos puntos básicos para ponerse en marcha con el desarrollo de la interfaz de usuario de solo código.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 En el diagrama siguiente se muestran las relaciones entre la ventana, las vistas, las subvistas y el controlador de vistas que, de forma conjunta, proporcionan la interfaz de usuario a la pantalla del dispositivo:
 
-[![](ios-code-only-images/image9.png "This diagram illustrates the relationships between the Window, Views, Subviews, and View Controller")](ios-code-only-images/image9.png#lightbox)
+[![En este diagrama se muestran las relaciones entre la ventana, las vistas, las subvistas y el controlador de vista.](ios-code-only-images/image9.png)](ios-code-only-images/image9.png#lightbox)
 
 Estas jerarquías de vistas se pueden construir mediante el [Xamarin Designer para iOS](~/ios/user-interface/designer/index.md) en Visual Studio para Mac, pero es conveniente tener un conocimiento fundamental de cómo trabajar completamente en el código. Este artículo le guía a través de algunos puntos básicos para ponerse en marcha con el desarrollo de la interfaz de usuario de solo código.
 
@@ -38,28 +38,28 @@ Estas jerarquías de vistas se pueden construir mediante el [Xamarin Designer pa
 
 ## <a name="creating-a-code-only-project"></a>Crear un proyecto de solo código
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ## <a name="ios-blank-project-template"></a>plantilla de proyecto en blanco de iOS
 
-En primer lugar, cree un proyecto de iOS en Visual Studio con el **archivo > nuevo C# proyecto > Visual > iPhone & iPad > aplicación de iOS (Xamarin)** , que se muestra a continuación:
+En primer lugar, cree un proyecto de iOS en Visual Studio con el **archivo > nuevo proyecto > proyecto de Visual C# > iPhone & iPad > aplicación de iOS (Xamarin)** , que se muestra a continuación:
 
-[![cuadro de diálogo nuevo proyecto](ios-code-only-images/blankapp.w157-sml.png)](ios-code-only-images/blankapp.w157.png#lightbox)
+[![Cuadro de diálogo nuevo proyecto](ios-code-only-images/blankapp.w157-sml.png)](ios-code-only-images/blankapp.w157.png#lightbox)
 
 Después, seleccione la plantilla de proyecto **aplicación vacía** :
 
-[Cuadro de diálogo![seleccionar una plantilla](ios-code-only-images/blankapp-2.w157-sml.png)](ios-code-only-images/blankapp-2.w157.png#lightbox)
+[![Cuadro de diálogo Seleccionar plantilla](ios-code-only-images/blankapp-2.w157-sml.png)](ios-code-only-images/blankapp-2.w157.png#lightbox)
 
 La plantilla de proyecto vacía agrega 4 archivos al proyecto:
 
 [![Archivos de proyecto](ios-code-only-images/empty-project.w157-sml.png "Archivos de proyecto")](ios-code-only-images/empty-project.w157.png#lightbox)
 
-1. **AppDelegate.CS** : contiene una subclase `UIApplicationDelegate`, `AppDelegate`, que se usa para controlar los eventos de aplicación de iOS. La ventana de la aplicación se crea en el método `FinishedLaunching` del `AppDelegate`.
-1. **Main.CS** : contiene el punto de entrada de la aplicación, que especifica la clase para el `AppDelegate`.
+1. **AppDelegate.CS** : contiene una `UIApplicationDelegate` subclase, `AppDelegate` , que se usa para controlar los eventos de aplicación de iOS. La ventana de la aplicación se crea en el `AppDelegate` `FinishedLaunching` método de.
+1. **Main.CS** : contiene el punto de entrada de la aplicación, que especifica la clase para `AppDelegate` .
 1. **Info. plist** : archivo de lista de propiedades que contiene información de configuración de la aplicación.
 1. **Contitles. plist** : archivo de lista de propiedades que contiene información sobre las capacidades y los permisos de la aplicación.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 ## <a name="ios-templates"></a>plantillas de iOS
 
@@ -69,18 +69,18 @@ Los pasos siguientes le guían por el proceso de eliminación del guion gráfico
 
 1. Use la plantilla de aplicación de vista única para crear un nuevo proyecto de iOS:
 
-    [![](ios-code-only-images/single-view-app.png "Use the Single View App template")](ios-code-only-images/single-view-app.png#lightbox)
+    [![Usar la plantilla de aplicación de vista única](ios-code-only-images/single-view-app.png)](ios-code-only-images/single-view-app.png#lightbox)
 
-1. Elimine los archivos de `Main.Storyboard` y `ViewController.cs`. **No** elimine el `LaunchScreen.Storyboard`. El controlador de vista debe eliminarse, ya que es el código subyacente para el controlador de vista que se crea en el guión gráfico:
+1. Elimine `Main.Storyboard` los `ViewController.cs` archivos y. **No** elimine el `LaunchScreen.Storyboard` . El controlador de vista debe eliminarse, ya que es el código subyacente para el controlador de vista que se crea en el guión gráfico:
 1. Asegúrese de seleccionar **eliminar** en el cuadro de diálogo emergente:
 
-    [![](ios-code-only-images/delete.png "Select Delete from the pop-up dialog")](ios-code-only-images/delete.png#lightbox)
+    [![Seleccione eliminar en el cuadro de diálogo emergente.](ios-code-only-images/delete.png)](ios-code-only-images/delete.png#lightbox)
 
 1. En info. plist, elimine la información incluida en la **información de implementación > opción de interfaz principal** :
 
-    [![](ios-code-only-images/main-interface.png "Delete the information inside the Main Interface option")](ios-code-only-images/main-interface.png#lightbox)
+    [![Eliminar la información incluida en la opción de interfaz principal](ios-code-only-images/main-interface.png)](ios-code-only-images/main-interface.png#lightbox)
 
-1. Por último, agregue el código siguiente al método `FinishedLaunching` de la clase AppDelegate:
+1. Por último, agregue el código siguiente al `FinishedLaunching` método en la clase AppDelegate:
 
     ```csharp
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
@@ -95,13 +95,13 @@ Los pasos siguientes le guían por el proceso de eliminación del guion gráfico
     }
     ```
 
-El código que se agregó al método `FinishedLaunching` en el paso 5 anterior, es la cantidad mínima de código necesaria para crear una ventana para la aplicación de iOS.
+El código que se agregó al `FinishedLaunching` método en el paso 5 anterior, es la cantidad mínima de código necesaria para crear una ventana para la aplicación de iOS.
 
 -----
 
 las aplicaciones de iOS se compilan con el [patrón MVC](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md#model-view-controller-mvc). La primera pantalla que se muestra en una aplicación se crea desde el controlador de vista raíz de la ventana. Para más información sobre el propio patrón MVC, consulte la guía de [pantalla de Hello, iOS](~/ios/get-started/hello-ios-multiscreen/index.md) .
 
-La implementación de la `AppDelegate` agregada por la plantilla crea la ventana de la aplicación, de la que solo hay una para cada aplicación de iOS y la hace visible con el código siguiente:
+La implementación de `AppDelegate` agregada por la plantilla crea la ventana de la aplicación, de la que solo hay una para cada aplicación de iOS y la hace visible con el código siguiente:
 
 ```csharp
 public class AppDelegate : UIApplicationDelegate
@@ -125,11 +125,11 @@ public class AppDelegate : UIApplicationDelegate
 }
 ```
 
-Si fuera a ejecutar esta aplicación ahora, es probable que se produzca una excepción que indica que `Application windows are expected to have a root view controller at the end of application launch`. Vamos a agregar un controlador y convertirlo en el controlador de vista raíz de la aplicación.
+Si va a ejecutar esta aplicación ahora, es probable que se produzca una excepción que lo indique `Application windows are expected to have a root view controller at the end of application launch` . Vamos a agregar un controlador y convertirlo en el controlador de vista raíz de la aplicación.
 
 ## <a name="adding-a-controller"></a>Agregar un controlador
 
-La aplicación puede contener muchos controladores de vista, pero debe tener un controlador de vista raíz para controlar todos los controladores de vista.  Agregue un controlador a la ventana creando una instancia de `UIViewController` y estableciéndolo en la propiedad `Window.RootViewController`:
+La aplicación puede contener muchos controladores de vista, pero debe tener un controlador de vista raíz para controlar todos los controladores de vista.  Agregue un controlador a la ventana creando una `UIViewController` instancia y estableciéndolo en la `Window.RootViewController` propiedad:
 
 ```csharp
 public class AppDelegate : UIApplicationDelegate
@@ -160,11 +160,11 @@ public class AppDelegate : UIApplicationDelegate
 }
 ```
 
-Cada controlador tiene una vista asociada, a la que se puede tener acceso desde la propiedad `View`. En el código anterior se cambia la propiedad `BackgroundColor` de la vista a `UIColor.LightGray` para que sea visible, como se muestra a continuación:
+Cada controlador tiene una vista asociada, a la que se puede tener acceso desde la `View` propiedad. En el código anterior se cambia la propiedad de la vista `BackgroundColor` a para `UIColor.LightGray` que sea visible, como se muestra a continuación:
 
- [![](ios-code-only-images/image1.png "The View's background is a visible light gray")](ios-code-only-images/image1.png#lightbox)
+ [![El fondo de la vista es un gris claro visible](ios-code-only-images/image1.png)](ios-code-only-images/image1.png#lightbox)
 
-Podríamos establecer cualquier `UIViewController` subclase como la `RootViewController` de este modo, incluidos los controladores de UIKit, así como los que escribimos nosotros mismos. Por ejemplo, el código siguiente agrega un `UINavigationController` como `RootViewController`:
+También podríamos establecer cualquier `UIViewController` subclase como `RootViewController` de esta manera, incluidos los controladores de UIKit, así como los que escribimos nosotros mismos. Por ejemplo, el código siguiente agrega `UINavigationController` como `RootViewController` :
 
 ```csharp
 public class AppDelegate : UIApplicationDelegate
@@ -200,25 +200,25 @@ public class AppDelegate : UIApplicationDelegate
 
 Esto genera el controlador anidado en el controlador de navegación, como se muestra a continuación:
 
- [![](ios-code-only-images/image2.png "The controller nested within the navigation controller")](ios-code-only-images/image2.png#lightbox)
+ [![Controlador anidado en el controlador de navegación](ios-code-only-images/image2.png)](ios-code-only-images/image2.png#lightbox)
 
 ## <a name="creating-a-view-controller"></a>Crear un controlador de vista
 
-Ahora que hemos visto cómo agregar un controlador como `RootViewController` de la ventana, veremos cómo crear un controlador de vista personalizado en el código.
+Ahora que hemos visto cómo agregar un controlador como el `RootViewController` de la ventana, veremos cómo crear un controlador de vista personalizado en el código.
 
 Agregue una nueva clase denominada `CustomViewController` como se muestra a continuación:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![](ios-code-only-images/customviewcontroller.w157-sml.png "Add a new class named CustomViewController")](ios-code-only-images/customviewcontroller.w157.png#lightbox)
+[![Agregue una nueva clase denominada CustomViewController](ios-code-only-images/customviewcontroller.w157-sml.png)](ios-code-only-images/customviewcontroller.w157.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-[![](ios-code-only-images/new-file.png "Add a new class named CustomViewController")](ios-code-only-images/new-file.png#lightbox)
+[![Agregue una nueva clase denominada CustomViewController](ios-code-only-images/new-file.png)](ios-code-only-images/new-file.png#lightbox)
 
 -----
 
-La clase debe heredar de `UIViewController`, que se encuentra en el espacio de nombres `UIKit`, como se muestra a continuación:
+La clase debe heredar de `UIViewController` , que se encuentra en el `UIKit` espacio de nombres, como se muestra a continuación:
 
 ```csharp
 using System;
@@ -234,7 +234,7 @@ namespace CodeOnlyDemo
 
 ## <a name="initializing-the-view"></a>Inicializar la vista
 
-`UIViewController` contiene un método denominado `ViewDidLoad` al que se llama cuando el controlador de vistas se carga por primera vez en la memoria. Este es un lugar adecuado para la inicialización de la vista, como establecer sus propiedades.
+`UIViewController`contiene un método denominado `ViewDidLoad` al que se llama cuando el controlador de vistas se carga por primera vez en la memoria. Este es un lugar adecuado para la inicialización de la vista, como establecer sus propiedades.
 
 Por ejemplo, el código siguiente agrega un botón y un controlador de eventos para que inserte un nuevo controlador de vista en la pila de navegación cuando se presiona el botón:
 
@@ -276,7 +276,7 @@ namespace CodyOnlyDemo
 }
 ```
 
-Para cargar este controlador en la aplicación y demostrar la navegación simple, cree una nueva instancia de `CustomViewController`. Cree un nuevo controlador de navegación, pase la instancia del controlador de vista y establezca el nuevo controlador de navegación en la `RootViewController` de la ventana en el `AppDelegate` como antes:
+Para cargar este controlador en la aplicación y demostrar la navegación simple, cree una nueva instancia de `CustomViewController` . Cree un nuevo controlador de navegación, pase la instancia del controlador de vista y establezca el nuevo controlador de navegación en el de la ventana `RootViewController` de la `AppDelegate` manera anterior:
 
 ```csharp
 var cvc = new CustomViewController ();
@@ -286,13 +286,13 @@ var navController = new UINavigationController (cvc);
 Window.RootViewController = navController;
 ```
 
-Ahora, cuando se carga la aplicación, el `CustomViewController` se carga dentro de un controlador de navegación:
+Ahora, cuando se carga la aplicación, `CustomViewController` se carga dentro de un controlador de navegación:
 
- [![](ios-code-only-images/customvc.png "The CustomViewController is loaded inside a navigation controller")](ios-code-only-images/customvc.png#lightbox)
+ [![El CustomViewController se carga dentro de un controlador de navegación](ios-code-only-images/customvc.png)](ios-code-only-images/customvc.png#lightbox)
 
 Al hacer clic en el botón, se generará un nuevo _controlador de vista_ en la pila de navegación:
 
-[![](ios-code-only-images/customvca.png "A new View Controller pushed onto the navigation stack")](ios-code-only-images/customvca.png#lightbox)
+[![Un nuevo controlador de vista insertado en la pila de navegación](ios-code-only-images/customvca.png)](ios-code-only-images/customvca.png#lightbox)
 
 ## <a name="building-the-view-hierarchy"></a>Generar la jerarquía de vistas
 
@@ -304,9 +304,9 @@ Por ejemplo, vamos a editar el `CustomViewController` para crear una pantalla de
 
 ### <a name="adding-the-text-fields"></a>Agregar los campos de texto
 
-En primer lugar, quite el botón y el controlador de eventos que se agregó en la sección [inicialización de la vista](#initializing-the-view) . 
+En primer lugar, quite el botón y el controlador de eventos que se agregó en la sección [inicialización de la vista](#initializing-the-view) .
 
-Agregue un control para el nombre de usuario mediante la creación e inicialización de un `UITextField` y, a continuación, agréguelo a la jerarquía de vistas, como se muestra a continuación:
+Agregue un control para el nombre de usuario mediante la creación e inicialización de `UITextField` y, a continuación, la adición a la jerarquía de vistas, como se muestra a continuación:
 
 ```csharp
 class CustomViewController : UIViewController
@@ -334,13 +334,13 @@ class CustomViewController : UIViewController
 }
 ```
 
-Cuando creamos el `UITextField`, establecemos la propiedad `Frame` para definir su ubicación y tamaño. En iOS, la coordenada 0, 0 está en la parte superior izquierda con + x a la derecha y + y hacia abajo. Después de establecer el `Frame` junto con un par de propiedades, llamamos a `View.AddSubview` para agregar el `UITextField` a la jerarquía de vistas. Esto hace que el `usernameField` una subvista de la instancia de `UIView` a la que hace referencia la propiedad `View`. Una subvista se agrega con un orden z superior a su vista primaria, por lo que aparece delante de la vista primaria en la pantalla.
+Cuando se crea `UITextField` , se establece la `Frame` propiedad para definir su ubicación y tamaño. En iOS, la coordenada 0, 0 está en la parte superior izquierda con + x a la derecha y + y hacia abajo. Después de establecer el `Frame` junto con un par de otras propiedades, llamamos `View.AddSubview` a para agregar `UITextField` a la jerarquía de vistas. Esto crea `usernameField` una subvista de la `UIView` instancia a la que `View` hace referencia la propiedad. Una subvista se agrega con un orden z superior a su vista primaria, por lo que aparece delante de la vista primaria en la pantalla.
 
-A continuación se muestra la aplicación con el `UITextField` incluido:
+`UITextField`A continuación se muestra la aplicación con el incluido:
 
- [![](ios-code-only-images/image4.png "The application with the UITextField included")](ios-code-only-images/image4.png#lightbox)
+ [![La aplicación con el campo incluido](ios-code-only-images/image4.png)](ios-code-only-images/image4.png#lightbox)
 
-Podemos agregar un `UITextField` para la contraseña de forma similar, solo en esta ocasión establecemos la propiedad `SecureTextEntry` en true, como se muestra a continuación:
+Podemos agregar un `UITextField` para la contraseña de forma similar, pero esta vez se establece la `SecureTextEntry` propiedad en true, como se muestra a continuación:
 
 ```csharp
 public class CustomViewController : UIViewController
@@ -364,15 +364,15 @@ public class CustomViewController : UIViewController
 
 ```
 
-La configuración `SecureTextEntry = true` oculta el texto escrito en el `UITextField` por el usuario, tal como se muestra a continuación:
+La configuración `SecureTextEntry = true` oculta el texto escrito `UITextField` por el usuario, tal como se muestra a continuación:
 
- [![](ios-code-only-images/image4a.png "Setting SecureTextEntry true hides the text entered by the user")](ios-code-only-images/image4a.png#lightbox)
+ [![Establecer SecureTextEntry true oculta el texto escrito por el usuario](ios-code-only-images/image4a.png)](ios-code-only-images/image4a.png#lightbox)
 
 ### <a name="adding-the-button"></a>Agregar el botón
 
-A continuación, agregaremos un botón para que el usuario pueda enviar el nombre de usuario y la contraseña. El botón se agrega a la jerarquía de vistas como cualquier otro control, pasándolo como un argumento al método `AddSubview` de la vista primaria de nuevo.
+A continuación, agregaremos un botón para que el usuario pueda enviar el nombre de usuario y la contraseña. El botón se agrega a la jerarquía de vistas como cualquier otro control, pasándolo como un argumento al método de la vista primaria de `AddSubview` nuevo.
 
-En el código siguiente se agrega el botón y se registra un controlador de eventos para el evento `TouchUpInside`:
+En el código siguiente se agrega el botón y se registra un controlador de eventos para el `TouchUpInside` evento:
 
 ```csharp
 var submitButton = UIButton.FromType (UIButtonType.RoundedRect);
@@ -389,9 +389,9 @@ View.AddSubview(submitButton);
 
 Con esto en contexto, la pantalla de inicio de sesión aparece ahora como se muestra a continuación:
 
- [![](ios-code-only-images/image5.png "The login screen")](ios-code-only-images/image5.png#lightbox)
+ [![La pantalla de inicio de sesión](ios-code-only-images/image5.png)](ios-code-only-images/image5.png#lightbox)
 
-A diferencia de las versiones anteriores de iOS, el fondo del botón predeterminado es transparente. La modificación de la propiedad `BackgroundColor` del botón cambia:
+A diferencia de las versiones anteriores de iOS, el fondo del botón predeterminado es transparente. La modificación de la propiedad del botón `BackgroundColor` cambia:
 
 ```csharp
 submitButton.BackgroundColor = UIColor.White;
@@ -405,11 +405,11 @@ submitButton.Layer.CornerRadius = 5f;
 
 Con estos cambios, la vista tendrá el siguiente aspecto:
 
-[![](ios-code-only-images/image6.png "An example run of the view")](ios-code-only-images/image6.png#lightbox)
+[![Ejemplo de ejecución de la vista](ios-code-only-images/image6.png)](ios-code-only-images/image6.png#lightbox)
 
 ## <a name="adding-multiple-views-to-the-view-hierarchy"></a>Agregar varias vistas a la jerarquía de vistas
 
-iOS proporciona una instalación para agregar varias vistas a la jerarquía de vistas mediante `AddSubviews`.
+iOS proporciona una utilidad para agregar varias vistas a la jerarquía de vistas mediante el uso de `AddSubviews` .
 
 ```csharp
 View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton });
@@ -428,7 +428,7 @@ var loginVC = new UIViewController () { Title = "Login Success!"};
 loginVC.View.BackgroundColor = UIColor.Purple;
 ```
 
-A continuación, agregue la funcionalidad al evento `TouchUpInside`:
+A continuación, agregue la funcionalidad al `TouchUpInside` evento:
 
 ```csharp
 submitButton.TouchUpInside += (sender, e) => {
@@ -438,13 +438,13 @@ submitButton.TouchUpInside += (sender, e) => {
 
 La navegación se muestra a continuación:
 
-[![](ios-code-only-images/navigation.png "The navigation is illustrated in this chart")](ios-code-only-images/navigation.png#lightbox)
+[![La navegación se muestra en este gráfico](ios-code-only-images/navigation.png)](ios-code-only-images/navigation.png#lightbox)
 
 Tenga en cuenta que, de forma predeterminada, cuando se usa un controlador de navegación, iOS proporciona a la aplicación una barra de navegación y un botón atrás para permitirle desplazarse a través de la pila.
 
 ## <a name="iterating-through-the-view-hierarchy"></a>Recorrer en iteración la jerarquía de vistas
 
-Es posible recorrer en iteración la jerarquía de la subvista y elegir una vista concreta. Por ejemplo, para buscar cada `UIButton` y dar a ese botón un `BackgroundColor`diferente, se puede usar el siguiente fragmento de código
+Es posible recorrer en iteración la jerarquía de la subvista y elegir una vista concreta. Por ejemplo, para buscar cada `UIButton` y dar a ese botón un distinto `BackgroundColor` , se puede usar el siguiente fragmento de código
 
 ```csharp
 foreach(var subview in View.Subviews)
@@ -457,15 +457,15 @@ foreach(var subview in View.Subviews)
 }
 ```
 
-Sin embargo, esto no funcionará si la vista que se va a iterar es una `UIView` a medida que todas las vistas regresarán como un `UIView` a medida que los objetos agregados a la vista primaria heredan `UIView`.
+Sin embargo, esto no funcionará si la vista que se recorre en iteración es `UIView` como todas las vistas se devolverán como si los `UIView` objetos agregados a la propia vista primaria heredan `UIView` .
 
 ## <a name="handling-rotation"></a>Controlar la rotación
 
 Si el usuario gira el dispositivo a horizontal, los controles no se ajustan correctamente, como se muestra en la siguiente captura de pantalla:
 
-[![](ios-code-only-images/image7.png "If the user rotates the device to landscape, the controls do not resize appropriately")](ios-code-only-images/image7.png#lightbox)
+[![Si el usuario gira el dispositivo a horizontal, no se cambia el tamaño de los controles de forma adecuada.](ios-code-only-images/image7.png)](ios-code-only-images/image7.png#lightbox)
 
-Una manera de solucionarlo es establecer la propiedad `AutoresizingMask` en cada vista. En este caso, queremos que los controles se ajusten horizontalmente, por lo que estableceremos cada `AutoresizingMask`. El ejemplo siguiente es para `usernameField`, pero es necesario aplicar lo mismo a cada gadget de la jerarquía de vistas.
+Una manera de solucionarlo es establecer la `AutoresizingMask` propiedad en cada vista. En este caso, queremos que los controles se ajusten horizontalmente, por lo que estableceremos cada uno de ellos `AutoresizingMask` . El ejemplo siguiente es para `usernameField` , pero es necesario aplicar lo mismo a cada gadget de la jerarquía de vistas.
 
 ```csharp
 usernameField.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
@@ -473,17 +473,17 @@ usernameField.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
 
 Ahora, cuando giramos el dispositivo o el simulador, todo se expande para rellenar el espacio adicional, como se muestra a continuación:
 
-[![](ios-code-only-images/image8.png "All the controls stretch to fill the additional space")](ios-code-only-images/image8.png#lightbox)
+[![Todos los controles se ajustan para rellenar el espacio adicional](ios-code-only-images/image8.png)](ios-code-only-images/image8.png#lightbox)
 
 ## <a name="creating-custom-views"></a>Crear vistas personalizadas
 
-Además de utilizar controles que forman parte de UIKit, también se pueden usar vistas personalizadas. Se puede crear una vista personalizada heredando de `UIView` e invalidando `Draw`. Vamos a crear una vista personalizada y a agregarla a la jerarquía de vistas para mostrar.
+Además de utilizar controles que forman parte de UIKit, también se pueden usar vistas personalizadas. Se puede crear una vista personalizada heredando de `UIView` e invalidando `Draw` . Vamos a crear una vista personalizada y a agregarla a la jerarquía de vistas para mostrar.
 
 ### <a name="inheriting-from-uiview"></a>Heredar de UIView
 
-Lo primero que debemos hacer es crear una clase para la vista personalizada. Haremos esto mediante la plantilla de **clase** en Visual Studio para agregar una clase vacía denominada `CircleView`. La clase base debe establecerse en `UIView`, que se recuerda en el espacio de nombres `UIKit`. También necesitaremos el espacio de nombres `System.Drawing`. El resto de espacios de nombres `System.*` no se utilizará en este ejemplo, así que no dude en quitarlos.
+Lo primero que debemos hacer es crear una clase para la vista personalizada. Haremos esto mediante la plantilla de **clase** en Visual Studio para agregar una clase vacía denominada `CircleView` . La clase base debe establecerse en `UIView` , que se recuerda en el `UIKit` espacio de nombres. También necesitaremos el `System.Drawing` espacio de nombres. Los otros `System.*` espacios de nombres no se utilizarán en este ejemplo, así que no dude en quitarlos.
 
-La clase debe tener el siguiente aspecto:
+La clase debería tener el siguiente aspecto:
 
 ```csharp
 using System;
@@ -498,9 +498,9 @@ namespace CodeOnlyDemo
 
 ### <a name="drawing-in-a-uiview"></a>Dibujar en un UIView
 
-Cada `UIView` tiene un método de `Draw` al que llama el sistema cuando es necesario dibujar. nunca se debe llamar a `Draw` directamente. Lo llama el sistema durante el procesamiento de bucles de ejecución. La primera vez que se realiza el bucle de ejecución después de agregar una vista a la jerarquía de vistas, se llama a su método `Draw`. Las llamadas subsiguientes a `Draw` tienen lugar cuando se marca la vista como necesaria para dibujar llamando a `SetNeedsDisplay` o `SetNeedsDisplayInRect` en la vista.
+Cada `UIView` tiene un `Draw` método al que llama el sistema cuando es necesario dibujar. `Draw`nunca se debe llamar directamente a. Lo llama el sistema durante el procesamiento de bucles de ejecución. La primera vez que se realiza el bucle de ejecución después de agregar una vista a la jerarquía de vistas, `Draw` se llama a su método. Las llamadas subsiguientes se `Draw` producen cuando la vista se marca como que es necesario dibujar llamando a `SetNeedsDisplay` o `SetNeedsDisplayInRect` en la vista.
 
-Podemos agregar código de dibujo a nuestra vista agregando este código dentro del método `Draw` invalidado, como se muestra a continuación:
+Podemos agregar código de dibujo a nuestra vista agregando este código dentro del método invalidado `Draw` , como se muestra a continuación:
 
 ```csharp
 public override void Draw(CGRect rect)
@@ -526,7 +526,7 @@ public override void Draw(CGRect rect)
 }
 ```
 
-Como `CircleView` es un `UIView`, también se pueden establecer propiedades de `UIView`. Por ejemplo, podemos establecer el `BackgroundColor` en el constructor:
+`CircleView` `UIView` Como es, también se pueden establecer `UIView` propiedades. Por ejemplo, podemos establecer `BackgroundColor` en el constructor:
 
 ```csharp
 public CircleView()
@@ -535,15 +535,15 @@ public CircleView()
 }
 ```
 
-Para usar el `CircleView` que acabamos de crear, podemos agregarlo como una subvista a la jerarquía de vistas en un controlador existente, como hicimos con el `UILabels` y `UIButton` anterior, o bien podemos cargarlo como la vista de un nuevo controlador. Vamos a hacer lo último.
+Para usar el `CircleView` recién creado, podemos agregarlo como una subvista a la jerarquía de vistas en un controlador existente, como hicimos con `UILabels` y `UIButton` versiones anteriores, o podemos cargarlo como la vista de un nuevo controlador. Vamos a hacer lo último.
 
 ### <a name="loading-a-view"></a>Cargar una vista
 
- `UIViewController` tiene un método denominado `LoadView` al que llama el controlador para crear su vista. Este es un lugar adecuado para crear una vista y asignarla a la propiedad `View` del controlador.
+ `UIViewController`tiene un método denominado al `LoadView` que llama el controlador para crear su vista. Este es un lugar adecuado para crear una vista y asignarla a la propiedad del controlador `View` .
 
-En primer lugar, necesitamos un controlador, por lo que debe crear una nueva clase vacía denominada `CircleController`.
+En primer lugar, necesitamos un controlador, por lo que debe crear una nueva clase vacía denominada `CircleController` .
 
-En `CircleController` agregue el siguiente código para establecer el `View` en un `CircleView` (no debe llamar a la implementación de `base` en la invalidación):
+En `CircleController` , agregue el código siguiente para establecer el `View` en un `CircleView` (no debe llamar a la `base` implementación en la invalidación):
 
 ```csharp
 using UIKit;
@@ -578,17 +578,17 @@ submitButton.TouchUpInside += delegate
 
 Ahora, al ejecutar la aplicación y pulsar el botón Enviar, se muestra la nueva vista con un círculo:
 
-[![](ios-code-only-images/circles.png "The new view with a circle is displayed")](ios-code-only-images/circles.png#lightbox)
+[![Se muestra la nueva vista con un círculo](ios-code-only-images/circles.png)](ios-code-only-images/circles.png#lightbox)
 
 ## <a name="creating-a-launch-screen"></a>Crear una pantalla de inicio
 
 Se muestra una [pantalla de inicio](~/ios/app-fundamentals/images-icons/launch-screens.md) cuando la aplicación se inicia como una forma de mostrar a los usuarios de que responde. Dado que se muestra una pantalla de inicio cuando se carga la aplicación, no se puede crear en el código, ya que la aplicación todavía se está cargando en la memoria.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Al crear un proyecto de iOS en Visual Studio, se proporciona una pantalla de inicio en forma de un archivo. Xib, que se puede encontrar en la carpeta de **recursos** dentro del proyecto.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Al crear un proyecto de iOS en Visual Studio para Mac, se proporciona una pantalla de inicio en forma de un archivo de guion gráfico.
 
@@ -596,7 +596,7 @@ Al crear un proyecto de iOS en Visual Studio para Mac, se proporciona una pantal
 
 Para editarlo, haga doble clic en él y ábralo en el diseñador de iOS.
 
-Apple recomienda que se use un archivo. Xib o Storyboard para las aplicaciones que tienen como destino iOS 8 o posterior, cuando se inicia cualquier archivo en el diseñador de iOS, se usarán las clases de tamaño y el diseño automático para adaptar el diseño de modo que tenga un aspecto correcto y se muestre correctamente en todos los dispositivos. aproxima. Se puede usar una imagen de inicio estática además de un. Xib o un guion gráfico para permitir la compatibilidad con aplicaciones destinadas a versiones anteriores.
+Apple recomienda que se use un archivo. Xib o Storyboard para las aplicaciones que tienen como destino iOS 8 o posterior, cuando se inicia cualquier archivo en el diseñador de iOS, se usarán las clases de tamaño y el diseño automático para adaptar el diseño de modo que tenga un aspecto correcto y se muestre correctamente en todos los tamaños de dispositivo. Se puede usar una imagen de inicio estática además de un. Xib o un guion gráfico para permitir la compatibilidad con aplicaciones destinadas a versiones anteriores.
 
 Para obtener más información acerca de cómo crear una pantalla de inicio, consulte los documentos siguientes:
 
@@ -613,17 +613,17 @@ Se puede usar una imagen estática además de una pantalla de inicio de. Xib o S
 Esta imagen estática se puede establecer en el archivo info. plist o como un catálogo de recursos (para iOS 7) en la aplicación. Tendrá que proporcionar imágenes independientes para cada tamaño de dispositivo (320x480, 640x960, 640x1136) en el que se pueda ejecutar la aplicación. Para obtener más información sobre los tamaños de pantalla de inicio, vea la guía de [Inicio de imágenes de pantalla](~/ios/app-fundamentals/images-icons/launch-screens.md) .
 
 > [!IMPORTANT]
-> Si la aplicación no tiene ninguna pantalla de inicio, es posible que observe que no se ajusta totalmente a la pantalla. En este caso, debe asegurarse de incluir, como mínimo, una imagen de 640x1136 denominada `Default-568@2x.png` en el archivo info. plist.
+> Si la aplicación no tiene ninguna pantalla de inicio, es posible que observe que no se ajusta totalmente a la pantalla. En este caso, debe asegurarse de incluir, como mínimo, una imagen de 640x1136 con `Default-568@2x.png` el nombre info. plist.
 
 ## <a name="summary"></a>Resumen
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-En este artículo se ha explicado cómo desarrollar aplicaciones de iOS mediante programación en Visual Studio. Hemos examinado cómo crear un proyecto a partir de una plantilla de proyecto vacía, en la que se explica cómo crear y agregar un controlador de vista raíz a la ventana. Después hemos mostrado cómo usar los controles de UIKit para crear una jerarquía de vistas dentro de un controlador para desarrollar una pantalla de la aplicación. A continuación, hemos examinado cómo hacer que las vistas se diseñan correctamente en distintas orientaciones y vimos cómo crear una vista personalizada mediante la creación de subclases de `UIView`, así como la forma de cargar la vista dentro de un controlador. Por último, hemos explorado cómo agregar una pantalla de inicio a una aplicación.
+En este artículo se ha explicado cómo desarrollar aplicaciones de iOS mediante programación en Visual Studio. Hemos examinado cómo crear un proyecto a partir de una plantilla de proyecto vacía, en la que se explica cómo crear y agregar un controlador de vista raíz a la ventana. Después hemos mostrado cómo usar los controles de UIKit para crear una jerarquía de vistas dentro de un controlador para desarrollar una pantalla de la aplicación. A continuación, hemos examinado cómo hacer que las vistas se diseñan correctamente en distintas orientaciones y vimos cómo crear una vista personalizada mediante subclases, así como `UIView` Cómo cargar la vista dentro de un controlador. Por último, hemos explorado cómo agregar una pantalla de inicio a una aplicación.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-En este artículo se ha explicado cómo desarrollar aplicaciones de iOS mediante programación en Visual Studio para Mac. Hemos examinado cómo crear un proyecto a partir de una plantilla de vista única, en la que se explica cómo crear y agregar un controlador de vista raíz a la ventana. Después hemos mostrado cómo usar los controles de UIKit para crear una jerarquía de vistas dentro de un controlador para desarrollar una pantalla de la aplicación. A continuación, hemos examinado cómo hacer que las vistas se diseñan correctamente en distintas orientaciones y vimos cómo crear una vista personalizada mediante la creación de subclases de `UIView`, así como la forma de cargar la vista dentro de un controlador. Por último, hemos explorado cómo agregar una pantalla de inicio a una aplicación.
+En este artículo se ha explicado cómo desarrollar aplicaciones de iOS mediante programación en Visual Studio para Mac. Hemos examinado cómo crear un proyecto a partir de una plantilla de vista única, en la que se explica cómo crear y agregar un controlador de vista raíz a la ventana. Después hemos mostrado cómo usar los controles de UIKit para crear una jerarquía de vistas dentro de un controlador para desarrollar una pantalla de la aplicación. A continuación, hemos examinado cómo hacer que las vistas se diseñan correctamente en distintas orientaciones y vimos cómo crear una vista personalizada mediante subclases, así como `UIView` Cómo cargar la vista dentro de un controlador. Por último, hemos explorado cómo agregar una pantalla de inicio a una aplicación.
 
 -----
 

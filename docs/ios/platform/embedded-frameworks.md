@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2018
-ms.openlocfilehash: cf74c31b149c24bc6e515c0f00803a60b10d5d1c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 690aaf81ee2600bd792a36f14b81df3d15e2d21b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032533"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930278"
 ---
 # <a name="embedded-frameworks-in-xamarinios"></a>Marcos de trabajo incrustados en Xamarin. iOS
 
@@ -34,17 +34,17 @@ Hay dos maneras de consumir marcos en Xamarin. iOS:
 
 - Agregar referencias nativas en el menú contextual
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Haga clic con el botón derecho en el proyecto y busque agregar referencias nativas.
 
-![](embedded-frameworks-images/xam-native-refs.png "Select Add native references in Visual Studio for Mac")
+![Seleccione Agregar referencias nativas en Visual Studio para Mac](embedded-frameworks-images/xam-native-refs.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Haga clic con el botón derecho en el proyecto y busque agregar referencias nativas.
 
-![](embedded-frameworks-images/vs-native-refs.png "Select Add native references in Visual Studio")
+![Seleccione Agregar referencias nativas en Visual Studio](embedded-frameworks-images/vs-native-refs.png)
 
 -----
 
@@ -70,7 +70,7 @@ Las aplicaciones sin extensiones seguirán vinculando el tiempo de ejecución de
 
 El desarrollador de la aplicación puede invalidar este comportamiento; para ello, agregue lo siguiente como argumento Mtouch adicional en las opciones de compilación de iOS del proyecto:
 
-- `--mono:static`: vínculos con el tiempo de ejecución mono estáticamente.
-- `--mono:framework`: vínculos con el tiempo de ejecución mono como un marco.
+- `--mono:static`: Vínculos con el tiempo de ejecución mono estáticamente.
+- `--mono:framework`: Vínculos con el tiempo de ejecución mono como un marco.
 
-Un escenario para la vinculación con el tiempo de ejecución de mono como un marco de trabajo para las aplicaciones sin extensiones es reducir el tamaño del archivo ejecutable, para superar las restricciones de tamaño que Apple aplica en el ejecutable. Como referencia, el entorno de ejecución mono agrega aproximadamente 1.7 MB por arquitectura (a partir de Xamarin. iOS 8,12, pero su variación varía entre versiones e incluso entre aplicaciones). El marco de trabajo mono agrega aproximadamente 2,3 MB por arquitectura, lo que significa que, en el caso de una aplicación de una sola arquitectura sin extensiones, el hecho de que el vínculo de la aplicación con el tiempo de ejecución de mono sea una plataforma, reducirá el archivo ejecutable de ~ 1.7 MB, pero agregará un marco de ~ 2,3 MB, lo que resultará en un ALLtogether de aplicación de ~ 0,6 MB de mayor tamaño.
+Un escenario para la vinculación con el tiempo de ejecución de mono como un marco de trabajo para las aplicaciones sin extensiones es reducir el tamaño del archivo ejecutable, para superar las restricciones de tamaño que Apple aplica en el ejecutable. Como referencia, el entorno de ejecución mono agrega aproximadamente 1.7 MB por arquitectura (a partir de Xamarin. iOS 8,12, pero su variación varía entre versiones e incluso entre aplicaciones). El marco de trabajo mono agrega aproximadamente 2,3 MB por arquitectura, lo que significa que, en el caso de una aplicación de una sola arquitectura sin extensiones, el hecho de que el vínculo de la aplicación con el tiempo de ejecución de mono sea la de un marco de trabajo reducirá el archivo ejecutable de ~ 1.7 MB, pero agregará un marco de trabajo de ~ 2,3 MB, lo que dará lugar a

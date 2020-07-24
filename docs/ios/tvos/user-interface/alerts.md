@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: ed58694073f8d04d16cf19840a07f5210f0afb91
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 1274fc409cd20b974c44fecd87b6d1b175591710
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574072"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930174"
 ---
 # <a name="working-with-tvos-alerts-in-xamarin"></a>Trabajar con alertas de tvOS en Xamarin
 
@@ -20,7 +20,7 @@ _En este artículo se describe cómo trabajar con UIAlertController para mostrar
 
 Si necesita obtener la atención del usuario tvOS o solicitar permiso para realizar una acción destructiva (por ejemplo, eliminar un archivo), puede presentar un mensaje de alerta mediante `UIAlertViewController` :
 
-[![](alerts-images/alert01.png "An example UIAlertViewController")](alerts-images/alert01.png#lightbox)
+[![Un ejemplo de UIAlertViewController](alerts-images/alert01.png)](alerts-images/alert01.png#lightbox)
 
 Si además de mostrar un mensaje, puede agregar botones y campos de texto a una alerta para que el usuario pueda responder a las acciones y proporcionar comentarios.
 
@@ -30,7 +30,7 @@ Si además de mostrar un mensaje, puede agregar botones y campos de texto a una 
 
 Como se indicó anteriormente, las alertas se usan para obtener la atención del usuario e informarles del estado de la aplicación o solicitar comentarios. Las alertas deben presentar un título; opcionalmente, pueden tener un mensaje y uno o varios botones o campos de texto.
 
-[![](alerts-images/alert04.png "An example alert")](alerts-images/alert04.png#lightbox)
+[![Una alerta de ejemplo](alerts-images/alert04.png)](alerts-images/alert04.png#lightbox)
 
 Apple tiene las siguientes sugerencias para trabajar con alertas:
 
@@ -117,11 +117,11 @@ El `AddAction` método agrega la acción especificada a `UIAlertViewController` 
 
 Además de agregar acciones (botones) a la alerta, puede agregar campos de texto a la alerta para permitir que el usuario rellene información como los identificadores de usuario y las contraseñas:
 
-[![](alerts-images/alert02.png "Text Field in an alert")](alerts-images/alert02.png#lightbox)
+[![Campo de texto en una alerta](alerts-images/alert02.png)](alerts-images/alert02.png#lightbox)
 
 Si el usuario selecciona el campo de texto, se mostrará el teclado tvOS estándar, lo que le permitirá especificar un valor para el campo:
 
-[![](alerts-images/alert03.png "Entering text")](alerts-images/alert03.png#lightbox)
+[![Escritura de texto](alerts-images/alert03.png)](alerts-images/alert03.png#lightbox)
 
 En el código siguiente se muestra una alerta de aceptar/cancelar con un solo campo de texto para escribir un valor:
 

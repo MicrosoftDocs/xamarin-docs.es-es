@@ -10,12 +10,12 @@ ms.date: 11/25/2015
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 110b01d6482fbe3e23a772c90194b6bf40d54877
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 923f7643bd1e137192bfb80dbbc7c5d2c25b5471
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84570536"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938429"
 ---
 # <a name="xamarinforms-absolutelayout"></a>Xamarin.FormsAbsoluteLayout
 
@@ -23,7 +23,7 @@ ms.locfileid: "84570536"
 
 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)coloca y ajusta el tamaño de los elementos secundarios en proporción con su propio tamaño y posición, o con valores absolutos. Las vistas secundarias se pueden colocar y cambiar de tamaño mediante valores proporcionales o valores estáticos, y los valores proporcionales y estáticos se pueden mezclar.
 
-[![](absolute-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](absolute-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
+[![Xamarin.FormsDiseños](absolute-layout-images/layouts-sml.png)](absolute-layout-images/layouts.png#lightbox "[! Operador. Diseños de NO-LOC (Xamarin. Forms)]")
 
 En este artículo se tratarán lo siguiente:
 
@@ -53,9 +53,9 @@ Debido al modelo de posicionamiento de `AbsoluteLayout` , el diseño hace que se
 
 Nota en la siguiente captura de pantalla, el delimitador del cuadro es un punto blanco. Observe la relación entre el delimitador y el cuadro cuando se desplaza por el diseño:
 
-![](absolute-layout-images/anchor-start.png "Anchor at Start")
-![](absolute-layout-images/anchor-center.png "Anchor at Center")
-![](absolute-layout-images/anchor-end.png "Anchor at End")
+![Anclar en el anclaje inicial ](absolute-layout-images/anchor-start.png)
+ ![ en el ](absolute-layout-images/anchor-center.png)
+ ![ anclaje central al final](absolute-layout-images/anchor-end.png)
 
 ### <a name="specifying-values"></a>Especificar valores
 
@@ -109,7 +109,7 @@ Title="Absolute Layout Exploration">
 </ContentPage>
 ```
 
-![](absolute-layout-images/exploration.png "AbsoluteLayout Examples")
+![Ejemplos de AbsoluteLayout](absolute-layout-images/exploration.png)
 
 Tenga en cuenta lo siguiente:
 
@@ -275,7 +275,7 @@ Title="AbsoluteLayout">
 
 El código anterior da como resultado el siguiente diseño:
 
-![](absolute-layout-images/abs.png "Complex AbsoluteLayout")
+![AbsoluteLayout complejos](absolute-layout-images/abs.png)
 
 Observe que `AbsoluteLayout` los elementos están anidados porque, en algunos casos, el anidamiento de diseños puede ser más fácil que presentar todos los elementos dentro del mismo diseño.
 

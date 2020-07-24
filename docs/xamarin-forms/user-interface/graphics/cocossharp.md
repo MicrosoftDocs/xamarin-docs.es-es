@@ -10,12 +10,12 @@ ms.date: 05/03/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a3183997eb229fd3548a1afeccf82670cf651a71
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 31b82586b47ead1a851000d59c8271deec063020
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84565309"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933788"
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Usar CocosSharp enXamarin.Forms
 
@@ -59,11 +59,11 @@ El paquete NuGet CocosSharp. Forms incluye la `CocosSharpView` clase, que se usa
 Agregue los **CocosSharp. Forms** NuGet y **CocosSharp** también se agregarán automáticamente.
 Para ello, haga clic con el botón derecho en la carpeta **paquetes** en el proyecto de biblioteca de .net Standard y seleccione **agregar paquetes.**... Escriba el término de búsqueda **CocosSharp. Forms**, seleccione **CocosSharp para Xamarin.Forms **y, a continuación, haga clic en **Agregar paquete**.
 
-![](cocossharp-images/image1.png "Add Packages Dialog")
+![Cuadro de diálogo Agregar paquetes](cocossharp-images/image1.png)
 
 Los paquetes NuGet **CocosSharp** y **CocosSharp. Forms** se agregarán al proyecto:
 
-![](cocossharp-images/image2.png "Packages Folder")
+![Carpeta de paquetes](cocossharp-images/image2.png)
 
 Repita los pasos anteriores para los proyectos específicos de la plataforma (como iOS y Android).
 
@@ -129,7 +129,7 @@ public HomePage ()
 
 En iOS, `HomePage` aparece como se muestra en la siguiente imagen:
 
-![](cocossharp-images/image3.png "HomePage Screenshot")
+![Captura de pantalla de página principal](cocossharp-images/image3.png)
 
 ### <a name="2-adding-a-cocossharpview"></a>2. agregar CocosSharpView
 
@@ -181,7 +181,7 @@ La `CCScene` clase es la raíz visual de toda la representación de CocosSharp. 
 
 El siguiente gráfico puede ayudarle a visualizar una jerarquía de CocosSharp típica:
 
-![](cocossharp-images/image4.png "Typical CocosSharp Hierarchy")
+![Jerarquía de CocosSharp típica](cocossharp-images/image4.png)
 
 Solo una `CCScene` puede estar activa al mismo tiempo. La mayoría de los juegos usan varias `CCLayer` instancias para ordenar el contenido, pero nuestra aplicación solo usa una. Del mismo modo, la mayoría de los juegos usan varios objetos visuales, pero solo tendremos uno en nuestra aplicación. Puede encontrar una explicación más detallada sobre la jerarquía visual CocosSharp en el [tutorial de BouncingGame](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/bouncing-game.md).
 
@@ -207,7 +207,7 @@ GameScene gameScene;
 
 Ahora podemos compilar el proyecto y ejecutarlo para ver la ejecución de CocosSharp. No hemos agregado nada a nuestro `GameScene,` , por lo que la mitad superior de la página es negra, el color predeterminado de una escena de CocosSharp:
 
-![](cocossharp-images/image5.png "Blank GameScene")
+![GameScene en blanco](cocossharp-images/image5.png)
 
 ### <a name="4-adding-a-circle"></a>4. agregar un círculo
 
@@ -239,7 +239,7 @@ public class GameScene : CCScene
 
 Al ejecutar la aplicación ahora se muestra un círculo en el lado izquierdo del área de presentación de CocosSharp:
 
-![](cocossharp-images/image6.png "Circle in GameScene")
+![Círculo en GameScene](cocossharp-images/image6.png)
 
 #### <a name="understanding-designresolution"></a>Descripción de DesignResolution
 
@@ -247,7 +247,7 @@ Ahora que se muestra un objeto visual CocosSharp, podemos investigar la `DesignR
 
 `DesignResolution`Representa el ancho y el alto del área CocosSharp para colocar y ajustar el tamaño de los objetos. La resolución real del área se mide en *píxeles* mientras `DesignResolution` se mide en *unidades*universales. En el diagrama siguiente se muestra la resolución de varias partes de la vista, tal como se muestra en un iPhone 5 con una resolución de pantalla de 640x1136 píxeles:
 
-![](cocossharp-images/image7.png "iPhone 5s Design Resolution")
+![Resolución de diseño de iPhone 5 s](cocossharp-images/image7.png)
 
 El diagrama anterior muestra las dimensiones de píxeles en el exterior de la pantalla en texto en negro. Las unidades se muestran en el interior del diagrama en texto en blanco. Estos son algunos detalles importantes mostrados anteriormente:
 
@@ -313,7 +313,7 @@ void CreateBottomHalf(Grid grid)
 
 El círculo CocosSharp ahora se mueve en respuesta a los clics. También podemos ver claramente los límites del lienzo CocosSharp moviendo el círculo lo suficientemente lejos hacia la izquierda o la derecha:
 
-![](cocossharp-images/image8.png "GameScene with Moving Circle")
+![GameScene con círculo en movimiento](cocossharp-images/image8.png)
 
 ## <a name="summary"></a>Resumen
 

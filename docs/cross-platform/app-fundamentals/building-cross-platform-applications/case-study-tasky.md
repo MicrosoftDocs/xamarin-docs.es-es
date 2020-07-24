@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 71d5ed3512980086d244acc5a604d7b33a5dd77c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 87ba471dad102059788695f3fe50633bc1a3de0c
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571355"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930187"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>Caso práctico de aplicación multiplataforma: tarea
 
@@ -42,7 +42,7 @@ Debe considerar el uso de características específicas de la plataforma.  ¿Pue
 Comience con un diseño de alto nivel que se puede implementar en las plataformas de destino. Tenga cuidado de tener en cuenta las restricciones de interfaz de usuario de Platform-identificación específica. Por ejemplo, `TabBarController` en iOS puede mostrar más de cinco botones, mientras que el Windows Phone equivalente puede mostrar hasta cuatro.
 Dibuje el flujo de pantalla con la herramienta de su elección (papel trabajo).
 
- [![](case-study-tasky-images/taskydesign.png "Draw the screen-flow using the tool of your choice paper works")](case-study-tasky-images/taskydesign.png#lightbox)
+ [![Dibuje el flujo de pantalla con la herramienta de su papel de elección](case-study-tasky-images/taskydesign.png)](case-study-tasky-images/taskydesign.png#lightbox)
 
  <a name="Data_Model"></a>
 
@@ -79,7 +79,7 @@ Una vez que se haya acordado el diseño de la aplicación, tenga en cuenta cómo
 - **Código común** : un proyecto común que contiene código reutilizable para almacenar los datos de la tarea. exponga una clase de modelo y una API para administrar el guardado y la carga de datos.
 - **Código específico** de la plataforma: proyectos específicos de la plataforma que implementan una interfaz de usuario nativa para cada sistema operativo, mediante el uso del código común como "back-end".
 
-[![](case-study-tasky-images/taskypro-architecture.png "Platform-specific projects implement a native UI for each operating system, utilizing the common code as the back end")](case-study-tasky-images/taskypro-architecture.png#lightbox)
+[![Los proyectos específicos de la plataforma implementan una interfaz de usuario nativa para cada sistema operativo, utilizando el código común como el back-end.](case-study-tasky-images/taskypro-architecture.png)](case-study-tasky-images/taskypro-architecture.png#lightbox)
 
 Estas dos partes se describen en las secciones siguientes.
 
@@ -93,11 +93,11 @@ Todo el código común, incluida la capa de acceso a datos, el código de base d
 
 El proyecto PCL completo se ilustra a continuación. Todo el código de la biblioteca portable es compatible con cada plataforma de destino. Cuando se implementa, cada aplicación nativa hará referencia a esa biblioteca.
 
-![](case-study-tasky-images/portable-project.png "When deployed, each native app will reference that library")
+![Cuando se implementa, cada aplicación nativa hará referencia a esa biblioteca.](case-study-tasky-images/portable-project.png)
 
 En el diagrama de clases siguiente se muestran las clases agrupadas por capa. La `SQLiteConnection` clase es código reutilizable del paquete SQLite-net. El resto de las clases son código personalizado para tareas. Las `TaskItemManager` `TaskItem` clases y representan la API que se expone a las aplicaciones específicas de la plataforma.
 
- [![](case-study-tasky-images/classdiagram-core.png "The TaskItemManager and TaskItem classes represent the API that is exposed to the platform-specific applications")](case-study-tasky-images/classdiagram-core.png#lightbox)
+ [![Las clases TaskItemManager y TaskItem representan la API que se expone a las aplicaciones específicas de la plataforma.](case-study-tasky-images/classdiagram-core.png)](case-study-tasky-images/classdiagram-core.png#lightbox)
 
 El uso de espacios de nombres para separar las capas ayuda a administrar las referencias entre cada capa. Los proyectos específicos de la plataforma solo deben incluir una `using` instrucción para el nivel de negocio. La capa de acceso a datos y el nivel de datos se deben encapsular mediante la API expuesta por `TaskItemManager` en el nivel de negocio.
 
@@ -255,11 +255,11 @@ En las secciones restantes se describen los detalles de implementación específ
 
 Solo hay unas cuantas clases necesarias para implementar la aplicación de tareas de iOS mediante el proyecto de PCL común para almacenar y recuperar datos. A continuación se muestra el proyecto de Xamarin. iOS completo de iOS:
 
- ![](case-study-tasky-images/taskyios-solution.png "iOS project is shown here")
+ ![el proyecto de iOS se muestra aquí](case-study-tasky-images/taskyios-solution.png)
 
 Las clases se muestran en este diagrama, agrupadas en capas.
 
- [![](case-study-tasky-images/classdiagram-android.png "The classes are shown in this diagram, grouped into layers")](case-study-tasky-images/classdiagram-android.png#lightbox)
+ [![Las clases se muestran en este diagrama, agrupadas en capas.](case-study-tasky-images/classdiagram-android.png)](case-study-tasky-images/classdiagram-android.png#lightbox)
 
  <a name="References"></a>
 
@@ -270,7 +270,7 @@ La aplicación de iOS hace referencia a las bibliotecas de SDK específicas de l
 También debe hacer referencia al `TaskyPortableLibrary` proyecto PCL.
 Aquí se muestra la lista de referencias:
 
- ![](case-study-tasky-images/taskyios-references.png "The references list is shown here")
+ ![Aquí se muestra la lista de referencias.](case-study-tasky-images/taskyios-references.png)
 
 El nivel de aplicación y la capa de la interfaz de usuario se implementan en este proyecto mediante estas referencias.
 
@@ -328,7 +328,7 @@ La capa de interfaz de usuario consta de las siguientes clases:
 
 La pantalla principal es una `MonoTouch.Dialog` pantalla que muestra una lista de tareas de la base de datos SQLite. Hereda de `DialogViewController` e implementa código para establecer `Root` que contenga una colección de `TaskItem` objetos para su presentación.
 
- [![](case-study-tasky-images/ios-taskylist.png "It inherits from DialogViewController and implements code to set the Root to contain a collection of TaskItem objects for display")](case-study-tasky-images/ios-taskylist.png#lightbox)
+ [![Hereda de DialogViewController e implementa código para establecer la raíz para que contenga una colección de objetos TaskItem para su presentación](case-study-tasky-images/ios-taskylist.png)](case-study-tasky-images/ios-taskylist.png#lightbox)
 
 Los dos métodos principales relacionados con la visualización e interacción con la lista de tareas son:
 
@@ -345,7 +345,7 @@ Taskly usa `MonoTouch.Dialog` la API de reflexión para mostrar la pantalla, por
 
 En esta captura de pantalla se muestra una pantalla vacía que muestra el `Entry` atributo que establece el texto de marca de agua en los campos **nombre** y **notas** :
 
- [![](case-study-tasky-images/ios-taskydetail.png "This screenshot shows an empty screen that demonstrates the Entry attribute setting the watermark text in the Name and Notes fields")](case-study-tasky-images/ios-taskydetail.png#lightbox)
+ [![En esta captura de pantalla se muestra una pantalla vacía que muestra el atributo de entrada que establece el texto de marca de agua en los campos nombre y notas.](case-study-tasky-images/ios-taskydetail.png)](case-study-tasky-images/ios-taskydetail.png#lightbox)
 
 La funcionalidad de la pantalla de detalles de la **tarea** (como guardar o eliminar una tarea) debe implementarse en la `HomeScreen` clase, porque es donde se `MonoTouch.Dialog.BindingContext` crea. Los `HomeScreen` métodos siguientes admiten la pantalla de detalles de la tarea:
 
@@ -359,11 +359,11 @@ La funcionalidad de la pantalla de detalles de la **tarea** (como guardar o elim
 
 El proyecto de Xamarin. Android completo se muestra a continuación:
 
- ![](case-study-tasky-images/taskyandroid-solution.png "Android project is pictured here")
+ ![El proyecto de Android se muestra aquí](case-study-tasky-images/taskyandroid-solution.png)
 
 El diagrama de clases, con las clases agrupadas por capa:
 
- [![](case-study-tasky-images/classdiagram-android.png "The class diagram, with classes grouped by layer")](case-study-tasky-images/classdiagram-android.png#lightbox)
+ [![El diagrama de clases, con clases agrupadas por nivel](case-study-tasky-images/classdiagram-android.png)](case-study-tasky-images/classdiagram-android.png#lightbox)
 
  <a name="References"></a>
 
@@ -373,7 +373,7 @@ El proyecto de aplicación de Android debe hacer referencia al ensamblado de Xam
 
 También debe hacer referencia al proyecto PCL (por ejemplo, TaskyPortableLibrary) para tener acceso a los datos comunes y al código de nivel de negocio.
 
- ![](case-study-tasky-images/taskyandroid-references.png "TaskyPortableLibrary to access the common data and business layer code")
+ ![TaskyPortableLibrary para tener acceso a los datos comunes y al código de nivel de negocio](case-study-tasky-images/taskyandroid-references.png)
 
  <a name="Application_Layer_(AL)"></a>
 
@@ -399,7 +399,7 @@ La capa de interfaz de usuario de la aplicación Android es una combinación de 
 
 La pantalla principal está formada por una subclase de actividad `HomeScreen` y el `HomeScreen.axml` archivo que define el diseño (posición del botón y de la lista de tareas). La pantalla tiene el siguiente aspecto:
 
- [![](case-study-tasky-images/android-taskylist.png "The screen looks like this")](case-study-tasky-images/android-taskylist.png#lightbox)
+ [![La pantalla tiene el siguiente aspecto](case-study-tasky-images/android-taskylist.png)](case-study-tasky-images/android-taskylist.png#lightbox)
 
 El código de la pantalla principal define los controladores para hacer clic en el botón y hacer clic en los elementos de la lista, así como rellenar la lista en el `OnResume` método (de modo que refleje los cambios realizados en la pantalla de detalles de la tarea). Los datos se cargan con la capa de negocio `TaskItemManager` y `TaskListAdapter` desde el nivel de aplicación.
 
@@ -409,7 +409,7 @@ El código de la pantalla principal define los controladores para hacer clic en 
 
 La pantalla detalles de tarea también consta de una `Activity` subclase y un archivo de diseño AXML. El diseño determina la ubicación de los controles de entrada y la clase de C# define el comportamiento para cargar y guardar `TaskItem` objetos.
 
- [![](case-study-tasky-images/android-taskydetail.png "The class defines the behavior to load and save TaskItem objects")](case-study-tasky-images/android-taskydetail.png#lightbox)
+ [![La clase define el comportamiento para cargar y guardar objetos TaskItem](case-study-tasky-images/android-taskydetail.png)](case-study-tasky-images/android-taskydetail.png#lightbox)
 
 Todas las referencias a la biblioteca PCL se encuentran a través de la `TaskItemManager` clase.
 
@@ -418,11 +418,11 @@ Todas las referencias a la biblioteca PCL se encuentran a través de la `TaskIte
 ## <a name="windows-phone-app"></a>Windows Phone aplicación
 El proyecto Windows Phone completo:
 
- ![](case-study-tasky-images/taskywp7-solution.png "Windows Phone App The complete Windows Phone project")
+ ![Windows Phone aplicación del proyecto de Windows Phone completo](case-study-tasky-images/taskywp7-solution.png)
 
 En el diagrama siguiente se muestran las clases agrupadas en capas:
 
- [![](case-study-tasky-images/classdiagram-wp7.png "This diagram presents the classes grouped into layers")](case-study-tasky-images/classdiagram-wp7.png#lightbox)
+ [![En este diagrama se presentan las clases agrupadas en capas.](case-study-tasky-images/classdiagram-wp7.png)](case-study-tasky-images/classdiagram-wp7.png#lightbox)
 
  <a name="References"></a>
 
@@ -432,7 +432,7 @@ El proyecto específico de la plataforma debe hacer referencia a las bibliotecas
 
 También debe hacer referencia al proyecto PCL (por ejemplo, `TaskyPortableLibrary`) para que use la `TaskItem` clase y la base de datos.
 
- ![](case-study-tasky-images/taskywp7-references.png "TaskyPortableLibrary to utilize the TaskItem class and database")
+ ![TaskyPortableLibrary para el uso de la clase TaskItem y la base de datos](case-study-tasky-images/taskywp7-references.png)
 
  <a name="Application_Layer_(AL)"></a>
 
@@ -479,7 +479,7 @@ Las aplicaciones resultantes tienen este aspecto en cada plataforma:
 
 La aplicación usa el diseño de la interfaz de usuario estándar de iOS, como el botón ' Agregar ' que se coloca en la barra de navegación y el icono de **más (+)** integrado. También usa el comportamiento predeterminado del `UINavigationController` botón ' atrás ' y admite ' deslizar a eliminar ' en la tabla.
 
- [![](case-study-tasky-images/ios-taskylist.png "También usa el comportamiento predeterminado del botón atrás UINavigationController y admite la función de deslizar para eliminar en la tabla.")](case-study-tasky-images/ios-taskylist.png#lightbox) [![](case-study-tasky-images/ios-taskylist.png "También usa el comportamiento predeterminado del botón atrás UINavigationController y admite la función de deslizar para eliminar en la tabla.")](case-study-tasky-images/ios-taskylist.png#lightbox)
+ [ ![ También usa el comportamiento predeterminado del botón atrás UINavigationController y admite la función de deslizar para eliminar en la tabla](case-study-tasky-images/ios-taskylist.png)](case-study-tasky-images/ios-taskylist.png#lightbox) [ ![ también usa el comportamiento del botón atrás predeterminado UINavigationController y admite la función de deslizar para eliminar en la tabla](case-study-tasky-images/ios-taskylist.png)](case-study-tasky-images/ios-taskylist.png#lightbox) .
 
  <a name="Android"></a>
 
@@ -487,7 +487,7 @@ La aplicación usa el diseño de la interfaz de usuario estándar de iOS, como e
 
 La aplicación Android usa controles integrados, incluido el diseño integrado para las filas que requieren un "tick" mostrado. El comportamiento de back-out del hardware o del sistema se admite además de un botón atrás en pantalla.
 
- [![](case-study-tasky-images/android-taskylist.png "The hardware/system back behavior is supported in addition to an on-screen back button")](case-study-tasky-images/android-taskylist.png#lightbox)[![](case-study-tasky-images/android-taskylist.png "The hardware/system back behavior is supported in addition to an on-screen back button")](case-study-tasky-images/android-taskylist.png#lightbox)
+ [ ![ El comportamiento de back-out del hardware o del sistema se admite además de un botón atrás en pantalla](case-study-tasky-images/android-taskylist.png)](case-study-tasky-images/android-taskylist.png#lightbox). el comportamiento de back-out del[ ![ hardware y del sistema se admite además de un botón atrás en pantalla](case-study-tasky-images/android-taskylist.png)](case-study-tasky-images/android-taskylist.png#lightbox) .
 
  <a name="Windows_Phone"></a>
 
@@ -495,7 +495,7 @@ La aplicación Android usa controles integrados, incluido el diseño integrado p
 
 La aplicación Windows Phone usa el diseño estándar, rellenando la barra de la aplicación en la parte inferior de la pantalla en lugar de una barra de navegación en la parte superior.
 
- [![](case-study-tasky-images/wp-taskylist.png "La aplicación Windows Phone usa el diseño estándar, rellenando la barra de la aplicación en la parte inferior de la pantalla en lugar de una barra de navegación en la parte superior")](case-study-tasky-images/wp-taskylist.png#lightbox) [![](case-study-tasky-images/wp-taskylist.png "La aplicación Windows Phone usa el diseño estándar, rellenando la barra de la aplicación en la parte inferior de la pantalla en lugar de una barra de navegación en la parte superior")](case-study-tasky-images/wp-taskylist.png#lightbox)
+ [ ![ La aplicación Windows Phone usa el diseño estándar, rellenando la barra de la aplicación en la parte inferior de la pantalla, en lugar de una barra de navegación en la parte superior](case-study-tasky-images/wp-taskylist.png)](case-study-tasky-images/wp-taskylist.png#lightbox) [ ![ , la aplicación Windows Phone usa el diseño estándar, rellenando la barra de la aplicación en la parte inferior de la pantalla en lugar de una barra de navegación en la parte superior](case-study-tasky-images/wp-taskylist.png)](case-study-tasky-images/wp-taskylist.png#lightbox)
 
  <a name="Summary"></a>
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: ac746c8489dae600bc2d8c6d1752d8fb10d4e016
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 84e21378a8ac7b61bc1a389352eb53b75881592a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84564724"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929654"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Gráficos principales en Xamarin. iOS
 
@@ -133,7 +133,7 @@ Una vez creada la ruta de acceso, se agrega al contexto de gráficos para que ll
 
 La vista resultante se muestra a continuación:
 
- ![](core-graphics-images/00-bluetriangle.png "The sample output triangle")
+ ![Triángulo de salida de ejemplo](core-graphics-images/00-bluetriangle.png)
 
 ## <a name="creating-gradient-fills"></a>Crear relleno de degradado
 
@@ -167,7 +167,7 @@ Al establecer la ruta de acceso actual como el trazado de recorte, se restringe 
 
 Estos cambios producen un relleno de degradado como se muestra a continuación:
 
- ![](core-graphics-images/01-gradient-fill.png "The example with a gradient fill")
+ ![El ejemplo con un relleno de degradado](core-graphics-images/01-gradient-fill.png)
 
 ## <a name="modifying-line-patterns"></a>Modificar patrones de línea
 
@@ -180,7 +180,7 @@ g.SetLineDash (0, new nfloat[] { 10, 4 * (nfloat)Math.PI });
 
 Al agregar este código antes de cualquier operación de dibujo, se produce una longitud de trazos de guiones de 10 unidades, con 4 unidades de espaciado entre guiones, como se muestra a continuación:
 
- ![](core-graphics-images/02-dashed-stroke.png "Adding this code before any drawing operations results in dashed strokes")
+ ![Agregar este código antes de que las operaciones de dibujo resulten en trazos discontinuos](core-graphics-images/02-dashed-stroke.png)
 
 Tenga en cuenta que al usar el Unified API en Xamarin. iOS, el tipo de matriz debe ser `nfloat` y también debe convertirse explícitamente a Math. PI.
 
@@ -203,7 +203,7 @@ public override void Draw (CGRect rect)
 
 Sin embargo, esto produce una imagen dibujada al revés, como se muestra a continuación:
 
- ![](core-graphics-images/03-upside-down-monkey.png "An image drawn upside down")
+ ![Una imagen dibujada al revés](core-graphics-images/03-upside-down-monkey.png)
 
 El motivo es que el origen de los gráficos principales del dibujo de la imagen está en la parte inferior izquierda, mientras que la vista tiene su origen en la parte superior izquierda. Por lo tanto, para mostrar la imagen correctamente, es necesario modificar el origen, lo que se puede lograr modificando la *matriz de transformación actual* *(CTM)*. CTM define dónde se encuentran los puntos en vivo, también conocido como *espacio de usuario*. Si se invierte el valor de CTM en la dirección y y se desplaza por el alto de los límites en la dirección y negativa, puede voltear la imagen.
 
@@ -225,7 +225,7 @@ public override void Draw (CGRect rect)
 
 La imagen resultante se muestra a continuación verticalmente:
 
- ![](core-graphics-images/04-upright-monkey.png "The sample image displayed upright")
+ ![La imagen de ejemplo mostrada verticalmente](core-graphics-images/04-upright-monkey.png)
 
 > [!IMPORTANT]
 > Los cambios en el contexto de gráficos se aplican a todas las operaciones de dibujo posteriores. Por lo tanto, cuando se transforma el CTM, afectará a cualquier dibujo adicional. Por ejemplo, si dibujó el triángulo después de la transformación CTM, aparecería al revés.
@@ -264,7 +264,7 @@ Como puede ver, establecer el estado de los gráficos para el dibujo de texto es
 
 El texto resultante se muestra con la imagen, como se muestra a continuación:
 
- ![](core-graphics-images/05-text-on-image.png "The resulting text is displayed with the image")
+ ![El texto resultante se muestra con la imagen.](core-graphics-images/05-text-on-image.png)
 
 ## <a name="memory-backed-images"></a>Imágenes con copia de seguridad de memoria
 

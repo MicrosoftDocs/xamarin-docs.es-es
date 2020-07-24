@@ -10,12 +10,12 @@ ms.date: 03/23/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 38a895c9064fc012aec35b37eac78bb16ff009a9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1e5f3b6cb84081f5e167d9afe7e7f2f2dffce247
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131513"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938117"
 ---
 # <a name="listview-data-sources"></a>Orígenes de datos de ListView
 
@@ -63,7 +63,7 @@ listView.ItemsSource = new string[]
 };
 ```
 
-![](data-and-databinding-images/itemssource-simple.png "ListView Displaying List of Strings")
+![ListView que muestra la lista de cadenas](data-and-databinding-images/itemssource-simple.png)
 
 Este enfoque rellenará `ListView` con una lista de cadenas. De forma predeterminada, `ListView` llamará a `ToString` y mostrará el resultado en una `TextCell` para cada fila. Para personalizar el modo en que se muestran los datos, vea apariencia de la [celda](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md).
 
@@ -144,7 +144,7 @@ El siguiente fragmento de código muestra un `ListView` enlazado a una lista de 
 
 En este ejemplo de XAML se define un `ContentPage` que contiene un `ListView` . El origen de datos del control `ListView` se establece mediante el atributo `ItemsSource`. El diseño de cada fila de `ItemsSource` se define dentro del elemento `ListView.ItemTemplate`. Esto da como resultado las siguientes capturas de pantallas:
 
-![](data-and-databinding-images/bound-data.png "ListView using Data Binding")
+![ListView mediante enlace de datos](data-and-databinding-images/bound-data.png)
 
 > [!WARNING]
 > `ObservableCollection` no es un subproceso seguro. `ObservableCollection`La modificación de hace que las actualizaciones de la interfaz de usuario se realicen en el mismo subproceso que realizó las modificaciones. Si el subproceso no es el subproceso de la interfaz de usuario principal, producirá una excepción.

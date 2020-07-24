@@ -10,12 +10,12 @@ ms.date: 09/26/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 02749c9f8f55427bb1742e78464bbc003f1f7358
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 36f4946ffc6d5a42e1997f389501f921449d0259
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136180"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937597"
 ---
 # <a name="xamarinforms-editor"></a>Xamarin.Forms Editor
 
@@ -271,7 +271,7 @@ En XAML:
 </ContentPage>
 ```
 
-![](editor-images/textbackgroundcolor.png "Editor with BackgroundColor Example")
+![Editor con el ejemplo de BackgroundColor](editor-images/textbackgroundcolor.png)
 
 Asegúrese de que los colores de fondo y de texto que elija se pueden usar en cada plataforma y no oculte ningún texto de marcador de posición.
 
@@ -285,7 +285,7 @@ Asegúrese de que los colores de fondo y de texto que elija se pueden usar en ca
 > [!NOTE]
 > La [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase, de la que [`Entry`](xref:Xamarin.Forms.Entry) hereda, también tiene [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused) eventos y.
 
-### <a name="completed"></a>Completado
+### <a name="completed"></a>Completed
 
 El `Completed` evento se utiliza para reaccionar a la finalización de una interacción con `Editor` . `Completed`se genera cuando el usuario finaliza la entrada con un campo escribiendo la tecla RETURN en el teclado (o presionando la tecla TAB en UWP). El controlador del evento es un controlador de eventos genérico que toma el remitente y `EventArgs` :
 
@@ -347,7 +347,7 @@ void EditorTextChanged (object sender, TextChangedEventArgs e)
 
 Se puede suscribir el evento completado en código y XAML:
 
-En el código:
+Mediante código:
 
 ```csharp
 public partial class EditorPage : ContentPage

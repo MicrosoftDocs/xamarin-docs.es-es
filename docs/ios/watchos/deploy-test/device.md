@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: cbbf8194505e9caa09587471020026d495f9f99b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: a1ff70349ca7d7b97431b2e3d07aa4c8028c38c0
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569715"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996362"
 ---
 # <a name="testing-on-apple-watch-devices"></a>Pruebas en dispositivos Apple Watch
 
@@ -28,19 +28,19 @@ Después de haber seguido los [pasos de implementación](~/ios/watchos/deploy-te
 
 Probar las aplicaciones de iOS en un iPhone o iPad real siempre requiere que el dispositivo esté registrado en el centro de desarrollo. La lista de dispositivos tiene el siguiente aspecto (haga clic en el signo más **+** para agregar un nuevo dispositivo):
 
-![](device-images/devices-sml.png "The device list looks like this")
+![La lista de dispositivos tiene el siguiente aspecto](device-images/devices-sml.png)
 
 Los relojes no son diferentes; ahora debe agregar el dispositivo Apple Watch antes de implementar las aplicaciones en él. Busque el UDID del reloj con **Xcode** (lista de**dispositivos de Windows >** ). Cuando se conecte el teléfono emparejado, también se mostrará la información del reloj:
 
-[![](device-images/xcode-devices-sml.png "Paired Watch Information")](device-images/xcode-devices.png#lightbox)
+[![Información de inspección emparejada](device-images/xcode-devices-sml.png)](device-images/xcode-devices.png#lightbox)
 
 Cuando conozca el UDID del reloj, agréguelo a la lista de dispositivos en el centro de desarrollo:
 
-![](device-images/devices-watch-sml.png "The Watch's UDID in the device list")
+![UDID del reloj en la lista de dispositivos](device-images/devices-watch-sml.png)
 
 Una vez que se ha agregado el dispositivo de inspección, asegúrese de que está seleccionado en cualquier perfil de aprovisionamiento nuevo o existente o en los perfiles de aprovisionamiento ad hoc que cree:
 
-![](device-images/devices-provisioning.png "Available device list")
+![Lista de dispositivos disponibles](device-images/devices-provisioning.png)
 
 No olvide Si edita un perfil de aprovisionamiento existente para descargarlo y volver a instalarlo.
 
@@ -52,17 +52,17 @@ Para compilar para realizar pruebas en el dispositivo, debe crear un **Perfil de
 
 Si tiene un identificador de aplicación comodín, *solo se necesitará un perfil de aprovisionamiento*; pero si tiene un identificador de aplicación independiente para cada proyecto, necesitará un perfil de aprovisionamiento para cada identificador de aplicación:
 
-![](device-images/provisioningprofile-development.png "The Development Provisioning Profile")
+![El perfil de aprovisionamiento de desarrollo](device-images/provisioningprofile-development.png)
 
 Una vez que haya creado los tres perfiles, aparecerán en la lista. No olvide descargar e instalar cada uno de ellos:
 
-![](device-images/provisioningprofiles.png "The available Development Provisioning Profiles")
+![Los perfiles de aprovisionamiento de desarrollo disponibles](device-images/provisioningprofiles.png)
 
 Puede comprobar el perfil de aprovisionamiento en las opciones del **proyecto** seleccionando la pantalla **compilar > la firma del lote de iOS** y seleccionando la configuración de **versión** o **depuración de iPhone** .
 
 La lista de perfiles de **aprovisionamiento** mostrará todos los perfiles coincidentes. debería ver los perfiles coincidentes que ha creado en esta lista desplegable:
 
-![](device-images/options-selectprofile.png "The Provisioning Profile list")
+![La lista de perfiles de aprovisionamiento](device-images/options-selectprofile.png)
 
 <a name="testing"></a>
 
@@ -97,7 +97,7 @@ Esto puede ocurrir al compilar en modo de depuración para implementar en un dis
 
 Para solucionar *temporalmente* este problema, deshabilite las **compilaciones incrementales** en las opciones de proyecto de extensión de inspección > ventana compilar compilación de **> watchos** :
 
-[![](device-images/disable-incremental-sml.png "The Incremental Builds checkbox")](device-images/disable-incremental.png#lightbox)
+[![Casilla compilaciones incrementales](device-images/disable-incremental-sml.png)](device-images/disable-incremental.png#lightbox)
 
 Esto se corregirá en una versión futura, después de la cual se pueden volver a habilitar las compilaciones incrementales para aprovechar las ventajas de tiempos de compilación más rápidos.
 
@@ -112,7 +112,7 @@ Failed to install [APPNAME]
 Invalid executable/Application Verification Failed
 ```
 
-![](device-images/invalid-application-executable.png "Invalid Application Executable alert")
+![Alerta ejecutable de aplicación no válida](device-images/invalid-application-executable.png)
 
 Si estos mensajes aparecen *en la pantalla de inspección* una vez que la aplicación ha intentado instalarse, podría haber un par de problemas:
 

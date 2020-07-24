@@ -10,12 +10,12 @@ ms.date: 04/27/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 18cdeccbdff86a6b20aab4b33db259f1f06ee096
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4cad46bdee1b49c316947bc56bdb69a3b9e9a270
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139599"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938221"
 ---
 # <a name="native-views-in-c"></a>Vistas nativas en C\#
 
@@ -29,7 +29,7 @@ Cualquier Xamarin.Forms control que permita `Content` establecer o que tenga una
 
 En las siguientes capturas de pantallas se muestran vistas específicas de la plataforma que se han agregado a un Xamarin.Forms [`StackLayout`](xref:Xamarin.Forms.StackLayout) :
 
-[![](code-images/screenshots-sml.png "StackLayout Containing Platform-Specific Views")](code-images/screenshots.png#lightbox "StackLayout Containing Platform-Specific Views")
+[![StackLayout que contiene vistas específicas de la plataforma](code-images/screenshots-sml.png)](code-images/screenshots.png#lightbox "StackLayout que contiene vistas específicas de la plataforma")
 
 La capacidad de agregar vistas específicas de la plataforma a un Xamarin.Forms diseño está habilitada por dos métodos de extensión en cada plataforma:
 
@@ -132,7 +132,7 @@ stackLayout.Children.Add (customControl);
 
 Sin embargo, dado que la `CustomControl.SizeThatFits` invalidación siempre devuelve un alto de 150, la vista se mostrará con un espacio vacío por encima y por debajo, tal como se muestra en la siguiente captura de pantalla:
 
-![](code-images/ios-bad-measurement.png "iOS CustomControl with Bad SizeThatFits Implementation")
+![CustomControl de iOS con implementación de SizeThatFits incorrecta](code-images/ios-bad-measurement.png)
 
 Una solución a este problema es proporcionar una `GetDesiredSizeDelegate` implementación, como se muestra en el ejemplo de código siguiente:
 
@@ -163,7 +163,7 @@ stackLayout.Children.Add (customControl, FixSize);
 
 Esto hace que la vista personalizada se muestre correctamente, sin espacio vacío por encima y por debajo, tal como se muestra en la siguiente captura de pantalla:
 
-![](code-images/ios-good-measurement.png "iOS CustomControl with GetDesiredSize Override")
+![CustomControl de iOS con invalidación de GetDesiredSize](code-images/ios-good-measurement.png)
 
 ### <a name="android"></a>Android
 
@@ -201,7 +201,7 @@ stackLayout.Children.Add (customControl);
 
 Sin embargo, dado que la `CustomControl.OnMeasure` invalidación siempre devuelve la mitad del ancho solicitado, se mostrará la vista ocupando solo la mitad del ancho disponible del dispositivo, tal como se muestra en la siguiente captura de pantalla:
 
-![](code-images/android-bad-measurement.png "Android CustomControl with Bad OnMeasure Implementation")
+![CustomControl de Android con implementación de e/n incorrecta](code-images/android-bad-measurement.png)
 
 Una solución a este problema es proporcionar una `GetDesiredSizeDelegate` implementación, como se muestra en el ejemplo de código siguiente:
 
@@ -230,7 +230,7 @@ stackLayout.Children.Add (customControl, FixSize);
 
 Esto hace que la vista personalizada se muestre correctamente, ocupando el ancho del dispositivo, tal como se muestra en la siguiente captura de pantalla:
 
-![](code-images/android-good-measurement.png "Android CustomControl with Custom GetDesiredSize Delegate")
+![CustomControl de Android con delegado GetDesiredSize personalizado](code-images/android-good-measurement.png)
 
 ### <a name="universal-windows-platform"></a>Plataforma universal de Windows
 
@@ -298,7 +298,7 @@ stackLayout.Children.Add(brokenControl);
 
 Sin embargo, dado que la `CustomControl.ArrangeOverride` invalidación siempre devuelve la mitad del ancho solicitado, la vista se recortará hasta la mitad del ancho disponible del dispositivo, tal como se muestra en la siguiente captura de pantalla:
 
-![](code-images/winrt-bad-measurement.png "UWP CustomControl with Bad ArrangeOverride Implementation")
+![CustomControl de UWP con implementación de ArrangeOverride incorrecta](code-images/winrt-bad-measurement.png)
 
 Una solución a este problema es proporcionar una `ArrangeOverrideDelegate` implementación, al agregar la vista a [`StackLayout`](xref:Xamarin.Forms.StackLayout) , tal y como se muestra en el ejemplo de código siguiente:
 
@@ -317,7 +317,7 @@ stackLayout.Children.Add(fixedControl, arrangeOverrideDelegate: (renderer, final
 
 Este método usa el ancho proporcionado por el `CustomControl.ArrangeOverride` método, pero lo multiplica por dos. Esto hace que la vista personalizada se muestre correctamente, ocupando el ancho del dispositivo, tal como se muestra en la siguiente captura de pantalla:
 
-![](code-images/winrt-good-measurement.png "UWP CustomControl with ArrangeOverride Delegate")
+![Propiedad CustomControl de UWP con el delegado ArrangeOverride](code-images/winrt-good-measurement.png)
 
 ## <a name="summary"></a>Resumen
 

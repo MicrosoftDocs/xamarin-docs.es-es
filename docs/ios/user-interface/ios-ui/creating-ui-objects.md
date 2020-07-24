@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: ef54cebebb3881f5bb08aa6edfdc344169f179b4
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 729289c1764746f9777ef3d720e77865c9a71389
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574098"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937259"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Crear objetos de interfaz de usuario en Xamarin. iOS
 
@@ -42,17 +42,17 @@ Para empezar a crear la interfaz de usuario en el diseñador de iOS, haga doble 
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
- [![](creating-ui-objects-images/image2b.png "Toolbox Pad")](creating-ui-objects-images/image2b.png#lightbox)
+ [![Cuadro de herramientas](creating-ui-objects-images/image2b.png)](creating-ui-objects-images/image2b.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
- [![](creating-ui-objects-images/image2b-vs.png "Toolbox Pad - Visual Stuio")](creating-ui-objects-images/image2b.png#lightbox)
+ [![Cuadro de herramientas-Visual Studio](creating-ui-objects-images/image2b-vs.png)](creating-ui-objects-images/image2b.png#lightbox)
 
 -----
 
 Cuando se selecciona un control en la superficie de diseño, el **Panel de propiedades** mostrará los atributos de ese control. El **Widget > identidad > campo Nombre** , que se rellena en la siguiente captura de pantalla, se usa como nombre de la *toma* . Así es cómo se puede hacer referencia al control en C#:
 
- [![](creating-ui-objects-images/image3b.png "Properties Widget Pad")](creating-ui-objects-images/image3b.png#lightbox)
+ [![Panel de widgets de propiedades](creating-ui-objects-images/image3b.png)](creating-ui-objects-images/image3b.png#lightbox)
 
 Para profundizar en el uso del diseñador de iOS, consulte la guía de [Introducción a iOS Designer](~/ios/user-interface/designer/introduction.md) .
 
@@ -64,27 +64,27 @@ Para abrir un guion gráfico en Xcode, haga clic con el botón derecho para acce
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
- [![](creating-ui-objects-images/imagexcode.png "Storyboard context menu - Xcode")](creating-ui-objects-images/imagexcode.png#lightbox)
+ [![Menú contextual de guion gráfico: Xcode](creating-ui-objects-images/imagexcode.png)](creating-ui-objects-images/imagexcode.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![](creating-ui-objects-images/imagexcode-vs.png "Storyboard context menu - Xcode")](creating-ui-objects-images/imagexcode-vs.png#lightbox)
+[![Menú contextual de guion gráfico: Xcode](creating-ui-objects-images/imagexcode-vs.png)](creating-ui-objects-images/imagexcode-vs.png#lightbox)
 
 -----
 
 Los controles se pueden arrastrar hasta el Superficie de diseño desde la **biblioteca de objetos** que se muestra a continuación:
 
- [![](creating-ui-objects-images/image5a.png "Xcode Object Library")](creating-ui-objects-images/image5a.png#lightbox)
+ [![Biblioteca de objetos de Xcode](creating-ui-objects-images/image5a.png)](creating-ui-objects-images/image5a.png#lightbox)
 
 Al diseñar la interfaz de usuario con Interface Builder debe crear una **salida** para cada control al que desea hacer referencia en C#. Para ello, active el editor del **Asistente** con el botón central **Editor** del botón de la barra de herramientas de Xcode:
 
- [![](creating-ui-objects-images/image6a.png "Assistant Editor button")](creating-ui-objects-images/image6a.png#lightbox)
+ [![Botón del editor de asistentes](creating-ui-objects-images/image6a.png)](creating-ui-objects-images/image6a.png#lightbox)
 
 Haga clic en un objeto de interfaz de usuario. después, **arrastre el control** hasta el archivo. h. Para **controlar**la operación de arrastrar, mantenga presionada la tecla control y, después, haga clic y mantenga presionado el objeto de interfaz de usuario para el que está creando la salida (o acción). Mantenga presionada la tecla control mientras arrastra el archivo de encabezado. Termine de arrastrar por debajo de la `@interface` definición. Debe aparecer una línea azul con una salida de inserción de leyenda o una colección de tomas, tal como se muestra en la captura de pantalla siguiente.
 
 Al liberar el clic se le pedirá que proporcione un nombre para la salida, que se usará para crear una propiedad de C# a la que se pueda hacer referencia en el código:
 
- [![](creating-ui-objects-images/image8a.png "Creating an outlet")](creating-ui-objects-images/image8a.png#lightbox)
+ [![Creación de una salida](creating-ui-objects-images/image8a.png)](creating-ui-objects-images/image8a.png#lightbox)
 
 Para más información sobre cómo se integra el Interface Builder de Xcode con Visual Studio para Mac, consulte el documento de [generación de código Xib](~/ios/internals/xib-code-generation.md#generated) .
 
@@ -118,7 +118,7 @@ public override void ViewDidLoad () {
 
 Cuando se agregan controladores de vista al Superficie de diseño, se crean dos archivos de C# correspondientes en el proyecto. En este ejemplo, `ControlsViewController.cs` y `ControlsViewController.designer.cs` se han creado automáticamente:
 
- [![](creating-ui-objects-images/image9b.png "ViewController partial class")](creating-ui-objects-images/image9b.png#lightbox)
+ [![Clase parcial ViewController](creating-ui-objects-images/image9b.png)](creating-ui-objects-images/image9b.png#lightbox)
 
 El `ControlsViewController.cs` archivo está pensado para *el código*. Aquí es donde se `View` implementan los métodos de ciclo de vida como `ViewDidLoad` y, `ViewWillAppear` donde puede agregar sus propias propiedades, campos y métodos.
 

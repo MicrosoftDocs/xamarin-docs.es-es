@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c8d660896684283ba9b40cde168adbfe30ca0c51
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: fda45bc0aa2b7bc582c30b752662055bd4bd4865
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135998"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937064"
 ---
 # <a name="listview-separator-style-on-ios"></a>Estilo de separador de ListView en iOS
 
@@ -51,7 +51,7 @@ El `ListView.On<iOS>` método especifica que este específico de la plataforma s
 
 El resultado es que un [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) valor especificado se aplica a [`ListView`](xref:Xamarin.Forms.ListView) , que controla el ancho del separador entre las celdas:
 
-![](listview-separator-style-images/listview-separatorstyle.png "ListView SeparatorStyle Platform-Specific")
+![Específico de la plataforma ListView SeparatorStyle](listview-separator-style-images/listview-separatorstyle.png)
 
 > [!NOTE]
 > Una vez que el estilo del separador se ha establecido en `FullWidth` , no se puede volver a cambiar a `Default` en tiempo de ejecución.

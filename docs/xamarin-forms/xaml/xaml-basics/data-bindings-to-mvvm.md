@@ -11,12 +11,12 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 047cf963394325e8f88759ffe9da7dcf2ca3ad12
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 805bdef812b33d3f4329346a437e1202a16fe3ae
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127535"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937324"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Parte 5. Enlaces de datos a MVVM
 
@@ -65,7 +65,7 @@ En el programa de **fecha y hora de una captura** , dos de los elementos secunda
 
 El problema es que la fecha y la hora se establecen una vez cuando la página se compila por primera vez y nunca cambian:
 
-[![](data-bindings-to-mvvm-images/oneshotdatetime.png "View Displaying Date and Time")](data-bindings-to-mvvm-images/oneshotdatetime-large.png#lightbox "View Displaying Date and Time")
+[![Vista que muestra la fecha y la hora](data-bindings-to-mvvm-images/oneshotdatetime.png)](data-bindings-to-mvvm-images/oneshotdatetime-large.png#lightbox "Vista que muestra la fecha y la hora")
 
 Un archivo XAML puede mostrar un reloj que siempre muestra la hora actual, pero necesita código para ayudarlo. Al pensar en términos de MVVM, el modelo y el ViewModel son clases escritas completamente en el código. La vista suele ser un archivo XAML que hace referencia a las propiedades definidas en el ViewModel a través de los enlaces de datos.
 
@@ -148,7 +148,7 @@ Observe cómo `ClockViewModel` se establece en el `BindingContext` de las `Label
 
 La `Binding` extensión de marcado de la `Text` propiedad de `Label` da formato a la `DateTime` propiedad. Esta es la pantalla:
 
-[![](data-bindings-to-mvvm-images/clock.png "View Displaying Date and Time via ViewModel")](data-bindings-to-mvvm-images/clock-large.png#lightbox "View Displaying Date and Time via ViewModel")
+[![Vista que muestra la fecha y la hora a través de ViewModel](data-bindings-to-mvvm-images/clock.png)](data-bindings-to-mvvm-images/clock-large.png#lightbox "Vista que muestra la fecha y la hora a través de ViewModel")
 
 También es posible obtener acceso a las propiedades individuales de la `DateTime` propiedad del ViewModel separando las propiedades con puntos:
 
@@ -298,7 +298,7 @@ El siguiente archivo XAML contiene una `BoxView` cuya `Color` propiedad está en
 
 El enlace en cada `Label` es el valor predeterminado `OneWay` . Solo necesita mostrar el valor. Pero el enlace en cada `Slider` es `TwoWay` . Esto permite `Slider` que se inicialice desde el ViewModel. Observe que la `Color` propiedad se establece en `Aqua` cuando se crea una instancia del ViewModel. Pero un cambio en `Slider` también necesita establecer un nuevo valor para la propiedad en el ViewModel, que a continuación calcula un nuevo color.
 
-[![](data-bindings-to-mvvm-images/hslcolorscroll.png "MVVM using Two-Way Data Bindings")](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM using Two-Way Data Bindings")
+[![MVVM con enlaces de datos bidireccionales](data-bindings-to-mvvm-images/hslcolorscroll.png)](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM con enlaces de datos bidireccionales")
 
 ## <a name="commanding-with-viewmodels"></a>Comandos con ViewModels
 
@@ -559,7 +559,7 @@ El siguiente teclado no es tan sofisticado como podría ser. En su lugar, el mar
 
 La `Command` propiedad de la primera `Button` que aparece en este marcado se enlaza a `DeleteCharCommand` ; el resto se enlaza al `AddCharCommand` con un `CommandParameter` que es igual que el carácter que aparece en la `Button` superficie. Este es el programa en acción:
 
-[![](data-bindings-to-mvvm-images/keypad.png "Calculator using MVVM and Commands")](data-bindings-to-mvvm-images/keypad-large.png#lightbox "Calculator using MVVM and Commands")
+[![Calculadora con MVVM y comandos](data-bindings-to-mvvm-images/keypad.png)](data-bindings-to-mvvm-images/keypad-large.png#lightbox "Calculadora con MVVM y comandos")
 
 ### <a name="invoking-asynchronous-methods"></a>Invocar métodos asincrónicos
 
@@ -684,7 +684,7 @@ El archivo XAML para `MainPage` define una `ListBox` cuya `ItemsSource` propieda
 
 Las páginas se muestran en una lista desplazable:
 
-[![](data-bindings-to-mvvm-images/mainpage.png "Scrollable list of pages")](data-bindings-to-mvvm-images/mainpage-large.png#lightbox "Scrollable list of pages")
+[![Lista desplazable de páginas](data-bindings-to-mvvm-images/mainpage.png)](data-bindings-to-mvvm-images/mainpage-large.png#lightbox "Lista desplazable de páginas")
 
 El controlador del archivo de código subyacente se desencadena cuando el usuario selecciona un elemento. El controlador establece la `SelectedItem` propiedad del de `ListBox` nuevo en `null` y, a continuación, crea una instancia de la página seleccionada y navega a ella:
 

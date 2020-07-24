@@ -10,12 +10,12 @@ ms.date: 10/01/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8478db85bd9904ee6c5cfeab9b2af390e7d3096d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e0c6e305287c97abac3500cba4771479b60381ac
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139508"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939807"
 ---
 # <a name="platform-specifics"></a>Características específicas de las plataformas
 
@@ -58,7 +58,7 @@ El resultado de exponer un efecto como específico de la plataforma es que el ef
 
 La [aplicación de ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) muestra un `Shadow` específico de la plataforma que agrega una sombra al texto mostrado por un [`Label`](xref:Xamarin.Forms.Label) control:
 
-![](images/screenshots.png "Shadow Platform-Specific")
+![Específico de la plataforma secundaria](images/screenshots.png)
 
 La [aplicación de ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) implementa la `Shadow` plataforma específica en cada plataforma, para facilitar la comprensión. Sin embargo, aparte de cada implementación de efecto específico de la plataforma, la implementación de la clase Shadow es en gran medida idéntica para cada plataforma. Por lo tanto, esta guía se centra en la implementación de la clase Shadow y en el efecto asociado en una sola plataforma.
 

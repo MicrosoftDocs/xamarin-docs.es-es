@@ -10,12 +10,12 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7c2a63c40d1006c7d83c9dde871e17d4b194bdca
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cce5b0fc9c3d1d04c20b1be242197e3bc9e4f901
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84129719"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929343"
 ---
 # <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Xamarin.Formsy Azure Cognitive Services introducción
 
@@ -42,17 +42,17 @@ Las tareas se almacenan en una base de datos SQLite local. Para obtener más inf
 
 `TodoListPage`Se muestra cuando se inicia la aplicación. En esta página se muestra una lista de las tareas almacenadas en la base de datos local y se permite al usuario crear una nueva tarea o evaluar la aplicación:
 
-![](introduction-images/sample-application-1.png "TodoListPage")
+![TodoListPage](introduction-images/sample-application-1.png)
 
 Se pueden crear nuevos elementos haciendo clic en el *+* botón, que navega a `TodoItemPage` . También se puede navegar por esta página seleccionando una tarea:
 
-![](introduction-images/sample-application-2.png "TodoItemPage")
+![TodoItemPage](introduction-images/sample-application-2.png)
 
 `TodoItemPage`Permite que las tareas se creen, se editen, se comprueben ortográficamente, se traduzcan, se guarden y se eliminen. El reconocimiento de voz se puede usar para crear o editar una tarea. Para ello, presione el botón micrófono para iniciar la grabación y presione el mismo botón una segunda vez para detener la grabación, que envía la grabación a la API de reconocimiento de Bing Speech.
 
 Al hacer clic en el botón de emoticonos de `TodoListPage` , navega hasta el `RateAppPage` , que se usa para realizar el reconocimiento de emociones en una imagen de una expresión facial:
 
-![](introduction-images/sample-application-3.png "RateAppPage")
+![RateAppPage](introduction-images/sample-application-3.png)
 
 `RateAppPage`Permite al usuario tomar una fotografía de su superficie, que se envía al Face API con la emoción devuelta que se muestra.
 

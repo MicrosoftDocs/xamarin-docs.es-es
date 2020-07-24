@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 72c10d10e65194171479d66845d597e313281cdf
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 69ea9b0786170345109f0845f3af6e5fd01d2b7c
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573786"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997116"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Trabajar con iconos e imágenes de tvOS en Xamarin
 
@@ -32,7 +32,7 @@ Crear iconos e imágenes atractivas es una parte fundamental del desarrollo de u
 
 ## <a name="launch-image"></a>Imagen de inicio
 
-La imagen de inicio es lo primero que se muestra cuando la aplicación de Xamarin. tvOS se inicia inicialmente en Apple TV y, como tal, cada aplicación de tvOS debe proporcionar una imagen de inicio. 
+La imagen de inicio es lo primero que se muestra cuando la aplicación de Xamarin. tvOS se inicia inicialmente en Apple TV y, como tal, cada aplicación de tvOS debe proporcionar una imagen de inicio.
 
 La imagen de inicio aparece rápidamente y da la impresión de que la aplicación es rápida y con capacidad de respuesta. Apple TV reemplazará la imagen de inicio por la primera pantalla de la aplicación en breve.
 
@@ -55,15 +55,15 @@ Apple realiza las siguientes sugerencias para diseñar la imagen de inicio de la
 
 Para establecer la imagen de inicio del proyecto de tvOS, haga lo siguiente:
 
-1. En el **Explorador de soluciones**, haga doble clic `Assets.xcassets` para abrirlo para su edición: 
+1. En el **Explorador de soluciones**, haga doble clic `Assets.xcassets` para abrirlo para su edición:
 
-    [![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png#lightbox)
-2. En el **Editor de recursos**, haga clic en el `LaunchImages` recurso: 
+    [![El archivo assets. xcassets](icons-images-images/asset01.png)](icons-images-images/asset01.png#lightbox)
+2. En el **Editor de recursos**, haga clic en el `LaunchImages` recurso:
 
-    [![](icons-images-images/asset02.png "The LaunchImages asset")](icons-images-images/asset02.png#lightbox)
-3. Haga clic en la entrada **1x Apple TV** y seleccione la imagen de inicio o, si lo desea, arrastre una nueva imagen del sistema de archivos: 
+    [![El recurso LaunchImages](icons-images-images/asset02.png)](icons-images-images/asset02.png#lightbox)
+3. Haga clic en la entrada **1x Apple TV** y seleccione la imagen de inicio o, si lo desea, arrastre una nueva imagen del sistema de archivos:
 
-    [![](icons-images-images/asset03.png "Select a Launch Image")](icons-images-images/asset03.png#lightbox)
+    [![Seleccionar una imagen de inicio](icons-images-images/asset03.png)](icons-images-images/asset03.png#lightbox)
 4. Guarde los cambios.
 
 <a name="Layered-Images"></a>
@@ -74,7 +74,7 @@ Novedad de Apple TV, las imágenes superpuestas funcionan con el efecto de Paral
 
 Las imágenes superpuestas contienen de dos (2) a cinco (5) capas separadas que se combinan para formar una imagen completa. A excepción de la capa de fondo, cada capa usa su orden Z junto con la transparencia para crear una ilusión de profundidad. Cuando el usuario interactúa con una imagen por capas, se escalan y superponen las capas ordenadas por Z más altas para crear este efecto.
 
-[![](icons-images-images/layered01.png "Layered Images Z-ordered diagram")](icons-images-images/layered01.png#lightbox)
+[![Diagrama ordenado por Z de imágenes superpuestas](icons-images-images/layered01.png)](icons-images-images/layered01.png#lightbox)
 
 > [!IMPORTANT]
 > Las imágenes superpuestas son necesarias para los iconos de la aplicación y son opcionales para otros elementos que pueden recibir el [foco](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (como la imagen de estante superior). Sin embargo, Apple sugiere el uso de imágenes superpuestas para cualquier imagen que pueda centrarse en la aplicación.
@@ -96,7 +96,7 @@ Siempre que sea posible, debe usar siempre los controles integrados `UIKit` para
 
 Es importante recordar incluir un borde de _zona segura_ en cada capa que componga la imagen por capas. Dado que las capas individuales se pueden escalar y recortar durante el efecto de Parallax, el contenido de las capas se puede recortar si está demasiado cerca del borde de la capa:
 
-[![](icons-images-images/layered02.png "35 pixel border")](icons-images-images/layered02.png#lightbox)
+[![borde de 35 píxeles](icons-images-images/layered02.png)](icons-images-images/layered02.png#lightbox)
 
 <a name="Creating-Layered-Images"></a>
 
@@ -115,7 +115,7 @@ tvOS funciona con imágenes superpuestas en los siguientes formatos:
 
 Apple creó el [previsor de Parallax](https://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) para obtener una vista previa y crear las imágenes en capas necesarias para los iconos de la aplicación y los elementos opcionales que permiten el foco. El previsor muestra cada capa que forma la imagen en capas completa:
 
-[![](icons-images-images/layered03.png "The Parallax Previewer")](icons-images-images/layered03.png#lightbox)
+[![Vista previa de Parallax](icons-images-images/layered03.png)](icons-images-images/layered03.png#lightbox)
 
 Al obtener una vista previa de una imagen en capas, puede usar el mouse para girar la imagen y obtener una vista previa del efecto de Parallax. Use los **+** botones (más) y **-** (menos) para agregar y quitar capas.
 
@@ -129,13 +129,13 @@ Para obtener más información sobre cómo crear y obtener una vista previa de l
 
 La aplicación Xamarin. tvOS necesitará no solo un icono de aplicación para la pantalla principal de Apple TV, sino también un icono para la tienda de aplicaciones. El icono de la aplicación es el primer cambio para crear una gran impresión para el usuario potencial y debe comunicar el propósito de la aplicación de un vistazo.
 
-[![](icons-images-images/icon01.png "The App Icon")](icons-images-images/icon01.png#lightbox)
+[![Icono de la aplicación](icons-images-images/icon01.png)](icons-images-images/icon01.png#lightbox)
 
 Cada aplicación debe proporcionar una versión pequeña y una grande de su icono de aplicación. El icono pequeño se usará en la pantalla principal de Apple TV cuando se instale la aplicación. La versión grande se usa en el App Store. El icono de la aplicación grande debe imitar la apariencia de la versión del icono pequeño.
 
-|Icono pequeño||Icono grande||
+|Icono pequeño|Resolución|Icono grande|Resolución|
 |---|---|---|---|
-|Tamaño real|400x240px|Size|1280x768px|
+|Tamaño real|400x240px||1280x768px|
 |Tamaño de zona segura|370x222px|||
 |Tamaño sin foco|300x180px|||
 |Tamaño centrado|370x222px|||
@@ -160,18 +160,18 @@ Apple proporciona las siguientes sugerencias para crear iconos de aplicación:
 
 Para establecer los iconos de la aplicación necesarios para el proyecto tvOS, haga lo siguiente:
 
-1. En el **Explorador de soluciones**, haga doble clic `Assets.xcassets` para abrirlo para su edición: 
+1. En el **Explorador de soluciones**, haga doble clic `Assets.xcassets` para abrirlo para su edición:
 
-    [![](icons-images-images/asset01.png "The Assets.xcassets fileg")](icons-images-images/asset01.png#lightbox)
-2. En el **Editor de recursos**, expanda el `App Icon & Top Shelf Image` recurso: 
+    [![Los recursos. xcassets fileg](icons-images-images/asset01.png)](icons-images-images/asset01.png#lightbox)
+2. En el **Editor de recursos**, expanda el `App Icon & Top Shelf Image` recurso:
 
-    [![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png#lightbox)
-3. A continuación, expanda el `App Icon - Small` recurso: 
+    [![Expandir el recurso de imagen de estante superior](icons-images-images/asset04.png)](icons-images-images/asset04.png#lightbox)
+3. A continuación, expanda el `App Icon - Small` recurso:
 
-    [![](icons-images-images/asset05.png "Expand the App Icon - Small asset")](icons-images-images/asset05.png#lightbox)
-4. A continuación, expanda el `Back` recurso y haga clic en la `Contents` entrada: 
+    [![Expanda el icono de la aplicación: recurso pequeño](icons-images-images/asset05.png)](icons-images-images/asset05.png#lightbox)
+4. A continuación, expanda el `Back` recurso y haga clic en la `Contents` entrada:
 
-    [![](icons-images-images/asset06.png "Then expand the Back asset")](icons-images-images/asset06.png#lightbox)
+    [![Después, expanda el recurso de reserva.](icons-images-images/asset06.png)](icons-images-images/asset06.png#lightbox)
 5. Haga clic en la **entrada 1x Apple TV** y seleccione un archivo de imagen.
 6. Repita los pasos anteriores para los `Front` `Middle` recursos y.
 7. A continuación, repita los mismos pasos para definir el `App Icon - Large` recurso.
@@ -183,7 +183,7 @@ Para establecer los iconos de la aplicación necesarios para el proyecto tvOS, h
 
 Si el usuario ha colocado la aplicación Xamarin. tvOS en la fila superior de la pantalla de inicio de Apple TV, se mostrará una imagen de estante superior grande cuando el usuario seleccione la aplicación. Esta imagen debe resaltar las características de la aplicación o proporcionar vínculos directos a su contenido.
 
-[![](icons-images-images/topshelf01.png "Top Shelf Image example")](icons-images-images/topshelf01.png#lightbox)
+[![Ejemplo de imagen de estante superior](icons-images-images/topshelf01.png)](icons-images-images/topshelf01.png#lightbox)
 
 La imagen de estante superior se puede proporcionar como un único `.png` archivo o estático `.lsr` (consulte [creación de imágenes por capas](#Creating-Layered-Images)) o se puede crear dinámicamente en tiempo de ejecución como una sola fila de elementos que pueden recibir el foco (vea el contenido de [estante superior dinámico](#Dynamic-Top-Shelf-Content) a continuación).
 
@@ -203,15 +203,15 @@ Apple proporciona las siguientes sugerencias para crear las imágenes de estante
 
 Para establecer la imagen de estante superior necesaria para el proyecto tvOS, haga lo siguiente:
 
-1. En el **Explorador de soluciones**, haga doble clic `Assets.xcassets` para abrirlo para su edición: 
+1. En el **Explorador de soluciones**, haga doble clic `Assets.xcassets` para abrirlo para su edición:
 
-    [![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png#lightbox)
-2. En el **Editor de recursos**, expanda el `App Icon & Top Shelf Image` recurso: 
+    [![El archivo assets. xcassets](icons-images-images/asset01.png)](icons-images-images/asset01.png#lightbox)
+2. En el **Editor de recursos**, expanda el `App Icon & Top Shelf Image` recurso:
 
-    [![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png#lightbox)
-3. Haga clic en el `Top Shelf Image` recurso: 
+    [![Expandir el recurso de imagen de estante superior](icons-images-images/asset04.png)](icons-images-images/asset04.png#lightbox)
+3. Haga clic en el `Top Shelf Image` recurso:
 
-    [![](icons-images-images/asset07.png "The Top Shelf Image asset")](icons-images-images/asset07.png#lightbox)
+    [![El recurso de imagen de estante superior](icons-images-images/asset07.png)](icons-images-images/asset07.png#lightbox)
 4. Haga clic en la **entrada 1x Apple TV** y seleccione un archivo de imagen.
 5. Guarde los cambios.
 
@@ -231,7 +231,7 @@ El contenido se presenta como una sola lista de desplazamiento horizontal de con
 
 Se necesitarán los siguientes tamaños de contenido:
 
-||Póster (2:3)|Cuadrado (1:1)|HDTV (16:9)|
+|Size|Póster (2:3)|Cuadrado (1:1)|HDTV (16:9)|
 |---|---|---|---|
 |Tamaño real|404x608px|608x608px|908x512px|
 |Tamaño de zona segura|380x570px|570x570px|852x479px|
@@ -253,7 +253,7 @@ Además del desplazamiento automático, el usuario puede tomar el control de los
 
 **Imagen de banner (extra ancha)**
 
-|   |   |
+| Size | Resolución |
 |---|---|
 |Tamaño real|1940x624px|
 |Tamaño de zona segura|1740x620px|
@@ -279,7 +279,7 @@ Si la aplicación Xamarin. tvOS es un juego y ha incluido Game Center soporte t�
 - **Ilustración del panel** : se puede proporcionar una imagen opcional que aparecerá en la parte superior del panel de la aplicación en Game Center. Estas imágenes no tienen el foco.
 - **Material gráfico de marcadores** : debe proporcionar entre una (1) a tres (3) 16:9 imágenes de relación de aspecto para cada marcador que admita la aplicación. Pueden ser archivos estáticos `.png` o en capas `.lsr` . La ilustración del marcador tiene el foco.
 
-||Iconos de logros|Ilustración del panel|Material gráfico de marcador|
+|Size|Iconos de logros|Ilustración del panel|Material gráfico de marcador|
 |---|---|---|---|
 |Tamaño visible|200x200px|923x150px|N/D|
 |Tamaño real|320x320px|N/D|659x371px|
@@ -301,14 +301,14 @@ Como tvOS 9 es un subconjunto de iOS 9, las mismas técnicas que se usan para in
 
 Como se indicó anteriormente, todas las aplicaciones de tvOS requieren una [imagen de inicio](#Launch-Image)y un [icono de aplicación](#App-Icons). En esta sección se describe cómo seleccionar el icono iniciar imagen y aplicación para el proyecto de aplicación Xamarin. tvOS una vez que se han establecido en un catálogo de recursos.
 
-Haga lo siguiente:
+Siga estos pasos:
 
-1. En el **Explorador de soluciones**, haga doble clic en el `Info.plist` para abrirlo para su edición: 
+1. En el **Explorador de soluciones**, haga doble clic en el `Info.plist` para abrirlo para su edición:
 
-    [![](icons-images-images/info01.png "The Info.plist file")](icons-images-images/info01.png#lightbox)
-2. En el **Editor info. plist**, seleccione el catálogo de recursos (configurado anteriormente en la sección [configuración de los iconos de la aplicación](#Setting-the-App-Icons) ) para los iconos de la **aplicación**: 
+    [![El archivo info. plist](icons-images-images/info01.png)](icons-images-images/info01.png#lightbox)
+2. En el **Editor info. plist**, seleccione el catálogo de recursos (configurado anteriormente en la sección [configuración de los iconos de la aplicación](#Setting-the-App-Icons) ) para los iconos de la **aplicación**:
 
-    [![](icons-images-images/info02.png "The Info.Plist Editor")](icons-images-images/info02.png#lightbox)
+    [![Editor de info. plist](icons-images-images/info02.png)](icons-images-images/info02.png#lightbox)
 3. Después, seleccione el catálogo de activos (configurado anteriormente en la sección [configuración de la imagen de inicio](#Setting-the-Launch-Image) ) para las **imágenes de inicio**.
 4. Guarde los cambios.
 

@@ -10,12 +10,12 @@ ms.date: 03/23/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bdf33f499bf43d99436cef815c03d35b27866b80
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5cb43bfe572b98a6530dfeb8d923ac71b5b633a7
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140184"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932059"
 ---
 # <a name="the-scale-transform"></a>Transformación de escala
 
@@ -25,7 +25,7 @@ _Detección de la transformación de escala SkiaSharp para escalar objetos a dis
 
 Como ha visto en [**el artículo traducir transformación**](translate.md) , la transformación traducir puede trasladar un objeto gráfico de una ubicación a otra. En cambio, la transformación de escala cambia el tamaño del objeto gráfico:
 
-![](scale-images/scaleexample.png "A tall word scaled in size")
+![Una palabra grande escalada en tamaño](scale-images/scaleexample.png)
 
 La transformación de escala también hace que las coordenadas de gráficos se muevan a medida que se hacen más grandes.
 
@@ -109,7 +109,7 @@ Puede que se pregunte: ¿Cómo afectan los factores de escala al valor devuelto 
 
 Como puede ver, todo lo dibujado después de la `Scale` llamada aumenta proporcionalmente:
 
-[![](scale-images/basicscale-small.png "Triple screenshot of the Basic Scale page")](scale-images/basicscale-large.png#lightbox "Triple screenshot of the Basic Scale page")
+[![Captura de pantalla triple de la página escala básica](scale-images/basicscale-small.png)](scale-images/basicscale-large.png#lightbox "Captura de pantalla triple de la página escala básica")
 
 El texto, el ancho de la línea discontinua, la longitud de los guiones de esa línea, el redondeo de las esquinas y el margen de 10 píxeles entre los bordes izquierdo y superior del lienzo y el rectángulo redondeado están sujetos a los mismos factores de escala.
 
@@ -171,7 +171,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 La esquina superior izquierda del rectángulo redondeado está posicionada `margin` en píxeles desde la izquierda del lienzo y `margin` los píxeles desde la parte superior. Los dos últimos argumentos del `Scale` método se establecen en esos valores más el ancho y el alto del texto, que también es el ancho y el alto del rectángulo redondeado. Esto significa que todo el ajuste de escala es relativo al centro de ese rectángulo:
 
-[![](scale-images/centeredscale-small.png "Triple screenshot of the Centered Scale page")](scale-images/centeredscale-large.png#lightbox "Triple screenshot of the Centered Scale page")
+[![Captura de pantalla triple de la página escala centrada](scale-images/centeredscale-small.png)](scale-images/centeredscale-large.png#lightbox "Captura de pantalla triple de la página escala centrada")
 
 Los `Slider` elementos de este programa tienen un intervalo de &ndash; 10 a 10. Como puede ver, los valores negativos del escalado vertical (por ejemplo, en la pantalla de Android del centro) provocan que los objetos se volteen alrededor del eje horizontal que pasa a través del centro del escalado. Los valores negativos del escalado horizontal (por ejemplo, en la pantalla de UWP a la derecha) hacen que los objetos se volteen alrededor del eje vertical que pasa a través del centro del escalado.
 
@@ -252,7 +252,7 @@ using (SKPaint strokePaint = new SKPaint
 
 El `pathBounds` rectángulo se obtiene cerca de la parte superior de este código y, después, se usa más adelante con el ancho y el alto del lienzo en la `Scale` llamada. Esa llamada por sí misma escalará las coordenadas de la ruta de acceso cuando se representen mediante la `DrawPath` llamada, pero la estrella se centrará en la esquina superior derecha del lienzo. Debe desplazarse hacia abajo y hacia la izquierda. Este es el trabajo de la `Translate` llamada. Las dos propiedades de `pathBounds` son aproximadamente – 100, por lo que los factores de traducción son aproximadamente 100. Dado que la `Translate` llamada es después de la `Scale` llamada, esos valores se escalan eficazmente mediante los factores de escala, por lo que mueven el centro de la estrella al centro del lienzo:
 
-[![](scale-images/anisotropicscaling-small.png "Triple screenshot of the Anisotropic Scaling page")](scale-images/anisotropicscaling-large.png#lightbox "Triple screenshot of the Anisotropic Scaling page")
+[![Captura de pantalla triple de la página escalado anisotrópico](scale-images/anisotropicscaling-small.png)](scale-images/anisotropicscaling-large.png#lightbox "Captura de pantalla triple de la página escalado anisotrópico")
 
 Otra manera de pensar `Scale` en las llamadas a y `Translate` es determinar el efecto en la secuencia inversa: la `Translate` llamada desplaza la ruta de acceso para que se vuelva totalmente visible pero esté orientada en la esquina superior izquierda del lienzo. `Scale`Después, el método hace que esa estrella sea más grande en relación con la esquina superior izquierda.
 
@@ -295,7 +295,7 @@ using (SKPaint textPaint = new SKPaint
 
 Es una lógica similar y el texto se expande hasta el tamaño de la página en función del rectángulo de límite de texto devuelto de `MeasureText` (que es un poco mayor que el texto real):
 
-[![](scale-images/anisotropictext-small.png "Triple screenshot of the Anisotropic Test page")](scale-images/anisotropictext-large.png#lightbox "Triple screenshot of the Anisotropic Test page")
+[![Captura de pantalla triple de la página de prueba anisotrópico](scale-images/anisotropictext-small.png)](scale-images/anisotropictext-large.png#lightbox "Captura de pantalla triple de la página de prueba anisotrópico")
 
 Si necesita conservar la relación de aspecto de los objetos gráficos, querrá usar el escalado anisotrópico. La página de **escalado de anisotrópico** muestra esto para la estrella de 11 puntas. Conceptualmente, los pasos para mostrar un objeto gráfico en el centro de la página con el escalado anisotrópico son:
 
@@ -344,7 +344,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El código también muestra la estrella 10 veces más, cada vez que reduce el factor de escala en un 10% y cambia progresivamente el color de rojo a azul:
 
-[![](scale-images/isotropicscaling-small.png "Triple screenshot of the Isotropic Scaling page")](scale-images/isotropicscaling-large.png#lightbox "Triple screenshot of the Isotropic Scaling page")
+[![Captura de pantalla triple de la página de escalado de anisotrópico](scale-images/isotropicscaling-small.png)](scale-images/isotropicscaling-large.png#lightbox "Captura de pantalla triple de la página de escalado de anisotrópico")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

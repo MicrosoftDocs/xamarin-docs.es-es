@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: be78e76e2a52fb6e924fd67e3f0de9e0890ee25b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b81e7b980c37f238fe9c2a299aa360cc01294ebe
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933437"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997194"
 ---
 # <a name="introduction-to-ios-6"></a>Introducción a iOS 6
 
@@ -25,7 +25,7 @@ En este documento se enumeran algunas de las nuevas características más intere
 
 ## <a name="introduction-to-collection-views"></a>[Introducción a las vistas de colección](~/ios/user-interface/controls/uicollectionview.md)
 
-Las vistas de colección permiten mostrar el contenido mediante diseños arbitrarios. Permiten crear diseños similares a cuadrículas de forma sencilla, al mismo tiempo que también se admiten diseños personalizados. Para obtener más información, vea la guía de [Introducción a las vistas de colección](~/ios/user-interface/controls/uicollectionview.md) [](~/ios/user-interface/controls/uicollectionview.md) .
+Las vistas de colección permiten mostrar el contenido mediante diseños arbitrarios. Permiten crear diseños similares a cuadrículas de forma sencilla, al mismo tiempo que también se admiten diseños personalizados. Para obtener más información, vea la guía de [Introducción a las vistas de colección](~/ios/user-interface/controls/uicollectionview.md) .
 
 ## <a name="introduction-to-passkit"></a>[Introduction to PassKit](~/ios/platform/passkit.md) (Introducción a PassKit)
 

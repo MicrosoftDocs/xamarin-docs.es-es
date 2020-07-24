@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c35cd6e30e7843cda0431581025aa7440a21cc29
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0a43ce2d27c8152137101d616302f6e56a57bd39
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140054"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931981"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>Comunicación entre componentes débilmente acoplados
 
@@ -29,7 +29,7 @@ La clase [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) de Xamarin.Form
 
 La clase [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) proporciona la funcionalidad de publicación y suscripción de multidifusión. Esto significa que puede haber varios publicadores que publican un único mensaje y puede haber varios suscriptores que escuchen el mismo mensaje. En la figura 4-1 se muestra esta relación:
 
-![](communicating-between-loosely-coupled-components-images/messagingcenter.png "Multicast publish-subscribe functionality")
+![Funcionalidad de publicación y suscripción de multidifusión](communicating-between-loosely-coupled-components-images/messagingcenter.png)
 
 **Figura 4-1:** Funcionalidad de publicación y suscripción de multidifusión
 

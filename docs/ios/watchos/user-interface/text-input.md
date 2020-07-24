@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 156a31e37d14ce3e3cbe7173ae97b608e9d4c32e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f523b6a028c8d9dcc0df772dc617c57bc947905d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032650"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936894"
 ---
 # <a name="working-with-watchos-text-input-in-xamarin"></a>Trabajar con la entrada de texto de watchos en Xamarin
 
@@ -25,12 +25,12 @@ El Apple Watch no proporciona un teclado para que los usuarios escriban texto, p
 
 El simulador no admite actualmente el dictado, pero todavía puede probar otras opciones del controlador de entrada de texto, como Scribble, como se muestra aquí:
 
-![](text-input-images/textinput-sml.png "Testing the scribble option")
+![Probar la opción Scribble](text-input-images/textinput-sml.png)
 
 Para aceptar la entrada de texto en una aplicación de inspección:
 
 1. Cree una matriz de cadenas de opciones predefinidas.
-2. Llame a `PresentTextInputController` con la matriz, ya sea para permitir Emoji o no, y una `Action` a la que se llame cuando el usuario haya finalizado.
+2. Llame a `PresentTextInputController` con la matriz, ya sea para permitir Emoji o not, y un `Action` que se llame cuando el usuario haya finalizado.
 3. En la acción de finalización, pruebe el resultado de la entrada y tome las medidas adecuadas en la aplicación (posiblemente estableciendo el valor de texto de una etiqueta).
 
 El siguiente fragmento de código presenta tres opciones predefinidas para el usuario:
@@ -49,7 +49,7 @@ PresentTextInputController (suggest, WatchKit.WKTextInputMode.AllowEmoji, (resul
 });
 ```
 
-La enumeración `WKTextInputMode` tiene tres valores:
+La `WKTextInputMode` enumeración tiene tres valores:
 
 - Texto
 - AllowEmoji
@@ -63,9 +63,9 @@ Cuando se establece el modo sin formato, el usuario puede elegir:
 - Scribble o
 - a partir de una lista predefinida que proporciona la aplicación.
 
-[![](text-input-images/plain-scribble-sml.png "Dictation, Scribble, or from a pre-defined list that the app supplies")](text-input-images/plain-scribble.png#lightbox)
+[![Dictado, Scribble o a partir de una lista predefinida que la aplicación proporciona](text-input-images/plain-scribble-sml.png)](text-input-images/plain-scribble.png#lightbox)
 
-El resultado siempre se devuelve como un `NSObject` que se puede convertir en un `string`.
+El resultado siempre se devuelve como un `NSObject` que se puede convertir en `string` .
 
 ## <a name="emoji"></a>Emoji
 
@@ -76,14 +76,14 @@ Hay dos tipos de Emoji:
 
 Cuando el usuario elige un Emoji de Unicode, se devuelve como una cadena.
 
-Si se selecciona un Emoji de imagen animado, el `result` en el controlador de finalización contendrá un objeto `NSData` que contiene el `UIImage`Emoji.
+Si se selecciona un Emoji de imagen animado `result` , en el controlador de finalización contendrá un `NSData` objeto que contiene el Emoji `UIImage` .
 
 ## <a name="accepting-dictation-only"></a>Aceptación solo del dictado
 
 Para llevar al usuario directamente a la pantalla de dictado sin mostrar ninguna sugerencia (o la opción Scribble):
 
 - Pase una matriz vacía para la lista de sugerencias y
-- establezca `WatchKit.WKTextInputMode.Plain`.
+- establecer `WatchKit.WKTextInputMode.Plain` .
 
 ```csharp
 PresentTextInputController (new string[0], WatchKit.WKTextInputMode.Plain, (result) => {
@@ -98,7 +98,7 @@ PresentTextInputController (new string[0], WatchKit.WKTextInputMode.Plain, (resu
 
 Cuando el usuario está hablando, la pantalla inspección muestra la pantalla siguiente, que incluye el texto tal como se entiende (por ejemplo, "Esto es una prueba"):
 
-![](text-input-images/dictation.png "When the user is speaking, the watch screen displays the text as it is understood")
+![Cuando el usuario está hablando, la pantalla inspección muestra el texto tal y como se entiende](text-input-images/dictation.png)
 
 Una vez que presione el botón **Done** , se devolverá el texto.
 

@@ -10,12 +10,12 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1703f0049408381a86da73fb28696ef8708cc790
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4c07f2667230695c6b884eb4902e68f7f4120f6b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139300"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939508"
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Revisión ortográfica mediante el Bing Spell Check API
 
@@ -37,7 +37,7 @@ Se debe obtener una clave de API para usar el Bing Spell Check API. Esto puede o
 
 Para obtener una lista de los idiomas admitidos por el Bing Spell Check API, consulte [idiomas admitidos](/azure/cognitive-services/bing-spell-check/bing-spell-check-supported-languages/). Para obtener más información sobre el Bing Spell Check API, consulte la [documentación de Bing spell check](/azure/cognitive-services/bing-spell-check/).
 
-## <a name="authentication"></a>Authentication
+## <a name="authentication"></a>Autenticación
 
 Cada solicitud realizada al Bing Spell Check API requiere una clave de API que debe especificarse como el valor del `Ocp-Apim-Subscription-Key` encabezado. En el ejemplo de código siguiente se muestra cómo agregar la clave de API al `Ocp-Apim-Subscription-Key` encabezado de una solicitud:
 
@@ -157,9 +157,9 @@ foreach (var flaggedToken in spellCheckResult.FlaggedTokens)
 
 Este código recorre en iteración la `FlaggedTokens` colección y reemplaza las palabras mal escritas o gramaticalmente incorrectas en el texto de origen con la primera sugerencia. Las capturas de pantallas siguientes se muestran antes y después de la revisión ortográfica:
 
-![](spell-check-images/before-spell-check.png "Before Spell Check")
+![Antes de Spell Check](spell-check-images/before-spell-check.png)
 
-![](spell-check-images/after-spell-check.png "After Spell Check")
+![Después Spell Check](spell-check-images/after-spell-check.png)
 
 > [!NOTE]
 > En el ejemplo anterior `Replace` se usa para simplificar, pero en una gran cantidad de texto podría reemplazar el token equivocado. La API proporciona el `offset` valor que debe usarse en las aplicaciones de producción para identificar la ubicación correcta en el texto de origen para realizar una actualización.

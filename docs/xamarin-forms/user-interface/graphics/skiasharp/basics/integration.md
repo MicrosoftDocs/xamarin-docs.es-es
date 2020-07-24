@@ -10,12 +10,12 @@ ms.date: 02/09/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9e763184f38719cda4526eb0a2dfdf39b2191a03
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 60f53fb00786b183f36f7cfefa6af9062bb682db
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137701"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938169"
 ---
 # <a name="integrating-with-xamarinforms"></a>Integración conXamarin.Forms
 
@@ -25,7 +25,7 @@ _Crear gráficos de SkiaSharp que respondan a Xamarin.Forms los elementos Touch 
 
 Los gráficos de SkiaSharp se pueden integrar con el resto de de Xamarin.Forms varias maneras. Puede combinar un lienzo SkiaSharp y Xamarin.Forms los elementos de la misma página e incluso colocar Xamarin.Forms los elementos en la parte superior de un lienzo SkiaSharp:
 
-![](integration-images/integrationexample.png "Selecting a color with sliders")
+![Seleccionar un color con controles deslizantes](integration-images/integrationexample.png)
 
 Otro enfoque para crear gráficos interactivos de SkiaSharp en Xamarin.Forms es el toque.
 La segunda página del programa [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) tiene derecho a **activar o desactivar relleno**. Dibuja un círculo simple de dos maneras &mdash; sin relleno y con un relleno &mdash; que se alterna mediante una derivación. La [`TapToggleFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) clase muestra cómo puede modificar los gráficos de SkiaSharp en respuesta a los datos proporcionados por el usuario.
@@ -240,7 +240,7 @@ En el modelo HSV, los colores puros se producen cuando la saturación y el valor
 
 Pero la mejor manera de hacerse una idea de los dos modelos es experimentar con ellos mismo:
 
-[![](integration-images/colorexplore-large.png "Triple screenshot of the Color Explore page")](integration-images/colorexplore-small.png#lightbox "Triple screenshot of the Color Explore page")
+[![Captura de pantalla triple de la página explorar color](integration-images/colorexplore-large.png)](integration-images/colorexplore-small.png#lightbox "Captura de pantalla triple de la página explorar color")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

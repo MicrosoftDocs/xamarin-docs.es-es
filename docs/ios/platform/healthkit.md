@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 8090cb3c694083be4ef12294799d6aadf26b6038
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 0c733789883c9752d63824d0bca7356a88d05659
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569132"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929667"
 ---
 # <a name="healthkit-in-xamarinios"></a>HealthKit en Xamarin. iOS
 
@@ -30,7 +30,7 @@ En este artículo no se abordarán temas más avanzados, como la consulta de la 
 
 En este artículo, se creará una aplicación de ejemplo para registrar la tarifa cardíaca del usuario:
 
-[![](healthkit-images/image01.png "A sample application to record the users heart rate")](healthkit-images/image01.png#lightbox)
+[![Una aplicación de ejemplo para registrar la tasa de corazón de los usuarios](healthkit-images/image01.png)](healthkit-images/image01.png#lightbox)
 
 ## <a name="requirements"></a>Requisitos
 
@@ -66,21 +66,21 @@ Los **identificadores de aplicación** actuales aparecen en la sección [certifi
 
 Para crear un **identificador de aplicación**explícito, haga clic **+** en el botón situado en la parte superior derecha para pasar a la página **registrar el ID. de aplicación de iOS** :
 
-[![](healthkit-images/image02.png "Registering an app on the Apple Developer Portal")](healthkit-images/image02.png#lightbox)
+[![Registro de una aplicación en el portal para desarrolladores de Apple](healthkit-images/image02.png)](healthkit-images/image02.png#lightbox)
 
 Como se muestra en la imagen anterior, después de crear una descripción de la aplicación, use la sección de ID. de **aplicación explícito** para crear un identificador para la aplicación. En la sección **App Services** , active el **Kit de estado** en la sección **habilitar servicios** .
 
 Cuando haya terminado, haga clic en el botón **Continue (continuar** ) para registrar el identificador de la **aplicación** en su cuenta. Se le devolverá a la página **certificados, identificadores y perfiles** . Haga clic en **perfiles de aprovisionamiento** para pasar a la lista de perfiles de aprovisionamiento actuales y haga clic **+** en el botón situado en la esquina superior derecha para pasar a la página **Agregar Perfil de aprovisionamiento de iOS** . Seleccione la opción **desarrollo de aplicaciones de iOS** y haga clic en **continuar** para acceder a la página **seleccionar ID** . de aplicación. Aquí, seleccione el **identificador de aplicación** explícito que especificó anteriormente:
 
-[![](healthkit-images/image03.png "Select the explicit App ID")](healthkit-images/image03.png#lightbox)
+[![Seleccionar el identificador de aplicación explícito](healthkit-images/image03.png)](healthkit-images/image03.png#lightbox)
 
 Haga clic en **continuar** y trabaje a través de las pantallas restantes, donde se especificarán los **certificados de desarrollador**, los **dispositivos**y un **nombre** para este **Perfil de aprovisionamiento**:
 
-[![](healthkit-images/image04.png "Generating the Provisioning Profile")](healthkit-images/image04.png#lightbox)
+[![Generación del perfil de aprovisionamiento](healthkit-images/image04.png)](healthkit-images/image04.png#lightbox)
 
 Haga clic en **generar** y espere a que se cree el perfil. Descargue el archivo y haga doble clic en él para instalarlo en Xcode. Puede confirmar su instalación en **Xcode > preferencias > cuentas > ver detalles..** . Debería ver el perfil de aprovisionamiento recién instalado y debe tener el icono del kit de mantenimiento y cualquier otro servicio especial en su fila **derechos** :
 
-[![](healthkit-images/image05.png "Viewing the profile in Xcode")](healthkit-images/image05.png#lightbox)
+[![Visualización del perfil en Xcode](healthkit-images/image05.png)](healthkit-images/image05.png#lightbox)
 
 <a name="associating-appid"></a>
 
@@ -90,11 +90,11 @@ Una vez que haya creado e instalado un **Perfil de aprovisionamiento** adecuado,
 
 En lugar de recorrer el proceso de creación de un proyecto de Xamarin iOS 8, abra la aplicación de ejemplo adjunta a este artículo (que incluye un guión gráfico y un código precompilados). Para asociar la aplicación de ejemplo con el **Perfil de aprovisionamiento**habilitado del kit de mantenimiento, en el **Panel de solución**, haga clic con el botón derecho en el proyecto y abra el cuadro de diálogo **Opciones** . Cambie al panel de la **aplicación iOS** y escriba el **identificador de aplicación** explícito que creó anteriormente como **identificador de lote**de la aplicación:
 
-[![](healthkit-images/image06.png "Enter the explicit App ID")](healthkit-images/image06.png#lightbox)
+[![Escriba el identificador de aplicación explícito](healthkit-images/image06.png)](healthkit-images/image06.png#lightbox)
 
 Ahora, cambie al panel de **firma de lote de iOS** . El **Perfil de aprovisionamiento**instalado recientemente, con su asociación al **identificador de aplicación**explícito, ahora estará disponible como el perfil de **aprovisionamiento**:
 
-[![](healthkit-images/image07.png "Select the Provisioning Profile")](healthkit-images/image07.png#lightbox)
+[![Seleccionar el perfil de aprovisionamiento](healthkit-images/image07.png)](healthkit-images/image07.png#lightbox)
 
 Si el **Perfil de aprovisionamiento** no está disponible, compruebe el identificador de la **agrupación** en el panel de la **aplicación iOS** en comparación con el especificado en el **centro de desarrollo de iOS** y que el perfil de **aprovisionamiento** está instalado (**Xcode > preferencias > cuentas > ver detalles...**).
 
@@ -141,11 +141,11 @@ Los datos del kit de mantenimiento se limitan a los tipos especificados de Apple
 
 Los tipos pueda almacenar en el almacén de almacenamiento de los kits de mantenimiento son todas las subclases de `HKObjectType` . `HKCharacteristicType`los objetos almacenan sexo biológico, tipo de sangre y fecha de nacimiento. Sin embargo, es más común que `HKSampleType` los objetos, que representan los datos muestreados en un momento específico o durante un período de tiempo. 
 
-[![](healthkit-images/image08.png "HKSampleType objects chart")](healthkit-images/image08.png#lightbox)
+[![Gráfico de objetos de HKSampleType](healthkit-images/image08.png)](healthkit-images/image08.png#lightbox)
 
 `HKSampleType`es abstracto y tiene cuatro subclases concretas. Actualmente solo hay un tipo de `HKCategoryType` datos, que es análisis de suspensión. La mayor parte de los datos del kit de mantenimiento son del tipo `HKQuantityType` y almacenan sus datos en `HKQuantitySample` objetos, que se crean con el modelo de diseño de fábrica conocido:
 
-[![](healthkit-images/image09.png "The large majority of data in Health Kit are of type HKQuantityType and store their data in HKQuantitySample objects")](healthkit-images/image09.png#lightbox)
+[![La mayor parte de los datos del kit de mantenimiento son del tipo HKQuantityType y almacenan sus datos en objetos HKQuantitySample](healthkit-images/image09.png)](healthkit-images/image09.png#lightbox)
 
 `HKQuantityType`los tipos van desde `HKQuantityTypeIdentifier.ActiveEnergyBurned` a `HKQuantityTypeIdentifier.StepCount` . 
 
@@ -155,11 +155,11 @@ Los tipos pueda almacenar en el almacén de almacenamiento de los kits de manten
 
 Los usuarios finales deben realizar pasos positivos para permitir que una aplicación lea o escriba datos del kit de mantenimiento. Esto se hace a través de la aplicación de mantenimiento que viene preinstalada en dispositivos iOS 8. La primera vez que se ejecuta una aplicación del kit de mantenimiento, se presenta al usuario un cuadro de diálogo de **acceso de mantenimiento** controlado por el sistema:
 
-[![](healthkit-images/image10.png "The user is presented with a system-controlled Health Access dialog")](healthkit-images/image10.png#lightbox)
+[![Se presenta al usuario un cuadro de diálogo de acceso de mantenimiento controlado por el sistema](healthkit-images/image10.png)](healthkit-images/image10.png#lightbox)
 
 Más adelante, el usuario puede cambiar los permisos mediante el cuadro de diálogo **orígenes** de la aplicación Health:
 
-[![](healthkit-images/image11.png "The user can change permissions using Health apps Sources dialog")](healthkit-images/image11.png#lightbox)
+[![El usuario puede cambiar los permisos mediante el cuadro de diálogo orígenes de aplicaciones de mantenimiento](healthkit-images/image11.png)](healthkit-images/image11.png#lightbox)
 
 Dado que la información de estado es extremadamente sensible, los desarrolladores de aplicaciones deben escribir sus programas de forma defensiva, con la expectativa de que los permisos se rechacen y cambien mientras se ejecuta la aplicación. La expresión más común es solicitar permisos en el `UIApplicationDelegate.OnActivated` método y, a continuación, modificar la interfaz de usuario según corresponda.
 
@@ -353,7 +353,7 @@ hkm.HeartRateSensorLocation = HKHeartRateSensorLocation.Chest;
 
 Una vez `heartRateSample` creado, el código crea una nueva conexión a la base de datos con el bloque using. Dentro de ese bloque, el `HKHealthStore.SaveObject()` método intenta realizar la escritura asincrónica en la base de datos. La llamada resultante a la expresión lambda desencadena eventos relevantes, ya sea `HeartRateStored` o `ErrorMessageChanged` .
 
-Ahora que el modelo se ha programado, es el momento de ver cómo el controlador refleja el estado del modelo. Abra el `HKWorkViewController.cs` archivo. El constructor simplemente conecta el `HeartRateModel` Singleton con los métodos de control de eventos (de nuevo, esto podría realizarse en línea con las expresiones lambda, pero los métodos independientes hacen que la intención sea un poco más obvia):
+Ahora que el modelo se ha programado, es el momento de ver cómo el controlador refleja el estado del modelo. Abra el archivo `HKWorkViewController.cs`. El constructor simplemente conecta el `HeartRateModel` Singleton con los métodos de control de eventos (de nuevo, esto podría realizarse en línea con las expresiones lambda, pero los métodos independientes hacen que la intención sea un poco más obvia):
 
 ```csharp
 public HKWorkViewController (IntPtr handle) : base (handle)
@@ -404,11 +404,11 @@ Conecte un dispositivo de desarrollo de iOS 8 aprovisionado correctamente al sis
 
 Suponiendo que las aprovisionaciones se han establecido correctamente, se iniciará la aplicación. Cuando alcance su `OnActivated` método, solicitará la autorización del kit de mantenimiento. La primera vez que lo encuentre el sistema operativo, se mostrará al usuario el siguiente cuadro de diálogo:
 
-[![](healthkit-images/image12.png "The user will be presented with this dialog")](healthkit-images/image12.png#lightbox)
+[![Se presentará al usuario este cuadro de diálogo](healthkit-images/image12.png)](healthkit-images/image12.png#lightbox)
 
 Habilite la aplicación para actualizar los datos de la tarifa de corazón y la aplicación volverá a aparecer. La `ReactToHealthCarePermissions` devolución de llamada se activará de forma asincrónica. Esto hará que la `HeartRateModel’s` `Enabled` propiedad cambie, lo que generará el `EnabledChanged` evento, lo que hará que se `HKPermissionsViewController.OnEnabledChanged()` ejecute el controlador de eventos, lo que habilita el `StoreData` botón. En el diagrama siguiente se muestra la secuencia:
 
-[![](healthkit-images/image13.png "This diagram shows the sequence of events")](healthkit-images/image13.png#lightbox)
+[![Este diagrama muestra la secuencia de eventos](healthkit-images/image13.png)](healthkit-images/image13.png#lightbox)
 
 Presione el botón **grabar** . Esto hará que se `StoreData_TouchUpInside()` ejecute el controlador, que intentará analizar el valor del campo de `heartRate` texto, convertir en a `HKQuantity` a través de la función descrita anteriormente `HeartRateModel.HeartRateInBeatsPerMinute()` y pasar esa cantidad a `HeartRateModel.StoreHeartRate()` . Como se explicó anteriormente, esto intentará almacenar los datos y producirá un `HeartRateStored` evento o `ErrorMessageChanged` .
 

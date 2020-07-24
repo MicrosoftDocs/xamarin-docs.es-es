@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: e90ee165073dbbe792e4ca1916463517ad86255d
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 39a18a775946c2f139b4c032d2c360bc5680a0e7
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572304"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937922"
 ---
 # <a name="alternate-app-icons-in-xamarinios"></a>Iconos de aplicación alternativos en Xamarin. iOS
 
@@ -25,7 +25,7 @@ Apple ha agregado varias mejoras a iOS 10,3 que permiten a una aplicación admin
 - `AlternateIconName`: Devuelve el nombre del icono alternativo seleccionado actualmente o `null` si se usa el icono principal.
 - `SetAlternameIconName`: Use este método para cambiar el icono de la aplicación al icono alternativo determinado.
 
-![](alternate-app-icons-images/icons04.png "A sample alert when an app changes its icon")
+![Una alerta de ejemplo cuando una aplicación cambia su icono](alternate-app-icons-images/icons04.png)
 
 <a name="Adding-Alternate-Icons"></a>
 
@@ -33,19 +33,19 @@ Apple ha agregado varias mejoras a iOS 10,3 que permiten a una aplicación admin
 
 Para permitir que una aplicación cambie a un icono alternativo, es necesario incluir una colección de imágenes de icono en el proyecto de aplicación de Xamarin. iOS. Estas imágenes no se pueden agregar al proyecto con el `Assets.xcassets` método típico, sino que se deben agregar directamente a la carpeta de **recursos** .
 
-Haga lo siguiente:
+Siga estos pasos:
 
 1. Seleccione las imágenes de icono necesarias en una carpeta, seleccione todas y arrástrelas hasta la carpeta **recursos** en el **Explorador de soluciones**:
 
-    ![](alternate-app-icons-images/icons00.png "Select the icons images from a folder")
+    ![Selección de las imágenes de iconos de una carpeta](alternate-app-icons-images/icons00.png)
 
 2. Cuando se le solicite, seleccione **copiar**, **use la misma acción para todos los archivos seleccionados** y haga clic en el botón **Aceptar** :
 
-    ![](alternate-app-icons-images/icons02.png "The Add File to Folder dialog box")
+    ![Cuadro de diálogo Agregar archivo a carpeta](alternate-app-icons-images/icons02.png)
 
 3. La carpeta de **recursos** debería tener un aspecto similar al siguiente:
 
-    ![](alternate-app-icons-images/icons01.png "The Resources folder should look like this")
+    ![La carpeta de recursos debe tener este aspecto.](alternate-app-icons-images/icons01.png)
 
 <a name="Modifying-the-Info.plist-File"></a>
 
@@ -53,10 +53,10 @@ Haga lo siguiente:
 
 Con las imágenes necesarias agregadas a la carpeta **Resources** , la clave [CFBundleAlternateIcons](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/TP40009249-SW13) deberá agregarse al archivo **info. plist** del proyecto. Esta clave definirá el nombre del nuevo icono y las imágenes que lo componen.
 
-Haga lo siguiente:
+Siga estos pasos:
 
 1. En el **Explorador de soluciones**, haga doble clic en el archivo **Info.plist** para abrirlo para su edición.
-2. Cambie a la vista de **código fuente** .
+2. Cambie a la vista **Código fuente**.
 3. Agregue una clave de **iconos de agrupación** y deje el **tipo** establecido en **Diccionario**.
 4. Agregue una `CFBundleAlternateIcons` clave y establezca el **tipo** en **Dictionary**.
 5. Agregue una `AppIcon2` clave y establezca el **tipo** en **Dictionary**. Este será el nombre del nuevo conjunto de iconos de aplicación alternativo.
@@ -67,7 +67,7 @@ Haga lo siguiente:
 
 El archivo **info. plist** resultante debería tener un aspecto similar al siguiente cuando se complete:
 
-![](alternate-app-icons-images/icons03.png "The completed Info.plist file")
+![El archivo info. plist completado](alternate-app-icons-images/icons03.png)
 
 O similar a esto si se abre en un editor de texto:
 
@@ -158,11 +158,11 @@ partial void UseAlternateIcon (Foundation.NSObject sender)
 
 Cuando se ejecute la aplicación y el usuario seleccione un icono alternativo, se mostrará una alerta similar a la siguiente:
 
-![](alternate-app-icons-images/icons04.png "A sample alert when an app changes its icon")
+![Una alerta de ejemplo cuando una aplicación cambia su icono](alternate-app-icons-images/icons04.png)
 
 Si el usuario vuelve al icono principal, se mostrará una alerta similar a la siguiente:
 
-![](alternate-app-icons-images/icons05.png "A sample alert when an app changes to the primary icon")
+![Una alerta de ejemplo cuando una aplicación cambia al icono principal](alternate-app-icons-images/icons05.png)
 
 <a name="Summary"></a>
 

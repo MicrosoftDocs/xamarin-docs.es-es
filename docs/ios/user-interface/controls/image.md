@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/13/2018
-ms.openlocfilehash: 70d3e7ddc8b88651ec68552d35dbd4a3e9c90bd0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 32f145d791a40bd90e848f1124ce150cbd9c7575
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022072"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937777"
 ---
 # <a name="displaying-images-with-xamarinios"></a>Mostrar imágenes con Xamarin. iOS
 
@@ -26,7 +26,7 @@ Visual Studio para Mac también admite un directorio especial denominado **recur
 
 En esta captura de pantalla se muestran las opciones de **acción de compilación** que aparecen cuando se hace clic con el botón derecho en un archivo:
 
- [![](image-images/image30a.png "Build Action menu")](image-images/image30a.png#lightbox)
+ [![Menú de acción de compilación](image-images/image30a.png)](image-images/image30a.png#lightbox)
 
 Visual Studio para Mac normalmente elegirá automáticamente la **acción de compilación** correcta, pero debe tener en cuenta esta configuración, especialmente si mueve archivos en el proyecto.
 
@@ -34,15 +34,15 @@ Visual Studio para Mac normalmente elegirá automáticamente la **acción de com
 
 Para agregar un archivo de imagen al proyecto, haga clic con el botón derecho en el proyecto y elija **Agregar archivos..** .
 
- [![](image-images/image31a.png "Add Files... menu")](image-images/image31a.png#lightbox)
+ [![Agregar archivos... MENU](image-images/image31a.png)](image-images/image31a.png#lightbox)
 
 Seleccione la imagen (o imágenes) que desee incluir en el cuadro de diálogo de archivo estándar. La acción de compilación predeterminada para las imágenes será **BundleResource** : no Invalide este valor a menos que tenga un motivo concreto.
 
- [![](image-images/image32a.png "Add Files dialog")](image-images/image32a.png#lightbox)
+ [![Cuadro de diálogo Agregar archivos](image-images/image32a.png)](image-images/image32a.png#lightbox)
 
 La imagen se agregará al proyecto y estará disponible para cargarse y mostrarse en el código. En esta captura de pantalla se muestra una imagen agregada a un proyecto de aplicación de iOS:
 
- [![](image-images/image33a.png "Image in project")](image-images/image33a.png#lightbox)
+ [![Imagen en el proyecto](image-images/image33a.png)](image-images/image33a.png#lightbox)
 
 ### <a name="what-is-the-resources-directory"></a>¿Qué es el directorio de recursos?
 
@@ -51,7 +51,7 @@ Los archivos colocados en el directorio de **recursos** se tratan de forma difer
 - Almacenar las imágenes configuradas en las propiedades de la aplicación, como las imágenes de inicio predeterminadas y los iconos de la aplicación.
 - Almacenar otras imágenes y archivos por separado del código, por lo que son más fáciles de administrar (los subdirectorios se conservan cuando se copia el contenido del directorio de recursos).
 
-El directorio de **recursos** es especialmente útil en un proyecto de biblioteca, ya que el código puede suponer que esas imágenes se copiarán en la raíz de la aplicación de consumo, lo que facilita la escritura de bibliotecas de código compartidas que requieren imagen, sonido, vídeo, XML o Otros archivos.
+El directorio de **recursos** es especialmente útil en un proyecto de biblioteca, ya que el código puede suponer que esas imágenes se copiarán en la raíz de la aplicación de consumo, lo que facilita la escritura de bibliotecas de código compartidas que requieren imagen, sonido, vídeo, XML u otros archivos.
 
 El directorio de **recursos** debe tener el mismo nombre y todos los archivos deben tener la acción de compilación establecida en **BundleResource**.
 
@@ -59,21 +59,21 @@ El directorio de **recursos** debe tener el mismo nombre y todos los archivos de
 
 En el diseñador de iOS, use una **vista de imagen** para mostrar una imagen o una serie animada de imágenes. A continuación se muestra el icono de **vista de imagen** del cuadro de herramientas:
 
- [![](image-images/image35a.png "ImageView in Toolbox")](image-images/image35.png#lightbox)
+ [![ImageView en el cuadro de herramientas](image-images/image35a.png)](image-images/image35.png#lightbox)
 
 Arrastre la **vista imagen** desde el **cuadro de herramientas** hasta el controlador de vista. A continuación, en la **vista imagen > imagen** , la lista desplegable proporcionará una lista de todos los archivos de imagen disponibles en el proyecto. Seleccione cualquiera de ellas para agregarla a la vista de imagen.
 
- [![](image-images/image36a.png "ImageView in Toolbox")](image-images/image36.png#lightbox)
+ [![ImageView en el cuadro de herramientas](image-images/image36a.png)](image-images/image36.png#lightbox)
 
 ### <a name="displaying-the-image-programmatically"></a>Mostrar la imagen mediante programación
 
-Dado que **SF Monkey. jpg** se encuentra en la raíz del directorio de **recursos** , estará disponible en tiempo de ejecución en la raíz del lote de aplicaciones. Para mostrar esta imagen en un control de vista de imagen, use el código siguiente:
+Como **SF Monkey.jpg** se encuentra en la raíz del directorio de **recursos** , estará disponible en tiempo de ejecución en la raíz del lote de aplicaciones. Para mostrar esta imagen en un control de vista de imagen, use el código siguiente:
 
 ```csharp
 imageview1.Image = UIImage.FromBundle("SF Monkey.png");
 ```
 
-Si hubiéramos colocado la imagen en **/Resources/pics/SF Monkey. jpg**, el código incluiría la carpeta **pics** en la ruta de acceso:
+Si hubiéramos colocado la imagen en **/Resources/Pics/SF Monkey.jpg**, el código incluiría la carpeta **pics** en la ruta de acceso:
 
 ```csharp
 imageview1.Image = UIImage.FromBundle("Pics/SF Monkey.png");

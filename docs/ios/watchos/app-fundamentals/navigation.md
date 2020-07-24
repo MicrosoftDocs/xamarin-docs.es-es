@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 1ad4ecad90238436f8d2a02727596186c6205eeb
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 8b1ffe54ad199acbc7bf3918c187e198d96b51c8
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572096"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939404"
 ---
 # <a name="working-with-watchos-navigation-in-xamarin"></a>Trabajar con la navegación de watchos en Xamarin
 
@@ -49,7 +49,7 @@ Las pantallas modales pueden ser una sola escena o usar un diseño basado en pá
 
 Presenta escenas como una pila de la que se puede navegar de nuevo, de forma similar a como `UINavigationController` funciona en iOS. Las escenas se pueden insertar en la pila de navegación y se extraen (mediante programación o mediante la selección del usuario).
 
-![](navigation-images/hierarchy-1.png "Las escenas se pueden insertar en la pila de navegación") ![](navigation-images/hierarchy-2.png "Las escenas se pueden extraer de la pila de navegación")
+![Las escenas se pueden insertar en la pila de navegación](navigation-images/hierarchy-1.png) ![Las escenas se pueden extraer de la pila de navegación](navigation-images/hierarchy-2.png)
 
 Al igual que con iOS, un deslizador a la izquierda navega hacia el controlador primario en una pila de navegación jerárquica.
 
@@ -95,7 +95,7 @@ public override NSObject GetContextForSegue (string segueIdentifier)
 
 Las interfaces basadas en páginas se deslizan de izquierda a derecha, de forma similar a como `UIPageViewController` funciona en iOS. Los puntos de indicador se muestran en la parte inferior de la pantalla para mostrar la página que se muestra actualmente.
 
-![](navigation-images/paged-1.png "Primera página de ejemplo") ![](navigation-images/paged-2.png "Segunda página de ejemplo") ![](navigation-images/paged-5.png "Quinta página de ejemplo")
+![Primera página de ejemplo](navigation-images/paged-1.png) ![Segunda página de ejemplo](navigation-images/paged-2.png) ![Quinta página de ejemplo](navigation-images/paged-5.png)
 
 Para convertir una interfaz basada en páginas en la interfaz de usuario principal de la aplicación de inspección, use `ReloadRootControllers` con una matriz de controladores de interfaz y contextos:
 
