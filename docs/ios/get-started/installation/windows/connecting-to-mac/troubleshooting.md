@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 311e0a84cfc71421c0992ffcecde975429eb7d3a
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 1214360f98464e1451da58aaca13df6a3964aba9
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572174"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933073"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Solucionar problemas de conexión del host de compilación de Xamarin.iOS
 
@@ -44,15 +44,15 @@ El host de compilación de Xamarin de versiones anteriores de Xamarin.iOS ya no 
 
 2. Asegúrese de que esté habilitada la opción **Inicio de sesión remoto** en el equipo Mac. Establezca el acceso para **Solo estos usuarios** y asegúrese de que su usuario de Mac esté incluido en la lista o grupo:
 
-    [![](troubleshooting-images/troubleshooting-image1.png "Set access for Only these users")](troubleshooting-images/troubleshooting-image1.png#lightbox)
+    [![Establecimiento del acceso para solo estos usuarios](troubleshooting-images/troubleshooting-image1.png)](troubleshooting-images/troubleshooting-image1.png#lightbox)
 
 3. Compruebe que el firewall permita las conexiones entrantes a través del puerto 22, el predeterminado para SSH:
 
-    [![](troubleshooting-images/troubleshooting-image2.png "Check that the firewall allows incoming connections through port 22")](troubleshooting-images/troubleshooting-image2.png#lightbox)
+    [![Comprobación de que el firewall permita las conexiones entrantes a través del puerto 22](troubleshooting-images/troubleshooting-image2.png)](troubleshooting-images/troubleshooting-image2.png#lightbox)
 
     Si ha desactivado **Automatically allow signed software to receive incoming connections** (Permitir automáticamente que el software firmado reciba conexiones entrantes), OS X mostrará un cuadro de diálogo durante el proceso de emparejamiento en el que se le preguntará si se permite que `mono-sgen` o `mono-sgen32` reciban conexiones entrantes. Haga clic en **Permitir** en este cuadro de diálogo:
 
-    [![](troubleshooting-images/troubleshooting-image4a.png "Click Allow on this dialog")](troubleshooting-images/troubleshooting-image4a.png#lightbox)
+    [![Clic en Permitir en este cuadro de diálogo](troubleshooting-images/troubleshooting-image4a.png)](troubleshooting-images/troubleshooting-image4a.png#lightbox)
 
 4. Confirme que ha iniciado sesión en la cuenta de usuario en ese equipo Mac y que tiene una sesión activa en la GUI.
 
@@ -62,11 +62,11 @@ El host de compilación de Xamarin de versiones anteriores de Xamarin.iOS ya no 
 
     Por ejemplo, en la siguiente captura de pantalla, el nombre de cuenta será **amyb** y no **Amy Burns**:
 
-    [![](troubleshooting-images/troubleshooting-image5a.png "Getting the account name from the Terminal app")](troubleshooting-images/troubleshooting-image5a.png#lightbox)
+    [![Obtención del nombre de cuenta de la aplicación Terminal](troubleshooting-images/troubleshooting-image5a.png)](troubleshooting-images/troubleshooting-image5a.png#lightbox)
 
 6. Compruebe que la dirección IP que usa para el equipo Mac es correcta. Encontrará la dirección IP en **Preferencias del sistema > Compartir > Inicio de sesión remoto** en el equipo Mac.
 
-    [![](troubleshooting-images/troubleshooting-image17.png "The IP address in the System Preferences app")](troubleshooting-images/troubleshooting-image17.png#lightbox)
+    [![Dirección IP en la aplicación Preferencias del sistema](troubleshooting-images/troubleshooting-image17.png)](troubleshooting-images/troubleshooting-image17.png#lightbox)
 
 7. Una vez que haya confirmado la dirección IP del equipo Mac, intente hacer `ping` a esa dirección en `cmd.exe` en Windows:
 
@@ -159,7 +159,7 @@ Causas notificadas:
 
     1. Confirme la ubicación del archivo **sshd\_config**. Para ello, ejecute `ls /etc/ssh/sshd_config` y `ls /etc/sshd_config` en un símbolo del sistema de Terminal. En los demás pasos, asegúrese de usar la ubicación que _no_ devuelva "No existe el archivo o directorio".
 
-        [![](troubleshooting-images/troubleshooting-image18.png "Running `ls /etc/ssh/sshd_config` and `ls /etc/sshd_config` in the Terminal")](troubleshooting-images/troubleshooting-image18.png#lightbox)
+        [![Ejecución de "ls /etc/ssh/sshd_config" y "ls /etc/sshd_config" en Terminal](troubleshooting-images/troubleshooting-image18.png)](troubleshooting-images/troubleshooting-image18.png#lightbox)
 
     2. Ejecute `cp /etc/ssh/sshd_config "$HOME/Desktop/"` en Terminal para copiar el archivo en el escritorio.
 
@@ -193,7 +193,7 @@ Si los archivos de registro muestran un problema durante los pasos de instalaci�
     
 2. Pulse la tecla Control y haga clic en la carpeta **XMA** y, después, seleccione **Mover a la papelera**:
 
-    [![](troubleshooting-images/troubleshooting-image8.png "Move the XMA folder to Trash")](troubleshooting-images/troubleshooting-image8.png#lightbox)
+    [![Envío de la carpeta XMA a la Papelera](troubleshooting-images/troubleshooting-image8.png)](troubleshooting-images/troubleshooting-image8.png#lightbox)
 
 3. También puede resultar útil borrar una caché que hay en Windows. Abra un símbolo del sistema como administrador en Windows:
 
@@ -233,7 +233,7 @@ La ventana de salida es el mejor lugar para comenzar. En ella se muestran mensaj
 2. En el menú de lista desplegable, haga clic en **Mostrar salida de**.
 3. Seleccione **Xamarin**.
 
-[![](troubleshooting-images/troubleshooting-image11.png "Select Xamarin in the Output tab")](troubleshooting-images/troubleshooting-image11.png#lightbox)
+[![Selección de Xamarin en la pestaña Salida](troubleshooting-images/troubleshooting-image11.png)](troubleshooting-images/troubleshooting-image11.png#lightbox)
 
 #### <a name="log-files"></a>Archivos de registro
 
@@ -248,17 +248,17 @@ Si la ventana de salida no incluye suficiente información para diagnosticar el 
 
 3. Una vez que Visual Studio haya producido el error de conexión, recopile los registros en **Ayuda > Xamarin > Comprimir registros**:
 
-    [![](troubleshooting-images/troubleshooting-image12.png "Collect the logs from Help > Xamarin > Zip Logs")](troubleshooting-images/troubleshooting-image12.png#lightbox)
+    [![Recopilación de los registros en Ayuda > Xamarin > Registros de archivos ZIP](troubleshooting-images/troubleshooting-image12.png)](troubleshooting-images/troubleshooting-image12.png#lightbox)
 
 4. Cuando abra el archivo .zip, verá una lista de archivos similar al ejemplo siguiente. En el caso de los errores de conexión, los archivos más importantes son **\*Ide.log** y **\*Ide.svclog**. Estos archivos contienen los mismos mensajes en dos formatos ligeramente diferentes. **.svclog** es un archivo XML y resulta útil para examinar los mensajes. **.log** es un archivo de texto sin formato y es útil si quiere filtrar los mensajes mediante herramientas de línea de comandos.
 
     Para examinar todos los mensajes, seleccione y abra el archivo **.svclog**:
 
-    [![](troubleshooting-images/troubleshooting-image13.png "Select the svclog file")](troubleshooting-images/troubleshooting-image13.png#lightbox)
+    [![Selección del archivo svclog](troubleshooting-images/troubleshooting-image13.png)](troubleshooting-images/troubleshooting-image13.png#lightbox)
 
 5. El archivo **.svclog** se abrirá en **Microsoft Service Trace Viewer**. Puede examinar los mensajes por subproceso para ver grupos de mensajes relacionados. Para examinar por subproceso, seleccione la pestaña **Gráfico**, haga clic en el menú desplegable **Modo de diseño** y seleccione **Subproceso**:
 
-    [![](troubleshooting-images/troubleshooting-image14.png "Click the Layout Mode drop-down menu and select Thread")](troubleshooting-images/troubleshooting-image14.png#lightbox)
+    [![Clic en el menú desplegable Modo de diseño y selección de Subproceso](troubleshooting-images/troubleshooting-image14.png)](troubleshooting-images/troubleshooting-image14.png#lightbox)
 
 <a name="verboselogs"></a>
 
@@ -324,7 +324,7 @@ Error relacionado: [36195](https://bugzilla.xamarin.com/show_bug.cgi?id=36195)
 
 Inicie Xcode en el equipo Mac y asegúrese de que ha iniciado sesión con su cuenta de desarrollador de Apple y que se ha descargado su perfil de desarrollo de iOS:
 
-[![](troubleshooting-images/troubleshooting-image7.png "Ensuring that the Apple developer account is logged in and the iOS Development Profile is downloaded")](troubleshooting-images/troubleshooting-image7.png#lightbox)
+[![Comprobación de que la cuenta de desarrollador de Apple se haya registrado y de que el perfil de desarrollo de iOS se haya descargado](troubleshooting-images/troubleshooting-image7.png)](troubleshooting-images/troubleshooting-image7.png#lightbox)
 
 ### <a name="a-socket-operation-was-attempted-to-an-unreachable-network"></a>"Se intentó realizar una operación de socket en una red inaccesible"
 
@@ -350,7 +350,7 @@ En ocasiones, los procesos de conexiones anteriores de host de compilación pued
 ps -A | grep mono
 ```
 
-[![](troubleshooting-images/troubleshooting-image10.png "Running commands in Terminal on the Mac")](troubleshooting-images/troubleshooting-image10.png#lightbox)
+[![Ejecución de comandos en Terminal en el equipo Mac](troubleshooting-images/troubleshooting-image10.png)](troubleshooting-images/troubleshooting-image10.png#lightbox)
 
 Para terminar los procesos existentes, use el siguiente comando:
 
@@ -370,7 +370,7 @@ Si está solucionando un problema de compilación y quiere asegurarse de que el 
 
 2. Pulse la tecla Control y haga clic en la carpeta **mtbs** y, después, seleccione **Mover a la papelera**:
 
-    [![](troubleshooting-images/troubleshooting-image9.png "Move the mtbs folder to Trash")](troubleshooting-images/troubleshooting-image9.png#lightbox)
+    [![Envío de la carpeta mtbs a la Papelera](troubleshooting-images/troubleshooting-image9.png)](troubleshooting-images/troubleshooting-image9.png#lightbox)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

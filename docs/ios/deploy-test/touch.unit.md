@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 08ddf282c8839a6283b90c0736c0b4259bd01469
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f5796ee17e947494d1e22f750bc43ff823d56d55
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028443"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937285"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Pruebas unitarias de Xamarin.iOS
 
@@ -23,11 +23,11 @@ Las pruebas unitarias con Xamarin.iOS se realizan mediante el marco Touch.Unit, 
 
 Para configurar un marco de pruebas unitarias para el proyecto, lo único que tiene que hacer es agregar a la solución un proyecto de tipo **proyecto de pruebas unitarias de iOS**. Para ello, haga clic con el botón derecho en la solución y seleccione **Agregar > Agregar nuevo proyecto**. En la lista, seleccione **iOS > Pruebas > Unified API > iOS Unit Tests Project (Proyecto de pruebas unitarias de iOS)** (puede elegir C# o F#).
 
-![](touch.unit-images/00.png "Choose either C# or F#")
+![Selección de C# o F#](touch.unit-images/00.png)
 
 Con los pasos anteriores se crea un proyecto básico que contiene un programa básico ejecutor y que hace referencia al nuevo ensamblado MonoTouch.NUnitLite; el proyecto tendrá este aspecto:
 
-![](touch.unit-images/01.png "The project in the Solution Explorer")
+![El proyecto en el Explorador de soluciones](touch.unit-images/01.png)
 
 La clase `AppDelegate.cs` contiene el ejecutor de pruebas y tiene el siguiente aspecto:
 
@@ -105,14 +105,14 @@ Para ejecutar este proyecto en la solución, haga clic en él con el botón dere
 
 El ejecutor de pruebas permite ver qué pruebas se registran y seleccionar individualmente las pruebas que se pueden ejecutar.
 
-[![](touch.unit-images/02-sml.png "The list of registered tests")](touch.unit-images/02.png#lightbox) 
-[![](touch.unit-images/03-sml.png "An individual text")](touch.unit-images/03.png#lightbox) 
+[![Lista de pruebas registradas](touch.unit-images/02-sml.png)](touch.unit-images/02.png#lightbox) 
+[![Texto individual](touch.unit-images/03-sml.png)](touch.unit-images/03.png#lightbox) 
 
-[![](touch.unit-images/04-sml.png "The run results")](touch.unit-images/04.png#lightbox)
+[![Resultados de la ejecución](touch.unit-images/04-sml.png)](touch.unit-images/04.png#lightbox)
 
 Puede ejecutar accesorios de prueba individuales si selecciona el accesorio de texto en las vistas anidadas o puede ejecutar todas las pruebas con "Run Everything (Ejecutar todo)". Si ejecuta la prueba predeterminada que se supone que incluye una prueba correcta, una incorrecta y una omitida. Este es el aspecto del informe, y puede ir directamente a las pruebas incorrectas y obtener más información sobre el error:
 
-[![](touch.unit-images/05-sml.png "Un informe de ejemplo")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/06-sml.png "Un informe de ejemplo")](touch.unit-images/06.png#lightbox) [![](touch.unit-images/07-sml.png "Un informe de ejemplo")](touch.unit-images/07.png#lightbox)
+[![Informe de ejemplo](touch.unit-images/05-sml.png)](touch.unit-images/05.png#lightbox) [![Informe de ejemplo](touch.unit-images/06-sml.png)](touch.unit-images/06.png#lightbox) [![Informe de ejemplo](touch.unit-images/07-sml.png)](touch.unit-images/07.png#lightbox)
 
 También puede ir a la ventana Application Output (Resultado de aplicación) del IDE para ver qué pruebas se ejecutan y su estado actual.
 

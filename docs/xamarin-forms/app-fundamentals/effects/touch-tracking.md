@@ -10,12 +10,12 @@ ms.date: 12/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 892bffa4027a1a61d6c22cc26d1556fb007432d8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cc150ecffbf9b6b31ec2f533bcc33876100614dc
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136986"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936856"
 ---
 # <a name="invoking-events-from-effects"></a>Invocación de eventos desde efectos
 
@@ -456,7 +456,7 @@ La lógica `Moved` mueve la `BoxView` modificando la propiedad adjunta `LayoutBo
 
 Puede mover varios elementos `BoxView` al mismo tiempo usando diferentes dedos.
 
-[![](touch-tracking-images/boxviewdragging-small.png "Triple screenshot of the BoxView Dragging page")](touch-tracking-images/boxviewdragging-large.png#lightbox "Triple screenshot of the BoxView Dragging page")
+[![Captura de pantalla triple de la página BoxView Dragging (Arrastre de BoxView)](touch-tracking-images/boxviewdragging-small.png)](touch-tracking-images/boxviewdragging-large.png#lightbox "Captura de pantalla triple de la página BoxView Dragging (Arrastre de BoxView)")
 
 ### <a name="subclassing-the-view"></a>Creación de subclases de la vista
 
@@ -519,7 +519,7 @@ Las siguientes dos demostraciones requieren gráficos y usan SkiaSharp para este
 
 La página **Ellipse Drawing** (Dibujo de elipse) le permite dibujar una elipse deslizando el dedo en la pantalla. Dependiendo de cómo mueva el dedo, puede dibujar la elipse desde la esquina superior izquierda a la esquina inferior derecha, o desde cualquier otra esquina hasta la esquina opuesta. La elipse se dibuja con un color aleatorio y una opacidad.
 
-[![](touch-tracking-images/ellipsedrawing-small.png "Triple screenshot of the Ellipse Drawing page")](touch-tracking-images/ellipsedrawing-large.png#lightbox "Triple screenshot of the Ellipse Drawing page")
+[![Captura de pantalla triple de la página Ellipse Drawing (Dibujo de elipse)](touch-tracking-images/ellipsedrawing-small.png)](touch-tracking-images/ellipsedrawing-large.png#lightbox "Captura de pantalla triple de la página Ellipse Drawing (Dibujo de elipse)")
 
 Si después toca uno de los puntos suspensivos, puede arrastrarla a otra ubicación. Esto requiere una técnica conocida como "prueba de posicionamiento," lo que implica buscar el objeto gráfico en un momento determinado. Los puntos suspensivos de SkiaSharp no son elementos de Xamarin.Forms, por lo que no pueden realizar su propio procesamiento de `TouchEffect`. El `TouchEffect` debe aplicarse a todo el objeto `SKCanvasView`.
 
@@ -691,7 +691,7 @@ case TouchActionType.Pressed:
 
 Otro ejemplo de SkiaSharp es la página **Finger Paint** (Dibujo con los dedos). Puede seleccionar un color de trazo y el ancho del trazo desde dos vistas `Picker` y después dibujar con uno o más dedos:
 
-[![](touch-tracking-images/fingerpaint-small.png "Triple screenshot of the Finger Paint page")](touch-tracking-images/fingerpaint-large.png#lightbox "Triple screenshot of the Finger Paint page")
+[![Captura de pantalla triple de la página Finger Paint (Dibujo con los dedos)](touch-tracking-images/fingerpaint-small.png)](touch-tracking-images/fingerpaint-large.png#lightbox "Captura de pantalla triple de la página Finger Paint (Dibujo con los dedos)")
 
 Este ejemplo también requiere una clase independiente para representar cada línea dibujada en la pantalla:
 
@@ -799,7 +799,7 @@ Los métodos `AddToList` y `RemoveFromList` comprueban si la `List` ha cambiado 
 
 Los distintos elementos `WhiteKey` y `BlackKey` se organizan en el [archivo XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/SilentKeyboardPage.xaml) de la página, que tiene mejor aspecto cuando se mantiene el teléfono en un modo horizontal:
 
-[![](touch-tracking-images/silentkeyboard-small.png "Triple screenshot of the Silent Keyboard page")](touch-tracking-images/silentkeyboard-large.png#lightbox "Triple screenshot of the Silent Keyboard page")
+[![Captura de pantalla triple de la página Silent Keyboard (Teclado silencioso)](touch-tracking-images/silentkeyboard-small.png)](touch-tracking-images/silentkeyboard-large.png#lightbox "Captura de pantalla triple de la página Silent Keyboard (Teclado silencioso)")
 
 Si pasa los dedos por las teclas, podrá ver por los pequeños cambios en el color que los eventos táctiles se transfieren de una tecla a otra.
 

@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 3bcfb20d8283f621ac1d32730ee67be2b09efe50
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 28dddc35ac829cb58a40a9296bb995e119b5b6e3
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303700"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937272"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Análisis detallado de Hello, iOS Multiscreen
 
@@ -26,7 +26,7 @@ Luego se profundiza en el controlador de navegación y se aprende a usarlo para 
 
 En el tutorial [Hello, iOS](~/ios/get-started/hello-ios/index.md), aprendimos que las aplicaciones de iOS solo tienen una *ventana* en la que los controladores de vista cargan sus *jerarquías de vista de contenido*. En el segundo tutorial Phoneword, agregamos una segunda pantalla a la aplicación y pasamos algunos datos (una lista de números de teléfono) entre las dos pantallas, como se muestra en el diagrama siguiente:
 
- [![](hello-ios-multiscreen-deepdive-images/08.png "This diagram illustrates passing data between two screens")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
+ [![Diagrama en el que se ilustra cómo se pasan los datos entre dos pantallas](hello-ios-multiscreen-deepdive-images/08.png)](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
 En el ejemplo, los datos se recopilaban en la primera pantalla, se pasaban desde el primer controlador de vista al segundo y aparecían en la segunda pantalla. Esta separación de datos, controladores de vista y pantallas sigue el patrón *Modelo, Vista, Controlador (MVC)* . En las siguientes secciones se explican las ventajas del modelo, sus componentes y cómo se usa en la aplicación Phoneword.
 
@@ -34,7 +34,7 @@ En el ejemplo, los datos se recopilaban en la primera pantalla, se pasaban desde
 
 Modelo-Vista-Controlador es un *modelo de diseño*: una solución de arquitectura reutilizable para un problema o un caso de uso común en el código. MVC es una arquitectura para aplicaciones con una *interfaz gráfica de usuario (GUI)* . Asigna objetos de uno de tres roles de la aplicación: el *modelo* (lógica de datos o aplicación), la *vista* (interfaz de usuario) y el *controlador* (código subyacente). En el diagrama siguiente se muestran las relaciones entre las tres partes del modelo MVC y el usuario:
 
- [![](hello-ios-multiscreen-deepdive-images/00.png "This diagram illustrates the relationships between the three pieces of the MVC pattern and the user")](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
+ [![Diagrama en el que se muestran las relaciones entre las tres partes del patrón MVC y el usuario](hello-ios-multiscreen-deepdive-images/00.png)](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
 
 El modelo MVC es útil porque proporciona una separación lógica entre diferentes partes de una aplicación GUI y facilita la reutilización del código y las vistas. Vamos a examinar más detalladamente cada uno de los tres roles.
 
@@ -68,13 +68,13 @@ En la aplicación Phoneword se ha usado un controlador de navegación para admin
 
 El controlador de navegación es común en las aplicaciones de iOS y proporciona navegación para aplicaciones de iOS inseparables como la aplicación **Ajustes**, como se muestra en la siguiente captura de pantalla:
 
- [![](hello-ios-multiscreen-deepdive-images/01.png "The navigation controller provides navigation for iOS applications like the Settings app shown here")](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
+ [![El controlador de navegación permite navegar por aplicaciones iOS, como la aplicación Ajustes que se muestra aquí.](hello-ios-multiscreen-deepdive-images/01.png)](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
 
 El controlador de navegación tiene tres funciones principales:
 
 - **Proporciona enlaces para la navegación hacia delante**: el controlador de navegación usa una metáfora de navegación jerárquica en la que las jerarquías de vistas de contenido se *insertan* en una *pila de navegación*. Puede imaginarse una pila de navegación como una pila de cartas en la que solo la superior es visible, como se muestra en el diagrama siguiente:  
 
-    [![](hello-ios-multiscreen-deepdive-images/02.png "This diagram illustrates navigation as a stack of cards")](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
+    [![Diagrama en el que se muestra la navegación como una baraja de cartas](hello-ios-multiscreen-deepdive-images/02.png)](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
 
 - **Opcionalmente proporciona un botón Atrás**: cuando se inserta un nuevo elemento en la pila de navegación, la barra de título puede mostrar automáticamente un *botón Atrás* que permita al usuario navegar hacia atrás. Al presionar el botón Atrás, *extrae* el controlador de vista actual de la pila de navegación y carga la jerarquía de vistas de contenido anterior en la ventana:  
 
@@ -82,18 +82,18 @@ El controlador de navegación tiene tres funciones principales:
 
 - **Proporciona una barra de título**: la parte superior del controlador de navegación se denomina *barra de título*. Es responsable de mostrar el título del controlador de vista, como se muestra en el diagrama siguiente:  
 
-    [![](hello-ios-multiscreen-deepdive-images/04.png "The Title Bar is responsible for displaying the view controller title")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
+    [![La barra de título se encarga de mostrar el título del controlador de vista.](hello-ios-multiscreen-deepdive-images/04.png)](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
 ### <a name="root-view-controller"></a>Controlador de vista raíz
 
 Un controlador de navegación no administra una jerarquía de vistas de contenido, por lo que no tiene nada que mostrar por sí mismo.
 En su lugar, un controlador de navegación se empareja con un *controlador de vista raíz*:
 
- [![](hello-ios-multiscreen-deepdive-images/05.png "A navigation controller is paired with a Root view controller")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
+ [![Un controlador de navegación se empareja con un controlador de vista raíz.](hello-ios-multiscreen-deepdive-images/05.png)](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
 El controlador de vista raíz representa al primer controlador de vista de la pila del controlador de navegación y la jerarquía de vistas de contenido del controlador de vista raíz es la primera jerarquía de vistas de contenido que se carga en la ventana. Si se quiere colocar toda la aplicación en la pila del controlador de navegación, se puede pasar el segoe sin origen al controlador de navegación y establecer el controlador de vista de la primera pantalla como controlador de vista raíz, como se hizo en la aplicación Phoneword:
 
- [![](hello-ios-multiscreen-deepdive-images/06.png "The Sourceless Segue sets the first screens view controller as the Root view controller")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
+ [![El objeto Sourceless Segue establece el controlador de vista de la primera pantalla como el controlador de vista raíz.](hello-ios-multiscreen-deepdive-images/06.png)](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
 ### <a name="additional-navigation-options"></a>Otras opciones de navegación
 
@@ -107,7 +107,7 @@ En el tutorial de Phoneword, la transición entre los dos controladores de vista
 
 Cuando se agrega un segoe con una acción **Mostrar** al Storyboard, se indica a iOS que inserte el segundo controlador de vista en la pila del controlador de navegación:
 
- [![](hello-ios-multiscreen-deepdive-images/09.png "Setting the segue type from a dropdown list")](hello-ios-multiscreen-deepdive-images/09.png#lightbox)
+ [![Establecimiento del tipo segue desde una lista desplegable](hello-ios-multiscreen-deepdive-images/09.png)](hello-ios-multiscreen-deepdive-images/09.png#lightbox)
 
 La adición de un Segue al guion gráfico basta para crear una transición sencilla entre pantallas. Si quiere pasar datos entre controladores de vista, tiene que invalidar el método `PrepareForSegue` y controlar los datos por sí mismo:
 

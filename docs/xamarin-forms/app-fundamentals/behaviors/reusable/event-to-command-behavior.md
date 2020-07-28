@@ -10,12 +10,12 @@ ms.date: 11/09/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 46d1566c89de763a469f30ce8ed2c6ef919f1426
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0967845ac61ddf5f8e1cc76664a50877d041f011
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135803"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939677"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>EventToCommandBehavior reutilizable
 
@@ -201,7 +201,7 @@ La propiedad `Command` del comportamiento está enlazada a datos a la propiedad 
 
 En tiempo de ejecución, el comportamiento responderá a la interacción con el control. Cuando se selecciona un elemento en el control [`ListView`](xref:Xamarin.Forms.ListView), se desencadena el evento [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected), que ejecutará `OutputAgeCommand` en el modelo de vista. A su vez, esto actualiza la propiedad `SelectedItemText` del modelo de vista a la que se enlaza [`Label`](xref:Xamarin.Forms.Label), como se muestra en las capturas de pantalla siguientes:
 
-[![](event-to-command-behavior-images/screenshots-sml.png "Sample Application with EventToCommandBehavior")](event-to-command-behavior-images/screenshots.png#lightbox "Sample Application with EventToCommandBehavior")
+[![Aplicación de ejemplo con EventToCommandBehavior](event-to-command-behavior-images/screenshots-sml.png)](event-to-command-behavior-images/screenshots.png#lightbox "Aplicación de ejemplo con EventToCommandBehavior")
 
 La ventaja de usar este comportamiento para ejecutar un comando cuando se desencadena un evento es que se pueden asociar comandos con controles que no se han diseñado para interactuar con los comandos. Además, esto quita el código de control de eventos reutilizable de los archivos de código subyacente.
 

@@ -1,6 +1,6 @@
 ---
-title: 'title: "Xamarin.Forms: Modelos de diseño de doble pantalla" description: "En esta guía se explica cómo Xamarin.Forms admite diversos patrones de diseño optimizados para los dispositivos de doble pantalla."'
-description: 'ms.prod: xamarin ms.assetid: 3176d792-6dba-4e00-b463-497c58678ee9 ms.technology: xamarin-forms author: davidortinau ms.author: daortin ms.date: 02/08/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Modelos de diseño de doble pantalla de Xamarin.Forms
+description: En esta guía se explica cómo Xamarin.Forms admite diversos patrones de diseño optimizados para los dispositivos de doble pantalla.
 ms.prod: xamarin
 ms.assetid: 3176d792-6dba-4e00-b463-497c58678ee9
 ms.technology: xamarin-forms
@@ -10,16 +10,16 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 277fb67eeea465239d9340e755240288286d2359
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 79c0f41e8ed0bffce0154ee618729316aab5e8e2
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84138793"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935283"
 ---
 # <a name="xamarinforms-dual-screen-design-patterns"></a>Modelos de diseño de doble pantalla de Xamarin.Forms
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
@@ -29,7 +29,7 @@ En esta guía se presentan nuestros patrones de diseño recomendados para los di
 
 El patrón de lienzo extendido trata las dos pantallas como un gran lienzo para mostrar un mapa, una imagen, una hoja de cálculo u otro tipo de contenido que se beneficie de la distribución para consumir el espacio máximo:
 
-![](design-patterns-images/extended-canvas-sample.png "Extended canvas sample")
+![Ejemplo de lienzo extendido](design-patterns-images/extended-canvas-sample.png)
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"
@@ -59,7 +59,7 @@ En este ejemplo, `Grid` y el contenido interno se expandirán para consumir toda
 
 El patrón Maestro y detalle se usa cuando la vista maestra, normalmente una lista en la parte izquierda, proporciona el contenido que el usuario selecciona para ver detalles sobre ese elemento en la parte derecha:
 
-![](design-patterns-images/master-detail-sample.png "Master detail sample")
+![Ejemplo de maestro y detalle](design-patterns-images/master-detail-sample.png)
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"
@@ -85,7 +85,7 @@ En este ejemplo, puede usar `TwoPaneView` para establecer una lista en un panel 
 
 El patrón de dos páginas es idóneo para el contenido que se presta a un diseño de dos páginas, como un lector de documentos, notas o una mesa de trabajo:
 
-![](design-patterns-images/two-page-sample.png "Two page sample")
+![Ejemplo de dos páginas](design-patterns-images/two-page-sample.png)
 
 ```xaml
 <Grid x:Name="layout">
@@ -126,7 +126,7 @@ El objeto [`CollectionView`](xref:Xamarin.Forms.CollectionView), con un diseño 
 
 El patrón de vista doble puede ser similar a la vista de "dos páginas", pero se diferencia en el contenido y el usuario. En este patrón, el contenido se compara en paralelo, posiblemente para editar un documento o una foto, comparar distintos menús de un restaurante o diferenciar un conflicto de fusión mediante combinación de archivos de código:
 
-![](design-patterns-images/dual-view-sample.png "Dual view sample")
+![Ejemplo de vista doble](design-patterns-images/dual-view-sample.png)
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"
@@ -164,7 +164,7 @@ El patrón de vista doble puede ser similar a la vista de "dos páginas", pero s
 
 El patrón complementario muestra cómo se podría usar la segunda pantalla para proporcionar un segundo nivel de contenido relacionado con la vista principal, como en el caso de una aplicación de dibujo, un juego o la edición de elementos multimedia:
 
-![](design-patterns-images/companion-pane-sample.png "Companion pane sample")
+![Ejemplo de panel complementario](design-patterns-images/companion-pane-sample.png)
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"

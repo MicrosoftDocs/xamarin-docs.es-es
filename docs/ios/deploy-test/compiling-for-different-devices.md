@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 1f71179ccafc2daf65e792c4538bf47ea2df1e7d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 2f70dd3b18c36d478548672bb78d329cb2a4c9ab
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75663733"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938780"
 ---
 # <a name="compiling-for-different-devices-in-xamarinios"></a>Compilación para varios dispositivos en Xamarin.iOS
 
@@ -20,11 +20,11 @@ Las propiedades de compilación del ejecutable se pueden configurar en la págin
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-[![](compiling-for-different-devices-images/image1.png "The Projects iOS Build properties page")](compiling-for-different-devices-images/image1.png#lightbox) 
+[![Página de propiedades de compilación de iOS de los proyectos](compiling-for-different-devices-images/image1.png)](compiling-for-different-devices-images/image1.png#lightbox) 
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![](compiling-for-different-devices-images/image1a.png "The Projects iOS Build properties page")](compiling-for-different-devices-images/image1a.png#lightbox)
+[![Página de propiedades de compilación de iOS de los proyectos](compiling-for-different-devices-images/image1a.png)](compiling-for-different-devices-images/image1a.png#lightbox)
 
 -----
 
@@ -58,9 +58,9 @@ El motor backend de optimización LLVM produce código más rápido y preciso qu
 
 Puede habilitarlos en las opciones de Compilación de iOS en Visual Studio para Mac o Visual Studio.
 
-[![](compiling-for-different-devices-images/image2.png "Enabling LLVM")](compiling-for-different-devices-images/image2.png#lightbox)
+[![Habilitación de LLVM](compiling-for-different-devices-images/image2.png)](compiling-for-different-devices-images/image2.png#lightbox)
 
-[![](compiling-for-different-devices-images/image2a.png "Enabling LLVM")](compiling-for-different-devices-images/image2a.png#lightbox)
+[![Habilitación de LLVM](compiling-for-different-devices-images/image2a.png)](compiling-for-different-devices-images/image2a.png#lightbox)
 
 ## <a name="architecture-support"></a>Compatibilidad de la arquitectura
 
@@ -112,7 +112,7 @@ Para ello, debe realizar los pasos siguientes:
 - Abra **Opciones del proyecto** y vaya al panel **Compilación de iOS**.
 - Agregue `'-gcc_flags "-weak_framework iAd"'` a **Opciones adicionales** para cada configuración en que desea establecer un enlace flexible:
 
-[![](compiling-for-different-devices-images/image3.png "Additional Options")](compiling-for-different-devices-images/image3.png#lightbox)
+[![Opciones adicionales](compiling-for-different-devices-images/image3.png)](compiling-for-different-devices-images/image3.png#lightbox)
 
 Además de esto, necesita proteger el uso de los tipos de la ejecución en versiones anteriores de iOS donde pueden no existir. Hay varios métodos para hacer esto, pero uno de ellos analiza `UIDevice.CurrentDevice.SystemVersion`.
 

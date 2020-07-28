@@ -10,12 +10,12 @@ ms.date: 03/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 45b7d0d20c43aa22ebde3a17552f10ceea77a48b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5367d7933e70c59298faacff85c1d5f533bc0776
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139144"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929286"
 ---
 # <a name="xamarin-hot-restart-preview"></a>Reinicio rápido de Xamarin (versión preliminar)
 
@@ -44,7 +44,7 @@ El reinicio rápido de Xamarin permite probar rápidamente los cambios en la apl
 
 2. Seleccione y haga clic en **Dispositivo local** en la barra de herramientas para iniciar el Asistente para la instalación:
 
-    [![](hot-restart-images/toolbar.png "Screenshot of the Visual Studio toolbar with local device set as the debug target.")](hot-restart-images/toolbar.png)
+    [![Captura de pantalla de la barra de herramientas de Visual Studio con el dispositivo local establecido como destino de depuración.](hot-restart-images/toolbar.png)](hot-restart-images/toolbar.png)
 
 3. Si iTunes no está instalado, haga clic en **Descargar iTunes** para descargar el instalador. Haga clic en **Siguiente** cuando se complete la instalación de iTunes.
 
@@ -62,7 +62,7 @@ Después de la instalación inicial, el dispositivo conectado aparecerá en el m
 
 Puede realizar modificaciones en los archivos de código durante la depuración y después presionar el botón **Reiniciar** de la barra de herramientas de depuración, o bien **Ctrl+Mayús+F5**, para reiniciar la sesión de depuración con los nuevos cambios aplicados:
 
-[![](hot-restart-images/restart.png "Screenshot of the debug toolbar with the restart button highlighted.")](hot-restart-images/toolbar.png)
+[![Captura de pantalla de la barra de herramientas de depuración con el botón Reiniciar resaltado.](hot-restart-images/restart.png)](hot-restart-images/toolbar.png)
 
 También puede usar el símbolo de preprocesador `HOTRESTART` para impedir que se ejecute cierto código al depurar con el reinicio rápido de Xamarin.
 

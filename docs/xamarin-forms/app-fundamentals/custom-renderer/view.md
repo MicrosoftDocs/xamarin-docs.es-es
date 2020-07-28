@@ -10,24 +10,24 @@ ms.date: 05/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c239955a093120c3a16ea3236946eb645ea9a4b4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8215454f80614c0c7cca79af5cf51e2dd96453ae
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84570809"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929498"
 ---
 # <a name="implementing-a-view"></a>Implementación de una vista
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-view)
 
-_Los controles de interfaz de usuario personalizados de Xamarin.Forms deben derivar de la clase View, que se usa para colocar diseños y controles en la pantalla. En este artículo se muestra cómo crear un representador personalizado para un control personalizado de Xamarin.Forms que se usa para mostrar una secuencia de vídeo de vista previa de la cámara del dispositivo._
+_Los controles de interfaces de usuario personalizadas de Xamarin.Forms deben derivarse de la clase View, que se usa para colocar los diseños y los controles en la pantalla. En este artículo se muestra cómo crear un representador personalizado para un control personalizado de Xamarin.Forms que se usa para mostrar una secuencia de vídeo de vista previa de la cámara del dispositivo._
 
 Todas las vistas de Xamarin.Forms tienen un representador que las acompaña para cada plataforma y que crea una instancia de un control nativo. Cuando una aplicación de Xamarin.Forms representa un [`View`](xref:Xamarin.Forms.View) en iOS, se crea la instancia de la clase `ViewRenderer`, que a su vez crea una instancia del control `UIView` nativo. En la plataforma de Android, la clase `ViewRenderer` crea una instancia de un control `View` nativo. En Plataforma universal de Windows (UWP), la clase `ViewRenderer` crea una instancia de un control `FrameworkElement` nativo. Para obtener más información sobre el representador y las clases de control nativo a las que se asignan los controles de Xamarin.Forms, vea [Clases base y controles nativos del representador](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 El siguiente diagrama muestra la relación entre la clase [`View`](xref:Xamarin.Forms.View) y los controles nativos correspondientes que la implementan:
 
-![](view-images/view-classes.png "Relationship Between the View Class and its Implementing Native Classes")
+![Relación entre la clase View y sus clases nativas de implementación](view-images/view-classes.png)
 
 El proceso de representación puede usarse para implementar personalizaciones específicas de plataforma al crear un representador personalizado para una clase [`View`](xref:Xamarin.Forms.View) en cada plataforma. Para hacerlo, siga este procedimiento:
 
@@ -118,11 +118,11 @@ El proceso para crear la clase del representador personalizado es el siguiente:
 
 El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
-![](view-images/solution-structure.png "CameraPreview Custom Renderer Project Responsibilities")
+![Responsabilidades de proyecto del representador personalizado de CameraPreview](view-images/solution-structure.png)
 
 El control personalizado `CameraPreview` se representa mediante clases de representador específicas de la plataforma, que se derivan de la clase `ViewRenderer` de cada plataforma. Esto da lugar a que cada control personalizado `CameraPreview` se represente con controles específicos de la plataforma, como se muestra en las capturas de pantalla siguientes:
 
-![](view-images/screenshots.png "CameraPreview on each Platform")
+![CameraPreview en cada plataforma](view-images/screenshots.png)
 
 La clase `ViewRenderer` expone el método `OnElementChanged`, al que se llama cuando se crea el control personalizado de Xamarin.Forms para representar el control nativo correspondiente. Este método toma un parámetro `ElementChangedEventArgs` que contiene propiedades `OldElement` y `NewElement`. Estas propiedades representan al elemento de Xamarin.Forms al que *estaba* asociado el representador y al elemento de Xamarin.Forms al que *está* asociado el representador, respectivamente. En la aplicación de ejemplo, la propiedad `OldElement` es `null` y la propiedad `NewElement` contiene una referencia a la instancia de `CameraPreview`.
 

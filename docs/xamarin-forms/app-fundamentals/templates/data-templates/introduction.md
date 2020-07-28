@@ -10,12 +10,12 @@ ms.date: 09/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f71e0a67b823d92a17158a076707f606f6a4c73f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3558352c9f43b8e301492077806bbb611e9b58cf
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136115"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929316"
 ---
 # <a name="introduction-to-xamarinforms-data-templates"></a>Introducción a las plantillas de datos de Xamarin.Forms
 
@@ -93,7 +93,7 @@ public WithoutDataTemplatePageCS()
 
 [`ListView`](xref:Xamarin.Forms.ListView) llama a `ToString` cuando se muestran los objetos de la colección. Como no hay ninguna invalidación de `Person.ToString`, `ToString` devuelve el nombre de tipo de cada objeto, como se muestra en las capturas de pantalla siguientes:
 
-![](introduction-images/no-data-template.png "ListView without a Data Template")
+![Objeto ListView sin una plantilla de datos](introduction-images/no-data-template.png)
 
 El objeto `Person` puede invalidar el método `ToString` para mostrar datos significativos, como se muestra en el ejemplo de código siguiente:
 
@@ -110,7 +110,7 @@ public class Person
 
 Como resultado, [`ListView`](xref:Xamarin.Forms.ListView) muestra el valor de propiedad `Person.Name` para cada objeto de la colección, como se muestra en las capturas de pantalla siguientes:
 
-![](introduction-images/override-tostring.png "ListView with a Data Template")
+![Objeto ListView con una plantilla de datos](introduction-images/override-tostring.png)
 
 La invalidación de `Person.ToString` podría devolver una cadena con formato formada por las propiedades `Name`, `Age` y `Location`. Pero este enfoque solo ofrece un control limitado sobre la apariencia de cada elemento de datos. Para obtener más flexibilidad, se puede crear un elemento [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que defina la apariencia de los datos.
 

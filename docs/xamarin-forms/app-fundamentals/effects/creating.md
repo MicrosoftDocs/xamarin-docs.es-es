@@ -10,12 +10,12 @@ ms.date: 10/24/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0ed11ccacec73dd3c5c220c41bffd090af6c5b27
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d1aead9297312e190a5a04ee0f33328d81f2547a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139391"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939963"
 ---
 # <a name="creating-an-effect"></a>Creación de un efecto
 
@@ -38,12 +38,12 @@ Después, el efecto se puede consumir si se adjunta al control adecuado.
 
 En la aplicación de ejemplo se muestra un elemento `FocusEffect` que cambia el color de fondo de un control cuando recibe el foco. El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
-![](creating-images/focus-effect.png "Focus Effect Project Responsibilities")
+![Responsabilidades del proyecto de efecto de foco](creating-images/focus-effect.png)
 
 La clase `FocusEffect` personaliza un control [`Entry`](xref:Xamarin.Forms.Entry) en el elemento `HomePage` en cada proyecto específico de la plataforma. Cada clase `FocusEffect` se deriva de la clase `PlatformEffect` para cada plataforma. Como resultado, se representa el control `Entry` con un color de fondo específico de la plataforma, que cambia cuando el control recibe el foco, como se muestra en las capturas de pantalla siguientes:
 
-![](creating-images/screenshots-1.png "Focus Effect on each Platform")
-![](creating-images/screenshots-2.png "Focus Effect on each Platform")
+![Efecto de foco en cada plataforma](creating-images/screenshots-1.png)
+![Efecto de foco en cada plataforma](creating-images/screenshots-2.png)
 
 ## <a name="creating-the-effect-on-each-platform"></a>Creación del efecto en cada plataforma
 

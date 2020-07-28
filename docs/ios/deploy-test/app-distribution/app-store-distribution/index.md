@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: ee8ff58566732c6a86a339d3080c7243be4b4a4e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: c9882944938b2d5136d36304c4a400208a68663a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572200"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937337"
 ---
 # <a name="app-store-distribution"></a>Distribución a través del App Store
 
@@ -53,13 +53,13 @@ Puede seleccionar el **identificador de la aplicación** y los **dispositivos** 
 3. Haga clic en el botón **+** para crear un nuevo certificado.
 4. En el encabezado *Producción*, seleccione **App Store and Ad Hoc** (App Store y ad hoc):
 
-    [![](images/createcertmanually01.png "Select App Store and Ad Hoc")](images/createcertmanually01.png#lightbox)
+    [![Selección de App Store y ad hoc](images/createcertmanually01.png)](images/createcertmanually01.png#lightbox)
 5. Haga clic en **Continuar** y siga las instrucciones para crear una solicitud de firma de certificado (CSR) a través de Acceso a llaves:
 
-    [![](images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](images/createcertmanually02.png#lightbox)
+    [![Creación de una solicitud de firma de certificado a través de Acceso a llaves](images/createcertmanually02.png)](images/createcertmanually02.png#lightbox)
 6. Una vez que haya creado la CSR tal como se indica, haga clic en **Continuar** y cárguela en el Centro de usuarios registrados:
 
-    [![](images/createcertmanually03.png "Upload the CSR to the Member Center")](images/createcertmanually03.png#lightbox)
+    [![Carga de la CSR en el Centro de usuarios registrados](images/createcertmanually03.png)](images/createcertmanually03.png#lightbox)
 
 7. Haga clic en **Generar** para crear el certificado.
 8. Por último, **descargue** el certificado completado y haga doble clic en el archivo para instalarlo.
@@ -67,11 +67,11 @@ Puede seleccionar el **identificador de la aplicación** y los **dispositivos** 
 
 Como alternativa, se puede solicitar un certificado mediante el cuadro de diálogo Preferencias de Xcode. Para ello, siga estos pasos:
 
-1. Seleccione el equipo y haga clic en **Manage Certificates…** (Administrar certificados…):  [![](images/selectteam.png "Selección del equipo y opción Ver detalles")](images/selectteam.png#lightbox)
+1. Seleccione el equipo y haga clic en **Manage Certificates…** (Administrar certificados…):  [![Selección del equipo y opción Ver detalles](images/selectteam.png)](images/selectteam.png#lightbox)
 
-2. Luego, haga clic en el botón **Crear** situado junto a **iOS Distribution Certificate** (Certificado de distribución de iOS): [![](images/selectcert.png "Creación de un certificado de distribución de iOS")](images/selectcert.png#lightbox)
+2. Luego, haga clic en el botón **Crear** situado junto a **iOS Distribution Certificate** (Certificado de distribución de iOS):  [![Creación de un certificado de distribución de iOS](images/selectcert.png)](images/selectcert.png#lightbox)
 
-3. Según los privilegios del equipo, se generará la identidad de firma, tal como se muestra a continuación, o bien es posible que tenga que esperar hasta que un administrador o agente de equipo la apruebe:  [![](images/generated.png "Se genera la identidad de firma y aparece un cuadro de diálogo")](images/generated.png#lightbox)
+3. Según los privilegios del equipo, se generará la identidad de firma, tal como se muestra a continuación, o puede que tenga que esperar hasta que un administrador o agente de equipo la apruebe:  [![Se genera la identidad de firma y aparece un cuadro de diálogo.](images/generated.png)](images/generated.png#lightbox)
 
 <a name="creatingprofile"></a>
 
@@ -97,27 +97,27 @@ Una vez que tenga los componentes necesarios para crear un perfil de distribuci�
 
 1. Vuelva al portal de aprovisionamiento de Apple y seleccione **Aprovisionamiento** > **Distribución**:
 
-    [![](images/distribute01.png "RSelect Provisioning > Distribution")](images/distribute01.png#lightbox)
+    [![Selección de Aprovisionamiento > Distribución](images/distribute01.png)](images/distribute01.png#lightbox)
 
 2. Haga clic en el botón **+** y seleccione el tipo de perfil de distribución que quiere crear como **App Store**:
 
-    [![](images/distribute02.png "Create an App Store distribution profile")](images/distribute02.png#lightbox)
+    [![Creación de un perfil de distribución de App Store](images/distribute02.png)](images/distribute02.png#lightbox)
 
 3. Haga clic en el botón **Continuar** y seleccione el identificador de la aplicación en la lista desplegable para la que quiere crear un perfil de distribución:
 
-    [![](images/distribute03.png "Select App ID from the dropdown list")](images/distribute03.png#lightbox)
+    [![Selección de id. de aplicación en la lista desplegable](images/distribute03.png)](images/distribute03.png#lightbox)
 
 4. Haga clic en el botón **Continuar** y seleccione el certificado necesario para firmar la aplicación:
 
-    [![](images/distribute04.png "Select the certificate required to sign the application")](images/distribute04.png#lightbox)
+    [![Selección del certificado necesario para firmar la aplicación](images/distribute04.png)](images/distribute04.png#lightbox)
 
 5. Haga clic en el botón **Continuar** y seleccione los dispositivos iOS en los que se podrá ejecutar la aplicación de Xamarin.iOS:
 
-    [![](images/distribute05.png "Select the iOS devices that app will be allowed to run on")](images/distribute05.png#lightbox)
+    [![Selección de los dispositivos iOS en los que se puede ejecutar la aplicación](images/distribute05.png)](images/distribute05.png#lightbox)
 
 6. Haga clic en el botón **Continuar** y escriba un **Nombre** para el nuevo perfil de distribución:
 
-    [![](images/distribute06.png "Enter a Name for the new Distribution Profile")](images/distribute06.png#lightbox)
+    [![Escritura de un nombre para el nuevo perfil de distribución](images/distribute06.png)](images/distribute06.png#lightbox)
 
 7. Haga clic en el botón **Generar** para crear el nuevo perfil y finalizar el proceso.
 
@@ -144,13 +144,13 @@ Cuando esté listo para realizar una compilación final de una aplicación de Xa
 1. Haga doble clic en el nombre del proyecto en el **Explorador de soluciones** para abrirlo para su edición.
 2. Seleccione **Firma del lote de iOS** y **Versión | iPhone** en el elemento desplegable **Configuración**:
 
-    ![](images/releasexs01.png "Select Release | iPhone from the Configuration dropdown")
+    ![Seleccione Versión | iPhone en la lista desplegable Configuración](images/releasexs01.png)
 3. En la mayoría de los casos, la **Identidad de firma** y el **Perfil de aprovisionamiento** pueden dejarse en su valor predeterminado **Automático** y Visual Studio para Mac elegirá el perfil correcto según el identificador de paquete de Info.plist:
 
-    ![](images/releasexs02.png "The Signing Identity and the Provisioning Profile set to the default values of Automatic")
+    ![Identidad de firma y perfil de aprovisionamiento establecidos en los valores predeterminados de Automático](images/releasexs02.png)
 4. Si fuera necesario, seleccione la identidad de firma y el perfil de distribución (creado anteriormente) en las listas desplegables:
 
-    ![](images/releasexs03.png "Select the Signing Identity and Distribution Profiles")
+    ![Seleccione la identidad de firma y los perfiles de distribución](images/releasexs03.png)
 5. Haga clic en el botón **Aceptar** para guardar los cambios.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
@@ -160,13 +160,13 @@ Cuando esté listo para realizar una compilación final de una aplicación de Xa
 1. Haga clic con el botón derecho en el nombre del proyecto en el **Explorador de soluciones** y seleccione **Propiedades** para abrirlo para su edición.
 2. Seleccione **Firma del lote de iOS** y **Versión | iPhone** en el elemento desplegable **Configuración**:
 
-    ![](images/releasevs01.png "Select Release | iPhone from the Configuration dropdown")
+    ![Seleccione Versión | iPhone en la lista desplegable Configuración](images/releasevs01.png)
 3. En la mayoría de los casos, los campos **Identidad de firma** y el **Perfil de aprovisionamiento** pueden dejarse en su valor predeterminado **Automático** y Visual Studio elegirá el perfil correcto según el identificador de paquete de Info.plist.
 
-    ![](images/releasevs02.png "The Signing Identity and the Provisioning Profile set to the default values of Automatic")
+    ![Identidad de firma y perfil de aprovisionamiento establecidos en los valores predeterminados de Automático](images/releasevs02.png)
 4. Si fuera necesario, seleccione la identidad de firma y el perfil de distribución (creado anteriormente) en las listas desplegables:
 
-    ![](images/releasevs03.png "Select the Signing Identity and Distribution Profile")
+    ![Selección de la identidad de firma y el perfil de distribución](images/releasevs03.png)
 5. Guarde los cambios en las propiedades del proyecto.
 
 -----

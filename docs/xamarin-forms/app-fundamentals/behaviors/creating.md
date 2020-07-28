@@ -10,12 +10,12 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 67db30b5caadce75a41755530db2b245562d0304
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f265d1da894b195402c91cbf9468a11837c53bcf
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135829"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933717"
 ---
 # <a name="create-xamarinforms-behaviors"></a>Creación de comportamientos de Xamarin.Forms
 
@@ -113,7 +113,7 @@ entry.Behaviors.Add (new NumericValidationBehavior ());
 
 En tiempo de ejecución, el comportamiento responderá a la interacción con el control, en función de la implementación del comportamiento. En las capturas de pantalla siguientes se muestra la respuesta del comportamiento a entradas no válidas:
 
-[![](creating-images/screenshots-sml.png "Sample Application with Xamarin.Forms Behavior")](creating-images/screenshots.png#lightbox "Sample Application with Xamarin.Forms Behavior")
+[![Aplicación de ejemplo con Behavior de Xamarin.Forms](creating-images/screenshots-sml.png)](creating-images/screenshots.png#lightbox "Aplicación de ejemplo con comportamiento de Xamarin.Forms")
 
 > [!NOTE]
 > Los comportamientos se escriben para un tipo de control específico (o una superclase que se puede aplicar a muchos controles), y solo se deben agregar a un control compatible. El intento de adjuntar un comportamiento a un control incompatible iniciará una excepción.

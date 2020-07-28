@@ -10,20 +10,28 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 12f3ac86d2418c6516d000371753fc8ae65d557c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 760d03cb5667853ab7eea021e281ebd863dd8dc4
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946356"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935244"
 ---
-# <a name="xamarinforms-dual-screen-device-capabilities"></a>Capacidades de dispositivos de doble pantalla de Xamarin.Forms
+# <a name="xamarinforms-dualscreeninfo-helper-class"></a>Clase auxiliar DualScreenInfo de Xamarin.Forms
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 La clase `DualScreenInfo` permite determinar en qué panel se encuentra la vista, qué tamaño tiene, en qué posición está el dispositivo, el ángulo de la bisagra y mucho más.
+
+## <a name="configure-dualscreeninfo"></a>Configuración de DualScreenInfo
+
+Siga estas instrucciones para crear un diseño de doble pantalla en la aplicación:
+
+1. Siga las instrucciones de la sección [Primeros pasos](index.md) para agregar NuGet y configurar la clase `MainActivity` de Android.
+1. Agregue `using Xamarin.Forms.DualScreen;` al archivo de clase.
+1. Use la clase `DualScreenInfo.Current` en la aplicación.
 
 ## <a name="properties"></a>Propiedades
 
@@ -213,7 +221,7 @@ public partial class GridUsingDualScreenInfo : ContentPage
 
 En la captura de pantalla siguiente se muestra el diseño resultante:
 
-![](dual-screen-info-images/grid-on-two-screens.png "Positioning Grid on Two Screens")
+![Posicionamiento de un objeto Grid en dos pantallas](dual-screen-info-images/grid-on-two-screens.png)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

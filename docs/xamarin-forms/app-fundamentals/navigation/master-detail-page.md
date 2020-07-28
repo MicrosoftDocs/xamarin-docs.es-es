@@ -1,6 +1,6 @@
 ---
-title: 'title: "Xamarin.Forms: Página maestra y de detalles" description: "MasterDetailPage de Xamarin.Forms es una página que administra dos páginas relacionadas de información: una página maestra que presenta elementos y una página de detalles que presenta detalles sobre los elementos de la página maestra.'
-description: 'En este artículo se explica cómo usar una instancia de MasterDetailPage y cómo navegar entre sus páginas de información." ms.prod: xamarin ms.assetid: 119945E3-58B8-4630-A3D2-8B561529D53B ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/01/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Página maestra y de detalles de Xamarin.Forms
+description: 'MasterDetailPage de Xamarin.Forms es una página que administra dos páginas relacionadas de información: una página maestra que presenta elementos y una página de detalles que presenta detalles sobre los elementos de la página maestra. En este artículo se explica cómo usar una instancia de MasterDetailPage y cómo navegar entre sus páginas de información.'
 ms.prod: xamarin
 ms.assetid: 119945E3-58B8-4630-A3D2-8B561529D53B
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c751a1843479f1e98739964631999dfdb0e3b634
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 3a65e9bb90f01bcb5e0b1182a21d998e2335da9a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569639"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934529"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Página maestra y de detalles de Xamarin.Forms
 
@@ -27,7 +27,7 @@ _MasterDetailPage de Xamarin.Forms es una página que administra dos páginas re
 
 Normalmente, una página maestra presenta una lista de elementos, como se muestra en las siguientes capturas de pantalla:
 
-[![](master-detail-page-images/masterpage-components.png "Master Page Components")](master-detail-page-images/masterpage-components-large.png#lightbox "Master Page Components")
+[![Componentes de la página maestra](master-detail-page-images/masterpage-components.png)](master-detail-page-images/masterpage-components-large.png#lightbox "Componentes de la página maestra")
 
 La ubicación de la lista de elementos es idéntica en cada plataforma; al seleccionar uno de los elementos, se le lleva a la página de detalles correspondiente. Además, la página maestra también incluye una barra de navegación que contiene un botón que se puede usar para ir a la página de detalles activa:
 
@@ -37,7 +37,7 @@ La ubicación de la lista de elementos es idéntica en cada plataforma; al selec
 
 Una página de detalles presenta datos correspondientes al elemento seleccionado en la página maestra; los componentes principales de la página de detalles se muestran en las capturas de pantalla siguientes:
 
-![](master-detail-page-images/detailpage-components.png "Detail Page Components")
+![Componentes de página de detalles](master-detail-page-images/detailpage-components.png)
 
 La página de detalles contiene una barra de navegación cuyo contenido depende de la plataforma:
 
@@ -213,7 +213,7 @@ public class MasterPageCS : ContentPage
 
 En las capturas de pantalla siguientes se muestra la página maestra en cada plataforma:
 
-![](master-detail-page-images/masterpage.png "Master Page Example")
+![Ejemplo de página maestra](master-detail-page-images/masterpage.png)
 
 ### <a name="creating-and-displaying-the-detail-page"></a>Creación y presentación de la página de detalles
 
@@ -248,7 +248,7 @@ El método `OnItemSelected` realiza las siguientes acciones:
 
 Las capturas de pantalla siguientes muestran la página de detalles `ContactPage`, que se presenta después de haberse seleccionado en la página maestra:
 
-![](master-detail-page-images/detailpage.png "Detail Page Example")
+![Ejemplo de página de detalles](master-detail-page-images/detailpage.png)
 
 ### <a name="controlling-the-detail-page-display-behavior"></a>Control del comportamiento de presentación de la página de detalles
 

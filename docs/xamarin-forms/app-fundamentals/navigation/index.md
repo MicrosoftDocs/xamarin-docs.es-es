@@ -10,18 +10,18 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8c907cd8a4a1d14b936dee309610bffc67ef363f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 65aa0f060e4d48834017a334d69b2f21645825f3
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137844"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937194"
 ---
 # <a name="xamarinforms-navigation"></a>Navegación en Xamarin.Forms
 
 _Xamarin.Forms proporciona una serie de experiencias de navegación de páginas diferente, en función del tipo de página que se use._
 
-![](images/page-types.png "Xamarin.Forms Page Types")
+Tipos de página de ![Xamarin.Forms](images/page-types.png)
 
 Como alternativa, las aplicaciones de Xamarin.Forms Shell usan una experiencia de navegación basada en URI que no obliga a una jerarquía de navegación del conjunto. Para obtener más información, consulte [Navegación en Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/navigation.md).
 

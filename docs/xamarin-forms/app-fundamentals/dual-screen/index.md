@@ -1,6 +1,6 @@
 ---
-title: 'title: "Xamarin.Forms: Doble pantalla" description: "En esta guía se explica cómo crear aplicaciones de Xamarin.Forms para dispositivos de doble pantalla."'
-description: 'ms.prod: xamarin ms.assetid: f9906e83-f8ae-48f9-997b-e1540b96ee8e ms.technology: xamarin-forms author: davidortinau ms.author: daortin ms.date: 02/08/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Doble pantalla de Xamarin.Forms
+description: En esta guía se explica cómo crear aplicaciones de Xamarin.Forms para dispositivos de doble pantalla.
 ms.prod: xamarin
 ms.assetid: f9906e83-f8ae-48f9-997b-e1540b96ee8e
 ms.technology: xamarin-forms
@@ -10,35 +10,56 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: aeaaeb732adaea45446d6baf833027801abf4d2a
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 737cb819cfd762e81536fba03f3ae5b563416a4e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84138910"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930746"
 ---
 # <a name="xamarinforms-dual-screen"></a>Doble pantalla de Xamarin.Forms
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
 
-Surface Duo (Android) y Surface Neo (Windows 10X) presentan nuevos patrones para aplicaciones táctiles. Xamarin.Forms incluye las clases `TwoPaneView` y `DualScreenInfo` para que pueda desarrollar aplicaciones para dispositivos de ese tipo.
+Los dispositivos de doble pantalla como Microsoft Surface Duo ofrecen nuevas posibilidades de experiencia del usuario para las aplicaciones. Xamarin.Forms incluye las clases `TwoPaneView` y `DualScreenInfo` para que pueda desarrollar aplicaciones para dispositivos de doble pantalla.
 
-## <a name="dual-screen-design-patterns"></a>[Modelos de diseño de doble pantalla](design-patterns.md)
+## <a name="get-started"></a>Primeros pasos
 
-Al considerar el uso óptimo de varias pantallas en un dispositivo de doble pantalla, consulte estas instrucciones de patrones para encontrar la mejor opción para la interfaz de la aplicación.
+Siga estos pasos para agregar funcionalidades de doble pantalla a una aplicación Xamarin.Forms:
 
-## <a name="dual-screen-layout"></a>[Diseño de doble pantalla](twopaneview.md)
+1. Abra el cuadro de diálogo **Administrador de paquetes de NuGet** para su solución.
+2. En la pestaña **Examinar**, busque `Xamarin.Forms.DualScreen`.
+3. Instale el paquete de `Xamarin.Forms.DualScreen` en la solución.
+4. Agregue la siguiente llamada al método de inicialización a la clase `MainActivity` del proyecto de Android, en el evento `OnCreate`:
 
-La clase `TwoPaneView` de Xamarin.Forms, inspirada en el control UWP del mismo nombre, es un diseño multiplataforma optimizado para los dispositivos de pantalla doble.
+    ```csharp
+    Xamarin.Forms.DualScreen.DualScreenService.Init(this);
+    ```
 
-## <a name="dual-screen-device-capabilities"></a>[Capacidades de dispositivos de doble pantalla](dual-screen-info.md)
+    Este método es necesario para que la aplicación pueda detectar cambios en el estado de la aplicación, como el hecho de abarcar un espacio de dos pantallas.
 
-La clase `DualScreenInfo` permite determinar en qué panel se encuentra la vista, qué tamaño tiene, en qué posición está el dispositivo, el ángulo de la bisagra y mucho más.
+5. Actualice el atributo `Activity` en la clase `MainActivity` del proyecto de Android, de modo que incluya _todas_ estas opciones de `ConfigurationChanges`:
 
-## <a name="dual-screen-platform-helpers"></a>[Asistentes de plataforma de doble pantalla](dual-screen-helper.md)
+    ```@csharp
+    ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation 
+        | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.UiMode
+    ```
 
-La clase `DualScreenHelper` permite comprobar si la plataforma admite la apertura de una nueva ventana como Imagen en imagen. En el caso de Neo, permite abrir una ventana que se mostrará en la barra táctil cuando el dispositivo esté en modo de redacción.
+    Estos valores son necesarios para que los cambios de configuración y el espacio abarcado se puedan notificar de forma más confiable. De forma predeterminada, solo dos se agregan a los proyectos de Xamarin.Forms, por lo que no olvide agregar el resto para ofrecer compatibilidad de doble pantalla confiable.
 
-## <a name="dual-screen-triggers"></a>[Desencadenadores de doble pantalla](triggers.md)
+## <a name="troubleshooting"></a>Solución de problemas
 
-El espacio de nombres de [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) incluye dos desencadenadores de estado que desencadenan un cambio de [`VisualState`](xref:Xamarin.Forms.VisualState) cuando se modifica el modo de vista del diseño adjunto o de la ventana.
+Si la clase `DualScreenInfo` o el diseño `TwoPaneView` no funcionan del modo esperado, revise de nuevo las instrucciones de configuración de esta página. La omisión o la incorrecta configuración del método `Init` o de los valores de atributo de `ConfigurationChanges` son causas comunes de error.
+
+Revise los [ejemplos de doble pantalla de Xamarin.Forms](https://docs.microsoft.com/dual-screen/xamarin/samples) para obtener orientación adicional y una implementación de referencia.
+
+## <a name="next-steps"></a>Pasos siguientes
+
+Una vez que haya agregado NuGet, agregue características de doble pantalla a la aplicación con las siguientes instrucciones:
+
+- [Modelos de diseño de doble pantalla](design-patterns.md): al considerar el uso óptimo de varias pantallas en un dispositivo de doble pantalla, consulte estas instrucciones de patrones para encontrar la mejor opción para la interfaz de su aplicación.
+- [Diseño TwoPaneView](twopaneview.md): la clase `TwoPaneView` de Xamarin.Forms, inspirada en el control UWP del mismo nombre, es un diseño multiplataforma optimizado para los dispositivos de pantalla doble.
+- [Clase auxiliar DualScreenInfo](dual-screen-info.md): la clase `DualScreenInfo` permite determinar en qué panel se encuentra la vista, qué tamaño tiene, en qué posición está el dispositivo, el ángulo de la bisagra y mucho más.
+- [Desencadenadores de pantalla doble](triggers.md): el espacio de nombres de [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) incluye dos desencadenadores de estado que desencadenan un cambio de [`VisualState`](xref:Xamarin.Forms.VisualState) cuando varía el modo de visualización del diseño adjunto o de la ventana.
+
+Para obtener más información, consulte la [documentación sobre la doble pantalla para desarrolladores](https://docs.microsoft.com/dual-screen/).

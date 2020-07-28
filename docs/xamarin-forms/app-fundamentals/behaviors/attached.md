@@ -10,12 +10,12 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 08b1c738dc87bb9373436a3fd96486eb15341112
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a705eef2ecd240b8944117a67a90ebeebc382bcb
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139430"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933752"
 ---
 # <a name="attached-behaviors"></a>Comportamientos asociados
 
@@ -106,7 +106,7 @@ NumericValidationBehavior.SetAttachBehavior (entry, true);
 
 En tiempo de ejecución, el comportamiento responderá a la interacción con el control, según la implementación del comportamiento. En las capturas de pantalla siguientes, se muestra la respuesta del comportamiento asociado en respuesta a entradas no válidas:
 
-[![](attached-images/screenshots-sml.png "Sample Application with Attached Behavior")](attached-images/screenshots.png#lightbox "Sample Application with Attached Behavior")
+[![Aplicación de ejemplo con comportamiento asociado](attached-images/screenshots-sml.png)](attached-images/screenshots.png#lightbox "Aplicación de ejemplo con comportamiento asociado")
 
 > [!NOTE]
 > Los comportamientos asociados se escriben para un tipo de control específico (o una superclase que se puede aplicar a muchos controles) y solo se tienen que agregar a un control compatible. Al intentar asociar un comportamiento a un control incompatible, se producirá un comportamiento desconocido que depende de la implementación del comportamiento.

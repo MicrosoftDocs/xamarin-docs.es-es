@@ -1,6 +1,6 @@
 ---
-title: 'title: "Creación de una aplicación de Xamarin.Forms de una página" description: "En este artículo se explica cómo crear una aplicación de Xamarin.Forms multiplataforma de una página que permite escribir una nota y conservarla en el almacenamiento del dispositivo."'
-description: 'zone_pivot_groups: platform-dev16 ms.topic: quickstart ms.prod: xamarin ms.assetid: E8CF05B1-54B9-428B-8518-D068837BD61E ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/01/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Creación de una aplicación de Xamarin.Forms de una página
+description: En este artículo se explica cómo crear una aplicación de Xamarin.Forms multiplataforma de una página que permite escribir una nota y conservarla en el almacenamiento del dispositivo.
 zone_pivot_groups: platform-dev16
 ms.topic: quickstart
 ms.prod: xamarin
@@ -12,12 +12,12 @@ ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b9a3017fc8188d3669b64d95c968b2d0a5325358
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: cc09f93a8d86b96324435bf63cd3d19b51242ed2
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84136076"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931812"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>Creación de una aplicación de Xamarin.Forms de una página
 
@@ -31,7 +31,7 @@ En este inicio rápido aprenderá a:
 
 El inicio rápido le guía sobre cómo crear una aplicación de Xamarin.Forms multiplataforma que permite escribir una nota y conservarla en el almacenamiento del dispositivo. A continuación se muestra la aplicación final:
 
-[![](single-page-images/screenshots-sml.png "Notes Application")](single-page-images/screenshots.png#lightbox "Notes Application")
+[![Aplicación Notes](single-page-images/screenshots-sml.png)](single-page-images/screenshots.png#lightbox "Aplicación Notes")
 
 ::: zone pivot="windows"
 
@@ -47,28 +47,28 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
 1. Inicie Visual Studio 2019 y, en la ventana de inicio, haga clic en **Crear un proyecto nuevo** para crear un proyecto:
 
-    ![](single-page-images/vs/new-solution-2019.png "New Project")
+    ![nuevo proyecto](single-page-images/vs/new-solution-2019.png)
 
 2. En la ventana **Crear un proyecto nuevo**, seleccione **Móvil** en la lista desplegable **Tipo de proyecto**, elija la plantilla **Aplicación móvil (Xamarin.Forms)** y haga clic en el botón **Siguiente**:
 
-    ![](single-page-images/vs/new-project-2019.png "Cross-Platform Project Templates")
+    ![Plantillas de proyectos multiplataforma](single-page-images/vs/new-project-2019.png)
 
 3. En el cuadro de diálogo **Configure su nuevo proyecto**, establezca **Nombre del proyecto** en **Notes**, elija una ubicación adecuada para el proyecto y haga clic en el botón **Crear**:
 
-    ![](single-page-images/vs/configure-project.png "Configure your Project")
+    ![Configurar el proyecto](single-page-images/vs/configure-project.png)
 
     > [!IMPORTANT]
     > Los fragmentos de XAML y C# en este inicio rápido requieren que la solución se denomine **Notes**. El uso de otro nombre dará como resultado errores de compilación al copiar el código de este inicio rápido en la solución.
 
 4. En el cuadro de diálogo **New Cross Platform App** (Nueva aplicación multiplataforma), haga clic en **En blanco** y después en el botón **Aceptar**:
 
-    ![](single-page-images/vs/new-app-2019.png "New Cross-Platform App")
+    ![Nueva aplicación multiplataforma](single-page-images/vs/new-app-2019.png)
 
     Para obtener más información sobre la biblioteca de .NET Standard creada, vea [Anatomía de una aplicación de Xamarin.Forms](deepdive.md#anatomy-of-a-xamarinforms-application) en [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md).
 
 5. En el **Explorador de soluciones**, en el proyecto **Notes**, haga doble clic en **MainPage.xaml** para abrirlo:
 
-    ![](single-page-images/vs/open-mainpage-xaml-2019.png "Open MainPage.xaml")
+    ![Abrir MainPage.xaml](single-page-images/vs/open-mainpage-xaml-2019.png)
 
 6. En **MainPage.xaml**, quite todo el código de plantilla y sustitúyalo por el siguiente código:
 
@@ -105,7 +105,7 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
 7. En el **Explorador de soluciones**, en el proyecto **Notes**, expanda **MainPage.xaml** y haga doble clic en **MainPage.xaml.cs** para abrirlo:
 
-    ![](single-page-images/vs/open-mainpage-codebehind-2019.png "Open MainPage.xaml.cs")
+    ![Abrir MainPage.xaml.cs](single-page-images/vs/open-mainpage-codebehind-2019.png)
 
 8. En **MainPage.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código:
 
@@ -155,15 +155,15 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
 1. En Visual Studio, seleccione el elemento de menú **Compilación > Compilar solución** (o presione F6). La solución se compilará y aparecerá un mensaje de operación correcta en la barra de estado de Visual Studio:
 
-      ![](single-page-images/vs/build-succeeded.png "Build Succeeded")
+      ![Compilación correcta](single-page-images/vs/build-succeeded.png)
 
     Si hay errores, repita los pasos anteriores y corrija los errores hasta que la solución se compile correctamente.
 
 2. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular que parece un botón de reproducción) para iniciar la aplicación en la instancia elegida de Android Emulator:
 
-    ![](single-page-images/vs/android-start.png "Visual Studio Android Toolbar")
+    ![Barra de herramientas de Android en Visual Studio](single-page-images/vs/android-start.png)
 
-    [![](single-page-images/vs/notes-android.png "Notes in the Android Emulator")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
+    [![Notes en Android Emulator](single-page-images/vs/notes-android.png)](single-page-images/vs/notes-android-large.png#lightbox "Notes en el simulador de Android")
 
     Escriba una nota y pulse el botón **Guardar**.
 
@@ -174,13 +174,13 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
 3. En la barra de herramientas de Visual Studio, haga clic con el botón derecho en el proyecto **Notes.iOS** y seleccione **Establecer como proyecto de inicio**.
 
-      ![](single-page-images/vs/set-as-startup-project-ios.png "Set iOS as Startup Project")
+      ![Establecer iOS como proyecto de inicio](single-page-images/vs/set-as-startup-project-ios.png)
 
 4. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular que parece un botón de reproducción) para iniciar la aplicación en la instancia elegida de [iOS Simulator](~/tools/ios-simulator/index.md):
 
-    ![](single-page-images/vs/ios-start.png "Visual Studio iOS Toolbar")
+    ![Barra de herramientas de iOS en Visual Studio](single-page-images/vs/ios-start.png)
 
-    [![](single-page-images/vs/notes-ios.png "Notes in the iOS Simulator")](single-page-images/vs/notes-ios-large.png#lightbox "Notes in the iOS Simulator")
+    [![Notes en el simulador de iOS](single-page-images/vs/notes-ios.png)](single-page-images/vs/notes-ios-large.png#lightbox "Notas en el simulador de iOS")
 
     Escriba una nota y pulse el botón **Guardar**.
 
@@ -201,24 +201,24 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
 1. Para crear un proyecto, inicie Visual Studio 2017 y, en la página de inicio, haga clic en **Crear nuevo proyecto...** :
 
-    ![](single-page-images/vs/new-solution.png "New Project")
+    ![nuevo proyecto](single-page-images/vs/new-solution.png)
 
 2. En el cuadro de diálogo **Nuevo proyecto**, haga clic en **Multiplataforma**, seleccione la plantilla **Aplicación móvil (Xamarin.Forms)** , establezca el nombre en **Notes**, elija una ubicación adecuada para el proyecto y haga clic en el botón **Aceptar**:
 
-    ![](single-page-images/vs/new-project.png "Cross-Platform Project Templates")
+    ![Plantillas de proyectos multiplataforma](single-page-images/vs/new-project.png)
 
     > [!IMPORTANT]
     > Los fragmentos de XAML y C# en este inicio rápido requieren que la solución se denomine **Notes**. El uso de otro nombre dará como resultado errores de compilación al copiar el código de este inicio rápido en la solución.
 
 3. En el cuadro de diálogo **New Cross Platform App** (Nueva aplicación multiplataforma), haga clic en **Aplicación en blanco**, seleccione **.NET Standard** como estrategia de código de uso compartido y haga clic en el botón **Aceptar**:
 
-    ![](single-page-images/vs/new-app.png "New Cross-Platform App")
+    ![Nueva aplicación multiplataforma](single-page-images/vs/new-app.png)
 
     Para obtener más información sobre la biblioteca de .NET Standard creada, vea [Anatomía de una aplicación de Xamarin.Forms](deepdive.md#anatomy-of-a-xamarinforms-application) en [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md).
 
 4. En el **Explorador de soluciones**, en el proyecto **Notes**, haga doble clic en **MainPage.xaml** para abrirlo:
 
-    ![](single-page-images/vs/open-mainpage-xaml.png "Open MainPage.xaml")
+    ![Abrir MainPage.xaml](single-page-images/vs/open-mainpage-xaml.png)
 
 5. En **MainPage.xaml**, quite todo el código de plantilla y sustitúyalo por el siguiente código:
 
@@ -255,7 +255,7 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
 6. En el **Explorador de soluciones**, en el proyecto **Notes**, expanda **MainPage.xaml** y haga doble clic en **MainPage.xaml.cs** para abrirlo:
 
-    ![](single-page-images/vs/open-mainpage-codebehind.png "Open MainPage.xaml.cs")
+    ![Abrir MainPage.xaml.cs](single-page-images/vs/open-mainpage-codebehind.png)
 
 7. En **MainPage.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código:
 
@@ -305,15 +305,15 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
 1. En Visual Studio, seleccione el elemento de menú **Compilación > Compilar solución** (o presione F6). La solución se compilará y aparecerá un mensaje de operación correcta en la barra de estado de Visual Studio:
 
-      ![](single-page-images/vs/build-succeeded.png "Build Succeeded")
+      ![Compilación correcta](single-page-images/vs/build-succeeded.png)
 
     Si hay errores, repita los pasos anteriores y corrija los errores hasta que la solución se compile correctamente.
 
 2. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular que parece un botón de reproducción) para iniciar la aplicación en la instancia elegida de Android Emulator:
 
-    ![](single-page-images/vs/android-start.png "Visual Studio Android Toolbar")
+    ![Barra de herramientas de Android en Visual Studio](single-page-images/vs/android-start.png)
 
-    [![](single-page-images/vs/notes-android.png "Notes in the Android Emulator")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
+    [![Notes en Android Emulator](single-page-images/vs/notes-android.png)](single-page-images/vs/notes-android-large.png#lightbox "Notes en el simulador de Android")
 
     Escriba una nota y pulse el botón **Guardar**.
 
@@ -324,13 +324,13 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
 3. En la barra de herramientas de Visual Studio, haga clic con el botón derecho en el proyecto **Notes.iOS** y seleccione **Establecer como proyecto de inicio**.
 
-      ![](single-page-images/vs/set-as-startup-project-ios.png "Set iOS as Startup Project")
+      ![Establecer iOS como proyecto de inicio](single-page-images/vs/set-as-startup-project-ios.png)
 
 4. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular que parece un botón de reproducción) para iniciar la aplicación en la instancia elegida de [iOS Simulator](~/tools/ios-simulator/index.md):
 
-    ![](single-page-images/vs/ios-start.png "Visual Studio iOS Toolbar")
+    ![Barra de herramientas de iOS en Visual Studio](single-page-images/vs/ios-start.png)
 
-    [![](single-page-images/vs/notes-ios.png "Notes in the iOS Simulator")](single-page-images/vs/notes-ios-large.png#lightbox "Notes in the iOS Simulator")
+    [![Notes en el simulador de iOS](single-page-images/vs/notes-ios.png)](single-page-images/vs/notes-ios-large.png#lightbox "Notas en el simulador de iOS")
 
     Escriba una nota y pulse el botón **Guardar**.
 
@@ -351,19 +351,19 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
 1. Para crear un proyecto, inicie Visual Studio para Mac y, en la ventana de inicio, haga clic en **Nuevo**:
 
-    ![](single-page-images/vsmac/new-project.png "New Solution")
+    ![Nueva solución](single-page-images/vsmac/new-project.png)
 
 2. En el cuadro de diálogo **Elija una plantilla para el nuevo proyecto**, haga clic en **Multiplataforma > Aplicación**, seleccione la plantilla **Aplicación de Forms en blanco** y haga clic en el botón **Siguiente**:
 
-    ![](single-page-images/vsmac/choose-template.png "Choose a Template")
+    ![Elegir una plantilla](single-page-images/vsmac/choose-template.png)
 
 3. En el cuadro de diálogo **Configurar su nueva aplicación de Forms en blanco**, asigne a la nueva aplicación el nombre **Notes**, asegúrese de que el botón de radio **Usar .NET Standard** esté seleccionado y haga clic en el botón **Siguiente**:    
 
-    ![](single-page-images/vsmac/configure-app.png "Configure the Forms Application")
+    ![Configurar la aplicación de Forms](single-page-images/vsmac/configure-app.png)
 
 4. En el cuadro de diálogo **Configurar su nueva aplicación de Forms en blanco**, deje los nombres de solución y de proyecto establecidos en **Notes**, elija una ubicación adecuada para el proyecto y haga clic en el botón **Crear** para crearlo:
 
-    ![](single-page-images/vsmac/configure-project.png "Configure the Forms Project")
+    ![Configurar el proyecto de Forms](single-page-images/vsmac/configure-project.png)
 
     > [!IMPORTANT]
     > Los fragmentos de XAML y C# en este inicio rápido requieren que tanto la solución como el proyecto se denominen **Notes**. El uso de otro nombre dará como resultado errores de compilación al copiar el código de este inicio rápido en la solución.
@@ -372,7 +372,7 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
 5. En el **Panel de solución**, en el proyecto **Notes**, haga doble clic en **MainPage.xaml** para abrirlo:
 
-    ![](single-page-images/vsmac/mainpage-xaml.png "MainPage.xaml")
+    ![MainPage.xaml](single-page-images/vsmac/mainpage-xaml.png)
 
 6. En **MainPage.xaml**, quite todo el código de plantilla y sustitúyalo por el siguiente código:
 
@@ -409,7 +409,7 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
 7. En el **Panel de solución**, en el proyecto **Notes**, expanda **MainPage.xaml** y haga doble clic en **MainPage.xaml.cs** para abrirlo:
 
-    ![](single-page-images/vsmac/mainpage-xaml-cs.png "MainPage.xaml.cs")
+    ![MainPage.xaml.cs](single-page-images/vsmac/mainpage-xaml-cs.png)
 
 8. En **MainPage.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código:
 
@@ -459,19 +459,19 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
 1. En Visual Studio para Mac, seleccione el elemento de menú **Compilación > Compilar todo** (o pulse **&#8984; + B**). El proyecto se compilará y aparecerá un mensaje de operación correcta en la barra de herramientas de Visual Studio para Mac.
 
-      ![](single-page-images/vsmac/build-successful.png "Build Successful")
+      ![Compilación correcta](single-page-images/vsmac/build-successful.png)
 
     Si hay errores, repita los pasos anteriores y corrija los errores hasta que la solución se compile correctamente.
 
 2. En el **Panel de solución**, seleccione el proyecto **Notes.iOS**, haga clic con el botón derecho y seleccione **Establecer como proyecto de inicio**:
 
-      ![](single-page-images/vsmac/set-startup-project-ios.png "Set iOS as Startup Project")
+      ![Establecer iOS como proyecto de inicio](single-page-images/vsmac/set-startup-project-ios.png)
 
 3. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en la instancia elegida de iOS Simulator:
 
-      ![](single-page-images/vsmac/start.png "Visual Studio for Mac Toolbar")
+      ![Barra de herramientas de Visual Studio para Mac](single-page-images/vsmac/start.png)
 
-      [![](single-page-images/vsmac/notes-ios.png "Notes in the iOS Simulator")](single-page-images/vsmac/notes-ios-large.png#lightbox "Notes in the iOS Simulator")
+      [![Notes en el simulador de iOS](single-page-images/vsmac/notes-ios.png)](single-page-images/vsmac/notes-ios-large.png#lightbox "Notes en el simulador de iOS")
 
     Escriba una nota y pulse el botón **Guardar**.
 
@@ -479,11 +479,11 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
 4. En el **Panel de solución**, seleccione el proyecto **Notes.Droid**, haga clic con el botón derecho y seleccione **Establecer como proyecto de inicio**:
 
-      ![](single-page-images/vsmac/set-startup-project-android.png "Set Android as Startup Project")
+      ![Establecer Android como proyecto de inicio](single-page-images/vsmac/set-startup-project-android.png)
 
 5. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en la instancia elegida de Android Emulator:
 
-      [![](single-page-images/vsmac/notes-android.png "Notes in the Android Emulator")](single-page-images/vsmac/notes-android-large.png#lightbox "Notes in the Android Simulator")
+      [![Notes en Android Emulator](single-page-images/vsmac/notes-android.png)](single-page-images/vsmac/notes-android-large.png#lightbox "Notes en el simulador de Android")
 
     Escriba una nota y pulse el botón **Guardar**.
 

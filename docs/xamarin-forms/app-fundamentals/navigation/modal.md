@@ -1,6 +1,6 @@
 ---
-title: 'title: "Xamarin.Forms: Páginas modales" description: "Xamarin.Forms proporciona compatibilidad con las páginas modales.'
-description: 'Una página modal anima a los usuarios a completar una tarea autocontenida que no se puede abandonar mientras no se complete o se cancele la tarea. En este artículo se muestra cómo navegar a páginas modales." ms.prod: xamarin ms.assetid: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/01/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Páginas modales de Xamarin.Forms
+description: Xamarin.Forms es compatible con las páginas modales. Una página modal anima a los usuarios a completar una tarea autocontenida que no se puede abandonar mientras no se complete o se cancele la tarea. En este artículo se muestra cómo navegar a páginas modales.
 ms.prod: xamarin
 ms.assetid: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: aecab26efaed9815ec6916877b5f42297821582c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: ea0d38946a773dc7571a08f999be5eb6500bfc9b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569613"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934503"
 ---
 # <a name="xamarinforms-modal-pages"></a>Páginas modales de Xamarin.Forms
 
@@ -32,11 +32,11 @@ En este artículo se tratan los siguientes temas:
 
 Una página modal puede ser cualquiera de los tipos [Página](~/xamarin-forms/user-interface/controls/pages.md) compatibles con Xamarin.Forms. Para mostrar una página modal, la aplicación la insertará en la pila modal, donde se convertirá en la página activa, como se muestra en el siguiente diagrama:
 
-![](modal-images/pushing.png "Pushing a Page to the Modal Stack")
+![Inserción de una página en la pila modal](modal-images/pushing.png)
 
 Para volver a la página anterior, la aplicación mostrará la página actual de la pila modal y la nueva página de nivel superior se convertirá en la página activa, tal como se muestra en el siguiente diagrama:
 
-![](modal-images/popping.png "Popping a Page from the Modal Stack")
+![Sacar una página de la pila modal](modal-images/popping.png)
 
 ## <a name="performing-navigation"></a>Realizar la navegación
 
@@ -64,7 +64,7 @@ async void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
 
 Esto hace que la instancia de `ModalPage` se inserte en la pila modal, donde se convertirá en la página activa, siempre que se haya seleccionado un elemento en la [`ListView`](xref:Xamarin.Forms.ListView) en la instancia de `MainPage`. La instancia de `ModalPage` se muestra en la siguiente captura de pantalla:
 
-![](modal-images/modalpage.png "Modal Page Example")
+![Ejemplo de página modal](modal-images/modalpage.png)
 
 Al invocar [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*), ocurre lo siguiente:
 

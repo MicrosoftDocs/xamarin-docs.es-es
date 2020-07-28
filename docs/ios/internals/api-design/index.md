@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: a2435b30b7d5b468fca6c55d295c87b9a0d20652
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 173af9638f4e7b2da39a89dd745ec53f54cf6c39
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303730"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937571"
 ---
 # <a name="xamarinios-api-design"></a>Diseño de la API de Xamarin.iOS
 
@@ -537,7 +537,7 @@ Las ventajas son que no es necesario profundizar en los archivos de encabezado d
 > [!IMPORTANT]
 > En esta sección se explica la integración del IDE con las salidas cuando se usan archivos XIB. Al usar Xamarin Designer para iOS, todo esto se sustituye por la especificación de un nombre en **Identidad > Nombre** en la sección Propiedades del IDE, como se muestra a continuación:
 >
-> [![](images/designeroutlet.png "Entering an item Name in the iOS Designer")](images/designeroutlet.png#lightbox)
+> [![Entrada de un nombre de elemento en iOS Designer](images/designeroutlet.png)](images/designeroutlet.png#lightbox)
 >
 >Para más información sobre iOS Designer, revise el documento [Introducción a iOS Designer](~/ios/user-interface/designer/introduction.md#how-it-works).
 

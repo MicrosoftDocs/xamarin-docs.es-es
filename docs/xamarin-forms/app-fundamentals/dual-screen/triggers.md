@@ -1,6 +1,6 @@
 ---
-title: 'title: "Desencadenadores de doble pantalla de Xamarin.Forms" description: "En este artículo se explica cómo usar desencadenadores de doble pantalla de Xamarin.Forms para responder a cambios de la interfaz de usuario con XAML."'
-description: 'ms.prod: xamarin ms.assetid: 2181715D-3995-4E71-9A21-6B892F0B3B59 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 02/28/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Desencadenadores de doble pantalla de Xamarin.Forms
+description: En este artículo se explica cómo usar desencadenadores de doble pantalla de Xamarin.Forms para responder a cambios de la interfaz de usuario con XAML.
 ms.prod: xamarin
 ms.assetid: 2181715D-3995-4E71-9A21-6B892F0B3B59
 ms.technology: xamarin-forms
@@ -10,16 +10,16 @@ ms.date: 02/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: df10327b2ac12d2b119f1ab558d7f27e8c319507
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 2e4d85077e1047f4158164d0c752570519c8ecdc
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84131201"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936843"
 ---
 # <a name="xamarinforms-dual-screen-triggers"></a>Desencadenadores de doble pantalla de Xamarin.Forms
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
 
 El espacio de nombres de [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) incluye dos desencadenadores de estado:
 

@@ -9,12 +9,12 @@ ms.date: 11/04/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5fafc24d9c4bd35d4ef0010ae4530341316c878a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: eb35750372c5ccb878c7b38f9d25898b09fd7f1e
+ms.sourcegitcommit: e412858ce431b3280c88241e324fcab33066eb58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84802363"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865902"
 ---
 # <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: Asistentes del sistema de archivos
 
@@ -69,6 +69,9 @@ Agregue un archivo a la carpeta **Activos** del proyecto de Android y marque la 
 
 - **CacheDirectory**: devuelve el directorio [Library/Caches](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html).
 - **AppDataDirectory**: devuelve el directorio [Library](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html) del que iTunes e iCloud realizan una copia de seguridad.
+
+> [!IMPORTANT]
+> En el simulador de iOS, el identificador de la aplicación (que forma parte del nombre del directorio) cambia en cada compilación, por lo que hay que recuperar el identificador correcto cada vez que se compile la aplicación para el simulador.
 
 Agregue cualquier archivo a la carpeta **Activos** del proyecto de iOS y marque la acción de compilación como **BundledResource** para usarla con `OpenAppPackageFileAsync`.
 

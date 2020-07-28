@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 5fadd1ba556b15cb92134471f007e41f04fce69e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 60c62bf4d2887cec3d68d44e7d384daae35c066f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303688"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929048"
 ---
 # <a name="hello-ios--deep-dive"></a>Revisión en profundidad de Hello, iOS
 
@@ -30,7 +30,7 @@ Visual Studio para Mac es un IDE gratuito de código abierto que combina las car
 
 Visual Studio para Mac sigue la práctica de Visual Studio consistente en organizar el código en *soluciones* y *proyectos*. Una solución es un contenedor que puede incluir uno o varios proyectos. Un proyecto puede ser una aplicación (por ejemplo, de iOS o Android), una biblioteca auxiliar, una aplicación de prueba, etc. En la aplicación Phoneword se ha agregado un nuevo proyecto de iPhone con la nueva plantilla **Single View Application** (Aplicación de vista única). El aspecto de la solución inicial era este:
 
-![](hello-ios-deepdive-images/image30.png "A screenshot of the initial solution")
+![Captura de pantalla de la solución inicial](hello-ios-deepdive-images/image30.png)
 
 ::: zone-end
 ::: zone pivot="windows"
@@ -41,7 +41,7 @@ Visual Studio es un IDE muy completo de Microsoft. Incluye un diseñador visual 
 
 Visual Studio organiza el código en soluciones y proyectos. Una solución es un contenedor que puede incluir uno o varios proyectos. Un proyecto puede ser una aplicación (por ejemplo, de iOS o Android), una biblioteca auxiliar, una aplicación de prueba, etc. En la aplicación Phoneword se ha agregado un nuevo proyecto de iPhone con la nueva plantilla **Single View Application** (Aplicación de vista única). El aspecto de la solución inicial era este:
 
-![](hello-ios-deepdive-images/vs-image30.png "A screenshot of the initial solution")
+![Captura de pantalla de la solución inicial](hello-ios-deepdive-images/vs-image30.png)
 
 ::: zone-end
 
@@ -51,14 +51,14 @@ Visual Studio organiza el código en soluciones y proyectos. Una solución es un
 
 A la izquierda se encuentra el **Panel de solución**, que contiene la estructura de directorios y todos los archivos asociados a la solución:
 
-![](hello-ios-deepdive-images/image31.png "The solution Pad, which contains the directory structure and all the files associated with the solution")
+![Panel de solución, que contiene la estructura de directorios y todos los archivos asociados a la solución](hello-ios-deepdive-images/image31.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
 A la derecha se encuentra el **Panel de soluciones**, que contiene la estructura de directorios y todos los archivos asociados a la solución:
 
-![](hello-ios-deepdive-images/vs-image31.png "The solution Pane, which contains the directory structure and all the files associated with the solution")
+![Panel de soluciones, que contiene la estructura de directorios y todos los archivos asociados a la solución](hello-ios-deepdive-images/vs-image31.png)
 
 ::: zone-end
 
@@ -81,7 +81,7 @@ Para que una aplicación de iOS pueda cargar una interfaz de usuario, es necesar
 
 En esta sección se cubren las relaciones que se muestran en el siguiente diagrama:
 
-[![](hello-ios-deepdive-images/image32.png "The Architecture and App Fundamentals relationships are illustrated in this diagram")](hello-ios-deepdive-images/image32.png#lightbox)
+[![Ilustración de las relaciones Arquitectura y aspectos básicos de la aplicación en este diagrama](hello-ios-deepdive-images/image32.png)](hello-ios-deepdive-images/image32.png#lightbox)
 
 ### <a name="main-method"></a>Main (método)
 
@@ -146,28 +146,28 @@ iOS Designer es una herramienta visual para compilar interfaces de usuario de Xa
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image33.png "iOS Designer Interface")
+![Interfaz del Diseñador de iOS](hello-ios-deepdive-images/image33.png)
 
 Un *guión gráfico* es un archivo que contiene los diseños visuales de las pantallas de la aplicación, así como las transiciones y las relaciones entre las pantallas. La representación de pantalla de la aplicación en un guión gráfico se denomina _escena_. Cada escena representa un controlador de vistas y la pila de vistas que administra, es decir, la jerarquía de vistas de contenido. Cuando se crea un proyecto de **aplicación de vista única** desde una plantilla, Visual Studio para Mac genera automáticamente un archivo de Storyboard denominado `Main.storyboard` y lo rellena con una sola escena, como se muestra en la siguiente captura de pantalla:
 
-![](hello-ios-deepdive-images/image34.png "Visual Studio for Mac automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene")
+![Visual Studio para Mac genera de forma automática un archivo de guion gráfico denominado Main.storyboard y lo rellena con una sola escena](hello-ios-deepdive-images/image34.png)
 
 La barra negra situada en la parte inferior de la pantalla de Storyboard se puede seleccionar para elegir el controlador de vistas de la escena. El controlador de vistas es una instancia de la clase `UIViewController` que contiene el código de respaldo de la jerarquía de vistas de contenido. Las propiedades de este controlador de vistas se pueden ver y establecer en el **Panel de propiedades**, como se muestra en la siguiente captura de pantalla:
 
-![](hello-ios-deepdive-images/image35.png "The Properties Pane")
+![Panel Propiedades](hello-ios-deepdive-images/image35.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image33.png "iOS Designer Interface")
+![Interfaz del Diseñador de iOS](hello-ios-deepdive-images/vs-image33.png)
 
 Un *guión gráfico* es un archivo que contiene los diseños visuales de las pantallas de la aplicación, así como las transiciones y las relaciones entre las pantallas. La representación de pantalla de la aplicación en un guión gráfico se denomina _escena_. Cada escena representa un controlador de vistas y la pila de vistas que administra, es decir, la jerarquía de vistas de contenido. Cuando se crea un proyecto de **aplicación de vista única** desde una plantilla, Visual Studio genera automáticamente un archivo de Storyboard denominado `Main.storyboard` y lo rellena con una sola escena, como se muestra en la siguiente captura de pantalla:
 
-![](hello-ios-deepdive-images/vs-image34.png "Visual Studio automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene")
+![Visual Studio genera de forma automática un archivo de guion gráfico denominado Main.storyboard y lo rellena con una sola escena](hello-ios-deepdive-images/vs-image34.png)
 
 La barra situada en la parte inferior de la pantalla de Storyboard se puede seleccionar para elegir el controlador de vistas de la escena. El controlador de vistas es una instancia de la clase `UIViewController` que contiene el código de respaldo de la jerarquía de vistas de contenido. Las propiedades de este controlador de vistas se pueden ver y establecer en el **Panel de propiedades**, como se muestra en la siguiente captura de pantalla:
 
-![](hello-ios-deepdive-images/vs-image35.png "The Properties Pane")
+![Panel Propiedades](hello-ios-deepdive-images/vs-image35.png)
 
 ::: zone-end
 
@@ -175,7 +175,7 @@ Para seleccionar la _vista_, haga clic en la parte blanca de la escena. La vista
 
 A la izquierda de la escena aparece una flecha gris con un icono de marca, como se muestra en la siguiente captura de pantalla:
 
- [![](hello-ios-deepdive-images/image37.png "A gray arrow with a flag icon")](hello-ios-deepdive-images/image37.png#lightbox)
+ [![Flecha de color gris con un icono de bandera](hello-ios-deepdive-images/image37.png)](hello-ios-deepdive-images/image37.png#lightbox)
 
 La flecha gris representa una transición de Storyboard denominada *Segoe*, del inglés "seg-way". Puesto que este segoe no tiene ningún origen, se denomina *segoe sin origen*. Un segoe sin origen apunta a la primera escena cuyas vistas se cargan en la ventana de la aplicación al iniciarse esta. La escena y las vistas que incluye serán lo primero que verá el usuario al cargar la aplicación.
 
@@ -183,12 +183,12 @@ Cuando se compila una interfaz de usuario, se pueden arrastrar vistas adicionale
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image38.png "Additional Views can be dragged from the Toolbox onto the main View on the design surface")
+![Se pueden arrastrar vistas adicionales desde el cuadro de herramientas a la vista principal en la superficie de diseño](hello-ios-deepdive-images/image38.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image38.png "Additional Views can be dragged from the Toolbox onto the main View on the design surface")
+![Se pueden arrastrar vistas adicionales desde el cuadro de herramientas a la vista principal en la superficie de diseño](hello-ios-deepdive-images/vs-image38.png)
 
 ::: zone-end
 
@@ -196,12 +196,12 @@ Estas vistas adicionales se denominan *subvistas*. Juntas, la vista raíz y las 
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image39.png "The Document Outline pad")
+![Panel Esquema del documento](hello-ios-deepdive-images/image39.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image39.png "The Document Outline pad")
+![Panel Esquema del documento](hello-ios-deepdive-images/vs-image39.png)
 
 ::: zone-end
 
@@ -209,12 +209,12 @@ Las subvistas se resaltan en el diagrama siguiente:
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image40.png "The Subviews are highlighted in the diagram")
+![Las subvistas se resaltan en el diagrama](hello-ios-deepdive-images/image40.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image40.png "The Subviews are highlighted in the diagram")
+![Las subvistas se resaltan en el diagrama](hello-ios-deepdive-images/vs-image40.png)
 
 ::: zone-end
 
@@ -224,24 +224,24 @@ En la siguiente sección se desglosa la jerarquía de las vistas de contenido re
 
 Una _jerarquía de vistas de contenido_ es una pila de vistas y subvistas administrada por un único controlador de vistas, como se muestra en el diagrama siguiente:
 
- [![](hello-ios-deepdive-images/image41.png "The Content View Hierarchy")](hello-ios-deepdive-images/image41.png#lightbox)
+ [![Jerarquía de vistas del contenido](hello-ios-deepdive-images/image41.png)](hello-ios-deepdive-images/image41.png#lightbox)
 
 Podemos hacer que la jerarquía de vistas de contenido de `ViewController` sea más fácil de ver, para lo cual será necesario cambiar el color de fondo de la vista raíz temporalmente por el amarillo en la sección de vista del **Controlador de propiedades**, como se muestra en la siguiente captura de pantalla:
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image42.png "Changing the background color of the root View to yellow in the View section of the Properties Pad")
+![Cambio del color de fondo de la vista raíz a amarillo en la sección Vista del Panel de propiedades](hello-ios-deepdive-images/image42.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image42.png "Changing the background color of the root View to yellow in the View section of the Properties Pad")
+![Cambio del color de fondo de la vista raíz a amarillo en la sección Vista del Panel de propiedades](hello-ios-deepdive-images/vs-image42.png)
 
 ::: zone-end
 
 En el diagrama siguiente se muestran las relaciones entre la ventana, las vistas, las subvistas y el controlador de vistas que, de forma conjunta, proporcionan la interfaz de usuario a la pantalla del dispositivo:
 
-[![](hello-ios-deepdive-images/image43.png "The relationships between the Window, Views, Subviews, and view controller")](hello-ios-deepdive-images/image43.png#lightbox)
+[![Relaciones entre la ventana, las vistas, las subvistas y el controlador de vistas](hello-ios-deepdive-images/image43.png)](hello-ios-deepdive-images/image43.png#lightbox)
 
 En la siguiente sección se describe cómo trabajar con las vistas en el código y cómo programar para la interacción del usuario con los controladores de vistas y el ciclo de vida de las vistas.
 
@@ -255,22 +255,22 @@ Cada jerarquía de vistas de contenido tiene un controlador de vistas correspond
 
 El controlador de vistas se representa en un Storyboard como una barra en la parte inferior de la escena. Al seleccionar el controlador de vistas, se muestran sus propiedades en el **Panel de propiedades**:
 
-![](hello-ios-deepdive-images/image44.png "Selecting the view controller brings up its properties in the Properties Pane")
+![Al seleccionar el controlador de vistas, se muestran sus propiedades en el Panel de propiedades](hello-ios-deepdive-images/image44.png)
 
 Puede establecerse una clase personalizada de controlador de vistas para la jerarquía de vistas de contenido representada por esta escena mediante la edición de la propiedad **Clase** en la sección **Identidad** del **Panel de propiedades**. Por ejemplo, la aplicación **Phoneword** establece `ViewController` como controlador de vistas de la primera pantalla, como se muestra en la siguiente captura de pantalla:
 
-![](hello-ios-deepdive-images/image45new.png "The Phoneword application sets the ViewController as the view controller")
+![La aplicación Phoneword establece ViewController como el controlador de vistas](hello-ios-deepdive-images/image45new.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
 El controlador de vistas se representa en un Storyboard como una barra en la parte inferior de la escena. Al seleccionar el controlador de vistas, se muestran sus propiedades en el **Panel de propiedades**:
 
-![](hello-ios-deepdive-images/vs-image44.png "Selecting the view controller brings up its properties in the Properties Pane")
+![Al seleccionar el controlador de vistas, se muestran sus propiedades en el Panel de propiedades](hello-ios-deepdive-images/vs-image44.png)
 
 Puede establecerse una clase personalizada de controlador de vistas para la jerarquía de vistas de contenido representada por esta escena mediante la edición de la propiedad **Clase** en la sección **Identidad** del **Panel de propiedades**. Por ejemplo, la aplicación **Phoneword** establece `ViewController` como controlador de vistas de la primera pantalla, como se muestra en la siguiente captura de pantalla:
 
-![](hello-ios-deepdive-images/vs-image45.png "The Phoneword application sets the ViewController as the view controller")
+![La aplicación Phoneword establece ViewController como el controlador de vistas](hello-ios-deepdive-images/vs-image45.png)
 
 ::: zone-end
 
@@ -313,7 +313,7 @@ El rol más importante del controlador de vistas es responder a la interacción 
 Veamos cómo funciona esto.
 En el proyecto `Phoneword_iOS`, se ha agregado un botón denominado `TranslateButton` a la jerarquía de vistas de contenido:
 
-[![](hello-ios-deepdive-images/image1.png "A button was added called TranslateButton to the Content View Hierarchy")](hello-ios-deepdive-images/image1.png#lightbox)
+[![Se ha agregado un botón llamado TranslateButton a la jerarquía de vistas de contenido.](hello-ios-deepdive-images/image1.png)](hello-ios-deepdive-images/image1.png#lightbox)
 
 Cuando se asigna un **nombre** al control del **botón** en el **Panel de propiedades**, iOS Designer lo asigna automáticamente a un control en **ViewController.designer.cs**, de tal modo que `TranslateButton` está disponible en la clase `ViewController`. Los controles están disponibles primero en la fase `ViewDidLoad` del ciclo de vida de vistas, por lo que este método de ciclo de vida se usa para responder a los toques del usuario:
 
@@ -420,18 +420,18 @@ Cuando se aprovisiona el dispositivo, puede realizar implementaciones en él al 
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image46new.png "Pressing Start/Play")
+![Pulsación de Iniciar/Reproducir](hello-ios-deepdive-images/image46new.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image46.png "Pressing Start/Play")
+![Pulsación de Iniciar/Reproducir](hello-ios-deepdive-images/vs-image46.png)
 
 ::: zone-end
 
 La aplicación se implementará en el dispositivo iOS:
 
-[![](hello-ios-deepdive-images/image1.png "The app will deploy to the iOS device and run")](hello-ios-deepdive-images/image1.png#lightbox)
+[![Implementación y ejecución de la aplicación en el dispositivo iOS](hello-ios-deepdive-images/image1.png)](hello-ios-deepdive-images/image1.png#lightbox)
 
 ### <a name="generate-custom-icons-and-launch-images"></a>Generación de iconos personalizados e imágenes de inicio
 
@@ -454,7 +454,7 @@ Para obtener más información sobre los tamaños de las imágenes de inicio, lo
 
 ## <a name="summary"></a>Resumen
 
-¡Enhorabuena! Ahora ya debería conocer bien los componentes de una aplicación de Xamarin.iOS, así como las herramientas necesarias para su creación.
+Enhorabuena. Ahora ya debería conocer bien los componentes de una aplicación de Xamarin.iOS, así como las herramientas necesarias para su creación.
 En el [siguiente tutorial de la serie de introducción](~/ios/get-started/hello-ios-multiscreen/index.md), extenderá la aplicación para administrar varias pantallas. También tendrá la oportunidad de implementar un controlador de navegación, obtener información sobre los segues de Storyboard e introducir el patrón MVC (Modelo-Vista-Controlador) a medida que amplía la aplicación para controlar varias pantallas.
 
 ## <a name="related-links"></a>Vínculos relacionados
