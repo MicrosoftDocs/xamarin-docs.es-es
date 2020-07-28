@@ -1,6 +1,6 @@
 ---
-title: 'title: "Xamarin.Forms: Análisis detallado de inicio rápido" description: "En este artículo se examinan los aspectos fundamentales del desarrollo de aplicaciones con Xamarin.Forms."'
-description: 'Los temas que se han tratado incluyen la anatomía de una aplicación de Xamarin.Forms, la arquitectura y los elementos fundamentales, y la interfaz de usuario." zone_pivot_groups: platform ms.topic: quickstart ms.prod: xamarin ms.custom: video ms.assetid: 7B2340A1-6883-41D8-860C-0BB6C4E0C316 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/27/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Análisis detallado de inicio rápido de Xamarin.Forms
+description: En este artículo se examinan los aspectos fundamentales del desarrollo de aplicaciones con Xamarin.Forms. Los temas que se han tratado incluyen la anatomía de una aplicación de Xamarin.Forms, la arquitectura y los elementos fundamentales, y la interfaz de usuario.
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
@@ -13,12 +13,12 @@ ms.date: 11/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1bfb76f71a2ac9d8bc9ae84152501909000b9623
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: d1670506fa78b39825368fc91d2452a44ddf8f03
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84132527"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939924"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Análisis detallado de inicio rápido de Xamarin.Forms
 
@@ -30,7 +30,7 @@ En [Inicio rápido de Xamarin.Forms](~/get-started/index.yml) se ha creado la ap
 
 Visual Studio organiza el código en *soluciones* y *proyectos*. Una solución es un contenedor que puede incluir uno o varios proyectos. Un proyecto puede ser una aplicación, una biblioteca auxiliar o una aplicación de prueba, entre otros. La aplicación Notes consta de una solución que contiene cuatro proyectos, como se muestra en la captura de pantalla siguiente:
 
-![](deepdive-images/vs/solution.png "Visual Studio Solution Explorer")
+![Explorador de soluciones de Visual Studio](deepdive-images/vs/solution.png)
 
 Los proyectos son:
 
@@ -43,7 +43,7 @@ Los proyectos son:
 
 En la captura de pantalla siguiente se muestra el contenido del proyecto de biblioteca de .NET Standard Notes en Visual Studio:
 
-![](deepdive-images/vs/net-standard-project.png "Phoneword .NET Standard Project Contents")
+![Contenido del proyecto Phoneword de .NET Standard](deepdive-images/vs/net-standard-project.png)
 
 El proyecto tiene un nodo **Dependencias** que contiene los nodos **NuGet** y **SDK**:
 
@@ -57,7 +57,7 @@ El proyecto tiene un nodo **Dependencias** que contiene los nodos **NuGet** y **
 
 [Visual Studio para Mac](/visualstudio/mac/) sigue la práctica de Visual Studio consistente en organizar el código en *soluciones* y *proyectos*. Una solución es un contenedor que puede incluir uno o varios proyectos. Un proyecto puede ser una aplicación, una biblioteca auxiliar o una aplicación de prueba, entre otros. La aplicación Notes consta de una solución que contiene tres proyectos, como se muestra en la captura de pantalla siguiente:
 
-![](deepdive-images/vsmac/solution.png "Visual Studio for Mac Solution Pane")
+![Panel Solución de Visual Studio para Mac](deepdive-images/vsmac/solution.png)
 
 Los proyectos son:
 
@@ -69,7 +69,7 @@ Los proyectos son:
 
 En la captura de pantalla siguiente se muestra el contenido del proyecto de biblioteca de .NET Standard Notes en Visual Studio para Mac:
 
-![](deepdive-images/vsmac/net-standard-project.png "Phoneword .NET Standard Library Project Contents")
+![Contenido del proyecto de biblioteca de .NET Standard Phoneword](deepdive-images/vsmac/net-standard-project.png)
 
 El proyecto tiene un nodo **Dependencias** que contiene los nodos **NuGet** y **SDK**:
 
@@ -98,12 +98,12 @@ Una aplicación de Xamarin.Forms tiene la misma arquitectura que una aplicación
 
 ::: zone pivot="windows"
 
-![](deepdive-images/vs/architecture.png "Notes Architecture")
+![Arquitectura de Notes](deepdive-images/vs/architecture.png)
 
 ::: zone-end
 ::: zone pivot="macos"
 
-![](deepdive-images/vsmac/architecture.png "Notes Architecture")
+![Arquitectura de Notes](deepdive-images/vsmac/architecture.png)
 
 ::: zone-end
 
@@ -388,7 +388,7 @@ El enlace de datos se usa para simplificar la forma en que una aplicación de Xa
 
 El enlace de datos conecta dos objetos, denominados *origen* y *destino*. El objeto de *origen* proporciona los datos. El objeto de *destino* usa (y, a menudo, muestra) los datos del objeto de origen. Por ejemplo, un control [`Editor`](xref:Xamarin.Forms.Editor) (objeto de *destino*) normalmente enlazará su propiedad [`Text`](xref:Xamarin.Forms.InputView.Text) a una propiedad `string` pública en un objeto de *origen*. En el diagrama siguiente se muestra la relación de enlace:
 
-![](deepdive-images/data-binding.png "Data Binding")
+![Enlace de datos](deepdive-images/data-binding.png)
 
 El principal beneficio del enlace de datos es que ya no tiene que preocuparse de sincronizar los datos entre las vistas y el origen de datos. Los cambios en el objeto de *origen* se insertan automáticamente en el objeto de *destino* en segundo plano por medio del marco de enlace, mientras que los cambios en el objeto de destino pueden insertarse de manera opcional en el objeto de *origen*.
 
@@ -532,7 +532,7 @@ En este análisis detallado se han examinado los aspectos fundamentales del desa
 - Los efectos también permiten personalizar los controles nativos de cada plataforma. Los efectos se crean en proyectos específicos de la plataforma mediante la creación de subclases de la clase [`PlatformEffect`](xref:Xamarin.Forms.PlatformEffect`2). Para usarlos, se adjuntan a un control adecuado de Xamarin.Forms. Para obtener más información, consulte [Effects](~/xamarin-forms/app-fundamentals/effects/index.md) (Efectos).
 - El código compartido puede tener acceso a la funcionalidad nativa mediante la clase [`DependencyService`](xref:Xamarin.Forms.DependencyService). Para obtener más información, consulte [Accessing Native Features with DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md) (Acceso a características nativas con DependencyService).
 
-También es recomendable el libro de Charles Petzold titulado [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) (Creación de aplicaciones móviles con Xamarin.Forms) para obtener más información sobre Xamarin.Forms. El libro está disponible como un archivo PDF o en una variedad de formatos de libro electrónico.
+También es recomendable el libro de Charles Petzold titulado [_Creación de aplicaciones móviles con Xamarin.Forms_ ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) para obtener más información sobre Xamarin.Forms. El libro está disponible como un archivo PDF o en una variedad de formatos de libro electrónico.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
