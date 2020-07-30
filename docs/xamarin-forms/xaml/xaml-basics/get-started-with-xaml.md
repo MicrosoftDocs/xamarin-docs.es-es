@@ -10,12 +10,12 @@ ms.date: 09/30/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e38080fc9bc4ef0b74eb8c12c3a3f646c4888f53
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 874793975f027e1323dbf8a8acd30d19e980370b
+ms.sourcegitcommit: 562d4f2d51a43af21b7dc3ab892dd3a4264349a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198077"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87177650"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introducción a XAML
 
@@ -148,7 +148,7 @@ Aunque normalmente no es necesario dedicar mucho tiempo a los archivos de códig
 
 Al compilar y ejecutar este programa, el `Label` elemento aparece en el centro de la página, como sugiere el XAML:
 
-[![Xamarin.FormsPresentación predeterminada](get-started-with-xaml-images/xamlsamples.png)](get-started-with-xaml-images/xamlsamples-large.png#lightbox)
+[![Default::: no-LOC (Xamarin. Forms)::: display](get-started-with-xaml-images/xamlsamples.png)](get-started-with-xaml-images/xamlsamples-large.png#lightbox)
 
 Para los objetos visuales más interesantes, lo único que necesita es XAML más interesante.
 
@@ -214,7 +214,7 @@ En este momento, la relación entre las clases, las propiedades y el XML debe se
 
 Existen muchos métodos abreviados para establecer los valores de estas propiedades. Algunas propiedades son tipos de datos básicos: por ejemplo, `Title` las `Text` propiedades y son de tipo, `String` `Rotation` es de tipo `Double` y `IsVisible` (que es de `true` forma predeterminada y se establece aquí solo para la ilustración) es de tipo `Boolean` .
 
-La `HorizontalTextAlignment` propiedad es de tipo `TextAlignment` , que es una enumeración. Para una propiedad de cualquier tipo de enumeración, lo único que necesita proporcionar es un nombre de miembro.
+La `HorizontalTextAlignment` propiedad es de tipo `TextAlignment` , que es una enumeración. Para una propiedad de cualquier tipo de enumeración, todo lo que necesita proporcionar es un nombre de miembro.
 
 En el caso de las propiedades de tipos más complejos, sin embargo, los convertidores se utilizan para analizar el código XAML. Se trata de clases de Xamarin.Forms que derivan de `TypeConverter` . Muchos son clases públicas, pero otros no. Para este archivo XAML concreto, algunas de estas clases desempeñan un papel en segundo plano:
 

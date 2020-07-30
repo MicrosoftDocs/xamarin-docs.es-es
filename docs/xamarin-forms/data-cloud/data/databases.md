@@ -10,14 +10,14 @@ ms.date: 12/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2268f9034a4b09adce697f5fb7b6652baa4feed6
-ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
+ms.openlocfilehash: 021831da13a936fc5eb9d2e4cb63412484ceb465
+ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226825"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87426869"
 ---
-# <a name="xamarinforms-local-databases"></a>Xamarin.FormsBases de datos locales
+# <a name="no-locxamarinforms-local-databases"></a>Xamarin.FormsBases de datos locales
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
@@ -40,9 +40,9 @@ Use el administrador de paquetes NuGet para buscar **SQLite-net-PCL** y agregue 
 Hay varios paquetes NuGet con nombres similares. El paquete correcto tiene estos atributos:
 
 - **Id.:** sqlite-net-pcl
-- **Autor (s):** SQLite-net
-- **Propietario (s):** praeclarum
-- **URL del proyecto:**https://github.com/praeclarum/sqlite-net
+- **Autores:** SQLite-net
+- **Propietario(s):** praeclarum
+- **URL de proyecto:** https://github.com/praeclarum/sqlite-net
 - **Vínculo de NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
@@ -122,8 +122,8 @@ public class TodoItemDatabase
             if (!Database.TableMappings.Any(m => m.MappedType.Name == typeof(TodoItem).Name))
             {
                 await Database.CreateTablesAsync(CreateFlags.None, typeof(TodoItem)).ConfigureAwait(false);
-                initialized = true;
             }
+            initialized = true;
         }
     }
 
@@ -219,7 +219,7 @@ public class TodoItemDatabase {
 }
 ```
 
-## <a name="access-data-in-xamarinforms"></a>Acceder a los datos enXamarin.Forms
+## <a name="access-data-in-no-locxamarinforms"></a>Acceder a los datos enXamarin.Forms
 
 La Xamarin.Forms `App` clase expone una instancia de la `TodoItemDatabase` clase:
 
