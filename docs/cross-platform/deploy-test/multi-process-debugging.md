@@ -6,16 +6,16 @@ ms.assetid: 852F8AB1-F9E2-4126-9C8A-12500315C599
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: f27a95481bc590814b6031cbdd9fc9606fe0e19f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9bdc5790133241ed30e903617541244a9d6ee06e
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932527"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996583"
 ---
 # <a name="multi-process-debugging"></a>Depuración de varios procesos
 
-Es muy común que las soluciones modernas desarrolladas en Visual Studio para Mac tengan varios proyectos en distintas plataformas de destino. Por ejemplo, una solución podría contener un proyecto de aplicación para dispositivos móviles basado en los datos proporcionados por un proyecto de servicio web. Al desarrollar esta solución, un desarrollador podría tener que ejecutar ambos proyectos al mismo tiempo con el fin de solucionar errores. A partir de la [versión Cycle 9 de Xamarin](https://releases.xamarin.com/stable-release-cycle-9/), ahora es posible que Visual Studio para Mac depure varios procesos que se ejecutan al mismo tiempo. Esto permite establecer puntos de interrupción, inspeccionar variables y ver los subprocesos en más de un proyecto en ejecución. Esto se conoce como _depuración de varios procesos_. 
+Es muy común que las soluciones modernas desarrolladas en Visual Studio para Mac tengan varios proyectos en distintas plataformas de destino. Por ejemplo, una solución podría contener un proyecto de aplicación para dispositivos móviles basado en los datos proporcionados por un proyecto de servicio web. Al desarrollar esta solución, un desarrollador podría tener que ejecutar ambos proyectos al mismo tiempo con el fin de solucionar errores. A partir de la [versión Cycle 9 de Xamarin](https://releases.xamarin.com/stable-release-cycle-9/), ahora es posible que Visual Studio para Mac depure varios procesos que se ejecutan al mismo tiempo. Esto permite establecer puntos de interrupción, inspeccionar variables y ver los subprocesos en más de un proyecto en ejecución. Esto se conoce como _depuración de varios procesos_.
 
 En esta guía se tratan algunos de los cambios realizados en Visual Studio para Mac para admitir la depuración de varios procesos, cómo configurar las soluciones para depurar múltiples procesos y cómo adjuntarlos a procesos existentes con Visual Studio para Mac.
 
@@ -74,7 +74,7 @@ Al depurar varios procesos, es posible cambiar el subproceso activo para ver la 
 
 Cuando dos (o más) proyectos tienen puntos de interrupción, Visual Studio para Mac pausará ambos procesos. Solo es posible recorrer el código **paso a paso por procedimientos** en el subproceso activo. El otro proceso se pausará hasta que un cambio de ámbito haga posible que el depurador cambie el foco del subproceso activo. Por ejemplo, fíjese en la siguiente captura de pantalla en que Visual Studio para Mac depura dos proyectos:
 
-![](multi-process-debugging-images/mpd09-xs.png  "Visual Studio for Mac debugging two projects")
+![Depuración de dos proyectos en Visual Studio para Mac](multi-process-debugging-images/mpd09-xs.png)
 
 En esta captura de pantalla, cada solución tiene su propio punto de interrupción. Cuando se inicia la depuración, el primer punto de interrupción que se encuentra está en la **línea 10** de `MainClass` en **SecondProject**. Dado que ambos proyectos tienen puntos de interrupción, cada proceso se detiene. Una vez que se encuentra el punto de interrupción, cada invocación del **paso a paso por procedimientos** provocará que Visual Studio para Mac recorra el código paso a paso por procedimientos en el subproceso activo.
 
@@ -92,7 +92,7 @@ Para pausar o reanudar un proceso, haga clic con el botón derecho en el proceso
 
 La apariencia de la barra de herramientas de depuración cambiará según el estado de los proyectos que se están depurando. Cuando se ejecuten varios proyectos, la barra de herramientas de depuración mostrará los botones **Pausar** y **Reanudar** en los casos en que haya al menos un proyecto que se esté ejecutando y un proyecto en pausa:
 
-![](multi-process-debugging-images/mpd07-xs.png  "Debug toolbar")
+![Barra de herramientas de depuración](multi-process-debugging-images/mpd07-xs.png)
 
 Al hacer clic en el botón **Pausar** en la **barra de herramientas de depuración**, se detendrán todos los procesos que se están depurando, mientras que al hacer clic en el botón **Reanudar** se reanudarán todos los procesos en pausa.
 
@@ -100,7 +100,7 @@ Al hacer clic en el botón **Pausar** en la **barra de herramientas de depuraci�
 
 También es posible depurar un segundo proyecto una vez que Visual Studio para Mac inicia el primer proyecto. Una vez iniciado el primer proyecto, **haga clic con el botón derecho* en el proyecto, en el **Panel de solución**, y seleccione **Iniciar la depuración de elemento**:
 
-![](multi-process-debugging-images/mpd13-xs.png  "Start Debugging Item")
+![Iniciar la depuración de elemento](multi-process-debugging-images/mpd13-xs.png)
 
 ## <a name="creating-a-solution-configuration"></a>Crear una configuración de soluciones
 
@@ -114,7 +114,7 @@ Para crear una nueva configuración de soluciones en Xamaring Studio:
 
 2. Haga clic en el botón **Nuevo**, escriba el nombre de la nueva configuración de soluciones y haga clic en **Crear**. La nueva configuración de soluciones aparecerá en la ventana **Configuraciones**:
 
-    ![](multi-process-debugging-images/mpd11-xs.png  "Naming a new solution configuration")
+    ![Asignar un nombre a una nueva configuración de soluciones](multi-process-debugging-images/mpd11-xs.png)
 
 3. Seleccione la nueva configuración de ejecución en la lista de configuraciones. En el cuadro de diálogo **Opciones de solución** se mostrará cada proyecto de la solución. Marque cada proyecto que debe iniciarse al iniciar una sesión de depuración:
 

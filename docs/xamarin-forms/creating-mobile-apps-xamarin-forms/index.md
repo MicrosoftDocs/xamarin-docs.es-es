@@ -10,18 +10,18 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e38c319db0d0adf23a2ec0d328ccc3822e33f66d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: de85e9108244230e9c0a740b1aa9140ecf92a033
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198281"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997402"
 ---
-# <a name="creating-mobile-apps-with-xamarinforms-book"></a>Creación de aplicaciones móviles con el libro de Xamarin.Forms
+# <a name="creating-mobile-apps-with-no-locxamarinforms-book"></a>Creación de aplicaciones móviles con el libro de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples)
 
-<img src="images/cover-sml.png" title="Creación de aplicaciones móviles con el libro de Xamarin.Forms" align="left" />El libro *Creación de aplicaciones móviles con Xamarin.Forms* de Charles Petzold es una guía para aprender a escribir aplicaciones de Xamarin.Forms. El único requisito previo es el conocimiento del lenguaje de programación de C#. El libro proporciona una amplia exploración en la interfaz de usuario de Xamarin.Forms y también abarca animación, MVVM, desencadenadores, comportamientos, diseños personalizados, representadores personalizados y mucho más.
+<img src="images/cover-sml.png" title="Creación de aplicaciones móviles con el libro de Xamarin.Forms" alt="Creating Mobile Apps with Xamarin.Forms Book" align="left" />El libro *Creación de aplicaciones móviles con Xamarin.Forms* de Charles Petzold es una guía para aprender a escribir aplicaciones de Xamarin.Forms. El único requisito previo es el conocimiento del lenguaje de programación de C#. El libro proporciona una amplia exploración en la interfaz de usuario de Xamarin.Forms y también abarca animación, MVVM, desencadenadores, comportamientos, diseños personalizados, representadores personalizados y mucho más.
 
 El libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los [materiales están anticuados](#ways-in-which-the-book-is-outdated) y algunos temas ya no son completamente correctos o completos.
 

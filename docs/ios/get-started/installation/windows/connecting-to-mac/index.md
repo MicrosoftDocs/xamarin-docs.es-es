@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/29/2018
-ms.openlocfilehash: 81377d790d695b60465319aeb166eb1e62483211
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 7bc6a7ce1b8cd20aa782ddde42925e4e72374ec4
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76940927"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996952"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Emparejar con Mac para el desarrollo de Xamarin.iOS
 
@@ -176,9 +176,9 @@ Emparejar con Mac comprobará que esté instalado Mono. Si no está instalado, E
 
 El progreso se indica mediante varios mensajes, como se muestra en las siguientes capturas de pantalla (haga clic para ampliar):
 
-||Comprobación de la instalación|Descarga|Instalación
+|Mono|Comprobación de la instalación|Descarga|Instalación
 |---|---|---|---|
-|Mono|[![Falta la instalación de Mono](images/mono-missing.png "Falta la instalación de Mono")](images/mono-missing-large.png#lightbox)|[![Descarga de Mono](images/mono-downloading.png "Descarga de Mono")](images/mono-downloading-large.png#lightbox)|[![Instalación de Mono](images/mono-installing.png "Instalación de Mono")](images/mono-installing-large.png#lightbox)|
+||[![Falta la instalación de Mono](images/mono-missing.png "Falta la instalación de Mono")](images/mono-missing-large.png#lightbox)|[![Descarga de Mono](images/mono-downloading.png "Descarga de Mono")](images/mono-downloading-large.png#lightbox)|[![Instalación de Mono](images/mono-installing.png "Instalación de Mono")](images/mono-installing-large.png#lightbox)|
 
 ### <a name="xamarinios"></a>Xamarin.iOS
 
@@ -192,17 +192,17 @@ Emparejar con Mac actualiza Xamarin.iOS en el equipo Mac para que coincida con l
 
 El progreso se indica mediante varios mensajes, como se muestra en las siguientes capturas de pantalla (haga clic para ampliar):
 
-||Comprobación de la instalación|Descarga|Instalación
+|Xamarin.iOS|Comprobación de la instalación|Descarga|Instalación
 |---|---|---|---|
-|Xamarin.iOS|[![Falta la instalación de Xamarin.iOS](images/xamios-missing.png "Falta la instalación de Xamarin.iOS")](images/xamios-missing-large.png#lightbox)|[![Descarga de Xamarin.iOS](images/xamios-downloading.png "Descarga de Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![Instalación de Xamarin.iOS](images/xamios-installing.png "Instalación de Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
+||[![Falta la instalación de Xamarin.iOS](images/xamios-missing.png "Falta la instalación de Xamarin.iOS")](images/xamios-missing-large.png#lightbox)|[![Descarga de Xamarin.iOS](images/xamios-downloading.png "Descarga de Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![Instalación de Xamarin.iOS](images/xamios-installing.png "Instalación de Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
 
 ### <a name="xcode-tools-and-license"></a>Licencias y herramientas de Xcode
 
 Emparejar con Mac también comprobará si se ha instalado Xcode y se ha aceptado su licencia. Aunque Emparejar con Mac no instala Xcode, solicita la aceptación de la licencia, como se muestra en las siguientes capturas de pantalla (haga clic para ampliar):
 
-||Comprobación de la instalación|Aceptación de la licencia|
+|Xcode|Comprobación de la instalación|Aceptación de la licencia|
 |---|---|---|
-|Xcode|[![Falta la instalación de Xcode](images/xcode-missing.png "Falta la instalación de Xcode")](images/xcode-missing-large.png#lightbox)|[![Licencia de Xcode](images/xcode-license.png "Licencia de Xcode")](images/xcode-license-large.png#lightbox)|
+||[![Falta la instalación de Xcode](images/xcode-missing.png "Falta la instalación de Xcode")](images/xcode-missing-large.png#lightbox)|[![Licencia de Xcode](images/xcode-license.png "Licencia de Xcode")](images/xcode-license-large.png#lightbox)|
 
 Además, Emparejar con Mac instalará o actualizará varios paquetes distribuidos con Xcode. Por ejemplo:
 
