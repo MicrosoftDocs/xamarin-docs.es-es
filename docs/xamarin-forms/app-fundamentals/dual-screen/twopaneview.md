@@ -10,14 +10,14 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fb5474c7436cb985a1404b662fcf842f22cfdc0d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 4f7fdc0bb18a49e601c00ce1e3eb13371bb80be3
+ms.sourcegitcommit: 3698b35c823225a74892a47139d19e8ae8e6d9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937701"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113815"
 ---
-# <a name="xamarinforms-twopaneview-layout"></a>Diseño TwoPaneView de Xamarin.Forms
+# <a name="no-locxamarinforms-twopaneview-layout"></a>Diseño TwoPaneView de Xamarin.Forms
 
 ![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
 
@@ -77,8 +77,8 @@ Las siguientes propiedades se aplican cuando `TwoPaneView` ocupa una sola pantal
 
 Las siguientes propiedades se aplican cuando `TwoPaneView` ocupa una sola pantalla o dos pantallas:
 
-- `TallModeConfiguration` indica, cuando está en modo Tall, la disposición izquierda/derecha, o bien si solo quiere un panel visible según lo que se haya definido mediante TwoPaneViewPriority.
-- `WideModeConfiguration` cuando está en modo Wide, indica la disposición arriba/abajo, o bien si solo quiere un panel visible según lo que se haya definido mediante TwoPaneViewPriority.
+- `TallModeConfiguration` cuando está en modo Tall (alto) indica la disposición de arriba a abajo, o bien si solo quiere un panel visible según lo que se haya definido mediante TwoPaneViewPriority.
+- `WideModeConfiguration` cuando está en modo Wide (ancho), la disposición de izquierda a derecha, o bien si solo quiere un panel visible según lo que se haya definido mediante TwoPaneViewPriority.
 - `PanePriority` determina si se muestra Panel1 o Panel2 en el modo SinglePane.
 
 ## <a name="related-links"></a>Vínculos relacionados

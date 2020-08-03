@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 1de157540011011be6d48db25414c8667195c679
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 90309fe8a9282110a685151455d0b1407b269128
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932713"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997363"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configuración de una aplicación en iTunes Connect
 
@@ -185,7 +185,7 @@ Siga estos pasos en [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
 4. Desplácese hasta la sección **Nombre**.
 5. Rellene toda la información necesaria:
 
-    [![](itunesconnect-images/name01.png "Editing Name, Description, What's New, Keywords and URLs in iTunes Connect")](itunesconnect-images/name01.png#lightbox)
+    [![Edición de nombres, descripciones, novedades, palabras clave y direcciones URL en iTunes Connect](itunesconnect-images/name01.png)](itunesconnect-images/name01.png#lightbox)
 6. Haga clic en el botón **Guardar** situado en la parte superior de la pantalla para guardar los cambios.
 
 > [!IMPORTANT]

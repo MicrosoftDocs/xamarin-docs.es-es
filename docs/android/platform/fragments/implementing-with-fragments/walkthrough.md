@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018
-ms.openlocfilehash: 043ad02f9ca9148910364ac82917551ee58d72ba
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 56c9fc307166ec9c72ab6cb1f7a726c4cd12cb3e
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027401"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997038"
 ---
 # <a name="fragments-walkthrough-ndash-phone"></a>Tutorial sobre los fragmentos: teléfono
 
 Esta es la primera parte de un tutorial que creará una aplicación de Xamarin.Android destinada a un dispositivo Android en orientación vertical. En este tutorial se explica cómo crear fragmentos en Xamarin. Android y cómo agregarlos a un ejemplo.
 
-[![](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
+[![Captura de pantalla de la aplicación del tutorial](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
 
 Se crearán las siguientes clases para esta aplicación:
 

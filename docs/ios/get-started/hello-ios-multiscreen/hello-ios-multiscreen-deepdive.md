@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 28dddc35ac829cb58a40a9296bb995e119b5b6e3
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8a9a38c24af3e14cd6930cbb27717ba184dd0235
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937272"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996414"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Análisis detallado de Hello, iOS Multiscreen
 
@@ -78,7 +78,7 @@ El controlador de navegación tiene tres funciones principales:
 
 - **Opcionalmente proporciona un botón Atrás**: cuando se inserta un nuevo elemento en la pila de navegación, la barra de título puede mostrar automáticamente un *botón Atrás* que permita al usuario navegar hacia atrás. Al presionar el botón Atrás, *extrae* el controlador de vista actual de la pila de navegación y carga la jerarquía de vistas de contenido anterior en la ventana:  
 
-    [![](hello-ios-multiscreen-deepdive-images/03.png "This diagram illustrates 'popping' a card off the stack")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
+    [![Diagrama en el que se ilustra cómo sacar una carta de la baraja](hello-ios-multiscreen-deepdive-images/03.png)](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 - **Proporciona una barra de título**: la parte superior del controlador de navegación se denomina *barra de título*. Es responsable de mostrar el título del controlador de vista, como se muestra en el diagrama siguiente:  
 

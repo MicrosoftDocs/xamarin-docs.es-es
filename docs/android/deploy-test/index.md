@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 4b7d3d19ce8766ccdbfc41163fcad44074e832b8
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: bec2bef92433320925c4179535c8371b69b9bf22
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80159772"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996557"
 ---
-# <a name="deployment-and-testing"></a>Implementación y prueba
+# <a name="deployment-and-testing-of-xamarinandroid-apps"></a>Implementación y pruebas de aplicaciones de Xamarin.Android
 
 En esta sección se incluyen guías en las que se explica cómo probar una aplicación, optimizar su rendimiento, prepararla para el lanzamiento, firmarla con un certificado y publicarla en una tienda de aplicaciones.
 

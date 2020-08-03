@@ -8,14 +8,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 659545431a490f50224de3e7728b4d4d0c111d64
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 19e0b209cb0e7a0ba0fb44904246aecff3821361
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "74681332"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996830"
 ---
-# <a name="troubleshooting"></a>Solución de problemas
+# <a name="troubleshooting-xamarinandroid"></a>Solución de problemas de Xamarin.Android
 
 _Los documentos de esta sección cubren características específicas para la solución de problemas con Android._
 

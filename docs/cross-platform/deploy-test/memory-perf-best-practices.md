@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: d21394b3c33b3f415cbe45ae13c84cabab1ec30b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 89b5dc2ae296b9e9033c45bf93c87de83054f721
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571043"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996492"
 ---
 # <a name="cross-platform-performance"></a>Rendimiento multiplataforma
 
@@ -298,11 +298,11 @@ Para reducir el tamaño de las aplicaciones, la plataforma Xamarin incluye un en
 
 En la siguiente captura de pantalla se muestran las opciones del enlazador en Visual Studio para Mac para un proyecto de Xamarin.iOS:
 
-![](memory-perf-best-practices-images/linker-options-ios.png)
+![Opciones del vinculador para Xamarin.iOS](memory-perf-best-practices-images/linker-options-ios.png)
 
 En la siguiente captura de pantalla se muestran las opciones del enlazador en Visual Studio para Mac para un proyecto de Xamarin.Android:
 
-![](memory-perf-best-practices-images/linker-options-droid.png)
+![Opciones del vinculador para Xamarin.Android](memory-perf-best-practices-images/linker-options-droid.png)
 
 El enlazador proporciona tres opciones distintas para controlar su comportamiento:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: f020219f28ce9389c3f8d5157ddfddc32af07f0f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 1f86227573fc5e9dc39d4781125c49a067e8967d
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939976"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997493"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Uso de TestFlight para distribuir aplicaciones Xamarin.iOS
 
@@ -75,7 +75,7 @@ Para obtener más información acerca de cómo crear un nuevo registro de iTunes
 
 El formulario debe reflejar exactamente la información que contiene el archivo Info.plist de la aplicación, como se muestra a continuación:
 
-[![](testflight-images/infoplist.png "Archivo Info.plist de la aplicación")](testflight-images/infoplist.png#lightbox)
+[![Info.plist de la aplicación](testflight-images/infoplist.png)](testflight-images/infoplist.png#lightbox)
 [![Formulario en iTunes Connect](testflight-images/newiosapp.png)](testflight-images/newiosapp.png#lightbox)
 
 - **Nombre**: el nombre descriptivo que se ha usado al configurar el paquete de aplicaciones. Debe coincidir exactamente con la entrada del **nombre de la aplicación** en su `Info.plist`.
@@ -227,7 +227,7 @@ Ahora puede empezar a preparar invitaciones y agregar a hasta 2000 evaluadores e
 
 Si tiene un gran número de evaluadores externos, puede utilizar el vínculo **Importar archivo** para importar un archivo `CSV` con el siguiente formato por línea:
 
-``` 
+```
 first name, last name, email address
 ```
 

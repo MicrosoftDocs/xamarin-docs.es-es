@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/23/2018
-ms.openlocfilehash: 96b0d6a00c7825939b1f89ed63e3e5559ca4ef59
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: e6eb62def5aeb9e4a4a347becffcae82116c1b11
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020481"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997077"
 ---
 # <a name="external-storage"></a>Almacenamiento externo
 
@@ -50,7 +50,7 @@ Este documento hará referencia al directorio de almacenamiento para los archivo
 
 El parámetro para `GetExternalFilesDir()` es una cadena que especifica un _directorio de aplicación_. Se trata de un directorio diseñado para proporcionar una ubicación estándar para una organización lógica de archivos. Los valores de cadena están disponibles mediante constantes en la clase `Android.OS.Environment`:
 
-| `Android.OS.Environment` | Directorio |
+| Android.OS.Environment | Directorio |
 |-|-|
 | DirectoryAlarms | **_PRIVATE\_EXTERNAL\_STORAGE_/Alarms** |
 | DirectoryDcim | **_PRIVATE\_EXTERNAL\_STORAGE_/DCIM** |

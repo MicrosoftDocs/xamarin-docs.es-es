@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 1b279b125ce88a37ddb3209cfe689a7fef50a256
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b937cc653275f509b7f759af5c3d995e84381cb2
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938754"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997350"
 ---
 # <a name="hello-ios-multiscreen--quickstart"></a>Inicio rápido de Hello, iOS Multiscreen
 
@@ -67,7 +67,7 @@ A continuación, mueva la escena de **Phoneword** junto al **controlador de nave
 
 8. Haga doble clic en el barra **Título** de la pantalla **Phoneword** y cambie el **título** por **Phoneword**:
 
-    ![](hello-ios-multiscreen-quickstart-images/09.png "Change the Title to 'Phoneword'")
+    ![Cambio del título a Phoneword](hello-ios-multiscreen-quickstart-images/09.png)
 
 9. Arrastre un **botón** desde el **cuadro de herramientas** y colóquelo debajo del **botón Llamada**. Arrastre los controladores para hacer que el **botón** nuevo tenga el mismo ancho que el **botón Llamada**:
 
@@ -90,7 +90,7 @@ A continuación, mueva la escena de **Phoneword** junto al **controlador de nave
     ![Archivo CallHistoryController.cs en el Panel de solución](hello-ios-multiscreen-quickstart-images/14new.png)
 
 13. Haga doble clic en el archivo **CallHistoryController.cs** para abrirlo y reemplace el contenido por el código siguiente:
-    
+
     ```csharp
     using System;
     using Foundation;
@@ -314,7 +314,7 @@ En este tutorial se agregará una pantalla Historial de llamadas a nuestra aplic
 
 10. En el **Explorador de propiedades**, cambie el **nombre** del **botón** por `CallHistoryButton` y cambie el **título** por **Historial de llamadas**:
 
-    ![](hello-ios-multiscreen-quickstart-images/image9.png "Change the Name of the Button to 'CallHistoryButton' and the Title to 'Call History'")
+    ![Cambie el nombre del botón a CallHistoryButton y el título a Historial de llamadas.](hello-ios-multiscreen-quickstart-images/image9.png)
 
 11. Cree la pantalla **Historial de llamadas**. Desde el **Cuadro de herramientas**, arrastre un **controlador de vista de tabla** a la superficie de diseño:
 
