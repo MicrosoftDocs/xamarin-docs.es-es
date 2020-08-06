@@ -1,6 +1,6 @@
 ---
-title: 'title: "Xamarin.Forms: TabbedPage" description: "TabbedPage de Xamarin.Forms consta de una lista de pestañas y un área de detalles mayor. Cada pestaña carga contenido en el área de detalles.'
-description: 'En este artículo se muestra cómo usar una instancia de TabbedPage para navegar por una colección de páginas." ms.prod: xamarin ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/07/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: TabbedPage de Xamarin.Forms
+description: TabbedPage de Xamarin.Forms consta de una lista de pestañas y un área de detalles mayor. Cada pestaña carga contenido en el área de detalles. En este artículo se muestra cómo usar una instancia de TabbedPage para navegar por una colección de páginas.
 ms.prod: xamarin
 ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 11/07/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 38389867ba52e63d8310e3b59d7838f58e8cf488
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 733ec985f4d285f26aca62930868970026847825
+ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84137519"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87426882"
 ---
-# <a name="xamarinforms-tabbedpage"></a>TabbedPage de Xamarin.Forms
+# <a name="no-locxamarinforms-tabbedpage"></a>TabbedPage de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 
@@ -33,7 +33,7 @@ En iOS, la lista de pestañas aparece en la parte inferior de la pantalla y el �
 En Android, la lista de pestañas aparece en la parte superior de la pantalla y el área de detalles está debajo. Cada pestaña está formada por un título y un icono, que debe ser un archivo PNG con un canal alfa. Sin embargo, se pueden mover las pestañas a la parte inferior de la pantalla con una plataforma específica. Si hay más de cinco pestañas, y la lista de pestañas está en la parte inferior de la pantalla, aparece una pestaña *Más* que puede usarse para acceder a las demás pestañas. Para información sobre los requisitos de los iconos, consulte [Pestañas](https://material.io/components/tabs/#) en material.io y [Compatibilidad con distintas densidades de píxeles](https://developer.android.com/training/multiscreen/screendensities) en developer.android.com. Para información sobre cómo mover las pestañas a la parte inferior de la pantalla, consulte [Establecimiento de la posición y el color de la barra de herramientas de TabbedPage](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md).
 
 > [!TIP]
-> El elemento `TabbedPageRenderer` para Android AppCompat tiene un método reemplazable `GetIconDrawable` que se puede usar para cargar iconos de pestaña desde un elemento `Drawable` personalizado. Esta invalidación permite usar imágenes SVG como iconos en un elemento `TabbedPage` y funciona con barras de pestañas superiores e inferiores. También se puede usar el método reemplazable `SetTabIcon` para cargar iconos de pestaña desde un elemento `Drawable` personalizado para barras de pestañas superiores.
+> El elemento `TabbedPageRenderer` para Android AppCompat tiene un método reemplazable `SetTabIconImageSource` que se puede usar para cargar iconos de pestaña desde un elemento `Drawable` personalizado. Esta invalidación permite usar imágenes SVG como iconos en un elemento `TabbedPage` y funciona con barras de pestañas superiores e inferiores.
 
 En la Plataforma universal de Windows (UWP), la lista de pestañas aparece en la parte superior de la pantalla y el área de detalles se muestra debajo. Cada pestaña está formada por un título. Sin embargo, se pueden agregar iconos a cada pestaña con una plataforma específica. Para más información, consulte [Iconos de TabbedPage en Windows](~/xamarin-forms/platform/windows/tabbedpage-icons.md).
 

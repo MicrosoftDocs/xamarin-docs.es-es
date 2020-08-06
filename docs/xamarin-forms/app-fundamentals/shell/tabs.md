@@ -1,6 +1,6 @@
 ---
-title: 'title: "Xamarin.Forms: Diseño del shell" description: "Después de un control flotante, el siguiente nivel de navegación en una aplicación de Shell es la barra de pestañas de la parte inferior.'
-description: 'Como alternativa, el modelo de navegación para una aplicación puede comenzar con pestañas en la parte inferior y no usar un control flotante. En ambos casos, cuando una pestaña inferior contiene más de una página, las páginas son navegables mediante las pestañas superiores." ms.prod: xamarin ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/06/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Diseño de Xamarin.Forms Shell
+description: Después de un control flotante, el siguiente nivel de navegación en una aplicación de Shell es la barra de pestañas de la parte inferior. Como alternativa, el modelo de navegación para una aplicación puede comenzar con pestañas en la parte inferior y no usar un control flotante. En ambos casos, cuando una pestaña inferior contiene más de una página, las páginas son navegables mediante las pestañas principales.
 ms.prod: xamarin
 ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fa49cdb7944e3ab942ccda611af906e2822b072a
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 7c4ed503e0379c2c7f235bd91621a031bd660c85
+ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84139963"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87426895"
 ---
-# <a name="xamarinforms-shell-tabs"></a>Pestañas de Xamarin.Forms Shell
+# <a name="no-locxamarinforms-shell-tabs"></a>Pestañas de Xamarin.Forms Shell
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
@@ -268,7 +268,7 @@ En una aplicación de Shell, cada objeto [`ContentPage`](xref:Xamarin.Forms.Cont
 </Shell>
 ```
 
-Este XAML crea y muestra `CatsPage`, porque es el primer elemento del contenido declarado en el objeto `Shell` en subclase. Se puede navegar por las páginas `CatsPage` y `MonkeysPage` mediante pestañas inferiores, y estas páginas solo se crean cuando el usuario se desplaza hasta ellas. La ventaja de este enfoque es que se evita la experiencia de inicio deficiente, ya que las páginas se crean a petición en respuesta a la navegación, y no cuando se inicia la aplicación.
+Este XAML crea y muestra `CatsPage`, porque es el primer elemento del contenido declarado en el objeto `Shell` en subclase. Se puede navegar por las páginas `DogsPage` y `MonkeysPage` mediante pestañas inferiores, y estas páginas solo se crean cuando el usuario se desplaza hasta ellas. La ventaja de este enfoque es que se evita la experiencia de inicio deficiente, ya que las páginas se crean a petición en respuesta a la navegación, y no cuando se inicia la aplicación.
 
 ## <a name="tab-appearance"></a>Apariencia de las pestañas
 

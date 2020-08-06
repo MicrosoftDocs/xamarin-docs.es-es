@@ -10,14 +10,14 @@ ms.date: 04/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2a71f48fb9911267188e7aa4b4124cd9b7488d31
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: fa907babc8dae0f466fd870f55b0e5be23114498
+ms.sourcegitcommit: 37ad3c1ef8faa5bfeeb305fde06e7b4654a643e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936479"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87795999"
 ---
-# <a name="xamarinforms-triggers"></a>Desencadenadores de Xamarin.Forms
+# <a name="no-locxamarinforms-triggers"></a>Desencadenadores de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
@@ -276,7 +276,7 @@ Puede proporcionar *tanto* `EnterActions` como `ExitActions`, así como `Setter`
         <Trigger TargetType="Entry"
                  Property="Entry.IsFocused" Value="True">
             <Trigger.EnterActions>
-                <local:FadeTriggerAction StartsFrom="0"" />
+                <local:FadeTriggerAction StartsFrom="0" />
             </Trigger.EnterActions>
 
             <Trigger.ExitActions>
@@ -319,7 +319,7 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 
 ## <a name="state-triggers"></a>Desencadenadores de estado
 
-Los desencadenadores de estado son un conjunto especializado de desencadenadores que definen las condiciones en las que se debe aplicar [`VisualState`](xref:Xamarin.Forms.VisualState). 
+Los desencadenadores de estado son un conjunto especializado de desencadenadores que definen las condiciones en las que se debe aplicar [`VisualState`](xref:Xamarin.Forms.VisualState).
 
 Los desencadenadores de estado se agregan a la colección [`StateTriggers`](xref:Xamarin.Forms.VisualState.StateTriggers) de una clase [`VisualState`](xref:Xamarin.Forms.VisualState). Esta colección puede contener un único desencadenador de estado o varios desencadenadores de estado. Se aplicará una clase [`VisualState`](xref:Xamarin.Forms.VisualState) cuando cualquier desencadenador de estado de la colección esté activo.
 
