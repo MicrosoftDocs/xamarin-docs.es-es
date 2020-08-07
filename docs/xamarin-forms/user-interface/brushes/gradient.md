@@ -10,18 +10,18 @@ ms.date: 07/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6b6fe37fda3fd54b4df5cb6f5dacce0d910ecb3f
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 254a4433888be0e441ae37d41c24b1886040998b
+ms.sourcegitcommit: 579ec4f2884fa391e5e214a3952cd6004c521eb8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/07/2020
-ms.locfileid: "87919210"
+ms.locfileid: "87919624"
 ---
 # <a name="no-locxamarinforms-brushes-gradients"></a>Xamarin.FormsPinceles: degradados
 
 ![API de vista previa](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
 
 La `GradientBrush` clase se deriva de la `Brush` clase y es una clase abstracta que describe un degradado, formado por delimitadores de degradado. Un pincel de degradado pinta un área con varios colores que se mezclan entre sí a lo largo de un eje. Las clases que derivan de `GradientBrush` describen diferentes formas de interpretar los delimitadores de degradado y Xamarin.Forms proporcionan los siguientes pinceles de degradado:
 
@@ -71,6 +71,6 @@ En este diagrama, los círculos marcan la posición de los delimitadores de degr
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [BrushesDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+- [BrushesDemos (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
 - [Xamarin.FormsPinceles: degradados lineales](lineargradient.md)
 - [Xamarin.FormsPinceles: degradados radiales](radialgradient.md)
