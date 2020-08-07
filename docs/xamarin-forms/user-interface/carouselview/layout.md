@@ -10,18 +10,18 @@ ms.date: 01/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d245ebbf42333ad822e0d6ed8569cc8193f1b478
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b45b1375ab7676e96976951e10b903d25c88bc14
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936713"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918530"
 ---
-# <a name="xamarinforms-carouselview-layout"></a>Xamarin.FormsDiseño de CarouselView
+# <a name="no-locxamarinforms-carouselview-layout"></a>Xamarin.FormsDiseño de CarouselView
 
-![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
+![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView)define las siguientes propiedades que controlan el diseño:
 

@@ -10,18 +10,18 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9d79f232a77972b6abbce23ba65d9c277b090311
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: a5d130922a9bd8f30b33b99f7f3dc512f056269f
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935452"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918633"
 ---
-# <a name="xamarinforms-shapes-line"></a>Xamarin.FormsFormas: línea
+# <a name="no-locxamarinforms-shapes-line"></a>Xamarin.FormsFormas: línea
 
-![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
+![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 La `Line` clase se deriva de la `Shape` clase y se puede usar para dibujar líneas. Para obtener información sobre las propiedades que la `Line` clase hereda de la `Shape` clase, vea [ Xamarin.Forms formas](index.md).
 
@@ -50,7 +50,8 @@ En el siguiente ejemplo de XAML se muestra cómo dibujar una línea:
       Y1="0"
       X2="0"
       Y2="120"
-      Stroke="Red" />
+      Stroke="Red"
+      StrokeThickness="1" />
 ```
 
 En este ejemplo, se dibuja una línea diagonal roja desde (40, 0) a (0120):
@@ -61,6 +62,7 @@ Dado que `X1` las `Y1` propiedades,, `X2` y `Y2` tienen valores predeterminados 
 
 ```xaml
 <Line Stroke="Red"
+      StrokeThickness="1"
       X2="200" />
 ```
 
@@ -74,6 +76,7 @@ En el siguiente ejemplo de XAML se muestra cómo dibujar una línea discontinua:
       X2="0"
       Y2="120"
       Stroke="DarkBlue"
+      StrokeThickness="1"
       StrokeDashArray="1,1"
       StrokeDashOffset="6" />
 ```

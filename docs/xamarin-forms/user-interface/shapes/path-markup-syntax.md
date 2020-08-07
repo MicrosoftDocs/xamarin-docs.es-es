@@ -10,23 +10,24 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 971cf76fece1ea9b0744052eb23e696d02ce0bc1
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8250bd5e5f7d6c9cb93a986656e908b40cec9ae2
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937740"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918518"
 ---
-# <a name="xamarinforms-shapes-path-markup-syntax"></a>Xamarin.FormsFormas: sintaxis de marcado de trazados
+# <a name="no-locxamarinforms-shapes-path-markup-syntax"></a>Xamarin.FormsFormas: sintaxis de marcado de trazados
 
-![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
+![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 Xamarin.Formsla sintaxis de marcado de trazados le permite especificar de forma compacta las geometrías de ruta de acceso en XAML. La sintaxis se especifica como un valor de cadena para la `Path.Data` propiedad:
 
 ```xaml
 <Path Stroke="Black"
+      StrokeThickness="1"
       Data="M13.908992,16.207977 L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983Z" />
 ```
 

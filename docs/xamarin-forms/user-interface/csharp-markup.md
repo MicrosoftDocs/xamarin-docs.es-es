@@ -10,18 +10,18 @@ ms.date: 05/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 279df31eeda506d6780533bac8ae190f799424a3
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3e8c95e84dd525c274403290712260ba86abd677
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936037"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918571"
 ---
-# <a name="xamarinforms-c-markup"></a>Xamarin.FormsMarcado de C#
+# <a name="no-locxamarinforms-c-markup"></a>Xamarin.FormsMarcado de C#
 
-![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
+![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 
 El marcado de C# es un conjunto opcional de métodos y clases auxiliares fluidas para simplificar el proceso de creación de interfaces de usuario declarativas Xamarin.Forms en C#. La API fluida proporcionada por el marcado de C# está disponible en el `Xamarin.Forms.Markup` espacio de nombres.
 

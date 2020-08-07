@@ -6,26 +6,26 @@ ms.assetId: F5EFEA72-CB23-4DD6-9545-D9BB755AF3CB
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 11/04/2019
+ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d8ceb139b1b9cd77aa922f98c80884d5c3e1a474
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a4c782f95db0f8e777494c47e9e668e9af67a2cc
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127548"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917777"
 ---
-# <a name="xamarinforms-searchbar"></a>Xamarin.FormsBarra
+# <a name="no-locxamarinforms-searchbar"></a>Xamarin.FormsBarra
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 
 Xamarin.Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) Es un control de entrada de usuario que se usa para iniciar una búsqueda. El `SearchBar` control admite el texto de marcador de posición, la entrada de consulta, la ejecución de búsqueda y la cancelación. En la captura de pantalla siguiente se muestra una `SearchBar` consulta con los resultados mostrados en un `ListView` :
 
 [![Captura de pantalla de barra en iOS y Android](searchbar-images/device-searchbars-cropped.png "Barra en iOS y Android")](searchbar-images/device-searchbars.png#lightbox "Barra en iOS y Android")
 
-La `SearchBar` clase define las siguientes propiedades:
+La clase `SearchBar` define las propiedades siguientes:
 
 * [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor)es un `Color` que define el color del botón Cancelar.
 * `CharacterSpacing`, del tipo `double`, es el espaciado entre los caracteres del texto de `SearchBar`.
@@ -40,6 +40,7 @@ La `SearchBar` clase define las siguientes propiedades:
 * [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter)es un `object` que especifica el parámetro que se debe pasar a `SearchCommand` .
 * [`Text`](xref:Xamarin.Forms.InputView.Text)es un valor de tipo `string` que contiene el texto de la consulta en `SearchBar` .
 * [`TextColor`](xref:Xamarin.Forms.InputView.TextColor)es un `Color` que define el color del texto de la consulta.
+* `TextTransform`es un `TextTransform` valor que determina las mayúsculas y minúsculas del `SearchBar` texto.
 
 Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que se `SearchBar` puede personalizar y ser el destino de los enlaces de datos. Especificar las propiedades de fuente en `SearchBar` es coherente con la personalización de texto en otros [ Xamarin.Forms controles de texto](~/xamarin-forms/user-interface/text/index.md). Para obtener más información, vea [fuentes Xamarin.Forms en ](~/xamarin-forms/user-interface/text/fonts.md).
 
@@ -66,6 +67,7 @@ El `SearchBar` control define muchas propiedades que personalizan la apariencia 
            CancelButtonColor="Orange"
            PlaceholderColor="Orange"
            TextColor="Orange"
+           TextTransform="Lowercase"
            HorizontalTextAlignment="Center"
            FontSize="Medium"
            FontAttributes="Italic" />
@@ -79,6 +81,7 @@ SearchBar searchBar = new SearchBar
     Placeholder = "Search items...",
     PlaceholderColor = Color.Orange,
     TextColor = Color.Orange,
+    TextTransform = TextTransform.Lowercase,
     HorizontalTextAlignment = TextAlignment.Center,
     FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(SearchBar)),
     FontAttributes = FontAttributes.Italic

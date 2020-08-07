@@ -6,25 +6,26 @@ ms.assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/15/2020
+ms.date: 07/31/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bd35722c76cce245701b7a548514d402cd978d38
-ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
+ms.openlocfilehash: 6dafdc547e4673134e8ff3badc85a3527dfc55c4
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853075"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917416"
 ---
-# <a name="xamarinforms-experimental-flags"></a>Xamarin.Formsmarcas experimentales
+# <a name="no-locxamarinforms-experimental-flags"></a>Xamarin.Formsmarcas experimentales
 
 Cuando Xamarin.Forms se implementa una nueva característica, a veces se coloca detrás de una marca experimental. Esto permite al equipo de ingeniería proporcionar nuevas características con mayor rapidez, al tiempo que sigue pudiendo cambiar las API de características antes de que pasen a una versión estable. Después, se quita la marca experimental una vez que la característica se mueve a una versión estable.
 
 Xamarin.Formsincluye las siguientes marcas experimentales:
 
-- `AppTheme_Experimental`
+- `Brush_Experimental`
 - `CarouselView_Experimental`
+- `DragAndDrop_Experimental`
 - `Expander_Experimental`
 - `Markup_Experimental`
 - `MediaElement_Experimental`

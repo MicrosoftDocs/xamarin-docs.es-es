@@ -10,18 +10,18 @@ ms.date: 06/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8e23e4151c4841dd4dce80ba0358471c64a26f39
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 274ff08d7fffc1cd3a817906e14ebddfac2c9337
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937620"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918260"
 ---
-# <a name="xamarinforms-shapes-path"></a>Xamarin.FormsFormas: ruta de acceso
+# <a name="no-locxamarinforms-shapes-path"></a>Xamarin.FormsFormas: ruta de acceso
 
-![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
+![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 La `Path` clase se deriva de la `Shape` clase y se puede usar para dibujar curvas y formas complejas. Estas curvas y formas suelen describirse mediante `Geometry` objetos. Para obtener información sobre las propiedades que la `Path` clase hereda de la `Shape` clase, vea [ Xamarin.Forms formas](index.md).
 
@@ -48,6 +48,7 @@ En el siguiente ejemplo de XAML se muestra cómo dibujar un triángulo mediante 
 ```xaml
 <Path Data="M 10,100 L 100,100 100,50Z"
       Stroke="Black"
+      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Start" />
 ```
@@ -71,6 +72,7 @@ En el siguiente ejemplo de XAML se muestra cómo dibujar un triángulo mediante 
 
 ```xaml
 <Path Stroke="Black"
+      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Start">
     <Path.Data>

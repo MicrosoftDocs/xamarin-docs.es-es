@@ -6,22 +6,22 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/09/2020
+ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8bf6517e3624ad80c2fd4d209e5a77472460be76
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1fcfc2c3fbb91a7ee326db7aeef08459e05d834d
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84570523"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917882"
 ---
-# <a name="xamarinforms-label"></a>Xamarin.FormsRótulo
+# <a name="no-locxamarinforms-label"></a>Xamarin.FormsRótulo
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_Mostrar texto en Xamarin. Forms_
+_Mostrar texto enXamarin.Forms_
 
 La [`Label`](xref:Xamarin.Forms.Label) vista se usa para mostrar texto, tanto de una sola línea como de varias líneas. Las etiquetas pueden tener decoraciones de texto, texto de color y usar fuentes personalizadas (familias, tamaños y opciones).
 
@@ -55,6 +55,32 @@ Las capturas de pantallas siguientes muestran los `TextDecorations` miembros de 
 
 > [!NOTE]
 > También se pueden aplicar decoraciones de texto a [`Span`](xref:Xamarin.Forms.Span) las instancias de. Para obtener más información sobre la `Span` clase, vea [texto con formato](#formatted-text).
+
+## <a name="transform-text"></a>Transformar texto
+
+Un [`Label`](xref:Xamarin.Forms.Entry) puede transformar el uso de mayúsculas y minúsculas de su texto, almacenado en la `Text` propiedad, estableciendo la `TextTransform` propiedad en un valor de la `TextTransform` enumeración. Esta enumeración tiene cuatro valores:
+
+- `None`indica que el texto no se transformará.
+- `Default`indica que se utilizará el comportamiento predeterminado para la plataforma. Este es el valor predeterminado de la propiedad `TextTransform`.
+- `Lowercase`indica que el texto se transformará a minúsculas.
+- `Uppercase`indica que el texto se transformará en mayúsculas.
+
+En el ejemplo siguiente se muestra cómo transformar texto a mayúsculas:
+
+```xaml
+<Label Text="This text will be displayed in uppercase."
+       TextTransform="Uppercase" />
+```
+
+El código de C# equivalente es el siguiente:
+
+```csharp
+Label label = new Label
+{
+    Text = "This text will be displayed in uppercase.",
+    TextTransform = TextTransform.Uppercase
+};
+```
 
 ## <a name="character-spacing"></a>espaciado entre caracteres
 
@@ -390,7 +416,7 @@ Las capturas de pantallas siguientes muestran el resultado de establecer la [`Sp
 
 ![Ejemplo de LineHeight de intervalo](label-images/span-lineheight.png)
 
-## <a name="padding"></a>Espaciado interno
+## <a name="padding"></a>Relleno
 
 El relleno representa el espacio que hay entre un elemento y sus elementos secundarios, y se utiliza para separar el elemento de su propio contenido. El relleno se puede aplicar a [`Label`](xref:Xamarin.Forms.Label) las instancias estableciendo la `Label.Padding` propiedad en un [`Thickness`](xref:Xamarin.Forms.Thickness) valor:
 

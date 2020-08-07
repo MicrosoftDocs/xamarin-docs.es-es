@@ -6,18 +6,18 @@ ms.prod: xamarin
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/17/2020
+ms.date: 08/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b451fe004ca21c8770658f31c9c38253e073c259
-ms.sourcegitcommit: 82eabb0eaa4a674897aa6d5e64efb91fd580c330
+ms.openlocfilehash: efd9cabc9504a9fa56f1f7a763013e6852be9382
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100188"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918093"
 ---
-# <a name="respond-to-system-theme-changes-in-xamarinforms-applications"></a>Responder a los cambios de tema del sistema en Xamarin.Forms las aplicaciones
+# <a name="respond-to-system-theme-changes-in-no-locxamarinforms-applications"></a>Responder a los cambios de tema del sistema en Xamarin.Forms las aplicaciones
 
 [![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
 
@@ -26,9 +26,6 @@ Los dispositivos suelen incluir temas claros y oscuros, que hacen referencia a u
 El tema del sistema puede cambiar por diversos motivos, en función de la configuración del dispositivo. Esto incluye el tema del sistema que el usuario cambia explícitamente, cambia debido a la hora del día y cambia debido a factores ambientales como la luz baja.
 
 Xamarin.Formslas aplicaciones pueden responder a los cambios del tema del sistema mediante el consumo de recursos con la `AppThemeBinding` extensión de marcado y los `SetAppThemeColor` métodos de `SetOnAppTheme<T>` extensión y.
-
-> [!IMPORTANT]
-> La respuesta a un cambio de tema del sistema es experimental actualmente y solo se puede usar si se establece la `AppTheme_Experimental` marca. Para obtener más información, vea [indicadores experimentales](~/xamarin-forms/internals/experimental-flags.md).
 
 Se deben cumplir los siguientes requisitos para Xamarin.Forms que respondan a un cambio de tema del sistema:
 

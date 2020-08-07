@@ -6,20 +6,20 @@ ms.assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/04/2019
+ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 595367d94bcc4ac384763e915a0a19db7517341d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7ed24d38c75036245a024eecbef7f9a74380b591
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573396"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917894"
 ---
-# <a name="xamarinforms-button"></a>Xamarin.FormsBotón
+# <a name="no-locxamarinforms-button"></a>Xamarin.FormsBotón
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
 
 _El botón responde a una pulsación o clic que dirige una aplicación para llevar a cabo una tarea determinada._
 
@@ -426,7 +426,8 @@ Este tipo de comportamiento tiene aplicaciones para juegos: un dedo que se manti
 - [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes)indica si el texto está en cursiva o en negrita
 - [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth)es el ancho del borde.
 - [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius)es el radio de la esquina del`Button`
-- `CharacterSpacing`es el espaciado entre los caracteres del `Button` texto
+- [`CharacterSpacing`](xref:Xamarin.Forms.Button.CharacterSpacing)es el espaciado entre los caracteres del `Button` texto.
+- `TextTransform`determina las mayúsculas y minúsculas del `Button` texto.
 
 > [!NOTE]
 > La `Button` clase también tiene [`Margin`](xref:Xamarin.Forms.View.Margin) [`Padding`](xref:Xamarin.Forms.Button.Padding) propiedades y que controlan el comportamiento de diseño de `Button` . Para obtener más información, vea [Márgenes y relleno](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).

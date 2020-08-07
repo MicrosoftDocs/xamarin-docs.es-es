@@ -6,18 +6,18 @@ ms.assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 06/19/2020
+ms.date: 07/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9afad335de60e605ef6551b0878455674a40750f
-ms.sourcegitcommit: 91b4d2f93687fadec5c3f80aadc8f7298d911624
+ms.openlocfilehash: b4c0ef44f528e3cbc56a27e98a1c38246736ff8c
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85795026"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918341"
 ---
-# <a name="xamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Formspropiedades, métodos y eventos de controles comunes
+# <a name="no-locxamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Formspropiedades, métodos y eventos de controles comunes
 
 La Xamarin.Forms `VisualElement` clase es la clase base para la mayoría de los controles utilizados en una Xamarin.Forms aplicación. La `VisualElement` clase define muchas [propiedades](#properties), [métodos](#methods)y [eventos](#events) que se usan en las clases derivadas.
 
@@ -32,6 +32,10 @@ La `AnchorX` propiedad es un `double` valor que define el punto central en el ej
 ### [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)
 
 La `AnchorY` propiedad es un `double` valor que define el punto central en el eje X para las transformaciones como la escala y la rotación. El valor predeterminado es 0,5.
+
+### `Background`
+
+La `Background` propiedad es un `Brush` valor que permite usar pinceles como fondo en cualquier control. El valor predeterminado es `Brush.Default`.
 
 ### [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor)
 
@@ -217,7 +221,7 @@ public void Unfocus ()
 
 El elemento ya debe tener el foco para que este método funcione.
 
-## <a name="events"></a>Events
+## <a name="events"></a>Eventos
 
 Los eventos siguientes están disponibles en la `VisualElement` clase. Para obtener una lista completa, vea [ Xamarin.Forms VisualElement Events](xref:Xamarin.Forms.VisualElement#events).
 

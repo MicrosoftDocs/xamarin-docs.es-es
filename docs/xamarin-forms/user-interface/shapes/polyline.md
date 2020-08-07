@@ -10,18 +10,18 @@ ms.date: 06/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2f00daff6cada3f74b2dbcf6daa8245b80cf13eb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 5b7e6404dec40814b800aef696afd058cafb69e5
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937662"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918364"
 ---
-# <a name="xamarinforms-shapes-polyline"></a>Xamarin.FormsFormas: Polyline
+# <a name="no-locxamarinforms-shapes-polyline"></a>Xamarin.FormsFormas: Polyline
 
-![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
+![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 La `Polyline` clase se deriva de la `Shape` clase y se puede usar para dibujar una serie de líneas rectas conectadas. Una polilínea es similar a un polígono, excepto que el último punto de una polilínea no está conectado al primer punto. Para obtener información sobre las propiedades que la `Polyline` clase hereda de la `Shape` clase, vea [ Xamarin.Forms formas](index.md).
 
@@ -47,7 +47,8 @@ En el siguiente ejemplo de XAML se muestra cómo dibujar una polilínea:
 
 ```xaml
 <Polyline Points="0,0 10,30, 15,0 18,60 23,30 35,30 40,0 43,60 48,30 100,30"
-          Stroke="Red" />
+          Stroke="Red"
+          StrokeThickness="1" />
 ```
 
 En este ejemplo, se dibuja una polilínea roja:

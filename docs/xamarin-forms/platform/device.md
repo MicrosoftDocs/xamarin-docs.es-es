@@ -6,20 +6,20 @@ ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/17/2020
+ms.date: 07/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ba4e93b8f364d6887439b05017a9cd373dce5985
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 38452ac477404d92468b7c9c4d2c88ce60104b50
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572330"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918026"
 ---
-# <a name="xamarinforms-device-class"></a>Xamarin.FormsClase de dispositivo
+# <a name="no-locxamarinforms-device-class"></a>Xamarin.FormsClase de dispositivo
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
 
 La [`Device`](xref:Xamarin.Forms.Device) clase contiene una serie de propiedades y métodos para ayudar a los desarrolladores a personalizar el diseño y la funcionalidad para cada plataforma.
 
@@ -176,32 +176,57 @@ Color color = Device.GetNamedColor(NamedPlatformColor.HoloBlueBright);
 
 La `NamedPlatformColor` clase contiene las constantes que definen los colores con nombre para Android, iOS y UWP:
 
-| Android | iOS | UWP |
-| --- | --- | --- |
-| `BackgroundDark` | `Label` | `SystemAltHighColor` |
-| `BackgroundLight` | `Link` | `SystemAltLowColor` |
-| `Black` | `OpaqueSeparator` | `SystemAltMediumColor` |
-| `DarkerGray` | `PlaceholderText` | `SystemAltMediumHighColor` |
-| `HoloBlueBright` | `QuaternaryLabel` | `SystemAltMediumLowColor` |
-| `HoloBlueDark` | `SecondaryLabel` | `SystemBaseHighColor` |
-| `HoloBlueLight` | `Separator` | `SystemBaseLowColor` |
-| `HoloGreenDark` | `SystemBlue` | `SystemBaseMediumColor` |
-| `HoloGreenLight` | `SystemGray` | `SystemBaseMediumHighColor` |
-| `HoloOrangeDark` | `SystemGray2` | `SystemBaseMediumLowColor` |
-| `HoloOrangeLight` | `SystemGray3` | `SystemChromeAltLowColor` |
-| `HoloPurple` | `SystemGray4` | `SystemChromeBlackHighColor` |
-| `HoloRedDark` | `SystemGray5` | `SystemChromeBlackLowColor` |
-| `HoloRedLight` | `SystemGray6` | `SystemChromeBlackMediumColor` |
-| `TabIndicatorText` | `SystemGreen` | `SystemChromeBlackMediumLowColor` |
-| `Transparent` | `SystemIndigo` | `SystemChromeDisabledHighColor` |
-| `White` | `SystemListLowColor` | `SystemChromeDisabledLowColor` |
-| `WidgetEditTextDark` | `SystemListMediumColor` | `SystemChromeHighColor` |
-| | `SystemPink` | `SystemChromeLowColor` |
-| | `SystemPurple` | `SystemChromeMediumColor` |
-| | `SystemRed` | `SystemChromeMediumLowColor` |
-| | `SystemTeal` | `SystemChromeWhiteColor` |
-| | `SystemYellow` |
-| | `TertiaryLabel` |
+| Android | iOS | macOS | UWP |
+| --- | --- | --- | --- |
+| `BackgroundDark` | `Label` | `AlternateSelectedControlTextColor` | `SystemAltHighColor` |
+| `BackgroundLight` | `Link` | `ControlAccent` | `SystemAltLowColor` |
+| `Black` | `OpaqueSeparator` | `ControlBackgroundColor` | `SystemAltMediumColor` |
+| `DarkerGray` | `PlaceholderText` | `ControlColor` | `SystemAltMediumHighColor` |
+| `HoloBlueBright` | `QuaternaryLabel` | `DisabledControlTextColor` | `SystemAltMediumLowColor` |
+| `HoloBlueDark` | `SecondaryLabel` | `FindHighlightColor` | `SystemBaseHighColor` |
+| `HoloBlueLight` | `Separator` | `GridColor` | `SystemBaseLowColor` |
+| `HoloGreenDark` | `SystemBlue` | `HeaderTextColor` | `SystemBaseMediumColor` |
+| `HoloGreenLight` | `SystemGray` | `HighlightColor` | `SystemBaseMediumHighColor` |
+| `HoloOrangeDark` | `SystemGray2` | `KeyboardFocusIndicatorColor` | `SystemBaseMediumLowColor` |
+| `HoloOrangeLight` | `SystemGray3` | `Label` | `SystemChromeAltLowColor` |
+| `HoloPurple` | `SystemGray4` | `LabelColor` | `SystemChromeBlackHighColor` |
+| `HoloRedDark` | `SystemGray5` | `Link` | `SystemChromeBlackLowColor` |
+| `HoloRedLight` | `SystemGray6` | `LinkColor` | `SystemChromeBlackMediumColor` |
+| `TabIndicatorText` | `SystemGreen` | `PlaceholderText` | `SystemChromeBlackMediumLowColor` |
+| `Transparent` | `SystemIndigo` | `PlaceholderTextColor` | `SystemChromeDisabledHighColor` |
+| `White` | `SystemOrange` | `QuaternaryLabel`| `SystemChromeDisabledLowColor` |
+| `WidgetEditTextDark` | `SystemPink` | `QuaternaryLabelColor` | `SystemChromeHighColor` |
+| | `SystemPurple` | `SecondaryLabel` | `SystemChromeLowColor` |
+| | `SystemRed` | `SecondaryLabelColor` | `SystemChromeMediumColor` |
+| | `SystemTeal` | `SelectedContentBackgroundColor` | `SystemChromeMediumLowColor` |
+| | `SystemYellow` | `SelectedControlColor` | `SystemChromeWhiteColor` |
+| | `TertiaryLabel` | `SelectedControlTextColor` | `SystemListLowColor` |
+| | | `SelectedMenuItemTextColor` | `SystemListMediumColor`|
+| | | `SelectedTextBackgroundColor` | |
+| | | `SelectedTextColor` | |
+| | | `Separator` | |
+| | | `SeparatorColor` | |
+| | | `ShadowColor` | |
+| | | `SystemBlue` | |
+| | | `SystemGray` | |
+| | | `SystemGreen` | |
+| | | `SystemIndigo` | |
+| | | `SystemOrange` | |
+| | | `SystemPink` | |
+| | | `SystemPurple` | |
+| | | `SystemRed` | |
+| | | `SystemTeal` | |
+| | | `SystemYellow` | |
+| | | `TertiaryLabel` | |
+| | | `TertiaryLabelColor` | |
+| | | `TextBackgroundColor` | |
+| | | `TextColor` | |
+| | | `UnderPageBackgroundColor` | |
+| | | `UnemphasizedSelectedContentBackgroundColor` | |
+| | | `UnemphasizedSelectedTextBackgroundColor` | |
+| | | `UnemphasizedSelectedTextColor` | |
+| | | `WindowBackgroundColor` | |
+| | | `WindowFrameTextColor` | |
 
 ## <a name="devicestarttimer"></a>Device. StartTimer
 
