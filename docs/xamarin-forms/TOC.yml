@@ -289,6 +289,8 @@ items:
             href: app-fundamentals/gestures/pan.md
           - name: Deslizar rápidamente
             href: app-fundamentals/gestures/swipe.md
+          - name: Arrastrar y colocar
+            href: app-fundamentals/gestures/drag-and-drop.md
       - name: Notificaciones locales
         href: app-fundamentals/local-notifications.md
       - name: Localización
@@ -546,6 +548,20 @@ items:
                 href: user-interface/animation/easing.md
               - name: Animaciones personalizadas
                 href: user-interface/animation/custom.md
+          - name: Pinceles
+            items:
+              - name: Introducción
+                href: user-interface/brushes/index.md
+              - name: Colores sólidos
+                href: user-interface/brushes/solidcolor.md
+              - name: Degradados
+                items:
+                  - name: Introducción
+                    href: user-interface/brushes/gradient.md
+                  - name: Degradados lineales
+                    href: user-interface/brushes/lineargradient.md
+                  - name: Degradados radiales
+                    href: user-interface/brushes/radialgradient.md
           - name: Colores
             href: user-interface/colors.md
           - name: DataPages

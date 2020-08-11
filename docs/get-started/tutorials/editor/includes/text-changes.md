@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 653d3677f96d7da78af61531c535b1b7db684e7e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f1671f4f40e3eb44465431d39994cf5e623665a1
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "77135102"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87919353"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -47,7 +47,7 @@ ms.locfileid: "77135102"
 
     Establezca puntos de interrupción en los dos controladores de eventos, escriba texto en [`Editor`](xref:Xamarin.Forms.Editor) y observe cómo se activa el evento [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged). Quite el enfoque de `Editor` para observar cómo se activa el evento [`Completed`](xref:Xamarin.Forms.Entry.Completed).
 
-    Para obtener más información sobre los eventos de [`Editor`](xref:Xamarin.Forms.Editor), consulte la sección [Interactividad](~/xamarin-forms/user-interface/text/editor.md#interactivity) en la guía del [Editor de Xamarin.Forms](~/xamarin-forms/user-interface/text/editor.md).
+    Para obtener más información sobre los eventos de [`Editor`](xref:Xamarin.Forms.Editor), consulte [Eventos e interactividad](~/xamarin-forms/user-interface/text/editor.md#events-and-interactivity) en la guía [Editor de Xamarin.Forms](~/xamarin-forms/user-interface/text/editor.md).
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -90,4 +90,4 @@ ms.locfileid: "77135102"
 
     Establezca puntos de interrupción en los dos controladores de eventos, escriba texto en [`Editor`](xref:Xamarin.Forms.Editor) y observe cómo se activa el evento [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged). Quite el enfoque de `Editor` para observar cómo se activa el evento [`Completed`](xref:Xamarin.Forms.Entry.Completed).
 
-    Para obtener más información sobre los eventos de [`Editor`](xref:Xamarin.Forms.Editor), consulte la sección [Interactividad](~/xamarin-forms/user-interface/text/editor.md#interactivity) en la guía del [Editor de Xamarin.Forms](~/xamarin-forms/user-interface/text/editor.md).
+    Para obtener más información sobre los eventos de [`Editor`](xref:Xamarin.Forms.Editor), consulte [Eventos e interactividad](~/xamarin-forms/user-interface/text/editor.md#events-and-interactivity) en la guía [Editor de Xamarin.Forms](~/xamarin-forms/user-interface/text/editor.md).

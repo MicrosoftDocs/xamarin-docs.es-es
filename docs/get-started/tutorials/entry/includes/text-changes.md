@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: deb3516cc134a8b2eecba8460931003de8bb312f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: d9834c2d2974787de989b640449fddae6c1ce39b
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "77135088"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87919336"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -46,7 +46,7 @@ ms.locfileid: "77135088"
 
     Establezca puntos de interrupción en los dos controladores de eventos, escriba texto en [`Entry`](xref:Xamarin.Forms.Entry) y observe cómo se desencadenan los eventos [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) y [`Completed`](xref:Xamarin.Forms.Entry.Completed).
 
-    Para obtener más información sobre los eventos de [`Entry`](xref:Xamarin.Forms.Entry), vea [Eventos e interactividad](~/xamarin-forms/user-interface/text/entry.md#events-and-interactivity) en la guía [Entrada de Xamarin.Forms](~/xamarin-forms/user-interface/text/entry.md).
+    Para obtener más información sobre los eventos de [`Entry`](xref:Xamarin.Forms.Entry), consulte [Eventos e interactividad](~/xamarin-forms/user-interface/text/entry.md#events-and-interactivity) en la guía [Entrada de Xamarin.Forms](~/xamarin-forms/user-interface/text/entry.md).
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
