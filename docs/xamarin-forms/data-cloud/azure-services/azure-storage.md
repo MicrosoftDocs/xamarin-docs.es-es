@@ -10,14 +10,14 @@ ms.date: 12/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f67543a6c678e2c3a1395f816e020d69af4bf873
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d7b97f21e5184a445cfac85dc06a7da0e1a6a4c5
+ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936661"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88186218"
 ---
-# <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Almacenar y obtener acceso a los datos de Azure Storage desdeXamarin.Forms
+# <a name="store-and-access-data-in-azure-storage-from-no-locxamarinforms"></a>Almacenar y obtener acceso a los datos de Azure Storage desdeXamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 
@@ -65,7 +65,7 @@ Cada objeto almacenado en Azure Storage tiene una dirección URL única. El nomb
 
 La dirección URL para el acceso a un objeto en una cuenta de almacenamiento se crea anexando la ubicación del objeto en la cuenta de almacenamiento al extremo. Por ejemplo, una dirección de BLOB tendrá el formato `https://mystorageaccount.blob.core.windows.net/mycontainer/myblob` .
 
-## <a name="setup"></a>Programa de instalación
+## <a name="setup"></a>Configurar
 
 El proceso para integrar una cuenta de Azure Storage en una Xamarin.Forms aplicación de es el siguiente:
 
@@ -81,7 +81,7 @@ Se deben autenticar todas las solicitudes realizadas en los recursos de la cuent
 - Clave compartida. Este enfoque usa el nombre de cuenta de Azure Storage y la clave de cuenta para tener acceso a los servicios de almacenamiento. A una cuenta de almacenamiento se le asignan dos claves privadas en creación que se pueden usar para la autenticación de clave compartida.
 - Firma de acceso compartido. Se trata de un token que se puede anexar a una dirección URL que permite el acceso delegado a un recurso de almacenamiento, con los permisos que especifica, durante el período de tiempo que sea válido.
 
-Se pueden especificar cadenas de conexión que incluyan la información de autenticación necesaria para obtener acceso a Azure Storage recursos de una aplicación. Además, se puede configurar una cadena de conexión para conectarse al emulador de Azure Storage desde Visual Studio.
+Se pueden especificar cadenas de conexión que incluyan la información de autenticación necesaria para obtener acceso a Azure Storage recursos de una aplicación. Además, se puede configurar una cadena de conexión para conectarse al emulador de almacenamiento de Azure desde Visual Studio.
 
 > [!NOTE]
 > Azure Storage admite HTTP y HTTPS en una cadena de conexión. Sin embargo, se recomienda el uso de HTTPS.
@@ -90,7 +90,7 @@ Se pueden especificar cadenas de conexión que incluyan la información de auten
 
 El emulador de Azure Storage proporciona un entorno local que emula los servicios de blobs, colas y tablas de Azure para fines de desarrollo.
 
-Debe usarse la siguiente cadena de conexión para conectarse al emulador de Azure Storage:
+La siguiente cadena de conexión debe usarse para conectarse al emulador de almacenamiento de Azure:
 
 ```csharp
 UseDevelopmentStorage=true

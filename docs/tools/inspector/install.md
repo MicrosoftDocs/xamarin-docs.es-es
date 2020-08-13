@@ -6,12 +6,12 @@ ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: 39e7a6c86a2d4ab4231a29c0e1014de702af01ac
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 1545af984c0a409244c323048b448ec44e9be6a8
+ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573422"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88186192"
 ---
 # <a name="inspector-installation-and-requirements"></a>Instalación y requisitos del inspector
 
@@ -33,7 +33,7 @@ ms.locfileid: "84573422"
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="supported-operating-systems"></a>Sistemas operativos admitidos
+### <a name="supported-operating-systems"></a>Sistemas operativos compatibles
 
 - **Mac** -OS X 10,11 o superior
 - **Windows** -Windows 7 o posterior (con Internet Explorer 11 o posterior y .net 4.6.1 o superior)
@@ -52,7 +52,7 @@ La inspección de aplicaciones activas está disponible para los clientes empres
 |Plataforma de aplicaciones|Compatibilidad con IDE|Notas|
 |--- |--- |--- |
 |Mac|Solo se admite en Visual Studio para Mac|
-|iOS|Compatible con Visual Studio 2017 y Visual Studio para Mac| El comportamiento del vinculador debe establecerse en **no vincular** (en opciones de proyecto de **compilación de iOS** ) |
+|iOS|Compatible con Visual Studio 2017 y Visual Studio para Mac| El comportamiento del vinculador debe establecerse en [**no vincular**](~/ios/deploy-test/linker.md) (en opciones de proyecto de **compilación de iOS** ) |
 |Android|Compatible con Visual Studio 2017 y Visual Studio para Mac|Debe tener como destino Android >= 4.0.3, con **fastdev** habilitado.<br />Debe usar los emuladores de Google, Visual Studio o Xamarin Android. Es posible que los emuladores de Android 7 no permitan la inspección en este momento.|
 |WPF|Solo se admite en Visual Studio 2017|
 
