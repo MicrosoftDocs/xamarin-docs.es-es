@@ -10,12 +10,12 @@ ms.date: 08/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9a097d6dad067f209d3aad27bde382f28910324a
-ms.sourcegitcommit: c3329ab25d377907d8804cdd5e26dc84a274f39c
+ms.openlocfilehash: 38b44bbb8f01f090d286bb2203014455a32a2290
+ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88130934"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88181490"
 ---
 # <a name="choose-a-no-locxamarinforms-layout"></a>Elegir un Xamarin.Forms diseño
 
@@ -78,7 +78,7 @@ Es una pérdida de tiempo porque se realizan cálculos de diseño innecesarios. 
 
 Para obtener más información, vea [ Xamarin.Forms StackLayout](stacklayout.md).
 
-## <a name="grid"></a>Cuadrícula
+## <a name="grid"></a>Grid
 
 [`Grid`](xref:Xamarin.Forms.Grid)Se usa para mostrar elementos en filas y columnas, que pueden tener tamaños proporcionales o absolutos. Las filas y columnas de una cuadrícula se especifican con las [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) propiedades y.
 
@@ -194,7 +194,7 @@ En este ejemplo, el diseño funciona de la siguiente manera:
 > [!WARNING]
 > Evite el uso de un `RelativeLayout` siempre que sea posible. Como resultado, la CPU tendrá que realizar mucho más trabajo.
 
-Para obtener más información, vea [ Xamarin.Forms RelativeLayout](relative-layout.md).
+Para obtener más información, vea [ Xamarin.Forms RelativeLayout](relativelayout.md).
 
 ## <a name="absolutelayout"></a>AbsoluteLayout
 
@@ -256,6 +256,6 @@ Además, el rendimiento de la representación de páginas también se puede mejo
 - [Xamarin.FormsCuadrícula](grid.md)
 - [Xamarin.FormsFlexLayout](flex-layout.md)
 - [Xamarin.FormsAbsoluteLayout](absolutelayout.md)
-- [Xamarin.FormsRelativeLayout](relative-layout.md)
+- [Xamarin.FormsRelativeLayout](relativelayout.md)
 - [Optimización del rendimiento del diseño](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance)
 - [Compresión de diseño](layout-compression.md)

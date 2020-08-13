@@ -10,16 +10,16 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 737cb819cfd762e81536fba03f3ae5b563416a4e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2b0290daedab4a6e825d2bab4bea9889b4966645
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930746"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918311"
 ---
-# <a name="xamarinforms-dual-screen"></a>Doble pantalla de Xamarin.Forms
+# <a name="no-locxamarinforms-dual-screen"></a>Doble pantalla de Xamarin.Forms
 
-![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
+![API de versión preliminar](~/media/shared/preview.png)
 
 Los dispositivos de doble pantalla como Microsoft Surface Duo ofrecen nuevas posibilidades de experiencia del usuario para las aplicaciones. Xamarin.Forms incluye las clases `TwoPaneView` y `DualScreenInfo` para que pueda desarrollar aplicaciones para dispositivos de doble pantalla.
 
@@ -41,7 +41,7 @@ Siga estos pasos para agregar funcionalidades de doble pantalla a una aplicació
 5. Actualice el atributo `Activity` en la clase `MainActivity` del proyecto de Android, de modo que incluya _todas_ estas opciones de `ConfigurationChanges`:
 
     ```@csharp
-    ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation 
+    ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation
         | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.UiMode
     ```
 

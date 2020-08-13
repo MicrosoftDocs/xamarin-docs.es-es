@@ -10,12 +10,12 @@ ms.date: 08/07/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 696429e04775640d46add77ec6a4bbf6e69f675b
-ms.sourcegitcommit: c3329ab25d377907d8804cdd5e26dc84a274f39c
+ms.openlocfilehash: a6efa4615f0061c83243f2d00d2d141a51607301
+ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88134171"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88181503"
 ---
 # <a name="no-locxamarinforms-absolutelayout"></a>Xamarin.FormsAbsoluteLayout
 
@@ -55,7 +55,7 @@ Para especificar que un elemento secundario tiene un tamaño horizontal o vertic
 
 ## <a name="absolute-positioning-and-sizing"></a>Posicionamiento y ajuste de tamaño absolutos
 
-De forma predeterminada, [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) coloca y ajusta el tamaño de los elementos secundarios usando valores absolutos, que se especifican en unidades independientes del dispositivo, que definen explícitamente dónde se deben colocar las vistas en el diseño. Esto se logra mediante la adición de elementos secundarios a la `Children` colección de `AbsoluteLayout` y el establecimiento de la [`AbsoluteLayout.LayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) propiedad adjunta en cada elemento secundario en la posición absoluta y/o los valores de tamaño.
+De forma predeterminada, [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) coloca y ajusta el tamaño de los elementos secundarios usando valores absolutos, que se especifican en unidades independientes del dispositivo, que definen explícitamente dónde se deben colocar los elementos secundarios en el diseño. Esto se logra mediante la adición de elementos secundarios a la `Children` colección de `AbsoluteLayout` y el establecimiento de la [`AbsoluteLayout.LayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) propiedad adjunta en cada elemento secundario en la posición absoluta y/o los valores de tamaño.
 
 > [!WARNING]
 > El uso de valores absolutos para el posicionamiento y el ajuste de tamaño de los elementos secundarios puede ser problemático, ya que los distintos dispositivos tienen diferentes tamaños de pantalla y resoluciones. Por lo tanto, las coordenadas del centro de la pantalla en un dispositivo pueden estar desplazadas en otros dispositivos.
@@ -190,7 +190,7 @@ En este ejemplo, cada elemento secundario se coloca usando valores proporcionale
 
 En la captura de pantalla siguiente se muestra el diseño resultante:
 
-![Los elementos secundarios se colocan en un AbsoluteLayout con valores positino proporcionales](absolutelayout-images/proportional-position.png)
+![Los elementos secundarios se colocan en un AbsoluteLayout con valores de posición proporcional](absolutelayout-images/proportional-position.png)
 
 A continuación se muestra el código de C# equivalente:
 

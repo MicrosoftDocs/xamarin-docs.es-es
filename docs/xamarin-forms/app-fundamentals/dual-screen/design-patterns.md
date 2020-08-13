@@ -10,16 +10,16 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 79c0f41e8ed0bffce0154ee618729316aab5e8e2
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b6d2dd1d6bdfd071ffb8fc52396cb6b2d73416e2
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935283"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918448"
 ---
-# <a name="xamarinforms-dual-screen-design-patterns"></a>Modelos de diseño de doble pantalla de Xamarin.Forms
+# <a name="no-locxamarinforms-dual-screen-design-patterns"></a>Modelos de diseño de doble pantalla de Xamarin.Forms
 
-![API de versión preliminar](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
+![API de versión preliminar](~/media/shared/preview.png)
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 

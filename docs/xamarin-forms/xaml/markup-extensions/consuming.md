@@ -10,16 +10,16 @@ ms.date: 06/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e1429c3f39e37dc552d7f6ca8767058e5aec853b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b23aca29fa77b58183a1f09053bc2bb9ba66bb49
+ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84903119"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88181516"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de extensiones de marcado XAML
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 Las extensiones de marcado XAML ayudan a mejorar la eficacia y flexibilidad de XAML al permitir que se establezcan atributos de elemento desde diversos orígenes. Varias extensiones de marcado XAML forman parte de la especificación de XAML 2009. Aparecen en archivos XAML con el `x` Prefijo de espacio de nombres personalizado y se suele hacer referencia a ellos con este prefijo. En este artículo se describen las siguientes extensiones de marcado:
 
@@ -42,7 +42,7 @@ Históricamente, las extensiones de marcado XAML adicionales se han admitido en 
 - `TemplateBinding`: realiza el enlace de datos de una plantilla de control, como se describe en el artículo [** Xamarin.Forms plantillas de control**](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 - `RelativeSource`: establece el origen de enlace con respecto a la posición del destino de enlace, como se describe en el artículo [enlaces relativos](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
-El [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) diseño hace uso de la extensión de marcado personalizada [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression) . Esta extensión de marcado se describe en el artículo [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
+El [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) diseño hace uso de la extensión de marcado personalizada [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression) . Esta extensión de marcado se describe en el artículo [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relativelayout.md).
 
 ## <a name="xstatic-markup-extension"></a>x:Static (extensión de marcado)
 
@@ -580,7 +580,7 @@ Esta es la ejecución del programa:
 
 Para obtener información sobre cómo mostrar los iconos de fuente especificando los datos del icono de fuente de un `FontImageSource` objeto, vea [Mostrar iconos de fuentes](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons).
 
-## <a name="appthemebinding-markup-extension"></a>Extensión de marcado AppThemeBinding
+## <a name="appthemebinding-markup-extension"></a>AppThemeBinding (extensión de marcado)
 
 La `AppThemeBinding` extensión de marcado le permite especificar el recurso que se va a consumir, como una imagen o un color, basándose en el tema del sistema actual.
 
