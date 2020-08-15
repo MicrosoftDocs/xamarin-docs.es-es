@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5bab1166ade7a5eeebbb720fa48f6116b4ec95d0
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 920246e9cbbe85c606969333ccb05d3c87dcef66
+ms.sourcegitcommit: 14d67a2db82e67471584b1749e0d5b9ec0c0c09b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933723"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88228591"
 ---
 # <a name="safe-area-layout-guide-on-ios"></a>Guía de diseño de área segura en iOS
 
@@ -53,7 +53,7 @@ El resultado es que el contenido de la página puede colocarse en un área de la
 > [!NOTE]
 > El área segura definida por Apple se usa en Xamarin.Forms para establecer la [`Page.Padding`](xref:Xamarin.Forms.Page.Padding) propiedad y reemplazará los valores anteriores de esta propiedad que se hayan establecido.
 
-El área segura se puede personalizar recuperando su [`Thickness`](xref:Xamarin.Forms.Thickness) valor con el `Page.SafeAreaInsets` método del espacio de [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) nombres. A continuación, se puede modificar según sea necesario y volver a asignarse a la `Padding` propiedad en el constructor de páginas o [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) invalidar:
+El área segura se puede personalizar recuperando su [`Thickness`](xref:Xamarin.Forms.Thickness) valor con el `Page.SafeAreaInsets` método del espacio de [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) nombres. Después, se puede modificar según sea necesario y volver a asignarse a la `Padding` propiedad en la [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) invalidación:
 
 ```csharp
 protected override void OnAppearing()
