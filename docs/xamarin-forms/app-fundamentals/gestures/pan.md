@@ -1,6 +1,6 @@
 ---
-title: 'title: "Adición de un reconocedor de gesto de desplazamiento lateral" description: "En este artículo se explica cómo usar un gesto de desplazamiento lateral para desplazar una imagen de forma horizontal y vertical, a fin de poder ver todo el contenido de imagen cuando se muestre en una ventanilla más pequeña que las dimensiones de la imagen."'
-description: 'ms.prod: xamarin ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/21/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Incorporación de un reconocedor de gesto de desplazamiento lateral
+description: En este artículo se explica cómo usar un gesto de desplazamiento lateral para desplazar una imagen de forma horizontal y vertical, a fin de poder ver todo el contenido de imagen cuando se muestre en una ventanilla más pequeña que las dimensiones de la imagen.
 ms.prod: xamarin
 ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 01/21/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 53122991811c06360e8d015a753096cb35c1cca0
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 886191725421a754e696409deb7a3cca0f6ea923
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84137636"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917691"
 ---
-# <a name="adding-a-pan-gesture-recognizer"></a>Adición de un reconocedor de gesto de desplazamiento lateral
+# <a name="add-a-pan-gesture-recognizer"></a>Incorporación de un reconocedor de gesto de desplazamiento lateral
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pangesture)
 

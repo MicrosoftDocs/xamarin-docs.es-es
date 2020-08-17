@@ -10,12 +10,12 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7c4ed503e0379c2c7f235bd91621a031bd660c85
-ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
+ms.openlocfilehash: 9ecdc3aca3264b52163d35e29659f434f521147f
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426895"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918619"
 ---
 # <a name="no-locxamarinforms-shell-tabs"></a>Pestañas de Xamarin.Forms Shell
 
@@ -184,6 +184,7 @@ La clase `ShellContent` incluye las siguientes propiedades que controlan la apar
 - `Icon`, de tipo `ImageSource`, define el icono que se mostrará en partes del cromo que no son la ventana flotante.
 - `IsChecked`, de tipo `boolean`, define si el elemento está actualmente resaltado en la ventana flotante.
 - `IsEnabled`, de tipo `boolean`, define si el elemento es seleccionable en el cromo.
+- `IsVisible`, de tipo `bool`, indica si `ShellContent` está oculto en todas las estructuras de la interfaz de usuario. Su valor predeterminado es `true`.
 - `MenuItems`, de tipo `MenuItemCollection`, los elementos de menú para mostrar en el control flotante cuando `ShellContent` es la página presentada.
 - `Title`, de tipo `string`, el título que se mostrará en la interfaz de usuario.
 

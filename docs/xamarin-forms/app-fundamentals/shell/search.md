@@ -6,18 +6,18 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/18/2019
+ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cc5e0c4cb8b474a1b7e23b476b0c5125eb2ba298
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 00dfec5b48507c83f43d0622c11770ecec304ea6
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138091"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917556"
 ---
-# <a name="xamarinforms-shell-search"></a>Búsqueda en Xamarin.Forms Shell
+# <a name="no-locxamarinforms-shell-search"></a>Búsqueda en Xamarin.Forms Shell
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
@@ -224,6 +224,7 @@ La clase `SearchHandler` define las siguientes propiedades que afectan a su apar
 - `HorizontalTextAlignment`, del tipo `TextAlignment`, es la alineación horizontal del texto del cuadro de búsqueda.
 - `PlaceholderColor`, del tipo `Color`, es el color del texto del cuadro de búsqueda del marcador de posición.
 - `TextColor`, del tipo `Color`, es el color del texto del cuadro de búsqueda.
+- `TextTransform`, del tipo `TextTransform`, determina las mayúsculas y minúsculas del texto del cuadro de búsqueda.
 - `VerticalTextAlignment`, del tipo `TextAlignment`, es la alineación vertical del texto del cuadro de búsqueda.
 
 ## <a name="searchhandler-keyboard"></a>Teclado SearchHandler
@@ -320,6 +321,7 @@ La clase `SearchHandler` define las siguientes propiedades que controlan su apar
 - `SelectedItem`, de tipo `object`, el elemento seleccionado en los resultados de búsqueda. Esta propiedad es de solo lectura y tiene un valor predeterminado de `null`.
 - `ShowsResults`, de tipo `bool`, indica si se deben esperar resultados de búsqueda en el área de sugerencias, al escribir texto. El valor predeterminado es `false`.
 - `TextColor`, del tipo `Color`, es el color del texto del cuadro de búsqueda.
+- `TextTransform`, del tipo `TextTransform`, determina las mayúsculas y minúsculas del texto del cuadro de búsqueda.
 
 Todas estas propiedades están respaldados por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que las propiedades pueden ser destinos de los enlaces de datos.
 

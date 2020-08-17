@@ -10,12 +10,12 @@ ms.date: 03/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5367d7933e70c59298faacff85c1d5f533bc0776
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3240906cdf964bcf798137e640a82dbd1e2341d9
+ms.sourcegitcommit: a662910a6ba14d241e01047739eb1cd87aa7d884
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929286"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88029726"
 ---
 # <a name="xamarin-hot-restart-preview"></a>Reinicio rápido de Xamarin (versión preliminar)
 
@@ -73,6 +73,7 @@ También puede usar el símbolo de preprocesador `HOTRESTART` para impedir que s
 - Los archivos de Storyboard y XIB no se admiten y es posible que la aplicación se bloquee si intenta cargarlos en tiempo de ejecución. Use el símbolo de preprocesador `HOTRESTART` para evitar que se ejecute el código.
 - No se admiten marcos ni bibliotecas de iOS estáticos y es posible que vea errores en tiempo de ejecución o bloqueos si la aplicación intenta cargarlos. Use el símbolo de preprocesador `HOTRESTART` para evitar que se ejecute el código. Las bibliotecas de iOS dinámicas se admiten.
 - No se puede usar el reinicio rápido de Xamarin para crear paquetes de aplicaciones para la publicación. Seguirá necesitando un equipo Mac a fin de realizar una compilación, firma e implementación completas para la aplicación en producción.
+- Los catálogos de recursos actualmente no se admiten. Al usar el reinicio rápido, la aplicación mostrará el icono y la pantalla de inicio predeterminados para las aplicaciones de Xamarin. Cuando se emparejan con un equipo Mac, o se desarrollan en un equipo Mac, los catálogos de recursos funcionarán.
 
 ## <a name="troubleshoot"></a>Solucionar problemas
 

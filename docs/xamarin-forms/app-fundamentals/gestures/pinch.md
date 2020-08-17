@@ -1,5 +1,5 @@
 ---
-title: Agregar un reconocedor de gestos de reducir
+title: Incorporación de un reconocedor de gesto de reducir
 description: En este artículo, se explica cómo usar el gesto de reducir para realizar un zoom interactivo de una imagen en la ubicación donde se realice el gesto.
 ms.prod: xamarin
 ms.assetid: 832F7810-F0CF-441A-B04A-3975F3FB8B29
@@ -10,14 +10,14 @@ ms.date: 01/21/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: da4a8bc66a7986efd3683de6dce1f6af618b85cc
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a3405e3bff1b500bcf0f7fab6bea1a888f2d4604
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137857"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918275"
 ---
-# <a name="adding-a-pinch-gesture-recognizer"></a>Agregar un reconocedor de gestos de reducir
+# <a name="add-a-pinch-gesture-recognizer"></a>Incorporación de un reconocedor de gesto de reducir
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pinchgesture)
 

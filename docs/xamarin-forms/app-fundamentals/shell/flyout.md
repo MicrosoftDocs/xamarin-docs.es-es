@@ -6,18 +6,18 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/10/2020
+ms.date: 07/30/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1a1d47b2b37fa532b3e2a64ada5f367e612f557d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 821eafab6896d8771ba38332a43c0cbc319797a7
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946265"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917838"
 ---
-# <a name="xamarinforms-shell-flyout"></a>Control flotante de Xamarin.Forms Shell
+# <a name="no-locxamarinforms-shell-flyout"></a>Control flotante de Xamarin.Forms Shell
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
@@ -234,6 +234,7 @@ La clase `FlyoutItem` incluye las siguientes propiedades que controlan la aparie
 - `IsChecked`, de tipo `boolean`, define si el elemento está actualmente resaltado en la ventana flotante.
 - `IsEnabled`, de tipo `boolean`, define si el elemento es seleccionable en el cromo.
 - `IsTabStop`, de tipo `bool`, indica si se incluye un objeto `FlyoutItem` en la navegación entre pestañas. Su valor predeterminado es `true`, y cuando su valor es `false`, la infraestructura de navegación entre pestañas omite el objeto `FlyoutItem`, independientemente de si se ha definido un objeto `TabIndex`.
+- `IsVisible`, de tipo `bool`, indica si `FlyoutItem` está oculto en el menú de control flotante. Su valor predeterminado es `true`.
 - `TabIndex`, de tipo `int`, indica el orden en que los objetos `FlyoutItem` reciben el foco cuando el usuario navega por los elementos presionando la tecla de tabulación. El valor predeterminado de la propiedad es 0.
 - `Title`, de tipo `string`, el título que se mostrará en la interfaz de usuario.
 - `Route`, de tipo `string`, la cadena usada para abordar el elemento.
@@ -249,6 +250,46 @@ Además, la clase `FlyoutItem` expone los siguientes métodos reemplazables:
 - `OnTabStopPropertyChanged`, que se llama cada vez que cambia la propiedad `IsTabStop`.
 - `TabIndexDefaultValueCreator`, devuelve un elemento `int`, y se llama para establecer el valor predeterminado de la propiedad `TabIndex`.
 - `TabStopDefaultValueCreator`, devuelve un elemento `bool`, y se llama para establecer el valor predeterminado de la propiedad `TabStop`.
+
+## <a name="flyout-backdrop"></a>Fondo del control flotante
+
+El fondo del control flotante, que es la apariencia de la superposición del control flotante, se puede especificar estableciendo la propiedad adjunta `Shell.FlyoutBackdrop` en `Brush`:
+
+```xaml
+<Shell ...
+       FlyoutBackdrop="Silver">
+    ...
+</Shell>
+```
+
+En este ejemplo, el fondo del control flotante se pinta con `SolidColorBrush` plata.
+
+> [!IMPORTANT]
+> La propiedad adjunta `FlyoutBackdrop` se puede establecer en cualquier elemento del shell, pero solo se aplicará cuando se establezca en objetos `Shell`, `FlyoutItem` o `TabBar`.
+
+En el ejemplo siguiente se muestra cómo establecer el fondo del control flotante en `FlyoutItem` en `LinearGradientBrush`:
+
+```xaml
+<Shell ...>
+    <FlyoutItem ...>
+      <Shell.FlyoutBackdrop>
+          <LinearGradientBrush StartPoint="0,0"
+                               EndPoint="1,1">
+              <GradientStop Color="#8A2387"
+                            Offset="0.1" />
+              <GradientStop Color="#E94057"
+                            Offset="0.6" />
+              <GradientStop Color="#F27121"
+                            Offset="1.0" />
+          </LinearGradientBrush>
+      </Shell.FlyoutBackdrop>
+      ...
+    </FlyoutItem>
+    ...
+</Shell>
+```
+
+Para más información acerca de los pinceles, vea [Pinceles de Xamarin.Forms](~/xamarin-forms/user-interface/brushes/index.md).
 
 ## <a name="flyout-vertical-scroll"></a>Desplazamiento vertical de control flotante
 
@@ -652,3 +693,4 @@ Además, se pueden definir y aplicar clases de estilo personalizadas a objetos `
 - [Xaminals (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Clases de estilo de Xamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/style-class.md)
 - [Administrador de estado visual de Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Pinceles de Xamarin.Forms](~/xamarin-forms/user-interface/brushes/index.md)
