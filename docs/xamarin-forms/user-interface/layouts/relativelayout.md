@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsRelativeLayout
+title: Xamarin.Forms RelativeLayout
 description: El Xamarin.Forms RelativeLayout se usa para los elementos secundarios de posición y tamaño en relación con las propiedades del diseño o de los elementos del mismo nivel.
 ms.prod: xamarin
 ms.assetid: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A
@@ -7,19 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/13/2020
+ms.custom: contperfq1
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b23da34239d99faa64578bd30c5a3e969cf4b289
-ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
+ms.openlocfilehash: 77b1837fb58d5743fd887b9f636f7f7311b807d3
+ms.sourcegitcommit: 9bd6b1b20d126b3f837c4cf859b25895c242e54e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88181834"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88648179"
 ---
-# <a name="no-locxamarinforms-relativelayout"></a>Xamarin.FormsRelativeLayout
+# <a name="no-locxamarinforms-relativelayout"></a>Xamarin.Forms RelativeLayout
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-relativelayoutdemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-relativelayoutdemos)
 
 [![::: no-LOC (Xamarin. Forms)::: RelativeLayout](relativelayout-images/layouts.png)](relativelayout-images/layouts-large.png#lightbox)
 
@@ -224,7 +225,7 @@ En el código XAML siguiente [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayou
 En este ejemplo, la posición de cada [`BoxView`](xref:Xamarin.Forms.BoxView) objeto se define estableciendo las [`XConstraint`](xref:Xamarin.Forms.RelativeLayout.XConstraintProperty) [`YConstraint`](xref:Xamarin.Forms.RelativeLayout.YConstraintProperty) propiedades adjuntas y. El primero `BoxView` tiene sus `XConstraint` `YConstraint` propiedades y adjuntas establecidas en constantes, que son valores absolutos. El resto de los `BoxView` objetos tienen su posición establecida mediante al menos un valor relativo. Por ejemplo, el `BoxView` objeto amarillo establece la `XConstraint` propiedad adjunta en el ancho de su elemento primario (el [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) ) menos 40. Del mismo modo, `BoxView` establece la `YConstraint` propiedad adjunta en el alto de su elemento primario menos 40. Esto garantiza que el amarillo `BoxView` aparezca en la esquina inferior derecha de la pantalla.
 
 > [!NOTE]
-> [`BoxView`](xref:Xamarin.Forms.BoxView)los objetos que no especifican un tamaño se ajustan automáticamente a 40 x 40 por Xamarin.Forms .
+> [`BoxView`](xref:Xamarin.Forms.BoxView) los objetos que no especifican un tamaño se ajustan automáticamente a 40 x 40 por Xamarin.Forms .
 
 El Silver [`BoxView`](xref:Xamarin.Forms.BoxView) denominado `oneThird` se coloca centralmente, con respecto a su elemento primario. También se ajusta en relación con su elemento primario, siendo un tercio de su ancho y alto. Esto se logra estableciendo las [`XConstraint`](xref:Xamarin.Forms.RelativeLayout.XConstraintProperty) [`WidthConstraint`](xref:Xamarin.Forms.RelativeLayout.WidthConstraintProperty) propiedades adjuntas y en el ancho del elemento primario (el [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) ), multiplicado por 0,33. Del mismo modo, las [`YConstraint`](xref:Xamarin.Forms.RelativeLayout.YConstraintProperty) [`HeightConstraint`](xref:Xamarin.Forms.RelativeLayout.HeightConstraintProperty) propiedades adjuntas y se establecen en el alto del elemento primario, multiplicado por 0,33.
 
@@ -341,7 +342,7 @@ En este ejemplo, los elementos secundarios se agregan a [`RelativeLayout`](xref:
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Demostraciones de RelativeLayout (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-relativelayoutdemos)
-- [Xamarin.FormsPropiedades adjuntas](~/xamarin-forms/xaml/attached-properties.md)
+- [Xamarin.Forms Propiedades adjuntas](~/xamarin-forms/xaml/attached-properties.md)
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Elegir un Xamarin.Forms diseño](choose-layout.md)
 - [Mejorar el rendimiento de las Xamarin.Forms aplicaciones](~/xamarin-forms/deploy-test/performance.md)

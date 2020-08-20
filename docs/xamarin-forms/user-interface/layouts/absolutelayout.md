@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsAbsoluteLayout
+title: Xamarin.Forms AbsoluteLayout
 description: Xamarin.FormsAbsoluteLayout se utiliza para colocar y ajustar el tamaño de los elementos mediante valores explícitos, o valores proporcionales al tamaño del diseño.
 ms.prod: xamarin
 ms.assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38
@@ -7,19 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2020
+ms.custom: contperfq1
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a6efa4615f0061c83243f2d00d2d141a51607301
-ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
+ms.openlocfilehash: 3fa88976c49d3ccb89b74a0ce40de0583fa20795
+ms.sourcegitcommit: 9bd6b1b20d126b3f837c4cf859b25895c242e54e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88181503"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88648166"
 ---
-# <a name="no-locxamarinforms-absolutelayout"></a>Xamarin.FormsAbsoluteLayout
+# <a name="no-locxamarinforms-absolutelayout"></a>Xamarin.Forms AbsoluteLayout
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
 
 [![::: no-LOC (Xamarin. Forms)::: AbsoluteLayout](absolutelayout-images/layouts.png)](absolutelayout-images/layouts-large.png#lightbox)
 
@@ -236,6 +237,6 @@ En este ejemplo, la posición y el tamaño de cada elemento secundario se establ
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Demostraciones de AbsoluteLayout (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
-- [Xamarin.FormsPropiedades adjuntas](~/xamarin-forms/xaml/attached-properties.md)
+- [Xamarin.Forms Propiedades adjuntas](~/xamarin-forms/xaml/attached-properties.md)
 - [Elegir un Xamarin.Forms diseño](choose-layout.md)
 - [Mejorar el rendimiento de las Xamarin.Forms aplicaciones](~/xamarin-forms/deploy-test/performance.md)
