@@ -1,29 +1,39 @@
 ---
 title: Aplicaciones de desgaste de empaquetado
+description: En este artículo se explica cómo empaquetar aplicaciones de desgaste de Android.
 ms.prod: xamarin
 ms.assetid: E32DD855-78DD-46F8-B234-4EAC0756BDA2
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: aa4a4f1ab3ae3024de2d969f9325c2efa4db48af
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 83c4ba8cbdc360682a4e06a885be15dd20d0f249
+ms.sourcegitcommit: f4b26c5b8cc84f79123951e80c15061eb859452d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028638"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720310"
 ---
 # <a name="packaging-wear-apps"></a>Aplicaciones de desgaste de empaquetado
 
-Las aplicaciones de desgaste de Android se empaquetan con una aplicación Android completa para su distribución en Google Play. 
+> [!WARNING]
+> Es posible que los siguientes documentos y proyectos de ejemplo ya no se mantengan.
+> A partir de [Xamarin. Android 11,1][xa-11.1], ya no se admite el empaquetado automático de una aplicación de desgaste de Android dentro de una aplicación de bolsillo de Android. En su lugar, se recomienda distribuir las aplicaciones de desgaste de Android como [aplicaciones independientes][standalone] .
+
+Las aplicaciones de desgaste de Android 1,0 se empaquetan con una aplicación Android completa para su distribución en Google Play.
+
+Las aplicaciones de desgaste de Android 2,0 pueden enviarse a Google Play como [aplicaciones independientes][standalone].
+
+[xa-11.1]: https://docs.microsoft.com/xamarin/android/release-notes/11/11.1
+[standalone]: https://developer.android.com/training/wearables/apps/standalone-apps
 
 ## <a name="automatic-packaging"></a>Empaquetado automático
 
 A partir de Xamarin Android 5,0, la aplicación de desgaste se empaqueta automáticamente como un recurso en la aplicación de mano cuando se crea una referencia de proyecto desde el proyecto de mano al proyecto de desgaste. Puede usar los pasos siguientes para crear esta asociación: 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Si la aplicación de desgaste todavía no forma parte de la solución de mano, haga clic con el botón derecho en el nodo de la solución y seleccione **agregar > agregar proyecto existente..** ..
+1. Si la aplicación de desgaste todavía no forma parte de la solución de mano, haga clic con el botón derecho en el nodo de la solución y seleccione **agregar > agregar proyecto existente..**..
 
 2. Navegue hasta el archivo **. csproj** de la aplicación de desgaste, selecciónelo y haga clic en **abrir**. El proyecto de aplicación de desgaste debe estar ahora visible en la solución de mano.
 
@@ -33,13 +43,13 @@ A partir de Xamarin Android 5,0, la aplicación de desgaste se empaqueta automá
 
 5. Cambie el nombre del paquete para el proyecto de desgaste para que coincida con el nombre de paquete del proyecto de mano (el nombre del paquete se puede cambiar en **propiedades > manifiesto de Android**).
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Si la aplicación de desgaste todavía no forma parte de la solución de mano, haga clic con el botón derecho en el nodo de la solución y seleccione **agregar > agregar proyecto existente..** ..
+1. Si la aplicación de desgaste todavía no forma parte de la solución de mano, haga clic con el botón derecho en el nodo de la solución y seleccione **agregar > agregar proyecto existente..**..
 
 2. Navegue hasta el archivo **. csproj** de la aplicación de desgaste, selecciónelo y haga clic en **abrir**. El proyecto de aplicación de desgaste debe estar ahora visible en la solución de mano.
 
-3. Haga clic con el botón secundario en el nodo del proyecto de mano de la solución y haga clic en **Editar referencias..** ..
+3. Haga clic con el botón secundario en el nodo del proyecto de mano de la solución y haga clic en **Editar referencias..**..
 
 4. En el cuadro de diálogo **Editar referencias** , habilite el proyecto de desgaste (haga clic para agregar una marca de verificación) y, a continuación, haga clic en **Aceptar**.
 
@@ -85,7 +95,7 @@ Puede escribir aplicaciones de desgaste de Android en Xamarin. Android antes de 
 
 3. Agregue manualmente la versión **. APK** del paso (2) en el directorio **Resources/RAW** del proyecto de mano (teléfono).
 
-4. Agregue manualmente un nuevo recurso de recursos XML **/XML/wearable_app_desc. XML** en el proyecto de mano que hace referencia a portátil **apk** del paso (3):
+4. Agregue manualmente un nuevo recurso de recursos XML **/XML/wearable_app_desc.xml** en el proyecto de mano que hace referencia a portátil **apk** del paso (3):
 
     ```xml
     <wearableApp package="wearable.app.package.name">
@@ -95,7 +105,7 @@ Puede escribir aplicaciones de desgaste de Android en Xamarin. Android antes de 
     </wearableApp>
     ```
 
-5. Agregue manualmente un elemento de `<meta-data />` al elemento de `<application>` **archivo AndroidManifest. XML** del proyecto de mano que hace referencia al nuevo recurso XML:
+5. Agregue manualmente un `<meta-data />` elemento al elemento **AndroidManifest.xml** del proyecto de mano `<application>` que hace referencia al nuevo recurso XML:
 
     ```xml
     <meta-data android:name="com.google.android.wearable.beta.app"
