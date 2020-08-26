@@ -8,12 +8,12 @@ author: davidortinau
 ms.author: daortin
 ms.custom: video
 ms.date: 03/05/2020
-ms.openlocfilehash: 069c40b74876bea1d3a0c8fca23b3d90c4b91635
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 09d20ef2e4fece36ce67a7891892defb05a5f3df
+ms.sourcegitcommit: ca1eca5bcf6c82bc4ec05db12ee1be585006d59f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79510684"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88514634"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Aprovisionamiento automático para Xamarin.iOS
 
@@ -45,13 +45,15 @@ Para inscribir la aplicación automáticamente para su implementación en un dis
 
 2. Abra el archivo **Info.plist**.
 
-3. En la sección **Firma**, seleccione **Aprovisionamiento automático**:
+3. Seleccione la pestaña **Aplicación**.
+
+4. En la sección **Firma**, seleccione **Aprovisionamiento automático**:
 
     ![Lista desplegable del selector de equipo](automatic-provisioning-images/image2.png)
 
-4. En la lista desplegable **Equipo**, seleccione su equipo.
+5. En la lista desplegable **Equipo**, seleccione su equipo.
 
-5. Después de unos segundos se crean un certificado de firma y un perfil de aprovisionamiento:
+6. Después de unos segundos se crean un certificado de firma y un perfil de aprovisionamiento:
 
     ![Certificado y perfil creados correctamente](automatic-provisioning-images/image5.png)
 
@@ -103,12 +105,12 @@ En algunos casos, los derechos de una aplicación requieren un identificador de 
 - Múltiples rutas
 - NFC
 - VPN personal
-- Notificaciones push
+- Notificaciones de inserción
 - Configuración inalámbrica de accesorios
 
 Si la aplicación utiliza uno de estos derechos, Visual Studio intentará crear un identificador de aplicación explícito (en lugar de un comodín).
 
-## <a name="troubleshoot"></a>Solucionar problemas 
+## <a name="troubleshoot"></a>Solución de problemas 
 
 - Pueden pasar varias horas hasta que se apruebe una nueva cuenta de desarrollador de Apple. No podrá habilitar el aprovisionamiento automático hasta que se haya aprobado la cuenta.
 - Si el proceso de aprovisionamiento automático no puede completarse y aparece el mensaje de error `Authentication Service Is Unavailable`, inicie sesión en [App Store Connect](https://appstoreconnect.apple.com/) o [appleid.apple.com](https://appleid.apple.com) para comprobar que ha aceptado los contratos de servicio más recientes.

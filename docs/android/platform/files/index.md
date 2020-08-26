@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/23/2018
-ms.openlocfilehash: 1bb0fae73a1e3647cdc0e3266c7b44ac04fcc1ee
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 746433293c52d7071a3289962ea021f716fd0cfe
+ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303670"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88186179"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>Almacenamiento y acceso a archivos con Xamarin.Android
 
@@ -74,6 +74,10 @@ Para maximizar el uso compartido de código, las aplicaciones de Xamarin.Android
 | `MyPictures` | **_ALMACENAMIENTO\_INTERNO_/Pictures** |
 | `MyVideos` | **_ALMACENAMIENTO\_INTERNO_/Videos** |
 | `Personal` | **_ALMACENAMIENTO\_INTERNO_** |
+| `Fonts` | **_INTERNAL\_STORAGE_/.fonts** |
+| `Templates` | **_INTERNAL\_STORAGE_/Templates** |
+| `CommonApplicationData` | **/usr/share** |
+| `CommonApplicationData` | **/usr/share** |
 
 ### <a name="reading-or-writing-to-files-on-internal-storage"></a>Lectura y escritura en archivos en el almacenamiento interno
 
