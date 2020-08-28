@@ -5,6 +5,8 @@
     - name: 2020
       expanded: true
       items:
+        - name: Agosto
+          href: 2020-08.md
         - name: Junio
           href: 2020-06.md
         - name: April
