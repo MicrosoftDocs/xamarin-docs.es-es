@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: edf224428103c318307f3a05dc79e1e8d286f512
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ce4614f7b21a42945a8541f2b18877e75a200f1a
+ms.sourcegitcommit: f6a2f07d2e689e0cfd01b30008d50c83c63fa70c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935126"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89052778"
 ---
 # <a name="advanced-user-notifications-in-xamarinios"></a>Notificaciones de usuario avanzadas en Xamarin. iOS
 
@@ -96,7 +96,7 @@ namespace MonkeyNotification
     public class NotificationService : UNNotificationServiceExtension
     {
         #region Constructors
-        public NotificationService ()
+        public NotificationService (IntPtr handle) : base(handle)
         {
         }
         #endregion
@@ -192,9 +192,9 @@ Para implementar una interfaz de usuario de notificación de usuario personaliza
 
 Cuando se agrega la extensión de contenido de notificación a la solución, se crearán tres archivos en el proyecto de la extensión:
 
-1. `NotificationViewController.cs`: Este es el controlador de vista principal de la extensión de contenido de notificación.
-2. `MainInterface.storyboard`-Donde el desarrollador diseña la interfaz de usuario visible para la extensión de contenido de notificación en el diseñador de iOS.
-3. `Info.plist`: Controla la configuración de la extensión de contenido de notificación.
+1. `NotificationViewController.cs` : Este es el controlador de vista principal de la extensión de contenido de notificación.
+2. `MainInterface.storyboard` -Donde el desarrollador diseña la interfaz de usuario visible para la extensión de contenido de notificación en el diseñador de iOS.
+3. `Info.plist` : Controla la configuración de la extensión de contenido de notificación.
 
 El `NotificationViewController.cs` archivo predeterminado tiene el aspecto siguiente:
 
