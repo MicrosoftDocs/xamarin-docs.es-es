@@ -1,6 +1,6 @@
 ---
-title: 'title: "Interfaz de comandos de Xamarin.Forms" description: "En este artículo se explica cómo implementar la propiedad Command con enlaces de datos de Xamarin.Forms.'
-description: 'La interfaz de comandos proporciona un enfoque alternativo para implementar comandos que se adapta mucho mejor a la arquitectura MVVM." ms.prod: xamarin ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/05/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Interfaz de comandos de Xamarin.Forms
+description: En este artículo se explica cómo implementar la propiedad Command con enlaces de datos de Xamarin.Forms. La interfaz de comandos proporciona un enfoque alternativo para implementar comandos que se adapta mucho mejor a la arquitectura MVVM.
 ms.prod: xamarin
 ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 253255f08cec6f08e03df94798c8572f7cf10f30
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: ad36bd5efe09909753fed948a961a690feb0592a
+ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84139729"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88964667"
 ---
-# <a name="the-xamarinforms-command-interface"></a>Interfaz de comandos de Xamarin.Forms
+# <a name="the-no-locxamarinforms-command-interface"></a>Interfaz de comandos de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -688,10 +688,6 @@ El método `execute` anexa el argumento de cadena a la propiedad `Entry`. Pero s
 El método `canExecute` devuelve `false` solo si el argumento es el separador decimal (lo que indica que se presiona el separador decimal) y `Entry` ya contiene un separador decimal.
 
 Todos los métodos `execute` llaman a `RefreshCanExecutes`, que llama a `ChangeCanExecute` para `DigitCommand` y `ClearCommand`. Esto garantiza que los botones de retroceso y separador decimal se habilitan o deshabilitan en función de la secuencia actual de dígitos especificados.
-
-## <a name="adding-commands-to-existing-views"></a>Adición de comandos a las vistas existentes
-
-Si quiere emplear la interfaz de comandos con vistas que no la admiten, puede usar un comportamiento de Xamarin.Forms que convierte un evento en un comando. Esto se describe en el artículo [**EventToCommandBehavior reutilizable**](~/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior.md).
 
 ## <a name="asynchronous-commanding-for-navigation-menus"></a>Comandos asincrónicos para menús de navegación
 

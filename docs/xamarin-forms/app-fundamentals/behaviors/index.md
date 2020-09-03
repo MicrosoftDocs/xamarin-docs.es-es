@@ -10,14 +10,14 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 83952982bd163725fb931c860cac3e267726315c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d917d7d6421cfae7fc877c81023a835573fa99b1
+ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135816"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88964628"
 ---
-# <a name="xamarinforms-behaviors"></a>Comportamientos de Xamarin.Forms
+# <a name="no-locxamarinforms-behaviors"></a>Comportamientos de Xamarin.Forms
 
 _Los comportamientos permiten agregar funciones a los controles de interfaz de usuario sin tener que incluir subclases. Los comportamientos se escriben en código y se agregan a controles en XAML o código._
 
@@ -29,10 +29,10 @@ Los comportamientos permiten implementar el código que normalmente tendría que
 
 Los comportamientos asociados son clases `static` con una o varias propiedades asociadas. En este artículo, se explica cómo crear y usar comportamientos asociados.
 
-## <a name="xamarinforms-behaviorscreatingmd"></a>[Comportamientos de Xamarin.Forms](creating.md)
+## <a name="no-locxamarinforms-behaviors"></a>[Comportamientos de Xamarin.Forms](creating.md)
 
 Los comportamientos de Xamarin.Forms se crean mediante la derivación de la clase [`Behavior`](xref:Xamarin.Forms.Behavior) o [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1). En este artículo se explica cómo crear y consumir comportamientos de Xamarin.Forms.
 
-## <a name="reusable-behaviors"></a>[Comportamientos reutilizables](reusable/index.md)
+## <a name="reusable-effectbehavior"></a>[EffectBehavior reutilizable](effect-behavior.md)
 
-Los comportamientos se pueden reutilizar en más de una aplicación. En estos artículos se explica cómo crear comportamientos útiles para realizar funciones usadas con frecuencia.
+Los comportamientos son una manera útil de agregar un efecto a un control, quitando el código de control de efecto reutilizable de los archivos de código subyacente. En este artículo se explica cómo crear y consumir un comportamiento de Xamarin.Forms para agregar un efecto a un control.
