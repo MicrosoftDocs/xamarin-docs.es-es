@@ -1,6 +1,6 @@
 ---
-title: 'title: "Introducción a Xamarin.Essentials" description: "Xamarin.Essentials brinda una API multiplataforma única que funciona con cualquier aplicación iOS, Android o UWP accesible desde código compartido, independientemente de cómo se creó la interfaz de usuario."'
-description: 'ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9 author: jamesmontemagno ms.author: jamont ms.custom: video ms.date: 05/11/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Introducción a Xamarin.Essentials
+description: Xamarin.Essentials brinda una API multiplataforma única que funciona con cualquier aplicación iOS, Android o UWP accesible desde código compartido, independientemente de cómo se creara la interfaz de usuario.
 ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
@@ -9,14 +9,14 @@ ms.date: 05/11/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0c0052b35475522ffb3634ebe22f69f66fe3b22b
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 3599958a493dd4051064b5e7f54aa5901e6bf32c
+ms.sourcegitcommit: f6a2f07d2e689e0cfd01b30008d50c83c63fa70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84129316"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89052765"
 ---
-# <a name="get-started-with-xamarinessentials"></a>Introducción a Xamarin.Essentials
+# <a name="get-started-with-no-locxamarinessentials"></a>Introducción a Xamarin.Essentials
 
 Xamarin.Essentials brinda una API multiplataforma única que funciona con cualquier aplicación iOS, Android o UWP accesible desde código compartido, independientemente de cómo se creara la interfaz de usuario. Para obtener más información sobre los sistemas operativos compatibles, consulte la [guía de compatibilidad con plataformas y características](platform-feature-support.md).
 
@@ -93,7 +93,7 @@ Xamarin.Essentials está disponible como paquete NuGet y se incluye en todos los
 
 6. Siga las [guías de Xamarin.Essentials](index.md) para poder copiar y pegar fragmentos de código para cada característica.
 
-## <a name="xamarinessentials---cross-platform-apis-for-mobile-apps-video"></a>Xamarin.Essentials: API multiplataforma para aplicaciones móviles (vídeo).
+## <a name="no-locxamarinessentials---cross-platform-apis-for-mobile-apps-video"></a>Xamarin.Essentials: API multiplataforma para aplicaciones móviles (vídeo).
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Snack-Pack-XamarinEssentials-Cross-Platform-APIs-for-Mobile-Apps/player]
 

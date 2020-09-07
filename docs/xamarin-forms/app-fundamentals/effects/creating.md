@@ -10,12 +10,12 @@ ms.date: 10/24/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d1aead9297312e190a5a04ee0f33328d81f2547a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: bb4e0c81fb3f2e58be9c44d1ec7fddcf4d72a656
+ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939963"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88964602"
 ---
 # <a name="creating-an-effect"></a>Creación de un efecto
 
@@ -42,8 +42,8 @@ En la aplicación de ejemplo se muestra un elemento `FocusEffect` que cambia el 
 
 La clase `FocusEffect` personaliza un control [`Entry`](xref:Xamarin.Forms.Entry) en el elemento `HomePage` en cada proyecto específico de la plataforma. Cada clase `FocusEffect` se deriva de la clase `PlatformEffect` para cada plataforma. Como resultado, se representa el control `Entry` con un color de fondo específico de la plataforma, que cambia cuando el control recibe el foco, como se muestra en las capturas de pantalla siguientes:
 
-![Efecto de foco en cada plataforma](creating-images/screenshots-1.png)
-![Efecto de foco en cada plataforma](creating-images/screenshots-2.png)
+![Efecto de foco en cada plataforma, control enfocado](creating-images/screenshots-1.png)
+![Efecto de foco en cada plataforma, control no enfocado](creating-images/screenshots-2.png)
 
 ## <a name="creating-the-effect-on-each-platform"></a>Creación del efecto en cada plataforma
 
@@ -239,7 +239,7 @@ public class FocusEffect : RoutingEffect
 
 La clase `FocusEffect` crea subclases de la clase [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect), que representa un efecto independiente de la plataforma que encapsula un efecto interno que suele ser específico de la plataforma. La clase `FocusEffect` llama al constructor de clase base, y se pasa un parámetro que consiste en la concatenación del nombre del grupo de resolución (que se especifica con el atributo [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) en la clase de efecto), y el identificador único que se ha especificado con el atributo [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) en la clase de efecto. Por tanto, cuando se inicializa [`Entry`](xref:Xamarin.Forms.Entry) en tiempo de ejecución, se agrega una nueva instancia de `MyCompany.FocusEffect` a la colección [`Effects`](xref:Xamarin.Forms.Element.Effects) del control.
 
-Los efectos también se pueden adjuntar a los controles mediante un comportamiento, o bien mediante propiedades adjuntas. Para obtener más información sobre cómo adjuntar un efecto a un control mediante un comportamiento, vea [EffectBehavior reutilizable](~/xamarin-forms/app-fundamentals/behaviors/reusable/effect-behavior.md). Para obtener más información sobre cómo adjuntar un efecto a un control mediante propiedades adjuntas, vea [Pasar parámetros a un efecto](~/xamarin-forms/app-fundamentals/effects/passing-parameters/index.md).
+Los efectos también se pueden adjuntar a los controles mediante un comportamiento, o bien mediante propiedades adjuntas. Para obtener más información sobre cómo adjuntar un efecto a un control mediante un comportamiento, vea [EffectBehavior reutilizable](~/xamarin-forms/app-fundamentals/behaviors/effect-behavior.md). Para obtener más información sobre cómo adjuntar un efecto a un control mediante propiedades adjuntas, vea [Pasar parámetros a un efecto](~/xamarin-forms/app-fundamentals/effects/passing-parameters/index.md).
 
 ## <a name="consuming-the-effect-in-cnum"></a>Consumo del efecto en C&num;
 

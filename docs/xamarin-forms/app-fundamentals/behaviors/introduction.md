@@ -10,12 +10,12 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d5bee3baa08387a1ed67384ba4089d63aad08d2c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 37c76a5f325c363a92c2a2c1e597dab28f064cd9
+ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135777"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88964615"
 ---
 # <a name="introduction-to-behaviors"></a>Introducción a los comportamientos
 
@@ -32,7 +32,7 @@ Los comportamientos también permiten escenarios más avanzados. En el contexto 
 
 Xamarin.Forms admite dos estilos de comportamiento:
 
-- **Comportamientos de Xamarin.Forms** : clases que derivan de la clase [`Behavior`](xref:Xamarin.Forms.Behavior) o [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1), donde `T` es el tipo del control en el que tiene que aplicarse el comportamiento. Para obtener más información sobre los comportamientos de Xamarin.Forms, vea [Comportamientos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/behaviors/creating.md) y [Comportamientos reutilizables](~/xamarin-forms/app-fundamentals/behaviors/reusable/index.md).
+- **Comportamientos de Xamarin.Forms** : clases que derivan de la clase [`Behavior`](xref:Xamarin.Forms.Behavior) o [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1), donde `T` es el tipo del control en el que tiene que aplicarse el comportamiento. Para obtener más información sobre los comportamientos de Xamarin.Forms, vea [Comportamientos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/behaviors/creating.md).
 - **Comportamientos asociados**: clases de `static` con una o varias propiedades asociadas. Para obtener más información sobre los comportamientos asociados, vea [Comportamientos asociados](~/xamarin-forms/app-fundamentals/behaviors/attached.md).
 
 Esta guía se centra en los comportamientos de Xamarin.Forms, ya que son el método preferido para la creación de comportamientos.

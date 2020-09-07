@@ -10,12 +10,12 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a705eef2ecd240b8944117a67a90ebeebc382bcb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 55c987ab9f9a95eaeacf648af11c3518a1c27c2a
+ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933752"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88964654"
 ---
 # <a name="attached-behaviors"></a>Comportamientos asociados
 
@@ -32,7 +32,7 @@ Una propiedad asociada puede definir un delegado `propertyChanged` que se ejecut
 1. El delegado `propertyChanged` transmite la referencia del control, que se recibe como un elemento [`BindableObject`](xref:Xamarin.Forms.BindableObject), al tipo de control cuyo comportamiento se ha diseñado para mejorar.
 1. El delegado `propertyChanged` modifica las propiedades del control, llama a métodos del control o registra controladores de eventos expuestos por el control para implementar la función básica de comportamiento.
 
-Un problema con los comportamientos asociados es que se definen en una clase `static`, con propiedades y métodos de `static`. Esto hace que sea difícil crear comportamientos asociados que tengan un estado. Además, los comportamientos de Xamarin.Forms han reemplazado los comportamientos asociados como método preferido para la creación de comportamientos. Para obtener más información sobre los comportamientos de Xamarin.Forms, vea [Comportamientos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/behaviors/creating.md) y [Comportamientos reutilizables](~/xamarin-forms/app-fundamentals/behaviors/reusable/index.md).
+Un problema con los comportamientos asociados es que se definen en una clase `static`, con propiedades y métodos de `static`. Esto hace que sea difícil crear comportamientos asociados que tengan un estado. Además, los comportamientos de Xamarin.Forms han reemplazado los comportamientos asociados como método preferido para la creación de comportamientos. Para obtener más información sobre los comportamientos de Xamarin.Forms, vea [Comportamientos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/behaviors/creating.md).
 
 ## <a name="creating-an-attached-behavior"></a>Crear un comportamiento asociado
 
