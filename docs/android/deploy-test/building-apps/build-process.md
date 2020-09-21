@@ -5,13 +5,13 @@ ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
-ms.date: 03/06/2020
-ms.openlocfilehash: 202041614d6a5b632aba6e92a77869effc21bb4f
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.date: 09/11/2020
+ms.openlocfilehash: d4c8e9ba717602aa30cb736957da5a61d2a91130
+ms.sourcegitcommit: e4a51ca35887dd3e45016cf10111cee68d343fbe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84568326"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027612"
 ---
 # <a name="build-process"></a>Proceso de compilación
 
@@ -437,6 +437,16 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
   [manifest-merger]: https://developer.android.com/studio/build/manifest-merge
 
+- **AndroidManifestPlaceholders**: una lista separada por punto y coma de pares de reemplazo clave-valor para *AndroidManifest.xml*, donde los pares tienen el formato `key=value`.
+
+  Por ejemplo, un valor de propiedad de `assemblyName=$(AssemblyName)` define un marcador de posición de `${assemblyName}` que puede aparecer en *AndroidManifest.xml*:
+
+  ```xml
+  <application android:label="${assemblyName}"
+  ```
+
+  Esto proporciona un método para insertar variables del proceso de compilación en el archivo *AndroidManifest.xml*.
+
 - **AndroidMultiDexClassListExtraArgs**: propiedad de cadena que permite a los desarrolladores pasar argumentos adicionales a `com.android.multidex.MainDexListBuilder` al generar el archivo `multidex.keep`.
 
   Un caso específico es si se obtiene el siguiente error durante la compilación de `dx`.
@@ -490,7 +500,7 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
   - `arm64-v8a`: requiere Xamarin.Android 5.1 y versiones posteriores.
   - `x86_64`: requiere Xamarin.Android 5.1 y versiones posteriores.
 
-- **AndroidTlsProvider**: valor de cadena que especifica qué proveedor de TLS se debe usar en una aplicación. Los valores posibles son:
+- **** AndroidTlsProvider&ndash;: un valor de cadena que especifica qué proveedor de TLS se debe usar en una aplicación. Los valores posibles son:
 
   - Anular la cadena vacía: En Xamarin.Android 7.3 y versiones posteriores, esto equivale a `btls`.
 
@@ -528,11 +538,11 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
   Se ha agregado en Xamarin.Android 10.1.
 
-- **AndroidUseLegacyVersionCode**: propiedad booleana permite al desarrollador revertir el cálculo de versionCode al comportamiento anterior Xamarin.Android 8.2. SOLO debe usarse para los desarrolladores con aplicaciones en Google Play Store. Se recomienda utilizar la nueva propiedad `$(AndroidVersionCodePattern)`.
+- **** AndroidUseLegacyVersionCode&ndash;: una propiedad booleana permite al desarrollador revertir el cálculo de versionCode al comportamiento anterior Xamarin.Android 8.2. SOLO debe usarse para los desarrolladores con aplicaciones en Google Play Store. Se recomienda utilizar la nueva propiedad `$(AndroidVersionCodePattern)`.
 
   Agregado en Xamarin.Android 8.2.
 
-- **AndroidUseManagedDesignTimeResourceGenerator**: propiedad booleana que cambiará las compilaciones en tiempo de diseño para usar el analizador de recursos administrados en lugar de `aapt`.
+- **AndroidUseManagedDesignTimeResourceGenerator** &ndash; Una propiedad booleana que cambiará las compilaciones en tiempo de diseño para usar el analizador de recurso administrado en lugar de `aapt`.
 
   Agregado en Xamarin.Android 8.1.
 
@@ -553,7 +563,7 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
   Elementos de clave predefinidos
 
-  - **abi**: inserta la ABI de destino para la aplicación.
+  - **** abi&ndash;: inserta la ABI de destino para la aplicación.
     - 2 &ndash; `armeabi-v7a`
     - 3: `x86`
     - 4: `arm64-v8a`
@@ -585,7 +595,7 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
   Cuando esta propiedad es `False`, la propiedad de MSBuild `$(AndroidFastDeploymentType)` también controla lo que se insertará en el archivo `.apk`, lo que puede afectar a los tiempos de desarrollo y recompilación.
 
-- **EnableLLVM**: propiedad booleana que determina si se usará o no LLVM al realizar la compilación Ahead Of Time de los ensamblados en código nativo.
+- **** EnableLLVM&ndash;: propiedad booleana que determina si se usará o no LLVM al realizar la compilación Ahead Of Time de los ensamblados en código nativo.
 
   El NDK de Android debe estar instalado para compilar un proyecto que tenga esta propiedad habilitada.
 
@@ -616,11 +626,11 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
 - **JavaOptions**: especifica opciones de línea de comandos adicionales que se pasarán a **Java** al compilar el archivo `.dex`.
 
-- **LinkerDumpDependencies**: propiedad bool que permite la generación del archivo de dependencias del enlazador. Este archivo se puede usar como entrada para la herramienta [illinkanalyzer](https://github.com/mono/linker/blob/master/src/analyzer/README.md).
+- **** LinkerDumpDependencies&ndash;: propiedad bool que permite la generación del archivo de dependencias del enlazador. Este archivo se puede usar como entrada para la herramienta [illinkanalyzer](https://github.com/mono/linker/blob/master/src/analyzer/README.md).
 
   El valor predeterminado es False.
 
-- **MandroidI18n**: especifica la compatibilidad con la internacionalización que se incluye con la aplicación, como tablas de intercalación y ordenación. El valor es una lista separada por comas o punto y coma de uno o varios de los siguientes valores sin distinción entre mayúsculas y minúsculas:
+- **** MandroidI18n&ndash;: especifica la compatibilidad con la internacionalización que se incluye con la aplicación, como tablas de intercalación y ordenación. El valor es una lista separada por comas o punto y coma de uno o varios de los siguientes valores sin distinción entre mayúsculas y minúsculas:
 
   - **None**: no incluye codificaciones adicionales.
 
@@ -630,11 +640,11 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
   - **MidEast**: incluye las codificaciones de Oriente Medio, como *Turco (Windows)* \[iso-8859-9, CP1254\], *Hebreo (Windows)* \[windows-1255, CP1255\], *Árabe (Windows)* \[windows-1256, CP1256\], *Árabe (ISO)* \[iso-8859-6, CP28596\], *Hebreo (ISO)* \[iso-8859-8, CP28598\], *Latín 5 (ISO)* \[iso-8859-9, CP28599\] y *Hebreo (alternativa a Iso)* \[iso-8859-8, CP38598\].
 
-  - **Other**: incluye otras codificaciones, como *Cirílico (Windows)* \[CP1251\], *Báltico (Windows)* \[iso-8859-4, CP1257\], *Vietnamita (Windows)* \[CP1258\], *Cirílico (KOI8-R)* \[koi8-r, CP1251\], *Ucraniano (KOI8-U)* \[koi8-u, CP1251\], *Báltico (ISO)* \[iso-8859-4, CP1257\], *Cirílico (ISO)* \[iso-8859-5, CP1251\], *ISCII Davenagari* \[x-iscii-de, CP57002\], *ISCII Bengalí* \[x-iscii-be, CP57003\], *ISCII Tamil* \[x-iscii-ta, CP57004\], *ISCII Telugu* \[x-iscii-te, CP57005\], *ISCII Asamés* \[x-iscii-as, CP57006\], *ISCII Oriya* \[x-iscii-or, CP57007\], *ISCII Kannada* \[x-iscii-ka, CP57008\], *ISCII Malayalam* \[x-iscii-ma, CP57009\], *ISCII Gujarati* \[x-iscii-gu, CP57010\], *ISCII Punyabí* \[x-iscii-pa, CP57011\] y *Tailandés (Windows)* \[CP874\].
+  - **Other**: incluye otras codificaciones, como *Cirílico(Windows)* \[CP1251\], *Báltico (Windows)* \[iso-8859-4, CP1257\], *Vietnamita (Windows)* \[CP1258\], *Cirílico (KOI8-R)* \[koi8-r, CP1251\], *Ucraniano (KOI8-U)* \[koi8-u, CP1251\], *Báltico (ISO)* \[iso-8859-4, CP1257\], *Cirílico (ISO)* \[iso-8859-5, CP1251\], *ISCII Davenagari* \[x-iscii-de, CP57002\], *ISCII Bengalí* \[x-iscii-be, CP57003\], *ISCII Tamil* \[x-iscii-ta, CP57004\], *ISCII Telugu* \[x-iscii-te, CP57005\], *ISCII Asamés* \[x-iscii-as, CP57006\], *ISCII Oriya* \[x-iscii-or, CP57007\], *ISCII Canarés* \[x-iscii-ka, CP57008\], *ISCII Malayalam* \[x-iscii-ma, CP57009\], *ISCII Gujarati* \[x-iscii-gu, CP57010\], *ISCII Punjabi* \[x-iscii-pa, CP57011\] y *Thai (Windows)* \[CP874\].
 
-  - **Rare**: incluye las codificaciones raras, como *IBM EBCDIC (Turco)* \[CP1026\], *IBM EBCDIC (Latín 1, sistemas abiertos)* \[CP1047\], *IBM EBCDIC (EE. UU. y Canadá con Euro)* \[CP1140\], *IBM EBCDIC (Alemania con Euro)* \[CP1141\], *IBM EBCDIC (Dinamarca/Noruega con Euro)* \[CP1142\], *IBM EBCDIC (Finlandia/Suecia con Euro)* \[CP1143\], *IBM EBCDIC (Italia con Euro)* \[CP1144\], *IBM EBCDIC (Latinoamérica/España con Euro)* \[CP1145\], *IBM EBCDIC (Reino Unido con Euro)* \[CP1146\], *IBM EBCDIC (Francia con Euro)* \[CP1147\], *IBM EBCDIC (Internacional con Euro)* \[CP1148\], *IBM EBCDIC (Islandés con Euro)* \[CP1149\], *IBM EBCDIC (Alemania)* \[CP20273\], *IBM EBCDIC (Dinamarca/Noruega)* \[CP20277\], *IBM EBCDIC (Finlandia/Suecia)* \[CP20278\], *IBM EBCDIC (Italia)* \[CP20280\], *IBM EBCDIC (Latinoamérica/España)* \[CP20284\], *IBM EBCDIC (Reino Unido)* \[CP20285\], *IBM EBCDIC (Katakana japonés extendido)* \[CP20290\], *IBM EBCDIC (Francia)* \[CP20297\], *IBM EBCDIC (Árabe)* \[CP20420\], *IBM EBCDIC (Hebreo)* \[CP20424\], *IBM EBCDIC (Islandés)* \[CP20871\], *IBM EBCDIC (Cirílico: serbio, búlgaro)* \[CP21025\], *IBM EBCDIC (EE. UU. y Canadá)* \[CP37\], *IBM EBCDIC (Internacional)* \[CP500\], *Árabe (ASMO 708)* \[CP708\], *Centroeuropeo (DOS)* \[CP852\] *, Cirílico (DOS)* \[CP855\], *Turco (DOS)* \[CP857\], *Europeo occidental (DOS con Euro)* \[CP858\], *Hebreo (DOS)* \[CP862\], *Árabe (DOS)* \[CP864\], *Ruso (DOS)* \[CP866\], *Griego (DOS)* \[CP869\], *IBM EBCDIC (Latín 2)* \[CP870\] e *IBM EBCDIC (Griego)* \[CP875\].
+  - **Rare**: incluye las codificaciones raras, como *IBM EBCDIC (Turco)* \[CP1026\], *IBM EBCDIC (Latín 1, sistemas abiertos)* \[CP1047\], *IBM EBCDIC (EE. UU. y Canadá con Euro)* \[CP1140\], *IBM EBCDIC (Alemania con Euro)* \[CP1141\], *IBM EBCDIC (Dinamarca/Noruega con Euro)* \[CP1142\], *IBM EBCDIC (Finlandia/Suecia con Euro)* \[CP1143\], *IBM EBCDIC (Italia con Euro)* \[CP1144\], *IBM EBCDIC (Latinoamérica/España con Euro)* \[CP1145\], *IBM EBCDIC (Reino Unido con Euro)* \[CP1146\], *IBM EBCDIC (Francia con Euro)* \[CP1147\], *IBM EBCDIC (Internacional con Euro)* \[CP1148\], *IBM EBCDIC (Islandés con Euro)* \[CP1149\], *IBM EBCDIC (Alemania)* \[CP20273\], *IBM EBCDIC (Dinamarca/Noruega)* \[CP20277\], *IBM EBCDIC (Finlandia/Suecia)* \[CP20278\], *IBM EBCDIC (Italia)* \[CP20280\], *IBM EBCDIC (Latinoamérica/España)* \[CP20284\], *IBM EBCDIC (Reino Unido)* \[CP20285\], *IBM EBCDIC (Katakana japonés extendido)* \[CP20290\], *IBM EBCDIC (Francia)* \[CP20297\], *IBM EBCDIC (Árabe)* \[CP20420\], *IBM EBCDIC (Hebreo)* \[CP20424\], *IBM EBCDIC (Islandés)* \[CP20871\], *IBM EBCDIC (Cirílico: serbio, búlgaro)* \[CP21025\], *IBM EBCDIC (EE. UU. y Canadá)* \[CP37\], *IBM EBCDIC (Internacional)* \[CP500\], *Árabe (ASMO 708)* \[CP708\], *Centroeuropeo (DOS)* \[CP852\]*, Cirílico (DOS)* \[CP855\], *Turco (DOS)* \[CP857\], *Europeo Occidental (DOS con Euro)* \[CP858\], *Hebreo (DOS)* \[CP862\], *Árabe (DOS)* \[CP864\], *Ruso (DOS)* \[CP866\], *Griego (DOS)* \[CP869\], *IBM EBCDIC (Latín 2)* \[CP870\], and *IBM EBCDIC (Griego)* \[CP875\].
 
-  - **West**: incluye las codificaciones occidentales, como *Europeo occidental (Mac)* \[macintosh, CP10000\], *Islandés (Mac)* \[x-mac-icelandic, CP10079\], *Centroeuropeo (Windows)* \[iso-8859-2, CP1250\], *Europeo occidental (Windows)* \[iso-8859-1, CP1252\], *Griego (Windows)* \[iso-8859-7, CP1253\], *Centroeuropeo (ISO)* \[iso-8859-2, CP28592\], *Latín 3 (ISO)* \[iso-8859-3, CP28593\], *Griego (ISO)* \[iso-8859-7, CP28597\], *Latín 9 (ISO)* \[iso-8859-15, CP28605\], *Estados Unidos OEM* \[CP437\], *Europeo occidental (DOS)* \[CP850\], *Portugués (DOS)* \[CP860\], *Islandés (DOS)* \[CP861\], *Francés canadiense (DOS)* \[CP863\] y *Nórdico (DOS)* \[CP865\].
+  - **West**: incluye las codificaciones occidentales, como *Europeo Occidental (Mac)* \[macintosh, CP10000\], *Islandés (Mac)* \[x-mac-icelandic, CP10079\], *Centroeuropeo (Windows)* \[iso-8859-2, CP1250\], *Europeo Occidental (Windows)* \[iso-8859-1, CP1252\], *Griego (Windows)* \[iso-8859-7, CP1253\], *Centroeuropeo (ISO)* \[iso-8859-2, CP28592\], *Latín 3 (ISO)* \[iso-8859-3, CP28593\], *Griego (ISO)* \[iso-8859-7, CP28597\], *Latín 9 (ISO)* \[iso-8859-15, CP28605\], *Estados Unidos OEM* \[CP437\], *Europeo Occidental (DOS)* \[CP850\], *Portugués (DOS)* \[CP860\], *Islandés (DOS)* \[CP861\], *Francés canadiense (DOS)* \[CP863\], and *Nórdico (DOS)* \[CP865\].
 
   ```xml
   <MandroidI18n>West</MandroidI18n>
@@ -650,9 +660,9 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
 Las siguientes propiedades de MSBuild se usan con [proyectos de enlace](~/android/platform/binding-java-library/index.md):
 
-- **AndroidClassParser**: propiedad de cadena que controla cómo se analizan los archivos `.jar`. Entre los posibles valores se incluyen:
+- **AndroidClassParser**: propiedad de cadena que controla cómo se analizan los archivos `.jar`. Los valores posibles son:
 
-  - **class-parse**: usa `class-parse.exe` para analizar el código de bytes de Java directamente, sin ayuda de una JVM. Este valor es experimental.
+  - **class-parse**: usa `class-parse.exe` para analizar el código de bytes directamente, sin ayuda de una JVM. Este valor es experimental.
 
   - **jar2xml**: usa `jar2xml.jar` para utilizar la reflexión de Java y extraer tipos y miembros de un archivo `.jar`.
 
@@ -668,7 +678,7 @@ Las siguientes propiedades de MSBuild se usan con [proyectos de enlace](~/androi
 
   El valor predeterminado cambiará en futuras versiones.
 
-- **AndroidCodegenTarget**: propiedad de cadena que controla la ABI de destino de generación de código. Entre los posibles valores se incluyen:
+- **** AndroidCodegenTarget&ndash;: una propiedad de cadena que controla la ABI de destino de generación de código. Los valores posibles son:
 
   - **XamarinAndroid**: usa la API de enlace de JNI presente desde Mono para Android 1.0. Los ensamblados de enlace compilados con Xamarin.Android 5.0 o posterior solo se pueden ejecutar en Xamarin.Android 5.0 o posterior (adiciones de API/ABI), pero el *origen* es compatible con versiones de producto anteriores.
 
@@ -684,7 +694,7 @@ Las siguientes propiedades de MSBuild se usan con [proyectos de enlace](~/androi
 
     El valor predeterminado es `XAJavaInterop1`.
 
-### <a name="resource-properties"></a>Propiedades del recurso
+### <a name="resource-properties"></a>Propiedades de los recursos
 
 Las propiedades del recurso controlan la generación del archivo `Resource.designer.cs`, que proporciona acceso a recursos de Android.
 
@@ -696,15 +706,15 @@ Las propiedades del recurso controlan la generación del archivo `Resource.desig
 
   Se ha agregado en Xamarin.Android 9.1.
 
-- **AndroidExplicitCrunch**: si va a compilar una aplicación con un gran número de recursos Drawable locales, una compilación inicial (o recompilación) puede tardar minutos en completarse. Para acelerar el proceso de compilación, intente incluir esta propiedad y establecerla en `True`. Cuando se establece esta propiedad, el proceso de compilación analiza previamente los archivos .png.
+- **AndroidExplicitCrunch**: ya no se admite en Xamarin.Android 11.0.
 
-  Nota: Esta opción no es compatible con la opción `$(AndroidUseAapt2)`. Si `$(AndroidUseAapt2)` está habilitada, se deshabilitará esta funcionalidad. Si quiere seguir usando esta característica, establezca `$(AndroidUseAapt2)` en `False`.
+- **AndroidR8IgnoreWarnings**: especifica automáticamente la regla de ProGuard `-ignorewarnings` para `r8`. Esto permite a `r8` continuar con la compilación dex aunque se encuentren ciertas advertencias. El valor predeterminado es `True`, pero se puede establecer en `False` para exigir un comportamiento más estricto. Para obtener más información, consulte el[manual de ProGuard](https://www.guardsquare.com/products/proguard/manual/usage).
 
-  **Experimental**. Agregado en Xamarin.Android 7.0.
+  Se ha agregado en Xamarin.Android 10.3.
 
 - **AndroidResgenExtraArgs**: especifica opciones adicionales de la línea de comandos que se pasan al comando **aapt** al procesar recursos de Android.
 
-- **AndroidResgenFile**: especifica el nombre del archivo de recursos que se generará. La plantilla predeterminada establece esta propiedad en `Resource.designer.cs`.
+- **** AndroidResgenFile&ndash;: especifica el nombre del archivo de recursos que se generará. La plantilla predeterminada establece esta propiedad en `Resource.designer.cs`.
 
 - **AndroidUseAapt2**: propiedad bool que permite al desarrollador controlar el uso de la herramienta `aapt2` para el empaquetado.
   De forma predeterminada, este valor se establecerá en False y usaremos `aapt`.
@@ -734,19 +744,19 @@ Las propiedades de firma controlan cómo se firma el paquete de aplicación para
 
 De forma predeterminada, el destino de firma genera una nueva clave de firma de depuración, si es necesario. Si desea usar una clave específica, por ejemplo, en un servidor de compilación, se pueden usar las siguientes propiedades de MSBuild:
 
-- **AndroidDebugKeyAlgorithm**: especifica el algoritmo predeterminado que se usará para `debug.keystore`. El valor predeterminado es `RSA`.
+- **AndroidDebugKeyAlgorithm** &ndash; Especifica el algoritmo predeterminado que se usará para `debug.keystore`. El valor predeterminado es `RSA`.
 
-- **AndroidDebugKeyValidity**: especifica la validez predeterminada que se usará para `debug.keystore`. El valor predeterminado es `10950`, `30 * 365` o `30 years`.
+- **AndroidDebugKeyValidity** &ndash; Especifica la validez predeterminada para usarla con `debug.keystore`. El valor predeterminado es `10950`, `30 * 365` o `30 years`.
 
 - **AndroidDebugStoreType** &ndash; Especifica el formato de archivo de almacén de claves que se va a usar para `debug.keystore`. El valor predeterminado es `pkcs12`.
 
   Se ha agregado en Xamarin.Android 10.2.
 
-- **AndroidKeyStore**: valor booleano que indica si se debe usar información de firma personalizada. El valor predeterminado es `False`, lo que significa que se usará la clave de firma de depuración predeterminada para firmar paquetes.
+- **** AndroidKeyStore&ndash;: un valor booleano que indica si se debe usar información de firma personalizada. El valor predeterminado es `False`, lo que significa que se usará la clave de firma de depuración predeterminada para firmar paquetes.
 
-- **AndroidSigningKeyAlias**: especifica el alias de la clave en el almacén de claves. Es el valor de **keytool -alias** usado al crear el almacén de claves.
+- **** AndroidSigningKeyAlias&ndash;: especifica el alias de la clave en el almacén de claves. Es el valor de **keytool -alias** usado al crear el almacén de claves.
 
-- **AndroidSigningKeyPass**: especifica la contraseña de la clave en el archivo de almacén de claves. Este es el valor especificado cuando `keytool` pide que se **escriba la contraseña de clave para $(AndroidSigningKeyAlias)** .
+- **** AndroidSigningKeyPass&ndash;: especifica la contraseña de la clave en el archivo de almacén de claves. Este es el valor especificado cuando `keytool` pide que se **escriba la contraseña de clave para $(AndroidSigningKeyAlias)**.
 
   En Xamarin.Android 10.0 y versiones anteriores, esta propiedad solo admite contraseñas de texto sin formato.
 
@@ -903,7 +913,7 @@ Con el examen de la ruta de acceso, el nombre del directorio principal de la bib
 
 #### <a name="item-attribute-name"></a>Nombre del atributo de elemento
 
-**Abi**: especifica la ABI de la biblioteca nativa.
+**** Abi&ndash;: especifica la ABI de la biblioteca nativa.
 
 ```xml
 <ItemGroup>
@@ -937,7 +947,7 @@ Quizás los usuarios más avanzados deseen que recursos diferentes se usen en di
 </PropertyGroup>
 ```
 
-**LogicalName**: especifica la ruta de acceso a los recursos de manera explícita. Permite la creación de &ldquo;alias&rdquo; de archivos para que estén disponibles con varios nombres de recursos distintos.
+**** LogicalName&ndash;: especifica la ruta de acceso a los recursos de manera explícita. Permite la creación de &ldquo;alias&rdquo; de archivos para que estén disponibles con varios nombres de recursos distintos.
 
 ```xml
 <ItemGroup Condition="'$(Configuration)'!='Debug'">

@@ -11,13 +11,13 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: f265d1da894b195402c91cbf9468a11837c53bcf
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.sourcegitcommit: f6a2f07d2e689e0cfd01b30008d50c83c63fa70c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/10/2020
 ms.locfileid: "86933717"
 ---
-# <a name="create-xamarinforms-behaviors"></a>Creación de comportamientos de Xamarin.Forms
+# <a name="create-no-locxamarinforms-behaviors"></a>Creación de comportamientos de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)
 
@@ -59,7 +59,7 @@ El método [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xam
 
 Después, el comportamiento se puede consumir si se adjunta a la colección [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) del control adecuado.
 
-## <a name="creating-a-xamarinforms-behavior"></a>Creación de un comportamiento de Xamarin.Forms
+## <a name="creating-a-no-locxamarinforms-behavior"></a>Creación de un comportamiento de Xamarin.Forms
 
 En la aplicación de ejemplo, se muestra un elemento `NumericValidationBehavior`, que resalta el valor especificado por el usuario en un control [`Entry`](xref:Xamarin.Forms.Entry) en color rojo, si no es del tipo `double`. El comportamiento se muestra en el ejemplo de código siguiente:
 
@@ -92,7 +92,7 @@ public class NumericValidationBehavior : Behavior<Entry>
 > [!NOTE]
 > Xamarin.Forms no establece el elemento `BindingContext` de un comportamiento, ya que los comportamientos se pueden compartir y aplicar a varios controles mediante estilos.
 
-## <a name="consuming-a-xamarinforms-behavior"></a>Consumo de un comportamiento de Xamarin.Forms
+## <a name="consuming-a-no-locxamarinforms-behavior"></a>Consumo de un comportamiento de Xamarin.Forms
 
 Todos los controles de Xamarin.Forms tienen una colección [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors), a la que se pueden agregar uno o varios comportamientos, como se muestra en el ejemplo de código XAML siguiente:
 
@@ -113,12 +113,12 @@ entry.Behaviors.Add (new NumericValidationBehavior ());
 
 En tiempo de ejecución, el comportamiento responderá a la interacción con el control, en función de la implementación del comportamiento. En las capturas de pantalla siguientes se muestra la respuesta del comportamiento a entradas no válidas:
 
-[![Aplicación de ejemplo con Behavior de Xamarin.Forms](creating-images/screenshots-sml.png)](creating-images/screenshots.png#lightbox "Aplicación de ejemplo con comportamiento de Xamarin.Forms")
+[![Aplicación de ejemplo con comportamiento Xamarin.Forms ](creating-images/screenshots-sml.png)](creating-images/screenshots.png#lightbox "Aplicación de ejemplo con comportamiento Xamarin.Forms Comportamiento")
 
 > [!NOTE]
 > Los comportamientos se escriben para un tipo de control específico (o una superclase que se puede aplicar a muchos controles), y solo se deben agregar a un control compatible. El intento de adjuntar un comportamiento a un control incompatible iniciará una excepción.
 
-### <a name="consuming-a-xamarinforms-behavior-with-a-style"></a>Consumo de un comportamiento de Xamarin.Forms con un estilo
+### <a name="consuming-a-no-locxamarinforms-behavior-with-a-style"></a>Consumo de un comportamiento de Xamarin.Forms con un estilo
 
 Los comportamientos también se pueden consumir mediante un estilo explícito o implícito. Pero no se puede crear un estilo que establece la propiedad [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) de un control porque la propiedad es de solo lectura. La solución consiste en agregar una propiedad adjunta a la clase de comportamiento que controle la adición y eliminación del comportamiento. El proceso es el siguiente:
 
