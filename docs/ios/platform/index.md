@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: a70095c5897163d3699d03ec42c33826f6d40419
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: aca9227bc5c885000bffe858e0fc8b34d3724dfd
+ms.sourcegitcommit: 0c45e3f810947e3d43223aa01bf3e43a0defca65
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997155"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90843504"
 ---
 # <a name="ios-platform-features-overview"></a>Información general sobre las características de la plataforma iOS
 
@@ -22,6 +22,7 @@ En esta página se enumeran las versiones recientes de iOS y se resaltan algunos
 
 | Release | Descripción |
 |-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Introducción a iOS 14](~/ios/platform/ios14/index.md) | En este documento se describe Xamarin. iOS 14.|
 | [Introducción a iOS 13](~/ios/platform/ios13/index.md) | En este documento se describe Xamarin. iOS 13.|
 | [Introducción a iOS 12](~/ios/platform/introduction-to-ios12/index.md) | En este documento se describen las características de iOS 12 que se pueden usar al compilar aplicaciones de Xamarin. iOS.|
 | [Introducción a iOS 11](~/ios/platform/introduction-to-ios11/index.md) | En este documento se describen las características nuevas y actualizadas de iOS 11 y Xcode 9, como ARKit, Core ML, Core NFC, arrastrar y colocar, MapKit, PDFKit, SiriKit y Vision. Se vincula a las guías que describen cómo usar estas características con Xamarin. iOS. |
