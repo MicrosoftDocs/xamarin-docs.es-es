@@ -49,7 +49,7 @@ Si el dispositivo no aparece en el menú, compruebe la **Consola** en Visual Stu
 
 Haga clic en el botón **Elegir** y debería aparecer la pantalla siguiente:
 
-[Interfaz de generación de perfiles![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png)](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png#lightbox)
+[![Interfaz de generación de perfiles](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png)](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png#lightbox)
 
 Haga clic en el botón Grabar (círculo rojo en la parte superior izquierda) para iniciar la generación del perfil.
 
