@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2018
-ms.openlocfilehash: f9de09065d7c26c9ae98ef664be63599becb4da5
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: a7bc2b87e267e78d841217b7860e5d54c046b788
+ms.sourcegitcommit: d7c09c6cc2f479b8f14910ad2d20ec76800cd9c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997454"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91248144"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Mostrar una imagen en Xamarin. iOS
 
@@ -100,9 +100,9 @@ A partir de iOS 8, se ha agregado la clase de **Vector** especial a los **conjun
 
 Por ejemplo, si el desarrollador incluye un `MonkeyIcon.pdf` archivo como vector de un catálogo de recursos con una resolución de 150 PX x 150 PX, los siguientes recursos de mapa de bits se incluirán en el lote de aplicaciones final cuando se compiló:
 
-- `MonkeyIcon@1x.png`-150 PX x 150 PX resolución.
-- `MonkeyIcon@2x.png`-300 PX x 300 PX resolución.
-- `MonkeyIcon@3x.png`-450px x 450px resolución.
+- `MonkeyIcon@1x.png` -150 PX x 150 PX resolución.
+- `MonkeyIcon@2x.png` -300 PX x 300 PX resolución.
+- `MonkeyIcon@3x.png` -450px x 450px resolución.
 
 Se deben tener en cuenta las siguientes consideraciones al usar imágenes vectoriales de PDF en catálogos de recursos:
 
@@ -159,9 +159,9 @@ Dado `RenderMode` que la propiedad de `UIImage` es de solo lectura, utilice el `
 
 Hay tres valores posibles para `UIImage.RenderMode` a través de la `UIImageRenderingMode` enumeración:
 
-- `AlwaysOriginal`: Fuerza la representación de la imagen como el archivo de imagen de origen original sin cambios.
-- `AlwaysTemplate`: Fuerza la representación de la imagen como una imagen de plantilla al colorear los píxeles con el `Tint` color especificado.
-- `Automatic`: Representa la imagen como una plantilla o original según el entorno en el que se usa. Por ejemplo, si la imagen se usa en `UIToolBar` , `UINavigationBar` o se `UITabBar` `UISegmentControl` tratará como una plantilla.
+- `AlwaysOriginal` : Fuerza la representación de la imagen como el archivo de imagen de origen original sin cambios.
+- `AlwaysTemplate` : Fuerza la representación de la imagen como una imagen de plantilla al colorear los píxeles con el `Tint` color especificado.
+- `Automatic` : Representa la imagen como una plantilla o original según el entorno en el que se usa. Por ejemplo, si la imagen se usa en `UIToolBar` , `UINavigationBar` o se `UITabBar` `UISegmentControl` tratará como una plantilla.
 
 ## <a name="adding-new-assets-collections"></a>Agregar nuevas colecciones de activos
 
@@ -215,7 +215,7 @@ TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 
 Para obtener más información sobre los iconos y las imágenes, consulte la documentación de Apple sobre el [icono personalizado y las directrices de creación de imágenes](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html).
 
-## <a name="displaying-an-image-in-a-storyboards"></a>Mostrar una imagen en guiones gráficos
+## <a name="displaying-an-image-in-a-storyboard"></a>Mostrar una imagen en un guión gráfico
 
 Una vez que se ha agregado una imagen a un proyecto de Xamarin. iOS mediante un catálogo de recursos, se puede mostrar fácilmente en un guion gráfico mediante un `UIImageView` en el diseñador de iOS. Por ejemplo, si se ha agregado el siguiente recurso de imagen:
 
