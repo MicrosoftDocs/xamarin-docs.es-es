@@ -2,7 +2,7 @@
   href: index.yml
   expanded: true
   items:
-    - name: Primeros pasos
+    - name: Introducción
       href: get-started/index.md
       expanded: true
       items:
@@ -31,16 +31,16 @@
         - name: 'Hello, Android'
           href: get-started/hello-android/index.md
           items:
-            - name: 'Parte 1: Inicio rápido'
+            - name: 'Parte 1: inicio rápido'
               href: get-started/hello-android/hello-android-quickstart.md
-            - name: 'Parte 2: profundización'
+            - name: 'Parte 2: análisis detallado'
               href: get-started/hello-android/hello-android-deepdive.md
         - name: 'Multipantalla de Hello, Android'
           href: get-started/hello-android-multiscreen/index.md
           items:
-            - name: 'Parte 1: Inicio rápido'
+            - name: 'Parte 1: inicio rápido'
               href: get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
-            - name: 'Parte 2: profundización'
+            - name: 'Parte 2: análisis detallado'
               href: get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md
         - name: Xamarin para desarrolladores de Java
           href: get-started/java-developers.md
@@ -145,7 +145,7 @@
               href: user-interface/android-designer/diagnostics.md
             - name: Analizadores de diagnóstico de Android Designer
               href: user-interface/android-designer/diagnostic-analyzers.md
-        - name: Tema de materiales
+        - name: Material Theme
           href: user-interface/material-theme.md
         - name: Perfil de usuario
           href: user-interface/user-profile.md
@@ -234,7 +234,7 @@
               href: user-interface/controls/ratingbar.md
             - name: Spinner
               href: user-interface/controls/spinner.md
-            - name: Modificador
+            - name: Conmutador
               href: user-interface/controls/switch.md
             - name: TextureView
               href: user-interface/controls/texture-view.md
@@ -287,7 +287,7 @@
           href: platform/android-job-scheduler.md
         - name: Distribuidor de trabajo de Firebase
           href: platform/firebase-job-dispatcher.md
-        - name: Fragmentos
+        - name: Fragments
           href: platform/fragments/index.md
           items:
             - name: Implementación de fragmentos
@@ -341,7 +341,7 @@
           items:
             - name: Ubicación
               href: platform/maps-and-location/location.md
-            - name: Asignaciones
+            - name: Mapas
               href: platform/maps-and-location/maps/index.md
               items:
                 - name: Aplicación de mapas
@@ -359,7 +359,7 @@
               href: platform/java-integration/android-callable-wrappers.md
             - name: Trabajo con JNI
               href: platform/java-integration/working-with-jni.md
-            - name: 'Migración de Java a C#'
+            - name: Migración de Java a C#
               href: platform/java-integration/porting-java-to-csharp.md
         - name: Enlace de una biblioteca Java
           href: platform/binding-java-library/index.md
@@ -504,7 +504,7 @@
         - name: Mensajería de Google
           href: data-cloud/google-messaging/index.md
           items:
-            - name: Mensajería en la nube de Firebase
+            - name: Firebase Cloud Messaging
               href: data-cloud/google-messaging/firebase-cloud-messaging.md
             - name: Tutorial de notificaciones de FCM
               href: data-cloud/google-messaging/remote-notifications-with-fcm.md
@@ -526,6 +526,12 @@
           items:
             - name: Proceso de compilación
               href: deploy-test/building-apps/build-process.md
+            - name: Elementos de compilación
+              href: deploy-test/building-apps/build-items.md
+            - name: Propiedades de compilación
+              href: deploy-test/building-apps/build-properties.md
+            - name: Compilar destinos
+              href: deploy-test/building-apps/build-targets.md
             - name: Compilar APK específicos de ABI
               href: deploy-test/building-apps/abi-specific-apks.md
         - name: Emulador de la línea de comandos
@@ -586,13 +592,13 @@
     - name: Conceptos avanzados y funcionamiento interno
       href: internals/index.md
       items:
-        - name: Arquitectura
+        - name: Architecture
           href: internals/architecture.md
         - name: Ensamblados disponibles
           href: ~/cross-platform/internals/available-assemblies.md?context=xamarin/android
         - name: Diseño de API
           href: internals/api-design.md
-        - name: recolección de elementos no utilizados
+        - name: Recolección de elementos no utilizados
           href: internals/garbage-collection.md
         - name: Limitaciones
           href: internals/limitations.md
@@ -643,7 +649,7 @@
     - name: Wear
       href: wear/index.md
       items:
-        - name: Primeros pasos
+        - name: Introducción
           href: wear/get-started/index.md
           items:
             - name: Introducción a Android Wear
@@ -674,7 +680,7 @@
               href: wear/deploy-test/debug-on-emulator.md
             - name: Depuración en un dispositivo Wear
               href: wear/deploy-test/debug-on-device.md
-            - name: Empaquetado
+            - name: Packaging
               href: wear/deploy-test/packaging.md
     - name: Notas de la versión
       href: 'https://docs.microsoft.com/xamarin/android/release-notes/'
