@@ -6,29 +6,29 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 960f75126fdfed770f79e0b4dad5641886eaf8ba
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 154c33944e48f1409b52f14c297befa960b84f39
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024316"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91455136"
 ---
 # <a name="touch-in-android"></a>Entrada táctil de Android
 
-De forma similar a iOS, Android crea un objeto que contiene datos sobre la interacción física del usuario con la pantalla &ndash; un objeto `Android.View.MotionEvent`. Este objeto contiene datos, como la acción que se lleva a cabo, dónde tuvo lugar el toque, cuánta presión se aplicó, etc. Un objeto `MotionEvent` divide el movimiento en hasta los valores siguientes:
+De forma similar a iOS, Android crea un objeto que contiene datos sobre la interacción física del usuario con la pantalla de &ndash; un `Android.View.MotionEvent` objeto. Este objeto contiene datos, como la acción que se lleva a cabo, dónde tuvo lugar el toque, cuánta presión se aplicó, etc. Un `MotionEvent` objeto divide el movimiento en hasta los valores siguientes:
 
 - Código de acción que describe el tipo de movimiento, como el toque inicial, el movimiento táctil a través de la pantalla o la finalización táctil.
 
-- Conjunto de valores de eje que describen la posición del `MotionEvent` y otras propiedades de movimiento, como el lugar en el que se está llevando a cabo el toque, Cuándo tuvo lugar el toque y cuánta presión se usó.
+- Un conjunto de valores de eje que describen la posición de `MotionEvent` y otras propiedades de movimiento, como el lugar en el que se está llevando a cabo el toque, Cuándo tuvo lugar el toque y cuánta presión se usó.
    Los valores de los ejes pueden variar en función del dispositivo, por lo que en la lista anterior no se describen todos los valores de los ejes.
 
-El objeto de `MotionEvent` se pasará a un método adecuado en una aplicación. Hay tres maneras de que una aplicación de Xamarin. Android responda a un evento Touch:
+El `MotionEvent` objeto se pasará a un método adecuado en una aplicación. Hay tres maneras de que una aplicación de Xamarin. Android responda a un evento Touch:
 
-- *Asignar un controlador de eventos a `View.Touch`* : la `Android.Views.View` clase tiene una `EventHandler<View.TouchEventArgs>` a la que las aplicaciones pueden asignar un controlador. Este es un comportamiento típico de .NET.
+- *Asignar un controlador de eventos `View.Touch` a* -La `Android.Views.View` clase tiene una `EventHandler<View.TouchEventArgs>` a la que las aplicaciones pueden asignar un controlador. Este es un comportamiento típico de .NET.
 
-- La *implementación de `View.IOnTouchListener`* -instancias de esta interfaz se puede asignar a un objeto de vista mediante la vista. `SetOnListener` método. Es funcionalmente equivalente a asignar un controlador de eventos al evento `View.Touch`. Si hay algunas lógicas comunes o compartidas que pueden necesitar muchas vistas diferentes cuando se tocan, será más eficaz crear una clase e implementar este método que asignar cada vista a su propio controlador de eventos.
+- *Implementar `View.IOnTouchListener` * -Las instancias de esta interfaz pueden asignarse a un objeto de vista mediante la vista. `SetOnListener` forma. Es funcionalmente equivalente a asignar un controlador de eventos al `View.Touch` evento. Si hay algunas lógicas comunes o compartidas que pueden necesitar muchas vistas diferentes cuando se tocan, será más eficaz crear una clase e implementar este método que asignar cada vista a su propio controlador de eventos.
 
-- *Invalide `View.OnTouchEvent`* -todas las vistas en la subclase de Android `Android.Views.View`. Cuando se toca una vista, Android llamará al `OnTouchEvent` y pasará un objeto `MotionEvent` como parámetro.
+- *Reemplazar `View.OnTouchEvent` * -Todas las vistas de la subclase de Android `Android.Views.View` . Cuando se toca una vista, Android llama a `OnTouchEvent` y le pasa un `MotionEvent` objeto como parámetro.
 
 > [!NOTE]
 > No todos los dispositivos Android admiten pantallas táctiles. 
@@ -43,9 +43,9 @@ Al agregar la siguiente etiqueta al archivo de manifiesto, Google Play solo mues
 
 Un gesto es una forma dibujada a mano en la pantalla táctil. Los gestos pueden tener uno o varios trazos, cada uno de los cuales consta de una secuencia de puntos creados por un punto de contacto distinto con la pantalla. Android puede admitir muchos tipos diferentes de gestos, desde un Fling simple a través de la pantalla, a gestos complejos que implican múltiples toques.
 
-Android proporciona el espacio de nombres `Android.Gestures` específicamente para administrar y responder a los gestos. En el corazón de todos los gestos hay una clase especial llamada `Android.Gestures.GestureDetector`. Como el nombre indica, esta clase escuchará los gestos y eventos en función de `MotionEvents` proporcionado por el sistema operativo.
+Android proporciona el `Android.Gestures` espacio de nombres específicamente para administrar y responder a los gestos. En el corazón de todos los gestos hay una clase especial denominada `Android.Gestures.GestureDetector` . Como implica el nombre, esta clase escuchará los movimientos y eventos en función de `MotionEvents` los proporcionados por el sistema operativo.
 
-Para implementar un detector de gestos, una actividad debe crear instancias de una `GestureDetector` clase y proporcionar una instancia de `IOnGestureListener`, como se muestra en el siguiente fragmento de código:
+Para implementar un detector de gestos, una actividad debe crear instancias `GestureDetector` de una clase y proporcionar una instancia de `IOnGestureListener` , como se muestra en el siguiente fragmento de código:
 
 ```csharp
 GestureOverlayView.IOnGestureListener myListener = new MyGestureListener();
@@ -62,7 +62,7 @@ public override bool OnTouchEvent(MotionEvent e)
 }
 ```
 
-Cuando una instancia de `GestureDetector` identifica un movimiento de interés, se lo notificará a la actividad o aplicación mediante la generación de un evento o a través de una devolución de llamada proporcionada por `GestureDetector.IOnGestureListener`.
+Cuando una instancia de `GestureDetector` identifica un movimiento de interés, se lo notificará a la actividad o aplicación mediante la generación de un evento o a través de una devolución de llamada proporcionada por `GestureDetector.IOnGestureListener` .
 Esta interfaz proporciona seis métodos para los distintos gestos:
 
 - *Down* : se llama cuando se produce una derivación, pero no se libera.
@@ -87,11 +87,11 @@ Los gestos son una excelente manera de que los usuarios puedan interactuar con u
 
 Desde Android 1,6, la Android SDK incluye una aplicación preinstalada en el emulador llamado gestos de gestos. Esta aplicación permite a los desarrolladores crear gestos predefinidos que se pueden incrustar en una aplicación. En la captura de pantalla siguiente se muestra un ejemplo de gestos del generador:
 
-[![captura de pantalla del generador de gestos con gestos de ejemplo](touch-in-android-images/image11.png)](touch-in-android-images/image11.png#lightbox)
+[![Captura de pantalla del generador de gestos con gestos de ejemplo](touch-in-android-images/image11.png)](touch-in-android-images/image11.png#lightbox)
 
 Se puede encontrar una versión mejorada de esta aplicación denominada herramienta de gestos Google Play. La herramienta de gestos es muy similar al generador de gestos, salvo que le permite probar los gestos después de haberlos creado. En la siguiente captura de pantalla se muestra el generador de gestos:
 
-[![captura de pantalla de la herramienta de gestos con gestos de ejemplo](touch-in-android-images/image12.png)](touch-in-android-images/image12.png#lightbox)
+[![Captura de pantalla de la herramienta de gestos con gestos de ejemplo](touch-in-android-images/image12.png)](touch-in-android-images/image12.png#lightbox)
 
 La herramienta de gestos es un poco más útil para crear gestos personalizados, ya que permite que los gestos se prueben a medida que se crean y que se pueden acceder fácilmente a través de Google Play.
 
@@ -131,11 +131,11 @@ El siguiente fragmento XML muestra cómo agregar un GestureOverlayView mediante 
     android:layout_height="match_parent" />
 ```
 
-El `GestureOverlayView` tiene varios eventos que se producirán durante el proceso de dibujo de un gesto. El evento más interesante es `GesturePerformed`. Este evento se desencadena cuando el usuario ha terminado de dibujar su gesto.
+`GestureOverlayView`Tiene varios eventos que se producirán durante el proceso de dibujo de un gesto. El evento más interesante es `GesturePerformed` . Este evento se desencadena cuando el usuario ha terminado de dibujar su gesto.
 
-Cuando se genera este evento, la actividad le pide un `GestureLibrary` para intentar hacer coincidir el gesto que el usuario con uno de los gestos creados por la herramienta de gestos. `GestureLibrary` devolverá una lista de objetos de predicción.
+Cuando se genera este evento, la actividad pide `GestureLibrary` a que pruebe y haga coincidir el gesto que el usuario con uno de los gestos creados por la herramienta de gestos. `GestureLibrary` devolverá una lista de objetos de predicción.
 
-Cada objeto de predicción contiene una puntuación y el nombre de uno de los gestos en el `GestureLibrary`. Cuanto mayor sea la puntuación, mayor será la probabilidad de que el gesto mencionado en la predicción coincida con el gesto dibujado por el usuario.
+Cada objeto de predicción contiene una puntuación y el nombre de uno de los gestos en `GestureLibrary` . Cuanto mayor sea la puntuación, mayor será la probabilidad de que el gesto mencionado en la predicción coincida con el gesto dibujado por el usuario.
 Por lo general, las puntuaciones inferiores a 1,0 se consideran malas coincidencias.
 
 En el código siguiente se muestra un ejemplo de coincidencia de un gesto:
@@ -164,5 +164,5 @@ Una vez hecho esto, debe tener conocimientos sobre cómo usar los gestos táctil
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Inicio táctil de Android (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-start)
-- [Android Touch final (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-final)
+- [Inicio táctil de Android (ejemplo)](/samples/xamarin/monodroid-samples/applicationfundamentals-touch-start)
+- [Android Touch final (ejemplo)](/samples/xamarin/monodroid-samples/applicationfundamentals-touch-final)

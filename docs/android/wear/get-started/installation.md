@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: ea54dcd1df800df1df855fc6b7efedecfda1a24f
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 7c63f4c245d6fc5cb6e9da6320e159229b07de6e
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996869"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453680"
 ---
 # <a name="install-and-setup-wear-os-on-xamarinandroid"></a>Instalar y configurar el desgaste del SO en Xamarin. Android
 
@@ -115,4 +115,4 @@ Para más información sobre las aplicaciones de desgaste de empaquetado, consul
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [SkeletonWear (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-skeletonwear)
+- [SkeletonWear (ejemplo)](/samples/xamarin/monodroid-samples/wear-skeletonwear)

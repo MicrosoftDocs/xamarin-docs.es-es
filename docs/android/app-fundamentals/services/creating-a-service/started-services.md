@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 74226aff2ae135144172a06be5e7869c5cd8e408
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 6075b125f36625a8dec12c041631e3794a71cc6a
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84568456"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91455371"
 ---
 # <a name="started-services-with-xamarinandroid"></a>Servicios iniciados con Xamarin. Android
 
@@ -23,7 +23,7 @@ A diferencia de un servicio enlazado, no hay ningún canal de comunicación entr
 
 - `OnCreate`&ndash;Se llama una vez cuando se inicia el servicio por primera vez. Aquí es donde se debe implementar el código de inicialización.
 - `OnBind`&ndash;Este método debe ser implementado por todas las clases de servicio; sin embargo, un servicio iniciado no tiene normalmente un cliente enlazado a él. Por este motivo, un servicio iniciado simplemente devuelve `null` . En cambio, un servicio híbrido (que es la combinación de un servicio enlazado y un servicio iniciado) tiene que implementar y devolver un `Binder` para el cliente.
-- `OnStartCommand`&ndash;Se llama para cada solicitud de inicio del servicio, ya sea en respuesta a una llamada a `StartService` o a un reinicio del sistema. Aquí es donde el servicio puede iniciar cualquier tarea de ejecución prolongada. El método devuelve un `StartCommandResult` valor que indica cómo o si el sistema debe controlar el reinicio del servicio después de un cierre debido a la falta de memoria. Esta llamada se realiza en el subproceso principal. Este método se describe con más detalle a continuación.
+- `OnStartCommand`&ndash;Se llama para cada solicitud de inicio del servicio, ya sea en respuesta a una llamada a `StartService` o a un reinicio del sistema. Aquí es donde el servicio puede iniciar cualquier tarea de ejecución prolongada. El método devuelve un  `StartCommandResult` valor que indica cómo o si el sistema debe controlar el reinicio del servicio después de un cierre debido a la falta de memoria. Esta llamada se realiza en el subproceso principal. Este método se describe con más detalle a continuación.
 - `OnDestroy`&ndash;Se llama a este método cuando se destruye el servicio. Se utiliza para realizar una limpieza final requerida.
 
 El método importante para un servicio iniciado es el `OnStartCommand` método. Se invocará cada vez que el servicio reciba una solicitud para realizar algún trabajo. El siguiente fragmento de código es un ejemplo de `OnStartCommand` : 
@@ -81,7 +81,7 @@ Varios llamadores pueden solicitar que se inicie un servicio. Si hay una solicit
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [StartedServicesDemo (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-startedservicesdemo)
+- [StartedServicesDemo (ejemplo)](/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-startedservicesdemo)
 - [Android. app. Service](xref:Android.App.Service)
 - [Android. app. StartCommandFlags](xref:Android.App.StartCommandFlags)
 - [Android. app. StartCommandResult](xref:Android.App.StartCommandResult)

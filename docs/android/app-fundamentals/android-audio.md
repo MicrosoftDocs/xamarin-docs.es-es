@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/28/2018
-ms.openlocfilehash: ac59bcbb062dc9dae784d18054048f50094c2145
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f8fb2c8b1d87ec1a02c0920cc4d3670e7e8f9cb0
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73018070"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456255"
 ---
 # <a name="android-audio"></a>Audio de Android
 
@@ -20,30 +20,30 @@ _El sistema operativo Android proporciona una amplia compatibilidad para multime
 
 ## <a name="overview"></a>Información general
 
-Los dispositivos móviles modernos han adoptado una funcionalidad que anteriormente habría requerido piezas dedicadas de equipos &ndash; cámaras, reproductores de música y grabadores de vídeo. Por este motivo, los marcos multimedia se han convertido en una característica de primera clase en las API móviles.
+Los dispositivos móviles modernos han adoptado una funcionalidad que anteriormente habría requerido piezas dedicadas de cámaras de equipos &ndash; , reproductores de música y grabadores de vídeo. Por este motivo, los marcos multimedia se han convertido en una característica de primera clase en las API móviles.
 
 Android proporciona una amplia compatibilidad con multimedia. En este artículo se examina el trabajo con audio en Android y se tratan los temas siguientes:
 
-1. **Reproducción de audio con MediaPlayer** &ndash; usar la clase integrada `MediaPlayer` para reproducir audio, incluidos archivos de audio locales y archivos de audio transmitidos con la clase `AudioTrack`.
+1. **Reproducir audio con MediaPlayer** &ndash; Usar la  `MediaPlayer` clase integrada para reproducir audio, incluidos los archivos de audio locales y los archivos de audio transmitidos con la `AudioTrack` clase.
 
-2. **Grabar audio** &ndash; mediante la clase integrada `MediaRecorder` para grabar audio.
+2. **Grabar audio** &ndash; Usar la `MediaRecorder` clase integrada para grabar audio.
 
-3. **Trabajar con notificaciones de audio** &ndash; el uso de notificaciones de audio para crear aplicaciones con un comportamiento correcto que respondan correctamente a eventos (por ejemplo, llamadas telefónicas entrantes) al suspender o cancelar las salidas de audio.
+3. **Trabajar con notificaciones** &ndash; de audio El uso de notificaciones de audio para crear aplicaciones con un comportamiento correcto que respondan correctamente a eventos (por ejemplo, llamadas telefónicas entrantes) al suspender o cancelar las salidas de audio.
 
-4. **Trabajar con audio de bajo nivel** &ndash; reproducir audio con la clase `AudioTrack` escribiendo directamente en los búferes de memoria. Grabar audio mediante la clase `AudioRecord` y leer directamente desde los búferes de memoria.
+4. **Trabajar con audio** &ndash; de bajo nivel Reproducción de audio mediante la `AudioTrack` clase escribiendo directamente en los búferes de memoria. Grabar audio mediante la `AudioRecord` clase y leer directamente desde los búferes de memoria.
 
 ## <a name="requirements"></a>Requisitos
 
 En esta guía se requiere Android 2,0 (nivel de API 5) o posterior. Tenga en cuenta que la depuración de audio en Android debe realizarse en un dispositivo.
 
-Es necesario solicitar los permisos de `RECORD_AUDIO` en **archivo AndroidManifest. XML**:
+Es necesario solicitar los `RECORD_AUDIO` permisos en **AndroidManifest.XML**:
 
-![Sección permisos necesarios del manifiesto de Android con registro\_AUDIO habilitado](android-audio-images/image01.png)
+![Sección permisos necesarios del manifiesto de Android con registro de \_ audio habilitado](android-audio-images/image01.png)
 
 ## <a name="playing-audio-with-the-mediaplayer-class"></a>Reproducir audio con la clase MediaPlayer
 
 La manera más sencilla de reproducir audio en Android es con la clase integrada [MediaPlayer](xref:Android.Media.MediaPlayer) .
-`MediaPlayer` puede reproducir archivos locales o remotos pasando la ruta de acceso del archivo. Sin embargo, `MediaPlayer` es muy sensible al estado y llamar a uno de sus métodos en un estado incorrecto hará que se produzca una excepción. Es importante interactuar con `MediaPlayer` en el orden que se describe a continuación para evitar errores.
+`MediaPlayer` puede reproducir archivos locales o remotos pasando la ruta de acceso del archivo. Sin embargo, `MediaPlayer` es muy sensible al estado y al llamar a uno de sus métodos en un estado incorrecto se producirá una excepción. Es importante interactuar con `MediaPlayer` en el orden que se describe a continuación para evitar errores.
 
 ### <a name="initializing-and-playing"></a>Inicializar y reproducir
 
@@ -103,11 +103,11 @@ player.Release();
 
 ## <a name="using-the-mediarecorder-class-to-record-audio"></a>Uso de la clase MediaRecorder para grabar audio
 
-La clase [MediaRecorder](xref:Android.Media.MediaRecorder) es el consecuencia de la `MediaPlayer` para grabar audio en Android. Al igual que el `MediaPlayer`, es sensible al estado y pasa por varios Estados para llegar al punto en el que puede comenzar a grabar. Para grabar audio, se debe establecer el permiso `RECORD_AUDIO`. Para obtener instrucciones sobre cómo establecer permisos de aplicación, vea [Working with archivo AndroidManifest. XML](~/android/platform/android-manifest.md).
+El consecuencia de la `MediaPlayer` grabación de audio en Android es la clase [MediaRecorder](xref:Android.Media.MediaRecorder) . Al igual que `MediaPlayer` , es sensible al estado y realiza transiciones a través de varios Estados para llegar al punto en el que puede comenzar a grabar. Para grabar audio, `RECORD_AUDIO` se debe establecer el permiso. Para obtener instrucciones sobre cómo establecer permisos de aplicación, consulte [trabajar con AndroidManifest.xml](~/android/platform/android-manifest.md).
 
 ### <a name="initializing-and-recording"></a>Inicializar y grabar
 
-La grabación de audio con el `MediaRecorder` requiere los pasos siguientes:
+La grabación de audio con `MediaRecorder` requiere los pasos siguientes:
 
 1. Cree una instancia de un nuevo objeto [MediaRecorder](xref:Android.Media.MediaRecorder) .
 
@@ -154,7 +154,7 @@ void RecordAudio (String filePath)
 
 ### <a name="stopping-recording"></a>Detener la grabación
 
-Para detener la grabación, llame al método `Stop` en el `MediaRecorder`:
+Para detener la grabación, llame al `Stop` método en `MediaRecorder` :
 
 ```csharp
 recorder.Stop();
@@ -162,13 +162,13 @@ recorder.Stop();
 
 ### <a name="cleaning-up"></a>Limpieza
 
-Una vez detenido el `MediaRecorder`, llame al método [RESET](xref:Android.Media.MediaRecorder.Reset) para volver a ponerlo en su estado de inactividad:
+Una vez que se haya `MediaRecorder` detenido, llame al método [RESET](xref:Android.Media.MediaRecorder.Reset) para volver a ponerlo en su estado de inactividad:
 
 ```csharp
 recorder.Reset();
 ```
 
-Cuando ya no se necesita el `MediaRecorder`, se deben liberar sus recursos llamando al método [Release](xref:Android.Media.MediaRecorder.Release) :
+Cuando `MediaRecorder` ya no se necesita, sus recursos deben liberarse llamando al método [Release](xref:Android.Media.MediaRecorder.Release) :
 
 ```csharp
 recorder.Release();
@@ -178,7 +178,7 @@ recorder.Release();
 
 ### <a name="the-audiomanager-class"></a>La clase AudioManager
 
-La clase [AudioManager](xref:Android.Media.AudioManager) proporciona acceso a las notificaciones de audio que permiten a las aplicaciones saber cuándo se producen los eventos de audio. Este servicio también proporciona acceso a otras características de audio, como el control de volumen y de modo de timbre. El `AudioManager` permite que una aplicación controle las notificaciones de audio para controlar la reproducción de audio.
+La clase [AudioManager](xref:Android.Media.AudioManager) proporciona acceso a las notificaciones de audio que permiten a las aplicaciones saber cuándo se producen los eventos de audio. Este servicio también proporciona acceso a otras características de audio, como el control de volumen y de modo de timbre. `AudioManager`Permite que una aplicación controle las notificaciones de audio para controlar la reproducción de audio.
 
 ### <a name="managing-audio-focus"></a>Administrar el foco de audio
 
@@ -186,7 +186,7 @@ Los recursos de audio del dispositivo (la grabadora y el reproductor integrados)
 
 Conceptualmente, esto es similar a las aplicaciones de un equipo de escritorio en el que solo una aplicación tiene el foco de teclado: después de seleccionar una de las aplicaciones en ejecución al hacer clic en ella, la entrada del teclado solo se dirige a esa aplicación.
 
-El foco de audio es una idea similar y evita que más de una aplicación reproduzca o grabe audio al mismo tiempo. Es más complicado que el foco del teclado porque es voluntario &ndash; la aplicación puede omitir ese hecho que actualmente no tiene el foco de audio y se reproduce independientemente &ndash; y porque hay distintos tipos de foco de audio que se pueden solicitar. Por ejemplo, si solo se espera que el solicitante reproduzca audio durante un tiempo muy breve, puede solicitar el foco transitorio.
+El foco de audio es una idea similar y evita que más de una aplicación reproduzca o grabe audio al mismo tiempo. Es más complicado que el foco de teclado porque es &ndash; un factor voluntario por el que la aplicación puede omitir el hecho de que actualmente no tiene el foco de audio y se reproduce, &ndash; ya que hay diferentes tipos de foco de audio que se pueden solicitar. Por ejemplo, si solo se espera que el solicitante reproduzca audio durante un tiempo muy breve, puede solicitar el foco transitorio.
 
 Se puede conceder el foco de audio inmediatamente, o bien denegarse y concederse en un momento posterior. Por ejemplo, si una aplicación solicita el foco de audio durante una llamada telefónica, se le denegará, pero es posible que se le conceda el foco una vez finalizada la llamada telefónica. En este caso, se registra un agente de escucha para responder en consecuencia si se quita el foco de audio. La solicitud del foco de audio se usa para determinar si es correcto reproducir o grabar audio.
 
@@ -194,23 +194,23 @@ Para obtener más información sobre el foco de audio, consulte [Administración
 
 #### <a name="registering-the-callback-for-audio-focus"></a>Registrar la devolución de llamada para el foco de audio
 
-El registro de la devolución de llamada de `FocusChangeListener` de la `IOnAudioChangeListener` es una parte importante de la obtención y liberación del foco de audio. Esto se debe a que la concesión del foco de audio se puede diferir hasta un momento posterior. Por ejemplo, una aplicación puede solicitar reproducir música mientras hay una llamada de teléfono en curso. No se concederá el foco de audio hasta que finalice la llamada telefónica.
+El registro `FocusChangeListener` de la devolución de llamada desde `IOnAudioChangeListener` es una parte importante de la obtención y liberación del foco de audio. Esto se debe a que la concesión del foco de audio se puede diferir hasta un momento posterior. Por ejemplo, una aplicación puede solicitar reproducir música mientras hay una llamada de teléfono en curso. No se concederá el foco de audio hasta que finalice la llamada telefónica.
 
-Por esta razón, el objeto de devolución de llamada se pasa como un parámetro al método `GetAudioFocus` del `AudioManager`y es esta llamada la que registra la devolución de llamada. Si el foco de audio se deniega inicialmente, pero se concede posteriormente, la aplicación se informa invocando `OnAudioFocusChange` en la devolución de llamada. Se usa el mismo método para indicar a la aplicación que se está quitando el foco de audio.
+Por esta razón, el objeto de devolución de llamada se pasa como un parámetro al `GetAudioFocus` método de `AudioManager` y es esta llamada que registra la devolución de llamada. Si el foco de audio se deniega inicialmente, pero se concede posteriormente, la aplicación se informa invocando `OnAudioFocusChange` en la devolución de llamada. Se usa el mismo método para indicar a la aplicación que se está quitando el foco de audio.
 
-Cuando la aplicación ha terminado de usar los recursos de audio, llama al método `AbandonFocus` del `AudioManager`y pasa de nuevo a la devolución de llamada. Esto anula el registro de la devolución de llamada y libera los recursos de audio para que otras aplicaciones puedan obtener el foco de audio.
+Cuando la aplicación ha terminado de usar los recursos de audio, llama al `AbandonFocus` método de `AudioManager` y pasa de nuevo a la devolución de llamada. Esto anula el registro de la devolución de llamada y libera los recursos de audio para que otras aplicaciones puedan obtener el foco de audio.
 
 #### <a name="requesting-audio-focus"></a>Solicitar el foco de audio
 
 Los pasos necesarios para solicitar los recursos de audio del dispositivo son los siguientes:
 
-1. Obtener un identificador para el servicio del sistema `AudioManager`.
+1. Obtener un identificador para el `AudioManager` servicio de sistema.
 
 2. Cree una instancia de la clase de devolución de llamada.
 
-3. Solicite los recursos de audio del dispositivo llamando al método `RequestAudioFocus` en el `AudioManager`. Los parámetros son el objeto de devolución de llamada, el tipo de secuencia (música, llamada de voz, anillo, etc.) y el tipo de derecho de acceso que se solicita (los recursos de audio se pueden solicitar momentáneamente o durante un período indefinido, por ejemplo).
+3. Solicite los recursos de audio del dispositivo llamando al `RequestAudioFocus` método en `AudioManager` . Los parámetros son el objeto de devolución de llamada, el tipo de secuencia (música, llamada de voz, anillo, etc.) y el tipo de derecho de acceso que se solicita (los recursos de audio se pueden solicitar momentáneamente o durante un período indefinido, por ejemplo).
 
-4. Si se concede la solicitud, el método de `playMusic` se invoca inmediatamente y el audio comienza a reproducirse.
+4. Si se concede la solicitud, el `playMusic` método se invoca inmediatamente y el audio comienza a reproducirse.
 
 5. Si se deniega la solicitud, no se realiza ninguna otra acción. En este caso, el audio solo se reproducirá si la solicitud se concede en otro momento.
 
@@ -234,11 +234,11 @@ Boolean RequestAudioResources(INotificationReceiver parent)
 
 #### <a name="releasing-audio-focus"></a>Liberación del foco de audio
 
-Cuando se completa la reproducción de la pista, se invoca el método de `AbandonFocus` en `AudioManager`. Esto permite a otra aplicación obtener los recursos de audio del dispositivo. Otras aplicaciones recibirán una notificación de este cambio de foco de audio si han registrado sus propios agentes de escucha.
+Cuando se completa la reproducción de la pista, `AbandonFocus` se invoca el método en `AudioManager` . Esto permite a otra aplicación obtener los recursos de audio del dispositivo. Otras aplicaciones recibirán una notificación de este cambio de foco de audio si han registrado sus propios agentes de escucha.
 
 ## <a name="low-level-audio-api"></a>API de audio de bajo nivel
 
-Las API de audio de bajo nivel proporcionan un mayor control sobre la reproducción y grabación de audio, ya que interactúan directamente con los búferes de memoria en lugar de usar los URI de archivo. Hay algunos escenarios en los que es preferible este enfoque. Estos escenarios incluyen:
+Las API de audio de bajo nivel proporcionan un mayor control sobre la reproducción y grabación de audio, ya que interactúan directamente con los búferes de memoria en lugar de usar los URI de archivo. Hay algunos escenarios en los que es preferible este enfoque. Entre los escenarios se incluyen los siguientes:
 
 1. Al reproducirse desde archivos de audio cifrados.
 
@@ -248,25 +248,25 @@ Las API de audio de bajo nivel proporcionan un mayor control sobre la reproducci
 
 ### <a name="audiotrack-class"></a>Clase AudioTrack
 
-La clase [AudioTrack](xref:Android.Media.AudioTrack) utiliza las API de audio de bajo nivel para grabar y es el equivalente de bajo nivel de la clase `MediaPlayer`.
+La clase [AudioTrack](xref:Android.Media.AudioTrack) utiliza las API de audio de bajo nivel para grabar y es el equivalente de bajo nivel de la `MediaPlayer` clase.
 
 #### <a name="initializing-and-playing"></a>Inicializar y reproducir
 
-Para reproducir audio, se debe crear una nueva instancia de `AudioTrack`. La lista de argumentos que se pasa al [constructor](xref:Android.Media.AudioTrack) especifica cómo reproducir el ejemplo de audio contenido en el búfer. Los argumentos son:
+Para reproducir audio, se debe crear una nueva instancia de `AudioTrack` . La lista de argumentos que se pasa al [constructor](xref:Android.Media.AudioTrack) especifica cómo reproducir el ejemplo de audio contenido en el búfer. Los argumentos son:
 
-1. Tipo de secuencia &ndash; voz, tono, música, sistema o alarma.
+1. Tipo &ndash; de flujo voz, tono, música, sistema o alarma.
 
-2. Frequency &ndash; la frecuencia de muestreo expresada en Hz.
+2. Frecuencia &ndash; : la frecuencia de muestreo expresada en Hz.
 
-3. Configuración del canal &ndash; mono o estéreo.
+3. &ndash;Mono o estéreo de configuración del canal.
 
-4. Formato de audio &ndash; codificación de 8 bits o de 16 bits.
+4. Formato &ndash; de audio de 8 bits o codificación de 16 bits.
 
-5. Tamaño de búfer &ndash; en bytes.
+5. Tamaño &ndash; de búfer en bytes.
 
-6. Modo de búfer &ndash; streaming o static.
+6. &ndash;Streaming en modo de búfer o static.
 
-Después de la construcción, se invoca el método [Play](xref:Android.Media.AudioTrack.Play) de `AudioTrack` para configurarlo de modo que comience a reproducirse. La escritura del búfer de audio en el `AudioTrack` inicia la reproducción:
+Después de la construcción, se invoca el método [Play](xref:Android.Media.AudioTrack.Play) de `AudioTrack` para configurarlo de modo que comience a reproducirse. La escritura del búfer de audio en `AudioTrack` inicia la reproducción:
 
 ```csharp
 void PlayAudioTrack(byte[] audioBuffer)
@@ -304,9 +304,9 @@ La llamada al método [Stop](xref:Android.Media.AudioTrack.Stop) terminará la r
 audioTrack.Stop();
 ```
 
-#### <a name="cleanup"></a>Reparación
+#### <a name="cleanup"></a>Limpieza
 
-Cuando ya no se necesita el `AudioTrack`, se deben liberar sus recursos llamando a [Release](xref:Android.Media.AudioTrack.Release):
+Cuando `AudioTrack` ya no se necesita, sus recursos deben liberarse llamando a [Release](xref:Android.Media.AudioTrack.Release):
 
 ```csharp
 audioTrack.Release();
@@ -314,25 +314,25 @@ audioTrack.Release();
 
 ### <a name="the-audiorecord-class"></a>La clase AudioRecord
 
-La clase [AudioRecord](xref:Android.Media.AudioRecord) es el equivalente de `AudioTrack` en el lado de la grabación. Como `AudioTrack`, utiliza búferes de memoria directamente, en lugar de archivos y URI. Requiere que el permiso `RECORD_AUDIO` se establezca en el manifiesto.
+La clase [AudioRecord](xref:Android.Media.AudioRecord) es el equivalente de `AudioTrack` en el lado de grabación. Al igual `AudioTrack` que, usa búferes de memoria directamente, en lugar de archivos y URI. Requiere que el `RECORD_AUDIO` permiso se establezca en el manifiesto.
 
 #### <a name="initializing-and-recording"></a>Inicializar y grabar
 
-El primer paso consiste en construir un nuevo objeto [AudioRecord](xref:Android.Media.AudioRecord) . La lista de argumentos que se pasa al [constructor](xref:Android.Media.AudioRecord) proporciona toda la información necesaria para la grabación. A diferencia de `AudioTrack`, donde los argumentos son en gran medida, los argumentos equivalentes en `AudioRecord` son enteros. Se incluyen los siguientes:
+El primer paso consiste en construir un nuevo objeto [AudioRecord](xref:Android.Media.AudioRecord) . La lista de argumentos que se pasa al [constructor](xref:Android.Media.AudioRecord) proporciona toda la información necesaria para la grabación. A diferencia de en `AudioTrack` , donde los argumentos son en gran medida enumeraciones, los argumentos equivalentes en `AudioRecord` son enteros. Estas incluyen:
 
 1. Origen de entrada de audio de hardware, como el micrófono.
 
-2. Tipo de secuencia &ndash; voz, tono, música, sistema o alarma.
+2. Tipo &ndash; de flujo voz, tono, música, sistema o alarma.
 
-3. Frequency &ndash; la frecuencia de muestreo expresada en Hz.
+3. Frecuencia &ndash; : la frecuencia de muestreo expresada en Hz.
 
-4. Configuración del canal &ndash; mono o estéreo.
+4. &ndash;Mono o estéreo de configuración del canal.
 
-5. Formato de audio &ndash; codificación de 8 bits o de 16 bits.
+5. Formato &ndash; de audio de 8 bits o codificación de 16 bits.
 
 6. Tamaño de búfer: en bytes
 
-Una vez construida el `AudioRecord`, se invoca su método [StartRecording](xref:Android.Media.AudioRecord.StartRecording) . Ahora está listo para empezar a grabar. El `AudioRecord` Lee continuamente el búfer de audio para la entrada y escribe esta entrada en un archivo de audio.
+Una vez `AudioRecord` construida, se invoca su método [StartRecording](xref:Android.Media.AudioRecord.StartRecording) . Ahora está listo para empezar a grabar. `AudioRecord`Lee continuamente el búfer de audio para la entrada y escribe esta entrada en un archivo de audio.
 
 ```csharp
 void RecordAudio()
@@ -373,9 +373,9 @@ La llamada al método [Stop](xref:Android.Media.AudioRecord.Stop) finaliza la gr
 audRecorder.Stop();
 ```
 
-#### <a name="cleanup"></a>Reparación
+#### <a name="cleanup"></a>Limpieza
 
-Cuando el objeto de `AudioRecord` ya no es necesario, al llamar a su método [Release](xref:Android.Media.AudioRecord.Release) se liberan todos los recursos asociados a él:
+Cuando el `AudioRecord` objeto ya no es necesario, al llamar a su método [Release](xref:Android.Media.AudioRecord.Release) se liberan todos los recursos asociados a él:
 
 ```csharp
 audRecorder.Release();
@@ -383,11 +383,11 @@ audRecorder.Release();
 
 ## <a name="summary"></a>Resumen
 
-El sistema operativo Android proporciona un marco de trabajo eficaz para reproducir, grabar y administrar audio. En este artículo se ha explicado cómo reproducir y grabar audio mediante las clases de `MediaPlayer` y `MediaRecorder` de alto nivel. A continuación, se ha explorado cómo usar las notificaciones de audio para compartir los recursos de audio del dispositivo entre las distintas aplicaciones. Por último, se trata de cómo reproducir y grabar audio mediante las API de bajo nivel, que se interforman directamente con los búferes de memoria.
+El sistema operativo Android proporciona un marco de trabajo eficaz para reproducir, grabar y administrar audio. En este artículo se ha explicado cómo reproducir y grabar audio mediante las `MediaPlayer` clases y de alto nivel `MediaRecorder` . A continuación, se ha explorado cómo usar las notificaciones de audio para compartir los recursos de audio del dispositivo entre las distintas aplicaciones. Por último, se trata de cómo reproducir y grabar audio mediante las API de bajo nivel, que se interforman directamente con los búferes de memoria.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Trabajar con audio (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/example-workingwithaudio)
+- [Trabajar con audio (ejemplo)](/samples/xamarin/monodroid-samples/example-workingwithaudio)
 - [Media Player](xref:Android.Media.MediaPlayer)
 - [Grabadora de medios](xref:Android.Media.MediaRecorder)
 - [Administrador de audio](xref:Android.Media.AudioManager)

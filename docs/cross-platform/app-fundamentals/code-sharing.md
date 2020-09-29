@@ -6,12 +6,12 @@ ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
 author: davidortinau
 ms.author: daortin
 ms.date: 08/06/2018
-ms.openlocfilehash: 5edfd8216892eb28a2b1ad14d3ccee1668b21a43
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: b097a0549db6178576d9e10eb3282c88e96b9ddb
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571225"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453303"
 ---
 # <a name="sharing-code-overview"></a>Información general sobre el uso compartido de código
 
@@ -43,13 +43,13 @@ Las bibliotecas de [.net Standard](~/cross-platform/app-fundamentals/net-standar
 - Las operaciones de refactorización siempre actualizan todas las referencias afectadas.
 - Un área expuesta mayor de la biblioteca de clases base (BCL) de .NET está disponible en lugar de los perfiles PCL. En concreto, .NET Standard 2,0 tiene casi la misma superficie de API que la .NET Framework y se recomienda para las nuevas aplicaciones y migrar los PCL existentes.
 
-### <a name="disadvantages"></a>Inconvenientes
+### <a name="disadvantages"></a>Desventajas
 
 - No se pueden usar directivas de compilador como `#if __IOS__` .
 
-### <a name="remarks"></a>Observaciones
+### <a name="remarks"></a>Comentarios
 
-.NET Standard es [similar a PCL](https://docs.microsoft.com/dotnet/standard/net-standard#comparison-to-portable-class-libraries), pero con un modelo más sencillo para la compatibilidad con plataformas y un mayor número de clases de la BCL.
+.NET Standard es [similar a PCL](/dotnet/standard/net-standard#comparison-to-portable-class-libraries), pero con un modelo más sencillo para la compatibilidad con plataformas y un mayor número de clases de la BCL.
 
 <a name="Shared_Projects"></a>
 
@@ -81,17 +81,17 @@ De esta manera, los tres proyectos de aplicación comparten el mismo código fue
 ### <a name="benefits"></a>Ventajas
 
 - Permite compartir código en varios proyectos.
-- El código compartido se puede bifurcar en función de la plataforma mediante directivas de compilador (por ejemplo, con `#if __ANDROID__` , como se describe en el documento [creación de aplicaciones multiplataforma](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) ).
-- Los proyectos de aplicación pueden incluir referencias específicas de la plataforma que puede utilizar el código compartido (como `Community.CsharpSqlite.WP7` el uso de en el ejemplo de tarea para Windows Phone).
+- El código compartido se puede bifurcar en función de la plataforma mediante directivas de compilador (por ejemplo, con  `#if __ANDROID__` , como se describe en el documento  [creación de aplicaciones multiplataforma](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) ).
+- Los proyectos de aplicación pueden incluir referencias específicas de la plataforma que puede utilizar el código compartido (como  `Community.CsharpSqlite.WP7` el uso de en el ejemplo de tarea para Windows Phone).
 
-### <a name="disadvantages"></a>Inconvenientes
+### <a name="disadvantages"></a>Desventajas
 
 - Las refactorizaciones que afectan al código dentro de las directivas de compilador ' Inactive ' no actualizarán el código dentro de esas directivas.
 - A diferencia de la mayoría de los demás tipos de proyecto, un proyecto compartido no tiene ningún ensamblado ' Output '. Durante la compilación, los archivos se tratan como parte del proyecto de referencia y se compilan en ese ensamblado. Si desea compartir el código como un ensamblado, .NET Standard o las bibliotecas de clases portables son una solución mejor.
 
 <a name="Shared_Remarks"></a>
 
-### <a name="remarks"></a>Observaciones
+### <a name="remarks"></a>Comentarios
 
 Una buena solución para que los desarrolladores de aplicaciones escriban código que solo está diseñado para compartir en su aplicación (y no se distribuye a otros desarrolladores).
 
@@ -111,13 +111,13 @@ Las bibliotecas de clases portables se [describen en detalle aquí](~/cross-plat
 - Permite compartir código en varios proyectos.
 - Las operaciones de refactorización siempre actualizan todas las referencias afectadas.
 
-### <a name="disadvantages"></a>Inconvenientes
+### <a name="disadvantages"></a>Desventajas
 
-- En desuso en las versiones más recientes de Visual Studio, en su lugar se recomienda .NET Standard bibliotecas. Consulte esta [explicación de las diferencias](https://docs.microsoft.com/dotnet/standard/net-standard#comparison-to-portable-class-libraries) entre PCL y .net Standard.
+- En desuso en las versiones más recientes de Visual Studio, en su lugar se recomienda .NET Standard bibliotecas. Consulte esta [explicación de las diferencias](/dotnet/standard/net-standard#comparison-to-portable-class-libraries) entre PCL y .net Standard.
 - No se pueden usar directivas de compilador.
-- Solo un subconjunto de .NET Framework está disponible para su uso, determinado por el perfil seleccionado (consulte [Introducción a PCL](~/cross-platform/app-fundamentals/pcl.md) para obtener más información).
+- Solo un subconjunto de .NET Framework está disponible para su uso, determinado por el perfil seleccionado (consulte  [Introducción a PCL](~/cross-platform/app-fundamentals/pcl.md) para obtener más información).
 
-### <a name="remarks"></a>Observaciones
+### <a name="remarks"></a>Comentarios
 
 La plantilla PCL se considera en desuso en las versiones más recientes de Visual Studio.
 

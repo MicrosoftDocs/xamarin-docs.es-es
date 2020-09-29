@@ -6,12 +6,12 @@ ms.assetid: 84B67E31-B217-443D-89E5-CFE1923CB14E
 author: davidortinau
 ms.author: daortin
 ms.date: 04/16/2018
-ms.openlocfilehash: 22028743742a618bd7347d5e49153defecd4e3bb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d3076e35d6e9b7e44ec2f9537f250295eaff7e2e
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015170"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453563"
 ---
 # <a name="build-optimizations"></a>Optimizaciones de compilación
 
@@ -40,13 +40,13 @@ public virtual void AddChildViewController (UIViewController childController)
 }
 ```
 
-Esta optimización requiere que el enlazador esté habilitado y solo se aplique a los métodos con el atributo `[BindingImpl (BindingImplOptions.Optimizable)]`.
+Esta optimización requiere que el enlazador esté habilitado y solo se aplique a los métodos con el `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
 
 De forma predeterminada, está habilitado para las compilaciones de versión.
 
 El comportamiento predeterminado se puede invalidar pasando `--optimize=[+|-]remove-uithread-checks` a Mtouch/MMP.
 
-[1]: https://docs.microsoft.com/dotnet/api/UIKit.UIApplication.EnsureUIThread
+[1]: /dotnet/api/UIKit.UIApplication.EnsureUIThread
 
 ## <a name="inline-intptrsize"></a>IntPtr. Size insertado
 
@@ -72,19 +72,19 @@ if (8 == 8) {
 }
 ```
 
-Esta optimización requiere que el enlazador esté habilitado y solo se aplique a los métodos con el atributo `[BindingImpl (BindingImplOptions.Optimizable)]`.
+Esta optimización requiere que el enlazador esté habilitado y solo se aplique a los métodos con el `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
 
-De forma predeterminada, se habilita si el destino es una arquitectura única o para el ensamblado de plataforma (**Xamarin. iOS. dll**, **Xamarin. TVOS. dll**, **Xamarin. watchos. dll** o **Xamarin. Mac. dll**).
+De forma predeterminada, se habilita si el destino es una arquitectura única o para el ensamblado de plataforma (**Xamarin.iOS.dll**, **Xamarin.TVOS.dll**, **Xamarin.WatchOS.dll** o **Xamarin.Mac.dll**).
 
-Si el destino es varias arquitecturas, esta optimización creará ensamblados distintos para la versión de 32 bits y la versión de 64 bits de la aplicación, y ambas versiones tendrán que incluirse en la aplicación, lo que aumentará el tamaño final de la aplicación en lugar de disminuir instalar.
+Si el destino es varias arquitecturas, esta optimización creará ensamblados distintos para la versión de 32 bits y la versión de 64 bits de la aplicación, y ambas versiones tendrán que incluirse en la aplicación, lo que aumentará el tamaño final de la aplicación en lugar de reducirla.
 
 El comportamiento predeterminado se puede invalidar pasando `--optimize=[+|-]inline-intptr-size` a Mtouch/MMP.
 
 ## <a name="inline-nsobjectisdirectbinding"></a>NSObject. IsDirectBinding en línea
 
-`NSObject.IsDirectBinding` es una propiedad de instancia que determina si una instancia determinada es de un tipo de contenedor o no (un tipo de contenedor es un tipo administrado que se asigna a un tipo nativo; por ejemplo, el tipo de `UIKit.UIView` administrado se asigna al tipo de `UIView` nativo: el contrario es un tipo de usuario. , en este caso `class MyUIView : UIKit.UIView` sería un tipo de usuario).
+`NSObject.IsDirectBinding` es una propiedad de instancia que determina si una instancia determinada es de un tipo contenedor o no (un tipo de contenedor es un tipo administrado que se asigna a un tipo nativo; por ejemplo, el tipo administrado se `UIKit.UIView` asigna al `UIView` tipo nativo: el contrario es un tipo de usuario, en este caso `class MyUIView : UIKit.UIView` sería un tipo de usuario).
 
-Es necesario conocer el valor de `IsDirectBinding` cuando se llama a Objective-C, ya que el valor determina la versión de `objc_msgSend` que se va a usar.
+Es necesario conocer el valor de `IsDirectBinding` al llamar a Objective-C, ya que el valor determina la versión de `objc_msgSend` que se va a usar.
 
 Solo se proporciona el código siguiente:
 
@@ -126,7 +126,7 @@ void myView = new MyUIView ();
 Console.WriteLine (myView.SomeProperty); // prints 'false'
 ```
 
-Sin embargo, es posible ver todos los tipos de la aplicación y determinar que no hay tipos que hereden de `NSUrl`y, por tanto, es seguro alinear el valor de `IsDirectBinding` con una constante `true`:
+Sin embargo, es posible ver todos los tipos de la aplicación y determinar que no hay tipos que hereden de y, `NSUrl` por tanto, es seguro alinear el `IsDirectBinding` valor a una constante `true` :
 
 ```csharp
 void myURL = new NSUrl ();
@@ -134,7 +134,7 @@ Console.WriteLine (myURL.SomeOtherProperty); // prints 'true'
 // There's no way to make SomeOtherProperty print anything but 'true', since there are no NSUrl subclasses.
 ```
 
-En concreto, esta optimización cambiará el siguiente tipo de código (es decir, el código de enlace para `NSUrl.AbsoluteUrl`):
+En concreto, esta optimización cambiará el siguiente tipo de código (es decir, el código de enlace para `NSUrl.AbsoluteUrl` ):
 
 ```csharp
 if (IsDirectBinding) {
@@ -154,7 +154,7 @@ if (true) {
 }
 ```
 
-Esta optimización requiere que el enlazador esté habilitado y solo se aplique a los métodos con el atributo `[BindingImpl (BindingImplOptions.Optimizable)]`.
+Esta optimización requiere que el enlazador esté habilitado y solo se aplique a los métodos con el `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
 
 Siempre está habilitado de forma predeterminada para Xamarin. iOS y siempre está deshabilitado de forma predeterminada para Xamarin. Mac (dado que es posible cargar ensamblados de forma dinámica en Xamarin. Mac, no es posible determinar que una clase determinada nunca se subclase).
 
@@ -182,7 +182,7 @@ if (Arch.DEVICE == Arch.DEVICE) {
 }
 ```
 
-Esta optimización requiere que el enlazador esté habilitado y solo se aplique a los métodos con el atributo `[BindingImpl (BindingImplOptions.Optimizable)]`.
+Esta optimización requiere que el enlazador esté habilitado y solo se aplique a los métodos con el `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
 
 Siempre está habilitado de forma predeterminada para Xamarin. iOS (no está disponible para Xamarin. Mac).
 
@@ -222,7 +222,7 @@ y determinan que la expresión `8 == 8` es siempre true y la reduce a:
 Console.WriteLine ("Doing this");
 ```
 
-Se trata de una optimización eficaz cuando se usa junto con las optimizaciones de inserción, ya que puede transformar el siguiente tipo de código (es decir, el código de enlace para `NFCIso15693ReadMultipleBlocksConfiguration.Range`):
+Se trata de una optimización eficaz cuando se usa junto con las optimizaciones de inserción, ya que puede transformar el siguiente tipo de código (este es el código de enlace para `NFCIso15693ReadMultipleBlocksConfiguration.Range` ):
 
 ```csharp
 NSRange ret;
@@ -254,7 +254,7 @@ if (IsDirectBinding) {
 return ret;
 ```
 
-en esto (al compilar para un dispositivo de 64 bits y cuando también se puede garantizar que no hay subclases de `NFCIso15693ReadMultipleBlocksConfiguration` en la aplicación):
+en esto (al compilar para un dispositivo de 64 bits y cuando también se puede garantizar que no hay `NFCIso15693ReadMultipleBlocksConfiguration` subclases en la aplicación):
 
 ```csharp
 NSRange ret;
@@ -262,13 +262,13 @@ ret = global::ObjCRuntime.Messaging.NSRange_objc_msgSend (this.Handle, Selector.
 return ret;
 ```
 
-El compilador de AOT ya puede eliminar código inactivo como este, pero esta optimización se realiza dentro del enlazador, lo que significa que el enlazador puede ver que hay varios métodos que ya no se usan y que, por tanto, se pueden quitar (a menos que se usen en otro lugar). :
+El compilador de AOT ya puede eliminar código inactivo como este, pero esta optimización se realiza dentro del enlazador, lo que significa que el enlazador puede ver que hay varios métodos que ya no se usan y que, por tanto, se pueden quitar (a menos que se usen en otro lugar):
 
 * `global::ObjCRuntime.Messaging.NSRange_objc_msgSend_stret`
 * `global::ObjCRuntime.Messaging.NSRange_objc_msgSendSuper`
 * `global::ObjCRuntime.Messaging.NSRange_objc_msgSendSuper_stret`
 
-Esta optimización requiere que el enlazador esté habilitado y solo se aplique a los métodos con el atributo `[BindingImpl (BindingImplOptions.Optimizable)]`.
+Esta optimización requiere que el enlazador esté habilitado y solo se aplique a los métodos con el `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
 
 Siempre está habilitado de forma predeterminada (cuando el enlazador está habilitado).
 
@@ -276,7 +276,7 @@ El comportamiento predeterminado se puede invalidar pasando `--optimize=[+|-]dea
 
 ## <a name="optimize-calls-to-blockliteralsetupblock"></a>Optimizar llamadas a BlockLiteral. SetupBlock
 
-El tiempo de ejecución de Xamarin. iOS/Mac debe conocer la firma del bloque al crear un bloque Objective-C para un delegado administrado. Puede tratarse de una operación bastante costosa. Esta optimización calculará la firma del bloque en el momento de la compilación y modificará el IL para llamar a un método de `SetupBlock` que toma la firma como argumento en su lugar. Esto evita la necesidad de calcular la firma en tiempo de ejecución.
+El tiempo de ejecución de Xamarin. iOS/Mac debe conocer la firma del bloque al crear un bloque Objective-C para un delegado administrado. Puede tratarse de una operación bastante costosa. Esta optimización calculará la firma del bloque en el momento de la compilación y modificará el IL para llamar a un `SetupBlock` método que toma la firma como argumento en su lugar. Esto evita la necesidad de calcular la firma en tiempo de ejecución.
 
 Las pruebas comparativas muestran que esto acelera la llamada de un bloque en un factor de 10 a 15.
 
@@ -302,7 +302,7 @@ public static void RequestGuidedAccessSession (bool enable, Action<bool> complet
 }
 ```
 
-Esta optimización requiere que el enlazador esté habilitado y solo se aplique a los métodos con el atributo `[BindingImpl (BindingImplOptions.Optimizable)]`.
+Esta optimización requiere que el enlazador esté habilitado y solo se aplique a los métodos con el `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
 
 Está habilitada de forma predeterminada al usar el registrador estático (en Xamarin. iOS, el registrador estático está habilitado de forma predeterminada para las compilaciones de dispositivos y en Xamarin. Mac, el registrador estático está habilitado de forma predeterminada para las compilaciones de versión).
 
@@ -312,7 +312,7 @@ El comportamiento predeterminado se puede invalidar pasando `--optimize=[+|-]blo
 
 El tiempo de ejecución de Xamarin. iOS/Mac necesita información sobre cómo los tipos administrados implementan los protocolos de Objective-C. Esta información se almacena en interfaces (y atributos en estas interfaces), que no es un formato muy eficaz, ni es compatible con el enlazador.
 
-Un ejemplo es que estas interfaces almacenan información acerca de todos los miembros del protocolo en un atributo de `[ProtocolMember]`, que entre otras cosas contienen referencias a los tipos de parámetro de esos miembros. Esto significa que, si se implementa una interfaz de este tipo, el vinculador conservará todos los tipos usados en esa interfaz, incluso para los miembros opcionales que la aplicación nunca llama o implementa.
+Un ejemplo es que estas interfaces almacenan información acerca de todos los miembros del protocolo en un `[ProtocolMember]` atributo, que entre otras cosas contienen referencias a los tipos de parámetro de esos miembros. Esto significa que, si se implementa una interfaz de este tipo, el vinculador conservará todos los tipos usados en esa interfaz, incluso para los miembros opcionales que la aplicación nunca llama o implementa.
 
 Esta optimización hará que el registrador estático almacene la información necesaria en un formato eficaz que use poca memoria que sea fácil y rápida de encontrar en tiempo de ejecución.
 
@@ -342,9 +342,9 @@ Si se invalida el valor predeterminado para quitar el registrador dinámico, el 
 
 ## <a name="inline-runtimedynamicregistrationsupported"></a>Runtime en línea. DynamicRegistrationSupported
 
-Inserta el valor de `Runtime.DynamicRegistrationSupported` como se determina en el momento de la compilación.
+Inserta el valor de según se `Runtime.DynamicRegistrationSupported` determine en el momento de la compilación.
 
-Si se quita el registrador dinámico (consulte [quitar la optimización del registrador dinámico](#remove-the-dynamic-registrar) ), se trata de una constante `false` valor, de lo contrario es un valor constante `true`.
+Si se quita el registrador dinámico (consulte [quitar la optimización del registrador dinámico](#remove-the-dynamic-registrar) ), se trata de un `false` valor constante, en caso contrario, es un `true` valor constante.
 
 Esta optimización cambiará el siguiente tipo de código:
 
@@ -368,7 +368,7 @@ en el siguiente cuando no se quita el registrador dinámico:
 Console.WriteLine ("do something");
 ```
 
-Esta optimización requiere que el enlazador esté habilitado y solo se aplique a los métodos con el atributo `[BindingImpl (BindingImplOptions.Optimizable)]`.
+Esta optimización requiere que el enlazador esté habilitado y solo se aplique a los métodos con el `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
 
 Siempre está habilitado de forma predeterminada (cuando el enlazador está habilitado).
 
@@ -378,7 +378,7 @@ El comportamiento predeterminado se puede invalidar pasando `--optimize=[+|-]inl
 
 Cuando Objective-C llama a un selector que toma un bloque como parámetro y, a continuación, el código administrado ha invalidado ese método, el tiempo de ejecución de Xamarin. iOS/Xamarin. Mac debe crear un delegado para dicho bloque.
 
-El código de enlace generado por el generador de enlaces incluirá un `[BlockProxy]` atributo, que especifica el tipo con un método `Create` que puede hacerlo.
+El código de enlace generado por el generador de enlaces incluirá un `[BlockProxy]` atributo, que especifica el tipo con un `Create` método que puede hacer esto.
 
 Dado el siguiente código de Objective-C:
 
@@ -503,12 +503,12 @@ static class Trampolines
 }
 ```
 
-Cuando Objective-C llama a `[ObjCBlockTester callClassCallback]`, el tiempo de ejecución de Xamarin. iOS/Xamarin. Mac examinará el atributo de `[BlockProxy (typeof (Trampolines.NIDActionArity1V0))]` en el parámetro. A continuación, buscará el método `Create` en ese tipo y llamará a ese método para crear el delegado.
+Cuando se llama a Objective-C `[ObjCBlockTester callClassCallback]` , el tiempo de ejecución de Xamarin. iOS/Xamarin. Mac examinará el `[BlockProxy (typeof (Trampolines.NIDActionArity1V0))]` atributo en el parámetro. A continuación, buscará el `Create` método en ese tipo y llamará a ese método para crear el delegado.
 
-Esta optimización encontrará el método `Create` en tiempo de compilación y el registrador estático generará código que busca el método en tiempo de ejecución usando los tokens de metadatos en su lugar mediante el atributo y la reflexión (esto es mucho más rápido y también permite que el enlazador Quite el código en tiempo de ejecución correspondiente, de modo que la aplicación sea más pequeña).
+Esta optimización encontrará el `Create` método en tiempo de compilación y el registrador estático generará el código que busca el método en tiempo de ejecución mediante los tokens de metadatos en su lugar mediante el atributo y la reflexión (esto es mucho más rápido y también permite que el enlazador Quite el código en tiempo de ejecución correspondiente, lo que hace que la aplicación sea más pequeña).
 
-Si MMP/Mtouch no encuentra el método de `Create`, se mostrará una advertencia MT4174/MM4174 y la búsqueda se realizará en tiempo de ejecución en su lugar.
-La causa más probable es el código de enlace escrito manualmente sin los atributos de `[BlockProxy]` necesarios.
+Si MMP/Mtouch no encuentra el `Create` método, se mostrará una advertencia MT4174/MM4174 y la búsqueda se realizará en tiempo de ejecución en su lugar.
+La causa más probable es el código de enlace escrito manualmente sin los `[BlockProxy]` atributos necesarios.
 
 Esta optimización requiere que esté habilitado el registrador estático.
 

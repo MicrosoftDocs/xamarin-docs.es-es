@@ -7,12 +7,12 @@ manager: crdun
 ms.workload:
 - xamarin
 ms.date: 10/23/2018
-ms.openlocfilehash: bd1a728dfe14ff9243402bedae74db7be93bf466
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 61a7017d2ba784770d1199b6332d781b36b6d0e0
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725136"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91452484"
 ---
 # <a name="devops-with-xamarin"></a>DevOps con Xamarin
 
@@ -42,18 +42,18 @@ Comentario general: todas las características de planeación y seguimiento son 
 
 Vínculo de referencia: **[Analizar y modelar la arquitectura](/visualstudio/modeling/analyze-and-model-your-architecture)**
 
-Las características de diseño son independientes del lenguaje de codificación o funcionan con lenguajes .NET como C#. Vea [Roles de arquitectura y diagramas de modelado en el desarrollo de software](/visualstudio/modeling/scenario-change-your-design-using-visualization-and-modeling#ModelingDiagramsTools) para obtener información sobre los aspectos relacionados con el código.
+Las características de diseño son independientes del lenguaje de codificación o funcionan con lenguajes .NET como C#. Vea [roles de arquitectura y diagramas de modelado en el desarrollo de software](/visualstudio/modeling/scenario-change-your-design-using-visualization-and-modeling#ModelingDiagramsTools) para saber qué aspectos están relacionados con el código.
 
 |Característica|Compatible con Xamarin|Comentarios adicionales|
 |-------------|----------------------------|-------------------------|
-|Diagramas de secuencia|Sí||
-|Gráficos de dependencia|Sí||
-|Jerarquía de llamadas|Sí||
-|Diseñador de clases|Sí||
-|Explorador de arquitectura|Sí||
-|Diagramas UML (caso de uso, actividad, clase, componente, secuencia y DSL)|Sí||
-|Diagramas de capas|Sí||
-|Validación de capas|Sí||
+|Diagramas de secuencia|Yes||
+|Gráficos de dependencia|Yes||
+|Jerarquía de llamadas|Yes||
+|Diseñador de clases|Yes||
+|Explorador de arquitectura|Yes||
+|Diagramas UML (caso de uso, actividad, clase, componente, secuencia y DSL)|Yes||
+|Diagramas de capas|Yes||
+|Validación de capas|Yes||
 
 ## <a name="code"></a>Código
 
@@ -65,15 +65,15 @@ Las características de diseño son independientes del lenguaje de codificación
 |[Buscar cambios en el código y otro historial](/visualstudio/ide/find-code-changes-and-other-history-with-codelens)|Sí|Excepto en los límites específicos de la plataforma donde la implementación no se resuelve hasta el tiempo de ejecución.|
 |[Usar mapas de código para depurar aplicaciones](/visualstudio/modeling/use-code-maps-to-debug-your-applications)|Sí||
 
-## <a name="build"></a>Build
+## <a name="build"></a>Compilar
 
 Vínculo de referencia: **[Azure Pipelines](/azure/devops/pipelines/index?view=vsts)**
 
 |Característica|Compatible con Xamarin|Comentarios adicionales|
 |-------------|----------------------------|-------------------------|
-|Servidor TFS local|Sí|Los equipos de compilación deben tener instalado Xamarin y se pueden vincular a un equipo OSX para compilar para iOS. Vea [Usar TFVC](/azure/devops/repos/tfvc/overview?view=vsts).|
-|Servidor de compilación local vinculado a Azure Pipelines|Sí|Vea [Build and release agents](/azure/devops/pipelines/agents/agents?view=vsts) (Agentes de compilación y versiones) para obtener instrucciones.|
-|Servicio de controlador hospedado de Azure Pipelines|Sí|Vea [Build your Xamarin app](/azure/devops/pipelines/languages/xamarin?view=vsts&tabs=vsts) (Crear su aplicación de Xamarin).|
+|Servidor TFS local|Yes|Los equipos de compilación deben tener instalado Xamarin y se pueden vincular a un equipo OSX para compilar para iOS. Vea [usar TFVC](/azure/devops/repos/tfvc/overview?view=vsts)|
+|Servidor de compilación local vinculado a Azure Pipelines|Yes|Vea [Build and release agents](/azure/devops/pipelines/agents/agents?view=vsts) (Agentes de compilación y versiones) para obtener instrucciones.|
+|Servicio de controlador hospedado de Azure Pipelines|Yes|Vea [Build your Xamarin app](/azure/devops/pipelines/languages/xamarin?view=vsts&tabs=vsts) (Crear su aplicación de Xamarin).|
 |Compilar definiciones con scripts anteriores y posteriores|Sí||
 |Integración continua, incluidas entradas validadas|Sí|Entradas validadas para TFVC solo cuando GIT funciona en un modelo de solicitud de extracción en lugar de entradas.|
 
@@ -83,26 +83,26 @@ Vínculo de referencia: **[Azure Pipelines](/azure/devops/pipelines/index?view=v
 |-------------|----------------------------|-------------------------|
 |Planear pruebas, crear casos de prueba y organizar conjuntos de pruebas|Sí||
 |Pruebas manuales|Sí||
-|Administrador de pruebas (grabar y reproducir pruebas)|Sí|Dispositivos Windows y emuladores de Android únicamente de Visual Studio.|
+|Administrador de pruebas (grabar y reproducir pruebas)|Yes|Dispositivos Windows y emuladores de Android únicamente de Visual Studio.|
 |Cobertura de código|N/D||
-|[Haga una prueba unitaria de su código](/visualstudio/test/unit-test-your-code/)|Sí|Para destinos Windows y Android, pueden usarse las herramientas integradas de MSTest. Xamarin recomienda NUnit para ejecutar pruebas unitarias en Windows, Android e iOS. Vea [Usar TFVC](/azure/devops/repos/tfvc/overview?view=vsts).|
+|[Haga una prueba unitaria de su código](/visualstudio/test/unit-test-your-code/)|Yes|Para destinos Windows y Android, pueden usarse las herramientas integradas de MSTest. Xamarin recomienda NUnit para ejecutar pruebas unitarias en Windows, Android e iOS. Vea [Usar TFVC](/azure/devops/repos/tfvc/overview?view=vsts).|
 |[Usar la automatización de la interfaz de usuario para probar el código](/visualstudio/test/use-ui-automation-to-test-your-code/)|Solo Windows|La grabadora de pruebas de interfaz de usuario de Visual Studio es solo para Windows. Para todas las plataformas, vea [Xamarin.UITest](/appcenter/test-cloud/uitest/).|
 
 ## <a name="improve-code-quality"></a>Mejorar la calidad del código
 
-Vínculo de referencia: **[Mejorar la calidad del código](/visualstudio/test/improve-code-quality)**
+Vínculo de referencia: ** [mejorar la calidad del código](/visualstudio/test/improve-code-quality)**
 
 |Característica|Compatible con Xamarin|Comentarios adicionales|
 |-------------|----------------------------|-------------------------|
 |[Analizar la calidad del código administrado](/visualstudio/code-quality/analyzing-managed-code-quality-by-using-code-analysis)|Sí||
-|[Buscar código duplicado mediante la detección de clones de código](https://msdn.microsoft.com/library/hh205279.aspx)|Sí||
+|[Buscar código duplicado mediante la detección de clones de código](/previous-versions/hh205279(v=vs.140))|Sí||
 |[Medir la complejidad y el mantenimiento del código administrado](/visualstudio/code-quality/measuring-complexity-and-maintainability-of-managed-code)|Sí||
-|[Explorador de rendimiento](/visualstudio/profiling/performance-explorer)|No|En su lugar, utilice la [Xamarin Profiler](/xamarin/tools/profiler/) a través de Visual Studio para Mac. Tenga en cuenta que el generador de perfiles de Xamarin está actualmente en vista previa y aún no funciona para destinos de Windows.|
-|[Analizar problemas de memoria de .NET Framework](https://msdn.microsoft.com/library/dn342825.aspx)|No|Las herramientas de Visual Studio no tienen enlaces al marco de trabajo de Mono para la generación de perfiles.|
+|[Explorador de rendimiento](/visualstudio/profiling/performance-explorer)|No|En su lugar, utilice la [Xamarin Profiler](../profiler/index.md) a través de Visual Studio para Mac. Tenga en cuenta que el generador de perfiles de Xamarin está actualmente en vista previa y aún no funciona para destinos de Windows.|
+|[Analizar problemas de memoria de .NET Framework](/visualstudio/misc/analyze-dotnet-framework-memory-issues)|No|Las herramientas de Visual Studio no tienen enlaces al marco de trabajo de Mono para la generación de perfiles.|
 
 ## <a name="release-management"></a>Administración de versiones
 
-Vínculo de referencia: **[Compilación y versiones en Azure Pipelines y TFS](/azure/devops/pipelines/overview?view=vsts)**
+Vínculo de referencia: ** [compilar y liberar en Azure PIPELINES y TFS](/azure/devops/pipelines/overview?view=vsts)**
 
 |Característica|Compatible con Xamarin|Comentarios adicionales|
 |-------------|----------------------------|-------------------------|
