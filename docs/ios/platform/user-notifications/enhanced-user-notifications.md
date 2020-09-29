@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: d4fe04412eb4fb456bc49d71c1e5fe87df5f9e76
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 207aac33101615a0a103176cd2bf5dd061e0d264
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939650"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430425"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Notificaciones de usuario mejoradas en Xamarin. iOS
 
@@ -242,7 +242,7 @@ En el caso de las notificaciones remotas, el proceso es similar:
 Con el contenido de la notificación creada, la aplicación debe programar Cuándo se presentará la notificación al usuario mediante el establecimiento de un *desencadenador*. iOS 10 proporciona cuatro tipos de desencadenadores diferentes:
 
 - **Notificación push** : se usa exclusivamente con notificaciones remotas y se desencadena cuando APNs envía un paquete de notificación a la aplicación que se ejecuta en el dispositivo.
-- **Intervalo de tiempo** : permite programar una notificación local desde un intervalo de tiempo de inicio con ahora y finalizar un momento posterior. Por ejemplo: `var trigger =  UNTimeIntervalNotificationTrigger.CreateTrigger (5, false);`
+- **Intervalo de tiempo** : permite programar una notificación local desde un intervalo de tiempo de inicio con ahora y finalizar un momento posterior. Por ejemplo, `var trigger =  UNTimeIntervalNotificationTrigger.CreateTrigger (5, false);`.
 - **Fecha del calendario** : permite programar las notificaciones locales para una fecha y hora específicas.
 - **Basado en la ubicación** : permite programar las notificaciones locales cuando el dispositivo iOS entra o sale de una ubicación geográfica específica o está en una proximidad determinada a cualquier señal de Bluetooth.
 
@@ -558,7 +558,7 @@ Para implementar una extensión de servicio en una aplicación de Xamarin. iOS, 
 -----
 
 > [!IMPORTANT]
-> El identificador de paquete de la extensión de servicio debe coincidir con el identificador de paquete de la aplicación principal con `.appnameserviceextension` anexado al final. Por ejemplo, si la aplicación principal tuviera un identificador de paquete `com.xamarin.monkeynotify` , la extensión de servicio debe tener un identificador de paquete de `com.xamarin.monkeynotify.monkeynotifyserviceextension` . Se debe establecer automáticamente cuando la extensión se agrega a la solución. 
+> El identificador de paquete de la extensión de servicio debe coincidir con el identificador de paquete de la aplicación principal con `.appnameserviceextension` anexado al final. Por ejemplo, si la aplicación principal tuviera un identificador de paquete  `com.xamarin.monkeynotify` , la extensión de servicio debe tener un identificador de paquete de `com.xamarin.monkeynotify.monkeynotifyserviceextension` . Se debe establecer automáticamente cuando la extensión se agrega a la solución. 
 
 Hay una clase principal en la extensión del servicio de notificación que tendrá que modificarse para proporcionar la funcionalidad necesaria. Por ejemplo:
 
@@ -666,7 +666,7 @@ En este artículo se han tratado todas las formas en que iOS 10 ha mejorado las 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Ejemplos de iOS 10](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)
 - [Referencia de UserNotifications Framework](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
 - [Guía de programación de notificaciones locales y remotas](https://developer.apple.com/documentation/usernotifications)

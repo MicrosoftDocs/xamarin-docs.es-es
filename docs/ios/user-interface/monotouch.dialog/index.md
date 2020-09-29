@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: davidortinau
 ms.author: daortin
-ms.openlocfilehash: 8216e0e41eea98dcdcd34ccfac6a9573224f3093
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c57a6d02488272934ea77714b07c0328ac501d26
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936674"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431215"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introducción a MonoTouch. Dialog para Xamarin. iOS
 
@@ -54,7 +54,7 @@ Por ejemplo, cada vez que se necesita una tabla, se necesita un origen de datos 
 
 Módulo. D simplifica esto al encapsular todo el código en una API genérica para la creación de tablas. A continuación, proporciona una abstracción sobre esa API que permite una sintaxis de enlace de objeto declarativo que facilita aún más la tarea. Como tal, hay dos API disponibles en MT. D
 
-- **API de elementos de bajo nivel** : la *API de elementos* se basa en la creación de un árbol jerárquico de elementos que representan pantallas y sus componentes. La API Elements proporciona a los desarrolladores la mayor flexibilidad y control en la creación de interfaces de IU. Además, la API de elementos tiene compatibilidad avanzada con la definición declarativa a través de JSON, que permite una declaración increíblemente rápida, así como la generación dinámica de la interfaz de usuario desde un servidor. 
+- **API de elementos de bajo nivel** : la  *API de elementos* se basa en la creación de un árbol jerárquico de elementos que representan pantallas y sus componentes. La API Elements proporciona a los desarrolladores la mayor flexibilidad y control en la creación de interfaces de IU. Además, la API de elementos tiene compatibilidad avanzada con la definición declarativa a través de JSON, que permite una declaración increíblemente rápida, así como la generación dinámica de la interfaz de usuario desde un servidor. 
 - **API de reflexión de alto nivel** , también conocida como la*API* de *enlace*, en la que las clases se anotan con sugerencias de interfaz de usuario y, a continuación, MT. D crea automáticamente pantallas basadas en los objetos y proporciona un enlace entre lo que se muestra (y, opcionalmente, editado) en la pantalla y el objeto subyacente que realiza la copia de seguridad.   En el ejemplo anterior se ilustra el uso de la API de reflexión. Esta API no proporciona el control específico que la API de elementos hace, pero reduce aún más la complejidad, ya que genera automáticamente la jerarquía de elementos basada en atributos de clase. 
 
 Módulo. D incluye un conjunto grande de elementos de interfaz de usuario integrados para la creación de pantalla, pero también reconoce la necesidad de elementos personalizados y diseños de pantalla avanzados. Como tal, la extensibilidad es una primera clase destacada en la API. Los desarrolladores pueden extender los elementos existentes o crear otros nuevos y, a continuación, integrarse sin problemas.
@@ -256,7 +256,7 @@ Además, la `KeyboardType` propiedad se puede establecer en el momento de la cre
 - Numeric
 - Teléfono
 - Url
-- Email
+- Correo electrónico
 
 ### <a name="boolean-element"></a>Elemento Boolean
 
@@ -276,7 +276,7 @@ mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0));
 
  [![Un radioelemento requiere que se especifique un radiogrupo en el RootElement](images/image14.png)](images/image14.png#lightbox)
 
- `RootElements`también se usan para coordinar los elementos de radio. Los `RadioElement` miembros pueden abarcar varias secciones (por ejemplo, para implementar algo similar al selector de tono de timbre y separar los tonos de timbre personalizados de los tonos del sistema). La vista de Resumen mostrará el elemento de radio que está seleccionado actualmente. Para utilizarlo, cree el `RootElement` con el constructor de grupo, de la siguiente manera:
+ `RootElements` también se usan para coordinar los elementos de radio. Los `RadioElement` miembros pueden abarcar varias secciones (por ejemplo, para implementar algo similar al selector de tono de timbre y separar los tonos de timbre personalizados de los tonos del sistema). La vista de Resumen mostrará el elemento de radio que está seleccionado actualmente. Para utilizarlo, cree el `RootElement` con el constructor de grupo, de la siguiente manera:
 
 ```csharp
 var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0));
@@ -391,7 +391,7 @@ using (var reader = File.OpenRead ("json.sample"))
     return JsonElement.FromJson (JsonObject.Load (reader) as JsonObject, arg);
 ```
 
-Para obtener más información sobre el uso de JSON con MT. D, vea el tutorial del [tutorial de elementos JSON](https://docs.microsoft.com/xamarin/ios/user-interface/monotouch.dialog/json-element-walkthrough) .
+Para obtener más información sobre el uso de JSON con MT. D, vea el tutorial del [tutorial de elementos JSON](./json-element-walkthrough.md) .
 
 ## <a name="other-features"></a>Otras características
 
@@ -569,7 +569,7 @@ La forma de notificar un error al usuario es específica de la aplicación. Pued
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se ha tratado mucha información sobre MonoTouch. Dialog. Se han explicado los aspectos básicos del funcionamiento de MT. D funciona y se han tratado los diversos componentes que conforman MT. D. También se ha mostrado la amplia gama de elementos y personalizaciones de tablas admitidas por MT. D y se describe cómo MT. D se puede extender con elementos personalizados. Además, se ha explicado la compatibilidad de JSON en MT. D que permite la creación dinámica de elementos desde JSON.
+En este artículo se ha tratado mucha información sobre MonoTouch. Dialog. Se han explicado los aspectos básicos del funcionamiento de MT. D funciona y se han tratado los distintos componentes que componen MT. D. También se ha mostrado la amplia gama de elementos y personalizaciones de tablas admitidas por MT. D y se describe cómo MT. D se puede extender con elementos personalizados. Además, se ha explicado la compatibilidad de JSON en MT. D que permite la creación dinámica de elementos desde JSON.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

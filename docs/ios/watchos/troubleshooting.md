@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 497096e7f422e8337498339737ab304b0d896dfe
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7e56eed866cb647bd654370d587b02bcaba04d4e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939001"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432817"
 ---
 # <a name="watchos-troubleshooting"></a>Solución de problemas de watchos
 
@@ -52,7 +52,7 @@ Esta página contiene información adicional y soluciones alternativas para los 
 - Es posible que vea el error "no se ha compilado la aplicación" al intentar iniciar la aplicación. Esto ocurre después de una **limpieza** cuando el proyecto de inicio se establece en el proyecto de extensión de inspección.
     La solución consiste en seleccionar **Compilar > volver a generar todo** y, a continuación, volver a iniciar la aplicación.
 
-### <a name="visual-studio"></a>Programa para la mejora
+### <a name="visual-studio"></a>Visual Studio
 
 La compatibilidad con el diseñador de iOS para el kit de inspección *requiere* que la solución se configure correctamente. Si no se establecen las referencias del proyecto (vea [cómo establecer referencias](~/ios/watchos/get-started/project-references.md)), la superficie de diseño no funcionará correctamente.
 
@@ -162,7 +162,7 @@ Es fácil quitar el canal alfa en Mac OS X mediante la aplicación de **vista pr
 
 6. Seleccione compilar **> compilar todo** para que la sincronización de Xcode reconozca la nueva clase (a través del `Register` atributo) que usamos.
 
-7. Vuelva a abrir el guion gráfico haciendo clic con el botón derecho en el archivo de guion gráfico de la aplicación de inspección y seleccionando **abrir con > Xcode Interface Builder**:
+7. Vuelva a abrir el guion gráfico haciendo clic con el botón derecho en el archivo de guion gráfico de la aplicación de inspección y seleccionando  **abrir con > Xcode Interface Builder**:
 
     ![Abrir el guion gráfico en Interface Builder](troubleshooting-images/add-6.png)
 
@@ -175,7 +175,7 @@ Es fácil quitar el canal alfa en Mac OS X mediante la aplicación de **vista pr
 
     ![El elemento de la barra de herramientas del editor de asistentes](troubleshooting-images/add-7.png)
 
-    Cuando el foco esté en el panel de código, asegúrese de consultar el archivo de encabezado **. h** y, si no hace clic con el botón derecho en la barra de ruta de navegación y selecciona el archivo correcto (**MyInterfaceController. h**)
+    Cuando el foco esté en el panel de código, asegúrese de consultar el archivo de encabezado  **. h** y, si no hace clic con el botón derecho en la barra de ruta de navegación y selecciona el archivo correcto (**MyInterfaceController. h**)
 
     ![Seleccionar MyInterfaceController](troubleshooting-images/add-8.png)
 
@@ -257,7 +257,7 @@ Los argumentos restantes se explican a continuación:
 
 ### <a name="--sdkroot"></a>--SDKRoot
 
-Necesario. Especifica la ruta de acceso a Xcode (6,2 o posterior).
+Obligatorio. Especifica la ruta de acceso a Xcode (6,2 o posterior).
 
 Ejemplo:
 
@@ -293,5 +293,5 @@ Ejemplo:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [WatchKitCatalog (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [WatchTables (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)
+- [WatchKitCatalog (ejemplo)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchTables (ejemplo)](/samples/xamarin/ios-samples/watchos-watchtables)

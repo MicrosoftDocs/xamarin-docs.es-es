@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: cd04450d1429092453e6d8b65278d87b5d52e45e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 65a76c0196b79a17f935f59902c8e6d2f9f25933
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571628"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434918"
 ---
 # <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Solución de problemas de aplicaciones de tvOS 10 compiladas con Xamarin
 
@@ -28,7 +28,7 @@ En las secciones siguientes se enumeran algunos problemas conocidos que pueden p
 
 <a name="App-Store"></a>
 
-## <a name="app-store"></a>Tienda de aplicaciones
+## <a name="app-store"></a>App Store
 
 Problemas conocidos:
 
@@ -63,7 +63,7 @@ Las operaciones de ejecución prolongada devolverán un _"no tiene permiso para 
 
 ## <a name="core-image"></a>Imagen principal
 
-La `CIImageProcessor` API ahora es compatible con un recuento de imágenes de entrada arbitrarias. `CIImageProcessor`Se quitará la API que se incluyó en tvOS 10 Beta 1.
+La `CIImageProcessor` API ahora es compatible con un recuento de imágenes de entrada arbitrarias. `CIImageProcessor` Se quitará la API que se incluyó en tvOS 10 Beta 1.
 
 <a name="NSUserActivity"></a>
 
@@ -86,5 +86,5 @@ Problemas conocidos:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Ejemplos de tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [Novedades de tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

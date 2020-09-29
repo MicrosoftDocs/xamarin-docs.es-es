@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: b4191ae3c25ee5d2eeccd44377177d7d0df6f19e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f4f24ee8bfc6bdde0becb9539ff9e2f532d06381
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937376"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432023"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Pantallas de inicio para aplicaciones de Xamarin. iOS
 
@@ -225,7 +225,7 @@ Para usar el nuevo guión gráfico como una pantalla de inicio, haga lo siguient
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Pantallas de inicio dinámico (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
+- [Pantallas de inicio dinámico (ejemplo)](/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
 - [Guiones gráficos unificados](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [Conceptos básicos de iOS Designer](~/ios/user-interface/designer/index.md)
 - [Agregar imágenes a un conjunto de imágenes del catálogo de recursos](~/ios/app-fundamentals/images-icons/displaying-an-image.md#adding-images-to-an-asset-catalog-image-set)

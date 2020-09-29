@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: 572ba31a1f19ab099765cc92bb1b389ba1115d1b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 875ae9c4712c974c663854f7790c51111eea4807
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84564698"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434498"
 ---
 # <a name="introduction-to-coreml-in-xamarinios"></a>Introducción a CoreML en Xamarin. iOS
 
@@ -27,7 +27,7 @@ Esta introducción abarca lo siguiente:
 
 ## <a name="getting-started-with-coreml"></a>Introducción con CoreML
 
-En estos pasos se describe cómo agregar CoreML a un proyecto de iOS. Consulte el ejemplo del [precio del hábitat de Mars](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) para ver un ejemplo práctico.
+En estos pasos se describe cómo agregar CoreML a un proyecto de iOS. Consulte el ejemplo del [precio del hábitat de Mars](/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) para ver un ejemplo práctico.
 
 ![Captura de pantalla del ejemplo de predicción de precio de hábitat](coreml-images/marspricer-heading.png)
 
@@ -92,7 +92,7 @@ var result = outFeatures.GetFeatureValue("theResult").DoubleValue; // eg. 622702
 
 CoreML también se puede usar junto con Vision Framework para realizar operaciones en una imagen, como el reconocimiento de formas, la identificación de objetos y otras tareas.
 
-En los pasos siguientes se describe cómo se usan CoreML y Vision conjuntamente en el [ejemplo CoreMLVision](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision). El ejemplo combina el [reconocimiento de los rectángulos](~/ios/platform/introduction-to-ios11/vision.md#rectangles) de Vision Framework con el modelo _MNINSTClassifier_ CoreML para identificar un dígito manuscrito en una fotografía.
+En los pasos siguientes se describe cómo se usan CoreML y Vision conjuntamente en el [ejemplo CoreMLVision](/samples/xamarin/ios-samples/ios11-coremlvision). El ejemplo combina el [reconocimiento de los rectángulos](~/ios/platform/introduction-to-ios11/vision.md#rectangles) de Vision Framework con el modelo _MNINSTClassifier_ CoreML para identificar un dígito manuscrito en una fotografía.
 
 ![Reconocimiento de imágenes del número 3](coreml-images/vision3.png) ![Reconocimiento de imagen del número 5](coreml-images/vision5.png)
 
@@ -167,21 +167,21 @@ void HandleClassification(VNRequest request, NSError error){
 }
 ```
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
 Hay tres ejemplos de CoreML para probar:
 
-- El [ejemplo de predicción de precios de hábitat de Mars](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) tiene entradas y salidas numéricas simples.
+- El [ejemplo de predicción de precios de hábitat de Mars](/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) tiene entradas y salidas numéricas simples.
 
-- El [ejemplo de vision & CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision) acepta un parámetro de imagen y usa el marco de trabajo para identificar las regiones cuadradas de la imagen, que se pasan a un modelo CoreML que reconoce los dígitos únicos.
+- El [ejemplo de vision & CoreML](/samples/xamarin/ios-samples/ios11-coremlvision) acepta un parámetro de imagen y usa el marco de trabajo para identificar las regiones cuadradas de la imagen, que se pasan a un modelo CoreML que reconoce los dígitos únicos.
 
-- Por último, el [ejemplo de reconocimiento de imágenes CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition) usa CoreML para identificar las características de una foto. De forma predeterminada, usa el modelo **SqueezeNet** más pequeño (5 MB), pero se ha escrito para que pueda descargar e incorporar el modelo **VGG16** mayor (553MB). Para obtener más información, vea el [archivo Léame del ejemplo](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md).
+- Por último, el [ejemplo de reconocimiento de imágenes CoreML](/samples/xamarin/ios-samples/ios11-coremlimagerecognition) usa CoreML para identificar las características de una foto. De forma predeterminada, usa el modelo **SqueezeNet** más pequeño (5 MB), pero se ha escrito para que pueda descargar e incorporar el modelo **VGG16** mayor (553MB). Para obtener más información, vea el [archivo Léame del ejemplo](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Machine Learning (Apple)](https://developer.apple.com/machine-learning/)
-- [Ejemplo de CoreML (hábitat de Mars) (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/)
-- [CoreML y Vision (reconocimiento de número) (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision)
-- [Reconocimiento de imagen CoreML (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
-- [CoreML con Azure Custom Vision (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel)
+- [Ejemplo de CoreML (hábitat de Mars) (ejemplo)](/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/)
+- [CoreML y Vision (reconocimiento de número) (ejemplo)](/samples/xamarin/ios-samples/ios11-coremlvision)
+- [Reconocimiento de imagen CoreML (ejemplo)](/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
+- [CoreML con Azure Custom Vision (ejemplo)](/samples/xamarin/ios-samples/ios11-coremlazuremodel)
 - [Introducción a CoreML (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/703/)

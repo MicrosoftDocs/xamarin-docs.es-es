@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 5cf86adf07043a60c6fe445265e14591692e365b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5a6c7a013a72d2ad0e80e305b8c4c550011a1737
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73008353"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430761"
 ---
 # <a name="toolbars-in-xamarinmac"></a>Barras de herramientas en Xamarin. Mac
 
 _En este artículo se describe cómo trabajar con barras de herramientas en una aplicación de Xamarin. Mac. Aquí se explica cómo crear y mantener barras de herramientas en Xcode y Interface Builder, exponerlas al código y trabajar con ellas mediante programación._
 
-Los desarrolladores de Xamarin. Mac que trabajan con Visual Studio para Mac tienen acceso a los mismos controles de interfaz de usuario disponibles para los desarrolladores de macOS que trabajan con Xcode, incluido el control de barra de herramientas. Dado que Xamarin. Mac se integra directamente con Xcode, es posible usar los Interface Builder de Xcode para crear y mantener los elementos de la barra de herramientas. Estos elementos de la barra de herramientas también C#se pueden crear en.
+Los desarrolladores de Xamarin. Mac que trabajan con Visual Studio para Mac tienen acceso a los mismos controles de interfaz de usuario disponibles para los desarrolladores de macOS que trabajan con Xcode, incluido el control de barra de herramientas. Dado que Xamarin. Mac se integra directamente con Xcode, es posible usar los Interface Builder de Xcode para crear y mantener los elementos de la barra de herramientas. Estos elementos de la barra de herramientas también se pueden crear en C#.
 
 Las barras de herramientas de macOS se agregan a la sección superior de una ventana y proporcionan un acceso fácil a los comandos relacionados con su funcionalidad. Los usuarios de una aplicación pueden ocultar, mostrar o personalizar las barras de herramientas, y pueden presentar los elementos de la barra de herramientas de varias maneras.
 
@@ -26,7 +26,7 @@ En este artículo se describen los aspectos básicos del trabajo con barras de h
 
 Antes de continuar, lea el artículo de [Hello, Mac](~/mac/get-started/hello-mac.md) , específicamente la [Introducción a Xcode y Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) y las secciones de [salidas y acciones](~/mac/get-started/hello-mac.md#outlets-and-actions) , ya que abarca conceptos clave y técnicas que se usarán en esta guía.
 
-Eche un vistazo a la sección [exposición de C# clases y métodos a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) . Se explican los atributos `Register` y `Export` que se C# usan para conectar clases a clases Objective-C.
+Eche un vistazo a la sección [exposición de clases y métodos de C# a Objective-C](~/mac/internals/how-it-works.md) del documento [interno de Xamarin. Mac](~/mac/internals/how-it-works.md) . Explica los `Register` atributos y `Export` que se usan para conectar clases de C# a clases de Objective-C.
 
 ## <a name="introduction-to-toolbars"></a>Introducción a las barras de herramientas
 
@@ -76,7 +76,7 @@ En las secciones siguientes de esta guía se describe cómo crear y mantener bar
 
 ## <a name="setting-a-custom-main-window-controller"></a>Establecer un controlador de ventana principal personalizado
 
-Para exponer elementos de la C# interfaz de usuario al código mediante salidas y acciones, la aplicación de Xamarin. Mac debe usar un controlador de ventana personalizado:
+Para exponer elementos de la interfaz de usuario al código de C# mediante salidas y acciones, la aplicación de Xamarin. Mac debe usar un controlador de ventana personalizado:
 
 1. Abra el guión gráfico de la aplicación en la Interface Builder de Xcode.
 2. Seleccione el controlador de ventana en la superficie de diseño.
@@ -121,7 +121,7 @@ Seleccione la opción **Autoguardar** y deje las demás propiedades con su confi
 
 Después de abrir la barra de herramientas en la jerarquía de la **interfaz**, abra el cuadro de diálogo de personalización seleccionando un elemento de la barra de herramientas:
 
-![Personalización de la barra de herramientas](toolbar-images/edit05.png "Personalización de la barra de herramientas")
+![Personalizar la barra de herramientas](toolbar-images/edit05.png "Personalizar la barra de herramientas")
 
 Use este cuadro de diálogo para establecer las propiedades de los elementos que ya forman parte de la barra de herramientas, para diseñar la barra de herramientas predeterminada de la aplicación y para proporcionar elementos de la barra de herramientas adicionales para que un usuario seleccione al personalizar la barra de herramientas. Para agregar elementos a la barra de herramientas, arrástrelos desde el **Inspector de biblioteca**:
 
@@ -198,7 +198,7 @@ Guarde el documento, vuelva a Visual Studio para Mac para sincronizarlo con Xcod
 
 Mediante el uso de un elemento de la **barra de herramientas de imagen**, cualquier imagen de mapa de bits agregada a la carpeta de **recursos** (y dada una acción de compilación de **recurso de agrupación**) se puede mostrar en la barra de herramientas como un icono:
 
-1. En Visual Studio para Mac, en el **Panel de solución**, haga clic con el botón derecho en la carpeta **recursos** y seleccione **Agregar**  > **Agregar archivos**.
+1. En Visual Studio para Mac, en el **Panel de solución**, haga clic con el botón derecho en la carpeta **recursos** y seleccione **Agregar**  >  **Agregar archivos**.
 2. En el cuadro de diálogo **Agregar archivos** , vaya a las imágenes deseadas, selecciónelas y haga clic en el botón **abrir** : 
 
     [![Seleccionar imágenes para agregar](toolbar-images/edit11.png "Seleccionar imágenes para agregar")](toolbar-images/edit11-large.png#lightbox)
@@ -269,7 +269,7 @@ public void EraseDocument() {
 }
 ```
 
-Después, edite el archivo **WindowController.CS** y agregue el código siguiente en la parte inferior de la clase `WindowController`:
+Después, edite el archivo **WindowController.CS** y agregue el código siguiente en la parte inferior de la `WindowController` clase:
 
 ```csharp
 [Export ("trashDocument:")]
@@ -288,9 +288,9 @@ Tenga en cuenta que ahora se puede usar el elemento de la barra de herramientas 
 
 ## <a name="disabling-toolbar-items"></a>Deshabilitar elementos de la barra de herramientas
 
-Para deshabilitar un elemento de una barra de herramientas, cree una clase de `NSToolbarItem` personalizada e invalide el método `Validate`. A continuación, en Interface Builder, asigne el tipo personalizado al elemento que desea habilitar o deshabilitar.
+Para deshabilitar un elemento en una barra de herramientas, cree una `NSToolbarItem` clase personalizada e invalide el `Validate` método. A continuación, en Interface Builder, asigne el tipo personalizado al elemento que desea habilitar o deshabilitar.
 
-Para crear una clase de `NSToolbarItem` personalizada, haga clic con el botón derecho en el proyecto y seleccione **agregar**  > **nuevo archivo..** .. Seleccione **General**  > **clase vacía**, escriba "ActivatableItem" como **nombre**y haga clic en el botón **nuevo** : 
+Para crear una `NSToolbarItem` clase personalizada, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..**.. Seleccione **General**  >  **clase vacía**general, escriba "ActivatableItem" como **nombre**y haga clic en el botón **nuevo** : 
 
 ![Agregar una clase vacía en Visual Studio para Mac](toolbar-images/custom01.png "Agregar una clase vacía en Visual Studio para Mac")
 
@@ -338,7 +338,7 @@ Haga doble clic en **Main. Storyboard** para abrirlo en Xcode. Seleccione el ele
 
 ![Establecer una clase personalizada para un elemento de la barra de herramientas](toolbar-images/custom02.png "Establecer una clase personalizada para un elemento de la barra de herramientas")
 
-Cree una toma llamada `trashItem` para el elemento de la barra de herramientas de la **papelera** . Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode. Por último, Abra **MainWindow.CS** y actualice el método `AwakeFromNib` para leer de la siguiente manera:
+Cree una toma llamada `trashItem` para el elemento de la barra de herramientas de la **papelera** . Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode. Por último, Abra **MainWindow.CS** y actualice el `AwakeFromNib` método para que se lea de la siguiente manera:
 
 ```csharp
 public override void AwakeFromNib ()
@@ -356,11 +356,11 @@ Ejecute la aplicación y observe que el elemento **Trash** ahora está deshabili
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se ha realizado una visión detallada del trabajo con barras de herramientas y elementos de la barra de herramientas en una aplicación de Xamarin. Mac. Se describe cómo crear y mantener barras de herramientas en la Interface Builder de Xcode, cómo algunos controles de interfaz de usuario funcionan automáticamente con elementos de la barra de herramientas C# , cómo trabajar con barras de herramientas en el código y cómo habilitar y deshabilitar elementos de la barra de herramientas.
+En este artículo se ha realizado una visión detallada del trabajo con barras de herramientas y elementos de la barra de herramientas en una aplicación de Xamarin. Mac. Se describe cómo crear y mantener barras de herramientas en la Interface Builder de Xcode, cómo algunos controles de interfaz de usuario funcionan automáticamente con elementos de la barra de herramientas, cómo trabajar con barras de herramientas en código de C# y cómo habilitar y deshabilitar elementos de la barra de herramientas.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacToolbar (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/mactoolbar)
+- [MacToolbar (ejemplo)](/samples/xamarin/mac-samples/mactoolbar)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Directrices de la interfaz humana para las barras de herramientas](https://developer.apple.com/macos/human-interface-guidelines/windows-and-views/toolbars/)
 - [Introducción a las barras de herramientas](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Toolbars/Toolbars.html)

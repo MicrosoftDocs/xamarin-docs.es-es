@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 91ead74f1ae26e10046b1e57d722e84014546108
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: db630ba7db1532f24fb6e810653427d1678ad5e2
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929030"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434646"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Solución de problemas de aplicaciones de tvOS compiladas con Xamarin
 
@@ -76,7 +76,7 @@ Section
  reserved2 0
 ```
 
-`addr`y serán `size` diferentes, pero otros campos deben ser idénticos.
+`addr` y serán `size` diferentes, pero otros campos deben ser idénticos.
 
 Tendrá que asegurarse de que las bibliotecas estáticas () de terceros `.a` que está usando se crearon con las bibliotecas de tvOS (no bibliotecas de iOS) y que también incluyen información de Bitcode.
 
@@ -202,7 +202,7 @@ Con este archivo en su lugar, debería poder agregar correctamente el archivo PC
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Ejemplos de tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guías de la interfaz humana de tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guía de programación de aplicaciones para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

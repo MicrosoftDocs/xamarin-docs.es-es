@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: ddd46da0787f853e949d08c45dff5be17b9451fd
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d25d48421ad9b05925c1fa373ddba600ad3bac2e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932761"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431225"
 ---
 # <a name="core-animation-in-xamarinios"></a>Animación básica en Xamarin. iOS
 
@@ -46,7 +46,7 @@ En esta sección se describen las características de animación de UIKit, entre
 
 ### <a name="view-controller-transitions"></a>Transiciones de controladores de vistas
 
- `UIViewController`proporciona compatibilidad integrada para la transición entre controladores de vista a través del `PresentViewController` método. Cuando `PresentViewController` se usa, la transición al segundo controlador se puede animar opcionalmente.
+ `UIViewController` proporciona compatibilidad integrada para la transición entre controladores de vista a través del `PresentViewController` método. Cuando `PresentViewController` se usa, la transición al segundo controlador se puede animar opcionalmente.
 
 Por ejemplo, considere una aplicación con dos controladores, donde tocar un botón en el primer controlador llama `PresentViewController` a para mostrar un segundo controlador. Para controlar qué animación de transición se usa para mostrar el segundo controlador, simplemente establezca su [`ModalTransitionStyle`](xref:UIKit.UIModalTransitionStyle) propiedad como se muestra a continuación:
 
@@ -58,9 +58,9 @@ SecondViewController vc2 = new SecondViewController {
 
 En este caso `PartialCurl` , se usa una animación, aunque hay varias otras disponibles, entre las que se incluyen:
 
-- `CoverVertical`: Se desliza hacia arriba desde la parte inferior de la pantalla.
-- `CrossDissolve`: La vista antigua atenúa & la nueva vista se atenúa.
-- `FlipHorizontal`: Un volteo horizontal de derecha a izquierda. En el descartado, la transición se voltea de izquierda a derecha.
+- `CoverVertical` : Se desliza hacia arriba desde la parte inferior de la pantalla.
+- `CrossDissolve` : La vista antigua atenúa & la nueva vista se atenúa.
+- `FlipHorizontal` : Un volteo horizontal de derecha a izquierda. En el descartado, la transición se voltea de izquierda a derecha.
 
 Para animar la transición, pase `true` como el segundo argumento a `PresentViewController` :
 
@@ -88,7 +88,7 @@ UIView.Transition (
   completion: () => { Console.WriteLine ("transition complete"); });
 ```
 
-`UIView.Transition`también toma un `duration` parámetro que controla durante cuánto tiempo se ejecuta la animación, así como [`options`](xref:UIKit.UIViewAnimationOptions) para especificar elementos como la animación que se va a usar y la función de aceleración. Además, puede especificar un controlador de finalización al que se llamará cuando se complete la animación.
+`UIView.Transition` también toma un `duration` parámetro que controla durante cuánto tiempo se ejecuta la animación, así como [`options`](xref:UIKit.UIViewAnimationOptions) para especificar elementos como la animación que se va a usar y la función de aceleración. Además, puede especificar un controlador de finalización al que se llamará cuando se complete la animación.
 
 En la captura de pantalla siguiente se muestra la transición animada entre las vistas de imagen cuando `TransitionFlipFromTop` se usa:
 
@@ -133,7 +133,7 @@ Al igual que con el `Transition` método, `Animate` permite establecer la duraci
 
 ## <a name="using-core-animation"></a>Usar la animación básica
 
- `UIView`las animaciones permiten una gran cantidad de capacidad y deben usarse si es posible debido a la facilidad de implementación. Como se mencionó anteriormente, las animaciones de UIView usan el marco de animaciones básicas. Sin embargo, algunas cosas no se pueden realizar con `UIView` animaciones, como la animación de propiedades adicionales que no se pueden animar con una vista o la interpolación a lo largo de una ruta de acceso no lineal. En casos en los que necesite un control más preciso, la animación básica también puede usarse directamente.
+ `UIView` las animaciones permiten una gran cantidad de capacidad y deben usarse si es posible debido a la facilidad de implementación. Como se mencionó anteriormente, las animaciones de UIView usan el marco de animaciones básicas. Sin embargo, algunas cosas no se pueden realizar con `UIView` animaciones, como la animación de propiedades adicionales que no se pueden animar con una vista o la interpolación a lo largo de una ruta de acceso no lineal. En casos en los que necesite un control más preciso, la animación básica también puede usarse directamente.
 
 ### <a name="layers"></a>Capas
 
@@ -143,7 +143,7 @@ Las animaciones de capas pueden ser implícitas o explícitas. Las animaciones i
 
 ### <a name="implicit-animations"></a>Animaciones IMPLÍCITAS
 
-Una manera de animar las propiedades de una capa es a través de una animación implícita. `UIView`las animaciones crean animaciones implícitas. Sin embargo, también puede crear animaciones implícitas directamente en una capa.
+Una manera de animar las propiedades de una capa es a través de una animación implícita. `UIView` las animaciones crean animaciones implícitas. Sin embargo, también puede crear animaciones implícitas directamente en una capa.
 
 Por ejemplo, el código siguiente establece un de una capa a `Contents` partir de una imagen, establece un ancho y un color de borde, y agrega la capa como una subcapa de la capa de la vista:
 
@@ -237,7 +237,7 @@ En este artículo, analizamos las capacidades de animación proporcionadas a tra
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de animación básica](https://docs.microsoft.com/samples/xamarin/ios-samples/graphicsandanimation)
+- [Ejemplo de animación básica](/samples/xamarin/ios-samples/graphicsandanimation)
 - [Gráficos básicos](~/ios/platform/graphics-animation-ios/core-graphics.md)
 - [Tutorial de animación y gráficos](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
 - [Animación básica](https://github.com/xamarin/recipes/tree/master/Recipes/ios/animation/coreanimation)

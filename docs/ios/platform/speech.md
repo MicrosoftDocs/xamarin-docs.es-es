@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: c4b818bcf3c4a5280c0280a2e28e2f59c65c8c81
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 98cbcd333d223d741602786643ef1948915d7dfc
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930226"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436461"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Reconocimiento de voz en Xamarin. iOS
 
@@ -66,7 +66,7 @@ Como novedad de iOS 10, Apple ha lanzado la API de reconocimiento de voz, que pr
 
 Los resultados proporcionados por la API de reconocimiento de voz están personalizados de forma transparente para los usuarios individuales, sin que la aplicación tenga que recopilar o tener acceso a los datos de usuario privados.
 
-La API de reconocimiento de voz proporciona los resultados a la aplicación que realiza la llamada casi en tiempo real a medida que el usuario está hablando y proporciona más información sobre los resultados de la traducción que solo texto. Entre ellas se incluyen las siguientes:
+La API de reconocimiento de voz proporciona los resultados a la aplicación que realiza la llamada casi en tiempo real a medida que el usuario está hablando y proporciona más información sobre los resultados de la traducción que solo texto. Estas incluyen:
 
 - Varias interpretaciones de lo que el usuario dijo.
 - Niveles de confianza para las traducciones individuales.
@@ -398,4 +398,4 @@ En este artículo se han presentado los nuevos Speech API y se ha mostrado cómo
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [SpeakToMe (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-speaktome)
+- [SpeakToMe (ejemplo)](/samples/xamarin/ios-samples/ios10-speaktome)

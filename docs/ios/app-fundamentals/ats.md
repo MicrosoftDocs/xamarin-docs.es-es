@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2017
-ms.openlocfilehash: 74647a3c9128496373917e714755f5aaa7f73187
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 476c19f22755775f7b2b8b1d4205747b4bc6b313
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931695"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432523"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Seguridad de transporte de aplicaciones en Xamarin. iOS
 
@@ -172,7 +172,7 @@ Cada clave tiene el siguiente tipo y significado:
 - **NSAllowsArbitraryLoads** ( `Boolean` ): si se va a `YES` deshabilitar ATS para cualquier dominio **no** incluido en `NSExceptionDomains` . En el caso de los dominios enumerados, se usará la configuración de seguridad especificada.
 - **NSAllowsArbitraryLoadsInWebContent** ( `Boolean` ): Si `YES` permite que las páginas web se carguen correctamente mientras la protección de seguridad de transporte de Apple (ATS) todavía está habilitada para el resto de la aplicación.
 - **NSExceptionDomains** ( `Dictionary` ): una colección de dominios que y la configuración de seguridad que ATS debe usar para un dominio determinado.
-- **\<domain-name-for-exception-as-string>**( `Dictionary` ): Una colección de excepciones para un dominio determinado (por ejemplo, `www.xamarin.com`).
+- **\<domain-name-for-exception-as-string>** ( `Dictionary` ): Una colección de excepciones para un dominio determinado (por ejemplo, `www.xamarin.com`).
 - **NSExceptionMinimumTLSVersion** ( `String` ): la versión de TLS mínima como `TLSv1.0` `TLSv1.1` o `TLSv1.2` (que es el valor predeterminado).
 - **NSExceptionRequiresForwardSecrecy** ( `Boolean` ): Si `NO` el dominio no tiene que usar un cifrado con seguridad de reenvío. El valor predeterminado es `YES`.
 - **NSExceptionAllowsInsecureHTTPLoads** ( `Boolean` ): Si `NO` (valor predeterminado) todas las comunicaciones con este dominio deben estar en el `HTTPS` Protocolo.
@@ -239,7 +239,7 @@ Dentro de Visual Studio para Mac, haga doble clic `Info.plist` en el archivo en 
 [![La vista de origen del archivo info. plist](ats-images/ats02.png)](ats-images/ats02.png#lightbox)
 
 > [!IMPORTANT]
-> Si la aplicación requiere una conexión a un sitio web inseguro, **siempre** debe escribir el dominio como una excepción mediante `NSExceptionDomains` en lugar de desactivar completamente el ATS usando `NSAllowsArbitraryLoads` . `NSAllowsArbitraryLoads`solo se debe usar en situaciones extremas de emergencia.
+> Si la aplicación requiere una conexión a un sitio web inseguro, **siempre** debe escribir el dominio como una excepción mediante `NSExceptionDomains` en lugar de desactivar completamente el ATS usando `NSAllowsArbitraryLoads` . `NSAllowsArbitraryLoads` solo se debe usar en situaciones extremas de emergencia.
 
 De nuevo, la deshabilitación de ATS _solo_ debe usarse como último recurso, si el cambio a conexiones seguras no está disponible o no es práctico.
 
@@ -251,6 +251,6 @@ En este artículo se ha introducido la seguridad de transporte de aplicaciones (
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [Ejemplos de iOS 9](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [iOS 9 para desarrolladores](https://developer.apple.com/ios/pre-release/)
 - [iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

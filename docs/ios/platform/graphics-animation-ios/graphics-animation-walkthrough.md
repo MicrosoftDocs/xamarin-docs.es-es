@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 632577d290c6d50a53d2f3fc236b5956f3795b35
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 1245531d68e43c833e892fe888830decc9d07c85
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929550"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430607"
 ---
 # <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Uso de gráficos principales y animación básica en Xamarin. iOS
 
@@ -22,7 +22,7 @@ La siguiente captura de pantalla muestra la aplicación completada:
 
 ![La aplicación completada](graphics-animation-walkthrough-images/00-final-app.png)
 
-Antes de comenzar, descargue el ejemplo *GraphicsDemo* que acompaña a esta guía. Se puede descargar [aquí](https://docs.microsoft.com/samples/xamarin/ios-samples/graphicsandanimation) y se encuentra en el directorio **GraphicsWalkthrough** inicie el proyecto denominado **GraphicsDemo_starter** haciendo doble clic en él y abriendo la `DemoView` clase.
+Antes de comenzar, descargue el ejemplo *GraphicsDemo* que acompaña a esta guía. Se puede descargar [aquí](/samples/xamarin/ios-samples/graphicsandanimation) y se encuentra en el directorio **GraphicsWalkthrough** inicie el proyecto denominado **GraphicsDemo_starter** haciendo doble clic en él y abriendo la `DemoView` clase.
 
 ## <a name="drawing-a-path"></a>Dibujo de un trazado
 
@@ -79,7 +79,7 @@ Antes de comenzar, descargue el ejemplo *GraphicsDemo* que acompaña a esta guí
     }
     ```
 
-    `SetNeedsDisplay`se llamará cada vez que toque Move en orden para `Draw` que se llame en el siguiente paso de bucle de ejecución.
+    `SetNeedsDisplay` se llamará cada vez que toque Move en orden para `Draw` que se llame en el siguiente paso de bucle de ejecución.
 
 4. Vamos a agregar líneas al trazado en el `Draw` método y a usar una línea discontinua roja para dibujar con. [Implementar `Draw` ](~/ios/platform/graphics-animation-ios/core-graphics.md) con el código que se muestra a continuación:
 

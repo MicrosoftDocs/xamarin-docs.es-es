@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/07/2017
-ms.openlocfilehash: 947e64c010d60a13a79a7832413d6f0226fdbdb4
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c299772916cbf706dfb5a52c1fa452ff7a26a48a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028236"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430443"
 ---
 # <a name="introduction-to-watchos-4"></a>Introducción a watchOS 4
 
@@ -31,6 +31,6 @@ Cambios desde watchos 3:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-* [Ejemplos de watchOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)
+* [Ejemplos de watchOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2bwatchOS)
 * [WatchKit (Apple)](https://developer.apple.com/documentation/watchkit)
 * [Novedades de watchos 4 (Apple) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/205/)

@@ -1,18 +1,18 @@
 ---
 title: Introducción a tvOS 12
-description: En este documento se proporciona un alto nivel de información general de las características nuevas y actualizadas de tvOS 12 para los que la C# versión preliminar de Xamarin proporciona enlaces actualmente.
+description: En este documento se proporciona información general de alto nivel de las características nuevas y actualizadas de tvOS 12 para las que la versión preliminar de Xamarin proporciona actualmente enlaces de C#.
 ms.prod: xamarin
 ms.assetid: 037F7FFF-2155-4017-B99A-839CE7EC5C9C
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 94fea1786497d04602ea6cf06d875206cf69eb3e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2ea9ddcf5f8a2412502c1133fdc9f87474bdd830
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030549"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434748"
 ---
 # <a name="introduction-to-tvos-12"></a>Introducción a tvOS 12
 
@@ -26,11 +26,11 @@ tvOS 12 incluye TVUIKit, un conjunto de API que permiten a los desarrolladores d
 
 ## <a name="password-autofill"></a>Autorrellenar de contraseña
 
-Con tvOS 12, los usuarios pueden usar sus dispositivos iOS para iniciar sesión en una aplicación de tvOS con una sola derivación. Esto se habilita a través de una combinación de uso de `UITextContentType` para especificar los campos de nombre de usuario y contraseña, dominios asociados para establecer una relación entre una aplicación de iOS y una aplicación de tvOS, y los entornos de enfoque preferidos para seleccionar un elemento para recibir el foco después de un usuario. proporciona un nombre de usuario y una contraseña.
+Con tvOS 12, los usuarios pueden usar sus dispositivos iOS para iniciar sesión en una aplicación de tvOS con una sola derivación. Esto se habilita a través de una combinación de `UITextContentType` uso para especificar los campos de nombre de usuario y contraseña, dominios asociados para establecer una relación entre una aplicación de iOS y una aplicación de tvOS, y los entornos de enfoque preferidos para seleccionar un elemento para recibir el foco después de que un usuario proporcione un nombre de usuario y una contraseña.
 
 ## <a name="focus-engine-enhancements"></a>Mejoras en el motor de enfoque
 
-tvOS 12 permite todas las aplicaciones, independientemente de cómo se representen, para interactuar con el motor de foco. A través de las interacciones de un usuario con el Siri remoto, el motor de foco puede usarse con cualquier aplicación para seleccionar un elemento, la sugerencia en los cambios de foco posibles y la actualización natural del foco. Esto está habilitado en las aplicaciones personalizadas a través de la interfaz `IUIFocusItemContainer` de UIKit, la clase `UIFocusMovementHint`, la interfaz `IUIFocusItemScrollableContainer` y otras clases y métodos relacionados.
+tvOS 12 permite todas las aplicaciones, independientemente de cómo se representen, para interactuar con el motor de foco. A través de las interacciones de un usuario con el Siri remoto, el motor de foco puede usarse con cualquier aplicación para seleccionar un elemento, la sugerencia en los cambios de foco posibles y la actualización natural del foco. Esto está habilitado en las aplicaciones personalizadas a través de `IUIFocusItemContainer` la interfaz de UIKit, la `UIFocusMovementHint` clase, la `IUIFocusItemScrollableContainer` interfaz y otras clases y métodos relacionados.
 
 ## <a name="vision-framework"></a>Vision Framework
 
@@ -46,7 +46,7 @@ Con tvOS 12, Apple ha dejado de usar OpenGL ES y [anima a los desarrolladores](h
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Ejemplos de tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS: Apple Developer (Apple)](https://developer.apple.com/tvos/)
 - [Novedades de tvOS 12 (Apple) (vídeo)](https://developer.apple.com/videos/play/wwdc2018/208/)
 - [TV (Apple)](https://www.apple.com/tv/)

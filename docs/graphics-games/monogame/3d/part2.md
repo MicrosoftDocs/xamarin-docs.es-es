@@ -6,12 +6,12 @@ ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: dfb03815f8642519cecf49ab7b626b9575821af1
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ccec89253c58d7d43cb09f33777c253a2f0da56d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937636"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431124"
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>Dibujo de gráficos 3D con vértices en monogame
 
@@ -42,7 +42,7 @@ El proyecto terminado contendrá un plano inferior que se dibujará con una matr
 
 ## <a name="creating-a-project"></a>Creación de un proyecto
 
-En primer lugar, se descargará un proyecto que servirá como punto de partida. Usaremos el proyecto de modelos [que se puede encontrar aquí](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelrenderingmg/).
+En primer lugar, se descargará un proyecto que servirá como punto de partida. Usaremos el proyecto de modelos [que se puede encontrar aquí](/samples/xamarin/mobile-samples/modelrenderingmg/).
 
 Una vez descargado y descomprimido, abra y ejecute el proyecto. Esperamos ver seis modelos de robot que se dibujan en pantalla:
 
@@ -219,7 +219,7 @@ Lo importante es tener en cuenta que el `foreach` bucle permite que el mismo có
 
 ### <a name="drawuserprimitives"></a>DrawUserPrimitives
 
-`DrawUserPrimitives`es donde se representan los vértices. El primer parámetro indica al método cómo hemos organizado nuestros vértices. Se han estructurado de modo que cada triángulo esté definido por tres vértices ordenados, por lo que usamos el `PrimitiveType.TriangleList` valor.
+`DrawUserPrimitives` es donde se representan los vértices. El primer parámetro indica al método cómo hemos organizado nuestros vértices. Se han estructurado de modo que cada triángulo esté definido por tres vértices ordenados, por lo que usamos el `PrimitiveType.TriangleList` valor.
 
 El segundo parámetro es la matriz de vértices que se definió anteriormente.
 
@@ -468,4 +468,4 @@ En este tutorial se ha mostrado cómo usar una matriz de vértices para realizar
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Archivo de tablero de ajedrez (ejemplo)](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true)
-- [Proyecto completado (ejemplo)](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelsandvertsmg/)
+- [Proyecto completado (ejemplo)](/samples/xamarin/mobile-samples/modelsandvertsmg/)

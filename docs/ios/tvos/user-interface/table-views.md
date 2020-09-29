@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: eb95970066f85bb62eb207f23cfc135dc1625a11
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 364aa1ebc70517ee8378e603922486ae29adf6c1
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937103"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436445"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Trabajar con vistas de tabla tvOS en Xamarin
 
@@ -582,7 +582,7 @@ internal void RaiseAttractionHighlighted (AttractionInformation attraction)
 }
 ```
 
-`CanFocusRow`Se llama al método para cada fila que está a punto de obtener el foco en la vista de tabla. Devuelve `true` si la fila puede obtener el foco; de lo contrario, devuelve `false` . En el caso de este ejemplo, se ha creado un `AttractionHighlighted` evento personalizado que se generará en cada fila a medida que recibe el foco.
+`CanFocusRow`Se llama al método para cada fila que está a punto de obtener el foco en la vista de tabla. Devuelve `true` si la fila puede obtener el foco; de lo contrario, devuelve    `false` . En el caso de este ejemplo, se ha creado un `AttractionHighlighted` evento personalizado que se generará en cada fila a medida que recibe el foco.
 
 Para obtener más información sobre cómo trabajar con `UITableViewDelegate` , consulte la documentación de [UITableViewDelegate](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewDelegate_Protocol/index.html#//apple_ref/doc/uid/TP40006942) de Apple.
 
@@ -883,8 +883,8 @@ namespace tvTable
 
 De nuevo, esta clase simplemente define algunos métodos abreviados para facilitar la comunicación entre los dos lados del controlador de vista de división:
 
-- `SplitView`: Es un vínculo al controlador de vista en dos paneles ( `MainSpiltViewController` ) al que pertenece el controlador de vista de navegación.
-- `TableController`: Obtiene el controlador de vista de tabla ( `AttractionTableViewController` ) que se presenta como vista superior en el controlador de vista de navegación.
+- `SplitView` : Es un vínculo al controlador de vista en dos paneles ( `MainSpiltViewController` ) al que pertenece el controlador de vista de navegación.
+- `TableController` : Obtiene el controlador de vista de tabla ( `AttractionTableViewController` ) que se presenta como vista superior en el controlador de vista de navegación.
 
 <a name="The-Split-View-Controller"></a>
 
@@ -941,7 +941,7 @@ En primer lugar, creamos accesos directos al lado de **detalles** de la vista en
 
 Después, cuando la vista en dos paneles se carga en la memoria, adjuntamos el controlador de vista de división a ambos lados de la vista en dos paneles y respondemos al usuario que resalta una atracción en la vista de tabla ( `AttractionHighlighted` ) mostrando la nueva atracción en el lado de **detalles** de la vista en dos paneles.
 
-Consulte la aplicación de ejemplo [tvTables](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvtable) para obtener una implementación completa de las vistas de tabla dentro de una vista dividida.
+Consulte la aplicación de ejemplo [tvTables](/samples/xamarin/ios-samples/tvos-tvtable) para obtener una implementación completa de las vistas de tabla dentro de una vista dividida.
 
 ## <a name="table-views-in-detail"></a>Vistas de tabla en detalle
 
@@ -955,7 +955,7 @@ En este artículo se ha tratado el diseño y el trabajo con vistas de tabla dent
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Ejemplos de tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [UITableViewController](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewController_Class/index.html#//apple_ref/doc/uid/TP40007523)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guías de la interfaz humana de tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)

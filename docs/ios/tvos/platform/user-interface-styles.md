@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: e779b874cda016a0cd6cc0444ff42a761ee7483e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 793a82b7bb88f3e0c0a233c8c18c2d90f741b137
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934685"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434761"
 ---
 # <a name="tvos-user-interface-styles-in-xamarin"></a>Estilos de la interfaz de usuario de tvOS en Xamarin
 
@@ -81,8 +81,8 @@ Si el desarrollador cambia el color del texto manualmente (ya sea en el guión g
 
 Para admitir los temas claro y oscuro en una aplicación de tvOS 10, Apple ha agregado dos nuevos efectos de desenfoque. Estos nuevos efectos ajustarán automáticamente el desenfoque en función del tema de la interfaz de usuario que el usuario haya seleccionado como sigue:
 
-- `UIBlurEffectStyleRegular`: Usa un desenfoque claro en el tema claro y un desenfoque oscuro en el tema oscuro.
-- `UIBlurEffectStyleProminent`: Usa un desenfoque extra claro en el tema claro y un desenfoque extra oscuro en el tema oscuro.
+- `UIBlurEffectStyleRegular` : Usa un desenfoque claro en el tema claro y un desenfoque oscuro en el tema oscuro.
+- `UIBlurEffectStyleProminent` : Usa un desenfoque extra claro en el tema claro y un desenfoque extra oscuro en el tema oscuro.
 
 <a name="Working-with-Trait-Collections"></a>
 
@@ -209,5 +209,5 @@ En este artículo se han tratado los temas claros y oscuros de la interfaz de us
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Ejemplos de tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [Novedades de tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

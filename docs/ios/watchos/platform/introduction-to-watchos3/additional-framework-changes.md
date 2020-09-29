@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 628d2c8efe9459378c64c55d653eac14c55e0815
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 50f671febdc698454dd5bc7e00d040672c7a79af
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028283"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436528"
 ---
 # <a name="additional-watchos-3-frameworks-changes"></a>Cambios adicionales en los marcos de watchos 3
 
@@ -27,8 +27,8 @@ Se han realizado las siguientes mejoras en el marco de datos principal para Watc
 - Los objetos [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) raíz admiten errores y recuperaciones simultáneas sin serialización.
 - La clase [NSPersistentStoreCoordinator](https://developer.apple.com/reference/coredata/nspersistentstorecoordinator) mantiene un grupo de almacenes de datos de SQLite.
 - Los objetos [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) con almacenes de datos de SQLite en el modo de diario de Wal admiten la nueva característica de generación de consultas, donde los contextos de objeto administrados (MOC) se pueden anclar a versiones de base de datos específicas para futuras capturas y transacciones con errores.
-- Usar el `NSPersistenceContainer` de alto nivel para hacer referencia a la `NSPersistentStoreCoordinator`, [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) y otros recursos de configuración de datos principales.
-- Se han agregado varios métodos útiles nuevos a `NSManagedObject` que facilitan la realización de capturas y la creación de subclases.
+- Usar el nivel alto `NSPersistenceContainer` para hacer referencia a `NSPersistentStoreCoordinator` , [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) y otros recursos de configuración de datos principales.
+- Se han agregado varios métodos de conveniencia para facilitar la `NSManagedObject` realización de capturas y la creación de subclases.
 
 Para obtener más información, consulte la referencia de la [plataforma principal de datos](https://developer.apple.com/reference/coredata)de Apple.
 
@@ -39,7 +39,7 @@ Se han realizado las siguientes mejoras en Core Motion Framework para Watch OS 3
 - El nuevo evento de movimiento de dispositivo usa el acelerómetro y giroscopio para proporcionar actualizaciones de movimiento y orientación. La aplicación se puede registrar para esta actualización (a velocidades de hasta 100 Hz).
 - El nuevo evento pedometer habilita las notificaciones rápidas y en tiempo real cuando el usuario se detiene y se reanuda la ejecución. Use [CMPedometer](https://developer.apple.com/reference/coremotion/cmpedometer) para registrarse para eventos pedometer de primer o segundo plano.
 
-## <a name="foundation"></a>Cimiento
+## <a name="foundation"></a>Foundation
 
 Se han realizado las siguientes mejoras en Foundation Framework para Watch OS 3:
 
@@ -54,8 +54,8 @@ Se han realizado las siguientes mejoras en Foundation Framework para Watch OS 3:
 Se han realizado las siguientes mejoras en el marco de trabajo de HealthKit para Watch OS 3:
 
 - Use la nueva clase [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) para especificar el `ActivityType` y `LocationType` de un entrenamiento.
-- Se han agregado los nuevos [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) y el método `WheelchairUse` de la clase [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) para trabajar con los datos de mantenimiento relacionados con la silla.
-- Se han agregado nuevas claves de metadatos para los tipos meteorológicos (como `HKWeatherConditionClear` y `HKWeatherConditionCloudy`) y los tipos de entrenamiento (como `HKWorkoutActivityTypeFlexibility` y `HKWorkoutActivityTypeWheelchairRunPace`).
+- Se han agregado los nuevos [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) y el `WheelchairUse` método de la clase [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) para trabajar con los datos de mantenimiento relacionados con la silla.
+- Se han agregado nuevas claves de metadatos para los tipos meteorológicos (como `HKWeatherConditionClear` y `HKWeatherConditionCloudy` ) y los tipos de entrenamiento (como `HKWorkoutActivityTypeFlexibility` y `HKWorkoutActivityTypeWheelchairRunPace` ).
 
 ## <a name="homekit"></a>HomeKit
 
@@ -76,10 +76,10 @@ Se han realizado las siguientes mejoras en el marco de trabajo de PassKit para W
 
 Se han realizado las siguientes mejoras en el marco de trabajo de UIKit para Watch OS 3:
 
-- Para admitir el tipo dinámico en etiquetas, los campos de texto y los cuadros de texto utilizan el nuevo método `PreferredFontForTextStyle` de la clase `UIFont`.
-- Se ha agregado el método `ColorWithDisplayP3` para admitir el color ancho.
+- Para admitir el tipo dinámico en etiquetas, los campos de texto y los cuadros de texto utilizan el nuevo `PreferredFontForTextStyle` método de la `UIFont` clase.
+- `ColorWithDisplayP3`Se ha agregado el método para admitir el color ancho.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ejemplos de watchos](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS%20watchos)
+- [ejemplos de watchos](/samples/browse/?products=xamarin&term=Xamarin.iOS%2bwatchos)
 - [Novedades de watchos 3](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInwatchOS/Articles/watchOS3.html#//apple_ref/doc/uid/TP40017085-SW1)

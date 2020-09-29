@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 02fda984d65bb89ac3dc8a4ae5e15e2c61ec7d90
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5d59646f111e5ac3f50de7319f8d5065492c9942
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030624"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434901"
 ---
 # <a name="introduction-to-tvos-10"></a>Introducción a tvOS 10
 
@@ -38,7 +38,7 @@ Para obtener más información, consulte la documentación de [nuevos estilos](~
 
 Apple ha realizado varias mejoras en la seguridad y la privacidad en tvOS 10 que le ayudarán a los desarrolladores a mejorar la seguridad de sus aplicaciones y a garantizar la privacidad del usuario final.
 
-Como resultado, las aplicaciones que se ejecutan en watchos 3 (o posterior) deben declarar de forma estática su intención de acceder a características específicas o a información de usuario especificando una o varias claves específicas de la privacidad en sus archivos `Info.plist` que expliquen al usuario por qué la aplicación quiere obtener acceso.
+Como resultado, las aplicaciones que se ejecutan en watchos 3 (o posterior) deben declarar estáticamente su intención de acceder a características específicas o información de usuario especificando una o más claves específicas de la privacidad en sus `Info.plist` archivos que expliquen al usuario por qué la aplicación quiere obtener acceso.
 
 Dado que tvOS 10 comparte estos cambios con iOS 10, consulte nuestra guía de [mejoras de seguridad y privacidad](~/ios/app-fundamentals/security-privacy.md) de iOS 10 para obtener más información.
 
@@ -52,12 +52,12 @@ Novedad de tvOS 10, el marco de cuentas del suscriptor de vídeo permite que las
 
 tvOS 10 amplía la compatibilidad con los formatos de píxeles de rango extendido y los espacios de colores de amplia gama en todo el sistema, incluidos marcos como gráficos principales, imagen básica, metal y AVFoundation. La compatibilidad con dispositivos con pantallas de color ancho se facilita aún más proporcionando este comportamiento en toda la pila de gráficos.
 
-Además, `UIKit` se ha modificado para que funcione en el nuevo **sRGB** ColorSpace extendido, lo que facilita la combinación de colores en gamas de colores anchos sin pérdida significativa de rendimiento.
+Además, se ha `UIKit` modificado para que funcione en el nuevo **sRGB** ColorSpace ampliado, lo que facilita la combinación de colores en gamas de colores anchos sin pérdida significativa de rendimiento.
 
 Apple ofrece las siguientes prácticas recomendadas al trabajar con colores anchos:
 
-- `UIColor` ahora usa el espacio de color sRGB y dejará de fijar valores a la `0.0` para `1.0` intervalo. Si la aplicación se basa en el comportamiento de la abrazadera anterior, deberá modificarla para tvOS 10.
-- Si la aplicación realiza una representación personalizada de `UIImages`, use la nueva clase [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) para especificar el uso de los formatos de intervalo extendido o estándar.
+- `UIColor` ahora usa el espacio de color sRGB y dejará de fijar valores en `0.0` el `1.0` intervalo para. Si la aplicación se basa en el comportamiento de la abrazadera anterior, deberá modificarla para tvOS 10.
+- Si la aplicación realiza una representación personalizada de `UIImages` , use la nueva clase [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) para especificar el uso de los formatos de intervalo extendido o de intervalo estándar.
 - Cuando se usa una API de bajo nivel como gráficos principales o metal para proporcionar el procesamiento de imágenes, la aplicación debe usar un espacio de colores extendido y un formato de píxel que admita valores de punto flotante de 16 bits. Cuando sea necesario, la aplicación tendrá que fijar manualmente los valores de componente de color.
 - Los gráficos principales, los sombreadores de imagen principal y de rendimiento de metal proporcionan nuevos métodos para la conversión entre los dos espacios de color.
 
@@ -86,5 +86,5 @@ Ninguna API o marco de trabajo quedó en desuso en tvOS 10. Consulte la document
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Ejemplos de tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [Novedades de tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 0af77464f849971050246a1676f89fe4702737e8
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 6fe6c254daf23f5f3d2fb267f6ba4986b94bcbd7
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997298"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431751"
 ---
 # <a name="contacts-and-contactsui-in-xamarinios"></a>Contactos y ContactsUI en Xamarin. iOS
 
@@ -44,11 +44,11 @@ El marco Contacts proporciona acceso a Xamarin. iOS a la información de contact
 
 ### <a name="contact-objects"></a>Objetos de contacto
 
-La `CNContact` clase proporciona acceso seguro para subprocesos y de solo lectura a las propiedades de un contacto como el nombre, la dirección o los números de teléfono. `CNContact`funciones como `NSDictionary` y contienen varias colecciones de propiedades de solo lectura (como direcciones o números de teléfono):
+La `CNContact` clase proporciona acceso seguro para subprocesos y de solo lectura a las propiedades de un contacto como el nombre, la dirección o los números de teléfono. `CNContact` funciones como `NSDictionary` y contienen varias colecciones de propiedades de solo lectura (como direcciones o números de teléfono):
 
 [![Información general sobre objetos de contacto](contacts-images/contactobjects.png)](contacts-images/contactobjects.png#lightbox)
 
-En el caso de las propiedades que pueden tener varios valores (como la dirección de correo electrónico o los números de teléfono), se representarán como una matriz de `NSLabeledValue` objetos. `NSLabeledValue`es una tupla segura para subprocesos que consta de un conjunto de solo lectura de etiquetas y valores en los que la etiqueta define el valor para el usuario (por ejemplo, un correo electrónico doméstico o de trabajo). El marco de contactos proporciona una selección de etiquetas predefinidas (a través de las `CNLabelKey` `CNLabelPhoneNumberKey` clases estáticas y) que se pueden usar en la aplicación o la opción de definir etiquetas personalizadas para sus necesidades.
+En el caso de las propiedades que pueden tener varios valores (como la dirección de correo electrónico o los números de teléfono), se representarán como una matriz de `NSLabeledValue` objetos. `NSLabeledValue` es una tupla segura para subprocesos que consta de un conjunto de solo lectura de etiquetas y valores en los que la etiqueta define el valor para el usuario (por ejemplo, un correo electrónico doméstico o de trabajo). El marco de contactos proporciona una selección de etiquetas predefinidas (a través de las `CNLabelKey` `CNLabelPhoneNumberKey` clases estáticas y) que se pueden usar en la aplicación o la opción de definir etiquetas personalizadas para sus necesidades.
 
 En cualquier aplicación de Xamarin. iOS que necesite ajustar los valores de un contacto existente (o crear otros nuevos), use la `NSMutableContact` versión de la clase y sus subclases (como `CNMutablePostalAddress` ).
 
@@ -359,7 +359,7 @@ En este artículo se ha realizado una visión detallada del trabajo con los marc
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de contactos](https://docs.microsoft.com/samples/xamarin/ios-samples/contacts/)
+- [Ejemplo de contactos](/samples/xamarin/ios-samples/contacts/)
 - [Novedades de iOS 9](https://developer.apple.com/library/content/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Referencia del marco de contactos](https://developer.apple.com/documentation/contacts?language=objc)
 - [Referencia de ContactsUI Framework](https://developer.apple.com/documentation/contactsui?language=objc)

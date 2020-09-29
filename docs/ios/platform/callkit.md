@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 791ab82e0e5f47929eff561ac836ec87e6d6c134
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 0dd7736d37f6db17ad794258d9dff852b2745053
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997324"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431855"
 ---
 # <a name="callkit-in-xamarinios"></a>CallKit en Xamarin. iOS
 
@@ -56,8 +56,8 @@ Eche un vistazo más de cerca a la aplicación MonkeyCall en el diagrama anterio
 
 Hay dos interfaces principales en CallKit que usa la aplicación:
 
-- `CXProvider`-Esto permite a la aplicación MonkeyCall informar al sistema de las notificaciones fuera de banda que puedan producirse.
-- `CXCallController`: Permite a la aplicación MonkeyCall informar al sistema de las acciones del usuario local.
+- `CXProvider` -Esto permite a la aplicación MonkeyCall informar al sistema de las notificaciones fuera de banda que puedan producirse.
+- `CXCallController` : Permite a la aplicación MonkeyCall informar al sistema de las acciones del usuario local.
 
 ### <a name="the-cxprovider"></a>CXProvider
 
@@ -217,7 +217,7 @@ namespace MonkeyCall
 }
 ```
 
-`ActiveCall`contiene varias propiedades que definen el estado de la llamada y dos eventos que se pueden generar cuando cambia el estado de la llamada. Puesto que esto es solo un ejemplo, hay tres métodos que se usan para simular el inicio, la respuesta y la finalización de una llamada.
+`ActiveCall` contiene varias propiedades que definen el estado de la llamada y dos eventos que se pueden generar cuando cambia el estado de la llamada. Puesto que esto es solo un ejemplo, hay tres métodos que se usan para simular el inicio, la respuesta y la finalización de una llamada.
 
 ### <a name="the-startcallrequest-class"></a>La clase StartCallRequest
 
@@ -1261,4 +1261,4 @@ En este artículo se ha explicado la nueva API de CallKit que Apple lanzó en iO
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Ejemplos de iOS 10](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)

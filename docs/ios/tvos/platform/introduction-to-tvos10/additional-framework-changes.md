@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 410b66e91168ed07da6f102d96b965f9e6a184f7
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 4eb81a074adb6d2b828bb74edfde9916d69960b1
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571641"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434965"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>Cambios adicionales de tvOS 10 frameworks
 
@@ -66,7 +66,7 @@ tvOS 10 realiza las siguientes mejoras en el marco de imagen principal:
 - El `ImageWithExtent` método de la clase [CIFilter](https://developer.apple.com/reference/coreimage/cifilter) se puede usar para insertar el procesamiento personalizado en la operación de filtro. La imagen principal invocará la devolución de llamada especificada entre filtros al procesar una imagen para la salida o la presentación.
 - Ahora, la aplicación puede procesar imágenes en un espacio de colores fuera del espacio de colores de trabajo del contexto de la imagen principal convirtiendo dentro y fuera del espacio de colores antes y después del procesamiento.
 - Se han realizado varias mejoras de rendimiento en la representación `UIImage` (cuando están respaldadas por los almacenes de imágenes de imagen principales) en los `UIImageView` objetos.
-- `UIImage`los objetos con etiquetas anchas se representarán como un color de gama ancha en los `UIImageView` objetos de dispositivos iOS que admiten el color ancho.
+- `UIImage` los objetos con etiquetas anchas se representarán como un color de gama ancha en los `UIImageView` objetos de dispositivos iOS que admiten el color ancho.
 - El código de kernel de imagen principal ahora puede solicitar formatos de salida de píxeles específicos.
 
 Además, se han agregado los siguientes nuevos filtros de imagen principal:
@@ -96,7 +96,7 @@ Se han realizado las siguientes mejoras en Foundation Framework para tvOS 10:
 Se han realizado las siguientes mejoras en el marco de trabajo de GameKit en tvOS 10:
 
 - La clase [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) ha implementado un nuevo tipo de cuenta solo iCloud.
-- La nueva clase [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) proporciona una solución generalizada para administrar el almacenamiento de datos persistentes en Game Center. `GKGameSession`mantiene una lista de reproductores y la aplicación es responsable de la implementación de la forma y el momento en que se almacena, recupera o intercambia la fecha del participante entre los reproductores. En muchas instancias, las sesiones de juego pueden reemplazar las coincidencias existentes basadas en turnos, las coincidencias en tiempo real o los métodos de guardado de juegos persistentes.
+- La nueva clase [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) proporciona una solución generalizada para administrar el almacenamiento de datos persistentes en Game Center. `GKGameSession` mantiene una lista de reproductores y la aplicación es responsable de la implementación de la forma y el momento en que se almacena, recupera o intercambia la fecha del participante entre los reproductores. En muchas instancias, las sesiones de juego pueden reemplazar las coincidencias existentes basadas en turnos, las coincidencias en tiempo real o los métodos de guardado de juegos persistentes.
 
 <a name="GameplayKit-Enhancements"></a>
 
@@ -197,5 +197,5 @@ Se han realizado las siguientes mejoras en el marco de trabajo de UIKit en tvOS 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Ejemplos de tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [Novedades de tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

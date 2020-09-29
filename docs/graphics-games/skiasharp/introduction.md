@@ -7,12 +7,12 @@ ms.assetid: 19506F08-2603-465E-A806-6BD01638DE90
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/03/2018
-ms.openlocfilehash: 4d0e57b98a479112b9fdf4f9c503418f3966cc73
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: fd8926edce6b2310271e15418f2498162723ba49
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "64749928"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436453"
 ---
 # <a name="skiasharp-platform-independent-examples"></a>Ejemplos independientes de la plataforma SkiaSharp
 
@@ -22,7 +22,7 @@ SkiaSharp proporciona una API de gráficos 2D enriquecida y eficaz que se puede 
 
 La biblioteca está disponible actualmente como [paquete NuGet](https://www.nuget.org/packages/SkiaSharp)multiplataforma, puede agregarla al proyecto agregando la referencia de Nuget.
 
-Para dibujar, el código creará una `SkCanvas` que describe la superficie en la que se realizarán las operaciones de dibujo.
+Para dibujar, el código creará un `SkCanvas` que describe la superficie donde se realizarán las operaciones de dibujo.
 
 ## <a name="obtaining-an-skcanvas"></a>Obtención de un SKCanvas
 
@@ -36,7 +36,7 @@ using (var surface = SKSurface.Create (width: 640, height: 480, SKImageInfo.Plat
 
 ## <a name="drawing-on-skcanvas"></a>Dibujar en SKCanvas
 
-En el `SKCanvas` se usa un modelo de dibujo similar a otros modelos de dibujo con los que puede estar familiarizado, se usan colores con un canal de transparencia opcional y se pueden dibujar líneas, arcos, texto e imágenes.
+`SKCanvas`Usa un modelo de dibujo similar en el espíritu a otros modelos de dibujo con los que puede estar familiarizado, usa colores con un canal de transparencia opcional y puede dibujar líneas, arcos, texto e imágenes.
 
 A continuación se muestran solo algunas de las muchas cosas diferentes que se pueden realizar con SkiaSharp.  En los ejemplos siguientes, la variable `canvas` es de tipo SKCanvas.
 
@@ -135,4 +135,4 @@ using (var paint = new SKPaint()) {
 
 ## <a name="more-information"></a>Más información
 
-Puede encontrar más información sobre el uso de SkiaSharp en la documentación de la [API](https://docs.microsoft.com/dotnet/api/skiasharp) .
+Puede encontrar más información sobre el uso de SkiaSharp en la documentación de la [API](/dotnet/api/skiasharp) .

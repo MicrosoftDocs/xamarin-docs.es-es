@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 9d346dc52437b5c079d499e142036e94cfaef65d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4f79fe550966c36a2be15431757fb7443e090ec9
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030438"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436404"
 ---
 # <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Trabajar con indicadores de progreso de tvOS en Xamarin
 
@@ -45,7 +45,7 @@ Apple tiene las siguientes sugerencias para trabajar con barras de progreso:
 
 La manera más sencilla de trabajar con un indicador de progreso en una aplicación Xamarin. tvOS es agregarla a la interfaz de usuario de la aplicación mediante el diseñador de iOS.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. En el **Panel de solución**, haga doble clic en el archivo **Main. Storyboard** y ábralo para su edición.
 
@@ -57,7 +57,7 @@ La manera más sencilla de trabajar con un indicador de progreso en una aplicaci
 
     ![La pestaña widget para un indicador de actividad](progress-indicators-images/activity02.png "La pestaña widget para un indicador de actividad")
     
-    El **nombre** determina el nombre de la propiedad que representa el indicador de actividad C# en el código.
+    El **nombre** determina el nombre de la propiedad que representa el indicador de actividad en el código de C#.
 
 4. Arrastre una **vista de progreso** desde el **cuadro de herramientas** y colóquela en la vista: 
 
@@ -67,11 +67,11 @@ La manera más sencilla de trabajar con un indicador de progreso en una aplicaci
 
     ![La pestaña widget para una vista de progreso](progress-indicators-images/activity04.png "La pestaña widget para una vista de progreso")
     
-    El **nombre** determina el nombre de la propiedad que representa la vista de progreso C# en el código.
+    El **nombre** determina el nombre de la propiedad que representa la vista de progreso en el código de C#.
 
 6. Guarde los cambios.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. En el **Explorador de soluciones**, haga doble clic en el archivo **Main. Storyboard** y ábralo para su edición.
 
@@ -84,7 +84,7 @@ La manera más sencilla de trabajar con un indicador de progreso en una aplicaci
 
     ![La pestaña widget para un indicador de actividad](progress-indicators-images/activity02-vs.png "La pestaña widget para un indicador de actividad")
 
-    El **nombre** determina el nombre de la propiedad que representa el indicador de actividad C# en el código.
+    El **nombre** determina el nombre de la propiedad que representa el indicador de actividad en el código de C#.
 
 4. Arrastre una **vista de progreso** desde el **cuadro de herramientas** y colóquela en la vista: 
 
@@ -94,7 +94,7 @@ La manera más sencilla de trabajar con un indicador de progreso en una aplicaci
 
     ![La pestaña widget para una vista de progreso](progress-indicators-images/activity04-vs.png "La pestaña widget para una vista de progreso")
     
-    El **nombre** determina el nombre de la propiedad que representa la vista de progreso C# en el código.
+    El **nombre** determina el nombre de la propiedad que representa la vista de progreso en el código de C#.
 
 6. Guarde los cambios.
 
@@ -106,7 +106,7 @@ Para obtener más información sobre cómo trabajar con guiones gráficos, vea n
 
 Como se indicó anteriormente, los indicadores de actividad deben mostrarse cuando la aplicación ejecuta un proceso largo de longitud indeterminada.
 
-En cualquier momento, puede ver si un indicador de actividad se anima comprobando su propiedad `IsAnimating`. Si la propiedad `HidesWhenStopped` es `true`, el indicador de actividad se ocultará automáticamente cuando se detenga su animación.
+En cualquier momento, puede ver si un indicador de actividad se anima comprobando su `IsAnimating` propiedad. Si la `HidesWhenStopped` propiedad es `true` , el indicador de actividad se ocultará automáticamente cuando se detenga su animación.
 
 Puede usar el siguiente código para iniciar la animación: 
 
@@ -127,7 +127,7 @@ ActivityIndicator.StopAnimating();
 
 Una vez más, se debe usar una barra de progreso cada vez que la aplicación ejecute una tarea de ejecución prolongada de una duración conocida. 
 
-La propiedad `Progress` se usa para establecer la cantidad de la tarea que se ha completado del 0% al 100% (de 0,0 a 1,0). Use la propiedad `ProgressTintColor` para establecer el color de la barra cantidad completada y la propiedad `TrackTintColor` para establecer el color de fondo (cantidad incompleta).
+La `Progress` propiedad se usa para establecer la cantidad de la tarea que se ha completado del 0% al 100% (de 0,0 a 1,0). Utilice la `ProgressTintColor` propiedad para establecer el color de la barra cantidad completada y la `TrackTintColor` propiedad para establecer el color de fondo (cantidad incompleta).
 
 ## <a name="summary"></a>Resumen
 
@@ -135,7 +135,7 @@ En este artículo se ha tratado el diseño y el trabajo con indicadores de progr
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Ejemplos de tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guías de la interfaz humana de tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guía de programación de aplicaciones para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

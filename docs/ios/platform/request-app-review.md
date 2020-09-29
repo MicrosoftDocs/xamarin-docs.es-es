@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 795bbffe17a5b14f3814967c1ec4032dfd2739aa
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b51eeb3594f1b41f8b8f7fdaedc7577138c4f5ba
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937077"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435678"
 ---
 # <a name="request-app-review-in-xamarinios"></a>Solicitar revisión de la aplicación en Xamarin. iOS
 
@@ -57,7 +57,7 @@ namespace iOSTenThree
 ```
 
 > [!NOTE]
-> Llamar a `RequestReview()` en una aplicación en desarrollo siempre mostrará el cuadro de diálogo clasificación y revisión para que se pueda probar. Esto no se aplica a las aplicaciones que se han distribuido a través de TestFlight, donde se omitirá la llamada al método.
+> Llamar a  `RequestReview()` en una aplicación en desarrollo siempre mostrará el cuadro de diálogo clasificación y revisión para que se pueda probar. Esto no se aplica a las aplicaciones que se han distribuido a través de TestFlight, donde se omitirá la llamada al método.
 
 Cuando `RequestReview()` se llama al método en una aplicación de envío que el usuario ha instalado desde la tienda de aplicaciones, iOS 10 tratará todo el proceso de evaluación y valoración del desarrollador. De nuevo, dado que este proceso se rige por la Directiva de App Store, es posible que se muestre una alerta.
 
@@ -71,4 +71,4 @@ En este artículo se ha tratado el método RequestReview que Apple ha agregado a
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de iOSTenThree](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree/)
+- [Ejemplo de iOSTenThree](/samples/xamarin/ios-samples/ios10-iostenthree/)

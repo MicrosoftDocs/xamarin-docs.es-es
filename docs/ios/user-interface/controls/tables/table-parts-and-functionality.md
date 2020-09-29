@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 6002e5cc62dfe30c14f21943c690a5a1b15a0c12
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 55f471fe02618becbfc4a7ab8571d9690fe44843
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936596"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430584"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Elementos de tabla y funcionalidad de Xamarin. iOS
 
@@ -92,4 +92,4 @@ En este documento, todos los ejemplos usan UITableViewSource y omiten estas dos 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [WorkingWithTables (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)
+- [WorkingWithTables (ejemplo)](/samples/xamarin/ios-samples/workingwithtables)

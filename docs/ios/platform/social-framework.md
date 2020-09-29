@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: a77b5cd33710a7a8755441efc8b7134d82855c2a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 0c5f2a5c6a3274b298d3de216a2a0f42ed590611
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937974"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436477"
 ---
 # <a name="social-framework-in-xamarinios"></a>Marco de redes sociales en Xamarin. iOS
 
@@ -50,11 +50,11 @@ if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
 }
 ```
 
- `SLComposeViewController`nunca envía un tweet directamente sin interacción del usuario. Sin embargo, se puede inicializar con los métodos siguientes:
+ `SLComposeViewController` nunca envía un tweet directamente sin interacción del usuario. Sin embargo, se puede inicializar con los métodos siguientes:
 
-- `SetInitialText`: Agrega el texto inicial que se va a mostrar en el tweet.
-- `AddUrl`: Agrega una dirección URL al tweet.
-- `AddImage`: Agrega una imagen al tweet.
+- `SetInitialText` : Agrega el texto inicial que se va a mostrar en el tweet.
+- `AddUrl` : Agrega una dirección URL al tweet.
+- `AddImage` : Agrega una imagen al tweet.
 
 Una vez inicializado, al llamar a se `PresentVIewController` muestra la vista creada por `SLComposeViewController` . El usuario puede editar y enviar el tweet opcionalmente, o cancelar su envío. En cualquier caso, el controlador debe descartarse en `CompletionHandler` , donde también se puede comprobar el resultado para ver si se ha enviado o cancelado el tweet, como se muestra a continuación:
 
@@ -472,5 +472,5 @@ En este artículo se ha mostrado cómo usar el marco de redes sociales para inte
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [SocialFrameworkDemo (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/socialframeworkdemo)
+- [SocialFrameworkDemo (ejemplo)](/samples/xamarin/ios-samples/socialframeworkdemo)
 - [Introducción a los servicios web](~/cross-platform/data-cloud/web-services/index.md)
