@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 2684866d04f2b085c70c70a04ff2c828205f0f32
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d378b48741b6640f342d51e6eaa16aaf1a2f74a5
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571921"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457463"
 ---
 # <a name="xamarinandroid-cardview"></a>CardView de Xamarin. Android
 
@@ -20,7 +20,7 @@ _El widget CardView es un componente de interfaz de usuario que presenta el cont
 
 ## <a name="overview"></a>Información general
 
-El `Cardview` widget, introducido en Android 5,0 (Lollipop), es un componente de interfaz de usuario que presenta el contenido de texto e imagen en las vistas que se parecen a las tarjetas. `CardView`se implementa como un `FrameLayout` widget con esquinas redondeadas y una sombra. Normalmente, `CardView` se usa para presentar un elemento de una sola fila en `ListView` un `GridView` grupo de vistas o. Por ejemplo, la siguiente captura de pantalla es un ejemplo de una aplicación de reserva de viajes que implementa `CardView` tarjetas de destino de viaje basadas en desplazable `ListView` :
+El `Cardview` widget, introducido en Android 5,0 (Lollipop), es un componente de interfaz de usuario que presenta el contenido de texto e imagen en las vistas que se parecen a las tarjetas. `CardView` se implementa como un `FrameLayout` widget con esquinas redondeadas y una sombra. Normalmente, `CardView` se usa para presentar un elemento de una sola fila en `ListView` un `GridView` grupo de vistas o. Por ejemplo, la siguiente captura de pantalla es un ejemplo de una aplicación de reserva de viajes que implementa `CardView` tarjetas de destino de viaje basadas en desplazable `ListView` :
 
 ![Aplicación de ejemplo que usa un CardView para cada destino de viaje](card-view-images/01-cardview-example.png)
 
@@ -55,7 +55,7 @@ Para agregar el `Xamarin.Android.Support.v7.CardView` paquete en Visual Studio:
 3. Cuando aparezca la **biblioteca de compatibilidad de Xamarin V7 CardView** , haga clic en **instalar**.
 
 Para obtener información sobre cómo configurar un proyecto de aplicación de Android 5,0, consulte [configuración de un proyecto de android 5,0](~/android/platform/lollipop.md).
-Para obtener más información sobre la instalación de paquetes NuGet, consulte [Tutorial: incluir un NuGet en el proyecto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
+Para obtener más información sobre la instalación de paquetes NuGet, consulte [Tutorial: incluir un NuGet en el proyecto](/visualstudio/mac/nuget-walkthrough).
 
 ## <a name="introducing-cardview"></a>Introducción a CardView
 
@@ -155,22 +155,22 @@ Cuando este ejemplo de diseño se usa para mostrar una imagen en una aplicación
 
 [![CardView con una imagen y un título por debajo de la imagen](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png#lightbox)
 
-Esta captura de pantalla se toma de la aplicación de ejemplo [RecyclerViewer](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer) , que usa un `RecyclerView` widget para presentar una lista desplazable de `CardView` imágenes para ver las fotos. Para obtener más información acerca de `RecyclerView` , consulte la guía de [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) .
+Esta captura de pantalla se toma de la aplicación de ejemplo [RecyclerViewer](/samples/xamarin/monodroid-samples/android50-recyclerviewer) , que usa un `RecyclerView` widget para presentar una lista desplazable de `CardView` imágenes para ver las fotos. Para obtener más información acerca de `RecyclerView` , consulte la guía de [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) .
 
 Tenga en cuenta que `CardView` puede mostrar más de una vista secundaria en su área de contenido. Por ejemplo, en el ejemplo anterior de la aplicación de visualización de fotografías, el área de contenido se compone de un `ListView` que contiene un `ImageView` y un `TextView` . Aunque `CardView` las instancias suelen estar organizadas verticalmente, también puede organizarlas horizontalmente (vea [crear un estilo de vista personalizado](~/android/user-interface/material-theme.md#customview) para obtener una captura de pantalla de ejemplo).
 
 ### <a name="cardview-layout-options"></a>Opciones de diseño CardView
 
-`CardView`los diseños se pueden personalizar estableciendo uno o más atributos que afecten a su relleno, elevación, radio de redondeo y color de fondo:
+`CardView` los diseños se pueden personalizar estableciendo uno o más atributos que afecten a su relleno, elevación, radio de redondeo y color de fondo:
 
 [![Diagrama de atributos CardView](card-view-images/04-attributes-sml.png)](card-view-images/04-attributes.png#lightbox)
 
 Cada atributo también se puede cambiar dinámicamente llamando a un `CardView` método homólogo (para obtener más información sobre `CardView` los métodos, vea la referencia de la [clase CardView](https://developer.android.com/reference/android/support/v7/widget/CardView.html)).
 Tenga en cuenta que estos atributos (excepto el color de fondo) aceptan un valor de dimensión, que es un número decimal seguido de la unidad. Por ejemplo, `11.5dp` especifica 11,5 píxeles independientes de la densidad.
 
-#### <a name="padding"></a>Espaciado interno
+#### <a name="padding"></a>Relleno
 
-`CardView`ofrece cinco atributos de relleno para colocar el contenido dentro de la tarjeta. Puede establecerlos en el XML de diseño o puede llamar a métodos análogos en el código:
+`CardView` ofrece cinco atributos de relleno para colocar el contenido dentro de la tarjeta. Puede establecerlos en el XML de diseño o puede llamar a métodos análogos en el código:
 
 [![Diagrama de atributos de relleno CardView](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png#lightbox)
 
@@ -191,7 +191,7 @@ Por ejemplo, si `contentPadding` se ha aumentado suficientemente en la aplicaci�
 
 #### <a name="elevation"></a>Elevation
 
-`CardView`ofrece dos atributos de elevación para controlar su elevación y, como resultado, el tamaño de su sombra:
+`CardView` ofrece dos atributos de elevación para controlar su elevación y, como resultado, el tamaño de su sombra:
 
 [![Diagrama de atributos de elevación CardView](card-view-images/06-elevation-sml.png)](card-view-images/06-elevation.png#lightbox)
 
@@ -206,7 +206,7 @@ La `cardMaxElevation` configuración es útil cuando la aplicación cambia la el
 
 #### <a name="corner-radius-and-background-color"></a>Color de fondo y radio de esquina
 
-`CardView`proporciona atributos que se pueden usar para controlar el radio de esquina y su color de fondo. Estas dos propiedades permiten cambiar el estilo general del `CardView` :
+`CardView` proporciona atributos que se pueden usar para controlar el radio de esquina y su color de fondo. Estas dos propiedades permiten cambiar el estilo general del `CardView` :
 
 [![Diagrama de los atributos de color de fondo y radio de la esquina CardView](card-view-images/07-radius-bgcolor-sml.png)](card-view-images/07-radius-bgcolor.png#lightbox)
 
@@ -223,11 +223,11 @@ En este diagrama, `cardCornerRadius` se establece en un 10dp redondeado y `cardB
 Puede usar `CardView` en versiones de Android anteriores a android 5,0 Lollipop. Dado `CardView` que forma parte de la biblioteca de compatibilidad de Android V7, puede usar `CardView` con Android 2,1 (nivel de API 7) y versiones posteriores.
 Sin embargo, debe instalar el `Xamarin.Android.Support.v7.CardView` paquete tal y como se describe en [requisitos](#requirements)anteriores.
 
-`CardView`exhibe un comportamiento ligeramente diferente en los dispositivos antes del círculo (nivel de API 21):
+`CardView` exhibe un comportamiento ligeramente diferente en los dispositivos antes del círculo (nivel de API 21):
 
-- `CardView`usa una implementación de instantáneas mediante programación que agrega relleno adicional.
+- `CardView` usa una implementación de instantáneas mediante programación que agrega relleno adicional.
 
-- `CardView`no recorta las vistas secundarias que forman una intersección con las `CardView` esquinas redondeadas de.
+- `CardView` no recorta las vistas secundarias que forman una intersección con las  `CardView` esquinas redondeadas de.
 
 Para ayudar a administrar estas diferencias de compatibilidad, `CardView` proporciona varios atributos adicionales que puede configurar en el diseño:
 
@@ -243,6 +243,6 @@ En esta guía se presentó el nuevo `CardView` Widget incluido en Android 5,0 (L
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [RecyclerView (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
+- [RecyclerView (ejemplo)](/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 - [Introducción al círculo](~/android/platform/lollipop.md)
 - [Referencia de la clase CardView](https://developer.android.com/reference/android/support/v7/widget/CardView.html)

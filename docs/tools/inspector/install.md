@@ -6,12 +6,12 @@ ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: 1545af984c0a409244c323048b448ec44e9be6a8
-ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
+ms.openlocfilehash: 70bc0f90b2802587dba8e2da19430164fccfe861
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88186192"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457346"
 ---
 # <a name="inspector-installation-and-requirements"></a>Instalación y requisitos del inspector
 
@@ -20,13 +20,13 @@ ms.locfileid: "88186192"
 # <a name="windows"></a>[Windows](#tab/windows)
 
 1. Descargue e instale [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/) y seleccione la carga de trabajo **desarrollo para dispositivos móviles con .net** .
-1. [Inicie sesión](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio) para habilitar su suscripción Enterprise.
+1. [Inicie sesión](/visualstudio/ide/signing-in-to-visual-studio) para habilitar su suscripción Enterprise.
 1. [Inspeccione](~/tools/inspector/inspect.md) su propia aplicación.
 
 # <a name="macos"></a>[macOS](#tab/macos)
 
 1. Descargue e instale [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/).
-1. [Inicie sesión](https://docs.microsoft.com/visualstudio/mac/activation) para habilitar su suscripción Enterprise.
+1. [Inicie sesión](/visualstudio/mac/activation) para habilitar su suscripción Enterprise.
 1. [Inspeccione](~/tools/inspector/inspect.md) su propia aplicación.
 
 -----

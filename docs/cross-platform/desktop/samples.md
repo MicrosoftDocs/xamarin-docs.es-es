@@ -5,12 +5,12 @@ description: Este documento se vincula a varias aplicaciones de ejemplo que se h
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: 2797237fed9dab1b7e101b63b17e04281bc5de1d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 11b92ecb29dd2a558aba8aa47551e6ed2a54883b
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016404"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456839"
 ---
 # <a name="cross-platform-desktop-samples"></a>Ejemplos de escritorio multiplataforma
 
@@ -46,4 +46,4 @@ Aplicación de ejemplo a la que se hace referencia a continuación:
 
 ## <a name="mobile-app-samples"></a>Ejemplos de aplicaciones móviles
 
-* Otros [ejemplos de Xamarin](https://docs.microsoft.com/samples/browse/?products=xamarin)
+* Otros [ejemplos de Xamarin](/samples/browse/?products=xamarin)

@@ -6,12 +6,12 @@ ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 55830c21c178a13fd58b73b6920c21cfa3e9c945
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 0ce1d4d0b74330b623b6d933e385222a71a38ec4
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86940041"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91458165"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Uso de Jenkins con Xamarin
 
@@ -44,7 +44,7 @@ En el siguiente diagrama se ilustran todos estos elementos en un servidor de com
 
 las aplicaciones de iOS solo se pueden compilar y firmar en un equipo que ejecute macOS. Una Mini Mac es una opción de bajo costo razonable, pero cualquier equipo capaz de ejecutar OS X 10,10 (Yosemite) o superior es suficiente.
 
-Si TFS se usa para el control de código fuente, querrá instalar [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/). Team Explorer Everywhere proporciona acceso multiplataforma a TFS en el terminal de macOS.
+Si TFS se usa para el control de código fuente, querrá instalar [Team Explorer Everywhere](/azure/devops/java/download-eclipse-plug-in/). Team Explorer Everywhere proporciona acceso multiplataforma a TFS en el terminal de macOS.
 
 [!include[](~/tools/ci/includes/firewall-information.md)]
 
@@ -114,7 +114,7 @@ Se mostrará la página del **Administrador de complementos de Jenkins** . Si ha
 Desplazarse por todos los complementos de 600 para encontrar algunos puede ser tedioso y propenso a errores. Jenkins proporciona un campo de búsqueda de filtro en la esquina superior derecha de la interfaz. El uso de este campo de filtro para buscar simplificará la ubicación e instalación de uno o todos los complementos siguientes:
 
 - **Complemento de MSBuild para Jenkins** : este complemento permite compilar soluciones de Visual Studio y Visual Studio para Mac (. sln) y proyectos (. csproj).
-- **Complemento de inyector de entorno** : se trata de un complemento opcional pero útil que permite establecer variables de entorno en el nivel de trabajo y de compilación. También ofrece protección adicional para variables como las contraseñas que se usan para firmar el código de la aplicación. A veces se abrevia como el *complemento EnvInject* .
+- **Complemento de inyector de entorno** : se trata de un complemento opcional pero útil que permite establecer variables de entorno en el nivel de trabajo y de compilación. También ofrece protección adicional para variables como las contraseñas que se usan para firmar el código de la aplicación. A veces se abrevia como el  *complemento EnvInject* .
 - **Complemento de Team Foundation Server** : se trata de un complemento opcional que solo es necesario si usa Team Foundation Server o Team Foundation Services para el control de código fuente.
 
 Jenkins admite git sin complementos adicionales.
@@ -139,7 +139,7 @@ Haga clic en este botón y rellene el **nombre** y la **ruta de acceso** a los c
 
 Esta sección es obligatoria si tiene previsto usar TFS para el control de código fuente.
 
-Para que una estación de trabajo de macOS interactúe con un servidor de TFS, [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) se debe instalar en la estación de trabajo. Team Explorer Everywhere es un conjunto de herramientas de Microsoft que incluye un cliente de línea de comandos multiplataforma para tener acceso a TFS. Team Explorer Everywhere puede descargarse de Microsoft e instalarse en tres pasos:
+Para que una estación de trabajo de macOS interactúe con un servidor de TFS, [Team Explorer Everywhere](/azure/devops/java/download-eclipse-plug-in/) se debe instalar en la estación de trabajo. Team Explorer Everywhere es un conjunto de herramientas de Microsoft que incluye un cliente de línea de comandos multiplataforma para tener acceso a TFS. Team Explorer Everywhere puede descargarse de Microsoft e instalarse en tres pasos:
 
 1. Descomprima el archivo de almacenamiento en un directorio que sea accesible para la cuenta de usuario. Por ejemplo, puede descomprimir el archivo en **~/Tee**.
 2. Configure el shell o la ruta de acceso del sistema para incluir la carpeta que contiene los archivos que se descomprimen en el paso uno anterior. Por ejemplo,
@@ -396,4 +396,4 @@ En esta guía hemos introducido Jenkins como un servidor de compilación en macO
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Integración continua](~/tools/ci/index.md)
-- [App Center Test](https://docs.microsoft.com/appcenter/test-cloud/)
+- [App Center Test](/appcenter/test-cloud/)

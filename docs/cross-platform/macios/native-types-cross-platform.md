@@ -6,12 +6,12 @@ ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 author: davidortinau
 ms.author: daortin
 ms.date: 04/07/2016
-ms.openlocfilehash: c86a00f325f9799b16f6244d3d1cb68de31be005
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4819f8fc88a8a2c730fc25215e862d68cc5bd643
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015538"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457294"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>Trabajo con tipos nativos en aplicaciones multiplataforma
 
@@ -23,9 +23,9 @@ En este documento se describen diferentes formas de interoperar con el Unified A
 
 ## <a name="when-to-use-the-native-types"></a>Cuándo usar los tipos nativos
 
-Las API unificadas de Xamarin. iOS y Xamarin. Mac todavía incluyen los tipos de datos `int`, `uint` y `float`, así como los tipos `RectangleF`, `SizeF` y `PointF`. Estos tipos de datos existentes deben seguir utilizándose en cualquier código compartido multiplataforma. Los nuevos tipos de datos nativos solo deben usarse al realizar una llamada a una API de Mac o iOS, donde se requiere compatibilidad con tipos compatibles con la arquitectura.
+Las API unificadas de Xamarin. iOS y Xamarin. Mac todavía incluyen los `int` `uint` tipos de datos, y, así `float` como los `RectangleF` `SizeF` tipos, y `PointF` . Estos tipos de datos existentes deben seguir utilizándose en cualquier código compartido multiplataforma. Los nuevos tipos de datos nativos solo deben usarse al realizar una llamada a una API de Mac o iOS, donde se requiere compatibilidad con tipos compatibles con la arquitectura.
 
-En función de la naturaleza del código que se va a compartir, puede haber ocasiones en las que el código multiplataforma pueda necesitar tratar con los tipos de datos `nint`, `nuint` y `nfloat`. Por ejemplo: una biblioteca que controla las transformaciones de datos rectangulares que anteriormente utilizaban `System.Drawing.RectangleF` para compartir la funcionalidad entre las versiones de Xamarin. iOS y Xamarin. Android de una aplicación, tendría que actualizarse para controlar tipos nativos en iOS.
+Dependiendo de la naturaleza del código que se comparte, puede haber ocasiones en las que el código multiplataforma pueda necesitar tratar con los `nint` tipos de `nuint` datos, y `nfloat` . Por ejemplo: una biblioteca que controla las transformaciones de datos rectangulares que anteriormente utilizaba `System.Drawing.RectangleF` para compartir la funcionalidad entre las versiones de Xamarin. iOS y Xamarin. Android de una aplicación, tendría que actualizarse para controlar tipos nativos en iOS.
 
 La forma en que se controlan estos cambios depende del tamaño y la complejidad de la aplicación y de la forma de uso compartido de código que se ha usado, como veremos en las secciones siguientes.
 
@@ -37,7 +37,7 @@ Como se indica en el documento [Opciones de código para compartir](~/cross-plat
 
 Una biblioteca de clases portable (PCL) permite tener como destino las plataformas que desea admitir y utilizar interfaces para proporcionar funcionalidad específica de la plataforma.
 
-Dado que el tipo de proyecto PCL se compila en un `.DLL` y no tiene sentido en el Unified API, se le obligará a seguir usando los tipos de datos existentes (`int`, `uint`, `float`) en el código fuente PCL y convierta las llamadas a las clases de la PCL. los métodos y en las aplicaciones de front-end. Por ejemplo:
+Dado que el tipo de proyecto PCL se compila en un `.DLL` y no tiene sentido el Unified API, se le obligará a seguir usando los tipos de datos existentes ( `int` , `uint` , `float` ) en el código fuente PCL y convierta las llamadas a las clases y los métodos de la PCL en las aplicaciones front-end. Por ejemplo:
 
 ```csharp
 using NativePCL;
@@ -49,11 +49,11 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 
 ### <a name="shared-projects"></a>Proyectos compartidos
 
-El tipo de proyecto de recurso compartido le permite organizar el código fuente en un proyecto independiente que, a continuación, se incluye y se compila en las aplicaciones front-end específicas de cada plataforma y usa `#if` directivas de compilador según sea necesario para administrar los específicos de la plataforma. satisfacer.
+El tipo de proyecto de recurso compartido le permite organizar el código fuente en un proyecto independiente que, a continuación, se incluye y se compila en las aplicaciones front-end específicas de cada plataforma y usa `#if` directivas de compilador según sea necesario para administrar los requisitos específicos de la plataforma.
 
-Es necesario tener en cuenta el tamaño y la complejidad de las aplicaciones móviles front-end que consumen código compartido, junto con el tamaño y la complejidad del código que se comparte, al elegir el método de compatibilidad con tipos de datos nativos en una plataforma multiplataforma. Proyecto de recurso compartido.
+Es necesario tener en cuenta el tamaño y la complejidad de las aplicaciones móviles front-end que consumen código compartido, junto con el tamaño y la complejidad del código que se comparte, al elegir el método de compatibilidad con tipos de datos nativos en un proyecto de recursos compartidos multiplataforma.
 
-En función de estos factores, los siguientes tipos de soluciones podrían implementarse mediante las directivas de compilador de `if __UNIFIED__ ... #endif` para controlar los cambios específicos de Unified API en el código.
+En función de estos factores, los siguientes tipos de soluciones podrían implementarse mediante las `if __UNIFIED__ ... #endif` directivas de compilador para controlar el Unified API cambios concretos en el código.
 
 #### <a name="using-duplicate-methods"></a>Usar métodos duplicados
 
@@ -98,11 +98,11 @@ namespace NativeShared
 }
 ```
 
-En el código anterior, dado que la rutina `CalculateArea` es muy sencilla, hemos usado la compilación condicional y hemos creado una versión de Unified API independiente del método. Por otro lado, si la biblioteca contiene muchas rutinas o varias rutinas complejas, esta solución no sería factible, ya que suponería un problema para mantener todos los métodos sincronizados para modificaciones o correcciones de errores.
+En el código anterior, dado que la `CalculateArea` rutina es muy simple, se ha usado la compilación condicional y se ha creado una versión independiente Unified API del método. Por otro lado, si la biblioteca contiene muchas rutinas o varias rutinas complejas, esta solución no sería factible, ya que suponería un problema para mantener todos los métodos sincronizados para modificaciones o correcciones de errores.
 
 #### <a name="using-method-overloads"></a>Usar sobrecargas de método
 
-En ese caso, la solución podría ser crear una versión de sobrecarga de los métodos usando tipos de datos de 32 bits para que ahora tomen `CGRect` como un parámetro o un valor devuelto, convertir ese valor en un `RectangleF` (sabiendo que la conversión de `nfloat` a `float` es una conversión de pérdida) y llama a la versión original de la rutina para realizar el trabajo real. Por ejemplo:
+En ese caso, la solución podría ser crear una versión de sobrecarga de los métodos usando tipos de datos de 32 bits para que ahora tomen `CGRect` como un parámetro o un valor devuelto, conviertan ese valor a un `RectangleF` (sabiendo que la conversión de `nfloat` a `float` es una conversión de pérdida) y llame a la versión original de la rutina para realizar el trabajo real. Por ejemplo:
 
 ```csharp
 using System;
@@ -149,7 +149,7 @@ Una vez más, se trata de una buena solución, siempre y cuando la pérdida de p
 
 #### <a name="using-alias-directives"></a>Usar directivas de alias
 
-En el caso de las áreas en las que la pérdida de precisión es un problema, otra posible solución es usar directivas de `using` para crear un alias para los tipos de datos nativos y CoreGraphics incluyendo el código siguiente en la parte superior de los archivos de código fuente compartidos y convirtiendo los @no_ necesarios valores de _t_1_, `uint` o `float` para `nint`, `nuint` o `nfloat`:
+En el caso de las áreas en las que la pérdida de precisión es un problema, otra posible solución es usar `using` directivas para crear un alias para los tipos de datos nativos y CoreGraphics mediante la inclusión del código siguiente en la parte superior de los archivos de código fuente compartidos y la conversión de los `int` valores necesarios, `uint` o `float` a `nint` `nuint` o `nfloat` :
 
 ```csharp
 #if __UNIFIED__
@@ -206,9 +206,9 @@ namespace NativeShared
 }
 ```
 
-Tenga en cuenta que aquí hemos cambiado el método `CalculateArea` para devolver una `nfloat` en lugar de la `float`estándar. Esto se hizo para que no se obtenga un error de compilación al intentar convertir _implícitamente_ el resultado de `nfloat` de nuestro cálculo (ya que los dos valores que se multiplican son del tipo `nfloat`) en un valor devuelto de `float`.
+Tenga en cuenta que aquí hemos cambiado el `CalculateArea` método para devolver un `nfloat` en lugar del estándar `float` . Esto se hizo para que no se obtenga un error de compilación al intentar convertir _implícitamente_ el `nfloat` resultado de nuestro cálculo (dado que los dos valores que se van a multiplicar son del tipo `nfloat` ) a un `float` valor devuelto.
 
-Si el código se compila y se ejecuta en un dispositivo que no es de Unified API, el `using nfloat = global::System.Single;` asigna el `nfloat` a un `Single` que se convertirá implícitamente en un `float` que permite a la aplicación de front-end consumidor llamar al método `CalculateArea` sin modificarlo.
+Si el código se compila y se ejecuta en un dispositivo que no es Unified API, `using nfloat = global::System.Single;` asigna `nfloat` a un `Single` que se convertirá implícitamente en un que `float` permita a la aplicación de front-end que lo consume llamar al `CalculateArea` método sin modificarlo.
 
 #### <a name="using-type-conversions-in-the-front-end-app"></a>Usar conversiones de tipos en la aplicación front-end
 
@@ -246,4 +246,4 @@ En este artículo hemos descubierto Cuándo usar los tipos de datos nativos en u
 - [Unified API](~/cross-platform/macios/unified/index.md)
 - [Tipos nativos](~/cross-platform/macios/nativetypes.md)
 - [Opciones de código compartido](~/cross-platform/app-fundamentals/code-sharing.md)
-- [Ejemplo de uso compartido de código](https://docs.microsoft.com/samples/xamarin/mobile-samples/sharingcode/)
+- [Ejemplo de uso compartido de código](/samples/xamarin/mobile-samples/sharingcode/)

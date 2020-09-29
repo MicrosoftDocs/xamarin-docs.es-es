@@ -7,63 +7,63 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2018
-ms.openlocfilehash: 63fb9c3b1484026cb390a8a475c711562dfd0771
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 67698ae7fe3ef9a7586d83e26ed276ba473396e5
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028590"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457515"
 ---
 # <a name="android-wear"></a>Android Wear
 
 El desgaste de Android es una versión de Android que está diseñada para dispositivos portátil, como las inspecciones inteligentes. En esta sección se incluyen instrucciones sobre cómo instalar y configurar las herramientas necesarias para el desarrollo de desgaste, un tutorial paso a paso para crear su primer dispositivo de desgaste y una lista de ejemplos a los que puede hacer referencia para crear sus propias aplicaciones de desgaste.
 
-## <a name="getting-startedandroidwearget-startedindexmd"></a>[Introducción](~/android/wear/get-started/index.md)
+## <a name="getting-started"></a>[Introducción](~/android/wear/get-started/index.md)
 
 Presenta el desgaste de Android, describe cómo instalar y configurar el equipo para el desarrollo de desgaste y proporciona pasos para ayudarle a crear y ejecutar su primera aplicación de desgaste de Android en un emulador o dispositivo de desgaste.
 
-## <a name="user-interfaceandroidwearuser-interfaceindexmd"></a>[Interfaz de usuario](~/android/wear/user-interface/index.md)
+## <a name="user-interface"></a>[Interfaz de usuario](~/android/wear/user-interface/index.md)
 
 Explica los controles específicos del desgaste de Android y proporciona vínculos a ejemplos que muestran cómo usar estos controles.
 
-## <a name="platform-featuresandroidwearplatformindexmd"></a>[Características de la plataforma](~/android/wear/platform/index.md)
+## <a name="platform-features"></a>[Características de la plataforma](~/android/wear/platform/index.md)
 
 Los documentos de esta sección cubren características específicas del desgaste de Android. Aquí encontrará un tema en el que se describe cómo crear un WatchFace.
 
-## <a name="screen-sizesandroidwearscreen-sizesmd"></a>[Tamaños de pantalla](~/android/wear/screen-sizes.md)
+## <a name="screen-sizes"></a>[Tamaños de pantalla](~/android/wear/screen-sizes.md)
 
 Obtenga una vista previa y optimice la interfaz de usuario para los tamaños de pantalla disponibles.
 
-## <a name="deployment--testingandroidweardeploy-testindexmd"></a>[Implementación y pruebas](~/android/wear/deploy-test/index.md)
+## <a name="deployment--testing"></a>[Implementación y pruebas](~/android/wear/deploy-test/index.md)
 
 Explica cómo implementar la aplicación de desgaste de Android en un dispositivo de desgaste de Android o en un emulador de Android configurado para el desgaste. También incluye sugerencias de depuración e información sobre cómo configurar una conexión Bluetooth entre el equipo de desarrollo y un dispositivo Android.
 
-## <a name="wear-apishttpsdeveloperandroidcomreferenceandroidsupportwearable"></a>[Desgaste de las API](https://developer.android.com/reference/android/support/wearable)
+## <a name="wear-apis"></a>[Desgaste de las API](https://developer.android.com/reference/android/support/wearable)
 
-El sitio para desarrolladores de Android proporciona información detallada sobre las API de desgaste de claves, como la [actividad de portátil](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html), los [intentos](https://developer.android.com/reference/com/google/android/wearable/intent/package-summary.html), la [autenticación](https://developer.android.com/reference/android/support/wearable/authentication/package-summary.html), las [complicaciones](https://developer.android.com/reference/android/support/wearable/complications/package-summary.html), la [representación de complicaciones](https://developer.android.com/reference/android/support/wearable/complications/rendering/package-summary.html), las [notificaciones](https://developer.android.com/reference/android/support/wearable/notifications/package-summary.html), [ Vistas](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)y [WatchFace](https://developer.android.com/reference/android/support/wearable/watchface/package-summary.html).
+El sitio para desarrolladores de Android proporciona información detallada sobre las API de desgaste de claves, como la [actividad de portátil](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html), los [intentos](https://developer.android.com/reference/com/google/android/wearable/intent/package-summary.html), la [autenticación](https://developer.android.com/reference/android/support/wearable/authentication/package-summary.html), las [complicaciones](https://developer.android.com/reference/android/support/wearable/complications/package-summary.html), la [representación de complicaciones](https://developer.android.com/reference/android/support/wearable/complications/rendering/package-summary.html), las [notificaciones](https://developer.android.com/reference/android/support/wearable/notifications/package-summary.html), las [vistas](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)y la [WatchFace](https://developer.android.com/reference/android/support/wearable/watchface/package-summary.html).
 
 ## <a name="samples"></a>Ejemplos
 
-Puede encontrar una serie de [ejemplos](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) con el desgaste de Android (o ir directamente a [GitHub](https://github.com/xamarin/monodroid-samples/tree/master/wear)).
+Puede encontrar una serie de [ejemplos](/samples/browse/?products=xamarin&term=Xamarin.Android%2bwear) con el desgaste de Android (o ir directamente a [GitHub](https://github.com/xamarin/monodroid-samples/tree/master/wear)).
 
-|Ejemplo|Descripción|Captura de pantalla|
+|Muestra|Descripción|Instantánea|
 |--- |--- |--- |
-|[SkeletonWear](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-skeletonwear)|Un ejemplo sencillo de los aspectos básicos de los proyectos de portátil, incluidas las notificaciones de GridViewPager y interactivas.|![Captura de pantalla de Skeletonwear](images/skeleton.png)|
-|[WatchViewStub](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchviewstub)|Demostración sencilla del control WatchViewStub que detecta la forma de pantalla y carga automáticamente el diseño correcto. Vea cómo funciona WatchViewStub en el diseño **Resources/layout/main_activity. XML** .|![Captura de pantalla de WatchViewStub](images/watchview.png)|
-|[RecipeAssistant](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant)|Demostración de las páginas de notificación de desgaste, en forma de pasos de recetas. Las notificaciones se crean en RecipeService.cs.|![Captura de pantalla de RecipeAssistant](images/recipeassist.png)|
-|[ElizaChat](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-elizachat)|Ejemplo divertido de interactuar con un "asistente personal" denominado Eliza, mediante el uso de notificaciones interactivas para crear una conversación mediante respuestas preparadas.|![Captura de pantalla de ElizaChat](images/eliza.png)|
-|[GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager)|GridViewPager implementa el modelo de navegación 2D, donde el usuario se desliza verticalmente y, a continuación, horizontalmente para navegar por las opciones y el contenido.|![Captura de pantalla de GridViewPager](images/gridviewpager.png)|
-|[WatchFace](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchface)|WatchFace es una esfera de inspección personalizada con una hora, un minuto y dos manos de estilo analógico. En este ejemplo se muestra cómo crear un servicio de reloj de inspección que dibuja la hora actual y controla los eventos de cambio de visibilidad y el modo ambiente. Incluye un receptor de difusión que escucha los cambios de zona horaria y actualiza automáticamente la hora según corresponda.|![Captura de pantalla de WatchFace](images/gridviewpager.png)|
+|[SkeletonWear](/samples/xamarin/monodroid-samples/wear-skeletonwear)|Un ejemplo sencillo de los aspectos básicos de los proyectos de portátil, incluidas las notificaciones de GridViewPager y interactivas.|![Captura de pantalla de Skeletonwear](images/skeleton.png)|
+|[WatchViewStub](/samples/xamarin/monodroid-samples/wear-watchviewstub)|Demostración sencilla del control WatchViewStub que detecta la forma de pantalla y carga automáticamente el diseño correcto. Vea cómo funciona WatchViewStub en el diseño de **recursos, diseño y main_activity.xml** .|![Captura de pantalla de WatchViewStub](images/watchview.png)|
+|[RecipeAssistant](/samples/xamarin/monodroid-samples/wear-recipeassistant)|Demostración de las páginas de notificación de desgaste, en forma de pasos de recetas. Las notificaciones se crean en RecipeService.cs.|![Captura de pantalla de RecipeAssistant](images/recipeassist.png)|
+|[ElizaChat](/samples/xamarin/monodroid-samples/wear-elizachat)|Ejemplo divertido de interactuar con un "asistente personal" denominado Eliza, mediante el uso de notificaciones interactivas para crear una conversación mediante respuestas preparadas.|![Captura de pantalla de ElizaChat](images/eliza.png)|
+|[GridViewPager](/samples/xamarin/monodroid-samples/wear-gridviewpager)|GridViewPager implementa el modelo de navegación 2D, donde el usuario se desliza verticalmente y, a continuación, horizontalmente para navegar por las opciones y el contenido.|![Captura de pantalla de GridViewPager](images/gridviewpager.png)|
+|[WatchFace](/samples/xamarin/monodroid-samples/wear-watchface)|WatchFace es una esfera de inspección personalizada con una hora, un minuto y dos manos de estilo analógico. En este ejemplo se muestra cómo crear un servicio de reloj de inspección que dibuja la hora actual y controla los eventos de cambio de visibilidad y el modo ambiente. Incluye un receptor de difusión que escucha los cambios de zona horaria y actualiza automáticamente la hora según corresponda.|![Captura de pantalla de WatchFace](images/gridviewpager.png)|
 
 ## <a name="videos"></a>Vídeos
 
 Consulte estos vínculos de vídeo que describen Xamarin. Android con soporte técnico de uso:
 
-|Descripción|Captura de pantalla|
+|Descripción|Instantánea|
 |--- |--- |
-|[Android l y mucho más](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; la versión preliminar para desarrolladores de Android l presentó una gran cantidad de nuevas API para que los desarrolladores aprovechen las ventajas de, incluido el diseño de materiales, las notificaciones y las nuevas animaciones, por nombrar algunas.|![Captura de pantalla de vídeo de presentación](images/video-android-l.png)|
-|[está en mis oídos y en mis ojos: Google Glass y el desgaste de Android&ndash;la informática de portátil podría parecer algo en el futuro (o un episodio de gadget de inspector), pero muchas personas ya están adoptando el futuro hoy mismo. C# ](https://www.youtube.com/watch?v=80H8tXByZQc) C#los desarrolladores saben esto y ya tienen las herramientas y los conocimientos necesarios para aprovechar la eficacia de los dispositivos portátil (desde el desarrollo de 2014).|![Captura de pantalla de vídeo de presentación](images/video-eyes-ears.png)|
-|[Novedades de Xamarin. android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, desgaste de Android, televisión de Android, Android auto, diseño de material y arte; ¿Qué significa esto como desarrollador de Xamarin? de evolucionar 2014.|![Captura de pantalla de vídeo de presentación](Images/video-whats-new.png)|
+|[Android L y mucho más](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; La versión preliminar para desarrolladores de Android L presentó una gran cantidad de nuevas API para que los desarrolladores aprovechen las ventajas de, incluido el diseño de materiales, las notificaciones y las nuevas animaciones, por nombrar algunas.|![Captura de pantalla de vídeo de presentación](images/video-android-l.png)|
+|[C# está en mis oídos y en mis ojos: el desgaste](https://www.youtube.com/watch?v=80H8tXByZQc) &ndash; de Google Glass y Android La informática de portátil podría parecer algo en el futuro (o un episodio de gadget de inspector), pero muchas personas ya están adoptando el futuro hoy mismo. Los desarrolladores de C# lo saben y ya tienen las herramientas y los conocimientos necesarios para aprovechar la eficacia de los dispositivos portátil (desde la evolución 2014).|![Captura de pantalla de vídeo de presentación](images/video-eyes-ears.png)|
+|[Novedades de Xamarin. Android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, desgaste de Android, televisión de Android, Android auto, diseño de material y arte; ¿Qué significa esto como desarrollador de Xamarin? de evolucionar 2014.|![Captura de pantalla de vídeo de presentación](Images/video-whats-new.png)|
 
 <!--
 

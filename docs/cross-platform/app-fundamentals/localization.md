@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: dab6d1ff573f0f74b3b230732aa4669ba9fda0d5
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 38bee7e2c4c0b3cdf5107842e47feeeb1445d626
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934867"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457736"
 ---
 # <a name="localization"></a>Localización
 
@@ -108,7 +108,7 @@ Si el usuario de la aplicación está introduciendo los datos, analice el uso de
 double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 ```
 
-Para obtener más información, consulte los artículos [análisis de cadenas numéricas](https://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) y análisis de cadenas de [fecha y hora](https://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) de MSDN.
+Para obtener más información, consulte los artículos [análisis de cadenas numéricas](/dotnet/standard/base-types/parsing-numeric) y análisis de cadenas de [fecha y hora](/dotnet/standard/base-types/parsing-datetime) de MSDN.
 
 <a name="rtl"></a>
 
@@ -124,11 +124,11 @@ Las aplicaciones que admiten estos lenguajes deben usar diseños de pantalla que
 
 Tanto iOS como Android admiten diseños de derecha a izquierda y representación de fuentes, con características integradas que ayudan a realizar los ajustes anteriores. Xamarin. Forms no admite actualmente la representación RTL.
 
-### <a name="sorting"></a>Ordenación
+### <a name="sorting"></a>Ordenar
 
 Los distintos idiomas definen el criterio de ordenación de los alfabetos de forma diferente, incluso cuando utilizan el mismo juego de caracteres.
 
-Vea los [detalles de la comparación de cadenas](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) en [procedimientos recomendados para el uso de cadenas en el .NET Framework](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) para ver un ejemplo en el que el lenguaje (CultureInfo) afecta al criterio de ordenación.
+Vea los [detalles de la comparación de cadenas](/dotnet/standard/base-types/best-practices-strings#the_details_of_string_comparison) en [procedimientos recomendados para el uso de cadenas en el .NET Framework](/dotnet/standard/base-types/best-practices-strings) para ver un ejemplo en el que el lenguaje (CultureInfo) afecta al criterio de ordenación.
 
 No es probable que las capacidades de base de datos integrada en las plataformas móviles admitan el orden específico del idioma, por lo que puede ser necesario implementar código adicional en la lógica de negocios.
 
@@ -297,4 +297,4 @@ Siga leyendo los detalles técnicos de la plataforma en la que está interesado:
 
 - [Información general sobre la localización de Apple](https://developer.apple.com/internationalization/)
 - [Lista de comprobación de la localización de Android](https://developer.android.com/distribute/tools/localization-checklist.html)
-- [Prácticas recomendadas para desarrollar aplicaciones de uso internacional (MSDN)](https://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)
+- [Prácticas recomendadas para desarrollar aplicaciones de uso internacional (MSDN)](/previous-versions/visualstudio/visual-studio-2008/w7x1y988(v=vs.90))

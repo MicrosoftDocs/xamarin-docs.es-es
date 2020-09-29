@@ -6,23 +6,23 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/30/2017
-ms.openlocfilehash: 2ffa544789e0d605a241c8e038c790650a7fc6a3
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 3085131e251a787965c91216106becb6c954da85
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76724981"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457710"
 ---
 # <a name="xamarinandroid-textureview"></a>TextureView de Xamarin. Android
 
-La clase `TextureView` es una vista que usa la representación 2D con aceleración de hardware para habilitar la presentación de un flujo de contenido de vídeo o OpenGL. Por ejemplo, en la siguiente captura de pantalla se muestra el `TextureView` mostrar una fuente dinámica desde la cámara del dispositivo:
+La `TextureView` clase es una vista que usa la representación 2D con aceleración de hardware para permitir que se muestre un flujo de contenido de vídeo o OpenGL. Por ejemplo, en la siguiente captura de pantalla se muestra la `TextureView` presentación de una fuente en directo desde la cámara del dispositivo:
 
-[![captura de pantalla de ejemplo de una imagen dinámica de la cámara del dispositivo](texture-view-images/22-textureviewcamera.png)](texture-view-images/22-textureviewcamera.png#lightbox)
+[![Captura de pantalla de ejemplo de una imagen dinámica de la cámara del dispositivo](texture-view-images/22-textureviewcamera.png)](texture-view-images/22-textureviewcamera.png#lightbox)
 
-A diferencia de la clase `SurfaceView`, que también se puede usar para mostrar contenido de OpenGL o vídeo, TextureView no se representa en una ventana independiente.
-Por lo tanto, `TextureView` es capaz de admitir transformaciones de vista como cualquier otra vista. Por ejemplo, la rotación de un `TextureView` se puede realizar simplemente estableciendo su propiedad `Rotation`, su transparencia estableciendo su propiedad `Alpha`, etc.
+A diferencia de la `SurfaceView` clase, que también se puede usar para mostrar contenido de OpenGL o vídeo, TextureView no se representa en una ventana independiente.
+Por lo tanto, `TextureView` es capaz de admitir transformaciones de vista como cualquier otra vista. Por ejemplo, la rotación de un `TextureView` se puede realizar simplemente estableciendo su `Rotation` propiedad, su transparencia estableciendo su `Alpha` propiedad, etc.
 
-Por lo tanto, con la `TextureView` podemos hacer cosas como mostrar una secuencia en directo desde la cámara y transformarla, tal y como se muestra en el código siguiente:
+Por lo tanto, con, `TextureView` ahora podemos hacer cosas como mostrar una secuencia en directo desde la cámara y transformarla, tal como se muestra en el código siguiente:
 
 ```csharp
 public class TextureViewActivity : Activity,
@@ -65,12 +65,12 @@ public class TextureViewActivity : Activity,
 }
 ```
 
-En el código anterior se crea una instancia de `TextureView` en el método de `OnCreate` de la actividad y se establece la actividad como `SurfaceTextureListener`del `TextureView`. Para ser el `SurfaceTextureListener`, la actividad implementa la interfaz `TextureView.ISurfaceTextureListener`. El sistema llamará al método `OnSurfaceTextAvailable` cuando el `SurfaceTexture` esté listo para su uso. En este método, tomamos el `SurfaceTexture` que se pasa y lo establece en la textura de vista previa de la cámara. A continuación, podemos realizar operaciones normales basadas en vistas, como establecer el `Rotation` y `Alpha`, como en el ejemplo anterior. La aplicación resultante, que se ejecuta en un dispositivo, se muestra a continuación:
+En el código anterior se crea una `TextureView` instancia en el método de la actividad `OnCreate` y se establece la actividad como `TextureView` `SurfaceTextureListener` . Para ser `SurfaceTextureListener` , la actividad implementa la `TextureView.ISurfaceTextureListener` interfaz. El sistema llamará al `OnSurfaceTextAvailable` método cuando el `SurfaceTexture` está listo para su uso. En este método, se toma el `SurfaceTexture` que se pasa y se establece en la textura de vista previa de la cámara. A continuación, podemos realizar operaciones normales basadas en vistas, como establecer `Rotation` y `Alpha` , como en el ejemplo anterior. La aplicación resultante, que se ejecuta en un dispositivo, se muestra a continuación:
 
-[![ejemplo de la aplicación que se ejecuta en un dispositivo y que muestra una imagen](texture-view-images/17-textureviewdemo.png)](texture-view-images/17-textureviewdemo.png#lightbox)
+[![Ejemplo de la aplicación que se ejecuta en un dispositivo y que muestra una imagen](texture-view-images/17-textureviewdemo.png)](texture-view-images/17-textureviewdemo.png#lightbox)
 
-Para usar el `TextureView`, la aceleración de hardware debe estar habilitada, que será de forma predeterminada a partir del nivel de API 14. Además, dado que en este ejemplo se usa la cámara, el permiso `android.permission.CAMERA` y la característica `android.hardware.camera` deben establecerse en **archivo AndroidManifest. XML**.
+Para usar `TextureView` , la aceleración de hardware debe estar habilitada, que será de forma predeterminada a partir del nivel de API 14. Además, dado que en este ejemplo se usa la cámara, el `android.permission.CAMERA` permiso y la `android.hardware.camera` característica deben establecerse en el **AndroidManifest.xml**.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [TextureViewDemo (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/textureviewdemo)/)
+- [TextureViewDemo (ejemplo)](/samples/xamarin/monodroid-samples/textureviewdemo)/)

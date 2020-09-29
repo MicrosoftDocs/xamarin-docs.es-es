@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: b9b771efe338fbcc250aa6e7a83b73f35269d3bf
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 08713afa4e781f0712ffccbbcf80533dda8e4bfc
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996817"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457229"
 ---
 # <a name="updating-component-references-to-nuget"></a>Actualización de referencias de componentes a NuGet
 
@@ -21,7 +21,7 @@ ms.locfileid: "86996817"
 >
 > Los componentes de Xamarin ya no se admiten en Visual Studio y deben reemplazarse por paquetes NuGet. Siga las instrucciones siguientes para quitar manualmente las referencias a componentes de los proyectos.
 
-Consulte estas instrucciones para agregar paquetes NuGet en [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package) o [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
+Consulte estas instrucciones para agregar paquetes NuGet en [Windows](/nuget/quickstart/use-a-package) o [Mac](/visualstudio/mac/nuget-walkthrough).
 
 Hay disponible una lista de [bibliotecas y complementos](https://github.com/xamarin/XamarinComponents/blob/master/README.md) de Xamarin populares para ayudar a encontrar alternativas a los componentes que no están disponibles como paquetes NuGet.
 
@@ -95,7 +95,7 @@ Para quitar un componente del proyecto:
     </ItemGroup>
     ```
 
-3. Quite las referencias a `XamarinComponentReference` y guarde el archivo. En el ejemplo anterior, es seguro quitar todo el`ItemGroup`
+3. Quite las referencias a `XamarinComponentReference` y guarde el archivo. En el ejemplo anterior, es seguro quitar todo el `ItemGroup`
 
 4. Repita los pasos anteriores para cada proyecto de la solución.
 
@@ -159,8 +159,8 @@ Para confirmar que existe un paquete de NuGet de reemplazo, busque [NuGet.org](h
 
 Por ejemplo, puede encontrar el popular paquete **SQLite-net-PCL** buscando:
 
-- [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl): el nombre del producto.
-- [`praeclarum`](https://www.nuget.org/packages?q=praeclarum): el perfil del autor.
+- [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl) : el nombre del producto.
+- [`praeclarum`](https://www.nuget.org/packages?q=praeclarum) : el perfil del autor.
 
 ### <a name="updating-the-solution"></a>Actualización de la solución
 
@@ -204,5 +204,5 @@ Muchos proveedores de componentes siguen trabajando en la migración a NuGet y o
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Lista de complementos y bibliotecas de Xamarin populares](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
-- [Instalar y usar un paquete de NuGet (Windows)](https://docs.microsoft.com/nuget/quickstart/use-a-package)
-- [Inclusión de un paquete NuGet (Mac)](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)
+- [Instalar y usar un paquete de NuGet (Windows)](/nuget/quickstart/use-a-package)
+- [Inclusión de un paquete NuGet (Mac)](/visualstudio/mac/nuget-walkthrough)

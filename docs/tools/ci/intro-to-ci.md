@@ -6,12 +6,12 @@ ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
 author: davidortinau
 ms.author: daortin
 ms.date: 07/19/2017
-ms.openlocfilehash: 21c8cba39031e133d96ed6a5ebeeab87f945af51
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 98606173913b57b7cf55f24c2581acbf82a587e3
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938299"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457866"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Introducción a la integración continua con Xamarin
 
@@ -36,7 +36,7 @@ En el siguiente diagrama se ilustra este proceso:
 
 Las aplicaciones móviles presentan desafíos únicos para la integración continua. Las aplicaciones pueden requerir sensores como el GPS o la cámara que solo están disponibles en dispositivos físicos. Además, los simuladores o emuladores son solo una aproximación del hardware y pueden ocultar o ocultar problemas. Al final, es necesario probar una aplicación móvil en hardware real para estar seguro de que está realmente preparada para el cliente.
 
-La [prueba de App Center](https://docs.microsoft.com/appcenter/test-cloud) aborda este problema concreto probando aplicaciones directamente en cientos de dispositivos físicos. Los desarrolladores escriben pruebas de aceptación automatizadas, lo que permite realizar pruebas de IU eficaces. Una vez que estas pruebas se cargan en App Center, el servidor de CI puede ejecutarlas automáticamente como parte de un proceso de CI, tal como se muestra en el diagrama siguiente:
+La [prueba de App Center](/appcenter/test-cloud) aborda este problema concreto probando aplicaciones directamente en cientos de dispositivos físicos. Los desarrolladores escriben pruebas de aceptación automatizadas, lo que permite realizar pruebas de IU eficaces. Una vez que estas pruebas se cargan en App Center, el servidor de CI puede ejecutarlas automáticamente como parte de un proceso de CI, tal como se muestra en el diagrama siguiente:
 
 [![Una vez que estas pruebas se cargan en App Center, el servidor de CI puede ejecutarlas automáticamente como parte de un proceso de CI, tal como se muestra en este diagrama.](intro-to-ci-images/intro02-small.png)](intro-to-ci-images/intro02.png#lightbox)
 
@@ -55,13 +55,13 @@ Existe un amplio ecosistema de herramientas comerciales y de código abierto dis
 
 Tanto TFS como Azure DevOps se integran estrechamente con Visual Studio y permiten a los desarrolladores realizar muchas tareas de control de versiones y de elementos de contenido desde la comodidad de un solo IDE. También está disponible el complemento de Team Explorer Everywhere para Eclipse (consulte a continuación). Visual Studio para Mac tiene [una vista previa de TFVC disponible](/visualstudio/mac/tf-version-control/).
 
-Las [canalizaciones DevOps de Azure](https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin/) tienen compatibilidad directa con los proyectos de Xamarin, en los que se crea una definición de compilación para cada plataforma de destino (Android, iOS y Windows). La licencia de Xamarin adecuada es necesaria para cada definición de compilación. También es posible conectar un servidor de compilación de TFS compatible con Xamarin local a Azure DevOps con este fin. Con esta configuración, las compilaciones que se ponen en cola en Azure DevOps se delegarán en el servidor local. Para obtener más información, consulte [agentes de compilación y lanzamiento](https://docs.microsoft.com/azure/devops/pipelines/agents/agents). Como alternativa, puede usar otra herramienta de compilación como Jenkins o City del equipo.
+Las [canalizaciones DevOps de Azure](/azure/devops/pipelines/languages/xamarin/) tienen compatibilidad directa con los proyectos de Xamarin, en los que se crea una definición de compilación para cada plataforma de destino (Android, iOS y Windows). La licencia de Xamarin adecuada es necesaria para cada definición de compilación. También es posible conectar un servidor de compilación de TFS compatible con Xamarin local a Azure DevOps con este fin. Con esta configuración, las compilaciones que se ponen en cola en Azure DevOps se delegarán en el servidor local. Para obtener más información, consulte [agentes de compilación y lanzamiento](/azure/devops/pipelines/agents/agents). Como alternativa, puede usar otra herramienta de compilación como Jenkins o City del equipo.
 
-Un resumen completo de todas las características de la administración del ciclo de vida de las aplicaciones (ALM) de Visual Studio, Azure DevOps y Team Foundation Server, consulte [DevOps con aplicaciones Xamarin](https://docs.microsoft.com/visualstudio/cross-platform/application-lifecycle-management-alm-with-xamarin-apps).
+Un resumen completo de todas las características de la administración del ciclo de vida de las aplicaciones (ALM) de Visual Studio, Azure DevOps y Team Foundation Server, consulte [DevOps con aplicaciones Xamarin](/visualstudio/cross-platform/application-lifecycle-management-alm-with-xamarin-apps).
 
 #### <a name="team-explorer-everywhere"></a>Team Explorer Everywhere
 
-[Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) aporta la eficacia de Team Foundation Server y Azure DevOps a los equipos que desarrollan fuera de Visual Studio. Permite a los desarrolladores conectarse a proyectos de equipo locales o en la nube desde Eclipse o el cliente de línea de comandos multiplataforma para OS X y Linux. Team Explorer Everywhere proporciona acceso completo al control de versiones (incluido GIT), a los elementos de trabajo y a las capacidades de compilación para las plataformas que no son de Windows.
+[Team Explorer Everywhere](/azure/devops/java/download-eclipse-plug-in/) aporta la eficacia de Team Foundation Server y Azure DevOps a los equipos que desarrollan fuera de Visual Studio. Permite a los desarrolladores conectarse a proyectos de equipo locales o en la nube desde Eclipse o el cliente de línea de comandos multiplataforma para OS X y Linux. Team Explorer Everywhere proporciona acceso completo al control de versiones (incluido GIT), a los elementos de trabajo y a las capacidades de compilación para las plataformas que no son de Windows.
 
 #### <a name="git"></a>Git
 
@@ -79,7 +79,7 @@ Las versiones actuales de Visual Studio para Windows y Mac proporcionan compatib
 
 La configuración de un entorno de integración continua significa la combinación de un sistema de control de versiones con un servicio de compilación.  En este último caso, los dos más comunes son:
 
-- [Azure pipelines](https://docs.microsoft.com/azure/devops/pipelines/) es el sistema de compilación de Azure DEVOPS y TFS. Está estrechamente integrado con Visual Studio, lo que facilita a los desarrolladores la activación de compilaciones, la ejecución automática de pruebas y la visualización de los resultados.
+- [Azure pipelines](/azure/devops/pipelines/) es el sistema de compilación de Azure DEVOPS y TFS. Está estrechamente integrado con Visual Studio, lo que facilita a los desarrolladores la activación de compilaciones, la ejecución automática de pruebas y la visualización de los resultados.
 - Jenkins es un servidor de CI de código abierto con un rico ecosistema de complementos para admitir todo tipo de desarrollo de software. Se ejecuta en Windows y Mac OS X. Jenkins no se integra con ningún IDE específico. En su lugar, se configura y se administra a través de una interfaz Web. El elemento de configuración de Jenkins también es fácil de instalar y configurar, lo que hace que resulte atractivo para equipos pequeños.
 
 Puede usar TFS/Azure DevOps por sí solo, o puede usar Jenkins en combinación con TFS/Azure DevOps o GIT, tal como se describe en las secciones siguientes.
@@ -88,22 +88,22 @@ Puede usar TFS/Azure DevOps por sí solo, o puede usar Jenkins en combinación c
 
 Como se explicó, Azure DevOps y Team Foundation Server proporciona servicios de compilación y control de versiones. Los servicios de compilación siempre requieren una licencia de Xamarin Business o Enterprise para cada plataforma de destino.
 
-Con Azure DevOps, puede crear una definición de compilación independiente para cada plataforma de destino y especificar allí la licencia adecuada. Una vez configurado, Azure DevOps ejecutará compilaciones y pruebas en la nube. Consulte [Azure pipelines](https://docs.microsoft.com/azure/devops/pipelines/) para obtener más detalles.
+Con Azure DevOps, puede crear una definición de compilación independiente para cada plataforma de destino y especificar allí la licencia adecuada. Una vez configurado, Azure DevOps ejecutará compilaciones y pruebas en la nube. Consulte [Azure pipelines](/azure/devops/pipelines/) para obtener más detalles.
 
 Con Team Foundation Server, configure una máquina de compilación como se indica a continuación para plataformas de destino específicas:
 
-- **Android y Windows:** Instale Visual Studio y las herramientas de Xamarin (para Android y Windows) y configúrela con sus licencias de Xamarin. También es necesario trasladar el Android SDK a una ubicación compartida en el servidor donde el agente de compilación de TFS pueda encontrarlo. Para obtener más información, consulte [configuración de TFVC](https://docs.microsoft.com/azure/devops/repos/tfvc/overview).
+- **Android y Windows:** Instale Visual Studio y las herramientas de Xamarin (para Android y Windows) y configúrela con sus licencias de Xamarin. También es necesario trasladar el Android SDK a una ubicación compartida en el servidor donde el agente de compilación de TFS pueda encontrarlo. Para obtener más información, consulte [configuración de TFVC](/azure/devops/repos/tfvc/overview).
 - **iOS y Xamarin:** Instale Visual Studio y las herramientas de Xamarin en Windows Server con la licencia adecuada. A continuación, instale Visual Studio para Mac en una máquina Mac OS X accesible desde la red, que servirá como host de compilación y creará el paquete de aplicación final (IPA para iOS, APP para OS X).
 
 En el siguiente diagrama se ilustra esta topografía:
 
 [![Este diagrama ilustra esta topografía](intro-to-ci-images/intro03-small.png)](intro-to-ci-images/intro03.png#lightbox)
 
-También es posible vincular un servidor de TFS local a un proyecto de Azure DevOps para que las compilaciones de Azure DevOps se deleguen en el servidor local. Para obtener más información, vea [agentes de compilación y lanzamiento](https://docs.microsoft.com/azure/devops/pipelines/agents/agents/).
+También es posible vincular un servidor de TFS local a un proyecto de Azure DevOps para que las compilaciones de Azure DevOps se deleguen en el servidor local. Para obtener más información, vea [agentes de compilación y lanzamiento](/azure/devops/pipelines/agents/agents/).
 
 #### <a name="azure-devops-and-jenkins"></a>Azure DevOps y Jenkins
 
-Si usa Jenkins para compilar las aplicaciones, puede almacenar el código en Azure DevOps o Team Foundation Server y seguir usando Jenkins para las compilaciones de CI. Puede desencadenar una compilación de Jenkins cuando inserte código en el repositorio de Git del proyecto de equipo o cuando compruebe el código en TFVC. Para más información, consulte [Jenkins con Azure DevOps](https://docs.microsoft.com/azure/devops/service-hooks/services/jenkins).
+Si usa Jenkins para compilar las aplicaciones, puede almacenar el código en Azure DevOps o Team Foundation Server y seguir usando Jenkins para las compilaciones de CI. Puede desencadenar una compilación de Jenkins cuando inserte código en el repositorio de Git del proyecto de equipo o cuando compruebe el código en TFVC. Para más información, consulte [Jenkins con Azure DevOps](/azure/devops/service-hooks/services/jenkins).
 
 [![Si usa Jenkins para compilar las aplicaciones, puede almacenar el código en Azure DevOps o Team Foundation Server y seguir usando Jenkins para las compilaciones de CI](intro-to-ci-images/intro04-small.png)](intro-to-ci-images/intro04.png#lightbox)
 

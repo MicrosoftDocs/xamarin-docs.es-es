@@ -6,12 +6,12 @@ ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
 author: davidortinau
 ms.author: daortin
 ms.date: 01/28/2016
-ms.openlocfilehash: 2f7d09405f90ac9fc4c3ce80181baafa447df637
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: f725fe06a5438e4dbdca2773d93befc13bc8ff95
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571250"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457502"
 ---
 # <a name="building-cross-platform-applications"></a>Creación de aplicaciones multiplataforma
 
@@ -64,6 +64,6 @@ Por último, analiza brevemente las pruebas y proporciona referencias a un caso 
 
 - [Opciones de código compartido](~/cross-platform/app-fundamentals/code-sharing.md)
 - [Caso práctico: Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
-- [Aplicación de ejemplo de tarea (GitHub)](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
+- [Aplicación de ejemplo de tarea (GitHub)](/samples/xamarin/mobile-samples/taskyportable/)
 - [Desarrollo de aplicaciones móviles de Xamarin: aspectos básicos de C# y Xamarin. Forms multiplataforma (Amazon)](https://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
 - [Desarrollo para dispositivos móviles con C# de Greg shackles (O'Reilly)](https://shop.oreilly.com/product/0636920024002.do)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: 83c4ba8cbdc360682a4e06a885be15dd20d0f249
-ms.sourcegitcommit: f4b26c5b8cc84f79123951e80c15061eb859452d
+ms.openlocfilehash: 3263bfd9cea184a7bfbb29099abe2f1b3deb4126
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720310"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91458061"
 ---
 # <a name="packaging-wear-apps"></a>Aplicaciones de desgaste de empaquetado
 
@@ -24,7 +24,7 @@ Las aplicaciones de desgaste de Android 1,0 se empaquetan con una aplicación An
 
 Las aplicaciones de desgaste de Android 2,0 pueden enviarse a Google Play como [aplicaciones independientes][standalone].
 
-[xa-11.1]: https://docs.microsoft.com/xamarin/android/release-notes/11/11.1
+[xa-11.1]: /xamarin/android/release-notes/11/11.1
 [standalone]: https://developer.android.com/training/wearables/apps/standalone-apps
 
 ## <a name="automatic-packaging"></a>Empaquetado automático

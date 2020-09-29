@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/10/2018
-ms.openlocfilehash: 0fe08856c70d8a23fb768a5b94b933addd42714b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8b640e867e3f7adb6960ecda557ac1e410ec5799
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028665"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456978"
 ---
 # <a name="hello-wear"></a>Hola, Wear
 
@@ -30,13 +30,13 @@ Cree una nueva **aplicación de desgaste de Android**:
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![creación de una nueva aplicación de desgaste de Android en el cuadro de diálogo nuevo proyecto](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
+[![Creación de una nueva aplicación de desgaste de Android en el cuadro de diálogo nuevo proyecto](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-[![creación de una nueva aplicación de desgaste de Android en el cuadro de diálogo Nueva solución](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
+[![Creación de una nueva aplicación de desgaste de Android en el cuadro de diálogo Nueva solución](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
 
@@ -44,17 +44,17 @@ Esta plantilla incluye automáticamente el NuGet (y las dependencias) de **Xamar
 
 ### <a name="2-choose-the-correct-target-framework"></a>2. Elija la versión de **.NET Framework de destino** correcta
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Asegúrese de que **Android to target mínimo** esté establecido en **Android 5,0 (Lollipop)** o posterior: 
 
-[![establecer la plataforma de destino en Android 5,0 en Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
+[![Establecimiento de la versión de .NET Framework de destino en Android 5,0 en Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Asegúrese de que el marco de trabajo de destino esté establecido en **Android 5,0 (Lollipop)** o posterior:
 
-[![establecer la versión de .NET Framework de destino en Android 5,0 en Visual Studio para Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
+[![Establecimiento de la versión de .NET Framework de destino en Android 5,0 en Visual Studio para Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
 
 -----
 
@@ -141,13 +141,13 @@ Si tiene un dispositivo de desgaste de Android, como un desgaste de SmartWatch d
 
 El dispositivo de desgaste de Android debe aparecer en el menú desplegable del dispositivo. Asegúrese de elegir el dispositivo de desgaste de Android correcto o AVD antes de iniciar la depuración. Después de seleccionar el dispositivo, haga clic en el botón reproducir para implementar la aplicación en el emulador o el dispositivo.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![elección de un menú de uso de AVD en Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
+[![Selección de un menú de uso de AVD en Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-[![elegir un uso de AVD en Visual Studio para Mac menú del dispositivo](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
+[![Elección de una AVD de desgaste en el menú de Visual Studio para Mac dispositivo](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 
 -----
 
@@ -159,18 +159,18 @@ Si usa un emulador de inspección, puede tardar un rato en iniciar la aplicació
 
 Una vez que la aplicación se implemente correctamente, la pantalla del dispositivo de desgaste debería mostrar una pantalla similar a la siguiente:
 
-[![pantalla inicial de la aplicación de desgaste](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
+[![Pantalla inicial de la aplicación de desgaste](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
 
 Pulse **en** la situado en la parte frontal del dispositivo de desgaste y ver el incremento de recuento con cada TAP:
 
-[![captura de pantalla de la aplicación de desgaste tras 3 clics](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
+[![Captura de pantalla de la aplicación de desgaste tras 3 clics](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Consulte los [ejemplos de desgaste](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) , incluidas las aplicaciones de desgaste de Android con aplicaciones de teléfono complementarias.
+Consulte los [ejemplos de desgaste](/samples/browse/?products=xamarin&term=Xamarin.Android%2bwear) , incluidas las aplicaciones de desgaste de Android con aplicaciones de teléfono complementarias.
 
 Cuando esté listo para distribuir la aplicación, consulte [trabajar con empaquetado](~/android/wear/deploy-test/packaging.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Haga clic en mi aplicación (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-weartest)
+- [Haga clic en mi aplicación (ejemplo)](/samples/xamarin/monodroid-samples/wear-weartest)

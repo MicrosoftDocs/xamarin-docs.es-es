@@ -6,24 +6,24 @@ ms.assetid: 455fda67-3879-4299-8036-b12840e6a498
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2019
-ms.openlocfilehash: 9f227f51596a4ed93fd830c3f3495a90c1f7f722
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 77df7d986f63861667c67b9c74b88ea6176f42ad
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014558"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91458191"
 ---
 # <a name="visual-basic-in-xamarin-android-and-ios"></a>Visual Basic en Xamarin Android e iOS
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-taskyvb/)
 
-La aplicación de ejemplo [TaskyVB](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-taskyvb/) muestra cómo Visual Basic código compilado en una biblioteca de .net Standard se puede usar con Xamarin. Estas son algunas capturas de pantallas de las aplicaciones resultantes que se ejecutan en Android e iOS:
+La aplicación de ejemplo [TaskyVB](/samples/xamarin/mobile-samples/visualbasic-taskyvb/) muestra cómo Visual Basic código compilado en una biblioteca de .net Standard se puede usar con Xamarin. Estas son algunas capturas de pantallas de las aplicaciones resultantes que se ejecutan en Android e iOS:
 
  [![Android e iOS que ejecutan una aplicación compilada con Visual Basic](native-apps-images/simulators-sml.png)](native-apps-images/simulators.png#lightbox)
 
-En el ejemplo, los proyectos de iOS y Android están escritos C#en. La interfaz de usuario de cada aplicación se crea con tecnologías nativas, mientras que la administración de `TodoItem` se proporciona mediante la biblioteca de .NET Standard de Visual Basic con un archivo XML (con fines de demostración, no una base de datos completa).
+Los proyectos de iOS y Android en el ejemplo están escritos en C#. La interfaz de usuario de cada aplicación se crea con tecnologías nativas, mientras que la `TodoItem` Administración se proporciona mediante el Visual Basic biblioteca de .net Standard mediante un archivo XML (con fines de demostración, no una base de datos completa).
 
-## <a name="sample-walkthrough"></a>Ejemplo de tutorial
+## <a name="sample-walkthrough"></a>Tutorial de ejemplo
 
 En esta guía se describe cómo se ha implementado Visual Basic en el ejemplo [TaskyVB](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyVB) de Xamarin para iOS y Android.
 
@@ -61,7 +61,7 @@ En el ejemplo se usa la serialización y la deserialización XML para cargar y g
 
 ### <a name="todoitemmanagervb"></a>TodoItemManager. VB
 
-La clase de administrador presenta la ' API ' para el código portable. Proporciona operaciones CRUD básicas para la clase `TodoItem`, pero no implementaciones de esas operaciones.
+La clase de administrador presenta la ' API ' para el código portable. Proporciona operaciones CRUD básicas para la `TodoItem` clase, pero no implementaciones de esas operaciones.
 
 ```vb
 Public Class TodoItemManager
@@ -154,7 +154,7 @@ End Class
 
 ### <a name="ios"></a>iOS
 
-En la aplicación de iOS, el `TodoItemManager` y el `XmlStorageImplementation` se crean en el archivo **AppDelegate.CS** , tal como se muestra en este fragmento de código. Las primeras cuatro líneas son simplemente compilando la ruta de acceso al archivo en el que se almacenarán los datos. las dos líneas finales muestran las dos clases de las que se crean instancias.
+En la aplicación de iOS `TodoItemManager` , y `XmlStorageImplementation` se crean en el archivo **AppDelegate.CS** , tal y como se muestra en este fragmento de código. Las primeras cuatro líneas son simplemente compilando la ruta de acceso al archivo en el que se almacenarán los datos. las dos líneas finales muestran las dos clases de las que se crean instancias.
 
 ```csharp
 var xmlFilename = "TodoList.xml";
@@ -167,7 +167,7 @@ TaskMgr = new TodoItemManager(path);
 
 ### <a name="android"></a>Android
 
-En la aplicación de Android, el `TodoItemManager` y el `XmlStorageImplementation` se crean en el archivo **Application.CS** , tal como se muestra en este fragmento de código. Las tres primeras líneas solo están compilando la ruta de acceso al archivo en el que se almacenarán los datos. las dos líneas finales muestran las dos clases de las que se crean instancias.
+En la aplicación de Android `TodoItemManager` , y `XmlStorageImplementation` se crean en el archivo **Application.CS** , tal y como se muestra en este fragmento de código. Las tres primeras líneas solo están compilando la ruta de acceso al archivo en el que se almacenarán los datos. las dos líneas finales muestran las dos clases de las que se crean instancias.
 
 ```csharp
 var xmlFilename = "TodoList.xml";
@@ -177,7 +177,7 @@ var path = Path.Combine(libraryPath, xmlFilename);
 TaskMgr = new TodoItemManager(path);
 ```
 
-El resto del código de la aplicación está principalmente relacionado con la interfaz de usuario y con la clase `TaskMgr` para cargar y guardar `TodoItem` clases.
+El resto del código de la aplicación está principalmente relacionado con la interfaz de usuario y con la `TaskMgr` clase para cargar y guardar `TodoItem` clases.
 
 ## <a name="visual-studio-2019-for-mac"></a>Visual Studio 2019 para Mac
 
@@ -195,4 +195,4 @@ En este artículo se ha mostrado cómo consumir código Visual Basic en aplicaci
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [TaskyVB (ejemplo .NET Standard)](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyVB)
-- [Novedades de .NET Standard](https://docs.microsoft.com/dotnet/standard/whats-new/whats-new-in-dotnet-standard?tabs=csharp)
+- [Novedades de .NET Standard](/dotnet/standard/whats-new/whats-new-in-dotnet-standard?tabs=csharp)

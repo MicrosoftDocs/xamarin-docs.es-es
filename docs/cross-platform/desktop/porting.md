@@ -5,12 +5,12 @@ description: Una simple explicación de cómo desacoplar las aplicaciones de Win
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: 181034a4936b2da010a2fcd280ded1a3419d43ae
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0bb5a7b851a80cb92881968729e561caeaf48d12
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016448"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456852"
 ---
 # <a name="desktop-app-porting-guidance"></a>Guía de migración de aplicaciones de escritorio
 
@@ -22,11 +22,11 @@ La mayoría del código de la aplicación se puede clasificar en una de las sigu
 - Acceso y almacenamiento de datos locales
 - Servicios web y acceso a datos remotos
 
-En el caso de las aplicaciones de C# Windows Forms y WPF escritas con (o Visual Basic.net), se puede compartir una cantidad sorprendente de la lógica de negocios, el acceso a datos locales y el código de servicios web entre plataformas.
+En el caso de las aplicaciones Windows Forms y WPF escritas con C# (o Visual Basic.NET), se puede compartir una cantidad sorprendente de la lógica de negocios, el acceso a datos locales y el código de servicios web entre plataformas.
 
 ## <a name="net-portability-analyzer"></a>Analizador de portabilidad de .NET
 
-Visual Studio 2017 y versiones posteriores admiten el [analizador de portabilidad de .net](https://docs.microsoft.com/dotnet/articles/standard/portability-analyzer) ([descarga para Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)), que puede examinar las aplicaciones existentes e indicar la cantidad de código que se puede migrar "tal cual" a otras plataformas. Puede obtener más información al respecto desde este [vídeo de Channel 9](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).
+Visual Studio 2017 y versiones posteriores admiten el [analizador de portabilidad de .net](/dotnet/articles/standard/portability-analyzer) ([descarga para Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)), que puede examinar las aplicaciones existentes e indicar la cantidad de código que se puede migrar "tal cual" a otras plataformas. Puede obtener más información al respecto desde este [vídeo de Channel 9](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).
 
 También se puede descargar una herramienta de línea de comandos desde el [analizador de portabilidad en github](https://github.com/Microsoft/dotnet-apiport) y se usa para proporcionar los mismos informes.
 

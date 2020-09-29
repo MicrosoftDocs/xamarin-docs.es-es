@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/09/2018
-ms.openlocfilehash: 6180896002d19c51bce47bf53aaecdc11b0cae6e
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: fb29478791c97028ff4d62f97922c672f7a8b17b
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725154"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457267"
 ---
 # <a name="xamarinandroid-edit-text"></a>Editar texto de Xamarin. Android
 
 En esta sección, usará el widget [EditText](xref:Android.Widget.EditText) para crear un campo de texto para los datos proporcionados por el usuario. Una vez que el texto se ha escrito en el campo, la tecla **entrar** mostrará el texto en un mensaje del sistema.
 
-Abra **Resources/layout/activity_main. axml** y agregue el elemento [EditText](xref:Android.Widget.EditText) a un diseño contenedor. En el ejemplo siguiente **activity_main. axml** tiene una `EditText` que se ha agregado a un `LinearLayout`:
+Abra **Resources/layout/activity_main. axml** y agregue el elemento [EditText](xref:Android.Widget.EditText) a un diseño contenedor. En el ejemplo siguiente **activity_main. axml** tiene un que se ha `EditText` agregado a un `LinearLayout` :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -35,7 +35,7 @@ Abra **Resources/layout/activity_main. axml** y agregue el elemento [EditText](x
 </LinearLayout>
 ```
 
-En este ejemplo de código, el atributo `EditText` `android:imeOptions` se establece en `actionGo`. Esta configuración cambia la acción de [listo](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_DONE) predeterminada a la acción [Go](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_GO) para que al pulsar la tecla **entrar** se desencadene el controlador de entrada `KeyPress`.
+En este ejemplo de código, el `EditText` atributo `android:imeOptions` se establece en `actionGo` . Esta configuración cambia la acción de [listo](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_DONE) predeterminada a la acción [Go](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_GO) para que al pulsar la tecla **entrar** se desencadene el `KeyPress` controlador de entrada.
 (Normalmente, `actionGo` se usa para que la tecla **entrar** lleve al usuario al destino de una dirección URL que se escribe).
 
 Para controlar la entrada de texto del usuario, agregue el código siguiente al final del método [alcrear](xref:Android.App.Activity.OnCreate*) en **MainActivity.CS**:
@@ -52,20 +52,20 @@ edittext.KeyPress += (object sender, View.KeyEventArgs e) => {
 };
 ```
 
-Además, agregue la siguiente instrucción `using` a la parte superior de **MainActivity.CS** si aún no está presente:
+Además, agregue la siguiente `using` instrucción a la parte superior de **MainActivity.CS** si aún no está presente:
 
 ```csharp
 using Android.Views;
 ```
 
-En este ejemplo de código se infla el elemento [EditText](xref:Android.Widget.EditText) del diseño y se agrega un controlador [KeyPress](xref:Android.Views.View.KeyPress) que define la acción que se debe realizar cuando se presiona una tecla mientras el widget tiene el foco. En este caso, el método se define para que escuche la tecla **entrar** (al puntear) y, a continuación, mostrar un mensaje del [sistema](xref:Android.Widget.Toast) con el texto que se ha escrito. Tenga en cuenta que la propiedad [controlada](xref:Android.Views.View.KeyEventArgs.Handled) siempre debe ser `true` si se ha controlado el evento. Esto es necesario para evitar que el evento se propague (lo que daría lugar a un retorno de carro en el campo de texto).
+En este ejemplo de código se infla el elemento [EditText](xref:Android.Widget.EditText) del diseño y se agrega un controlador [KeyPress](xref:Android.Views.View.KeyPress) que define la acción que se debe realizar cuando se presiona una tecla mientras el widget tiene el foco. En este caso, el método se define para que escuche la tecla **entrar** (al puntear) y, a continuación, mostrar un mensaje del [sistema](xref:Android.Widget.Toast) con el texto que se ha escrito. Tenga en cuenta que la propiedad [controlada](xref:Android.Views.View.KeyEventArgs.Handled) siempre debe ser si se ha `true` controlado el evento. Esto es necesario para evitar que el evento se propague (lo que daría lugar a un retorno de carro en el campo de texto).
 
 Ejecute la aplicación y escriba texto en el campo de texto. Al presionar la tecla **entrar** , la notificación del sistema se mostrará como se muestra a la derecha:
 
-[![ejemplos de cómo escribir texto en EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
+[![Ejemplos de cómo escribir texto en EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
 *Algunas partes de esta página son modificaciones basadas en el trabajo creado y compartido por el proyecto de código abierto de Android y que se usan según los términos descritos en la* [*licencia de atribución de Creative Commons 2,5*](https://creativecommons.org/licenses/by/2.5/) *. Este tutorial se basa en el tutorial de* [*formularios de Android*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [EditTextSample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-edittextsample)
+- [EditTextSample](/samples/xamarin/monodroid-samples/userinterface-edittextsample)

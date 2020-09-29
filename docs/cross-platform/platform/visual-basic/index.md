@@ -6,12 +6,12 @@ ms.assetid: f264c632-8feb-4015-a5e5-cb9c681c787d
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2019
-ms.openlocfilehash: 594f7584e914b7bd8f4d7b72b3c82c42bb2fb73e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8ccf96e266f9d5eae69a178cfcad3d1e48fb6962
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014573"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457540"
 ---
 # <a name="visual-basic-and-net-standard"></a>Visual Basic y .NET Standard
 
@@ -39,13 +39,13 @@ Al agregar una biblioteca de .NET Standard de Visual Basic en Visual Studio, deb
 
 2. Escriba **Visual Basic biblioteca** para filtrar las opciones del proyecto y elija la opción **biblioteca de clases (.net Standard)** con el icono de Visual Basic:
 
-    [![filtro de Visual Basic biblioteca](xamarin-forms-images/06-sml.png)](xamarin-forms-images/06.png#lightbox)
+    [![Filtrar por biblioteca de Visual Basic](xamarin-forms-images/06-sml.png)](xamarin-forms-images/06.png#lightbox)
 
 3. En la siguiente pantalla, escriba un nombre para el proyecto y presione **crear**.
 
-4. El proyecto Visual Basic aparecerá como se muestra en la **Explorador de soluciones** de la siguiente manera:
+4. El proyecto Visual Basic aparecerá como se muestra en la  **Explorador de soluciones** de la siguiente manera:
 
-    [![proyecto de Visual Basic vacío](images/new-library-sml.png)](images/new-library.png#lightbox)
+    [![Proyecto de Visual Basic vacío](images/new-library-sml.png)](images/new-library.png#lightbox)
 
 El proyecto ya está listo para agregar Visual Basic código. Otros proyectos (proyectos de aplicación o proyectos de biblioteca) pueden hacer referencia a proyectos de .NET Standard.
 
@@ -60,7 +60,7 @@ En las páginas siguientes se describe cómo usar las bibliotecas de .NET Standa
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [TaskyVB (ejemplo)](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-taskyvb/)
-- [XamarinFormsVB (ejemplo)](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
+- [TaskyVB (ejemplo)](/samples/xamarin/mobile-samples/visualbasic-taskyvb/)
+- [XamarinFormsVB (ejemplo)](/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
 - [.NET Standard y Xamarin](~/cross-platform/app-fundamentals/net-standard.md)
 - [.NET Standard](/dotnet/standard/net-standard/)

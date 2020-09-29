@@ -6,12 +6,12 @@ ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: davidortinau
 ms.author: daortin
 ms.date: 10/09/2017
-ms.openlocfilehash: 441ac213531c84aa3b7edfd6dfabab3f2c37d15d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9439b33c0e2c8458fd1308003aa9cd93148b6eac
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934789"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457320"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure y Xamarin
 
@@ -21,7 +21,7 @@ ms.locfileid: "86934789"
 
 ## <a name="connected-services-in-visual-studio-for-mac"></a>Servicios conectados en Visual Studio para Mac
 
-La nueva característica [servicios conectados](connected-services.md) de Visual Studio para Mac ayuda a los desarrolladores a agregar rápida y fácilmente la funcionalidad de Azure a las aplicaciones móviles desde el IDE. Actualmente disponible para pruebas en el canal alfa.
+La nueva característica [servicios conectados](/visualstudio/mac/connected-services) de Visual Studio para Mac ayuda a los desarrolladores a agregar rápida y fácilmente la funcionalidad de Azure a las aplicaciones móviles desde el IDE. Actualmente disponible para pruebas en el canal alfa.
 
 ## <a name="azure-app-services"></a>Azure App Services
 

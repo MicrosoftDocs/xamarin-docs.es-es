@@ -6,12 +6,12 @@ ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: a9f84192a312f9aba98817b75c058229e6c721bb
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 5bddbee99f068baea69d3bc7dc8bcb731c547a43
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76723626"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91458022"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6: Pruebas y aprobaciones de App Store
 
@@ -40,17 +40,17 @@ Al probar las aplicaciones dentro de su organización o administrar un programa 
 - **Distribución** : administrar el proceso de aprovisionamiento (especialmente para dispositivos iOS) y obtener versiones actualizadas de software para los evaluadores.
 - **Comentarios** : recopilación de información sobre el uso de la aplicación e información detallada sobre los errores que puedan producirse.
 
-Hay una serie de servicios que ayudan a resolver estos problemas, ya que proporcionan una infraestructura integrada en la aplicación para recopilar e informar sobre el uso y los errores, así como para optimizar el proceso de aprovisionamiento para ayudar a registrar y administrar los evaluadores y sus dispositivos. .
+Hay una serie de servicios que ayudan a resolver estos problemas, ya que proporcionan una infraestructura integrada en la aplicación para recopilar e informar sobre el uso y los errores, así como para optimizar el proceso de aprovisionamiento para ayudar a registrar y administrar evaluadores y sus dispositivos.
 
 [Visual Studio App Center](/appcenter/) ofrece una solución a estos problemas, lo que proporciona distribución de la versión de prueba, informes de bloqueo e información de uso de la aplicación sofisticada.
 
 ### <a name="test-automation"></a>Automatización de pruebas
 
-Xamarin [UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) se puede usar para crear scripts de prueba de interfaz de usuario automatizados que se pueden ejecutar localmente o cargar en [App Center prueba](https://docs.microsoft.com/appcenter/test-cloud/).
+Xamarin [UITest](/appcenter/test-cloud/preparing-for-upload/uitest) se puede usar para crear scripts de prueba de interfaz de usuario automatizados que se pueden ejecutar localmente o cargar en [App Center prueba](/appcenter/test-cloud/).
 
 ## <a name="unit-testing"></a>Pruebas unitarias
 
-### <a name="touchunit"></a>Touch. Unit
+### <a name="touchunit"></a>Touch.Unit
 
 Xamarin. iOS incluye un marco de pruebas unitarias denominado Touch. Unit, que sigue las pruebas de escritura de estilo JUnit/NUnit.
 
@@ -58,11 +58,11 @@ Consulte la documentación sobre las [pruebas unitarias con Xamarin. iOS](~/ios/
 
 ### <a name="andrunit"></a>Andr. unidad
 
-Hay un equivalente de código abierto de Touch. Unit para Android llamado Andr. Unit. Puede descargarlo desde [GitHub](https://github.com/spouliot/Andr.Unit) y obtener información sobre la herramienta en el [blog de@spouliot](https://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/).
+Hay un equivalente de código abierto de Touch. Unit para Android llamado Andr. Unit. Puede descargarlo de [GitHub](https://github.com/spouliot/Andr.Unit) y obtener información sobre la herramienta en el [ @spouliot blog](https://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/)de.
 
 ## <a name="app-store-approvals"></a>Aprobaciones de App Store
 
-Apple y Microsoft funcionan el único almacén en sus plataformas: App Store y Marketplace, respectivamente. Ambos bloquean sus dispositivos e implementan un proceso riguroso de revisión de la aplicación para controlar la calidad de las aplicaciones disponibles para su descarga. La naturaleza abierta de Android significa que hay una serie de opciones de almacenamiento que van desde el juego de Google, que está ampliamente disponible y no tiene ningún proceso de revisión, hasta el AppStore de Amazon para Android y esfuerzos específicos de hardware como aplicaciones de Samsung que tienen una distribución más limitada. e implementan un proceso de aprobación.
+Apple y Microsoft funcionan el único almacén en sus plataformas: App Store y Marketplace, respectivamente. Ambos bloquean sus dispositivos e implementan un proceso riguroso de revisión de la aplicación para controlar la calidad de las aplicaciones disponibles para su descarga. La naturaleza abierta de Android significa que hay una serie de opciones de almacenamiento que van desde el juego de Google, que está ampliamente disponible y no tiene ningún proceso de revisión, hasta el AppStore de Amazon para Android y esfuerzos específicos de hardware como aplicaciones de Samsung que tienen una distribución más limitada e implementan un proceso de aprobación.
 
 Esperar a que una aplicación sea revisada puede ser muy intensa. a menudo, las aplicaciones se envían para su aprobación con muy poco margen de error antes de la fecha de inicio "de destino". El propio proceso puede tardar hasta dos semanas y no es necesariamente transparente: hay un comentario limitado sobre el progreso de la aplicación hasta que finalmente se rechaza o aprueba. El rechazo puede significar que falta una ventana de promoción, especialmente si se produce más de una vez, y las semanas pasan entre la fecha de inicio original y el momento en que la aplicación se aprueba finalmente.
 
@@ -114,14 +114,14 @@ Anime a los diseñadores a leer y seguir las instrucciones de diseño de cada pl
 
 Las cosas son un poco más estrictas en lo que respecta a la implementación de servicios específicos de la plataforma, especialmente en iOS. Para evitar el rechazo automático de Apple, hay algunas reglas que deben seguirse con las siguientes características de iOS:
 
-- **Compras desde la aplicación** : las aplicaciones no deben implementar mecanismos de pago externos para productos digitales, como la moneda del juego, las características de las aplicaciones, las suscripciones de la revista y mucho más. las aplicaciones de iOS deben usar el servicio basado en iTunes de Apple para este tipo de funcionalidad. Hay un escape: aplicaciones como el lector Kindle y algunas aplicaciones basadas en suscripciones permiten adquirir contenido en otro lugar que se adjunta a una "cuenta" a la que se puede acceder a través de la aplicación; sin embargo, en este caso, la aplicación no debe contener vínculos ni referencias al proceso de compra fuera de la aplicación (o, una vez más, se rechazará).
+- **Compras desde la aplicación** : las aplicaciones no deben implementar mecanismos de pago externos para productos digitales, como la moneda del juego, las características de las aplicaciones, las suscripciones de la revista y mucho más. las aplicaciones de iOS deben usar el servicio basado en iTunes de Apple para este tipo de funcionalidad. Hay un escape: aplicaciones como el lector Kindle y algunas aplicaciones basadas en suscripciones permiten comprar contenido en otro lugar que se adjunta a una "cuenta" a la que se puede acceder a través de la aplicación. sin embargo, en este caso, la aplicación no debe contener vínculos ni referencias al proceso de compra fuera de la aplicación (o, una vez más, se rechazará).
 - **copia de seguridad de icloud** : con la llegada de icloud, los revisores de Apple son mucho más estrictos con respecto al modo en que las aplicaciones usan Storage (para asegurarse de que la experiencia de copia de seguridad remota del cliente es agradable). Es posible que se rechacen las aplicaciones que desperdician espacio de almacenamiento capaz de copia de seguridad, por lo que debe usar la carpeta de caché correctamente y seguir las otras directrices relacionadas con el almacenamiento de Apple.
 - **NewsStand** : las aplicaciones de periódicos y revistas son una buena opción para NewsStand de Apple. sin embargo, las aplicaciones deben implementar al menos una suscripción de renovación automática y admitir la descarga en segundo plano para su aprobación.
 - **Maps** : cada vez es más común agregar superposiciones y otras características a las asignaciones móviles. sin embargo, tenga cuidado de no oscurecer la información de los créditos del mapa (como el logotipo de Google en IOS5), ya que esto provocará un rechazo.
 
 ### <a name="manage-your-metadata"></a>Administrar los metadatos
 
-Además de los problemas técnicos obvios que pueden dar lugar a la rechazo de una aplicación, hay algunos aspectos más sutiles del envío que podrían dar lugar a un rechazo, especialmente en torno a los metadatos (descripción, palabras clave y imágenes de marketing) que Envíe su aplicación para que se muestre en la tienda de aplicaciones o en Marketplace.
+Además de los problemas técnicos obvios que pueden dar lugar a la rechazo de una aplicación, hay algunos aspectos más sutiles del envío que podrían dar lugar a un rechazo, especialmente en torno a los metadatos (descripción, palabras clave y imágenes de marketing) que se envían con la aplicación para que se muestren en la tienda de aplicaciones o en Marketplace.
 
 - **Imágenes** : siga las instrucciones de la plataforma para los iconos de la aplicación y las imágenes de la tienda. No usar imágenes marcadas, hemos visto las aplicaciones que se rechazan porque sus iconos incluyen un dibujo de un iPhone.
 - **Marcas comerciales** : Evite usar marcas que no sean las suyas propias. Se han denegado las aplicaciones para mencionar las marcas comerciales en la descripción de la aplicación o incluso en las palabras clave de la tienda de aplicaciones de Apple.
@@ -141,6 +141,6 @@ Desafortunadamente, esta licencia no aborda la necesidad de la distribución de 
 
 ### <a name="app-store-summary"></a>Resumen de la tienda de aplicaciones
 
-El proceso de revisión puede ser desalentadora, pero, al igual que el resto del ciclo de vida de desarrollo, puede ayudar a garantizar el éxito con cierta planificación y atención al detalle. Todo se refiere a unos sencillos pasos: leer y comprender las directrices de la interfaz de usuario que debe cumplir, siga las reglas si va a implementar características específicas de la plataforma, realice pruebas exhaustivas (después pruebe algo más) y, por último, asegúrese de que los metadatos de la aplicación es correcto antes de enviar.
+El proceso de revisión puede ser desalentadora, pero, al igual que el resto del ciclo de vida de desarrollo, puede ayudar a garantizar el éxito con cierta planificación y atención al detalle. Todo se refiere a unos sencillos pasos: leer y comprender las directrices de la interfaz de usuario que debe cumplir, siga las reglas si va a implementar características específicas de la plataforma, realice pruebas exhaustivas (después pruebe algo más) y, por último, asegúrese de que los metadatos de la aplicación sean correctos antes de enviarlos.
 
 Una última palabra de consejos para los desarrolladores que publican en Google Play: la falta de proceso de aprobación puede parecer que facilita el trabajo, pero los clientes serán incluso más exigentes que un equipo de revisión. Siga estas instrucciones como si su aplicación pudiera rechazarse; de lo contrario, los clientes realizarán el rechazo.

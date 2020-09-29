@@ -1,22 +1,22 @@
 ---
 title: Introducción a Android Wear
-description: Con la introducción del desgaste de Android de Google, ya no está restringido a los teléfonos y las tabletas cuando se trata de desarrollar excelentes aplicaciones Android. La compatibilidad de Xamarin. Android con el desgaste de Android permite ejecutar C# código en su muñeca. Esta introducción proporciona información general básica sobre el desgaste de Android, describe sus características clave y ofrece información general sobre las características disponibles en el desgaste de Android 2,0. En él se enumeran algunos de los dispositivos de desgaste de Android más populares y se proporcionan vínculos a la documentación esencial sobre el desgaste de Android de Google para su posterior lectura.
+description: Con la introducción del desgaste de Android de Google, ya no está restringido a los teléfonos y las tabletas cuando se trata de desarrollar excelentes aplicaciones Android. La compatibilidad de Xamarin. Android con el desgaste de Android permite ejecutar código de C# en su muñeca. Esta introducción proporciona información general básica sobre el desgaste de Android, describe sus características clave y ofrece información general sobre las características disponibles en el desgaste de Android 2,0. En él se enumeran algunos de los dispositivos de desgaste de Android más populares y se proporcionan vínculos a la documentación esencial sobre el desgaste de Android de Google para su posterior lectura.
 ms.prod: xamarin
 ms.assetid: EAEF99F0-8FBE-47E4-8644-E7244CFAF464
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 3b1d27b1489cb71d4bd1922c2de993567ddf36bd
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a0e352850dced5c78c68859912de8f41c1fe87f9
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028621"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91458136"
 ---
 # <a name="introduction-to-android-wear"></a>Introducción a Android Wear
 
-_Con la introducción del desgaste de Android de Google, ya no está restringido a los teléfonos y las tabletas cuando se trata de desarrollar excelentes aplicaciones Android. La compatibilidad de Xamarin. Android con el desgaste de Android permite ejecutar C# código en su muñeca. Esta introducción proporciona información general básica sobre el desgaste de Android, describe sus características clave y ofrece información general sobre las características disponibles en el desgaste de Android 2,0. En él se enumeran algunos de los dispositivos de desgaste de Android más populares y se proporcionan vínculos a la documentación esencial sobre el desgaste de Android de Google para su posterior lectura._
+_Con la introducción del desgaste de Android de Google, ya no está restringido a los teléfonos y las tabletas cuando se trata de desarrollar excelentes aplicaciones Android. La compatibilidad de Xamarin. Android con el desgaste de Android permite ejecutar código de C# en su muñeca. Esta introducción proporciona información general básica sobre el desgaste de Android, describe sus características clave y ofrece información general sobre las características disponibles en el desgaste de Android 2,0. En él se enumeran algunos de los dispositivos de desgaste de Android más populares y se proporcionan vínculos a la documentación esencial sobre el desgaste de Android de Google para su posterior lectura._
 
 ## <a name="overview"></a>Información general
 
@@ -36,19 +36,19 @@ La primera versión del desgaste de Android se centró principalmente en la exte
 
 #### <a name="wearable-notifications"></a>Notificaciones de portátil
 
-La manera más sencilla de admitir el desgaste de Android es aprovechar la naturaleza compartida de las notificaciones entre el dispositivo de mano y el dispositivo portátil. Mediante el uso de la API de notificación de support V4 y la clase `WearableExtender` (disponible en la [biblioteca de compatibilidad de Android de Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)), puede aprovechar las características nativas de la plataforma, como las tarjetas de estilo de bandeja de entrada o la entrada de voz. El ejemplo [RecipeAssistant](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant) proporciona código de ejemplo que muestra cómo enviar una lista de notificaciones a un dispositivo de desgaste de Android. 
+La manera más sencilla de admitir el desgaste de Android es aprovechar la naturaleza compartida de las notificaciones entre el dispositivo de mano y el dispositivo portátil. Mediante el uso de la API de notificación de support V4 y la `WearableExtender` clase (disponible en la [biblioteca de compatibilidad de Android de Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)), puede aprovechar las características nativas de la plataforma, como las tarjetas de estilo de bandeja de entrada o la entrada de voz. El ejemplo [RecipeAssistant](/samples/xamarin/monodroid-samples/wear-recipeassistant) proporciona código de ejemplo que muestra cómo enviar una lista de notificaciones a un dispositivo de desgaste de Android. 
 
 #### <a name="companion-applications"></a>Aplicaciones complementarias
 
-Otra estrategia consiste en crear una aplicación completa que se ejecute de forma nativa en el dispositivo portátil y pares con una aplicación de mano complementaria. Un buen ejemplo de este enfoque es la aplicación de ejemplo de [cuestionario](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-quiz) , que muestra cómo crear una prueba que se ejecuta en un dispositivo de mano y realiza preguntas de prueba en el dispositivo portátil. 
+Otra estrategia consiste en crear una aplicación completa que se ejecute de forma nativa en el dispositivo portátil y pares con una aplicación de mano complementaria. Un buen ejemplo de este enfoque es la aplicación de ejemplo de [cuestionario](/samples/xamarin/monodroid-samples/wear-quiz) , que muestra cómo crear una prueba que se ejecuta en un dispositivo de mano y realiza preguntas de prueba en el dispositivo portátil. 
 
 ### <a name="user-interface"></a>Interfaz de usuario
 
-El patrón de navegación principal para el desgaste es una serie de tarjetas organizadas verticalmente. Cada una de estas tarjetas puede tener acciones asociadas que se superponen en la misma fila. La clase `GridViewPager` proporciona esta funcionalidad; se adhiere al mismo concepto de adaptador que `ListView`. Normalmente asocia el `GridViewPager` con un `FragmentGridPagerAdaptor` (o `GridPagerAdaptor`) que le permite representar cada celda de fila y columna como `Fragment`: 
+El patrón de navegación principal para el desgaste es una serie de tarjetas organizadas verticalmente. Cada una de estas tarjetas puede tener acciones asociadas que se superponen en la misma fila. La `GridViewPager` clase proporciona esta funcionalidad; se adhiere al mismo concepto de adaptador que `ListView` . Normalmente, se asocia `GridViewPager` con un `FragmentGridPagerAdaptor` (o `GridPagerAdaptor` ) que permite representar cada celda de fila y columna como `Fragment` : 
 
 [![Navegación por desgaste](intro-to-wear-images/2d-picker-sml.png "Navegación por desgaste")](intro-to-wear-images/2d-picker.png#lightbox)
 
-El desgaste también hace uso de botones de acción que se componen de un círculo de color grande con un pequeño texto de Descripción debajo (como se muestra arriba).  En el ejemplo [GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager) se muestra cómo usar `GridViewPager` y `GridPagerAdapter` en una aplicación de desgaste.
+El desgaste también hace uso de botones de acción que se componen de un círculo de color grande con un pequeño texto de Descripción debajo (como se muestra arriba).  En el ejemplo [GridViewPager](/samples/xamarin/monodroid-samples/wear-gridviewpager) se muestra cómo usar `GridViewPager` y `GridPagerAdapter` en una aplicación de desgaste.
 
 El desgaste de Android 2,0 agrega un cajón de navegación, un cajón de acciones y botones de acción insertados a la interfaz de usuario de desgaste. Para más información sobre los elementos de la interfaz de usuario de 2,0 de Android, consulte el tema sobre la [anatomía](https://www.google.com/design/spec-wear/system-overview/anatomy.html) de Android. 
 
@@ -56,15 +56,15 @@ El desgaste de Android 2,0 agrega un cajón de navegación, un cajón de accione
 
 El desgaste de Android proporciona dos API de comunicación diferentes para facilitar la comunicación entre las aplicaciones de portátil y las aplicaciones de mano complementarias: 
 
-**Data api** &ndash; esta API es similar a un almacén de datos sincronizado entre el dispositivo portátil y el dispositivo de mano. Android se encarga de propagar los cambios entre portátil y el dispositivo de mano cuando es óptimo hacerlo. Cuando el portátil está fuera del intervalo, pone en cola la sincronización para más adelante. El punto de entrada principal para esta API es `WearableClass.DataApi`. Para obtener más información acerca de esta API, vea el tema Android [Syncing Data items](https://developer.android.com/training/wearables/data-layer/data-items.html) . 
+**API** &ndash; de datos Esta API es similar a un almacén de datos sincronizado entre el dispositivo portátil y el dispositivo de mano. Android se encarga de propagar los cambios entre portátil y el dispositivo de mano cuando es óptimo hacerlo. Cuando el portátil está fuera del intervalo, pone en cola la sincronización para más adelante. El punto de entrada principal para esta API es `WearableClass.DataApi` . Para obtener más información acerca de esta API, vea el tema Android [Syncing Data items](https://developer.android.com/training/wearables/data-layer/data-items.html) . 
 
-**Message api** &ndash; esta API permite usar una ruta de comunicación de nivel inferior: una carga pequeña se envía de forma unidireccional sin sincronización entre las aplicaciones de handheld y portátil.
-El punto de entrada principal para esta API es `WearableClass.MessageApi`.
+**API** &ndash; de mensajes Esta API permite usar una ruta de comunicación de nivel inferior: una carga pequeña se envía de forma unidireccional sin sincronización entre las aplicaciones de mano y portátil.
+El punto de entrada principal para esta API es `WearableClass.MessageApi` .
 Para obtener más información acerca de esta API, consulte el tema [envío y recepción de mensajes](https://developer.android.com/training/wearables/data-layer/messages.html) de Android.
 
-Puede optar por registrar devoluciones de llamada para recibir esos mensajes a través de cada una de las interfaces del agente de escucha de API o, como alternativa, implementar un servicio en la aplicación que se derive de `WearableListenerService`.
+Puede optar por registrar devoluciones de llamada para recibir esos mensajes a través de cada una de las interfaces del agente de escucha de API o, como alternativa, implementar un servicio en la aplicación que se derive de `WearableListenerService` .
 Se crearán instancias de este servicio automáticamente con el desgaste de Android.
-En el ejemplo [FindMyPhone](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-findmyphonesample) se muestra cómo implementar un `WearableListenerService`.
+En el ejemplo [FindMyPhone](/samples/xamarin/monodroid-samples/wear-findmyphonesample) se muestra cómo implementar un `WearableListenerService` .
 
 ### <a name="deployment"></a>Implementación
 
@@ -77,7 +77,7 @@ La mejor manera de familiarizarse con el desgaste de Android consiste en compila
 
 1. Instalación [& instalación](~/android/wear/get-started/installation.md) proporciona instrucciones detalladas para instalar y configurar el entorno de desarrollo para compilar aplicaciones de desgaste de Xamarin. Android. 
 
-2. Una vez que haya instalado los paquetes necesarios y haya configurado un emulador o un dispositivo, consulte [Hola, desgaste](~/android/wear/get-started/hello-wear.md) de las instrucciones paso a paso que explican cómo crear un pequeño proyecto de desgaste de Android que controla los clics de los botones y muestra un contador de clic en el desgaste. dispositivos. 
+2. Una vez que haya instalado los paquetes necesarios y haya configurado un emulador o un dispositivo, consulte  [Hola, desgaste](~/android/wear/get-started/hello-wear.md) de las instrucciones paso a paso que explican cómo crear un pequeño proyecto de desgaste de Android que controla los clics de los botones y muestra un contador de clics en el dispositivo de desgaste. 
 
 3. Las [pruebas de & de implementación](~/android/wear/deploy-test/index.md) proporcionan información más detallada sobre la configuración e implementación en emuladores y dispositivos, incluidas instrucciones sobre cómo implementar la aplicación en un dispositivo de desgaste a través de Bluetooth.
 
@@ -126,11 +126,11 @@ Para obtener más información sobre estos dos nuevos interactivos interactivos,
 
 #### <a name="curved-layouts"></a>Diseños curvos 
 
-Desgaste 2,0 presenta nuevas características para mostrar diseños curvos en dispositivos de desgaste de ida y vuelta. En concreto, la nueva clase de `WearableRecyclerView` está optimizada para mostrar una lista de elementos verticales en pantallas redondas: 
+Desgaste 2,0 presenta nuevas características para mostrar diseños curvos en dispositivos de desgaste de ida y vuelta. En concreto, la nueva `WearableRecyclerView` clase está optimizada para mostrar una lista de elementos verticales en pantallas redondas: 
 
 ![Ejemplo de diseño curvo](intro-to-wear-images/curved-layout.png "Ejemplo de diseño curvo")
 
-`WearableRecyclerView` extiende la `RecyclerView` clase para admitir diseños curvos y movimientos de desplazamiento circular. Para obtener más información, consulte la documentación de la API de Android [WearableRecyclerView](https://developer.android.com/reference/android/support/wearable/view/WearableRecyclerView.html) . 
+`WearableRecyclerView` extiende la `RecyclerView` clase para admitir diseños curvos y gestos de desplazamiento circular. Para obtener más información, consulte la documentación de la API de Android [WearableRecyclerView](https://developer.android.com/reference/android/support/wearable/view/WearableRecyclerView.html) . 
 
 #### <a name="standalone-apps"></a>Aplicaciones independientes 
 
@@ -158,7 +158,7 @@ Estos son algunos ejemplos de los dispositivos que pueden ejecutar el desgaste d
 - [SONY SmartWatch 3](https://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
 - [ASUS ZenWatch](https://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
 
-## <a name="further-reading"></a>Información adicional
+## <a name="further-reading"></a>Lecturas adicionales
 
 Consulte la documentación sobre el desgaste de Android de Google:
 

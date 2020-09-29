@@ -6,12 +6,12 @@ ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 16b8f303555bc2f45516c3c060c0d2482f9c4954
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: 3e67d2c329e5ea0ad91eebcc4301965682d647aa
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728231"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91458009"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Creación manual de paquetes NuGet para Xamarin
 
@@ -26,7 +26,7 @@ El sitio web de NuGet que [admite varias versiones y perfiles de .NET Framework]
 
 Las principales plataformas de destino de Xamarin que se usan hoy en día son:
 
-- **MonoAndroid** - Xamarin.Android
+- **Monoandroid** -Xamarin. Android
 - **Xamarin. iOS** : [Unified API](~/cross-platform/macios/unified/index.md) de Xamarin. iOS (admite 64 bits)
 - **Xamarin. Mac** : perfil móvil de Xamarin. Mac, que es equivalente a la superficie de la API de Xamarin. iOS y Xamarin. Android.
 
@@ -51,7 +51,7 @@ La mayoría de los archivos **. nuspec** especifican el número de versión de l
 
 Puede especificar la versión con un conjunto de números sin un separador decimal o puede especificarlo mediante separadores decimales. Sin el separador decimal, NuGet solo tomará cada número y lo convertirá en una versión insertando un '. ' entre cada dígito.
 
-En la sección anterior, "MonoAndroid10" hace referencia a "Android 1,0". Esto significa simplemente que la [plataforma de destino](~/android/app-fundamentals/android-api-levels.md) del proyecto debe ser la versión 1,0 o superior de monoandroid. La versión se especifica en el elemento `<TargetFrameworkVersion>` del archivo de proyecto.
+En la sección anterior, "MonoAndroid10" hace referencia a "Android 1,0". Esto significa simplemente que la [plataforma de destino](~/android/app-fundamentals/android-api-levels.md) del proyecto debe ser la versión 1,0 o superior de monoandroid. La versión se especifica en el `<TargetFrameworkVersion>` elemento del archivo de proyecto.
 
 Para aclarar:
 
@@ -80,4 +80,4 @@ Algunos ejemplos de código abierto a los que puede hacer referencia:
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Nugetizer-3000 creación automatizada de NuGet](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)       
-- [Inclusión de un NuGet en el proyecto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)
+- [Inclusión de un NuGet en el proyecto](/visualstudio/mac/nuget-walkthrough)
