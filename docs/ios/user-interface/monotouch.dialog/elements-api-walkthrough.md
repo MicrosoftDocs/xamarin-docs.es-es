@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: davidortinau
 ms.author: daortin
-ms.openlocfilehash: 3e1e7a9c5fb01f73cddb4cab3a95aa421bd8c3fb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b95066379e7b6845bf1265b43681aec83b130aa4
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933372"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436752"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Creación de una aplicación Xamarin. iOS mediante la API Elements
 
@@ -28,7 +28,7 @@ Módulo. D se distribuye con Xamarin. iOS. Para usarlo, haga clic con el botón 
 
 ## <a name="elements-api-walkthrough"></a>Tutorial de API de elementos
 
-En el artículo sobre el [cuadro de diálogo Introducción al monotoque](~/ios/user-interface/monotouch.dialog/index.md) , hemos conseguido una comprensión sólida de las distintas partes de Mt. D. Vamos a usar la API Elements para colocarlas todas juntas en una aplicación.
+En el artículo de [Introducción al cuadro de diálogo MonoTouch](~/ios/user-interface/monotouch.dialog/index.md) , hemos conseguido una comprensión sólida de las distintas partes de Mt. D. Vamos a usar la API Elements para colocarlas todas juntas en una aplicación.
 
 ## <a name="setting-up-the-multi-screen-application"></a>Configuración de la aplicación de varias pantallas
 
@@ -38,9 +38,9 @@ Para crear una aplicación de varias pantallas con MonoTouch. Dialog, es necesar
 
 1. Creación de una clase `UINavigationController.`
 1. Creación de una clase `DialogViewController.`
-1. Agregue `DialogViewController` como la raíz del`UINavigationController.` 
-1. Agregue un `RootElement` al`DialogViewController.`
-1. Agregue `Sections` y `Elements` al`RootElement.` 
+1. Agregue `DialogViewController` como la raíz del  `UINavigationController.` 
+1. Agregue un `RootElement` al  `DialogViewController.`
+1. Agregue `Sections` y  `Elements` al  `RootElement.` 
 
 ### <a name="using-a-uinavigationcontroller"></a>Uso de un UINavigationController
 
@@ -143,7 +143,7 @@ En este artículo se ha presentado un tutorial que muestra cómo usar la API de 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MTDWalkthrough (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/mtdwalkthrough)
+- [MTDWalkthrough (ejemplo)](/samples/xamarin/ios-samples/mtdwalkthrough)
 - [Introducción a MonoTouch. Dialog](~/ios/user-interface/monotouch.dialog/index.md)
 - [Tutorial de la API de reflexión](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [Tutorial de elementos JSON](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)

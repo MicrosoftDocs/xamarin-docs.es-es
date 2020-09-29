@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: dcfa727499859164d950ca9abc24fb935b3d76f9
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 04c33b59e2a1bab7fb401ffdc49d120bcfd679d0
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937012"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436833"
 ---
 # <a name="manual-camera-controls-in-xamarinios"></a>Controles de cámara manuales en Xamarin. iOS
 
@@ -308,16 +308,16 @@ Teniendo en cuenta estos términos y conocimientos, los nuevos controles de enfo
 
 iOS 7 y versiones anteriores proporcionaban los controles de enfoque existentes a través `FocusMode` de la propiedad como:
 
-- `AVCaptureFocusModeLocked`: El foco está bloqueado en un único punto de enfoque.
-- `AVCaptureFocusModeAutoFocus`: La cámara barre la lente a través de todos los puntos focales hasta que encuentra un enfoque agudo y luego permanece allí.
-- `AVCaptureFocusModeContinuousAutoFocus`: La cámara se reenfoca cada vez que detecta una condición de desenfoque.
+- `AVCaptureFocusModeLocked` : El foco está bloqueado en un único punto de enfoque.
+- `AVCaptureFocusModeAutoFocus` : La cámara barre la lente a través de todos los puntos focales hasta que encuentra un enfoque agudo y luego permanece allí.
+- `AVCaptureFocusModeContinuousAutoFocus` : La cámara se reenfoca cada vez que detecta una condición de desenfoque.
 
 Los controles existentes también proporcionan un punto de interés configurable a través de la `FocusPointOfInterest` propiedad, por lo que el usuario puede pulsar para centrarse en un área determinada. La aplicación también puede realizar un seguimiento del movimiento de la lente supervisando la `IsAdjustingFocus` propiedad.
 
 Además, la restricción de intervalo la proporcionó la `AutoFocusRangeRestriction` propiedad como:
 
-- `AVCaptureAutoFocusRangeRestrictionNear`: Restringe el foco a profundidades cercanas. Útil en situaciones como el examen de un código QR o código de barras.
-- `AVCaptureAutoFocusRangeRestrictionFar`: Restringe el foco a profundidades distantes. Resulta útil en situaciones en las que los objetos que se sabe que son irrelevantes se encuentran en el campo de la vista (por ejemplo, un marco de ventana).
+- `AVCaptureAutoFocusRangeRestrictionNear` : Restringe el foco a profundidades cercanas. Útil en situaciones como el examen de un código QR o código de barras.
+- `AVCaptureAutoFocusRangeRestrictionFar` : Restringe el foco a profundidades distantes. Resulta útil en situaciones en las que los objetos que se sabe que son irrelevantes se encuentran en el campo de la vista (por ejemplo, un marco de ventana).
 
 Por último, hay la `SmoothAutoFocus` propiedad que reduce el algoritmo de enfoque automático y lo recorre en incrementos más pequeños para evitar mover los artefactos al grabar vídeo.
 
@@ -529,8 +529,8 @@ De nuevo, tiene el bloque de exposición automática que está intentando calcul
 
 iOS 7 y versiones posteriores, proporcionan los siguientes controles de exposición existentes a través de la `ExposureMode` propiedad:
 
-- `AVCaptureExposureModeLocked`: Muestrea la escena una vez y usa esos valores en toda la escena.
-- `AVCaptureExposureModeContinuousAutoExposure`: Muestrea la escena continuamente para asegurarse de que está bien iluminada.
+- `AVCaptureExposureModeLocked` : Muestrea la escena una vez y usa esos valores en toda la escena.
+- `AVCaptureExposureModeContinuousAutoExposure` : Muestrea la escena continuamente para asegurarse de que está bien iluminada.
 
 `ExposurePointOfInterest`Se puede usar para pulsar para exponer la escena seleccionando un objeto de destino que se va a exponer y la aplicación puede supervisar la `AdjustingExposure` propiedad para ver cuándo se está ajustando la exposición.
 
@@ -578,7 +578,7 @@ La vista contiene los siguientes elementos principales:
 
 - `UIImageView`Que mostrará la fuente de vídeo.
 - `UISegmentedControl`Que cambiará el modo de enfoque de automático a bloqueado.
-- Cuatro `UISlider` controles que mostrarán y actualizarán el desplazamiento, la duración, la ISO y la diferencia.
+- Cuatro  `UISlider` controles que mostrarán y actualizarán el desplazamiento, la duración, la ISO y la diferencia.
 
 Realice lo siguiente para conectar el controlador de vista para el control de exposición manual:
 
@@ -817,8 +817,8 @@ los dispositivos iOS compensan las conversiones de color aumentando la ganancia 
 
 iOS 7 y versiones posteriores proporcionaron los siguientes controles de equilibrio de blancos existentes a través de la `WhiteBalanceMode` propiedad:
 
-- `AVCapture WhiteBalance ModeLocked`: Muestrea la escena una vez y usa esos valores en toda la escena.
-- `AVCapture WhiteBalance ModeContinuousAutoExposure`: Muestrea la escena continuamente para asegurarse de que está bien equilibrada.
+- `AVCapture WhiteBalance ModeLocked` : Muestrea la escena una vez y usa esos valores en toda la escena.
+- `AVCapture WhiteBalance ModeContinuousAutoExposure` : Muestrea la escena continuamente para asegurarse de que está bien equilibrada.
 
 Y la aplicación puede supervisar la `AdjustingWhiteBalance` propiedad para ver cuándo se está ajustando la exposición.
 
@@ -845,13 +845,13 @@ La `DeviceWhiteBalanceGains` propiedad se puede utilizar para observar los valor
 
 Se han agregado rutinas de conversión a iOS 8 para ayudar en la conversión de espacios de colores independientes del dispositivo a y desde ellos. Para implementar las rutinas de conversión, se ha `AVCaptureWhiteBalanceChromaticityValues` agregado la estructura con los siguientes miembros:
 
-- `X`: es un valor comprendido entre 0 y 1.
-- `Y`: es un valor comprendido entre 0 y 1.
+- `X` : es un valor comprendido entre 0 y 1.
+- `Y` : es un valor comprendido entre 0 y 1.
 
 También se ha `AVCaptureWhiteBalanceTemperatureAndTintValues` agregado una estructura con los siguientes miembros:
 
-- `Temperature`: es un valor de punto flotante en grados Kelvin.
-- `Tint`: es un desplazamiento desde el verde o el magenta desde 0 hasta 150 con valores positivos hacia la dirección verde y negativos hacia el magenta.
+- `Temperature` : es un valor de punto flotante en grados Kelvin.
+- `Tint` : es un desplazamiento desde el verde o el magenta desde 0 hasta 150 con valores positivos hacia la dirección verde y negativos hacia el magenta.
 
 Use los `CaptureDevice.GetTemperatureAndTintValues` métodos y `CaptureDevice.GetDeviceWhiteBalanceGains` para realizar conversiones entre los espacios de colores de la temperatura y el matiz, la cromaticidad y la ganancia de RGB.
 
@@ -878,7 +878,7 @@ La vista contiene los siguientes elementos principales:
 
 - `UIImageView`Que mostrará la fuente de vídeo.
 - `UISegmentedControl`Que cambiará el modo de enfoque de automático a bloqueado.
-- Dos `UISlider` controles que mostrarán y actualizarán la temperatura y el matiz.
+- Dos  `UISlider` controles que mostrarán y actualizarán la temperatura y el matiz.
 - `UIButton`Que se usa para muestrear un espacio de tarjeta gris (mundo gris) y establecer el balance de blanco con esos valores.
 
 Realice lo siguiente para conectar el controlador de vista para el control manual de balance de blanco:
@@ -1116,8 +1116,8 @@ Todos los comandos de captura entre corchetes se implementan en la `AVCaptureSti
 
 Se han implementado dos nuevas clases para controlar la configuración:
 
-- `AVCaptureAutoExposureBracketedStillImageSettings`: Tiene una propiedad, `ExposureTargetBias` , que se usa para establecer la diferencia para un corchete de exposición automática.
-- `AVCaptureManual`  `ExposureBracketedStillImageSettings`: Tiene dos propiedades, `ExposureDuration` y `ISO` , que se usan para establecer la velocidad del obturador e ISO para un corchete de exposición manual.
+- `AVCaptureAutoExposureBracketedStillImageSettings` : Tiene una propiedad,  `ExposureTargetBias` , que se usa para establecer la diferencia para un corchete de exposición automática.
+- `AVCaptureManual`  `ExposureBracketedStillImageSettings` : Tiene dos propiedades,  `ExposureDuration` y  `ISO` , que se usan para establecer la velocidad del obturador e ISO para un corchete de exposición manual.
 
 ### <a name="bracketed-capture-controls-dos-and-donts"></a>Los controles de captura entre corchetes hacen y no
 
@@ -1125,22 +1125,22 @@ Se han implementado dos nuevas clases para controlar la configuración:
 
 A continuación se muestra una lista de las cosas que deben realizarse cuando se usan los controles de captura entre corchetes en iOS 8:
 
-- Prepare la aplicación para la situación de captura en el peor de los casos llamando al `PrepareToCaptureStillImageBracket` método.
+- Prepare la aplicación para la situación de captura en el peor de los casos llamando al  `PrepareToCaptureStillImageBracket` método.
 - Suponga que los búferes de ejemplo van a provienen del mismo grupo compartido.
-- Para liberar la memoria asignada por una llamada a Prepare anterior, llame `PrepareToCaptureStillImageBracket` de nuevo a y envíelo a una matriz de un objeto.
+- Para liberar la memoria asignada por una llamada a Prepare anterior, llame  `PrepareToCaptureStillImageBracket` de nuevo a y envíelo a una matriz de un objeto.
 
 #### <a name="donts"></a>Qué no hacer
 
 A continuación se muestra una lista de las cosas que no se deben realizar cuando se usan los controles de captura entre corchetes en iOS 8:
 
 - No mezcle tipos de configuración de captura entre corchetes en una sola captura.
-- No solicite más de `MaxBracketedCaptureStillImageCount` imágenes en una sola captura.
+- No solicite más de  `MaxBracketedCaptureStillImageCount` imágenes en una sola captura.
 
 ### <a name="bracketed-capture-details"></a>Detalles de la captura entre corchetes
 
 Se deben tener en cuenta los siguientes detalles al trabajar con la captura entre corchetes en iOS 8:
 
-- La configuración entre corchetes invalida temporalmente la `AVCaptureDevice` configuración.
+- La configuración entre corchetes invalida temporalmente la  `AVCaptureDevice` configuración.
 - Se omite la configuración de la estabilización de imágenes y de Flash.
 - Todas las imágenes deben usar el mismo formato de salida (JPEG, PNG, etc.).
 - La vista previa de vídeo puede quitar fotogramas.
@@ -1157,7 +1157,7 @@ Con el código de configuración de la captura de AV general en su lugar, `UIVie
 La vista contiene los siguientes elementos principales:
 
 - `UIImageView`Que mostrará la fuente de vídeo.
-- Tres `UIImageViews` que mostrarán los resultados de la captura.
+- Tres  `UIImageViews` que mostrarán los resultados de la captura.
 - `UIScrollView`Para hospedar las vistas de fuente de vídeo y resultado.
 - `UIButton`Que se usa para tomar una captura entre corchetes con algunas configuraciones preestablecidas.
 
@@ -1321,5 +1321,5 @@ En este artículo se ha tratado una introducción a los nuevos controles de cám
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ManualCameraControls (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/manualcameracontrols)
+- [ManualCameraControls (ejemplo)](/samples/xamarin/ios-samples/manualcameracontrols)
 - [Introducción a iOS 8](~/ios/platform/introduction-to-ios8.md)

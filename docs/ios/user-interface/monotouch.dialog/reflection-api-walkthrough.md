@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: davidortinau
 ms.author: daortin
-ms.openlocfilehash: bdbff7760e7680173c57e5fc83cecb80967c0a51
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 2eef38791f420fd49b87b46fd131f1e6ce501892
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996102"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436587"
 ---
 # <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>Creación de una aplicación de Xamarin. iOS mediante la API de reflexión
 
@@ -27,8 +27,8 @@ Módulo. D se distribuye con Xamarin. iOS. Para usarlo, haga clic con el botón 
 El uso de la API de reflexión es tan sencillo como:
 
 1. Crear una clase decorada con MT. Atributos D.
-1. Crear una `BindingContext` instancia de, pasándole una instancia de la clase anterior.
-1. Crear un `DialogViewController` , pasándole el `BindingContext’s` `RootElement` .
+1. Crear una  `BindingContext` instancia de, pasándole una instancia de la clase anterior.
+1. Crear un  `DialogViewController` , pasándole el  `BindingContext’s` `RootElement` .
 
 Echemos un vistazo a un ejemplo para ilustrar cómo usar la API de reflexión. En este ejemplo, se creará una pantalla de entrada de datos simple, como se muestra a continuación:
 
@@ -143,7 +143,7 @@ En este artículo se ha presentado un tutorial de la API de reflexión. Hemos mo
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MTDReflectionWalkthrough (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/mtdreflectionwalkthrough)
+- [MTDReflectionWalkthrough (ejemplo)](/samples/xamarin/ios-samples/mtdreflectionwalkthrough)
 - [Introducción al cuadro de diálogo MonoTouch](~/ios/user-interface/monotouch.dialog/index.md)
 - [Tutorial de API de elementos](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
 - [Tutorial de elementos JSON](~/ios/user-interface/monotouch.dialog/monotouch.dialog-json-markup.md)

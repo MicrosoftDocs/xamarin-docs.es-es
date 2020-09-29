@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 345c05a439423474644ac64ef86f9adc580ab0b1
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 1fdb7a10bd767085ba8758fa2e026cc36c93639a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937727"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436921"
 ---
 # <a name="working-with-watchos-layout-in-xamarin"></a>Trabajar con el diseño de watchos en Xamarin
 
@@ -54,9 +54,9 @@ Cuando el tamaño se establece en **relativo al contenedor** , puede proporciona
 
 ![Proporcionar un valor proporcional y un ajuste de desplazamiento](layout-images/button-attributes.png)
 
-### <a name="group"></a>Grupo
+### <a name="group"></a>Group (Grupo)
 
-`WKInterfaceGroup`es un contenedor de diseño simple que se puede configurar para apilar controles vertical u horizontalmente. Incluye el espaciado entre cada control de forma predeterminada, pero puede modificar el espaciado (e indefinido) en el inspector de **atributos** .
+`WKInterfaceGroup` es un contenedor de diseño simple que se puede configurar para apilar controles vertical u horizontalmente. Incluye el espaciado entre cada control de forma predeterminada, pero puede modificar el espaciado (e indefinido) en el inspector de **atributos** .
 
 ![Modificar el espaciado y los indefinidos en el inspector de atributos](layout-images/group-attributes.png)
 
@@ -79,6 +79,6 @@ Se pueden colocar en los diseños mediante **grupos** o la configuración de pos
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [WatchKitCatalog (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchKitCatalog (ejemplo)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Referencia de diseño de Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/Layout.html)
 - [Referencia tipográfica de color & de Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/ColorandTypography.html)

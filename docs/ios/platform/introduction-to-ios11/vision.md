@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/31/2017
-ms.openlocfilehash: 89a21eec369691e5c6e1ec8ce2430d679b6b309d
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 9a31cd31f7cbfb4748991d45204ca867b5d62c8c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572148"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436620"
 ---
 # <a name="vision-framework-in-xamarinios"></a>Vision Framework en Xamarin. iOS
 
 Vision Framework agrega una serie de nuevas características de procesamiento de imágenes a iOS 11, entre las que se incluyen:
 
 - [Detección de rectángulos](#rectangles)
-- [Detección de caras](#faces)
+- [Detección facial](#faces)
 - Machine Learning el análisis de imágenes (se explica en [CoreML](~/ios/platform/introduction-to-ios11/coreml.md))
 - Detección de códigos de barras
 - Análisis de alineación de imagen
@@ -35,7 +35,7 @@ La detección y el Detección de caras de los rectángulos se describen con más
 
 ## <a name="rectangle-detection"></a>Detección de rectángulos
 
-En el [ejemplo VisionRects](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles) se muestra cómo procesar una imagen y dibujar los rectángulos detectados en ella.
+En el [ejemplo VisionRects](/samples/xamarin/ios-samples/ios11-visionrectangles) se muestra cómo procesar una imagen y dibujar los rectángulos detectados en ella.
 
 ### <a name="1-initialize-the-vision-request"></a>1. inicializar la solicitud de visión
 
@@ -94,7 +94,7 @@ El `OverlayRectangles` método en el ejemplo **VisionRectangles** tiene tres fun
 - Dibujar un rectángulo para indicar dónde se ha detectado cada uno de ellos y
 - Agregar una etiqueta de texto para cada rectángulo mediante CoreGraphics.
 
-Vea el [origen del ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles) para el método CoreGraphics exacto.
+Vea el [origen del ejemplo](/samples/xamarin/ios-samples/ios11-visionrectangles) para el método CoreGraphics exacto.
 
 ![Fotografía con tres rectángulos detectados](vision-images/found-rectangles-phone-sml.png)
 
@@ -106,7 +106,7 @@ La detección de rectángulos suele ser solo el primer paso en una cadena de ope
 
 ## <a name="face-detection"></a>Detección facial
 
-El [ejemplo VisionFaces](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces) funciona de forma similar al ejemplo **VisionRectangles** , mediante una clase de solicitud de visión diferente.
+El [ejemplo VisionFaces](/samples/xamarin/ios-samples/ios11-visionfaces) funciona de forma similar al ejemplo **VisionRectangles** , mediante una clase de solicitud de visión diferente.
 
 ### <a name="1-initialize-the-vision-request"></a>1. inicializar la solicitud de visión
 
@@ -167,7 +167,7 @@ El `OverlayRectangles` método en el ejemplo **VisionFaces** tiene tres funcione
 - Dibujar un rectángulo para cada una de las caras detectadas
 - Agregar una etiqueta de texto para cada una de ellas mediante CoreGraphics.
 
-Vea el [origen del ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces) para el método CoreGraphics exacto.
+Vea el [origen del ejemplo](/samples/xamarin/ios-samples/ios11-visionfaces) para el método CoreGraphics exacto.
 
 ![Fotografía con dos caras detectadas](vision-images/found-faces-phone-sml.png)
 
@@ -177,6 +177,6 @@ Vision Framework incluye funcionalidades adicionales para detectar característi
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Rectángulos de visión (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles)
-- [Caras de visión (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces)
+- [Rectángulos de visión (ejemplo)](/samples/xamarin/ios-samples/ios11-visionrectangles)
+- [Caras de visión (ejemplo)](/samples/xamarin/ios-samples/ios11-visionfaces)
 - [Avances en los filtros de imagen principal, metal, visión y mucho más (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/510/)

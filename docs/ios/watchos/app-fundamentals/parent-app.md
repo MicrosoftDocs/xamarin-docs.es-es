@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 49f2bdf63c286464073308cd1f17239692aa2395
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 002c57a1549201018cb2068f000a038f686eb2c0
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84567338"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436740"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabajar con la aplicación primaria watchos en Xamarin
 
@@ -30,8 +30,8 @@ También se hace referencia a la aplicación primaria como la aplicación conten
 
 En estos dos ejemplos se muestra cómo usar `WCSession` para ejecutar código y enviar mensajes entre una aplicación de inspección y el iPhone emparejado:
 
-- [Supervisión de la conectividad](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchconnectivity/)
-- [SimpleWatchConnectivity](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-simplewatchconnectivity/) 
+- [Supervisión de la conectividad](/samples/xamarin/ios-samples/watchos-watchconnectivity/)
+- [SimpleWatchConnectivity](/samples/xamarin/ios-samples/watchos-simplewatchconnectivity/) 
 
 ## <a name="shared-storage"></a>Almacenamiento compartido
 

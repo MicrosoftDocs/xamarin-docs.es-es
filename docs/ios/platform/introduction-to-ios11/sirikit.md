@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/07/2017
-ms.openlocfilehash: 48ea94b62ba01f32699bf595bc004de133371468
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 7bc102069d673b9459c863282b0423952c8fa59d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574578"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437325"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>SiriKit actualizaciones en iOS 11
 
@@ -49,7 +49,7 @@ El nuevo dominio de listas y notas proporciona una API para que las aplicaciones
 
 - Tienen un título y un campo de contenido.
 
-Las tareas y las notas se pueden organizar en grupos. En el resto de esta sección se describe cómo implementar este nuevo dominio con SiriKit, mediante el [ejemplo de TasksNotes SiriKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample).
+Las tareas y las notas se pueden organizar en grupos. En el resto de esta sección se describe cómo implementar este nuevo dominio con SiriKit, mediante el [ejemplo de TasksNotes SiriKit](/samples/xamarin/ios-samples/ios11-sirikitsample).
 
 ### <a name="how-to-process-a-sirikit-request"></a>Cómo procesar una solicitud SiriKit
 
@@ -68,10 +68,10 @@ Estos métodos opcionales permiten que el código Realice la validación, selecc
 
 Por ejemplo, para la `IINCreateTaskListIntent` interfaz, el método necesario es `HandleCreateTaskList` . Hay cuatro métodos opcionales que proporcionan más control sobre la interacción de Siri:
 
-- `ResolveTitle`: Valida el título, establece un título predeterminado (si es necesario) o indica que los datos no son necesarios.
-- `ResolveTaskTitles`: Valida la lista de tareas que habla el usuario.
-- `ResolveGroupName`: Valida el nombre del grupo, elige un grupo predeterminado o indica que los datos no son necesarios.
-- `ConfirmCreateTaskList`: Valida que el código puede realizar la operación solicitada, pero no la realiza (solo los `Handle*` métodos deben modificar los datos).
+- `ResolveTitle` : Valida el título, establece un título predeterminado (si es necesario) o indica que los datos no son necesarios.
+- `ResolveTaskTitles` : Valida la lista de tareas que habla el usuario.
+- `ResolveGroupName` : Valida el nombre del grupo, elige un grupo predeterminado o indica que los datos no son necesarios.
+- `ConfirmCreateTaskList` : Valida que el código puede realizar la operación solicitada, pero no la realiza (solo los `Handle*` métodos deben modificar los datos).
 
 ### <a name="handle-the-intent"></a>Control de la intención
 
@@ -94,18 +94,18 @@ La aplicación debe analizar los datos proporcionados y, a continuación, realiz
 
 Los métodos obligatorios `Handle*` y opcionales `Confirm*` indican un código de respuesta estableciendo un valor en el objeto que pasan a su controlador de finalización. Las respuestas proceden de la `INCreateTaskListIntentResponseCode` enumeración:
 
-- `Ready`: Devuelve durante la fase de confirmación (es decir, desde un `Confirm*` método, pero no desde un `Handle*` método).
-- `InProgress`: Se usa para tareas de ejecución prolongada (como una operación de red/servidor).
-- `Success`: Responde con los detalles de la operación correcta (solo desde un `Handle*` método).
-- `Failure`: Significa que se ha producido un error y que la operación no se ha podido completar.
-- `RequiringAppLaunch`: No se puede procesar por el intento, pero la operación es posible en la aplicación.
-- `Unspecified`– No usar: el mensaje de error se mostrará al usuario.
+- `Ready` : Devuelve durante la fase de confirmación (es decir, desde un `Confirm*` método, pero no desde un `Handle*` método).
+- `InProgress` : Se usa para tareas de ejecución prolongada (como una operación de red/servidor).
+- `Success` : Responde con los detalles de la operación correcta (solo desde un `Handle*` método).
+- `Failure` : Significa que se ha producido un error y que la operación no se ha podido completar.
+- `RequiringAppLaunch` : No se puede procesar por el intento, pero la operación es posible en la aplicación.
+- `Unspecified` – No usar: el mensaje de error se mostrará al usuario.
 
 Obtenga más información sobre estos métodos y respuestas en la [documentación de notas y listas de SiriKit](https://developer.apple.com/documentation/sirikit/lists_and_notes)de Apple.
 
 ### <a name="implementing-lists-and-notes"></a>Implementar listas y notas
 
-El [ejemplo de TasksNotes SiriKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample) se creó con los pasos siguientes para agregar compatibilidad con SiriKit a una aplicación de iOS en blanco.
+El [ejemplo de TasksNotes SiriKit](/samples/xamarin/ios-samples/ios11-sirikitsample) se creó con los pasos siguientes para agregar compatibilidad con SiriKit a una aplicación de iOS en blanco.
 
 En primer lugar, para agregar compatibilidad con SiriKit, siga estos pasos para la aplicación iOS:
 
@@ -229,5 +229,5 @@ _Se produjo una excepción de Objective-C.  Name: NSInternalInconsistencyExcepti
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [SiriKit (Apple)](https://developer.apple.com/documentation/sirikit)
-- [Ejemplo de TasksNotes SiriKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample)
+- [Ejemplo de TasksNotes SiriKit](/samples/xamarin/ios-samples/ios11-sirikitsample)
 - [Novedades de SiriKit (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/214/)

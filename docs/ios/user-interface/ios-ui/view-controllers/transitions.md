@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 902e59aa9f5c4aec1dc73f10410132b500932094
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: e973221e013132c8172a4b1de0250a085f0ea1df
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86928736"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436935"
 ---
 # <a name="view-controller-transitions-in-xamarinios"></a>Ver transiciones del controlador en Xamarin. iOS
 
@@ -20,13 +20,13 @@ UIKit agrega compatibilidad para personalizar la transición animada que se prod
 
 ## <a name="custom-transitions"></a>Transiciones personalizadas
 
-La transición animada entre controladores de vista en iOS 7 es totalmente personalizable. `UIViewController`ahora incluye una `TransitioningDelegate` propiedad que proporciona una clase de animación personalizada al sistema cuando se produce una transición.
+La transición animada entre controladores de vista en iOS 7 es totalmente personalizable. `UIViewController` ahora incluye una `TransitioningDelegate` propiedad que proporciona una clase de animación personalizada al sistema cuando se produce una transición.
 
 Para usar una transición personalizada con `PresentViewController` :
 
-1. Establezca en `ModalPresentationStyle` `UIModalPresentationStyle.Custom` en el controlador que se va a presentar.
-2. Implemente `UIViewControllerTransitioningDelegate` para crear una clase de animación, que es una instancia de `UIViewControllerAnimatedTransitioning` .
-3. Establezca la `TransitioningDelegate` propiedad en una instancia de `UIViewControllerTransitioningDelegate` , también en el controlador que se va a presentar.
+1. Establezca en  `ModalPresentationStyle`  `UIModalPresentationStyle.Custom` en el controlador que se va a presentar.
+2. Implemente  `UIViewControllerTransitioningDelegate` para crear una clase de animación, que es una instancia de  `UIViewControllerAnimatedTransitioning` .
+3. Establezca la  `TransitioningDelegate` propiedad en una instancia de  `UIViewControllerTransitioningDelegate` , también en el controlador que se va a presentar.
 4. Presente el controlador de vista.
 
 Por ejemplo, el código siguiente presenta un controlador de vista de tipo `ControllerTwo` -a `UIViewController` subclase:
@@ -75,12 +75,12 @@ public class TransitioningDelegate : UIViewControllerTransitioningDelegate
 }
 ```
 
-Cuando se realiza la transición, el sistema crea una instancia de `IUIViewControllerContextTransitioning` , que se pasa a los métodos del animador. `IUIViewControllerContextTransitioning`contiene el `ContainerView` lugar donde se produce la animación, así como el controlador de vista que inicia la transición y el controlador de vista al que se está realizando la transición.
+Cuando se realiza la transición, el sistema crea una instancia de `IUIViewControllerContextTransitioning` , que se pasa a los métodos del animador. `IUIViewControllerContextTransitioning` contiene el `ContainerView` lugar donde se produce la animación, así como el controlador de vista que inicia la transición y el controlador de vista al que se está realizando la transición.
 
 La `UIViewControllerAnimatedTransitioning` clase controla la animación real. Se deben implementar dos métodos:
 
-1. `TransitionDuration`: devuelve la duración de la animación en segundos.
-1. `AnimateTransition`: realiza la animación real.
+1. `TransitionDuration` : devuelve la duración de la animación en segundos.
+1. `AnimateTransition` : realiza la animación real.
 
 Por ejemplo, la clase siguiente implementa `UIViewControllerAnimatedTransitioning` para animar el marco de la vista del controlador:
 
@@ -124,17 +124,17 @@ Ahora, cuando se puntee en el botón, se usa la animación implementada en la `U
 
 Las vistas de colección tienen compatibilidad integrada para crear transiciones animadas:
 
-- **Controladores de navegación** : la transición animada entre dos `UICollectionViewController` instancias se puede controlar opcionalmente de forma automática cuando la `UINavigationController` administra.
-- **Diseño de transición** : una nueva `UICollectionViewTransitionLayout` clase permite la transición interactiva entre diseños.
+- **Controladores de navegación** : la transición animada entre dos  `UICollectionViewController` instancias se puede controlar opcionalmente de forma automática cuando la  `UINavigationController` administra.
+- **Diseño de transición** : una nueva  `UICollectionViewTransitionLayout` clase permite la transición interactiva entre diseños.
 
 ### <a name="navigation-controller-transitions"></a>Transiciones del controlador de navegación
 
 Cuando se usa dentro de un controlador de navegación, `UICollectionViewController` incluye compatibilidad con transiciones animadas entre controladores. Esta compatibilidad está integrada y requiere solo unos pocos pasos sencillos para implementar:
 
-1. Se establece en `UseLayoutToLayoutNavigationTransitions` `false` en un `UICollectionViewController` .
-1. Agregue una instancia de `UICollectionViewController` a la raíz de la pila del controlador de navegación.
-1. Cree un segundo `UICollectionViewController` y establezca su `UseLayoutToLayoutNavigtionTransitions` propiedad en `true` .
-1. Inserte el segundo `UICollectionViewController` en la pila del controlador de navegación.
+1. Se establece en  `UseLayoutToLayoutNavigationTransitions`  `false` en un  `UICollectionViewController` .
+1. Agregue una instancia de  `UICollectionViewController` a la raíz de la pila del controlador de navegación.
+1. Cree un segundo  `UICollectionViewController` y establezca su  `UseLayoutToLayoutNavigtionTransitions` propiedad en  `true` .
+1. Inserte el segundo  `UICollectionViewController` en la pila del controlador de navegación.
 
 El código siguiente agrega una `UICollectionViewController` subclase denominada `ImagesCollectionViewController` a la raíz de la pila de un controlador de navegación, con la `UseLayoutToLayoutNavigationTransitions` propiedad establecida en `false` :
 
@@ -198,18 +198,18 @@ La `UseLayoutToLayoutNavigationTransitions` propiedad se debe establecer antes d
 
 ### <a name="transition-layout"></a>Diseño de transición
 
-Además de la compatibilidad con la transición de diseño dentro de los controladores de navegación, ahora está disponible un nuevo diseño denominado `UICollectionViewTransitionLayout` . Esta clase de diseño permite el control interactivo durante el proceso de transición del diseño, ya que permite que `TransitionProgress` se establezca desde el código. `UICollectionViewTransitionLayout`es diferente de-y no un reemplazo para: el `SetCollectionViewLayout` método de iOS 6 que hizo que se produjera una transición de diseño animado. Ese método no proporcionó compatibilidad integrada para controlar el progreso de la transición animada.
+Además de la compatibilidad con la transición de diseño dentro de los controladores de navegación, ahora está disponible un nuevo diseño denominado `UICollectionViewTransitionLayout` . Esta clase de diseño permite el control interactivo durante el proceso de transición del diseño, ya que permite que `TransitionProgress` se establezca desde el código. `UICollectionViewTransitionLayout` es diferente de-y no un reemplazo para: el `SetCollectionViewLayout` método de iOS 6 que hizo que se produjera una transición de diseño animado. Ese método no proporcionó compatibilidad integrada para controlar el progreso de la transición animada.
 
- `UICollectionViewTransitionLayout`permite, por ejemplo, que se configure un reconocedor de gestos para controlar la transición entre los diseños en respuesta a la interacción del usuario, mediante la administración del diseño original, así como el diseño previsto para realizar la transición a.
+ `UICollectionViewTransitionLayout` permite, por ejemplo, que se configure un reconocedor de gestos para controlar la transición entre los diseños en respuesta a la interacción del usuario, mediante la administración del diseño original, así como el diseño previsto para realizar la transición a.
 
 Los pasos para implementar una transición interactiva dentro de un reconocedor de gestos mediante `UICollectionViewTransitionLayout` son los siguientes:
 
 1. Cree un reconocedor de gestos.
-1. Llame al `StartInteractiveTransition` método de `UICollectionView` , pasándole el diseño de destino y un controlador de finalización.
-1. Establezca la `TransitionProgress` propiedad de la `UICollectionViewTransitionLayout` instancia devuelta desde el `StartInteractiveTransition` método.
+1. Llame al  `StartInteractiveTransition` método de  `UICollectionView` , pasándole el diseño de destino y un controlador de finalización.
+1. Establezca la `TransitionProgress` propiedad de la  `UICollectionViewTransitionLayout` instancia devuelta desde el  `StartInteractiveTransition` método.
 1. Invalidar el diseño.
-1. Llame al `FinishInteractiveTransition` método de `UICollectionView` para completar la transición o el `CancelInteractiveTransition` método para cancelarla.  `FinishInteractiveTransition`hace que la animación complete su transición al diseño de destino, mientras que `CancelInteractiveTransition` la animación vuelve al diseño original.
-1. Controle la finalización de la transición en el controlador de finalización del `StartInteractiveTransition` método.
+1. Llame al `FinishInteractiveTransition` método de  `UICollectionView` para completar la transición o el  `CancelInteractiveTransition` método para cancelarla.  `FinishInteractiveTransition` hace que la animación complete su transición al diseño de destino, mientras que `CancelInteractiveTransition` la animación vuelve al diseño original.
+1. Controle la finalización de la transición en el controlador de finalización del  `StartInteractiveTransition` método.
 1. Agregue el reconocedor de gestos a la vista de colección.
 
 El código siguiente implementa una transición de diseño interactivo dentro de un reconocedor de gestos de pinch:
@@ -258,6 +258,6 @@ A medida que el usuario reduce la vista de colección, `TransitionProgress` se e
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Introducción a iOS 7 (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/introtoios7)
+- [Introducción a iOS 7 (ejemplo)](/samples/xamarin/ios-samples/introtoios7)
 - [Introducción a la interfaz de usuario de iOS 7](~/ios/platform/introduction-to-ios7/ios7-ui.md)
 - [Procesamiento en segundo plano](~/ios/app-fundamentals/backgrounding/index.md)

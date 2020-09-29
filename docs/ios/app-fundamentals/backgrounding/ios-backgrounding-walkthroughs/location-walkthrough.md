@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: bbb0dfbc9a6bf1396c8d517cc2c3289e2857a836
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2350db2e8d4f43a33b0ce394e06ffd2c16b6b7ad
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938403"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436562"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Tutorial: ubicación en segundo plano en Xamarin. iOS
 
@@ -73,9 +73,9 @@ En este tutorial se explican algunos conceptos de fondo clave, incluido el regis
 
     El código anterior establece una serie de propiedades y permisos en la clase [CLLocationManager](xref:CoreLocation.CLLocationManager) :
 
-    - `PausesLocationUpdatesAutomatically`: Es un valor booleano que se puede establecer en función de si se permite al sistema pausar las actualizaciones de ubicación. En algunos dispositivos, el valor predeterminado es `true` , lo que puede hacer que el dispositivo deje de obtener actualizaciones de ubicación en segundo plano después de unos 15 minutos.
-    - `RequestAlwaysAuthorization`-Debe pasar este método para proporcionar al usuario de la aplicación la opción de permitir el acceso a la ubicación en segundo plano. `RequestWhenInUseAuthorization`también se puede pasar si desea proporcionar al usuario la opción de permitir el acceso a la ubicación solo cuando la aplicación está en primer plano.
-    - `AllowsBackgroundLocationUpdates`: Se trata de una propiedad booleana, introducida en iOS 9 que se puede establecer para permitir que una aplicación Reciba actualizaciones de ubicación cuando se suspende.
+    - `PausesLocationUpdatesAutomatically` : Es un valor booleano que se puede establecer en función de si se permite al sistema pausar las actualizaciones de ubicación. En algunos dispositivos, el valor predeterminado es `true` , lo que puede hacer que el dispositivo deje de obtener actualizaciones de ubicación en segundo plano después de unos 15 minutos.
+    - `RequestAlwaysAuthorization` -Debe pasar este método para proporcionar al usuario de la aplicación la opción de permitir el acceso a la ubicación en segundo plano. `RequestWhenInUseAuthorization` también se puede pasar si desea proporcionar al usuario la opción de permitir el acceso a la ubicación solo cuando la aplicación está en primer plano.
+    - `AllowsBackgroundLocationUpdates` : Se trata de una propiedad booleana, introducida en iOS 9 que se puede establecer para permitir que una aplicación Reciba actualizaciones de ubicación cuando se suspende.
 
     > [!IMPORTANT]
     > iOS 8 (y versiones posteriores) también requiere una entrada en el archivo **info. plist** para mostrar el usuario como parte de la solicitud de autorización.
@@ -84,7 +84,7 @@ En este tutorial se explican algunos conceptos de fondo clave, incluido el regis
 
 1. iOS 9 requiere que, al `AllowsBackgroundLocationUpdates` usar **info. plist** , incluya la clave `UIBackgroundModes` con el valor `location` . Si ha completado el paso 2 de este tutorial, ya debería estar en el archivo info. plist.
 
-1. Dentro de la `LocationManager` clase, cree un método llamado `StartLocationUpdates` con el código siguiente. Este código muestra cómo empezar a recibir actualizaciones de ubicación de `CLLocationManager` :
+1. Dentro de la `LocationManager` clase, cree un método llamado `StartLocationUpdates` con el código siguiente. Este código muestra cómo empezar a recibir actualizaciones de ubicación de   `CLLocationManager` :
 
     ```csharp
     if (CLLocationManager.LocationServicesEnabled) {
@@ -101,7 +101,7 @@ En este tutorial se explican algunos conceptos de fondo clave, incluido el regis
 
     Hay varias cosas importantes que se producen en este método. En primer lugar, se realiza una comprobación para ver si la aplicación tiene acceso a los datos de ubicación en el dispositivo. Para comprobarlo, se llama a `LocationServicesEnabled` en `CLLocationManager` . Este método devolverá **false** si el usuario ha denegado el acceso de la aplicación a la información de ubicación.
 
-1. A continuación, indique al administrador de ubicación la frecuencia de actualización. `CLLocationManager`proporciona muchas opciones para filtrar y configurar los datos de ubicación, incluida la frecuencia de las actualizaciones. En este ejemplo, establezca `DesiredAccuracy` para que se actualice siempre que la ubicación cambie por un medidor. Para obtener más información sobre la configuración de la frecuencia de actualización de ubicación y otras preferencias, consulte la referencia de la [clase CLLocationManager](https://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) en la documentación de Apple.
+1. A continuación, indique al administrador de ubicación la frecuencia de actualización. `CLLocationManager` proporciona muchas opciones para filtrar y configurar los datos de ubicación, incluida la frecuencia de las actualizaciones. En este ejemplo, establezca `DesiredAccuracy` para que se actualice siempre que la ubicación cambie por un medidor. Para obtener más información sobre la configuración de la frecuencia de actualización de ubicación y otras preferencias, consulte la referencia de la [clase CLLocationManager](https://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) en la documentación de Apple.
 
 1. Por último, llame a `StartUpdatingLocation` en la `CLLocationManager` instancia de. Esto indica al administrador de ubicación que obtenga una corrección inicial en la ubicación actual y que empiece a enviar actualizaciones.
 
@@ -278,5 +278,5 @@ En este tutorial, creamos una aplicación de iOS correcta y con reconocimiento d
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ubicación (parte 4) (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/location)
+- [Ubicación (parte 4) (ejemplo)](/samples/xamarin/ios-samples/location)
 - [Referencia de Framework de la ubicación principal](https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/_index.html)

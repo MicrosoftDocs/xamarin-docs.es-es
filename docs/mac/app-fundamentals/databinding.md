@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 2f9b4dfac4909a5c68b6c53fc913925ee95313a3
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 688febbb8b2aae3ae9dff45ea06ef3cf3809641a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997519"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436544"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Enlace de datos y codificación de valores de clave en Xamarin. Mac
 
@@ -371,10 +371,10 @@ public void SetPeople(NSMutableArray array) {
 
 Estos permiten que los controladores soliciten y modifiquen los datos que muestran. Al igual que el expuesto `NSArray` anteriormente, tienen una Convención de nomenclatura muy específica (que difiere de las convenciones de nomenclatura de C# típicas):
 
-- `addObject:`: Agrega un objeto a la matriz.
-- `insertObject:in{class_name}ArrayAtIndex:`: Donde `{class_name}` es el nombre de la clase. Este método inserta un objeto en el índice especificado de la matriz.
-- `removeObjectFrom{class_name}ArrayAtIndex:`: Donde `{class_name}` es el nombre de la clase. Este método quita el objeto de la matriz en un índice determinado.
-- `set{class_name}Array:`: Donde `{class_name}` es el nombre de la clase. Este método permite reemplazar el transporte existente por uno nuevo.
+- `addObject:` : Agrega un objeto a la matriz.
+- `insertObject:in{class_name}ArrayAtIndex:` : Donde `{class_name}` es el nombre de la clase. Este método inserta un objeto en el índice especificado de la matriz.
+- `removeObjectFrom{class_name}ArrayAtIndex:` : Donde `{class_name}` es el nombre de la clase. Este método quita el objeto de la matriz en un índice determinado.
+- `set{class_name}Array:` : Donde `{class_name}` es el nombre de la clase. Este método permite reemplazar el transporte existente por uno nuevo.
 
 Dentro de estos métodos, hemos ajustado los cambios en la matriz en `WillChangeValue` y `DidChangeValue` los mensajes para el cumplimiento de KVO.
 
@@ -602,7 +602,7 @@ Ahora debemos enlazar nuestra vista de tabla al controlador de la matriz, haga l
 3. Seleccione la **celda vista de tabla** en la columna **empleado** . En el **Inspector de enlaces** en el **valor** control situado, seleccione **enlazar a** y **vista de celda de tabla**. Escriba `objectValue.Name` para la **ruta de acceso**de la clave del modelo:
 
     [![Establecer la ruta de acceso de la clave del modelo](databinding-images/table09.png "Establecer la ruta de acceso de la clave del modelo")](databinding-images/table09-large.png#lightbox)
-4. `objectValue`es el actual `PersonModel` de la matriz que está siendo administrado por el controlador de la matriz.
+4. `objectValue` es el actual `PersonModel` de la matriz que está siendo administrado por el controlador de la matriz.
 5. Seleccione la **celda vista de tabla** en la columna **ocupación** . En el **Inspector de enlaces** en el **valor** control situado, seleccione **enlazar a** y **vista de celda de tabla**. Escriba `objectValue.Occupation` para la **ruta de acceso**de la clave del modelo:
 
     [![Establecer la ruta de acceso de la clave del modelo](databinding-images/table10.png "Establecer la ruta de acceso de la clave del modelo")](databinding-images/table10-large.png#lightbox)
@@ -610,7 +610,7 @@ Ahora debemos enlazar nuestra vista de tabla al controlador de la matriz, haga l
 
 Si ejecutamos la aplicación, la tabla se rellenará con nuestra matriz de `PersonModels` :
 
-[![Ejecución de la aplicación](databinding-images/table11.png "Ejecución de la aplicación")](databinding-images/table11-large.png#lightbox)
+[![Ejecutar la aplicación](databinding-images/table11.png "Ejecución de la aplicación")](databinding-images/table11-large.png#lightbox)
 
 <a name="Outline_View_Data_Binding"></a>
 
@@ -724,7 +724,7 @@ Ahora debemos enlazar nuestra vista de esquema al controlador de árbol, haga lo
 3. Seleccione la **celda vista de tabla** en la columna **empleado** . En el **Inspector de enlaces** en el **valor** control situado, seleccione **enlazar a** y **vista de celda de tabla**. Escriba `objectValue.Name` para la **ruta de acceso**de la clave del modelo:
 
     [![Escribir la ruta de acceso de la clave del modelo](databinding-images/outline09.png "Escribir la ruta de acceso de la clave del modelo")](databinding-images/outline09-large.png#lightbox)
-4. `objectValue`es el actual `PersonModel` de la matriz que se está administrando mediante el controlador de árbol.
+4. `objectValue` es el actual `PersonModel` de la matriz que se está administrando mediante el controlador de árbol.
 5. Seleccione la **celda vista de tabla** en la columna **ocupación** . En el **Inspector de enlaces** en el **valor** control situado, seleccione **enlazar a** y **vista de celda de tabla**. Escriba `objectValue.Occupation` para la **ruta de acceso**de la clave del modelo:
 
     [![Escribir la ruta de acceso de la clave del modelo](databinding-images/outline10.png "Escribir la ruta de acceso de la clave del modelo")](databinding-images/outline10-large.png#lightbox)
@@ -732,7 +732,7 @@ Ahora debemos enlazar nuestra vista de esquema al controlador de árbol, haga lo
 
 Si ejecutamos la aplicación, el contorno se rellenará con nuestra matriz de `PersonModels` :
 
-[![Ejecución de la aplicación](databinding-images/outline11.png "Ejecución de la aplicación")](databinding-images/outline11-large.png#lightbox)
+[![Ejecutar la aplicación](databinding-images/outline11.png "Ejecución de la aplicación")](databinding-images/outline11-large.png#lightbox)
 
 ### <a name="collection-view-data-binding"></a>Enlace de datos de la vista de colección
 
@@ -891,13 +891,13 @@ En este artículo se ha realizado una visión detallada del trabajo con el enlac
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Guion gráfico de MacDatabinding (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macdatabinding-storyboard)
-- [MacDatabinding Xib (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macdatabinding-xibs)
+- [Guion gráfico de MacDatabinding (ejemplo)](/samples/xamarin/mac-samples/macdatabinding-storyboard)
+- [MacDatabinding Xib (ejemplo)](/samples/xamarin/mac-samples/macdatabinding-xibs)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Controles estándar](~/mac/user-interface/standard-controls.md)
 - [Vistas de tabla](~/mac/user-interface/table-view.md)
 - [Vistas de esquema](~/mac/user-interface/outline-view.md)
-- [Vistas de recopilación](~/mac/user-interface/collection-view.md)
+- [Vistas de colección](~/mac/user-interface/collection-view.md)
 - [Guía de programación de codificación de clave-valor](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueCoding/index.html)
 - [Introducción a la guía de programación de la observación de clave-valor](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html)
 - [Introducción a los temas de programación de enlaces de cacao](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CocoaBindings/CocoaBindings.html)

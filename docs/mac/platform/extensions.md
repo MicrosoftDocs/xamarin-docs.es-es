@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: ac4c8d7bbd28946b6089e7f22a36727d2d73ec18
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: abb14f2074a2f519037ef2a9e85f2bf66613b836
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939209"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436785"
 ---
 # <a name="xamarinmac-extension-support"></a>Compatibilidad con las extensiones de Xamarin.Mac
 
@@ -44,7 +44,7 @@ Las siguientes sugerencias pueden ser útiles al trabajar con extensiones en Xam
 
     [![Registro del sistema](extensions-images/extension02.png)](extensions-images/extension02.png#lightbox)
 - Como se indicó anteriormente, la ejecución de la aplicación host de extensión la registrará en el sistema. Eliminando la agrupación de aplicaciones con el anulación del registro. 
-- Si se registran las versiones "apartadas" de las extensiones de una aplicación, use el siguiente comando para localizarlas (para que se puedan eliminar):`plugin kit -mv`
+- Si se registran las versiones "apartadas" de las extensiones de una aplicación, use el siguiente comando para localizarlas (para que se puedan eliminar): `plugin kit -mv`
 
 <a name="Walkthrough-and-Sample-App"></a>
 
@@ -52,7 +52,7 @@ Las siguientes sugerencias pueden ser útiles al trabajar con extensiones en Xam
 
 Dado que el desarrollador creará y trabajará con las extensiones de Xamarin. Mac de la misma manera que las extensiones de Xamarin. iOS, consulte la documentación [Introducción a las extensiones](~/ios/platform/extensions.md) para obtener más detalles.
 
-[Aquí](https://docs.microsoft.com/samples/xamarin/mac-samples/extensionsamples)puede encontrar un proyecto de Xamarin. Mac de ejemplo que contiene pequeños ejemplos funcionales de cada tipo de extensión.
+[Aquí](/samples/xamarin/mac-samples/extensionsamples)puede encontrar un proyecto de Xamarin. Mac de ejemplo que contiene pequeños ejemplos funcionales de cada tipo de extensión.
 
 <a name="Summary"></a>
 
@@ -63,5 +63,5 @@ En este artículo se ha examinado rápidamente el trabajo con extensiones en una
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
-- [ExtensionSamples](https://docs.microsoft.com/samples/xamarin/mac-samples/extensionsamples)
+- [ExtensionSamples](/samples/xamarin/mac-samples/extensionsamples)
 - [Directrices de la interfaz humana de macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

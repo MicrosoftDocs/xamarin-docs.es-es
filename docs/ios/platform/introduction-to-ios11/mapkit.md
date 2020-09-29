@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: bddab35044c2b85b69146a03babd9884784baceb
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 8ccafec971a97a05dbf16488974d7a8e8e349708
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574592"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437335"
 ---
 # <a name="new-features-in-mapkit-on-ios-11"></a>Nuevas características de MapKit en iOS 11
 
@@ -29,7 +29,7 @@ iOS 11 agrega las siguientes características nuevas a MapKit:
 
 ## <a name="automatically-grouping-markers-while-zooming"></a>Agrupar marcadores automáticamente al hacer zoom
 
-En el ejemplo de MapKit de ejemplo ["Tandm"](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample) se muestra cómo implementar la nueva característica de agrupación en clústeres de anotaciones de iOS 11.
+En el ejemplo de MapKit de ejemplo ["Tandm"](/samples/xamarin/ios-samples/ios11-mapkitsample) se muestra cómo implementar la nueva característica de agrupación en clústeres de anotaciones de iOS 11.
 
 ### <a name="1-create-an-mkpointannotation-subclass"></a>1. crear una `MKPointAnnotation` subclase
 
@@ -108,7 +108,7 @@ public class BikeView : MKMarkerAnnotationView
 
 Aunque la vista de anotación que representa un clúster de marcadores _podría_ ser una imagen simple, los usuarios esperan que la aplicación proporcione indicaciones visuales sobre cuántos marcadores se han agrupado.
 
-En el [código de ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample) se usa CoreGraphics para representar el número de marcadores del clúster, así como una representación de gráfico en círculos de la proporción de cada tipo de marcador.
+En el [código de ejemplo](/samples/xamarin/ios-samples/ios11-mapkitsample) se usa CoreGraphics para representar el número de marcadores del clúster, así como una representación de gráfico en círculos de la proporción de cada tipo de marcador.
 
 También debe establecer:
 
@@ -200,7 +200,7 @@ Consulte la [sección mapas](~/ios/user-interface/controls/ios-maps/index.md) pa
 
 ## <a name="compass-button"></a>Botón brújula
 
-iOS 11 agrega la capacidad de extraer la brújula del mapa y representarla en otro lugar de la vista. Consulte la [aplicación de ejemplo Tandm](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample) para obtener un ejemplo.
+iOS 11 agrega la capacidad de extraer la brújula del mapa y representarla en otro lugar de la vista. Consulte la [aplicación de ejemplo Tandm](/samples/xamarin/ios-samples/ios11-mapkitsample) para obtener un ejemplo.
 
 Cree un botón que se parezca a una brújula (incluida la animación en directo cuando cambie la orientación del mapa) y lo represente en otro control.
 
@@ -255,6 +255,6 @@ View.AddSubview(button); // constraints omitted for simplicity
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de MapKit ' Tandm '](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample)
+- [Ejemplo de MapKit ' Tandm '](/samples/xamarin/ios-samples/ios11-mapkitsample)
 - [MKCompassButton](https://developer.apple.com/documentation/mapkit/mkcompassbutton)
 - [Novedades de MapKit (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/237/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 59ad6a11eecf629fc2a815e21a29493f4a1a1397
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 56306b04b57295a3625804bdbbb6a9810675be2b
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932228"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436760"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>Anotaciones y superposiciones en Xamarin. iOS
 
@@ -20,7 +20,7 @@ La aplicación que vamos a crear en este tutorial se muestra a continuación:
 
  [![Una aplicación de ejemplo de MapKit](ios-maps-walkthrough-images/00-map-overlay.png)](ios-maps-walkthrough-images/00-map-overlay.png#lightbox)
 
-Puede encontrar el código completado en el [ejemplo de tutorial de Maps](https://docs.microsoft.com/samples/xamarin/ios-samples/mapswalkthrough).
+Puede encontrar el código completado en el [ejemplo de tutorial de Maps](/samples/xamarin/ios-samples/mapswalkthrough).
 
 Comencemos con la creación de un nuevo **proyecto de iOS vacío**y asignándole un nombre relevante. Comenzaremos agregando código a nuestro controlador de vistas para mostrar el MapView y, a continuación, crearemos nuevas clases para MapDelegate y las anotaciones personalizadas. Para ello, siga los pasos indicados a continuación:
 
@@ -80,7 +80,7 @@ Comencemos con la creación de un nuevo **proyecto de iOS vacío**y asignándole
 
     ```
 
-1. Cree una nueva instancia de `MapDelegate` y asígnela al `Delegate` de `MKMapView` . Una vez más, implementaremos lo `MapDelegate` siguiente:
+1. Cree una nueva instancia de  `MapDelegate` y asígnela al `Delegate` de `MKMapView` . Una vez más, implementaremos lo `MapDelegate` siguiente:
 
     ```csharp
     mapDelegate = new MapDelegate ();
@@ -286,6 +286,6 @@ En este artículo hemos visto cómo agregar una anotación a un mapa y cómo agr
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de tutorial de Maps](https://docs.microsoft.com/samples/xamarin/ios-samples/mapswalkthrough)
-- [Ejemplo de demostración de mapa](https://docs.microsoft.com/samples/xamarin/ios-samples/mapdemo)
+- [Ejemplo de tutorial de Maps](/samples/xamarin/ios-samples/mapswalkthrough)
+- [Ejemplo de demostración de mapa](/samples/xamarin/ios-samples/mapdemo)
 - [Maps in Xamarin.iOS](~/ios/user-interface/controls/ios-maps/index.md) (Mapas en Xamarin.iOS)

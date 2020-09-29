@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: b9e32fecab7fc5048de319d35ed1a1e55f32b96c
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d9ea7a822b8b841df682a20a70d9231996a17d3d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929810"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436694"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Controles estándar en Xamarin. Mac
 
@@ -387,14 +387,14 @@ Los controles de menú disponibles para macOS pueden establecerse para rellenar 
 
 Además de definir elementos en Interface Builder, los controles de menú (como `NSComboBox` ) proporcionan un conjunto completo de métodos que permiten agregar, editar o eliminar los elementos de la lista interna que mantienen:
 
-- `Add`: Agrega un nuevo elemento al final de la lista.
-- `GetItem`: Devuelve el elemento en el índice especificado.
-- `Insert`: Inserta un nuevo elemento en la lista en la ubicación especificada.
-- `IndexOf`: Devuelve el índice del elemento especificado.
-- `Remove`: Quita el elemento especificado de la lista.
-- `RemoveAll`: Quita todos los elementos de la lista.
-- `RemoveAt`: Quita el elemento en el índice especificado.
-- `Count`: Devuelve el número de elementos de la lista.
+- `Add` : Agrega un nuevo elemento al final de la lista.
+- `GetItem` : Devuelve el elemento en el índice especificado.
+- `Insert` : Inserta un nuevo elemento en la lista en la ubicación especificada.
+- `IndexOf` : Devuelve el índice del elemento especificado.
+- `Remove` : Quita el elemento especificado de la lista.
+- `RemoveAll` : Quita todos los elementos de la lista.
+- `RemoveAt` : Quita el elemento en el índice especificado.
+- `Count` : Devuelve el número de elementos de la lista.
 
 > [!IMPORTANT]
 > Si usa un origen de datos externo ( `UsesDataSource = true` ), la llamada a cualquiera de los métodos anteriores producirá una excepción.
@@ -407,10 +407,10 @@ En lugar de usar los datos internos integrados para proporcionar las filas del c
 
 Para trabajar con un origen de datos externo, creará una instancia del origen de datos del control de menú ( `NSComboBoxDataSource` por ejemplo) e invalidará varios métodos para proporcionar los datos necesarios:
 
-- `ItemCount`: Devuelve el número de elementos de la lista.
-- `ObjectValueForItem`: Devuelve el valor del elemento para un índice determinado.
-- `IndexOfItem`: Devuelve el índice para el valor de proporcionar elemento.
-- `CompletedString`: Devuelve el primer valor de elemento coincidente para el valor del elemento con tipo parcial. Solo se llama a este método si se ha habilitado autocompletar ( `Completes = true` ).
+- `ItemCount` : Devuelve el número de elementos de la lista.
+- `ObjectValueForItem` : Devuelve el valor del elemento para un índice determinado.
+- `IndexOfItem` : Devuelve el índice para el valor de proporcionar elemento.
+- `CompletedString` : Devuelve el primer valor de elemento coincidente para el valor del elemento con tipo parcial. Solo se llama a este método si se ha habilitado autocompletar ( `Completes = true` ).
 
 Para obtener más información, consulte la sección [bases de datos y cuadros combinados](~/mac/app-fundamentals/databases.md#Databases-and-ComboBoxes) del documento [trabajar con bases](~/mac/app-fundamentals/databases.md) de datos.
 
@@ -420,10 +420,10 @@ Para obtener más información, consulte la sección [bases de datos y cuadros c
 
 Los siguientes métodos están disponibles para ajustar la apariencia del control de menú:
 
-- `HasVerticalScroller`-Si es `true` , el control mostrará una barra de desplazamiento vertical. 
-- `VisibleItems`: Ajusta el número de elementos que se muestran cuando se abre el control. El valor predeterminado es cinco (5).
-- `IntercellSpacing`-Ajustar la cantidad de espacio alrededor de un elemento determinado proporcionando un objeto `NSSize` donde `Width` especifica los márgenes izquierdo y derecho, y `Height` especifica el espacio antes y después de un elemento.
-- `ItemHeight`: Especifica el alto de cada elemento de la lista.
+- `HasVerticalScroller` -Si es `true` , el control mostrará una barra de desplazamiento vertical. 
+- `VisibleItems` : Ajusta el número de elementos que se muestran cuando se abre el control. El valor predeterminado es cinco (5).
+- `IntercellSpacing` -Ajustar la cantidad de espacio alrededor de un elemento determinado proporcionando un objeto `NSSize` donde `Width` especifica los márgenes izquierdo y derecho, y `Height` especifica el espacio antes y después de un elemento.
+- `ItemHeight` : Especifica el alto de cada elemento de la lista.
 
 En el caso de los tipos desplegables de `NSPopupButtons` , el primer elemento de menú proporciona el título para el control. Por ejemplo: 
 
@@ -441,11 +441,11 @@ DropDownSelected.Title = "Item 1";
 
 Los siguientes métodos y propiedades le permiten manipular los elementos seleccionados en la lista del control de menú:
 
-- `SelectItem`: Selecciona el elemento en el índice especificado.
-- `Select`-Seleccionar el valor del elemento especificado.
-- `DeselectItem`-Anula la selección del elemento en el índice especificado.
-- `SelectedIndex`: Devuelve el índice del elemento seleccionado actualmente.
-- `SelectedValue`: Devuelve el valor del elemento seleccionado actualmente.
+- `SelectItem` : Selecciona el elemento en el índice especificado.
+- `Select` -Seleccionar el valor del elemento especificado.
+- `DeselectItem` -Anula la selección del elemento en el índice especificado.
+- `SelectedIndex` : Devuelve el índice del elemento seleccionado actualmente.
+- `SelectedValue` : Devuelve el valor del elemento seleccionado actualmente.
 
 Utilice el `ScrollItemAtIndexToTop` para presentar el elemento en el índice especificado en la parte superior de la lista y `ScrollItemAtIndexToVisible` para desplazarse a la lista hasta que el elemento en el índice especificado esté visible.
 
@@ -455,10 +455,10 @@ Utilice el `ScrollItemAtIndexToTop` para presentar el elemento en el índice esp
 
 Los controles de menú proporcionan los siguientes eventos para responder a la interacción del usuario:
 
-- `SelectionChanged`-Se llama a cuando el usuario ha seleccionado un valor de la lista.
-- `SelectionIsChanging`-Se llama a antes de que el nuevo elemento seleccionado por el usuario se convierta en la selección activa.
-- `WillPopup`-Se llama a antes de que se muestre la lista desplegable de elementos.
-- `WillDismiss`-Se llama a antes de que se cierre la lista desplegable de elementos.
+- `SelectionChanged` -Se llama a cuando el usuario ha seleccionado un valor de la lista.
+- `SelectionIsChanging` -Se llama a antes de que el nuevo elemento seleccionado por el usuario se convierta en la selección activa.
+- `WillPopup` -Se llama a antes de que se muestre la lista desplegable de elementos.
+- `WillDismiss` -Se llama a antes de que se cierre la lista desplegable de elementos.
 
 En el caso de los `NSComboBox` controles, incluyen todos los mismos eventos que `NSTextField` , como, por ejemplo, el `Changed` evento al que se llama cada vez que el usuario edita el valor del texto en el cuadro combinado.
 
@@ -577,7 +577,7 @@ FeedbackLabel.StringValue = string.Format("Number: {0}",NumberField.IntValue);
 
 Un `NSTextView` proporciona un área de presentación y edición de texto con todas las características con formato integrado. Como `NSTextField` , utilice la `StringValue` propiedad para leer o establecer el valor del área.
 
-Para ver un ejemplo de un ejemplo complejo de cómo trabajar con vistas de texto en una aplicación de Xamarin. Mac, consulte la [aplicación de ejemplo SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter es un editor de código fuente simple que proporciona compatibilidad con la finalización de código y el resaltado de sintaxis simple.
+Para ver un ejemplo de un ejemplo complejo de cómo trabajar con vistas de texto en una aplicación de Xamarin. Mac, consulte la [aplicación de ejemplo SourceWriter](/samples/xamarin/mac-samples/sourcewriter). SourceWriter es un editor de código fuente simple que proporciona compatibilidad con la finalización de código y el resaltado de sintaxis simple.
 
 El código de SourceWriter se ha comentado completamente y, si están disponibles, se han proporcionado vínculos de métodos o tecnologías clave a información relevante en la documentación de las guías de Xamarin.Mac.
 
@@ -644,7 +644,7 @@ En este artículo se ha realizado una visión detallada del trabajo con los cont
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacControls (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccontrols)
+- [MacControls (ejemplo)](/samples/xamarin/mac-samples/maccontrols)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Windows](~/mac/user-interface/window.md)
 - [Enlace de datos y codificación de clave-valor](~/mac/app-fundamentals/databinding.md)
