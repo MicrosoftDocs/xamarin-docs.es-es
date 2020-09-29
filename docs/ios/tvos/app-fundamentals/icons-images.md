@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 69ea9b0786170345109f0845f3af6e5fd01d2b7c
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 26d4d5ef5f21d16e0de79579c4552e48975a4e2b
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997116"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437140"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Trabajar con iconos e imágenes de tvOS en Xamarin
 
@@ -133,7 +133,7 @@ La aplicación Xamarin. tvOS necesitará no solo un icono de aplicación para la
 
 Cada aplicación debe proporcionar una versión pequeña y una grande de su icono de aplicación. El icono pequeño se usará en la pantalla principal de Apple TV cuando se instale la aplicación. La versión grande se usa en el App Store. El icono de la aplicación grande debe imitar la apariencia de la versión del icono pequeño.
 
-|Icono pequeño|Resolución|Icono grande|Resolución|
+|Icono pequeño|Solución|Icono grande|Solución|
 |---|---|---|---|
 |Tamaño real|400x240px||1280x768px|
 |Tamaño de zona segura|370x222px|||
@@ -231,7 +231,7 @@ El contenido se presenta como una sola lista de desplazamiento horizontal de con
 
 Se necesitarán los siguientes tamaños de contenido:
 
-|Size|Póster (2:3)|Cuadrado (1:1)|HDTV (16:9)|
+|Tamaño|Póster (2:3)|Cuadrado (1:1)|HDTV (16:9)|
 |---|---|---|---|
 |Tamaño real|404x608px|608x608px|908x512px|
 |Tamaño de zona segura|380x570px|570x570px|852x479px|
@@ -253,7 +253,7 @@ Además del desplazamiento automático, el usuario puede tomar el control de los
 
 **Imagen de banner (extra ancha)**
 
-| Size | Resolución |
+| Tamaño | Solución |
 |---|---|
 |Tamaño real|1940x624px|
 |Tamaño de zona segura|1740x620px|
@@ -279,7 +279,7 @@ Si la aplicación Xamarin. tvOS es un juego y ha incluido Game Center soporte t�
 - **Ilustración del panel** : se puede proporcionar una imagen opcional que aparecerá en la parte superior del panel de la aplicación en Game Center. Estas imágenes no tienen el foco.
 - **Material gráfico de marcadores** : debe proporcionar entre una (1) a tres (3) 16:9 imágenes de relación de aspecto para cada marcador que admita la aplicación. Pueden ser archivos estáticos `.png` o en capas `.lsr` . La ilustración del marcador tiene el foco.
 
-|Size|Iconos de logros|Ilustración del panel|Material gráfico de marcador|
+|Tamaño|Iconos de logros|Ilustración del panel|Material gráfico de marcador|
 |---|---|---|---|
 |Tamaño visible|200x200px|923x150px|N/D|
 |Tamaño real|320x320px|N/D|659x371px|
@@ -320,7 +320,7 @@ En este artículo se han tratado todos los tipos y tamaños de imagen que se usa
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Ejemplos de tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guías de la interfaz humana de tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guía de programación de aplicaciones para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

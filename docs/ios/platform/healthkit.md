@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 0c733789883c9752d63824d0bca7356a88d05659
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3d5bdfd78658803dcbb159101050aea48008b69e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929667"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435233"
 ---
 # <a name="healthkit-in-xamarinios"></a>HealthKit en Xamarin. iOS
 
@@ -139,15 +139,15 @@ El almacén de información del kit de mantenimiento es un almacén de informaci
 
 Los datos del kit de mantenimiento se limitan a los tipos especificados de Apple. Estos tipos están estrictamente definidos: algunos, como el tipo de sangre, se limitan a los valores concretos de una enumeración proporcionada por Apple, mientras que otros combinan una magnitud con una unidad de medida (como gramos, calorías y litros). Incluso los datos que comparten una unidad de medida compatible se distinguen por su `HKObjectType` ; por ejemplo, el sistema de tipos detectará un intento erróneo de almacenar un `HKQuantityTypeIdentifier.NumberOfTimesFallen` valor en un campo que espera un, aunque `HKQuantityTypeIdentifier.FlightsClimbed` ambos utilicen la `HKUnit.Count` unidad de medida.
 
-Los tipos pueda almacenar en el almacén de almacenamiento de los kits de mantenimiento son todas las subclases de `HKObjectType` . `HKCharacteristicType`los objetos almacenan sexo biológico, tipo de sangre y fecha de nacimiento. Sin embargo, es más común que `HKSampleType` los objetos, que representan los datos muestreados en un momento específico o durante un período de tiempo. 
+Los tipos pueda almacenar en el almacén de almacenamiento de los kits de mantenimiento son todas las subclases de `HKObjectType` . `HKCharacteristicType` los objetos almacenan sexo biológico, tipo de sangre y fecha de nacimiento. Sin embargo, es más común que `HKSampleType` los objetos, que representan los datos muestreados en un momento específico o durante un período de tiempo. 
 
 [![Gráfico de objetos de HKSampleType](healthkit-images/image08.png)](healthkit-images/image08.png#lightbox)
 
-`HKSampleType`es abstracto y tiene cuatro subclases concretas. Actualmente solo hay un tipo de `HKCategoryType` datos, que es análisis de suspensión. La mayor parte de los datos del kit de mantenimiento son del tipo `HKQuantityType` y almacenan sus datos en `HKQuantitySample` objetos, que se crean con el modelo de diseño de fábrica conocido:
+`HKSampleType` es abstracto y tiene cuatro subclases concretas. Actualmente solo hay un tipo de `HKCategoryType` datos, que es análisis de suspensión. La mayor parte de los datos del kit de mantenimiento son del tipo `HKQuantityType` y almacenan sus datos en `HKQuantitySample` objetos, que se crean con el modelo de diseño de fábrica conocido:
 
 [![La mayor parte de los datos del kit de mantenimiento son del tipo HKQuantityType y almacenan sus datos en objetos HKQuantitySample](healthkit-images/image09.png)](healthkit-images/image09.png#lightbox)
 
-`HKQuantityType`los tipos van desde `HKQuantityTypeIdentifier.ActiveEnergyBurned` a `HKQuantityTypeIdentifier.StepCount` . 
+`HKQuantityType` los tipos van desde `HKQuantityTypeIdentifier.ActiveEnergyBurned` a `HKQuantityTypeIdentifier.StepCount` . 
 
 <a name="requesting-permission"></a>
 
@@ -331,19 +331,19 @@ La primera sección es código reutilizable para crear eventos y controladores g
 
 A continuación, `HeartRateModel` expone 3 eventos: 
 
-- `EnabledChanged`: Indica que se ha habilitado o deshabilitado el almacenamiento de velocidad cardíaca (tenga en cuenta que el almacenamiento está deshabilitado inicialmente). 
-- `ErrorMessageChanged`-En esta aplicación de ejemplo, tenemos un modelo de control de errores muy simple: una cadena con el último error. 
-- `HeartRateStored`: Se genera cuando se almacena una tarifa de corazón en la base de datos del kit de mantenimiento.
+- `EnabledChanged` : Indica que se ha habilitado o deshabilitado el almacenamiento de velocidad cardíaca (tenga en cuenta que el almacenamiento está deshabilitado inicialmente). 
+- `ErrorMessageChanged` -En esta aplicación de ejemplo, tenemos un modelo de control de errores muy simple: una cadena con el último error. 
+- `HeartRateStored` : Se genera cuando se almacena una tarifa de corazón en la base de datos del kit de mantenimiento.
 
 Tenga en cuenta que cada vez que se activan estos eventos, se realiza a través `NSObject.InvokeOnMainThread()` de, lo que permite a los suscriptores actualizar la interfaz de usuario. Como alternativa, los eventos podrían estar documentados como generados en subprocesos en segundo plano y la responsabilidad de garantizar la compatibilidad podría dejarse en sus controladores. Las consideraciones sobre los subprocesos son importantes en las aplicaciones del kit de mantenimiento porque muchas de las funciones, como la solicitud de permiso, son asincrónicas y ejecutan sus devoluciones de llamada en subprocesos no principales.
 
 El código específico del kit de mantenimiento en `HeartRateModel` está en las dos funciones `HeartRateInBeatsPerMinute()` y `StoreHeartRate()` . 
 
-`HeartRateInBeatsPerMinute()`convierte su argumento en un kit de mantenimiento fuertemente tipado `HKQuantity` . El tipo de la cantidad es el especificado por el `HKQuantityTypeIdentifierKey.HeartRate` y las unidades de la cantidad se `HKUnit.Count` dividen entre `HKUnit.Minute` (es decir, la unidad es *pulsaciones por minuto*). 
+`HeartRateInBeatsPerMinute()` convierte su argumento en un kit de mantenimiento fuertemente tipado `HKQuantity` . El tipo de la cantidad es el especificado por el `HKQuantityTypeIdentifierKey.HeartRate` y las unidades de la cantidad se `HKUnit.Count` dividen entre `HKUnit.Minute` (es decir, la unidad es *pulsaciones por minuto*). 
 
 La `StoreHeartRate()` función toma un `HKQuantity` (en la aplicación de ejemplo, uno creado por `HeartRateInBeatsPerMinute()` ). Para validar sus datos, usa el `HKQuantity.IsCompatible()` método, que devuelve `true` si las unidades del objeto se pueden convertir en las unidades del argumento. Si la cantidad se creó con `HeartRateInBeatsPerMinute()` , se devolverá obviamente `true` , pero también devolverá `true` si la cantidad se creó como, por ejemplo, las *pulsaciones por hora*. Normalmente, `HKQuantity.IsCompatible()` se puede usar para validar la masa, la distancia y la energía que el usuario o un dispositivo pueden escribir o mostrarse en un sistema de medida (como unidades de datos imperial), pero que podrían estar almacenados en otro sistema (por ejemplo, unidades métricas). 
 
-Una vez que se ha validado la compatibilidad de la cantidad, el `HKQuantitySample.FromType()` Factory Method se usa para crear un objeto fuertemente tipado `heartRateSample` . `HKSample`los objetos tienen una fecha de inicio y de finalización; en el caso de las lecturas instantáneas, estos valores deben ser los mismos que en el ejemplo. El ejemplo tampoco establece ningún dato de valor clave en su `HKMetadata` argumento, pero puede usar código como el código siguiente para especificar la ubicación del sensor:
+Una vez que se ha validado la compatibilidad de la cantidad, el `HKQuantitySample.FromType()` Factory Method se usa para crear un objeto fuertemente tipado `heartRateSample` . `HKSample` los objetos tienen una fecha de inicio y de finalización; en el caso de las lecturas instantáneas, estos valores deben ser los mismos que en el ejemplo. El ejemplo tampoco establece ningún dato de valor clave en su `HKMetadata` argumento, pero puede usar código como el código siguiente para especificar la ubicación del sensor:
 
 ```csharp
 var hkm = new HKMetadata();
@@ -436,5 +436,5 @@ Por último, hemos echado un vistazo a una implementación sencilla del kit de m
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [HKWork (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-introtohealthkit)
+- [HKWork (ejemplo)](/samples/xamarin/ios-samples/ios8-introtohealthkit)
 - [Introducción a iOS 8](~/ios/platform/introduction-to-ios8.md)

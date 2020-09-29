@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: e57b6df0f0137d5a8a8f2c0ba68793008986ba18
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 0252626cb58ff334e3cff2cc60e6544e4eba18c0
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932189"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435387"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Técnicas de interacción rápida para watchos 3 en Xamarin
 
@@ -115,8 +115,8 @@ Como novedad de watchos 3, el desarrollador tiene acceso directo a los eventos d
 
 Los siguientes elementos proporcionan acceso Digital Crown:
 
-- `WKCrownSequencer`: Proporciona acceso a los giros por segundo.
-- `WKCrownDelegate`: Proporciona acceso a los eventos Delta de rotación.
+- `WKCrownSequencer` : Proporciona acceso a los giros por segundo.
+- `WKCrownDelegate` : Proporciona acceso a los eventos Delta de rotación.
 
 #### <a name="rotations-per-second"></a>Rotaciones por segundo
 
@@ -252,8 +252,8 @@ Como novedad de watchos 3, el desarrollador ahora puede usar los objetos SpritKi
 
 Se han agregado dos nuevas clases de interfaz para admitir esta característica:
 
-- `WKInterfaceSKScene`-Para trabajar con gráficos 2D de SpriteKit.
-- `WKInterfaceSCNScene`-Para trabajar con gráficos SceneKit 3D.
+- `WKInterfaceSKScene` -Para trabajar con gráficos 2D de SpriteKit.
+- `WKInterfaceSCNScene` -Para trabajar con gráficos SceneKit 3D.
 
 Para usar estos objetos, simplemente arrástrelos a la superficie de diseño dentro del guión gráfico de la aplicación de inspección en la Interface Builder de Xcode y use el **Inspector de atributos** para configurarlos.
 
@@ -354,4 +354,4 @@ En este artículo se han tratado las técnicas de interacción rápida que Apple
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de watchOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)
+- [Ejemplos de watchOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2bwatchOS)

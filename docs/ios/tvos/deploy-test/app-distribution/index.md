@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: b311f3121ea6a58975d41b9690e31a44daa0951e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: a9e555c6e4713c4d34f4e14ea29164a769bc3db9
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573708"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435629"
 ---
 # <a name="tvos-app-distribution-overview"></a>Introducción a la distribución de aplicaciones de tvOS
 
@@ -83,7 +83,7 @@ En este artículo se proporciona una breve descripción de los mecanismos de dis
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Ejemplos de tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guías de la interfaz humana de tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guía de programación de aplicaciones para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

@@ -6,12 +6,12 @@ ms.assetid: A4130995-48FD-4E2E-9C2B-ADCEFF35BE3A
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 54a4c6e32059b6ff32b3a93abf5fd30c65f16b5f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 06309c2d746d1349a672d947e27503018b80ae40
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936635"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436965"
 ---
 # <a name="3d-coordinates-in-monogame"></a>Coordenadas 3D en monogame
 
@@ -36,7 +36,7 @@ Una vez finalizado, tendremos un proyecto con un robot moviéndose en un círcul
 
 ## <a name="creating-a-project"></a>Creación de un proyecto
 
-Este tutorial se centra en mover objetos en el espacio 3D. Comenzaremos con el proyecto para representar modelos y matrices de vértices [que se pueden encontrar aquí](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelsandvertsmg/). Una vez descargado, descomprima y abra el proyecto para asegurarse de que se ejecuta y debemos ver lo siguiente:
+Este tutorial se centra en mover objetos en el espacio 3D. Comenzaremos con el proyecto para representar modelos y matrices de vértices [que se pueden encontrar aquí](/samples/xamarin/mobile-samples/modelsandvertsmg/). Una vez descargado, descomprima y abra el proyecto para asegurarse de que se ejecuta y debemos ver lo siguiente:
 
 ![Una vez descargado, descomprima y abra el proyecto para asegurarse de que se ejecuta y se debe mostrar esta vista.](part3-images/image2.png)
 
@@ -572,11 +572,11 @@ namespace MonoGame3D
 
 Las modificaciones realizadas en `Game1` de la versión anterior (que se identifican con `// New camera code` ) son:
 
-- `Camera`campo de`Game1`
-- `Camera`creación de instancias en`Game1.Initialize`
-- `Camera.Update`llamar a en`Game1.Update`
-- `Robot.Draw`Ahora toma un `Camera` parámetro
-- `Game1.Draw`ahora usa `Camera.ViewMatrix` y`Camera.ProjectionMatrix`
+- `Camera` campo de `Game1`
+- `Camera` creación de instancias en `Game1.Initialize`
+- `Camera.Update` llamar a en `Game1.Update`
+- `Robot.Draw` Ahora toma un `Camera` parámetro
+- `Game1.Draw` ahora usa `Camera.ViewMatrix` y `Camera.ProjectionMatrix`
 
 ## <a name="moving-the-camera-with-input"></a>Mover la cámara con entrada
 
@@ -728,4 +728,4 @@ En este tutorial se explica cómo moverse y girar `Models` en el espacio 3D medi
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Vínculo de API de monogame](http://www.monogame.net/documentation/?page=api)
-- [Proyecto terminado (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/monogame3dcamera)
+- [Proyecto terminado (ejemplo)](/samples/xamarin/monodroid-samples/monogame3dcamera)

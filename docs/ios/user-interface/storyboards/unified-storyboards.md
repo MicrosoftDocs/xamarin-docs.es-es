@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 4da0bd1c47c37430b278bed46f658b935a502e2d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: fdfdd385563ee425f0e8767aed13304ae9541b94
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937883"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435365"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Guiones gráficos unificados en Xamarin. iOS
 
@@ -28,7 +28,7 @@ Antes de iOS 8, el desarrollador usaba `UIInterfaceOrientation` y `UIInterfaceId
 
 Los dispositivos se definen mediante clases de tamaño, tanto en los ejes verticales como horizontales, y hay dos tipos de clases de tamaño en iOS 8:
 
-- **Normal** : se trata de un tamaño de pantalla grande (por ejemplo, un iPad) o un gadget que proporciona la impresión de un gran tamaño (por ejemplo, un`UIScrollView`
+- **Normal** : se trata de un tamaño de pantalla grande (por ejemplo, un iPad) o un gadget que proporciona la impresión de un gran tamaño (por ejemplo, un `UIScrollView`
 - **Compacto** : es para dispositivos más pequeños (por ejemplo, un iPhone). Este tamaño tiene en cuenta la orientación del dispositivo.
 
 Si se usan juntos los dos conceptos, el resultado es una cuadrícula de 2 x 2 que define los diferentes tamaños posibles que se pueden usar en las distintas orientaciones, como se puede ver en el diagrama siguiente:
@@ -112,7 +112,7 @@ En esta sección se tratarán los tipos típicos de colecciones de rasgos que el
 
 A continuación se muestra una colección de rasgos típica que el desarrollador podría ver en un iPhone:
 
-|Propiedad|Valor|
+|Propiedad.|Valor|
 |--- |--- |
 |`HorizontalSizeClass`|Compacto|
 |`VerticalSizeClass`|Normal|
@@ -123,7 +123,7 @@ El conjunto anterior representaría una colección de rasgos completa, ya que ti
 
 También es posible tener una colección de rasgos que no presente algunos de sus valores (a los que Apple hace referencia como no *especificado*):
 
-|Propiedad|Valor|
+|Propiedad.|Valor|
 |--- |--- |
 |`HorizontalSizeClass`|Compacto|
 |`VerticalSizeClass`|Sin especificar|
@@ -216,7 +216,7 @@ iOS 8 proporciona varias devoluciones de llamada que el desarrollador puede usar
 
 |Fase|Devolución de llamada|Descripción|
 |--- |--- |--- |
-|Programa de instalación|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Se llama a este método al principio de un cambio de rasgo antes de que una colección de rasgos se establezca en su nuevo valor.</li><li>Se llama al método cuando el valor de la colección de rasgos ha cambiado pero antes de que tenga lugar cualquier animación.</li></ul>|
+|Configurar|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Se llama a este método al principio de un cambio de rasgo antes de que una colección de rasgos se establezca en su nuevo valor.</li><li>Se llama al método cuando el valor de la colección de rasgos ha cambiado pero antes de que tenga lugar cualquier animación.</li></ul>|
 |Animación|`WillTransitionToTraitCollection`|El Coordinador de transiciones que se pasa a este método tiene una `AnimateAlongside` propiedad que permite al desarrollador agregar animaciones que se ejecutarán junto con las animaciones predeterminadas.|
 |Limpieza|`WillTransitionToTraitCollection`|Proporciona un método para que los desarrolladores incluyan su propio código de limpieza después de que tenga lugar la transición.|
 
@@ -228,17 +228,17 @@ El `WillTransitionToTraitCollection` método es ideal para animar los controlado
 
 Ahora veamos más detenidamente lo que ocurre cuando un controlador de vista en dos paneles se contrae de una columna en una vista de una columna. Como parte de este cambio, hay dos procesos que deben realizarse:
 
-- De forma predeterminada, el controlador de vista en dos paneles usará el controlador de vista principal como vista después de que se produzca la contracción. El desarrollador puede invalidar este comportamiento invalidando el `GetPrimaryViewControllerForCollapsingSplitViewController` método de `UISplitViewControllerDelegate` y proporcionando cualquier controlador de vista que desee mostrar en el estado contraído.
-- El controlador de vista secundario tiene que combinarse en el controlador de vista principal. Por lo general, el desarrollador no tendrá que realizar ninguna acción para este paso; el controlador de vista en dos paneles incluye el control automático de esta fase basándose en el dispositivo de hardware. Sin embargo, puede haber algunos casos especiales en los que el desarrollador desee interactuar con este cambio. La llamada al `CollapseSecondViewController` método de `UISplitViewControllerDelegate` permite mostrar el controlador de vista principal cuando se produce la contracción, en lugar de la vista de detalles.
+- De forma predeterminada, el controlador de vista en dos paneles usará el controlador de vista principal como vista después de que se produzca la contracción. El desarrollador puede invalidar este comportamiento invalidando el  `GetPrimaryViewControllerForCollapsingSplitViewController` método de  `UISplitViewControllerDelegate` y proporcionando cualquier controlador de vista que desee mostrar en el estado contraído.
+- El controlador de vista secundario tiene que combinarse en el controlador de vista principal. Por lo general, el desarrollador no tendrá que realizar ninguna acción para este paso; el controlador de vista en dos paneles incluye el control automático de esta fase basándose en el dispositivo de hardware. Sin embargo, puede haber algunos casos especiales en los que el desarrollador desee interactuar con este cambio. La llamada al  `CollapseSecondViewController` método de  `UISplitViewControllerDelegate` permite mostrar el controlador de vista principal cuando se produce la contracción, en lugar de la vista de detalles.
 
 ### <a name="expanding-the-split-view-controller"></a>Expandir el controlador de vista en dos paneles
 
 Ahora veamos más detenidamente lo que ocurre cuando un controlador de vista en dos paneles se expande desde un estado contraído. Una vez más, hay dos fases que deben producirse:
 
-- En primer lugar, defina el nuevo controlador de vista principal. De forma predeterminada, el controlador de vista en dos paneles usará automáticamente el controlador de vista principal de la vista contraída. De nuevo, el desarrollador puede invalidar este comportamiento mediante el `GetPrimaryViewControllerForExpandingSplitViewController` método de `UISplitViewControllerDelegate` .
-- Una vez elegido el controlador de vista principal, se debe volver a crear el controlador de vista secundario. De nuevo, el controlador de vista en dos paneles incluye el control automático de esta fase basándose en el dispositivo de hardware. El desarrollador puede invalidar este comportamiento llamando al `SeparateSecondaryViewController` método de `UISplitViewControllerDelegate` .
+- En primer lugar, defina el nuevo controlador de vista principal. De forma predeterminada, el controlador de vista en dos paneles usará automáticamente el controlador de vista principal de la vista contraída. De nuevo, el desarrollador puede invalidar este comportamiento mediante el  `GetPrimaryViewControllerForExpandingSplitViewController` método de  `UISplitViewControllerDelegate` .
+- Una vez elegido el controlador de vista principal, se debe volver a crear el controlador de vista secundario. De nuevo, el controlador de vista en dos paneles incluye el control automático de esta fase basándose en el dispositivo de hardware. El desarrollador puede invalidar este comportamiento llamando al  `SeparateSecondaryViewController` método de  `UISplitViewControllerDelegate` .
 
-En un controlador de vista en dos paneles, el controlador de vista principal desempeña una parte en la expansión y la contracción de las vistas mediante la implementación de los `CollapseSecondViewController` `SeparateSecondaryViewController` métodos y de `UISplitViewControllerDelegate` . `UINavigationController`implementa estos métodos para enviar y extraer automáticamente el controlador de vista secundario.
+En un controlador de vista en dos paneles, el controlador de vista principal desempeña una parte en la expansión y la contracción de las vistas mediante la implementación de los `CollapseSecondViewController` `SeparateSecondaryViewController` métodos y de `UISplitViewControllerDelegate` . `UINavigationController` implementa estos métodos para enviar y extraer automáticamente el controlador de vista secundario.
 
 ### <a name="showing-view-controllers"></a>Mostrar controladores de vista
 
@@ -246,8 +246,8 @@ Otro cambio que Apple ha realizado en iOS 8 es la forma en que el desarrollador 
 
 Esto presentó un acoplamiento muy estrecho entre el controlador de navegación y el entorno en el que se estaba ejecutando. En iOS 8, Apple ha desacoplado esto proporcionando dos nuevos métodos:
 
-- `ShowViewController`: Se adapta para mostrar el nuevo controlador de vista en función de su entorno. Por ejemplo, en, `UINavigationController` simplemente se envía la nueva vista en la pila. En un controlador de vista en dos paneles, el nuevo controlador de vista se presentará en el lado izquierdo como el nuevo controlador de vista principal. Si no hay ningún controlador de vista de contenedor, la nueva vista se mostrará como un controlador de vista modal.
-- `ShowDetailViewController`: Funciona de manera similar a `ShowViewController` , pero se implementa en un controlador de vista en dos paneles para reemplazar la vista de detalles con el nuevo controlador de vistas que se pasa. Si el controlador de vista en dos paneles está contraído (como podría verse en una aplicación de iPhone), la llamada se redirigirá al `ShowViewController` método y la nueva vista se mostrará como el controlador de vista principal. De nuevo, si no hay ningún controlador de vista de contenedor, la nueva vista se mostrará como un controlador de vista modal.
+- `ShowViewController` : Se adapta para mostrar el nuevo controlador de vista en función de su entorno. Por ejemplo, en,  `UINavigationController` simplemente se envía la nueva vista en la pila. En un controlador de vista en dos paneles, el nuevo controlador de vista se presentará en el lado izquierdo como el nuevo controlador de vista principal. Si no hay ningún controlador de vista de contenedor, la nueva vista se mostrará como un controlador de vista modal.
+- `ShowDetailViewController` : Funciona de manera similar a  `ShowViewController` , pero se implementa en un controlador de vista en dos paneles para reemplazar la vista de detalles con el nuevo controlador de vistas que se pasa. Si el controlador de vista en dos paneles está contraído (como podría verse en una aplicación de iPhone), la llamada se redirigirá al  `ShowViewController` método y la nueva vista se mostrará como el controlador de vista principal. De nuevo, si no hay ningún controlador de vista de contenedor, la nueva vista se mostrará como un controlador de vista modal.
 
 Estos métodos funcionan empezando por el controlador de vista Hoja y pasando por la jerarquía de vistas hasta que encuentren el controlador de vista del contenedor adecuado para controlar la presentación de la nueva vista.
 
@@ -261,8 +261,8 @@ En esta sección, echaremos un vistazo a cómo se implementan realmente estos m�
 
 Este método recorre la cadena de jerarquía hasta que se encuentra el controlador de vista del contenedor correcto. Por ejemplo:
 
-1. Si `ShowViewController` se llama a un método, el primer controlador de vista de la cadena que implementa este método es el controlador de navegación, por lo que se usa como elemento primario de la nueva vista.
-1. Si `ShowDetailViewController` se llama a un método en su lugar, el controlador de vista en dos paneles es el primer controlador de vista para implementarlo, por lo que se usa como elemento primario.
+1. Si  `ShowViewController` se llama a un método, el primer controlador de vista de la cadena que implementa este método es el controlador de navegación, por lo que se usa como elemento primario de la nueva vista.
+1. Si  `ShowDetailViewController` se llama a un método en su lugar, el controlador de vista en dos paneles es el primer controlador de vista para implementarlo, por lo que se usa como elemento primario.
 
 El `GetTargetForAction` método funciona mediante la búsqueda de un controlador de vista que implementa una acción determinada y, a continuación, la pregunta a ese controlador de vista si desea recibir esa acción. Dado que este método es público, los desarrolladores pueden crear sus propios métodos personalizados que funcionen igual que `ShowViewController` los `ShowDetailViewController` métodos integrados y.
 
@@ -454,7 +454,7 @@ public class SplitViewControllerDelegate : UISplitViewControllerDelegate
 }
 ```
 
-El `SeparateSecondaryViewController` método prueba para ver si se está mostrando una foto y toma medidas en función de ese estado. Si no se muestra ninguna foto, se contrae el controlador de vista secundario para que se muestre el controlador de vista principal.
+El `SeparateSecondaryViewController`  método prueba para ver si se está mostrando una foto y toma medidas en función de ese estado. Si no se muestra ninguna foto, se contrae el controlador de vista secundario para que se muestre el controlador de vista principal.
 
 El `CollapseSecondViewController` método se usa al expandir el controlador de vista en dos paneles para ver si hay fotografías en la pila, en caso de que se contraiga de nuevo a esa vista.
 
@@ -749,7 +749,7 @@ Vuelva a Visual Studio para Mac y detenga la ejecución de la aplicación.
 
 Para mantener la compatibilidad con versiones anteriores de iOS 7, solo tiene que incluir los `Default.png` recursos de imagen habituales de la forma habitual en la aplicación iOS 8. iOS volverá al comportamiento anterior y usará esos archivos como pantalla de inicio cuando se ejecute en un dispositivo iOS 7.
 
-Para ver una implementación de una pantalla de inicio dinámico en Xamarin, consulte la aplicación de ejemplo de [pantallas de inicio dinámicos](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen) de iOS 8 adjuntada a este documento.
+Para ver una implementación de una pantalla de inicio dinámico en Xamarin, consulte la aplicación de ejemplo de [pantallas de inicio dinámicos](/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen) de iOS 8 adjuntada a este documento.
 
 ## <a name="summary"></a>Resumen
 
@@ -759,8 +759,8 @@ Por último, en este artículo se han tratado los conceptos básicos de la creac
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Fotos adaptables (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-adaptivephotos)
-- [Pantallas de inicio dinámico (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
+- [Fotos adaptables (ejemplo)](/samples/xamarin/ios-samples/ios8-adaptivephotos)
+- [Pantallas de inicio dinámico (ejemplo)](/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
 - [Introducción a iOS 8](~/ios/platform/introduction-to-ios8.md)
 - [Diseños dinámicos en iOS8: evolucione 2014 (vídeo)](https://youtu.be/f3mMGlS-lM4)
 - [UIPresentationController](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPresentationController_class/)

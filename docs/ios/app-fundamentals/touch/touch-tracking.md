@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: b1ba548135cedd951d7f0a349f273b29182839d1
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: deda3a96272db42af17221e613822b858d57abb1
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86928684"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436331"
 ---
 # <a name="multi-touch-finger-tracking-in-xamarinios"></a>Seguimiento de dedo multitáctil en Xamarin. iOS
 
@@ -22,7 +22,7 @@ Hay ocasiones en las que una aplicación multitáctil necesita realizar un segui
 
 Cuando un dedo toca primero la pantalla, iOS crea un [`UITouch`](xref:UIKit.UITouch) objeto para ese dedo. Este objeto se mantiene igual que el dedo se mueve en la pantalla y, a continuación, se eleva de la pantalla, momento en el que se elimina el objeto. Para realizar un seguimiento de los dedos, un programa debe evitar almacenar este `UITouch` objeto directamente. En su lugar, puede usar la [`Handle`](xref:Foundation.NSObject.Handle) propiedad de tipo `IntPtr` para identificar de forma única estos `UITouch` objetos.
 
-Casi siempre, un programa que realiza un seguimiento de los dedos individuales mantiene un diccionario para el seguimiento táctil. Para un programa iOS, la clave del diccionario es el `Handle` valor que identifica un dedo determinado. El valor del diccionario depende de la aplicación. En el programa de [pintura](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) , cada trazo de dedo (de toque a lanzamiento) se asocia a un objeto que contiene toda la información necesaria para representar la línea dibujada con ese dedo. El programa define una `FingerPaintPolyline` clase pequeña para este propósito:
+Casi siempre, un programa que realiza un seguimiento de los dedos individuales mantiene un diccionario para el seguimiento táctil. Para un programa iOS, la clave del diccionario es el `Handle` valor que identifica un dedo determinado. El valor del diccionario depende de la aplicación. En el programa de [pintura](/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) , cada trazo de dedo (de toque a lanzamiento) se asocia a un objeto que contiene toda la información necesaria para representar la línea dibujada con ese dedo. El programa define una `FingerPaintPolyline` clase pequeña para este propósito:
 
 ```csharp
 class FingerPaintPolyline
@@ -58,7 +58,7 @@ List<FingerPaintPolyline> completedPolylines = new List<FingerPaintPolyline>();
 
 Los objetos de esta `List` se encuentran en el mismo orden en que se dibujaron.
 
-`FingerPaintCanvasView`invalida cinco métodos definidos por `View` :
+`FingerPaintCanvasView` invalida cinco métodos definidos por `View` :
 
 - [`TouchesBegan`](xref:UIKit.UIResponder.TouchesBegan(Foundation.NSSet,UIKit.UIEvent))
 - [`TouchesMoved`](xref:UIKit.UIResponder.TouchesMoved(Foundation.NSSet,UIKit.UIEvent))
@@ -181,7 +181,7 @@ public override void TouchesCancelled(NSSet touches, UIEvent evt)
 }
 ```
 
-Por completo, este procesamiento permite que el programa de [pintura](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) realice un seguimiento de los dedos individuales y dibuje los resultados en la pantalla:
+Por completo, este procesamiento permite que el programa de [pintura](/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) realice un seguimiento de los dedos individuales y dibuje los resultados en la pantalla:
 
 [![Seguimiento de dedos individuales y dibujo de los resultados en la pantalla](touch-tracking-images/image01.png)](touch-tracking-images/image01.png#lightbox)
 
@@ -190,4 +190,4 @@ Ahora ha visto cómo puede realizar el seguimiento de los dedos individuales en 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Guía de Xamarin Android equivalente](~/android/app-fundamentals/touch/touch-tracking.md)
-- [Pintura (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)
+- [Pintura (ejemplo)](/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)

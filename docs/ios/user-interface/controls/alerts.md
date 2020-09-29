@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 1264b28b2ee56ec5de610350a199668c67d5c33c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b7dae8afbb5db378687f9ecb9469236dc68831ae
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022100"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435493"
 ---
 # <a name="displaying-alerts-in-xamarinios"></a>Mostrar alertas en Xamarin. iOS
 
@@ -20,7 +20,7 @@ A partir de iOS 8, UIAlertController ha terminado de reemplazar UIActionSheet y 
 
 A diferencia de las clases reemplazadas, que son subclases de UIView, UIAlertController es una subclase de UIViewController.
 
-Use `UIAlertControllerStyle` para indicar el tipo de alerta que se va a mostrar. Estos tipos de alertas son:
+`UIAlertControllerStyle`Se usa para indicar el tipo de alerta que se va a mostrar. Estos tipos de alertas son:
 
 - **UIAlertControllerStyleActionSheet**
   - Anterior a iOS 8 esto habría sido UIActionSheet
@@ -30,7 +30,7 @@ Use `UIAlertControllerStyle` para indicar el tipo de alerta que se va a mostrar.
 Existen tres pasos necesarios para crear un controlador de alertas:
 
 - Cree y configure la alerta con un:
-  - título
+  - title
   - message
   - preferredStyle
 
@@ -81,7 +81,7 @@ Las alertas también pueden mostrar una hoja de acción, similar a la siguiente 
 
  ![Alerta de hoja de acción](alerts-images/alert3.png)
 
-Los botones se agregan a la alerta con el método `AddAction`:
+Los botones se agregan a la alerta con el `AddAction` método:
 
 ```csharp
 actionSheetButton.TouchUpInside += ((sender, e) => {
@@ -111,5 +111,5 @@ actionSheetButton.TouchUpInside += ((sender, e) => {
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Controles (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [Controles (ejemplo)](/samples/xamarin/ios-samples/controls)
 - [Controlador de alertas](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)

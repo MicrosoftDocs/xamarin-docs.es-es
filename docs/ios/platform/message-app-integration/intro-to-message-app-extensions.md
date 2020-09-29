@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 2cc27b18bdb58ee633cae2d61e8cc6a8064df581
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 0a2ca9fea8135e0188829b8651e9ec15303b933d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937140"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436519"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Conceptos básicos de la extensión de aplicaciones de mensajes en Xamarin. iOS
 
@@ -99,7 +99,7 @@ Los paquetes de adhesivos pueden proporcionar adhesivos en uno de los tres tama�
 
 Usar el inspector de atributos de Xcode para establecer el tamaño de todo el paquete de adhesivos y proporcionar solo recursos de imagen que coincidan con el tamaño solicitado, para obtener los mejores resultados en el explorador de adhesivos dentro de la aplicación mensajes.
 
-Para obtener más información, consulte la aplicación del [generador de helados](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder) y la [referencia de mensajes](https://developer.apple.com/reference/messages)de Apple.
+Para obtener más información, consulte la aplicación del [generador de helados](/samples/xamarin/ios-samples/ios10-icecreambuilder) y la [referencia de mensajes](https://developer.apple.com/reference/messages)de Apple.
 
 ## <a name="creating-a-custom-sticker-experience"></a>Creación de una experiencia de adhesivo personalizada
 
@@ -147,15 +147,15 @@ De forma predeterminada, el `MessagesViewController.cs` archivo se agregará a l
 
 El marco de mensajes proporciona clases para presentar los adhesivos disponibles al usuario:
 
-- `MSStickerBrowserViewController`: Controla la vista en la que se presentarán los adhesivos. También se ajusta a la `IMSStickerBrowserViewDataSource` interfaz para devolver el recuento de adhesivos y la etiqueta de un índice de explorador determinado.
-- `MSStickerBrowserView`: Esta es la vista en la que se mostrarán los adhesivos disponibles.
-- `MSStickerSize`: Decide los tamaños de celda individuales de la cuadrícula de adhesivos presentados en la vista de explorador.
+- `MSStickerBrowserViewController` : Controla la vista en la que se presentarán los adhesivos. También se ajusta a la `IMSStickerBrowserViewDataSource` interfaz para devolver el recuento de adhesivos y la etiqueta de un índice de explorador determinado.
+- `MSStickerBrowserView` : Esta es la vista en la que se mostrarán los adhesivos disponibles.
+- `MSStickerSize` : Decide los tamaños de celda individuales de la cuadrícula de adhesivos presentados en la vista de explorador.
 
 ### <a name="creating-a-custom-sticker-browser"></a>Crear un explorador de adhesivos personalizado
 
 El desarrollador puede personalizar aún más la experiencia de adhesivo para el usuario proporcionando un explorador de adhesivo personalizado ( `MSMessageAppBrowserViewController` ) en la extensión de la aplicación de mensajes. El explorador de adhesivos personalizado cambia el modo en que se presentan los adhesivos al usuario cuando seleccionan un adhesivo para incluirlos en el flujo de mensajes.
 
-Haga lo siguiente:
+Siga estos pasos:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -711,6 +711,6 @@ En este artículo se incluye una extensión de aplicación de mensajes en una so
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Creador de helados (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder)
+- [Creador de helados (ejemplo)](/samples/xamarin/ios-samples/ios10-icecreambuilder)
 - [Referencia de mensajes](https://developer.apple.com/reference/messages)
 - [Guía de programación de extensiones de aplicaciones](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214)

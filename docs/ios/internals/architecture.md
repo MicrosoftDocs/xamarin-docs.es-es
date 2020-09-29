@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 832071023bfe2ea9d947946ff2b70428d93fc866
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2a0d9ebabe2a1f5d6570559f018e6419712b42fc
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937556"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433328"
 ---
 # <a name="ios-app-architecture"></a>Arquitectura de aplicaciones de iOS
 
@@ -24,13 +24,13 @@ En el diagrama siguiente se muestra una introducción básica de esta arquitectu
 
 ## <a name="native-and-managed-code-an-explanation"></a>Código nativo y administrado: explicación
 
-Al desarrollar para Xamarin, a menudo se utilizan los términos código *nativo y administrado* . El [código administrado](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) es código que tiene su ejecución administrada por [.NET Framework Common Language Runtime](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx)o en el caso de Xamarin: el tiempo de ejecución de mono. Esto es lo que llamamos un lenguaje intermedio.
+Al desarrollar para Xamarin, a menudo se utilizan los términos código *nativo y administrado* . El [código administrado](/archive/blogs/brada/what-is-managed-code) es código que tiene su ejecución administrada por [.NET Framework Common Language Runtime](/dotnet/standard/clr)o en el caso de Xamarin: el tiempo de ejecución de mono. Esto es lo que llamamos un lenguaje intermedio.
 
 El código nativo es código que se ejecutará de forma nativa en la plataforma específica (por ejemplo, Objective-C o incluso código compilado AOT, en un chip ARM). En esta guía se describe cómo el AOT compila el código administrado en código nativo y se explica cómo funciona una aplicación de Xamarin. iOS, lo que hace un uso completo de las API de iOS de Apple a través del uso de enlaces, a la vez que también tiene acceso a. BCL de la red y un lenguaje sofisticado como C#.
 
 ## <a name="aot"></a>AOT
 
-Al compilar cualquier aplicación de plataforma Xamarin, el compilador mono de C# (o F #) se ejecutará y compilará el código de C# y F # en el lenguaje intermedio de Microsoft (MSIL). Si está ejecutando una aplicación de Xamarin. Android, Xamarin. Mac o incluso una aplicación de Xamarin. iOS en el simulador, [.net Common Language Runtime (CLR)](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx) COMPILA el MSIL mediante un compilador Just-in-Time (JIT). En tiempo de ejecución, se compila en un código nativo, que se puede ejecutar en la arquitectura correcta para la aplicación.
+Al compilar cualquier aplicación de plataforma Xamarin, el compilador mono de C# (o F #) se ejecutará y compilará el código de C# y F # en el lenguaje intermedio de Microsoft (MSIL). Si está ejecutando una aplicación de Xamarin. Android, Xamarin. Mac o incluso una aplicación de Xamarin. iOS en el simulador, [.net Common Language Runtime (CLR)](/dotnet/standard/clr) COMPILA el MSIL mediante un compilador Just-in-Time (JIT). En tiempo de ejecución, se compila en un código nativo, que se puede ejecutar en la arquitectura correcta para la aplicación.
 
 Sin embargo, hay una restricción de seguridad en iOS, establecida por Apple, que no permite la ejecución de código generado dinámicamente en un dispositivo.
 Para asegurarse de que se adhiere a estos protocolos de seguridad, Xamarin. iOS usa en su lugar un compilador de antemano para compilar el código administrado. Esto genera un archivo binario de iOS nativo, optimizado opcionalmente con LLVM para dispositivos, que se puede implementar en el procesador Basado en ARM de Apple. A continuación se muestra un diagrama aproximado de cómo encaja esto:

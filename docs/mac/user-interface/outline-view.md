@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 7f1ae2ecfa7d6dbed56b8009593fc172615fd051
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c5120fead9084b50912fb4ea1e8cfa100f4b3bbe
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86928801"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436322"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Esquematizar vistas en Xamarin. Mac
 
@@ -97,7 +97,7 @@ Seleccione la vista esquema en la **jerarquía** de la interfaz y las siguientes
 - **Trunca la última línea visible** : si es `true` , la celda se truncará en los datos no caben dentro de sus límites.
 
 > [!IMPORTANT]
-> A menos que esté manteniendo una aplicación de Xamarin. Mac heredada, las `NSView` vistas de esquema basadas en se deben usar en `NSCell` vistas de tabla basadas en. `NSCell`se considera heredada y puede que no se admita en el futuro.
+> A menos que esté manteniendo una aplicación de Xamarin. Mac heredada, las `NSView` vistas de esquema basadas en se deben usar en `NSCell` vistas de tabla basadas en. `NSCell` se considera heredada y puede que no se admita en el futuro.
 
 Seleccione una columna de la tabla en la jerarquía de la **interfaz** y las siguientes propiedades estarán disponibles en el **Inspector de atributos**:
 
@@ -686,8 +686,8 @@ En este artículo se ha tomado una visión detallada del trabajo con las vistas 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacOutlines (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macoutlines)
-- [MacImages (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
+- [MacOutlines (ejemplo)](/samples/xamarin/mac-samples/macoutlines)
+- [MacImages (ejemplo)](/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Vistas de tabla](~/mac/user-interface/table-view.md)
 - [Listas de origen](~/mac/user-interface/source-list.md)

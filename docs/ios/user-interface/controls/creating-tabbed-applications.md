@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 2e8dde87456c6e33eda6846967ceea13eb412b93
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9bd048239c404c0eb3309fdc74b26bcb94db4740
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934308"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434131"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Barras de pestañas y controladores de barra de pestañas en Xamarin. iOS
 
-Las aplicaciones con pestañas se usan en iOS para admitir interfaces de usuario en las que se puede tener acceso a varias pantallas sin ningún orden determinado. A través de la `UITabBarController` clase, las aplicaciones pueden incluir fácilmente compatibilidad con estos escenarios de varias pantallas. `UITabBarController`se encarga de la administración de varias pantallas, lo que permite al desarrollador de la aplicación centrarse en los detalles de cada pantalla.
+Las aplicaciones con pestañas se usan en iOS para admitir interfaces de usuario en las que se puede tener acceso a varias pantallas sin ningún orden determinado. A través de la `UITabBarController` clase, las aplicaciones pueden incluir fácilmente compatibilidad con estos escenarios de varias pantallas. `UITabBarController` se encarga de la administración de varias pantallas, lo que permite al desarrollador de la aplicación centrarse en los detalles de cada pantalla.
 
 Normalmente, las aplicaciones con pestañas se compilan con la `UITabBarController` `RootViewController` de la ventana principal. Sin embargo, con un poco de código adicional, las aplicaciones con pestañas también se pueden usar de forma sucesiva en otra pantalla inicial, como el escenario en el que una aplicación presenta primero una pantalla de inicio de sesión, seguida de la interfaz con pestañas.
 
@@ -27,7 +27,7 @@ En esta página se describen ambos escenarios: cuando las pestañas están en la
 `UITabBarController`Admite el desarrollo de aplicaciones con pestañas de la siguiente manera:
 
 - Permite agregar varios controladores a él.
-- Proporcionar una interfaz de usuario con pestañas, a través de la `UITabBar` clase, para permitir que un usuario cambie entre controladores y sus vistas.
+- Proporcionar una interfaz de usuario con pestañas, a través de la  `UITabBar` clase, para permitir que un usuario cambie entre controladores y sus vistas.
 
 Los controladores se agregan a `UITabBarController` mediante su `ViewControllers` propiedad, que es una `UIViewController` matriz. El `UITabBarController` propio controla la carga del controlador adecuado y la presentación de su vista en función de la pestaña seleccionada.
 
@@ -63,9 +63,9 @@ La `TabController` clase contendrá la implementación de `UITabBarController` q
 
 Para implementar `UITabBarController` , es necesario hacer lo siguiente:
 
-1. Establezca la clase base de `TabController` en `UITabBarController` .
-1. Cree `UIViewController` instancias para agregarlas al `TabController` .
-1. Agregue las `UIViewController` instancias de a una matriz asignada a la `ViewControllers` propiedad de `TabController` .
+1. Establezca la clase base de  `TabController` en  `UITabBarController` .
+1. Cree  `UIViewController` instancias para agregarlas al  `TabController` .
+1. Agregue las  `UIViewController` instancias de a una matriz asignada a la  `ViewControllers` propiedad de  `TabController` .
 
 Agregue el código siguiente a la `TabController` clase para realizar estos pasos:
 
@@ -221,7 +221,7 @@ Vamos a llamar a este nuevo guion gráfico **archivo mainstoryboard** , como se 
 
 [![Agregar un archivo archivo mainstoryboard al proyecto](creating-tabbed-applications-images/new-file-dialog.png)](creating-tabbed-applications-images/new-file-dialog.png#lightbox)
 
-Hay algunos pasos importantes que se deben tener en cuenta al agregar un guion gráfico a un archivo que no es un guion gráfico anterior, que se explican en la guía [Introducción a los guiones gráficos](~/ios/user-interface/storyboards/index.md) . Son los siguientes:
+Hay algunos pasos importantes que se deben tener en cuenta al agregar un guion gráfico a un archivo que no es un guion gráfico anterior, que se explican en la guía [Introducción a los guiones gráficos](~/ios/user-interface/storyboards/index.md) . Dichos componentes son:
 
 1. Agregue el nombre del guion gráfico a la sección **interfaz principal** del `Info.plist` :
 
@@ -332,6 +332,6 @@ En este artículo se describe cómo usar un `UITabBarController` en una aplicaci
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Creación de aplicaciones con pestañas (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/creatingtabbedapplications)
+- [Creación de aplicaciones con pestañas (ejemplo)](/samples/xamarin/ios-samples/creatingtabbedapplications)
 - [Images.zip](https://github.com/xamarin/ios-samples/blob/master/CreatingTabbedApplications/Resources/images.zip?raw=true)
 - [Referencia de la clase UITabBarController](https://developer.apple.com/library/ios/#documentation/uikit/reference/UITabBarController_Class/Reference/Reference.html)

@@ -7,23 +7,23 @@ ms.technology: xamarin-ios
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
-ms.openlocfilehash: 72ab1d9f10ee308313569528d152d5930a258207
-ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
+ms.openlocfilehash: f678ec02ca5b9b47f6f78eea77547b038274190f
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85852972"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435522"
 ---
 # <a name="bind-ios-swift-libraries"></a>Enlazar bibliotecas SWIFT de iOS
 
 > [!IMPORTANT]
-> Actualmente estamos investigando el uso de enlaces personalizados en la plataforma Xamarin. Lleve a cabo [**esta encuesta**](https://www.surveymonkey.com/r/KKBHNLT) para informar sobre los esfuerzos futuros de desarrollo.
+> Estamos investigando el uso de enlaces personalizados en la plataforma Xamarin. Realice [**esta encuesta**](https://www.surveymonkey.com/r/KKBHNLT) para informar de esfuerzos de desarrollo futuros.
 
-La plataforma iOS, junto con sus lenguajes y herramientas nativos, está evolucionando constantemente y hay muchas bibliotecas de terceros desarrolladas con las últimas ofertas. Maximizar la reutilización de código y componentes es uno de los principales objetivos del desarrollo multiplataforma. La capacidad de reutilizar los componentes creados con SWIFT ha vuelto siendo cada vez más importante para los desarrolladores de Xamarin, ya que su popularidad entre los desarrolladores sigue creciendo. Es posible que ya esté familiarizado con el proceso de enlace de bibliotecas de [Objective-C](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough) normales. Hay documentación adicional ahora disponible que describe el proceso de [enlace de un marco de trabajo de SWIFT](walkthrough.md), de modo que una aplicación de Xamarin pueda utilizarla de la misma manera. El propósito de este documento es describir un enfoque de alto nivel para crear un enlace SWIFT para Xamarin.
+La plataforma iOS, junto con sus lenguajes y herramientas nativos, está evolucionando constantemente y hay muchas bibliotecas de terceros desarrolladas con las últimas ofertas. La maximización de la reutilización del código y de los componentes es uno de los principales objetivos del desarrollo multiplataforma. La capacidad de reutilizar los componentes creados con SWIFT ha vuelto siendo cada vez más importante para los desarrolladores de Xamarin, ya que su popularidad entre los desarrolladores sigue creciendo. Es posible que ya esté familiarizado con el proceso de enlace de bibliotecas de [Objective-C](../binding-objective-c/walkthrough.md) normales. Hay documentación adicional ahora disponible que describe el proceso de [enlace de un marco de trabajo de SWIFT](walkthrough.md), de modo que una aplicación de Xamarin pueda utilizarla de la misma manera. El propósito de este documento es describir un enfoque de alto nivel para crear un enlace SWIFT para Xamarin.
 
 ## <a name="high-level-approach"></a>Enfoque de alto nivel
 
-Con Xamarin, puede enlazar cualquier biblioteca nativa de terceros para que pueda ser consumida por una aplicación de Xamarin. SWIFT es el nuevo lenguaje y la creación de enlaces para las bibliotecas compiladas con este lenguaje requiere algunos pasos y herramientas adicionales. Este enfoque implica los cuatro pasos siguientes:
+Con Xamarin, puede enlazar cualquier biblioteca nativa de terceros para que una aplicación de Xamarin la pueda consumir. SWIFT es el nuevo lenguaje y la creación de enlaces para las bibliotecas compiladas con este lenguaje requiere algunos pasos y herramientas adicionales. Este enfoque implica los cuatro pasos siguientes:
 
 1. Compilar la biblioteca nativa
 1. Preparación de los metadatos de Xamarin, que permite a las herramientas de Xamarin generar clases de C#
@@ -32,7 +32,7 @@ Con Xamarin, puede enlazar cualquier biblioteca nativa de terceros para que pued
 
 En las secciones siguientes se describen estos pasos con detalles adicionales.
 
-### <a name="build-the-native-library"></a>Crear la biblioteca nativa
+### <a name="build-the-native-library"></a>Compilación de la biblioteca nativa
 
 El primer paso es tener un marco de trabajo de SWIFT nativo preparado con el encabezado Objective-C creado. Este archivo es un encabezado generado automáticamente que expone las clases, los métodos y los campos de SWIFT deseados, lo que les permite tener acceso a ambos de Objective-C y, en última instancia, a C# a través de una biblioteca de enlace de Xamarin. Este archivo se encuentra en el marco de trabajo en la siguiente ruta de acceso: ** \<FrameworkName> . Framework/headers/ \<FrameworkName> -SWIFT. h**. Si la interfaz expuesta tiene todos los miembros necesarios, puede ir directamente al paso siguiente. De lo contrario, se necesitan pasos adicionales para exponer esos miembros. El enfoque dependerá de si tiene acceso al código fuente de la plataforma SWIFT:
 
@@ -41,13 +41,13 @@ El primer paso es tener un marco de trabajo de SWIFT nativo preparado con el enc
 
 ### <a name="prepare-the-xamarin-metadata"></a>Preparación de los metadatos de Xamarin
 
-El segundo paso es preparar las interfaces de definición de API, que se usan en un proyecto de enlace para generar clases de C#. Estas definiciones pueden crearse de forma manual o automática mediante la herramienta [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) y el archivo de encabezado autogenerated ** \<FrameworkName> -SWIFT. h** mencionado anteriormente. Una vez que se generan los metadatos, debe comprobarse y validarse manualmente.
+El segundo paso es preparar las interfaces de definición de API, que se usan en un proyecto de enlace para generar clases de C#. Estas definiciones pueden crearse de forma manual o automática mediante la herramienta [Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/index.md) y el archivo de encabezado autogenerated ** \<FrameworkName> -SWIFT. h** mencionado anteriormente. Una vez que se generan los metadatos, debe comprobarse y validarse manualmente.
 
 ### <a name="build-the-xamarinios-binding-library"></a>Compilación de la biblioteca de enlace de Xamarin. iOS
 
 El tercer paso consiste en crear un proyecto especial: biblioteca de enlace Xamarin. iOS. Hace referencia a los marcos de trabajo y los metadatos preparados en el paso anterior junto con cualquier dependencia adicional en la que dependa el marco de trabajo correspondiente. También controla la vinculación de los marcos nativos a los que se hace referencia con la aplicación de Xamarin. iOS de consumo.
 
-### <a name="consume-the-xamarin-binding-library"></a>Usar la biblioteca de enlace de Xamarin
+### <a name="consume-the-xamarin-binding-library"></a>Uso de la biblioteca de enlaces de Xamarin
 
 El cuarto y el último paso es hacer referencia a la biblioteca de enlaces en una aplicación de Xamarin. iOS. Es suficiente para habilitar el uso de la biblioteca nativa dentro de las aplicaciones de Xamarin. iOS que tienen como destino iOS 12,2 y versiones posteriores. En el caso de las aplicaciones que tienen como destino una versión anterior, se requieren algunos pasos adicionales:
 
@@ -62,13 +62,13 @@ En el enfoque anterior se describen los pasos de alto nivel necesarios para crea
 
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
 - [Visual Studio para Mac](https://visualstudio.microsoft.com/downloads)
-- [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/)
-- [Comprobación de metadatos de Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify)
-- [Enlace de Objective-C Framework](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough)
+- [Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/index.md)
+- [Comprobación de metadatos de Sharpie](../../../cross-platform/macios/binding/objective-sharpie/platform/verify.md)
+- [Enlace de Objective-C Framework](../binding-objective-c/walkthrough.md)
 - [SDK de iOS para Gigya (marco de SWIFT)](https://developers.gigya.com/display/GD/Swift+SDK)
 - [Estabilidad de la ABI de SWIFT 5,1](https://swift.org/blog/swift-5-1-released/)
 - [SwiftRuntimeSupport NuGet](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/)
-- [Automatización de Xamarin UITest](https://docs.microsoft.com/appcenter/test-cloud/uitest/)
-- [Configuración de Xamarin. iOS UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
-- [AppCenter Test Cloud](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
+- [Automatización de Xamarin UITest](/appcenter/test-cloud/uitest/)
+- [Configuración de Xamarin. iOS UITest](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
+- [AppCenter Test Cloud](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
 - [Repositorio del proyecto de ejemplo](https://github.com/xamcat/xamarin-binding-swift-framework)

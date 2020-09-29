@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: bfa2a74bf9cd30fb7b9888ecd7339a80fe472c9e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 75da06af3444cdb83f00c1089d43ca4d34f2177e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939092"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436819"
 ---
 # <a name="introduction-to-ios-9"></a>Introducción a iOS 9
 
@@ -105,7 +105,7 @@ El marco de trabajo de [HomeKit](xref:HomeKit) , introducido en iOS 8, proporcio
 
 En iOS 9, Apple ha facilitado la instalación, amplió los tipos de accesorios admitidos y proporcionó más interacciones de accesorios (por ejemplo, el control de un accesorio de forma remota a través de iCloud).
 
-Para obtener más información, consulte nuestra [Introducción a HomeKit](~/ios/platform/homekit.md), [aplicación de ejemplo de HomeKitIntro iOS](https://docs.microsoft.com/samples/xamarin/ios-samples/homekit-homekitintro) y documentación de [HomeKit](https://developer.apple.com/homekit/) de Apple.
+Para obtener más información, consulte nuestra [Introducción a HomeKit](~/ios/platform/homekit.md), [aplicación de ejemplo de HomeKitIntro iOS](/samples/xamarin/ios-samples/homekit-homekitintro) y documentación de [HomeKit](https://developer.apple.com/homekit/) de Apple.
 
 ## <a name="handoff-framework-changes"></a>Cambios en el marco de entrega
 
@@ -145,7 +145,7 @@ Para obtener más información, consulte [Touch ID and facial ID en Xamarin. iOS
 
 ## <a name="right-to-left-language-support"></a>Compatibilidad con idiomas de derecha a izquierda
 
-En iOS 9, Apple ha facilitado la presentación de una interfaz de usuario volteada con más facilidad que nunca, ya que proporciona compatibilidad total con los idiomas de derecha a izquierda. Incluye lo siguiente:
+En iOS 9, Apple ha facilitado la presentación de una interfaz de usuario volteada con más facilidad que nunca, ya que proporciona compatibilidad total con los idiomas de derecha a izquierda. Entre estas estructuras se incluyen las siguientes:
 
 - Los controles estándar de [UIKit](xref:UIKit) se voltearán de derecha a izquierda en función de la configuración regional y de idioma de los dispositivos iOS.
 - La clase [UIView](xref:UIKit.UIView) proporciona atributos que permiten definir cómo debe aparecer una vista determinada cuando se voltea de derecha a izquierda.
@@ -185,14 +185,14 @@ Para obtener una lista completa de las desuso específicas de la API, consulte l
 
 ## <a name="ios-9-sample-apps"></a>Aplicaciones de ejemplo de iOS 9
 
-Tenemos algunas [muestras específicas de iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9) para empezar:
+Tenemos algunas [muestras específicas de iOS 9](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9) para empezar:
 
 - [AstroLayout](https://github.com/xamarin/monotouch-samples/tree/master/ios9/AstroLayout)
 - [CollectionView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/CollectionView)
-- [MetalPerformanceShadersHelloWorld](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-metalperformanceshadershelloworld)
-- [MusicMotion](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-musicmotion)
-- [Fotoprogreso](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-photoprogress)
-- [SegueCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-seguecatalog)
+- [MetalPerformanceShadersHelloWorld](/samples/xamarin/ios-samples/ios9-metalperformanceshadershelloworld)
+- [MusicMotion](/samples/xamarin/ios-samples/ios9-musicmotion)
+- [Fotoprogreso](/samples/xamarin/ios-samples/ios9-photoprogress)
+- [SegueCatalog](/samples/xamarin/ios-samples/ios9-seguecatalog)
 - [StackView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StackView)
 - [StickyCorners](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StickyCorners)
 
@@ -203,7 +203,7 @@ Consulte también las partes de iOS de estos ejemplos (Companion Mac OS X versio
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [Ejemplos de iOS 9](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [Introducción a la función táctil 3D](~/ios/platform/3d-touch.md)
 - [Seguridad de transporte de aplicación](~/ios/app-fundamentals/ats.md)
 - [Multitarea para iPad](~/ios/platform/multitasking.md)

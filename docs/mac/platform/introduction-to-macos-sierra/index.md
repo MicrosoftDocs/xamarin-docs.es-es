@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 4dde8941b09ac7b235b94e73e86dc60167fb6bd4
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 8715559db3f551773f41659a0c7c36adb29f0d1e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574462"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437235"
 ---
 # <a name="introduction-to-macos-sierra"></a>Introducción a macOS Sierra
 
@@ -127,7 +127,7 @@ Además, se ha `AppKit` modificado para que funcione en el nuevo **sRGB** ColorS
 
 Apple ofrece las siguientes prácticas recomendadas al trabajar con colores anchos:
 
-- `NSColor`ahora usa el espacio de color sRGB y dejará de fijar valores en `0.0` el `1.0` intervalo para. Si la aplicación se basa en el comportamiento de la abrazadera anterior, deberá modificarla para macOS Sierra.
+- `NSColor` ahora usa el espacio de color sRGB y dejará de fijar valores en `0.0` el `1.0` intervalo para. Si la aplicación se basa en el comportamiento de la abrazadera anterior, deberá modificarla para macOS Sierra.
 - Cuando se usa una API de bajo nivel como gráficos principales o metal para proporcionar el procesamiento de imágenes, la aplicación debe usar un espacio de colores extendido y un formato de píxel que admita valores de punto flotante de 16 bits. Cuando sea necesario, la aplicación tendrá que fijar manualmente los valores de componente de color.
 - Los gráficos principales, los sombreadores de imagen principal y de rendimiento de metal proporcionan nuevos métodos para la conversión entre los dos espacios de color.
 
@@ -153,5 +153,5 @@ Consulte la documentación sobre diferencias de la [API de MacOS v 10.12](https:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [Ejemplos de Mac](/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [Novedades de macOS 10,12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

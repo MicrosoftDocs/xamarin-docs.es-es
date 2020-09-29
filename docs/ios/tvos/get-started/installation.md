@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: f2f0ab8079eea3762a8f37ca93a3caf70ba5ec33
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 57cb31ce2df82345972d3c2032bec8b25fff191b
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030710"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435056"
 ---
 # <a name="installing-tvos-support-in-xamarin"></a>Instalación de la compatibilidad con tvOS en Xamarin
 
@@ -23,7 +23,7 @@ Apple ha publicado Apple TV 4K y tvOS 11. La plataforma Apple TV está abierta a
 
 Xamarin. iOS 11 y versiones posteriores admiten el SDK de tvOS 11 que se incluye con Xcode 9 de Apple.
 
-- [Notas de la versión de Xamarin. iOS](https://docs.microsoft.com/xamarin/ios/release-notes/)
+- [Notas de la versión de Xamarin. iOS](/xamarin/ios/release-notes/)
 - [Notas de la versión de Xcode](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051-CH1-SW876)
 
 ## <a name="installation"></a>Instalación
@@ -36,7 +36,7 @@ Para compilar aplicaciones de tvOS con Xamarin:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Ejemplos de tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guías de la interfaz humana de tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guía de programación de aplicaciones para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

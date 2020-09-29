@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 6f2a188617b00a008dafa20012c0997bc399045d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 87b828221582db37ded66d075bdc933b0743b793
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930967"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436167"
 ---
 # <a name="introduction-to-ios-8"></a>Introducción a iOS 8
 
@@ -166,7 +166,7 @@ En este artículo se han examinado algunas de las nuevas características introd
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [UIKitEnhancements (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-uikitenhancements)
+- [UIKitEnhancements (ejemplo)](/samples/xamarin/ios-samples/ios8-uikitenhancements)
 - [Introducción a las extensiones de aplicaciones](~/ios/platform/extensions.md)
 - [Introduction to CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) (Introducción a CloudKit)
 - [Introducción al selector de documentos](~/ios/platform/document-picker.md)

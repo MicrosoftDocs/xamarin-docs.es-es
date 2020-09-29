@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: bd57232b183d5940a22915a0277a016cab36af8a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9f27fa550bb21f4261288e8a9a3d809a0ccc7de2
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931617"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436504"
 ---
 # <a name="introduction-to-ios-7"></a>Introducción a iOS 7
 
@@ -26,10 +26,10 @@ iOS 7 aumenta la compatibilidad con la animación en UIKit, lo que permite que l
 
 ### <a name="spring-animations"></a>Animaciones de Spring
 
- `UIView`ahora admite animar los cambios de propiedad con un efecto elástico. Para agregar esto, llame al `AnimateNotify` método o `AnimateNotifyAsync` , pasando los valores de la relación de amortiguación del muelle y la velocidad inicial del muelle, tal como se describe a continuación:
+ `UIView` ahora admite animar los cambios de propiedad con un efecto elástico. Para agregar esto, llame al `AnimateNotify` método o `AnimateNotifyAsync` , pasando los valores de la relación de amortiguación del muelle y la velocidad inicial del muelle, tal como se describe a continuación:
 
-- `springWithDampingRatio`: Un valor entre 0 y 1, donde la oscilación aumenta para un valor menor.
-- `initialSpringVelocity`: Velocidad inicial del muelle como un porcentaje de la distancia total de la animación por segundo.
+- `springWithDampingRatio` : Un valor entre 0 y 1, donde la oscilación aumenta para un valor menor.
+- `initialSpringVelocity` : Velocidad inicial del muelle como un porcentaje de la distancia total de la animación por segundo.
 
 El código siguiente produce un efecto elástico cuando cambia el centro de la vista de imagen:
 
@@ -96,12 +96,12 @@ La API es declarativa por naturaleza. Para declarar cómo se comportan las inter
 
 Hay varios comportamientos primitivos distintos disponibles para desencadenar interacciones complejas, entre las que se incluyen:
 
-- `UIAttachmentBehavior`: Adjunta dos elementos dinámicos de modo que se mueven juntos o adjunta un elemento dinámico a un punto de datos adjuntos.
-- `UICollisionBehavior`: Permite que los elementos dinámicos participen en colisiones.
-- `UIDynamicItemBehavior`: Especifica un conjunto general de propiedades que se van a aplicar a los elementos dinámicos, como elasticidad, densidad y fricción.
-- `UIGravityBehavior`: Aplica la gravedad a un elemento dinámico, lo que hace que los elementos se aceleren en la dirección Gravitational.
-- `UIPushBehavior`: Aplica Force a un elemento dinámico.
-- `UISnapBehavior`: Permite que un elemento dinámico se ajuste a una posición con un efecto elástico.
+- `UIAttachmentBehavior` : Adjunta dos elementos dinámicos de modo que se mueven juntos o adjunta un elemento dinámico a un punto de datos adjuntos.
+- `UICollisionBehavior` : Permite que los elementos dinámicos participen en colisiones.
+- `UIDynamicItemBehavior` : Especifica un conjunto general de propiedades que se van a aplicar a los elementos dinámicos, como elasticidad, densidad y fricción.
+- `UIGravityBehavior` : Aplica la gravedad a un elemento dinámico, lo que hace que los elementos se aceleren en la dirección Gravitational.
+- `UIPushBehavior` : Aplica Force a un elemento dinámico.
+- `UISnapBehavior` : Permite que un elemento dinámico se ajuste a una posición con un efecto elástico.
 
 Aunque hay muchos primitivos, el proceso general para agregar interacciones basadas en el física a una vista mediante UIKit Dynamics es coherente entre los distintos comportamientos:
 
@@ -239,6 +239,6 @@ En este artículo se tratan varias novedades principales para iOS. En primer lug
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Introducción a iOS 7 (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/introtoios7)
+- [Introducción a iOS 7 (ejemplo)](/samples/xamarin/ios-samples/introtoios7)
 - [Introducción a la interfaz de usuario de iOS 7](~/ios/platform/introduction-to-ios7/ios7-ui.md)
 - [Procesamiento en segundo plano](~/ios/app-fundamentals/backgrounding/index.md)

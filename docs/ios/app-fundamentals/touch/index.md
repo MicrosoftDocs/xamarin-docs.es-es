@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/23/2017
-ms.openlocfilehash: edf5f1c82857930a2647f306195a4c82f4338db6
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: db3e66920beb355e0b05df2118cd2645c602f0d5
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76724634"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433921"
 ---
 # <a name="handling-touch-in-xamarinios-apps"></a>Control de la entrada táctil en aplicaciones de Xamarin. iOS
 
 Al igual que otras plataformas móviles, iOS tiene varias formas de controlar la interacción táctil. Puede admitir multitáctiles (muchos puntos de contacto en la pantalla) y gestos complejos. En esta guía se presentan algunos de los conceptos, así como las peculiaridades de la implementación de funciones táctiles y gestos en iOS.
 
-iOS encapsula los datos táctiles en la clase `UITouch`, que se pone a disposición de las aplicaciones a través de una serie de métodos de `UIResponder`. Las aplicaciones pueden invalidar estos métodos en las subclases de `UIView` y `UIViewController`, que heredan de `UIResponder`.
+iOS encapsula los datos táctiles en la `UITouch` clase, que se pone a disposición de las aplicaciones a través de una serie de `UIResponder` métodos. Las aplicaciones pueden invalidar estos métodos en las subclases de `UIView` y `UIViewController` , que heredan de `UIResponder` .
 
 Además de capturar los datos táctiles, iOS proporciona medios para interpretar los patrones de los toques en los movimientos. Estos reconocedores de gestos se pueden usar a su vez para interpretar comandos específicos de la aplicación, como un giro de una imagen o un turno de una página. iOS proporciona una colección enriquecida de clases para controlar gestos comunes con el código agregado mínimo.
 
@@ -39,5 +39,5 @@ Esta guía sirve como introducción a la entrada táctil en iOS. Para obtener m�
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [iOS Touch final (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
-- [Pintura (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)
+- [iOS Touch final (ejemplo)](/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
+- [Pintura (ejemplo)](/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)

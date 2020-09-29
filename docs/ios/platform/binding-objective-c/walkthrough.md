@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 342558908c5f42941c9e6e7ef5c7f75d8e0fa9d4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 82367d63d1cc7b52d69de52ee635e380cd68c382
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937987"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435665"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Tutorial: enlazar una biblioteca de Objective-C de iOS
 
@@ -51,7 +51,7 @@ En este artículo se supone que está familiarizado con Xcode y el lenguaje Obje
 - **Xcode y el SDK de iOS** : Xcode de Apple y la API de iOS más reciente deben instalarse y configurarse en el equipo del desarrollador.
 - **[Herramientas de línea de comandos de Xcode](#Installing_the_Xcode_Command_Line_Tools)** : las herramientas de línea de comandos de Xcode deben estar instaladas para la versión instalada actualmente de Xcode (consulte a continuación los detalles de la instalación).
 - **Visual Studio para Mac o Visual Studio** : la versión más reciente de Visual Studio para Mac o Visual Studio debe estar instalada y configurada en el equipo de desarrollo. Se necesita un equipo Mac de Apple para desarrollar una aplicación de Xamarin. iOS y, al usar Visual Studio, debe estar conectado a [un host de compilación de Xamarin. iOS.](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
-- **La versión más reciente de Objective Sharpie** : una copia actual de la herramienta de objetivo Sharpie descargada [aquí](~/cross-platform/macios/binding/objective-sharpie/get-started.md). Si ya tiene el objetivo Sharpie instalado, puede actualizarlo a la versión más reciente mediante el`sharpie update`
+- **La versión más reciente de Objective Sharpie** : una copia actual de la herramienta de objetivo Sharpie descargada [aquí](~/cross-platform/macios/binding/objective-sharpie/get-started.md). Si ya tiene el objetivo Sharpie instalado, puede actualizarlo a la versión más reciente mediante el `sharpie update`
 
 <a name="Installing_the_Xcode_Command_Line_Tools"></a>
 
@@ -491,7 +491,7 @@ Para que la definición tenga el siguiente aspecto:
 
 A continuación, hacemos lo mismo con el contenido del `InfColorPicker.enums.cs` archivo, copiándolos y pegándolos en el `StructsAndEnums.cs` archivo que deja `using` intactas las instrucciones:
 
-[![El contenido del archivo StructsAndEnums.cs](walkthrough-images/os09.png)](walkthrough-images/os09.png#lightbox)
+[![El contenido del archivo StructsAndEnums.cs ](walkthrough-images/os09.png)](walkthrough-images/os09.png#lightbox)
 
 También puede encontrar que el objetivo Sharpie ha anotado el enlace con `[Verify]` atributos. Estos atributos indican que debe comprobar que Objective Sharpie hizo lo correcto comparando el enlace con la declaración C/Objective-C original (que se proporcionará en un comentario encima de la declaración enlazada). Una vez que haya comprobado los enlaces, debe quitar el atributo verify. Para obtener más información, consulte la guía de [comprobación](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md) .
 
@@ -726,4 +726,4 @@ En este artículo se explica el proceso de creación y uso de un proyecto de enl
 - [Detalles de enlace](~/cross-platform/macios/binding/overview.md)
 - [Guía de referencia de tipos de enlace](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin para desarrolladores de Objective-C](~/ios/get-started/objective-c-developers/index.md)
-- [Directrices de diseño de marco](https://msdn.microsoft.com/library/ms229042.aspx)
+- [Directrices de diseño de marco](/dotnet/standard/design-guidelines/)

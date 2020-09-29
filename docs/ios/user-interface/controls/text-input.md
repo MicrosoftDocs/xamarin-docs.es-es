@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: b36ae9f9fe04ea060ef0238d5af25fb771cafe85
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: e8f8c2196edd5450ca2949d59c2fc06ff62274b7
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932345"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435378"
 ---
 # <a name="text-input-in-xamarinios"></a>Entrada de texto en Xamarin. iOS
 
@@ -38,7 +38,7 @@ Estos controles se explican a continuación:
 
 - **Marcador de posición** : es opcional. Si se establece, se muestra cuando el campo de texto está vacío, normalmente para explicar al usuario qué entrada se espera.
 - **Botón Borrar** : controla cuándo aparece el botón Borrar estándar (el círculo gris con (X)) en el campo de texto, de modo que el usuario pueda borrar texto rápidamente. Se puede ocultar, ver o mostrar permanentemente de forma permanente, en función de si el campo se está editando o no.
-- **Tamaño de fuente mínimo** y **ajustar a ajuste** : permite ajustar automáticamente el tamaño de fuente para ajustarse al texto más largo y evitar el truncamiento, pero se limita a un tamaño inferior al especificado.
+- **Tamaño de fuente mínimo** y  **ajustar a ajuste** : permite ajustar automáticamente el tamaño de fuente para ajustarse al texto más largo y evitar el truncamiento, pero se limita a un tamaño inferior al especificado.
 - **Capitalización** : si se van a poner en mayúsculas automáticamente palabras, oraciones o cualquier entrada.
 - **Corrección** : indica si la revisión ortográfica y las sugerencias están habilitadas.
 - **Teclado** : controla el estilo de teclado que se muestra para la entrada y, por tanto, las teclas que están disponibles en el teclado. Esto incluye el panel numérico, el panel de teléfono, el correo electrónico y la dirección URL junto con otras opciones.
@@ -91,4 +91,4 @@ textview1.DataDetectorTypes = UIDataDetectorType.PhoneNumber | UIDataDetectorTyp
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Controles (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [Controles (ejemplo)](/samples/xamarin/ios-samples/controls)

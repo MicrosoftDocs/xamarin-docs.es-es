@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 30501600e0b86498ae967340e2201a135b22d7ad
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8a4b1b5ed3089cb7044850cf19629fa063e43703
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939130"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436342"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Cambios adicionales de los marcos de iOS 9
 
@@ -74,8 +74,8 @@ Apple incluye los siguientes cambios en Foundation Framework en iOS 9:
 
 Se han realizado los siguientes cambios en la clase [NSBundle](xref:Foundation.NSBundle) para iOS 9:
 
-- `GetPreservationPriorityForTag (NSString tag)`: Obtiene la prioridad de conservación actual para los recursos con la etiqueta especificada. Los valores válidos están en el intervalo `0.0` a `1.0` , los recursos con la prioridad más baja se purgarán primero.
-- `SetPreservationPriorityForTag (double priority, NSSet tags)`: Establece la prioridad de conservación actual para los recursos con las etiquetas especificadas. Los valores válidos están en el intervalo `0.0` a `1.0` , los recursos con la prioridad más baja se purgarán primero.
+- `GetPreservationPriorityForTag (NSString tag)` : Obtiene la prioridad de conservación actual para los recursos con la etiqueta especificada. Los valores válidos están en el intervalo `0.0` a `1.0` , los recursos con la prioridad más baja se purgarán primero.
+- `SetPreservationPriorityForTag (double priority, NSSet tags)` : Establece la prioridad de conservación actual para los recursos con las etiquetas especificadas. Los valores válidos están en el intervalo `0.0` a `1.0` , los recursos con la prioridad más baja se purgarán primero.
 
 Para obtener más información, consulte la [referencia de NSBundle](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/Foundation/Classes/NSBundle_Class/index.html#//apple_ref/occ/cl/NSBundle)de Apple.
 
@@ -260,7 +260,7 @@ Use la nueva `UITextInputAssistantItem` clase para los grupos de botones de la b
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [Ejemplos de iOS 9](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [Introducción a iOS 9](~/ios/platform/introduction-to-ios9/index.md)
 - [iOS 9 para desarrolladores](https://developer.apple.com/ios/pre-release/)
 - [Novedades de iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

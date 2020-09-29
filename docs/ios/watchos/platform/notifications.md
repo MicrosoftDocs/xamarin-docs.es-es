@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 0358b2b422e4cc69faa15187ee24d72c7d02ca38
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c8275811cb61aaa1a033ca414e9abd4d20ecc873
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937935"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435423"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>Notificaciones de watchos en Xamarin
 
@@ -50,13 +50,13 @@ Si el usuario no omite la notificación, el sistema cambiará automáticamente a
 
 El sistema operativo decide si Mostrar la vista estática o dinámica en función de una serie de factores. Debe proporcionar una interfaz estática y, opcionalmente, también puede incluir una interfaz dinámica para las notificaciones.
 
-#### <a name="static"></a>estática
+#### <a name="static"></a>Estático
 
 La vista estática debe ser sencilla y rápida de mostrar.
 
 ![Vista estática](notifications-images/notification-static.png)
 
-#### <a name="dynamic"></a>Dinámica
+#### <a name="dynamic"></a>Dinámico
 
 La vista dinámica puede mostrar más datos y proporcionar más interactividad.
 
@@ -99,7 +99,7 @@ Haga clic con el botón derecho en el proyecto de extensión de inspección y el
 
 [![Ejecutar con propiedades personalizadas](notifications-images/runwith-customparams-sml.png)](notifications-images/runwith-customparams.png#lightbox)
 
-Se abrirá la ventana **argumentos de ejecución** que contiene una pestaña **WatchKit** . Seleccione la **notificación** y proporcione una carga JSON y, a continuación, presione **Ejecutar** para iniciar la aplicación de inspección en el simulador:
+Se abrirá la ventana **argumentos de ejecución** que contiene una pestaña **WatchKit** . Seleccione **notificación** y proporcione una carga JSON y, a continuación, presione **Ejecutar** para iniciar la aplicación de inspección en el simulador:
 
 [![Seleccionar carga de notificación predeterminada](notifications-images/runwith-execargs-sml.png)](notifications-images/runwith-execargs.png#lightbox)
 
@@ -123,7 +123,7 @@ También es posible usar la línea de [comandos](~/ios/watchos/troubleshooting.m
 
 ### <a name="example-notification-payload"></a>Ejemplo de carga de notificación
 
-En el ejemplo de [Catálogo del kit de inspección](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) hay un archivo JSON **de carga de ejemploNotificationPayload.jsen** (que se enumeran a continuación).
+En el ejemplo de [Catálogo del kit de inspección](/samples/xamarin/ios-samples/watchos-watchkitcatalog) hay un archivo JSON ** de carga de ejemploNotificationPayload.jsen** (que se enumeran a continuación).
 
 ```json
 {
@@ -146,5 +146,5 @@ En el ejemplo de [Catálogo del kit de inspección](https://docs.microsoft.com/s
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [WatchKitCatalog (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchKitCatalog (ejemplo)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Documentos de notificaciones del kit de inspección de Apple](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)

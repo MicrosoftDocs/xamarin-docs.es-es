@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: c303125ac02c8e7c47fb16928df1432c66a8e8d2
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8a1f386209ccc1f2cb33348930f29bf5ac65ce4f
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937155"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435625"
 ---
 # <a name="advanced-message-app-extensions-in-xamarinios"></a>Extensiones de aplicación de mensajes avanzadas en Xamarin. iOS
 
@@ -30,7 +30,7 @@ Como se indicó anteriormente, una extensión de aplicación de mensaje se integ
 Las extensiones de aplicaciones de mensajes proporcionan tres tipos de contenido principales:
 
 - **Mensajes interactivos** : son un tipo de contenido de mensaje personalizado que genera una aplicación, cuando el usuario pulsa el mensaje, la aplicación se iniciará en primer plano.
-- **Adhesivos** : son imágenes generadas por la aplicación que se pueden incluir en los mensajes enviados entre usuarios. Consulte nuestra aplicación de ejemplo del [generador de helados](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder) para ver un ejemplo de implementación de una aplicación de adhesivo.
+- **Adhesivos** : son imágenes generadas por la aplicación que se pueden incluir en los mensajes enviados entre usuarios. Consulte nuestra aplicación de ejemplo del [generador de helados](/samples/xamarin/ios-samples/ios10-icecreambuilder) para ver un ejemplo de implementación de una aplicación de adhesivo.
 - **Otro contenido admitido** : la aplicación puede proporcionar contenido como fotos, vídeos, texto o vínculos del tipo que siempre ha sido compatible con la aplicación mensajes.
 
 Como novedad de iOS 10, la aplicación de mensaje incluye ahora su propia tienda de aplicaciones integrada y dedicada. Las aplicaciones que incluyen extensiones de aplicaciones de mensajes se mostrarán y promocionarán en este almacén. El nuevo cajón de aplicaciones de mensajes mostrará todas las aplicaciones que se han descargado de la tienda de aplicaciones de mensajes para proporcionar acceso rápido a los usuarios.
@@ -71,8 +71,8 @@ Cuando lo invoca el usuario, se mostrará una extensión de aplicación de mensa
 1. El `MSMessageAppViewController` objeto de la extensión de aplicación de mensajes es la clase principal a la que se llama cuando se muestra al usuario la vista de la extensión.
 2. La conversación se presenta al usuario como una `MSConversation` instancia de objeto.
 3. La `MSMessage` clase representa una burbuja de mensaje determinada en la conversación.
-4. `MSSession`controla cómo se envía un mensaje.
-5. `MSMessageTemplateLayout`controla cómo se muestra el mensaje
+4. `MSSession` controla cómo se envía un mensaje.
+5. `MSMessageTemplateLayout` controla cómo se muestra el mensaje
 
 ## <a name="the-extension-lifecycle"></a>Ciclo de vida de la extensión
 
@@ -503,9 +503,9 @@ Con las características básicas de la nueva API de mensajes que se describen e
 
 En primer lugar, hay otros métodos de invalidación en la `MSMessagesAppViewController` clase que proporcionan un acceso más profundo a la conversación:
 
-- `DidStartSendingMessage`: Se llama cuando el usuario pulsa el botón Enviar. Esto no significa que el mensaje se haya entregado realmente al destinatario, solo que se ha iniciado el proceso de envío.
-- `DidCancelSendingMessage`: Esto ocurre cuando el usuario pulsa el botón *X* de la esquina superior derecha de la burbuja del mensaje en la transcripción de la conversación.
-- `DidReceiveMessage`: Se llama a este método cuando la extensión de la aplicación de mensaje está activa, se recibió un nuevo mensaje de uno de los participantes en la conversación.
+- `DidStartSendingMessage` : Se llama cuando el usuario pulsa el botón Enviar. Esto no significa que el mensaje se haya entregado realmente al destinatario, solo que se ha iniciado el proceso de envío.
+- `DidCancelSendingMessage` : Esto ocurre cuando el usuario pulsa el botón *X* de la esquina superior derecha de la burbuja del mensaje en la transcripción de la conversación.
+- `DidReceiveMessage` : Se llama a este método cuando la extensión de la aplicación de mensaje está activa, se recibió un nuevo mensaje de uno de los participantes en la conversación.
 
 ### <a name="group-conversations"></a>Agrupar conversaciones
 
@@ -605,6 +605,6 @@ En este artículo se han presentado técnicas avanzadas para trabajar con extens
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Creador de helados (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder)
+- [Creador de helados (ejemplo)](/samples/xamarin/ios-samples/ios10-icecreambuilder)
 - [Referencia de mensajes](https://developer.apple.com/reference/messages)
 - [Guía de programación de extensiones de aplicaciones](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214)

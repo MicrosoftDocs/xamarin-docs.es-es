@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 12/05/2017
-ms.openlocfilehash: 4cc321f44238a7b738e40c02656b42f1eda1155a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 89d074e14f2a66d472f06acecf42127a7ff44c4c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938767"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437371"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Instalación y uso de watchos en Xamarin
 
@@ -33,7 +33,7 @@ Una aplicación de inspección consta de tres proyectos:
 
 - **Proyecto** de la aplicación de inspección: contiene el archivo de guion gráfico de la interfaz de usuario con todos los recursos de la interfaz de usuario para la aplicación de inspección.
 
-La solución de [ejemplo de catálogo del kit de inspección](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) tiene este aspecto en Xamarin. Studio:
+La solución de [ejemplo de catálogo del kit de inspección](/samples/xamarin/ios-samples/watchos-watchkitcatalog) tiene este aspecto en Xamarin. Studio:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -45,7 +45,7 @@ La solución de [ejemplo de catálogo del kit de inspección](https://docs.micro
 
 -----
 
-Descargue y ejecute el ejemplo [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) para comenzar.
+Descargue y ejecute el ejemplo [WatchKitCatalog](/samples/xamarin/ios-samples/watchos-watchkitcatalog) para comenzar.
 Las pantallas del ejemplo se pueden encontrar en la página [controles](~/ios/watchos/user-interface/index.md) .
 
 ## <a name="creating-a-new-project"></a>Crear un proyecto nuevo
@@ -216,6 +216,6 @@ Los archivos de plantilla de watchos (como `InterfaceController` ,, `ExtensionDe
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [WatchKitCatalog (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchKitCatalog (ejemplo)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Vídeo de la primera aplicación de inspección](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Sugerencias de WatchKit de Apple](https://developer.apple.com/watchkit/tips/)

@@ -6,18 +6,18 @@ ms.assetid: AD0A7971-51B1-4E38-B412-7907CE43CDDF
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 909594fe86c9718d9922470d7fca36155e33aed3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 06d585e976ce41080682f531b9661ff06cedaebe
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73005236"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437009"
 ---
 # <a name="using-the-model-class"></a>Usar la clase Model
 
 _La clase de modelo simplifica considerablemente la representación de objetos 3D complejos en comparación con el método tradicional de representación de gráficos 3D. Los objetos de modelo se crean a partir de archivos de contenido, lo que permite una fácil integración del contenido sin código personalizado._
 
-La API de monogame incluye una clase `Model` que se puede usar para almacenar los datos cargados desde un archivo de contenido y para realizar la representación. Los archivos de modelo pueden ser muy sencillos (por ejemplo, un triángulo de color sólido) o pueden incluir información para una representación compleja, como texturas e iluminación.
+La API de monogame incluye una `Model` clase que se puede usar para almacenar datos cargados de un archivo de contenido y para realizar la representación. Los archivos de modelo pueden ser muy sencillos (por ejemplo, un triángulo de color sólido) o pueden incluir información para una representación compleja, como texturas e iluminación.
 
 En este tutorial se usa [un modelo 3D de un robot](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true) y se trata lo siguiente:
 
@@ -43,27 +43,27 @@ Antes de continuar, debemos comprobar que el proyecto se abre y se implementa co
 
 El formato de archivo. XNB es una extensión estándar para el contenido compilado (contenido creado por la [herramienta de canalización monogame](http://www.monogame.net/documentation/?page=Pipeline)). Todo el contenido compilado tiene un archivo de código fuente (que es un archivo. FBX en el caso de nuestro modelo) y un archivo de destino (un archivo. XNB). El formato. FBX es un formato de modelo 3D común que pueden crear aplicaciones como [Maya](https://www.autodesk.com/products/maya/overview) y [Blender](https://www.blender.org/). 
 
-La clase `Model` se puede construir cargando un archivo. XNB de un disco que contenga datos de geometría 3D.   Este archivo. XNB se crea a través de un proyecto de contenido. Las plantillas monogame incluyen automáticamente un proyecto de contenido (con la extensión. MGCP) en la carpeta de contenido. Para obtener información detallada sobre la herramienta de canalización de monogame, consulte la [Guía de canalizaciones de contenido](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
+La `Model` clase se puede construir cargando un archivo. XNB de un disco que contenga datos de geometría 3D.   Este archivo. XNB se crea a través de un proyecto de contenido. Las plantillas monogame incluyen automáticamente un proyecto de contenido (con la extensión. MGCP) en la carpeta de contenido. Para obtener información detallada sobre la herramienta de canalización de monogame, consulte la [Guía de canalizaciones de contenido](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
 
 En esta guía se omitirá el uso de la herramienta de canalización monogame y se usará. XNB los archivos que se incluyen aquí. Tenga en cuenta que. Los archivos XNB varían según la plataforma, por lo que debe asegurarse de usar el conjunto correcto de archivos XNB para cualquier plataforma con la que esté trabajando.
 
-Descomprimiremos el [archivo. zip de contenido](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true) para que podamos usar los archivos. XNB contenidos en el juego. Si trabaja en un proyecto de Android, haga clic con el botón derecho en la carpeta **assets** del proyecto **WalkingGame. Android** . Si trabaja en un proyecto de iOS, haga clic con el botón derecho en el proyecto **WalkingGame. iOS** . Seleccione **agregar > agregar archivos...** y seleccione ambos archivos. XNB en la carpeta de la plataforma en la que está trabajando.
+Descomprimiremos el [ archivo deContent.zip](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true) para poder usar los archivos. XNB contenidos en nuestro juego. Si trabaja en un proyecto de Android, haga clic con el botón derecho en la carpeta **assets** del proyecto **WalkingGame. Android** . Si trabaja en un proyecto de iOS, haga clic con el botón derecho en el proyecto **WalkingGame. iOS** . Seleccione **agregar >agregar archivos...** y seleccione ambos archivos. XNB en la carpeta de la plataforma en la que está trabajando.
 
 Los dos archivos deben formar parte de nuestro proyecto ahora:
 
 ![Carpeta de contenido del explorador de soluciones con archivos XNB](part1-images/xnbsinxs.png)
 
-Es posible que Visual Studio para Mac no establezca automáticamente la acción de compilación para XNBs recién agregados. Para iOS, haga clic con el botón derecho en cada uno de los archivos y seleccione **Build Action-> BundleResource**. Para Android, haga clic con el botón derecho en cada uno de los archivos y seleccione **Build Action-> AndroidAsset**.
+Es posible que Visual Studio para Mac no establezca automáticamente la acción de compilación para XNBs recién agregados. Para iOS, haga clic con el botón derecho en cada uno de los archivos y seleccione **Build Action->BundleResource**. Para Android, haga clic con el botón derecho en cada uno de los archivos y seleccione **Build Action->AndroidAsset**.
 
 ## <a name="rendering-a-3d-model"></a>Representar un modelo 3D
 
 El último paso necesario para ver el modelo en pantalla consiste en agregar el código de carga y de dibujo. En concreto, haremos lo siguiente:
 
-- Definición de una instancia de `Model` en nuestra clase `Game1`
-- Cargar la instancia de `Model` en `Game1.LoadContent`
-- Dibujo de la instancia de `Model` en `Game1.Draw`
+- Definir una `Model` instancia en nuestra `Game1` clase
+- Cargar la `Model` instancia en `Game1.LoadContent`
+- Dibujar la `Model` instancia en `Game1.Draw`
 
-Reemplace el archivo de código `Game1.cs` (que se encuentra en la PCL de **WalkingGame** ) por lo siguiente:
+Reemplace el `Game1.cs` archivo de código (que se encuentra en la PCL de **WalkingGame** ) por lo siguiente:
 
 ```csharp
 public class Game1 : Game
@@ -167,15 +167,15 @@ Si ejecutamos este código, veremos el modelo en pantalla:
 
 ### <a name="model-class"></a>Clase de modelo
 
-La clase `Model` es la clase básica para realizar la representación 3D a partir de archivos de contenido (como archivos. FBX). Contiene toda la información necesaria para la representación, incluidas la geometría 3D, las referencias de textura y `BasicEffect` instancias de que controlan los valores de posición, iluminación y cámara.
+La `Model` clase es la clase principal para realizar la representación 3D a partir de archivos de contenido (como archivos. FBX). Contiene toda la información necesaria para la representación, incluidas la geometría 3D, las referencias de textura y las `BasicEffect` instancias que controlan los valores de posición, iluminación y cámara.
 
-La propia clase `Model` no tiene directamente variables de posicionamiento, ya que se puede representar una única instancia de modelo en varias ubicaciones, como se muestra más adelante en esta guía.
+La `Model` propia clase no tiene directamente variables de posicionamiento, ya que una única instancia de modelo se puede representar en varias ubicaciones, como se muestra más adelante en esta guía.
 
-Cada `Model` se compone de una o varias instancias de `ModelMesh`, que se exponen a través de la propiedad `Meshes`. Aunque podríamos considerar un `Model` como un solo objeto de juego (por ejemplo, un robot o un coche), cada `ModelMesh` se puede dibujar con distintos valores de `BasicEffect`. Por ejemplo, las partes individuales de la malla pueden representar las piernas de un robot o las ruedas de un coche, y podríamos asignar los valores de `BasicEffect` para que las ruedas giren o las piernas se muevan. 
+Cada `Model` se compone de una o varias `ModelMesh` instancias de, que se exponen a través de la `Meshes` propiedad. Aunque podamos considerar como un `Model` solo objeto de juego (por ejemplo, un robot o un coche), cada uno de ellos `ModelMesh` se puede dibujar con `BasicEffect` valores diferentes. Por ejemplo, las partes individuales de la malla pueden representar las piernas de un robot o las ruedas de un coche, y es posible que se asignen los `BasicEffect` valores para que las ruedas giren o se muevan las piernas. 
 
 ### <a name="basiceffect-class"></a>Clase BasicEffect
 
-La clase `BasicEffect` proporciona propiedades para controlar las opciones de representación. La primera modificación que hacemos en el `BasicEffect` es llamar al método `EnableDefaultLighting`. Como implica el nombre, esto habilita la iluminación predeterminada, que es muy útil para comprobar que un `Model` aparece en el juego como se espera. Si se marcan como comentario la llamada `EnableDefaultLighting`, veremos que el modelo se represente solo con su textura, pero sin sombreado ni resplandor especular:
+La `BasicEffect` clase proporciona propiedades para controlar las opciones de representación. La primera modificación que hacemos en `BasicEffect` es llamar al `EnableDefaultLighting` método. Como implica el nombre, esto habilita la iluminación predeterminada, que es muy útil para comprobar que un `Model` aparece en el juego como se espera. Si marcamos como comentario la `EnableDefaultLighting` llamada, veremos que el modelo se representará con solo su textura, pero sin sombreado ni resplandor especular:
 
 ```csharp
 //effect.EnableDefaultLighting ();
@@ -183,7 +183,7 @@ La clase `BasicEffect` proporciona propiedades para controlar las opciones de re
 
 ![Modelo representado solo con su textura, pero sin sombreado ni resplandor especular](part1-images/image9.png "Modelo representado solo con su textura, pero sin sombreado ni resplandor especular")
 
-La propiedad `World` se puede utilizar para ajustar la posición, el giro y la escala del modelo. El código anterior usa el valor `Matrix.Identity`, lo que significa que el `Model` se representará exactamente como se especifica en el archivo. FBX. Trataremos las matrices y las coordenadas 3D con más detalle en la [parte 3](~/graphics-games/monogame/3d/part3.md), pero, como ejemplo, podemos cambiar la posición de la `Model` cambiando la propiedad `World` de la siguiente manera:
+La `World` propiedad se puede utilizar para ajustar la posición, el giro y la escala del modelo. El código anterior usa el `Matrix.Identity` valor, lo que significa que `Model` se representará en juego exactamente como se especifica en el archivo. FBX. Trataremos las matrices y las coordenadas 3D con más detalle en la [parte 3](~/graphics-games/monogame/3d/part3.md), pero, como ejemplo, podemos cambiar la posición de cambiando la propiedad de la manera `Model` `World` siguiente:
 
 ```csharp
 // Z is up, so changing Z to 3 moves the object up 3 units:
@@ -195,20 +195,20 @@ Este código hace que el objeto se mueva hacia arriba en tres unidades universal
 
 ![Este código hace que el objeto se mueva hacia arriba en tres unidades universales](part1-images/image10.png "Este código hace que el objeto se mueva hacia arriba en tres unidades universales")
 
-Las dos últimas propiedades asignadas en el `BasicEffect` son `View` y `Projection`. Vamos a cubrir las cámaras 3D en la [parte 3](~/graphics-games/monogame/3d/part3.md), pero, por ejemplo, podemos modificar la posición de la cámara cambiando la variable local `cameraPosition`:
+Las dos propiedades finales asignadas en `BasicEffect` son `View` y `Projection` . Vamos a cubrir las cámaras 3D en la [parte 3](~/graphics-games/monogame/3d/part3.md), pero, por ejemplo, podemos modificar la posición de la cámara cambiando la variable local `cameraPosition` :
 
 ```csharp
 // The 8 has been changed to a 30 to move the Camera further back
 var cameraPosition = new Vector3 (0, 30, 0);
 ```
 
-Podemos ver que la cámara ha retrovuelto, lo que da lugar a que el `Model` aparezca más pequeño debido a la perspectiva:
+Podemos ver que la cámara ha retrovuelto, lo que da lugar `Model` a un tamaño menor debido a la perspectiva:
 
 ![La cámara se ha vuelto más allá, lo que da lugar a que el modelo aparezca más pequeño debido a la perspectiva](part1-images/image11.png "La cámara se ha vuelto más allá, lo que da lugar a que el modelo aparezca más pequeño debido a la perspectiva")
 
 ## <a name="rendering-multiple-models"></a>Representar varios modelos
 
-Como se mencionó anteriormente, un solo `Model` se puede dibujar varias veces. Para facilitar esta tarea, moveremos el `Model` el código de dibujo a su propio método que toma la posición de `Model` deseada como parámetro. Una vez finalizado, nuestros métodos `Draw` y `DrawModel` tendrán el siguiente aspecto:
+Como se mencionó anteriormente, un solo `Model` se puede dibujar varias veces. Para facilitar esta tarea, moveremos el `Model` código de dibujo a su propio método que toma la `Model` posición deseada como parámetro. Una vez finalizado, nuestros `Draw` métodos y tendrán el siguiente `DrawModel` aspecto:
 
 ```csharp
 protected override void Draw(GameTime gameTime)
@@ -257,10 +257,10 @@ Esto hace que el modelo de robot se dibuje seis veces:
 
 ## <a name="summary"></a>Resumen
 
-En este tutorial se ha introducido la clase de `Model` de monogame. Trata la conversión de un archivo. FBX en un. XNB, que se puede cargar a la vez en una `Model` clase. También muestra cómo las modificaciones realizadas en una instancia de `BasicEffect` pueden afectar `Model` dibujo.
+En este tutorial se ha introducido la clase de monogame `Model` . Trata la conversión de un archivo. FBX en un. XNB, que se puede cargar a la vez en una `Model` clase. También muestra cómo las modificaciones de una `BasicEffect` instancia pueden afectar al `Model` dibujo.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Referencia del modelo monogame](http://www.monogame.net/documentation/?page=T_Microsoft_Xna_Framework_Graphics_Model)
-- [Archivo. zip de contenido](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true)
-- [Proyecto completado (ejemplo)](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelrenderingmg/)
+- [Content.zip](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true)
+- [Proyecto completado (ejemplo)](/samples/xamarin/mobile-samples/modelrenderingmg/)

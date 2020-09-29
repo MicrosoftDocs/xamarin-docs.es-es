@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 00e5b2a2238763822172a1b7d7a7c3090634ed17
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 55c4d4e6154ef75f15b2e75edc020b7cb4c96e38
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938091"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435309"
 ---
 # <a name="alerts-in-xamarinmac"></a>Alertas en Xamarin. Mac
 
@@ -232,7 +232,7 @@ var result = alert.RunModal ();
 Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 ```
 
-Las líneas clave aquí son `var input = new NSTextField (new CGRect (0, 0, 300, 20));` , que crea un nuevo **campo de texto** al que se agregará la alerta. `alert.AccessoryView = input;`que adjunta el **campo de texto** a la alerta y la llamada al `Layout()` método, que es necesaria para cambiar el tamaño de la alerta de forma que quepa en la nueva subvista.
+Las líneas clave aquí son `var input = new NSTextField (new CGRect (0, 0, 300, 20));` , que crea un nuevo **campo de texto** al que se agregará la alerta. `alert.AccessoryView = input;` que adjunta el **campo de texto** a la alerta y la llamada al `Layout()` método, que es necesaria para cambiar el tamaño de la alerta de forma que quepa en la nueva subvista.
 
 Si ejecutamos el código, se mostrará lo siguiente:
 
@@ -271,7 +271,7 @@ En este artículo se ha realizado una visión detallada del trabajo con alertas 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacWindows (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macwindows)
+- [MacWindows (ejemplo)](/samples/xamarin/mac-samples/macwindows)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Trabajar con Windows](~/mac/user-interface/window.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) (Directrices de interfaz humana de OS X)

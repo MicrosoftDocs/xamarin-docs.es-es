@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: d5830fcc4eab2feb5002253a519d72099d6bcdde
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d72a9722a9d48ea52932e4fd6516c0712dbd693c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929992"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436253"
 ---
 # <a name="using-adonet-with-xamarinios"></a>Uso de ADO.NET con Xamarin. iOS
 
@@ -149,7 +149,7 @@ public static string DoSomeDataAccess ()
 Dado que SQLite permite que se ejecuten comandos SQL arbitrarios en los datos, puede realizar cualquier instrucción de creación, inserción, actualización, eliminación o selección que desee. Puede leer acerca de los comandos SQL compatibles con SQLite en el sitio web de SQLite. Las instrucciones SQL se ejecutan con uno de los tres métodos en un objeto SqliteCommand:
 
 - **ExecuteNonQuery** : se usa normalmente para la creación de tablas o la inserción de datos. El valor devuelto para algunas operaciones es el número de filas afectadas; de lo contrario, es-1.
-- **ExecuteReader** : se utiliza cuando se debe devolver una colección de filas como `SqlDataReader` .
+- **ExecuteReader** : se utiliza cuando se debe devolver una colección de filas como  `SqlDataReader` .
 - **ExecuteScalar** : recupera un valor único (por ejemplo, un agregado).
 
 ### <a name="executenonquery"></a>EXECUTENONQUERY
@@ -214,7 +214,7 @@ El `ExecuteScalar` tipo de valor devuelto del método es `object` : debe convert
 
 Hay otra biblioteca `Microsoft.Data.Sqlite` , que se puede [instalar desde NuGet](https://www.nuget.org/packages/Microsoft.Data.Sqlite), que es funcionalmente equivalente a `Mono.Data.Sqlite` y permite los mismos tipos de consultas.
 
-Hay una [comparación entre las dos bibliotecas](https://docs.microsoft.com/dotnet/standard/data/sqlite/compare) y algunos [detalles específicos de Xamarin](https://docs.microsoft.com/dotnet/standard/data/sqlite/xamarin). Lo más importante para las aplicaciones de Xamarin. iOS, debe incluir una llamada de inicialización:
+Hay una [comparación entre las dos bibliotecas](/dotnet/standard/data/sqlite/compare) y algunos [detalles específicos de Xamarin](/dotnet/standard/data/sqlite/xamarin). Lo más importante para las aplicaciones de Xamarin. iOS, debe incluir una llamada de inicialización:
 
 ```csharp
 // required for Xamarin.iOS

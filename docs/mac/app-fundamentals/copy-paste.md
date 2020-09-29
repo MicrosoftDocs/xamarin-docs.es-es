@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 002b6ced319bf7e7b1c5b9b7cc472c43eefcc450
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: e85a273c75fd09672c6c75738adcdc576705af09
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574313"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433979"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Copiar y pegar en Xamarin. Mac
 
@@ -45,7 +45,7 @@ En este ejemplo, vamos a crear una aplicación simple basada en documentos que a
 
 En primer lugar, vamos a crear una nueva aplicación de Xamarin. Mac basada en documentos para la que se va a agregar compatibilidad para copiar y pegar.
 
-Haga lo siguiente:
+Siga estos pasos:
 
 1. Inicie Visual Studio para Mac y haga clic en el vínculo **nuevo proyecto...** .
 2. Seleccione **Mac**aplicación  >  **App**  >  de**Cocoa**de aplicación Mac y haga clic en el botón **siguiente** : 
@@ -621,7 +621,7 @@ Para obtener más información, consulte la documentación de los [menús](~/mac
 
 Con todo en su lugar, estamos preparados para probar la aplicación. Compilar y ejecutar la aplicación y se muestra la interfaz principal:
 
-![Ejecución de la aplicación](copy-paste-images/run01.png "Ejecución de la aplicación")
+![Ejecutar la aplicación](copy-paste-images/run01.png "Ejecución de la aplicación")
 
 Si abre el menú Edición, tenga en cuenta que las opciones **cortar**, **copiar** y **pegar** están deshabilitadas porque no hay ninguna imagen en el área imagen o en la mesa de opciones predeterminada:
 
@@ -659,11 +659,11 @@ En su forma más sencilla, las mesas de área se usan para trasladar los datos d
 
 Una mesa de tareas puede ser pública o privada y se puede usar para una variedad de propósitos dentro de una aplicación o entre varias aplicaciones. macOS proporciona varias mesas de pegas estándar, cada una con un uso específico y definido:
 
-- `NSGeneralPboard`: La mesa de opciones predeterminada para las operaciones de **cortar**, **copiar** y **pegar** .
-- `NSRulerPboard`-Admite operaciones de **cortar**, **copiar** y **pegar** en **reglas**.
-- `NSFontPboard`-Admite operaciones de **cortar**, **copiar** y **pegar** en `NSFont` objetos.
-- `NSFindPboard`: Admite los paneles de búsqueda específicos de la aplicación que pueden compartir texto de búsqueda.
-- `NSDragPboard`: Admite las operaciones de **arrastrar y colocar &** .
+- `NSGeneralPboard` : La mesa de opciones predeterminada para las operaciones de **cortar**, **copiar** y **pegar** .
+- `NSRulerPboard` -Admite operaciones de **cortar**, **copiar** y **pegar** en **reglas**.
+- `NSFontPboard` -Admite operaciones de **cortar**, **copiar** y **pegar** en `NSFont` objetos.
+- `NSFindPboard` : Admite los paneles de búsqueda específicos de la aplicación que pueden compartir texto de búsqueda.
+- `NSDragPboard` : Admite las operaciones de **arrastrar y colocar &** .
 
 En la mayoría de los casos, usará una de las portapapeles definidas por el sistema. Pero puede haber situaciones que requieran la creación de sus propias mesa de pegado. En estas situaciones, puede usar el `FromName (string name)` método de la `NSPasteboard` clase para crear una mesa de pegado personalizada con el nombre especificado.
 
@@ -1278,7 +1278,7 @@ En este artículo se ha explicado con detalle cómo trabajar con la mesa de trab
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacCopyPaste (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccopypaste)
+- [MacCopyPaste (ejemplo)](/samples/xamarin/mac-samples/maccopypaste)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Guía de programación de la mesa de pega](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PasteboardGuide106/Articles/pbGettingStarted.html)
 - [Directrices de la interfaz humana de macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

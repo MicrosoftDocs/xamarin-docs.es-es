@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: 51b28ec05af91dea21b1291956de30c549b1868e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 6803ecf2303ff2c91265f3ac8352a7aa15e74d40
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571680"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436201"
 ---
 # <a name="introduction-to-arkit-in-xamarinios"></a>Introducción a ARKit en Xamarin. iOS
 
@@ -113,6 +113,6 @@ ARKit proporciona muchas características más sofisticadas, como el seguimiento
 
 - [Realidad aumentada (Apple)](https://developer.apple.com/arkit/)
 - [Uso de ARKit con UrhoSharp](urhosharp.md)
-- [Ejemplo de ARKit simple (jet)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitsample)
-- [ARKit colocar objetos (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
+- [Ejemplo de ARKit simple (jet)](/samples/xamarin/ios-samples/ios11-arkitsample)
+- [ARKit colocar objetos (ejemplo)](/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
 - [Introducción a ARKit-aumento de la realidad de iOS (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/602/)

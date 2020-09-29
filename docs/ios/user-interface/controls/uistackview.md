@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: f38aee099cd2551ab2bdbaa94a8a3f9c0e1cf869
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: a926ae3aa91b7c1dbe13ba78c28f4df63228e151
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939560"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436488"
 ---
 # <a name="stack-views-in-xamarinios"></a>Vistas de pila en Xamarin. iOS
 
@@ -62,7 +62,7 @@ Donde:
 Al trabajar con una vista de pila, puede pensar en la **alineación** como la **X** ubicación X **e y de** la subvista y la **distribución** como el **alto** y el **ancho**.
 
 > [!IMPORTANT]
-> `UIStackView`está diseñada como una vista de contenedor sin representación y, como tal, no se dibuja en el lienzo como otras subclases de `UIView` . Por lo tanto, establecer propiedades como `BackgroundColor` o invalidar `DrawRect` no tendrá ningún efecto visual.
+> `UIStackView` está diseñada como una vista de contenedor sin representación y, como tal, no se dibuja en el lienzo como otras subclases de `UIView` . Por lo tanto, establecer propiedades como `BackgroundColor` o invalidar `DrawRect` no tendrá ningún efecto visual.
 
 Continúe con el diseño de la interfaz de la aplicación agregando una etiqueta, ImageView, dos botones y una vista de pila horizontal para que sea similar a lo siguiente:
 
@@ -273,7 +273,7 @@ Comenzó con un ejemplo sencillo del uso de vistas de pila para crear una interf
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [Ejemplos de iOS 9](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [iOS 9 para desarrolladores](https://developer.apple.com/ios/pre-release/)
 - [Novedades de iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Referencia de UIStackView](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIStackView_Class_Reference/)

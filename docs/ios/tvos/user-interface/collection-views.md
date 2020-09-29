@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: fd1bf68e45fa163588d91640147d9e9dbf8ff237
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2adc161742e7891fcce65cf2025a1b7c531c7a39
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939495"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435249"
 ---
 # <a name="working-with-tvos-collection-views-in-xamarin"></a>Trabajar con vistas de colección de tvOS en Xamarin
 
@@ -56,8 +56,8 @@ El origen de datos de una vista de colección no es solo responsable de proporci
 
 Dado que las vistas de colección se diseñaron para administrar grandes colecciones de elementos, las celdas individuales se pueden quitar de la cola y volver a usar para evitar las limitaciones de memoria que se sobrecargan. Hay dos métodos diferentes para quitar de la cola las vistas:
 
-- `DequeueReusableCell`: Crea o devuelve una celda del tipo especificado (tal y como se especifica en el guión gráfico de la aplicación).
-- `DequeueReusableSupplementaryView`: Crea o devuelve una vista complementaria del tipo especificado (tal y como se especifica en el guión gráfico de la aplicación).
+- `DequeueReusableCell` : Crea o devuelve una celda del tipo especificado (tal y como se especifica en el guión gráfico de la aplicación).
+- `DequeueReusableSupplementaryView` : Crea o devuelve una vista complementaria del tipo especificado (tal y como se especifica en el guión gráfico de la aplicación).
 
 Antes de llamar a cualquiera de estos métodos, debe registrar la clase, el guión gráfico o el `.xib` archivo usados para crear la vista de la celda con la vista de colección. Por ejemplo:
 
@@ -825,7 +825,7 @@ En este artículo se ha tratado el diseño y el trabajo con vistas de colección
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Ejemplos de tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guías de la interfaz humana de tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guía de programación de aplicaciones para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

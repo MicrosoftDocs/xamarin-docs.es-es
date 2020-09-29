@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: cfb694faff68e0762b93dd3bdf7c2e073108e77b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ed31e0262fecccf8974961d45d02388aeb8e85ea
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935176"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434425"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Implementación de SiriKit en Xamarin. iOS
 
@@ -74,7 +74,7 @@ Siga estos pasos:
 1. Inicie Visual Studio para Mac y abra la aplicación MonkeyChat.
 2. Haga clic con el botón derecho en el nombre de la solución en el **Panel de solución** y seleccione **Agregar**  >  **nuevo proyecto...**: 
 
-    [![Agregar un nuevo proyecto](implementing-sirikit-images/prep01.png)](implementing-sirikit-images/prep01.png#lightbox)
+    [![Incorporación de proyecto nuevo](implementing-sirikit-images/prep01.png)](implementing-sirikit-images/prep01.png#lightbox)
 3. Seleccione **iOS**  >  **Library**  >  **biblioteca de clases** de biblioteca de iOS y haga clic en el botón **siguiente** : 
 
     [![Seleccionar biblioteca de clases](implementing-sirikit-images/prep02.png)](implementing-sirikit-images/prep02.png#lightbox)
@@ -1062,7 +1062,7 @@ En este artículo se ha explicado SiriKit y se ha mostrado cómo puede agregarse
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de ElizaChat](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-elizachat)
+- [Ejemplo de ElizaChat](/samples/xamarin/ios-samples/ios10-elizachat)
 - [Guía de programación de SiriKit](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)
 - [Referencia de marco de trabajo](https://developer.apple.com/reference/intents)
 - [Referencia del marco de interfaz de usuario de Intent](https://developer.apple.com/reference/intentsui)

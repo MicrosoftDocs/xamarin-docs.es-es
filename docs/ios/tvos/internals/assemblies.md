@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: 2fde84441eeb9342d1a86e4dc565faf51d08c57b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 138b65d51c7069f04433f5b4aee6f8d2b743ccdb
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573565"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435023"
 ---
 # <a name="assemblies-supported-by-xamarin-for-tvos"></a>Ensamblados compatibles con Xamarin para tvOS
 
@@ -22,26 +22,26 @@ Esta es una lista de los ensamblados admitidos por Xamarin para las aplicaciones
 
 |Ensamblado|Adición|Compatibilidad de API|
 |---|---|---|
-|Mono.CompilerServices.SymbolWriter.dll|1.0|Para escritores de compiladores.|
+|Mono.CompilerServices.SymbolWriter.dll|1,0|Para escritores de compiladores.|
 |Mono.Data.Sqlite.dll|1.2|Proveedor ADO.NET para SQLite; vea [limitaciones](~/ios/data-cloud/system.data.md).|
 |Mono.Data.Tds.dll|1.2|Compatibilidad con el protocolo TDS; se usa para la compatibilidad con [System. Data. SqlClient](xref:System.Data.SqlClient) dentro de [System. Data](~/ios/data-cloud/system.data.md).|
-|Mono.Security.dll|1.0|API criptográficas.|
-|monotouch.dll|1.0|Este ensamblado contiene el [enlace de C# a la API de CocoaTouch](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8).|
-|mscorlib.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|OpenTK.dll|1.0|Las API orientadas a objetos abiertos y OpenGL, [ampliadas para proporcionar compatibilidad con dispositivos iPhone](xref:OpenGLES).|
-|System.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), además de los tipos de los siguientes espacios de nombres: <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System. ComponentModel. Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System .net. cache</li> <li>System.Net.Mail</li> <li>System .net. MIME</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>System. Timers</li></ul>|
-|System.Core.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.Data.dll|1.2|[.Net 3,5](https://msdn.microsoft.com/library/ms229335.aspx), [con alguna funcionalidad eliminada](~/ios/data-cloud/system.data.md).|
-|System. Data. Service. Client. dll|3.x|Cliente oData completo.|
-|System.Drawing|1.0|System. Drawing API: solo Classic API.<br />_System. Drawing no se admite en el Unified API para los marcos de trabajo de Xamarin. Mac .NET 4,5 o Mobile._|
-|System.Json.dll|1.1|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.Runtime.Serialization.dll|?|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.ServiceModel.dll|1.1|Pila de [WCF](https://docs.microsoft.com/xamarin/cross-platform/data-cloud/web-services/) tal como está presente en [Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.ServiceModel.Web.dll|?|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), además de los tipos de los siguientes espacios de nombres: <ul><li>Sistema</li><li>System.ServiceModel.Channels</li><li>System.ServiceModel.Description</li><li>System.ServiceModel.Web</li></ul>|
-|System.Transactions.dll|1.2|[.Net 3,5](https://msdn.microsoft.com/library/ms229335.aspx); parte de la compatibilidad con [System. Data](https://docs.microsoft.com/xamarin/ios/data-cloud/system.data) .|
-|System.Web.Services|1.1|[Servicios web básicos](https://docs.microsoft.com/xamarin/cross-platform/data-cloud/web-services/) del perfil de .net 3,5, con las características de servidor quitadas.|
-|System.Xml.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
-|System.Xml.Linq.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
+|Mono.Security.dll|1,0|API criptográficas.|
+|monotouch.dll|1,0|Este ensamblado contiene el [enlace de C# a la API de CocoaTouch](/dotnet/api/?view=xamarinios-10.8).|
+|mscorlib.dll|1,0|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95))|
+|OpenTK.dll|1,0|Las API orientadas a objetos abiertos y OpenGL, [ampliadas para proporcionar compatibilidad con dispositivos iPhone](xref:OpenGLES).|
+|System.dll|1,0|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95)), además de los tipos de los siguientes espacios de nombres: <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System. ComponentModel. Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System .net. cache</li> <li>System.Net.Mail</li> <li>System .net. MIME</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>System. Timers</li></ul>|
+|System.Core.dll|1,0|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95))|
+|System.Data.dll|1.2|[.Net 3,5](/previous-versions/ms229335(v=vs.100)), [con alguna funcionalidad eliminada](~/ios/data-cloud/system.data.md).|
+|System.Data.Service.Client.dll|3.x|Cliente oData completo.|
+|System.Drawing|1,0|System. Drawing API: solo Classic API.<br />_System. Drawing no se admite en el Unified API para los marcos de trabajo de Xamarin. Mac .NET 4,5 o Mobile._|
+|System.Json.dll|1.1|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95))|
+|System.Runtime.Serialization.dll|?|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95))|
+|System.ServiceModel.dll|1.1|Pila de [WCF](../../../cross-platform/data-cloud/web-services/index.md) tal como está presente en [Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95))|
+|System.ServiceModel.Web.dll|?|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95)), además de los tipos de los siguientes espacios de nombres: <ul><li>Sistema</li><li>System.ServiceModel.Channels</li><li>System.ServiceModel.Description</li><li>System.ServiceModel.Web</li></ul>|
+|System.Transactions.dll|1.2|[.Net 3,5](/previous-versions/ms229335(v=vs.100)); parte de la compatibilidad con [System. Data](../../data-cloud/system.data.md) .|
+|System.Web.Services|1.1|[Servicios web básicos](../../../cross-platform/data-cloud/web-services/index.md) del perfil de .net 3,5, con las características de servidor quitadas.|
+|System.Xml.dll|1,0|[.NET 3.5](/previous-versions/ms229335(v=vs.100))|
+|System.Xml.Linq.dll|1,0|[.NET 3.5](/previous-versions/ms229335(v=vs.100))|
 
 <a name="Summary"></a>
 

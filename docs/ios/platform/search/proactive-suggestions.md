@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 363427a410a2e4bc40348c6f50e2920e552f31fe
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 85879026639dbf92e1c85881e57124e802803bb3
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939443"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436986"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introducción a las sugerencias proactivas en Xamarin. iOS
 
@@ -93,7 +93,7 @@ Todas estas características tienen una cosa en común, todas usan `NSUserActivi
 
 ## <a name="nsuseractivity"></a>NSUserActivity
 
-Como se indicó anteriormente, `NSUserActivity` ayuda al sistema a comprender la información con la que el usuario está trabajando actualmente en la pantalla. `NSUserActivity`es un mecanismo de almacenamiento en caché de estado ligero para capturar la actividad del usuario mientras navega por la aplicación. Por ejemplo, al examinar una aplicación de restaurante:
+Como se indicó anteriormente, `NSUserActivity` ayuda al sistema a comprender la información con la que el usuario está trabajando actualmente en la pantalla. `NSUserActivity` es un mecanismo de almacenamiento en caché de estado ligero para capturar la actividad del usuario mientras navega por la aplicación. Por ejemplo, al examinar una aplicación de restaurante:
 
 [![Mecanismo de almacenamiento en caché de estado de NSUserActivity Light-Weight](proactive-suggestions-images/activity02.png)](proactive-suggestions-images/activity02.png#lightbox)
 
@@ -213,7 +213,7 @@ Toda la funcionalidad anterior tiene algo en común, todos ellos indican de dón
 
 iOS 10 se ha mejorado para habilitar esta funcionalidad para una aplicación a través de varias pequeñas modificaciones y adiciones a los marcos de trabajo existentes:
 
-- `NSUserActivity`tiene campos adicionales para capturar información de ubicación que se ve dentro de la aplicación.
+- `NSUserActivity` tiene campos adicionales para capturar información de ubicación que se ve dentro de la aplicación.
 - Se han realizado varias adiciones a MapKit y CoreSpotlight para capturar la ubicación.
 - La funcionalidad con reconocimiento de ubicación se ha agregado a Siri, mapas, teclados, multitarea y otras aplicaciones del sistema.
 
@@ -326,7 +326,7 @@ Eche un vistazo a cómo la aplicación puede donar interacciones:
 
 [![Información general sobre la donación de interacciones](proactive-suggestions-images/activity04.png)](proactive-suggestions-images/activity04.png#lightbox)
 
-La aplicación crea un `INInteraction` objeto que contiene una **intención** ( `INIntent` ), los **participantes** y los **metadatos**. La **intención** representa una acción del usuario, como la realización de una llamada de vídeo o el envío de un mensaje de texto. Los **participantes** incluyen las personas que reciben la comunicación. Los **metadatos** definen información adicional, como el envío correcto del mensaje, etc.
+La aplicación crea un `INInteraction` objeto que contiene una  **intención** ( `INIntent` ), los **participantes** y los **metadatos**. La **intención** representa una acción del usuario, como la realización de una llamada de vídeo o el envío de un mensaje de texto. Los **participantes** incluyen las personas que reciben la comunicación. Los **metadatos** definen información adicional, como el envío correcto del mensaje, etc.
 
 El desarrollador nunca crea directamente una instancia de `INIntent` o `INIntentResponse` , utilizará una de las clases secundarias específicas (en función de la tarea que la aplicación está realizando en nombre del usuario) que heredan de estas clases primarias. Por ejemplo, `INSendMessageIntent` y `INSendMessageIntentResponse` para enviar un mensaje de texto. 
 
@@ -683,5 +683,5 @@ En este artículo se han tratado sugerencias proactivas y se ha mostrado cómo e
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Ejemplos de iOS 10](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)
 - [Guía de programación de SiriKit](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)

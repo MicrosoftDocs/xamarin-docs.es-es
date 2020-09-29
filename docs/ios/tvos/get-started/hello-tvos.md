@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: 55e41c01421e2cd5a0bb5c3a0a9fe2d025c8a223
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: beaa26e0d028fb614baf76ff52d05b80584f14d4
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938052"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435262"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hola, guía de inicio rápido de tvOS
 
@@ -38,7 +38,7 @@ En este artículo se presentan los conceptos básicos necesarios para crear una 
 
 Trataremos los siguientes conceptos:
 
-- **Visual Studio para Mac** : Introducción a la Visual Studio para Mac y cómo crear aplicaciones de Xamarin. tvOS con ella.
+- **Visual Studio para Mac**  : Introducción a la Visual Studio para Mac y cómo crear aplicaciones de Xamarin. tvOS con ella.
 - **Anatomía de una aplicación Xamarin. tvOS** : de qué consta una aplicación Xamarin. tvOS.
 - **Creación de una interfaz de usuario** : Cómo usar para Xamarin Designer para iOS para crear una interfaz de usuario.
 - **Implementación y pruebas** : Cómo ejecutar y probar la aplicación en el simulador de tvOS y en el hardware de tvOS real.
@@ -78,11 +78,11 @@ Si está familiarizado con la programación de iOS, observará muchas similitude
 Echemos un vistazo a los archivos del proyecto:
 
 - `Main.cs`: contiene el punto de entrada principal de la aplicación. Cuando se inicia la aplicación, contiene la primera clase y método que se ejecutan.
-- `AppDelegate.cs`: Este archivo contiene la clase de aplicación principal responsable de escuchar eventos del sistema operativo.
-- `Info.plist`: Este archivo contiene propiedades de la aplicación, como el nombre de la aplicación, los iconos, etc.
-- `ViewController.cs`: Esta es la clase que representa la ventana principal y controla el ciclo de vida de la misma.
-- `ViewController.designer.cs`: Este archivo contiene código de fontanería que le ayuda a integrarse con la interfaz de usuario de la pantalla principal.
-- `Main.storyboard`: La interfaz de usuario de la ventana principal. El Xamarin Designer para iOS puede crear y mantener este archivo.
+- `AppDelegate.cs` : Este archivo contiene la clase de aplicación principal responsable de escuchar eventos del sistema operativo.
+- `Info.plist` : Este archivo contiene propiedades de la aplicación, como el nombre de la aplicación, los iconos, etc.
+- `ViewController.cs` : Esta es la clase que representa la ventana principal y controla el ciclo de vida de la misma.
+- `ViewController.designer.cs` : Este archivo contiene código de fontanería que le ayuda a integrarse con la interfaz de usuario de la pantalla principal.
+- `Main.storyboard` : La interfaz de usuario de la ventana principal. El Xamarin Designer para iOS puede crear y mantener este archivo.
 
 En las secciones siguientes, echaremos un vistazo rápido a algunos de estos archivos. Los exploraremos con más detalle más adelante, pero es una buena idea comprender sus aspectos básicos ahora.
 
@@ -253,7 +253,7 @@ No tiene que usar Xamarin Designer para iOS para crear la interfaz de usuario pa
 
 Para empezar a crear la interfaz de usuario, vamos a hacer doble clic `Main.storyboard` en el archivo en el **Explorador de soluciones** para abrirlo para su edición en el diseñador de iOS:
 
-[![Archivo Main.storyboard en el Explorador de soluciones](hello-tvos-images/designer01.png)](hello-tvos-images/designer01.png#lightbox)
+[![El archivo Main.storyboard en el Explorador de soluciones](hello-tvos-images/designer01.png)](hello-tvos-images/designer01.png#lightbox)
 
 Esto debería iniciar el diseñador y tener un aspecto similar al siguiente:
 
@@ -429,7 +429,7 @@ Se llamará a este código cada vez que el usuario haga clic en nuestro botón.
 
 Con todo en su lugar, ahora estamos preparados para compilar y probar nuestra aplicación Xamarin. tvOS.
 
-## <a name="testing-the-application"></a>Prueba de la aplicación
+## <a name="testing-the-application"></a>Probar la aplicación
 
 Es el momento de compilar y ejecutar la aplicación para asegurarse de que se ejecuta según lo previsto. Podemos compilar y ejecutar todo en un solo paso, o podemos compilarlo sin ejecutarlo.
 
@@ -452,7 +452,7 @@ Si no se ha producido ningún error, verá un mensaje **compilación correcta** 
 
 Para ejecutar la aplicación, tenemos tres opciones:
 
-- Presione **⌘ + entrar**.
+- Presione **⌘+Entrar**.
 - En el menú **Ejecutar**, elija **Depurar**.
 - Haga clic en el botón **Reproducir** de la barra de herramientas de Visual Studio para Mac (justo encima del **Explorador de soluciones**).
 
@@ -492,7 +492,7 @@ En este artículo se ha proporcionado un tutorial introductorio para desarrollar
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Ejemplos de tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guías de la interfaz humana de tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guía de programación de aplicaciones para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

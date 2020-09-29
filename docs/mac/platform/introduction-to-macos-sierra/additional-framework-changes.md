@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 03840e127ba53ee63623252585e51e51e6890eb5
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 9bee1cb5108053dac74fcde4f4f5171c24c7ce1a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571602"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437223"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>Cambios adicionales en el marco de macOS Sierra
 
@@ -39,11 +39,11 @@ Se ha realizado la siguiente mejora en el marco de trabajo de AppKit para macOS 
 - El paso de diseño de vista diferida se ha optimizado y ampliado.
 - La API de arrastrar y colocar ahora incluye las nuevas `NSFilePromiseProvider` clases y `NSFilePromiseReceiver` para admitir la rebaño de arrastre.
 - Se han agregado varios constructores de conveniencia a los controles existentes:
-  - `NSButton`incluye nuevos constructores para crear botones de reenvío, casillas y botones de radio.
-  - `NSTextField`incluye nuevos constructores para crear etiquetas de ajuste y sin ajuste, etiquetas con atributos y campos de texto editables.
-  - `NSSegmentedControl`incluye nuevos constructores para crear controles segmentados a partir de un grupo de etiquetas o imágenes.
-  - `NSSlider`incluye nuevos constructores para crear controles deslizantes lineales horizontales.
-  - `NSImageView`incluye nuevos constructores para crear vistas de imagen no editables a partir de un determinado `NSImage` .
+  - `NSButton` incluye nuevos constructores para crear botones de reenvío, casillas y botones de radio.
+  - `NSTextField` incluye nuevos constructores para crear etiquetas de ajuste y sin ajuste, etiquetas con atributos y campos de texto editables.
+  - `NSSegmentedControl` incluye nuevos constructores para crear controles segmentados a partir de un grupo de etiquetas o imágenes.
+  - `NSSlider` incluye nuevos constructores para crear controles deslizantes lineales horizontales.
+  - `NSImageView` incluye nuevos constructores para crear vistas de imagen no editables a partir de un determinado `NSImage` .
 - El nuevo `NSGridView` elemento se ha agregado a la disposición automática de una colección de subvistas en una cuadrícula con filas y columnas de tamaño variable que se pueden ocultar o mostrar dinámicamente.
 
 <a name="AVFoundation-Framework-Enhancements"></a>
@@ -103,7 +103,7 @@ Se ha realizado la siguiente mejora en el marco de trabajo de GameKit para macOS
 
 - La **aplicación Game Center** ha quedado en desuso y se ha quitado de MacOS. Si la aplicación usa GameKit, _debe_ presentar su propia interfaz para mostrar las características de GameKit, como los marcadores, etc.
 - La clase [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) ha implementado un nuevo tipo de cuenta solo iCloud.
-- La nueva clase [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) proporciona una solución generalizada para administrar el almacenamiento de datos persistentes en Game Center. `GKGameSession`mantiene una lista de reproductores y la aplicación es responsable de la implementación de la forma y el momento en que se almacena, recupera o intercambia la fecha del participante entre los reproductores. En muchas instancias, las sesiones de juego pueden reemplazar las coincidencias existentes basadas en turnos, las coincidencias en tiempo real o los métodos de guardado de juegos persistentes.
+- La nueva clase [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) proporciona una solución generalizada para administrar el almacenamiento de datos persistentes en Game Center. `GKGameSession` mantiene una lista de reproductores y la aplicación es responsable de la implementación de la forma y el momento en que se almacena, recupera o intercambia la fecha del participante entre los reproductores. En muchas instancias, las sesiones de juego pueden reemplazar las coincidencias existentes basadas en turnos, las coincidencias en tiempo real o los métodos de guardado de juegos persistentes.
 
 <a name="GamePlayKit-Framework-Enhancements"></a>
 
@@ -201,5 +201,5 @@ Se han agregado los siguientes marcos de trabajo a macOS Sierra:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [Ejemplos de Mac](/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [Novedades de OS X 10,12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

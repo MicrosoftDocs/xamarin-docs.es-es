@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: b547d21b19d223aebb345f7c4a1dc8dc126fb0d6
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3d296c36febfb5671c816372aa97661494179b83
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86928788"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433905"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Tutorial: uso de Touch en Xamarin. iOS
 
@@ -24,7 +24,7 @@ En este tutorial se muestra cómo escribir código que responda a distintos tipo
 
 Cada sección contiene instrucciones para escribir el código desde cero.
 
-Siga las instrucciones que se indican a continuación para agregar código al guion gráfico y obtenga información sobre los diferentes tipos de eventos táctiles disponibles en iOS. Como alternativa, abra el [ejemplo terminado](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final) para ver todo lo que funciona.
+Siga las instrucciones que se indican a continuación para agregar código al guion gráfico y obtenga información sobre los diferentes tipos de eventos táctiles disponibles en iOS. Como alternativa, abra el [ejemplo terminado](/samples/xamarin/ios-samples/applicationfundamentals-touch-final) para ver todo lo que funciona.
 
 <a name="Touch_Samples"></a>
 
@@ -159,7 +159,7 @@ En este ejemplo, se mostrarán algunas de las API de Touch. Siga estos pasos par
     }
     ```
 
-    Ambos métodos restablecerán la `touchStartedInside` marca en false. `TouchesEnded`también se mostrará `TouchesEnded` en la pantalla.
+    Ambos métodos restablecerán la `touchStartedInside` marca en false. `TouchesEnded` también se mostrará `TouchesEnded` en la pantalla.
 
 1. En este punto, la pantalla de ejemplos de Touch ha finalizado. Observe cómo cambia la pantalla a medida que interactúa con cada una de las imágenes, tal como se muestra en la siguiente captura de pantalla:
 
@@ -484,4 +484,4 @@ Las tres secciones anteriores demostraron diferentes maneras de responder a even
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [iOS Touch final (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
+- [iOS Touch final (ejemplo)](/samples/xamarin/ios-samples/applicationfundamentals-touch-final)

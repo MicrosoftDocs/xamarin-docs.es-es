@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: f05bc534b1220e6659f123a17dc57e02185fdea4
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: b7bfa98f84210c921790989c60a7bda21b7c6bcd
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996349"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435541"
 ---
 # <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Información general de StoreKit y recuperación de la información de producto en Xamarin. iOS
 
@@ -80,11 +80,11 @@ En el primer paso de la venta de un producto de compra desde la aplicación se m
 
 Independientemente del tipo de productos que una aplicación vende (consumible, no consumible o de un tipo de suscripción), el proceso de recuperación de la información de producto para su presentación es el mismo. El código de InAppPurchaseSample que acompaña a este artículo contiene un proyecto denominado *consumibles* que muestra cómo recuperar la información de producción para su presentación. Muestra cómo:
 
-- Cree una implementación de `SKProductsRequestDelegate` e implemente el `ReceivedResponse` método abstracto. El código de ejemplo llama a esta `InAppPurchaseManager` clase.
-- Compruebe con StoreKit para ver si se permiten pagos (con `SKPaymentQueue.CanMakePayments` ).
-- Cree una instancia de `SKProductsRequest` con los identificadores de producto que se han definido en iTunes Connect. Esto se hace en el método del ejemplo `InAppPurchaseManager.RequestProductData` .
-- Llame al método Start en `SKProductsRequest` . Esto desencadena una llamada asincrónica a los servidores de App Store. Se llamará al delegado ( `InAppPurchaseManager` ) con los resultados.
-- El método del delegado ( `InAppPurchaseManager` ) `ReceivedResponse` actualiza la interfaz de usuario con los datos devueltos de la tienda de aplicaciones (precios de productos & descripciones o mensajes sobre productos no válidos).
+- Cree una implementación de  `SKProductsRequestDelegate` e implemente el  `ReceivedResponse` método abstracto. El código de ejemplo llama a esta  `InAppPurchaseManager` clase.
+- Compruebe con StoreKit para ver si se permiten pagos (con  `SKPaymentQueue.CanMakePayments` ).
+- Cree una instancia de  `SKProductsRequest` con los identificadores de producto que se han definido en iTunes Connect. Esto se hace en el método del ejemplo  `InAppPurchaseManager.RequestProductData` .
+- Llame al método Start en  `SKProductsRequest` . Esto desencadena una llamada asincrónica a los servidores de App Store. Se llamará al delegado ( `InAppPurchaseManager` ) con los resultados.
+- El método del delegado ( `InAppPurchaseManager` )  `ReceivedResponse` actualiza la interfaz de usuario con los datos devueltos de la tienda de aplicaciones (precios de productos & descripciones o mensajes sobre productos no válidos).
 
 La interacción general tiene el siguiente aspecto ( **StoreKit** está integrado en iOS y el **App Store** representa los servidores de Apple):
 
@@ -92,7 +92,7 @@ La interacción general tiene el siguiente aspecto ( **StoreKit** está integrad
 
 ### <a name="displaying-product-information-example"></a>Ejemplo de visualización de la información del producto
 
-El código de ejemplo de los *consumibles* de [InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) muestra cómo se puede recuperar la información del producto. En la pantalla principal del ejemplo se muestra información de dos productos que se recuperan de la tienda de aplicaciones:   
+El código de ejemplo de los *consumibles* de [InAppPurchaseSample](/samples/xamarin/ios-samples/storekit) muestra cómo se puede recuperar la información del producto. En la pantalla principal del ejemplo se muestra información de dos productos que se recuperan de la tienda de aplicaciones:   
 
  [![La pantalla principal muestra los productos de información recuperados de la tienda de aplicaciones](store-kit-overview-and-retreiving-product-information-images/image23.png)](store-kit-overview-and-retreiving-product-information-images/image23.png#lightbox)   
 

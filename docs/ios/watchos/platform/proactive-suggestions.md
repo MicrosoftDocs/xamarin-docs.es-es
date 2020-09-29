@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 4235e6049b9700edbb3974f1e4cbaf7c405f6e83
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 246757ddc43c5480b26ab4c1360a036fd111dcfa
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937480"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435342"
 ---
 # <a name="watchos-proactive-suggestions-in-xamarin"></a>Sugerencias proactivas de watchos en Xamarin
 
@@ -44,7 +44,7 @@ Agregar compatibilidad con las sugerencias proactiva a la aplicación de Xamarin
 
 Las sugerencias proactivas funcionan con las aplicaciones de tres maneras principales:
 
-- **`NSUserActivity`**: Ayuda al sistema a comprender la información con la que el usuario está trabajando actualmente en la pantalla.
+- **`NSUserActivity`** : Ayuda al sistema a comprender la información con la que el usuario está trabajando actualmente en la pantalla.
 - **Sugerencias de ubicación** : Si la aplicación ofrece o usa información basada en la ubicación, esta extensión de API ofrece nuevas maneras de compartir esta información entre aplicaciones.
 
 Y se admite en la aplicación mediante la implementación de lo siguiente:
@@ -57,7 +57,7 @@ Todas estas características tienen una cosa en común, todas usan `NSUserActivi
 
 ## <a name="nsuseractivity"></a>NSUserActivity
 
-Como se indicó anteriormente, `NSUserActivity` ayuda al sistema a comprender la información con la que el usuario está trabajando actualmente en la pantalla. `NSUserActivity`es un mecanismo de almacenamiento en caché de estado ligero para capturar la actividad del usuario mientras navega por la aplicación. Por ejemplo, examinando la aplicación de restaurante:
+Como se indicó anteriormente, `NSUserActivity` ayuda al sistema a comprender la información con la que el usuario está trabajando actualmente en la pantalla. `NSUserActivity` es un mecanismo de almacenamiento en caché de estado ligero para capturar la actividad del usuario mientras navega por la aplicación. Por ejemplo, examinando la aplicación de restaurante:
 
 [![La aplicación restaurante](proactive-suggestions-images/activity02.png)](proactive-suggestions-images/activity02.png#lightbox)
 
@@ -175,7 +175,7 @@ Toda la funcionalidad anterior tiene algo en común, todos ellos indican de dón
 
 watchos 3 se ha mejorado para habilitar esta funcionalidad para una aplicación a través de varias pequeñas modificaciones y adiciones a los marcos de trabajo existentes:
 
-- `NSUserActivity`tiene campos adicionales para capturar información de ubicación que se ve dentro de la aplicación.
+- `NSUserActivity` tiene campos adicionales para capturar información de ubicación que se ve dentro de la aplicación.
 - Se han realizado varias adiciones a MapKit y CoreSpotlight para capturar la ubicación.
 - La funcionalidad con reconocimiento de ubicación se ha agregado a Siri, Maps, multitarea y otras aplicaciones del sistema.
 
@@ -362,5 +362,5 @@ En este artículo se han tratado sugerencias proactivas y se ha mostrado cómo e
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de watchOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)
+- [Ejemplos de watchOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2bwatchOS)
 - [Guía de programación de SiriKit](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)

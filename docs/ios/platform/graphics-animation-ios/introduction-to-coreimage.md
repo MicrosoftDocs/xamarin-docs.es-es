@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 9e0363f941784ecc488861c0d2f089a30c275a10
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7cb94956266a3094cc62ccc66c3d44e97884f04d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937402"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435295"
 ---
 # <a name="core-image-in-xamarinios"></a>Imagen básica en Xamarin. iOS
 
@@ -222,7 +222,7 @@ En este artículo se ha mostrado cómo usar algunas de las nuevas característic
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Imagen principal (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/coreimage)
+- [Imagen principal (ejemplo)](/samples/xamarin/ios-samples/coreimage)
 - [Ajustar el contrato y el brillo de una receta de imagen](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image)
 - [Uso de filtros de imagen principales](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
 - [Referencia de la clase CIFilter](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Reference/QuartzCoreFramework/Classes/CIFilter_Class/Reference/Reference.htm)

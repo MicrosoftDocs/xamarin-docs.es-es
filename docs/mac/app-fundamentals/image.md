@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: b6681832ce83bbc2783ba874c5902c30013c8c94
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 53a3b43347e51cfbc99b2b798f0ad5c787f04847
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572562"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435558"
 ---
 # <a name="images-in-xamarinmac"></a>Imágenes en Xamarin. Mac
 
@@ -43,7 +43,7 @@ Cuando se agrega una imagen para su uso en una aplicación de Xamarin. Mac, hay 
 
 - **Árbol de proyecto principal [desusado]** -las imágenes se pueden agregar directamente al árbol de proyectos. Cuando se llama a imágenes almacenadas en el árbol del proyecto principal desde el código, no se especifica ninguna ubicación de carpeta. Por ejemplo: `NSImage image = NSImage.ImageNamed("tags.png");`. 
 - **Carpeta recursos [en desuso]** -la carpeta **recursos** especiales es para cualquier archivo que se convertirá en parte del paquete de la aplicación, como el icono, la pantalla de inicio o las imágenes generales (o cualquier otra imagen o archivo que el desarrollador desee agregar). Cuando se llama a imágenes almacenadas en la carpeta **recursos** desde el código, al igual que las imágenes almacenadas en el árbol del proyecto principal, no se especifica ninguna ubicación de carpeta. Por ejemplo: `NSImage.ImageNamed("tags.png")`.
-- **Carpeta o subcarpeta personalizada [en desuso]** : el desarrollador puede Agregar una carpeta personalizada al árbol de origen de proyectos y almacenar allí las imágenes. La ubicación donde se agrega el archivo puede estar anidada en una subcarpeta para facilitar la organización del proyecto. Por ejemplo, si el desarrollador agrega una `Card` carpeta al proyecto y una subcarpeta de `Hearts` a esa carpeta, almacene una imagen **Jack. png** en la `Hearts` carpeta, `NSImage.ImageNamed("Card/Hearts/Jack.png")` cargará la imagen en tiempo de ejecución.
+- **Carpeta o subcarpeta personalizada [en desuso]** : el desarrollador puede Agregar una carpeta personalizada al árbol de origen de proyectos y almacenar allí las imágenes. La ubicación donde se agrega el archivo puede estar anidada en una subcarpeta para facilitar la organización del proyecto. Por ejemplo, si el desarrollador agrega una `Card` carpeta al proyecto y una subcarpeta de `Hearts` a esa carpeta, almacena una imagen **Jack.png** en la `Hearts` carpeta, `NSImage.ImageNamed("Card/Hearts/Jack.png")` cargaría la imagen en tiempo de ejecución.
 - **Conjuntos de imágenes del catálogo de recursos [preferido]** -agregado en OS X el Capitan, los **conjuntos de imágenes de catálogos de recursos** contienen todas las versiones o representaciones de una imagen que son necesarias para admitir varios dispositivos y factores de escala para la aplicación. En lugar de confiar en el nombre de archivo de recursos de imagen ( **@1x** , **@2x** ).
 
 <a name="asset-catalogs"></a>
@@ -72,9 +72,9 @@ Una clase de **Vector** especial que se ha agregado a los **conjuntos de imágen
 
 Por ejemplo, si incluye un `MonkeyIcon.pdf` archivo como vector de un catálogo de recursos con una resolución de 150 PX x 150 PX, los siguientes recursos de mapa de bits se incluirán en el lote de aplicaciones final cuando se compiló:
 
-1. **MonkeyIcon@1x.png**-150 PX x 150 PX resolución.
-2. **MonkeyIcon@2x.png**-300 PX x 300 PX resolución.
-3. **MonkeyIcon@3x.png**-450px x 450px resolución.
+1. **MonkeyIcon@1x.png** -150 PX x 150 PX resolución.
+2. **MonkeyIcon@2x.png** -300 PX x 300 PX resolución.
+3. **MonkeyIcon@3x.png** -450px x 450px resolución.
 
 Se deben tener en cuenta las siguientes consideraciones al usar imágenes vectoriales de PDF en catálogos de recursos:
 
@@ -137,14 +137,14 @@ Cualquier recurso gráfico que agregue a una aplicación de Xamarin. Mac (iconos
 
 Al crear las versiones estándar y de alta resolución de una imagen, siga esta Convención de nomenclatura para el par de imágenes al incluirlas en el proyecto de Xamarin. Mac:
 
-- **Resolución estándar**   -  **ImageName. FileName-Extension** (ejemplo: **Tags. png**)
+- **Resolución estándar**   -  **ImageName. FileName-Extension** (ejemplo: **tags.png**)
 - **Alta resolución**   -  **ImageName@2x.filename-extension** (Ejemplo: **tags@2x.png** )
 
 Cuando se agrega a un proyecto, aparecería de la siguiente manera:
 
 ![Archivos de imagen en el Panel de solución](image-images/add03.png "Archivos de imagen en el Panel de solución")
 
-Cuando se asigna una imagen a un elemento de la interfaz de usuario en Interface Builder simplemente tendrá que elegir el archivo en _ImageName_**.** _nombre de archivo: formato de extensión_ (ejemplo: **Tags. png**). Lo mismo para usar una imagen en el código de C#, seleccionará el archivo en _ImageName_**.** _nombre de archivo: formato de extensión_ .
+Cuando se asigna una imagen a un elemento de la interfaz de usuario en Interface Builder simplemente tendrá que elegir el archivo en _ImageName_**.** _nombre de archivo: formato de extensión_ (ejemplo: **tags.png**). Lo mismo para usar una imagen en el código de C#, seleccionará el archivo en _ImageName_**.** _nombre de archivo: formato de extensión_ .
 
 Cuando se ejecuta la aplicación de Xamarin. Mac en un equipo Mac, el _ImageName_**.** _nombre de archivo:_ la imagen del formato de extensión se usará en las pantallas de resolución estándar **ImageName@2x.filename-extension** . la imagen se seleccionará automáticamente en los equipos Mac de las bases de visualización de retina.
 
@@ -446,7 +446,7 @@ En este artículo se ha realizado una visión detallada del trabajo con imágene
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacImages (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
+- [MacImages (ejemplo)](/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Vistas de tabla](~/mac/user-interface/table-view.md)
 - [Vistas de esquema](~/mac/user-interface/outline-view.md)

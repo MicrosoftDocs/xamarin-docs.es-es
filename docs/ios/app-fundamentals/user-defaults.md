@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: c65a06b8f2a04eda669b2d741135538fa8a583f2
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 587ce48f3d40bb4f16634409920b01d150d628ef
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571732"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436307"
 ---
 # <a name="working-with-user-defaults-in-xamarinios"></a>Trabajar con valores predeterminados de usuario en Xamarin. iOS
 
@@ -77,16 +77,16 @@ Donde `group.com.xamarin.todaysharing` es el grupo de aplicaciones creado en **c
 
 Una vez que haya tenido acceso a la base de datos predeterminada del usuario deseado, puede leer los valores de los valores predeterminados mediante pares clave-valor y varios métodos útiles en función del tipo de datos que se están leyendo:
 
-- `ArrayForKey`: Devuelve una matriz de `NSObjects` para el valor de clave especificado.
-- `BoolForKey`: Devuelve un valor booleano para la clave especificada.
-- `DataForKey`: Devuelve un `NSData` objeto para la clave especificada.
-- `DictionaryForKey`: Devuelve un `NSDictionary` para la clave especificada.
-- `DoubleForKey`: Devuelve un valor Double para la clave especificada.
-- `FloatForKey`: Devuelve un valor Float para la clave especificada.
-- `IntForKey`: Devuelve un valor entero para la clave especificada.
-- `StringArrayForKey`: Devuelve una matriz de `String` objetos del valor de clave especificado.
-- `StringForKey`: Devuelve un valor de cadena para la clave especificada.
-- `URLForKey`: Devuelve un `NSUrl` valor para la clave especificada.
+- `ArrayForKey` : Devuelve una matriz de `NSObjects` para el valor de clave especificado.
+- `BoolForKey` : Devuelve un valor booleano para la clave especificada.
+- `DataForKey` : Devuelve un `NSData` objeto para la clave especificada.
+- `DictionaryForKey` : Devuelve un `NSDictionary` para la clave especificada.
+- `DoubleForKey` : Devuelve un valor Double para la clave especificada.
+- `FloatForKey` : Devuelve un valor Float para la clave especificada.
+- `IntForKey` : Devuelve un valor entero para la clave especificada.
+- `StringArrayForKey` : Devuelve una matriz de `String` objetos del valor de clave especificado.
+- `StringForKey` : Devuelve un valor de cadena para la clave especificada.
+- `URLForKey` : Devuelve un `NSUrl` valor para la clave especificada.
 
 Por ejemplo, el código siguiente leerá un valor booleano de los valores predeterminados del usuario:
 
@@ -106,11 +106,11 @@ var useHeader = plist.BoolForKey("UseHeader");
 
 Al igual que la lectura de los valores anteriores, una vez que haya tenido acceso a la base de datos predeterminada del usuario, puede escribir valores en los valores predeterminados mediante pares de clave-valor y varios métodos útiles basados en el tipo de datos que se escriben:
 
-- `SetBool`: Escribe el valor booleano dado en la clave especificada.
-- `SetDouble`: Escribe el valor Double especificado en la clave especificada.
-- `SetFloat`: Escribe el valor Float dado en la clave especificada.
-- `SetString`: Escribe el valor de cadena especificado en la clave especificada.
-- `SetURL`: Escribe el valor de dirección URL ( `NSUrl` ) dado en la clave especificada.
+- `SetBool` : Escribe el valor booleano dado en la clave especificada.
+- `SetDouble` : Escribe el valor Double especificado en la clave especificada.
+- `SetFloat` : Escribe el valor Float dado en la clave especificada.
+- `SetString` : Escribe el valor de cadena especificado en la clave especificada.
+- `SetURL` : Escribe el valor de dirección URL ( `NSUrl` ) dado en la clave especificada.
 
 Por ejemplo, el código siguiente escribiría un valor booleano en los valores predeterminados del usuario:
 
@@ -136,6 +136,6 @@ En este artículo se ha tratado la `NSUserDefaults` clase y cómo se puede usar 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Ejemplos de tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [Guía de programación de preferencias y configuraciones](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/UserDefaults/Introduction/Introduction.html#//apple_ref/doc/uid/10000059i)
 - [NSUserDefaults](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSUserDefaults_Class/#//apple_ref/doc/constant_group/NSUserDefaults_Domains)

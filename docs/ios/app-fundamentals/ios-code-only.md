@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: edd49cc891a86d3323bab319ab811e85f9148640
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 7b6852485fed6cc14c9f9b2e1a303b7c2e576da9
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997103"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433580"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Creación de interfaces de usuario de iOS en código en Xamarin. iOS
 
-La interfaz de usuario de una aplicación de iOS es como un escaparate; normalmente, la aplicación obtiene una ventana, pero puede rellenar la ventana con tantos objetos como sea necesario, y los objetos y las disposiciones se pueden cambiar en función de lo que la aplicación quiera mostrar. Los objetos de este escenario, lo que el usuario ve, se denominan "vistas". Para compilar una sola pantalla en una aplicación, las vistas se apilan unas sobre otras en una jerarquía de vistas de contenido, que esta, a su vez, se administra a través de un controlador de vistas único. Las aplicaciones con varias pantallas tienen varias jerarquías de vistas de contenido, cada una con su propio controlador de vistas. La aplicación coloca las vistas en la ventana para crear una jerarquía de vistas de contenido diferente basándose en la pantalla en la que se encuentra el usuario.
+La interfaz de usuario de una aplicación de iOS es como un escaparate; normalmente, la aplicación obtiene una ventana, pero puede rellenar la ventana con tantos objetos como sea necesario, y los objetos y las disposiciones se pueden cambiar en función de lo que la aplicación quiera mostrar. Los objetos de este escenario, lo que el usuario ve, se denominan "vistas". Para compilar una sola pantalla en una aplicación, las vistas se apilan entre sí en una jerarquía de vistas de contenido y la jerarquía se administra mediante un solo controlador de vista. Las aplicaciones con varias pantallas tienen varias jerarquías de vistas de contenido, cada una con su propio controlador de vistas. La aplicación coloca las vistas en la ventana para crear una jerarquía de vistas de contenido diferente basándose en la pantalla en la que se encuentra el usuario.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -54,8 +54,8 @@ La plantilla de proyecto vacía agrega 4 archivos al proyecto:
 
 [![Archivos de proyecto](ios-code-only-images/empty-project.w157-sml.png "Archivos de proyecto")](ios-code-only-images/empty-project.w157.png#lightbox)
 
-1. **AppDelegate.CS** : contiene una `UIApplicationDelegate` subclase, `AppDelegate` , que se usa para controlar los eventos de aplicación de iOS. La ventana de la aplicación se crea en el `AppDelegate` `FinishedLaunching` método de.
-1. **Main.CS** : contiene el punto de entrada de la aplicación, que especifica la clase para `AppDelegate` .
+1. **AppDelegate.CS** : contiene una  `UIApplicationDelegate` subclase,  `AppDelegate` , que se usa para controlar los eventos de aplicación de iOS. La ventana de la aplicación se crea en el `AppDelegate`  `FinishedLaunching` método de.
+1. **Main.CS** : contiene el punto de entrada de la aplicación, que especifica la clase para  `AppDelegate` .
 1. **Info. plist** : archivo de lista de propiedades que contiene información de configuración de la aplicación.
 1. **Contitles. plist** : archivo de lista de propiedades que contiene información sobre las capacidades y los permisos de la aplicación.
 
@@ -234,7 +234,7 @@ namespace CodeOnlyDemo
 
 ## <a name="initializing-the-view"></a>Inicializar la vista
 
-`UIViewController`contiene un método denominado `ViewDidLoad` al que se llama cuando el controlador de vistas se carga por primera vez en la memoria. Este es un lugar adecuado para la inicialización de la vista, como establecer sus propiedades.
+`UIViewController` contiene un método denominado `ViewDidLoad` al que se llama cuando el controlador de vistas se carga por primera vez en la memoria. Este es un lugar adecuado para la inicialización de la vista, como establecer sus propiedades.
 
 Por ejemplo, el código siguiente agrega un botón y un controlador de eventos para que inserte un nuevo controlador de vista en la pila de navegación cuando se presiona el botón:
 
@@ -498,7 +498,7 @@ namespace CodeOnlyDemo
 
 ### <a name="drawing-in-a-uiview"></a>Dibujar en un UIView
 
-Cada `UIView` tiene un `Draw` método al que llama el sistema cuando es necesario dibujar. `Draw`nunca se debe llamar directamente a. Lo llama el sistema durante el procesamiento de bucles de ejecución. La primera vez que se realiza el bucle de ejecución después de agregar una vista a la jerarquía de vistas, `Draw` se llama a su método. Las llamadas subsiguientes se `Draw` producen cuando la vista se marca como que es necesario dibujar llamando a `SetNeedsDisplay` o `SetNeedsDisplayInRect` en la vista.
+Cada `UIView` tiene un `Draw` método al que llama el sistema cuando es necesario dibujar. `Draw` nunca se debe llamar directamente a. Lo llama el sistema durante el procesamiento de bucles de ejecución. La primera vez que se realiza el bucle de ejecución después de agregar una vista a la jerarquía de vistas, `Draw` se llama a su método. Las llamadas subsiguientes se `Draw` producen cuando la vista se marca como que es necesario dibujar llamando a `SetNeedsDisplay` o `SetNeedsDisplayInRect` en la vista.
 
 Podemos agregar código de dibujo a nuestra vista agregando este código dentro del método invalidado `Draw` , como se muestra a continuación:
 
@@ -539,7 +539,7 @@ Para usar el `CircleView` recién creado, podemos agregarlo como una subvista a 
 
 ### <a name="loading-a-view"></a>Cargar una vista
 
- `UIViewController`tiene un método denominado al `LoadView` que llama el controlador para crear su vista. Este es un lugar adecuado para crear una vista y asignarla a la propiedad del controlador `View` .
+ `UIViewController` tiene un método denominado al `LoadView` que llama el controlador para crear su vista. Este es un lugar adecuado para crear una vista y asignarla a la propiedad del controlador `View` .
 
 En primer lugar, necesitamos un controlador, por lo que debe crear una nueva clase vacía denominada `CircleController` .
 
@@ -629,4 +629,4 @@ En este artículo se ha explicado cómo desarrollar aplicaciones de iOS mediante
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [SimpleLogin (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplelogin)
+- [SimpleLogin (ejemplo)](/samples/xamarin/ios-samples/simplelogin)

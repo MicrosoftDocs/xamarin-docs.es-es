@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 8b911be4b1bf547a9a1ad5d6b795894ddba3c26d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 24a1e1af5b56a3cd10557658a0cad0c4e73ebac8
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939066"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433375"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Introducción a los guiones gráficos en Xamarin. Mac
 
@@ -102,7 +102,7 @@ En esta sección se tratan los detalles detallados sobre [Cómo trabajar con gui
 
 ## <a name="complex-storyboard-example"></a>Ejemplo de Storyboard complejo
 
-Para ver un ejemplo de un ejemplo complejo de cómo trabajar con guiones gráficos en una aplicación de Xamarin. Mac, consulte la [aplicación de ejemplo SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter es un editor de código fuente simple que proporciona compatibilidad con la finalización de código y el resaltado de sintaxis simple.
+Para ver un ejemplo de un ejemplo complejo de cómo trabajar con guiones gráficos en una aplicación de Xamarin. Mac, consulte la [aplicación de ejemplo SourceWriter](/samples/xamarin/mac-samples/sourcewriter). SourceWriter es un editor de código fuente simple que proporciona compatibilidad con la finalización de código y el resaltado de sintaxis simple.
 
 El código de SourceWriter se ha comentado completamente y, si están disponibles, se han proporcionado vínculos de métodos o tecnologías clave a información relevante en la documentación de las guías de Xamarin.Mac.
 
@@ -114,7 +114,7 @@ En este artículo se ha examinado rápidamente el trabajo con guiones gráficos 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Hello, Mac (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac)
+- [Ejemplo de Hello, Mac (ejemplo)](/samples/xamarin/mac-samples/hello-mac)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Trabajar con Windows](~/mac/user-interface/window.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) (Directrices de interfaz humana de OS X)

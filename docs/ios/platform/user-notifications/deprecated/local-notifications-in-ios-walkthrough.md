@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: b0a45207ba036f73c2d1066ea292a02ebcc45064
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 915b5cb11aed96598e0460125734b15757f45466
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934633"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436146"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Tutorial: uso de notificaciones locales en Xamarin. iOS
 
@@ -120,5 +120,5 @@ En este tutorial se ha mostrado cómo usar las distintas API para crear y public
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Notificaciones locales (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications)
+- [Notificaciones locales (ejemplo)](/samples/xamarin/ios-samples/localnotifications)
 - [Guía de programación de notificaciones de envío y locales](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)

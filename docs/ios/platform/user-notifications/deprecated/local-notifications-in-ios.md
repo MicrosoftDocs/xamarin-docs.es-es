@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/13/2018
-ms.openlocfilehash: 04631993d47a1d51858ab24948ab61170d37bb6e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f99776a0e6a84c193362d0e5a4efb68e70717ad0
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939896"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436120"
 ---
 # <a name="notifications-in-xamarinios"></a>Notificaciones en Xamarin.iOS
 
@@ -32,7 +32,7 @@ iOS también proporciona un *centro de notificaciones* que mostrará todas las n
 ## <a name="creating-local-notifications-in-ios"></a>Creación de notificaciones locales en iOS
 
 iOS hace que sea bastante sencillo crear y controlar las notificaciones locales.
-En primer lugar, iOS 8 requiere que las aplicaciones soliciten el permiso del usuario para mostrar las notificaciones. Agregue el código siguiente a la aplicación antes de intentar enviar una notificación local: el [ejemplo adjunto](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications) lo coloca en el método **FinishedLaunching** de **AppDelegate**.
+En primer lugar, iOS 8 requiere que las aplicaciones soliciten el permiso del usuario para mostrar las notificaciones. Agregue el código siguiente a la aplicación antes de intentar enviar una notificación local: el [ejemplo adjunto](/samples/xamarin/ios-samples/localnotifications) lo coloca en el método **FinishedLaunching** de **AppDelegate**.
 
 ```csharp
 var notificationSettings = UIUserNotificationSettings.GetSettingsForTypes(
@@ -135,8 +135,8 @@ En esta sección se ha mostrado cómo crear y publicar una notificación en Xama
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Notificaciones locales (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications)
+- [Notificaciones locales (ejemplo)](/samples/xamarin/ios-samples/localnotifications)
 - [Notificaciones de envío y locales para desarrolladores](https://developer.apple.com/notifications/)
 - [Local and Push Notification Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)
-- [UIApplication](https://docs.microsoft.com/dotnet/api/uikit.uiapplication)
-- [UILocalNotification](https://docs.microsoft.com/dotnet/api/uikit.UILocalNotification)
+- [UIApplication](/dotnet/api/uikit.uiapplication)
+- [UILocalNotification](/dotnet/api/uikit.UILocalNotification)

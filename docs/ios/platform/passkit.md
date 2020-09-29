@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2018
-ms.openlocfilehash: d5a4a78341f66ec754d9161e201023c0ebb478d4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: edbdf656774026eab66ada748bedb61cead3a31a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939196"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435340"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit en Xamarin. iOS
 
@@ -56,7 +56,7 @@ Cada parte del ecosistema tiene un rol claramente definido:
 - **Wallet** : aplicación iOS integrada de Apple que almacena y muestra las pasadas. Este es el único lugar en el que se representan las pasadas para su uso en el mundo real (es decir, se muestra el código de barras, junto con todos los datos localizados en el paso).
 - **Aplicaciones complementarias** : aplicaciones de iOS 6 creadas por los proveedores de Pass para ampliar la funcionalidad de los pasos que emiten, como agregar valor a una tarjeta de la tienda, cambiar el puesto en un paso de incorporación o en otra función específica de la empresa. Las aplicaciones complementarias no son necesarias para que un paso sea útil.
 - **El servidor** : servidor seguro en el que se pueden generar y firmar las pasadas para su distribución. La aplicación complementaria puede conectarse al servidor para generar nuevas pasadas o solicitar actualizaciones a las pasadas existentes. Opcionalmente, puede implementar la API del servicio Web a la que llamará Wallet para actualizar las pasadas.
-- **Servidores de APNS** : el servidor tiene la capacidad de notificar a la cartera de actualizaciones a un paso en un dispositivo determinado mediante APNS. Inserte una notificación en Wallet que luego se pondrá en contacto con el servidor para obtener detalles del cambio. No es necesario que las aplicaciones complementarias implementen APNS para esta característica (pueden escuchar `PKPassLibraryDidChangeNotification` ).
+- **Servidores de APNS** : el servidor tiene la capacidad de notificar a la cartera de actualizaciones a un paso en un dispositivo determinado mediante APNS. Inserte una notificación en Wallet que luego se pondrá en contacto con el servidor para obtener detalles del cambio. No es necesario que las aplicaciones complementarias implementen APNS para esta característica (pueden escuchar  `PKPassLibraryDidChangeNotification` ).
 - **Aplicaciones de conducto** : las aplicaciones que no manipulan los pasos directamente (como las aplicaciones complementarias sí), pero que pueden mejorar su utilidad al reconocer los pasos y permitir que se agreguen a wallet. Los clientes de correo, los exploradores de redes sociales y otras aplicaciones de agregación de datos pueden encontrar datos adjuntos o vínculos a las pasadas.
 
 Todo el ecosistema tiene un aspecto complejo, por lo que merece la pena tener en cuenta que algunos componentes son opcionales y son posibles implementaciones de PassKit mucho más sencillas.
@@ -85,7 +85,7 @@ Un archivo de paso es realmente un archivo ZIP con una extensión **. pkpass** ,
 
 - **pass.jsen** : requerido. Contiene toda la información del paso.
 - **manifest.jsen** : requerido. Contiene hashes SHA1 para cada archivo del paso excepto el archivo de signatura y este archivo (manifest.jsen).
-- **Signature** : requerido. Se crea firmando el `manifest.json` archivo con el certificado generado en el portal de aprovisionamiento de iOS.
+- **Signature** : requerido. Se crea firmando el  `manifest.json` archivo con el certificado generado en el portal de aprovisionamiento de iOS.
 - **logo.png** : opcional.
 - **background.png** : opcional.
 - **icon.png** : opcional.
@@ -101,7 +101,7 @@ JSON es el formato porque normalmente se crean pasadas en un servidor, lo que si
 
 - **teamIdentifier** : esta vincula todos los pasos que genere en la cuenta de App Store. Este valor es visible en el portal de aprovisionamiento de iOS.
 - **passTypeIdentifier** : Regístrese en el portal de aprovisionamiento para agrupar las pasadas (si genera más de un tipo). Por ejemplo, una cafetería podría crear un tipo de pase de tarjeta de tienda para permitir que sus clientes obtengan créditos de fidelidad, pero también un tipo de paso de cupón independiente para crear y distribuir cupones de descuento. Esa misma cafetería podría incluso contener eventos de música en directo y emitir pasadas de incidencias de eventos para ellos.
-- **SerialNumber** : una cadena única dentro de este `passTypeidentifier` . El valor es opaco a Wallet, pero es importante para realizar un seguimiento de los pasos específicos al comunicarse con el servidor.
+- **SerialNumber** : una cadena única dentro de este  `passTypeidentifier` . El valor es opaco a Wallet, pero es importante para realizar un seguimiento de los pasos específicos al comunicarse con el servidor.
 
 Hay un gran número de otras claves JSON en cada paso, un ejemplo que se muestra a continuación:
 
@@ -198,9 +198,9 @@ Traducir un paso en varios idiomas es similar a la localización de una aplicaci
 
 Las pasadas se firman con un certificado privado que se genera en el portal de aprovisionamiento de iOS. Los pasos para firmar el paso son:
 
-1. Calcular un hash SHA1 para cada archivo en el directorio de paso (no incluya el `manifest.json` `signature` archivo o, ninguno de los cuales debe existir en esta fase de todos modos).
-1. Escriba `manifest.json` como una lista de clave/valor JSON de cada nombre de archivo con su hash.
-1. Utilice el certificado para firmar el `manifest.json` archivo y escribir el resultado en un archivo denominado `signature` .
+1. Calcular un hash SHA1 para cada archivo en el directorio de paso (no incluya el  `manifest.json`  `signature` archivo o, ninguno de los cuales debe existir en esta fase de todos modos).
+1. Escriba  `manifest.json` como una lista de clave/valor JSON de cada nombre de archivo con su hash.
+1. Utilice el certificado para firmar el  `manifest.json` archivo y escribir el resultado en un archivo denominado  `signature` .
 1. COMPRIMIR todo y dar al archivo resultante una extensión de `.pkpass` archivo.
 
 Dado que la clave privada es necesaria para firmar el paso, este proceso solo debe realizarse en un servidor seguro que usted controle. NO distribuya las claves para probar y generar pasadas en una aplicación.
@@ -222,7 +222,7 @@ Para crear un identificador de tipo de paso, haga lo siguiente.
 
 El primer paso consiste en configurar un identificador de tipo de paso para que se admita cada _tipo_ de paso diferente. El identificador de paso (o el identificador de tipo de paso) crea un identificador único para el paso. Usaremos este identificador para vincular el paso con la cuenta de desarrollador mediante un certificado.
 
-1. En la [sección certificados, identificadores y perfiles del portal de aprovisionamiento de iOS](https://developer.apple.com/account/overview.action), vaya a **identificadores** y seleccione **pasar identificadores de tipo** . Después, seleccione el **+** botón para crear un nuevo tipo de paso: [ ![ crear un nuevo tipo de paso](passkit-images/passid.png)](passkit-images/passid.png#lightbox)
+1. En la  [sección certificados, identificadores y perfiles del portal de aprovisionamiento de iOS](https://developer.apple.com/account/overview.action), vaya a  **identificadores** y seleccione  **pasar identificadores de tipo** . Después, seleccione el **+** botón para crear un nuevo tipo de paso: [ ![ crear un nuevo tipo de paso](passkit-images/passid.png)](passkit-images/passid.png#lightbox)
 
 2. Proporcione una **Descripción** (nombre) e **identificador** (cadena única) para el paso. Tenga en cuenta que todos los identificadores de tipo de paso deben comenzar con la cadena `pass.` en este ejemplo, se usa `pass.com.xamarin.coupon.banana` : [ ![ proporcione una descripción y un identificador](passkit-images/register.png)](passkit-images/register.png#lightbox) .
 
@@ -259,7 +259,7 @@ Ahora que hemos creado el tipo de paso, podemos crear manualmente un paso para p
 - Inicie sesión manifest.jscon el archivo Certificate. p12 descargado.
 - COMPRIMIR el contenido del directorio y cambiar el nombre con la extensión. pkpass.
 
-En el [código de ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) de este artículo hay algunos archivos de código fuente que se pueden usar para generar un paso. Use los archivos del `CouponBanana.raw` directorio del directorio CreateAPassManually Los archivos siguientes están presentes:
+En el [código de ejemplo](/samples/xamarin/ios-samples/passkit) de este artículo hay algunos archivos de código fuente que se pueden usar para generar un paso. Use los archivos del `CouponBanana.raw` directorio del directorio CreateAPassManually Los archivos siguientes están presentes:
 
  [![Estos archivos están presentes](passkit-images/image18.png)](passkit-images/image18.png#lightbox)
 
@@ -416,7 +416,7 @@ Las siguientes clases de PassKit están disponibles para que las aplicaciones te
 
 ## <a name="example"></a>Ejemplo
 
-Consulte el proyecto PassLibrary en el [código de ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) de este artículo. Muestra las siguientes funciones comunes que serían necesarias en una aplicación complementaria de Wallet:
+Consulte el proyecto PassLibrary en el [código de ejemplo](/samples/xamarin/ios-samples/passkit) de este artículo. Muestra las siguientes funciones comunes que serían necesarias en una aplicación complementaria de Wallet:
 
 ### <a name="check-that-wallet-is-available"></a>Comprobar que Wallet está disponible
 
@@ -447,7 +447,7 @@ Las aplicaciones pueden solicitar una lista de las pasadas de la biblioteca. Est
 var passes = library.GetPasses ();  // returns PKPass[]
 ```
 
-Tenga en cuenta que el simulador no filtra la lista de las pasadas devueltas, por lo que este método siempre debe probarse en dispositivos reales. Esta lista se puede mostrar en un UITableView. La [aplicación de ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) tiene el siguiente aspecto después de haber agregado dos cupones:
+Tenga en cuenta que el simulador no filtra la lista de las pasadas devueltas, por lo que este método siempre debe probarse en dispositivos reales. Esta lista se puede mostrar en un UITableView. La [aplicación de ejemplo](/samples/xamarin/ios-samples/passkit) tiene el siguiente aspecto después de haber agregado dos cupones:
 
  [![La aplicación de ejemplo tiene el siguiente aspecto después de haber agregado dos cupones](passkit-images/image29.png)](passkit-images/image29.png#lightbox)
 
@@ -468,7 +468,7 @@ string passInfo =
                 + "\nPassUrl:" + pass.PassUrl;
 ```
 
-Esta cadena se muestra como una alerta en el [ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit):
+Esta cadena se muestra como una alerta en el [ejemplo](/samples/xamarin/ios-samples/passkit):
 
  [![La alerta de cupón seleccionada en el ejemplo](passkit-images/image30.png)](passkit-images/image30.png#lightbox)
 
@@ -556,7 +556,7 @@ En este artículo se presentaron PassKit, se detallaron algunas de las razones p
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Wallet para desarrolladores](https://developer.apple.com/wallet/)
-- [Ejemplo de PassKit](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit)
+- [Ejemplo de PassKit](/samples/xamarin/ios-samples/passkit)
 - [Guía del desarrollador de Wallet](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/PassKit_PG/index.html#//apple_ref/doc/uid/TP40012195-CH1-SW1)
 - [Marcos de trabajo: Apple Pay y Wallet (vídeos de WWDC)](https://developer.apple.com/videos/frameworks/apple-pay-and-wallet)
 - [Referencia de PassKit Framework](https://developer.apple.com/library/prerelease/ios/#documentation/UserExperience/Reference/PassKit_Framework/_index.html)

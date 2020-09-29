@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: f9f1b09c5cbd5660018e8e8d346aa1d25e51dab2
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 47530b27fb754bf2efd50615fef9dfc558d9c7d2
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937389"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436187"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Trabajar con controles segmentados de tvOS en Xamarin
 
@@ -214,7 +214,7 @@ Donde `UIControlState` especifica el estado del control para el que está config
 
 Y `UIBarMetrics` especifican las métricas que se van a usar como:
 
-- Default
+- Valor predeterminado
 - Compacto
 - DefaultPrompt
 - CompactPrompt
@@ -235,7 +235,7 @@ En este artículo se ha tratado el diseño y el uso del control segmentado dentr
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Ejemplos de tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guías de la interfaz humana de tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guía de programación de aplicaciones para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
