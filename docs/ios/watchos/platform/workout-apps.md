@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: c4fc1607667dd6201c28c4d00a2938760e429f0f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 826d8c982e9976cb4147c0ed77a55a4b1d18f879
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938988"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432409"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>Aplicaciones de entrenamiento de watchos en Xamarin
 
@@ -390,8 +390,8 @@ public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkou
 
 Apple ha agregado los siguientes tipos de eventos nuevos en watchos 3:
 
-- `HKWorkoutEventType.Lap`-Son para eventos que interrumpen el entrenamiento en partes de la misma distancia. Por ejemplo, para marcar una vuelta alrededor de una pista mientras se ejecuta.
-- `HKWorkoutEventType.Marker`-Se trata de puntos arbitrarios de interés dentro del entrenamiento. Por ejemplo, alcanzar un punto concreto en la ruta de una ejecución exterior.
+- `HKWorkoutEventType.Lap` -Son para eventos que interrumpen el entrenamiento en partes de la misma distancia. Por ejemplo, para marcar una vuelta alrededor de una pista mientras se ejecuta.
+- `HKWorkoutEventType.Marker` -Se trata de puntos arbitrarios de interés dentro del entrenamiento. Por ejemplo, alcanzar un punto concreto en la ruta de una ejecución exterior.
 
 Estos nuevos tipos pueden ser creados por la aplicación y almacenados en el entrenamiento para su uso posterior en la creación de gráficos y estadísticas.
 
@@ -1253,5 +1253,5 @@ En este artículo se han explicado las mejoras que Apple ha realizado en las apl
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Ejemplos de iOS 10](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)
 - [Introducción a HealthKit](~/ios/platform/healthkit.md)

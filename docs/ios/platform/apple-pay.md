@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 87f81f96e51b6744e37a80819c3c88d1abb644f1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 51a18042bea820221f450d8d7ceedf3f69359a6d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022235"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431628"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Apple Pay en Xamarin. iOS
 
@@ -79,7 +79,7 @@ Como novedad de iOS 10, el desarrollador puede incorporar Apple Pay directamente
 
 ### <a name="passkit-framework-enhancements"></a>Mejoras de PassKit Framework
 
-En iOS 10, el marco de trabajo de PassKit se ha ampliado para admitir Apple Pay fuera de `UIKit` y permitir que los emisores de tarjetas presenten sus propias tarjetas desde sus aplicaciones.
+En iOS 10, el marco de trabajo de PassKit se ha ampliado para admitir Apple Pay fuera de `UIKit` y para permitir que los emisores de tarjetas presenten sus propias tarjetas desde sus aplicaciones.
 
 #### <a name="supporting-apple-pay-outside-of-uikit"></a>Compatibilidad Apple Pay fuera de UIKit
 
@@ -89,13 +89,13 @@ Mediante el uso de [PKPaymentAuthorizationController](https://developer.apple.co
 
 Con iOS 10, se han agregado nuevas características al marco PassKit que permiten a los emisores de tarjetas presentar sus tarjetas desde sus propias aplicaciones. El desarrollador puede Agregar un `PKPaymentButtonTypeInStore` botón a la interfaz de usuario de la aplicación que mostrará un botón Apple Pay de una tarjeta.
 
-El método `PresentPaymentPass` de la clase [PKPassLibrary](https://developer.apple.com/reference/passkit/pkpasslibrary) también se puede usar para mostrar la tarjeta mediante programación.
+El `PresentPaymentPass` método de la clase [PKPassLibrary](https://developer.apple.com/reference/passkit/pkpasslibrary) también se puede usar para mostrar la tarjeta mediante programación.
 
 ### <a name="new-payment-network-support"></a>Nueva compatibilidad con redes de pago
 
 Como novedad de iOS 10, una aplicación puede admitir automáticamente una nueva red de pago cuando está disponible sin que el desarrollador tenga que modificar, volver a compilar la aplicación y volver a enviarla a la tienda de aplicaciones.
 
-El nuevo método [AvailableNetworks](https://developer.apple.com/reference/passkit/pkpaymentrequest/1833288-availablenetworks) de la clase `PKPaymentNetwork` permite a una aplicación detectar las redes disponibles en el dispositivo del usuario en tiempo de ejecución. Además, la propiedad [SupportedNetworks](https://developer.apple.com/reference/passkit/pkpaymentrequest/1619329-supportednetworks) se ha expandido para tomar el nombre del proveedor de pago como argumento. Con estos métodos, una aplicación puede admitir automáticamente cualquier red que admita el proveedor de pagos.
+El nuevo método [AvailableNetworks](https://developer.apple.com/reference/passkit/pkpaymentrequest/1833288-availablenetworks) de la `PKPaymentNetwork` clase permite a una aplicación detectar las redes disponibles en el dispositivo del usuario en tiempo de ejecución. Además, la propiedad [SupportedNetworks](https://developer.apple.com/reference/passkit/pkpaymentrequest/1619329-supportednetworks) se ha expandido para tomar el nombre del proveedor de pago como argumento. Con estos métodos, una aplicación puede admitir automáticamente cualquier red que admita el proveedor de pagos.
 
 Para obtener más información, consulte la [configuración de Apple Pay](~/ios/platform/apple-pay.md) y la [Guía de Apple Pay](https://developer.apple.com/apple-pay/)de Apple.
 
@@ -123,4 +123,4 @@ En este artículo, se exploran los distintos elementos necesarios para usar Appl
 - [Introducción a PassKit](~/ios/platform/passkit.md)
 - [PassKit](https://developer.apple.com/library/ios/documentation/PassKit/Reference/PKPaymentAuthorizationViewController_Ref/)
 - [Apple Pay](https://developer.apple.com/apple-pay/)
-- [Emporium (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-emporium)
+- [Emporium (ejemplo)](/samples/xamarin/ios-samples/ios9-emporium)

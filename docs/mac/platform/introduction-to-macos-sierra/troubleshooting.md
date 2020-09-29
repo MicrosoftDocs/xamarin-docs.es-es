@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 09/22/2016
-ms.openlocfilehash: e7bc6fa12ab6720842ab264678cbf8124353fc40
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d3ec300cbda5d22a285c3f63d3281bde29b94024
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574423"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430055"
 ---
 # <a name="xamarinmac---macos-sierra-troubleshooting"></a>Xamarin. Mac: solución de problemas de macOS Sierra
 
@@ -32,7 +32,7 @@ En las secciones siguientes se enumeran algunos problemas conocidos que pueden p
 
 <a name="App-Store"></a>
 
-## <a name="app-store"></a>Tienda de aplicaciones
+## <a name="app-store"></a>App Store
 
 Problemas conocidos:
 
@@ -72,7 +72,7 @@ Las operaciones de ejecución prolongada devolverán un _"no tiene permiso para 
 
 ## <a name="core-image"></a>Imagen principal
 
-La `CIImageProcessor` API ahora es compatible con un recuento de imágenes de entrada arbitrarias. `CIImageProcessor`Se quitará la API que se incluyó en macOS Sierra beta 1.
+La `CIImageProcessor` API ahora es compatible con un recuento de imágenes de entrada arbitrarias. `CIImageProcessor` Se quitará la API que se incluyó en macOS Sierra beta 1.
 
 <a name="Notifications"></a>
 
@@ -94,5 +94,5 @@ WebGeolocation requiere una `https://` dirección URL segura () para trabajar ta
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [Ejemplos de Mac](/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [Novedades de macOS 10,12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: d768be516b67ed23bdb851d87286a856a7269de4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d8c5cc10b4bce507f7a1d7896a41730745b08cbd
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935556"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431646"
 ---
 # <a name="table-views-in-xamarinmac"></a>Vistas de tabla en Xamarin. Mac
 
@@ -93,7 +93,7 @@ Seleccione la vista de tabla en la jerarquía de la **interfaz** y las siguiente
 - **Trunca la última línea visible** : si es `true` , la celda se truncará en los datos no caben dentro de sus límites.
 
 > [!IMPORTANT]
-> A menos que esté manteniendo una aplicación de Xamarin. Mac heredada, las `NSView` vistas de tabla basadas en se deben usar en `NSCell` vistas de tabla basadas en. `NSCell`se considera heredada y puede que no se admita en el futuro.
+> A menos que esté manteniendo una aplicación de Xamarin. Mac heredada, las `NSView` vistas de tabla basadas en se deben usar en `NSCell` vistas de tabla basadas en. `NSCell` se considera heredada y puede que no se admita en el futuro.
 
 Seleccione una columna de la tabla en la jerarquía de la **interfaz** y las siguientes propiedades estarán disponibles en el **Inspector de atributos**:
 
@@ -420,10 +420,10 @@ Esto permitirá al usuario seleccionar cualquier fila única en la vista de tabl
 
 La vista de tabla ( `NSTableView` ) contiene los siguientes métodos para trabajar con la selección de filas:
 
-- `DeselectRow(nint)`-Anula la selección de la fila especificada en la tabla.
-- `SelectRow(nint,bool)`: Selecciona la fila especificada. Pase `false` el segundo parámetro para seleccionar solo una fila cada vez.
-- `SelectedRow`: Devuelve la fila actual seleccionada en la tabla.
-- `IsRowSelected(nint)`-Devuelve `true` si se selecciona la fila especificada.
+- `DeselectRow(nint)` -Anula la selección de la fila especificada en la tabla.
+- `SelectRow(nint,bool)` : Selecciona la fila especificada. Pase `false` el segundo parámetro para seleccionar solo una fila cada vez.
+- `SelectedRow` : Devuelve la fila actual seleccionada en la tabla.
+- `IsRowSelected(nint)` -Devuelve `true` si se selecciona la fila especificada.
 
 <a name="Multiple_Row_Selection"></a>
 
@@ -448,15 +448,15 @@ Esto permitirá al usuario seleccionar cualquier fila única en la vista de tabl
 
 La vista de tabla ( `NSTableView` ) contiene los siguientes métodos para trabajar con la selección de filas:
 
-- `DeselectAll(NSObject)`-Anula la selección de todas las filas de la tabla. Use `this` para el primer parámetro que se va a enviar en el objeto que realiza la selección. 
-- `DeselectRow(nint)`-Anula la selección de la fila especificada en la tabla.
-- `SelectAll(NSobject)`: Selecciona todas las filas de la tabla. Use `this` para el primer parámetro que se va a enviar en el objeto que realiza la selección.
-- `SelectRow(nint,bool)`: Selecciona la fila especificada. Pass `false` para el segundo parámetro borra la selección y selecciona una sola fila, Pass `true` para extender la selección e incluir esta fila.
-- `SelectRows(NSIndexSet,bool)`: Selecciona el conjunto de filas especificado. Pass `false` para el segundo parámetro borre la selección y seleccione solo estas filas, Pass `true` para extender la selección e incluir estas filas.
-- `SelectedRow`: Devuelve la fila actual seleccionada en la tabla.
-- `SelectedRows`: Devuelve un objeto `NSIndexSet` que contiene los índices de las filas seleccionadas.
-- `SelectedRowCount`: Devuelve el número de filas seleccionadas.
-- `IsRowSelected(nint)`-Devuelve `true` si se selecciona la fila especificada.
+- `DeselectAll(NSObject)` -Anula la selección de todas las filas de la tabla. Use `this` para el primer parámetro que se va a enviar en el objeto que realiza la selección. 
+- `DeselectRow(nint)` -Anula la selección de la fila especificada en la tabla.
+- `SelectAll(NSobject)` : Selecciona todas las filas de la tabla. Use `this` para el primer parámetro que se va a enviar en el objeto que realiza la selección.
+- `SelectRow(nint,bool)` : Selecciona la fila especificada. Pass `false` para el segundo parámetro borra la selección y selecciona una sola fila, Pass `true` para extender la selección e incluir esta fila.
+- `SelectRows(NSIndexSet,bool)` : Selecciona el conjunto de filas especificado. Pass `false` para el segundo parámetro borre la selección y seleccione solo estas filas, Pass `true` para extender la selección e incluir estas filas.
+- `SelectedRow` : Devuelve la fila actual seleccionada en la tabla.
+- `SelectedRows` : Devuelve un objeto `NSIndexSet` que contiene los índices de las filas seleccionadas.
+- `SelectedRowCount` : Devuelve el número de filas seleccionadas.
+- `IsRowSelected(nint)` -Devuelve `true` si se selecciona la fila especificada.
 
 <a name="Type_to_Select_Row"></a>
 
@@ -923,8 +923,8 @@ En este artículo se ha realizado una visión detallada del trabajo con las vist
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacTables (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/mactables)
-- [MacImages (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
+- [MacTables (ejemplo)](/samples/xamarin/mac-samples/mactables)
+- [MacImages (ejemplo)](/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Vistas de esquema](~/mac/user-interface/outline-view.md)
 - [Listas de origen](~/mac/user-interface/source-list.md)

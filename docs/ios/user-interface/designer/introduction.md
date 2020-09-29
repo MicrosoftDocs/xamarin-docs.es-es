@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/31/2018
-ms.openlocfilehash: e5cbbc10f189abb6d0d0b2ef99b50ae53d1103c2
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 7c6b5a4dd2f6f5d4992d84d5d8690a6dda3d20e3
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572291"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432762"
 ---
 # <a name="ios-designer-basics"></a>aspectos básicos del diseñador de iOS
 
@@ -84,13 +84,13 @@ Ahora que el botón tiene un nombre, se puede tener acceso a él en el código. 
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-En el **Panel de solución**, al navegar a **ViewController.CS** y al hacer clic en el indicador de divulgación se revela que la definición de clase del controlador de vista `ViewController` abarca dos archivos, cada uno de los cuales contiene una definición de [clase parcial](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
+En el **Panel de solución**, al navegar a **ViewController.CS** y al hacer clic en el indicador de divulgación se revela que la definición de clase del controlador de vista `ViewController` abarca dos archivos, cada uno de los cuales contiene una definición de [clase parcial](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
 
 [![Los dos archivos que componen la clase ViewController: ViewController.cs y ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "Los dos archivos que componen la clase ViewController: ViewController.cs y ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-En el **Explorador de soluciones**, al navegar a **ViewController.CS** y al hacer clic en el indicador de divulgación se revela que la definición de clase del controlador de vista `ViewController` abarca dos archivos, cada uno de los cuales contiene una definición de [clase parcial](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
+En el **Explorador de soluciones**, al navegar a **ViewController.CS** y al hacer clic en el indicador de divulgación se revela que la definición de clase del controlador de vista `ViewController` abarca dos archivos, cada uno de los cuales contiene una definición de [clase parcial](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
 
 [![Los dos archivos que componen la clase ViewController: ViewController.cs y ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vs.png "Los dos archivos que componen la clase ViewController: ViewController.cs y ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png#lightbox)
 
@@ -173,7 +173,7 @@ IOS Designer tiene seis secciones principales:
 2. **Barra de herramientas restricciones** : permite cambiar entre el modo de edición de Marcos y el modo de edición de restricciones, de dos maneras diferentes para colocar elementos en una interfaz de usuario.
 3. **Cuadro de herramientas** : enumera los controladores, objetos, controles, vistas de datos, reconocedores de gestos, ventanas y barras que se pueden arrastrar a la superficie de diseño y agregarlos a una interfaz de usuario.
 4. **Panel de propiedades** : muestra las propiedades del control seleccionado, incluidas la identidad, los estilos visuales, la accesibilidad, el diseño y el comportamiento.
-5. **Esquema del documento** : muestra el árbol de controles que componen el diseño de la interfaz que se está editando. Al hacer clic en un elemento en el árbol, se selecciona en el diseñador de iOS y se muestran sus propiedades en el **Panel de propiedades**. Esto resulta útil para seleccionar un control específico en una interfaz de usuario profundamente anidada.
+5. **Esquema del documento** : muestra el árbol de controles que componen el diseño de la interfaz que se está editando. Al hacer clic en un elemento en el árbol, se selecciona en el diseñador de iOS y se muestran sus propiedades en el  **Panel de propiedades**. Esto resulta útil para seleccionar un control específico en una interfaz de usuario profundamente anidada.
 6. **Barra de herramientas inferior** : contiene opciones para cambiar el modo en que el diseñador de iOS muestra el archivo. Storyboard o. Xib, incluidos los dispositivos, la orientación y el zoom.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
@@ -184,12 +184,12 @@ IOS Designer tiene seis secciones principales:
 2. **Barra de herramientas restricciones** : permite cambiar entre el modo de edición de Marcos y el modo de edición de restricciones, de dos maneras diferentes para colocar elementos en una interfaz de usuario.
 3. **Cuadro de herramientas** : enumera los controladores, objetos, controles, vistas de datos, reconocedores de gestos, ventanas y barras que se pueden arrastrar a la superficie de diseño y agregarlos a una interfaz de usuario.
 4. **Ventana Propiedades** : muestra las propiedades del control seleccionado, incluidas la identidad, los estilos visuales, la accesibilidad, el diseño y el comportamiento.
-5. **Esquema del documento** : muestra el árbol de controles que componen el diseño de la interfaz que se está editando. Al hacer clic en un elemento en el árbol, se selecciona en el diseñador de iOS y se muestran sus propiedades en la **ventana Propiedades**. Esto resulta útil para seleccionar un control específico en una interfaz de usuario profundamente anidada.
+5. **Esquema del documento** : muestra el árbol de controles que componen el diseño de la interfaz que se está editando. Al hacer clic en un elemento en el árbol, se selecciona en el diseñador de iOS y se muestran sus propiedades en la  **ventana Propiedades**. Esto resulta útil para seleccionar un control específico en una interfaz de usuario profundamente anidada.
 6. **Barra de herramientas inferior** : contiene opciones para cambiar el modo en que el diseñador de iOS muestra el archivo. Storyboard o. Xib, incluidos los dispositivos, la orientación y el zoom.
 
 -----
 
-### <a name="design-workflow"></a>Diseñar flujo de trabajo
+### <a name="design-workflow"></a>Diseño del flujo de trabajo
 
 #### <a name="adding-a-control-to-the-interface"></a>Agregar un control a la interfaz
 
@@ -298,7 +298,7 @@ Una vez expandida, la barra de herramientas inferior muestra todos los dispositi
 
 Tenga en cuenta que la selección de un dispositivo y la orientación solo cambia el modo en que el diseñador de iOS muestra una vista previa del diseño. Independientemente de la selección actual, las restricciones recién agregadas se aplican a todos los dispositivos y orientaciones, a menos que se haya usado el botón **Editar rasgos** para especificar lo contrario.
 
-Cuando se [habilitan](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes) [las clases de tamaño](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) , el botón **Editar rasgos** aparecerá en la barra de herramientas inferior expandida.  Al hacer clic en el botón **Editar rasgos** , se muestran las opciones para crear una variación de interfaz basada en la clase de tamaño representada por el dispositivo seleccionado y la orientación. Considere los ejemplos siguientes:
+Cuando se [habilitan](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes) [las clases de tamaño](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) , el botón **Editar rasgos** aparecerá en la barra de herramientas inferior expandida.  Al hacer clic en el botón **Editar rasgos** , se muestran las opciones para crear una variación de interfaz basada en la clase de tamaño representada por el dispositivo seleccionado y la orientación. Considera los ejemplos siguientes:
 
 - Si se selecciona **iPhone se**  /  **verticalmente**, el elemento flotante proporcionará opciones para crear una variación de interfaz para la clase de ancho compacto, tamaño de alto normal. 
 - Si **iPad Pro 9.7"**  /  **Landscape**  /  está seleccionada la**pantalla completa** de iPad Pro 9,7 "horizontal, el elemento flotante proporcionará opciones para crear una variación de interfaz para la clase de ancho normal, tamaño de alto normal.
@@ -499,6 +499,6 @@ En esta guía se proporciona una introducción al diseñador de iOS, en la que s
 - [Hello, iOS](~/ios/get-started/hello-ios/index.md)
 - [Hello, iOS Multiscreen](~/ios/get-started/hello-ios-multiscreen/index.md)
 - [Información general de Android Designer](~/android/user-interface/android-designer/index.md)
-- [Clases y métodos parciales](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)
+- [Clases y métodos parciales](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)
 - [Profundizar en el Xamarin Designer para iOS: evolución del 2014 (vídeo)](https://www.youtube.com/watch?v=W4H9uLjoEjM)
 - [Usar el diseñador de iOS para crear una pantalla de inicio (vídeo)](https://university.xamarin.com/lightninglectures/using-the-ios-designer-to-create-a-launch-screen)

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: fbd6e4a3b1c5cdb45a057f1ed664a0d5e71e224d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7f600593d7a3bb180ef8daca6639dbbea4bf07aa
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937896"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430065"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Introducción a OpenTK en Xamarin. Mac
 
@@ -315,7 +315,7 @@ Con los aspectos básicos del trabajo con OpenTk en una aplicación de Xamarin. 
 
 Para obtener más ejemplos, consulte el repositorio de [GitHub de ejemplos de OpenTK](https://github.com/opentk/opentk/tree/master/Source/Examples) . Contiene una lista oficial de ejemplos del uso de OpenTK. Tendrá que adaptar estos ejemplos para usar con la versión de Xamarin. Mac de OpenTK.
 
-Para ver un ejemplo de Xamarin. Mac más complejo de una implementación de OpenTK, consulte nuestro ejemplo de [MonoMacGameView](https://docs.microsoft.com/samples/xamarin/mac-samples/monomacgamewindow) .
+Para ver un ejemplo de Xamarin. Mac más complejo de una implementación de OpenTK, consulte nuestro ejemplo de [MonoMacGameView](/samples/xamarin/mac-samples/monomacgamewindow) .
 
 <a name="Summary"></a>
 
@@ -325,8 +325,8 @@ En este artículo se ha examinado rápidamente el trabajo con OpenTK en una apli
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacOpenTK (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macopentk)
-- [MonoMacGameView (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/monomacgamewindow)
+- [MacOpenTK (ejemplo)](/samples/xamarin/mac-samples/macopentk)
+- [MonoMacGameView (ejemplo)](/samples/xamarin/mac-samples/monomacgamewindow)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Trabajar con Windows](~/mac/user-interface/window.md)
 - [El kit de herramientas abierto](https://opentk.net)

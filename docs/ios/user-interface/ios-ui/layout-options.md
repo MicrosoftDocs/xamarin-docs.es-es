@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 6cfb567e6f74228a0b7e9ce017c57436df06cb56
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 719436835f5d104930adfe8cd7aa95de326784e9
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939105"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432090"
 ---
 # <a name="layout-options-in-xamarinios"></a>Opciones de diseño en Xamarin. iOS
 
 Hay dos mecanismos diferentes para controlar el diseño cuando se cambia el tamaño o se gira una vista:
 
 - **Ajuste** automático de tamaño: el inspector de ajuste automático de tamaño del diseñador proporciona una manera de establecer las `AutoresizingMask` propiedades. Esto permitirá que un control se delimite a los bordes de su contenedor o corrija su tamaño. El ajuste automático de tamaño funciona en todas las versiones de iOS. Esto se describe con más detalle a continuación.
-- **Diseño automático** : característica, introducida en iOS 6 que permite un control exhaustivo sobre las relaciones de los controles de interfaz de usuario. Permitirá el control de las posiciones de los elementos en relación con otros elementos en la superficie de diseño. Este tema se trata con más detalle en la guía [diseño automático con Xamarin iOS Designer](~/ios/user-interface/designer/designer-auto-layout.md) .
+- **Diseño automático** : característica, introducida en iOS 6 que permite un control exhaustivo sobre las relaciones de los controles de interfaz de usuario. Permitirá el control de las posiciones de los elementos en relación con otros elementos en la superficie de diseño. Este tema se trata con más detalle en la guía  [diseño automático con Xamarin iOS Designer](~/ios/user-interface/designer/designer-auto-layout.md) .
 
 ## <a name="autosizing"></a>Cambiar automáticamente
 
@@ -64,4 +64,4 @@ Tenga en cuenta que la vista de texto y el campo de texto se ajustan para manten
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Controles (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [Controles (ejemplo)](/samples/xamarin/ios-samples/controls)

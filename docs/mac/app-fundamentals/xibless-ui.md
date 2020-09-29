@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: fe4927384470a37581f556f06e71d489ef90ecbb
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 47025f48b1f3455f70a077f2ca55da2cdeeba761
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574526"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430889"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. Storyboard/. Xib: diseño de la interfaz de usuario menos en Xamarin. Mac
 
@@ -359,7 +359,7 @@ En este artículo se ha tomado una visión detallada de la creación de la inter
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacXibless (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macxibless)
+- [MacXibless (ejemplo)](/samples/xamarin/mac-samples/macxibless)
 - [Windows](~/mac/user-interface/window.md)
 - [Menús](~/mac/user-interface/menu.md)
 - [Directrices de la interfaz humana de macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

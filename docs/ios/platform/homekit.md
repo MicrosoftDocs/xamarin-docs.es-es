@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 7319cc50a147da93018bdd1c2036d70cf01e9b80
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7d5c5a6543da701b70532134d8ae901564e5c0b8
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936687"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430176"
 ---
 # <a name="homekit-in-xamarinios"></a>HomeKit en Xamarin. iOS
 
@@ -38,11 +38,11 @@ HomeKit organiza todos los dispositivos de automatización en una ubicación det
 
 La colección Home se almacena en una base de datos de configuración principal de la que se realizará automáticamente una copia de seguridad y se sincronizará en todos los dispositivos iOS del usuario. HomeKit proporciona las siguientes clases para trabajar con la base de datos de configuración de Inicio:
 
-- `HMHome`: Este es el contenedor de nivel superior que contiene toda la información y las configuraciones de todos los dispositivos de automatización doméstica en una única ubicación física (por ejemplo, residencia de una sola familia). El usuario puede tener más de una residencia, como su hogar principal y una casa de vacaciones. O bien, pueden tener diferentes "casas" en la misma propiedad, como la casa principal y una casa de invitados en el garaje. En cualquier caso, se `HMHome` _debe_ configurar al menos un objeto antes de que se pueda escribir cualquier otra información de HomeKit.
-- `HMRoom`-Aunque es opcional, `HMRoom` permite al usuario definir salones específicos dentro de un hogar ( `HMHome` ) como cocina, baño, garaje o salón. El usuario puede agrupar todos los dispositivos de automatización doméstica en una ubicación específica de su casa en un `HMRoom` y actuar sobre ellos como una unidad. Por ejemplo, pedir a Siri que desactive las luces del garaje.
-- `HMAccessory`: Representa un dispositivo de automatización habilitado para HomeKit físico que se ha instalado en la residencia del usuario (por ejemplo, un termostato inteligente). Cada `HMAccessory` se asigna a un `HMRoom` . Si el usuario no ha configurado ningún salón, HomeKit asigna accesorios a una sala especial predeterminada.
-- `HMService`: Representa un servicio proporcionado por un determinado `HMAccessory` , como el estado ON/OFF de una luz o su color (si se admite el cambio de color). Cada `HMAccessory` una de ellas puede tener más de un servicio, como un abierto de puerta de garaje que también incluye una luz. Además, un determinado `HMAccessory` puede tener servicios, como la actualización de firmware, que están fuera del control de usuario.
-- `HMZone`: Permite al usuario agrupar una colección de `HMRoom` objetos en zonas lógicas, como planta, downstairs o sótano. Aunque es opcional, esto permite interacciones como preguntar a Siri que convierta toda la luz downstairs desactivada.
+- `HMHome` : Este es el contenedor de nivel superior que contiene toda la información y las configuraciones de todos los dispositivos de automatización doméstica en una única ubicación física (por ejemplo, residencia de una sola familia). El usuario puede tener más de una residencia, como su hogar principal y una casa de vacaciones. O bien, pueden tener diferentes "casas" en la misma propiedad, como la casa principal y una casa de invitados en el garaje. En cualquier caso, se `HMHome` _debe_ configurar al menos un objeto antes de que se pueda escribir cualquier otra información de HomeKit.
+- `HMRoom` -Aunque es opcional, `HMRoom` permite al usuario definir salones específicos dentro de un hogar ( `HMHome` ) como cocina, baño, garaje o salón. El usuario puede agrupar todos los dispositivos de automatización doméstica en una ubicación específica de su casa en un `HMRoom` y actuar sobre ellos como una unidad. Por ejemplo, pedir a Siri que desactive las luces del garaje.
+- `HMAccessory` : Representa un dispositivo de automatización habilitado para HomeKit físico que se ha instalado en la residencia del usuario (por ejemplo, un termostato inteligente). Cada `HMAccessory` se asigna a un `HMRoom` . Si el usuario no ha configurado ningún salón, HomeKit asigna accesorios a una sala especial predeterminada.
+- `HMService` : Representa un servicio proporcionado por un determinado `HMAccessory` , como el estado ON/OFF de una luz o su color (si se admite el cambio de color). Cada `HMAccessory` una de ellas puede tener más de un servicio, como un abierto de puerta de garaje que también incluye una luz. Además, un determinado `HMAccessory` puede tener servicios, como la actualización de firmware, que están fuera del control de usuario.
+- `HMZone` : Permite al usuario agrupar una colección de `HMRoom` objetos en zonas lógicas, como planta, downstairs o sótano. Aunque es opcional, esto permite interacciones como preguntar a Siri que convierta toda la luz downstairs desactivada.
 
 <a name="Provisioning-a-HomeKit-App"></a>
 
@@ -68,7 +68,7 @@ Siga estos pasos:
     [![Seleccione el perfil de aprovisionamiento que acaba de crear.](homekit-images/provision03.png)](homekit-images/provision03.png#lightbox)
 9. Después, edite el archivo **info. plist** y asegúrese de que está usando el identificador de aplicación que se usó para crear el perfil de aprovisionamiento: 
 
-    [![Establecimiento del identificador de la aplicación](homekit-images/provision04.png)](homekit-images/provision04.png#lightbox)
+    [![Establecimiento del identificador de la aplicación ](homekit-images/provision04.png)](homekit-images/provision04.png#lightbox)
 10. Por último, edite el archivo **contitles. plist** y asegúrese de que se ha seleccionado el derecho **HomeKit** : 
 
     [![Habilitación del derecho HomeKit](homekit-images/provision05.png)](homekit-images/provision05.png#lightbox)
@@ -274,7 +274,7 @@ Una vez que se ha definido o cargado una página principal principal desde el ad
 Llame al `StartSearchingForNewAccessories` método para empezar a buscar nuevos accesorios y el `StopSearchingForNewAccessories` método cuando termine.
 
 > [!IMPORTANT]
-> `StartSearchingForNewAccessories`no debe dejarse en ejecución durante largos períodos de tiempo, ya que afectará negativamente a la duración de la batería y al rendimiento del dispositivo iOS. Apple sugiere llamar `StopSearchingForNewAccessories` después de un minuto o buscar solo cuando se presenta al usuario la interfaz de usuario del accesorio de búsqueda.
+> `StartSearchingForNewAccessories` no debe dejarse en ejecución durante largos períodos de tiempo, ya que afectará negativamente a la duración de la batería y al rendimiento del dispositivo iOS. Apple sugiere llamar `StopSearchingForNewAccessories` después de un minuto o buscar solo cuando se presenta al usuario la interfaz de usuario del accesorio de búsqueda.
 
 Se `DidFindNewAccessory` llamará al evento cuando se detecten nuevos accesorios y se agregarán a la `DiscoveredAccessories` lista en el explorador de accesorios.
 
@@ -379,7 +379,7 @@ Una vez que se ha seleccionado un servicio, el usuario puede ver o modificar una
 
 Cada `HMService` objeto puede contener una colección de `HMCharacteristic` objetos que pueden proporcionar información sobre el estado del servicio (por ejemplo, una puerta abierta o cerrada) o permitir que el usuario ajuste un estado (por ejemplo, establecer el color de una luz).
 
-`HMCharacteristic`no solo proporciona información sobre una característica y su estado, sino que también proporciona métodos para trabajar con el estado a través de _metadatos característicos_ ( `HMCharacteristisMetadata` ). Estos metadatos pueden proporcionar propiedades (como los intervalos de valores mínimo y máximo) que son útiles cuando se muestra información al usuario o se les permite modificar los Estados.
+`HMCharacteristic` no solo proporciona información sobre una característica y su estado, sino que también proporciona métodos para trabajar con el estado a través de _metadatos característicos_ ( `HMCharacteristisMetadata` ). Estos metadatos pueden proporcionar propiedades (como los intervalos de valores mínimo y máximo) que son útiles cuando se muestra información al usuario o se les permite modificar los Estados.
 
 La `HMCharacteristicType` enumeración proporciona un conjunto de valores de metadatos característicos que se pueden definir o modificar de la siguiente manera:
 
@@ -425,7 +425,7 @@ La `HMCharacteristicType` enumeración proporciona un conjunto de valores de met
 - Fabricante
 - Modelo
 - MotionDetected
-- Nombre
+- Name
 - ObstructionDetected
 - OccupancyDetected
 - OutletInUse
@@ -707,7 +707,7 @@ En este artículo se ha introducido HomeKit Home Automation Framework de Apple. 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [Ejemplos de iOS 9](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [iOS 9 para desarrolladores](https://developer.apple.com/ios/pre-release/)
 - [Novedades de iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Guía de HomeKitDeveloper](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/Introduction/Introduction.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 9280917f451d58ae864398088bec7faaf15ad96a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ae82918c1f87e47be9446e80f99ebc4dc967c078
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937350"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431939"
 ---
 # <a name="source-lists-in-xamarinmac"></a>Listas de origen en Xamarin. Mac
 
@@ -624,7 +624,7 @@ En este artículo se ha realizado una visión detallada del trabajo con listas d
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacOutlines (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macoutlines)
+- [MacOutlines (ejemplo)](/samples/xamarin/mac-samples/macoutlines)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Vistas de tabla](~/mac/user-interface/table-view.md)
 - [Vistas de esquema](~/mac/user-interface/outline-view.md)

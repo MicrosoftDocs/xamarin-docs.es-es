@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/09/2016
-ms.openlocfilehash: 6588747fb806c858f5bc7b024980ae0d0771c60e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: cace68a1b85a4404774ca88ec697d419920d05cb
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938793"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432907"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Usar iCloud con Xamarin. iOS
 
@@ -45,13 +45,13 @@ Las aplicaciones deben configurarse para usar iCloud en el [portal de aprovision
 
 Para configurar correctamente una aplicación para tener acceso a iCloud:
 
-- **Busque** el inicio de sesión de TeamID en [Developer.Apple.com](https://developer.apple.com) y visite el **centro de usuarios > su cuenta > Resumen** de la cuenta de desarrollador para obtener su identificador de equipo (o un identificador individual para desarrolladores únicos). Será una cadena de 10 caracteres ( **A93A5CM278** por ejemplo), que forma parte del "identificador de contenedor".
+- **Busque** el inicio de sesión de TeamID en  [Developer.Apple.com](https://developer.apple.com) y visite el  **centro de usuarios > su cuenta > Resumen** de la cuenta de desarrollador para obtener su identificador de equipo (o un identificador individual para desarrolladores únicos). Será una cadena de 10 caracteres ( **A93A5CM278** por ejemplo), que forma parte del "identificador de contenedor".
 
-- **Crear un nuevo identificador de aplicación** : para crear un identificador de aplicación, siga los pasos descritos en la [sección aprovisionamiento de tecnologías de la tienda de la guía de aprovisionamiento de dispositivos](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)y asegúrese de comprobar **iCloud** como servicio permitido:
+- **Crear un nuevo identificador de aplicación** : para crear un identificador de aplicación, siga los pasos descritos en la  [sección aprovisionamiento de tecnologías de la tienda de la guía de aprovisionamiento de dispositivos](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)y asegúrese de comprobar **iCloud** como servicio permitido:
 
  [![Comprobar iCloud como servicio permitido](introduction-to-icloud-images/icloud-sml.png)](introduction-to-icloud-images/icloud.png#lightbox)
 
-- **Crear un nuevo perfil de aprovisionamiento** : para crear un perfil de aprovisionamiento, siga los pasos descritos en la [Guía de aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) .
+- **Crear un nuevo perfil de aprovisionamiento** : para crear un perfil de aprovisionamiento, siga los pasos descritos en la  [Guía de aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) .
 
 - **Agregue el identificador del contenedor a contitles. plist** : el formato del identificador del contenedor es `TeamID.BundleID` . Para obtener más información, consulte la guía [trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) .
 
@@ -275,7 +275,7 @@ En este caso, el modelo de datos es muy simple: un solo campo de texto. El model
 
 ### <a name="finding-and-opening-icloud-documents"></a>Buscar y abrir documentos de iCloud
 
-La aplicación de ejemplo solo se ocupa de un solo archivo test.txt, por lo que el código de **AppDelegate.CS** crea `NSPredicate` y `NSMetadataQuery` para buscar específicamente ese nombre de archivo. El `NSMetadataQuery` se ejecuta de forma asincrónica y envía una notificación cuando finaliza. `DidFinishGathering`lo llama el observador de notificación, detiene la consulta y llama a LoadDocument, que usa el `UIDocument.Open` método con un controlador de finalización para intentar cargar el archivo y mostrarlo en un `MonkeyDocumentViewController` .
+La aplicación de ejemplo solo se ocupa de un solo archivo test.txt, por lo que el código de **AppDelegate.CS** crea `NSPredicate` y `NSMetadataQuery` para buscar específicamente ese nombre de archivo. El `NSMetadataQuery` se ejecuta de forma asincrónica y envía una notificación cuando finaliza. `DidFinishGathering` lo llama el observador de notificación, detiene la consulta y llama a LoadDocument, que usa el `UIDocument.Open` método con un controlador de finalización para intentar cargar el archivo y mostrarlo en un `MonkeyDocumentViewController` .
 
 ```csharp
 string monkeyDocFilename = "test.txt";
@@ -341,7 +341,7 @@ void LoadDocument (NSMetadataQuery metadataQuery)
 
 Mostrar un UIDocument no debe ser diferente a cualquier otra clase de modelo: las propiedades se muestran en los controles de interfaz de usuario, posiblemente editados por el usuario y, a continuación, se escriben de nuevo en el modelo.
 
-En el ejemplo **iCloudUIDoc\MonkeyDocumentViewController.CS** se muestra el texto de MonkeyDocument en un `UITextView` . `ViewDidLoad`Escucha la notificación enviada en el `MonkeyDocument.LoadFromContents` método. `LoadFromContents`se llama a cuando iCloud tiene nuevos datos para el archivo, de modo que la notificación indica que el documento se ha actualizado.
+En el ejemplo **iCloudUIDoc\MonkeyDocumentViewController.CS** se muestra el texto de MonkeyDocument en un `UITextView` . `ViewDidLoad` Escucha la notificación enviada en el `MonkeyDocument.LoadFromContents` método. `LoadFromContents` se llama a cuando iCloud tiene nuevos datos para el archivo, de modo que la notificación indica que el documento se ha actualizado.
 
 ```csharp
 NSNotificationCenter.DefaultCenter.AddObserver (this,
@@ -427,7 +427,7 @@ Por último, incluye una breve explicación sobre cómo la incorporación de cop
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Introducción a iCloud (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/introductiontoicloud)
+- [Introducción a iCloud (ejemplo)](/samples/xamarin/ios-samples/introductiontoicloud)
 - [Código de ejemplo del Seminario de iCloud](https://github.com/xamarin/Seminars/tree/master/2012-03-22-iCloud)
 - [Diapositivas del Seminario de iCloud](https://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
 - [iCloud NSUbiquitousKeyValueStore](https://developer.apple.com/library/prerelease/ios/)

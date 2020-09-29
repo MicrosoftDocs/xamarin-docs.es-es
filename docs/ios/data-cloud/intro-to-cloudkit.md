@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/11/2016
-ms.openlocfilehash: 588dadbfe63a46bc7658d5d29a052cebe52be65c
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: a01f0075ec7f47d6653313ea50047b7f89529bc6
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997415"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431397"
 ---
 # <a name="cloudkit-in-xamarinios"></a>CloudKit en Xamarin. iOS
 
@@ -56,7 +56,7 @@ Para acceder a CloudKit, el archivo de **derechos. plist** debe incluir los perm
 
 ### <a name="sample-app"></a>Aplicación de ejemplo
 
-En el [ejemplo CloudKitAtlas](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-cloudkitatlas) se muestra cómo usar CloudKit con Xamarin. En los pasos siguientes se muestra cómo configurar el ejemplo: requiere una configuración adicional más allá de lo que se necesita para CloudKit por sí solo:
+En el [ejemplo CloudKitAtlas](/samples/xamarin/ios-samples/ios8-cloudkitatlas) se muestra cómo usar CloudKit con Xamarin. En los pasos siguientes se muestra cómo configurar el ejemplo: requiere una configuración adicional más allá de lo que se necesita para CloudKit por sí solo:
 
 1. Abra el proyecto en Visual Studio para Mac o Visual Studio.
 2. En el **Explorador de soluciones**, abra el archivo **info. plist** y asegúrese de que el identificador de la **agrupación** coincide con el que se definió en ID. de **aplicación** creado como parte de la configuración de aprovisionamiento.
@@ -373,7 +373,7 @@ ThisApp.PublicDatabase.SaveRecord(newRecord, (record, err) => {
 
 Tres aspectos que hay que tener en cuenta sobre el código anterior:
 
-1. Al llamar al `SaveRecord` método de `PublicDatabase` , el desarrollador no tiene que especificar cómo se envían los datos, en qué zona se está escribiendo, etc. La comodidad de la API se ocupa de todos los detalles.
+1. Al llamar al  `SaveRecord` método de  `PublicDatabase` , el desarrollador no tiene que especificar cómo se envían los datos, en qué zona se está escribiendo, etc. La comodidad de la API se ocupa de todos los detalles.
 1. La llamada es asincrónica y proporciona una rutina de devolución de llamada cuando se completa la llamada, bien con éxito o con errores. Si se produce un error en la llamada, se proporcionará un mensaje de error.
 1. CloudKit no proporciona almacenamiento ni persistencia local. es solo un medio de transferencia. Por tanto, cuando se realiza una solicitud para guardar un registro, se envía inmediatamente a los servidores de iCloud.
 
@@ -626,7 +626,7 @@ En esta sección se ha mostrado cómo responder a los macrodatos, el pequeño pr
 
 Como se indicó al principio de este artículo, CloudKit se basa en la infraestructura existente de iCloud. En la siguiente sección se tratan, en detalle, cómo se exponen las cuentas a un desarrollador mediante la API de CloudKit.
 
-### <a name="authentication"></a>Autenticación
+### <a name="authentication"></a>Authentication
 
 Al trabajar con cuentas de usuario, la primera consideración es la autenticación. CloudKit admite la autenticación mediante el usuario que ha iniciado sesión actualmente en el dispositivo. La autenticación se realiza en segundo plano y se controla mediante iOS. De esta manera, los desarrolladores nunca tienen que preocuparse de los detalles de la implementación de la autenticación. Solo prueban para ver si un usuario ha iniciado sesión.
 
@@ -649,7 +649,7 @@ Como se indicó anteriormente, CloudKit proporciona una manera para que la aplic
 
 Hay una aplicación cliente que se ejecuta en los dispositivos de un usuario y todas las bases de datos privadas del usuario específicas dentro del contenedor CloudKit. La aplicación cliente se va a vincular a uno de esos usuarios específicos. Esto se basa en el usuario que ha iniciado sesión en iCloud localmente en el dispositivo.
 
-Dado que procede de iCloud, hay una gran cantidad de datos de usuario. Y como iCloud hospeda realmente el contenedor, puede correlacionar a los usuarios. En el gráfico anterior, el usuario cuya cuenta de iCloud `user@icloud.com` está vinculada al cliente actual.
+Dado que procede de iCloud, hay una gran cantidad de datos de usuario. Y como iCloud hospeda realmente el contenedor, puede correlacionar a los usuarios. En el gráfico anterior, el usuario cuya cuenta de iCloud  `user@icloud.com` está vinculada al cliente actual.
 
 En un contenedor por contenedor, se crea un identificador de usuario único y generado aleatoriamente y se asocia a la cuenta de iCloud del usuario (dirección de correo electrónico). Este identificador de usuario se devuelve a la aplicación y se puede usar de cualquier manera que el desarrollador considere adecuado.
 
@@ -855,5 +855,5 @@ En este artículo se ha tratado una introducción rápida a la API de CloudKit. 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [CloudKit (Apple)](https://developer.apple.com/icloud/cloudkit/)
-- [CloudKitAtlas (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-cloudkitatlas)
+- [CloudKitAtlas (ejemplo)](/samples/xamarin/ios-samples/ios8-cloudkitatlas)
 - [Creación de un perfil de aprovisionamiento](~/ios/get-started/installation/device-provisioning/index.md)

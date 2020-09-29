@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 86c7c726465257d71b6b407686153650dddbcbca
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: e6879db1631bc6b58a36142344ff1fba997ee4fb
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574475"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432046"
 ---
 # <a name="providing-haptic-feedback-in-xamarinios"></a>Proporcionar comentarios hápticos en Xamarin. iOS
 
@@ -37,9 +37,9 @@ Varios elementos integrados de la interfaz de usuario ya proporcionan comentario
 
 El desarrollador puede usar una de las siguientes `UIFeedbackGenerator` subclases para desencadenar comentarios hápticos mediante programación:
 
-- `UIImpactFeedbackGenerator`-Use este generador de comentarios para complementar una acción o tarea, como presentar un "thud" cuando una vista se desliza hacia el lugar o si dos objetos en pantalla entran en conflicto.
-- `UINotificationFeedbackGenerator`-Use este generador de comentarios para las notificaciones, como una acción completada, con errores o cualquier otro tipo de advertencia.
-- `UISelectionFeedbackGenerator`-Use este generador de comentarios para una selección que cambie activamente, como la selección de un elemento de una lista.
+- `UIImpactFeedbackGenerator` -Use este generador de comentarios para complementar una acción o tarea, como presentar un "thud" cuando una vista se desliza hacia el lugar o si dos objetos en pantalla entran en conflicto.
+- `UINotificationFeedbackGenerator` -Use este generador de comentarios para las notificaciones, como una acción completada, con errores o cualquier otro tipo de advertencia.
+- `UISelectionFeedbackGenerator` -Use este generador de comentarios para una selección que cambie activamente, como la selección de un elemento de una lista.
 
 <a name="UIImpactFeedbackGenerator"></a>
 
@@ -129,4 +129,4 @@ En este artículo se han tratado los nuevos tipos de comentarios hápticos dispo
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Ejemplos de iOS 10](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)

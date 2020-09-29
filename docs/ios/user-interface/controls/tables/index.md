@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/06/2016
-ms.openlocfilehash: 7f5af84a8dfb9f774822e28e50cf8bbca9acf94b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: fc2a76d97fe6c3bb52877bd58707872068f25968
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021889"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430811"
 ---
 # <a name="working-with-tables-and-cells-in-xamarinios"></a>Trabajar con tablas y celdas en Xamarin. iOS
 
@@ -22,20 +22,20 @@ Para aquellos que trabajan en aplicaciones multiplataforma con Xamarin. Android,
 
 En estos artículos se proporciona una visión completa del trabajo con tablas, entre las que se incluyen:
 
-- **Partes** de la tabla: introducción y explicación de los elementos visuales del control `UITableView`. 
+- **Partes** de la tabla: introducción y explicación de los elementos visuales del  `UITableView` control. 
 - **Mostrar datos en tablas** : demostrar cómo crear y rellenar una tabla, usar distintos estilos de tabla y celda y evitar problemas de memoria mediante el reciclaje de objetos de celda. 
 - **Uso avanzado** : compilar celdas personalizadas y usar las características de edición de la clase UITableView. 
 - **Crear una tabla visualmente** : mediante el Xamarin Designer para iOS para crear una interfaz controlada por tabla con un guion gráfico. 
 
 ## <a name="contents"></a>Contenido
 
- [Partes de la tabla &amp; funcionalidad](~/ios/user-interface/controls/tables/table-parts-and-functionality.md)
+ [Funcionalidad de partes de tabla &amp;](~/ios/user-interface/controls/tables/table-parts-and-functionality.md)
 
  [Relleno de una tabla con datos](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)
 
  [Personalización de la apariencia de una tabla](~/ios/user-interface/controls/tables/customizing-table-appearance.md)
 
- [Edición](~/ios/user-interface/controls/tables/editing.md)
+ [Editar](~/ios/user-interface/controls/tables/editing.md)
 
  [Acciones de fila](~/ios/user-interface/controls/tables/row-action.md)
 
@@ -45,8 +45,8 @@ En estos artículos se proporciona una visión completa del trabajo con tablas, 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [WorkingWithTables (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)
-- [Tablas en guiones gráficos (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/storyboardtable)
+- [WorkingWithTables (ejemplo)](/samples/xamarin/ios-samples/workingwithtables)
+- [Tablas en guiones gráficos (ejemplo)](/samples/xamarin/ios-samples/storyboardtable)
 - [Introducción a guiones gráficos](~/ios/user-interface/storyboards/index.md)
 - [Guion gráfico de una receta de TableView](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/storyboard_a_tableview)
 - [Introducción a MonoTouch. Dialog](~/ios/user-interface/monotouch.dialog/index.md)

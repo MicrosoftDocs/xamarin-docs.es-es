@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 84e21378a8ac7b61bc1a389352eb53b75881592a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 281595f45db48316feeebb88debf8c70873f87f3
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929654"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430854"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Gráficos principales en Xamarin. iOS
 
@@ -279,9 +279,9 @@ A diferencia del `Draw` método, donde la vista proporciona el contexto, en este
 
 1. Llamando a `UIGraphics.BeginImageContext` (o `BeginImageContextWithOptions` )
 
-2. Mediante la creación de un nuevo`CGBitmapContextInstance`
+2. Mediante la creación de un nuevo `CGBitmapContextInstance`
 
- `CGBitmapContextInstance`resulta útil cuando se trabaja directamente con los bits de imagen, como en los casos en los que se usa un algoritmo de manipulación de imágenes personalizado. En todos los demás casos, debe usar `BeginImageContext` o `BeginImageContextWithOptions` .
+ `CGBitmapContextInstance` resulta útil cuando se trabaja directamente con los bits de imagen, como en los casos en los que se usa un algoritmo de manipulación de imágenes personalizado. En todos los demás casos, debe usar `BeginImageContext` o `BeginImageContextWithOptions` .
 
 Una vez que tiene un contexto de imagen, agregar código de dibujo es igual que en una `UIView` subclase. Por ejemplo, el ejemplo de código usado anteriormente para dibujar un triángulo se puede usar para dibujar en una imagen en la memoria en lugar de en una `UIView` , como se muestra a continuación:
 
@@ -427,7 +427,7 @@ En este artículo, analizamos las capacidades de gráficos proporcionadas a trav
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de gráficos principales](https://docs.microsoft.com/samples/xamarin/ios-samples/graphicsandanimation)
+- [Ejemplo de gráficos principales](/samples/xamarin/ios-samples/graphicsandanimation)
 - [Tutorial de animación y gráficos](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
 - [Animación básica](~/ios/platform/graphics-animation-ios/core-animation.md)
 - [Recetas básicas de animación](https://github.com/xamarin/recipes/tree/master/Recipes/ios/animation/coreanimation)

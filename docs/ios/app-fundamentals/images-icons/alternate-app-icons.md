@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 39a18a775946c2f139b4c032d2c360bc5680a0e7
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 6ac5a6924f2b297b63a73b8b417dd68bad062a84
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937922"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431357"
 ---
 # <a name="alternate-app-icons-in-xamarinios"></a>Iconos de aplicación alternativos en Xamarin. iOS
 
@@ -20,10 +20,10 @@ _En este artículo se explica el uso de iconos de aplicación alternativos en Xa
 
 Apple ha agregado varias mejoras a iOS 10,3 que permiten a una aplicación administrar su icono:
 
-- `ApplicationIconBadgeNumber`: Obtiene o establece el distintivo del icono de la aplicación en el Springboard.
-- `SupportsAlternateIcons`: Si `true` la aplicación tiene un conjunto alternativo de iconos.
-- `AlternateIconName`: Devuelve el nombre del icono alternativo seleccionado actualmente o `null` si se usa el icono principal.
-- `SetAlternameIconName`: Use este método para cambiar el icono de la aplicación al icono alternativo determinado.
+- `ApplicationIconBadgeNumber` : Obtiene o establece el distintivo del icono de la aplicación en el Springboard.
+- `SupportsAlternateIcons` : Si `true` la aplicación tiene un conjunto alternativo de iconos.
+- `AlternateIconName` : Devuelve el nombre del icono alternativo seleccionado actualmente o `null` si se usa el icono principal.
+- `SetAlternameIconName` : Use este método para cambiar el icono de la aplicación al icono alternativo determinado.
 
 ![Una alerta de ejemplo cuando una aplicación cambia su icono](alternate-app-icons-images/icons04.png)
 
@@ -172,4 +172,4 @@ En este artículo se ha tratado la adición de iconos de aplicación alternativo
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de iOSTenThree](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree/)
+- [Ejemplo de iOSTenThree](/samples/xamarin/ios-samples/ios10-iostenthree/)

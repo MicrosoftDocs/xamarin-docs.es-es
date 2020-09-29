@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 8c296e32fd0d1491c83ea3cb16e0921c0f0c5f12
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: dc3def5d5c709515574a72cf9f61d71d67690d87
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73017045"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429700"
 ---
 # <a name="introduction-to-macos-mojave"></a>Introducción a macOS Mojave
 
@@ -38,7 +38,7 @@ Vision Framework incluye un detector de rostros mejorado que puede detectar rost
 
 ## <a name="network-framework"></a>Marco de red
 
-El marco de red, la pila de red que subyace a las API de `URLSession` que se usan habitualmente en las aplicaciones de iOS, ahora está disponible como un marco independiente, lo que facilita el trabajo con TCP, UDP, TLS, IPv4/IPv6, etc.
+El marco de red, la pila de red que subyace `URLSession` a las API que se usan habitualmente en las aplicaciones de iOS, ahora está disponible como un marco independiente, lo que facilita el trabajo con TCP, UDP, TLS, IPv4/IPv6, etc.
 
 ## <a name="deprecations"></a>Elementos obsoletos
 
@@ -46,6 +46,6 @@ Con macOS Mojave, Apple ha dejado de usar OpenGL ES y OpenCL, lo que [anima a lo
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de Xamarin. Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [Ejemplos de Xamarin.Mac](/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [macOS – desarrollador de Apple](https://developer.apple.com/macos/)
-- [Notas de la versión de Xamarin. Mac 5,0](https://docs.microsoft.com/xamarin/mac/release-notes/5/5.0/)
+- [Notas de la versión de Xamarin. Mac 5,0](/xamarin/mac/release-notes/5/5.0/)

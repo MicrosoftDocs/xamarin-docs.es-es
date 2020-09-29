@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 40640f903ad82c5f154dbb74307c0003d7271561
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2cb453996a43d1e70f4fb818c86f6215c213b988
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936609"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429749"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Trabajar con acciones de fila en Xamarin. iOS
 
@@ -22,7 +22,7 @@ _En esta guía se muestra cómo crear acciones de deslizamiento personalizado pa
 
 iOS proporciona dos maneras de realizar acciones en una tabla: `UISwipeActionsConfiguration` y `UITableViewRowAction` .
 
-`UISwipeActionsConfiguration`se presentó en iOS 11 y se usa para definir un conjunto de acciones que deben realizarse cuando el usuario se desliza rápidamente _en cualquier dirección_ de una fila en una vista de tabla. Este comportamiento es similar al de la aplicación de correo electrónico nativo.
+`UISwipeActionsConfiguration` se presentó en iOS 11 y se usa para definir un conjunto de acciones que deben realizarse cuando el usuario se desliza rápidamente _en cualquier dirección_ de una fila en una vista de tabla. Este comportamiento es similar al de la aplicación de correo electrónico nativo.
 
 La `UITableViewRowAction` clase se utiliza para definir una acción que tendrá lugar cuando el usuario se deslice horizontalmente a la izquierda en una fila de una vista de tabla.
 Por ejemplo, al editar una tabla, deslizar el dedo a la izquierda en una fila muestra un botón **eliminar** de forma predeterminada. Al adjuntar varias instancias de la `UITableViewRowAction` clase a un `UITableView` , se pueden definir varias acciones personalizadas, cada una con su propio texto, formato y comportamiento.
@@ -33,15 +33,15 @@ Hay tres pasos necesarios para implementar las acciones de deslizamiento con `UI
 
 1. Reemplace `GetLeadingSwipeActionsConfiguration` los métodos y/o `GetTrailingSwipeActionsConfiguration` . Estos métodos devuelven `UISwipeActionsConfiguration` .
 2. Cree una instancia del `UISwipeActionsConfiguration` que se va a devolver. Esta clase toma una matriz de `UIContextualAction` .
-3. Crear un control `UIContextualAction`.
+3. Creará un control `UIContextualAction`.
 
 Estos se explican con mayor detalle en las secciones siguientes.
 
 ### <a name="1-implementing-the-swipeactionsconfigurations-methods"></a>1. implementación de los métodos SwipeActionsConfigurations
 
-`UITableViewController`(y también `UITableViewSource` y `UITableViewDelegate` ) contienen dos métodos: `GetLeadingSwipeActionsConfiguration` y `GetTrailingSwipeActionsConfiguration` , que se usan para implementar un conjunto de acciones de deslizar rápidamente en una fila de la vista de tabla. La acción de deslizar rápidamente hace referencia a un dedo desde el lado izquierdo de la pantalla en un idioma que se escribe de izquierda a derecha y desde el lado derecho de la pantalla en un idioma que se escribe de derecha a izquierda.
+`UITableViewController` (y también `UITableViewSource` y `UITableViewDelegate` ) contienen dos métodos: `GetLeadingSwipeActionsConfiguration` y `GetTrailingSwipeActionsConfiguration` , que se usan para implementar un conjunto de acciones de deslizar rápidamente en una fila de la vista de tabla. La acción de deslizar rápidamente hace referencia a un dedo desde el lado izquierdo de la pantalla en un idioma que se escribe de izquierda a derecha y desde el lado derecho de la pantalla en un idioma que se escribe de derecha a izquierda.
 
-En el ejemplo siguiente (del ejemplo [TableSwipeActions](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions) ) se muestra la implementación de la configuración de deslizamiento inicial. Se crean dos acciones a partir de las acciones contextuales, que se explican [a continuación](#create-uicontextualaction). Después, estas acciones se pasan a un recién inicializado [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations) , que se utiliza como valor devuelto.
+En el ejemplo siguiente (del ejemplo [TableSwipeActions](/samples/xamarin/ios-samples/tableswipeactions) ) se muestra la implementación de la configuración de deslizamiento inicial. Se crean dos acciones a partir de las acciones contextuales, que se explican [a continuación](#create-uicontextualaction). Después, estas acciones se pasan a un recién inicializado [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations) , que se utiliza como valor devuelto.
 
 ```csharp
 public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(UITableView tableView, NSIndexPath indexPath)
@@ -61,7 +61,7 @@ public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(
 
 <a name="create-uiswipeactionsconfigurations"></a>
 
-### <a name="2-instantiate-a-uiswipeactionsconfiguration"></a>2. crear una instancia de`UISwipeActionsConfiguration`
+### <a name="2-instantiate-a-uiswipeactionsconfiguration"></a>2. crear una instancia de `UISwipeActionsConfiguration`
 
 Cree una instancia `UISwipeActionsConfiguration` de mediante el `FromActions` método para agregar una nueva matriz de `UIContextualAction` s, como se muestra en el siguiente fragmento de código:
 
@@ -181,5 +181,5 @@ Si el usuario pulsa el botón **HI** , se `Hello World!` escribirá en la consol
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [TableSwipeActions (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions)
-- [WorkingWithTables (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)
+- [TableSwipeActions (ejemplo)](/samples/xamarin/ios-samples/tableswipeactions)
+- [WorkingWithTables (ejemplo)](/samples/xamarin/ios-samples/workingwithtables)

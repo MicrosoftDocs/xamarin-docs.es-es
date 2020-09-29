@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 729289c1764746f9777ef3d720e77865c9a71389
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 5b1bd4a07f9df13bff517db28715d985fc33e322
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937259"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430246"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Crear objetos de interfaz de usuario en Xamarin. iOS
 
-Apple agrupa los elementos de funcionalidad relacionados en "Marcos", que equivalen a los espacios de nombres de Xamarin. iOS. `UIKit`es el espacio de nombres que contiene todos los controles de interfaz de usuario para iOS.
+Apple agrupa los elementos de funcionalidad relacionados en "Marcos", que equivalen a los espacios de nombres de Xamarin. iOS. `UIKit` es el espacio de nombres que contiene todos los controles de interfaz de usuario para iOS.
 
 Siempre que el código necesite hacer referencia a un control de la interfaz de usuario, como una etiqueta o un botón, Recuerde incluir la siguiente instrucción using:
 
@@ -171,4 +171,4 @@ Cuando los objetos de interfaz de usuario se agregan mediante programación a un
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Controles (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [Controles (ejemplo)](/samples/xamarin/ios-samples/controls)

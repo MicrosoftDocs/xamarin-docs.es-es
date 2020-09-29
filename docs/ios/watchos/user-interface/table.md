@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 0358e1570a5e38e008894a7eb9b6ca1985a0fed0
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 21154ee5ed83d9d6af2c5d5f70bb64759de43137
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997259"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431510"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Controles de tabla watchos en Xamarin
 
@@ -41,7 +41,7 @@ Una vez establecida la clase para el controlador de la fila, el IDE creará un a
 
 ## <a name="create-and-populate-rows"></a>Crear y rellenar filas
 
-`SetNumberOfRows`crea las clases de controlador de filas para cada fila, utilizando `Identifier` para seleccionar el correcto. Si dio a su controlador de filas un personalizado `Identifier` , cambie el **valor predeterminado** en el fragmento de código que aparece a continuación por el identificador que ha usado. La `RowController` *columna para cada fila* se crea cuando `SetNumberOfRows` se llama a y se muestra la tabla.
+`SetNumberOfRows` crea las clases de controlador de filas para cada fila, utilizando `Identifier` para seleccionar el correcto. Si dio a su controlador de filas un personalizado `Identifier` , cambie el **valor predeterminado** en el fragmento de código que aparece a continuación por el identificador que ha usado. La `RowController` *columna para cada fila* se crea cuando `SetNumberOfRows` se llama a y se muestra la tabla.
 
 ```csharp
 myTable.SetNumberOfRows ((nint)rows.Count, "default");
@@ -51,7 +51,7 @@ myTable.SetNumberOfRows ((nint)rows.Count, "default");
 > [!IMPORTANT]
 > Las filas de la tabla no se virtualizan de la misma forma que en iOS. Intente limitar el número de filas (Apple recomienda menos de 20).
 
-Una vez creadas las filas, debe rellenar cada celda (como `GetCell` haría en iOS). En este fragmento de código del [ejemplo WatchTables](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables) se actualiza la etiqueta de cada fila.
+Una vez creadas las filas, debe rellenar cada celda (como `GetCell` haría en iOS). En este fragmento de código del [ejemplo WatchTables](/samples/xamarin/ios-samples/watchos-watchtables) se actualiza la etiqueta de cada fila.
 
 ```csharp
 for (var i = 0; i < rows.Count; i++) {
@@ -208,6 +208,6 @@ A continuación, se puede hacer referencia a las salidas y acciones declaradas e
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [WatchTables (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)
-- [WatchKitCatalog (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchTables (ejemplo)](/samples/xamarin/ios-samples/watchos-watchtables)
+- [WatchKitCatalog (ejemplo)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Documento de la tabla de Apple](https://developer.apple.com/reference/watchkit/wkinterfacetable)

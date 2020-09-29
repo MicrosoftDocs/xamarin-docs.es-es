@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 05/24/2017
-ms.openlocfilehash: f6e9a9338c0bce628cfd62d1106601ddc7a11490
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 0d95ecb1997ba70a2994d74bacdedd334f2b4c61
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84568638"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429727"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Vistas de colección en Xamarin. Mac
 
@@ -197,7 +197,7 @@ El enlace de datos con una vista de colección es muy similar al enlace con una 
 
 Dado que la vista de colección no incluye un prototipo de celda predeterminado, el desarrollador deberá agregar uno o varios `.xib` archivos a la aplicación de Xamarin. Mac para definir el diseño y el contenido de las celdas individuales.
 
-Haga lo siguiente:
+Siga estos pasos:
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar**  >  **nuevo archivo..** .
 2. Seleccione **Mac**  >  **controlador de vista**de Mac y asígnele un nombre (por `EmployeeItem` ejemplo, en este ejemplo) y haga clic en el botón **nuevo** para crear: 
@@ -573,7 +573,7 @@ Los `ItemsSelected` `ItemsDeselected` métodos y se reemplazan y se usan para es
 
 Con todas las piezas de soporte técnico necesarias en su lugar, se puede editar el guión gráfico principal y agregarle una vista de colección.
 
-Haga lo siguiente:
+Siga estos pasos:
 
 1. Haga doble clic en el `Main.Storyboard` archivo en el **Explorador de soluciones** para abrirlo para su edición en el Interface Builder de Xcode.
 2. Arrastre una vista de colección a la vista principal y cambie su tamaño para rellenar la vista:
@@ -769,7 +769,7 @@ var flowLayout = new NSCollectionViewFlowLayout()
 };
 ```
 
-La `ItemSize` propiedad define el tamaño de cada celda individual de la colección. La `SectionInset` propiedad define los insets del borde de la colección en las que se colocarán las celdas. `MinimumInteritemSpacing`define el espaciado mínimo entre los elementos y `MinimumLineSpacing` define el espaciado mínimo entre las líneas de la colección.
+La `ItemSize` propiedad define el tamaño de cada celda individual de la colección. La `SectionInset` propiedad define los insets del borde de la colección en las que se colocarán las celdas. `MinimumInteritemSpacing` define el espaciado mínimo entre los elementos y `MinimumLineSpacing` define el espaciado mínimo entre las líneas de la colección.
 
 El diseño se asigna a la vista de colección y se adjunta una instancia de `CollectionViewDelegate` para administrar la selección de elementos:
 
@@ -817,7 +817,7 @@ En este artículo se ha realizado una visión detallada del trabajo con las vist
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacCollectionNew (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccollectionnew)
+- [MacCollectionNew (ejemplo)](/samples/xamarin/mac-samples/maccollectionnew)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Enlace de datos y codificación de clave-valor](~/mac/app-fundamentals/databinding.md)
 - [NSCollectionView](https://developer.apple.com/reference/appkit/nscollectionview)

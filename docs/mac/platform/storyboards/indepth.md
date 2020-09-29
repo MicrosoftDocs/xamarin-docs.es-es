@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 8586157dc9a803c3502ae2ffed9fed4fc285bfda
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: c90a51d8d849dc95ca9465dd55910bcd5b50e43e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574410"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430143"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Trabajar con guiones gráficos en Xamarin. Mac
 
@@ -61,14 +61,14 @@ Los controladores de vista definen las relaciones entre una vista determinada de
 
 Se han agregado varios métodos nuevos a la `NSViewController` clase para admitir guiones gráficos en MacOS. Lo más importante es que los métodos siguientes usen para responder al ciclo de vida de la vista que controla el controlador de vista dado:
 
-- `ViewDidLoad`: Se llama a este método cuando la vista se carga desde el archivo de guion gráfico.
-- `ViewWillAppear`: Se llama a este método justo antes de que la vista se muestre en la pantalla.
-- `ViewDidAppear`: Este método se llama directamente después de que la vista se muestre en la pantalla.
-- `ViewWillDisappear`: Se llama a este método justo antes de que se quite la vista de la pantalla.
-- `ViewDidDisappear`: Este método se llama directamente después de quitar la vista de la pantalla.
-- `UpdateViewConstraints`: Se llama a este método cuando es necesario actualizar las restricciones que definen una posición y tamaño de diseño automático de la vista.
-- `ViewWillLayout`: Se llama a este método justo antes de que las subvistas de esta vista se colocan en la pantalla.
-- `ViewDidLayout`: Este método se llama directamente después de que las subvistas de la vista se colocan en la pantalla.
+- `ViewDidLoad` : Se llama a este método cuando la vista se carga desde el archivo de guion gráfico.
+- `ViewWillAppear` : Se llama a este método justo antes de que la vista se muestre en la pantalla.
+- `ViewDidAppear` : Este método se llama directamente después de que la vista se muestre en la pantalla.
+- `ViewWillDisappear` : Se llama a este método justo antes de que se quite la vista de la pantalla.
+- `ViewDidDisappear` : Este método se llama directamente después de quitar la vista de la pantalla.
+- `UpdateViewConstraints` : Se llama a este método cuando es necesario actualizar las restricciones que definen una posición y tamaño de diseño automático de la vista.
+- `ViewWillLayout` : Se llama a este método justo antes de que las subvistas de esta vista se colocan en la pantalla.
+- `ViewDidLayout` : Este método se llama directamente después de que las subvistas de la vista se colocan en la pantalla.
 
 <a name="The-Responder-Chain"></a>
 
@@ -249,11 +249,11 @@ En lugar de reemplazar el `MouseDown` evento en el controlador de vista, debe us
 
 Los siguientes reconocedores de gestos están disponibles en macOS:
 
-- `NSClickGestureRecognizer`-Registra eventos de presionar y bajar del mouse.
-- `NSPanGestureRecognizer`-Registra los eventos de presionar el botón del mouse, arrastrar y soltar.
-- `NSPressGestureRecognizer`: Registra la acción de mantener presionado el botón del mouse durante un período de tiempo determinado.
-- `NSMagnificationGestureRecognizer`: Registra un evento de ampliación del hardware del dispositivo de registro.
-- `NSRotationGestureRecognizer`: Registra un evento de rotación del hardware de paneles de registro.
+- `NSClickGestureRecognizer` -Registra eventos de presionar y bajar del mouse.
+- `NSPanGestureRecognizer` -Registra los eventos de presionar el botón del mouse, arrastrar y soltar.
+- `NSPressGestureRecognizer` : Registra la acción de mantener presionado el botón del mouse durante un período de tiempo determinado.
+- `NSMagnificationGestureRecognizer` : Registra un evento de ampliación del hardware del dispositivo de registro.
+- `NSRotationGestureRecognizer` : Registra un evento de rotación del hardware de paneles de registro.
 
 <a name="Using-Storyboard-References"></a>
 
@@ -350,7 +350,7 @@ Cuando se ejecuta la aplicación y el usuario hace clic en el elemento de la int
 
 ## <a name="complex-storyboard-example"></a>Ejemplo de Storyboard complejo
 
-Para ver un ejemplo complejo de cómo trabajar con guiones gráficos en una aplicación de Xamarin. Mac, consulte la [aplicación de ejemplo SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter es un editor de código fuente simple que proporciona compatibilidad con la finalización de código y el resaltado de sintaxis simple.
+Para ver un ejemplo complejo de cómo trabajar con guiones gráficos en una aplicación de Xamarin. Mac, consulte la [aplicación de ejemplo SourceWriter](/samples/xamarin/mac-samples/sourcewriter). SourceWriter es un editor de código fuente simple que proporciona compatibilidad con la finalización de código y el resaltado de sintaxis simple.
 
 El código de SourceWriter se ha comentado completamente y, si están disponibles, se han proporcionado vínculos de métodos o tecnologías clave a información relevante en la documentación de las guías de Xamarin.Mac.
 

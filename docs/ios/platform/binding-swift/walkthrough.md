@@ -7,23 +7,23 @@ ms.technology: xamarin-ios
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
-ms.openlocfilehash: 3c63b1a4ed58b0efcc510085934a5380e6049ae7
-ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
+ms.openlocfilehash: 3bc6f0a95bdd01991ccea69d7917f5fabcb9f51b
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853149"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430972"
 ---
 # <a name="walkthrough-bind-an-ios-swift-library"></a>Tutorial: Enlace de una biblioteca Swift de iOS
 
 > [!IMPORTANT]
-> Actualmente estamos investigando el uso de enlaces personalizados en la plataforma Xamarin. Lleve a cabo [**esta encuesta**](https://www.surveymonkey.com/r/KKBHNLT) para informar sobre los esfuerzos futuros de desarrollo.
+> Estamos investigando el uso de enlaces personalizados en la plataforma Xamarin. Realice [**esta encuesta**](https://www.surveymonkey.com/r/KKBHNLT) para informar de esfuerzos de desarrollo futuros.
 
 Xamarin permite a los desarrolladores de dispositivos móviles crear experiencias móviles nativas multiplataforma con Visual Studio y C#. Puede usar los componentes del SDK de la plataforma iOS de la caja. Pero en muchos casos, también quiere usar los SDK de terceros desarrollados para esa plataforma, que Xamarin permite hacer a través de los enlaces. Para incorporar un marco de trabajo de Objective-C de terceros a la aplicación de Xamarin. iOS, debe crear un enlace de Xamarin. iOS para poder usarlo en sus aplicaciones.
 
 La plataforma iOS, junto con sus lenguajes y herramientas nativos, están evolucionando constantemente y SWIFT es una de las áreas más dinámicas en el mundo del desarrollo de iOS. Hay una serie de SDK de terceros, que ya se han migrado de Objective-C a SWIFT y nos presenta nuevos desafíos. Aunque el proceso de enlace de SWIFT es similar a Objective-C, requiere pasos adicionales y valores de configuración para compilar y ejecutar correctamente una aplicación de Xamarin. iOS que sea aceptable para el AppStore.
 
-El objetivo de este documento es describir un enfoque de alto nivel para abordar este escenario y proporcionar una guía paso a paso detallada con un ejemplo sencillo.
+El objetivo de este documento es describir un enfoque de alto nivel para abordar este escenario y brindar una exhaustiva guía paso a paso con un ejemplo sencillo.
 
 ## <a name="background"></a>Fondo
 
@@ -35,10 +35,10 @@ Para completar este tutorial, necesita:
 
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
 - [Visual Studio para Mac](https://visualstudio.microsoft.com/downloads)
-- [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/get-started#installing-objective-sharpie)
-- [APPCENTER CLI](https://docs.microsoft.com/appcenter/test-cloud/) (opcional)
+- [Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/get-started.md#installing-objective-sharpie)
+- [APPCENTER CLI](/appcenter/test-cloud/) (opcional)
 
-## <a name="build-a-native-library"></a>Crear una biblioteca nativa
+## <a name="build-a-native-library"></a>Compilación de una biblioteca nativa
 
 El primer paso es crear un marco de trabajo de SWIFT nativo con el encabezado Objective-C habilitado. El marco de trabajo lo proporciona normalmente un desarrollador de terceros y tiene el encabezado incrustado en el paquete en el directorio siguiente: ** \<FrameworkName> . Framework/headers/ \<FrameworkName> -SWIFT. h**.
 
@@ -201,11 +201,11 @@ Como ejemplo, en este tutorial se crea un enlace para el [SDK de Gigya SWIFT](ht
     > [!TIP]
     > También puede usar [el script de la aplicación auxiliar](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L16-L24) para crear el marco FAT, que automatiza todos los pasos anteriores.
 
-## <a name="prepare-metadata"></a>Preparar metadatos
+## <a name="prepare-metadata"></a>Preparación de metadatos
 
-En este momento, debe tener el marco con el encabezado de la interfaz generada por Objective-C listo para que lo consuma un enlace de Xamarin. iOS.  El siguiente paso consiste en preparar las interfaces de definición de API, que se usan en un proyecto de enlace para generar clases de C#. Estas definiciones pueden crearse de forma manual o automática mediante la herramienta [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) y el archivo de encabezado generado. Use Sharpie para generar los metadatos:
+En este momento, debe tener el marco con el encabezado de la interfaz generada por Objective-C listo para que lo consuma un enlace de Xamarin. iOS.  El siguiente paso consiste en preparar las interfaces de definición de API, que se usan en un proyecto de enlace para generar clases de C#. Estas definiciones pueden crearse de forma manual o automática mediante la herramienta [Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/index.md) y el archivo de encabezado generado. Use Sharpie para generar los metadatos:
 
-1. Descargue la herramienta [Sharpie de objetivo](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) más reciente desde el sitio web de descargas oficiales e instálelo mediante el asistente. Una vez completada la instalación, puede ejecutar el comando Sharpie para comprobarlo:
+1. Descargue la herramienta [Sharpie de objetivo](../../../cross-platform/macios/binding/objective-sharpie/index.md) más reciente desde el sitio web de descargas oficiales e instálelo mediante el asistente. Una vez completada la instalación, puede ejecutar el comando Sharpie para comprobarlo:
 
     ```bash
     sharpie -v
@@ -239,7 +239,7 @@ En este momento, debe tener el marco con el encabezado de la interfaz generada p
     > [!TIP]
     > Como parte del proceso de automatización, puede usar [el script auxiliar](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L35) para generar metadatos automáticamente una vez que se crea el marco FAT.
 
-## <a name="build-a-binding-library"></a>Crear una biblioteca de enlaces
+## <a name="build-a-binding-library"></a>Compilación de una biblioteca de enlaces
 
 El siguiente paso consiste en crear un proyecto de enlace de Xamarin. iOS con la plantilla de enlace de Visual Studio, agregar los metadatos necesarios, las referencias nativas y luego compilar el proyecto para generar una biblioteca consumible:
 
@@ -299,9 +299,9 @@ El siguiente paso consiste en crear un proyecto de enlace de Xamarin. iOS con la
 
         Las dos primeras opciones (las dos  `-L ...`   ) indican al compilador nativo dónde encontrar las bibliotecas de SWIFT. El compilador nativo omitirá las bibliotecas que no tienen la arquitectura correcta, lo que significa que es posible pasar la ubicación de las bibliotecas del simulador y las bibliotecas de dispositivos al mismo tiempo, de modo que funcione tanto para el simulador como para las compilaciones de dispositivos (estas rutas de acceso solo son correctas para iOS; para tvOS y watchos, deben actualizarse). Una desventaja es que este enfoque requiere que la Xcode correcta esté en/Application/Xcode.app, si el consumidor de la biblioteca de enlace tiene Xcode en una ubicación diferente, no funcionará. La solución alternativa consiste en agregar estas opciones en los argumentos Mtouch adicionales en las opciones de compilación de iOS del proyecto ejecutable ( `--gcc_flags -L... -L...` ). La tercera opción hace que el vinculador nativo almacene la ubicación de las bibliotecas SWIFT en el archivo ejecutable, de modo que el sistema operativo pueda encontrarlos.
 
-1. La acción final es crear la biblioteca y asegurarse de que no tiene ningún error de compilación. A menudo, encontrará que los enlaces de metadatos generados por Objective Sharpie se anotarán con el  `[Verify]`   atributo. Estos atributos indican que debe comprobar que Objective Sharpie hizo lo correcto comparando el enlace con la declaración de Objective-C original (que se proporcionará en un Comentario sobre la declaración enlazada). Puede obtener más información acerca de los miembros marcados con el atributo mediante [el siguiente vínculo](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify). Una vez compilado el proyecto, se puede usar en una aplicación de Xamarin. iOS.
+1. La acción final es crear la biblioteca y asegurarse de que no tiene ningún error de compilación. A menudo, encontrará que los enlaces de metadatos generados por Objective Sharpie se anotarán con el  `[Verify]`   atributo. Estos atributos indican que debe comprobar que Objective Sharpie hizo lo correcto comparando el enlace con la declaración de Objective-C original (que se proporcionará en un Comentario sobre la declaración enlazada). Puede obtener más información acerca de los miembros marcados con el atributo mediante [el siguiente vínculo](../../../cross-platform/macios/binding/objective-sharpie/platform/verify.md). Una vez compilado el proyecto, se puede usar en una aplicación de Xamarin. iOS.
 
-## <a name="consume-the-binding-library"></a>Usar la biblioteca de enlaces
+## <a name="consume-the-binding-library"></a>Consumo de la biblioteca de enlaces
 
 El último paso es usar la biblioteca de enlace de Xamarin. iOS en una aplicación de Xamarin. iOS. Cree un nuevo proyecto de Xamarin. iOS, agregue referencia a la biblioteca de enlace y Active Gigya SWIFT SDK:
 
@@ -366,7 +366,7 @@ El último paso es usar la biblioteca de enlace de Xamarin. iOS en una aplicaci�
         ![Visual Studio UITest nuevo](walkthrough-images/visualstudio-uitest-new.png)
 
         > [!TIP]
-        > Puede encontrar más información sobre cómo crear un proyecto de UITest y configurarlo para su aplicación mediante [el siguiente vínculo](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
+        > Puede encontrar más información sobre cómo crear un proyecto de UITest y configurarlo para su aplicación mediante [el siguiente vínculo](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
     - Cree una prueba básica para ejecutar la aplicación y use algunas de las características del SDK de SWIFT. Esta prueba activa la aplicación, intenta iniciar sesión y, a continuación, presiona el botón Cancelar:
 
@@ -390,14 +390,14 @@ El último paso es usar la biblioteca de enlace de Xamarin. iOS en una aplicaci�
         ```
 
         > [!TIP]
-        > Obtenga más información sobre UITests Framework y la automatización de la interfaz de usuario mediante [el siguiente vínculo](https://docs.microsoft.com/appcenter/test-cloud/uitest/).
+        > Obtenga más información sobre UITests Framework y la automatización de la interfaz de usuario mediante [el siguiente vínculo](/appcenter/test-cloud/uitest/).
 
     - Cree una aplicación de iOS en App Center, cree una nueva serie de pruebas con un nuevo conjunto de dispositivos para ejecutar la prueba:
 
         ![Visual Studio App Center nuevo](walkthrough-images/visualstudio-appcenter-new.png)
 
         > [!TIP]
-        > Obtenga más información sobre AppCenter Test Cloud mediante [el siguiente vínculo](https://docs.microsoft.com/appcenter/test-cloud/).
+        > Obtenga más información sobre AppCenter Test Cloud mediante [el siguiente vínculo](/appcenter/test-cloud/).
 
     - Instalación de la CLI de AppCenter
 
@@ -428,13 +428,13 @@ Ha desarrollado una aplicación básica de Xamarin. iOS que usa un marco de trab
 
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
 - [Visual Studio para Mac](https://visualstudio.microsoft.com/downloads)
-- [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/)
-- [Comprobación de metadatos de Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify)
-- [Enlace de Objective-C Framework](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough)
+- [Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/index.md)
+- [Comprobación de metadatos de Sharpie](../../../cross-platform/macios/binding/objective-sharpie/platform/verify.md)
+- [Enlace de Objective-C Framework](../binding-objective-c/walkthrough.md)
 - [SDK de iOS para Gigya (marco de SWIFT)](https://developers.gigya.com/display/GD/Swift+SDK)
 - [Estabilidad de la ABI de SWIFT 5,1](https://swift.org/blog/swift-5-1-released/)
 - [SwiftRuntimeSupport NuGet](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/)
-- [Automatización de Xamarin UITest](https://docs.microsoft.com/appcenter/test-cloud/uitest/)
-- [Configuración de Xamarin. iOS UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
-- [AppCenter Test Cloud](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
+- [Automatización de Xamarin UITest](/appcenter/test-cloud/uitest/)
+- [Configuración de Xamarin. iOS UITest](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
+- [AppCenter Test Cloud](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
 - [Repositorio del proyecto de ejemplo](https://github.com/alexeystrakh/xamarin-binding-swift-framework)

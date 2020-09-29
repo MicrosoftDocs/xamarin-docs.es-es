@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 034169b4e77dace365b36733442afe295b62fb80
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: cae2b0ebfa81d140af1c233938ceddb9acd5ff07
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574028"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432910"
 ---
 # <a name="databases-in-xamarinmac"></a>Bases de datos en Xamarin. Mac
 
@@ -47,7 +47,7 @@ En este artículo, se modificará la aplicación de ejemplo del enlace de datos 
 
 Antes de continuar, necesitamos agregar compatibilidad con la base de datos de SQLite a nuestra aplicación incluyendo referencias a un par de. Archivos dll.
 
-Haga lo siguiente:
+Siga estos pasos:
 
 1. En el **Panel de solución**, haga clic con el botón derecho en la carpeta **referencias** y seleccione **Editar referencias**.
 2. Seleccione los ensamblados **mono. Data. SQLite** y **System. Data** : 
@@ -1401,11 +1401,11 @@ namespace MacDatabase
 
 En este ejemplo, vamos a crear un nuevo `NSComboBoxDataSource` que puede presentar elementos del cuadro combinado desde cualquier origen de datos de SQLite. En primer lugar, definimos las siguientes propiedades:
 
-- `Conn`: Obtiene o establece una conexión a la base de datos de SQLite.
-- `TableName`: Obtiene o establece el nombre de la tabla.
-- `IDField`: Obtiene o establece el campo que proporciona el identificador único de la tabla especificada. El valor predeterminado es `ID`.
-- `DisplayField`: Obtiene o establece el campo que se muestra en la lista desplegable.
-- `RecordCount`: Obtiene el número de registros de la tabla especificada.
+- `Conn` : Obtiene o establece una conexión a la base de datos de SQLite.
+- `TableName` : Obtiene o establece el nombre de la tabla.
+- `IDField` : Obtiene o establece el campo que proporciona el identificador único de la tabla especificada. El valor predeterminado es `ID`.
+- `DisplayField` : Obtiene o establece el campo que se muestra en la lista desplegable.
+- `RecordCount` : Obtiene el número de registros de la tabla especificada.
 
 Cuando se crea una nueva instancia del objeto, se pasa la conexión, el nombre de la tabla, opcionalmente el campo ID. y el campo de visualización:
 
@@ -2224,7 +2224,7 @@ En este artículo se ha realizado una visión detallada del uso del enlace de da
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacDatabase (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macdatabase)
+- [MacDatabase (ejemplo)](/samples/xamarin/mac-samples/macdatabase)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Enlace de datos y codificación de valores de clave](~/mac/app-fundamentals/databinding.md)
 - [Controles estándar](~/mac/user-interface/standard-controls.md)

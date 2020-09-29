@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 2a7a09b1dec840090587377199533ef8c6ec63b5
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: c607e4668e4754edaec50a4c8b24776c7bb5844e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573175"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430785"
 ---
 # <a name="menus-in-xamarinmac"></a>Menús en Xamarin. Mac
 
@@ -120,7 +120,7 @@ De forma predeterminada, cada vez que se produce un evento de usuario, `NSMenu` 
 - **Acciones personalizadas y validateMenuItem:** -para cualquier elemento de menú que esté enlazado a una [acción personalizada de ventana o controlador de vista](#Working-with-Custom-Window-Actions), puede Agregar la `validateMenuItem:` acción y habilitar o deshabilitar manualmente los elementos de menú.
 - **Menú manual habilitando** : se establece manualmente la `Enabled` propiedad de cada `NSMenuItem` para habilitar o deshabilitar cada elemento en un menú individualmente.
 
-Para elegir un sistema, establezca la `AutoEnablesItems` propiedad de `NSMenu` . `true`es automático (comportamiento predeterminado) y `false` es manual. 
+Para elegir un sistema, establezca la `AutoEnablesItems` propiedad de `NSMenu` . `true` es automático (comportamiento predeterminado) y `false` es manual. 
 
 > [!IMPORTANT]
 > Si decide usar la habilitación manual de menús, ninguno de los elementos de menú, ni siquiera los controlados por clases AppKit como `NSTextView` , se actualiza automáticamente. Será responsable de habilitar y deshabilitar todos los elementos manualmente en el código.
@@ -992,7 +992,7 @@ public override void DidFinishLaunching (NSNotification notification)
 }
 ```
 
-`NSStatusBar statusBar = NSStatusBar.SystemStatusBar;`nos permite acceder a la barra de estado de todo el sistema. `var item = statusBar.CreateStatusItem (NSStatusItemLength.Variable);`crea un nuevo elemento de la barra de estado. Desde allí, se crea un menú y varios elementos de menú y se adjunta el menú al elemento de la barra de estado que se acaba de crear. 
+`NSStatusBar statusBar = NSStatusBar.SystemStatusBar;` nos permite acceder a la barra de estado de todo el sistema. `var item = statusBar.CreateStatusItem (NSStatusItemLength.Variable);` crea un nuevo elemento de la barra de estado. Desde allí, se crea un menú y varios elementos de menú y se adjunta el menú al elemento de la barra de estado que se acaba de crear. 
 
 Si ejecutamos la aplicación, se mostrará el nuevo elemento de la barra de estado. Al seleccionar un elemento en el menú, cambiará el texto en la vista de texto: 
 
@@ -1074,7 +1074,7 @@ En este artículo se ha realizado una visión detallada del trabajo con menús y
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacMenus (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macmenus)
+- [MacMenus (ejemplo)](/samples/xamarin/mac-samples/macmenus)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Directrices de la interfaz humana: menús](https://developer.apple.com/macos/human-interface-guidelines/menus/menu-anatomy/)
 - [Introducción a los menús de la aplicación y las listas emergentes](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/MenuList/MenuList.html)

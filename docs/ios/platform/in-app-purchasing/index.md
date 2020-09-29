@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 5aabaadfb1781f9f1622abf5687252b16b327d34
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 7e061f12e45e6d60c1772fc8699ffdb1f1b1d730
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725427"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430388"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Compras desde la aplicación en Xamarin. iOS
 
@@ -58,11 +58,11 @@ En este artículo se ha introducido el concepto de compra desde la aplicación, 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit/)
+- [InAppPurchaseSample](/samples/xamarin/ios-samples/storekit/)
 - [En la guía de programación de compras de aplicaciones](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html)
 - [Guía para desarrolladores de iTunes Connect](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/iTunesConnect_Guide.pdf)
 - [Referencia de Framework del kit de tiendas](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/StoreKit_Collection/StoreKit_Collection.pdf)
-- [Identificadores de producto de compra desde la aplicación Q & A](https://developer.apple.com/library/ios/#qa/qa1329/_index.html)
+- [Identificadores de producto de compra desde la aplicación Q&A](https://developer.apple.com/library/ios/#qa/qa1329/_index.html)
 - [Nota técnica de compras desde la aplicación](https://developer.apple.com/library/ios/#technotes/tn2259/_index.html)
 - [El primer envío de la tienda de aplicaciones](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
 - [Sugerencias de envío al App Store](https://developer.apple.com/appstore/resources/submission/tips.html)

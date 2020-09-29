@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2018
-ms.openlocfilehash: e51b6c7ffe0b0ae027e527d959979e558afa6325
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 3d50bf91502e7a3b7331348a61af50a5c789f838
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73005069"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432420"
 ---
 # <a name="backgrounding-in-xamarinios"></a>Procesamiento en segundo plano en Xamarin. iOS
 
@@ -20,7 +20,7 @@ _El procesamiento en segundo plano o el fondo es el proceso de permitir que las 
 
 El procesamiento en segundo plano en aplicaciones móviles es fundamentalmente diferente del concepto tradicional de multitarea en el escritorio. Los equipos de escritorio tienen una gran variedad de recursos disponibles para una aplicación, como el estado real de la pantalla, la energía y la memoria. Las aplicaciones pueden ejecutarse en paralelo y tener un rendimiento y ser utilizable. En un dispositivo móvil, los recursos son mucho más limitados. Es difícil Mostrar más de una aplicación en una pantalla pequeña y ejecutar varias aplicaciones a gran velocidad agotaría la batería. El fondo es un compromiso constante entre dar a las aplicaciones los recursos para ejecutar las tareas en segundo plano que requieren y mantener la aplicación en primer plano y el dispositivo que responde. Tanto iOS como Android tienen disposiciones para el fondo, pero lo administran de manera muy diferente.
 
-En iOS, el fondo se reconoce como un estado de aplicación y las aplicaciones se mueven dentro y fuera del estado en segundo plano en función del comportamiento de la aplicación y del usuario. iOS también ofrece varias opciones para conectar una aplicación para que se ejecute en segundo plano, lo que incluye pedir al sistema operativo el tiempo necesario para completar una tarea importante, funcionando como un tipo de aplicación conocida necesaria para el segundo plano y actualizar el contenido de una aplicación en la forma designada. intervalos.
+En iOS, el fondo se reconoce como un estado de aplicación y las aplicaciones se mueven dentro y fuera del estado en segundo plano en función del comportamiento de la aplicación y del usuario. iOS también ofrece varias opciones para conectar una aplicación para que se ejecute en segundo plano, lo que incluye pedir al sistema operativo el tiempo necesario para completar una tarea importante, funcionando como un tipo de aplicación conocida necesaria para el segundo plano y actualizar el contenido de una aplicación a intervalos designados.
 
 En esta guía y los tutoriales que lo acompañan, vamos a aprender a realizar tareas de aplicación en segundo plano. Trataremos los conceptos clave y los procedimientos recomendados y, a continuación, le guiaremos en la creación de una aplicación real que recibe actualizaciones de ubicación en segundo plano.
 
@@ -39,7 +39,7 @@ En esta guía se presentaron las distintas formas de realizar el procesamiento e
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Procesamiento en segundo plano en Android](~/android/app-fundamentals/services/index.md)
-- [LifecycleDemo (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo)
-- [Ubicación (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/location)
-- [Transferencia de fondo simple (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplebackgroundtransfer)
+- [LifecycleDemo (ejemplo)](/samples/xamarin/ios-samples/lifecycledemo)
+- [Ubicación (ejemplo)](/samples/xamarin/ios-samples/location)
+- [Transferencia de fondo simple (ejemplo)](/samples/xamarin/ios-samples/simplebackgroundtransfer)
 - [Ejecución en segundo plano de iOS](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html)

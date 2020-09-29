@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 631b1019313ddde6b53ffe63600be8f3fc58673a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f4d90960547fb43d6681667daadde1ce71fc105a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931474"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431760"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Cuadros de diálogo en Xamarin. Mac
 
@@ -1099,7 +1099,7 @@ En este artículo se ha realizado una visión detallada del trabajo con ventanas
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacWindows (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macwindows)
+- [MacWindows (ejemplo)](/samples/xamarin/mac-samples/macwindows)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Menús](~/mac/user-interface/menu.md)
 - [Windows](~/mac/user-interface/window.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 57347336bb91757c9c54f7279f386f15e07c9cd7
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 963151c8f5f88373fd6d71a2bb74bd2dbe5d6ab5
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573683"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430083"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Trabajo con tablas en iOS Designer
 
@@ -70,17 +70,17 @@ El primer cambio en el guión gráfico es eliminar la vista de detalles existent
 
 1. Seleccione la barra situada en la parte inferior del controlador de vista y elimínela.
 2. Arrastre un **controlador de navegación** y un **controlador de vista de tabla** al guion gráfico desde el cuadro de herramientas. 
-3. Cree un segue desde el controlador de vista raíz para el segundo controlador de vista de tabla que acaba de agregar. Para crear segue, control + arrastre *desde la celda detail* hasta la UITableViewController recién agregada. Elija la opción **Mostrar** en **selección de segue**. 
-4. Seleccione el nuevo segue que creó y asígnele un identificador para hacer referencia a este segue en el código. Haga clic en segue y escriba `TaskSegue` para el **identificador** en el **Panel de propiedades**, como se indica a continuación:    
+3. Cree un segue desde el controlador de vista raíz para el segundo controlador de vista de tabla que acaba de agregar. Para crear segue, control + arrastre *desde la celda detail* hasta la UITableViewController recién agregada. Elija la opción  **Mostrar** en  **selección de segue**. 
+4. Seleccione el nuevo segue que creó y asígnele un identificador para hacer referencia a este segue en el código. Haga clic en segue y escriba `TaskSegue` para el  **identificador** en el  **Panel de propiedades**, como se indica a continuación:    
   [![Asignar nombres a segue en el panel de propiedades](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 
 5. A continuación, configure las dos vistas de tabla seleccionándola y usando el Panel de propiedades. Asegúrese de seleccionar ver y no ver controlador: puede usar el esquema del documento como ayuda para la selección.
 
-6. Cambie el controlador de vista raíz para que sea **contenido: prototipos dinámicos** (la vista en el superficie de diseño se etiquetará como **contenido del prototipo** ):
+6. Cambie el controlador de vista raíz para que sea  **contenido: prototipos dinámicos** (la vista en el superficie de diseño se etiquetará como  **contenido del prototipo** ):
 
     [![Establecer la propiedad de contenido en prototipos dinámicos](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
-7. Cambie el nuevo **UITableViewController** para que sea **contenido: celdas estáticas**. 
+7. Cambie el nuevo **UITableViewController** para que sea  **contenido: celdas estáticas**. 
 
 8. El nuevo UITableViewController debe tener el nombre de clase y el identificador establecido. Seleccione el controlador de vista y escriba _TaskDetailViewController_ para la **clase** en el **Panel de propiedades** : se creará un nuevo `TaskDetailViewController.cs` archivo en el panel de solución. Escriba **StoryboardID** como _detalle_, como se muestra en el ejemplo siguiente. Se usará más adelante para cargar esta vista en el código de C#:  
 
@@ -106,10 +106,10 @@ A continuación, deberá crear un botón que agregará nuevas tareas, como se mu
 
 [![elemento de botón de barra en la barra de navegación](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png#lightbox)
 
-Haga lo siguiente: 
+Siga estos pasos: 
 
 - Arrastre un **elemento de botón de barra** del cuadro de herramientas a la _parte derecha de la barra de navegación_.
-- En el **Panel de propiedades**, en **elemento de botón de barra** , seleccione **identificador: agregar** (para convertirlo en un *+* botón más). 
+- En el **Panel de propiedades**, en **elemento de botón de barra** , seleccione  **identificador: agregar** (para convertirlo en un *+* botón más). 
 - Asígnele un nombre para que se pueda identificar en el código en una fase posterior. Tenga en cuenta que deberá asignar al controlador de vista raíz un nombre de clase (por ejemplo, **ItemViewController**) para que pueda establecer el nombre del elemento del botón de barra.
 
 #### <a name="taskdetail-view-controller"></a>Controlador de vista TaskDetail
@@ -133,14 +133,14 @@ Seleccione la sección superior y, en **propiedades > sección** de la vista de 
 
 Para cada celda, abra el **Panel de propiedades** y establezca:
 
-- **Estilo**: _personalizado_
+- **Estilo**:  _personalizado_
 - **Identificador**: elija un identificador único para cada celda (por ejemplo, "_title_", "_notas_", "_Done_").
 - Arrastre los controles necesarios para generar el diseño que se muestra en la captura de pantalla (Coloque **UILabel**, **campo** y **UISwitch** en las celdas correctas y establezca las etiquetas adecuadamente, por ej. Título, notas y listo).
 
 En la segunda sección, establezca **las filas** en _1_ y arrastre el controlador de tamaño inferior de la celda para que sea más alto.
 
 - **Establezca el identificador**en un valor único (por ejemplo, "guardar"). 
-- **Establezca fondo**: _Borrar color_ .
+- **Establezca fondo**:  _Borrar color_ .
 - Arrastre dos botones a la celda y establezca sus títulos correctamente (por ejemplo, _Guardar_ y _eliminar_), como se muestra a continuación:
 
    [![establecer dos botones en la sección inferior](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)
@@ -338,10 +338,10 @@ En el ejemplo se muestra:
 
 - Crear una tabla con contenido de prototipo donde se definen las celdas para reutilizarlas para mostrar listas de datos. 
 - Crear una tabla con contenido estático para crear un formulario de entrada. Esto incluye cambiar el estilo de tabla y agregar secciones, celdas y controles de interfaz de usuario. 
-- Cómo crear un segue e invalidar el `PrepareForSegue` método para notificar a la vista de destino los parámetros que requiere. 
-- Cargar vistas de guion gráfico directamente con el `Storyboard.InstantiateViewController` método.
+- Cómo crear un segue e invalidar el  `PrepareForSegue` método para notificar a la vista de destino los parámetros que requiere. 
+- Cargar vistas de guion gráfico directamente con el  `Storyboard.InstantiateViewController` método.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [StoryboardTable (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/storyboardtable)
+- [StoryboardTable (ejemplo)](/samples/xamarin/ios-samples/storyboardtable)
 - [Introducción a guiones gráficos](~/ios/user-interface/storyboards/index.md)

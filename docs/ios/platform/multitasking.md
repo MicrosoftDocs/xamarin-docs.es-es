@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: b86f3a159a144f02ea13663bfddb41ed0100f740
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: e32042c4b7e7d67e219611014d3a06ad9ed17b9d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931409"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432461"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitarea para iPad en Xamarin. iOS
 
@@ -100,7 +100,7 @@ Al igual que con las vistas de diapositiva y de división, el usuario tiene cont
 
 Para que la aplicación muestre el vídeo de PIP en la solicitud del usuario, debe usar _AVKit_ o las _API de AV Foundation_. El marco de Media Player se ha depreciado en iOS 9 y no es compatible con PIP.
 
-Imagen en imagen solo está disponible en un iPad Pro, iPad Air, iPad Air 2, iPad mini 2, iPad mini 3 o iPad Mini 4. Para obtener más información, consulte la [aplicación de ejemplo PictureInPicture](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9) y la [imagen de Apple en Picture Inicio rápido](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/QuickStartForPictureInPicture.html#//apple_ref/doc/uid/TP40015145-CH14) documentación.
+Imagen en imagen solo está disponible en un iPad Pro, iPad Air, iPad Air 2, iPad mini 2, iPad mini 3 o iPad Mini 4. Para obtener más información, consulte la [aplicación de ejemplo PictureInPicture](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9) y la [imagen de Apple en Picture Inicio rápido](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/QuickStartForPictureInPicture.html#//apple_ref/doc/uid/TP40015145-CH14) documentación.
 
 <a name="Supporting-Multitasking-in-your-App"></a>
 
@@ -130,7 +130,7 @@ En iPad que admiten diapositivas y la vista en dos paneles, puede acabar con las
 | **Horizontal** |75% de la pantalla<br />Horizontal normal<br />Vertical normal|25% de la pantalla<br />Horizontal compacta<br />Vertical normal|
 | **Horizontal** |50% de la pantalla<br />Horizontal compacta<br />Vertical normal|50% de la pantalla<br />Horizontal compacta<br />Vertical normal|
 
-En la aplicación de [MuliTask](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) de ejemplo, si se ejecuta en pantalla completa en un iPad en el modo horizontal, presentará la lista y la vista de detalle al mismo tiempo:
+En la aplicación de [MuliTask](/samples/xamarin/ios-samples/ios9-multitask) de ejemplo, si se ejecuta en pantalla completa en un iPad en el modo horizontal, presentará la lista y la vista de detalle al mismo tiempo:
 
 [![La lista y la vista de detalle presentada al mismo tiempo](multitasking-images/sizeclasses03.png)](multitasking-images/sizeclasses03.png#lightbox)
 
@@ -196,7 +196,7 @@ Si ejecutamos esta aplicación en un iPad con un teclado de hardware conectado y
 
 [![Menú emergente de métodos abreviados de teclado](multitasking-images/keyboard03.png)](multitasking-images/keyboard03.png#lightbox)
 
-Vea la [aplicación](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) de ejemplo para obtener una implementación de ejemplo.
+Vea la [aplicación](/samples/xamarin/ios-samples/ios9-multitask) de ejemplo para obtener una implementación de ejemplo.
 
 <a name="Resource-Management-Considerations"></a>
 
@@ -253,8 +253,8 @@ En este artículo se han explicado los pasos necesarios para asegurarse de que u
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
-- [Multitarea (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask)
+- [Ejemplos de iOS 9](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
+- [Multitarea (ejemplo)](/samples/xamarin/ios-samples/ios9-multitask)
 - [Introducción a los guiones gráficos unificados](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [iOS 9 para desarrolladores](https://developer.apple.com/ios/pre-release/)
 - [iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

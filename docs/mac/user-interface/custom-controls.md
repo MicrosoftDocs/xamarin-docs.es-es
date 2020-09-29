@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 8ed83ee8f0bded6258b695f7a6383cda1929f542
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: db4cab313b1c1f2fc1aaa969735f7f136feb7015
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997090"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429695"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Crear controles personalizados en Xamarin. Mac
 
@@ -389,7 +389,7 @@ En este artículo se ha tomado una visión detallada de la creación de un contr
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacCustomControl (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccustomcontrol)
+- [MacCustomControl (ejemplo)](/samples/xamarin/mac-samples/maccustomcontrol)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Enlace de datos y codificación de clave-valor](~/mac/app-fundamentals/databinding.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) (Directrices de interfaz humana de OS X)

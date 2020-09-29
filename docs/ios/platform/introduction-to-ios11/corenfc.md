@@ -7,12 +7,12 @@ ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 556ea205e9894a2553224da0dc71c00d9bb55a9b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 17f5caa7849b076fd8ac2b7a22459fbf8fed1c9d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84564749"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432805"
 ---
 # <a name="core-nfc-in-xamarinios"></a>NFC principal en Xamarin. iOS
 
@@ -29,7 +29,7 @@ Hay algunas restricciones que se deben tener en cuenta:
 - Las aplicaciones deben estar visibles en primer plano para su análisis.
 - CoreNFC solo se puede probar en dispositivos reales (no en el simulador).
 
-En esta página se describe la configuración necesaria para usar CoreNFC y se muestra cómo usar la API con el [código de ejemplo "NFCTagReader"](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader).
+En esta página se describe la configuración necesaria para usar CoreNFC y se muestra cómo usar la API con el [código de ejemplo "NFCTagReader"](/samples/xamarin/ios-samples/ios11-nfctagreader).
 
 ## <a name="configuration"></a>Configuración
 
@@ -71,12 +71,12 @@ Después, debe crear un nuevo perfil de aprovisionamiento para este identificado
 
 Una vez configurado el proyecto, agregue `using CoreNFC;` a la parte superior del archivo y siga estos tres pasos para implementar la funcionalidad de lectura de etiquetas NFC:
 
-### <a name="1-implement-infcndefreadersessiondelegate"></a>1. implementar`INFCNdefReaderSessionDelegate`
+### <a name="1-implement-infcndefreadersessiondelegate"></a>1. implementar `INFCNdefReaderSessionDelegate`
 
 La interfaz tiene dos métodos que se van a implementar:
 
-- `DidDetect`: Se le llama cuando se lee correctamente una etiqueta.
-- `DidInvalidate`: Se le llama cuando se produce un error o se alcanza el tiempo de espera de 60 segundos.
+- `DidDetect` : Se le llama cuando se lee correctamente una etiqueta.
+- `DidInvalidate` : Se le llama cuando se produce un error o se alcanza el tiempo de espera de 60 segundos.
 
 #### <a name="diddetect"></a>DidDetect
 
@@ -125,7 +125,7 @@ Una vez que se ha invalidado una sesión, se debe crear un nuevo objeto de sesi�
 
 <a name="step2"></a>
 
-### <a name="2-start-an-nfcndefreadersession"></a>2. iniciar un`NFCNdefReaderSession`
+### <a name="2-start-an-nfcndefreadersession"></a>2. iniciar un `NFCNdefReaderSession`
 
 El análisis debe comenzar con una solicitud de usuario, como presionar un botón.
 El código siguiente crea e inicia una sesión de examen:
@@ -137,9 +137,9 @@ Session?.BeginSession();
 
 Los parámetros del `NFCNdefReaderSession` constructor son los siguientes:
 
-- `delegate`: Una implementación de `INFCNdefReaderSessionDelegate` . En el código de ejemplo, el delegado se implementa en el controlador de vista de tabla, por lo `this` que se usa como parámetro de delegado.
-- `queue`: La cola en la que se administran las devoluciones de llamada. Puede ser `null` , en cuyo caso, asegúrese de usar `DispatchQueue.MainQueue` al actualizar los controles de la interfaz de usuario (como se muestra en el ejemplo).
-- `invalidateAfterFirstRead`: Cuando `true` , el examen se detiene después del primer análisis correcto; cuando el examen `false` continúa y se devuelven varios resultados hasta que se cancela el examen o se alcanza el tiempo de espera de 60 segundos.
+- `delegate` : Una implementación de `INFCNdefReaderSessionDelegate` . En el código de ejemplo, el delegado se implementa en el controlador de vista de tabla, por lo `this` que se usa como parámetro de delegado.
+- `queue` : La cola en la que se administran las devoluciones de llamada. Puede ser `null` , en cuyo caso, asegúrese de usar `DispatchQueue.MainQueue` al actualizar los controles de la interfaz de usuario (como se muestra en el ejemplo).
+- `invalidateAfterFirstRead` : Cuando `true` , el examen se detiene después del primer análisis correcto; cuando el examen `false` continúa y se devuelven varios resultados hasta que se cancela el examen o se alcanza el tiempo de espera de 60 segundos.
 
 ### <a name="3-cancel-the-scanning-session"></a>3. cancelar la sesión de examen
 
@@ -161,5 +161,5 @@ CoreNFC permite que la aplicación Lea datos de etiquetas NFC. Admite la lectura
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [NFCTagReader (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader)
+- [NFCTagReader (ejemplo)](/samples/xamarin/ios-samples/ios11-nfctagreader)
 - [Introducción al NFC básico (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/718/)

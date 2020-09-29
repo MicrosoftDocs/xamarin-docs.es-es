@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: d50f104b8b6e3e82fb7e9d6dbea45757742a5739
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 6e76821033276ed3bb756cecd10e801fa615fb1e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937038"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431840"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Introducción a la función táctil 3D en Xamarin. iOS
 
@@ -102,7 +102,7 @@ Se puede llamar a este método antes *o después de* `ViewDidLoad()` .
 
 ### <a name="handling-peek-and-pop"></a>Control de PEEK y pop
 
-En un dispositivo iOS que puede controlar el toque 3D, podemos usar una instancia de la `UIViewControllerPreviewingDelegate` clase para controlar la presentación de los detalles de los elementos **PEEK** y **pop** . Por ejemplo, si tenemos un controlador de vista de tabla llamado, podríamos `MasterViewController` usar el código siguiente para admitir **PEEK** y **pop**:
+En un dispositivo iOS que puede controlar el toque 3D, podemos usar una instancia de la  `UIViewControllerPreviewingDelegate` clase para controlar la presentación de los detalles de los elementos **PEEK** y **pop** . Por ejemplo, si tenemos un controlador de vista de tabla llamado, podríamos `MasterViewController` usar el código siguiente para admitir **PEEK** y **pop**:
 
 ```csharp
 using System;
@@ -195,7 +195,7 @@ public override void ViewDidLoad ()
 
 Aquí vamos a llamar al `RegisterForPreviewingWithDelegate` método con una instancia de `PreviewingDelegate` creada anteriormente. En los dispositivos iOS que admiten la función táctil 3D, el usuario puede pulsar en un elemento para leerlo. Si presionan incluso más difíciles, el elemento se mostrará en la vista estándar.
 
-Para obtener más información, consulte el [ejemplo de ApplicationShortcuts de iOS 9](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-viewcontrollerpreview) y [ViewControllerPreviews de Apple: uso de la](https://developer.apple.com/library/prerelease/ios/samplecode/ViewControllerPreviews/Introduction/Intro.html) aplicación de ejemplo de vista previa de las API de UIViewController, referencia de clase de [UIPreviewAction](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewAction_Class/), referencia de [clase de UIPreviewActionGroup](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionGroup_Class/) y [Referencia del protocolo UIPreviewActionItem](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionItem_Protocol/).
+Para obtener más información, consulte el [ejemplo de ApplicationShortcuts de iOS 9](/samples/xamarin/ios-samples/ios9-viewcontrollerpreview) y [ViewControllerPreviews de Apple: uso de la](https://developer.apple.com/library/prerelease/ios/samplecode/ViewControllerPreviews/Introduction/Intro.html) aplicación de ejemplo de vista previa de las API de UIViewController, referencia de clase de [UIPreviewAction](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewAction_Class/), referencia de [clase de UIPreviewActionGroup](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionGroup_Class/) y [Referencia del protocolo UIPreviewActionItem](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionItem_Protocol/).
 
 <a name="Quick-Actions"></a>
 
@@ -239,7 +239,7 @@ Si una o varias de las acciones rápidas que requiere la aplicación son estáti
 
 Aquí vamos a definir dos elementos de acción rápida estáticos con las claves siguientes:
 
-- `UIApplicationShortcutItemIconType`: Define el icono que se mostrará en el elemento de acción rápida como uno de los siguientes valores:
+- `UIApplicationShortcutItemIconType` : Define el icono que se mostrará en el elemento de acción rápida como uno de los siguientes valores:
   - `UIApplicationShortcutIconTypeAdd`
   - `UIApplicationShortcutIconTypeAlarm`
   - `UIApplicationShortcutIconTypeAudio`
@@ -272,9 +272,9 @@ Aquí vamos a definir dos elementos de acción rápida estáticos con las claves
 
   ![Imagen UIApplicationShortcutIconType](3d-touch-images/uiapplicationshortcuticontype.png)
 
-- `UIApplicationShortcutItemSubtitle`: Define el subtítulo del elemento.
-- `UIApplicationShortcutItemTitle`: Define el título del elemento.
-- `UIApplicationShortcutItemType`: Es un valor de cadena que se va a usar para identificar el elemento en la aplicación. Para obtener más información, vea la sección siguiente.
+- `UIApplicationShortcutItemSubtitle` : Define el subtítulo del elemento.
+- `UIApplicationShortcutItemTitle` : Define el título del elemento.
+- `UIApplicationShortcutItemType` : Es un valor de cadena que se va a usar para identificar el elemento en la aplicación. Para obtener más información, vea la sección siguiente.
 
 > [!IMPORTANT]
 > No se puede tener acceso a los elementos de acceso directo de acción rápida que se establecen en el `Info.plist` archivo con la `Application.ShortcutItems` propiedad. Solo se pasan al `HandleShortcutItem` controlador de eventos.
@@ -420,7 +420,7 @@ El código que ya hemos agregado en la sección [control de una acción rápida]
 
 Debe tenerse en contada que puede crear una mezcla de elementos de acción rápida estáticos y dinámicos (como hacemos aquí), no está limitado a uno u otro.
 
-Para obtener más información, consulte el [ejemplo de ViewControllerPreview de iOS 9](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-viewcontrollerpreview) y vea ApplicationShortcuts de Apple [: uso](https://developer.apple.com/library/prerelease/ios/samplecode/ApplicationShortcuts/) de la aplicación de ejemplo UIApplicationShortcutItem, referencia de clase [UIApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutItem_class/), referencia de clase [UIMutableApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIMutableApplicationShortcutItem_class/) y [referencia de clase UIApplicationShortcutIcon](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutIcon_Class/).
+Para obtener más información, consulte el [ejemplo de ViewControllerPreview de iOS 9](/samples/xamarin/ios-samples/ios9-viewcontrollerpreview) y vea ApplicationShortcuts de Apple [: uso](https://developer.apple.com/library/prerelease/ios/samplecode/ApplicationShortcuts/) de la aplicación de ejemplo UIApplicationShortcutItem, referencia de clase [UIApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutItem_class/), referencia de clase [UIMutableApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIMutableApplicationShortcutItem_class/) y [referencia de clase UIApplicationShortcutIcon](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutIcon_Class/).
 
 <a name="Testing-3D-Touch-in-the-Simulator"></a>
 
@@ -440,8 +440,8 @@ En este artículo se han incorporado las nuevas API táctiles 3D que están disp
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de ViewControllerPreview de iOS 9](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-viewcontrollerpreview)
-- [Ejemplo de ApplicationShortcuts de iOS 9](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-applicationshortcuts)
+- [Ejemplo de ViewControllerPreview de iOS 9](/samples/xamarin/ios-samples/ios9-viewcontrollerpreview)
+- [Ejemplo de ApplicationShortcuts de iOS 9](/samples/xamarin/ios-samples/ios9-applicationshortcuts)
 - [iOS 9 para desarrolladores](https://developer.apple.com/ios/pre-release/)
 - [iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Preparar las aplicaciones de iPhone para la funcionalidad táctil 3D](https://developer.apple.com/ios/3d-touch/)
