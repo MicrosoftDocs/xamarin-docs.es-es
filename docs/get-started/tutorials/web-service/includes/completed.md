@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e0f7e89be5de282daf10f941d0f0b8d0175df81a
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 572c6d378bdc2af72277bba8726daba860ab38fe
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71107357"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451592"
 ---
 Ha completado el tutorial, donde ha aprendido a:
 
@@ -32,6 +32,6 @@ También es recomendable el libro de Charles Petzold titulado [_Creating Mobile 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Web Service Tutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-webservicetutorial/) (Tutorial de servicios web [ejemplo])
+- [Web Service Tutorial (sample)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-webservicetutorial/) (Tutorial de servicios web [ejemplo])
 - [Consumo de servicios web RESTful (guía)](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Newtonsoft.Json NuGet Package](https://www.nuget.org/packages/Newtonsoft.Json/) (Paquete NuGet Newtonsoft.Json)
+- [Paquete Newtonsoft.Json NuGet Package](https://www.nuget.org/packages/Newtonsoft.Json/)

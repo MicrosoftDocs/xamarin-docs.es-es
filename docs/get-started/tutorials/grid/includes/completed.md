@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 36454d9fe2903bc5e9b05c7809bd09a1f305f46b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 4ee2326079ba9ddea6b0f4c5c4356412a3d5b492
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71059805"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451484"
 ---
 Ha completado el tutorial, donde ha aprendido a:
 
@@ -23,7 +23,7 @@ Para obtener más información sobre los conceptos básicos de creación de apli
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [GridTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-gridtutorial/)
+- [GridTutorial (sample)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-gridtutorial/)
 - [Guía sobre las vistas de lista de Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md)
 - [Guía sobre los márgenes y el relleno](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)
 - [API de la cuadrícula](xref:Xamarin.Forms.Grid)

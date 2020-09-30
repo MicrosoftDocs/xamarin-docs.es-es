@@ -1,21 +1,21 @@
 ### YamlMime:Landing
 title: Xamarin.Android
-summary: Xamarin.Android expone el Android SDK completo para los desarrolladores de .NET. Cree aplicaciones Android, totalmente nativas, con C# o F# en Visual Studio.
+summary: Xamarin.Android expone Android SDK completamente para los desarrolladores de .NET. Compile aplicaciones Android totalmente nativas mediante C# o F# en Visual Studio.
 metadata:
   title: Xamarin.Android
-  description: Xamarin.Android expone el Android SDK completo para los desarrolladores de .NET.
+  description: Xamarin.Android expone Android SDK completamente para los desarrolladores de .NET.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.technology: xamarin-android
   author: davidbritch
   ms.author: dabritch
   ms.date: 01/27/2020
-  ms.openlocfilehash: 394812b5150f7bbea46dff476bd2f896083b9a74
-  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+  ms.openlocfilehash: 593d8d20433222e1b18fd65b86a7586aa5560933
+  ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 04/09/2020
-  ms.locfileid: "77374089"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91454291"
 landingContent:
 - title: Introducción
   linkLists:
@@ -53,7 +53,7 @@ landingContent:
       url: ~/android/app-fundamentals/permissions.md
     - text: Gestos y entrada táctil
       url: ~/android/app-fundamentals/touch/index.md
-    - text: Ver más >
+    - text: Más información >
       url: ~/android/app-fundamentals/index.md
 - title: Interfaz de usuario
   linkLists:
@@ -93,22 +93,22 @@ landingContent:
       url: ~/android/platform/android-job-scheduler.md
     - text: Mapas y ubicación
       url: ~/android/platform/maps-and-location/index.md
-    - text: Ver más >
+    - text: Más información >
       url: ~/android/platform/index.md
 - title: Xamarin.Essentials
   linkLists:
   - linkListType: concept
     links:
-    - text: Información
+    - text: Acerca de
       url: ~/essentials/index.md?context=xamarin/android
     - text: Introducción
       url: ~/essentials/get-started.md?context=xamarin/android
     - text: Compatibilidad de plataformas y características
       url: ~/essentials/platform-feature-support.md?context=xamarin/android
-    - text: Solución de problemas
+    - text: Solucionar problemas
       url: ~/essentials/troubleshooting.md?context=xamarin/android
     - text: Notas de la versión
-      url: https://docs.microsoft.com/xamarin/essentials/release-notes/
+      url: /xamarin/essentials/release-notes/
 - title: Datos y servicios en la nube
   linkLists:
   - linkListType: concept
@@ -139,19 +139,19 @@ landingContent:
       url: ~/android/deploy-test/performance.md
     - text: Generación de perfiles
       url: ~/android/deploy-test/profiling.md
-    - text: Preparación de las versiones
+    - text: Preparación del lanzamiento
       url: ~/android/deploy-test/release-prep/index.md
     - text: Firmar el APK
       url: ~/android/deploy-test/signing/index.md
     - text: Publicar una aplicación
       url: ~/android/deploy-test/publishing/index.md
-    - text: Ver más >
+    - text: Más información >
       url: ~/android/deploy-test/index.md
 - title: Conceptos avanzados y funcionamiento interno
   linkLists:
   - linkListType: concept
     links:
-    - text: Architecture
+    - text: Arquitectura
       url: ~/android/internals/architecture.md
     - text: Ensamblados disponibles
       url: ~/cross-platform/internals/available-assemblies.md?context=xamarin/android

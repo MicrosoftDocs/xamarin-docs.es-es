@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e01d661d5481c59175b5a9f747b2a11cb4a6301a
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 03b54f479e9fcc3b332ab45594ac013a4eea6aa3
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71059811"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451385"
 ---
 Ha completado el tutorial, donde ha aprendido a:
 
@@ -22,6 +22,6 @@ Para obtener más información sobre los conceptos básicos de creación de apli
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PopupsTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-popupstutorial/)
+- [PopupsTutorial (sample)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-popupstutorial/)
 - [Mostrar elementos emergentes (guía)](~/xamarin-forms/user-interface/pop-ups.md)
 - [API de página](xref:Xamarin.Forms.Page)

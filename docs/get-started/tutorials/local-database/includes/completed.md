@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a0f2e909d4c7003ba1314b848fd01e604d190a1b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: c1d2900e31b76bb9f66bde55eb948d1f3f46e34e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71107353"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451589"
 ---
 Ha completado el tutorial, donde ha aprendido a:
 
@@ -23,6 +23,6 @@ Para obtener más información sobre los conceptos básicos de creación de apli
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [LocalDatabaseTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-localdatabasetutorial/)
+- [LocalDatabaseTutorial (sample)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-localdatabasetutorial/)
 - [Guía sobre las bases de datos locales de Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md)
-- [Paquete NuGet SQLite.NET](https://www.nuget.org/packages/sqlite-net-pcl/)
+- [Paquete SQLite.NET NuGet](https://www.nuget.org/packages/sqlite-net-pcl/)

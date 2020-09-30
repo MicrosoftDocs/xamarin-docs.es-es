@@ -222,6 +222,6 @@
         - name: Mensajes de error (mmp)
           href: troubleshooting/mmp-errors.md
     - name: Notas de la versión
-      href: 'https://docs.microsoft.com/xamarin/mac/release-notes/'
-    - name: Ejemplos
+      href: /xamarin/mac/release-notes/
+    - name: Muestras
       href: samples/index.md

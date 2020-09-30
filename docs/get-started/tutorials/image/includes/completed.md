@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 83baf0982da49b5568a43a1695f78150119d4d88
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: e2d0173f23cfb43865038c330f40c3d5ebf60941
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71107346"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451422"
 ---
 Ha completado el tutorial, donde ha aprendido a:
 
@@ -23,6 +23,6 @@ Para obtener más información sobre los conceptos básicos de creación de apli
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ImageTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-imagetutorial/)
+- [ImageTutorial (sample)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-imagetutorial/)
 - [Guía sobre las imágenes de Xamarin.Forms](~/xamarin-forms/user-interface/images.md)
 - [API de las imágenes](xref:Xamarin.Forms.Image)
