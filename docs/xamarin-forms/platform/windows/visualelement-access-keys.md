@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1bfd61e79a2b4697e884afb45e4b9080ee939b87
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6e25654fb856935c119d731df5db3eaa2d501930
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136531"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560252"
 ---
 # <a name="visualelement-access-keys-on-windows"></a>Claves de acceso de VisualElement en Windows
 
@@ -80,12 +80,12 @@ button4.On<Windows>()
 
 El `VisualElement.On<Windows>` método especifica que este específico de la plataforma solo se ejecutará en el plataforma universal de Windows. [ `VisualElement.SetAccessKey` ] (XREF: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. VisualElement. SetAccessKey ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . VisualElement}, System. String)), en el [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) espacio de nombres, se usa para establecer el valor de la clave de acceso para `VisualElement` . [ `VisualElement.SetAccessKeyPlacement` ] (XREF: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. VisualElement. SetAccessKeyPlacement ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . VisualElement}, Xamarin.Forms . AccessKeyPlacement)), especifica opcionalmente la posición que se va a usar para mostrar la sugerencia de clave de acceso, con la [`AccessKeyPlacement`](xref:Xamarin.Forms.AccessKeyPlacement) enumeración que proporciona los siguientes valores posibles:
 
-- [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto): indica que el sistema operativo determinará la ubicación de la información sobre las teclas de acceso.
-- [`Top`](xref:Xamarin.Forms.AccessKeyPlacement.Top): indica que la sugerencia de tecla de acceso aparecerá encima del borde superior de `VisualElement` .
-- [`Bottom`](xref:Xamarin.Forms.AccessKeyPlacement.Bottom): indica que la sugerencia de tecla de acceso aparecerá debajo del borde inferior de `VisualElement` .
-- [`Right`](xref:Xamarin.Forms.AccessKeyPlacement.Right): indica que la sugerencia de tecla de acceso aparecerá a la derecha del borde derecho del `VisualElement` .
-- [`Left`](xref:Xamarin.Forms.AccessKeyPlacement.Left): indica que la sugerencia de tecla de acceso aparecerá a la izquierda del borde izquierdo de `VisualElement` .
-- [`Center`](xref:Xamarin.Forms.AccessKeyPlacement.Center): indica que la sugerencia de tecla de acceso aparecerá superpuesta en el centro del `VisualElement` .
+- [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto) : indica que el sistema operativo determinará la ubicación de la información sobre las teclas de acceso.
+- [`Top`](xref:Xamarin.Forms.AccessKeyPlacement.Top) : indica que la sugerencia de tecla de acceso aparecerá encima del borde superior de `VisualElement` .
+- [`Bottom`](xref:Xamarin.Forms.AccessKeyPlacement.Bottom) : indica que la sugerencia de tecla de acceso aparecerá debajo del borde inferior de `VisualElement` .
+- [`Right`](xref:Xamarin.Forms.AccessKeyPlacement.Right) : indica que la sugerencia de tecla de acceso aparecerá a la derecha del borde derecho del `VisualElement` .
+- [`Left`](xref:Xamarin.Forms.AccessKeyPlacement.Left) : indica que la sugerencia de tecla de acceso aparecerá a la izquierda del borde izquierdo de `VisualElement` .
+- [`Center`](xref:Xamarin.Forms.AccessKeyPlacement.Center) : indica que la sugerencia de tecla de acceso aparecerá superpuesta en el centro del `VisualElement` .
 
 > [!NOTE]
 > Normalmente, la [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto) Ubicación de la sugerencia de teclas es suficiente, lo que incluye la compatibilidad con las interfaces de usuario adaptables.
@@ -107,6 +107,6 @@ Para obtener más información acerca de las claves de acceso, consulte [claves 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de WindowsSpecific](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

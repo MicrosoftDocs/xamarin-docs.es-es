@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsControl de mapa
+title: Xamarin.Forms Control de mapa
 description: El control de mapa es una vista multiplataforma para mostrar y anotar asignaciones. Usa el control de mapa nativo para cada plataforma, lo que proporciona una experiencia de mapas rápida y familiar a los usuarios.
 ms.prod: xamarin
 ms.assetid: 22C99029-0B16-43A6-BF58-26B48C4AED38
@@ -10,14 +10,14 @@ ms.date: 05/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1aee81b6988e1f3a7099c2722b6f336f071ad8c0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: df3189455102cedab232e0c629e63f65e242c9b5
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946369"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560057"
 ---
-# <a name="xamarinforms-map-control"></a>Xamarin.FormsControl de mapa
+# <a name="no-locxamarinforms-map-control"></a>Xamarin.Forms Control de mapa
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -89,9 +89,9 @@ Como alternativa, [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) se puede pasar un
 
 La [`Map.MapType`](xref:Xamarin.Forms.Maps.Map.MapType) propiedad se puede establecer en un [`MapType`](xref:Xamarin.Forms.Maps.MapType) miembro de enumeración para definir el estilo de presentación del mapa. La enumeración `MapType` define los miembros siguientes:
 
-- `Street`Especifica que se mostrará un mapa de calles.
-- `Satellite`Especifica que se mostrará un mapa que contiene imágenes de satélite.
-- `Hybrid`Especifica que se mostrará un mapa que combina una calle y datos satélite.
+- `Street` Especifica que se mostrará un mapa de calles.
+- `Satellite` Especifica que se mostrará un mapa que contiene imágenes de satélite.
+- `Hybrid` Especifica que se mostrará un mapa que combina una calle y datos satélite.
 
 De forma predeterminada, un [`Map`](xref:Xamarin.Forms.Maps.Map) mostrará un mapa de calle si la [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) propiedad no está definida. Como alternativa, la `MapType` propiedad se puede establecer en uno de los [`MapType`](xref:Xamarin.Forms.Maps.MapType) miembros de enumeración:
 
@@ -163,9 +163,9 @@ Existen varios enfoques para crear [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) 
 
 Como alternativa, hay tres métodos en la [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) clase que devuelven nuevos `MapSpan` objetos:
 
-1. [`ClampLatitude`](xref:Xamarin.Forms.Maps.MapSpan.ClampLatitude*)Devuelve un `MapSpan` con el mismo `LongitudeDegrees` que la instancia de la clase del método y un radio definido por `north` sus `south` argumentos y.
-1. [`FromCenterAndRadius`](xref:Xamarin.Forms.Maps.MapSpan.FromCenterAndRadius*)Devuelve un `MapSpan` que se define por sus [`Position`](xref:Xamarin.Forms.Maps.Position) [`Distance`](xref:Xamarin.Forms.Maps.Distance) argumentos y.
-1. [`WithZoom`](xref:Xamarin.Forms.Maps.MapSpan.WithZoom*)Devuelve un `MapSpan` con el mismo centro que la instancia de la clase del método, pero con un radio multiplicado por su `double` argumento.
+1. [`ClampLatitude`](xref:Xamarin.Forms.Maps.MapSpan.ClampLatitude*) Devuelve un `MapSpan` con el mismo `LongitudeDegrees` que la instancia de la clase del método y un radio definido por `north` sus `south` argumentos y.
+1. [`FromCenterAndRadius`](xref:Xamarin.Forms.Maps.MapSpan.FromCenterAndRadius*) Devuelve un `MapSpan` que se define por sus [`Position`](xref:Xamarin.Forms.Maps.Position) [`Distance`](xref:Xamarin.Forms.Maps.Distance) argumentos y.
+1. [`WithZoom`](xref:Xamarin.Forms.Maps.MapSpan.WithZoom*) Devuelve un `MapSpan` con el mismo centro que la instancia de la clase del método, pero con un radio multiplicado por su `double` argumento.
 
 Para obtener más información sobre el [`Distance`](xref:Xamarin.Forms.Maps.Distance) struct, consulte [asignación de posición y distancia](position-distance.md).
 
@@ -328,7 +328,7 @@ map.MapClicked += OnMapClicked;
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Ejemplo de Maps](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Posición y distancia del mapa](position-distance.md)
 - [Personalización de un Xamarin.Forms mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)
 - [Paso de argumentos en XAML](~/xamarin-forms/xaml/passing-arguments.md)

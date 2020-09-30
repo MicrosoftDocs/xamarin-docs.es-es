@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.FormsFormas: línea'
+title: 'Xamarin.Forms Formas: línea'
 description: La Xamarin.Forms clase line se puede usar para dibujar líneas.
 ms.prod: xamarin
 ms.assetid: 384F1A72-6D3B-4FD3-BC40-E00A73A463EC
@@ -10,18 +10,18 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a5d130922a9bd8f30b33b99f7f3dc512f056269f
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 845e5842f91a1da415509631ec2472330d972dfb
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918633"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559160"
 ---
-# <a name="no-locxamarinforms-shapes-line"></a>Xamarin.FormsFormas: línea
+# <a name="no-locxamarinforms-shapes-line"></a>Xamarin.Forms Formas: línea
 
 ![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 La `Line` clase se deriva de la `Shape` clase y se puede usar para dibujar líneas. Para obtener información sobre las propiedades que la `Line` clase hereda de la `Shape` clase, vea [ Xamarin.Forms formas](index.md).
 
@@ -32,7 +32,7 @@ La `Line` clase se deriva de la `Shape` clase y se puede usar para dibujar líne
 - `X2`, de tipo Double, indica la coordenada x del punto final de la línea. El valor predeterminado de esta propiedad es 0,0.
 - `Y2`, de tipo Double, indica la coordenada y del punto final de la línea. El valor predeterminado de esta propiedad es 0,0.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
 Para obtener información acerca de cómo controlar el modo en que se dibujan los extremos de línea, vea [extremos de línea de control](index.md#control-line-ends).
 
@@ -56,7 +56,7 @@ En el siguiente ejemplo de XAML se muestra cómo dibujar una línea:
 
 En este ejemplo, se dibuja una línea diagonal roja desde (40, 0) a (0120):
 
-![Line](line-images/line.png "Línea")
+![Línea](line-images/line.png "Línea")
 
 Dado que `X1` las `Y1` propiedades,, `X2` y `Y2` tienen valores predeterminados de 0, es posible dibujar algunas líneas con la sintaxis mínima:
 
@@ -89,5 +89,5 @@ Para obtener más información sobre cómo dibujar una línea discontinua, vea [
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsColocar](index.md)
+- [ShapeDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms Colocar](index.md)

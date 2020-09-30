@@ -10,12 +10,12 @@ ms.date: 12/11/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c420fe65b020067169230dd06dbcd5ce65c036ab
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a1c05fb6ea81827be97d1d49a8066a755ac0a1b7
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128627"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560668"
 ---
 # <a name="swipeview-swipe-transition-mode-on-android"></a>SwipeView deslizar el modo de transición en Android
 
@@ -56,8 +56,8 @@ swipeView.On<Android>().SetSwipeTransitionMode(SwipeTransitionMode.Drag);
 
 El `SwipeView.On<Android>` método especifica que este específico de la plataforma solo se ejecutará en Android. El `SwipeView.SetSwipeTransitionMode` método, en el [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) espacio de nombres, se utiliza para controlar la transición que se utiliza al abrir `SwipeView` . La `SwipeTransitionMode` enumeración proporciona dos valores posibles:
 
-- `Reveal`indica que los elementos que se van a deslizar se revelarán cuando se deslice el contenido por el dedo `SwipeView` y es el valor predeterminado de la `SwipeView.SwipeTransitionMode` propiedad.
-- `Drag`indica que los elementos que se van a deslizar se arrastrarán hasta la vista a medida que `SwipeView` se deslice el contenido.
+- `Reveal` indica que los elementos que se van a deslizar se revelarán cuando se deslice el contenido por el dedo `SwipeView` y es el valor predeterminado de la `SwipeView.SwipeTransitionMode` propiedad.
+- `Drag` indica que los elementos que se van a deslizar se arrastrarán hasta la vista a medida que `SwipeView` se deslice el contenido.
 
 Además, el `SwipeView.GetSwipeTransitionMode` método se puede utilizar para devolver el `SwipeTransitionMode` que se aplica a `SwipeView` .
 
@@ -67,6 +67,6 @@ El resultado es que un `SwipeTransitionMode` valor especificado se aplica a `Swi
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de AndroidSpecific](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)

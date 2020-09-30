@@ -1,6 +1,6 @@
 ---
-title: 'Xamarin.FormsFormas: geometrías'
-description: Xamarin.Formslas clases Geometry permiten describir la geometría de una forma 2D.
+title: 'Xamarin.Forms Formas: geometrías'
+description: Xamarin.Forms las clases Geometry permiten describir la geometría de una forma 2D.
 ms.prod: xamarin
 ms.assetid: 07DE3D66-1820-4642-BDDF-84146D40C99D
 ms.technology: xamarin-forms
@@ -10,20 +10,20 @@ ms.date: 06/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 420099cadd3a541736084403265b9302c9a32b37
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: c6c6fb0ea9d3e2b728072fa36c3cdb2a86ade131
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918321"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559329"
 ---
-# <a name="no-locxamarinforms-shapes-geometries"></a>Xamarin.FormsFormas: geometrías
+# <a name="no-locxamarinforms-shapes-geometries"></a>Xamarin.Forms Formas: geometrías
 
 ![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
-La `Geometry` clase y las clases que derivan de ella permiten describir la geometría de una forma 2D. `Geometry`los objetos pueden ser simples, como rectángulos y círculos, o compuestos, creados a partir de dos o más objetos Geometry. Además, se pueden crear geometrías más complejas que incluyen arcos y curvas.
+La `Geometry` clase y las clases que derivan de ella permiten describir la geometría de una forma 2D. `Geometry` los objetos pueden ser simples, como rectángulos y círculos, o compuestos, creados a partir de dos o más objetos Geometry. Además, se pueden crear geometrías más complejas que incluyen arcos y curvas.
 
 La `Geometry` clase es la clase primaria para varias clases que definen diferentes categorías de geometrías:
 
@@ -56,7 +56,7 @@ La clase `EllipseGeometry` define las propiedades siguientes:
 - `RadiusX`, de tipo `double` , que representa el valor del radio x de la geometría. El valor predeterminado de esta propiedad es 0,0.
 - `RadiusY`, de tipo `double` , que representa el valor del radio y de la geometría. El valor predeterminado de esta propiedad es 0,0.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
 En el ejemplo siguiente se muestra cómo crear y representar un `EllipseGeometry` en un `Path` objeto:
 
@@ -85,7 +85,7 @@ La clase `LineGeometry` define las propiedades siguientes:
 - `StartPoint`, de tipo [`Point`](xref:Xamarin.Forms.Point) , que representa el punto inicial de la línea.
 - `EndPoint`, de tipo [`Point`](xref:Xamarin.Forms.Point) , que representa el punto final de la línea.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
 En el ejemplo siguiente se muestra cómo crear y representar un `LineGeometry` en un `Path` objeto:
 
@@ -137,7 +137,7 @@ La clase `PathGeometry` define las propiedades siguientes:
 - `Figures`, de tipo `PathFigureCollection` , que representa la colección de `PathFigure` objetos que describen el contenido de la ruta de acceso.
 - `FillRule`, de tipo `FillRule` , que determina cómo se combinan las áreas de intersección contenidas en la geometría. El valor predeterminado de esta propiedad es `FillRule.EvenOdd`.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
 Para obtener más información acerca de la `FillRule` enumeración, consulte [ Xamarin.Forms formas: rellenar reglas](fillrules.md).
 
@@ -193,7 +193,7 @@ La clase `ArcSegment` define las propiedades siguientes:
 - `SweepDirection`, de tipo `SweepDirection` , que especifica la dirección en la que se dibuja el arco. El valor predeterminado de esta propiedad es `SweepDirection.CounterClockwise`.
 - `IsLargeArc`, de tipo `bool` , que indica si el arco debe ser mayor que 180 grados. El valor predeterminado de esta propiedad es `false`.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
 > [!NOTE]
 > La `ArcSegment` clase no contiene una propiedad para el punto inicial del arco. Solo define el punto final del arco que representa. El punto inicial del arco es el punto actual del `PathFigure` al que `ArcSegment` se agrega.
@@ -242,7 +242,7 @@ La clase `BezierSegment` define las propiedades siguientes:
 - `Point2`, de tipo [`Point`](xref:Xamarin.Forms.Point) , que representa el segundo punto de control de la curva. El valor predeterminado de esta propiedad es (0,0).
 - `Point3`, de tipo [`Point`](xref:Xamarin.Forms.Point) , que representa el punto final de la curva. El valor predeterminado de esta propiedad es (0,0).
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
 > [!NOTE]
 > La `BezierSegment` clase no contiene una propiedad para el punto inicial de la curva. El punto inicial de la curva es el punto actual del `PathFigure` al que `BezierSegment` se agrega.
@@ -431,7 +431,7 @@ La clase `QuadraticBezierSegment` define las propiedades siguientes:
 - `Point1`, de tipo [`Point`](xref:Xamarin.Forms.Point) , que representa el punto de control de la curva. El valor predeterminado de esta propiedad es (0,0).
 - `Point2`, de tipo [`Point`](xref:Xamarin.Forms.Point) , que representa el punto final de la curva. El valor predeterminado de esta propiedad es (0,0).
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
 > [!NOTE]
 > La `QuadraticBezierSegment` clase no contiene una propiedad para el punto inicial de la curva. El punto inicial de la curva es el punto actual del `PathFigure` al que `QuadraticBezierSegment` se agrega.
@@ -560,7 +560,7 @@ La clase `GeometryGroup` define las propiedades siguientes:
 - `Children`, de tipo `GeometryCollection` , que tiene en especie los objetos que definen `GeomtryGroup` . Un `GeometryCollection` es `ObservableCollection` de `Geometry` objetos.
 - `FillRule`, de tipo `FillRule` , que especifica cómo se combinan las áreas de intersección de `GeometryGroup` . El valor predeterminado de esta propiedad es `FillRule.EvenOdd`.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
 > [!NOTE]
 > La `Children` propiedad es `ContentProperty` de la `GeometryGroup` clase y, por tanto, no es necesario establecer explícitamente desde XAML.
@@ -630,6 +630,6 @@ La `GeometryHelper` clase proporciona los siguientes métodos auxiliares:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsColocar](index.md)
-- [Xamarin.FormsFormas: reglas de relleno](fillrules.md)
+- [ShapeDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms Colocar](index.md)
+- [Xamarin.Forms Formas: reglas de relleno](fillrules.md)

@@ -10,12 +10,12 @@ ms.date: 12/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e2b8e057d9687cd0a472451fc73cc578f9358277
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: c010ac513cec8ac59927325dbe80ad1c8ac556d8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139898"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560005"
 ---
 # <a name="listview-performance"></a>Rendimiento de ListView
 
@@ -31,7 +31,7 @@ Los controles ListView suelen usarse para mostrar muchos más datos de los que c
 
 Para conservar memoria, los [`ListView`](xref:Xamarin.Forms.ListView) equivalentes nativos de cada plataforma tienen características integradas para reutilizar las filas. Solo las celdas visibles en la pantalla se cargan en la memoria y el **contenido** se carga en las celdas existentes. Este patrón evita que la aplicación Cree instancias de miles de objetos, lo que ahorra tiempo y memoria.
 
-Xamarin.Formspermite [`ListView`](xref:Xamarin.Forms.ListView) la reutilización de celdas a través de la [`ListViewCachingStrategy`](xref:Xamarin.Forms.ListViewCachingStrategy) enumeración, que tiene los valores siguientes:
+Xamarin.Forms permite [`ListView`](xref:Xamarin.Forms.ListView) la reutilización de celdas a través de la [`ListViewCachingStrategy`](xref:Xamarin.Forms.ListViewCachingStrategy) enumeración, que tiene los valores siguientes:
 
 ```csharp
 public enum ListViewCachingStrategy
@@ -167,20 +167,20 @@ Existen muchas técnicas para mejorar el rendimiento de un `ListView` . Las sigu
 - Limite el uso del [`Cell.ForceUpdateSize`](xref:Xamarin.Forms.Cell.ForceUpdateSize) método. Si se sobreutiliza, se degradará el rendimiento.
 - En Android, evite establecer `ListView` la visibilidad o el color del separador de filas de una vez que se haya creado una instancia, ya que esto produce una gran penalización del rendimiento.
 - Evite cambiar el diseño de las celdas en función del [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) . Cambiar el diseño conlleva grandes costos de medición e inicialización.
-- Evite las jerarquías de diseño profundamente anidadas. Use `AbsoluteLayout` o `Grid` para ayudar a reducir el anidamiento.
-- Evite `LayoutOptions` un específico distinto de `Fill` ( `Fill` es el más barato de calcular).
+- Evite las jerarquías de diseño profundamente anidadas. Use  `AbsoluteLayout` o  `Grid` para ayudar a reducir el anidamiento.
+- Evite `LayoutOptions` un específico distinto de  `Fill` ( `Fill` es el más barato de calcular).
 - Evite colocar un `ListView` dentro `ScrollView` de por los siguientes motivos:
   - `ListView`Implementa su propio desplazamiento.
   - `ListView`No recibirá ningún gesto, ya que lo controlará el elemento primario `ScrollView` .
   - `ListView`Puede presentar un encabezado y un pie de página personalizados que se desplacen con los elementos de la lista, lo que podría ofrecer la funcionalidad para la que `ScrollView` se utilizó. Para obtener más información, vea [encabezados y pies de página](~/xamarin-forms/user-interface/listview/customizing-list-appearance.md#headers-and-footers).
 - Considere la posibilidad de un representador personalizado si necesita un diseño específico y complejo presentado en las celdas.
 
-`AbsoluteLayout`tiene la posibilidad de realizar diseños sin una única llamada de medida, lo que lo convierte en un rendimiento elevado. Si `AbsoluteLayout` no se puede usar, tenga en cuenta [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) . Si se usa `RelativeLayout` , pasar restricciones directamente será mucho más rápido que el uso de Expression API. Este método es más rápido porque la API de expresión usa JIT y, en iOS, el árbol debe interpretarse, lo que es más lento. Expression API es adecuado para los diseños de página donde solo es necesario en el diseño y la rotación iniciales, pero en `ListView` , donde se ejecuta constantemente durante el desplazamiento, afecta al rendimiento.
+`AbsoluteLayout` tiene la posibilidad de realizar diseños sin una única llamada de medida, lo que lo convierte en un rendimiento elevado. Si `AbsoluteLayout` no se puede usar, tenga en cuenta [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) . Si se usa `RelativeLayout` , pasar restricciones directamente será mucho más rápido que el uso de Expression API. Este método es más rápido porque la API de expresión usa JIT y, en iOS, el árbol debe interpretarse, lo que es más lento. Expression API es adecuado para los diseños de página donde solo es necesario en el diseño y la rotación iniciales, pero en `ListView` , donde se ejecuta constantemente durante el desplazamiento, afecta al rendimiento.
 
 La creación de un representador personalizado para un [`ListView`](xref:Xamarin.Forms.ListView) o sus celdas es un enfoque para reducir el efecto de los cálculos de diseño en el rendimiento del desplazamiento. Para obtener más información, vea [personalizar un control ListView](~/xamarin-forms/app-fundamentals/custom-renderer/listview.md) y [personalizar un ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Vista de representador personalizado (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
-- [Representador personalizado ViewCell (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
+- [Vista de representador personalizado (ejemplo)](/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+- [Representador personalizado ViewCell (ejemplo)](/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
 - [ListViewCachingStrategy](xref:Xamarin.Forms.ListViewCachingStrategy)

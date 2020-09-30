@@ -1,5 +1,5 @@
 ---
-title: Inicie la aplicación de asignación nativa desdeXamarin.Forms
+title: Inicie la aplicación de asignación nativa desde Xamarin.Forms
 description: La aplicación de mapas nativos en cada plataforma se puede iniciar desde una Xamarin.Forms aplicación mediante la Xamarin.Essentials clase iniciador.
 ms.prod: xamarin
 ms.assetid: 5CF7CD67-3F20-4D80-B99E-D35A5FD1019A
@@ -10,14 +10,14 @@ ms.date: 10/30/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c135d5dd02bba5102f5a93132f079526c84865d5
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ede34258650c378a45ee694f90de1e8b249acf71
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84129343"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559888"
 ---
-# <a name="launch-the-native-map-app-from-xamarinforms"></a>Inicie la aplicación de asignación nativa desdeXamarin.Forms
+# <a name="launch-the-native-map-app-from-no-locxamarinforms"></a>Inicie la aplicación de asignación nativa desde Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -80,7 +80,7 @@ Este código de ejemplo hace que la aplicación de asignación nativa se inicie 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Ejemplo de Maps](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Xamarin.Essentials](~/essentials/index.md?context=xamarin/xamarin-forms)
 - [Vínculos de mapa](https://developer.apple.com/library/archive/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html)
 - [Guía para desarrolladores de Maps](https://developer.android.com/guide/components/intents-common.html#Maps)

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsAnclajes de mapa
+title: Xamarin.Forms Anclajes de mapa
 description: En este artículo se explica cómo crear PIN en un Xamarin.Forms mapa.
 ms.prod: xamarin
 ms.assetid: F8FC081B-A811-4FBB-B8F8-30D6FD36BD40
@@ -10,14 +10,14 @@ ms.date: 10/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5e22888291a430863b8e45ee21d359a5acec750f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 476ef1b8fd6c8e16c5fb3e5fdd1ac60eafd90b7c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138442"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559849"
 ---
-# <a name="xamarinforms-map-pins"></a>Xamarin.FormsAnclajes de mapa
+# <a name="no-locxamarinforms-map-pins"></a>Xamarin.Forms Anclajes de mapa
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -157,7 +157,7 @@ El `PinClickedEventArgs` objeto que acompaña a ambos eventos tiene una `HideInf
 
 ## <a name="pin-types"></a>Tipos de PIN
 
-[`Pin`](xref:Xamarin.Forms.Maps.Pin)los objetos incluyen una [`Type`](xref:Xamarin.Forms.Maps.Pin.Type) propiedad, de tipo [`PinType`](xref:Xamarin.Forms.Maps.PinType) , que representa el tipo de PIN. La enumeración `PinType` define los miembros siguientes:
+[`Pin`](xref:Xamarin.Forms.Maps.Pin) los objetos incluyen una [`Type`](xref:Xamarin.Forms.Maps.Pin.Type) propiedad, de tipo [`PinType`](xref:Xamarin.Forms.Maps.PinType) , que representa el tipo de PIN. La enumeración `PinType` define los miembros siguientes:
 
 - `Generic`, representa un PIN genérico.
 - `Place`, representa un PIN para un lugar.
@@ -271,7 +271,7 @@ Para más información sobre los selectores de plantilla de datos, consulte [cre
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Ejemplo de Maps](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Representador personalizado de asignación](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)
 - [Paso de argumentos en XAML](~/xamarin-forms/xaml/passing-arguments.md)
 - [Creación de un Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

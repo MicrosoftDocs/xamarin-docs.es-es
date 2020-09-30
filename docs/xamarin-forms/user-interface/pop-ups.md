@@ -1,6 +1,6 @@
 ---
 title: Mostrar elementos emergentes
-description: 'Xamarin.Formsproporciona tres elementos de interfaz de usuario de tipo emergente: una alerta, una hoja de acción y un símbolo del sistema. En este artículo se muestra el uso de alertas, hojas de acción y API de mensajes para mostrar cuadros de diálogo que piden a los usuarios preguntas sencillas, guiar a los usuarios a través de tareas y mostrar mensajes.'
+description: 'Xamarin.Forms proporciona tres elementos de interfaz de usuario de tipo emergente: una alerta, una hoja de acción y un símbolo del sistema. En este artículo se muestra el uso de alertas, hojas de acción y API de mensajes para mostrar cuadros de diálogo que piden a los usuarios preguntas sencillas, guiar a los usuarios a través de tareas y mostrar mensajes.'
 ms.prod: xamarin
 ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
@@ -10,18 +10,18 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a7ddd9134b7214b84a883e171d7b0cadaba3390b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 58ab2f785c26019c90b91c928daed864c3c6098b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136323"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559576"
 ---
 # <a name="display-pop-ups"></a>Mostrar elementos emergentes
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
 
-Mostrar una alerta, pedir al usuario que elija una opción o mostrar un mensaje es una tarea común de la interfaz de usuario. Xamarin.Formstiene tres métodos en la [`Page`](xref:Xamarin.Forms.Page) clase para interactuar con el usuario a través de un elemento emergente: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) , [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) y `DisplayPromptAsync` . Se representan con controles nativos adecuados en cada plataforma.
+Mostrar una alerta, pedir al usuario que elija una opción o mostrar un mensaje es una tarea común de la interfaz de usuario. Xamarin.Forms tiene tres métodos en la [`Page`](xref:Xamarin.Forms.Page) clase para interactuar con el usuario a través de un elemento emergente: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) , [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) y `DisplayPromptAsync` . Se representan con controles nativos adecuados en cada plataforma.
 
 ## <a name="display-an-alert"></a>Visualización de una alerta
 
@@ -31,7 +31,7 @@ Todas las Xamarin.Forms plataformas compatibles con son un elemento emergente mo
 await DisplayAlert ("Alert", "You have been alerted", "OK");
 ```
 
-![](pop-ups-images/alert.png "Alert Dialog with One Button")
+![Cuadro de diálogo de alerta con un botón](pop-ups-images/alert.png)
 
 En este ejemplo, no se recopila información del usuario. La alerta se muestra modalmente y, después de cerrarla, el usuario sigue interactuando con la aplicación.
 
@@ -61,7 +61,7 @@ async void OnActionSheetSimpleClicked (object sender, EventArgs e)
 }
 ```
 
-![](pop-ups-images/action.png "ActionSheet Dialog")
+![Cuadro de diálogo de ActionSheet](pop-ups-images/action.png)
 
 El botón `destroy` se representa de forma distinta y puede dejarse como `null`, o bien se puede especificar como el tercer parámetro de cadena. En el ejemplo siguiente, se usa el botón `destroy`:
 
@@ -112,4 +112,4 @@ Este código muestra una respuesta predefinida de 10, limita el número de carac
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PopupsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
+- [PopupsSample](/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)

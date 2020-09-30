@@ -10,16 +10,16 @@ ms.date: 09/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 287b116d9ba2cb84e4e196fff080b8212e4eca3b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d665a80d6f1e0319fc9dc8696db379cf781ee833
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938416"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560122"
 ---
 # <a name="listview-interactivity"></a>Interactividad de ListView
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
 
 La Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) clase admite la interacción del usuario con los datos que presenta.
 
@@ -27,13 +27,13 @@ La Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) clase admite la inter
 
 El [`ListView`](xref:Xamarin.Forms.ListView) modo de selección se controla estableciendo la [`ListView.SelectionMode`](xref:Xamarin.Forms.ListView.SelectionMode) propiedad en un valor de la [`ListViewSelectionMode`](xref:Xamarin.Forms.ListViewSelectionMode) enumeración:
 
-- [`Single`](xref:Xamarin.Forms.ListViewSelectionMode.Single)indica que se puede seleccionar un solo elemento, con el elemento seleccionado resaltado. Este es el valor predeterminado.
-- [`None`](xref:Xamarin.Forms.ListViewSelectionMode.None)indica que no se pueden seleccionar elementos.
+- [`Single`](xref:Xamarin.Forms.ListViewSelectionMode.Single) indica que se puede seleccionar un solo elemento, con el elemento seleccionado resaltado. Este es el valor predeterminado.
+- [`None`](xref:Xamarin.Forms.ListViewSelectionMode.None) indica que no se pueden seleccionar elementos.
 
 Cuando un usuario pulsa un elemento, se activan dos eventos:
 
-- [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected)se desencadena cuando se selecciona un nuevo elemento.
-- [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped)se desencadena cuando se puntea un elemento.
+- [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) se desencadena cuando se selecciona un nuevo elemento.
+- [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) se desencadena cuando se puntea un elemento.
 
 Si puntea dos veces en el mismo elemento, se activarán dos [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) eventos, pero solo se desencadenará un [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) evento único.
 
@@ -76,7 +76,7 @@ De forma predeterminada, `MenuItem` no tiene ninguna manera de saber a qué celd
 
 ### <a name="xaml"></a>XAML
 
-`MenuItem`los elementos se pueden crear en una colección XAML. En el código XAML siguiente se muestra una celda personalizada con dos acciones de contexto implementadas:
+`MenuItem` los elementos se pueden crear en una colección XAML. En el código XAML siguiente se muestra una celda personalizada con dos acciones de contexto implementadas:
 
 ```xaml
 <ListView x:Name="ContextDemoList">
@@ -187,14 +187,14 @@ Las siguientes capturas de pantallas muestran la extracción a la actualización
 
 ![Incorporación de cambios de ListView a actualización completada](interactivity-images/refresh-in-progress.png)
 
-[`ListView`](xref:Xamarin.Forms.ListView)activa el [`Refreshing`](xref:Xamarin.Forms.ListView.Refreshing) evento para iniciar la actualización y la [`IsRefreshing`](xref:Xamarin.Forms.ListView.IsRefreshing) propiedad se establecerá en `true` . El código necesario para actualizar el contenido del `ListView` debería ejecutarse a continuación por el controlador de eventos para el `Refreshing` evento, o por el método ejecutado por [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand) . Una vez que `ListView` se actualiza, la `IsRefreshing` propiedad debe establecerse en `false` , o [`EndRefresh`](xref:Xamarin.Forms.ListView.EndRefresh) se debe llamar al método para indicar que la actualización se ha completado.
+[`ListView`](xref:Xamarin.Forms.ListView) activa el [`Refreshing`](xref:Xamarin.Forms.ListView.Refreshing) evento para iniciar la actualización y la [`IsRefreshing`](xref:Xamarin.Forms.ListView.IsRefreshing) propiedad se establecerá en `true` . El código necesario para actualizar el contenido del `ListView` debería ejecutarse a continuación por el controlador de eventos para el `Refreshing` evento, o por el método ejecutado por [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand) . Una vez que `ListView` se actualiza, la `IsRefreshing` propiedad debe establecerse en `false` , o [`EndRefresh`](xref:Xamarin.Forms.ListView.EndRefresh) se debe llamar al método para indicar que la actualización se ha completado.
 
 > [!NOTE]
 > Al definir un [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand) , `CanExecute` se puede especificar el método del comando para habilitar o deshabilitar el comando.
 
 ## <a name="detect-scrolling"></a>Detectar desplazamiento
 
-[`ListView`](xref:Xamarin.Forms.ListView)define un `Scrolled` evento que se desencadena para indicar que se ha producido el desplazamiento. En el ejemplo de XAML siguiente se muestra un `ListView` que establece un controlador de eventos para el `Scrolled` evento:
+[`ListView`](xref:Xamarin.Forms.ListView) define un `Scrolled` evento que se desencadena para indicar que se ha producido el desplazamiento. En el ejemplo de XAML siguiente se muestra un `ListView` que establece un controlador de eventos para el `Scrolled` evento:
 
 ```xaml
 <ListView Scrolled="OnListViewScrolled">
@@ -223,4 +223,4 @@ El `OnListViewScrolled` controlador de eventos genera los valores del `ScrolledE
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Interactividad de ListView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
+- [Interactividad de ListView (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)

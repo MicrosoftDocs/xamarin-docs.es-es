@@ -1,6 +1,6 @@
 ---
-title: 'Xamarin.FormsFormas: sintaxis de marcado de trazados'
-description: Xamarin.FormsLa sintaxis de marcado de trazados le permite especificar de forma compacta las geometrías de ruta de acceso en XAML.
+title: 'Xamarin.Forms Formas: sintaxis de marcado de trazados'
+description: Xamarin.Forms La sintaxis de marcado de trazados le permite especificar de forma compacta las geometrías de ruta de acceso en XAML.
 ms.prod: xamarin
 ms.assetid: A2C1BD59-1A16-4E26-A825-0338E2AF9E65
 ms.technology: xamarin-forms
@@ -10,20 +10,20 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8250bd5e5f7d6c9cb93a986656e908b40cec9ae2
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 743f6366cc7e798247ea0151720a81e9cbddfeeb
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918518"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559109"
 ---
-# <a name="no-locxamarinforms-shapes-path-markup-syntax"></a>Xamarin.FormsFormas: sintaxis de marcado de trazados
+# <a name="no-locxamarinforms-shapes-path-markup-syntax"></a>Xamarin.Forms Formas: sintaxis de marcado de trazados
 
 ![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
-Xamarin.Formsla sintaxis de marcado de trazados le permite especificar de forma compacta las geometrías de ruta de acceso en XAML. La sintaxis se especifica como un valor de cadena para la `Path.Data` propiedad:
+Xamarin.Forms la sintaxis de marcado de trazados le permite especificar de forma compacta las geometrías de ruta de acceso en XAML. La sintaxis se especifica como un valor de cadena para la `Path.Data` propiedad:
 
 ```xaml
 <Path Stroke="Black"
@@ -35,7 +35,7 @@ La sintaxis de marcado de trazados se compone de un `FillRule` valor opcional y 
 
 En esta sintaxis:
 
-- *fillRule* es un opcional `Xamarin.Forms.Shapes.FillRule` que especifica si la geometría debe usar `EvenOdd` o `Nonzero` `FillRule` . `F0`se utiliza para especificar la `EvenOdd` regla de relleno, mientras `F1` que se usa para especificar la `Nonzero` regla de relleno. Para obtener más información sobre las reglas de relleno, consulte [ Xamarin.Forms formas: rellenar reglas](fillrules.md).
+- *fillRule* es un opcional `Xamarin.Forms.Shapes.FillRule` que especifica si la geometría debe usar `EvenOdd` o `Nonzero` `FillRule` . `F0` se utiliza para especificar la `EvenOdd` regla de relleno, mientras `F1` que se usa para especificar la `Nonzero` regla de relleno. Para obtener más información sobre las reglas de relleno, consulte [ Xamarin.Forms formas: rellenar reglas](fillrules.md).
 - *figureDescription* representa una figura compuesta por un comando de movimiento, comandos de dibujo y un comando de cierre opcional. Un comando de movimiento especifica el punto inicial de la figura. Los comandos Draw describen el contenido de la figura y el comando opcional Close cierra la figura.
 
 En el ejemplo anterior, la sintaxis de marcado de trazados especifica un punto de inicio mediante el comando move ( `M` ), una serie de líneas rectas con el comando line ( `L` ) y cierra la ruta de acceso con el comando CLOSE ( `Z` ).
@@ -51,7 +51,7 @@ El comando move especifica el punto inicial de una nueva figura. La sintaxis de 
 
 En esta sintaxis, *startPoint* es una [`Point`](xref:Xamarin.Forms.Point) estructura que especifica el punto inicial de una nueva figura. Si enumera varios puntos después del comando de movimiento, se dibuja una línea en esos puntos.
 
-`M 10,10`es un ejemplo de un comando de movimiento válido.
+`M 10,10` es un ejemplo de un comando de movimiento válido.
 
 ## <a name="draw-commands"></a>Comandos de dibujo
 
@@ -100,13 +100,13 @@ El comando de arco elíptico crea un arco elíptico entre el punto actual y el p
 
 En esta sintaxis:
 
-- `size`es un [`Size`](xref:Xamarin.Forms.Size) que representa el radio x e y del arco.
-- `rotationAngle`es un `double` que representa el giro de la elipse, en grados.
-- `isLargeArcFlag`debe establecerse en 1 si el ángulo del arco debe ser de 180 grados o superior; de lo contrario, establézcalo en 0.
-- `sweepDirectionFlag`debe establecerse en 1 si el arco se dibuja en una dirección de ángulo positivo; de lo contrario, establézcalo en 0.
-- `endPoint`es un [`Point`](xref:Xamarin.Forms.Point) en el que se dibuja el arco.
+- `size` es un [`Size`](xref:Xamarin.Forms.Size) que representa el radio x e y del arco.
+- `rotationAngle` es un `double` que representa el giro de la elipse, en grados.
+- `isLargeArcFlag` debe establecerse en 1 si el ángulo del arco debe ser de 180 grados o superior; de lo contrario, establézcalo en 0.
+- `sweepDirectionFlag` debe establecerse en 1 si el arco se dibuja en una dirección de ángulo positivo; de lo contrario, establézcalo en 0.
+- `endPoint` es un [`Point`](xref:Xamarin.Forms.Point) en el que se dibuja el arco.
 
-`A 150,150 0 1,0 150,-150`es un ejemplo de un comando de arco elíptico válido.
+`A 150,150 0 1,0 150,-150` es un ejemplo de un comando de arco elíptico válido.
 
 Para obtener información sobre cómo crear un arco elíptico como un `PathGeometry` objeto, vea [crear un objeto ArcSegment](geometries.md#create-an-arcsegment).
 
@@ -120,7 +120,7 @@ En esta sintaxis:
 - *controlPoint2* es un [`Point`](xref:Xamarin.Forms.Point) que representa el segundo punto de control de la curva, que determina la tangente final de la curva.
 - el punto de *conexión* es un [`Point`](xref:Xamarin.Forms.Point) que representa el punto en el que se dibuja la curva.
 
-`C 100,200 200,400 300,200`es un ejemplo de un comando de curva Bézier cúbica válido.
+`C 100,200 200,400 300,200` es un ejemplo de un comando de curva Bézier cúbica válido.
 
 Para obtener información sobre cómo crear una curva Bézier cúbica como un `PathGeometry` objeto, consulte [crear un BezierSegment](geometries.md#create-a-beziersegment).
 
@@ -148,7 +148,7 @@ En esta sintaxis:
 
 Se supone que el primer punto de control es el reflejo del segundo punto de control del comando anterior, con respecto al punto actual. Si no hay ningún comando anterior, o si el comando anterior no era un comando de curva Bézier cúbica o un comando de curva Bézier cúbica suavizada, se supone que el primer punto de control tiene coincidencias con el punto actual.
 
-`S 100,200 200,300`es un ejemplo de un comando de curva Bézier cúbica suave válido.
+`S 100,200 200,300` es un ejemplo de un comando de curva Bézier cúbica suave válido.
 
 ### <a name="smooth-quadratic-bezier-curve-command"></a>Comando de curva Bézier cuadrática suavizada
 
@@ -158,7 +158,7 @@ En esta sintaxis, el *punto de conexión* es un [`Point`](xref:Xamarin.Forms.Poi
 
 El punto de control se supone que es el reflejo del punto de control del comando anterior en relación al punto actual. Si no hay ningún comando anterior o si el comando anterior no era una curva de Bézier cuadrática o un comando de curva Bézier cuadrática suavizada, se supone que el punto de control tiene coincidencias con el punto actual.
 
-`T 100,30`es un ejemplo de un comando válido de curva Bézier cuadrática suavizada.
+`T 100,30` es un ejemplo de un comando válido de curva Bézier cuadrática suavizada.
 
 ## <a name="close-command"></a>Comando de cierre
 
@@ -170,14 +170,14 @@ La sintaxis del comando cerrar es: `Z` o `z` .
 
 En lugar de un valor numérico estándar, también puede usar los siguientes valores especiales que distinguen mayúsculas de minúsculas:
 
-- `Infinity`representa `double.PositiveInfinity` .
+- `Infinity` representa `double.PositiveInfinity` .
 - `-Infinity`representa `double.NegativeInfinity` .
-- `NaN`representa `double.NaN` .
+- `NaN` representa `double.NaN` .
 
 Además, también puede usar la notación científica sin distinción entre mayúsculas y minúsculas. Por lo tanto, `+1.e17` es un valor válido.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsFormas: geometrías](geometries.md)
-- [Xamarin.FormsFormas: reglas de relleno](fillrules.md)
+- [ShapeDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms Formas: geometrías](geometries.md)
+- [Xamarin.Forms Formas: reglas de relleno](fillrules.md)

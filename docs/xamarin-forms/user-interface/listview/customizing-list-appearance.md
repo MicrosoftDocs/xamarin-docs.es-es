@@ -10,12 +10,12 @@ ms.date: 12/13/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: be8dd5d29aebf29395885d650fbd28082013d0d1
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: dcf4e7ca0f081ff000aaa69d8be3a3cb3aa43e8e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929169"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560291"
 ---
 # <a name="listview-appearance"></a>Apariencia de ListView
 
@@ -55,7 +55,7 @@ public class PageTypeGroup : List<PageModel>
     }
 ```
 
-En el código anterior, `All` es la lista que se proporcionará a nuestro ListView como el origen de enlace. `Title`y `ShortName` son las propiedades que se usarán para los encabezados de grupo.
+En el código anterior, `All` es la lista que se proporcionará a nuestro ListView como el origen de enlace. `Title` y `ShortName` son las propiedades que se usarán para los encabezados de grupo.
 
 En esta fase, `All` es una lista vacía. Agregue un constructor estático para que la lista se rellene al iniciar el programa:
 
@@ -210,9 +210,9 @@ Para crear un encabezado y un pie de página personalizados, defina las vistas d
 
 La [`ListView`](xref:Xamarin.Forms.ListView) clase tiene `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` las propiedades y, que obtienen o establecen un [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) valor que representa Cuándo está visible la barra de desplazamiento horizontal o vertical. Ambas propiedades se pueden establecer en los siguientes valores:
 
-- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)indica el comportamiento predeterminado de la barra de desplazamiento para la plataforma y es el valor predeterminado para las `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` propiedades y.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)indica que las barras de desplazamiento serán visibles, incluso cuando el contenido quepa en la vista.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)indica que las barras de desplazamiento no estarán visibles, incluso si el contenido no cabe en la vista.
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indica el comportamiento predeterminado de la barra de desplazamiento para la plataforma y es el valor predeterminado para las `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` propiedades y.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica que las barras de desplazamiento serán visibles, incluso cuando el contenido quepa en la vista.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica que las barras de desplazamiento no estarán visibles, incluso si el contenido no cabe en la vista.
 
 ## <a name="row-separators"></a>Separadores de filas
 
@@ -276,7 +276,7 @@ XAML:
 
 Todas las filas de un control ListView tienen el mismo alto de forma predeterminada. ListView tiene dos propiedades que se pueden usar para cambiar este comportamiento:
 
-- `HasUnevenRows`&ndash; `true`/`false` valor, las filas tienen altos variables si están establecidas en `true` . Tiene como valor predeterminado `false`.
+- `HasUnevenRows`&ndash; `true`/`false` valor, las filas tienen altos variables si están establecidas en `true` . Su valor predeterminado es `false`.
 - `RowHeight`&ndash;establece el alto de cada fila cuando `HasUnevenRows` es `false` .
 
 Puede establecer el alto de todas las filas estableciendo la `RowHeight` propiedad en `ListView` .
@@ -341,8 +341,8 @@ El `OnImageTapped` controlador de eventos se ejecuta en respuesta a un [`Image`]
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Agrupación (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
-- [Vista de representador personalizado (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
-- [Cambio de tamaño dinámico de filas (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-dynamicunevenlistcells)
+- [Agrupación (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
+- [Vista de representador personalizado (ejemplo)](/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+- [Cambio de tamaño dinámico de filas (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-listview-dynamicunevenlistcells)
 - [Notas de la versión de 1,4](https://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
 - [Notas de la versión de 1,3](https://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)

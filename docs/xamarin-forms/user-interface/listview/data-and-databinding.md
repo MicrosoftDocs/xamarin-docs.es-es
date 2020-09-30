@@ -10,12 +10,12 @@ ms.date: 03/23/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1e5f3b6cb84081f5e167d9afe7e7f2f2dffce247
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c77a219ab1b729aa279708d04610911fbbfe4e81
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938117"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560135"
 ---
 # <a name="listview-data-sources"></a>Orígenes de datos de ListView
 
@@ -67,7 +67,7 @@ listView.ItemsSource = new string[]
 
 Este enfoque rellenará `ListView` con una lista de cadenas. De forma predeterminada, `ListView` llamará a `ToString` y mostrará el resultado en una `TextCell` para cada fila. Para personalizar el modo en que se muestran los datos, vea apariencia de la [celda](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md).
 
-Dado `ItemsSource` que se ha enviado a una matriz, el contenido no se actualizará a medida que la lista o la matriz subyacentes cambien. Si desea que ListView se actualice automáticamente a medida que se agregan, quitan y cambian elementos en la lista subyacente, deberá utilizar `ObservableCollection` . [`ObservableCollection`](xref:System.Collections.ObjectModel.ObservableCollection`1)se define en `System.Collections.ObjectModel` y es igual `List` que, salvo que puede notificar los `ListView` cambios:
+Dado `ItemsSource` que se ha enviado a una matriz, el contenido no se actualizará a medida que la lista o la matriz subyacentes cambien. Si desea que ListView se actualice automáticamente a medida que se agregan, quitan y cambian elementos en la lista subyacente, deberá utilizar `ObservableCollection` . [`ObservableCollection`](xref:System.Collections.ObjectModel.ObservableCollection`1) se define en `System.Collections.ObjectModel` y es igual `List` que, salvo que puede notificar los `ListView` cambios:
 
 ```csharp
 ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
@@ -165,4 +165,4 @@ Suponiendo `listView` que `ItemsSource` es una lista de cadenas, `SomeLabel` ten
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Enlace bidireccional (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
+- [Enlace bidireccional (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)

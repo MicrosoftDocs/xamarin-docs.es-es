@@ -10,16 +10,16 @@ ms.date: 03/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2c271c3537c6e96497763c67c5b8128148191f16
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 78bd93e2f6556480ae7d2903771d7d6303dda148
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937363"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558381"
 ---
 # <a name="native-views-in-xaml"></a>Vistas nativas en XAML
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
 
 _Se puede hacer referencia directamente a las vistas nativas de iOS, Android y el Plataforma universal de Windows desde Xamarin.Forms los archivos XAML. Las propiedades y los controladores de eventos se pueden establecer en las vistas nativas y pueden interactuar con las Xamarin.Forms vistas. En este artículo se muestra cómo consumir vistas nativas de Xamarin.Forms archivos XAML._
 
@@ -171,7 +171,7 @@ El [`UIFont.FromName`](xref:UIKit.UIFont.FromName*) Factory Method se usa para e
 
 El [`Typeface.Create`](xref:Android.Graphics.Typeface.Create*) Factory Method se usa para establecer la [`TextView.Typeface`](xref:Android.Widget.TextView.Typeface) propiedad en un nuevo [`Typeface`](xref:Android.Graphics.Typeface) en Android. El `Typeface` nombre de familia y el estilo se especifican mediante los argumentos del método que son elementos secundarios del `x:Arguments` atributo.
 
-El [`FontFamily`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.fontfamily) constructor se usa para establecer la [`TextBlock.FontFamily`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.fontfamily) propiedad en una nueva `FontFamily` en el plataforma universal de Windows (UWP). El `FontFamily` nombre se especifica mediante el argumento de método que es un elemento secundario del `x:Arguments` atributo.
+El [`FontFamily`](/uwp/api/Windows.UI.Xaml.Media.FontFamily) constructor se usa para establecer la [`TextBlock.FontFamily`](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) propiedad en una nueva `FontFamily` en el plataforma universal de Windows (UWP). El `FontFamily` nombre se especifica mediante el argumento de método que es un elemento secundario del `x:Arguments` atributo.
 
 > [!NOTE]
 > Los argumentos deben coincidir con los tipos requeridos por el constructor o Factory Method.
@@ -466,9 +466,9 @@ La `MySpinner` clase expone `ItemsSource` `SelectedObject` las propiedades y, y 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [NativeSwitch (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
-- [Forms2Native (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/forms2native)
-- [NativeViewInsideContentView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeviewinsidecontentview)
-- [SubclassedNativeControls (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-subclassednativecontrols)
+- [NativeSwitch (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
+- [Forms2Native (ejemplo)](/samples/xamarin/xamarin-forms-samples/forms2native)
+- [NativeViewInsideContentView (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeviewinsidecontentview)
+- [SubclassedNativeControls (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-subclassednativecontrols)
 - [Formularios nativos](~/xamarin-forms/platform/native-forms.md)
 - [Paso de argumentos en XAML](~/xamarin-forms/xaml/passing-arguments.md)

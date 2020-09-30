@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsÍndices
+title: Xamarin.Forms Índices
 description: Xamarin.FormsRadioButton es un tipo de botón que permite a los usuarios seleccionar una opción de un conjunto. Cada opción está representada por un botón de radio y solo puede seleccionar un botón de radio de un grupo.
 ms.prod: xamarin
 ms.assetid: E2AA40E0-69A5-41DF-BFC4-C151CA657451
@@ -10,14 +10,14 @@ ms.date: 03/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f7cbd11f98127cb73514112dae785102ff9c51c0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 964bac947f46e5279cbdcc6bdb61d74deba7f622
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127631"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559394"
 ---
-# <a name="xamarinforms-radiobutton"></a>Xamarin.FormsÍndices
+# <a name="no-locxamarinforms-radiobutton"></a>Xamarin.Forms Índices
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
 
@@ -28,14 +28,14 @@ En las siguientes capturas de pantallas se muestran los `RadioButton` objetos en
 ![Captura de pantalla de RadioButtons en Estados seleccionados y borrados, en iOS y Android](radiobutton-images/radiobutton-states.png "RadioButtons en iOS y Android")
 
 > [!IMPORTANT]
-> `RadioButton`es experimental actualmente y solo se puede usar si se establece la `RadioButton_Experimental` marca. Para obtener más información, vea [indicadores experimentales](~/xamarin-forms/internals/experimental-flags.md).
+> `RadioButton` es experimental actualmente y solo se puede usar si se establece la `RadioButton_Experimental` marca. Para más información, vea [Marcas experimentales](~/xamarin-forms/internals/experimental-flags.md).
 
 El `RadioButton` control define las siguientes propiedades:
 
 - `IsChecked`, de tipo `bool` , que define si `RadioButton` está seleccionado. Esta propiedad usa un `TwoWay` enlace y tiene un valor predeterminado de `false` .
 - `GroupName`, de tipo `string` , que define el nombre que especifica qué `RadioButton` controles se excluyen mutuamente. Esta propiedad tiene un valor predeterminado de `null` .
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
 El `RadioButton` control define un `CheckedChanged` evento que se desencadena cuando `IsChecked` cambia la propiedad, ya sea a través de la manipulación de usuario o mediante programación. El `CheckedChangedEventArgs` objeto que acompaña al `CheckedChanged` evento tiene una propiedad única denominada `Value` , de tipo `bool` . Cuando se desencadena el evento, el valor de la `Value` propiedad se establece en el nuevo valor de la `IsChecked` propiedad.
 
@@ -116,7 +116,7 @@ En este ejemplo, cada `RadioButton` es mutuamente excluyente porque comparte el 
 
 ## <a name="respond-to-a-radiobutton-state-change"></a>Responder a un cambio de estado de RadioButton
 
-Un botón de radio tiene dos estados: seleccionado o borrado. Cuando se selecciona un botón de radio, su `IsChecked` propiedad es `true` . Cuando se borra un botón de radio, su `IsChecked` propiedad es `false` . Un botón de radio se puede desactivar haciendo clic en otro botón de radio del mismo grupo, pero no se puede borrar haciendo clic de nuevo en él. Sin embargo, puede borrar un botón de radio mediante programación estableciendo su `IsChecked` propiedad en `false` .
+Un botón de radio tiene dos estados: seleccionado o desactivado. Cuando se selecciona un botón de radio, su `IsChecked` propiedad es `true` . Cuando se desactiva un botón de radio, su propiedad `IsChecked` es `false`. Un botón de radio se puede desactivar haciendo clic en otro botón de radio del mismo grupo, pero no se puede borrar haciendo clic de nuevo en él. Sin embargo, para desactivar un botón de radio mediante programación puede establecer su propiedad `IsChecked` en `false`.
 
 Cuando la `IsChecked` propiedad cambia, ya sea a través de la manipulación de usuario o mediante programación, se `CheckedChanged` desencadena el evento. Se puede registrar un controlador de eventos para este evento para responder al cambio:
 
@@ -153,7 +153,7 @@ radioButton.CheckedChanged += (sender, e) =>
 
 ## <a name="radiobutton-visual-states"></a>Estados visuales de RadioButton
 
-`RadioButton`tiene un `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) que se puede utilizar para iniciar un cambio visual cuando `RadioButton` se selecciona un.
+`RadioButton` tiene un `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) que se puede utilizar para iniciar un cambio visual cuando `RadioButton` se selecciona un.
 
 En el siguiente ejemplo de XAML se muestra cómo definir un estado visual para el `IsChecked` Estado:
 
@@ -211,6 +211,6 @@ A veces, una aplicación entra en un estado en el que un `RadioButton` que se es
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de RadioButton (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
+- [Demostraciones de RadioButton (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
 - [Botón de Xamarin.Forms](~/xamarin-forms/user-interface/button.md)
 - [Administrador de estado visual de Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md)

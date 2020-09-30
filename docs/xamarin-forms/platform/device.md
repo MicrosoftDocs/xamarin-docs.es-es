@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsClase de dispositivo
+title: Xamarin.Forms Clase de dispositivo
 description: En este artículo se explica cómo usar la Xamarin.Forms clase Device para tener un mayor control sobre la funcionalidad y los diseños en cada plataforma.
 ms.prod: xamarin
 ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
@@ -10,16 +10,16 @@ ms.date: 07/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 38452ac477404d92468b7c9c4d2c88ce60104b50
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 8eff115e894f77aeacff0f6c072bfd338fa19844
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918026"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560512"
 ---
-# <a name="no-locxamarinforms-device-class"></a>Xamarin.FormsClase de dispositivo
+# <a name="no-locxamarinforms-device-class"></a>Xamarin.Forms Clase de dispositivo
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
 
 La [`Device`](xref:Xamarin.Forms.Device) clase contiene una serie de propiedades y métodos para ayudar a los desarrolladores a personalizar el diseño y la funcionalidad para cada plataforma.
 
@@ -29,7 +29,7 @@ Además de los métodos y las propiedades para el código de destino en tipos y 
 
 Antes de Xamarin.Forms 2.3.4, la plataforma en la que se ejecutaba la aplicación se podía obtener examinando la [`Device.OS`](xref:Xamarin.Forms.Device.OS) propiedad y comparándola con los [`TargetPlatform.iOS`](xref:Xamarin.Forms.TargetPlatform.iOS) [`TargetPlatform.Android`](xref:Xamarin.Forms.TargetPlatform.Android) valores de [`TargetPlatform.WinPhone`](xref:Xamarin.Forms.TargetPlatform.WinPhone) enumeración,, y [`TargetPlatform.Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) . De forma similar, una de las [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) sobrecargas podría usarse para proporcionar valores específicos de la plataforma a un control.
 
-Sin embargo, como Xamarin.Forms 2.3.4, estas API han quedado en desuso y se han reemplazado. La [`Device`](xref:Xamarin.Forms.Device) clase contiene ahora constantes de cadena públicas que identifican las plataformas: [`Device.iOS`](xref:Xamarin.Forms.Device.iOS) , [`Device.Android`](xref:Xamarin.Forms.Device.Android) , `Device.WinPhone` (en desuso), `Device.WinRT` (desusado), [`Device.UWP`](xref:Xamarin.Forms.Device.UWP) y [`Device.macOS`](xref:Xamarin.Forms.Device.macOS) . Del mismo modo, las [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) sobrecargas se han reemplazado por las [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) [`On`](xref:Xamarin.Forms.On) API y.
+Sin embargo, como Xamarin.Forms 2.3.4, estas API han quedado en desuso y se han reemplazado. La [`Device`](xref:Xamarin.Forms.Device) clase contiene ahora constantes de cadena públicas que identifican las plataformas: [`Device.iOS`](xref:Xamarin.Forms.Device.iOS) , [`Device.Android`](xref:Xamarin.Forms.Device.Android) , `Device.WinPhone` (en desuso), `Device.WinRT` (desusado), [`Device.UWP`](xref:Xamarin.Forms.Device.UWP) y [`Device.macOS`](xref:Xamarin.Forms.Device.macOS) . Del mismo modo, las  [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) sobrecargas se han reemplazado por las [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) [`On`](xref:Xamarin.Forms.On) API y.
 
 En C#, se pueden proporcionar valores específicos de la plataforma mediante la creación de una `switch` instrucción en la [`Device.RuntimePlatform`](xref:Xamarin.Forms.Device.RuntimePlatform) propiedad y, a continuación, proporcionar `case` instrucciones para las plataformas necesarias:
 
@@ -147,7 +147,7 @@ La [ `Styles` propiedad](~/xamarin-forms/user-interface/styles/index.md) contien
 
 ## <a name="devicegetnamedsize"></a>Device. GetNamedSize
 
-`GetNamedSize`se puede usar al establecer [`FontSize`](~/xamarin-forms/user-interface/text/fonts.md) en el código de C#:
+`GetNamedSize` se puede usar al establecer [`FontSize`](~/xamarin-forms/user-interface/text/fonts.md) en el código de C#:
 
 ```csharp
 myLabel.FontSize = Device.GetNamedSize (NamedSize.Small, myLabel);
@@ -160,7 +160,7 @@ someLabel.FontSize = Device.OnPlatform (
 
 ## <a name="devicegetnamedcolor"></a>Device.GetNamedColor
 
-Xamarin.Forms4,6 introduce compatibilidad con los colores con nombre. Un color con nombre es un color que tiene un valor diferente en función del modo del sistema (por ejemplo, claro o oscuro) que está activo en el dispositivo. En Android, se tiene acceso a los colores con nombre a través de la clase [R. color](https://developer.android.com/reference/android/R.color#constants_2) . En iOS, los colores con nombre se denominan [colores del sistema](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/#system-colors). En el Plataforma universal de Windows, los colores con nombre se denominan [recursos de tema XAML](/windows/uwp/design/controls-and-patterns/xaml-theme-resources).
+Xamarin.Forms 4,6 introduce compatibilidad con los colores con nombre. Un color con nombre es un color que tiene un valor diferente en función del modo del sistema (por ejemplo, claro o oscuro) que está activo en el dispositivo. En Android, se tiene acceso a los colores con nombre a través de la clase [R. color](https://developer.android.com/reference/android/R.color#constants_2) . En iOS, los colores con nombre se denominan [colores del sistema](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/#system-colors). En el Plataforma universal de Windows, los colores con nombre se denominan [recursos de tema XAML](/windows/uwp/design/controls-and-patterns/xaml-theme-resources).
 
 El `GetNamedColor` método se puede usar para recuperar los colores con nombre en Android, iOS y UWP. El método toma un `string` argumento y devuelve [`Color`](xref:Xamarin.Forms.Color) :
 
@@ -169,7 +169,7 @@ El `GetNamedColor` método se puede usar para recuperar los colores con nombre e
 Color color = Device.GetNamedColor(NamedPlatformColor.HoloBlueBright);
 ```
 
-`Color.Default`se devolverá cuando no se pueda encontrar un nombre de color o cuando `GetNamedColor` se invoque en una plataforma no compatible.
+`Color.Default` se devolverá cuando no se pueda encontrar un nombre de color o cuando `GetNamedColor` se invoque en una plataforma no compatible.
 
 > [!NOTE]
 > Dado `GetNamedColor` que el método devuelve un `Color` que es específico de una plataforma, normalmente se debe utilizar junto con la [`Device.RuntimePlatform`](xref:Xamarin.Forms.Device.RuntimePlatform) propiedad.
@@ -273,6 +273,6 @@ Device.BeginInvokeOnMainThread (() =>
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de dispositivo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
-- [Ejemplo de estilos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
+- [Ejemplo de dispositivo](/samples/xamarin/xamarin-forms-samples/workingwithdevice)
+- [Ejemplo de estilos](/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [API del dispositivo](xref:Xamarin.Forms.Device)

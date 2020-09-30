@@ -10,12 +10,12 @@ ms.date: 02/26/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8872c6748ba778a2622d82803d580c781bd282cd
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d65352022057ce32bd969950c2165ad530c05bbb
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139638"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559628"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>Adición de datos a la colección de elementos de un selector
 
@@ -86,5 +86,5 @@ Este método obtiene el [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedInde
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demo de selector (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
+- [Demo de selector (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
 - [Selector](xref:Xamarin.Forms.Picker)

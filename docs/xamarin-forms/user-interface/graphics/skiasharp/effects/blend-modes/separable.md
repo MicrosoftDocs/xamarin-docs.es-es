@@ -10,12 +10,12 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c1939c30cbefdbf8d6546761a8c6ac7199bfff62
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0fd934a305e34bb7406a0379a0882873e3400fe8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139690"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558367"
 ---
 # <a name="the-separable-blend-modes"></a>Modos de fusión separables
 
@@ -155,7 +155,7 @@ En la tabla siguiente se muestran todos los modos de fusión separables con expl
 | `Plus`       | Negro     | Se aclara mediante la adición de colores: SC + DC |
 | `Modulate`   | Blanco     | Se oscurece mediante la multiplicación de colores: SC · CD | 
 | `Screen`     | Negro     | Complementa el producto de complementos: SC + DC &ndash; SC · CD |
-| `Overlay`    | Gris      | Inversa de`HardLight` |
+| `Overlay`    | Gris      | Inversa de `HardLight` |
 | `Darken`     | Blanco     | Mínimo de colores: mín. (SC, DC) |
 | `Lighten`    | Negro     | Número máximo de colores: máximo (SC, DC) |
 | `ColorDodge` | Negro     | Brillante el destino en función del origen |
@@ -430,5 +430,5 @@ El `Darken` modo también funciona para este mismo efecto.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

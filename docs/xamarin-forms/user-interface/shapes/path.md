@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.FormsFormas: ruta de acceso'
+title: 'Xamarin.Forms Formas: ruta de acceso'
 description: La Xamarin.Forms clase path se puede usar para dibujar curvas y formas complejas.
 ms.prod: xamarin
 ms.assetid: B29486F4-9A5E-4588-ABDF-7EB1E69B9AE6
@@ -10,18 +10,18 @@ ms.date: 06/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 274ff08d7fffc1cd3a817906e14ebddfac2c9337
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 80b0bcd84602fc999764e7e0896a44f83401a9dd
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918260"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558900"
 ---
-# <a name="no-locxamarinforms-shapes-path"></a>Xamarin.FormsFormas: ruta de acceso
+# <a name="no-locxamarinforms-shapes-path"></a>Xamarin.Forms Formas: ruta de acceso
 
 ![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 La `Path` clase se deriva de la `Shape` clase y se puede usar para dibujar curvas y formas complejas. Estas curvas y formas suelen describirse mediante `Geometry` objetos. Para obtener información sobre las propiedades que la `Path` clase hereda de la `Shape` clase, vea [ Xamarin.Forms formas](index.md).
 
@@ -30,7 +30,7 @@ La `Path` clase se deriva de la `Shape` clase y se puede usar para dibujar curva
 - `Data`, de tipo `Geometry` , que especifica la forma que se va a dibujar.
 - `RenderTransform`, de tipo `Transform` , que representa la transformación que se aplica a la geometría de una ruta de acceso antes de que se dibuje.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
 Para obtener más información sobre las transformaciones, vea [ Xamarin.Forms transformaciones de trazado](path-transforms.md).
 
@@ -53,7 +53,7 @@ En el siguiente ejemplo de XAML se muestra cómo dibujar un triángulo mediante 
       HorizontalOptions="Start" />
 ```
 
-La `Data` cadena comienza con el comando move, indicado por `M` , que establece un punto de inicio absoluto para la ruta de acceso. `L`es el comando de línea, que crea una línea recta desde el punto inicial hasta el punto final especificado. `Z`es el comando cerrar, que crea una línea que conecta el punto actual con el punto inicial. El resultado es un triángulo:
+La `Data` cadena comienza con el comando move, indicado por `M` , que establece un punto de inicio absoluto para la ruta de acceso. `L` es el comando de línea, que crea una línea recta desde el punto inicial hasta el punto final especificado. `Z` es el comando cerrar, que crea una línea que conecta el punto actual con el punto inicial. El resultado es un triángulo:
 
 ![Triángulo de trazado](path-images/triangle.png "Triángulo de trazado")
 
@@ -66,7 +66,7 @@ Para obtener más información sobre la sintaxis de marcado de trazados, vea [ X
 
 Las curvas y formas se pueden describir mediante `Geometry` objetos, que se utilizan para establecer la `Path` propiedad del objeto `Data` . Hay una variedad de `Geometry` objetos entre los que elegir. Las `EllipseGeometry` `LineGeometry` clases, y `RectangleGeometry` describen formas relativamente simples. Para crear formas más complejas o crear curvas, use `PathGeometry` .
 
-`PathGeometry`los objetos se componen de uno o varios `PathFigure` objetos. Cada `PathFigure` objeto representa una forma diferente. Cada `PathFigure` objeto se compone de uno o varios `PathSegment` objetos, cada uno de los cuales representa una parte de conexión de la forma. Los tipos de segmento incluyen las `LineSegment` `BezierSegment` clases, y `ArcSegment` .
+`PathGeometry` los objetos se componen de uno o varios `PathFigure` objetos. Cada `PathFigure` objeto representa una forma diferente. Cada `PathFigure` objeto se compone de uno o varios `PathSegment` objetos, cada uno de los cuales representa una parte de conexión de la forma. Los tipos de segmento incluyen las `LineSegment` `BezierSegment` clases, y `ArcSegment` .
 
 En el siguiente ejemplo de XAML se muestra cómo dibujar un triángulo mediante un `PathGeometry` objeto:
 
@@ -103,8 +103,8 @@ Para obtener más información sobre las geometrías, vea [ Xamarin.Forms geomet
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsColocar](index.md)
-- [Xamarin.FormsGeometrías](geometries.md)
-- [Xamarin.FormsSintaxis de marcado de trazados](path-markup-syntax.md)
-- [Xamarin.FormsTransformaciones de ruta de acceso](path-transforms.md)
+- [ShapeDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms Colocar](index.md)
+- [Xamarin.Forms Geometrías](geometries.md)
+- [Xamarin.Forms Sintaxis de marcado de trazados](path-markup-syntax.md)
+- [Xamarin.Forms Transformaciones de ruta de acceso](path-transforms.md)

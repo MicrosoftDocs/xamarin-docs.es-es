@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsInicialización y configuración de asignaciones
+title: Xamarin.Forms Inicialización y configuración de asignaciones
 description: El Xamarin.Forms . El paquete NuGet de Maps es necesario para usar la funcionalidad de Maps en una aplicación. Además, el acceso a la ubicación del usuario requiere que se hayan concedido permisos de ubicación a la aplicación.
 ms.prod: xamarin
 ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
@@ -10,14 +10,14 @@ ms.date: 02/07/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 52e2ac5f8075c57f533fcba064223f355e07ba48
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3da0223bf72e4de60cc50be2562a0fdbd279f52e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139846"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559745"
 ---
-# <a name="xamarinforms-map-initialization-and-configuration"></a>Xamarin.FormsInicialización y configuración de asignaciones
+# <a name="no-locxamarinforms-map-initialization-and-configuration"></a>Xamarin.Forms Inicialización y configuración de asignaciones
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -60,11 +60,11 @@ Se requiere configuración adicional en Android y en el Plataforma universal de 
 La visualización e interacción con un mapa en iOS no requiere ninguna configuración adicional. Sin embargo, para tener acceso a los servicios de ubicación, debe establecer las siguientes claves en **info. plist**:
 
 - iOS 11 y versiones posteriores
-  - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26): para usar los servicios de ubicación cuando la aplicación está en uso
-  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocationalwaysandwheninuseusagedescription): para usar servicios de ubicación en todo momento
+  - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) : para usar los servicios de ubicación cuando la aplicación está en uso
+  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocationalwaysandwheninuseusagedescription) : para usar servicios de ubicación en todo momento
 - iOS 10 y versiones anteriores
-  - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26): para usar los servicios de ubicación cuando la aplicación está en uso
-  - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18): para usar servicios de ubicación en todo momento    
+  - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) : para usar los servicios de ubicación cuando la aplicación está en uso
+  - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) : para usar servicios de ubicación en todo momento    
 
 Para admitir iOS 11 y versiones anteriores, puede incluir las tres claves: `NSLocationWhenInUseUsageDescription` , `NSLocationAlwaysAndWhenInUseUsageDescription` y `NSLocationAlwaysUsageDescription` .
 
@@ -115,7 +115,7 @@ Una vez que haya obtenido una clave de API, debe agregarse dentro del `<applicat
 Esto incrusta la clave de API en el manifiesto. Sin una clave de API válida [`Map`](xref:Xamarin.Forms.Maps.Map) , el control mostrará una cuadrícula en blanco.
 
 > [!NOTE]
-> `com.google.android.geo.API_KEY`es el nombre de metadatos recomendado para la clave de API. Por compatibilidad con versiones anteriores, `com.google.android.maps.v2.API_KEY` se puede usar el nombre de los metadatos, pero solo permite la autenticación en la API de mapas de Android v2.
+> `com.google.android.geo.API_KEY` es el nombre de metadatos recomendado para la clave de API. Por compatibilidad con versiones anteriores, `com.google.android.maps.v2.API_KEY` se puede usar el nombre de los metadatos, pero solo permite la autenticación en la API de mapas de Android v2.
 
 Para que el APK acceda a Google Maps, debe incluir las huellas digitales y los nombres de paquete de SHA-1 para cada almacén de claves (depuración y lanzamiento) que use para firmar el APK. Por ejemplo, si usa un equipo para la depuración y otro equipo para generar la versión APK, debe incluir la huella digital del certificado SHA-1 del almacén de claves de depuración del primer equipo y la huella digital del certificado SHA-1 del almacén de claves de la versión del segundo equipo. Recuerde también editar las credenciales clave si cambia el **nombre del paquete** de la aplicación. Consulte [obtención de una clave de API de Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
 
@@ -271,7 +271,7 @@ Este código pasa el ensamblado en el que `Xamarin.Forms.Maps.UWP.MapRenderer` r
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Ejemplo de Maps](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Xamarin.Forms. Asigna PIN](~/xamarin-forms/user-interface/map/pins.md).
 - [API de Maps](xref:Xamarin.Forms.Maps)
 - [Representador personalizado de asignación](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)

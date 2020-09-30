@@ -10,12 +10,12 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 08be571d3ba69891a56c08efd556a999e51431c8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2dd2abed23704f6a67ac34bc828c48e7200cf99a
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139859"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558724"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Conceptos básicos del enlace de datos
 
@@ -114,10 +114,10 @@ Una sola vista puede tener enlaces de datos en algunas de sus propiedades. Sin e
 La solución para este y otros problemas implica la `Mode` propiedad, que se establece en un miembro de la `BindingMode` enumeración:
 
 - `Default`
-- `OneWay`: los valores se transfieren desde el origen al destino.
-- `OneWayToSource`: los valores se transfieren desde el destino al origen.
-- `TwoWay`: los valores se transfieren en ambos sentidos entre el origen y el destino.
-- `OneTime`: los datos van desde el origen hasta el destino, pero solo cuando los `BindingContext` cambios
+- `OneWay` : los valores se transfieren desde el origen al destino.
+- `OneWayToSource` : los valores se transfieren desde el destino al origen.
+- `TwoWay` : los valores se transfieren en ambos sentidos entre el origen y el destino.
+- `OneTime` : los datos van desde el origen hasta el destino, pero solo cuando los `BindingContext` cambios
 
 En el programa siguiente se muestra un uso común de los `OneWayToSource` `TwoWay` modos de enlace y. `Slider`Hay cuatro vistas diseñadas para controlar las `Scale` `Rotate` propiedades,, `RotateX` y `RotateY` de `Label` . En primer lugar, parece como si estas cuatro propiedades de `Label` deben ser destinos de enlace de datos porque cada una se establece mediante `Slider` . Sin embargo, el `BindingContext` de `Label` solo puede ser un objeto y hay cuatro controles deslizantes diferentes.
 
@@ -213,7 +213,7 @@ Sin embargo, el enlace para la `Scale` propiedad es `TwoWay` . Esto se debe a qu
 
 Nada ilustra la eficacia de los enlaces de datos y XAML mejor que una plantilla `ListView` .
 
-`ListView`define una `ItemsSource` propiedad de tipo `IEnumerable` y muestra los elementos de esa colección. Estos elementos pueden ser objetos de cualquier tipo. De forma predeterminada, `ListView` usa el `ToString` método de cada elemento para mostrar ese elemento. A veces, esto es exactamente lo que desea, pero en muchos casos, `ToString` solo devuelve el nombre de clase completo del objeto.
+`ListView` define una `ItemsSource` propiedad de tipo `IEnumerable` y muestra los elementos de esa colección. Estos elementos pueden ser objetos de cualquier tipo. De forma predeterminada, `ListView` usa el `ToString` método de cada elemento para mostrar ese elemento. A veces, esto es exactamente lo que desea, pero en muchos casos, `ToString` solo devuelve el nombre de clase completo del objeto.
 
 Sin embargo, los elementos de la `ListView` colección se pueden mostrar de la forma que desee mediante el uso de una *plantilla*, que implica una clase que deriva de `Cell` . La plantilla se clona para cada elemento de `ListView` , y los enlaces de datos que se han establecido en la plantilla se transfieren a los clones individuales.
 
@@ -401,7 +401,7 @@ Este es el resultado:
 
 [![Enlazar a una colección con un DataTemplate y convertidores](data-binding-basics-images/listview3.png)](data-binding-basics-images/listview3-large.png#lightbox)
 
-`ListView`Es bastante sofisticado para controlar los cambios que podrían producirse dinámicamente en los datos subyacentes, pero solo si se realizan determinados pasos. Si la colección de elementos asignada a la `ItemsSource` propiedad de `ListView` cambia durante el tiempo de ejecución, es decir, si se pueden agregar o quitar elementos de la colección, utilice una `ObservableCollection` clase para estos elementos. `ObservableCollection`implementa la `INotifyCollectionChanged` interfaz e `ListView` instalará un controlador para el `CollectionChanged` evento.
+`ListView`Es bastante sofisticado para controlar los cambios que podrían producirse dinámicamente en los datos subyacentes, pero solo si se realizan determinados pasos. Si la colección de elementos asignada a la `ItemsSource` propiedad de `ListView` cambia durante el tiempo de ejecución, es decir, si se pueden agregar o quitar elementos de la colección, utilice una `ObservableCollection` clase para estos elementos. `ObservableCollection` implementa la `INotifyCollectionChanged` interfaz e `ListView` instalará un controlador para el `CollectionChanged` evento.
 
 Si las propiedades de los elementos cambian durante el tiempo de ejecución, los elementos de la colección deben implementar la `INotifyPropertyChanged` interfaz y los cambios de señal en los valores de propiedad mediante el `PropertyChanged` evento. Esto se muestra en la siguiente parte de esta serie, [parte 5. Del enlace de datos a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
 
@@ -411,7 +411,7 @@ Los enlaces de datos proporcionan un mecanismo eficaz para vincular propiedades 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 1. Introducción con XAML (ejemplo)](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Parte 2. Sintaxis XAML esencial (ejemplo)](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Parte 3. Extensiones de marcado XAML (ejemplo)](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)

@@ -1,6 +1,6 @@
 ---
-title: 'Xamarin.FormsFormas: reglas de relleno'
-description: Xamarin.FormsLas formas de relleno de las formas determinan si un punto está en la región de relleno de una forma.
+title: 'Xamarin.Forms Formas: reglas de relleno'
+description: Xamarin.Forms Las formas de relleno de las formas determinan si un punto está en la región de relleno de una forma.
 ms.prod: xamarin
 ms.assetid: 5CABB22B-C6BE-43D1-91D9-6E90A4BD5622
 ms.technology: xamarin-forms
@@ -10,18 +10,18 @@ ms.date: 06/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 536992f5a8501f51e14dc15caa9825771e4ed950
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: a1277b0acda598128e69b39a99910a468f6baa11
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918608"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559264"
 ---
-# <a name="no-locxamarinforms-shapes-fill-rules"></a>Xamarin.FormsFormas: reglas de relleno
+# <a name="no-locxamarinforms-shapes-fill-rules"></a>Xamarin.Forms Formas: reglas de relleno
 
 ![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 Varias Xamarin.Forms clases Shapes tienen `FillRule` propiedades, de tipo `FillRule` . Estas incluyen `Polygon` , `Polyline` y `GeometryGroup` .
 
@@ -192,5 +192,5 @@ Una suma de cero da como resultado que el anillo no se rellene.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsColocar](index.md)
+- [ShapeDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms Colocar](index.md)

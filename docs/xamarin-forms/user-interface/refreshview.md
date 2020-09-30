@@ -12,14 +12,14 @@ no-loc:
 - Xamarin.Essentials
 - RefreshView
 - Universal Windows Platform
-ms.openlocfilehash: 83802683aee722468acf9bcc827ba66f45c05e6b
-ms.sourcegitcommit: cd0c0999b53e825b60471bfbfd4144cfcd783587
+ms.openlocfilehash: aa71e486e81c62a39840e4db05f206c4cb20bacd
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86225486"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559316"
 ---
-# <a name="xamarinforms-refreshview"></a>Xamarin.Forms RefreshView
+# <a name="no-locxamarinforms-no-locrefreshview"></a>Xamarin.Forms RefreshView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
 
@@ -32,12 +32,12 @@ ms.locfileid: "86225486"
 - `IsRefreshing`, de tipo `bool` , que indica el estado actual de `RefreshView` .
 - `RefreshColor`, de tipo `Color` , el color del círculo de progreso que aparece durante la actualización.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
 > [!NOTE]
 > En Universal Windows Platform , la dirección de extracción de un `RefreshView` se puede establecer con una específica de la plataforma. Para obtener más información, vea [ RefreshView dirección de extracción](~/xamarin-forms/platform/windows/refreshview-pulldirection.md).
 
-## <a name="create-a-refreshview"></a>Creación de una clase RefreshView
+## <a name="create-a-no-locrefreshview"></a>Creación de una clase RefreshView
 
 En el ejemplo siguiente se muestra cómo crear una instancia `RefreshView` de en XAML:
 
@@ -79,12 +79,12 @@ El valor de la `RefreshView.IsRefreshing` propiedad indica el estado actual de `
 
 Cuando el usuario inicia una actualización, `ICommand` se ejecuta la definida por la `Command` propiedad, que debe actualizar los elementos que se muestran. Se muestra una visualización de actualización mientras se produce la actualización, que consta de un círculo de progreso animado:
 
-[![Captura de pantalla de una RefreshView actualización de datos, en iOS y Android](refreshview-images/default-progress-circle.png "[! Operador. NO-LOC (RefreshView)] actualizar datos")](refreshview-images/default-progress-circle-large.png#lightbox "[! Operador. NO-LOC (RefreshView)] actualizar datos")
+[![Captura de pantalla de un::: no-LOC (RefreshView)::: actualizar datos, en iOS y Android](refreshview-images/default-progress-circle.png "::: no-LOC (RefreshView)::: actualizar datos")](refreshview-images/default-progress-circle-large.png#lightbox "::: no-LOC (RefreshView)::: actualizar datos")
 
 > [!NOTE]
 > Al establecer manualmente la `IsRefreshing` propiedad en `true` , se desencadenará la visualización de la actualización y se ejecutará el `ICommand` definido por la `Command` propiedad.
 
-## <a name="refreshview-appearance"></a>RefreshViewaparición
+## <a name="no-locrefreshview-appearance"></a>RefreshView aparición
 
 Además de las propiedades que `RefreshView` heredan de la [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase, `RefreshView` también define la `RefreshColor` propiedad. Esta propiedad se puede establecer para definir el color del círculo de progreso que aparece durante la actualización:
 
@@ -95,14 +95,14 @@ Además de las propiedades que `RefreshView` heredan de la [`VisualElement`](xre
 
 En la captura de pantalla siguiente se muestra un `RefreshView` con el `RefreshColor` conjunto de propiedades:
 
-[![Captura de pantalla RefreshView con un círculo de progreso de verde, en iOS y Android](refreshview-images/teal-progress-circle.png "[! Operador. NO-LOC (RefreshView)] con un círculo de progreso de verde azulado")](refreshview-images/teal-progress-circle-large.png#lightbox "[! Operador. NO-LOC (RefreshView)] con un círculo de progreso de verde azulado")
+[![Captura de pantalla de un::: no-LOC (RefreshView)::: con un círculo de progreso de verde azulado, en iOS y Android](refreshview-images/teal-progress-circle.png "::: no-LOC (RefreshView)::: con un círculo de progreso de verde azulado")](refreshview-images/teal-progress-circle-large.png#lightbox "::: no-LOC (RefreshView)::: con un círculo de progreso de verde azulado")
 
 Además, la `BackgroundColor` propiedad se puede establecer en un [`Color`](xref:Xamarin.Forms.Color) que representa el color de fondo del círculo de progreso.
 
 > [!NOTE]
 > En iOS, la `BackgroundColor` propiedad establece el color de fondo del `UIView` que contiene el círculo de progreso.
 
-## <a name="disable-a-refreshview"></a>Deshabilitar unRefreshView
+## <a name="disable-a-no-locrefreshview"></a>Deshabilitar un RefreshView
 
 Una aplicación puede entrar en un estado en el que la extracción para actualizar no es una operación válida. En tales casos, `RefreshView` se puede deshabilitar estableciendo su `IsEnabled` propiedad en `false` . Esto impedirá que los usuarios puedan desencadenar la incorporación de cambios a la actualización.
 
@@ -110,6 +110,6 @@ Como alternativa, al definir la `Command` propiedad, `CanExecute` `ICommand` se 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [RefreshViewAdventureWorks](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
-- [Diseños enlazables enXamarin.Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
-- [RefreshViewEspecífico de la plataforma de dirección de extracción](~/xamarin-forms/platform/windows/refreshview-pulldirection.md)
+- [RefreshView AdventureWorks](/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
+- [Diseños enlazables en Xamarin.Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
+- [RefreshView Específico de la plataforma de dirección de extracción](~/xamarin-forms/platform/windows/refreshview-pulldirection.md)

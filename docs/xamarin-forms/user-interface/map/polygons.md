@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsPolígonos de mapa, polilíneas y círculos
+title: Xamarin.Forms Polígonos de mapa, polilíneas y círculos
 description: En este artículo se explica cómo crear polígonos, polilíneas y círculos en una Xamarin.Forms instancia de mapa.
 ms.prod: xamarin
 ms.assetid: CDAF0B02-1AA8-4AD6-94A7-ABFC18006A2D
@@ -10,14 +10,14 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ca813f9f0f75aeaf4a2502faa7cb96d1fbead471
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d4b82cc9c04dd711cc99b558475c2e003e557252
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138416"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559784"
 ---
-# <a name="xamarinforms-map-polygons-and-polylines"></a>Xamarin.FormsRectángulos de mapa y polilíneas
+# <a name="no-locxamarinforms-map-polygons-and-polylines"></a>Xamarin.Forms Rectángulos de mapa y polilíneas
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -28,20 +28,20 @@ ms.locfileid: "84138416"
 
 Las `Polygon` `Polyline` clases, y se `Circle` derivan de la `MapElement` clase, que expone las siguientes propiedades enlazables:
 
-- `StrokeColor`es un `Color` objeto que determina el color de la línea.
-- `StrokeWidth`es un `float` objeto que determina el ancho de línea.
+- `StrokeColor` es un `Color` objeto que determina el color de la línea.
+- `StrokeWidth` es un `float` objeto que determina el ancho de línea.
 
 La `Polygon` clase define una propiedad enlazable adicional:
 
-- `FillColor`es un `Color` objeto que determina el color de fondo del polígono.
+- `FillColor` es un `Color` objeto que determina el color de fondo del polígono.
 
 Además, las `Polygon` clases y `Polyline` definen una `GeoPath` propiedad, que es una lista de [`Position`](xref:Xamarin.Forms.Maps.Position) objetos que especifican los puntos de la forma.
 
 La `Circle` clase define las siguientes propiedades enlazables:
 
-- `Center`es un [`Position`](xref:Xamarin.Forms.Maps.Position) objeto que define el centro del círculo, en latitud y longitud.
-- `Radius`es un [`Distance`](xref:Xamarin.Forms.Maps.Distance) objeto que define el radio del círculo en metros, kilómetros o millas.
-- `FillColor`es una `Color` propiedad que determina el color del perímetro del círculo.
+- `Center` es un [`Position`](xref:Xamarin.Forms.Maps.Position) objeto que define el centro del círculo, en latitud y longitud.
+- `Radius` es un [`Distance`](xref:Xamarin.Forms.Maps.Distance) objeto que define el radio del círculo en metros, kilómetros o millas.
+- `FillColor` es una `Color` propiedad que determina el color del perímetro del círculo.
 
 > [!NOTE]
 > Si `StrokeColor` no se especifica la propiedad, el trazo se establecerá de forma predeterminada en negro. Si `FillColor` no se especifica la propiedad, el relleno se establecerá de forma predeterminada en transparente. Por lo tanto, si no se especifica ninguna propiedad, la forma tendrá un contorno negro sin relleno.
@@ -233,4 +233,4 @@ La ubicación de `Circle` en el mapa viene determinada por el valor de las `Cent
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Ejemplo de Maps](/samples/xamarin/xamarin-forms-samples/workingwithmaps)

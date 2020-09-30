@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Formsen proyectos nativos de Xamarin
+title: Xamarin.Forms en proyectos nativos de Xamarin
 description: En este artículo se explica cómo consumir páginas derivadas de ContentPage que se agregan directamente a proyectos de Xamarin Native y cómo navegar entre ellas.
 ms.prod: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
@@ -10,14 +10,14 @@ ms.date: 08/19/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9fb741a03d1c8dd2a8754120d0b46567d8889a0b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e34144f253b19796ea6ec83cb3873fe373aeb914
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84132280"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560616"
 ---
-# <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin.Formsen proyectos nativos de Xamarin
+# <a name="no-locxamarinforms-in-xamarin-native-projects"></a>Xamarin.Forms en proyectos nativos de Xamarin
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)
 
@@ -27,11 +27,11 @@ El proceso de consumo de una Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.Co
 
 1. Agregue el Xamarin.Forms paquete NuGet al proyecto nativo.
 1. Agregue la [`ContentPage`](xref:Xamarin.Forms.ContentPage) Página derivada de y las dependencias al proyecto nativo.
-1. Llame al método `Forms.Init`.
+1. Llame al método `Forms.Init` .
 1. Construya una instancia de la [`ContentPage`](xref:Xamarin.Forms.ContentPage) Página derivada de y conviértala en el tipo nativo adecuado mediante uno de los siguientes métodos de extensión: `CreateViewController` para iOS, `CreateSupportFragment` para Android o `CreateFrameworkElement` para UWP.
 1. Navegue a la representación de tipo nativo de la [`ContentPage`](xref:Xamarin.Forms.ContentPage) Página derivada de mediante la API de navegación nativa.
 
-Xamarin.Formsse debe inicializar llamando al `Forms.Init` método antes de que un proyecto nativo pueda construir una [`ContentPage`](xref:Xamarin.Forms.ContentPage) Página derivada de. Elegir cuándo hacerlo depende principalmente del momento en el que sea más conveniente en el flujo de la aplicación: puede realizarse durante el inicio de la aplicación o justo antes de que `ContentPage` se construya la página derivada de. En este artículo y en las aplicaciones de ejemplo que lo acompañan, `Forms.Init` se llama al método durante el inicio de la aplicación.
+Xamarin.Forms se debe inicializar llamando al `Forms.Init` método antes de que un proyecto nativo pueda construir una [`ContentPage`](xref:Xamarin.Forms.ContentPage) Página derivada de. Elegir cuándo hacerlo depende principalmente del momento en el que sea más conveniente en el flujo de la aplicación: puede realizarse durante el inicio de la aplicación o justo antes de que `ContentPage` se construya la página derivada de. En este artículo y en las aplicaciones de ejemplo que lo acompañan, `Forms.Init` se llama al método durante el inicio de la aplicación.
 
 > [!NOTE]
 > La solución de aplicación de ejemplo **NativeForms** no contiene ningún Xamarin.Forms proyecto. En su lugar, consta de un proyecto de Xamarin. iOS, un proyecto de Xamarin. Android y un proyecto de UWP. Cada proyecto es un proyecto nativo que utiliza formularios nativos para consumir [`ContentPage`](xref:Xamarin.Forms.ContentPage) páginas derivadas de. Sin embargo, no hay ningún motivo por el que los proyectos nativos no hayan podido consumir `ContentPage` páginas derivadas de un proyecto de biblioteca de .net Standard o un proyecto compartido.
@@ -80,7 +80,7 @@ public class AppDelegate : UIApplicationDelegate
 
 El método `FinishedLaunching` realiza las siguientes tareas:
 
-- Xamarin.Formsse inicializa llamando al `Forms.Init` método.
+- Xamarin.Forms se inicializa llamando al `Forms.Init` método.
 - `AppDelegate`En el campo se almacena una referencia a la clase `static` `Instance` . Esto es para proporcionar un mecanismo para que otras clases llamen a métodos definidos en la `AppDelegate` clase.
 - `UIWindow`Se crea el, que es el contenedor principal de las vistas en aplicaciones nativas de iOS.
 - La `FolderPath` propiedad se inicializa en una ruta de acceso en el dispositivo donde se almacenarán los datos de la nota.
@@ -181,7 +181,7 @@ public class MainActivity : AppCompatActivity
 
 El método `OnCreate` realiza las siguientes tareas:
 
-- Xamarin.Formsse inicializa llamando al `Forms.Init` método.
+- Xamarin.Forms se inicializa llamando al `Forms.Init` método.
 - `MainActivity`En el campo se almacena una referencia a la clase `static` `Instance` . Esto es para proporcionar un mecanismo para que otras clases llamen a métodos definidos en la `MainActivity` clase.
 - El `Activity` contenido se establece desde un recurso de diseño. En la aplicación de ejemplo, el diseño está compuesto de un `LinearLayout` que contiene un `Toolbar` y un `FrameLayout` para actuar como contenedor de fragmentos.
 - `Toolbar`Se recupera y establece como la barra de acción para `Activity` , y se establece el título de la barra de acciones.
@@ -278,7 +278,7 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 
 ## <a name="uwp"></a>UWP
 
-En UWP, la `App` clase nativa es normalmente el lugar en el que se realizan las tareas relacionadas con el inicio de la aplicación. Xamarin.Formsnormalmente se inicializa, en Xamarin.Forms las aplicaciones para UWP, en la `OnLaunched` invalidación de la `App` clase nativa, para pasar el `LaunchActivatedEventArgs` argumento al `Forms.Init` método. Por este motivo, las aplicaciones de UWP nativas que consumen una Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage) Página derivada de pueden llamar más fácilmente al `Forms.Init` método desde el `App.OnLaunched` método.
+En UWP, la `App` clase nativa es normalmente el lugar en el que se realizan las tareas relacionadas con el inicio de la aplicación. Xamarin.Forms normalmente se inicializa, en Xamarin.Forms las aplicaciones para UWP, en la `OnLaunched` invalidación de la `App` clase nativa, para pasar el `LaunchActivatedEventArgs` argumento al `Forms.Init` método. Por este motivo, las aplicaciones de UWP nativas que consumen una Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage) Página derivada de pueden llamar más fácilmente al `Forms.Init` método desde el `App.OnLaunched` método.
 
 De forma predeterminada, la `App` clase nativa inicia la `MainPage` clase como la primera página de la aplicación. En el ejemplo de código siguiente se muestra la `MainPage` clase en la aplicación de ejemplo:
 
@@ -314,7 +314,7 @@ El `MainPage` constructor realiza las siguientes tareas:
 
 Una vez `MainPage` ejecutado el constructor, se mostrará la interfaz de usuario definida en la Xamarin.Forms `NotesPage` clase, como se muestra en la siguiente captura de pantalla:
 
-[![Captura de pantalla de una aplicación de UWP que usa una interfaz de usuario definida con Xamarin.Forms XAML](native-forms-images/uwp-notespage.png "Aplicación para UWP con un [! Operador. UI XAML de NO-LOC (Xamarin. Forms)")](native-forms-images/uwp-notespage-large.png#lightbox "Aplicación para UWP con un [! Operador. UI XAML de NO-LOC (Xamarin. Forms)")
+[![Captura de pantalla de una aplicación de UWP que usa una interfaz de usuario definida con::: no-LOC (Xamarin. Forms)::: XAML](native-forms-images/uwp-notespage.png "Aplicación para UWP con una interfaz de usuario::: no-LOC (Xamarin. Forms)::: XAML")](native-forms-images/uwp-notespage-large.png#lightbox "Aplicación para UWP con una interfaz de usuario::: no-LOC (Xamarin. Forms)::: XAML")
 
 La interacción con la interfaz de usuario, por ejemplo, al puntear en **+** [`Button`](xref:Xamarin.Forms.Button) , dará como resultado el siguiente controlador de eventos en la `NotesPage` ejecución del código subyacente:
 
@@ -338,9 +338,9 @@ public void NavigateToNoteEntryPage(Note note)
 }
 ```
 
-La navegación en UWP se realiza normalmente con el `Frame.Navigate` método, que toma un `Page` argumento. Xamarin.Formsdefine un `Frame.Navigate` método de extensión que toma una [`ContentPage`](xref:Xamarin.Forms.ContentPage) instancia de página derivada de. Por lo tanto, cuando se `NavigateToNoteEntryPage` ejecute el método, se mostrará la interfaz de usuario definida en el Xamarin.Forms `NoteEntryPage` , tal y como se muestra en la siguiente captura de pantalla:
+La navegación en UWP se realiza normalmente con el `Frame.Navigate` método, que toma un `Page` argumento. Xamarin.Forms define un `Frame.Navigate` método de extensión que toma una [`ContentPage`](xref:Xamarin.Forms.ContentPage) instancia de página derivada de. Por lo tanto, cuando se `NavigateToNoteEntryPage` ejecute el método, se mostrará la interfaz de usuario definida en el Xamarin.Forms `NoteEntryPage` , tal y como se muestra en la siguiente captura de pantalla:
 
-[![Captura de pantalla de una aplicación de UWP que usa una interfaz de usuario definida con Xamarin.Forms XAML](native-forms-images/uwp-noteentrypage.png "Aplicación para UWP con un [! Operador. UI XAML de NO-LOC (Xamarin. Forms)")](native-forms-images/uwp-noteentrypage-large.png#lightbox "Aplicación para UWP con un [! Operador. UI XAML de NO-LOC (Xamarin. Forms)")
+[![Captura de pantalla de una aplicación de UWP que usa una interfaz de usuario definida con::: no-LOC (Xamarin. Forms)::: XAML](native-forms-images/uwp-noteentrypage.png "Aplicación para UWP con una interfaz de usuario::: no-LOC (Xamarin. Forms)::: XAML")](native-forms-images/uwp-noteentrypage-large.png#lightbox "Aplicación para UWP con una interfaz de usuario::: no-LOC (Xamarin. Forms)::: XAML")
 
 Cuando `NoteEntryPage` se muestra, al puntear en la flecha atrás se desactivará el elemento de la `FrameworkElement` pila de `NoteEntryPage` retroceso de la aplicación y se devolverá al usuario al `FrameworkElement` de la `NotesPage` clase.
 
@@ -419,5 +419,5 @@ Para más información sobre la compatibilidad con la navegación hacia atrás e
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [NativeForms (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)
+- [NativeForms (ejemplo)](/samples/xamarin/xamarin-forms-samples/native2forms)
 - [Vistas nativas](~/xamarin-forms/platform/native-views/index.md)

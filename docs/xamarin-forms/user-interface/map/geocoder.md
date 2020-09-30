@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsGeocodificación de mapas
+title: Xamarin.Forms Geocodificación de mapas
 description: En este artículo se explica cómo codificar y descodificar datos de mapas geocode mediante el Xamarin.Forms . Asigna la clase de Geocoder.
 ms.prod: xamarin
 ms.assetid: DE7DB31A-8921-4614-8B49-DAEF1E7B03B3
@@ -10,14 +10,14 @@ ms.date: 10/22/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7e92385f3a82c2d12881be4ff3e54bc47533696d
-ms.sourcegitcommit: ea2abdc789d0e292c3e1700a2b53b92097e0e542
+ms.openlocfilehash: d6a63e952d7466dc4b7f2d3e8cfc39d6c63e4daf
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517498"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559979"
 ---
-# <a name="no-locxamarinforms-map-geocoding"></a>Xamarin.FormsGeocodificación de mapas
+# <a name="no-locxamarinforms-map-geocoding"></a>Xamarin.Forms Geocodificación de mapas
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -60,6 +60,6 @@ El [`GetAddressesForPositionAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetAddresse
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de Maps](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
-- [Xamarin.FormsPosición y distancia del mapa](position-distance.md)
+- [Ejemplo de Maps](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Xamarin.Forms Posición y distancia del mapa](position-distance.md)
 - [API del codificador](xref:Xamarin.Forms.Maps.Geocoder)

@@ -1,6 +1,6 @@
 ---
-title: Estilos de dispositivo enXamarin.Forms
-description: Xamarin.Formsincluye seis estilos dinámicos, conocidos como estilos de dispositivo, en la clase Device. Styles. En este artículo se explica cómo consumir los estilos de dispositivo en una Xamarin.Forms aplicación.
+title: Estilos de dispositivo en Xamarin.Forms
+description: Xamarin.Forms incluye seis estilos dinámicos, conocidos como estilos de dispositivo, en la clase Device. Styles. En este artículo se explica cómo consumir los estilos de dispositivo en una Xamarin.Forms aplicación.
 ms.prod: xamarin
 ms.assetid: 7FF19ED1-0822-4238-9435-AD970317A2F8
 ms.technology: xamarin-forms
@@ -10,18 +10,18 @@ ms.date: 02/17/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 04669479bb321da4fee6c45fd0f2c00deb5bbf1a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b8665e5489da396cb9f7ef984c97fe79fda17434
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929732"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558328"
 ---
-# <a name="device-styles-in-xamarinforms"></a>Estilos de dispositivo enXamarin.Forms
+# <a name="device-styles-in-no-locxamarinforms"></a>Estilos de dispositivo en Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 
-_Xamarin.Formsincluye seis estilos dinámicos, conocidos como estilos de dispositivo, en la clase Device. Styles._
+_Xamarin.Forms incluye seis estilos dinámicos, conocidos como estilos de dispositivo, en la clase Device. Styles._
 
 Los estilos de *dispositivo* son los siguientes:
 
@@ -130,8 +130,8 @@ Las capturas de pantallas siguientes muestran los estilos de dispositivo en cada
 
 - [Estilos de texto](~/xamarin-forms/user-interface/text/styles.md)
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Estilos dinámicos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
-- [Trabajar con estilos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
+- [Estilos dinámicos (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
+- [Trabajar con estilos (ejemplo)](/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [Device. Styles](xref:Xamarin.Forms.Device.Styles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Estilo](xref:Xamarin.Forms.Style)

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsBarra
+title: Xamarin.Forms Barra
 description: Xamarin.FormsBarra es un control de entrada de usuario que se usa para iniciar una búsqueda. El control barra admite texto de marcador de posición, entrada de consulta, ejecución y cancelación. En este artículo se explica cómo usar barra en XAML y en código.
 ms.prod: xamarin
 ms.assetId: F5EFEA72-CB23-4DD6-9545-D9BB755AF3CB
@@ -10,16 +10,16 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a4c782f95db0f8e777494c47e9e668e9af67a2cc
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 3061692311811a360020041603bb8aca7af1b1f2
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917777"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559277"
 ---
-# <a name="no-locxamarinforms-searchbar"></a>Xamarin.FormsBarra
+# <a name="no-locxamarinforms-searchbar"></a>Xamarin.Forms Barra
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 
 Xamarin.Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) Es un control de entrada de usuario que se usa para iniciar una búsqueda. El `SearchBar` control admite el texto de marcador de posición, la entrada de consulta, la ejecución de búsqueda y la cancelación. En la captura de pantalla siguiente se muestra una `SearchBar` consulta con los resultados mostrados en un `ListView` :
 
@@ -27,20 +27,20 @@ Xamarin.Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) Es un control de entra
 
 La clase `SearchBar` define las propiedades siguientes:
 
-* [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor)es un `Color` que define el color del botón Cancelar.
+* [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor) es un `Color` que define el color del botón Cancelar.
 * `CharacterSpacing`, del tipo `double`, es el espaciado entre los caracteres del texto de `SearchBar`.
-* [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes)es un `FontAttributes` valor de enumeración que determina si la `SearchBar` fuente está en negrita, en cursiva o en ninguna de ellas.
-* [`FontFamily`](xref:Xamarin.Forms.SearchBar.FontFamily)es un `string` que determina la familia de fuentes utilizada por `SearchBar` .
-* [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize)puede ser un `NamedSize` valor de enumeración o un `double` valor que represente tamaños de fuente específicos entre plataformas.
-* [`HorizontalTextAlignment`](xref:Xamarin.Forms.SearchBar.HorizontalTextAlignment)es un `TextAlignment` valor de enumeración que define la alineación horizontal del texto de la consulta.
-* `VerticalTextAlignment`es un `TextAlignment` valor de enumeración que define la alineación vertical del texto de la consulta.
-* [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder)es un `string` que define el texto del marcador de posición, como "Buscar...".
-* [`PlaceholderColor`](xref:Xamarin.Forms.InputView.PlaceholderColor)es un `Color` que define el color del texto del marcador de posición.
-* [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand)es un `ICommand` que permite enlazar acciones de usuario, como pulsaciones de dedo o clics, a comandos definidos en un ViewModel.
-* [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter)es un `object` que especifica el parámetro que se debe pasar a `SearchCommand` .
-* [`Text`](xref:Xamarin.Forms.InputView.Text)es un valor de tipo `string` que contiene el texto de la consulta en `SearchBar` .
-* [`TextColor`](xref:Xamarin.Forms.InputView.TextColor)es un `Color` que define el color del texto de la consulta.
-* `TextTransform`es un `TextTransform` valor que determina las mayúsculas y minúsculas del `SearchBar` texto.
+* [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes) es un `FontAttributes` valor de enumeración que determina si la `SearchBar` fuente está en negrita, en cursiva o en ninguna de ellas.
+* [`FontFamily`](xref:Xamarin.Forms.SearchBar.FontFamily) es un `string` que determina la familia de fuentes utilizada por `SearchBar` .
+* [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize) puede ser un `NamedSize` valor de enumeración o un `double` valor que represente tamaños de fuente específicos entre plataformas.
+* [`HorizontalTextAlignment`](xref:Xamarin.Forms.SearchBar.HorizontalTextAlignment) es un `TextAlignment` valor de enumeración que define la alineación horizontal del texto de la consulta.
+* `VerticalTextAlignment` es un `TextAlignment` valor de enumeración que define la alineación vertical del texto de la consulta.
+* [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) es un `string` que define el texto del marcador de posición, como "Buscar...".
+* [`PlaceholderColor`](xref:Xamarin.Forms.InputView.PlaceholderColor) es un `Color` que define el color del texto del marcador de posición.
+* [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) es un `ICommand` que permite enlazar acciones de usuario, como pulsaciones de dedo o clics, a comandos definidos en un ViewModel.
+* [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter) es un `object` que especifica el parámetro que se debe pasar a `SearchCommand` .
+* [`Text`](xref:Xamarin.Forms.InputView.Text) es un valor de tipo `string` que contiene el texto de la consulta en `SearchBar` .
+* [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) es un `Color` que define el color del texto de la consulta.
+* `TextTransform` es un `TextTransform` valor que determina las mayúsculas y minúsculas del `SearchBar` texto.
 
 Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que se `SearchBar` puede personalizar y ser el destino de los enlaces de datos. Especificar las propiedades de fuente en `SearchBar` es coherente con la personalización de texto en otros [ Xamarin.Forms controles de texto](~/xamarin-forms/user-interface/text/index.md). Para obtener más información, vea [fuentes Xamarin.Forms en ](~/xamarin-forms/user-interface/text/fonts.md).
 
@@ -99,8 +99,8 @@ En la captura de pantalla siguiente se muestra el `SearchBar` control resultante
 
 Se puede ejecutar una búsqueda mediante el `SearchBar` control adjuntando un controlador de eventos a uno de los siguientes eventos:
 
-* [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed)se llama a cuando el usuario hace clic en el botón buscar o presiona la tecla entrar.
-* [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged)se llama siempre que se cambia el texto del cuadro consulta.
+* [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed) se llama a cuando el usuario hace clic en el botón buscar o presiona la tecla entrar.
+* [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) se llama siempre que se cambia el texto del cuadro consulta.
 
 En el ejemplo siguiente se muestra un controlador de eventos asociado al `TextChanged` evento en XAML y `ListView` se usa para mostrar los resultados de la búsqueda:
 
@@ -195,7 +195,7 @@ Para obtener más información sobre la `ICommand` interfaz y los enlaces, consu
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-* [Demostraciones de barra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
-* [Xamarin.FormsControles de texto](~/xamarin-forms/user-interface/text/index.md)
-* [Fuentes enXamarin.Forms](~/xamarin-forms/user-interface/text/fonts.md)
-* [Xamarin.Formsenlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+* [Demostraciones de barra](/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
+* [Xamarin.Forms Controles de texto](~/xamarin-forms/user-interface/text/index.md)
+* [Fuentes en Xamarin.Forms](~/xamarin-forms/user-interface/text/fonts.md)
+* [Xamarin.Forms enlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md)

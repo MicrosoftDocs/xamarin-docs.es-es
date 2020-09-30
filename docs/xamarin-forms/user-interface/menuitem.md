@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsObjetos
+title: Xamarin.Forms Objetos
 description: La clase MenuItem se usa para crear elementos de menú para menús como menús contextuales de elementos de ListView y menús flotante de aplicación de Shell.
 ms.prod: xamarin
 ms.assetId: 62655C21-6053-466D-A7F4-DE2BE36538F5
@@ -10,14 +10,14 @@ ms.date: 08/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6b27f778a417a2bc0b458af4214ee8cb914fd93d
-ms.sourcegitcommit: 34fa3086c55b1e01838419c930f839c20662c362
+ms.openlocfilehash: 749e569e36896441c5b7cebbc4425d9c0e860e0b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990855"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559641"
 ---
-# <a name="xamarinforms-menuitem"></a>Xamarin.FormsObjetos
+# <a name="no-locxamarinforms-menuitem"></a>Xamarin.Forms Objetos
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
 
@@ -27,20 +27,20 @@ Las siguientes capturas `MenuItem` de pantallas muestran objetos en un `ListView
 
 [!["MenuItem en iOS y Android"](menuitem-images/menuitem-demo-cropped.png "MenuItem en iOS y Android")](menuitem-images/menuitem-demo-full.png#lightbox "MenuItem en la imagen completa de iOS y Android")
 
-La `MenuItem` clase define las siguientes propiedades:
+La clase `MenuItem` define las propiedades siguientes:
 
-* [`Command`](xref:Xamarin.Forms.MenuItem.Command)es un `ICommand` que permite enlazar acciones de usuario, como pulsaciones de dedo o clics, a comandos definidos en un ViewModel.
-* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter)es un `object` que especifica el parámetro que se debe pasar a `Command` .
-* [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource)es un `ImageSource` valor que define el icono de presentación.
-* [`IsDestructive`](xref:Xamarin.Forms.MenuItem.IsDestructive)es un `bool` valor que indica si `MenuItem` quita su elemento de interfaz de usuario asociado de la lista.
-* [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled)es un `bool` valor que indica si este objeto responde a la entrada del usuario.
-* [`Text`](xref:Xamarin.Forms.MenuItem.Text)es un `string` valor que especifica el texto para mostrar.
+* [`Command`](xref:Xamarin.Forms.MenuItem.Command) es un `ICommand` que permite enlazar acciones de usuario, como pulsaciones de dedo o clics, a comandos definidos en un ViewModel.
+* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter) es un `object` que especifica el parámetro que se debe pasar a `Command` .
+* [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) es un `ImageSource` valor que define el icono de presentación.
+* [`IsDestructive`](xref:Xamarin.Forms.MenuItem.IsDestructive) es un `bool` valor que indica si `MenuItem` quita su elemento de interfaz de usuario asociado de la lista.
+* [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) es un `bool` valor que indica si este objeto responde a la entrada del usuario.
+* [`Text`](xref:Xamarin.Forms.MenuItem.Text) es un `string` valor que especifica el texto para mostrar.
 
 Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, por lo que la `MenuItem` instancia puede ser el destino de los enlaces de datos.
 
 ## <a name="create-a-menuitem"></a>Crear un MenuItem
 
-`MenuItem`los objetos se pueden usar dentro de un menú contextual en `ListView` los elementos de un objeto. El patrón más común es crear `MenuItem` objetos dentro de una `ViewCell` instancia de, que se utiliza como el `DataTemplate` objeto para los `ListView` s `ItemTemplate` . Cuando el `ListView` objeto se rellena, creará cada elemento con `DataTemplate` , exponiendo las `MenuItem` opciones cuando el menú contextual se active para un elemento.
+`MenuItem` los objetos se pueden usar dentro de un menú contextual en `ListView` los elementos de un objeto. El patrón más común es crear `MenuItem` objetos dentro de una `ViewCell` instancia de, que se utiliza como el `DataTemplate` objeto para los `ListView` s `ItemTemplate` . Cuando el `ListView` objeto se rellena, creará cada elemento con `DataTemplate` , exponiendo las `MenuItem` opciones cuando el menú contextual se active para un elemento.
 
 En el ejemplo siguiente se muestra la `MenuItem` creación de instancias en el contexto de un `ListView` objeto:
 
@@ -192,7 +192,7 @@ public MenuItemXamlMvvmPage()
 ## <a name="menuitem-icons"></a>Iconos de MenuItem
 
 > [!WARNING]
-> `MenuItem`los objetos solo muestran iconos en Android. En otras plataformas, solo se mostrará el texto especificado por la `Text` propiedad.
+> `MenuItem` los objetos solo muestran iconos en Android. En otras plataformas, solo se mostrará el texto especificado por la `Text` propiedad.
 
  Los iconos se especifican mediante la `IconImageSource` propiedad. Si se especifica un icono, no se mostrará el texto especificado por la `Text` propiedad. En la captura de pantalla siguiente se muestra un `MenuItem` con un icono en Android:
 
@@ -263,5 +263,5 @@ En UWP, el menú contextual se activa haciendo clic con el botón derecho en un 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-* [Demostraciones de MenuItem](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
-* [Imágenes enXamarin.Forms](~/xamarin-forms/user-interface/images.md)
+* [Demostraciones de MenuItem](/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
+* [Imágenes en Xamarin.Forms](~/xamarin-forms/user-interface/images.md)

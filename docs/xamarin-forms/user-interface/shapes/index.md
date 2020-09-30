@@ -1,6 +1,6 @@
 ---
-title: Xamarin.FormsColocar
-description: Xamarin.FormsLas formas son tipos de vistas que permiten dibujar formas en la pantalla.
+title: Xamarin.Forms Colocar
+description: Xamarin.Forms Las formas son tipos de vistas que permiten dibujar formas en la pantalla.
 ms.prod: xamarin
 ms.assetid: 4E749FE8-852C-46DA-BB1E-652936106357
 ms.technology: xamarin-forms
@@ -10,23 +10,23 @@ ms.date: 07/30/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6a0771ac0dbbbc89301aeca3812c3b49e14655a2
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 07765fdb9f67f21415db495da1b635b0507b7ed1
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918458"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559212"
 ---
-# <a name="no-locxamarinforms-shapes"></a>Xamarin.FormsColocar
+# <a name="no-locxamarinforms-shapes"></a>Xamarin.Forms Colocar
 
 ![API de versión preliminar](~/media/shared/preview.png)
 
-Un `Shape` es un tipo de [`View`](xref:Xamarin.Forms.View) que permite dibujar una forma en la pantalla. `Shape`los objetos se pueden usar dentro de las clases de diseño y la mayoría de los controles, ya que la `Shape` clase se deriva de la `View` clase.
+Un `Shape` es un tipo de [`View`](xref:Xamarin.Forms.View) que permite dibujar una forma en la pantalla. `Shape` los objetos se pueden usar dentro de las clases de diseño y la mayoría de los controles, ya que la `Shape` clase se deriva de la `View` clase.
 
-Xamarin.FormsLas formas están disponibles en el `Xamarin.Forms.Shapes` espacio de nombres de iOS, Android, MacOS, el plataforma universal de Windows (UWP) y el Windows Presentation Foundation (WPF).
+Xamarin.Forms Las formas están disponibles en el `Xamarin.Forms.Shapes` espacio de nombres de iOS, Android, MacOS, el plataforma universal de Windows (UWP) y el Windows Presentation Foundation (WPF).
 
 > [!IMPORTANT]
-> Xamarin.FormsLas formas actualmente son experimentales y solo se pueden usar si se establece la `Shapes_Experimental` marca. Para obtener más información, vea [indicadores experimentales](~/xamarin-forms/internals/experimental-flags.md).
+> Xamarin.Forms Las formas actualmente son experimentales y solo se pueden usar si se establece la `Shapes_Experimental` marca. Para más información, vea [Marcas experimentales](~/xamarin-forms/internals/experimental-flags.md).
 
 `Shape` define las siguientes propiedades:
 
@@ -40,13 +40,13 @@ Xamarin.FormsLas formas están disponibles en el `Xamarin.Forms.Shapes` espacio 
 - `StrokeMiterLimit`, de tipo `double` , especifica el límite en la proporción de la longitud del ángulo en la mitad `StrokeThickness` de una forma. El valor predeterminado de esta propiedad es 10,0.
 - `StrokeThickness`, de tipo `double` , indica el ancho del contorno de la forma. El valor predeterminado de esta propiedad es 0,0.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
-Xamarin.Formsdefine un número de objetos que derivan de la `Shape` clase. Son `Ellipse` ,, `Line` `Path` , `Polygon` , `Polyline` y `Rectangle` .
+Xamarin.Forms define un número de objetos que derivan de la `Shape` clase. Son `Ellipse` ,, `Line` `Path` , `Polygon` , `Polyline` y `Rectangle` .
 
 ## <a name="paint-shapes"></a>Formas de dibujo
 
-`Brush`los objetos se utilizan para pintar las formas `Stroke` y `Fill` :
+`Brush` los objetos se utilizan para pintar las formas `Stroke` y `Fill` :
 
 ```xaml
 <Ellipse Fill="DarkBlue"
@@ -62,7 +62,7 @@ En este ejemplo, se especifican el trazo y el relleno de un `Ellipse` :
 ![Formas de dibujo](images/ellipse.png "Formas de dibujo")
 
 > [!IMPORTANT]
-> `Brush`los objetos usan un convertidor de tipos que permite [`Color`](xref:Xamarin.Forms.Color) especificar valores para la `Stroke` propiedad.
+> `Brush` los objetos usan un convertidor de tipos que permite [`Color`](xref:Xamarin.Forms.Color) especificar valores para la `Stroke` propiedad.
 
 Si no se especifica un `Brush` objeto para `Stroke` , o si se establece `StrokeThickness` en 0, no se dibuja el borde alrededor de la forma.
 
@@ -70,7 +70,7 @@ Para obtener más información sobre los `Brush` objetos, vea [ Xamarin.Forms pi
 
 ## <a name="stretch-shapes"></a>Formas de ajuste
 
-`Shape`los objetos tienen una `Aspect` propiedad, de tipo `Stretch` . Esta propiedad determina cómo `Shape` se ajusta el contenido de un objeto para rellenar el `Shape` espacio de diseño del objeto. El `Shape` espacio de diseño de un objeto es la cantidad de espacio que el `Shape` sistema de diseño asigna a Xamarin.Forms , debido a una `WidthRequest` configuración explícita y a la `HeightRequest` `HorizontalOptions` configuración de y `VerticalOptions` .
+`Shape` los objetos tienen una `Aspect` propiedad, de tipo `Stretch` . Esta propiedad determina cómo `Shape` se ajusta el contenido de un objeto para rellenar el `Shape` espacio de diseño del objeto. El `Shape` espacio de diseño de un objeto es la cantidad de espacio que el `Shape` sistema de diseño asigna a Xamarin.Forms , debido a una `WidthRequest` configuración explícita y a la `HeightRequest` `HorizontalOptions` configuración de y `VerticalOptions` .
 
 La enumeración `Stretch` define los miembros siguientes:
 
@@ -102,9 +102,9 @@ En este ejemplo, un `Path` objeto dibuja un corazón. Las `Path` `WidthRequest` 
 
 ## <a name="draw-dashed-shapes"></a>Dibujar formas discontinuas
 
-`Shape`los objetos tienen una `StrokeDashArray` propiedad, de tipo `DoubleCollection` . Esta propiedad representa una colección de `double` valores que indican el modelo de guiones y espacios que se usan para esquematizar una forma. Un `DoubleCollection` es `ObservableCollection` de `double` valores. Cada `double` de la colección especifica la longitud de un guión o un espacio. El primer elemento de la colección, que se encuentra en el índice 0, especifica la longitud de un guión. El segundo elemento de la colección, que se encuentra en el índice 1, especifica la longitud de un intervalo. Por lo tanto, los objetos con un valor de índice par especifican guiones, mientras que los objetos con un valor de índice impar especifican huecos.
+`Shape` los objetos tienen una `StrokeDashArray` propiedad, de tipo `DoubleCollection` . Esta propiedad representa una colección de `double` valores que indican el modelo de guiones y espacios que se usan para esquematizar una forma. Un `DoubleCollection` es `ObservableCollection` de `double` valores. Cada `double` de la colección especifica la longitud de un guión o un espacio. El primer elemento de la colección, que se encuentra en el índice 0, especifica la longitud de un guión. El segundo elemento de la colección, que se encuentra en el índice 1, especifica la longitud de un intervalo. Por lo tanto, los objetos con un valor de índice par especifican guiones, mientras que los objetos con un valor de índice impar especifican huecos.
 
-`Shape`los objetos también tienen una `StrokeDashOffset` propiedad, de tipo `double` , que especifica la distancia dentro del patrón de guiones donde comienza un guión. Si no se establece esta propiedad, se producirá `Shape` un contorno sólido.
+`Shape` los objetos también tienen una `StrokeDashOffset` propiedad, de tipo `double` , que especifica la distancia dentro del patrón de guiones donde comienza un guión. Si no se establece esta propiedad, se producirá `Shape` un contorno sólido.
 
 Las formas de guiones se pueden dibujar mediante el establecimiento de las `StrokeDashArray` `StrokeDashOffset` propiedades y. La `StrokeDashArray` propiedad se debe establecer en uno o más `double` valores, donde cada par está delimitado por una sola coma y/o uno o varios espacios. Por ejemplo, "0,5 1,0" y "0.5, 1.0" son válidos.
 
@@ -129,7 +129,7 @@ En este ejemplo, se dibuja un rectángulo relleno con un trazo discontinuo:
 
 Una línea tiene tres partes: el extremo inicial, el cuerpo de la línea y el extremo final. Los extremos inicial y final describen la forma al principio y al final de una línea, o segmento.
 
-`Shape`los objetos tienen una `StrokeLineCap` propiedad, de tipo `PenLineCap` , que describe la forma en el principio y el final de una línea, o segmento. La enumeración `PenLineCap` define los miembros siguientes:
+`Shape` los objetos tienen una `StrokeLineCap` propiedad, de tipo `PenLineCap` , que describe la forma en el principio y el final de una línea, o segmento. La enumeración `PenLineCap` define los miembros siguientes:
 
 - `Flat`, que representa un extremo que no se extiende más allá del último punto de la línea. Esto es comparable a ningún extremo de línea y es el valor predeterminado de la `StrokeLineCap` propiedad.
 - `Square`, que representa un rectángulo que tiene un alto igual al grosor de la línea y una longitud igual a la mitad del grosor de la línea.
@@ -156,7 +156,7 @@ En este ejemplo, la línea roja se redondea al principio y al final de la línea
 
 ## <a name="control-line-joins"></a>Combinaciones de línea de control
 
-`Shape`los objetos tienen una `StrokeLineJoin` propiedad, de tipo `PenLineJoin` , que especifica el tipo de combinación que se usa en los vértices de la forma. La enumeración `PenLineJoin` define los miembros siguientes:
+`Shape` los objetos tienen una `StrokeLineJoin` propiedad, de tipo `PenLineJoin` , que especifica el tipo de combinación que se usa en los vértices de la forma. La enumeración `PenLineJoin` define los miembros siguientes:
 
 - `Miter`, que representa los vértices angulares normales. Este es el valor predeterminado de la propiedad `StrokeLineJoin`.
 - `Bevel`, que representa los vértices biselados.
@@ -180,6 +180,6 @@ En este ejemplo, la polilínea azul oscuro tiene combinaciones redondeadas en su
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ShapeDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsBrush](~/xamarin-forms/user-interface/brushes/index.md)
-- [Colores enXamarin.Forms](~/xamarin-forms/user-interface/colors.md)
+- [ShapeDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Pinceles de Xamarin.Forms](~/xamarin-forms/user-interface/brushes/index.md)
+- [Colores en Xamarin.Forms](~/xamarin-forms/user-interface/colors.md)

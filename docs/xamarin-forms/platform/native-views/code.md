@@ -10,12 +10,12 @@ ms.date: 04/27/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4cad46bdee1b49c316947bc56bdb69a3b9e9a270
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 71df780c648bcaa5a2ca4db388b52ac77a64d158
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938221"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560551"
 ---
 # <a name="native-views-in-c"></a>Vistas nativas en C\#
 
@@ -33,8 +33,8 @@ En las siguientes capturas de pantallas se muestran vistas específicas de la pl
 
 La capacidad de agregar vistas específicas de la plataforma a un Xamarin.Forms diseño está habilitada por dos métodos de extensión en cada plataforma:
 
-- `Add`: agrega una vista específica de la plataforma a la [`Children`](xref:Xamarin.Forms.Layout`1.Children) colección de un diseño.
-- `ToView`: toma una vista específica de la plataforma y la ajusta como una Xamarin.Forms [`View`](xref:Xamarin.Forms.View) que se puede establecer como la `Content` propiedad de un control.
+- `Add` : agrega una vista específica de la plataforma a la [`Children`](xref:Xamarin.Forms.Layout`1.Children) colección de un diseño.
+- `ToView` : toma una vista específica de la plataforma y la ajusta como una Xamarin.Forms [`View`](xref:Xamarin.Forms.View) que se puede establecer como la `Content` propiedad de un control.
 
 El uso de estos métodos en un Xamarin.Forms proyecto compartido requiere la importación del espacio de nombres específico de la plataforma adecuado Xamarin.Forms :
 
@@ -325,5 +325,5 @@ En este artículo se ha explicado cómo agregar vistas nativas a un Xamarin.Form
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [NativeEmbedding (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
+- [NativeEmbedding (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
 - [Formularios nativos](~/xamarin-forms/platform/native-forms.md)
