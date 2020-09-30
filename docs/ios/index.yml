@@ -1,21 +1,21 @@
 ### YamlMime:Landing
 title: Xamarin.iOS
-summary: Xamarin.iOS expone el iOS SDK completo para los desarrolladores de .NET. Cree aplicaciones iOS, totalmente nativas, con C# o F# en Visual Studio.
+summary: Xamarin.iOS expone el SDK de iOS completo para los desarrolladores de .NET. Compile aplicaciones iOS totalmente nativas mediante C# o F# en Visual Studio.
 metadata:
   title: Xamarin.iOS
-  description: Xamarin.iOS expone el iOS SDK completo para los desarrolladores de .NET.
+  description: Xamarin.iOS expone el SDK de iOS completo para los desarrolladores de .NET.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: 7DF889E9-23F6-408F-B836-E0FDF5F0FA9B
   author: davidbritch
   ms.author: dabritch
   ms.date: 01/24/2020
-  ms.openlocfilehash: f800b61bfdf9d1e79eed6e943c2b49e4724ef641
-  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+  ms.openlocfilehash: c54bbc3d1157ad46abbfe798dbf3227efaed4f78
+  ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 04/09/2020
-  ms.locfileid: "77374115"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91432227"
 landingContent:
 - title: Primeros pasos
   linkLists:
@@ -53,7 +53,7 @@ landingContent:
       url: ~/ios/app-fundamentals/security-privacy.md
     - text: Entrada táctil
       url: ~/ios/app-fundamentals/touch/index.md
-    - text: Ver más >
+    - text: Más información >
       url: ~/ios/app-fundamentals/index.md
 - title: Interfaz de usuario
   linkLists:
@@ -93,7 +93,7 @@ landingContent:
       url: ~/ios/platform/3d-touch.md
     - text: Touch ID y Face ID
       url: ~/ios/platform/touch-id-face-id.md
-    - text: Ver más >
+    - text: Más información >
       url: ~/ios/platform/index.md
 - title: Xamarin.Essentials
   linkLists:
@@ -101,14 +101,14 @@ landingContent:
     links:
     - text: Acerca de
       url: ~/essentials/index.md?context=xamarin/ios
-    - text: Primeros pasos
+    - text: Introducción
       url: ~/essentials/get-started.md?context=xamarin/ios
     - text: Compatibilidad de plataformas y características
       url: ~/essentials/platform-feature-support.md?context=xamarin/ios
-    - text: Solución de problemas
+    - text: Solucionar problemas
       url: ~/essentials/troubleshooting.md?context=xamarin/ios
     - text: Notas de la versión
-      url: https://docs.microsoft.com/xamarin/essentials/release-notes/
+      url: /xamarin/essentials/release-notes/
 - title: Datos y servicios en la nube
   linkLists:
   - linkListType: concept
@@ -149,7 +149,7 @@ landingContent:
       url: ~/ios/deploy-test/touch.unit.md
     - text: Implementación inalámbrica
       url: ~/ios/deploy-test/wireless-deployment.md
-    - text: Ver más >
+    - text: Más información >
       url: ~/ios/deploy-test/index.md
 - title: Conceptos avanzados y funcionamiento interno
   linkLists:
@@ -179,7 +179,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Primeros pasos
+    - text: Introducción
       url: ~/ios/watchos/get-started/index.md
     - text: Aspectos básicos de la aplicación
       url: ~/ios/watchos/app-fundamentals/index.md
@@ -197,7 +197,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Primeros pasos
+    - text: Introducción
       url: ~/ios/tvos/get-started/index.md
     - text: Aspectos básicos de la aplicación
       url: ~/ios/tvos/app-fundamentals/index.md

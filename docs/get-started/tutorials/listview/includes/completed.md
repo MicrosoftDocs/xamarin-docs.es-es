@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b01ea403fde614bc06e616c3b1e30bfd8ed10a0f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 8d7572d4fb04bd7974c1badc28226c991e60ddcd
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71107347"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451637"
 ---
 Ha completado el tutorial, donde ha aprendido a:
 
@@ -24,6 +24,6 @@ Para obtener más información sobre los conceptos básicos de creación de apli
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ListViewTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-listviewtutorial/)
+- [ListViewTutorial (sample)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-listviewtutorial/)
 - [Guía sobre la vista de lista de Xamarin.Forms](~/xamarin-forms/user-interface/listview/index.md)
 - [API de las vistas de lista](xref:Xamarin.Forms.ListView)
