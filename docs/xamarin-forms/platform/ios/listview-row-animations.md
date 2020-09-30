@@ -10,12 +10,12 @@ ms.date: 02/21/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 594e436c9db7c123fea4f9aa262c9d27af765b07
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 53930f6b6b83ea855db9538f19e88482a4d1a82f
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136011"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557457"
 ---
 # <a name="listview-row-animations-on-ios"></a>Animaciones de filas de ListView en iOS
 
@@ -47,10 +47,10 @@ listView.On<iOS>().SetRowAnimationsEnabled(false);
 El `ListView.On<iOS>` método especifica que este específico de la plataforma solo se ejecutará en iOS. El `ListView.SetRowAnimationsEnabled` método, en el [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) espacio de nombres, se utiliza para controlar si se deshabilitan las animaciones de filas cuando [`ListView`](xref:Xamarin.Forms.ListView) se actualiza la colección de elementos. Además, se `ListView.GetRowAnimationsEnabled` puede utilizar el método para devolver si las animaciones de fila están deshabilitadas en `ListView` .
 
 > [!NOTE]
-> [`ListView`](xref:Xamarin.Forms.ListView)las animaciones de fila están habilitadas de forma predeterminada. Por lo tanto, una animación se produce cuando se inserta una nueva fila en `ListView` .
+> [`ListView`](xref:Xamarin.Forms.ListView) las animaciones de fila están habilitadas de forma predeterminada. Por lo tanto, una animación se produce cuando se inserta una nueva fila en `ListView` .
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

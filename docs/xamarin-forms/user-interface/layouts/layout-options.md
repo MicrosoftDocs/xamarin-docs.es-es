@@ -1,5 +1,5 @@
 ---
-title: Opciones de diseño enXamarin.Forms
+title: Opciones de diseño en Xamarin.Forms
 description: Cada Xamarin.Forms vista tiene las propiedades HorizontalOptions y VerticalOptions, de tipo LayoutOptions. En este artículo se explica el efecto que tiene cada valor de LayoutOptions en la alineación y la expansión de una vista.
 ms.prod: xamarin
 ms.assetid: 7CAB5631-5153-4DEF-8AD7-C6011CE44307
@@ -10,16 +10,16 @@ ms.date: 02/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1a3b9db435de49c438f458d1c4d85d3f81bbf749
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: bf85bb3bf6f694aa5eefa8512b8391084228598e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930694"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563528"
 ---
-# <a name="layout-options-in-xamarinforms"></a>Opciones de diseño enXamarin.Forms
+# <a name="layout-options-in-no-locxamarinforms"></a>Opciones de diseño en Xamarin.Forms
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
 
 _Cada Xamarin.Forms vista tiene las propiedades HorizontalOptions y VerticalOptions, de tipo LayoutOptions. En este artículo se explica el efecto que tiene cada valor de LayoutOptions en la alineación y la expansión de una vista._
 
@@ -53,7 +53,7 @@ Los `StartAndExpand` `CenterAndExpand` valores,, `EndAndExpand` y `FillAndExpand
 > [!NOTE]
 > El valor predeterminado de las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) y [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) de una vista es [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill).
 
-## <a name="alignment"></a>Alineación
+## <a name="alignment"></a>Alignment
 
 La alineación controla cómo se coloca una vista dentro de su diseño primario cuando el diseño primario contiene espacio no utilizado (es decir, el diseño primario es mayor que el tamaño combinado de todos sus elementos secundarios).
 
@@ -62,7 +62,7 @@ Un [`StackLayout`](xref:Xamarin.Forms.StackLayout) solo respeta los `Start` `Cen
 No [`StackLayout`](xref:Xamarin.Forms.StackLayout) respeta los `Start` `Center` campos,, `End` y en las `Fill` [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) vistas secundarias que se encuentran en la misma dirección que la `StackLayout` orientación. Por consiguiente, una orientada verticalmente `StackLayout` omite `Start` los `Center` campos,, `End` o `Fill` si se establecen en las [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) propiedades de las vistas secundarias. De forma similar, una orientación horizontal `StackLayout` omite los `Start` `Center` campos,, `End` o `Fill` si se establecen en las [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) propiedades de las vistas secundarias.
 
 > [!NOTE]
-> [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill)generalmente invalida las solicitudes de tamaño especificadas mediante [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) las [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) propiedades y.
+> [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill) generalmente invalida las solicitudes de tamaño especificadas mediante  [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) las [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) propiedades y.
 
 En el siguiente ejemplo de código XAML se muestra una orientación vertical [`StackLayout`](xref:Xamarin.Forms.StackLayout) en la que cada elemento secundario [`Label`](xref:Xamarin.Forms.Label) establece su [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) propiedad en uno de los cuatro campos de alineación de la [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) estructura:
 
@@ -157,5 +157,5 @@ En este artículo se ha explicado el efecto que [`LayoutOptions`](xref:Xamarin.F
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [LayoutOptions (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
+- [LayoutOptions (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
 - [LayoutOptions](xref:Xamarin.Forms.LayoutOptions)

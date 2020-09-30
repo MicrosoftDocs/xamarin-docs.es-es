@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a0c30d32d53397392a4be2ca984ac5f60975ca78
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 22e020ad585c39671d3e3cc8ec47f55c8c41c90c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936323"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563762"
 ---
 # <a name="entry-font-size-on-ios"></a>Tamaño de fuente de entrada en iOS
 
@@ -58,6 +58,6 @@ El resultado es que se escala el tamaño de fuente del [`Entry`](xref:Xamarin.Fo
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

@@ -10,22 +10,22 @@ ms.date: 12/13/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5fa9c7592ecd2cb314ce12d7e303677447a5e104
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d5e1cb9709c224ed5059de24bb45eed882ef216b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931175"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563541"
 ---
 # <a name="layout-compression"></a>Compresión de diseño
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
 
 _La compresión de diseño quita los diseños especificados del árbol visual para intentar mejorar el rendimiento de la representación de páginas. En este artículo se explica cómo habilitar la compresión del diseño y las ventajas que puede llevar a cabo._
 
 ## <a name="overview"></a>Información general
 
-Xamarin.Formsrealiza el diseño mediante dos series de llamadas a métodos recursivos:
+Xamarin.Forms realiza el diseño mediante dos series de llamadas a métodos recursivos:
 
 - El diseño comienza en la parte superior del árbol visual con una página y continúa a través de todas las ramas del árbol visual para abarcar todos los elementos visuales de una página. Los elementos que son elementos primarios de otros elementos son responsables de ajustar el tamaño y la posición de sus elementos secundarios en relación con ellos mismos.
 - La invalidación es el proceso por el que un cambio en un elemento de una página desencadena un nuevo ciclo de diseño. Los elementos se consideran no válidos cuando ya no tienen el tamaño o la posición correctos. Cada elemento del árbol visual que tiene elementos secundarios recibe una alerta cuando uno de sus elementos secundarios cambia de tamaño. Por lo tanto, un cambio en el tamaño de un elemento en el árbol visual puede producir cambios que se hagan en el árbol.
@@ -125,4 +125,4 @@ La compresión de diseño quita los diseños especificados del árbol visual par
 
 - [Creación de un diseño personalizado](~/xamarin-forms/user-interface/layouts/custom.md)
 - [Representadores rápidos](~/xamarin-forms/internals/fast-renderers.md)
-- [LayoutCompression (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
+- [LayoutCompression (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)

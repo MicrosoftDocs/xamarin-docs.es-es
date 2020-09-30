@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsIntroducción a servicios Web
+title: Xamarin.Forms Introducción a servicios Web
 description: En esta guía se proporciona un tutorial de la Xamarin.Forms aplicación de ejemplo que muestra cómo comunicarse con distintos servicios Web. Aunque cada servicio Web utiliza una aplicación de ejemplo independiente, son funcionalmente similares y comparten clases comunes.
 ms.prod: xamarin
 ms.assetid: A3FEB262-0D79-42E6-8F8B-A565618C490B
@@ -10,14 +10,14 @@ ms.date: 02/28/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cd9815c6448efae0bb0af982c8807c47263ae13e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ebff259519776718f41ab0fcc0a7abb0c692dac6
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938218"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563424"
 ---
-# <a name="xamarinforms-web-services-introduction"></a>Xamarin.FormsIntroducción a servicios Web
+# <a name="no-locxamarinforms-web-services-introduction"></a>Xamarin.Forms Introducción a servicios Web
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
@@ -45,7 +45,7 @@ El proyecto de código compartido para cada aplicación de ejemplo consta de tre
 
 |Carpeta|Propósito|
 |--- |--- |
-|data|Contiene las clases e interfaces utilizadas para administrar los elementos de datos y comunicarse con el servicio Web. Como mínimo, incluye la `TodoItemManager` clase, que se expone a través de una propiedad en la `App` clase para invocar las operaciones del servicio Web.|
+|Datos|Contiene las clases e interfaces utilizadas para administrar los elementos de datos y comunicarse con el servicio Web. Como mínimo, incluye la `TodoItemManager` clase, que se expone a través de una propiedad en la `App` clase para invocar las operaciones del servicio Web.|
 |Modelos|Contiene las clases de modelo de datos para la aplicación. Como mínimo, incluye la `TodoItem` clase, que modela un único elemento de datos utilizado por la aplicación. La carpeta también puede incluir cualquier clase adicional que se use para modelar los datos de usuario.|
 |Vistas|Contiene las páginas de la aplicación. Normalmente, se compone de `TodoListPage` las `TodoItemPage` clases y y cualquier clase adicional que se use para la autenticación.|
 
@@ -96,6 +96,6 @@ En lugar de invocar directamente las operaciones de servicio Web, los `TodoItemM
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ASMX (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
-- [WCF (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
-- [REST (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
+- [ASMX (ejemplo)](/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
+- [WCF (ejemplo)](/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
+- [REST (ejemplo)](/samples/xamarin/xamarin-forms-samples/webservices-todorest)

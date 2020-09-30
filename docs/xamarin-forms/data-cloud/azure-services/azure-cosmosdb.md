@@ -1,5 +1,5 @@
 ---
-title: Usar una base de datos de documentos de Azure Cosmos DB enXamarin.Forms
+title: Usar una base de datos de documentos de Azure Cosmos DB en Xamarin.Forms
 description: En este artículo se explica cómo usar la biblioteca de cliente de .NET Standard de Azure Cosmos DB para integrar una base de datos de documentos Azure Cosmos DB en una Xamarin.Forms aplicación.
 ms.prod: xamarin
 ms.assetid: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C
@@ -11,14 +11,14 @@ ms.date: 06/16/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b8cd2ea2f54e4bfdfea4fa5787a01aca252691b4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ef6ccbaac73946ac19f4f5fe194f395234226b5e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84564659"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562852"
 ---
-# <a name="consume-an-azure-cosmos-db-document-database-in-xamarinforms"></a>Usar una base de datos de documentos de Azure Cosmos DB enXamarin.Forms
+# <a name="consume-an-azure-cosmos-db-document-database-in-no-locxamarinforms"></a>Usar una base de datos de documentos de Azure Cosmos DB en Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
 
@@ -229,7 +229,7 @@ En este artículo se explica cómo usar la biblioteca de cliente de .NET Standar
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Azure Cosmos DB todo (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
+- [Azure Cosmos DB todo (ejemplo)](/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
 - [Documentación sobre Azure Cosmos DB](/azure/cosmos-db/)
 - [Biblioteca de cliente de Azure Cosmos DB .NET Standard](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
-- [API de Azure Cosmos DB](https://docs.microsoft.com/dotnet/api/overview/azure/cosmosdb/client?view=azure-dotnet)
+- [API de Azure Cosmos DB](/dotnet/api/overview/azure/cosmosdb/client?view=azure-dotnet)

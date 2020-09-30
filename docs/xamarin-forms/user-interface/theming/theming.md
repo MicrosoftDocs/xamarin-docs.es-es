@@ -10,18 +10,18 @@ ms.date: 08/07/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3341ada6c5605917eeec79aac96e38cb99b40fc4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7eef9cdf353c527be4e1de4721a5658a7763dabe
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138208"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557548"
 ---
-# <a name="theme-a-xamarinforms-application"></a>Aplicar un tema a una Xamarin.Forms aplicación
+# <a name="theme-a-no-locxamarinforms-application"></a>Aplicar un tema a una Xamarin.Forms aplicación
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 
-Xamarin.Formslas aplicaciones pueden responder dinámicamente a los cambios de estilo en tiempo de ejecución mediante la `DynamicResource` extensión de marcado. Esta extensión de marcado es similar a la `StaticResource` extensión de marcado, en que ambos usan una clave de diccionario para capturar un valor de un [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . Sin embargo, mientras que la `StaticResource` extensión de marcado realiza una búsqueda de un solo diccionario, la `DynamicResource` extensión de marcado mantiene un vínculo a la clave del diccionario. Por consiguiente, si se reemplaza el valor asociado a la clave, el cambio se aplica a [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Esto permite que los encargados de tiempo de ejecución se implementen en Xamarin.Forms aplicaciones.
+Xamarin.Forms las aplicaciones pueden responder dinámicamente a los cambios de estilo en tiempo de ejecución mediante la `DynamicResource` extensión de marcado. Esta extensión de marcado es similar a la `StaticResource` extensión de marcado, en que ambos usan una clave de diccionario para capturar un valor de un [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . Sin embargo, mientras que la `StaticResource` extensión de marcado realiza una búsqueda de un solo diccionario, la `DynamicResource` extensión de marcado mantiene un vínculo a la clave del diccionario. Por consiguiente, si se reemplaza el valor asociado a la clave, el cambio se aplica a [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Esto permite que los encargados de tiempo de ejecución se implementen en Xamarin.Forms aplicaciones.
 
 El proceso de implementación de los procesos en tiempo de ejecución en una Xamarin.Forms aplicación es el siguiente:
 
@@ -225,8 +225,8 @@ void OnPickerSelectionChanged(object sender, EventArgs e)
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Cómo hacerlo (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
+- [Cómo hacerlo (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 - [Responder a cambios de tema del sistema](system-theme-changes.md)
 - [Diccionarios de recursos](~/xamarin-forms/xaml/resource-dictionaries.md)
-- [Estilos dinámicos enXamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
+- [Estilos dinámicos en Xamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
 - [Aplicación de estilo a aplicaciones Xamarin.Forms con estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)

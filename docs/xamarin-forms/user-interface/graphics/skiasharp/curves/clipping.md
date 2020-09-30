@@ -10,12 +10,12 @@ ms.date: 06/16/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a4bb6c30ada13691146d00d2094df8f13ca453b9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 604d2aa8368c85b852530f999601fffca8e104e6
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140262"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562930"
 ---
 # <a name="clipping-with-paths-and-regions"></a>Recorte con trazados y regiones
 
@@ -29,7 +29,7 @@ A veces es necesario restringir la representación de gráficos a un área deter
 
 El *área de recorte* es el área de la pantalla en la que se representan los gráficos. Todo lo que se muestra fuera del área de recorte no se representa. El área de recorte se define normalmente mediante un rectángulo o un [`SKPath`](xref:SkiaSharp.SKPath) objeto, pero también puede definir un área de recorte mediante un [`SKRegion`](xref:SkiaSharp.SKRegion) objeto. Estos dos tipos de objetos al principio parecen relacionados porque puede crear una región a partir de una ruta de acceso. Sin embargo, no puede crear una ruta de acceso desde una región y son muy diferentes internamente: una ruta de acceso consta de una serie de líneas y curvas, mientras que una región se define mediante una serie de líneas de recorrido horizontal.
 
-La imagen anterior se creó mediante la página **Monkey a Keyhole** . La [`MonkeyThroughKeyholePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) clase define una ruta de acceso que usa datos SVG y usa el constructor para cargar un mapa de bits de los recursos del programa:
+La imagen anterior se creó mediante la página **Monkey a Keyhole** . La  [`MonkeyThroughKeyholePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) clase define una ruta de acceso que usa datos SVG y usa el constructor para cargar un mapa de bits de los recursos del programa:
 
 ```csharp
 public class MonkeyThroughKeyholePage : ContentPage
@@ -122,7 +122,7 @@ También hay un [`ClipRect`](xref:SkiaSharp.SKCanvas.ClipRect(SkiaSharp.SKRect,S
 public Void ClipRect(SKRect rect, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);
 ```
 
-De forma predeterminada, el área de recorte resultante es una intersección del área de recorte existente y el `SKPath` o `SKRect` que se especifica en el `ClipPath` `ClipRect` método o. Esto se muestra en la página de **clip de intersección cuatro círculos** . El `PaintSurface` controlador de la [`FourCircleInteresectClipPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/FourCircleIntersectClipPage.cs) clase reutiliza el mismo `SKPath` objeto para crear cuatro círculos superpuestos, cada uno de los cuales reduce el área de recorte mediante llamadas sucesivas a `ClipPath` :
+De forma predeterminada, el área de recorte resultante es una intersección del área de recorte existente y el `SKPath` o `SKRect` que se especifica en el `ClipPath` `ClipRect` método o. Esto se muestra en la página de **clip de intersección cuatro círculos** . El `PaintSurface` controlador de la  [`FourCircleInteresectClipPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/FourCircleIntersectClipPage.cs) clase reutiliza el mismo `SKPath` objeto para crear cuatro círculos superpuestos, cada uno de los cuales reduce el área de recorte mediante llamadas sucesivas a `ClipPath` :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -173,9 +173,9 @@ Lo que queda es la intersección de estos cuatro círculos:
 
 La [`SKClipOperation`](xref:SkiaSharp.SKClipOperation) enumeración solo tiene dos miembros:
 
-- `Difference`quita la ruta de acceso o el rectángulo especificados del área de recorte existente.
+- `Difference` quita la ruta de acceso o el rectángulo especificados del área de recorte existente.
 
-- `Intersect`forma una intersección con la ruta de acceso o el rectángulo especificados con el área de recorte existente.
+- `Intersect` forma una intersección con la ruta de acceso o el rectángulo especificados con el área de recorte existente.
 
 Si reemplaza los cuatro `SKClipOperation.Intersect` argumentos de la `FourCircleIntersectClipPage` clase con `SKClipOperation.Difference` , verá lo siguiente:
 
@@ -515,5 +515,5 @@ En realidad, no parece un trébol de cuatro hojas, pero es una imagen que de otr
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

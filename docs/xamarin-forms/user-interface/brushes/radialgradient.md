@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.FormsPinceles: degradados radiales'
+title: 'Xamarin.Forms Pinceles: degradados radiales'
 description: La Xamarin.Forms clase RadialGradientBrush pinta un área con un degradado radial.
 ms.prod: xamarin
 ms.assetid: 099BA530-3B38-4005-9B19-A0EB4D4DEEFC
@@ -10,27 +10,27 @@ ms.date: 07/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 897ffd8b86eb161f0264a095b5a041828e631dae
-ms.sourcegitcommit: 579ec4f2884fa391e5e214a3952cd6004c521eb8
+ms.openlocfilehash: a56d2f590b78bef0f47c764862b891c9c0d46129
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87919555"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563580"
 ---
-# <a name="no-locxamarinforms-brushes-radial-gradients"></a>Xamarin.FormsPinceles: degradados radiales
+# <a name="no-locxamarinforms-brushes-radial-gradients"></a>Xamarin.Forms Pinceles: degradados radiales
 
 ![API de vista previa](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
-La `RadialGradientBrush` clase se deriva de la `GradientBrush` clase y pinta un área con un degradado radial, que combina dos o más colores en un círculo. `GradientStop`los objetos se utilizan para especificar los colores del degradado y sus posiciones. Para obtener más información sobre los `GradientStop` objetos, consulte [ Xamarin.Forms brushes: gradientes](gradient.md).
+La `RadialGradientBrush` clase se deriva de la `GradientBrush` clase y pinta un área con un degradado radial, que combina dos o más colores en un círculo. `GradientStop` los objetos se utilizan para especificar los colores del degradado y sus posiciones. Para obtener más información sobre los `GradientStop` objetos, consulte [ Xamarin.Forms brushes: gradientes](gradient.md).
 
 La clase `RadialGradientBrush` define las propiedades siguientes:
 
 - `Center`, de tipo [`Point`](xref:Xamarin.Forms.Point) , que representa el punto central del círculo del degradado radial. El valor predeterminado de esta propiedad es (0.5, 0.5).
 - `Radius`, de tipo `double` , que representa el radio del círculo del degradado radial. El valor predeterminado de esta propiedad es 0,5.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
 La `RadialGradientBrush` clase también tiene un `IsEmpty` método que devuelve un `bool` que indica si se ha asignado algún objeto al pincel `GradientStop` .
 
@@ -102,5 +102,5 @@ En este ejemplo, el fondo de [`Frame`](xref:Xamarin.Forms.Frame) se pinta con un
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [BrushesDemos (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
-- [Xamarin.FormsPinceles: degradados](gradient.md)
+- [BrushesDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+- [Xamarin.Forms Pinceles: degradados](gradient.md)

@@ -10,12 +10,12 @@ ms.date: 05/09/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e76684ffb293380c283153c35c907acc50e40aab
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6a5249b6929b283cbbcb5ea4a4bc1f136003ea43
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128081"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563658"
 ---
 # <a name="home-indicator-visibility-on-ios"></a>Visibilidad del indicador de inicio en iOS
 
@@ -52,6 +52,6 @@ El resultado es que se puede controlar la visibilidad del indicador de inicio en
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

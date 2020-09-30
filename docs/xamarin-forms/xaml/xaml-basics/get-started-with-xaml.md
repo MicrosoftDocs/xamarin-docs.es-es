@@ -10,12 +10,12 @@ ms.date: 09/30/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 874793975f027e1323dbf8a8acd30d19e980370b
-ms.sourcegitcommit: 562d4f2d51a43af21b7dc3ab892dd3a4264349a1
+ms.openlocfilehash: 319afff4572c02e363fef6296aca06ba290923c2
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87177650"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562839"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introducción a XAML
 
@@ -111,7 +111,7 @@ El archivo **mainpage. Xaml** tiene el siguiente aspecto (aunque el formato pued
 
 Las dos declaraciones de espacio de nombres XML ( `xmlns` ) hacen referencia a los identificadores URI, el primero aparentemente en el sitio web de Xamarin y el segundo en Microsoft. No moleste a comprobar a qué apuntan los URI. No hay nada. Son simplemente los URI que pertenecen a Xamarin y Microsoft, y básicamente funcionan como identificadores de versión.
 
-La primera declaración de espacio de nombres XML significa que las etiquetas definidas dentro del archivo XAML sin prefijo hacen referencia a las clases de Xamarin.Forms , por ejemplo `ContentPage` . La segunda declaración de espacio de nombres define un prefijo de `x` . Se usa para varios elementos y atributos que son intrínsecos al propio XAML y que son compatibles con otras implementaciones de XAML. Sin embargo, estos elementos y atributos son ligeramente diferentes en función del año incrustado en el URI. Xamarin.Formsadmite la especificación XAML 2009, pero no todo.
+La primera declaración de espacio de nombres XML significa que las etiquetas definidas dentro del archivo XAML sin prefijo hacen referencia a las clases de Xamarin.Forms , por ejemplo `ContentPage` . La segunda declaración de espacio de nombres define un prefijo de `x` . Se usa para varios elementos y atributos que son intrínsecos al propio XAML y que son compatibles con otras implementaciones de XAML. Sin embargo, estos elementos y atributos son ligeramente diferentes en función del año incrustado en el URI. Xamarin.Forms admite la especificación XAML 2009, pero no todo.
 
 La `local` declaración del espacio de nombres permite tener acceso a otras clases desde el proyecto de biblioteca de .net Standard.
 
@@ -142,7 +142,7 @@ La `MainPage` clase se deriva de `ContentPage` , pero Fíjese en la `partial` de
 
 Cuando Visual Studio compila el proyecto, analiza el archivo XAML para generar un archivo de código de C#. Si busca en el directorio **XamlSamples\XamlSamples\obj\Debug** , encontrará un archivo denominado **XamlSamples.mainpage.Xaml.g.CS**. ' G ' significa que se ha generado. Esta es la otra definición de clase parcial de `MainPage` que contiene la definición del `InitializeComponent` método al que se llama desde el `MainPage` constructor. Estas dos `MainPage` definiciones de clase parcial se pueden compilar a su vez. En función de si el XAML está compilado o no, el archivo XAML o un formato binario del archivo XAML se incrustan en el ejecutable.
 
-En tiempo de ejecución, el código del proyecto de plataforma concreto llama a un `LoadApplication` método, pasándole una nueva instancia de la `App` clase en la biblioteca de .net Standard. `App`Crea instancias del constructor de clase `MainPage` . El constructor de esa clase llama `InitializeComponent` a, que después llama al `LoadFromXaml` método que extrae el archivo XAML (o su binario compilado) de la biblioteca de .net Standard. `LoadFromXaml`Inicializa todos los objetos definidos en el archivo XAML, los conecta todos juntos en las relaciones de elementos primarios y secundarios, asocia los controladores de eventos definidos en el código a los eventos establecidos en el archivo XAML y establece el árbol resultante de objetos como el contenido de la página.
+En tiempo de ejecución, el código del proyecto de plataforma concreto llama a un `LoadApplication` método, pasándole una nueva instancia de la `App` clase en la biblioteca de .net Standard. `App`Crea instancias del constructor de clase `MainPage` . El constructor de esa clase llama `InitializeComponent` a, que después llama al `LoadFromXaml` método que extrae el archivo XAML (o su binario compilado) de la biblioteca de .net Standard. `LoadFromXaml` Inicializa todos los objetos definidos en el archivo XAML, los conecta todos juntos en las relaciones de elementos primarios y secundarios, asocia los controladores de eventos definidos en el código a los eventos establecidos en el archivo XAML y establece el árbol resultante de objetos como el contenido de la página.
 
 Aunque normalmente no es necesario dedicar mucho tiempo a los archivos de código generados, a veces se producen excepciones en tiempo de ejecución en el código de los archivos generados, por lo que debe estar familiarizado con ellos.
 
@@ -186,7 +186,7 @@ Edite el archivo **HelloXamlPage. Xaml** para que las únicas etiquetas sean las
 
 Las `ContentPage.Content` etiquetas forman parte de la sintaxis única de XAML. En primer lugar, es posible que parezca que el código XML no es válido, pero son válidos. El punto no es un carácter especial en XML.
 
-Las `ContentPage.Content` etiquetas se denominan etiquetas de *elemento de propiedad* . `Content`es una propiedad de `ContentPage` y, generalmente, se establece en una vista única o un diseño con vistas secundarias. Normalmente, las propiedades se convierten en atributos en XAML, pero sería difícil establecer un `Content` atributo en un objeto complejo. Por ese motivo, la propiedad se expresa como un elemento XML que se compone del nombre de la clase y el nombre de la propiedad separados por un punto. Ahora la `Content` propiedad se puede establecer entre las `ContentPage.Content` etiquetas, de la siguiente manera:
+Las `ContentPage.Content` etiquetas se denominan etiquetas de *elemento de propiedad* . `Content` es una propiedad de `ContentPage` y, generalmente, se establece en una vista única o un diseño con vistas secundarias. Normalmente, las propiedades se convierten en atributos en XAML, pero sería difícil establecer un `Content` atributo en un objeto complejo. Por ese motivo, la propiedad se expresa como un elemento XML que se compone del nombre de la clase y el nombre de la propiedad separados por un punto. Ahora la `Content` propiedad se puede establecer entre las `ContentPage.Content` etiquetas, de la siguiente manera:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -218,9 +218,9 @@ La `HorizontalTextAlignment` propiedad es de tipo `TextAlignment` , que es una e
 
 En el caso de las propiedades de tipos más complejos, sin embargo, los convertidores se utilizan para analizar el código XAML. Se trata de clases de Xamarin.Forms que derivan de `TypeConverter` . Muchos son clases públicas, pero otros no. Para este archivo XAML concreto, algunas de estas clases desempeñan un papel en segundo plano:
 
-- `LayoutOptionsConverter`para la `VerticalOptions` propiedad
-- `FontSizeConverter`para la `FontSize` propiedad
-- `ColorTypeConverter`para la `TextColor` propiedad
+- `LayoutOptionsConverter` para la  `VerticalOptions` propiedad
+- `FontSizeConverter` para la  `FontSize` propiedad
+- `ColorTypeConverter` para la  `TextColor` propiedad
 
 Estos convertidores rigen la sintaxis permitida de los valores de propiedad.
 
@@ -287,7 +287,7 @@ Al establecer la `Content` propiedad de la página, se reemplaza el valor de la 
 
 [![Texto de etiqueta girado](get-started-with-xaml-images/helloxaml1.png)](get-started-with-xaml-images/helloxaml1-large.png#lightbox)
 
-Puede volver a `MainPage` usar el botón **atrás<** en iOS, con la flecha izquierda en la parte superior de la página o en la parte inferior del teléfono en Android, o mediante la flecha izquierda en la parte superior de la página en Windows 10.
+Puede volver a `MainPage` usar el botón ** atrás<** en iOS, con la flecha izquierda en la parte superior de la página o en la parte inferior del teléfono en Android, o mediante la flecha izquierda en la parte superior de la página en Windows 10.
 
 No dude en experimentar con el código XAML para diferentes maneras de representar `Label` . Si necesita insertar caracteres Unicode en el texto, puede usar la sintaxis XML estándar. Por ejemplo, para poner el saludo en Comillas inteligentes, use:
 
@@ -458,7 +458,7 @@ Con esta introducción, ha visto cómo un archivo XAML y un archivo de código c
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 2. Sintaxis XAML básica](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Parte 3. Extensiones de marcado XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Parte 4. Conceptos básicos del enlace de datos](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

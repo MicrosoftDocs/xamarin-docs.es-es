@@ -10,16 +10,16 @@ ms.date: 03/20/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 998584c3deebf5ab722758aeefe7560ba738f426
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ed1bcbed86874362e291fb23ce86dea8992d3408
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939300"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563736"
 ---
 # <a name="the-skew-transform"></a>Transformación de sesgo
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Vea cómo la transformación de sesgo puede crear objetos gráficos inclinados en SkiaSharp_
 
@@ -255,5 +255,5 @@ Ahora la sombra se extiende desde la parte inferior de los descendentes:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

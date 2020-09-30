@@ -10,18 +10,18 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 735aae1b9d94865bd34450861bd6c57b08c420c2
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: af1747a19af6c715d1594122393e500d1f73c79b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134724"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562527"
 ---
 # <a name="skiasharp-transparency"></a>Transparencia SkiaSharp
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Como ha visto, la [`SKPaint`](xref:SkiaSharp.SKPaint) clase incluye una [`Color`](xref:SkiaSharp.SKPaint.Color) propiedad de tipo [`SKColor`](xref:SkiaSharp.SKColor) . `SKColor`incluye un canal alfa, por lo que todo lo que se colorea con un `SKColor` valor puede ser parcialmente transparente. 
+Como ha visto, la [`SKPaint`](xref:SkiaSharp.SKPaint) clase incluye una [`Color`](xref:SkiaSharp.SKPaint.Color) propiedad de tipo [`SKColor`](xref:SkiaSharp.SKColor) . `SKColor` incluye un canal alfa, por lo que todo lo que se colorea con un `SKColor` valor puede ser parcialmente transparente. 
 
 Se ha mostrado cierta transparencia en la [**animación básica en el artículo de SkiaSharp**](animation.md) . En este artículo se profundiza en la transparencia para combinar varios objetos en una sola escena, una técnica que a veces se conoce como _fusión_. En los artículos de la sección [**sombreadores SkiaSharp**](../effects/shaders/index.md) se describen técnicas de combinación más avanzadas.
 
@@ -39,7 +39,7 @@ Además, `SKColor` define un método útil [`WithAlpha`](xref:SkiaSharp.SKColor.
 SKColor halfTransparentBlue = SKColors.Blue.WithAlpha(0x80);
 ```
 
-El uso de texto parcialmente transparente se muestra en la página código **más** en el ejemplo de [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . En esta página se atenúan dos cadenas de texto y se extraen mediante la incorporación de transparencia en los `SKColor` valores:
+El uso de texto parcialmente transparente se muestra en la página código **más** en el ejemplo de [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . En esta página se atenúan dos cadenas de texto y se extraen mediante la incorporación de transparencia en los `SKColor` valores:
 
 ```csharp
 public class CodeMoreCodePage : ContentPage
@@ -242,5 +242,5 @@ En los últimos artículos, ha aprendido a usar SkiaSharp para dibujar texto, c�
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

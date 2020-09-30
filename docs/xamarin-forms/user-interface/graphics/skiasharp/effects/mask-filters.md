@@ -10,12 +10,12 @@ ms.date: 08/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 10192e93d2e20f9aa58ca95dd81c07f560193905
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 827b5618dce019e2dedb773f270fe1090da5d616
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136414"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562514"
 ---
 # <a name="skiasharp-mask-filters"></a>Filtros de máscara de SkiaSharp
 
@@ -37,7 +37,7 @@ public static SKMaskFilter CreateBlur (SKBlurStyle blurStyle, float sigma);
 
 Las sobrecargas permiten especificar marcas para el algoritmo utilizado para crear el desenfoque y un rectángulo para evitar desenfoques en áreas que se tratarán con otros objetos gráficos.
 
-[`SKBlurStyle`](xref:SkiaSharp.SKBlurStyle)es una enumeración con los siguientes miembros:
+[`SKBlurStyle`](xref:SkiaSharp.SKBlurStyle) es una enumeración con los siguientes miembros:
 
 - `Normal`
 - `Solid`
@@ -46,7 +46,7 @@ Las sobrecargas permiten especificar marcas para el algoritmo utilizado para cre
 
 Los efectos de estos estilos se muestran en los ejemplos siguientes. El `sigma` parámetro especifica la extensión del desenfoque. En versiones anteriores de Skia, la extensión del desenfoque se indicaba con un valor de radio. Si se prefiere un valor de radio para su aplicación, existe un método estático [`SKMaskFilter.ConvertRadiusToSigma`](xref:SkiaSharp.SKMaskFilter.ConvertRadiusToSigma*) que puede convertir de uno a otro. El método multiplica el radio por 0,57735 y agrega 0,5.
 
-La página **experimento de desenfoque de máscara** en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) permite experimentar con los estilos de desenfoque y los valores de Sigma. El archivo XAML crea una instancia de `Picker` con los cuatro `SKBlurStyle` miembros de enumeración y un `Slider` para especificar el valor de Sigma:
+La página **experimento de desenfoque de máscara** en el ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) permite experimentar con los estilos de desenfoque y los valores de Sigma. El archivo XAML crea una instancia de `Picker` con los cuatro `SKBlurStyle` miembros de enumeración y un `Slider` para especificar el valor de Sigma:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -276,5 +276,5 @@ Este filtro de desenfoque hace que la reflexión parezca mucho más realista:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

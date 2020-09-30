@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6c73f46d2845be7bb54e24cd02ec22f3c2cd386d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: de412e064fa84e516dcb8e9b604068c84a2689e6
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137257"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563619"
 ---
 # <a name="listview-selectionmode-on-windows"></a>ListView (SelectionMode) en Windows
 
@@ -48,8 +48,8 @@ listView.On<Windows>().SetSelectionMode(ListViewSelectionMode.Inaccessible);
 
 El `ListView.On<Windows>` método especifica que este específico de la plataforma solo se ejecutará en el plataforma universal de Windows. [ `ListView.SetSelectionMode` ] (XREF: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. ListView. SetSelectionMode ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . ListView}, Xamarin.Forms . PlatformConfiguration. WindowsSpecific. ListViewSelectionMode)), en el [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) espacio de nombres, se utiliza para controlar si los elementos de un [`ListView`](xref:Xamarin.Forms.ListView) pueden responder a los gestos de TAP, con la [`ListViewSelectionMode`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListViewSelectionMode) enumeración que proporciona dos valores posibles:
 
-- [`Accessible`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListViewSelectionMode.Accessible): indica que `ListView` desencadenará el evento nativo `ItemClick` para controlar la interacción y, por tanto, proporcionará la funcionalidad de accesibilidad. Por lo tanto, el narrador de Windows y el teclado pueden interactuar con `ListView` . Sin embargo, los elementos del `ListView` no pueden responder a los gestos de TAP. Éste es el comportamiento predeterminado de las `ListView` instancias en el plataforma universal de Windows.
-- [`Inaccessible`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListViewSelectionMode.Inaccessible): indica que `ListView` desencadenará el evento nativo `Tapped` para controlar la interacción. Por lo tanto, los elementos de `ListView` pueden responder a los gestos de TAP. Sin embargo, no hay ninguna funcionalidad de accesibilidad y, por lo tanto, el narrador de Windows y el teclado no pueden interactuar con `ListView` .
+- [`Accessible`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListViewSelectionMode.Accessible) : indica que `ListView` desencadenará el evento nativo `ItemClick` para controlar la interacción y, por tanto, proporcionará la funcionalidad de accesibilidad. Por lo tanto, el narrador de Windows y el teclado pueden interactuar con `ListView` . Sin embargo, los elementos del `ListView` no pueden responder a los gestos de TAP. Éste es el comportamiento predeterminado de las `ListView` instancias en el plataforma universal de Windows.
+- [`Inaccessible`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListViewSelectionMode.Inaccessible) : indica que `ListView` desencadenará el evento nativo `Tapped` para controlar la interacción. Por lo tanto, los elementos de `ListView` pueden responder a los gestos de TAP. Sin embargo, no hay ninguna funcionalidad de accesibilidad y, por lo tanto, el narrador de Windows y el teclado no pueden interactuar con `ListView` .
 
 > [!NOTE]
 > Los `Accessible` `Inaccessible` modos de selección y son mutuamente excluyentes y tendrá que elegir entre un accesible [`ListView`](xref:Xamarin.Forms.ListView) o un `ListView` que pueda responder a los gestos de TAP.
@@ -60,6 +60,6 @@ El resultado es que [`ListViewSelectionMode`](xref:Xamarin.Forms.PlatformConfigu
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de WindowsSpecific](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

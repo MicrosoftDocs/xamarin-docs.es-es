@@ -10,12 +10,12 @@ ms.date: 01/22/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2a46d099520103ba6f1552d5bda3f619c07b743d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 98b59b1dc9e32b1af1be991055057b94223a4223
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86928528"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563268"
 ---
 # <a name="authenticate-a-restful-web-service"></a>Autenticación de un servicio web RESTful
 
@@ -90,4 +90,4 @@ En el módulo de autenticación básica que usa IIS, los usuarios se autentican 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Consumo de un servicio web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)
+- [HttpClient](/dotnet/api/system.net.http.httpclient)

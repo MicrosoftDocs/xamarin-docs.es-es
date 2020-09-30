@@ -1,5 +1,5 @@
 ---
-title: Animaciones personalizadas enXamarin.Forms
+title: Animaciones personalizadas en Xamarin.Forms
 description: En este artículo se muestra cómo usar la clase de animación de Xamarin. Forms para crear y cancelar animaciones, sincronizar varias animaciones y crear animaciones personalizadas que animan las propiedades que no animan los métodos de animación existentes.
 ms.prod: xamarin
 ms.assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907
@@ -10,14 +10,14 @@ ms.date: 02/10/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 573f18de0d7593d832505eb6bb2b492caea024a1
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3731f35ab03edf9b65c3adca7a2091c2a609b552
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946109"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563398"
 ---
-# <a name="custom-animations-in-xamarinforms"></a>Animaciones personalizadas enXamarin.Forms
+# <a name="custom-animations-in-no-locxamarinforms"></a>Animaciones personalizadas en Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
 
@@ -181,6 +181,6 @@ En este ejemplo de código, el `ColorTo` método anima las [`TextColor`](xref:Xa
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Animaciones personalizadas (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
+- [Animaciones personalizadas (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
 - [Animation API](xref:Xamarin.Forms.Animation)
 - [API de AnimationExtensions](xref:Xamarin.Forms.AnimationExtensions)

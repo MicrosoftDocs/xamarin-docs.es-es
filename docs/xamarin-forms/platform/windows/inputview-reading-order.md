@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f5f0bcdc2d2c8eb1b51ad8dcd1014c649af80c90
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0fd754b2d41de61238cb7b0b2f34c1035d8dc2bf
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137766"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557769"
 ---
 # <a name="inputview-reading-order-on-windows"></a>InputView orden de lectura en Windows
 
@@ -58,6 +58,6 @@ El resultado es que [`Entry`](xref:Xamarin.Forms.Entry) las [`Editor`](xref:Xama
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de WindowsSpecific](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

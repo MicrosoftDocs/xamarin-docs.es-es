@@ -10,12 +10,12 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 01f4fcf1953658af44d2a8996913860a3b605abf
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2e0c4d247f3ecf9c1b8e077c4a96712e9ed138ca
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138663"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562956"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>Guardar mapas de bits de SkiaSharp en archivos
 
@@ -71,7 +71,7 @@ Guardar en un archivo en el almacenamiento local de la aplicación es bastante s
 
 Si desea que el archivo se comparta con otras aplicaciones, se debe guardar en la biblioteca de fotos del usuario. Esta tarea requiere código específico de la plataforma y el uso de Xamarin.Forms [`DependencyService`](xref:Xamarin.Forms.DependencyService) .
 
-El proyecto **SkiaSharpFormsDemo** de la aplicación [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) define una `IPhotoLibrary` interfaz que se usa con la `DependencyService` clase. Define la sintaxis de un `SavePhotoAsync` método:
+El proyecto **SkiaSharpFormsDemo** de la aplicación [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) define una `IPhotoLibrary` interfaz que se usa con la `DependencyService` clase. Define la sintaxis de un `SavePhotoAsync` método:
 
 ```csharp
 public interface IPhotoLibrary
@@ -248,7 +248,7 @@ Este es el [`Encode`](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSha
 public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality)
 ```
 
-[`SKEncodedImageFormat`](xref:SkiaSharp.SKEncodedImageFormat)es una enumeración con miembros que hacen referencia a once formatos de archivo de mapa de bits, algunos de los cuales son bastante claros:
+[`SKEncodedImageFormat`](xref:SkiaSharp.SKEncodedImageFormat) es una enumeración con miembros que hacen referencia a once formatos de archivo de mapa de bits, algunos de los cuales son bastante claros:
 
 - `Astc`&mdash;Compresión de textura escalable adaptable
 - `Bmp`&mdash;Mapa de bits de Windows
@@ -283,7 +283,7 @@ using (SKManagedWStream wstream = new SKManagedWStream(memStream))
 
 La `SKManagedWStream` clase se deriva de `SKWStream` (que significa "Stream grabable"). El `Encode` método escribe el archivo de mapa de bits codificado en esa secuencia. Los comentarios de ese código hacen referencia a algunas comprobaciones de errores que es posible que deba realizar.
 
-La página **Guardar formatos de archivo** de la aplicación [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) usa código similar para que pueda experimentar con la opción de guardar un mapa de bits en los distintos formatos.
+La página **Guardar formatos de archivo** de la aplicación [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) usa código similar para que pueda experimentar con la opción de guardar un mapa de bits en los distintos formatos.
 
 El archivo XAML contiene un `SKCanvasView` que muestra un mapa de bits, mientras que el resto de la página contiene todo lo que la aplicación necesita para llamar al `Encode` método de `SKBitmap` . Tiene un `Picker` para un miembro de la `SKEncodedImageFormat` enumeración, un `Slider` para el argumento Quality para formatos de mapa de bits perdidos, dos `Entry` vistas para un nombre de archivo y un nombre de carpeta, y `Button` para guardar el archivo.
 
@@ -456,7 +456,7 @@ En el caso de todos los demás formatos, el `Encode` método no escribe nada en 
 
 El mapa de bits que guarda la página **formatos de archivo guardados** es 600-píxeles cuadrados. Con 4 bytes por píxel, es un total de 1.440.000 bytes en memoria. En la tabla siguiente se muestra el tamaño de archivo para varias combinaciones de formato de archivo y calidad:
 
-|Formato|Calidad|Tamaño|
+|Formato|Calidad|Size|
 |------|------:|---:|
 | PNG | N/D | 492K |
 | JPEG | 0 | 2.95 k |
@@ -474,7 +474,7 @@ Un uso común de un mapa de bits es el dibujo de programas, donde funciona como 
 
 El artículo sobre cómo [**pintar el dedo en SkiaSharp**](../paths/finger-paint.md) muestra cómo usar el seguimiento táctil para implementar un programa de pintado de huellas primitivo. El programa admite solo un color y un ancho de trazo, pero reservó todo el dibujo en una colección de `SKPath` objetos.
 
-La página **con el dedo pintar con guardar** en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) también conserva todo el dibujo en una colección de `SKPath` objetos, pero también representa el dibujo en un mapa de bits, que puede guardar en la biblioteca de fotos.
+La página **con el dedo pintar con guardar** en el ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) también conserva todo el dibujo en una colección de `SKPath` objetos, pero también representa el dibujo en un mapa de bits, que puede guardar en la biblioteca de fotos.
 
 Gran parte de este programa es similar al programa de pintura con el **dedo** original. Una mejora es que el archivo XAML ahora crea instancias de los botones con la etiqueta **Clear** y **Save**:
 
@@ -701,7 +701,7 @@ Este es el programa en acción:
 
 [![Guardar con el dedo](saving-images/FingerPaintSave.png "Guardar con el dedo")](saving-images/FingerPaintSave-Large.png#lightbox)
 
-En el ejemplo [**SpinPaint**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint) se usa una técnica muy similar. También se trata de un programa de dibujo de dedos, salvo que el usuario pinta en un disco girando y, a continuación, reproduce los diseños en los otros cuatro cuadrantes. El color del dibujo con el dedo cambia a medida que el disco gira:
+En el ejemplo [**SpinPaint**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint) se usa una técnica muy similar. También se trata de un programa de dibujo de dedos, salvo que el usuario pinta en un disco girando y, a continuación, reproduce los diseños en los otros cuatro cuadrantes. El color del dibujo con el dedo cambia a medida que el disco gira:
 
 [![Girar dibujo](saving-images/SpinPaint.png "Girar dibujo")](saving-images/SpinPaint-Large.png#lightbox)
 
@@ -709,6 +709,6 @@ El botón **Guardar** de la `SpinPaint` clase es similar a la **pintura con dedo
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
-- [SpinPaint (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SpinPaint (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint)

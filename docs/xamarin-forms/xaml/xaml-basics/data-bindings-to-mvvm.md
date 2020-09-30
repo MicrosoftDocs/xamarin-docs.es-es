@@ -11,12 +11,12 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 805bdef812b33d3f4329346a437e1202a16fe3ae
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8cb59738519af933e509ebf63a923e573667941e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937324"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562917"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Parte 5. Enlaces de datos a MVVM
 
@@ -39,7 +39,7 @@ El programa puede usar `x:Static` para obtener la fecha y hora actuales de la `D
 <StackLayout BindingContext="{x:Static sys:DateTime.Now}" …>
 ```
 
-`BindingContext`es una propiedad especial: cuando se establece `BindingContext` en un elemento, lo heredan todos los elementos secundarios de ese elemento. Esto significa que todos los elementos secundarios de `StackLayout` tienen este mismo `BindingContext` y pueden contener enlaces simples a las propiedades de ese objeto.
+`BindingContext` es una propiedad especial: cuando se establece `BindingContext` en un elemento, lo heredan todos los elementos secundarios de ese elemento. Esto significa que todos los elementos secundarios de `StackLayout` tienen este mismo `BindingContext` y pueden contener enlaces simples a las propiedades de ese objeto.
 
 En el programa de **fecha y hora de una captura** , dos de los elementos secundarios contienen enlaces a las propiedades de ese `DateTime` valor, pero otros dos elementos secundarios contienen enlaces a los que parece que falta una ruta de acceso de enlace. Esto significa que el `DateTime` propio valor se utiliza para `StringFormat` :
 
@@ -312,14 +312,14 @@ Para permitir que ViewModels sea más independiente de los objetos de interfaz d
 - `MenuItem`
 - `ToolbarItem`
 - `SearchBar`
-- `TextCell`(y, por tanto, también `ImageCell` )
+- `TextCell` (y, por tanto, también `ImageCell` )
 - `ListView`
 - `TapGestureRecognizer`
 
 A excepción del `SearchBar` `ListView` elemento y, estos elementos definen dos propiedades:
 
-- `Command`de tipo`System.Windows.Input.ICommand`
-- `CommandParameter`de tipo`Object`
+- `Command` de tipo  `System.Windows.Input.ICommand`
+- `CommandParameter` de tipo  `Object`
 
 `SearchBar`Define las `SearchCommand` `SearchCommandParameter` propiedades y, mientras que `ListView` define una `RefreshCommand` propiedad de tipo `ICommand` .
 
@@ -585,7 +585,7 @@ void Download ()
 
 ## <a name="implementing-a-navigation-menu"></a>Implementar un menú de navegación
 
-El programa [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples) que contiene todo el código fuente de esta serie de artículos usa un ViewModel para su página principal. Este ViewModel es una definición de una clase corta con tres propiedades denominadas `Type` , `Title` y `Description` que contienen el tipo de cada una de las páginas de ejemplo, un título y una breve descripción. Además, el ViewModel define una propiedad estática denominada `All` que es una colección de todas las páginas del programa:
+El programa [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples) que contiene todo el código fuente de esta serie de artículos usa un ViewModel para su página principal. Este ViewModel es una definición de una clase corta con tres propiedades denominadas `Type` , `Title` y `Description` que contienen el tipo de cada una de las páginas de ejemplo, un título y una breve descripción. Además, el ViewModel define una propiedad estática denominada `All` que es una colección de todas las páginas del programa:
 
 ```csharp
 public class PageDataViewModel
@@ -714,7 +714,7 @@ XAML es una herramienta eficaz para definir interfaces de usuario en Xamarin.For
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 1. Introducción con XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Parte 2. Sintaxis XAML básica](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Parte 3. Extensiones de marcado XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)

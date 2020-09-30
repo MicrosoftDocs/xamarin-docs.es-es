@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 97c7305e59a023e65535186bbbe39a9c2b7d4c26
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 380c9d5b8159a1a142ebf005955e4345dbc6e6d8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139001"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562904"
 ---
 # <a name="skiasharp-lines-and-paths"></a>Trazados y líneas de SkiaSharp
 
@@ -27,7 +27,7 @@ En la [sección anterior](~/xamarin-forms/user-interface/graphics/skiasharp/basi
 
 La ruta de acceso de los gráficos es el enfoque más generalizado para dibujar líneas y curvas en SkiaSharp. En esta sección se describe el uso [`SKPath`](xref:SkiaSharp.SKPath) de un objeto para dibujar líneas rectas y el uso de una colección de pequeñas líneas rectas (denominada *polilínea*) para dibujar curvas que se pueden definir de manera algorítmica. En una sección posterior de [**curvas y trazados de SkiaSharp**](../curves/index.md) se describen los distintos tipos de curvas admitidas por `SKPath` .
 
-Todos los programas de ejemplo de esta sección aparecen en las **líneas** de encabezado y las rutas de acceso en la Página principal del programa [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) y en la carpeta [**rutas**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths) de acceso de la solución.
+Todos los programas de ejemplo de esta sección aparecen en las **líneas** de encabezado y las rutas de acceso en la Página principal del programa [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) y en la carpeta [**rutas**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths) de acceso de la solución.
 
 ## <a name="lines-and-stroke-caps"></a>[Líneas y extremos de trazo](lines.md)
 
@@ -55,5 +55,5 @@ Use los dedos para pintar en el lienzo.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

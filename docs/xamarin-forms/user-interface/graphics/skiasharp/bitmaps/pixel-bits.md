@@ -10,12 +10,12 @@ ms.date: 07/11/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9018cbe6e41350b22a0f1f91858017531c75a0ac
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7f0b7c61d44170ab97b060a16693287c28903660
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135587"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562969"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>Obtener acceso a bits de píxel de mapa de bits SkiaSharp
 
@@ -35,12 +35,12 @@ SkiaSharp proporciona varias técnicas para tener acceso a los bits de píxeles 
 
 - Los `GetPixel` `SetPixel` métodos y permiten obtener o establecer el color de un solo píxel.
 - La `Pixels` propiedad obtiene una matriz de colores de píxeles para el mapa de bits completo o establece la matriz de colores.
-- `GetPixels`Devuelve la dirección de la memoria de píxeles utilizada por el mapa de bits.
-- `SetPixels`reemplaza la dirección de la memoria de píxeles utilizada por el mapa de bits.
+- `GetPixels` Devuelve la dirección de la memoria de píxeles utilizada por el mapa de bits.
+- `SetPixels` reemplaza la dirección de la memoria de píxeles utilizada por el mapa de bits.
 
 Puede considerar las dos primeras técnicas como "alto nivel" y la segunda dos como "bajo nivel". Hay otros métodos y propiedades que puede usar, pero estos son los más valiosos.
 
-Para que pueda ver las diferencias de rendimiento entre estas técnicas, la aplicación [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) contiene una página denominada **mapa de bits de degradado** que crea un mapa de bits con píxeles que combinan sombras de color rojo y azul para crear un degradado. El programa crea ocho copias diferentes de este mapa de bits, todo ello con distintas técnicas para establecer los píxeles del mapa de bits. Cada uno de estos ocho mapas de bits se crea en un método independiente que también establece una breve descripción de texto de la técnica y calcula el tiempo necesario para establecer todos los píxeles. Cada método recorre en bucle la lógica de configuración de píxeles 100 veces para obtener una estimación mejor del rendimiento.
+Para que pueda ver las diferencias de rendimiento entre estas técnicas, la aplicación [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) contiene una página denominada **mapa de bits de degradado** que crea un mapa de bits con píxeles que combinan sombras de color rojo y azul para crear un degradado. El programa crea ocho copias diferentes de este mapa de bits, todo ello con distintas técnicas para establecer los píxeles del mapa de bits. Cada uno de estos ocho mapas de bits se crea en un método independiente que también establece una breve descripción de texto de la técnica y calcula el tiempo necesario para establecer todos los píxeles. Cada método recorre en bucle la lógica de configuración de píxeles 100 veces para obtener una estimación mejor del rendimiento.
 
 ### <a name="the-setpixel-method"></a>El método SetPixel
 
@@ -90,7 +90,7 @@ El `SetPixel` método se llama 65.536 veces y, con independencia de lo eficaz qu
 
 ### <a name="the-pixels-property"></a>La propiedad píxeles
 
-`SKBitmap`define una [`Pixels`](xref:SkiaSharp.SKBitmap.Pixels) propiedad que devuelve una matriz de `SKColor` valores para el mapa de bits completo. También puede usar `Pixels` para establecer una matriz de valores de color para el mapa de bits:
+`SKBitmap` define una [`Pixels`](xref:SkiaSharp.SKBitmap.Pixels) propiedad que devuelve una matriz de `SKColor` valores para el mapa de bits completo. También puede usar `Pixels` para establecer una matriz de valores de color para el mapa de bits:
 
 ```csharp
 SKColor[] pixels = bitmap.Pixels;
@@ -130,7 +130,7 @@ SKBitmap FillBitmapPixelsProp(out string description, out int milliseconds)
 
 Observe que el índice de la `pixels` matriz debe calcularse a partir de `row` las `col` variables y. La fila se multiplica por el número de píxeles de cada fila (256 en este caso) y, a continuación, se agrega la columna.
 
-`SKBitmap`también define una `Bytes` propiedad similar, que devuelve una matriz de bytes para el mapa de bits completo, pero es más complicada para los mapas de bits de color completo.
+`SKBitmap` también define una `Bytes` propiedad similar, que devuelve una matriz de bytes para el mapa de bits completo, pero es más complicada para los mapas de bits de color completo.
 
 ### <a name="the-getpixels-pointer"></a>Puntero GetPixels
 
@@ -287,7 +287,7 @@ La única pregunta es esto: ¿es el formato de entero del `SKColor` valor en el 
 
 ### <a name="the-setpixels-method"></a>El método SetPixels
 
-`SKBitmap`también define un método denominado [`SetPixels`](xref:SkiaSharp.SKBitmap.SetPixels(System.IntPtr)) , que se llama de la siguiente manera:
+`SKBitmap` también define un método denominado [`SetPixels`](xref:SkiaSharp.SKBitmap.SetPixels(System.IntPtr)) , que se llama de la siguiente manera:
 
 ```csharp
 bitmap.SetPixels(intPtr);
@@ -493,11 +493,11 @@ Esta es una tabla que consolida los tiempos de ejecución en milisegundos:
 | --------- | --------- | ----:| -------:| ----:|
 | SetPixel  |           | 3,17 |   10,77 | 3.49 |
 | píxeles    |           | 0,32 |    1.23 | 0,07 |
-| GetPixels | byte      | 0,09 |    0.24 | 0,10 |
-|           | uint      | 0.06 |    0.26 | 0,05 |
+| GetPixels | byte      | 0,09 |    0,24 | 0,10 |
+|           | uint      | 0,06 |    0,26 | 0,05 |
 |           | SKColor   | 0,29 |    0,99 | 0,07 |
 | SetPixels | byte      | 1.33 |    6,78 | 0,11 |
-|           | uint      | 0.14 |    0.69 | 0.06 |
+|           | uint      | 0.14 |    0.69 | 0,06 |
 |           | SKColor   | 0.35 |    1,93 | 0,10 |
 
 Como se esperaba, `SetPixel` la llamada a 65.536 veces es la forma menos effeicient de establecer los píxeles de un mapa de bits. El rellenado de una `SKColor` matriz y el establecimiento de la `Pixels` propiedad es mucho mejor e incluso se compara de forma favorable con algunas de las `GetPixels` `SetPixels` técnicas y. Trabajar con `uint` valores de píxeles suele ser más rápido que establecer `byte` componentes independientes y convertir el `SKColor` valor en un entero sin signo agrega cierta sobrecarga al proceso.
@@ -796,5 +796,5 @@ El código del constructor accede a cada píxel, realiza una operación and bit 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

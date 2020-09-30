@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c74f9bd17f8da5cd41a55f8b35a66e21df81a8d2
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 99dc2b56a559048bb0dee776a9f9efee6a2618de
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931188"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557899"
 ---
 # <a name="navigationpage-bar-separator-on-ios"></a>Separador de barra NavigationPage en iOS
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Este específico de la plataforma iOS oculta la línea de separación y la sombra que se encuentra en la parte inferior de la barra de navegación en un [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) . Se consume en XAML estableciendo la [`NavigationPage.HideNavigationBarSeparator`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) propiedad Bindable en `false` :
 
@@ -54,6 +54,6 @@ El resultado es que se puede ocultar el separador de la barra de navegación de 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

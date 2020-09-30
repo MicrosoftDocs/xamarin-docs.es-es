@@ -10,12 +10,12 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6a28dd20eb8978334365ac217df1241e5288fd28
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8c6d139e47974247ce4af6bfa6c32331fcf7c824
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137434"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563138"
 ---
 # <a name="skiasharp-bitmap-tiling"></a>Mosaico de mapa de bits SkiaSharp
 
@@ -45,7 +45,7 @@ Este artículo contiene varios ejemplos de cómo usar esta transformación de ma
 
 ## <a name="exploring-the-tile-modes"></a>Exploración de los modos de mosaico
 
-El primer programa de la sección **segmentación de mapas de bits** de la página **sombreadores y otros efectos** del ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) muestra los efectos de los dos `SKShaderTileMode` argumentos. El archivo XAML de los **modos de volteo del mosaico de mapa de bits** crea una instancia de `SKCanvasView` y dos `Picker` vistas que permiten seleccionar un `SKShaderTilerMode` valor para el mosaico horizontal y vertical. Observe que se define una matriz de los `SKShaderTileMode` miembros en la `Resources` sección:
+El primer programa de la sección **segmentación de mapas de bits** de la página **sombreadores y otros efectos** del ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) muestra los efectos de los dos `SKShaderTileMode` argumentos. El archivo XAML de los **modos de volteo del mosaico de mapa de bits** crea una instancia de `SKCanvasView` y dos `Picker` vistas que permiten seleccionar un `SKShaderTilerMode` valor para el mosaico horizontal y vertical. Observe que se define una matriz de los `SKShaderTileMode` miembros en la `Resources` sección:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -303,7 +303,7 @@ Observe que los `SKShaderTileMode` argumentos de `CreateBitmap` son ambos `Mirro
 
 Se requiere algún trabajo para obtener un mapa de bits adecuado para el icono. Este no funciona bien porque el brick más oscuro destaca demasiado. Aparece periódicamente en las imágenes repetidas, lo que revela el hecho de que esta pared de Brick se construyó a partir de un mapa de bits más pequeño.
 
-La carpeta de **medios** del ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) también incluye esta imagen de una pared de piedra:
+La carpeta de **medios** del ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) también incluye esta imagen de una pared de piedra:
 
 ![Icono de pared de piedra](bitmap-tiling-images/StoneWallTile.jpg "Icono de pared de piedra")
 
@@ -369,7 +369,7 @@ Si la transformación se aplica al mosaico individual, se debe girar cada imagen
 
 En la sección [**alineación de mosaicos**](#tile-alignment), verá un ejemplo de una transformación translate aplicada al sombreador.
 
-El ejemplo de [**reloj de gato**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock) independiente (que no forma parte de **SkiaSharpFormsDemos**) simula un fondo de grano de madera mediante mosaicos de mapas de bits basados en este mapa de bits cuadrado de 240 píxeles:
+El ejemplo de [**reloj de gato**](/samples/xamarin/xamarin-forms-samples/catclock) independiente (que no forma parte de **SkiaSharpFormsDemos**) simula un fondo de grano de madera mediante mosaicos de mapas de bits basados en este mapa de bits cuadrado de 240 píxeles:
 
 ![Grano de madera](bitmap-tiling-images/WoodGrain.png "Grano de madera")
 
@@ -782,6 +782,6 @@ Las `SKShaderTileMode.Mirror` Opciones aseguran que los brazos de la x de cada c
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
-- [CatClock (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [CatClock (ejemplo)](/samples/xamarin/xamarin-forms-samples/catclock)

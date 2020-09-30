@@ -10,12 +10,12 @@ ms.date: 12/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 64529b81a375ee5a8cc8a96ec557c03401e60495
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: be1de99ba42e58e375792b0a4e03d1847e2e3c87
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84130577"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562891"
 ---
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Autenticación de usuarios con Azure Active Directory B2C
 
@@ -207,7 +207,7 @@ public partial class LoginPage : ContentPage
 }
 ```
 
-El `OnForgotPassword` método es similar al proceso de inicio de sesión, pero implementa una directiva personalizada. `OnForgotPassword`utiliza una sobrecarga diferente de `AcquireTokenAsync` , que permite proporcionar una **autoridad**específica. En el ejemplo siguiente se muestra cómo proporcionar una **entidad de certificación** personalizada al adquirir un token:
+El `OnForgotPassword` método es similar al proceso de inicio de sesión, pero implementa una directiva personalizada. `OnForgotPassword` utiliza una sobrecarga diferente de `AcquireTokenAsync` , que permite proporcionar una **autoridad**específica. En el ejemplo siguiente se muestra cómo proporcionar una **entidad de certificación** personalizada al adquirir un token:
 
 ```csharp
 public partial class LoginPage : ContentPage
@@ -344,7 +344,7 @@ Ejecute la aplicación en un dispositivo físico o virtual. Al pulsar el botón 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [AzureADB2CAuth (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
+- [AzureADB2CAuth (ejemplo)](/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
 - [Azure Active Directory B2C](/azure/active-directory-b2c/)
 - [Biblioteca de autenticación de Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client)
 - [Documentación de la biblioteca de autenticación de Microsoft](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki)

@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.FormsPinceles: degradados'
+title: 'Xamarin.Forms Pinceles: degradados'
 description: La Xamarin.Forms clase GradientBrush es una clase abstracta que describe un degradado, formado por delimitadores de degradado.
 ms.prod: xamarin
 ms.assetid: 24763E56-74EC-4082-897B-E4EAACCADFEE
@@ -10,18 +10,18 @@ ms.date: 07/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 254a4433888be0e441ae37d41c24b1886040998b
-ms.sourcegitcommit: 579ec4f2884fa391e5e214a3952cd6004c521eb8
+ms.openlocfilehash: 08a423830ee3db55cb0ec7facfa5630c8832885b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87919624"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562943"
 ---
-# <a name="no-locxamarinforms-brushes-gradients"></a>Xamarin.FormsPinceles: degradados
+# <a name="no-locxamarinforms-brushes-gradients"></a>Xamarin.Forms Pinceles: degradados
 
 ![API de vista previa](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
 La `GradientBrush` clase se deriva de la `Brush` clase y es una clase abstracta que describe un degradado, formado por delimitadores de degradado. Un pincel de degradado pinta un área con varios colores que se mezclan entre sí a lo largo de un eje. Las clases que derivan de `GradientBrush` describen diferentes formas de interpretar los delimitadores de degradado y Xamarin.Forms proporcionan los siguientes pinceles de degradado:
 
@@ -42,7 +42,7 @@ La clase `GradientStop` define las propiedades siguientes:
 - `Color`, de tipo [`Color`](xref:Xamarin.Forms.Color) , que representa el color del delimitador de degradado. El valor predeterminado de esta propiedad es `Color.Default`.
 - `Offset`, de tipo `float` , que representa la ubicación del delimitador de degradado dentro del vector de degradado. El valor predeterminado de esta propiedad es 0 y los valores válidos están en el intervalo 0.0-1.0. Cuanto más se acerque este valor a 0, más próximo será el color al inicio del degradado. Del mismo modo, cuanto más se acerque este valor a 1, más cerca será el color hasta el final del degradado.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
 > [!IMPORTANT]
 > El sistema de coordenadas utilizado por los degradados es relativo a un cuadro de límite para el área de salida. 0 indica un 0 por ciento del rectángulo de selección, mientras que 1 indica un 100 por cien del rectángulo de selección. Por lo tanto, (0.5, 0.5) describe un punto en el centro del cuadro de límite y (1,1) describe un punto en la parte inferior derecha del cuadro de límite.
@@ -71,6 +71,6 @@ En este diagrama, los círculos marcan la posición de los delimitadores de degr
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [BrushesDemos (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
-- [Xamarin.FormsPinceles: degradados lineales](lineargradient.md)
-- [Xamarin.FormsPinceles: degradados radiales](radialgradient.md)
+- [BrushesDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+- [Xamarin.Forms Pinceles: degradados lineales](lineargradient.md)
+- [Xamarin.Forms Pinceles: degradados radiales](radialgradient.md)

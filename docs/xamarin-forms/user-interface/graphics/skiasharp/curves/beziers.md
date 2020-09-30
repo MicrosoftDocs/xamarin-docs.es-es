@@ -10,12 +10,12 @@ ms.date: 05/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1ad548846500ccbacc2a3d117919bfb4df1a1d79
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9193cef76a5f474f3681b15a1315e5840b41d88a
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138689"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562982"
 ---
 # <a name="three-types-of-bzier-curves"></a>Tres tipos de curvas de Bézier
 
@@ -498,7 +498,7 @@ Es muy fácil derivar el punto de control y el peso para usar el `ConicTo` méto
 
 Puede usar trigonometría para determinar la distancia del punto de control del centro del círculo: es el radio del círculo dividido entre el coseno de la mitad del ángulo α. Para dibujar un arco circular entre los puntos inicial y final, establezca el peso en el mismo coseno de la mitad del ángulo. Observe que si el ángulo es de 180 grados, las líneas tangentes nunca se cumplen y el peso es cero. Pero para los ángulos inferiores a 180 grados, la matemática funciona correctamente.
 
-En la página **arco circular cónico** se muestra esto. El archivo [**ConicCircularArc. Xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml) crea una instancia `Slider` de para seleccionar el ángulo. El `PaintSurface` controlador del archivo de código subyacente [**ConicCircularArc.Xaml.CS**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml.cs) calcula el punto de control y el peso:
+En la página **arco circular cónico** se muestra esto. El archivo [**ConicCircularArc. Xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml) crea una instancia `Slider` de para seleccionar el ángulo. El `PaintSurface` controlador del archivo de código subyacente  [**ConicCircularArc.Xaml.CS**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml.cs) calcula el punto de control y el peso:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -558,5 +558,5 @@ En este caso, es lamentable que no `ConicTo` admita pesos negativos, porque en t
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

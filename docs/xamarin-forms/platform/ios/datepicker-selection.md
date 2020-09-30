@@ -10,12 +10,12 @@ ms.date: 01/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c65cac4c777150185524b291adc6e9d1e79958d3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f8b98d103021864aeb589787224f90bdaed17146
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138559"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563788"
 ---
 # <a name="datepicker-item-selection-on-ios"></a>Selección de elementos del DatePicker en iOS
 
@@ -47,8 +47,8 @@ datePicker.On<iOS>().SetUpdateMode(UpdateMode.WhenFinished);
 
 El `DatePicker.On<iOS>` método especifica que este específico de la plataforma solo se ejecutará en iOS. El `DatePicker.SetUpdateMode` método, en el [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) espacio de nombres, se utiliza para controlar cuándo se produce la selección del elemento, con la `UpdateMode` enumeración que proporciona dos valores posibles:
 
-- `Immediately`: la selección de elementos se produce cuando el usuario examina los elementos de [`DatePicker`](xref:Xamarin.Forms.DatePicker) . Éste es el comportamiento predeterminado en Xamarin.Forms .
-- `WhenFinished`: la selección de elementos solo se produce una vez que el usuario ha presionado el botón **Done** en el [`DatePicker`](xref:Xamarin.Forms.DatePicker) .
+- `Immediately` : la selección de elementos se produce cuando el usuario examina los elementos de [`DatePicker`](xref:Xamarin.Forms.DatePicker) . Éste es el comportamiento predeterminado en Xamarin.Forms .
+- `WhenFinished` : la selección de elementos solo se produce una vez que el usuario ha presionado el botón **Done** en el [`DatePicker`](xref:Xamarin.Forms.DatePicker) .
 
 Además, el `SetUpdateMode` método se puede utilizar para alternar los valores de enumeración llamando al `UpdateMode` método, que devuelve la actual `UpdateMode` :
 
@@ -70,6 +70,6 @@ El resultado es que `UpdateMode` se aplica un especificado a [`DatePicker`](xref
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

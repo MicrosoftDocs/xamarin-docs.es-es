@@ -1,5 +1,5 @@
 ---
-title: Autentique a los usuarios con una base de datos de documentos Azure Cosmos DB yXamarin.Forms
+title: Autentique a los usuarios con una base de datos de documentos Azure Cosmos DB y Xamarin.Forms
 description: En este artículo se explica cómo combinar el control de acceso con Azure Cosmos DB colecciones con particiones, de modo que un usuario solo pueda tener acceso a sus propios documentos en una Xamarin.Forms aplicación.
 ms.prod: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
@@ -10,14 +10,14 @@ ms.date: 06/16/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 05547e960ba1ea141a830396f803dfc265283627
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2dacbc18fdbc7d9c7bd38d5ddfad2157e3a0a503
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936466"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563294"
 ---
-# <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Autentique a los usuarios con una base de datos de documentos Azure Cosmos DB yXamarin.Forms
+# <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-no-locxamarinforms"></a>Autentique a los usuarios con una base de datos de documentos Azure Cosmos DB y Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 
@@ -51,7 +51,7 @@ El agente de token de recursos es un servicio de API Web de nivel intermedio, ho
 
 Para obtener más información acerca de la creación de particiones Cosmos DB, consulte [partición y escalado en Azure Cosmos dB](/azure/cosmos-db/partition-data/). Para obtener más información sobre el control de acceso de Cosmos DB, consulte [proteger el acceso a los datos de Cosmos dB](/azure/cosmos-db/secure-access-to-data/) y [el control de acceso en la API de SQL](/rest/api/documentdb/access-control-on-documentdb-resources/).
 
-## <a name="setup"></a>Programa de instalación
+## <a name="setup"></a>Configurar
 
 El proceso para integrar el agente de token de recursos en una Xamarin.Forms aplicación es el siguiente:
 
@@ -77,11 +77,11 @@ El proceso para hospedar el agente de token de recursos en Azure App Service es 
 
 1. En el Azure Portal, cree una nueva aplicación Web de App Service. Para obtener más información, consulte [crear una aplicación web en un APP Service Environment](/azure/app-service-web/app-service-web-how-to-create-a-web-app-in-an-ase/).
 1. En el Azure Portal, abra la hoja configuración de la aplicación de la aplicación web y agregue la siguiente configuración:
-    - `accountUrl`: el valor debe ser la dirección URL de la cuenta de Cosmos DB de la hoja claves de la cuenta de Cosmos DB.
-    - `accountKey`: el valor debe ser la clave maestra Cosmos DB (principal o secundaria) de la hoja claves de la cuenta de Cosmos DB.
-    - `databaseId`: el valor debe ser el nombre de la base de datos Cosmos DB.
-    - `collectionId`: el valor debe ser el nombre de la colección de Cosmos DB (en este caso, `UserItems` ).
-    - `hostUrl`: el valor debe ser la dirección URL de la aplicación web en la hoja de información general de la cuenta de App Service.
+    - `accountUrl` : el valor debe ser la dirección URL de la cuenta de Cosmos DB de la hoja claves de la cuenta de Cosmos DB.
+    - `accountKey` : el valor debe ser la clave maestra Cosmos DB (principal o secundaria) de la hoja claves de la cuenta de Cosmos DB.
+    - `databaseId` : el valor debe ser el nombre de la base de datos Cosmos DB.
+    - `collectionId` : el valor debe ser el nombre de la colección de Cosmos DB (en este caso, `UserItems` ).
+    - `hostUrl` : el valor debe ser la dirección URL de la aplicación web en la hoja de información general de la cuenta de App Service.
 
     En la captura de pantalla siguiente se muestra esta configuración:
 
@@ -121,16 +121,16 @@ El proceso para configurar la autenticación de App Service Easy es el siguiente
 
 También se debe configurar la aplicación Web de App Service para comunicarse con la aplicación de Facebook para habilitar el flujo de autenticación. Para ello, seleccione el proveedor de identidades de Facebook y escriba los valores de **ID. de aplicación** y secreto de la **aplicación** en la configuración de la aplicación de Facebook en el centro para desarrolladores de Facebook. Para obtener más información, consulte [Agregar información de Facebook a la aplicación](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application).
 
-### <a name="xamarinforms-application-configuration"></a>Xamarin.FormsConfiguración de la aplicación
+### <a name="no-locxamarinforms-application-configuration"></a>Xamarin.Forms Configuración de la aplicación
 
 El proceso para configurar la Xamarin.Forms aplicación de ejemplo es el siguiente:
 
 1. Abra la Xamarin.Forms solución.
 1. Abra `Constants.cs` y actualice los valores de las constantes siguientes:
-    - `EndpointUri`: el valor debe ser la dirección URL de la cuenta de Cosmos DB de la hoja claves de la cuenta de Cosmos DB.
-    - `DatabaseName`: el valor debe ser el nombre de la base de datos de documentos.
-    - `CollectionName`: el valor debe ser el nombre de la colección de bases de datos de documentos (en este caso, `UserItems` ).
-    - `ResourceTokenBrokerUrl`: el valor debe ser la dirección URL de la aplicación web del agente de token de recursos en la hoja de información general de la cuenta de App Service.
+    - `EndpointUri` : el valor debe ser la dirección URL de la cuenta de Cosmos DB de la hoja claves de la cuenta de Cosmos DB.
+    - `DatabaseName` : el valor debe ser el nombre de la base de datos de documentos.
+    - `CollectionName` : el valor debe ser el nombre de la colección de bases de datos de documentos (en este caso, `UserItems` ).
+    - `ResourceTokenBrokerUrl` : el valor debe ser la dirección URL de la aplicación web del agente de token de recursos en la hoja de información general de la cuenta de App Service.
 
 ## <a name="initiating-login"></a>Iniciando inicio de sesión
 
@@ -264,10 +264,10 @@ En este artículo se explica cómo combinar el control de acceso con colecciones
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Azure Cosmos DB autenticación de todo (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
+- [Azure Cosmos DB autenticación de todo (ejemplo)](/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 - [Consumo de una base de datos de documentos de Cosmos Azure DB](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md)
 - [Protección del acceso a los datos de Azure Cosmos DB](/azure/cosmos-db/secure-access-to-data/)
 - [Control de acceso en la API de SQL](/rest/api/documentdb/access-control-on-documentdb-resources/).
 - [Cómo particionar y escalar en Azure Cosmos DB](/azure/cosmos-db/partition-data/)
 - [Biblioteca de cliente de Azure Cosmos DB](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
-- [API de Azure Cosmos DB](https://msdn.microsoft.com/library/azure/dn948556.aspx)
+- [API de Azure Cosmos DB](/dotnet/api/overview/azure/cosmosdb/client)

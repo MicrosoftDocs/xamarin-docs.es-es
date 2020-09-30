@@ -10,25 +10,25 @@ ms.date: 07/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ae30b4a4b75906613baf8a2568548c8890ccb33a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6d4c9be2166881824e798e9cb801a5720ab55178
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139092"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557861"
 ---
-# <a name="dependency-resolution-in-xamarinforms"></a>Resolución de dependencias Xamarin.Forms
+# <a name="dependency-resolution-in-no-locxamarinforms"></a>Resolución de dependencias Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)
 
-_En este artículo se explica cómo insertar un método de resolución de dependencias en Xamarin.Forms para que el contenedor de inserción de dependencias de una aplicación controle la creación y la duración de los representadores personalizados, los efectos y las implementaciones de DependencyService. Los ejemplos de código de este artículo se han tomado del ejemplo de [resolución de dependencias mediante contenedores](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo) ._
+_En este artículo se explica cómo insertar un método de resolución de dependencias en Xamarin.Forms para que el contenedor de inserción de dependencias de una aplicación controle la creación y la duración de los representadores personalizados, los efectos y las implementaciones de DependencyService. Los ejemplos de código de este artículo se han tomado del ejemplo de [resolución de dependencias mediante contenedores](/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo) ._
 
 En el contexto de una Xamarin.Forms aplicación que usa el patrón Model-View-ViewModel (MVVM), se puede usar un contenedor de inserción de dependencias para registrar y resolver modelos de vista, así como para registrar servicios e insertarlos en modelos de vista. Durante la creación del modelo de vista, el contenedor inserta las dependencias necesarias. Si no se han creado estas dependencias, el contenedor crea y resuelve primero las dependencias. Para obtener más información sobre la inserción de dependencias, incluidos ejemplos de inserción de dependencias en los modelos de vista, consulte [inserción de dependencias](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
 
-Normalmente, el control sobre la creación y la duración de los tipos de los proyectos de plataforma se realiza mediante Xamarin.Forms , que utiliza el `Activator.CreateInstance` método para crear instancias de representadores, efectos e [`DependencyService`](xref:Xamarin.Forms.DependencyService) implementaciones personalizados. Desafortunadamente, esto limita el control del desarrollador sobre la creación y la duración de estos tipos, y la capacidad de insertar dependencias en ellos. Este comportamiento se puede cambiar insertando un método de resolución de dependencia en Xamarin.Forms que controla cómo se crearán los tipos, ya sea por el contenedor de inserción de dependencias de la aplicación o por Xamarin.Forms . Sin embargo, tenga en cuenta que no hay ningún requisito para insertar un método de resolución de dependencias en Xamarin.Forms . Xamarin.Formscontinuará creando y administrando la duración de los tipos en los proyectos de plataforma si no se inserta un método de resolución de dependencias.
+Normalmente, el control sobre la creación y la duración de los tipos de los proyectos de plataforma se realiza mediante Xamarin.Forms , que utiliza el `Activator.CreateInstance` método para crear instancias de representadores, efectos e [`DependencyService`](xref:Xamarin.Forms.DependencyService) implementaciones personalizados. Desafortunadamente, esto limita el control del desarrollador sobre la creación y la duración de estos tipos, y la capacidad de insertar dependencias en ellos. Este comportamiento se puede cambiar insertando un método de resolución de dependencia en Xamarin.Forms que controla cómo se crearán los tipos, ya sea por el contenedor de inserción de dependencias de la aplicación o por Xamarin.Forms . Sin embargo, tenga en cuenta que no hay ningún requisito para insertar un método de resolución de dependencias en Xamarin.Forms . Xamarin.Forms continuará creando y administrando la duración de los tipos en los proyectos de plataforma si no se inserta un método de resolución de dependencias.
 
 > [!NOTE]
-> Aunque este artículo se centra en la inserción de un método de resolución de dependencias en Xamarin.Forms que resuelve los tipos registrados mediante un contenedor de inserción de dependencias, también es posible insertar un método de resolución de dependencias que use métodos de generador para resolver los tipos registrados. Para obtener más información, vea el ejemplo de [resolución de dependencias mediante métodos de generador](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-factoriesdemo) .
+> Aunque este artículo se centra en la inserción de un método de resolución de dependencias en Xamarin.Forms que resuelve los tipos registrados mediante un contenedor de inserción de dependencias, también es posible insertar un método de resolución de dependencias que use métodos de generador para resolver los tipos registrados. Para obtener más información, vea el ejemplo de [resolución de dependencias mediante métodos de generador](/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-factoriesdemo) .
 
 ## <a name="injecting-a-dependency-resolution-method"></a>Insertar un método de resolución de dependencias
 
@@ -304,8 +304,8 @@ Cuando [`DependencyService.Resolve<T>`](xref:Xamarin.Forms.DependencyService.Res
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Resolución de dependencias mediante contenedores (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)
-- [Inserción de dependencia](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)
+- [Resolución de dependencias mediante contenedores (ejemplo)](/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)
+- [Inserción de dependencias](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)
 - [Implementación de un reproductor de vídeo](~/xamarin-forms/app-fundamentals/custom-renderer/video-player/index.md)
 - [Invocar eventos a partir de efectos](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)
 - [Seleccionar una foto de la biblioteca de imágenes](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

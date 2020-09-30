@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsRótulo
+title: Xamarin.Forms Rótulo
 description: En este artículo se explica cómo usar la Xamarin.Forms clase Label para mostrar texto de una o varias líneas en las aplicaciones.
 ms.prod: xamarin
 ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
@@ -10,18 +10,18 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1fcfc2c3fbb91a7ee326db7aeef08459e05d834d
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 742cc1171901d5aa9b81cab31fd45258686c2085
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917882"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557587"
 ---
-# <a name="no-locxamarinforms-label"></a>Xamarin.FormsRótulo
+# <a name="no-locxamarinforms-label"></a>Xamarin.Forms Rótulo
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_Mostrar texto enXamarin.Forms_
+_Mostrar texto en Xamarin.Forms_
 
 La [`Label`](xref:Xamarin.Forms.Label) vista se usa para mostrar texto, tanto de una sola línea como de varias líneas. Las etiquetas pueden tener decoraciones de texto, texto de color y usar fuentes personalizadas (familias, tamaños y opciones).
 
@@ -60,10 +60,10 @@ Las capturas de pantallas siguientes muestran los `TextDecorations` miembros de 
 
 Un [`Label`](xref:Xamarin.Forms.Entry) puede transformar el uso de mayúsculas y minúsculas de su texto, almacenado en la `Text` propiedad, estableciendo la `TextTransform` propiedad en un valor de la `TextTransform` enumeración. Esta enumeración tiene cuatro valores:
 
-- `None`indica que el texto no se transformará.
-- `Default`indica que se utilizará el comportamiento predeterminado para la plataforma. Este es el valor predeterminado de la propiedad `TextTransform`.
-- `Lowercase`indica que el texto se transformará a minúsculas.
-- `Uppercase`indica que el texto se transformará en mayúsculas.
+- `None` indica que el texto no se transformará.
+- `Default` indica que se utilizará el comportamiento predeterminado para la plataforma. Este es el valor predeterminado de la propiedad `TextTransform`.
+- `Lowercase` indica que el texto se transformará a minúsculas.
+- `Uppercase` indica que el texto se transformará en mayúsculas.
 
 En el ejemplo siguiente se muestra cómo transformar texto a mayúsculas:
 
@@ -175,7 +175,7 @@ Para obtener más información sobre cómo especificar fuentes en un `Label` , v
 
 ## <a name="truncation-and-wrapping"></a>Truncamiento y ajuste
 
-Las etiquetas se pueden establecer para controlar el texto que no cabe en una línea de una de varias maneras, expuesta por la `LineBreakMode` propiedad. [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode)es una enumeración con los valores siguientes:
+Las etiquetas se pueden establecer para controlar el texto que no cabe en una línea de una de varias maneras, expuesta por la `LineBreakMode` propiedad. [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode) es una enumeración con los valores siguientes:
 
 - **HeadTruncation** &ndash; trunca el encabezado del texto, mostrando el final.
 - **CharacterWrap** &ndash; ajusta el texto en una nueva línea en el límite de un carácter.
@@ -219,8 +219,8 @@ Las siguientes capturas de pantallas muestran el resultado de establecer la `Max
 
 La [`Label`](xref:Xamarin.Forms.Label) clase tiene una `TextType` propiedad, que determina si la `Label` instancia debe mostrar texto sin formato o texto HTML. Esta propiedad debe establecerse en uno de los miembros de la `TextType` enumeración:
 
-- `Text`indica que mostrará el `Label` texto sin formato y es el valor predeterminado de la `Label.TextType` propiedad.
-- `Html`indica que mostrará el `Label` texto HTML.
+- `Text` indica que mostrará el `Label` texto sin formato y es el valor predeterminado de la `Label.TextType` propiedad.
+- `Html` indica que mostrará el `Label` texto HTML.
 
 Por lo tanto, [`Label`](xref:Xamarin.Forms.Label) las instancias de pueden mostrar HTML estableciendo la `Label.TextType` propiedad en `Html` y la `Label.Text` propiedad en una cadena HTML:
 
@@ -266,18 +266,18 @@ Las etiquetas exponen una [`FormattedText`](xref:Xamarin.Forms.Label.FormattedTe
 
 La `FormattedText` propiedad es de tipo [`FormattedString`](xref:Xamarin.Forms.FormattedString) , que consta de una o más [`Span`](xref:Xamarin.Forms.Span) instancias, establecida a través de la [`Spans`](xref:Xamarin.Forms.FormattedString.Spans) propiedad. Las siguientes `Span` propiedades se pueden usar para establecer la apariencia visual:
 
-- [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor): color del fondo del intervalo.
+- [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor) : color del fondo del intervalo.
 - `CharacterSpacing`, del tipo `double`, es el espaciado entre los caracteres del texto de `Span`.
-- [`Font`](xref:Xamarin.Forms.Span.Font): la fuente del texto del intervalo.
-- [`FontAttributes`](xref:Xamarin.Forms.Span.FontAttributes): los atributos de fuente para el texto del intervalo.
-- [`FontFamily`](xref:Xamarin.Forms.Span.FontFamily): la familia de fuentes a la que pertenece la fuente del texto del intervalo.
-- [`FontSize`](xref:Xamarin.Forms.Span.FontSize): tamaño de la fuente del texto del intervalo.
-- [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor): color del texto del intervalo. Esta propiedad está obsoleta y se ha reemplazado por la `TextColor` propiedad.
-- [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight): multiplicador que se va a aplicar al alto de línea predeterminado del intervalo. Para obtener más información, consulte [alto de línea](#line-height).
-- [`Style`](xref:Xamarin.Forms.Span.Style): el estilo que se va a aplicar al intervalo.
-- [`Text`](xref:Xamarin.Forms.Span.Text): el texto del intervalo.
-- [`TextColor`](xref:Xamarin.Forms.Span.TextColor): color del texto del intervalo.
-- `TextDecorations`: las decoraciones que se aplican al texto en el intervalo. Para obtener más información, vea [decoraciones de texto](#text-decorations).
+- [`Font`](xref:Xamarin.Forms.Span.Font) : la fuente del texto del intervalo.
+- [`FontAttributes`](xref:Xamarin.Forms.Span.FontAttributes) : los atributos de fuente para el texto del intervalo.
+- [`FontFamily`](xref:Xamarin.Forms.Span.FontFamily) : la familia de fuentes a la que pertenece la fuente del texto del intervalo.
+- [`FontSize`](xref:Xamarin.Forms.Span.FontSize) : tamaño de la fuente del texto del intervalo.
+- [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) : color del texto del intervalo. Esta propiedad está obsoleta y se ha reemplazado por la `TextColor` propiedad.
+- [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) : multiplicador que se va a aplicar al alto de línea predeterminado del intervalo. Para obtener más información, consulte [alto de línea](#line-height).
+- [`Style`](xref:Xamarin.Forms.Span.Style)  : el estilo que se va a aplicar al intervalo.
+- [`Text`](xref:Xamarin.Forms.Span.Text) : el texto del intervalo.
+- [`TextColor`](xref:Xamarin.Forms.Span.TextColor) : color del texto del intervalo.
+- `TextDecorations` : las decoraciones que se aplican al texto en el intervalo. Para obtener más información, vea [decoraciones de texto](#text-decorations).
 
 Las [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor) [`Text`](xref:Xamarin.Forms.Span.Text) propiedades, y [`Text`](xref:Xamarin.Forms.Span.Text) enlazables tienen un modo de enlace predeterminado de [`OneWay`](xref:Xamarin.Forms.BindingMode) . Para obtener más información acerca de este modo de enlace, vea [el modo de enlace predeterminado](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#the-default-binding-mode) en la guía del [modo de enlace](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md) .
 
@@ -466,7 +466,7 @@ El texto que se muestra en [`Label`](xref:Xamarin.Forms.Label) [`Span`](xref:Xam
 1. Defina el `ICommand` que va a ejecutar [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) .
 1. Escriba el código que va a ejecutar `ICommand` .
 
-En el ejemplo de código siguiente, tomado del ejemplo de [demostraciones de hipervínculo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , se muestra un [`Label`](xref:Xamarin.Forms.Label) cuyo contenido se establece a partir de varias [`Span`](xref:Xamarin.Forms.Span) instancias:
+En el ejemplo de código siguiente, tomado del ejemplo de [demostraciones de hipervínculo](/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , se muestra un [`Label`](xref:Xamarin.Forms.Label) cuyo contenido se establece a partir de varias [`Span`](xref:Xamarin.Forms.Span) instancias:
 
 ```xaml
 <Label>
@@ -515,7 +515,7 @@ public partial class MainPage : ContentPage
 
 El enfoque anterior para crear un hipervínculo requiere la escritura de código repetitivo cada vez que se requiere un hipervínculo en la aplicación. Sin embargo, [`Label`](xref:Xamarin.Forms.Label) [`Span`](xref:Xamarin.Forms.Span) se pueden crear subclases para las clases y `HyperlinkLabel` `HyperlinkSpan` , con el reconocedor de gestos y el código de formato de texto agregado allí.
 
-En el ejemplo de código siguiente, tomado del ejemplo de [demostraciones de hipervínculo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , se muestra una `HyperlinkSpan` clase:
+En el ejemplo de código siguiente, tomado del ejemplo de [demostraciones de hipervínculo](/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , se muestra una `HyperlinkSpan` clase:
 
 ```csharp
 public class HyperlinkSpan : Span
@@ -573,8 +573,8 @@ En las secciones anteriores se describe la configuración [`Label`](xref:Xamarin
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Texto (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
-- [Hipervínculos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks)
+- [Texto (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [Hipervínculos (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks)
 - [Creación de Mobile Apps con Xamarin.Forms , capítulo 3](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [API de las etiquetas](xref:Xamarin.Forms.Label)
 - [API de span](xref:Xamarin.Forms.Span)

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsSwipeView
+title: Xamarin.Forms SwipeView
 description: Xamarin.FormsSwipeView es un control contenedor que se ajusta alrededor de un elemento de contenido y proporciona elementos de menú contextual que se revelan mediante un gesto de deslizar rápidamente.
 ms.prod: xamarin
 ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
@@ -10,24 +10,24 @@ ms.date: 03/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4a51f2d7bef446bc14938aaa3e9b60d85580ebc9
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 178d36eabfdbe0452bec456979fcca89acdf8926
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918328"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563346"
 ---
-# <a name="no-locxamarinforms-swipeview"></a>Xamarin.FormsSwipeView
+# <a name="no-locxamarinforms-swipeview"></a>Xamarin.Forms SwipeView
 
 ![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
 
 `SwipeView`Es un control contenedor que se ajusta alrededor de un elemento de contenido y proporciona elementos de menú contextual que se revelan mediante un gesto de deslizar rápidamente:
 
 [![Captura de pantalla de SwipeView deslizar rápidamente los elementos en una CollectionView, en iOS y Android](swipeview-images/swipeview-collectionview.png "SwipeView deslizar rápidamente los elementos")](swipeview-images/swipeview-collectionview-large.png#lightbox "SwipeView deslizar rápidamente los elementos")
 
-`SwipeView`está disponible en Xamarin.Forms 4,4. Sin embargo, actualmente es experimental y solo se puede usar agregando la siguiente línea de código a la `AppDelegate` clase en iOS, a la `MainActivity` clase en Android o a la `App` clase en UWP, antes de llamar a `Forms.Init` :
+`SwipeView` está disponible en Xamarin.Forms 4,4. Sin embargo, actualmente es experimental y solo se puede usar agregando la siguiente línea de código a la `AppDelegate` clase en iOS, a la `MainActivity` clase en Android o a la `App` clase en UWP, antes de llamar a `Forms.Init` :
 
 ```csharp
 Forms.SetFlags("SwipeView_Experimental");
@@ -40,21 +40,21 @@ Forms.SetFlags("SwipeView_Experimental");
 - `TopItems`, de tipo `SwipeItems` , que representa los elementos de deslizamiento que se pueden invocar cuando el control se desliza hacia arriba hacia abajo.
 - `BottomItems`, de tipo `SwipeItems` , que representa los elementos de deslizamiento que se pueden invocar cuando se pasa el dedo hacia arriba en el control.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
 Además, `SwipeView` hereda la [`Content`](xref:Xamarin.Forms.ContentView.Content) propiedad de la [`ContentView`](xref:Xamarin.Forms.ContentView) clase. La `Content` propiedad es la propiedad de contenido de la `SwipeView` clase y, por tanto, no es necesario establecer explícitamente.
 
 La `SwipeView` clase también define cuatro eventos:
 
-- `SwipeStarted`se desencadena cuando se inicia un deslizamiento. El `SwipeStartedEventArgs` objeto que acompaña a este evento tiene una `SwipeDirection` propiedad, de tipo `SwipeDirection` .
-- `SwipeChanging`se desencadena cuando se mueve el dedo. El `SwipeChangingEventArgs` objeto que acompaña a este evento tiene una `SwipeDirection` propiedad, de tipo `SwipeDirection` y una `Offset` propiedad de tipo `double` .
-- `SwipeEnded`se desencadena cuando finaliza un deslizamiento. El `SwipeEndedEventArgs` objeto que acompaña a este evento tiene una `SwipeDirection` propiedad, de tipo `SwipeDirection` .
-- `CloseRequested`se desencadena cuando se cierran los elementos de deslizamiento.
+- `SwipeStarted` se desencadena cuando se inicia un deslizamiento. El `SwipeStartedEventArgs` objeto que acompaña a este evento tiene una `SwipeDirection` propiedad, de tipo `SwipeDirection` .
+- `SwipeChanging` se desencadena cuando se mueve el dedo. El `SwipeChangingEventArgs` objeto que acompaña a este evento tiene una `SwipeDirection` propiedad, de tipo `SwipeDirection` y una `Offset` propiedad de tipo `double` .
+- `SwipeEnded` se desencadena cuando finaliza un deslizamiento. El `SwipeEndedEventArgs` objeto que acompaña a este evento tiene una `SwipeDirection` propiedad, de tipo `SwipeDirection` .
+- `CloseRequested` se desencadena cuando se cierran los elementos de deslizamiento.
 
 Además, `SwipeView` incluye `Open` métodos y `Close` , que abren y cierran los elementos de deslizamiento mediante programación, respectivamente.
 
 > [!NOTE]
-> `SwipeView`tiene una plataforma específica para iOS y Android, que controla la transición que se usa al abrir un `SwipeView` . Para obtener más información, consulte el [modo de transición de SwipeView con el dedo en iOS](~/xamarin-forms/platform/ios/swipeview-swipetransitionmode.md) y [SwipeView Deslice el modo de transición en Android](~/xamarin-forms/platform/android/swipeview-swipetransitionmode.md).
+> `SwipeView` tiene una plataforma específica para iOS y Android, que controla la transición que se usa al abrir un `SwipeView` . Para obtener más información, consulte el [modo de transición de SwipeView con el dedo en iOS](~/xamarin-forms/platform/ios/swipeview-swipetransitionmode.md) y [SwipeView Deslice el modo de transición en Android](~/xamarin-forms/platform/android/swipeview-swipetransitionmode.md).
 
 ## <a name="create-a-swipeview"></a>Creación de un SwipeView
 
@@ -152,7 +152,7 @@ Las `LeftItems` `RightItems` colecciones,, `TopItems` y `BottomItems` son de tip
 - `Mode`, de tipo `SwipeMode` , que indica el efecto de una interacción de deslizar rápidamente. Para obtener más información sobre el modo de deslizar rápidamente, vea el [modo de deslizar rápidamente](#swipe-mode).
 - `SwipeBehaviorOnInvoked`, de tipo `SwipeBehaviorOnInvoked` , que indica cómo `SwipeView` se comporta una vez que se invoca un elemento de deslizamiento. Para obtener más información sobre el comportamiento de los deslizamientos, vea [deslizar el comportamiento](#swipe-behavior).
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
 Cada elemento de deslizamiento se define como un `SwipeItem` objeto que se coloca en una de las cuatro `SwipeItems` colecciones direccionales. La `SwipeItem` clase se deriva de la [`MenuItem`](xref:Xamarin.Forms.MenuItem) clase y agrega los siguientes miembros:
 
@@ -195,7 +195,7 @@ Además de definir los elementos de deslizar rápidamente como `SwipeItem` objet
 
 ## <a name="swipe-direction"></a>Deslizar rápidamente
 
-`SwipeView`admite cuatro direcciones de deslizamiento diferentes, con la dirección de deslizamiento que se define en la colección direcciona `SwipeItems` a la que `SwipeItem` se agregan los objetos. Cada dirección de deslizamiento puede mantener sus propios elementos de deslizamiento. Por ejemplo, en el ejemplo siguiente se muestra un `SwipeView` cuyos elementos de deslizamiento dependen de la dirección de deslizamiento:
+`SwipeView` admite cuatro direcciones de deslizamiento diferentes, con la dirección de deslizamiento que se define en la colección direcciona `SwipeItems` a la que `SwipeItem` se agregan los objetos. Cada dirección de deslizamiento puede mantener sus propios elementos de deslizamiento. Por ejemplo, en el ejemplo siguiente se muestra un `SwipeView` cuyos elementos de deslizamiento dependen de la dirección de deslizamiento:
 
 ```xaml
 <SwipeView>
@@ -230,17 +230,17 @@ En este ejemplo, el `SwipeView` contenido se puede deslizar hacia la derecha o h
 
 Los `SwipeStarted` `SwipeChanging` eventos, y `SwipeEnded` notifican la dirección de deslizamiento a través de la `SwipeDirection` propiedad en los argumentos del evento. Esta propiedad es de tipo `SwipeDirection` , que es una enumeración que consta de cuatro miembros:
 
-- `Right`indica que se ha producido un dedo a la derecha.
-- `Left`indica que se ha producido un deslizamiento a la izquierda.
-- `Up`indica que se ha producido un deslizamiento hacia arriba.
-- `Down`indica que se ha producido un deslizamiento hacia abajo.
+- `Right` indica que se ha producido un dedo a la derecha.
+- `Left` indica que se ha producido un deslizamiento a la izquierda.
+- `Up` indica que se ha producido un deslizamiento hacia arriba.
+- `Down` indica que se ha producido un deslizamiento hacia abajo.
 
 ## <a name="swipe-mode"></a>Modo de deslizar rápidamente
 
 La `SwipeItems` clase tiene una `Mode` propiedad, que indica el efecto de una interacción de deslizar rápidamente. Esta propiedad debe establecerse en uno de los `SwipeMode` miembros de enumeración:
 
-- `Reveal`indica que un deslizador revela los elementos de deslizamiento. Este es el valor predeterminado de la propiedad `SwipeItems.Mode`.
-- `Execute`indica que un dedo ejecuta los elementos de deslizamiento.
+- `Reveal` indica que un deslizador revela los elementos de deslizamiento. Este es el valor predeterminado de la propiedad `SwipeItems.Mode`.
+- `Execute` indica que un dedo ejecuta los elementos de deslizamiento.
 
 En el modo de visualización, el usuario desliza el dedo `SwipeView` para abrir un menú que consta de uno o varios elementos de deslizamiento y debe pulsar explícitamente en un elemento de deslizamiento para ejecutarlo. Una vez que se haya ejecutado el dedo, se cerrarán los elementos de deslizamiento y `SwipeView` se volverá a mostrar el contenido. En el modo de ejecución, el usuario desliza el dedo `SwipeView` para abrir un menú que consta de uno o varios elementos de deslizamiento, que se ejecutan automáticamente. Después de la ejecución, se cierran los elementos de deslizamiento y `SwipeView` se vuelve a mostrar el contenido.
 
@@ -266,9 +266,9 @@ En este ejemplo, el `SwipeView` contenido se puede deslizar hacia la derecha par
 
 La `SwipeItems` clase tiene una `SwipeBehaviorOnInvoked` propiedad, que indica cómo `SwipeView` se comporta una vez que se invoca un elemento de deslizamiento. Esta propiedad debe establecerse en uno de los `SwipeBehaviorOnInvoked` miembros de enumeración:
 
-- `Auto`indica que en modo de revelar `SwipeView` se cierra después de invocar un elemento de deslizamiento y en modo de ejecución, el `SwipeView` permanece abierto después de invocar un elemento de deslizamiento. Este es el valor predeterminado de la propiedad `SwipeItems.SwipeBehaviorOnInvoked`.
-- `Close`indica que `SwipeView` se cierra después de invocar un elemento de deslizamiento.
-- `RemainOpen`indica que `SwipeView` permanece abierto después de invocar un elemento de deslizamiento.
+- `Auto` indica que en modo de revelar `SwipeView` se cierra después de invocar un elemento de deslizamiento y en modo de ejecución, el `SwipeView` permanece abierto después de invocar un elemento de deslizamiento. Este es el valor predeterminado de la propiedad `SwipeItems.SwipeBehaviorOnInvoked`.
+- `Close` indica que `SwipeView` se cierra después de invocar un elemento de deslizamiento.
+- `RemainOpen` indica que `SwipeView` permanece abierto después de invocar un elemento de deslizamiento.
 
 En el ejemplo siguiente se muestra una `SwipeView` configurada para que permanezca abierta después de invocar un elemento de deslizamiento:
 
@@ -297,7 +297,7 @@ Los elementos de deslizamiento personalizado se pueden definir con el `SwipeItem
 - `Command`, de tipo `ICommand` , que se ejecuta cuando se puntea un elemento de deslizamiento.
 - `CommandParameter`, de tipo `object`, que es el parámetro que se pasa a `Command`.
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
 La `SwipeItemView` clase también define un `Invoked` evento que se desencadena cuando se puntea el elemento, después de que `Command` se ejecute.
 
@@ -329,7 +329,7 @@ En este ejemplo, el objeto `SwipeItemView` incluye un objeto [`StackLayout`](xre
 
 ## <a name="open-and-close-a-swipeview-programmatically"></a>Abrir y cerrar un SwipeView mediante programación
 
-`SwipeView`incluye `Open` `Close` métodos y, que abren y cierran los elementos de deslizamiento mediante programación, respectivamente.
+`SwipeView` incluye `Open` `Close` métodos y, que abren y cierran los elementos de deslizamiento mediante programación, respectivamente.
 
 El `Open` método requiere un `OpenSwipeItem` argumento, para especificar la dirección desde la que se `SwipeView` abrirá. La `OpenSwipeItem` enumeración tiene cuatro miembros:
 
@@ -361,5 +361,5 @@ Además, al definir la `Command` propiedad de un `SwipeItem` objeto o `SwipeItem
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [SwipeView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
-- [Xamarin.FormsObjetos](~/xamarin-forms/user-interface/menuitem.md)
+- [SwipeView (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
+- [Xamarin.Forms Objetos](~/xamarin-forms/user-interface/menuitem.md)

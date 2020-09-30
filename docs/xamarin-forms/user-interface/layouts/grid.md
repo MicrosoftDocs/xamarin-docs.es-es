@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsCuadrícula
+title: Xamarin.Forms Cuadrícula
 description: La Xamarin.Forms cuadrícula es un diseño que organiza sus elementos secundarios en filas y columnas de celdas.
 ms.prod: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
@@ -10,18 +10,18 @@ ms.date: 06/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9d2e697a07e033fd7c3c8d3efffa1d67f6c097c3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 59a4d5c0730719d6cc332728c6cab641d02239b4
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946346"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563567"
 ---
-# <a name="xamarinforms-grid"></a>Xamarin.FormsCuadrícula
+# <a name="no-locxamarinforms-grid"></a>Xamarin.Forms Cuadrícula
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
 
-[![Xamarin.FormsCuadrícula](grid-images/layouts.png "[! Operador. Cuadrícula de NO-LOC (Xamarin. Forms)]")](grid-images/layouts-large.png#lightbox "[! Operador. Cuadrícula de NO-LOC (Xamarin. Forms)]")
+[![::: no-LOC (Xamarin. Forms)::: Grid](grid-images/layouts.png "::: no-LOC (Xamarin. Forms)::: Grid")](grid-images/layouts-large.png#lightbox "::: no-LOC (Xamarin. Forms)::: Grid")
 
 [`Grid`](xref:Xamarin.Forms.Grid)Es un diseño que organiza sus elementos secundarios en filas y columnas, que pueden tener tamaños proporcionales o absolutos. De forma predeterminada, un `Grid` contiene una fila y una columna. Además, `Grid` se puede utilizar como un diseño primario que contiene otros diseños secundarios.
 
@@ -67,9 +67,9 @@ El comportamiento de diseño de [`Grid`](xref:Xamarin.Forms.Grid) se puede defin
 
 La [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) clase define una [`Height`](xref:Xamarin.Forms.RowDefinition.Height) propiedad, de tipo [`GridLength`](xref:Xamarin.Forms.GridLength) , y la [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) clase define una [`Width`](xref:Xamarin.Forms.ColumnDefinition.Width) propiedad, de tipo [`GridLength`](xref:Xamarin.Forms.GridLength) . El [`GridLength`](xref:Xamarin.Forms.GridLength) struct especifica un alto de fila o un ancho de columna en cuanto a la [`GridUnitType`](xref:Xamarin.Forms.GridUnitType) enumeración, que tiene tres miembros:
 
-- `Absolute`: el alto de fila o el ancho de columna es un valor en unidades independientes del dispositivo (un número en XAML).
-- `Auto`: el alto de fila o el ancho de columna se ajusta automáticamente según el contenido de la celda ( `Auto` en XAML).
-- `Star`– el alto de fila o el ancho de columna sobrante se asigna proporcionalmente (un número seguido `*` de en XAML).
+- `Absolute` : el alto de fila o el ancho de columna es un valor en unidades independientes del dispositivo (un número en XAML).
+- `Auto` : el alto de fila o el ancho de columna se ajusta automáticamente según el contenido de la celda ( `Auto` en XAML).
+- `Star` – el alto de fila o el ancho de columna sobrante se asigna proporcionalmente (un número seguido `*` de en XAML).
 
 Una [`Grid`](xref:Xamarin.Forms.Grid) fila con una `Height` propiedad de `Auto` restringe el alto de las vistas en esa fila de la misma manera que una vertical [`StackLayout`](xref:Xamarin.Forms.StackLayout) . Del mismo modo, una columna con una `Width` propiedad de funciona de forma `Auto` muy parecida a una horizontal `StackLayout` .
 
@@ -344,7 +344,7 @@ public GridSpacingPageCS()
 }
 ```
 
-## <a name="alignment"></a>Alineación
+## <a name="alignment"></a>Alignment
 
 Las vistas secundarias de una [`Grid`](xref:Xamarin.Forms.Grid) se pueden colocar en sus celdas por las [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) propiedades y. Estas propiedades se pueden establecer en los siguientes campos del [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) struct:
 
@@ -752,7 +752,7 @@ public class ColorSlidersGridPageCS : ContentPage
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de cuadrícula (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
-- [Opciones de diseño enXamarin.Forms](layout-options.md)
+- [Demostraciones de cuadrícula (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
+- [Opciones de diseño en Xamarin.Forms](layout-options.md)
 - [Elegir un Xamarin.Forms diseño](choose-layout.md)
 - [Mejorar el rendimiento de las Xamarin.Forms aplicaciones](~/xamarin-forms/deploy-test/performance.md)

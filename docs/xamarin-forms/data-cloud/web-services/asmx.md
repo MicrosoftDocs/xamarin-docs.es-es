@@ -10,12 +10,12 @@ ms.date: 04/02/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: aa600974cdf25f8f85d9152edc4a377334cc8c78
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 90f93c2fd17771ccd8bc5dc67404b76cd4ab9c30
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936557"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563008"
 ---
 # <a name="consume-an-aspnet-web-service-asmx"></a>Consumo de un servicio web ASP.NET (ASMX)
 
@@ -67,7 +67,7 @@ El ejemplo `SoapService` :
 
 1. Crea `TodoService` una instancia de como una instancia de nivel de clase.
 1. Crea una colección denominada `Items` para almacenar `TodoItem` objetos.
-1. Especifica un extremo personalizado para la `Url` propiedad opcional en el`TodoService`
+1. Especifica un extremo personalizado para la `Url` propiedad opcional en el `TodoService`
 
 ```csharp
 public class SoapService : ISoapService
@@ -270,5 +270,5 @@ La prueba de dispositivos físicos o emulados con un servicio hospedado localmen
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [TodoASMX (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
-- [IAsyncResult](https://docs.microsoft.com/dotnet/api/system.iasyncresult)
+- [TodoASMX (ejemplo)](/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
+- [IAsyncResult](/dotnet/api/system.iasyncresult)

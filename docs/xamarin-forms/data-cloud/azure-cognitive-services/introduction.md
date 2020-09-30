@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Formsy Azure Cognitive Services introducción
+title: Xamarin.Forms y Azure Cognitive Services introducción
 description: En este artículo se proporciona una introducción a una aplicación de ejemplo que muestra cómo invocar algunas de las API de los servicios cognitivos de Microsoft.
 ms.prod: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
@@ -10,14 +10,14 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cce5b0fc9c3d1d04c20b1be242197e3bc9e4f901
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f40220a29611bb365dc77eeb5e85445a0df19fd6
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929343"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563255"
 ---
-# <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Xamarin.Formsy Azure Cognitive Services introducción
+# <a name="no-locxamarinforms-and-azure-cognitive-services-introduction"></a>Xamarin.Forms y Azure Cognitive Services introducción
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
@@ -79,10 +79,10 @@ El proyecto de código compartido también contiene algunos archivos importantes
 
 La aplicación de ejemplo usa los siguientes paquetes NuGet:
 
-- `Newtonsoft.Json`: proporciona un marco JSON para .NET.
-- `PCLStorage`: proporciona un conjunto de API de e/s de archivos locales entre plataformas.
-- `sqlite-net-pcl`: proporciona almacenamiento de base de datos de SQLite.
-- `Xam.Plugin.Media`: proporciona las API de selección y toma de fotografías multiplataforma.
+- `Newtonsoft.Json` : proporciona un marco JSON para .NET.
+- `PCLStorage` : proporciona un conjunto de API de e/s de archivos locales entre plataformas.
+- `sqlite-net-pcl` : proporciona almacenamiento de base de datos de SQLite.
+- `Xam.Plugin.Media` : proporciona las API de selección y toma de fotografías multiplataforma.
 
 Además, estos paquetes NuGet también instalan sus propias dependencias.
 
@@ -132,4 +132,4 @@ La aplicación de ejemplo invoca el siguiente Microsoft Cognitive Services:
 
 - [Reconocimiento de voz con la API del servicio Speech](~/xamarin-forms/data-cloud/azure-cognitive-services/speech-recognition.md)
 - [Microsoft Cognitive Services documentación](https://www.microsoft.com/cognitive-services/documentation)
-- [Cognitive Services todo (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+- [Cognitive Services todo (ejemplo)](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

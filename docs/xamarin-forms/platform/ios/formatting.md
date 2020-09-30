@@ -10,12 +10,12 @@ ms.date: 01/29/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4381b1fbe7b38c2695bce645903d599bdb792fc2
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f447a89ca4b4f21554a75ec52c5771ee9f9d35fd
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937441"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562995"
 ---
 # <a name="adding-ios-specific-formatting"></a>Agregar formato específico de iOS
 
@@ -32,7 +32,7 @@ Estas alternativas se describen a continuación.
 
 El archivo **info. plist** le permite configurar algunos aspectos de renderering de una aplicación de iOS, como, por ejemplo, cómo se muestra la barra de estado (y si).
 
-Por ejemplo, el [ejemplo todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) usa el código siguiente para establecer el color de la barra de navegación y el color del texto en todas las plataformas:
+Por ejemplo, el [ejemplo todo](/samples/xamarin/xamarin-forms-samples/todo) usa el código siguiente para establecer el color de la barra de navegación y el color del texto en todas las plataformas:
 
 ```csharp
 var nav = new NavigationPage (new TodoListPage ());
@@ -85,7 +85,7 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 
 ### <a name="uitabbar"></a>UITabBar
 
-De forma predeterminada, el icono de la barra de pestañas seleccionada en un[`TabbedPage`](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)
+De forma predeterminada, el icono de la barra de pestañas seleccionada en un [`TabbedPage`](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)
 sería azul:
 
 ![Icono predeterminado de la barra de pestañas de iOS en TabbedPage](theme-images/tabbar-default.png)
@@ -100,8 +100,8 @@ Esto hace que la pestaña seleccionada sea verde:
 
 ![Icono verde de la barra de pestañas de iOS en TabbedPage](theme-images/tabbar-custom.png)
 
-El uso de esta API le permite personalizar la apariencia delXamarin.Forms
-`TabbedPage`en iOS con muy poco código. Consulte la [receta personalización de pestañas](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs) para obtener más información sobre el uso de un representador personalizado para establecer una fuente específica para la pestaña.
+El uso de esta API le permite personalizar la apariencia del Xamarin.Forms
+`TabbedPage` en iOS con muy poco código. Consulte la [receta personalización de pestañas](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs) para obtener más información sobre el uso de un representador personalizado para establecer una fuente específica para la pestaña.
 
 ### <a name="uiswitch"></a>UISwitch
 
@@ -111,7 +111,7 @@ El `Switch` control es otro ejemplo en el que se puede aplicar un estilo sencill
 UISwitch.Appearance.OnTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); // green
 ```
 
-Estas dos capturas de pantalla muestran el `UISwitch` control predeterminado a la izquierda y la versión personalizada (valor `Appearance` ) de la derecha en el [ejemplo de todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo):
+Estas dos capturas de pantalla muestran el `UISwitch` control predeterminado a la izquierda y la versión personalizada (valor `Appearance` ) de la derecha en el [ejemplo de todo](/samples/xamarin/xamarin-forms-samples/todo):
 
 ![Color de UISwitch predeterminado](theme-images/switch-default.png) ![Color de UISwitch personalizado](theme-images/switch-custom.png)
 

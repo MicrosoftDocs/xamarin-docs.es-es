@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f1c438ec182119ffda1fe73916cbd8e971d421ab
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 295f90c86eb08fa6df376e1b4665f1c66d2467cb
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929706"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563645"
 ---
 # <a name="visualelement-legacy-color-mode-on-windows"></a>Modo de color heredado de VisualElement en Windows
 
@@ -60,6 +60,6 @@ El resultado es que el modo de color heredado se puede deshabilitar, de modo que
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de WindowsSpecific](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

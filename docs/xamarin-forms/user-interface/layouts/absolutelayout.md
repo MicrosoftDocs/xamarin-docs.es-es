@@ -11,12 +11,12 @@ ms.custom: contperfq1
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3fa88976c49d3ccb89b74a0ce40de0583fa20795
-ms.sourcegitcommit: 9bd6b1b20d126b3f837c4cf859b25895c242e54e
+ms.openlocfilehash: 0468d132ee6e75ab75c0150f1f5c9e0af6dfde40
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88648166"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557782"
 ---
 # <a name="no-locxamarinforms-absolutelayout"></a>Xamarin.Forms AbsoluteLayout
 
@@ -236,7 +236,7 @@ En este ejemplo, la posición y el tamaño de cada elemento secundario se establ
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de AbsoluteLayout (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
+- [Demostraciones de AbsoluteLayout (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
 - [Xamarin.Forms Propiedades adjuntas](~/xamarin-forms/xaml/attached-properties.md)
 - [Elegir un Xamarin.Forms diseño](choose-layout.md)
 - [Mejorar el rendimiento de las Xamarin.Forms aplicaciones](~/xamarin-forms/deploy-test/performance.md)

@@ -1,5 +1,5 @@
 ---
-title: Estilos implícitos enXamarin.Forms
+title: Estilos implícitos en Xamarin.Forms
 description: Un estilo implícito es aquél que usan todos los controles del mismo TargetType, sin necesidad de que cada control haga referencia al estilo.
 ms.prod: xamarin
 ms.assetid: 02A75F3B-4389-49D4-A2F4-AFD473A4A161
@@ -10,14 +10,14 @@ ms.date: 01/30/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3fb6ea40ced93103ec9cc92fa707f68c674d7826
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ad297b735449796925b92fbc9d1887db9e8a1c99
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139014"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563333"
 ---
-# <a name="implicit-styles-in-xamarinforms"></a>Estilos implícitos enXamarin.Forms
+# <a name="implicit-styles-in-no-locxamarinforms"></a>Estilos implícitos en Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
@@ -89,7 +89,7 @@ Para obtener información sobre cómo crear estilos en la de una aplicación [`R
 
 ## <a name="create-an-implicit-style-in-c35"></a>Crear un estilo implícito en C&#35;
 
-[`Style`](xref:Xamarin.Forms.Style)las instancias se pueden agregar a la colección de una página [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) en C# mediante la creación de una nueva [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) y, a continuación, agregando las `Style` instancias a `ResourceDictionary` , tal y como se muestra en el ejemplo de código siguiente:
+[`Style`](xref:Xamarin.Forms.Style) las instancias se pueden agregar a la colección de una página [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) en C# mediante la creación de una nueva [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) y, a continuación, agregando las `Style` instancias a `ResourceDictionary` , tal y como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 public class ImplicitStylesPageCS : ContentPage
@@ -160,8 +160,8 @@ Resources = new ResourceDictionary { buttonStyle };
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Estilos básicos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
-- [Trabajar con estilos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
+- [Estilos básicos (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+- [Trabajar con estilos (ejemplo)](/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Estilo](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

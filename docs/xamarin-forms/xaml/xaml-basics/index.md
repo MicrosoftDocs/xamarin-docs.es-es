@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsConceptos básicos de XAML
+title: Xamarin.Forms Conceptos básicos de XAML
 description: En esta guía se explica cómo empezar a trabajar con XAML multiplataforma para dispositivos móviles. XAML permite a los desarrolladores definir interfaces de usuario en Xamarin.Forms aplicaciones con marcado en lugar de código.
 ms.prod: xamarin
 ms.custom: video
@@ -11,14 +11,14 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8f5f69038f7d5cfe7ad46f013acb1519c4e9569f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3d2620014c9554712c746b98de3b9a0eeaa20864
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138624"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562761"
 ---
-# <a name="xamarinforms-xaml-basics"></a>Xamarin.FormsConceptos básicos de XAML
+# <a name="no-locxamarinforms-xaml-basics"></a>Xamarin.Forms Conceptos básicos de XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
@@ -37,17 +37,17 @@ XAML tiene varias ventajas con respecto al código equivalente:
 También hay desventajas, principalmente relacionadas con las limitaciones que son intrínsecas a los lenguajes de marcado:
 
 - XAML no puede contener código. Todos los controladores de eventos se deben definir en un archivo de código.
-- XAML no puede contener bucles para el procesamiento repetitivo. (Sin embargo, varios Xamarin.Forms objetos visuales, en concreto, [`ListView`](xref:Xamarin.Forms.ListView) pueden generar varios elementos secundarios basados en los objetos de su `ItemsSource` colección).
+- XAML no puede contener bucles para el procesamiento repetitivo. (Sin embargo, varios Xamarin.Forms objetos visuales, en concreto,  [`ListView`](xref:Xamarin.Forms.ListView) pueden generar varios elementos secundarios basados en los objetos de su `ItemsSource` colección).
 - XAML no puede contener procesamiento condicional (sin embargo, un enlace de datos puede hacer referencia a un convertidor de enlace basado en código que permita de forma eficaz algún procesamiento condicional).
 - Por lo general, XAML no puede crear instancias de clases que no definen un constructor sin parámetros. (Sin embargo, a veces hay una forma de evitar esta restricción).
 - Normalmente, XAML no puede llamar a métodos. (De nuevo, esta restricción a veces se puede solucionar).
 
 Todavía no hay un diseñador visual para generar XAML en Xamarin.Forms aplicaciones. Todo XAML debe estar escrito a mano, pero hay un controlador de [vista previa de XAML](~/xamarin-forms/xaml/xaml-previewer/index.md). Es posible que los programadores nuevos en XAML deseen compilar y ejecutar sus aplicaciones con frecuencia, especialmente después de cualquier cosa que podría no ser correcta. Incluso los desarrolladores con mucha experiencia en XAML saben que la experimentación es gratificante.
 
-XAML es básicamente XML, pero XAML tiene algunas características de sintaxis únicas. Las más importantes son:
+XAML es básicamente XML, pero XAML tiene algunas características de sintaxis únicas. Las más importantes son las siguientes:
 
 - Elementos de propiedad
-- Propiedades asociadas
+- Propiedades adjuntas
 - Extensiones de marcado
 
 Estas características *no* son extensiones XML. XAML es completamente XML legal. Pero estas características de sintaxis XAML usan XML de maneras únicas. Se describen en detalle en los artículos siguientes, que concluyen con una introducción al uso de XAML para implementar MVVM.
@@ -60,9 +60,9 @@ Cuando esté familiarizado con Xamarin.Forms y XML, empiece a leer la [parte 1. 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Crear Mobile Apps libro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
-- [Ejemplos de Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Ejemplos de Xamarin.Forms](/samples/browse/?products=xamarin&term=Xamarin.Forms)
 
 ## <a name="related-video"></a>Vídeo relacionado
 

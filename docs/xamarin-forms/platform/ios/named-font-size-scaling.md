@@ -10,12 +10,12 @@ ms.date: 06/28/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9aa29ba4d8e6bda9126ec211af1b4febebd5bab9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e693565bf34b2ab17992aed72d022315a33b87e3
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128276"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563671"
 ---
 # <a name="accessibility-scaling-for-named-font-sizes-on-ios"></a>Escalado de accesibilidad para tamaños de fuente con nombre en iOS
 
@@ -45,6 +45,6 @@ El `Application.On<iOS>` método especifica que este específico de la plataform
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

@@ -10,16 +10,16 @@ ms.date: 05/24/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2571375e7ad28acbf367870b5c48e19d3a7525e7
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f2e6735be2593133f755f87b365b8352bf09ebb4
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931292"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563086"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Datos de la ruta de acceso SVG en SkiaSharp
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Definir rutas de acceso mediante cadenas de texto en el formato de gráficos vectoriales escalables_
 
@@ -87,7 +87,7 @@ V y ...
 
 Este comando agrega una línea vertical a la ruta de acceso y establece la nueva posición actual en el final de la línea.
 
-## <a name="close"></a>**Close**
+## <a name="close"></a>**Cerrar**
 
 ```
 Z
@@ -434,5 +434,5 @@ Sin embargo, se hace algo especial con la segunda mano. Dado que el reloj se act
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

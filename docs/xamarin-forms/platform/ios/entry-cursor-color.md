@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 501210f669c7d62eddaf7ebe3b4ebf19614589a7
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ee5c4baae0380c854bc6f1cf0f608e065924a157
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936349"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563775"
 ---
 # <a name="entry-cursor-color-on-ios"></a>Color del cursor de entrada en iOS
 
@@ -51,6 +51,6 @@ El resultado es que el color del cursor de un [`Entry`](xref:Xamarin.Forms.Entry
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

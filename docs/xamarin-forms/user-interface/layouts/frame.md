@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsGrama
+title: Xamarin.Forms Grama
 description: La Xamarin.Forms clase de marco es un diseño que se usa para ajustar una vista o un diseño con un borde que se puede configurar con color, sombra y otras opciones.
 ms.prod: xamarin
 ms.assetId: 4E074714-0928-41C8-A468-B60E23236A8C
@@ -10,14 +10,14 @@ ms.date: 08/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 42192111befbefda7e0f62b7691a8392c2828818
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8a14390afc04c1a0b2ccb5199350b69a9645a794
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137194"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563554"
 ---
-# <a name="xamarinforms-frame"></a>Xamarin.FormsGrama
+# <a name="no-locxamarinforms-frame"></a>Xamarin.Forms Grama
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 
@@ -27,11 +27,11 @@ En la captura de pantalla siguiente se muestran `Frame` los controles de iOS y A
 
 [!["Ejemplos de marcos en iOS y Android"](frame-images/frame-cropped.png)](frame-images/frame-full.png#lightbox "Ejemplos de fotogramas en iOS y Android")
 
-La `Frame` clase define las siguientes propiedades:
+La clase `Frame` define las propiedades siguientes:
 
-* [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor)es un `Color` valor que determina el color del `Frame` borde.
-* [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius)es un `float` valor que determina el radio redondeado de la esquina.
-* [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow)es un `bool` valor que determina si el marco tiene una sombra paralela.
+* [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor) es un `Color` valor que determina el color del `Frame` borde.
+* [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius) es un `float` valor que determina el radio redondeado de la esquina.
+* [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) es un `bool` valor que determina si el marco tiene una sombra paralela.
 
 Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que `Frame` puede ser el destino de los enlaces de datos.
 
@@ -57,7 +57,7 @@ Frame defaultFrame = new Frame
 };
 ```
 
-`Frame`los objetos se pueden personalizar con esquinas redondeadas, bordes coloreados y sombras paralelas estableciendo propiedades en el código XAML. En el ejemplo siguiente se muestra un `Frame` objeto personalizado:
+`Frame` los objetos se pueden personalizar con esquinas redondeadas, bordes coloreados y sombras paralelas estableciendo propiedades en el código XAML. En el ejemplo siguiente se muestra un `Frame` objeto personalizado:
 
 ```xaml
 <Frame BorderColor="Orange"
@@ -196,5 +196,5 @@ La imagen de **outdoors.jpg** se debe agregar a cada proyecto de plataforma y la
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-* [Demostraciones de fotogramas](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
-* [Imágenes enXamarin.Forms](~/xamarin-forms/user-interface/images.md)
+* [Demostraciones de fotogramas](/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+* [Imágenes en Xamarin.Forms](~/xamarin-forms/user-interface/images.md)

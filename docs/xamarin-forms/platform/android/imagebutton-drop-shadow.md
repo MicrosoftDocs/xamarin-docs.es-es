@@ -10,12 +10,12 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d6f3304c9eeb87405ab303a80450a1cd8b2af267
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c355816ec1b89801814b217cad8a23be2f453226
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938065"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563801"
 ---
 # <a name="imagebutton-drop-shadows-on-android"></a>Sombras paralelas de colocación en Android
 
@@ -67,8 +67,8 @@ imageButton.On<Android>()
 
 El `ImageButton.On<Android>` método especifica que este específico de la plataforma solo se ejecutará en Android. El `ImageButton.SetIsShadowEnabled` método, en el [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se utiliza para controlar si una sombra paralela está habilitada en `ImageButton` . Además, se pueden invocar los métodos siguientes para controlar la sombra paralela:
 
-- `SetShadowColor`: establece el color de la sombra paralela. El color predeterminado es [`Color.Default`](xref:Xamarin.Forms.Color.Default*) .
-- `SetShadowOffset`: establece el desplazamiento de la sombra paralela. El desplazamiento cambia la dirección en la que se proyecta la sombra y se especifica como un [`Size`](xref:Xamarin.Forms.Size) valor. Los `Size` valores de la estructura se expresan en unidades independientes del dispositivo, donde el primer valor es la distancia a la izquierda (valor negativo) o a la derecha (valor positivo) y el segundo valor es la distancia por encima (valor negativo) o inferior (valor positivo). El valor predeterminado de esta propiedad es (0,0, 0,0), lo que hace que se convierta la sombra en torno a cada lado de `ImageButton` .
+- `SetShadowColor` : establece el color de la sombra paralela. El color predeterminado es [`Color.Default`](xref:Xamarin.Forms.Color.Default*) .
+- `SetShadowOffset` : establece el desplazamiento de la sombra paralela. El desplazamiento cambia la dirección en la que se proyecta la sombra y se especifica como un [`Size`](xref:Xamarin.Forms.Size) valor. Los `Size` valores de la estructura se expresan en unidades independientes del dispositivo, donde el primer valor es la distancia a la izquierda (valor negativo) o a la derecha (valor positivo) y el segundo valor es la distancia por encima (valor negativo) o inferior (valor positivo). El valor predeterminado de esta propiedad es (0,0, 0,0), lo que hace que se convierta la sombra en torno a cada lado de `ImageButton` .
 - `SetShadowRadius`: establece el radio de desenfoque que se usa para representar la sombra paralela. El valor de radio predeterminado es 10,0.
 
 > [!NOTE]
@@ -80,7 +80,7 @@ El resultado es que se puede habilitar una sombra paralela en un `ImageButton` :
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de AndroidSpecific](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [AndroidSpecific. AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

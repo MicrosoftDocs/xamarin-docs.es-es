@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsDatos de CollectionView
+title: Xamarin.Forms Datos de CollectionView
 description: Un CollectionView se rellena con datos estableciendo su propiedad ItemsSource en cualquier colección que implementa IEnumerable.
 ms.prod: xamarin
 ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
@@ -10,18 +10,18 @@ ms.date: 04/29/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e381184271d4a7bfa9872d2502d2281b1f3864bf
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 089fb69dfc12b23bb594d5f88a50b37f9694c778
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134568"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563385"
 ---
-# <a name="xamarinforms-collectionview-data"></a>Xamarin.FormsDatos de CollectionView
+# <a name="no-locxamarinforms-collectionview-data"></a>Xamarin.Forms Datos de CollectionView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)incluye las siguientes propiedades que definen los datos que se van a mostrar y su apariencia:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) incluye las siguientes propiedades que definen los datos que se van a mostrar y su apariencia:
 
 - [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource), de tipo `IEnumerable` , especifica la colección de elementos que se van a mostrar y tiene un valor predeterminado de `null` .
 - [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate), de tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , especifica la plantilla que se va a aplicar a cada elemento de la colección de elementos que se va a mostrar.
@@ -29,9 +29,9 @@ ms.locfileid: "84134568"
 Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que las propiedades pueden ser destinos de enlaces de datos.
 
 > [!NOTE]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView)define una `ItemsUpdatingScrollMode` propiedad que representa el comportamiento de desplazamiento de `CollectionView` cuando se agregan nuevos elementos a él. Para obtener más información sobre esta propiedad, vea [control de posición de desplazamiento cuando se agregan nuevos elementos](scrolling.md#control-scroll-position-when-new-items-are-added).
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) define una `ItemsUpdatingScrollMode` propiedad que representa el comportamiento de desplazamiento de `CollectionView` cuando se agregan nuevos elementos a él. Para obtener más información sobre esta propiedad, vea [control de posición de desplazamiento cuando se agregan nuevos elementos](scrolling.md#control-scroll-position-when-new-items-are-added).
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)admite la virtualización de datos incrementales a medida que el usuario se desplaza. Para obtener más información, vea [cargar datos de forma incremental](#load-data-incrementally).
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) admite la virtualización de datos incrementales a medida que el usuario se desplaza. Para obtener más información, vea [cargar datos de forma incremental](#load-data-incrementally).
 
 ## <a name="populate-a-collectionview-with-data"></a>Rellenar un CollectionView con datos
 
@@ -73,7 +73,7 @@ collectionView.ItemsSource = new string[]
 ```
 
 > [!WARNING]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView)producirá una excepción si [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) se actualiza fuera del subproceso de la interfaz de usuario.
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) producirá una excepción si [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) se actualiza fuera del subproceso de la interfaz de usuario.
 
 De forma predeterminada, [`CollectionView`](xref:Xamarin.Forms.CollectionView) muestra los elementos en una lista vertical, tal como se muestra en las siguientes capturas de pantallas:
 
@@ -86,7 +86,7 @@ Para obtener información sobre cómo cambiar el [`CollectionView`](xref:Xamarin
 
 ### <a name="data-binding"></a>Enlace de datos
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)se puede rellenar con datos mediante el enlace de datos para enlazar su [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) propiedad a una `IEnumerable` colección. En XAML, esto se consigue con la `Binding` extensión de marcado:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) se puede rellenar con datos mediante el enlace de datos para enlazar su [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) propiedad a una `IEnumerable` colección. En XAML, esto se consigue con la `Binding` extensión de marcado:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}" />
@@ -256,7 +256,7 @@ Para más información sobre los selectores de plantilla de datos, consulte [cre
 
 ## <a name="context-menus"></a>Menús contextuales
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)admite menús contextuales para elementos de datos a través de `SwipeView` , que revela el menú contextual con un gesto de deslizar rápidamente. `SwipeView`Es un control contenedor que se ajusta alrededor de un elemento de contenido y proporciona elementos de menú contextual para ese elemento de contenido. Por lo tanto, los menús contextuales se implementan para un `CollectionView` mediante la creación de un `SwipeView` que define el contenido que `SwipeView` contiene y los elementos de menú contextual revelados por el gesto de deslizar rápidamente. Esto se logra estableciendo `SwipeView` como la vista raíz en el [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que define la apariencia de cada elemento de datos en `CollectionView` :
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) admite menús contextuales para elementos de datos a través de `SwipeView` , que revela el menú contextual con un gesto de deslizar rápidamente. `SwipeView`Es un control contenedor que se ajusta alrededor de un elemento de contenido y proporciona elementos de menú contextual para ese elemento de contenido. Por lo tanto, los menús contextuales se implementan para un `CollectionView` mediante la creación de un `SwipeView` que define el contenido que `SwipeView` contiene y los elementos de menú contextual revelados por el gesto de deslizar rápidamente. Esto se logra estableciendo `SwipeView` como la vista raíz en el [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que define la apariencia de cada elemento de datos en `CollectionView` :
 
 ```xaml
 <CollectionView x:Name="collectionView"
@@ -329,13 +329,13 @@ En este ejemplo, el `SwipeView` contenido es un [`Grid`](xref:Xamarin.Forms.Grid
 
 [![Captura de pantalla de elementos de menú contextual de CollectionView, en iOS y Android](populate-data-images/swipeview.png "CollectionView con elementos de menú contextual de SwipeView")](populate-data-images/swipeview-large.png#lightbox "CollectionView con elementos de menú contextual de SwipeView")
 
-`SwipeView`admite cuatro direcciones de deslizamiento diferentes, con la dirección de deslizamiento que se define en la colección direcciona `SwipeItems` a la que `SwipeItems` se agregan los objetos. De forma predeterminada, se ejecuta un dedo al puntear en el usuario. Además, una vez que se ha ejecutado un dedo, se ocultan los elementos de deslizamiento y `SwipeView` se vuelve a mostrar el contenido. Sin embargo, estos comportamientos se pueden cambiar.
+`SwipeView` admite cuatro direcciones de deslizamiento diferentes, con la dirección de deslizamiento que se define en la colección direcciona `SwipeItems` a la que `SwipeItems` se agregan los objetos. De forma predeterminada, se ejecuta un dedo al puntear en el usuario. Además, una vez que se ha ejecutado un dedo, se ocultan los elementos de deslizamiento y `SwipeView` se vuelve a mostrar el contenido. Sin embargo, estos comportamientos se pueden cambiar.
 
 Para obtener más información sobre el `SwipeView` control, vea [ Xamarin.Forms SwipeView](~/xamarin-forms/user-interface/swipeview.md).
 
 ## <a name="pull-to-refresh"></a>Extraer para actualizar
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)admite la funcionalidad de extracción para actualizar a través de `RefreshView` , que permite que los datos que se muestran se actualicen en la lista de elementos. `RefreshView`Es un control contenedor que proporciona la funcionalidad de extracción para actualizar a su elemento secundario, siempre que el elemento secundario admita contenido desplazable. Por lo tanto, la extracción de la actualización se implementa para una `CollectionView` al establecerla como el elemento secundario de un `RefreshView` :
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) admite la funcionalidad de extracción para actualizar a través de `RefreshView` , que permite que los datos que se muestran se actualicen en la lista de elementos. `RefreshView`Es un control contenedor que proporciona la funcionalidad de extracción para actualizar a su elemento secundario, siempre que el elemento secundario admita contenido desplazable. Por lo tanto, la extracción de la actualización se implementa para una `CollectionView` al establecerla como el elemento secundario de un `RefreshView` :
 
 ```xaml
 <RefreshView IsRefreshing="{Binding IsRefreshing}"
@@ -374,20 +374,20 @@ Para obtener más información sobre `RefreshView` , vea [ Xamarin.Forms Refresh
 
 ## <a name="load-data-incrementally"></a>Cargar datos incrementalmente
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)admite la virtualización de datos incrementales a medida que el usuario se desplaza. Esto permite escenarios como la carga asincrónica de una página de datos de un servicio Web, a medida que el usuario se desplaza. Además, el punto en el que se cargan más datos se puede configurar para que los usuarios no vean el espacio en blanco o se detengan del desplazamiento.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) admite la virtualización de datos incrementales a medida que el usuario se desplaza. Esto permite escenarios como la carga asincrónica de una página de datos de un servicio Web, a medida que el usuario se desplaza. Además, el punto en el que se cargan más datos se puede configurar para que los usuarios no vean el espacio en blanco o se detengan del desplazamiento.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)define las siguientes propiedades para controlar la carga incremental de datos:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define las siguientes propiedades para controlar la carga incremental de datos:
 
 - `RemainingItemsThreshold`, de tipo `int` , el umbral de elementos que todavía no están visibles en la lista en la que se `RemainingItemsThresholdReached` desencadenará el evento.
 - `RemainingItemsThresholdReachedCommand`, de tipo `ICommand` , que se ejecuta cuando `RemainingItemsThreshold` se alcanza el.
 - `RemainingItemsThresholdReachedCommandParameter`, de tipo `object`, que es el parámetro que se pasa a `RemainingItemsThresholdReachedCommand`.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)también define un `RemainingItemsThresholdReached` evento que se desencadena cuando `CollectionView` se desplaza lo suficiente como para que `RemainingItemsThreshold` no se muestren los elementos. Este evento se puede controlar para cargar más elementos. Además, cuando `RemainingItemsThresholdReached` se desencadena el evento, `RemainingItemsThresholdReachedCommand` se ejecuta, lo que permite que la carga de datos incrementales se realice en un ViewModel.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) también define un `RemainingItemsThresholdReached` evento que se desencadena cuando `CollectionView` se desplaza lo suficiente como para que `RemainingItemsThreshold` no se muestren los elementos. Este evento se puede controlar para cargar más elementos. Además, cuando `RemainingItemsThresholdReached` se desencadena el evento, `RemainingItemsThresholdReachedCommand` se ejecuta, lo que permite que la carga de datos incrementales se realice en un ViewModel.
 
 El valor predeterminado de la `RemainingItemsThreshold` propiedad es-1, lo que indica que el `RemainingItemsThresholdReached` evento nunca se desencadenará. Cuando el valor de la propiedad es 0, el `RemainingItemsThresholdReached` evento se desencadena cuando se muestra el último elemento de [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) . En el caso de valores mayores que 0, el `RemainingItemsThresholdReached` evento se desencadena cuando `ItemsSource` contiene ese número de elementos a los que todavía no se ha desplazado.
 
 > [!NOTE]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView)valida la `RemainingItemsThreshold` propiedad de modo que su valor sea siempre mayor o igual que-1.
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) valida la `RemainingItemsThreshold` propiedad de modo que su valor sea siempre mayor o igual que-1.
 
 En el siguiente ejemplo de XAML se muestra un [`CollectionView`](xref:Xamarin.Forms.CollectionView) que carga datos incrementalmente:
 
@@ -424,9 +424,9 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [CollectionView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
-- [Xamarin.FormsRefreshView](~/xamarin-forms/user-interface/refreshview.md)
-- [Xamarin.FormsSwipeView](~/xamarin-forms/user-interface/swipeview.md)
+- [CollectionView (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [Xamarin.Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md)
+- [Xamarin.Forms SwipeView](~/xamarin-forms/user-interface/swipeview.md)
 - [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
-- [Xamarin.FormsPlantillas de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Xamarin.Forms Plantillas de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Creación de un Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
