@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsScrollView
+title: Xamarin.Forms ScrollView
 description: Xamarin.FormsScrollView es un diseño que es capaz de desplazarse por el contenido.
 ms.prod: xamarin
 ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
@@ -10,25 +10,25 @@ ms.date: 05/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f527acabe3b051cbfd6450ba6f5328449b1a728c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: af8513d86b7cf02ec7adcee75241d8ce99e2dfab
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84199198"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556833"
 ---
-# <a name="xamarinforms-scrollview"></a>Xamarin.FormsScrollView
+# <a name="no-locxamarinforms-scrollview"></a>Xamarin.Forms ScrollView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-scrollviewdemos)
 
-[![Xamarin.FormsScrollView](scrollview-images/layouts.png "[! Operador. NO-LOC (Xamarin. Forms)] ScrollView")](scrollview-images/layouts-large.png#lightbox "[! Operador. NO-LOC (Xamarin. Forms)] ScrollView")
+[![::: no-LOC (Xamarin. Forms)::: ScrollView](scrollview-images/layouts.png "::: no-LOC (Xamarin. Forms)::: ScrollView")](scrollview-images/layouts-large.png#lightbox "::: no-LOC (Xamarin. Forms)::: ScrollView")
 
-[`ScrollView`](xref:Xamarin.Forms.ScrollView)es un diseño capaz de desplazarse por el contenido. La `ScrollView` clase se deriva de la [`Layout`](xref:Xamarin.Forms.Layout) clase y, de forma predeterminada, desplaza el contenido verticalmente. Un `ScrollView` solo puede tener un único elemento secundario, aunque puede ser otros diseños.
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) es un diseño capaz de desplazarse por el contenido. La `ScrollView` clase se deriva de la [`Layout`](xref:Xamarin.Forms.Layout) clase y, de forma predeterminada, desplaza el contenido verticalmente. Un `ScrollView` solo puede tener un único elemento secundario, aunque puede ser otros diseños.
 
 > [!WARNING]
-> [`ScrollView`](xref:Xamarin.Forms.ScrollView)los objetos no deben estar anidados. Además, `ScrollView` los objetos no se deben anidar con otros controles que proporcionen desplazamiento, como [`CollectionView`](xref:Xamarin.Forms.CollectionView) , [`ListView`](xref:Xamarin.Forms.ListView) y [`WebView`](xref:Xamarin.Forms.WebView) .
+> [`ScrollView`](xref:Xamarin.Forms.ScrollView) los objetos no deben estar anidados. Además, `ScrollView` los objetos no se deben anidar con otros controles que proporcionen desplazamiento, como [`CollectionView`](xref:Xamarin.Forms.CollectionView) , [`ListView`](xref:Xamarin.Forms.ListView) y [`WebView`](xref:Xamarin.Forms.WebView) .
 
-[`ScrollView`](xref:Xamarin.Forms.ScrollView)define las siguientes propiedades:
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) define las siguientes propiedades:
 
 - [`Content`](xref:Xamarin.Forms.ScrollView.Content), de tipo [`View`](xref:Xamarin.Forms.View) , representa el contenido que se va a mostrar en [`ScrollView`](xref:Xamarin.Forms.ScrollView) .
 - [`ContentSize`](xref:Xamarin.Forms.ScrollView), de tipo [`Size`](xref:Xamarin.Forms.Size) , representa el tamaño del contenido. Se trata de una propiedad de solo lectura.
@@ -205,19 +205,19 @@ public class BlackCatPageCS : ContentPage
 
 ## <a name="orientation"></a>Orientación
 
-[`ScrollView`](xref:Xamarin.Forms.ScrollView)tiene una [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) propiedad, que representa la dirección de desplazamiento de `ScrollView` . Esta propiedad es de tipo [`ScrollOrientation`](xref:Xamarin.Forms.ScrollOrientation) , que define los siguientes miembros:
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) tiene una [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) propiedad, que representa la dirección de desplazamiento de `ScrollView` . Esta propiedad es de tipo [`ScrollOrientation`](xref:Xamarin.Forms.ScrollOrientation) , que define los siguientes miembros:
 
-- `Vertical`indica que `ScrollView` se desplazará verticalmente. Este miembro es el valor predeterminado de la [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) propiedad.
-- `Horizontal`indica que `ScrollView` se desplazará horizontalmente.
-- `Both`indica que `ScrollView` se desplazará horizontal y verticalmente.
-- `Neither`indica que `ScrollView` no se desplazará.
+- `Vertical` indica que `ScrollView` se desplazará verticalmente. Este miembro es el valor predeterminado de la [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) propiedad.
+- `Horizontal` indica que `ScrollView` se desplazará horizontalmente.
+- `Both` indica que `ScrollView` se desplazará horizontal y verticalmente.
+- `Neither` indica que `ScrollView` no se desplazará.
 
 > [!TIP]
 > El desplazamiento se puede deshabilitar estableciendo la [`Orientation`](xref:Xamarin.Forms.ScrollView.OrientationProperty) propiedad en `Neither` .
 
 ## <a name="detect-scrolling"></a>Detectar desplazamiento
 
-[`ScrollView`](xref:Xamarin.Forms.ScrollView)define un [`Scrolled`](xref:Xamarin.Forms.ScrollView.Scrolled) evento que se desencadena para indicar que se ha producido el desplazamiento. El [`ScrolledEventArgs`](xref:Xamarin.Forms.ScrolledEventArgs) objeto que acompaña al `Scrolled` evento tiene `ScrollX` propiedades y `ScrollY` , ambos de tipo `double` .
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) define un [`Scrolled`](xref:Xamarin.Forms.ScrollView.Scrolled) evento que se desencadena para indicar que se ha producido el desplazamiento. El [`ScrolledEventArgs`](xref:Xamarin.Forms.ScrolledEventArgs) objeto que acompaña al `Scrolled` evento tiene `ScrollX` propiedades y `ScrollY` , ambos de tipo `double` .
 
 > [!IMPORTANT]
 > Las `ScrolledEventArgs.ScrollX` `ScrolledEventArgs.ScrollY` propiedades y pueden tener valores negativos, debido al efecto de rebote que se produce al desplazarse de nuevo al inicio de [`ScrollView`](xref:Xamarin.Forms.ScrollView) .
@@ -253,7 +253,7 @@ En este ejemplo, el `OnScrollViewScrolled` controlador de eventos genera los val
 
 ## <a name="scroll-programmatically"></a>Desplazarse mediante programación
 
-[`ScrollView`](xref:Xamarin.Forms.ScrollView)define dos [`ScrollToAsync`](xref:Xamarin.Forms.ScrollView.ScrollToAsync*) métodos que desplazan de forma asincrónica `ScrollView` . Una de las sobrecargas se desplaza hasta una posición especificada en `ScrollView` , mientras que la otra desplaza un elemento especificado en la vista. Ambas sobrecargas tienen un argumento adicional que se puede usar para indicar si se debe animar el desplazamiento.
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) define dos [`ScrollToAsync`](xref:Xamarin.Forms.ScrollView.ScrollToAsync*) métodos que desplazan de forma asincrónica `ScrollView` . Una de las sobrecargas se desplaza hasta una posición especificada en `ScrollView` , mientras que la otra desplaza un elemento especificado en la vista. Ambas sobrecargas tienen un argumento adicional que se puede usar para indicar si se debe animar el desplazamiento.
 
 > [!IMPORTANT]
 > Los [`ScrollToAsync`](xref:Xamarin.Forms.ScrollView.ScrollToAsync*) métodos no provocarán un desplazamiento cuando la [`ScrollView.Orientation`](xref:Xamarin.Forms.ScrollView.OrientationProperty) propiedad esté establecida en `Neither` .
@@ -280,21 +280,21 @@ El tercer argumento de [`ScrollToAsync`](xref:Xamarin.Forms.ScrollView.ScrollToA
 
 Al desplazar un elemento en la vista, la posición exacta del elemento después del desplazamiento se puede establecer con el segundo argumento, `position` , del [`ScrollToAsync`](xref:Xamarin.Forms.ScrollView.ScrollToAsync*) método. Este argumento acepta un [`ScrollToPosition`](xref:Xamarin.Forms.ScrollToPosition) miembro de enumeración:
 
-- `MakeVisible`indica que el elemento debe desplazarse hasta que esté visible en `ScrollView` .
-- `Start`indica que el elemento se debe desplazar al principio de `ScrollView` .
-- `Center`indica que el elemento se debe desplazar al centro de `ScrollView` .
-- `End`indica que el elemento se debe desplazar hasta el final de `ScrollView` .
+- `MakeVisible` indica que el elemento debe desplazarse hasta que esté visible en `ScrollView` .
+- `Start` indica que el elemento se debe desplazar al principio de `ScrollView` .
+- `Center` indica que el elemento se debe desplazar al centro de `ScrollView` .
+- `End` indica que el elemento se debe desplazar hasta el final de `ScrollView` .
 
 ## <a name="scroll-bar-visibility"></a>Visibilidad de la barra de desplazamiento
 
-[`ScrollView`](xref:Xamarin.Forms.ScrollView)define [`HorizontalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView) [`VerticalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView) las propiedades y, que están respaldadas por propiedades enlazables. Estas propiedades obtienen o establecen un [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollView.HorizontalScrollBarVisibility) valor de enumeración que representa si está visible la barra de desplazamiento horizontal o vertical. La enumeración `ScrollBarVisibility` define los miembros siguientes:
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) define [`HorizontalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView) [`VerticalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView) las propiedades y, que están respaldadas por propiedades enlazables. Estas propiedades obtienen o establecen un [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollView.HorizontalScrollBarVisibility) valor de enumeración que representa si está visible la barra de desplazamiento horizontal o vertical. La enumeración `ScrollBarVisibility` define los miembros siguientes:
 
-- `Default`indica el comportamiento predeterminado de la barra de desplazamiento para la plataforma y es el valor predeterminado de las `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` propiedades y.
-- `Always`indica que las barras de desplazamiento serán visibles, incluso cuando el contenido quepa en la vista.
-- `Never`indica que las barras de desplazamiento no estarán visibles, incluso si el contenido no cabe en la vista.
+- `Default` indica el comportamiento predeterminado de la barra de desplazamiento para la plataforma y es el valor predeterminado de las `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` propiedades y.
+- `Always` indica que las barras de desplazamiento serán visibles, incluso cuando el contenido quepa en la vista.
+- `Never` indica que las barras de desplazamiento no estarán visibles, incluso si el contenido no cabe en la vista.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de ScrollView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-scrollviewdemos)
-- [Xamarin.FormsStackLayout](stacklayout.md)
-- [Diseños enlazables enXamarin.Forms](bindable-layouts.md)
+- [Demostraciones de ScrollView (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-scrollviewdemos)
+- [Xamarin.Forms StackLayout](stacklayout.md)
+- [Diseños enlazables en Xamarin.Forms](bindable-layouts.md)

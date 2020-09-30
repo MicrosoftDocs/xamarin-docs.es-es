@@ -10,14 +10,14 @@ ms.date: 04/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bdead80671a1ae6539de6614441df7e86863a5a6
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9dc5b8e63a35c3a0b797d0794af7a31aea4969c9
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137480"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555598"
 ---
-# <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-package"></a>¿Puedo actualizar la Xamarin.Forms plantilla predeterminada a un paquete de NuGet más reciente?
+# <a name="can-i-update-the-no-locxamarinforms-default-template-to-a-newer-nuget-package"></a>¿Puedo actualizar la Xamarin.Forms plantilla predeterminada a un paquete de NuGet más reciente?
 
 En esta guía se usa la Xamarin.Forms plantilla de biblioteca de .net Standard como ejemplo, pero el mismo método general también funcionará para la Xamarin.Forms plantilla de proyecto compartido. Esta guía se ha escrito con el ejemplo de actualización de Xamarin.Forms 1.5.1.6471 a 2.1.0.6529, pero se pueden realizar los mismos pasos para establecer otras versiones como valor predeterminado.
 
@@ -34,7 +34,7 @@ En esta guía se usa la Xamarin.Forms plantilla de biblioteca de .net Standard c
 
     Ejemplo: `<package id="Xamarin.Forms" version="1.5.1.6471" />` -> `<package id="Xamarin.Forms" version="2.1.0.6529" />`
 
-4. Cambie el elemento "Name" del archivo de [plantilla de varios proyectos](https://msdn.microsoft.com/library/ms185308.aspx) principal ( `Xamarin.Forms.PCL.vstemplate` ) para que sea único. Por ejemplo:
+4. Cambie el elemento "Name" del archivo de [plantilla de varios proyectos](/visualstudio/ide/how-to-create-multi-project-templates) principal ( `Xamarin.Forms.PCL.vstemplate` ) para que sea único. Por ejemplo:
 
     > `<Name>Blank App (Xamarin.Forms Portable) - 2.1.0.6529</Name>`
 

@@ -1,6 +1,6 @@
 ---
 title: Elegir un Xamarin.Forms diseño
-description: Xamarin.Formslas clases de diseño permiten organizar y agrupar los controles de interfaz de usuario en la aplicación.
+description: Xamarin.Forms las clases de diseño permiten organizar y agrupar los controles de interfaz de usuario en la aplicación.
 ms.prod: xamarin
 ms.assetid: 05A39752-A174-447E-A30D-3CC9EF98CB96
 ms.technology: xamarin-forms
@@ -10,18 +10,18 @@ ms.date: 08/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 38b44bbb8f01f090d286bb2203014455a32a2290
-ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
+ms.openlocfilehash: 6f5702695698881a30cfbf3e63110856a97a2c24
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88181490"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555352"
 ---
 # <a name="choose-a-no-locxamarinforms-layout"></a>Elegir un Xamarin.Forms diseño
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
-Xamarin.Formslas clases de diseño permiten organizar y agrupar los controles de interfaz de usuario en la aplicación. La elección de una clase de diseño requiere saber cómo el diseño coloca sus elementos secundarios y cómo el diseño dimensiona sus elementos secundarios. Además, puede ser necesario anidar diseños para crear el diseño deseado.
+Xamarin.Forms las clases de diseño permiten organizar y agrupar los controles de interfaz de usuario en la aplicación. La elección de una clase de diseño requiere saber cómo el diseño coloca sus elementos secundarios y cómo el diseño dimensiona sus elementos secundarios. Además, puede ser necesario anidar diseños para crear el diseño deseado.
 
 En la imagen siguiente se muestran los diseños típicos que se pueden lograr con las Xamarin.Forms clases de diseño principales:
 
@@ -29,7 +29,7 @@ En la imagen siguiente se muestran los diseños típicos que se pueden lograr co
 
 ## <a name="stacklayout"></a>StackLayout
 
-Un [`StackLayout`](xref:Xamarin.Forms.StackLayout) organiza los elementos de una pila unidimensional, ya sea horizontal o verticalmente. La [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) propiedad especifica la dirección de los elementos y la orientación predeterminada es [`Vertical`](xref:Xamarin.Forms.StackOrientation) . `StackLayout`normalmente se usa para organizar una subsección de la interfaz de usuario en una página.
+Un [`StackLayout`](xref:Xamarin.Forms.StackLayout) organiza los elementos de una pila unidimensional, ya sea horizontal o verticalmente. La [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) propiedad especifica la dirección de los elementos y la orientación predeterminada es [`Vertical`](xref:Xamarin.Forms.StackOrientation) . `StackLayout` normalmente se usa para organizar una subsección de la interfaz de usuario en una página.
 
 En el código XAML siguiente se muestra cómo crear un [`StackLayout`](xref:Xamarin.Forms.StackLayout) objeto vertical que contiene tres [`Label`](xref:Xamarin.Forms.Label) objetos:
 
@@ -78,7 +78,7 @@ Es una pérdida de tiempo porque se realizan cálculos de diseño innecesarios. 
 
 Para obtener más información, vea [ Xamarin.Forms StackLayout](stacklayout.md).
 
-## <a name="grid"></a>Grid
+## <a name="grid"></a>Cuadrícula
 
 [`Grid`](xref:Xamarin.Forms.Grid)Se usa para mostrar elementos en filas y columnas, que pueden tener tamaños proporcionales o absolutos. Las filas y columnas de una cuadrícula se especifican con las [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) propiedades y.
 
@@ -250,12 +250,12 @@ Además, el rendimiento de la representación de páginas también se puede mejo
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Diseño (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
-- [Xamarin.FormsDiseños (vídeo)](https://youtu.be/4HlLjTZQzjM)
-- [Xamarin.FormsStackLayout](stacklayout.md)
-- [Xamarin.FormsCuadrícula](grid.md)
-- [Xamarin.FormsFlexLayout](flex-layout.md)
-- [Xamarin.FormsAbsoluteLayout](absolutelayout.md)
-- [Xamarin.FormsRelativeLayout](relativelayout.md)
+- [Diseño (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [Xamarin.Forms Diseños (vídeo)](https://youtu.be/4HlLjTZQzjM)
+- [Xamarin.Forms StackLayout](stacklayout.md)
+- [Xamarin.Forms Cuadrícula](grid.md)
+- [Xamarin.Forms FlexLayout](flex-layout.md)
+- [Xamarin.Forms AbsoluteLayout](absolutelayout.md)
+- [Xamarin.Forms RelativeLayout](relativelayout.md)
 - [Optimización del rendimiento del diseño](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance)
 - [Compresión de diseño](layout-compression.md)

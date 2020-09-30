@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsIndicatorView
+title: Xamarin.Forms IndicatorView
 description: IndicatorView es un control que muestra los indicadores que representan el número de elementos y la posición actual, en un CarouselView.
 ms.prod: xamarin
 ms.assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2
@@ -10,14 +10,14 @@ ms.date: 02/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0e6d223fd10e7b792f2d145a7cdd417865a095bb
-ms.sourcegitcommit: d86b7a18cf8b1ef28cd0fe1d311f1c58a65101a8
+ms.openlocfilehash: 95c4e247ca0be6e5f0f39a7bc95c41a73b3f590e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85101430"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556794"
 ---
-# <a name="xamarinforms-indicatorview"></a>Xamarin.FormsIndicatorView
+# <a name="no-locxamarinforms-indicatorview"></a>Xamarin.Forms IndicatorView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
 
@@ -39,7 +39,7 @@ ms.locfileid: "85101430"
 - `Position`, de tipo `int` , el índice del indicador actualmente seleccionado. Esta propiedad usa un `TwoWay` enlace. Esta propiedad se establecerá automáticamente cuando `CarouselView.IndicatorView` se establezca la propiedad.
 - `SelectedIndicatorColor`, de tipo `Color` , el color del indicador que representa el elemento actual del objeto `CarouselView` .
 
-Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos y con estilo.
+Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
 ## <a name="create-an-indicatorview"></a>Creación de un IndicatorView
 
@@ -69,8 +69,8 @@ En este ejemplo, `IndicatorView` se representa debajo de `CarouselView` , con un
 
 La `IndicatorView` clase tiene una `IndicatorsShape` propiedad, que determina la forma de los indicadores. Esta propiedad se puede establecer en uno de los `IndicatorShape` miembros de enumeración:
 
-- `Circle`Especifica que las formas de indicador serán circulares. Este es el valor predeterminado de la propiedad `IndicatorView.IndicatorsShape`.
-- `Square`indica que las formas de indicador serán cuadradas.
+- `Circle` Especifica que las formas de indicador serán circulares. Este es el valor predeterminado de la propiedad `IndicatorView.IndicatorsShape`.
+- `Square` indica que las formas de indicador serán cuadradas.
 
 En el ejemplo siguiente se muestra una `IndicatorView` configurada para usar indicadores cuadrados:
 
@@ -138,5 +138,5 @@ Para obtener más información sobre la `FontImage` extensión de marcado, consu
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [IndicatorView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
+- [IndicatorView (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
 - [Extensión de marcado FontImage](~/xamarin-forms/xaml/markup-extensions/consuming.md#fontimage-markup-extension)

@@ -1,6 +1,6 @@
 ---
-title: Colores enXamarin.Forms
-description: Xamarin.Formsproporciona una clase de color flexible multiplataforma. En este artículo se explica la funcionalidad proporcionada por la clase color y cómo utilizarla.
+title: Colores en Xamarin.Forms
+description: Xamarin.Forms proporciona una clase de color flexible multiplataforma. En este artículo se explica la funcionalidad proporcionada por la clase color y cómo utilizarla.
 ms.prod: xamarin
 ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
 ms.technology: xamarin-forms
@@ -10,31 +10,31 @@ ms.date: 04/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a02fe7451702367d85d322b756df4a547a009454
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6b4e44cb667335ecca7a0c7e5ec77d6e14ed975c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137350"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557236"
 ---
-# <a name="colors-in-xamarinforms"></a>Colores enXamarin.Forms
+# <a name="colors-in-no-locxamarinforms"></a>Colores en Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithcolors)
 
-_Xamarin. Forms proporciona una clase de color flexible multiplataforma._
+_Xamarin.Forms proporciona una clase de color flexible multiplataforma._
 
 En este artículo se presentan las distintas formas [`Color`](xref:Xamarin.Forms.Color) en que se puede usar la clase en Xamarin.Forms .
 
 La [`Color`](xref:Xamarin.Forms.Color) clase proporciona una serie de métodos para compilar una `Color` instancia de:
 
 - **Colores con nombre** : una colección de colores con nombre comunes, incluidos `Red` , `Green` y `Blue` .
-- `FromHex`-valor de cadena similar a la sintaxis usada en HTML, por ejemplo "00FF00". Opcionalmente, se puede especificar alfa como el primer par de caracteres ("CC00FF00").
-- `FromHsla`-Valores de matiz, saturación y luminosidad `double` , con valor alfa opcional (0,0-1,0).
-- `FromHsv`: Matiz, saturación, valor `int` o `double` valores.
-- `FromHsva`: Matiz, saturación, valor `int` o `double` valores.
-- `FromRgb`-Valores rojo, verde y azul `int` (0-255).
-- `FromRgba`-Valores rojo, verde, azul y alfa `int` (0-255).
-- `FromUint`: establezca un `double` valor único que represente **ARGB**.
+- `FromHex` -valor de cadena similar a la sintaxis usada en HTML, por ejemplo "00FF00". Opcionalmente, se puede especificar alfa como el primer par de caracteres ("CC00FF00").
+- `FromHsla` -Valores de matiz, saturación y luminosidad `double` , con valor alfa opcional (0,0-1,0).
+- `FromHsv` : Matiz, saturación, valor `int` o `double` valores.
+- `FromHsva` : Matiz, saturación, valor `int` o `double` valores.
+- `FromRgb` -Valores rojo, verde y azul `int` (0-255).
+- `FromRgba` -Valores rojo, verde, azul y alfa  `int` (0-255).
+- `FromUint` : establezca un `double` valor único que represente **ARGB**.
 
 A continuación se indican algunos colores de ejemplo asignados a la `BackgroundColor` de algunas etiquetas con diferentes variaciones de la sintaxis permitida:
 
@@ -72,14 +72,14 @@ En iOS y Android, esta instancia se establece en un color de contraste que está
 
 ## <a name="additional-methods"></a>Métodos adicionales
 
-[`Color`](xref:Xamarin.Forms.Color)las instancias de incluyen los siguientes métodos adicionales:
+[`Color`](xref:Xamarin.Forms.Color) las instancias de incluyen los siguientes métodos adicionales:
 
-- `AddLuminosity`: devuelve un `Color` modificador la luminosidad por el Delta proporcionado.
-- `MultiplyAlpha`: devuelve una `Color` modificando el alfa, multiplicándolo por el valor alfa proporcionado.
-- `ToHex`: devuelve una `string` representación hexadecimal de un `Color` .
-- `WithHue`: devuelve `Color` , reemplazando el matiz por el valor proporcionado.
-- `WithLuminosity`: devuelve `Color` , reemplazando la luminosidad por el valor proporcionado.
-- `WithSaturation`: devuelve `Color` , reemplazando la saturación por el valor proporcionado.
+- `AddLuminosity` : devuelve un `Color` modificador la luminosidad por el Delta proporcionado.
+- `MultiplyAlpha` : devuelve una `Color` modificando el alfa, multiplicándolo por el valor alfa proporcionado.
+- `ToHex` : devuelve una `string` representación hexadecimal de un `Color` .
+- `WithHue` : devuelve `Color` , reemplazando el matiz por el valor proporcionado.
+- `WithLuminosity` : devuelve `Color` , reemplazando la luminosidad por el valor proporcionado.
+- `WithSaturation` : devuelve `Color` , reemplazando la saturación por el valor proporcionado.
 
 ## <a name="implicit-conversions"></a>Conversiones implícitas
 
@@ -125,5 +125,5 @@ También se puede hacer referencia a los colores en XAML mediante los nombres de
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ColorsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithcolors)
-- [Selector enlazable (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)
+- [ColorsSample](/samples/xamarin/xamarin-forms-samples/workingwithcolors)
+- [Selector enlazable (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)

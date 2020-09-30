@@ -10,12 +10,12 @@ ms.date: 09/12/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4fee695a20cae26537beb30513423492114e5c77
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: cf9ebb819d5b424963170d563575c4900bbed28b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936258"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556365"
 ---
 # <a name="path-information-and-enumeration"></a>Enumeración e información de trazado
 
@@ -121,7 +121,7 @@ Como la curva de Bézier es más larga o más corta, puede ver el cambio de tama
 
 ## <a name="traversing-the-path"></a>Atravesar la ruta de acceso
 
-`SKPathMeasure`puede hacer algo más que simplemente medir la longitud de la ruta de acceso. Para cualquier valor entre cero y la longitud de la ruta de acceso, un `SKPathMeasure` objeto puede obtener la posición en la ruta de acceso y la tangente a la curva de trazado en ese punto. La tangente está disponible como vector en forma de un `SKPoint` objeto, o como un giro encapsulado en un `SKMatrix` objeto. Estos son los métodos de `SKPathMeasure` que obtienen esta información de maneras diferentes y flexibles:
+`SKPathMeasure` puede hacer algo más que simplemente medir la longitud de la ruta de acceso. Para cualquier valor entre cero y la longitud de la ruta de acceso, un `SKPathMeasure` objeto puede obtener la posición en la ruta de acceso y la tangente a la curva de trazado en ese punto. La tangente está disponible como vector en forma de un `SKPoint` objeto, o como un giro encapsulado en un `SKMatrix` objeto. Estos son los métodos de `SKPathMeasure` que obtienen esta información de maneras diferentes y flexibles:
 
 ```csharp
 Boolean GetPosition (Single distance, out SKPoint position)
@@ -232,12 +232,12 @@ SKPathVerb pathVerb = rawIterator.Next(points);
 
 El `Next` método devuelve un miembro del [`SKPathVerb`](xref:SkiaSharp.SKPathVerb) tipo de enumeración. Estos valores indican el comando de dibujo determinado en la ruta de acceso. El número de puntos válidos insertados en la matriz depende de este verbo:
 
-- `Move`con un solo punto
-- `Line`con dos puntos
-- `Cubic`con cuatro puntos
-- `Quad`con tres puntos
-- `Conic`con tres puntos (y también llama al [`ConicWeight`](xref:SkiaSharp.SKPath.RawIterator.ConicWeight*) método para el peso)
-- `Close`con un punto
+- `Move` con un solo punto
+- `Line` con dos puntos
+- `Cubic` con cuatro puntos
+- `Quad` con tres puntos
+- `Conic` con tres puntos (y también llama al [`ConicWeight`](xref:SkiaSharp.SKPath.RawIterator.ConicWeight*) método para el peso)
+- `Close` con un punto
 - `Done`
 
 El `Done` verbo indica que la enumeración de la ruta de acceso está completa.
@@ -258,7 +258,7 @@ La mayoría de estas letras se componen de líneas rectas, pero estas líneas re
 
 La clave es que las líneas rectas originales se dividen en una serie de líneas rectas más pequeñas. A continuación, estas líneas rectas más pequeñas pueden manipularse de maneras diferentes para formar una curva.
 
-Para ayudar con este proceso, el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) contiene una [`PathExtensions`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) clase estática con un `Interpolate` método que divide una línea recta en numerosas líneas cortas que solo tienen una unidad de longitud. Además, la clase contiene varios métodos que convierten los tres tipos de curvas de Bézier en una serie de pequeñas líneas rectas que se aproximan a la curva. (Las fórmulas paramétricas se presentaron en el artículo [**tres tipos de curvas de Bézier**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md)). Este proceso se denomina _aplanar_ la curva:
+Para ayudar con este proceso, el ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) contiene una [`PathExtensions`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) clase estática con un `Interpolate` método que divide una línea recta en numerosas líneas cortas que solo tienen una unidad de longitud. Además, la clase contiene varios métodos que convierten los tres tipos de curvas de Bézier en una serie de pequeñas líneas rectas que se aproximan a la curva. (Las fórmulas paramétricas se presentaron en el artículo [**tres tipos de curvas de Bézier**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md)). Este proceso se denomina _aplanar_ la curva:
 
 ```csharp
 static class PathExtensions
@@ -526,5 +526,5 @@ Se trata de una técnica muy versátil. Si la matriz de los efectos de la ruta d
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsAgrupación de CollectionView
+title: Xamarin.Forms Agrupación de CollectionView
 description: CollectionView puede mostrar los datos agrupados correctamente estableciendo su propiedad IsGrouped en true.
 ms.prod: xamarin
 ms.assetid: 7E494245-FDBD-49D6-B7FA-CEF976EB59BB
@@ -10,20 +10,20 @@ ms.date: 09/17/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 51661d6573d78386f4ca8bfea0063b752295c2d8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 51bdcc6f9a95911c548269dbf7b3050cc5921183
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136466"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556625"
 ---
-# <a name="xamarinforms-collectionview-grouping"></a>Xamarin.FormsAgrupación de CollectionView
+# <a name="no-locxamarinforms-collectionview-grouping"></a>Xamarin.Forms Agrupación de CollectionView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 A menudo, los conjuntos de datos de gran tamaño pueden resultar difíciles de manejar cuando se presentan en una lista de desplazamiento continuo. En este escenario, la organización de los datos en grupos puede mejorar la experiencia del usuario al facilitar la navegación por los datos.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)admite la visualización de datos agrupados y define las siguientes propiedades que controlan cómo se presentará:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) admite la visualización de datos agrupados y define las siguientes propiedades que controlan cómo se presentará:
 
 - `IsGrouped`, de tipo `bool` , indica si los datos subyacentes se deben mostrar en grupos. El valor predeterminado de esta propiedad es `false`.
 - `GroupHeaderTemplate`, de tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , la plantilla que se va a usar para el encabezado de cada grupo.
@@ -142,7 +142,7 @@ Este código crea dos grupos en la `Animals` colección. El primero `AnimalGroup
 
 ## <a name="display-grouped-data"></a>Mostrar datos agrupados
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)mostrará los datos agrupados, siempre que los datos se hayan agrupado correctamente, estableciendo la `IsGrouped` propiedad en `true` :
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) mostrará los datos agrupados, siempre que los datos se hayan agrupado correctamente, estableciendo la `IsGrouped` propiedad en `true` :
 
 ```xaml
 <CollectionView ItemsSource="{Binding Animals}"
@@ -241,7 +241,7 @@ Cuando un [`CollectionView`](xref:Xamarin.Forms.CollectionView) muestra los dato
 
 ## <a name="group-without-templates"></a>Grupo sin plantillas
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)puede mostrar datos agrupados correctamente sin establecer la [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) propiedad en [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) :
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) puede mostrar datos agrupados correctamente sin establecer la [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) propiedad en [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) :
 
 ```xaml
 <CollectionView ItemsSource="{Binding Animals}"
@@ -252,5 +252,5 @@ En este escenario, se pueden mostrar datos significativos invalidando el `ToStri
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [CollectionView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
-- [Xamarin.FormsPlantillas de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [CollectionView (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [Xamarin.Forms Plantillas de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)

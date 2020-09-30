@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsDesplazar CarouselView
+title: Xamarin.Forms Desplazar CarouselView
 description: Cuando un usuario desliza el dedo para iniciar un desplazamiento, se puede controlar la posición final del desplazamiento para que los elementos se muestren por completo. Además, CarouselView define dos métodos ScrollTo, que desplazan los elementos mediante programación a la vista.
 ms.prod: xamarin
 ms.assetid: 92D7B618-07FA-4343-9D0F-212525E92C39
@@ -10,20 +10,20 @@ ms.date: 01/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5c15760919c2511ee24485ab7539463ec252d999
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 5e48b962130acf98aa99c83773318d077dde2666
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918138"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556651"
 ---
-# <a name="no-locxamarinforms-carouselview-scrolling"></a>Xamarin.FormsDesplazar CarouselView
+# <a name="no-locxamarinforms-carouselview-scrolling"></a>Xamarin.Forms Desplazar CarouselView
 
 ![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)define las siguientes propiedades relacionadas con el desplazamiento:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) define las siguientes propiedades relacionadas con el desplazamiento:
 
 - `HorizontalScrollBarVisibility`, de tipo `ScrollBarVisibility` , que especifica cuándo está visible la barra de desplazamiento horizontal.
 - `IsDragging`, de tipo `bool` , que indica si `CarouselView` se está desplazando el. Se trata de una propiedad de solo lectura, cuyo valor predeterminado es `false` .
@@ -33,15 +33,15 @@ ms.locfileid: "87918138"
 
 Todas estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que pueden ser destinos de enlaces de datos.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)también define dos [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos, que desplazan los elementos a la vista. Una de las sobrecargas desplaza el elemento en el índice especificado en la vista, mientras que el otro desplaza el elemento especificado a la vista. Ambas sobrecargas tienen argumentos adicionales que se pueden especificar para indicar la posición exacta del elemento una vez que se ha completado el desplazamiento y si se debe animar el desplazamiento.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) también define dos [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos, que desplazan los elementos a la vista. Una de las sobrecargas desplaza el elemento en el índice especificado en la vista, mientras que el otro desplaza el elemento especificado a la vista. Ambas sobrecargas tienen argumentos adicionales que se pueden especificar para indicar la posición exacta del elemento una vez que se ha completado el desplazamiento y si se debe animar el desplazamiento.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)define un [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) evento que se desencadena cuando se invoca a uno de los [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos. El [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) objeto que acompaña al `ScrollToRequested` evento tiene muchas propiedades, entre las que se incluyen `IsAnimated` , `Index` , `Item` y `ScrollToPosition` . Estas propiedades se establecen a partir de los argumentos especificados en las `ScrollTo` llamadas de método.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) define un [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) evento que se desencadena cuando se invoca a uno de los [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos. El [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) objeto que acompaña al `ScrollToRequested` evento tiene muchas propiedades, entre las que se incluyen `IsAnimated` , `Index` , `Item` y `ScrollToPosition` . Estas propiedades se establecen a partir de los argumentos especificados en las `ScrollTo` llamadas de método.
 
 Además, [`CarouselView`](xref:Xamarin.Forms.CarouselView) define un `Scrolled` evento que se desencadena para indicar que se ha producido el desplazamiento. El `ItemsViewScrolledEventArgs` objeto que acompaña al `Scrolled` evento tiene muchas propiedades. Para obtener más información, vea [detectar desplazamiento](#detect-scrolling).
 
 Cuando un usuario desliza el dedo para iniciar un desplazamiento, se puede controlar la posición final del desplazamiento para que los elementos se muestren por completo. Esta característica se conoce como ajuste, ya que los elementos se ajustan a la posición cuando se detiene el desplazamiento. Para obtener más información, vea [puntos de acoplamiento](#snap-points).
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)también puede cargar datos de forma incremental a medida que el usuario se desplaza. Para obtener más información, vea [cargar datos de forma incremental](populate-data.md#load-data-incrementally).
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) también puede cargar datos de forma incremental a medida que el usuario se desplaza. Para obtener más información, vea [cargar datos de forma incremental](populate-data.md#load-data-incrementally).
 
 ## <a name="detect-scrolling"></a>Detectar desplazamiento
 
@@ -135,7 +135,7 @@ Este código de ejemplo produce el desplazamiento mínimo necesario para desplaz
 > [!NOTE]
 > El [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) miembro se utiliza de forma predeterminada si `position` no se especifica el argumento al llamar al `ScrollTo` método.
 
-### <a name="start"></a>Start
+### <a name="start"></a>Inicio
 
 El [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) miembro indica que el elemento debe desplazarse hasta el inicio de la vista:
 
@@ -167,11 +167,11 @@ Este código de ejemplo hace que el elemento se desplace hasta el final de la vi
 
 ## <a name="control-scroll-position-when-new-items-are-added"></a>Controlar la posición de desplazamiento cuando se agregan nuevos elementos
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)define una `ItemsUpdatingScrollMode` propiedad, que está respaldada por una propiedad enlazable. Esta propiedad obtiene o establece un `ItemsUpdatingScrollMode` valor de enumeración que representa el comportamiento de desplazamiento de `CarouselView` cuando se agregan nuevos elementos a él. La enumeración `ItemsUpdatingScrollMode` define los miembros siguientes:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) define una `ItemsUpdatingScrollMode` propiedad, que está respaldada por una propiedad enlazable. Esta propiedad obtiene o establece un `ItemsUpdatingScrollMode` valor de enumeración que representa el comportamiento de desplazamiento de `CarouselView` cuando se agregan nuevos elementos a él. La enumeración `ItemsUpdatingScrollMode` define los miembros siguientes:
 
-- `KeepItemsInView`ajusta el desplazamiento de desplazamiento para mantener el primer elemento visible que se muestra cuando se agregan nuevos elementos.
-- `KeepScrollOffset`mantiene el desplazamiento de desplazamiento con respecto al principio de la lista cuando se agregan nuevos elementos.
-- `KeepLastItemInView`ajusta el desplazamiento de desplazamiento para mantener visible el último elemento cuando se agregan nuevos elementos.
+- `KeepItemsInView` ajusta el desplazamiento de desplazamiento para mantener el primer elemento visible que se muestra cuando se agregan nuevos elementos.
+- `KeepScrollOffset` mantiene el desplazamiento de desplazamiento con respecto al principio de la lista cuando se agregan nuevos elementos.
+- `KeepLastItemInView` ajusta el desplazamiento de desplazamiento para mantener visible el último elemento cuando se agregan nuevos elementos.
 
 El valor predeterminado de la `ItemsUpdatingScrollMode` propiedad es `KeepItemsInView` . Por lo tanto, cuando se agreguen nuevos elementos a un [`CarouselView`](xref:Xamarin.Forms.CarouselView) primer elemento visible de la lista, se mostrarán. Para asegurarse de que los elementos recién agregados siempre estén visibles en la parte inferior de la lista, la `ItemsUpdatingScrollMode` propiedad debe establecerse en `KeepLastItemInView` :
 
@@ -192,11 +192,11 @@ CarouselView carouselView = new CarouselView
 
 ## <a name="scroll-bar-visibility"></a>Visibilidad de la barra de desplazamiento
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)define `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` las propiedades y, que están respaldadas por propiedades enlazables. Estas propiedades obtienen o establecen un [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) valor de enumeración que representa Cuándo está visible la barra de desplazamiento horizontal o vertical. La enumeración `ScrollBarVisibility` define los miembros siguientes:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) define `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` las propiedades y, que están respaldadas por propiedades enlazables. Estas propiedades obtienen o establecen un [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) valor de enumeración que representa Cuándo está visible la barra de desplazamiento horizontal o vertical. La enumeración `ScrollBarVisibility` define los miembros siguientes:
 
-- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)indica el comportamiento predeterminado de la barra de desplazamiento para la plataforma y es el valor predeterminado para las `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` propiedades y.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)indica que las barras de desplazamiento serán visibles, incluso cuando el contenido quepa en la vista.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)indica que las barras de desplazamiento no estarán visibles, incluso si el contenido no cabe en la vista.
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indica el comportamiento predeterminado de la barra de desplazamiento para la plataforma y es el valor predeterminado para las `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` propiedades y.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica que las barras de desplazamiento serán visibles, incluso cuando el contenido quepa en la vista.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica que las barras de desplazamiento no estarán visibles, incluso si el contenido no cabe en la vista.
 
 ## <a name="snap-points"></a>Puntos de acoplamiento
 
@@ -214,9 +214,9 @@ Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms
 
 La [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) enumeración define los siguientes miembros:
 
-- `None`indica que el desplazamiento no se ajusta a los elementos.
-- `Mandatory`indica que el contenido se ajusta siempre al punto de acoplamiento más cercano a donde se detendría el desplazamiento de forma natural, a lo largo de la dirección de inercia.
-- `MandatorySingle`indica el mismo comportamiento que `Mandatory` , pero solo desplaza un elemento cada vez.
+- `None` indica que el desplazamiento no se ajusta a los elementos.
+- `Mandatory` indica que el contenido se ajusta siempre al punto de acoplamiento más cercano a donde se detendría el desplazamiento de forma natural, a lo largo de la dirección de inercia.
+- `MandatorySingle` indica el mismo comportamiento que `Mandatory` , pero solo desplaza un elemento cada vez.
 
 De forma predeterminada [`CarouselView`](xref:Xamarin.Forms.CarouselView) , en, la [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) propiedad se establece en `SnapPointsType.MandatorySingle` , lo que garantiza que el desplazamiento solo se desplaza un elemento cada vez.
 
@@ -231,7 +231,7 @@ La [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) enumeración 
 > [!IMPORTANT]
 > El valor de la [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) propiedad solo se respeta cuando la [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) propiedad está establecida en `Mandatory` , o `MandatorySingle` .
 
-#### <a name="start"></a>Start
+#### <a name="start"></a>Inicio
 
 El `SnapPointsAlignment.Start` miembro indica que los puntos de ajuste están alineados con el borde inicial de los elementos. En el siguiente ejemplo de XAML se muestra cómo establecer este miembro de enumeración:
 
@@ -337,4 +337,4 @@ Cuando un usuario desliza el dedo para iniciar un desplazamiento en un desplazam
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [CarouselView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [CarouselView (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)

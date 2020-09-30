@@ -1,5 +1,5 @@
 ---
-title: Control de archivos enXamarin.Forms
+title: Control de archivos en Xamarin.Forms
 description: El control de archivos con Xamarin.Forms se puede lograr mediante el uso de código en una biblioteca de .net Standard o mediante el uso de recursos incrustados.
 ms.prod: xamarin
 ms.assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8
@@ -10,14 +10,14 @@ ms.date: 06/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f62e5522b5b9a10a3806a70fe949561d77ce0d4e
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f8d81e037d63a7144263ce4b3520647e6829bd57
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84574358"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557262"
 ---
-# <a name="file-handling-in-xamarinforms"></a>Control de archivos enXamarin.Forms
+# <a name="file-handling-in-no-locxamarinforms"></a>Control de archivos en Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
@@ -25,7 +25,7 @@ _El control de archivos con Xamarin.Forms se puede lograr mediante el uso de có
 
 ## <a name="overview"></a>Información general
 
-Xamarin.Formsel código se ejecuta en varias plataformas, cada una de las cuales tiene su propio sistema de archivos. Anteriormente, esto significaba que las acciones de leer y escribir en archivos se realizaban con mayor facilidad mediante las API de archivo nativas de cada plataforma. Como alternativa, los recursos incrustados son una solución más sencilla para distribuir archivos de datos con una aplicación. Pero, con .NET Standard 2.0, se puede compartir el código de acceso a archivos en bibliotecas de .NET Standard.
+Xamarin.Forms el código se ejecuta en varias plataformas, cada una de las cuales tiene su propio sistema de archivos. Anteriormente, esto significaba que las acciones de leer y escribir en archivos se realizaban con mayor facilidad mediante las API de archivo nativas de cada plataforma. Como alternativa, los recursos incrustados son una solución más sencilla para distribuir archivos de datos con una aplicación. Pero, con .NET Standard 2.0, se puede compartir el código de acceso a archivos en bibliotecas de .NET Standard.
 
 Para obtener información sobre cómo controlar archivos de imagen, vea la página [Trabajar con imágenes](~/xamarin-forms/user-interface/images.md).
 
@@ -87,7 +87,7 @@ using (var reader = new System.IO.StreamReader (stream))
 }
 ```
 
-Después, la variable `text` puede usarse para mostrar el texto o, en cualquier caso, usarlo en el código. En esta captura de pantalla de la [aplicación de ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles), se muestra el texto representado en un control `Label`.
+Después, la variable `text` puede usarse para mostrar el texto o, en cualquier caso, usarlo en el código. En esta captura de pantalla de la [aplicación de ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithfiles), se muestra el texto representado en un control `Label`.
 
  [![Archivo de texto insertado en la biblioteca estándar de .NET](files-images/pcltext-sml.png "Archivo de texto incrustado en .NET Standard biblioteca que se muestra en la aplicación")](files-images/pcltext.png#lightbox "Archivo de texto incrustado en .NET Standard biblioteca que se muestra en la aplicación")
 
@@ -159,6 +159,6 @@ En este artículo, se muestran algunas operaciones de archivo sencillas para gua
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [FilesSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
+- [FilesSample](/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 - [Ejemplos de Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
 - [Trabajar con el sistema de archivos en Xamarin.iOS](~/ios/app-fundamentals/file-system.md)

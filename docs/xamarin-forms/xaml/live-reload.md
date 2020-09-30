@@ -11,12 +11,12 @@ ms.date: 10/26/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b67594e2675c774512f3bf64f2e91ef10dbff444
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: bdc5b715d4502590b56b41b864835a47076ad518
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134217"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556456"
 ---
 # <a name="xamarin-live-reload-preview"></a>Recarga en vivo de Xamarin (versión preliminar)
 
@@ -145,7 +145,7 @@ No. De hecho, puede incluso iniciar todos los destinos de aplicación admitidos 
 
 * *Excepción al cargar ensamblados: System. IO. FileNotFoundException: no se pudo cargar el ensamblado ' Xamarin. Live. Reload, version = 0.3.27.0, Culture = neutral, PublicKeyToken = '.*
 
-  El proyecto host debe usar `PackageReference` en lugar de`packages.config`
+  El proyecto host debe usar `PackageReference` en lugar de `packages.config`
 
 ### <a name="app-doesnt-connect"></a>La aplicación no se conecta
 
@@ -186,7 +186,7 @@ Probablemente, la manera más fácil es instalar el servidor de [mosquitto](http
 
 1. Creación de una nueva máquina virtual de Ubuntu Server en Azure portal
 2. Agregar una nueva regla de puerto de entrada para 1883 (puerto MQTT predeterminado) en la pestaña redes
-3. Abrir el [Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview) (modo Bash)
+3. Abrir el [Cloud Shell](/azure/cloud-shell/overview) (modo Bash)
 4. Escriba `ssh [USERNAME]@[PUBLIC_IP]` con el nombre de usuario que eligió en 1) y la dirección IP pública que se muestra en la página de información general de la máquina virtual.
 5. Ejecute `sudo apt-get install mosquitto` y escriba la contraseña que eligió en 1)
 

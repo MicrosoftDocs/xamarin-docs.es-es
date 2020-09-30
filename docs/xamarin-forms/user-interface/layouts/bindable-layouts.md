@@ -1,5 +1,5 @@
 ---
-title: Diseños enlazables enXamarin.Forms
+title: Diseños enlazables en Xamarin.Forms
 description: Los diseños enlazables permiten a las clases de diseño generar su contenido enlazando con una colección de elementos, con la opción de establecer la apariencia de cada elemento con un DataTemplate.
 ms.prod: xamarin
 ms.assetid: 824C3319-20A0-42D0-8632-CDECD98349C3
@@ -10,30 +10,30 @@ ms.date: 03/09/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9d0497c0c0593b54f69bac84307976c4050e9c95
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a5b1e43586810521e87360d8b6537d9bafdabad7
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138247"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555442"
 ---
-# <a name="bindable-layouts-in-xamarinforms"></a>Diseños enlazables enXamarin.Forms
+# <a name="bindable-layouts-in-no-locxamarinforms"></a>Diseños enlazables en Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 
 Los diseños enlazables habilitan cualquier clase de diseño que derive de la [`Layout<T>`](xref:Xamarin.Forms.Layout`1) clase para generar su contenido enlazando con una colección de elementos, con la opción de establecer la apariencia de cada elemento con [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) . Los diseños enlazables se proporcionan mediante la `BindableLayout` clase, que expone las siguientes propiedades adjuntas:
 
-- `ItemsSource`: especifica la colección de `IEnumerable` elementos que se mostrarán en el diseño.
-- `ItemTemplate`: especifica el [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que se va a aplicar a cada elemento de la colección de elementos mostrados por el diseño.
-- `ItemTemplateSelector`: especifica el [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) que se usará para elegir un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) para un elemento en tiempo de ejecución.
+- `ItemsSource` : especifica la colección de `IEnumerable` elementos que se mostrarán en el diseño.
+- `ItemTemplate` : especifica el [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que se va a aplicar a cada elemento de la colección de elementos mostrados por el diseño.
+- `ItemTemplateSelector` : especifica el [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) que se usará para elegir un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) para un elemento en tiempo de ejecución.
 
 > [!NOTE]
 > La `ItemTemplate` propiedad tiene prioridad cuando `ItemTemplate` `ItemTemplateSelector` se establecen las propiedades y.
 
 Además, la `BindableLayout` clase expone las siguientes propiedades enlazables:
 
-- `EmptyView`: especifica la `string` vista o que se mostrará cuando la `ItemsSource` propiedad sea o `null` cuando la colección especificada por la `ItemsSource` propiedad sea o esté `null` vacía. El valor predeterminado es `null`.
-- `EmptyViewTemplate`: especifica el [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que se mostrará cuando la `ItemsSource` propiedad sea `null` o cuando la colección especificada por la `ItemsSource` propiedad sea o esté `null` vacía. El valor predeterminado es `null`.
+- `EmptyView` : especifica la `string` vista o que se mostrará cuando la `ItemsSource` propiedad sea o `null` cuando la colección especificada por la `ItemsSource` propiedad sea o esté `null` vacía. El valor predeterminado es `null`.
+- `EmptyViewTemplate` : especifica el [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que se mostrará cuando la `ItemsSource` propiedad sea `null` o cuando la colección especificada por la `ItemsSource` propiedad sea o esté `null` vacía. El valor predeterminado es `null`.
 
 > [!NOTE]
 > La `EmptyViewTemplate` propiedad tiene prioridad cuando `EmptyView` `EmptyViewTemplate` se establecen las propiedades y.
@@ -253,7 +253,7 @@ El `ToggleEmptyView` método establece la `EmptyView` propiedad del `stackLayout
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostración de diseño enlazable (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
+- [Demostración de diseño enlazable (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 - [Creación de un diseño personalizado](~/xamarin-forms/user-interface/layouts/custom.md)
-- [Xamarin.FormsPlantillas de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Xamarin.Forms Plantillas de datos](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Creación de un Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

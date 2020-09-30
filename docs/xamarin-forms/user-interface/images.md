@@ -1,5 +1,5 @@
 ---
-title: Imágenes enXamarin.Forms
+title: Imágenes en Xamarin.Forms
 description: Las imágenes se pueden compartir entre plataformas con Xamarin.Forms , se pueden cargar específicamente para cada plataforma o se pueden descargar para su visualización.
 ms.prod: xamarin
 ms.assetid: C025AB53-05CC-49BA-9815-75D6DF9E40B7
@@ -10,42 +10,42 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3ad0981c0249bc81a97d5c48489167d81a1523de
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 824d5ca711495c8a8ad663034e77506468efd397
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938476"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556196"
 ---
-# <a name="images-in-xamarinforms"></a>Imágenes enXamarin.Forms
+# <a name="images-in-no-locxamarinforms"></a>Imágenes en Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
 
 _Las imágenes se pueden compartir entre plataformas con Xamarin.Forms , se pueden cargar específicamente para cada plataforma o se pueden descargar para su visualización._
 
-Las imágenes son una parte fundamental de la navegación, la facilidad de uso y la personalización de la aplicación. Xamarin.Formslas aplicaciones deben poder compartir imágenes en todas las plataformas, pero también pueden mostrar imágenes diferentes en cada plataforma.
+Las imágenes son una parte fundamental de la navegación, la facilidad de uso y la personalización de la aplicación. Xamarin.Forms las aplicaciones deben poder compartir imágenes en todas las plataformas, pero también pueden mostrar imágenes diferentes en cada plataforma.
 
 También se necesitan imágenes específicas de la plataforma para iconos y pantallas de presentación. deben configurarse en cada plataforma.
 
 ## <a name="display-images"></a>Mostrar imágenes
 
-Xamarin.Formsusa la [`Image`](xref:Xamarin.Forms.Image) vista para mostrar las imágenes en una página. Tiene varias propiedades importantes:
+Xamarin.Forms usa la [`Image`](xref:Xamarin.Forms.Image) vista para mostrar las imágenes en una página. Tiene varias propiedades importantes:
 
-- [`Source`](xref:Xamarin.Forms.Image.Source): Una [`ImageSource`](xref:Xamarin.Forms.ImageSource) instancia, ya sea archivo, Uri o recurso, que establece la imagen que se va a mostrar.
-- [`Aspect`](xref:Xamarin.Forms.Image.Aspect): Cómo ajustar el tamaño de la imagen dentro de los límites en los que se muestra (si se va a expandir, recortar o Mostrar en pantalla ancha).
+- [`Source`](xref:Xamarin.Forms.Image.Source) : Una [`ImageSource`](xref:Xamarin.Forms.ImageSource) instancia, ya sea archivo, Uri o recurso, que establece la imagen que se va a mostrar.
+- [`Aspect`](xref:Xamarin.Forms.Image.Aspect) : Cómo ajustar el tamaño de la imagen dentro de los límites en los que se muestra (si se va a expandir, recortar o Mostrar en pantalla ancha).
 
-[`ImageSource`](xref:Xamarin.Forms.ImageSource)las instancias se pueden obtener mediante métodos estáticos para cada tipo de origen de imagen:
+[`ImageSource`](xref:Xamarin.Forms.ImageSource) las instancias se pueden obtener mediante métodos estáticos para cada tipo de origen de imagen:
 
-- [`FromFile`](xref:Xamarin.Forms.ImageSource.FromFile(System.String))-Requiere un nombre de archivo o una ruta de archivo que se pueda resolver en cada plataforma.
-- [`FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)): Requiere un objeto URI, por ejemplo,.  `new Uri("http://server.com/image.jpg")` .
-- [`FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*)-Requiere un identificador de recursos para un archivo de imagen incrustado en el proyecto de biblioteca o de aplicación de .NET Standard, con una **acción de compilación: EmbeddedResource**.
-- [`FromStream`](xref:Xamarin.Forms.ImageSource.FromStream(System.Func{System.IO.Stream})): Requiere una secuencia que proporcione datos de imagen.
+- [`FromFile`](xref:Xamarin.Forms.ImageSource.FromFile(System.String)) -Requiere un nombre de archivo o una ruta de archivo que se pueda resolver en cada plataforma.
+- [`FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) : Requiere un objeto URI, por ejemplo,.  `new Uri("http://server.com/image.jpg")` .
+- [`FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) -Requiere un identificador de recursos para un archivo de imagen incrustado en el proyecto de biblioteca o de aplicación de .NET Standard, con una **acción de compilación: EmbeddedResource**.
+- [`FromStream`](xref:Xamarin.Forms.ImageSource.FromStream(System.Func{System.IO.Stream})) : Requiere una secuencia que proporcione datos de imagen.
 
 La [`Aspect`](xref:Xamarin.Forms.Image.Aspect) propiedad determina cómo se escalará la imagen para ajustarse al área de presentación:
 
-- [`Fill`](xref:Xamarin.Forms.Aspect.Fill): Estira la imagen para rellenar completamente el área de presentación. Esto puede dar lugar a que la imagen se distorsione.
-- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill)-Recorta la imagen para que rellene el área de visualización conservando el aspecto (es decir, sin distorsión).
-- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit): Muestra una panorámica de la imagen (si es necesario) para que toda la imagen quepa en el área de presentación, con un espacio en blanco agregado a la parte superior o inferior, en función de si la imagen es ancha o alta.
+- [`Fill`](xref:Xamarin.Forms.Aspect.Fill) : Estira la imagen para rellenar completamente el área de presentación. Esto puede dar lugar a que la imagen se distorsione.
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -Recorta la imagen para que rellene el área de visualización conservando el aspecto (es decir, sin distorsión).
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) : Muestra una panorámica de la imagen (si es necesario) para que toda la imagen quepa en el área de presentación, con un espacio en blanco agregado a la parte superior o inferior, en función de si la imagen es ancha o alta.
 
 Las imágenes se pueden cargar desde un [archivo local](#local-images), un [recurso incrustado](#embedded-images), [descargado](#download-images)o cargado desde una secuencia. Además, los iconos de fuente se pueden mostrar en la [`Image`](xref:Xamarin.Forms.Image) vista especificando los datos del icono de fuente en un `FontImageSource` objeto. Para obtener más información, vea [Mostrar iconos de fuentes](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) en la guía de [fuentes](~/xamarin-forms/user-interface/text/fonts.md) .
 
@@ -56,7 +56,7 @@ Los archivos de imagen se pueden agregar a cada proyecto de aplicación y se pue
 Para usar una sola imagen en todas las aplicaciones, se *debe usar el mismo nombre de archivo en*todas las plataformas y debe ser un nombre de recurso de Android válido (es decir, solo letras minúsculas, números, el carácter de subrayado y el período permitido).
 
 - **iOS** : la manera preferida de administrar y admitir imágenes ya que Ios 9 es usar **conjuntos de imágenes del catálogo de activos**, que deben contener todas las versiones de una imagen necesarias para admitir varios dispositivos y factores de escala para una aplicación. Para obtener más información, consulte [Agregar imágenes a un conjunto de imágenes del catálogo de recursos](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
-- **Android** : incluya imágenes en el directorio **Resources/drawable** con la **acción de compilación: AndroidResource**. También se pueden proporcionar versiones alta y baja de PPP de una imagen (en **los** subdirectorios de recursos con nombre adecuados, como **drawable-ldpi**, **drawable-hdpi**y **drawable-xhdpi**).
+- **Android** : incluya imágenes en el directorio  **Resources/drawable** con la **acción de compilación: AndroidResource**. También se pueden proporcionar versiones alta y baja de PPP de una imagen (en **los** subdirectorios de recursos con nombre adecuados, como **drawable-ldpi**, **drawable-hdpi**y **drawable-xhdpi**).
 - **Plataforma universal de Windows (UWP)** : de forma predeterminada, las imágenes se deben colocar en el directorio raíz de la aplicación con la **acción de compilación: contenido**. Como alternativa, las imágenes se pueden colocar en un directorio diferente que, a continuación, se especifican con una plataforma específica. Para obtener más información, consulte [Directorio de imagen predeterminado en Windows](~/xamarin-forms/platform/windows/default-image-directory.md).
 
 > [!IMPORTANT]
@@ -91,7 +91,7 @@ image.Source = Device.RuntimePlatform == Device.Android
 
 ### <a name="native-resolutions-retina-and-high-dpi"></a>Resoluciones nativas (retina y alta PPP)
 
-iOS, Android y UWP incluyen compatibilidad con distintas resoluciones de imagen, donde el sistema operativo elige la imagen adecuada en tiempo de ejecución en función de las capacidades del dispositivo. Xamarin.Formsusa las API de las plataformas nativas para cargar imágenes locales, por lo que admite automáticamente resoluciones alternativas si los archivos se denominan correctamente y se encuentran en el proyecto.
+iOS, Android y UWP incluyen compatibilidad con distintas resoluciones de imagen, donde el sistema operativo elige la imagen adecuada en tiempo de ejecución en función de las capacidades del dispositivo. Xamarin.Forms usa las API de las plataformas nativas para cargar imágenes locales, por lo que admite automáticamente resoluciones alternativas si los archivos se denominan correctamente y se encuentran en el proyecto.
 
 La mejor manera de administrar imágenes desde iOS 9 es arrastrar imágenes para cada resolución necesaria para el conjunto de imágenes del catálogo de activos adecuado. Para obtener más información, consulte [Agregar imágenes a un conjunto de imágenes del catálogo de recursos](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
@@ -101,16 +101,16 @@ Las imágenes de resolución alternativas de Android deben colocarse en [directo
 
 [![Ubicación de la imagen de varias resoluciones de Android](images-images/xs-highdpisolution-sml.png)](images-images/xs-highdpisolution.png#lightbox)
 
-Los nombres de los archivos de imagen [de UWP se pueden agregar con el sufijo `.scale-xxx` anterior a la extensión de archivo](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast), donde `xxx` es el porcentaje de escalado aplicado al activo, por ejemplo, **myimage.scale-200.png**. A continuación, se puede hacer referencia a las imágenes en código o XAML sin el modificador de escala, por ejemplo, simplemente **myimage.png**. La plataforma seleccionará la escala de recursos más cercana adecuada en función de los PPP actuales de la pantalla.
+Los nombres de los archivos de imagen [de UWP se pueden agregar con el sufijo `.scale-xxx` anterior a la extensión de archivo](/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast), donde `xxx` es el porcentaje de escalado aplicado al activo, por ejemplo, **myimage.scale-200.png**. A continuación, se puede hacer referencia a las imágenes en código o XAML sin el modificador de escala, por ejemplo, simplemente **myimage.png**. La plataforma seleccionará la escala de recursos más cercana adecuada en función de los PPP actuales de la pantalla.
 
 ### <a name="additional-controls-that-display-images"></a>Controles adicionales que muestran imágenes
 
 Algunos controles tienen propiedades que muestran una imagen, como:
 
-- [`Button`](xref:Xamarin.Forms.Button)tiene una [`ImageSource`](xref:Xamarin.Forms.Button.ImageSource) propiedad que se puede establecer en una imagen de mapa de bits que se va a mostrar en `Button` . Para obtener más información, vea [usar mapas de bits con botones](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons).
-- [`ImageButton`](xref:Xamarin.Forms.Button)tiene una [`Source`](xref:Xamarin.Forms.ImageButton.Source) propiedad que se puede establecer en la imagen que se va a mostrar en `ImageButton` . Para obtener más información, vea [establecer el origen de la imagen](~/xamarin-forms/user-interface/imagebutton.md#setting-the-image-source).
-- [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem)tiene una [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) propiedad que se puede establecer en una imagen que se carga desde un archivo, un recurso incrustado, un URI o un flujo.
-- [`ImageCell`](xref:Xamarin.Forms.ImageCell)tiene una [`ImageSource`](xref:Xamarin.Forms.ImageCell.ImageSource) propiedad que se puede establecer en una imagen recuperada de un archivo, un recurso incrustado, un URI o un flujo.
+- [`Button`](xref:Xamarin.Forms.Button) tiene una [`ImageSource`](xref:Xamarin.Forms.Button.ImageSource) propiedad que se puede establecer en una imagen de mapa de bits que se va a mostrar en `Button` . Para obtener más información, vea [usar mapas de bits con botones](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons).
+- [`ImageButton`](xref:Xamarin.Forms.Button) tiene una [`Source`](xref:Xamarin.Forms.ImageButton.Source) propiedad que se puede establecer en la imagen que se va a mostrar en `ImageButton` . Para obtener más información, vea [establecer el origen de la imagen](~/xamarin-forms/user-interface/imagebutton.md#setting-the-image-source).
+- [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) tiene una [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) propiedad que se puede establecer en una imagen que se carga desde un archivo, un recurso incrustado, un URI o un flujo.
+- [`ImageCell`](xref:Xamarin.Forms.ImageCell) tiene una [`ImageSource`](xref:Xamarin.Forms.ImageCell.ImageSource) propiedad que se puede establecer en una imagen recuperada de un archivo, un recurso incrustado, un URI o un flujo.
 - [`Page`](xref:Xamarin.Forms.Page). Cualquier tipo de página que derive de `Page` tiene [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) [`BackgroundImageSource`](xref:Xamarin.Forms.Page.BackgroundImageSource) propiedades y, a las que se puede asignar un archivo, un recurso incrustado, un URI o un flujo. En determinadas circunstancias, como cuando [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) se muestra un [`ContentPage`](xref:Xamarin.Forms.ContentPage) , el icono se mostrará si es compatible con la plataforma.
 
   > [!IMPORTANT]
@@ -280,8 +280,8 @@ Las siguientes capturas de pantallas muestran el resultado de mostrar una imagen
 
 [`UriImageSource`](xref:Xamarin.Forms.UriImageSource)También admite el almacenamiento en caché de imágenes descargadas, configuradas mediante las siguientes propiedades:
 
-- [`CachingEnabled`](xref:Xamarin.Forms.UriImageSource.CachingEnabled)-Si el almacenamiento en caché está habilitado ( `true` de forma predeterminada).
-- [`CacheValidity`](xref:Xamarin.Forms.UriImageSource.CacheValidity)-A `TimeSpan` que define cuánto tiempo se almacenará la imagen localmente.
+- [`CachingEnabled`](xref:Xamarin.Forms.UriImageSource.CachingEnabled) -Si el almacenamiento en caché está habilitado ( `true` de forma predeterminada).
+- [`CacheValidity`](xref:Xamarin.Forms.UriImageSource.CacheValidity) -A `TimeSpan` que define cuánto tiempo se almacenará la imagen localmente.
 
 El almacenamiento en caché está habilitado de forma predeterminada y almacenará la imagen localmente durante 24 horas. Para deshabilitar el almacenamiento en caché de una imagen determinada, cree una instancia del origen de la imagen como se indica a continuación:
 
@@ -304,7 +304,7 @@ El almacenamiento en caché integrado facilita la compatibilidad con escenarios 
 
 ## <a name="animated-gifs"></a>Archivos GIF animados
 
-Xamarin.Formsincluye compatibilidad para mostrar pequeños archivos GIF animados. Esto se logra estableciendo la [`Image.Source`](xref:Xamarin.Forms.Image.Source) propiedad en un archivo GIF animado:
+Xamarin.Forms incluye compatibilidad para mostrar pequeños archivos GIF animados. Esto se logra estableciendo la [`Image.Source`](xref:Xamarin.Forms.Image.Source) propiedad en un archivo GIF animado:
 
 ```xaml
 <Image Source="demo.gif" />
@@ -341,7 +341,7 @@ Consulte la documentación de [iOS trabajar con imágenes](~/ios/app-fundamental
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [WorkingWithImages (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
+- [WorkingWithImages (ejemplo)](/samples/xamarin/xamarin-forms-samples/workingwithimages)
 - [iOS trabajar con imágenes](~/ios/app-fundamentals/images-icons/index.md)
 - [Iconografía de Android](https://developer.android.com/design/style/iconography.html)
 - [Directrices sobre los activos de iconos y ventanas](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/)

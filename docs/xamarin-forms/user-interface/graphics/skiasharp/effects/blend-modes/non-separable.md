@@ -10,12 +10,12 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 52be7641ac3b2983f537e11bccd76f2a5b52574d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a77ebb07a09c1bbd2df482c81040f271cdf8f56e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84130187"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556352"
 ---
 # <a name="the-non-separable-blend-modes"></a>Modos de mezcla no separables
 
@@ -211,11 +211,11 @@ Por lo general, no es el caso que desee usar uno de los modos de mezcla no separ
 
 ## <a name="a-matte-for-a-separable-mode"></a>Un mate para un modo separable
 
-Este es uno de los mapas de bits incluidos como un recurso en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . El nombre de archivo es **Banana.jpg**:
+Este es uno de los mapas de bits incluidos como un recurso en el ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . El nombre de archivo es **Banana.jpg**:
 
 ![Monkey de banana](non-separable-images/Banana.jpg "Monkey de banana")
 
-Es posible crear un mate que abarque solo el plátano. También es un recurso en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . El nombre de archivo es **BananaMatte.png**:
+Es posible crear un mate que abarque solo el plátano. También es un recurso en el ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . El nombre de archivo es **BananaMatte.png**:
 
 ![Mate de banana](non-separable-images/BananaMatte.png "Mate de banana")
 
@@ -294,5 +294,5 @@ Intente cambiar el modo de mezcla a `SKBlendMode.Saturation` . El plátano sigue
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

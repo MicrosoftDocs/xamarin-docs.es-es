@@ -10,12 +10,12 @@ ms.date: 10/01/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e0c6e305287c97abac3500cba4771479b60381ac
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b029ffdb0a16d9f54951ae3754ca0f1eb7f69aaa
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939807"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556885"
 ---
 # <a name="platform-specifics"></a>Características específicas de las plataformas
 
@@ -56,11 +56,11 @@ El resultado de exponer un efecto como específico de la plataforma es que el ef
 > [!NOTE]
 > Está previsto que los proveedores utilicen esta técnica para crear sus propias características específicas de la plataforma, para facilitar el consumo de los usuarios. Aunque los usuarios pueden optar por crear sus propias características específicas de la plataforma, se debe tener en cuenta que requiere más código que la creación y el consumo de un efecto.
 
-La [aplicación de ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) muestra un `Shadow` específico de la plataforma que agrega una sombra al texto mostrado por un [`Label`](xref:Xamarin.Forms.Label) control:
+La [aplicación de ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) muestra un `Shadow` específico de la plataforma que agrega una sombra al texto mostrado por un [`Label`](xref:Xamarin.Forms.Label) control:
 
 ![Específico de la plataforma secundaria](images/screenshots.png)
 
-La [aplicación de ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) implementa la `Shadow` plataforma específica en cada plataforma, para facilitar la comprensión. Sin embargo, aparte de cada implementación de efecto específico de la plataforma, la implementación de la clase Shadow es en gran medida idéntica para cada plataforma. Por lo tanto, esta guía se centra en la implementación de la clase Shadow y en el efecto asociado en una sola plataforma.
+La [aplicación de ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) implementa la `Shadow` plataforma específica en cada plataforma, para facilitar la comprensión. Sin embargo, aparte de cada implementación de efecto específico de la plataforma, la implementación de la clase Shadow es en gran medida idéntica para cada plataforma. Por lo tanto, esta guía se centra en la implementación de la clase Shadow y en el efecto asociado en una sola plataforma.
 
 Para obtener más información sobre los efectos, vea [Personalizar controles con efectos](~/xamarin-forms/app-fundamentals/effects/index.md).
 
@@ -155,7 +155,7 @@ namespace MyCompany.Forms.PlatformConfiguration.iOS
 }
 ```
 
-La `IsShadowed` propiedad adjunta se usa para agregar el `MyCompany.LabelShadowEffect` efecto a y quitarlo de, el control `Shadow` al que está asociada la clase. Esta propiedad adjunta registra el método `OnIsShadowedPropertyChanged` que se ejecutará cuando cambie el valor de la propiedad. A su vez, este método llama `AttachEffect` al `DetachEffect` método o para agregar o quitar el efecto basado en el valor de la `IsShadowed` propiedad adjunta. El efecto se agrega o se quita del control modificando la colección del control [`Effects`](xref:Xamarin.Forms.Element.Effects) .
+La `IsShadowed` propiedad adjunta se usa para agregar el `MyCompany.LabelShadowEffect` efecto a y quitarlo de, el control `Shadow` al que está asociada la clase. Esta propiedad asociada registra el método `OnIsShadowedPropertyChanged` que se ejecutará cuando cambie el valor de la propiedad. A su vez, este método llama `AttachEffect` al `DetachEffect` método o para agregar o quitar el efecto basado en el valor de la `IsShadowed` propiedad adjunta. El efecto se agrega o se quita del control modificando la colección del control [`Effects`](xref:Xamarin.Forms.Element.Effects) .
 
 > [!NOTE]
 > Tenga en cuenta que el efecto se resuelve especificando un valor que es una concatenación del nombre del grupo de resolución y el identificador único que se especifica en la implementación del efecto. Para obtener más información, vea [crear un efecto](~/xamarin-forms/app-fundamentals/effects/creating.md).
@@ -280,8 +280,8 @@ shadowLabel.On<iOS>().SetIsShadowed(true);
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
-- [ShadowPlatformSpecific (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific)
+- [PlatformSpecifics (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [ShadowPlatformSpecific (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific)
 - [Características específicas de la plataforma iOS](~/xamarin-forms/platform/ios/index.md)
 - [Características específicas de la plataforma Android](~/xamarin-forms/platform/android/index.md)
 - [Características específicas de la plataforma Windows](~/xamarin-forms/platform/windows/index.md)

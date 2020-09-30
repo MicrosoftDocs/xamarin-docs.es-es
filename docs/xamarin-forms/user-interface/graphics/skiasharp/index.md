@@ -1,5 +1,5 @@
 ---
-title: Gráficos de SkiaSharpXamarin.Forms
+title: Gráficos de SkiaSharp Xamarin.Forms
 description: SkiaSharp es un sistema de gráficos 2D para .NET y C# basado en el motor de gráficos Skia de código abierto que se usa en gran medida en productos de Google. En esta guía se explica cómo usar SkiaSharp para gráficos 2D en las Xamarin.Forms aplicaciones.
 ms.prod: xamarin
 ms.assetid: 2C348BEA-81DF-4794-8857-EB1DFF5E11DB
@@ -9,16 +9,16 @@ ms.date: 09/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: da00aafb9f659d8af119e00476a9a243a2f91023
-ms.sourcegitcommit: 91b4d2f93687fadec5c3f80aadc8f7298d911624
+ms.openlocfilehash: 6ca08815e422b9ec96dcb11d6b069a227bf62866
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85795068"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555273"
 ---
-# <a name="skiasharp-graphics-in-xamarinforms"></a>Gráficos de SkiaSharpXamarin.Forms
+# <a name="skiasharp-graphics-in-no-locxamarinforms"></a>Gráficos de SkiaSharp Xamarin.Forms
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Uso de SkiaSharp para gráficos 2D en las Xamarin.Forms aplicaciones_
 
@@ -28,7 +28,7 @@ En esta guía se da por supuesto que está familiarizado con la Xamarin.Forms pr
 
 > [!VIDEO https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms/player]
 
-**Seminario Web: SkiaSharp paraXamarin.Forms**
+**Seminario Web: SkiaSharp para Xamarin.Forms**
 
 ## <a name="skiasharp-preliminaries"></a>SkiaSharp Windows°PE
 
@@ -67,6 +67,6 @@ Los efectos son propiedades que modifican la presentación normal de gráficos, 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 - [SkiaSharp con Xamarin.Forms seminario web (vídeo)](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)

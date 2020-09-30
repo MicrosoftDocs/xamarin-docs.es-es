@@ -11,12 +11,12 @@ ms.custom: contperfq1
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 77b1837fb58d5743fd887b9f636f7f7311b807d3
-ms.sourcegitcommit: 9bd6b1b20d126b3f837c4cf859b25895c242e54e
+ms.openlocfilehash: d350ceee778c9f9ba9f25555a89a925558c6d38b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88648179"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556846"
 ---
 # <a name="no-locxamarinforms-relativelayout"></a>Xamarin.Forms RelativeLayout
 
@@ -341,7 +341,7 @@ En este ejemplo, los elementos secundarios se agregan a [`RelativeLayout`](xref:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de RelativeLayout (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-relativelayoutdemos)
+- [Demostraciones de RelativeLayout (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-relativelayoutdemos)
 - [Xamarin.Forms Propiedades adjuntas](~/xamarin-forms/xaml/attached-properties.md)
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Elegir un Xamarin.Forms diseño](choose-layout.md)

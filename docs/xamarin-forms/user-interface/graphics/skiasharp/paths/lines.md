@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 644e6ab4acffa7acf2d86733d68fed8db07a752a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 75d19e41243076da127d58defdabeca908d900cd
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932371"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556092"
 ---
 # <a name="lines-and-stroke-caps"></a>Líneas y extremos de trazo
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Aprenda a usar SkiaSharp para dibujar líneas con distintos extremos de trazo_
 
@@ -37,11 +37,11 @@ De forma predeterminada, la [`StrokeWidth`](xref:SkiaSharp.SKPaint.StrokeWidth) 
 
 La apariencia de los inicios y finales de las líneas se denomina *extremo de línea* o, en Skia, un extremo de *trazo*. La palabra "Cap" en este contexto hace referencia a un tipo de sombrero &mdash; que se encuentra al final de la línea. La [`StrokeCap`](xref:SkiaSharp.SKPaint.StrokeCap) propiedad del objeto se establece `SKPaint` en uno de los siguientes miembros de la [`SKStrokeCap`](xref:SkiaSharp.SKStrokeCap) enumeración:
 
-- `Butt`(valor predeterminado)
+- `Butt` (valor predeterminado)
 - `Square`
 - `Round`
 
-Se ilustran mejor con un programa de ejemplo. La sección **líneas y rutas** de acceso de SkiaSharp del programa [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) comienza con una página titulada **extremos de trazos** basados en la [`StrokeCapsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeCapsPage.cs) clase. En esta página se define un `PaintSurface` controlador de eventos que recorre en bucle los tres miembros de la `SKStrokeCap` enumeración, mostrando el nombre del miembro de la enumeración y dibujando una línea con el extremo del trazo:
+Se ilustran mejor con un programa de ejemplo. La sección **líneas y rutas** de acceso de SkiaSharp del programa [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) comienza con una página titulada **extremos de trazos** basados en la [`StrokeCapsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeCapsPage.cs) clase. En esta página se define un `PaintSurface` controlador de eventos que recorre en bucle los tres miembros de la `SKStrokeCap` enumeración, mostrando el nombre del miembro de la enumeración y dibujando una línea con el extremo del trazo:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -109,9 +109,9 @@ DrawPoints (SKPointMode mode, points, paint)
 
 El `points` parámetro es una matriz de `SKPoint` valores y `mode` es un miembro de la [`SKPointMode`](xref:SkiaSharp.SKPointMode) enumeración, que tiene tres miembros:
 
-- `Points`para representar los puntos individuales
-- `Lines`para conectar cada par de puntos
-- `Polygon`para conectar todos los puntos consecutivos
+- `Points` para representar los puntos individuales
+- `Lines` para conectar cada par de puntos
+- `Polygon` para conectar todos los puntos consecutivos
 
 En la página de **varias líneas** se muestra este método. El archivo [**MultipleLinesPage. Xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/MultipleLinesPage.xaml) crea una instancia de dos `Picker` vistas que permiten seleccionar un miembro de la `SKPointMode` enumeración y un miembro de la `SKStrokeCap` enumeración:
 
@@ -243,5 +243,5 @@ El hecho de que las líneas estén conectadas o no conectadas es un aspecto fund
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

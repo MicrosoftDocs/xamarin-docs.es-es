@@ -480,7 +480,7 @@
         - name: Autenticador web
           href: ~/essentials/web-authenticator.md?context=xamarin/android
         - name: Notas de la versión de Xamarin.Essentials
-          href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
+          href: /xamarin/essentials/release-notes/
         - name: Solución de problemas
           href: ~/essentials/troubleshooting.md?context=xamarin/android
     - name: Datos y servicios en la nube
@@ -695,6 +695,6 @@
             - name: Packaging
               href: wear/deploy-test/packaging.md
     - name: Notas de la versión
-      href: 'https://docs.microsoft.com/xamarin/android/release-notes/'
+      href: /xamarin/android/release-notes/
     - name: Muestras
       href: samples/index.md

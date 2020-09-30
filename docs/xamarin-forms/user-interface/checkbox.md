@@ -1,34 +1,23 @@
 ---
-title: Xamarin.FormsCasilla
-description: La Xamarin.Forms casilla es un tipo de botón que puede estar activado o vacío. Cuando se activa una casilla, se considera que está activada. Cuando una casilla está vacía, se considera que está desactivada.
-ms.prod: xamarin
-ms.assetid: B8B9268B-BCB8-42B9-B08C-C0F22C137238
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/11/2019
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8399dde2e4e2c9fb53b38fca2923eb0e3bfc6ce3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136479"
+title: " Xamarin.Forms CheckBox" Descripción: la Xamarin.Forms casilla es un tipo de botón que puede estar activado o vacío. Cuando se activa una casilla, se considera que está activada. Cuando una casilla está vacía, se considera que está desactivada.
+MS. Prod: Xamarin ms. AssetID: B8B9268B-BCB8-42B9-B08C-C0F22C137238 ms. Technology: Xamarin-Forms Author: davidbritch ms. Author: dabritch ms. Date: 06/11/2019 no-LOC:
+- "Xamarin.Forms"
+- "Xamarin.Essentials"
+
 ---
-# <a name="xamarinforms-checkbox"></a>Xamarin.FormsCasilla
+
+# <a name="no-locxamarinforms-checkbox"></a>Xamarin.Forms Casilla
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
 
 Xamarin.Forms `CheckBox` Es un tipo de botón que puede estar activado o vacío. Cuando se activa una casilla, se considera que está activada. Cuando una casilla está vacía, se considera que está desactivada.
 
-`CheckBox`define una `bool` propiedad denominada `IsChecked` , que indica si `CheckBox` está activada. Esta propiedad también está respaldada por un [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, lo que significa que se puede aplicar un estilo a y ser el destino de los enlaces de datos.
+`CheckBox` define una `bool` propiedad denominada `IsChecked` , que indica si `CheckBox` está activada. Esta propiedad también está respaldada por un [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, lo que significa que se puede aplicar un estilo a y ser el destino de los enlaces de datos.
 
 > [!NOTE]
 > La `IsChecked` propiedad enlazable tiene un modo de enlace predeterminado de [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) .
 
-`CheckBox`define un `CheckedChanged` evento que se desencadena cuando `IsChecked` cambia la propiedad, ya sea a través de la manipulación de usuarios o cuando una aplicación establece la `IsChecked` propiedad. El `CheckedChangedEventArgs` objeto que acompaña al `CheckedChanged` evento tiene una propiedad única denominada `Value` , de tipo `bool` . Cuando se desencadena el evento, el valor de la `Value` propiedad se establece en el nuevo valor de la `IsChecked` propiedad.
+`CheckBox` define un `CheckedChanged` evento que se desencadena cuando `IsChecked` cambia la propiedad, ya sea a través de la manipulación de usuarios o cuando una aplicación establece la `IsChecked` propiedad. El `CheckedChangedEventArgs` objeto que acompaña al `CheckedChanged` evento tiene una propiedad única denominada `Value` , de tipo `bool` . Cuando se desencadena el evento, el valor de la `Value` propiedad se establece en el nuevo valor de la `IsChecked` propiedad.
 
 ## <a name="create-a-checkbox"></a>Crear una casilla
 
@@ -133,7 +122,7 @@ En las siguientes capturas de pantallas se muestran una serie de objetos comprob
 
 ## <a name="checkbox-visual-states"></a>Estados visuales de la casilla
 
-`CheckBox`tiene un `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) que se puede utilizar para iniciar un cambio visual en `CheckBox` cuando se activa.
+`CheckBox` tiene un `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) que se puede utilizar para iniciar un cambio visual en `CheckBox` cuando se activa.
 
 En el siguiente ejemplo de XAML se muestra cómo definir un estado visual para el `IsChecked` Estado:
 
@@ -165,6 +154,6 @@ Para obtener más información sobre los estados visuales, vea [Administrador de
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de CheckBox (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
+- [Demostraciones de CheckBox (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
 - [Desencadenadores de Xamarin.Forms](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Administrador de estado visual de Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md)

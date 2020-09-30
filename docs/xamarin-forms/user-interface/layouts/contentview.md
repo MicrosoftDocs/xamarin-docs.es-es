@@ -1,5 +1,5 @@
 ---
-title: ContentView de Xamarin.Forms
+title: Xamarin.Forms ContentView
 description: En este artículo se explica cómo usar la clase ContentView para crear un control personalizado, como el CardView de ejemplo.
 ms.prod: xamarin
 ms.assetid: 638402E7-CA44-456B-863B-791F6B6B561D
@@ -10,14 +10,14 @@ ms.date: 08/14/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 46d2abf895ffe31bd1dc1c22caf36440c54b331c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: eb94b2943cfe4659bb77764f810d45dc8b189005
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84130122"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555377"
 ---
-# <a name="xamarinforms-contentview"></a>ContentView de Xamarin.Forms
+# <a name="no-locxamarinforms-contentview"></a>Xamarin.Forms ContentView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 
@@ -29,11 +29,11 @@ En la captura de pantalla siguiente se muestra un `CardView` control que se deri
 
 La `ContentView` clase define una propiedad única:
 
-* [`Content`](xref:Xamarin.Forms.ContentView.Content)es un `View` objeto. Esta propiedad está respaldada por un [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, por lo que puede ser el destino de los enlaces de datos.
+* [`Content`](xref:Xamarin.Forms.ContentView.Content) es un `View` objeto. Esta propiedad está respaldada por un [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, por lo que puede ser el destino de los enlaces de datos.
 
 `ContentView`También hereda una propiedad de la `TemplatedView` clase:
 
-* [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate)es un `ControlTemplate` que puede definir o invalidar la apariencia del control.
+* [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) es un `ControlTemplate` que puede definir o invalidar la apariencia del control.
 
 Para obtener más información sobre la `ControlTemplate` propiedad, vea [personalizar el aspecto con una ControlTemplate](#customize-appearance-with-a-controltemplate).
 
@@ -211,7 +211,7 @@ Para obtener más información sobre las plantillas de control, consulte [Planti
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-* [Aplicación de ejemplo ContentView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
+* [Aplicación de ejemplo ContentView](/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 * [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 * [Propiedades enlazables](~/xamarin-forms/xaml/bindable-properties.md).
 * [Plantillas de control de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-template.md)

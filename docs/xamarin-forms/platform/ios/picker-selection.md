@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f7149a818506611176f7c34a6fae4ec733cd2ad9
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8e8c5696235e0258ab4e300a821c1ef804e6bd50
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938572"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556690"
 ---
 # <a name="picker-item-selection-on-ios"></a>Selección de elementos de selector en iOS
 
@@ -47,8 +47,8 @@ picker.On<iOS>().SetUpdateMode(UpdateMode.WhenFinished);
 
 El `Picker.On<iOS>` método especifica que este específico de la plataforma solo se ejecutará en iOS. El `Picker.SetUpdateMode` método, en el [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) espacio de nombres, se utiliza para controlar cuándo se produce la selección del elemento, con la `UpdateMode` enumeración que proporciona dos valores posibles:
 
-- `Immediately`: la selección de elementos se produce cuando el usuario examina los elementos de [`Picker`](xref:Xamarin.Forms.Picker) . Éste es el comportamiento predeterminado en Xamarin.Forms .
-- `WhenFinished`: la selección de elementos solo se produce una vez que el usuario ha presionado el botón **Done** en el [`Picker`](xref:Xamarin.Forms.Picker) .
+- `Immediately` : la selección de elementos se produce cuando el usuario examina los elementos de [`Picker`](xref:Xamarin.Forms.Picker) . Éste es el comportamiento predeterminado en Xamarin.Forms .
+- `WhenFinished` : la selección de elementos solo se produce una vez que el usuario ha presionado el botón **Done** en el [`Picker`](xref:Xamarin.Forms.Picker) .
 
 Además, el `SetUpdateMode` método se puede utilizar para alternar los valores de enumeración llamando al `UpdateMode` método, que devuelve la actual `UpdateMode` :
 
@@ -70,6 +70,6 @@ El resultado es que `UpdateMode` se aplica un especificado a [`Picker`](xref:Xam
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

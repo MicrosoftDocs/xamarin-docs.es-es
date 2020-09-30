@@ -599,7 +599,7 @@
         - name: Autenticador web
           href: ~/essentials/web-authenticator.md?context=xamarin/ios
         - name: Notas de la versión de Xamarin.Essentials
-          href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
+          href: /xamarin/essentials/release-notes/
         - name: Solución de problemas
           href: ~/essentials/troubleshooting.md?context=xamarin/ios
     - name: Datos y servicios en la nube
@@ -1143,6 +1143,6 @@
             - name: Marcos de trabajo
               href: tvos/internals/frameworks.md
     - name: Notas de la versión
-      href: 'https://docs.microsoft.com/xamarin/ios/release-notes/'
+      href: /xamarin/ios/release-notes/
     - name: Muestras
       href: samples/index.md

@@ -10,12 +10,12 @@ ms.date: 01/14/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 171ecc02fda304135e5f535c3e798067595d7047
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e5888e77948bef0fbb60a4e0068cbedf2d2a50e7
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139326"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555390"
 ---
 # <a name="speech-recognition-using-azure-speech-service"></a>Reconocimiento de voz con el servicio de voz de Azure
 
@@ -34,7 +34,7 @@ En este artículo se explica cómo se implementa Speech-to-Text en la aplicació
 
 ## <a name="create-an-azure-speech-service-resource"></a>Creación de un recurso de Azure Speech Services
 
-El servicio de voz de Azure forma parte de Azure Cognitive Services, que proporciona API basadas en la nube para tareas como el reconocimiento de imágenes, el reconocimiento de voz y la traducción, y la búsqueda de Bing. Para obtener más información, consulte [¿Qué son Azure Cognitive Services?](https://docs.microsoft.com/azure/cognitive-services/welcome).
+El servicio de voz de Azure forma parte de Azure Cognitive Services, que proporciona API basadas en la nube para tareas como el reconocimiento de imágenes, el reconocimiento de voz y la traducción, y la búsqueda de Bing. Para obtener más información, consulte [¿Qué son Azure Cognitive Services?](/azure/cognitive-services/welcome).
 
 El proyecto de ejemplo requiere la creación de un recurso de Cognitive Services de Azure en el Azure Portal. Se puede crear un recurso de Cognitive Services para un servicio único, como Speech Service, o como un recurso de varios servicios. Los pasos para crear un recurso de Speech Services son los siguientes:
 
@@ -43,7 +43,7 @@ El proyecto de ejemplo requiere la creación de un recurso de Cognitive Services
 1. Obtenga la clave de API y la información de la región para el recurso.
 1. Actualice el archivo **constants.CS** de ejemplo.
 
-Para obtener una guía paso a paso sobre la creación de un recurso, vea [creación de un recurso de Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account).
+Para obtener una guía paso a paso sobre la creación de un recurso, vea [creación de un recurso de Cognitive Services](/azure/cognitive-services/cognitive-services-apis-create-account).
 
 > [!NOTE]
 > Si no tiene una [suscripción a Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), cree una [cuenta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de empezar. Una vez que tenga una cuenta, se puede crear un recurso de servicio único en el nivel gratis para probar el servicio.
@@ -462,7 +462,7 @@ Por último, el **paquete de UWP. appxmanifest** debe especificar que la aplicac
 
 [![Captura de pantalla del manifiesto en Visual Studio 2019](speech-recognition-images/package-manifest-cropped.png)](speech-recognition-images/package-manifest.png#lightbox "Captura de pantalla del manifiesto en Visual Studio 2019")
 
-## <a name="test-the-application"></a>Probar la aplicación
+## <a name="test-the-application"></a>Prueba de la aplicación
 
 Ejecute la aplicación y haga clic en el botón **transcribir** . La aplicación debe solicitar acceso al micrófono e iniciar el proceso de transcripción. `ActivityIndicator`Se animará, mostrando que la transcripción está activa. A medida que hable, la aplicación transmitirá los datos de audio al recurso de Azure Speech Services, que responderá con el texto transformado. El texto `Label` transformado aparecerá en el elemento a medida que se reciba.
 
@@ -471,7 +471,7 @@ Ejecute la aplicación y haga clic en el botón **transcribir** . La aplicación
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de servicio de voz de Azure](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
-- [Información general de Azure Speech Service](https://docs.microsoft.com/azure/cognitive-services/speech-service/overview)
-- [Creación de un recurso de Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account)
-- [Inicio rápido: Reconocimiento de voz a través de un micrófono](https://docs.microsoft.com/azure/cognitive-services/speech-service/quickstarts/speech-to-text-from-microphone)
+- [Ejemplo de servicio de voz de Azure](/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
+- [Información general de Azure Speech Service](/azure/cognitive-services/speech-service/overview)
+- [Cree un recurso de Cognitive Services](/azure/cognitive-services/cognitive-services-apis-create-account)
+- [Inicio rápido: Reconocimiento de voz a través de un micrófono](/azure/cognitive-services/speech-service/quickstarts/speech-to-text-from-microphone)

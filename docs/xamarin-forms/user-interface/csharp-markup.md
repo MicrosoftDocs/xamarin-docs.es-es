@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsMarcado de C#
+title: Xamarin.Forms Marcado de C#
 description: El marcado de C# es un conjunto opcional de métodos y clases auxiliares fluidas para simplificar el proceso de creación de interfaces de usuario declarativas Xamarin.Forms en C#.
 ms.prod: xamarin
 ms.assetid: D41B9DCD-5C34-4C2F-B177-FC082AB2E9E0
@@ -10,18 +10,18 @@ ms.date: 05/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3e8c95e84dd525c274403290712260ba86abd677
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: a07931bfa53a5e4d77c2755b08745b8dd962b695
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918571"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557158"
 ---
-# <a name="no-locxamarinforms-c-markup"></a>Xamarin.FormsMarcado de C#
+# <a name="no-locxamarinforms-c-markup"></a>Xamarin.Forms Marcado de C#
 
 ![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 
 El marcado de C# es un conjunto opcional de métodos y clases auxiliares fluidas para simplificar el proceso de creación de interfaces de usuario declarativas Xamarin.Forms en C#. La API fluida proporcionada por el marcado de C# está disponible en el `Xamarin.Forms.Markup` espacio de nombres.
 
@@ -231,7 +231,7 @@ new Label { Text = "Tap Me" }
 
 Dado que un reconocedor de gestos es un `BindableObject` , puede utilizar los `Bind` `BindCommand` métodos de extensión y al inicializarlo. También puede inicializar tipos de reconocedor de gestos personalizados con el `Gesture<TGestureElement, TGestureRecognizer>` método de extensión.
 
-## <a name="layout"></a>Layout
+## <a name="layout"></a>Diseño
 
 El marcado de C# incluye una serie de métodos de extensión de diseño que admiten la colocación de vistas en diseños y contenido en vistas:
 
@@ -553,7 +553,7 @@ Aplicar de forma coherente esta Convención permite examinar rápidamente el mar
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [CSharpForMarkupDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
+- [CSharpForMarkupDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 - [Características de la plataforma Android](~/xamarin-forms/platform/android/index.md)
 - [características de la plataforma iOS](~/xamarin-forms/platform/ios/index.md)
 - [Características de la plataforma Windows](~/xamarin-forms/platform/windows/index.md)

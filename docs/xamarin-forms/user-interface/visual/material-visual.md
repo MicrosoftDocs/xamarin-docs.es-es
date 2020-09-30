@@ -1,6 +1,6 @@
 ---
-title: Objeto visual de material de Xamarin.Forms
-description: Xamarin.FormsEl material visual se puede usar para crear Xamarin.Forms aplicaciones que tengan un aspecto muy idéntico en iOS y Android.
+title: Xamarin.Forms Material visual
+description: Xamarin.Forms El material visual se puede usar para crear Xamarin.Forms aplicaciones que tengan un aspecto muy idéntico en iOS y Android.
 ms.prod: xamarin
 ms.assetid: B774F68C-EF9E-49E1-B738-CDC64879ADA2
 ms.technology: xamarin-forms
@@ -10,20 +10,20 @@ ms.date: 11/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bba7d77d8cf565b1b2db2c1324e171389c5d0280
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 753644b372fafc7c3ea22008267844251527050d
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127187"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556482"
 ---
-# <a name="xamarinforms-material-visual"></a>Objeto visual de material de Xamarin.Forms
+# <a name="no-locxamarinforms-material-visual"></a>Xamarin.Forms Material visual
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 
 El [diseño de material](https://material.io) es un sistema de diseño de bien fundamentadas creado por Google que prescribe el tamaño, el color, el espaciado y otros aspectos de cómo deben buscarse y comportarse las vistas y los diseños.
 
-Xamarin.FormsEl material visual se puede usar para aplicar reglas de diseño de materiales a Xamarin.Forms aplicaciones y crear aplicaciones que tengan una apariencia muy idéntica en iOS y Android. Cuando el material visual está habilitado, las vistas admitidas adoptan el mismo diseño multiplataforma, lo que crea una apariencia unificada.
+Xamarin.Forms El material visual se puede usar para aplicar reglas de diseño de materiales a Xamarin.Forms aplicaciones y crear aplicaciones que tengan una apariencia muy idéntica en iOS y Android. Cuando el material visual está habilitado, las vistas admitidas adoptan el mismo diseño multiplataforma, lo que crea una apariencia unificada.
 
 [![Capturas de pantallas de material visual](material-visual-images/material-visual-cropped.png)](material-visual-images/material-visual.png#lightbox)
 
@@ -92,9 +92,9 @@ contentPage.Visual = VisualMarker.Material;
 
 Al establecer la `VisualElement.Visual` propiedad en `Material` , se indica a la aplicación que use los representadores de material visual en lugar de los representadores predeterminados. La [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) propiedad se puede establecer en cualquier tipo que implemente `IVisual` , con la [`VisualMarker`](xref:Xamarin.Forms.VisualMarker) clase que proporciona las `IVisual` propiedades siguientes:
 
-- `Default`: indica que la vista debe representarse mediante el representador predeterminado.
-- `MatchParent`: indica que la vista debe utilizar el mismo representador que su elemento primario directo.
-- `Material`: indica que la vista debe representarse mediante un representador de materiales.
+- `Default` : indica que la vista debe representarse mediante el representador predeterminado.
+- `MatchParent` : indica que la vista debe utilizar el mismo representador que su elemento primario directo.
+- `Material` : indica que la vista debe representarse mediante un representador de materiales.
 
 > [!IMPORTANT]
 > La [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) propiedad se define en la [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase, con vistas que heredan el `Visual` valor de propiedad de sus elementos primarios. Por consiguiente, si `Visual` se establece la propiedad en, [`ContentPage`](xref:Xamarin.Forms.ContentPage) se garantiza que cualquier vista admitida en la página utilizará ese visual. Además, la `Visual` propiedad se puede invalidar en una vista.
@@ -157,7 +157,7 @@ Para obtener más información acerca de los representadores personalizados, vea
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Material visual (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
+- [Material visual (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 - [Creación de un Xamarin.Forms representador visual](create.md)
-- [Xamarin.FormsEfectos](~/xamarin-forms/app-fundamentals/effects/index.md)
+- [Xamarin.Forms Efectos](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Representadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

@@ -10,12 +10,12 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d613c4f73c0a377a599b0137ce2f2b557c04ad6a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 45634695050dc6f74a9b1617a2180481e3788d11
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572343"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557327"
 ---
 # <a name="cropping-skiasharp-bitmaps"></a>Recortar mapas de bits de SkiaSharp
 
@@ -448,7 +448,7 @@ class PhotoCropperCanvasView : SKCanvasView
 
 ## <a name="hosting-the-photo-cropper-canvas-view"></a>Hospedaje de la vista de lienzo Photo Cropper
 
-Con esas dos clases que controlan la lógica de recorte, la página de **recorte de fotografías** en la aplicación **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** tiene muy poco trabajo. El archivo XAML crea una instancia de `Grid` para hospedar el `PhotoCropperCanvasView` y un botón **Done** :
+Con esas dos clases que controlan la lógica de recorte, la página de **recorte de fotografías** en la aplicación **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** tiene muy poco trabajo. El archivo XAML crea una instancia de `Grid` para hospedar el `PhotoCropperCanvasView` y un botón **Done** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -535,9 +535,9 @@ Verá que el rectángulo de recorte está restringido a una característica de r
 
 ## <a name="dividing-a-bitmap-into-tiles"></a>Dividir un mapa de bits en mosaicos
 
-Una Xamarin.Forms versión del rompecabezas 14-15 famoso apareció en el capítulo 22 del libro [_creación de Mobile Apps con Xamarin. Forms_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) y se puede descargar como [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle). Sin embargo, el rompecabezas se vuelve más divertido (y a menudo más desafiante) cuando se basa en una imagen de su propia biblioteca de fotos.
+Una Xamarin.Forms versión del rompecabezas 14-15 famoso apareció en el capítulo 22 del libro [_creación de Mobile Apps con Xamarin.Forms _](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) y se puede descargar como [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle). Sin embargo, el rompecabezas se vuelve más divertido (y a menudo más desafiante) cuando se basa en una imagen de su propia biblioteca de fotos.
 
-Esta versión del rompecabezas 14-15 forma parte de la aplicación **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** y consta de una serie de páginas con el título **Photo Puzzle**.
+Esta versión del rompecabezas 14-15 forma parte de la aplicación **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** y consta de una serie de páginas con el título **Photo Puzzle**.
 
 El archivo **PhotoPuzzlePage1. Xaml** se compone de `Button` :
 
@@ -650,7 +650,7 @@ public partial class PhotoPuzzlePage2 : ContentPage
 
 Cuando el usuario hace clic en el botón **Done** , el `Clicked` controlador navega hasta `PhotoPuzzlePage3` y pasa el mapa de bits girado final en el constructor de la página.
 
-`PhotoPuzzlePage3`permite recortar la foto. El programa requiere un mapa de bits cuadrado para dividirlo en una cuadrícula de 4 por 4 de mosaicos.
+`PhotoPuzzlePage3` permite recortar la foto. El programa requiere un mapa de bits cuadrado para dividirlo en una cuadrícula de 4 por 4 de mosaicos.
 
 El archivo **PhotoPuzzlePage3. Xaml** contiene un `Label` , un `Grid` para hospedar `PhotoCropperCanvasView` y otro botón **listo** :
 
@@ -739,7 +739,7 @@ public partial class PhotoPuzzlePage3 : ContentPage
 
 El controlador de botón **Done** obtiene el ancho y el alto del mapa de bits recortado (estos dos valores deben ser iguales) y, a continuación, lo divide en 15 mapas de bits independientes, cada uno de los cuales es 1/4 el ancho y el alto del original. (No se crea el último de los 16 mapas de bits posibles). El `DrawBitmap` método con el rectángulo de origen y de destino permite crear un mapa de bits basado en un subconjunto de un mapa de bits mayor.
 
-## <a name="converting-to-xamarinforms-bitmaps"></a>Convertir en Xamarin.Forms mapas de bits
+## <a name="converting-to-no-locxamarinforms-bitmaps"></a>Convertir en Xamarin.Forms mapas de bits
 
 En el `OnDoneButtonClicked` método, la matriz creada para los 15 mapas de bits es de tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource) :
 
@@ -747,7 +747,7 @@ En el `OnDoneButtonClicked` método, la matriz creada para los 15 mapas de bits 
 ImageSource[] imgSources = new ImageSource[15];
 ```
 
-`ImageSource`es el Xamarin.Forms tipo base que encapsula un mapa de bits. Afortunadamente, SkiaSharp permite convertir mapas de bits de SkiaSharp en Xamarin.Forms mapas de bits. El ensamblado **SkiaSharp. views. Forms** define una [`SKBitmapImageSource`](xref:SkiaSharp.Views.Forms.SKBitmapImageSource) clase que `ImageSource` se deriva de pero que se puede crear basándose en un `SKBitmap` objeto SkiaSharp. `SKBitmapImageSource`incluso define las conversiones entre `SKBitmapImageSource` y `SKBitmap` , y así es como `SKBitmap` se almacenan los objetos en una matriz como Xamarin.Forms mapas de bits:
+`ImageSource` es el Xamarin.Forms tipo base que encapsula un mapa de bits. Afortunadamente, SkiaSharp permite convertir mapas de bits de SkiaSharp en Xamarin.Forms mapas de bits. El ensamblado **SkiaSharp. views. Forms** define una [`SKBitmapImageSource`](xref:SkiaSharp.Views.Forms.SKBitmapImageSource) clase que `ImageSource` se deriva de pero que se puede crear basándose en un `SKBitmap` objeto SkiaSharp. `SKBitmapImageSource` incluso define las conversiones entre `SKBitmapImageSource` y `SKBitmap` , y así es como `SKBitmap` se almacenan los objetos en una matriz como Xamarin.Forms mapas de bits:
 
 ```csharp
 imgSources[4 * row + col] = (SKBitmapImageSource)bitmap;
@@ -765,5 +765,5 @@ Ahora puede volver a colocarlos en el orden correcto. Los mosaicos de la misma f
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

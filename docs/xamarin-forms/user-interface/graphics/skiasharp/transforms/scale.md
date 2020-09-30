@@ -10,12 +10,12 @@ ms.date: 03/23/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5cb43bfe572b98a6530dfeb8d923ac71b5b633a7
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 5ea4fa88925925ba7c81f47c30875c3419603ab8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932059"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555468"
 ---
 # <a name="the-scale-transform"></a>Transformación de escala
 
@@ -105,7 +105,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Puede que se pregunte: ¿Cómo afectan los factores de escala al valor devuelto desde el `MeasureText` método de `SKPaint` ? La respuesta es: no en absoluto. `Scale`es un método de `SKCanvas` . No afecta a nada que se haga con un `SKPaint` objeto hasta que se use ese objeto para representar algo en el lienzo.
+Puede que se pregunte: ¿Cómo afectan los factores de escala al valor devuelto desde el `MeasureText` método de `SKPaint` ? La respuesta es: no en absoluto. `Scale` es un método de `SKCanvas` . No afecta a nada que se haga con un `SKPaint` objeto hasta que se use ese objeto para representar algo en el lienzo.
 
 Como puede ver, todo lo dibujado después de la `Scale` llamada aumenta proporcionalmente:
 
@@ -348,5 +348,5 @@ El código también muestra la estrella 10 veces más, cada vez que reduce el fa
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

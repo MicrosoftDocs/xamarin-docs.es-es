@@ -10,18 +10,18 @@ ms.date: 03/12/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 23edbb007e912d13858686d1c5ec574c9e3349c7
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a8e8388a6a460b3a2958d3ab3b9a4c9c34ea1831
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127146"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556469"
 ---
-# <a name="create-a-xamarinforms-visual-renderer"></a>Creación de un Xamarin.Forms representador visual
+# <a name="create-a-no-locxamarinforms-visual-renderer"></a>Creación de un Xamarin.Forms representador visual
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 
-Xamarin.FormsVisual permite crear representadores y aplicarlos de forma selectiva a los [`VisualElement`](xref:Xamarin.Forms.VisualElement) objetos, sin tener que realizar vistas de subclases Xamarin.Forms . Se usará un representador que especifique un `IVisual` tipo, como parte de su `ExportRendererAttribute` , para representar en las vistas, en lugar del representador predeterminado. En el momento de la selección del representador, la `Visual` propiedad de la vista se inspecciona y se incluye en el proceso de selección del representador.
+Xamarin.Forms Visual permite crear representadores y aplicarlos de forma selectiva a los [`VisualElement`](xref:Xamarin.Forms.VisualElement) objetos, sin tener que realizar vistas de subclases Xamarin.Forms . Se usará un representador que especifique un `IVisual` tipo, como parte de su `ExportRendererAttribute` , para representar en las vistas, en lugar del representador predeterminado. En el momento de la selección del representador, la `Visual` propiedad de la vista se inspecciona y se incluye en el proceso de selección del representador.
 
 > [!IMPORTANT]
 > Actualmente [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) no se puede cambiar la propiedad una vez representada la vista, pero esto cambiará en una versión futura.
@@ -175,6 +175,6 @@ Las capturas de pantallas siguientes muestran el representado [`Button`](xref:Xa
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Material visual (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
+- [Material visual (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 - [Objeto visual de material de Xamarin.Forms](material-visual.md)
 - [Representadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

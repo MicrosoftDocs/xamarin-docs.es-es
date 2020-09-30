@@ -10,12 +10,12 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 43aa429046c1b0f72a1cbe6a5b921da9b8907a49
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2cc0806af28360cf4bf2bb7e382e8d0a423abab9
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84132228"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555533"
 ---
 # <a name="the-skiasharp-linear-gradient"></a>El degradado lineal SkiaSharp
 
@@ -40,7 +40,7 @@ A menudo, un degradado lineal se extiende de una esquina de un rectángulo a otr
 - horizontalmente en la esquina superior derecha
 - diagonalmente a la esquina inferior derecha
 
-El degradado lineal diagonal se muestra en la primera página de la sección **sombreadores SkiaSharp y otros efectos** del ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . La página de **degradado de esquina a esquina** crea un `SKCanvasView` en su constructor. El `PaintSurface` controlador crea un `SKPaint` objeto en una `using` instrucción y, a continuación, define un rectángulo cuadrado de 300 píxeles centrado en el lienzo:
+El degradado lineal diagonal se muestra en la primera página de la sección **sombreadores SkiaSharp y otros efectos** del ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . La página de **degradado de esquina a esquina** crea un `SKCanvasView` en su constructor. El `PaintSurface` controlador crea un `SKPaint` objeto en una `using` instrucción y, a continuación, define un rectángulo cuadrado de 300 píxeles centrado en el lienzo:
 
 ```csharp
 public class CornerToCornerGradientPage : ContentPage
@@ -514,7 +514,7 @@ public class GradientAnimationPage : ContentPage
 }
 ```
 
-Un enfoque algo diferente requiere menos código. Este enfoque usa el método de [`SKShader.CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) sobrecarga con una transformación de matriz como el último argumento. Este enfoque es la versión en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
+Un enfoque algo diferente requiere menos código. Este enfoque usa el método de [`SKShader.CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) sobrecarga con una transformación de matriz como el último argumento. Este enfoque es la versión en el ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
 
 ```csharp
 public class GradientAnimationPage : ContentPage
@@ -626,7 +626,7 @@ Los dos puntos de degradado del `CreateLinearGradient` método se basan en dos d
 
 Se trata de una imagen interesante, pero no se trata de la intención. El problema es que al crear un degradado lineal, las líneas de color constante son perpendiculares a la línea de degradado. La línea de degradado se basa en los puntos en los que la figura toca los lados superior e izquierdo, y esa línea no suele ser perpendicular a los bordes de la figura que se extienden a la esquina inferior derecha. Este enfoque solo funcionaría si el lienzo fuera cuadrado.
 
-Para crear un degradado de arco iris adecuado, la línea de degradado debe ser perpendicular al borde del arco iris. Este es un cálculo más complicado. Debe definirse un vector que sea paralelo al lado largo de la figura. El vector gira 90 grados para que sea perpendicular a ese lado. A continuación, se alarga para que sea el ancho de la figura mediante la multiplicación por `rainbowWidth` . Los dos puntos de degradado se calculan en función de un punto del lado de la ilustración y ese punto más el vector. Este es el código que aparece en la página de **degradado de arco iris** en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
+Para crear un degradado de arco iris adecuado, la línea de degradado debe ser perpendicular al borde del arco iris. Este es un cálculo más complicado. Debe definirse un vector que sea paralelo al lado largo de la figura. El vector gira 90 grados para que sea perpendicular a ese lado. A continuación, se alarga para que sea el ancho de la figura mediante la multiplicación por `rainbowWidth` . Los dos puntos de degradado se calculan en función de un punto del lado de la ilustración y ese punto más el vector. Este es el código que aparece en la página de **degradado de arco iris** en el ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
 
 ```csharp
 public class RainbowGradientPage : ContentPage
@@ -919,5 +919,5 @@ La `CreateLinearGradient` llamada define un degradado desde la parte superior de
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

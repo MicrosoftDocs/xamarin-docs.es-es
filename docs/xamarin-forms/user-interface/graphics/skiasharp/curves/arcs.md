@@ -10,12 +10,12 @@ ms.date: 05/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4eea7d500876793357113453493fa2fe2ede6cc4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 32de64c0fa6b0ec0a0b03c8075710e1cbc92dd49
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140025"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557418"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Tres maneras de dibujar un arco
 
@@ -29,7 +29,7 @@ Un arco es una curva en la circunferencia de una elipse, como las partes redonde
 
 A pesar de la simplicidad de esa definición, no hay forma de definir una función de dibujo de arco que satisfaga cada necesidad y, por lo tanto, no hay ningún consenso entre los sistemas de gráficos de la mejor forma de dibujar un arco. Por esta razón, la `SKPath` clase no se limita a un solo enfoque.
 
-`SKPath`define un [`AddArc`](xref:SkiaSharp.SKPath.AddArc*) método, cinco [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo*) métodos diferentes y dos métodos relativos [`RArcTo`](xref:SkiaSharp.SKPath.RArcTo*) . Estos métodos se dividen en tres categorías, que representan tres enfoques muy diferentes para especificar un arco. La que use dependerá de la información disponible para definir el arco y de cómo quepa este arco con los demás gráficos que dibuje.
+`SKPath` define un [`AddArc`](xref:SkiaSharp.SKPath.AddArc*) método, cinco [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo*) métodos diferentes y dos métodos relativos [`RArcTo`](xref:SkiaSharp.SKPath.RArcTo*) . Estos métodos se dividen en tres categorías, que representan tres enfoques muy diferentes para especificar un arco. La que use dependerá de la información disponible para definir el arco y de cómo quepa este arco con los demás gráficos que dibuje.
 
 ## <a name="the-angle-arc"></a>Arco angular
 
@@ -65,7 +65,7 @@ Los `startAngle` `sweepAngle` argumentos o pueden ser negativos: el arco está e
 
 Sin embargo `AddArc` , *no* define un contorno cerrado. Si llama a `LineTo` después de `AddArc` , se dibuja una línea desde el final del arco hasta el punto en el `LineTo` método, y el mismo es true `ArcTo` .
 
-`AddArc`inicia automáticamente un nuevo perfil y es funcionalmente equivalente a una llamada a `ArcTo` con un argumento final de `true` :
+`AddArc` inicia automáticamente un nuevo perfil y es funcionalmente equivalente a una llamada a `ArcTo` con un argumento final de `true` :
 
 ```csharp
 path.ArcTo (oval, startAngle, sweepAngle, true);
@@ -221,7 +221,7 @@ Para ver su aspecto sin la "explosión", simplemente comente la `Translate` llam
 
 El segundo tipo de arco compatible con `SKPath` es el *arco tangente*, por lo que se llama a porque el arco es la circunferencia de un círculo que es tangente a dos líneas conectadas.
 
-Se agrega un arco tangente a un trazado con una llamada al [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,System.Single)) método con dos `SKPoint` parámetros, o la [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,System.Single,System.Single)) sobrecarga con parámetros independientes `Single` para los puntos:
+Se agrega un arco tangente a un trazado con una llamada al  [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,System.Single)) método con dos `SKPoint` parámetros, o la [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,System.Single,System.Single)) sobrecarga con parámetros independientes `Single` para los puntos:
 
 ```csharp
 public void ArcTo (SKPoint point1, SKPoint point2, Single radius)
@@ -498,7 +498,7 @@ Esta es la ejecución del programa:
 
 ## <a name="the-elliptical-arc"></a>Arco elíptico
 
-El arco elíptico se agrega a un trazado con una llamada al [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,System.Single,SkiaSharp.SKPathArcSize,SkiaSharp.SKPathDirection,SkiaSharp.SKPoint)) método que tiene dos `SKPoint` parámetros, o la [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,SkiaSharp.SKPathArcSize,SkiaSharp.SKPathDirection,System.Single,System.Single)) sobrecarga con coordenadas X e y independientes:
+El arco elíptico se agrega a un trazado con una llamada al [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,System.Single,SkiaSharp.SKPathArcSize,SkiaSharp.SKPathDirection,SkiaSharp.SKPoint)) método que tiene dos `SKPoint` parámetros, o la  [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,SkiaSharp.SKPathArcSize,SkiaSharp.SKPathDirection,System.Single,System.Single)) sobrecarga con coordenadas X e y independientes:
 
 ```csharp
 public void ArcTo (SKPoint r, Single xAxisRotate, SKPathArcSize largeArc, SKPathDirection sweep, SKPoint xy)
@@ -671,5 +671,5 @@ Aunque las conexiones entre los arcos y las líneas rectas son matemáticamente 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

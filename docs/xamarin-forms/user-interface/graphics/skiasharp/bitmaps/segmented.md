@@ -10,12 +10,12 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5c3909271580d0568d7c603de0d434ff5b3f3bc4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9a39433a0bad518055542adb190f4f441675ddfb
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138676"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556378"
 ---
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>Presentación segmentada de mapas de bits SkiaSharp
 
@@ -27,7 +27,7 @@ El `SKCanvas` objeto SkiaSharp define un método denominado `DrawBitmapNinePatch
 
 Estos métodos se suelen usar para representar mapas de bits que forman parte de objetos de la interfaz de usuario, como botones. Al diseñar un botón, normalmente desea que el tamaño de un botón se base en el contenido del botón, pero es probable que desee que el borde del botón tenga el mismo ancho independientemente del contenido del botón. Esta es una aplicación ideal de `DrawBitmapNinePatch` .
 
-`DrawBitmapNinePatch`es un caso especial de `DrawBitmapLattice` pero es el más fácil de usar y comprender los dos métodos.
+`DrawBitmapNinePatch` es un caso especial de `DrawBitmapLattice` pero es el más fácil de usar y comprender los dos métodos.
 
 ## <a name="the-nine-patch-display"></a>La pantalla de nueve revisiones 
 
@@ -47,7 +47,7 @@ canvas.DrawBitmapNinePatch(bitmap, centerRectangle, destRectangle, paint);
 
 El rectángulo central es relativo al mapa de bits. Es un `SKRectI` valor (la versión entera de `SKRect` ) y todas las coordenadas y tamaños están en unidades de píxeles. El rectángulo de destino es relativo a la superficie de la pantalla. El argumento `paint` es opcional.
 
-La página de **presentación de nueve revisiones** en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) usa primero un constructor estático para crear una propiedad estática pública de tipo `SKBitmap` :
+La página de **presentación de nueve revisiones** en el ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) usa primero un constructor estático para crear una propiedad estática pública de tipo `SKBitmap` :
 
 ```csharp
 public partial class NinePatchDisplayPage : ContentPage
@@ -131,7 +131,7 @@ La [`SKLattice`](xref:SkiaSharp.SKLattice) estructura define cuatro propiedades:
 - [`XDivs`](xref:SkiaSharp.SKLattice.XDivs), una matriz de enteros.
 - [`YDivs`](xref:SkiaSharp.SKLattice.YDivs), una matriz de enteros.
 - [`Flags`](xref:SkiaSharp.SKLattice.Flags), una matriz de `SKLatticeFlags` , un tipo de enumeración
-- [`Bounds`](xref:SkiaSharp.SKLattice.Bounds)de tipo `Nullable<SKRectI>` para especificar un rectángulo de origen opcional en el mapa de bits
+- [`Bounds`](xref:SkiaSharp.SKLattice.Bounds) de tipo `Nullable<SKRectI>` para especificar un rectángulo de origen opcional en el mapa de bits
 
 La `XDivs` matriz divide el ancho del mapa de bits en bandas verticales. La primera franja se extiende desde el píxel 0 a la izquierda hasta `XDivs[0]` . Esta franja se representa en el ancho de píxel. La segunda franja se extiende de `XDivs[0]` a `XDivs[1]` , y se ajusta. La tercera franja se extiende de `XDivs[1]` a `XDivs[2]` y se representa en el ancho de píxel. La última franja se extiende desde el último elemento de la matriz hasta el borde derecho del mapa de bits. Si la matriz tiene un número par de elementos, se muestra en su ancho de píxel. De lo contrario, se ajusta. El número total de bandas verticales es uno más que el número de elementos de la matriz.
 
@@ -141,8 +141,8 @@ Juntas, la `XDivs` `YDivs` matriz y divide el mapa de bits en rectángulos. El n
 
 Según la documentación de Skia, la `Flags` matriz contiene un elemento para cada rectángulo, primero la fila superior de rectángulos, después la segunda fila, etc. La `Flags` matriz es de tipo [`SKLatticeFlags`](xref:SkiaSharp.SKLatticeFlags) , una enumeración con los siguientes miembros:
 
-- `Default`con valor 0
-- `Transparent`con valor 1
+- `Default` con valor 0
+- `Transparent` con valor 1
 
 Sin embargo, estas marcas no parecen funcionar como se supone y es mejor omitirlas. Sin embargo, no establezca la `Flags` propiedad en `null` . Establézcalo en una matriz de `SKLatticeFlags` valores lo suficientemente grande como para abarcar el número total de rectángulos.
 
@@ -230,5 +230,5 @@ La página de **presentación de Lattice** generaliza la creación de la `Flags`
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

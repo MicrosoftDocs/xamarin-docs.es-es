@@ -10,12 +10,12 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 418d29010a8cce81d2bb8c365608c54b61739622
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ec84ac906ac146f37ba5b161a898582ce483bc95
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135647"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556677"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>Los degradados circulares SkiaSharp
 
@@ -57,7 +57,7 @@ Los dos primeros argumentos especifican el centro de un círculo y un radio. El 
 
 Si usa `CreateRadialGradient` para rellenar un círculo, puede establecer el centro del degradado en el centro del círculo y el radio del degradado en el radio del círculo. En ese caso, el `SKShaderTileMode` argumento no tiene ningún efecto en la representación del degradado. Pero si el área rellenada por el degradado es mayor que el círculo definido por el degradado, el `SKShaderTileMode` argumento tiene un efecto profundo sobre lo que ocurre fuera del círculo.
 
-El efecto de `SKShaderMode` se muestra en la página **gradiente radial** en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . El archivo XAML de esta página crea una instancia de `Picker` que permite seleccionar uno de los tres miembros de la `SKShaderTileMode` enumeración:
+El efecto de `SKShaderMode` se muestra en la página **gradiente radial** en el ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . El archivo XAML de esta página crea una instancia de `Picker` que permite seleccionar uno de los tres miembros de la `SKShaderTileMode` enumeración:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -622,5 +622,5 @@ Los dos círculos tienen centros de `offCenter` y `center` . El círculo centrad
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -10,12 +10,12 @@ ms.date: 09/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6de2caf95d4ce983f7e97e0bc017932df534aedb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c6d568e948f02952fa71ed21af48160a53bfc419
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931864"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556547"
 ---
 # <a name="touch-manipulations"></a>Manipulaciones táctiles
 
@@ -419,7 +419,7 @@ enum TouchManipulationMode
 }
 ```
 
-`PanOnly`es un arrastre de un dedo que se implementa con la traducción. Todas las opciones siguientes también incluyen el movimiento panorámico, pero implica dos dedos: `IsotropicScale` es una operación de pinch que hace que el escalado de objetos sea igual en las direcciones horizontal y vertical. `AnisotropicScale`permite el escalado distinto.
+`PanOnly` es un arrastre de un dedo que se implementa con la traducción. Todas las opciones siguientes también incluyen el movimiento panorámico, pero implica dos dedos: `IsotropicScale` es una operación de pinch que hace que el escalado de objetos sea igual en las direcciones horizontal y vertical. `AnisotropicScale` permite el escalado distinto.
 
 La `ScaleRotate` opción es para el ajuste de escala y la rotación de dos dedos. El escalado es anisotrópico. Como se mencionó anteriormente, la implementación de la rotación de dos dedos con el escalado anisotrópico es problemática porque los movimientos de los dedos son esencialmente los mismos.
 
@@ -708,7 +708,7 @@ En los `Moved` `Released` eventos y, el método llama a `Manipulate` . En estos 
 
 Esto es importante: el `Manipulate` método puede suponer que está procesando el movimiento de un solo dedo. En el momento de esta llamada no se está moviendo ninguno de los otros dedos y, si realmente se están moviendo (como es probable,), esos movimientos se procesarán en futuras llamadas a `Manipulate` .
 
-El `Manipulate` método copia primero el Diccionario en una matriz para mayor comodidad. Omite todo lo que no sea las dos primeras entradas. Si hay más de dos dedos intentando manipular el mapa de bits, se omiten los demás. `Manipulate`es el miembro final de `TouchManipulationBitmap` :
+El `Manipulate` método copia primero el Diccionario en una matriz para mayor comodidad. Omite todo lo que no sea las dos primeras entradas. Si hay más de dos dedos intentando manipular el mapa de bits, se omiten los demás. `Manipulate` es el miembro final de `TouchManipulationBitmap` :
 
 ```csharp
 class TouchManipulationBitmap
@@ -751,7 +751,7 @@ En el caso de la manipulación con un solo dedo, `pivotPoint` es el centro del m
 
 En ambos casos, `TouchManipulationManager` devuelve un `SKMatrix` valor, que el método concatena con la propiedad actual `Matrix` que `TouchManipulationPage` usa para representar el mapa de bits.
 
-`TouchManipulationManager`está generalizado y no utiliza ningún otro archivo excepto `TouchManipulationMode` . Es posible que pueda usar esta clase sin cambiar sus propias aplicaciones. Define una única propiedad de tipo `TouchManipulationMode`:
+`TouchManipulationManager` está generalizado y no utiliza ningún otro archivo excepto `TouchManipulationMode` . Es posible que pueda usar esta clase sin cambiar sus propias aplicaciones. Define una única propiedad de tipo `TouchManipulationMode`:
 
 ```csharp
 class TouchManipulationManager
@@ -763,7 +763,7 @@ class TouchManipulationManager
 
 Sin embargo, probablemente querrá evitar la `AnisotropicScale` opción. Es muy fácil con esta opción manipular el mapa de bits para que uno de los factores de escala sea cero. Esto hace que el mapa de bits desaparezca de la vista, nunca se devuelva. Si realmente necesita escalado anisotrópico, querrá mejorar la lógica para evitar resultados no deseados.
 
-`TouchManipulationManager`hace uso de vectores, pero dado que no hay ninguna `SKVector` estructura en SkiaSharp, `SKPoint` se usa en su lugar. `SKPoint`admite el operador de resta y el resultado se puede tratar como un vector. La única lógica específica del vector que era necesario agregar es un `Magnitude` cálculo:
+`TouchManipulationManager` hace uso de vectores, pero dado que no hay ninguna `SKVector` estructura en SkiaSharp, `SKPoint` se usa en su lugar. `SKPoint` admite el operador de resta y el resultado se puede tratar como un vector. La única lógica específica del vector que era necesario agregar es un `Magnitude` cálculo:
 
 ```csharp
 class TouchManipulationManager
@@ -1273,6 +1273,6 @@ Este código divide eficazmente el área del mapa de bits en una forma de rombo 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 - [Invocación de eventos desde efectos](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

@@ -10,16 +10,16 @@ ms.date: 04/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 20bf6d3d8c802c1d4919cd16885d3939cb0102aa
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9ed0c2b9b0916349b11f64e83c57f2737c302e92
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930629"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557470"
 ---
 # <a name="modal-page-presentation-style-on-ios"></a>Estilo de presentación de página modal en iOS
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esta plataforma específica de iOS se usa para establecer el estilo de presentación de una página modal y, además, se puede usar para mostrar páginas modales con fondos transparentes. Se consume en XAML estableciendo la `Page.ModalPresentationStyle` propiedad Bindable en un `UIModalPresentationStyle` valor de enumeración:
 
@@ -67,6 +67,6 @@ El resultado es que se puede establecer el estilo de Presentación modal en un [
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

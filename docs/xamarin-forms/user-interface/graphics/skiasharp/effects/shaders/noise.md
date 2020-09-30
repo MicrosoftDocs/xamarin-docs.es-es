@@ -10,12 +10,12 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 45ec48c0b7b58e26fa47d7343e96bb49591cb339
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 00b6251f530a4927d069ae92ec919645a06baf15
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127769"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555403"
 ---
 # <a name="skiasharp-noise-and-composing"></a>SkiaSharp ruido y composición
 
@@ -31,7 +31,7 @@ La compatibilidad de Perlen el ruido en Skia se basa en una especificación del 
 
 ## <a name="exploring-perlin-noise"></a>Exploración del ruido de Perl
 
-La [`SKShader`](xref:SkiaSharp.SKShader) clase define dos métodos estáticos distintos para generar el ruido de Perl: [`CreatePerlinNoiseFractalNoise`](xref:SkiaSharp.SKShader.CreatePerlinNoiseFractalNoise*) y [`CreatePerlinNoiseTurbulence`](xref:SkiaSharp.SKShader.CreatePerlinNoiseTurbulence*) . Los parámetros son idénticos:
+La [`SKShader`](xref:SkiaSharp.SKShader) clase define dos métodos estáticos distintos para generar el ruido de Perl:  [`CreatePerlinNoiseFractalNoise`](xref:SkiaSharp.SKShader.CreatePerlinNoiseFractalNoise*) y [`CreatePerlinNoiseTurbulence`](xref:SkiaSharp.SKShader.CreatePerlinNoiseTurbulence*) . Los parámetros son idénticos:
 
 ```csharp
 public static SkiaSharp CreatePerlinNoiseFractalNoise (float baseFrequencyX, float baseFrequencyY, int numOctaves, float seed);
@@ -47,7 +47,7 @@ El `numOctaves` valor es un entero de 1 o superior. Se relaciona con un factor d
 
 El `seed` parámetro es el punto inicial para el generador de números aleatorios. Aunque se especifica como un valor de punto flotante, la fracción se trunca antes de usarse y 0 es igual que 1.
 
-La página de **ruido de Perlen** en el ejemplo [ **SkiaSharpFormsDemos**)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) le permite experimentar con varios valores de los `baseFrequency` `numOctaves` argumentos y. Este es el archivo XAML:
+La página de **ruido de Perlen** en el ejemplo [ **SkiaSharpFormsDemos**)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) le permite experimentar con varios valores de los `baseFrequency` `numOctaves` argumentos y. Este es el archivo XAML:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -188,7 +188,7 @@ public static SKShader CreatePerlinNoiseFractalNoise (float baseFrequencyX, floa
 public static SKShader CreatePerlinNoiseTurbulence (float baseFrequencyX, float baseFrequencyY, int numOctaves, float seed, SKPointI tileSize);
 ```
 
-La [`SKPointI`](xref:SkiaSharp.SKPointI) estructura es la versión entera de la estructura familiar [`SKPoint`](xref:SkiaSharp.SKPoint) . `SKPointI`define `X` `Y` las propiedades y del tipo `int` en lugar de `float` .
+La [`SKPointI`](xref:SkiaSharp.SKPointI) estructura es la versión entera de la estructura familiar [`SKPoint`](xref:SkiaSharp.SKPoint) . `SKPointI` define `X` `Y` las propiedades y del tipo `int` en lugar de `float` .
 
 Estos métodos crean un patrón de repetición del tamaño especificado. En cada icono, el borde derecho es el mismo que el borde izquierdo y el borde superior es el mismo que el borde inferior. Esta característica se muestra en la página de **ruido de Perlen en mosaico** . El archivo XAML es similar al ejemplo anterior, pero solo tiene una `Stepper` vista para cambiar el `seed` argumento:
 
@@ -401,5 +401,5 @@ El último parámetro es un miembro de la `SKBlendMode` enumeración, una enumer
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
