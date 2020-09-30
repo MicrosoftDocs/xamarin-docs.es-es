@@ -1,5 +1,5 @@
 ---
-title: Recarga activa de XAML paraXamarin.Forms
+title: Recarga activa de XAML para Xamarin.Forms
 description: Vuelva a cargar los cambios en el archivo XAML al instante en la aplicación en ejecución para que no tenga que compilar el Xamarin.Forms proyecto después de cada cambio de XAML.
 ms.prod: xamarin
 ms.assetid: E220F054-32EE-424C-A7E5-6156BE271519
@@ -10,14 +10,14 @@ ms.date: 03/14/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0655739c95ba58b8d93aae6d3987d54bd0582c7b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ca79a8a4059a303b6f4bfa152d645311a6056ffd
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127457"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563892"
 ---
-# <a name="xaml-hot-reload-for-xamarinforms"></a>Recarga activa de XAML paraXamarin.Forms
+# <a name="xaml-hot-reload-for-no-locxamarinforms"></a>Recarga activa de XAML para Xamarin.Forms
 
 La recarga activa de XAML se conecta al flujo de trabajo existente para aumentar su productividad y ahorrar tiempo. Sin la recarga activa de XAML, debe compilar e implementar la aplicación cada vez que quiera ver un cambio de XAML. Con la recarga activa, al guardar el archivo XAML, los cambios se reflejan en directo en la aplicación en ejecución. Además, se mantendrán el estado y los datos de navegación, lo que le permitirá iterar rápidamente en la interfaz de usuario sin perder su lugar en la aplicación. Por lo tanto, con la recarga activa de XAML, pasará menos tiempo recompilando e implementando sus aplicaciones para validar los cambios de la interfaz de usuario.
 
@@ -34,7 +34,7 @@ La recarga activa de XAML se conecta al flujo de trabajo existente para aumentar
 Visual Studio 2019 para Mac | 8,4 o superior
 Xamarin.Forms | 4,1 o superior
 
-## <a name="enable-xaml-hot-reload-for-xamarinforms"></a>Habilitar la recarga activa de XAML paraXamarin.Forms
+## <a name="enable-xaml-hot-reload-for-no-locxamarinforms"></a>Habilitar la recarga activa de XAML para Xamarin.Forms
 
 Si se inicia desde una plantilla, la recarga activa de XAML está activada de forma predeterminada y el proyecto está configurado para funcionar sin ninguna configuración adicional. Depure la aplicación en un emulador, simulador o dispositivo físico Android o iOS, cambie el código XAML y guarde el archivo para desencadenar una recarga activa de XAML.
 
@@ -57,8 +57,8 @@ Si realiza un cambio que no se puede volver a cargar la recarga activa de XAML, 
 ## <a name="reload-on-multiple-platforms-at-once"></a>Recarga en varias plataformas a la vez
 
 La recarga activa de XAML admite la depuración simultánea en Visual Studio y Visual Studio para Mac. Puede implementar un dispositivo Android y un destino iOS al mismo tiempo para ver los cambios reflejados en ambas plataformas a la vez. Para depurar en varias plataformas, consulte:
-* **Windows** [Cómo: establecer proyectos de inicio múltiples](https://docs.microsoft.com/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2019)
-* **Mac** [establecer varios proyectos de inicio](https://docs.microsoft.com/visualstudio/mac/set-startup-projects?view=vsmac-2019)
+* **Windows** [Cómo: establecer proyectos de inicio múltiples](/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2019)
+* **Mac** [establecer varios proyectos de inicio](/visualstudio/mac/set-startup-projects?view=vsmac-2019)
 
 ## <a name="known-limitations"></a>Restricciones conocidas
 
@@ -75,7 +75,7 @@ La recarga activa de XAML admite la depuración simultánea en Visual Studio y V
 * [Sugerencias y trucos para la recarga activa de XAML](https://devblogs.microsoft.com/xamarin/tips-tricks-xaml-hot-reload/)
 * [Recarga activa de XAML para Xamarin.Forms en profundidad: el programa Xamarin](https://www.youtube.com/watch?v=crhjjPjzknk)
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 * Si no se puede inicializar la recarga activa de XAML:
   * Actualice su Xamarin.Forms versión.

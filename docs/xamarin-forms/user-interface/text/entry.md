@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsMovimientos
+title: Xamarin.Forms Movimientos
 description: En este artículo se explica cómo usar la Xamarin.Forms clase entry para aceptar texto de una sola línea o la entrada de contraseña en una aplicación.
 ms.prod: xamarin
 ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
@@ -10,16 +10,16 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3738a0fa3519f18864c2430430a6716bed5be130
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: ab2f0880f694bd9e270385dd6e0256374ed76c43
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918229"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562228"
 ---
-# <a name="no-locxamarinforms-entry"></a>Xamarin.FormsMovimientos
+# <a name="no-locxamarinforms-entry"></a>Xamarin.Forms Movimientos
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) Se utiliza para la entrada de texto de una sola línea. `Entry`, Al igual que la [`Editor`](xref:Xamarin.Forms.Editor) vista, admite varios tipos de teclado. Además, `Entry` se puede usar como un campo de contraseña.
 
@@ -78,10 +78,10 @@ var entry = new Entry { Text = "This is a read-only Entry", IsReadOnly = true })
 
 [`Entry`](xref:Xamarin.Forms.Entry)Puede transformar el uso de mayúsculas y minúsculas de su texto, almacenado en la `Text` propiedad, estableciendo la `TextTransform` propiedad en un valor de la `TextTransform` enumeración. Esta enumeración tiene cuatro valores:
 
-- `None`indica que el texto no se transformará.
-- `Default`indica que se utilizará el comportamiento predeterminado para la plataforma. Este es el valor predeterminado de la propiedad `TextTransform`.
-- `Lowercase`indica que el texto se transformará a minúsculas.
-- `Uppercase`indica que el texto se transformará en mayúsculas.
+- `None` indica que el texto no se transformará.
+- `Default` indica que se utilizará el comportamiento predeterminado para la plataforma. Este es el valor predeterminado de la propiedad `TextTransform`.
+- `Lowercase` indica que el texto se transformará a minúsculas.
+- `Uppercase` indica que el texto se transformará en mayúsculas.
 
 En el ejemplo siguiente se muestra cómo transformar texto a mayúsculas:
 
@@ -136,7 +136,7 @@ El resultado es que los caracteres del texto mostrados por [`Entry`](xref:Xamari
 
 ## <a name="password-fields"></a>Campos de contraseña
 
-`Entry`proporciona la `IsPassword` propiedad. Cuando `IsPassword` es `true` , el contenido del campo se presentará como círculos negros:
+`Entry` proporciona la `IsPassword` propiedad. Cuando `IsPassword` es `true` , el contenido del campo se presentará como círculos negros:
 
 En XAML:
 
@@ -198,8 +198,8 @@ El valor predeterminado de la [`SelectionLength`](xref:Xamarin.Forms.Entry.Selec
 
 La `ClearButtonVisibility` propiedad se puede utilizar para controlar si [`Entry`](xref:Xamarin.Forms.Entry) muestra un botón borrar, lo que permite al usuario borrar el texto. Esta propiedad se debe establecer en un `ClearButtonVisibility` miembro de enumeración:
 
-- `Never`indica que nunca se mostrará un botón CLEAR. Este es el valor predeterminado de la propiedad `Entry.ClearButtonVisibility`.
-- `WhileEditing`indica que se mostrará un botón borrar en [`Entry`](xref:Xamarin.Forms.Entry) , mientras que tiene el foco y el texto.
+- `Never` indica que nunca se mostrará un botón CLEAR. Este es el valor predeterminado de la propiedad `Entry.ClearButtonVisibility`.
+- `WhileEditing` indica que se mostrará un botón borrar en [`Entry`](xref:Xamarin.Forms.Entry) , mientras que tiene el foco y el texto.
 
 En el ejemplo siguiente se muestra cómo establecer la propiedad en XAML:
 
@@ -281,12 +281,12 @@ entry.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.Capit
 
 La apariencia de la tecla retorno en el teclado para software, que se muestra cuando [`Entry`](xref:Xamarin.Forms.Entry) tiene el foco, puede personalizarse estableciendo la [`ReturnType`](xref:Xamarin.Forms.Entry.ReturnType) propiedad en un valor de la [`ReturnType`](xref:Xamarin.Forms.ReturnType) enumeración:
 
-- [`Default`](xref:Xamarin.Forms.ReturnType.Default): indica que no se requiere ninguna clave de devolución específica y que se usará el valor predeterminado de la plataforma.
-- [`Done`](xref:Xamarin.Forms.ReturnType.Done): indica una tecla de retorno "Done".
-- [`Go`](xref:Xamarin.Forms.ReturnType.Go): indica una tecla de retorno "Go".
-- [`Next`](xref:Xamarin.Forms.ReturnType.Next): indica una clave de retorno "Next".
-- [`Search`](xref:Xamarin.Forms.ReturnType.Search): indica una clave de "búsqueda".
-- [`Send`](xref:Xamarin.Forms.ReturnType.Send): indica una clave de "envío".
+- [`Default`](xref:Xamarin.Forms.ReturnType.Default) : indica que no se requiere ninguna clave de devolución específica y que se usará el valor predeterminado de la plataforma.
+- [`Done`](xref:Xamarin.Forms.ReturnType.Done) : indica una tecla de retorno "Done".
+- [`Go`](xref:Xamarin.Forms.ReturnType.Go) : indica una tecla de retorno "Go".
+- [`Next`](xref:Xamarin.Forms.ReturnType.Next) : indica una clave de retorno "Next".
+- [`Search`](xref:Xamarin.Forms.ReturnType.Search) : indica una clave de "búsqueda".
+- [`Send`](xref:Xamarin.Forms.ReturnType.Send) : indica una clave de "envío".
 
 En el siguiente ejemplo de XAML se muestra cómo establecer la clave de devolución:
 
@@ -394,9 +394,9 @@ La entrada expone dos eventos:
 > [!NOTE]
 > La [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase, de la que [`Entry`](xref:Xamarin.Forms.Entry) hereda, también tiene [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused) eventos y.
 
-### <a name="completed"></a>Completed
+### <a name="completed"></a>Completado
 
-El `Completed` evento se utiliza para reaccionar a la finalización de una interacción con una entrada. `Completed`se genera cuando el usuario finaliza la entrada con un campo presionando la tecla entrar en el teclado (o presionando la tecla TAB en UWP). El controlador del evento es un controlador de eventos genérico que toma el remitente y `EventArgs` :
+El `Completed` evento se utiliza para reaccionar a la finalización de una interacción con una entrada. `Completed` se genera cuando el usuario finaliza la entrada con un campo presionando la tecla entrar en el teclado (o presionando la tecla TAB en UWP). El controlador del evento es un controlador de eventos genérico que toma el remitente y `EventArgs` :
 
 ```csharp
 void Entry_Completed (object sender, EventArgs e)
@@ -424,7 +424,7 @@ Una vez que [`Completed`](xref:Xamarin.Forms.Entry.Completed) se desencadena el 
 
 El `TextChanged` evento se utiliza para reaccionar a un cambio en el contenido de un campo.
 
-`TextChanged`se genera cuando `Text` cambia el de `Entry` . El controlador del evento toma una instancia de `TextChangedEventArgs` . `TextChangedEventArgs`proporciona acceso a los valores antiguos y nuevos de `Entry` `Text` a través de `OldTextValue` las `NewTextValue` propiedades y:
+`TextChanged` se genera cuando `Text` cambia el de `Entry` . El controlador del evento toma una instancia de `TextChangedEventArgs` . `TextChangedEventArgs` proporciona acceso a los valores antiguos y nuevos de `Entry` `Text` a través de `OldTextValue` las `NewTextValue` propiedades y:
 
 ```csharp
 void Entry_TextChanged (object sender, TextChangedEventArgs e)
@@ -449,5 +449,5 @@ entry.TextChanged += Entry_TextChanged;
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Texto (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [Texto (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [API de las entradas](xref:Xamarin.Forms.Entry)

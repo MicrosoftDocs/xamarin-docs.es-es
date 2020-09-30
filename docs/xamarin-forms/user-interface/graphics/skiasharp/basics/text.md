@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a98c7210f2e71f6f26d53da3555f3f9b5e016952
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 032a01a1e4e0f2b3e3d394aec6a30bd215fd84f8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935985"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562423"
 ---
 # <a name="integrating-text-and-graphics"></a>Integración de texto y gráficos
 
@@ -65,10 +65,10 @@ La segunda [`MeasureText`](xref:SkiaSharp.SKPaint.MeasureText(System.String,Skia
 
 Las `Left` `Top` propiedades y de la `SKRect` estructura indican las coordenadas de la esquina superior izquierda del texto representado si el texto se muestra mediante una `DrawText` llamada con las posiciones X e y de 0. Por ejemplo, cuando se ejecuta este programa en un simulador de iPhone 7, `TextSize` se le asigna el valor 90,6254 como resultado del cálculo que sigue a la primera llamada a `MeasureText` . El `SKRect` valor obtenido de la segunda llamada a `MeasureText` tiene los siguientes valores de propiedad:
 
-- `Left`= 6
+- `Left` = 6
 - `Top` = &ndash;68
-- `Width`= 664,8214
-- `Height`= 88;
+- `Width` = 664,8214
+- `Height` = 88;
 
 Tenga en cuenta que las coordenadas X e Y que se pasan al `DrawText` método especifican el lado izquierdo del texto en la línea base. El `Top` valor indica que el texto extiende 68 píxeles por encima de esa línea de base y (restando 68 de 88) 20 píxeles por debajo de la línea de base. El `Left` valor de 6 indica que el texto comienza en seis píxeles a la derecha del valor X de la `DrawText` llamada. Esto permite un espaciado entre caracteres normal. Si desea mostrar el texto de forma correcta en la esquina superior izquierda de la pantalla, pase los negativos de estos `Left` `Top` valores y como las coordenadas X e y de `DrawText` , en este ejemplo, &ndash; 6 y 68.
 
@@ -179,5 +179,5 @@ Otro objeto gráfico común es el mapa de bits. Este es un tema de gran tamaño 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

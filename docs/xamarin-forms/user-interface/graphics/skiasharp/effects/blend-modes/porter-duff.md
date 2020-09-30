@@ -10,12 +10,12 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a1e6290c0f85b54c3fd8958bc43667714bdece20
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 12e3e95b0f87d0e93d157bebe057874430866c2b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131058"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560785"
 ---
 # <a name="porter-duff-blend-modes"></a>Porter-Duff modos de Blend
 
@@ -286,7 +286,7 @@ La página de composición de la **pared del brick** muestra un ejemplo de una t
 
 ![Monkey sentado](porter-duff-images/SeatedMonkey.jpg "Monkey sentado")
 
-Como preparación para la composición, se creó un _mate_ correspondiente, que es otro mapa de bits que es negro donde desea que aparezca la imagen y sea transparente en caso contrario. Este archivo se denomina **SeatedMonkeyMatte.png** y se encuentra entre los recursos de la carpeta **multimedia** en el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
+Como preparación para la composición, se creó un _mate_ correspondiente, que es otro mapa de bits que es negro donde desea que aparezca la imagen y sea transparente en caso contrario. Este archivo se denomina **SeatedMonkeyMatte.png** y se encuentra entre los recursos de la carpeta **multimedia** en el ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
 
 ![Mate Monkey colocado](porter-duff-images/SeatedMonkeyMatte.png "Mate Monkey colocado")
 
@@ -905,5 +905,5 @@ En las siguientes capturas de pantallas se muestran tres tipos diferentes de tra
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

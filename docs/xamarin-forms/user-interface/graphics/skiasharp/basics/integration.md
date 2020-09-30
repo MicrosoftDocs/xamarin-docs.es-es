@@ -1,5 +1,5 @@
 ---
-title: Integración conXamarin.Forms
+title: Integración con Xamarin.Forms
 description: En este artículo se explica cómo crear gráficos de SkiaSharp que respondan a los elementos táctiles y a Xamarin.Forms los elementos, y se muestra con código de ejemplo.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
@@ -10,14 +10,14 @@ ms.date: 02/09/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 60f53fb00786b183f36f7cfefa6af9062bb682db
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: cca93508e022420e0d5d11de079420b367188052
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938169"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562254"
 ---
-# <a name="integrating-with-xamarinforms"></a>Integración conXamarin.Forms
+# <a name="integrating-with-no-locxamarinforms"></a>Integración con Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
@@ -28,7 +28,7 @@ Los gráficos de SkiaSharp se pueden integrar con el resto de de Xamarin.Forms v
 ![Seleccionar un color con controles deslizantes](integration-images/integrationexample.png)
 
 Otro enfoque para crear gráficos interactivos de SkiaSharp en Xamarin.Forms es el toque.
-La segunda página del programa [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) tiene derecho a **activar o desactivar relleno**. Dibuja un círculo simple de dos maneras &mdash; sin relleno y con un relleno &mdash; que se alterna mediante una derivación. La [`TapToggleFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) clase muestra cómo puede modificar los gráficos de SkiaSharp en respuesta a los datos proporcionados por el usuario.
+La segunda página del programa [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) tiene derecho a **activar o desactivar relleno**. Dibuja un círculo simple de dos maneras &mdash; sin relleno y con un relleno &mdash; que se alterna mediante una derivación. La [`TapToggleFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) clase muestra cómo puede modificar los gráficos de SkiaSharp en respuesta a los datos proporcionados por el usuario.
 
 En esta página, `SKCanvasView` se crea una instancia de la clase en el archivo [TapToggleFill. Xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml) , que también establece un Xamarin.Forms [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) en la vista:
 
@@ -244,5 +244,5 @@ Pero la mejor manera de hacerse una idea de los dos modelos es experimentar con 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

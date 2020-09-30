@@ -10,16 +10,16 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3a7dedad6fc33b75a687f94897b64d04a72a0b08
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 42f89f09bd84127fd19bc3ab64794bdac7f145d7
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918430"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561630"
 ---
 # <a name="no-locxamarinforms-editor"></a>Xamarin.Forms Editor
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 El [`Editor`](xref:Xamarin.Forms.Editor) control se usa para aceptar la entrada de varias líneas.
 
@@ -75,10 +75,10 @@ var editor = new Editor { Text = "This is a read-only Editor", IsReadOnly = true
 
 [`Editor`](xref:Xamarin.Forms.Editor)Puede transformar el uso de mayúsculas y minúsculas de su texto, almacenado en la `Text` propiedad, estableciendo la `TextTransform` propiedad en un valor de la `TextTransform` enumeración. Esta enumeración tiene cuatro valores:
 
-- `None`indica que el texto no se transformará.
-- `Default`indica que se utilizará el comportamiento predeterminado para la plataforma. Este es el valor predeterminado de la propiedad `TextTransform`.
-- `Lowercase`indica que el texto se transformará a minúsculas.
-- `Uppercase`indica que el texto se transformará en mayúsculas.
+- `None` indica que el texto no se transformará.
+- `Default` indica que se utilizará el comportamiento predeterminado para la plataforma. Este es el valor predeterminado de la propiedad `TextTransform`.
+- `Lowercase` indica que el texto se transformará a minúsculas.
+- `Uppercase` indica que el texto se transformará en mayúsculas.
 
 En el ejemplo siguiente se muestra cómo transformar texto a mayúsculas:
 
@@ -135,8 +135,8 @@ El resultado es que los caracteres del texto mostrados por [`Editor`](xref:Xamar
 
 Se [`Editor`](xref:Xamarin.Forms.Editor) puede establecer el tamaño automático de su contenido estableciendo la [`Editor.AutoSize`](xref:Xamarin.Forms.Editor.AutoSize) propiedad en [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) , que es un valor de la [`EditoAutoSizeOption`](xref:Xamarin.Forms.EditorAutoSizeOption) enumeración. Esta enumeración tiene dos valores:
 
-- [`Disabled`](xref:Xamarin.Forms.EditorAutoSizeOption.Disabled)indica que el cambio de tamaño automático está deshabilitado y es el valor predeterminado.
-- [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges)indica que el cambio de tamaño automático está habilitado.
+- [`Disabled`](xref:Xamarin.Forms.EditorAutoSizeOption.Disabled) indica que el cambio de tamaño automático está deshabilitado y es el valor predeterminado.
+- [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) indica que el cambio de tamaño automático está habilitado.
 
 Esto puede realizarse en el código como se indica a continuación:
 
@@ -248,7 +248,7 @@ var editor = new Editor { ... IsTextPredictionEnabled = false };
 
 ## <a name="colors"></a>Colores
 
-`Editor`se puede establecer para utilizar un color de fondo personalizado a través de la `BackgroundColor` propiedad. Es necesario tener especial cuidado para asegurarse de que se puedan usar los colores en cada plataforma. Dado que cada plataforma tiene valores predeterminados diferentes para el color del texto, puede que tenga que establecer un color de fondo personalizado para cada plataforma. Vea [trabajar con ajustes de plataforma](~/xamarin-forms/platform/device.md) para obtener más información sobre la optimización de la interfaz de usuario para cada plataforma.
+`Editor` se puede establecer para utilizar un color de fondo personalizado a través de la `BackgroundColor` propiedad. Es necesario tener especial cuidado para asegurarse de que se puedan usar los colores en cada plataforma. Dado que cada plataforma tiene valores predeterminados diferentes para el color del texto, puede que tenga que establecer un color de fondo personalizado para cada plataforma. Vea [trabajar con ajustes de plataforma](~/xamarin-forms/platform/device.md) para obtener más información sobre la optimización de la interfaz de usuario para cada plataforma.
 
 En C#:
 
@@ -296,7 +296,7 @@ Asegúrese de que los colores de fondo y de texto que elija se pueden usar en ca
 
 ## <a name="events-and-interactivity"></a>Eventos e interactividad
 
-`Editor`expone dos eventos:
+`Editor` expone dos eventos:
 
 - [TextChanged](xref:Xamarin.Forms.InputView.TextChanged) &ndash; se genera cuando cambia el texto en el editor. Proporciona el texto antes y después del cambio.
 - [Completado](xref:Xamarin.Forms.Editor.Completed) &ndash; se genera cuando el usuario ha finalizado la entrada presionando la tecla RETURN del teclado.
@@ -304,9 +304,9 @@ Asegúrese de que los colores de fondo y de texto que elija se pueden usar en ca
 > [!NOTE]
 > La [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase, de la que [`Entry`](xref:Xamarin.Forms.Entry) hereda, también tiene [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused) eventos y.
 
-### <a name="completed"></a>Completed
+### <a name="completed"></a>Completado
 
-El `Completed` evento se utiliza para reaccionar a la finalización de una interacción con `Editor` . `Completed`se genera cuando el usuario finaliza la entrada con un campo escribiendo la tecla RETURN en el teclado (o presionando la tecla TAB en UWP). El controlador del evento es un controlador de eventos genérico que toma el remitente y `EventArgs` :
+El `Completed` evento se utiliza para reaccionar a la finalización de una interacción con `Editor` . `Completed` se genera cuando el usuario finaliza la entrada con un campo escribiendo la tecla RETURN en el teclado (o presionando la tecla TAB en UWP). El controlador del evento es un controlador de eventos genérico que toma el remitente y `EventArgs` :
 
 ```csharp
 void EditorCompleted (object sender, EventArgs e)
@@ -354,7 +354,7 @@ Title="Editor Demo">
 
 El `TextChanged` evento se utiliza para reaccionar a un cambio en el contenido de un campo.
 
-`TextChanged`se genera cuando `Text` cambia el de `Editor` . El controlador del evento toma una instancia de `TextChangedEventArgs` . `TextChangedEventArgs`proporciona acceso a los valores antiguos y nuevos de `Editor` `Text` a través de `OldTextValue` las `NewTextValue` propiedades y:
+`TextChanged` se genera cuando `Text` cambia el de `Editor` . El controlador del evento toma una instancia de `TextChangedEventArgs` . `TextChangedEventArgs` proporciona acceso a los valores antiguos y nuevos de `Editor` `Text` a través de `OldTextValue` las `NewTextValue` propiedades y:
 
 ```csharp
 void EditorTextChanged (object sender, TextChangedEventArgs e)
@@ -401,5 +401,5 @@ Title="Editor Demo">
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Texto (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [Texto (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [API de los editores](xref:Xamarin.Forms.Editor)

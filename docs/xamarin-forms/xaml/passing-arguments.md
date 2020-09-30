@@ -10,12 +10,12 @@ ms.date: 10/25/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 84d8901b7f8dee8ffd6c3ba22d30c76b456555f0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: dcf09adc690aee5487107630eb74bb8c4e9599cb
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84571511"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562176"
 ---
 # <a name="passing-arguments-in-xaml"></a>Paso de argumentos en XAML
 
@@ -34,7 +34,7 @@ Además, el `x:TypeArguments` atributo se puede utilizar para especificar los ar
 
 ## <a name="passing-constructor-arguments"></a>Pasar argumentos de constructor
 
-Los argumentos se pueden pasar a un constructor no predeterminado mediante el `x:Arguments` atributo. Cada argumento de constructor debe delimitarse dentro de un elemento XML que representa el tipo del argumento. Xamarin.Formsadmite los siguientes elementos para los tipos básicos:
+Los argumentos se pueden pasar a un constructor no predeterminado mediante el `x:Arguments` atributo. Cada argumento de constructor debe delimitarse dentro de un elemento XML que representa el tipo del argumento. Xamarin.Forms admite los siguientes elementos para los tipos básicos:
 
 - `x:Array`
 - `x:Boolean`
@@ -136,7 +136,7 @@ La [`Color`](xref:Xamarin.Forms.Color) estructura define una serie de métodos d
 </BoxView>
 ```
 
-El número de elementos dentro de la `x:Arguments` etiqueta, así como los tipos de estos elementos, deben coincidir con los argumentos del Factory Method que se va a llamar. El [`FromRgba`](xref:Xamarin.Forms.Color.FromRgba(System.Int32,System.Int32,System.Int32,System.Int32)) Factory Method requiere cuatro [`Int32`](https://docs.microsoft.com/dotnet/api/system.int32) parámetros, que representan los valores rojo, verde, azul y alfa, comprendidos entre 0 y 255, respectivamente. El [`FromHsla`](xref:Xamarin.Forms.Color.FromHsla(System.Double,System.Double,System.Double,System.Double)) Factory Method requiere cuatro [`Double`](https://docs.microsoft.com/dotnet/api/system.double) parámetros, que representan los valores de matiz, saturación, luminosidad y alfa, comprendidos entre 0 y 1, respectivamente. El [`FromHex`](xref:Xamarin.Forms.Color.FromHex(System.String)) Factory Method requiere un [`String`](https://docs.microsoft.com/dotnet/api/system.string) que representa el color RGB hexadecimal (a).
+El número de elementos dentro de la `x:Arguments` etiqueta, así como los tipos de estos elementos, deben coincidir con los argumentos del Factory Method que se va a llamar. El [`FromRgba`](xref:Xamarin.Forms.Color.FromRgba(System.Int32,System.Int32,System.Int32,System.Int32)) Factory Method requiere cuatro [`Int32`](/dotnet/api/system.int32) parámetros, que representan los valores rojo, verde, azul y alfa, comprendidos entre 0 y 255, respectivamente. El [`FromHsla`](xref:Xamarin.Forms.Color.FromHsla(System.Double,System.Double,System.Double,System.Double)) Factory Method requiere cuatro [`Double`](/dotnet/api/system.double) parámetros, que representan los valores de matiz, saturación, luminosidad y alfa, comprendidos entre 0 y 1, respectivamente. El [`FromHex`](xref:Xamarin.Forms.Color.FromHex(System.String)) Factory Method requiere un [`String`](/dotnet/api/system.string) que representa el color RGB hexadecimal (a).
 
 Las capturas de pantallas siguientes muestran el resultado de llamar a cada [`Color`](xref:Xamarin.Forms.Color) Factory Method con los valores de argumento especificados:
 
@@ -166,7 +166,7 @@ Para obtener más información sobre los argumentos de tipo genérico, vea [gen�
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Pasar argumentos de constructor (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
-- [Llamar a métodos de generador (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-callingfactorymethods)
+- [Pasar argumentos de constructor (ejemplo)](/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
+- [Llamar a métodos de generador (ejemplo)](/samples/xamarin/xamarin-forms-samples/xaml-callingfactorymethods)
 - [Espacios de nombres XAML](~/xamarin-forms/xaml/namespaces.md)
 - [Genéricos en Xamarin.Forms XAML](generics.md)

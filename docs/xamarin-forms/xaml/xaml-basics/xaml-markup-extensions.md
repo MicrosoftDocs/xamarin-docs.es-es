@@ -10,12 +10,12 @@ ms.date: 03/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3fcea963b253ea34601a36434007f18d925975eb
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9923a7f0605a7ca5d9d81269c3d855e92fbccaf4
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131344"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91564087"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensiones de marcado XAML
 
@@ -146,7 +146,7 @@ Ahora es necesario establecer las `HorizontalOptions` `VerticalOptions` propieda
 
 La `StaticResource` extensión de marcado siempre está delimitada por llaves e incluye la clave del diccionario.
 
-El nombre `StaticResource` lo distingue de `DynamicResource` , que Xamarin.Forms también admite. `DynamicResource`es para las claves de diccionario asociadas a valores que pueden cambiar durante el tiempo de ejecución, mientras que `StaticResource` obtiene acceso a los elementos del diccionario una sola vez cuando se construyen los elementos de la página.
+El nombre `StaticResource` lo distingue de `DynamicResource` , que Xamarin.Forms también admite. `DynamicResource` es para las claves de diccionario asociadas a valores que pueden cambiar durante el tiempo de ejecución, mientras que `StaticResource` obtiene acceso a los elementos del diccionario una sola vez cuando se construyen los elementos de la página.
 
 En el caso de la `BorderWidth` propiedad, es necesario almacenar un Double en el diccionario. XAML define las etiquetas para tipos de datos comunes como `x:Double` y `x:Int32` :
 
@@ -323,7 +323,7 @@ A veces, los desarrolladores nuevos en XAML preguntan si pueden colocar un eleme
 
 ## <a name="the-xstatic-markup-extension"></a>La extensión de marcado x:Static
 
-A pesar de las similitudes de sus nombres, `x:Static` y `StaticResource` son muy diferentes. `StaticResource`Devuelve un objeto de un diccionario de recursos mientras `x:Static` tiene acceso a uno de los elementos siguientes:
+A pesar de las similitudes de sus nombres, `x:Static` y `StaticResource` son muy diferentes. `StaticResource` Devuelve un objeto de un diccionario de recursos mientras `x:Static` tiene acceso a uno de los elementos siguientes:
 
 - un campo estático público
 - una propiedad estática pública
@@ -444,9 +444,9 @@ El tamaño del resultado `BoxView` relativo a la pantalla depende de la platafor
 
 Varias extensiones de marcado son intrínsecas de XAML y se admiten en Xamarin.Forms los archivos XAML. Algunos de ellos no se usan con frecuencia, pero son esenciales cuando se necesitan:
 
-- Si una propiedad tiene un valor que no es de `null` forma predeterminada pero desea establecerla en `null` , establézcala en la `{x:Null}` extensión de marcado.
-- Si una propiedad es de tipo `Type` , puede asignarla a un `Type` objeto utilizando la extensión de marcado `{x:Type someClass}` .
-- Puede definir matrices en XAML mediante la extensión de `x:Array` marcado. Esta extensión de marcado tiene un atributo necesario denominado `Type` que indica el tipo de los elementos de la matriz.
+- Si una propiedad tiene un valor que no es de `null` forma predeterminada pero desea establecerla en  `null` , establézcala en la `{x:Null}` extensión de marcado.
+- Si una propiedad es de tipo `Type` , puede asignarla a un  `Type` objeto utilizando la extensión de marcado `{x:Type someClass}` .
+- Puede definir matrices en XAML mediante la extensión de `x:Array` marcado. Esta extensión de marcado tiene un atributo necesario denominado  `Type` que indica el tipo de los elementos de la matriz.
 - La `Binding` extensión de marcado se describe en la [parte 4. Aspectos básicos del enlace de datos](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 - La `RelativeSource` extensión de marcado se describe en [enlaces relativos](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
@@ -563,7 +563,7 @@ Las extensiones de marcado XAML que se muestran aquí proporcionan una compatibi
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 1. Introducción con XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Parte 2. Sintaxis XAML básica](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Parte 4. Conceptos básicos del enlace de datos](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

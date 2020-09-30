@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsPropiedades enlazables
+title: Xamarin.Forms Propiedades enlazables
 description: En este artículo se proporciona una introducción a las propiedades enlazables y se muestra cómo crearlas y consumirlas.
 ms.prod: xamarin
 ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
@@ -10,14 +10,14 @@ ms.date: 01/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7d83728edc161a89b381330884e86f09b7788e3d
-ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
+ms.openlocfilehash: df2cf99ef0ea1fcbb1b52dda7abb6c8cfdd2d2e7
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226786"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561539"
 ---
-# <a name="xamarinforms-bindable-properties"></a>Xamarin.FormsPropiedades enlazables
+# <a name="no-locxamarinforms-bindable-properties"></a>Xamarin.Forms Propiedades enlazables
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
@@ -221,8 +221,8 @@ El `defaultValueCreator` parámetro se establece en `Func` que invoca [ `Device.
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Espacios de nombres XAML](~/xamarin-forms/xaml/namespaces.md)
-- [Comportamiento de eventos a comandos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
-- [Devolución de llamada de validación (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-validationcallback)
-- [Devolución de llamada de valor de coerción (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-coercevaluecallback)
+- [Comportamiento de eventos a comandos (ejemplo)](/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
+- [Devolución de llamada de validación (ejemplo)](/samples/xamarin/xamarin-forms-samples/xaml-validationcallback)
+- [Devolución de llamada de valor de coerción (ejemplo)](/samples/xamarin/xamarin-forms-samples/xaml-coercevaluecallback)
 - [API de BindableProperty](xref:Xamarin.Forms.BindableProperty)
 - [API de BindableObject](xref:Xamarin.Forms.BindableObject)

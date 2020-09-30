@@ -10,12 +10,12 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c400bb342568a0399e2a582496f85ead273b6994
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e8afb0aa2a36a73af6c63e48a6c1048d8b69cf90
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572187"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563983"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintaxis XAML esencial
 
@@ -85,9 +85,9 @@ Estas dos maneras de especificar la `TextColor` propiedad son funcionalmente equ
 
 Con esta nueva sintaxis, se puede introducir alguna terminología útil:
 
-- `Label`es un *elemento de objeto*. Es un Xamarin.Forms objeto expresado como un elemento XML.
-- `Text`, `VerticalOptions` `FontAttributes` y `FontSize` son atributos de *propiedad*. Son Xamarin.Forms propiedades expresadas como atributos XML.
-- En ese fragmento de código final, `TextColor` se ha convertido en un *elemento de propiedad*. Es una Xamarin.Forms propiedad, pero ahora es un elemento XML.
+- `Label` es un  *elemento de objeto*. Es un Xamarin.Forms objeto expresado como un elemento XML.
+- `Text`,  `VerticalOptions` `FontAttributes` y  `FontSize` son atributos de  *propiedad*. Son Xamarin.Forms propiedades expresadas como atributos XML.
+- En ese fragmento de código final, `TextColor` se ha convertido en un  *elemento de propiedad*. Es una Xamarin.Forms propiedad, pero ahora es un elemento XML.
 
 En primer lugar, la definición de los elementos de propiedad podría ser una infracción de la sintaxis XML, pero no es así. El punto no tiene ningún significado especial en XML. En un descodificador XML, `Label.TextColor` es simplemente un elemento secundario normal.
 
@@ -172,7 +172,7 @@ Este es el principio del archivo XAML para una `GridDemoPage` clase, que muestra
 
 Observe la sintaxis abreviada para definir celdas de tamaño automático, celdas de anchos de píxel y alto y configuración de estrella.
 
-## <a name="attached-properties"></a>Propiedades adjuntas
+## <a name="attached-properties"></a>Propiedades asociadas
 
 Acaba de observar que `Grid` requiere elementos de propiedad para las `RowDefinitions` colecciones y `ColumnDefinitions` para definir las filas y columnas. Sin embargo, también debe haber alguna manera para que el programador indique la fila y la columna donde reside cada elemento secundario de `Grid` .
 
@@ -364,7 +364,7 @@ public class ContentPage : TemplatedPage
 
 Esto significa que `Content` no se requieren etiquetas de elemento de propiedad. Se supone que el contenido XML que aparece entre las etiquetas inicial y final se `ContentPage` asigna a la `Content` propiedad.
 
- `StackLayout`, `Grid` , `AbsoluteLayout` y se `RelativeLayout` derivan de y, `Layout<View>` si busca `Layout<T>` en la Xamarin.Forms documentación, verá otro `ContentProperty` atributo:
+ `StackLayout`, `Grid` , `AbsoluteLayout` y se `RelativeLayout` derivan de y, `Layout<View>` si busca `Layout<T>` en la  Xamarin.Forms documentación, verá otro `ContentProperty` atributo:
 
 ```csharp
 [Xamarin.Forms.ContentProperty("Children")]
@@ -400,7 +400,7 @@ También puede hacer algo similar en XAML mediante las [`OnPlatform`](xref:Xamar
 </ContentPage>
 ```
 
-Dentro de estas etiquetas, incluya una `OnPlatform` etiqueta. `OnPlatform`es una clase genérica. Debe especificar el argumento de tipo genérico, en este caso, `Thickness` , que es el tipo de `Padding` propiedad. Afortunadamente, hay un atributo XAML específicamente para definir argumentos genéricos denominados `x:TypeArguments` . Debe coincidir con el tipo de la propiedad que está estableciendo:
+Dentro de estas etiquetas, incluya una `OnPlatform` etiqueta. `OnPlatform` es una clase genérica. Debe especificar el argumento de tipo genérico, en este caso, `Thickness` , que es el tipo de `Padding` propiedad. Afortunadamente, hay un atributo XAML específicamente para definir argumentos genéricos denominados `x:TypeArguments` . Debe coincidir con el tipo de la propiedad que está estableciendo:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -416,7 +416,7 @@ Dentro de estas etiquetas, incluya una `OnPlatform` etiqueta. `OnPlatform`es una
 </ContentPage>
 ```
 
-`OnPlatform`tiene una propiedad denominada `Platforms` que es `IList` de `On` objetos. Use etiquetas de elemento de propiedad para esa propiedad:
+`OnPlatform` tiene una propiedad denominada `Platforms` que es `IList` de `On` objetos. Use etiquetas de elemento de propiedad para esa propiedad:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -534,7 +534,7 @@ Con elementos de propiedad y propiedades adjuntas, gran parte de la sintaxis bá
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 1. Introducción con XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Parte 3. Extensiones de marcado XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Parte 4. Conceptos básicos del enlace de datos](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

@@ -10,12 +10,12 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c045e297beca675c0582efc2f75b1d6b2bcedcf8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 91051b1ffc859d4e3deb62d41709db0c587b2789
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573300"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560837"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Crear y dibujar en mapas de bits de SkiaSharp
 
@@ -59,7 +59,7 @@ using (SKCanvas canvas = new SKCanvas(bitmap))
 
 A continuación, se puede mostrar el mapa de bits. En un momento posterior, el programa puede crear un nuevo `SKCanvas` objeto basado en ese mismo mapa de bits y dibujarlo más.
 
-La página de **mapa de bits de Hello** en la aplicación **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** escribe el texto "Hello, bitmap!" en un mapa de bits y, a continuación, muestra el mapa de bits varias veces.
+La página de **mapa de bits de Hello** en la aplicación **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** escribe el texto "Hello, bitmap!" en un mapa de bits y, a continuación, muestra el mapa de bits varias veces.
 
 El constructor de `HelloBitmapPage` comienza creando un `SKPaint` objeto para mostrar texto. Determina las dimensiones de una cadena de texto y crea un mapa de bits con esas dimensiones. A continuación, crea un `SKCanvas` objeto basado en ese mapa de bits, llama a `Clear` y, a continuación, llama a `DrawText` . Siempre es una buena idea llamar a `Clear` con un nuevo mapa de bits, ya que un mapa de bits recién creado podría contener datos aleatorios.
 
@@ -126,7 +126,7 @@ La presentación de la página de **mapa de bits de Hola** muestra que el mapa d
 
 La documentación de los `Clear` métodos de los `SKCanvas` describe con la instrucción: "reemplaza todos los píxeles del lienzo ' clip actual '. El uso de la palabra "reemplaza" revela una característica importante de estos métodos: todos los métodos de dibujo de `SKCanvas` agregan algo a la superficie de pantalla existente. Los `Clear` métodos _reemplazan_ a lo que ya existe.
 
-`Clear`existe en dos versiones diferentes:
+`Clear` existe en dos versiones diferentes:
 
 - El [`Clear`](xref:SkiaSharp.SKCanvas.Clear(SkiaSharp.SKColor)) método con un `SKColor` parámetro reemplaza los píxeles de la superficie de presentación con píxeles de ese color.
 
@@ -176,8 +176,8 @@ Estos días, los programadores casi siempre usan mapas de bits de color completo
 
 Esta serie de artículos se restringirá a los `SKBitmap` formatos de color que se usan de forma predeterminada cuando no `SKColorType` se especifica ningún miembro. Este formato predeterminado se basa en la plataforma subyacente. En el caso de las plataformas admitidas por Xamarin.Forms , el tipo de color predeterminado es:
 
-- `Rgba8888`para iOS y Android
-- `Bgra8888`para UWP
+- `Rgba8888` para iOS y Android
+- `Bgra8888` para UWP
 
 La única diferencia es el orden de los 4 bytes en memoria y esto solo se convierte en un problema cuando se accede directamente a los bits de píxeles. Esto no será importante hasta que llegue al artículo [**acceso a los píxeles del mapa de bits de SkiaSharp**](pixel-bits.md).
 
@@ -267,7 +267,7 @@ Los métodos de `SKCanvas` que puede usar para dibujar en un mapa de bits incluy
 
 La forma más versátil de modificar un mapa de bits es obtener acceso a los bits de píxeles reales, un asunto que se trata en el artículo sobre el **[acceso a los píxeles del mapa](pixel-bits.md)** de bits SkiaSharp. Pero hay muchas otras técnicas para modificar los mapas de bits que no requieren el acceso a los bits de píxeles.
 
-El siguiente mapa de bits incluido con la aplicación **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** tiene 360 píxeles de ancho y 480 píxeles de alto:
+El siguiente mapa de bits incluido con la aplicación **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** tiene 360 píxeles de ancho y 480 píxeles de alto:
 
 ![Montañas rocosas](drawing-images/MountainClimbers.jpg "Montañas rocosas")
 
@@ -497,7 +497,7 @@ El mapa de bits girado es lo suficientemente grande como para incluir el mapa de
 
 Otra operación que se realiza normalmente en mapas de bits se denomina _volteo_. Conceptualmente, el mapa de bits gira en tres dimensiones en torno a un eje vertical o eje horizontal a través del centro del mapa de bits. El volteo vertical crea una imagen reflejada.
 
-La página de **impulsor de mapa de bits** en la aplicación **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** muestra estos procesos. El archivo XAML contiene `SKCanvasView` y dos botones para voltearlos vertical y horizontalmente:
+La página de **impulsor de mapa de bits** en la aplicación **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** muestra estos procesos. El archivo XAML contiene `SKCanvasView` y dos botones para voltearlos vertical y horizontalmente:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -599,5 +599,5 @@ Otra tarea común que se puede controlar mediante técnicas similares es recorta
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -10,12 +10,12 @@ ms.date: 08/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: eedbca080fce9f3001a7b1e2358845fd63c6121b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4f10d39ff9fb08897f12cf1991ddcd2d7793b695
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136349"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91564035"
 ---
 # <a name="skiasharp-image-filters"></a>Filtros de imagen de SkiaSharp
 
@@ -41,7 +41,7 @@ public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
 
 El método tiene dos valores Sigma &mdash; el primero para la extensión de desenfoque en la dirección horizontal y el segundo para la dirección vertical. Puede aplicar filtros de imagen en cascada especificando otro filtro de imagen como el tercer argumento opcional. También se puede especificar un rectángulo de recorte.
 
-La página de **experimento de desenfoque de imagen** en [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) incluye dos `Slider` vistas que permiten experimentar con la configuración de varios niveles de desenfoque:
+La página de **experimento de desenfoque de imagen** en [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) incluye dos `Slider` vistas que permiten experimentar con la configuración de varios niveles de desenfoque:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -445,5 +445,5 @@ En el artículo [traducción](../transforms/translate.md)de transformaciones se 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

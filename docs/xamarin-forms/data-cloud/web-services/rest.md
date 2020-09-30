@@ -10,16 +10,16 @@ ms.date: 05/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 972a5ac99ff775ea7301f803c333d8239ae7f193
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 6af0641fe1f8f9be772b25c26825232b6bdba9b7
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938195"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562384"
 ---
 # <a name="consume-a-restful-web-service"></a>Consumo de un servicio web RESTful
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
 _La integración de un servicio Web en una aplicación es un escenario común. En este artículo se muestra cómo consumir un servicio web RESTful desde una Xamarin.Forms aplicación._
 
@@ -59,7 +59,7 @@ El servicio REST se escribe utilizando ASP.NET Core y proporciona las operacione
 |Obtención de una lista de tareas pendientes|GET|/api/todoitems/|
 |Crear un nuevo elemento de tareas pendientes|POST|/api/todoitems/|Un TodoItem con formato JSON|
 |Actualizar una tarea pendiente|PUT|/api/todoitems/|Un TodoItem con formato JSON|
-|Eliminar una tarea pendiente|DELETE|/api/todoitems/{id}|
+|Eliminar una tarea pendiente|Delete|/api/todoitems/{id}|
 
 La mayoría de los URI incluyen el `TodoItem` identificador de la ruta de acceso. Por ejemplo, para eliminar el `TodoItem` cuyo identificador es `6bb8a868-dba1-4f1a-93b7-24ebce87e243` , el cliente envía una solicitud DELETE a `http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243` . Para obtener más información sobre el modelo de datos utilizado en la aplicación de ejemplo, vea [modelar los datos](~/xamarin-forms/data-cloud/web-services/introduction.md).
 
@@ -214,5 +214,5 @@ El servicio REST envía un código de Estado HTTP en la `HttpResponseMessage.IsS
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Creación de servicios back-end para aplicaciones móviles nativas](/aspnet/core/mobile/native-mobile-backend/)
-- [TodoREST (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
-- [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)
+- [TodoREST (ejemplo)](/samples/xamarin/xamarin-forms-samples/webservices-todorest)
+- [HttpClient](/dotnet/api/system.net.http.httpclient)

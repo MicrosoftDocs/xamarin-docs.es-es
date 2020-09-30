@@ -1,5 +1,5 @@
 ---
-title: Buscar datos con Azure Search yXamarin.Forms
+title: Buscar datos con Azure Search y Xamarin.Forms
 description: En este artículo se muestra cómo usar la biblioteca de búsqueda de Microsoft Azure para integrar Azure Search en una Xamarin.Forms aplicación.
 ms.prod: xamarin
 ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
@@ -10,16 +10,16 @@ ms.date: 12/05/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 29e73f4051eda9117663992af9e710483e4b772b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 14d26c1360c1c1b7997598ef1263e3dd62e3c013
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934100"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561786"
 ---
-# <a name="search-data-with-azure-search-and-xamarinforms"></a>Buscar datos con Azure Search yXamarin.Forms
+# <a name="search-data-with-azure-search-and-no-locxamarinforms"></a>Buscar datos con Azure Search y Xamarin.Forms
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 
 _Azure Search es un servicio en la nube que proporciona capacidades de indexación y consulta para los datos cargados. Esto elimina los requisitos de infraestructura y las complejidades del algoritmo de búsqueda tradicionalmente asociadas a la implementación de la funcionalidad de búsqueda en una aplicación. En este artículo se muestra cómo usar la biblioteca de búsqueda de Microsoft Azure para integrar Azure Search en una Xamarin.Forms aplicación._
 
@@ -44,7 +44,7 @@ Azure Search también admite la recuperación de sugerencias basadas en la entra
 > [!NOTE]
 > Si no tiene una [suscripción a Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), cree una [cuenta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de empezar.
 
-## <a name="setup"></a>Instalación
+## <a name="setup"></a>Configurar
 
 El proceso para integrar Azure Search en una Xamarin.Forms aplicación es el siguiente:
 
@@ -96,12 +96,12 @@ static void CreateSearchIndex()
 
 La `Index.Name` propiedad se debe establecer en el nombre del índice y la `Index.Fields` propiedad debe establecerse en una matriz de `Field` objetos. Cada `Field` instancia especifica un nombre, un tipo y cualquier propiedad, que especifica cómo se usa el campo. Estas propiedades incluyen:
 
-- `IsKey`: indica si el campo es la clave del índice. Solo un campo del índice, de tipo `DataType.String` , debe designarse como el campo de clave.
-- `IsFacetable`: indica si es posible realizar una navegación por facetas en este campo. El valor predeterminado es `false`.
-- `IsFilterable`: indica si el campo se puede usar en consultas de filtro. El valor predeterminado es `false`.
-- `IsRetrievable`: indica si el campo se puede recuperar en los resultados de la búsqueda. El valor predeterminado es `true`.
-- `IsSearchable`: indica si el campo está incluido en las búsquedas de texto completo. El valor predeterminado es `false`.
-- `IsSortable`: indica si el campo se puede usar en `OrderBy` expresiones. El valor predeterminado es `false`.
+- `IsKey` : indica si el campo es la clave del índice. Solo un campo del índice, de tipo `DataType.String` , debe designarse como el campo de clave.
+- `IsFacetable` : indica si es posible realizar una navegación por facetas en este campo. El valor predeterminado es `false`.
+- `IsFilterable` : indica si el campo se puede usar en consultas de filtro. El valor predeterminado es `false`.
+- `IsRetrievable` : indica si el campo se puede recuperar en los resultados de la búsqueda. El valor predeterminado es `true`.
+- `IsSearchable` : indica si el campo está incluido en las búsquedas de texto completo. El valor predeterminado es `false`.
+- `IsSortable` : indica si el campo se puede usar en `OrderBy` expresiones. El valor predeterminado es `false`.
 
 > [!NOTE]
 > Cambiar un índice después de su implementación implica volver a generar y volver a cargar los datos.
@@ -262,11 +262,11 @@ async Task AzureSuggestions(string text)
 
 El `SuggestAsync` método toma un argumento de texto de búsqueda, el nombre del que se va a usar (que se define en el índice) y un `SuggestParameters` objeto opcional que se puede usar para refinar aún más la consulta. La `SuggestParameters` instancia de establece las siguientes propiedades:
 
-- `UseFuzzyMatching`: cuando se establece en `true` , Azure Search encontrará sugerencias incluso si hay un carácter sustituido o que falta en el texto de búsqueda.
-- `HighlightPreTag`: la etiqueta que se antepone a los aciertos de sugerencias.
-- `HighlightPostTag`: la etiqueta que se anexa a los aciertos de sugerencias.
-- `MinimumCoverage`: representa el porcentaje del índice que debe estar cubierta por una consulta de sugerencia para que se notifique un éxito en la consulta. El valor predeterminado es 80.
-- `Top`: número de sugerencias que se van a recuperar. Debe ser un entero comprendido entre 1 y 100, con un valor predeterminado de 5.
+- `UseFuzzyMatching` : cuando se establece en `true` , Azure Search encontrará sugerencias incluso si hay un carácter sustituido o que falta en el texto de búsqueda.
+- `HighlightPreTag` : la etiqueta que se antepone a los aciertos de sugerencias.
+- `HighlightPostTag` : la etiqueta que se anexa a los aciertos de sugerencias.
+- `MinimumCoverage` : representa el porcentaje del índice que debe estar cubierta por una consulta de sugerencia para que se notifique un éxito en la consulta. El valor predeterminado es 80.
+- `Top` : número de sugerencias que se van a recuperar. Debe ser un entero comprendido entre 1 y 100, con un valor predeterminado de 5.
 
 El efecto general es que los 10 resultados principales del índice se devolverán con el resaltado de referencias, y los resultados incluirán documentos que incluyan términos de búsqueda escritos de forma similar.
 
@@ -282,6 +282,6 @@ En este artículo se muestra cómo usar la biblioteca de búsqueda de Microsoft 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Azure Search (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
+- [Azure Search (ejemplo)](/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 - [Azure Search documentación](/azure/search/)
 - [Microsoft Azure biblioteca de búsqueda](https://www.nuget.org/packages/Microsoft.Azure.Search/)

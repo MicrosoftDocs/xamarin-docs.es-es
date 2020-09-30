@@ -1,5 +1,5 @@
 ---
-title: Esquemas de espacios de nombres personalizados XAML enXamarin.Forms
+title: Esquemas de espacios de nombres personalizados XAML en Xamarin.Forms
 description: Un esquema de espacio de nombres personalizado XAML se puede definir con la clase XmlnsDefinitionAttribute, que especifica una asignación entre una dirección URL personalizada y uno o varios espacios de nombres CLR. El esquema de espacio de nombres personalizado se puede usar en las declaraciones de espacio de nombres XAML.
 ms.prod: xamarin
 ms.assetid: FDF201A1-8C35-4569-A728-F9B0A0C5B31A
@@ -10,14 +10,14 @@ ms.date: 12/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 41a95b1a82ab8aa1f6938e5a2bcdebcef368e72d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5c7e0d90358ec230436276070ea2792539c446e5
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138169"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561487"
 ---
-# <a name="xaml-custom-namespace-schemas-in-xamarinforms"></a>Esquemas de espacios de nombres personalizados XAML enXamarin.Forms
+# <a name="xaml-custom-namespace-schemas-in-no-locxamarinforms"></a>Esquemas de espacios de nombres personalizados XAML en Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
 
@@ -136,7 +136,7 @@ Para consumir el `CircleButton` control, se declara un espacio de nombres XAML, 
 </ContentPage>
 ```
 
-`CircleButton`después, las instancias se pueden agregar al [`ContentPage`](xref:Xamarin.Forms.ContentPage) declararlas con el `controls` Prefijo de espacio de nombres.
+`CircleButton` después, las instancias se pueden agregar al [`ContentPage`](xref:Xamarin.Forms.ContentPage) declararlas con el `controls` Prefijo de espacio de nombres.
 
 Para buscar los tipos de esquema de espacio de nombres personalizados, Xamarin.Forms buscará en los ensamblados a los que se hace referencia `XmlnsDefinitionAttribute` . Si el `xmlns` atributo de un elemento de un archivo XAML coincide con el `XmlNamespace` valor de propiedad en `XmlnsDefinitionAttribute` , Xamarin.Forms intentará usar el `XmlnsDefinitionAttribute.ClrNamespace` valor de propiedad para la resolución del tipo. Si se produce un error en la resolución de tipos, Xamarin.Forms seguirá intentando la resolución de tipos basándose en las instancias coincidentes adicionales `XmlnsDefinitionAttribute` .
 
@@ -146,6 +146,6 @@ El resultado es que `CircleButton` se muestran dos instancias:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Esquemas de espacios de nombres personalizados (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
+- [Esquemas de espacios de nombres personalizados (ejemplo)](/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
 - [Prefijos recomendados de espacio de nombres de XAML](custom-prefix.md)
-- [Espacios de nombres XAML enXamarin.Forms](namespaces.md)
+- [Espacios de nombres XAML en Xamarin.Forms](namespaces.md)

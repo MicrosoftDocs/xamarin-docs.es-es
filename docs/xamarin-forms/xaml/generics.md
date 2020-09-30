@@ -1,6 +1,6 @@
 ---
 title: Genéricos en Xamarin.Forms XAML
-description: Xamarin.FormsXAML proporciona compatibilidad para consumir tipos CLR genéricos especificando las restricciones genéricas como argumentos de tipo.
+description: Xamarin.Forms XAML proporciona compatibilidad para consumir tipos CLR genéricos especificando las restricciones genéricas como argumentos de tipo.
 ms.prod: xamarin
 ms.assetid: 97B73048-4F90-41AD-AB48-8EB804C4998B
 ms.technology: xamarin-forms
@@ -10,18 +10,18 @@ ms.date: 04/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5a033e5feeefc41b97be29491a70632e767aa1b4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e6856e0ef513905a6300dcaf661ea33f4a89852c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84565205"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563918"
 ---
-# <a name="generics-in-xamarinforms-xaml"></a>Genéricos en Xamarin.Forms XAML
+# <a name="generics-in-no-locxamarinforms-xaml"></a>Genéricos en Xamarin.Forms XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
 
-Xamarin.FormsXAML proporciona compatibilidad para consumir tipos CLR genéricos especificando las restricciones genéricas como argumentos de tipo. Esta compatibilidad se proporciona mediante la `x:TypeArguments` Directiva, que pasa los argumentos de tipo restrictivos de un genérico al constructor del tipo genérico.
+Xamarin.Forms XAML proporciona compatibilidad para consumir tipos CLR genéricos especificando las restricciones genéricas como argumentos de tipo. Esta compatibilidad se proporciona mediante la `x:TypeArguments` Directiva, que pasa los argumentos de tipo restrictivos de un genérico al constructor del tipo genérico.
 
 > [!IMPORTANT]
 > No se admite la definición de clases genéricas en Xamarin.Forms XAML, con la `x:TypeArguments` Directiva.
@@ -212,7 +212,7 @@ En este ejemplo, `GenericsDemo.Models` se define como el `models` espacio de nom
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Genéricos en XAML (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
+- [Genéricos en XAML (ejemplo)](/samples/xamarin/xamarin-forms-samples/xaml-generics/)
 - [Primitivas del lenguaje XAML 2009](/dotnet/desktop-wpf/xaml-services/types-for-primitives#xaml-2009-language-primitives)
 - [Extensión de marcado x:Type](~/xamarin-forms/xaml/markup-extensions/consuming.md#xtype-markup-extension)
 - [Pasar argumentos de constructor](~/xamarin-forms/xaml/passing-arguments.md#passing-constructor-arguments)

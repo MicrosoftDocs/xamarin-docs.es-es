@@ -10,12 +10,12 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b0fecac02c44e3ba721dd4625e7bee264c6869d0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1427b6f8461c74ded933fe562a7d17221790383a
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134763"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562319"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>Mostrar mapas de bits SkiaSharp
 
@@ -27,7 +27,7 @@ El asunto de los mapas de bits SkiaSharp se presentó en el artículo **[concept
 
 Los `DrawBitmapLattice` `DrawBitmapNinePatch` métodos y se describen en el artículo **[presentación segmentada de mapas de bits de SkiaSharp](segmented.md)**.
 
-Los ejemplos de esta página proceden de la aplicación **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** . En la Página principal de la aplicación, elija **SkiaSharp mapas de bits**y, a continuación, vaya a la sección **visualización de mapas de bits** .
+Los ejemplos de esta página proceden de la aplicación **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** . En la Página principal de la aplicación, elija **SkiaSharp mapas de bits**y, a continuación, vaya a la sección **visualización de mapas de bits** .
 
 ## <a name="loading-a-bitmap"></a>Cargar un mapa de bits
 
@@ -95,7 +95,7 @@ using (Stream stream = assembly.GetManifestResourceStream(resourceID))
 
 Los archivos de mapa de bits también se pueden almacenar como recursos en el proyecto de plataforma individual para iOS, Android y el Plataforma universal de Windows (UWP). Sin embargo, la carga de estos mapas de bits requiere código que se encuentra en el proyecto de plataforma.
 
-Un tercer enfoque para obtener un mapa de bits es desde la biblioteca de imágenes del usuario. En el código siguiente se usa un servicio de dependencia que se incluye en la aplicación **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** . La biblioteca .NET Standard **SkiaSharpFormsDemo** incluye la `IPhotoLibrary` interfaz, mientras que cada uno de los proyectos de plataforma contiene una `PhotoLibrary` clase que implementa esa interfaz.
+Un tercer enfoque para obtener un mapa de bits es desde la biblioteca de imágenes del usuario. En el código siguiente se usa un servicio de dependencia que se incluye en la aplicación **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** . La biblioteca .NET Standard **SkiaSharpFormsDemo** incluye la `IPhotoLibrary` interfaz, mientras que cada uno de los proyectos de plataforma contiene una `PhotoLibrary` clase que implementa esa interfaz.
 
 ```csharp
 IPhotoicturePicker picturePicker = DependencyService.Get<IPhotoLibrary>();
@@ -147,7 +147,7 @@ Sin embargo, el propio color es irrelevante. Solo se examina el canal alfa cuand
 
 El `SKPaint` objeto también desempeña un rol cuando se muestran mapas de bits mediante modos de mezcla o efectos de filtro. Se muestran en los artículos [modos de composición y mezcla de SkiaSharp](../effects/blend-modes/index.md) y [filtros de imagen de SkiaSharp](../effects/image-filters.md).
 
-La página **dimensiones de píxeles** del programa de ejemplo **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** muestra un recurso de mapa de bits de 320 píxeles de ancho por 240 píxeles de alto:
+La página **dimensiones de píxeles** del programa de ejemplo **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** muestra un recurso de mapa de bits de 320 píxeles de ancho por 240 píxeles de alto:
 
 ```csharp
 public class PixelDimensionsPage : ContentPage
@@ -197,7 +197,7 @@ Si la aplicación desea mostrar el mapa de bits en la esquina superior izquierda
 
 ## <a name="a-method-for-loading-resource-bitmaps"></a>Método para cargar mapas de bits de recursos
 
-Muchos de los ejemplos que se incluyen deberán cargar recursos de mapa de bits. La `BitmapExtensions` clase estática de la solución **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** contiene un método para ayudar:
+Muchos de los ejemplos que se incluyen deberán cargar recursos de mapa de bits. La `BitmapExtensions` clase estática de la solución **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** contiene un método para ayudar:
 
 ```csharp
 static class BitmapExtensions
@@ -322,7 +322,7 @@ Se conserva la relación de aspecto del mapa de bits, pero se recortan las área
 
 ## <a name="a-versatile-bitmap-display-function"></a>Una función de presentación de mapas de bits versátil
 
-Los entornos de programación basados en XAML (como UWP y Xamarin.Forms ) tienen una utilidad para expandir o reducir el tamaño de los mapas de bits a la vez que conservan sus relaciones de aspecto. Aunque SkiaSharp no incluye esta característica, puede implementarla usted mismo. La `BitmapExtensions` clase incluida en la aplicación [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) muestra cómo. La clase define dos nuevos `DrawBitmap` métodos que realizan el cálculo de la relación de aspecto. Estos nuevos métodos son métodos de extensión de `SKCanvas` .
+Los entornos de programación basados en XAML (como UWP y Xamarin.Forms ) tienen una utilidad para expandir o reducir el tamaño de los mapas de bits a la vez que conservan sus relaciones de aspecto. Aunque SkiaSharp no incluye esta característica, puede implementarla usted mismo. La `BitmapExtensions` clase incluida en la aplicación [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) muestra cómo. La clase define dos nuevos `DrawBitmap` métodos que realizan el cálculo de la relación de aspecto. Estos nuevos métodos son métodos de extensión de `SKCanvas` .
 
 Los nuevos `DrawBitmap` métodos incluyen un parámetro de tipo `BitmapStretch` , una enumeración definida en el archivo **BitmapExtensions.CS** :
 
@@ -338,7 +338,7 @@ public enum BitmapStretch
 }
 ```
 
-Los `None` `Fill` miembros,, `Uniform` y `UniformToFill` son los mismos que los de la [`Stretch`](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.stretch.aspx) enumeración de UWP. La Xamarin.Forms [`Aspect`](xref:Xamarin.Forms.Aspect) enumeración similar define los miembros `Fill` , `AspectFit` y `AspectFill` .
+Los `None` `Fill` miembros,, `Uniform` y `UniformToFill` son los mismos que los de la [`Stretch`](/uwp/api/Windows.UI.Xaml.Media.Stretch) enumeración de UWP. La Xamarin.Forms [`Aspect`](xref:Xamarin.Forms.Aspect) enumeración similar define los miembros `Fill` , `AspectFit` y `AspectFill` .
 
 La página **escala uniforme** mostrada arriba centra el mapa de bits dentro del rectángulo, pero podría querer otras opciones, como colocar el mapa de bits en el lado izquierdo o derecho del rectángulo, o en la parte superior o inferior. Este es el propósito de la `BitmapAlignment` enumeración:
 
@@ -668,5 +668,5 @@ Este origen del rectángulo aísla el encabezado del Monkey, tal y como se muest
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

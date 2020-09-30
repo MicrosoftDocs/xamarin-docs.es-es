@@ -10,12 +10,12 @@ ms.date: 04/14/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 855fde62483dcbc6f8769e7a8eb66d84aadfe1da
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9bb2720d60f62c0bac6ab30007e226c362d1c5cd
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934984"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563879"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>Rotaciones 3D en SkiaSharp
 
@@ -117,7 +117,7 @@ El giro alrededor del eje Z es el mismo que en los gráficos 2D:
 
 La dirección de la rotación viene implícita por la mano del sistema de coordenadas. Se trata de un sistema que se entrega a la izquierda, por lo que si se apunta el pulgar de la mano izquierda hacia los valores en aumento para un eje determinado (a la derecha para la rotación alrededor del eje X), hacia abajo para la rotación alrededor del eje Y, y hacia el usuario para la rotación alrededor del eje Z
 
-`SKMatrix44`tiene métodos y estáticos generalizados [`CreateRotation`](xref:SkiaSharp.SKMatrix44.CreateRotation(System.Single,System.Single,System.Single,System.Single)) [`CreateRotationDegrees`](xref:SkiaSharp.SKMatrix44.CreateRotationDegrees(System.Single,System.Single,System.Single,System.Single)) que le permiten especificar el eje alrededor del cual se produce la rotación:
+`SKMatrix44` tiene métodos y estáticos generalizados [`CreateRotation`](xref:SkiaSharp.SKMatrix44.CreateRotation(System.Single,System.Single,System.Single,System.Single)) [`CreateRotationDegrees`](xref:SkiaSharp.SKMatrix44.CreateRotationDegrees(System.Single,System.Single,System.Single,System.Single)) que le permiten especificar el eje alrededor del cual se produce la rotación:
 
 ```csharp
 public static SKMatrix44 CreateRotationDegrees (Single x, Single y, Single z, Single degrees)
@@ -540,5 +540,5 @@ Este giro 3D está rodeado de varias transformaciones 2D para descartar el centr
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

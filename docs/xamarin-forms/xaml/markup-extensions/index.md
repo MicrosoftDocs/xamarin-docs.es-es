@@ -10,12 +10,12 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 568cffc335f28b1a47f3278ad061d851ebef84b6
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 98eb35697aee9022a837a7b0b531edb0c53b2239
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84130395"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562150"
 ---
 # <a name="xaml-markup-extensions"></a>Extensiones de marcado XAML
 
@@ -61,7 +61,7 @@ Escriba sus propias extensiones de marcado XAML personalizadas.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Extensiones de marcado (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+- [Extensiones de marcado (ejemplo)](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [Capítulo de extensiones de marcado XAML del Xamarin.Forms libro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [Diccionarios de recursos](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Estilos dinámicos](~/xamarin-forms/user-interface/styles/dynamic.md)

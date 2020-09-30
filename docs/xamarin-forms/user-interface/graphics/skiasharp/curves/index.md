@@ -10,12 +10,12 @@ ms.date: 05/24/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7d5a4fc818cef77671b6cabddc56de8234cb858d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f783dcc9d0070e8e816f378d261191444822841b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127808"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561955"
 ---
 # <a name="skiasharp-curves-and-paths"></a>Trazados y curvas de SkiaSharp
 
@@ -25,7 +25,7 @@ _Aprenda a usar SkiaSharp para dibujar curvas y usar las características de la 
 
 La exploración de [`SKPath`](xref:SkiaSharp.SKPath) métodos y propiedades comenzó en el artículo [**SkiaSharp Lines and paths**](../paths/index.md) . Los artículos siguientes continúan con los métodos que agregan curvas a un `SKPath` objeto y aprovechan otras características de trazado eficaces. Verá cómo puede especificar una ruta de acceso completa en una cadena de texto concisa, cómo usar los efectos de la ruta de acceso y cómo profundizar en la ruta de acceso interna.
 
-Todos los programas de ejemplo de esta sección se pueden encontrar en la página **curvas y trazados de SkiaSharp** del programa [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) , y en la carpeta [**curvas**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) de la solución.
+Todos los programas de ejemplo de esta sección se pueden encontrar en la página **curvas y trazados de SkiaSharp** del programa [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) , y en la carpeta [**curvas**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) de la solución.
 
 ## <a name="three-ways-to-draw-an-arc"></a>[Tres maneras de dibujar un arco](arcs.md)
 
@@ -57,5 +57,5 @@ Obtener información sobre las rutas de acceso y enumerar el contenido
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

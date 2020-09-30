@@ -10,12 +10,12 @@ ms.date: 08/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e0964ad7d2bf517a6a4c7cf7965c346629716166
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c78d6777db4e8dcc3a8302d418f1c87440dc90a5
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936024"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562059"
 ---
 # <a name="paths-and-text-in-skiasharp"></a>Rutas de acceso y texto en SkiaSharp
 
@@ -333,5 +333,5 @@ El texto en sí también se ha elegido como circular: la palabra "círculo" es e
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

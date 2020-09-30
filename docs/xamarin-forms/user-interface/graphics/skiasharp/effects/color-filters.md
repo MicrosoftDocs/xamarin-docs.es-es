@@ -10,12 +10,12 @@ ms.date: 08/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b9c89d4d426884d678e77687ffa226cced97be58
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 809477fe466ee7a8f0985308896c14341f2dd460
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136388"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561942"
 ---
 # <a name="skiasharp-color-filters"></a>SkiaSharp filtros de color
 
@@ -123,7 +123,7 @@ El [`SKColorFilter.CreateColorMatrix`](xref:SkiaSharp.SKColorFilter.CreateColorM
 public static SKColorFilter CreateColorMatrix (float[] matrix);
 ```
 
-donde `matrix` es una matriz de los 20 `float` valores. Al crear la matriz en C#, es fácil dar formato a los números para que se parezcan a la matriz de 4 × 5. Esto se muestra en la página **matriz de escala de grises** del ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
+donde `matrix` es una matriz de los 20 `float` valores. Al crear la matriz en C#, es fácil dar formato a los números para que se parezcan a la matriz de 4 × 5. Esto se muestra en la página **matriz de escala de grises** del ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
 
 ```csharp
 public class GrayScaleMatrixPage : ContentPage
@@ -166,7 +166,7 @@ public class GrayScaleMatrixPage : ContentPage
 }
 ```
 
-El `DrawBitmap` método usado en este código procede del archivo **BitmapExtension.CS** incluido con el ejemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . 
+El `DrawBitmap` método usado en este código procede del archivo **BitmapExtension.CS** incluido con el ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . 
 
 Este es el resultado que se ejecuta en iOS, Android y Plataforma universal de Windows:
 
@@ -176,7 +176,7 @@ Observe el valor de la cuarta fila y la cuarta columna. Este es el factor crucia
 
 Al experimentar con matrices de colores, puede tratar la transformación desde la perspectiva del origen o desde la perspectiva del destino. ¿Cómo debe contribuir el píxel rojo del origen con los píxeles rojo, verde y azul del destino? Viene determinado por los valores de la primera _columna_ de la matriz. Como alternativa, ¿cómo debe afectar el píxel rojo de destino de los píxeles rojo, verde y azul del origen? Viene determinado por la primera _fila_ de la matriz.
 
-Para ver algunas ideas sobre cómo usar las transformaciones de color, consulte las páginas [**cambiar el color**](https://docs.microsoft.com/dotnet/framework/winforms/advanced/recoloring-images) de las imágenes. La explicación se refiere Windows Forms y la matriz tiene un formato diferente, pero los conceptos son los mismos.
+Para ver algunas ideas sobre cómo usar las transformaciones de color, consulte las páginas [**cambiar el color**](/dotnet/framework/winforms/advanced/recoloring-images) de las imágenes. La explicación se refiere Windows Forms y la matriz tiene un formato diferente, pero los conceptos son los mismos.
 
 La **matriz pastel** calcula el píxel rojo de destino al atenuar el píxel rojo de origen y enfatizar ligeramente los píxeles rojo y verde. Este proceso se produce de forma similar para los píxeles verde y azul:
 
@@ -302,5 +302,5 @@ Puede usar varias tablas de color para los distintos canales de color para disti
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

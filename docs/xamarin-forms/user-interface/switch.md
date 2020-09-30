@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsConmutador
+title: Xamarin.Forms Conmutador
 description: El Xamarin.Forms modificador es un tipo de botón que el usuario puede manipular para alternar entre los Estados de activado y desactivado. En este artículo se explica cómo usar la clase switch para mostrar un elemento de interfaz de usuario de alternancia.
 ms.prod: xamarin
 ms.assetId: B2F9CC65-481B-4323-8E77-C6BE29C90DE9
@@ -10,14 +10,14 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 12831eec6ba97eee7cde7479729c5c22dce78e90
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 94f77fd70fee595efd341ff7372828b12661442d
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946443"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561734"
 ---
-# <a name="xamarinforms-switch"></a>Xamarin.FormsConmutador
+# <a name="no-locxamarinforms-switch"></a>Xamarin.Forms Conmutador
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
 
@@ -29,9 +29,9 @@ Las siguientes capturas de pantallas muestran un `Switch` control en su estado *
 
 El `Switch` control define las siguientes propiedades:
 
-- [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled)es un `boolean` valor que indica si `Switch` está **activado**.
-- [`OnColor`](xref:Xamarin.Forms.Switch.OnColor)es un `Color` que afecta al modo `Switch` en que se representa en el estado de alternancia o **activada**.
-- `ThumbColor`es el `Color` de la Thumb del modificador.
+- [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) es un `boolean` valor que indica si `Switch` está **activado**.
+- [`OnColor`](xref:Xamarin.Forms.Switch.OnColor) es un `Color` que afecta al modo `Switch` en que se representa en el estado de alternancia o **activada**.
+- `ThumbColor` es el `Color` de la Thumb del modificador.
 
 Estas propiedades están respaldadas por un [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, lo que significa que se puede aplicar un `Switch` estilo a y ser el destino de los enlaces de datos.
 
@@ -125,7 +125,7 @@ Para obtener información acerca de los desencadenadores, vea [ Xamarin.Forms de
 
 ## <a name="switch-visual-states"></a>Cambiar Estados visuales
 
-[`Switch`](xref:Xamarin.Forms.Switch)tiene `On` `Off` Estados visuales y que se pueden usar para iniciar un cambio visual cuando [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) cambia la propiedad.
+[`Switch`](xref:Xamarin.Forms.Switch) tiene `On` `Off` Estados visuales y que se pueden usar para iniciar un cambio visual cuando [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) cambia la propiedad.
 
 En el siguiente ejemplo de XAML se muestra cómo definir Estados visuales para los `On` `Off` Estados y:
 
@@ -163,6 +163,6 @@ Una aplicación puede entrar en un estado en el que la `Switch` alternancia no e
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Cambiar demostraciones](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
+- [Cambiar demostraciones](/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
 - [Desencadenadores de Xamarin.Forms](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Administrador de estado visual de Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md)

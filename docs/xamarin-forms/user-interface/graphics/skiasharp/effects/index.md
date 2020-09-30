@@ -10,12 +10,12 @@ ms.date: 08/22/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d9fa710f5dfc61c2892b8fc409a39b37cf449018
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e63d92cde5925561dae4217c3c46af2c2c59f795
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136310"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563996"
 ---
 # <a name="skiasharp-effects"></a>Efectos SkiaSharp
 
@@ -47,9 +47,9 @@ Establezca la [`ImageFilter`](xref:SkiaSharp.SKPaint.ImageFilter) propiedad de `
 
 Establezca la [`ColorFilter`](xref:SkiaSharp.SKPaint.ColorFilter) propiedad de `SKPaint` en un objeto de tipo [`SKColorFilter`](xref:SkiaSharp.SKColorFilter) para modificar los colores usando tablas o transformaciones de matriz.
 
-Todo el código de ejemplo de estos artículos está en [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos). En la Página principal, seleccione **efectos de SkiaSharp**.
+Todo el código de ejemplo de estos artículos está en [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos). En la Página principal, seleccione **efectos de SkiaSharp**.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [API de SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,5 +1,5 @@
 ---
-title: Crear un diseño personalizado enXamarin.Forms
+title: Crear un diseño personalizado en Xamarin.Forms
 description: En este artículo se explica cómo escribir una clase de diseño personalizada y se muestra una clase WrapLayout con distinción de orientación que organiza sus elementos secundarios horizontalmente por la página y, a continuación, ajusta la presentación de los elementos secundarios posteriores a filas adicionales.
 ms.prod: xamarin
 ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
@@ -10,18 +10,18 @@ ms.date: 03/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b3063a644a48a8796b03b1a6acedbbcbfc7acbf7
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 63a939e7093bcbe52f1aed376253c7aa78b078bf
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934269"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563853"
 ---
-# <a name="create-a-custom-layout-in-xamarinforms"></a>Crear un diseño personalizado enXamarin.Forms
+# <a name="create-a-custom-layout-in-no-locxamarinforms"></a>Crear un diseño personalizado en Xamarin.Forms
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
-_Xamarin.Formsdefine cinco clases de diseño: StackLayout, AbsoluteLayout, RelativeLayout, Grid y FlexLayout, y cada una de ellas organiza sus elementos secundarios de manera diferente. Sin embargo, a veces es necesario organizar el contenido de la página mediante un diseño no proporcionado por Xamarin.Forms . En este artículo se explica cómo escribir una clase de diseño personalizada y se muestra una clase WrapLayout con distinción de orientación que organiza sus elementos secundarios horizontalmente por la página y, a continuación, ajusta la presentación de los elementos secundarios posteriores a filas adicionales._
+_Xamarin.Forms define cinco clases de diseño: StackLayout, AbsoluteLayout, RelativeLayout, Grid y FlexLayout, y cada una de ellas organiza sus elementos secundarios de manera diferente. Sin embargo, a veces es necesario organizar el contenido de la página mediante un diseño no proporcionado por Xamarin.Forms . En este artículo se explica cómo escribir una clase de diseño personalizada y se muestra una clase WrapLayout con distinción de orientación que organiza sus elementos secundarios horizontalmente por la página y, a continuación, ajusta la presentación de los elementos secundarios posteriores a filas adicionales._
 
 En Xamarin.Forms , todas las clases de diseño se derivan de la [`Layout<T>`](xref:Xamarin.Forms.Layout`1) clase y restringen el tipo genérico a [`View`](xref:Xamarin.Forms.View) y sus tipos derivados. A su vez, la `Layout<T>` clase se deriva de la [`Layout`](xref:Xamarin.Forms.Layout) clase, que proporciona el mecanismo para colocar y ajustar el tamaño de los elementos secundarios.
 
@@ -29,7 +29,7 @@ Cada elemento visual es responsable de determinar su propio tamaño preferido, l
 
 Se requiere un conocimiento exhaustivo de los Xamarin.Forms ciclos de diseño e invalidación para crear un diseño personalizado. Ahora se analizarán estos ciclos.
 
-## <a name="layout"></a>Layout
+## <a name="layout"></a>Diseño
 
 El diseño comienza en la parte superior del árbol visual con una página y continúa a través de todas las ramas del árbol visual para abarcar todos los elementos visuales de una página. Los elementos que son elementos primarios de otros elementos son responsables de ajustar el tamaño y la posición de sus elementos secundarios en relación con ellos mismos.
 
@@ -40,7 +40,7 @@ La [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase define un [ `Measur
 
 Este ciclo garantiza que todos los elementos visuales de la página reciban llamadas a los `Measure` `Layout` métodos y. El proceso se muestra en el diagrama siguiente:
 
-![Xamarin.FormsCiclo de diseño](custom-images/layout-cycle.png)
+![::: no-LOC (Xamarin. Forms)::: ciclo de diseño](custom-images/layout-cycle.png)
 
 > [!NOTE]
 > Tenga en cuenta que los ciclos de diseño también pueden producirse en un subconjunto del árbol visual si algo cambia para afectar al diseño. Esto incluye los elementos que se agregan o quitan de una colección, como en [`StackLayout`](xref:Xamarin.Forms.StackLayout) , un cambio en la [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) propiedad de un elemento o un cambio en el tamaño de un elemento.
@@ -108,10 +108,10 @@ public class WrapLayout : Layout<View>
 
 La `LayoutData` estructura almacena los datos sobre una colección de elementos secundarios en una serie de propiedades:
 
-- `VisibleChildCount`: el número de elementos secundarios que están visibles en el diseño.
-- `CellSize`: el tamaño máximo de todos los elementos secundarios, ajustado al tamaño del diseño.
-- `Rows`: el número de filas.
-- `Columns`: el número de columnas.
+- `VisibleChildCount` : el número de elementos secundarios que están visibles en el diseño.
+- `CellSize` : el tamaño máximo de todos los elementos secundarios, ajustado al tamaño del diseño.
+- `Rows` : el número de filas.
+- `Columns` : el número de columnas.
 
 El `layoutDataCache` campo se usa para almacenar varios `LayoutData` valores. Cuando se inicia la aplicación, se `LayoutData` almacenan en caché dos objetos en el `layoutDataCache` Diccionario para la orientación actual: uno para los argumentos de restricción para la `OnMeasure` invalidación y otro para los `width` `height` argumentos y para la `LayoutChildren` invalidación. Al girar el dispositivo en orientación horizontal, se `OnMeasure` invocará de nuevo la invalidación y la `LayoutChildren` invalidación, lo que provocará que se `LayoutData` almacenen en el Diccionario otros dos objetos. Sin embargo, al devolver el dispositivo a la orientación vertical, no es necesario realizar más cálculos porque `layoutDataCache` ya tiene los datos necesarios.
 
@@ -412,9 +412,9 @@ El número de columnas de cada fila depende del tamaño de la fotografía, el an
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [WrapLayout (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
+- [WrapLayout (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [Diseños personalizados](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
 - [Crear diseños personalizados en Xamarin.Forms (vídeo)](https://www.youtube.com/watch?v=sxjOqNZFhKU)
-- [Layout\<T>](xref:Xamarin.Forms.Layout`1)
+- [Diseño\<T>](xref:Xamarin.Forms.Layout`1)
 - [Diseño](xref:Xamarin.Forms.Layout)
 - [VisualElement](xref:Xamarin.Forms.VisualElement)

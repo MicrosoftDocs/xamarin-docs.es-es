@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsDatePicker
+title: Xamarin.Forms DatePicker
 description: DatePicker es una Xamarin.Forms vista que permite al usuario seleccionar una fecha. En este artículo se explica cómo consumir un DatePicker en una Xamarin.Forms aplicación.
 ms.prod: xamarin
 ms.assetid: 68E8EF8A-42E7-4939-8ABE-64D060E609D9
@@ -10,29 +10,29 @@ ms.date: 06/04/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5c1de52e2a173e7d9a366d8fd7cbd63998b3a6d1
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: fed80f0954613a6bff49d0611d56549405c78333
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137363"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91564100"
 ---
-# <a name="xamarinforms-datepicker"></a>Xamarin.FormsDatePicker
+# <a name="no-locxamarinforms-datepicker"></a>Xamarin.Forms DatePicker
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker)
 
 _Una Xamarin.Forms vista que permite al usuario seleccionar una fecha._
 
-Xamarin.Forms [`DatePicker`](xref:Xamarin.Forms.DatePicker) Invoca el control selector de fecha y de la plataforma y permite al usuario seleccionar una fecha. `DatePicker`define ocho propiedades:
+Xamarin.Forms [`DatePicker`](xref:Xamarin.Forms.DatePicker) Invoca el control selector de fecha y de la plataforma y permite al usuario seleccionar una fecha. `DatePicker` define ocho propiedades:
 
-- [`MinimumDate`](xref:Xamarin.Forms.DatePicker.MinimumDate)de tipo [`DateTime`](xref:System.DateTime) , que tiene como valor predeterminado el primer día del año 1900.
-- [`MaximumDate`](xref:Xamarin.Forms.DatePicker.MaximumDate)de tipo `DateTime` , cuyo valor predeterminado es el último día del año 2100.
-- [`Date`](xref:Xamarin.Forms.DatePicker.Date)de tipo `DateTime` , la fecha seleccionada, que tiene como valor predeterminado el valor [`DateTime.Today`](xref:System.DateTime.Today) .
-- [`Format`](xref:Xamarin.Forms.DatePicker.Format)de tipo `string` , una cadena de formato .net [estándar](/dotnet/standard/base-types/standard-date-and-time-format-strings/) o [personalizada](/dotnet/standard/base-types/custom-date-and-time-format-strings/) , cuyo valor predeterminado es "D", el patrón de fecha larga.
-- [`TextColor`](xref:Xamarin.Forms.DatePicker.TextColor)de tipo [`Color`](xref:Xamarin.Forms.Color) , el color que se usa para mostrar la fecha seleccionada, cuyo valor predeterminado es [`Color.Default`](xref:Xamarin.Forms.Color.Default) .
-- [`FontAttributes`](xref:Xamarin.Forms.DatePicker.FontAttributes)de tipo [`FontAttributes`](xref:Xamarin.Forms.FontAttributes) , cuyo valor predeterminado es [`FontAtributes.None`](xref:Xamarin.Forms.FontAttributes.None) .
-- [`FontFamily`](xref:Xamarin.Forms.DatePicker.FontFamily)de tipo `string` , cuyo valor predeterminado es `null` .
-- [`FontSize`](xref:Xamarin.Forms.DatePicker.FontSize)de tipo `double` , que tiene como valor predeterminado-1,0.
+- [`MinimumDate`](xref:Xamarin.Forms.DatePicker.MinimumDate) de tipo [`DateTime`](xref:System.DateTime) , que tiene como valor predeterminado el primer día del año 1900.
+- [`MaximumDate`](xref:Xamarin.Forms.DatePicker.MaximumDate) de tipo `DateTime` , cuyo valor predeterminado es el último día del año 2100.
+- [`Date`](xref:Xamarin.Forms.DatePicker.Date) de tipo `DateTime` , la fecha seleccionada, que tiene como valor predeterminado el valor [`DateTime.Today`](xref:System.DateTime.Today) .
+- [`Format`](xref:Xamarin.Forms.DatePicker.Format) de tipo `string` , una cadena de formato .net [estándar](/dotnet/standard/base-types/standard-date-and-time-format-strings/) o [personalizada](/dotnet/standard/base-types/custom-date-and-time-format-strings/) , cuyo valor predeterminado es "D", el patrón de fecha larga.
+- [`TextColor`](xref:Xamarin.Forms.DatePicker.TextColor) de tipo [`Color`](xref:Xamarin.Forms.Color) , el color que se usa para mostrar la fecha seleccionada, cuyo valor predeterminado es [`Color.Default`](xref:Xamarin.Forms.Color.Default) .
+- [`FontAttributes`](xref:Xamarin.Forms.DatePicker.FontAttributes) de tipo [`FontAttributes`](xref:Xamarin.Forms.FontAttributes) , cuyo valor predeterminado es [`FontAtributes.None`](xref:Xamarin.Forms.FontAttributes.None) .
+- [`FontFamily`](xref:Xamarin.Forms.DatePicker.FontFamily) de tipo `string` , cuyo valor predeterminado es `null` .
+- [`FontSize`](xref:Xamarin.Forms.DatePicker.FontSize) de tipo `double` , que tiene como valor predeterminado-1,0.
 - `CharacterSpacing`, del tipo `double`, es el espaciado entre los caracteres del texto de `DatePicker`.
 
 `DatePicker`Desencadena un [`DateSelected`](xref:Xamarin.Forms.DatePicker.DateSelected) evento cuando el usuario selecciona una fecha.
@@ -96,7 +96,7 @@ Sin embargo, esto no es recomendable. Dependiendo del valor de la `Format` propi
 
 ## <a name="datepicker-in-an-application"></a>DatePicker en una aplicación
 
-El ejemplo [**DaysBetweenDates**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker) incluye dos `DatePicker` vistas en su página. Se pueden usar para seleccionar dos fechas y el programa calcula el número de días entre esas fechas. El programa no cambia la configuración de las `MinimumDate` `MaximumDate` propiedades y, por lo que las dos fechas deben estar entre 1900 y 2100.
+El ejemplo [**DaysBetweenDates**](/samples/xamarin/xamarin-forms-samples/userinterface-datepicker) incluye dos `DatePicker` vistas en su página. Se pueden usar para seleccionar dos fechas y el programa calcula el número de días entre esas fechas. El programa no cambia la configuración de las `MinimumDate` `MaximumDate` propiedades y, por lo que las dos fechas deben estar entre 1900 y 2100.
 
 Este es el archivo XAML:
 
@@ -200,5 +200,5 @@ Después de seleccionar dos fechas, la aplicación muestra el número de días e
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de DaysBetweenDates](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker)
+- [Ejemplo de DaysBetweenDates](/samples/xamarin/xamarin-forms-samples/userinterface-datepicker)
 - [API de DatePicker](xref:Xamarin.Forms.DatePicker)

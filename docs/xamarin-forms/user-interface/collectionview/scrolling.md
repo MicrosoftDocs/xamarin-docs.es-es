@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsDesplazamientos de CollectionView
+title: Xamarin.Forms Desplazamientos de CollectionView
 description: Cuando un usuario desliza el dedo para iniciar un desplazamiento, se puede controlar la posición final del desplazamiento para que los elementos se muestren por completo. Además, CollectionView define dos métodos ScrollTo, que desplazan los elementos mediante programación a la vista.
 ms.prod: xamarin
 ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
@@ -10,32 +10,32 @@ ms.date: 09/17/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 04d190971fa5ef16e08091600558f7f016bc8605
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: dad0c3fd70e2484033268f9ad0686d0b3f42cb70
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134542"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91564113"
 ---
-# <a name="xamarinforms-collectionview-scrolling"></a>Xamarin.FormsDesplazamientos de CollectionView
+# <a name="no-locxamarinforms-collectionview-scrolling"></a>Xamarin.Forms Desplazamientos de CollectionView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)define dos [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos que desplazan los elementos en la vista. Una de las sobrecargas desplaza el elemento en el índice especificado en la vista, mientras que el otro desplaza el elemento especificado a la vista. Ambas sobrecargas tienen argumentos adicionales que se pueden especificar para indicar el grupo al que pertenece el elemento, la posición exacta del elemento una vez que se ha completado el desplazamiento y si se debe animar el desplazamiento.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define dos [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos que desplazan los elementos en la vista. Una de las sobrecargas desplaza el elemento en el índice especificado en la vista, mientras que el otro desplaza el elemento especificado a la vista. Ambas sobrecargas tienen argumentos adicionales que se pueden especificar para indicar el grupo al que pertenece el elemento, la posición exacta del elemento una vez que se ha completado el desplazamiento y si se debe animar el desplazamiento.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)define un [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) evento que se desencadena cuando se invoca a uno de los [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos. El [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) objeto que acompaña al `ScrollToRequested` evento tiene muchas propiedades, entre las que se incluyen `IsAnimated` , `Index` , `Item` y `ScrollToPosition` . Estas propiedades se establecen a partir de los argumentos especificados en las `ScrollTo` llamadas de método.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define un [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) evento que se desencadena cuando se invoca a uno de los [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos. El [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) objeto que acompaña al `ScrollToRequested` evento tiene muchas propiedades, entre las que se incluyen `IsAnimated` , `Index` , `Item` y `ScrollToPosition` . Estas propiedades se establecen a partir de los argumentos especificados en las `ScrollTo` llamadas de método.
 
 Además, [`CollectionView`](xref:Xamarin.Forms.CollectionView) define un `Scrolled` evento que se desencadena para indicar que se ha producido el desplazamiento. El `ItemsViewScrolledEventArgs` objeto que acompaña al `Scrolled` evento tiene muchas propiedades. Para obtener más información, vea [detectar desplazamiento](#detect-scrolling).
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)también define una `ItemsUpdatingScrollMode` propiedad que representa el comportamiento de desplazamiento de `CollectionView` cuando se les agregan nuevos elementos. Para obtener más información sobre esta propiedad, vea [control de posición de desplazamiento cuando se agregan nuevos elementos](#control-scroll-position-when-new-items-are-added).
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) también define una `ItemsUpdatingScrollMode` propiedad que representa el comportamiento de desplazamiento de `CollectionView` cuando se les agregan nuevos elementos. Para obtener más información sobre esta propiedad, vea [control de posición de desplazamiento cuando se agregan nuevos elementos](#control-scroll-position-when-new-items-are-added).
 
 Cuando un usuario desliza el dedo para iniciar un desplazamiento, se puede controlar la posición final del desplazamiento para que los elementos se muestren por completo. Esta característica se conoce como ajuste, ya que los elementos se ajustan a la posición cuando se detiene el desplazamiento. Para obtener más información, vea [puntos de acoplamiento](#snap-points).
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)también puede cargar datos de forma incremental a medida que el usuario se desplaza. Para obtener más información, vea [cargar datos de forma incremental](populate-data.md#load-data-incrementally).
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) también puede cargar datos de forma incremental a medida que el usuario se desplaza. Para obtener más información, vea [cargar datos de forma incremental](populate-data.md#load-data-incrementally).
 
 ## <a name="detect-scrolling"></a>Detectar desplazamiento
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)define un `Scrolled` evento que se desencadena para indicar que se ha producido el desplazamiento. En el ejemplo de XAML siguiente se muestra un `CollectionView` que establece un controlador de eventos para el `Scrolled` evento:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define un `Scrolled` evento que se desencadena para indicar que se ha producido el desplazamiento. En el ejemplo de XAML siguiente se muestra un `CollectionView` que establece un controlador de eventos para el `Scrolled` evento:
 
 ```xaml
 <CollectionView Scrolled="OnCollectionViewScrolled">
@@ -175,11 +175,11 @@ Este código de ejemplo hace que el elemento se desplace hasta el final de la vi
 
 ## <a name="control-scroll-position-when-new-items-are-added"></a>Controlar la posición de desplazamiento cuando se agregan nuevos elementos
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)define una `ItemsUpdatingScrollMode` propiedad, que está respaldada por una propiedad enlazable. Esta propiedad obtiene o establece un `ItemsUpdatingScrollMode` valor de enumeración que representa el comportamiento de desplazamiento de `CollectionView` cuando se agregan nuevos elementos a él. La enumeración `ItemsUpdatingScrollMode` define los miembros siguientes:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define una `ItemsUpdatingScrollMode` propiedad, que está respaldada por una propiedad enlazable. Esta propiedad obtiene o establece un `ItemsUpdatingScrollMode` valor de enumeración que representa el comportamiento de desplazamiento de `CollectionView` cuando se agregan nuevos elementos a él. La enumeración `ItemsUpdatingScrollMode` define los miembros siguientes:
 
-- `KeepItemsInView`ajusta el desplazamiento de desplazamiento para mantener el primer elemento visible que se muestra cuando se agregan nuevos elementos.
-- `KeepScrollOffset`mantiene el desplazamiento de desplazamiento con respecto al principio de la lista cuando se agregan nuevos elementos.
-- `KeepLastItemInView`ajusta el desplazamiento de desplazamiento para mantener visible el último elemento cuando se agregan nuevos elementos.
+- `KeepItemsInView` ajusta el desplazamiento de desplazamiento para mantener el primer elemento visible que se muestra cuando se agregan nuevos elementos.
+- `KeepScrollOffset` mantiene el desplazamiento de desplazamiento con respecto al principio de la lista cuando se agregan nuevos elementos.
+- `KeepLastItemInView` ajusta el desplazamiento de desplazamiento para mantener visible el último elemento cuando se agregan nuevos elementos.
 
 El valor predeterminado de la `ItemsUpdatingScrollMode` propiedad es `KeepItemsInView` . Por lo tanto, cuando se agreguen nuevos elementos a un [`CollectionView`](xref:Xamarin.Forms.CollectionView) primer elemento visible de la lista, se mostrarán. Para asegurarse de que los elementos recién agregados siempre estén visibles en la parte inferior de la lista, la `ItemsUpdatingScrollMode` propiedad debe establecerse en `KeepLastItemInView` :
 
@@ -200,11 +200,11 @@ CollectionView collectionView = new CollectionView
 
 ## <a name="scroll-bar-visibility"></a>Visibilidad de la barra de desplazamiento
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)define `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` las propiedades y, que están respaldadas por propiedades enlazables. Estas propiedades obtienen o establecen un [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) valor de enumeración que representa Cuándo está visible la barra de desplazamiento horizontal o vertical. La enumeración `ScrollBarVisibility` define los miembros siguientes:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` las propiedades y, que están respaldadas por propiedades enlazables. Estas propiedades obtienen o establecen un [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) valor de enumeración que representa Cuándo está visible la barra de desplazamiento horizontal o vertical. La enumeración `ScrollBarVisibility` define los miembros siguientes:
 
-- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)indica el comportamiento predeterminado de la barra de desplazamiento para la plataforma y es el valor predeterminado para las `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` propiedades y.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)indica que las barras de desplazamiento serán visibles, incluso cuando el contenido quepa en la vista.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)indica que las barras de desplazamiento no estarán visibles, incluso si el contenido no cabe en la vista.
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indica el comportamiento predeterminado de la barra de desplazamiento para la plataforma y es el valor predeterminado para las `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` propiedades y.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica que las barras de desplazamiento serán visibles, incluso cuando el contenido quepa en la vista.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica que las barras de desplazamiento no estarán visibles, incluso si el contenido no cabe en la vista.
 
 ## <a name="snap-points"></a>Puntos de acoplamiento
 
@@ -222,9 +222,9 @@ Estas propiedades están respaldadas por [`BindableProperty`](xref:Xamarin.Forms
 
 La [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) enumeración define los siguientes miembros:
 
-- `None`indica que el desplazamiento no se ajusta a los elementos.
-- `Mandatory`indica que el contenido se ajusta siempre al punto de acoplamiento más cercano a donde se detendría el desplazamiento de forma natural, a lo largo de la dirección de inercia.
-- `MandatorySingle`indica el mismo comportamiento que `Mandatory` , pero solo desplaza un elemento cada vez.
+- `None` indica que el desplazamiento no se ajusta a los elementos.
+- `Mandatory` indica que el contenido se ajusta siempre al punto de acoplamiento más cercano a donde se detendría el desplazamiento de forma natural, a lo largo de la dirección de inercia.
+- `MandatorySingle` indica el mismo comportamiento que `Mandatory` , pero solo desplaza un elemento cada vez.
 
 De forma predeterminada, la [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) propiedad se establece en `SnapPointsType.None` , lo que garantiza que el desplazamiento no ajusta los elementos, como se muestra en las siguientes capturas de pantallas:
 
@@ -340,4 +340,4 @@ Cuando un usuario desliza el dedo para iniciar un desplazamiento, el elemento in
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [CollectionView (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [CollectionView (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
