@@ -1,6 +1,6 @@
 ---
-title: 'title: "Xamarin.Forms: Accesibilidad" description: "Crear una aplicación accesible garantiza que la aplicación podrá ser usada por personas que interactúan con la interfaz de usuario con una variedad de necesidades y experiencias."'
-description: 'ms.prod: xamarin ms.assetid: 99B8A8E8-6F5E-46BC-9639-1C4A6D301049 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 05/28/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials] ms.custom: video'
+title: Accesibilidad de Xamarin.Forms
+description: Crear una aplicación accesible garantiza que la aplicación podrá ser usada por personas que interaccionan con la interfaz de usuario con una variedad de necesidades y experiencias.
 ms.prod: xamarin
 ms.assetid: 99B8A8E8-6F5E-46BC-9639-1C4A6D301049
 ms.technology: xamarin-forms
@@ -11,20 +11,20 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.custom: video
-ms.openlocfilehash: 7ac8b305ae09e005013aea9f83fb4a3e4740f2b2
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: f2fc7000df2c14dfdd863bd431df67643c5501cf
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84129812"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561292"
 ---
-# <a name="xamarinforms-accessibility"></a>Accesibilidad de Xamarin.Forms
+# <a name="no-locxamarinforms-accessibility"></a>Accesibilidad de Xamarin.Forms
 
 _Crear una aplicación accesible garantiza que la aplicación podrá ser usada por personas que interaccionan con la interfaz de usuario con una variedad de necesidades y experiencias._
 
 Hacer que una aplicación de Xamarin.Forms sea accesible significa pensar en el diseño de muchos elementos de interfaz de usuario. Para obtener información sobre cuestiones que hay que tener en cuenta, vea la [lista de comprobación de accesibilidad](~/cross-platform/app-fundamentals/accessibility.md). Ya se pueden solucionar muchos problemas de accesibilidad como las fuentes grandes y la configuración adecuada de color y contraste mediante las API de Xamarin.Forms.
 
-Las guías [Accesibilidad para Android](~/android/app-fundamentals/accessibility.md) y [Accesibilidad para iOS](~/ios/app-fundamentals/accessibility.md) contienen información detallada de las API nativas expuestas por Xamarin, y la [Guía de accesibilidad UWP en MSDN](https://msdn.microsoft.com/windows/uwp/accessibility/basic-accessibility-information) explica el enfoque nativo en esa plataforma. Estas API se usan para implementar por completo aplicaciones accesibles en cada plataforma.
+Las guías [Accesibilidad para Android](~/android/app-fundamentals/accessibility.md) y [Accesibilidad para iOS](~/ios/app-fundamentals/accessibility.md) contienen información detallada de las API nativas expuestas por Xamarin, y la [Guía de accesibilidad UWP en MSDN](/windows/uwp/design/accessibility/basic-accessibility-information) explica el enfoque nativo en esa plataforma. Estas API se usan para implementar por completo aplicaciones accesibles en cada plataforma.
 
 Actualmente, Xamarin.Forms no tiene compatibilidad *integrada* con todas las API de accesibilidad que hay disponibles en cada una de las plataformas subyacentes. Pero sí admite configurar las propiedades de automatización en los elementos de la interfaz de usuario para admitir las herramientas de ayuda a la navegación y el lector de pantalla, que es uno de los aspectos más importantes al crear aplicaciones accesibles. Para más información, vea [Propiedades de automatización](~/xamarin-forms/app-fundamentals/accessibility/automation-properties.md).
 
@@ -38,7 +38,7 @@ Las aplicaciones de Xamarin.Forms normalmente van dirigidas a varias plataformas
 
 - [**Pruebas en iOS**](~/ios/app-fundamentals/accessibility.md)
 - [**Pruebas en Android**](~/android/app-fundamentals/accessibility.md)
-- [**Windows AccScope (MSDN)** ](https://msdn.microsoft.com/library/windows/desktop/dn433239)
+- [**Windows AccScope (MSDN)** ](/windows/win32/winauto/accscope)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

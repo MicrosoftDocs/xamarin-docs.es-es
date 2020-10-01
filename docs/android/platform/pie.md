@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018
-ms.openlocfilehash: 0105b43116df697bc6688becb77298c236dfa601
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 6f192e9171a9da2e2ef7e0478b5bb6838676faee
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73019884"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453446"
 ---
 # <a name="android-pie-features"></a>Características de Android Pie
 
@@ -24,7 +24,7 @@ _Cómo empezar a desarrollar aplicaciones para Android 9 Pie con Xamarin.Androi
 
 Este artículo está estructurado para ayudarle a empezar a desarrollar aplicaciones de Xamarin.Android para Android Pie. Explica cómo instalar las actualizaciones necesarias, configurar el SDK y preparar un emulador o un dispositivo para realizar pruebas. También proporciona un esquema de las nuevas características de Android Pie y proporciona código fuente de ejemplo que muestra cómo usar algunas de las características clave de Android Pie.
 
-Xamarin.Android 9.0 proporciona compatibilidad con Android Pie. Para más información sobre la compatibilidad de Xamarin.Android para Android Pie, vea las notas de la versión de [Android P Developer Preview 3](https://docs.microsoft.com/xamarin/android/release-notes/9/9.0/#android-p-dp1).
+Xamarin.Android 9.0 proporciona compatibilidad con Android Pie. Para más información sobre la compatibilidad de Xamarin.Android para Android Pie, vea las notas de la versión de [Android P Developer Preview 3](/xamarin/android/release-notes/9/9.0/#android-p-dp1).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -43,7 +43,7 @@ Para usar las características de Android Pie en aplicaciones basadas en Xamarin
 
 Para empezar a desarrollar aplicaciones de Android Pie con Xamarin.Android, debe descargar e instalar las herramientas y los paquetes de SDK más recientes antes de poder crear su primer proyecto de Android Pie:
 
-1. Se recomienda Visual Studio 2019. Si usa Visual Studio 2017, actualice a [Visual Studio 2017 15.8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) o a una versión posterior. Si usa Visual Studio para Mac, actualice a [Visual Studio 2017 para Mac 7.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) o posterior.
+1. Se recomienda Visual Studio 2019. Si usa Visual Studio 2017, actualice a [Visual Studio 2017 15.8](/visualstudio/releasenotes/vs2017-relnotes) o a una versión posterior. Si usa Visual Studio para Mac, actualice a [Visual Studio 2017 para Mac 7.6](/visualstudio/releasenotes/vs2017-relnotes) o posterior.
 
 2. Instale los paquetes y herramientas de **Android Pie (API 28)** con el Administrador de SDK.
 
@@ -57,7 +57,7 @@ En las siguientes secciones se explican cada uno de estos pasos:
 
 Se recomienda Visual Studio 2019 para crear aplicaciones de Android Pie con Xamarin.
 
-Si usa Visual Studio 2017, actualice a Visual Studio 2017 versión 15.8 o posterior (para obtener instrucciones, vea [Actualización de Visual Studio 2017 a la versión más reciente](https://docs.microsoft.com/visualstudio/install/update-visual-studio)). En macOS, actualice a Visual Studio 2017 para Mac 7.6 o posterior (para obtener instrucciones, vea [Configuración e instalación de Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation)).
+Si usa Visual Studio 2017, actualice a Visual Studio 2017 versión 15.8 o posterior (para obtener instrucciones, vea [Actualización de Visual Studio 2017 a la versión más reciente](/visualstudio/install/update-visual-studio)). En macOS, actualice a Visual Studio 2017 para Mac 7.6 o posterior (para obtener instrucciones, vea [Configuración e instalación de Visual Studio para Mac](/visualstudio/mac/installation)).
 
 ### <a name="install-the-android-sdk"></a>Instalación de Android SDK
 

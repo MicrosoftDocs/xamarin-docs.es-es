@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/30/2018
-ms.openlocfilehash: 729dede97a9b153738ca72af499d4d1e9d77fae0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 3c42743a26ab4ec5388c1d3458d88ef4d161a1f3
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73021454"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454850"
 ---
 # <a name="linking-on-android"></a>Vincular en Android
 
 Las aplicaciones de Xamarin.Android usan un *enlazador* para reducir el tamaño de la aplicación. El enlazador emplea análisis estáticos de la aplicación para determinar qué ensamblados, tipos y miembros se usan realmente. El enlazador se comporta entonces como un *recolector de elementos no utilizados*, que busca continuamente los ensamblados, tipos y miembros a los que se hace referencia hasta que se encuentra la clausura completa de los ensamblados, los tipos y los miembros a los que se hace referencia. Todo el contenido fuera de esta clausura se *descarta*.
 
-Por ejemplo, el ejemplo [Hello, Android](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellom4a):
+Por ejemplo, el ejemplo [Hello, Android](/samples/xamarin/monodroid-samples/hellom4a):
 
 |Configuración|Tamaño 1.2.0|Tamaño 4.0.1|
 |---|---|---|

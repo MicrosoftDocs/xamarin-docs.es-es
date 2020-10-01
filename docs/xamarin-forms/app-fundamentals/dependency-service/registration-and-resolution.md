@@ -10,14 +10,14 @@ ms.date: 06/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 050b53be5e4ae67e2adbc1436bbd56ff824f5f7b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: da3c6c2f55f1cdbed1b3c4e1bb16c4f78e32cf23
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946395"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556053"
 ---
-# <a name="xamarinforms-dependencyservice-registration-and-resolution"></a>Registro y resolución de DependencyService de Xamarin.Forms
+# <a name="no-locxamarinforms-dependencyservice-registration-and-resolution"></a>Registro y resolución de DependencyService de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
@@ -192,5 +192,5 @@ Para obtener más información sobre cómo llamar al método `Dispose` de un obj
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de DependencyService (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
+- [Demostraciones de DependencyService (ejemplo)](/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 - [Resolución de dependencias Xamarin.Forms](~/xamarin-forms/internals/dependency-resolution.md)

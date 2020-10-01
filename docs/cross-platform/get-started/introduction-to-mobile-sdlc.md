@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: davidortinau
 ms.author: daortin
 ms.date: 11/22/2016
-ms.openlocfilehash: 32dec6b8fcdd5387e138a7812d8c3e2074673111
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f3de8f6bb5cc8cb717642ebc86cefe1a184f4a78
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939625"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456631"
 ---
 # <a name="mobile-software-development-lifecycle"></a>Ciclo de vida de desarrollo de software móvil
 
@@ -70,7 +70,7 @@ Una vez que se hayan determinado las características y funcionalidades de la ap
 
 #### <a name="ux-design"></a>Diseño de la experiencia del usuario
 
-La experiencia del usuario se efectúa normalmente a través de tramas de alambres o prototipos con uno de los muchos [conjuntos de herramientas de diseño](https://docs.microsoft.com/windows/uwp/design/downloads/). Los prototipos de experiencia del usuario permiten diseñar esta experiencia sin tener que preocuparse por el diseño real de la interfaz de usuario:
+La experiencia del usuario se efectúa normalmente a través de tramas de alambres o prototipos con uno de los muchos [conjuntos de herramientas de diseño](/windows/uwp/design/downloads/). Los prototipos de experiencia del usuario permiten diseñar esta experiencia sin tener que preocuparse por el diseño real de la interfaz de usuario:
 
  [![La experiencia del usuario normalmente se efectúa a través de estructuras de alambre o prototipos con herramientas como Balsamiq.](introduction-to-mobile-sdlc-images/balsamiq.png)](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
 
@@ -78,7 +78,7 @@ Al crear prototipos de experiencia del usuario, es importante tener en cuenta la
 
 1. **Apple**: [Directrices de interfaz humana](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
 1. **Android**: [Instrucciones de diseño](https://developer.android.com/design/index.html)
-1. **UWP**: [Conceptos básicos de diseño UWP](https://docs.microsoft.com/windows/uwp/design/basics/)
+1. **UWP**: [Conceptos básicos de diseño UWP](/windows/uwp/design/basics/)
 
 Por ejemplo, cada aplicación tiene una metáfora para cambiar de sección en una aplicación. iOS usa una barra de pestañas en la parte inferior de la pantalla, mientras que Android la usa en la superior. Por otro lado, UWP usa la vista [dinámica o de pestañas](/windows/uwp/design/controls-and-patterns/pivot).
 
@@ -153,7 +153,7 @@ Esto facilita a los desarrolladores un canal de distribución posiblemente más 
 
 #### <a name="uwp"></a>UWP
 
-Las aplicaciones UWP se distribuyen a los usuarios en Microsoft Store. Los desarrolladores envían sus aplicaciones para que las aprueben y después aparecen en la Tienda. Para obtener más información sobre la publicación de aplicaciones Windows, consulte la documentación relativa a la [publicación](https://docs.microsoft.com/windows/uwp/publish/) de UWP.
+Las aplicaciones UWP se distribuyen a los usuarios en Microsoft Store. Los desarrolladores envían sus aplicaciones para que las aprueben y después aparecen en la Tienda. Para obtener más información sobre la publicación de aplicaciones Windows, consulte la documentación relativa a la [publicación](/windows/uwp/publish/) de UWP.
 
 ## <a name="mobile-development-considerations"></a>Consideraciones sobre el desarrollo móvil
 
@@ -243,7 +243,7 @@ Aunque el hardware de UWP es bastante homogéneo, hay componentes que son opcion
 
 #### <a name="security-considerations"></a>Consideraciones de seguridad
 
-Para obtener más información sobre las consideraciones de seguridad importantes en UWP, consulte la documentación relativa a la [seguridad](https://docs.microsoft.com/windows/uwp/security/).
+Para obtener más información sobre las consideraciones de seguridad importantes en UWP, consulte la documentación relativa a la [seguridad](/windows/uwp/security/).
 
 ## <a name="summary"></a>Resumen
 

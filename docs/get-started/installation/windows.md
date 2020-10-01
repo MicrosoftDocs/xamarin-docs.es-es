@@ -9,12 +9,12 @@ ms.date: 08/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 91e4cbf09ac730483659dbe692bab19f8bb0b113
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 255c870407f1657196abd826b46c7e9b114285c9
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84570139"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433320"
 ---
 # <a name="installing-xamarin-in-visual-studio-2019"></a>Instalación de Xamarin en Visual Studio 2019
 
@@ -44,7 +44,7 @@ La instalación de Xamarin en Visual Studio 2019 le permite empezar a escribir 
 
 Para obtener información detallada, consulte la guía de [instalación de Xamarin.iOS en Windows](~/ios/get-started/installation/windows/index.md).
 
-1. [Instalación de Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation)
+1. [Instalación de Visual Studio para Mac](/visualstudio/mac/installation)
 2. [Conexión de Visual Studio con el host de compilación del equipo Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
 3. [Configuración del desarrollador de iOS](~/ios/get-started/installation/device-provisioning/index.md): necesaria para ejecutar la aplicación en el dispositivo
 4. [Simulador remoto de iOS](~/tools/ios-simulator/index.md)

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 3062afda82be2b45146687b9d77210a42f8f55fa
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 0b44cbf754e8d1be66b0f3bf09badb78852978eb
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75487963"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454642"
 ---
 # <a name="publishing-an-application"></a>Publicar una aplicación
 
@@ -23,7 +23,7 @@ El paso final en el desarrollo de una aplicación de Xamarin.Android es publicar
 
 - **Preparación para la publicación** &ndash;: se crea una versión de lanzamiento de la aplicación que se puede implementar en dispositivos Android (consulte [Preparar una aplicación para su lanzamiento](~/android/deploy-test/release-prep/index.md) para obtener más información sobre la preparación de lanzamiento).
 
-- **Distribución**: la versión de lanzamiento de una aplicación estará disponible a través de uno o varios canales de distribución.
+- **** Distribución&ndash;: la versión de lanzamiento de una aplicación estará disponible a través de uno o varios canales de distribución.
 
 El siguiente diagrama ilustra los pasos de publicación de una aplicación de Xamarin.Android:
 
@@ -31,8 +31,8 @@ El siguiente diagrama ilustra los pasos de publicación de una aplicación de Xa
 
 Como puede observarse en el diagrama anterior, la preparación es la misma independientemente del método de distribución que se utilice. Hay varias formas de poner una aplicación de Android a disposición de los usuarios:
 
-- **A través de un sitio web**: una aplicación Xamarin.Android puede estar disponible para su descarga en un sitio web, desde el que los usuarios pueden instalarla haciendo clic en un vínculo.
-- **Por correo electrónico**: los usuarios pueden instalar una aplicación Xamarin.Android desde su correo electrónico. La aplicación se instalará cuando se abra el archivo adjunto con un dispositivo Android.
+- **** A través de un sitio web&ndash;: una aplicación Xamarin.Android puede estar disponible para su descarga en un sitio web, desde el que los usuarios pueden instalarla haciendo clic en un vínculo.
+- **** Por correo electrónico&ndash;: los usuarios pueden instalar una aplicación Xamarin.Android desde su correo electrónico. La aplicación se instalará cuando se abra el archivo adjunto con un dispositivo Android.
 - **A través de una tienda**: existen varias tiendas de aplicaciones para la distribución, como [Google Play](https://play.google.com/) o la [Tienda Apps de Amazon para Android](https://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011).
 
 Utilizar una tienda establecida es la manera más común para publicar una aplicación, ya que proporciona la mayor cobertura de mercado y el máximo control sobre la distribución. Sin embargo, publicar una aplicación a través de una tienda requiere un esfuerzo adicional.
@@ -52,11 +52,11 @@ En esta sección se muestra cómo cargar la aplicación en una tienda, como Goog
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [HelloWorldPublishing (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/helloworldpublishing)
-- [Creación de proceso](~/android/deploy-test/building-apps/build-process.md)
+- [HelloWorldPublishing (ejemplo)](/samples/xamarin/monodroid-samples/helloworldpublishing)
+- [Proceso de compilación](~/android/deploy-test/building-apps/build-process.md)
 - [Vinculación](~/android/deploy-test/linker.md)
 - [Obtener una clave de API de Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Implementación mediante Visual Studio App Center](https://docs.microsoft.com/appcenter/distribution/stores/googleplay)
+- [Implementación mediante Visual Studio App Center](/appcenter/distribution/stores/googleplay)
 - [Firma de aplicaciones](https://source.android.com/security/apksigning/)
 - [Publicación en Google Play](https://developer.android.com/distribute/googleplay/publish/index.html)
 - [Licencias de aplicaciones de Google](https://developer.android.com/guide/google/play/licensing/index.html)

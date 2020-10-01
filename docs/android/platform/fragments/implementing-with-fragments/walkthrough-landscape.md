@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2018
-ms.openlocfilehash: 4d9ef88f39914f8fa5e578577ee9f6977c2bc88e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: c0d4b0d1a31be43d16fb69eba18c07815631f496
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020265"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453940"
 ---
 # <a name="fragments-walkthrough-ndash-landscape"></a>Guía detallada sobre los fragmentos: horizontal
 
@@ -34,9 +34,9 @@ Las siguientes modificaciones se basarán en el trabajo que se realizó en la [G
 
 ## <a name="1-create-an-alternate-layout"></a>1. Creación de un diseño alternativo
 
-Cuando se crea la actividad principal en un dispositivo Android, Android decidirá qué diseño se debe cargar en función de la orientación del dispositivo. De forma predeterminada, Android proporcionará el archivo de diseño **Resources/layout/activity_main.axml**. En el caso de los dispositivos que se cargan en modo horizontal, Android proporcionará el archivo de diseño **Resources/layout-land/activity_main.axml**. La guía sobre los [recursos de Android](/xamarin/android/app-fundamentals/resources-in-android) contiene más detalles sobre cómo Android decide qué archivos de recursos se cargan para una aplicación.
+Cuando se crea la actividad principal en un dispositivo Android, Android decidirá qué diseño se debe cargar en función de la orientación del dispositivo. De forma predeterminada, Android proporcionará el archivo de diseño **Resources/layout/activity_main.axml**. En el caso de los dispositivos que se cargan en modo horizontal, Android proporcionará el archivo de diseño **Resources/layout-land/activity_main.axml**. La guía sobre los [recursos de Android](../../../app-fundamentals/resources-in-android/index.md) contiene más detalles sobre cómo Android decide qué archivos de recursos se cargan para una aplicación.
 
-Cree un diseño alternativo dirigido a la **orientación horizontal**, siguiendo los pasos descritos en la guía sobre los [diseños alternativos](/xamarin/android/user-interface/android-designer/alternative-layout-views). Con ello, se debería agregar un nuevo archivo de recursos de diseño al proyecto, **Resources/layout/activity_main.axml**:
+Cree un diseño alternativo dirigido a la **orientación horizontal**, siguiendo los pasos descritos en la guía sobre los [diseños alternativos](../../../user-interface/android-designer/alternative-layout-views.md). Con ello, se debería agregar un nuevo archivo de recursos de diseño al proyecto, **Resources/layout/activity_main.axml**:
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 

@@ -10,12 +10,12 @@ ms.date: 12/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cc150ecffbf9b6b31ec2f533bcc33876100614dc
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3bbad7f96403cb1f386b80b2923b0cdd222f9596
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936856"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555884"
 ---
 # <a name="invoking-events-from-effects"></a>Invocación de eventos desde efectos
 
@@ -55,7 +55,7 @@ Por ese motivo, el efecto de seguimiento táctil que se describe en este artícu
 
 ## <a name="the-touch-tracking-effect-api"></a>La API de efecto de seguimiento táctil
 
-El ejemplo de [**Touch Tracking Effect Demos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) (Demostraciones de efecto de seguimiento táctil) contiene las clases (y una enumeración) que implementan el seguimiento táctil de bajo nivel. Estos tipos pertenecen al espacio de nombres `TouchTracking` y comienzan con la palabra `Touch`. El proyecto de biblioteca de .NET Standard **TouchTrackingEffectDemos** incluye la enumeración `TouchActionType` para el tipo de eventos táctiles:
+El ejemplo de [**Touch Tracking Effect Demos**](/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) (Demostraciones de efecto de seguimiento táctil) contiene las clases (y una enumeración) que implementan el seguimiento táctil de bajo nivel. Estos tipos pertenecen al espacio de nombres `TouchTracking` y comienzan con la palabra `Touch`. El proyecto de biblioteca de .NET Standard **TouchTrackingEffectDemos** incluye la enumeración `TouchActionType` para el tipo de eventos táctiles:
 
 ```csharp
 public enum TouchActionType
@@ -362,7 +362,7 @@ Gran parte de la estructura de esta clase `TouchRecognizer` es similar a la de l
 
 ## <a name="putting-the-touch-effect-to-work"></a>Poner el efecto táctil en funcionamiento
 
-El programa [**TouchTrackingEffectDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) contiene cinco páginas que prueban el efecto de seguimiento táctil para tareas comunes.
+El programa [**TouchTrackingEffectDemos**](/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) contiene cinco páginas que prueban el efecto de seguimiento táctil para tareas comunes.
 
 La página **Arrastre de BoxView** le permite agregar elementos `BoxView` a un `AbsoluteLayout` y después arrastrarlos en la pantalla. El [archivo XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/BoxViewDraggingPage.xaml) crea instancias de dos vistas de `Button` para agregar elementos `BoxView` a la `AbsoluteLayout` y borrar el `AbsoluteLayout`.
 
@@ -811,4 +811,4 @@ En este artículo se mostró cómo invocar eventos en un efecto, y cómo escribi
 
 - [Multi-Touch Finger Tracking in iOS](~/ios/app-fundamentals/touch/touch-tracking.md) (Seguimiento de dedos multitáctil en iOS)
 - [Multi-Touch Finger Tracking in Android](~/android/app-fundamentals/touch/touch-tracking.md) (Seguimiento de dedos multitáctil en Android)
-- [Touch Tracking Effect (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) (Efecto de seguimiento táctil [ejemplo])
+- [Touch Tracking Effect (sample)](/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) (Efecto de seguimiento táctil [ejemplo])

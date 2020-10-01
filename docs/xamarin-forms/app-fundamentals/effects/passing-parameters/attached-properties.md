@@ -10,12 +10,12 @@ ms.date: 08/05/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 71238775e9cc9d3e32ab9c9287e5b52c759ca9eb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c014396f9670ece93295c2c8da1738f9dc7dae9e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939937"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555988"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Pasar parámetros de efecto como propiedades adjuntas
 
@@ -442,4 +442,4 @@ En este artículo se ha mostrado cómo usar propiedades adjuntas para pasar par�
 - [Efecto](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
-- [Efecto de sombra (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
+- [Efecto de sombra (ejemplo)](/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)

@@ -10,14 +10,14 @@ ms.date: 09/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e0961fad18ccd961a5b84b2a5535bca70781dd8d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 459b918869bd3e2b5c1927d3fbcded6035226a58
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136128"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562592"
 ---
-# <a name="xamarinforms-data-templates"></a>Plantillas de datos de Xamarin.Forms
+# <a name="no-locxamarinforms-data-templates"></a>Plantillas de datos de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
@@ -37,4 +37,4 @@ Un [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) se puede us
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Plantillas de datos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
+- [Plantillas de datos (ejemplo)](/samples/xamarin/xamarin-forms-samples/templates-datatemplates)

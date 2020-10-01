@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 6fa1357adc9cf2f545fbcdf3a30fef70280593bb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2458abc3363d847623a27a73626266dabe6a7a5c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938026"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437249"
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>Tutorial: usar la herramienta Instruments de Apple
 
 _Este artículo es una guía de uso de la herramienta Instruments de Apple para diagnosticar problemas de memoria en una aplicación iOS compilada con Xamarin. Muestra cómo iniciar Instruments, tomar instantáneas del montón y analizar el aumento de la memoria. También muestra cómo usar Instruments para mostrar e identificar las líneas de código exactas que provocan el problema de memoria._
 
 En esta página se muestra cómo usar la **herramienta Instruments de Xcode** para diagnosticar un problema de memoria en una aplicación de iOS.
-En primer lugar, descargue el [ejemplo MemoryDemo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) y abra la solución **anterior** en Visual Studio para Mac.
+En primer lugar, descargue el [ejemplo MemoryDemo](/samples/xamarin/ios-samples/profiling-memorydemo) y abra la solución **anterior** en Visual Studio para Mac.
 
 ## <a name="diagnosing-the-memory-issues"></a>Diagnóstico de problemas de memoria
 
@@ -85,7 +85,7 @@ Ahora, cuando se ejecuta la aplicación, se reduce enormemente el uso de memoria
 
 ![Representación de la utilización de memoria de la aplicación](walkthrough-apples-instrument-images/06-reduced-memory.png)
 
-El código mejorado está disponible en el [ejemplo MemoryDemo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) de la solución **posterior** en Visual Studio para Mac.
+El código mejorado está disponible en el [ejemplo MemoryDemo](/samples/xamarin/ios-samples/profiling-memorydemo) de la solución **posterior** en Visual Studio para Mac.
 
 Este blog de la comunidad sobre [Recolección de elementos no utilizados de Xamarin.iOS](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/) es una referencia útil para solucionar problemas de memoria con Xamarin.iOS.
 
@@ -97,5 +97,5 @@ Por último, se ha vuelto a examinar la aplicación para comprobar que se ha cor
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo MemoryDemo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo)
+- [Ejemplo MemoryDemo](/samples/xamarin/ios-samples/profiling-memorydemo)
 - [Recolección de elementos no utilizados de Xamarin.iOS (entrada de blog)](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

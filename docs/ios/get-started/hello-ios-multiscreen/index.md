@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 871a94d06048f893cf06b00de46d66dd59b3703e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 01980ab03119729d5405691f94d2509ca9b1beee
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73023215"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435690"
 ---
 # <a name="hello-ios-multiscreen"></a>Hello, iOS Multiscreen
 
@@ -21,12 +21,12 @@ ms.locfileid: "73023215"
 
 En la primera parte de esta guía, se agrega una segunda pantalla a la aplicación de ejemplo Phoneword para realizar un seguimiento del historial de los números que se han escrito.
 
-## <a name="part-2-deep-dive"></a>[Parte 2: profundización](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
+## <a name="part-2-deep-dive"></a>[Parte 2: análisis detallado](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
 
 En la segunda parte de este documento, se explica lo que se ha compilado, así como la arquitectura, la navegación y otros conceptos nuevos de iOS que surgen durante el proceso.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Hola, iOS (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Hola, iOS (ejemplo)](/samples/xamarin/ios-samples/hello-ios)
 - [Directrices de la interfaz humana de iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portal de aprovisionamiento de iOS](https://developer.apple.com/ios/manage/overview/index.action)

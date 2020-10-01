@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 11/10/2017
-ms.openlocfilehash: a5a759ae9f156eec71706d9681fac2a94995848e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: a1649c4b8498f3e7ad3684cb4d119236b4ceaf57
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73021683"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435472"
 ---
 # <a name="xamarinmac-performance"></a>Rendimiento de Xamarin.Mac
 
@@ -59,7 +59,7 @@ Las aplicaciones de escritorio a menudo procesan grandes cantidades de datos, y 
 
 Siempre que sea posible, use la [asíncronía](~/cross-platform/platform/async.md) y los subprocesos para que no se bloquee la interfaz de usuario.
 
-Para operaciones de larga ejecución, valore la posibilidad de usar [NSProgressIndicator](https://docs.microsoft.com/samples/xamarin/mac-samples/progressbarexample) u otras opciones indicadas en los documentos de [HIG](https://developer.apple.com/macos/human-interface-guidelines/indicators/progress-indicators/) de Apple para enviar notificaciones a los usuarios.
+Para operaciones de larga ejecución, valore la posibilidad de usar [NSProgressIndicator](/samples/xamarin/mac-samples/progressbarexample) u otras opciones indicadas en los documentos de [HIG](https://developer.apple.com/macos/human-interface-guidelines/indicators/progress-indicators/) de Apple para enviar notificaciones a los usuarios.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

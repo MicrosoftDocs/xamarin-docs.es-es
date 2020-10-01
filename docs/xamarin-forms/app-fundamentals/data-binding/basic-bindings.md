@@ -1,6 +1,6 @@
 ---
-title: 'title: "Xamarin.Forms: Enlaces básicos" description: "En este artículo se explica cómo usar el enlace de datos de Xamarin.Forms, que enlaza un par de propiedades entre dos objetos, del que al menos uno suele ser un objeto de interfaz de usuario.'
-description: 'Estos dos objetos se denominan el destino y el origen." ms.prod: xamarin ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/22/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials] ms.custom: video'
+title: Enlaces básicos de Xamarin.Forms
+description: En este artículo se explica cómo usar el enlace de datos de Xamarin.Forms, que enlaza un par de propiedades entre dos objetos, del que al menos uno suele ser un objeto de interfaz de usuario. Estos dos objetos se denominan el destino y el origen.
 ms.prod: xamarin
 ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
 ms.technology: xamarin-forms
@@ -11,14 +11,14 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.custom: video
-ms.openlocfilehash: c0c6bc6e1005997548952aedc09cd83a451e7caa
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 9bedde64f0eda233c289cb31296854b5cbca54a1
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84133554"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561123"
 ---
-# <a name="xamarinforms-basic-bindings"></a>Enlaces básicos de Xamarin.Forms
+# <a name="no-locxamarinforms-basic-bindings"></a>Enlaces básicos de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -334,7 +334,7 @@ En el [artículo siguiente](binding-mode.md), verá cómo el *modo de enlace* pu
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
+- [Data Binding Demos (sample)](/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
 - [Capítulo sobre el enlace de datos del libro Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 
 ## <a name="related-video"></a>Vídeo relacionado

@@ -10,12 +10,12 @@ ms.date: 12/07/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bb6167eae394b41583195911bfac9d691e48d361
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 20de91e7a9d0acf5c5aacfb7a05088aec2c20c71
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929381"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558302"
 ---
 # <a name="customizing-a-viewcell"></a>Personalización de ViewCell
 
@@ -574,4 +574,4 @@ En este artículo se ha mostrado cómo crear un representador personalizado para
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Rendimiento de ListView](~/xamarin-forms/user-interface/listview/performance.md)
-- [CustomRendererViewCell (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell) (CustomRendererViewCell [ejemplo])
+- [CustomRendererViewCell (sample)](/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell) (CustomRendererViewCell [ejemplo])

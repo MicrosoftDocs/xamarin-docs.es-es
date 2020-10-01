@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: af0b9b4a73a82afbaef314384b10d6b9465a4b29
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f1a95bd49588077b6765eaec0a8e038f33f94109
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73022813"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436417"
 ---
 # <a name="sample-app-hello-ios"></a>Aplicación de ejemplo: Hello, iOS
 
@@ -21,10 +21,10 @@ ms.locfileid: "73022813"
 
 La primera parte de esta guía describe cómo crea una aplicación que convierte un número de teléfono alfanumérico escrito por el usuario en un número de teléfono numérico y, después, llama a ese número.
 
-## <a name="part-2-deep-dive"></a>[Parte 2: profundización](~/ios/get-started/hello-ios/hello-ios-deepdive.md)
+## <a name="part-2-deep-dive"></a>[Parte 2: análisis detallado](~/ios/get-started/hello-ios/hello-ios-deepdive.md)
 
 La segunda parte de este documento revisa la aplicación compilada y proporciona los conocimientos básicos sobre cómo funcionan las aplicaciones de iOS.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Hola, iOS (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Hola, iOS (ejemplo)](/samples/xamarin/ios-samples/hello-ios)

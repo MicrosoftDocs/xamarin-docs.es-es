@@ -10,12 +10,12 @@ ms.date: 08/04/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2d929043a6b4cd5dd8b06318df0d7a347708fe6c
-ms.sourcegitcommit: c3329ab25d377907d8804cdd5e26dc84a274f39c
+ms.openlocfilehash: d3eb7edbb24c7e28ee375e1de85f6a7597ec63ac
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88130921"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561020"
 ---
 # <a name="add-drag-and-drop-gesture-recognizers"></a>Incorporación de reconocedores de gesto de arrastrar y colocar
 
@@ -312,4 +312,4 @@ En este ejemplo, el objeto de `Square` se recupera de la bolsa de propiedades de
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Gesto de arrastrar y colocar (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)
+- [Gesto de arrastrar y colocar (ejemplo)](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)

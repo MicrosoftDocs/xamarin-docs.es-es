@@ -10,14 +10,14 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d08a89d5394a227e3cee76603e4e97d2cf9495e0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8e05420e41509c82c1912a4639159fb58b1a30dc
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135764"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558588"
 ---
-# <a name="xamarinforms-string-formatting"></a>Formato de cadena de Xamarin.Forms
+# <a name="no-locxamarinforms-string-formatting"></a>Formato de cadena de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -189,5 +189,5 @@ Empero, el siguiente artículo explora la [**Ruta de enlace**](binding-path.md) 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
+- [Data Binding Demos (sample)](/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
 - [Capítulo sobre el enlace de datos del libro Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

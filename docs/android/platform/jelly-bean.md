@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: a638ccf7810c737faaeded7fcc98fcf657c85288
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 55969993a4cb3755f5a26e681ae21bf993307a0a
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027209"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456891"
 ---
 # <a name="jelly-bean-features"></a>Características de Jelly Bean
 
@@ -236,7 +236,7 @@ En este artículo se presentan las actualizaciones de notificaciones y se coment
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de animación de tiempo (muestra)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-timeanimatorexample)
+- [Ejemplo de animación de tiempo (muestra)](/samples/xamarin/monodroid-samples/platformfeatures-timeanimatorexample)
 - [Interfaces API de Android 4.1](https://developer.android.com/about/versions/android-4.1.html)
 - [Tareas y pilas de retroceso](https://developer.android.com/guide/components/tasks-and-back-stack.html)
 - [Navegación con Atrás y Arriba](https://developer.android.com/design/patterns/navigation.html)

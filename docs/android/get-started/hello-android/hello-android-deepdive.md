@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 2f8c6a80b00a4a91c40c70af05ac0ebe18daaed3
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: e07a7e6ea11cbf717db22dd46eaa5e28d907bafa
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571446"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454928"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: profundización
 
@@ -70,7 +70,7 @@ Visual Studio organiza el código en _soluciones_ y _proyectos_. Una solución e
 
 ## <a name="introduction-to-visual-studio-for-mac"></a>Introducción a Visual Studio para Mac
 
-Visual Studio para Mac es un IDE gratuito y de código abierto similar a Visual Studio. Incluye un diseñador visual completamente integrado, un editor de texto completo con herramientas de refactorización, un explorador de ensamblados, integración de código fuente y mucho más. Con esta guía aprenderá a usar algunas características básicas de Visual Studio para Mac. Si no está familiarizado con Visual Studio para Mac, tal vez le interese consultar [Introduction to Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/) (Introducción a Visual Studio para Mac), que incluye información más detallada.
+Visual Studio para Mac es un IDE gratuito y de código abierto similar a Visual Studio. Incluye un diseñador visual completamente integrado, un editor de texto completo con herramientas de refactorización, un explorador de ensamblados, integración de código fuente y mucho más. Con esta guía aprenderá a usar algunas características básicas de Visual Studio para Mac. Si no está familiarizado con Visual Studio para Mac, tal vez le interese consultar [Introduction to Visual Studio for Mac](/visualstudio/mac/) (Introducción a Visual Studio para Mac), que incluye información más detallada.
 
 Visual Studio para Mac sigue la práctica de Visual Studio consistente en organizar el código en _soluciones_ y _proyectos_. Una solución es un contenedor que puede incluir uno o varios proyectos. Un proyecto puede ser una aplicación (por ejemplo, para iOS o Android), una biblioteca auxiliar, una aplicación de prueba, etc. En la aplicación **Phoneword**, ha agregado un nuevo proyecto de Android con la plantilla **Aplicación de Android** a la solución **Phoneword** creada en la guía de [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
 

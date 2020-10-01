@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 60c62bf4d2887cec3d68d44e7d384daae35c066f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 4b9043d70bb7460abf62c964da8041f345cd1be6
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929048"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435602"
 ---
 # <a name="hello-ios--deep-dive"></a>Revisión en profundidad de Hello, iOS
 
@@ -26,7 +26,7 @@ Esta guía es una ayuda para desarrollar las habilidades y los conocimientos nec
 
 ## <a name="introduction-to-visual-studio-for-mac"></a>Introducción a Visual Studio para Mac
 
-Visual Studio para Mac es un IDE gratuito de código abierto que combina las características de Visual Studio y XCode. Incluye un diseñador visual completamente integrado, un editor de texto completo con herramientas de refactorización, un explorador de ensamblados, integración de código fuente y mucho más. En esta guía se presentan algunas características básicas de Visual Studio para Mac, pero si está familiarizado con Visual Studio para Mac, consulte la documentación [Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/).
+Visual Studio para Mac es un IDE gratuito de código abierto que combina las características de Visual Studio y XCode. Incluye un diseñador visual completamente integrado, un editor de texto completo con herramientas de refactorización, un explorador de ensamblados, integración de código fuente y mucho más. En esta guía se presentan algunas características básicas de Visual Studio para Mac, pero si está familiarizado con Visual Studio para Mac, consulte la documentación [Visual Studio para Mac](/visualstudio/mac/).
 
 Visual Studio para Mac sigue la práctica de Visual Studio consistente en organizar el código en *soluciones* y *proyectos*. Una solución es un contenedor que puede incluir uno o varios proyectos. Un proyecto puede ser una aplicación (por ejemplo, de iOS o Android), una biblioteca auxiliar, una aplicación de prueba, etc. En la aplicación Phoneword se ha agregado un nuevo proyecto de iPhone con la nueva plantilla **Single View Application** (Aplicación de vista única). El aspecto de la solución inicial era este:
 
@@ -64,7 +64,7 @@ A la derecha se encuentra el **Panel de soluciones**, que contiene la estructura
 
 En la guía de [Hello, iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md), creó una solución denominada **Phoneword** y colocó un proyecto de iOS, **Phoneword_iOS**, en ella. Entre los elementos del proyecto se incluyen los siguientes:
 
-- **Referencias**: contiene los ensamblados necesarios para compilar y ejecutar la aplicación. Expanda el directorio para ver referencias a ensamblados .NET, como [System](https://docs.microsoft.com/dotnet/api/system), System.Core y [System.Xml](https://docs.microsoft.com/dotnet/api/system.xml), así como una referencia al ensamblado Xamarin.iOS.
+- **Referencias**: contiene los ensamblados necesarios para compilar y ejecutar la aplicación. Expanda el directorio para ver referencias a ensamblados .NET, como [System](/dotnet/api/system), System.Core y [System.Xml](/dotnet/api/system.xml), así como una referencia al ensamblado Xamarin.iOS.
 - **Paquetes**: contiene los paquetes NuGet listos para su uso.
 - **Recursos**: en esta carpeta se almacenan otros elementos multimedia.
 - **Main.cs**: contiene el punto de entrada principal de la aplicación. Para iniciar la aplicación, se pasa el nombre de la clase principal de la aplicación, `AppDelegate`.
@@ -459,6 +459,6 @@ En el [siguiente tutorial de la serie de introducción](~/ios/get-started/hello-
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Hola, iOS (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Hola, iOS (ejemplo)](/samples/xamarin/ios-samples/hello-ios)
 - [Directrices de la interfaz humana de iOS](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
 - [Portal de aprovisionamiento de iOS](https://developer.apple.com/account/#/overview)

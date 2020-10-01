@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/02/2018
-ms.openlocfilehash: 6274c75abf229268070d495ced662724f5c16627
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 135303743cce1f23bb1d70731f6e760188df11e2
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027088"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457216"
 ---
 # <a name="nougat-features"></a>Características de Nougat
 
@@ -144,7 +144,7 @@ if (!IsInMultiWindowMode) {
 }
 ```
 
-La aplicación de ejemplo [MultiWindowPlayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground) incluye código de C# que muestra cómo sacar provecho de las interfaces de usuario de varias ventana con la aplicación.
+La aplicación de ejemplo [MultiWindowPlayground](/samples/xamarin/monodroid-samples/android-n-multiwindowplayground) incluye código de C# que muestra cómo sacar provecho de las interfaces de usuario de varias ventana con la aplicación.
 
 Para obtener más información sobre el modo de varias ventanas, vea la [Compatibilidad multiventana](https://developer.android.com/guide/topics/ui/multi-window.html).
 
@@ -191,7 +191,7 @@ NotificationCompat.Builder builder = new NotificationCompat.Builder (Application
    .AddAction (actionReplyByRemoteInput);
 ```
 
-La aplicación de ejemplo [Servicio de mensajería](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) incluye código de C# que muestra cómo extender las notificaciones con un objeto `RemoteInput`. Para más información sobre cómo agregar acciones de respuesta insertadas a la aplicación para Android 7.0 o posterior, consulte el tema [Respuesta a las notificaciones](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct) de Android.
+La aplicación de ejemplo [Servicio de mensajería](/samples/xamarin/monodroid-samples/android-n-messagingservice) incluye código de C# que muestra cómo extender las notificaciones con un objeto `RemoteInput`. Para más información sobre cómo agregar acciones de respuesta insertadas a la aplicación para Android 7.0 o posterior, consulte el tema [Respuesta a las notificaciones](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct) de Android.
 
 #### <a name="bundled-notifications"></a>Notificaciones agrupadas
 
@@ -227,15 +227,15 @@ Para más información sobre la nueva característica de accesos directos de apl
 
 Hay varios ejemplos de Xamarin.Android disponibles para mostrarle cómo sacar provecho de las características de Android Nougat:
 
-- [MultiWindowPlayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground) muestra el uso de la API de varias ventanas disponible en Android Nougat. Puede cambiar la aplicación de ejemplo en modo de varias ventanas para ver cómo afecta al ciclo de vida y el comportamiento de la aplicación.
+- [MultiWindowPlayground](/samples/xamarin/monodroid-samples/android-n-multiwindowplayground) muestra el uso de la API de varias ventanas disponible en Android Nougat. Puede cambiar la aplicación de ejemplo en modo de varias ventanas para ver cómo afecta al ciclo de vida y el comportamiento de la aplicación.
 
-- [Servicio de mensajería](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) es un servicio sencillo que envía notificaciones mediante `NotificationCompatManager`. También extiende la notificación con un objeto `RemoteInput` para permitir que los dispositivos Android Nougat respondan a través del texto directamente desde la notificación sin tener que abrir una aplicación.
+- [Servicio de mensajería](/samples/xamarin/monodroid-samples/android-n-messagingservice) es un servicio sencillo que envía notificaciones mediante `NotificationCompatManager`. También extiende la notificación con un objeto `RemoteInput` para permitir que los dispositivos Android Nougat respondan a través del texto directamente desde la notificación sin tener que abrir una aplicación.
 
-- [Notificaciones activas](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-activenotifications) muestra cómo usar la API `NotificationManager` para indicarle el número de notificaciones que la aplicación muestra actualmente.
+- [Notificaciones activas](/samples/xamarin/monodroid-samples/android-n-activenotifications) muestra cómo usar la API `NotificationManager` para indicarle el número de notificaciones que la aplicación muestra actualmente.
 
-- [Acceso a directorios con ámbito](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-scopeddirectoryaccess) muestra cómo usar la API de acceso a directorios con ámbito para acceder fácilmente a directorios específicos. Esto sirve como alternativa a tener que definir permisos `READ_EXTERNAL_STORAGE` o `WRITE_EXTERNAL_STORAGE` en el manifiesto.
+- [Acceso a directorios con ámbito](/samples/xamarin/monodroid-samples/android-n-scopeddirectoryaccess) muestra cómo usar la API de acceso a directorios con ámbito para acceder fácilmente a directorios específicos. Esto sirve como alternativa a tener que definir permisos `READ_EXTERNAL_STORAGE` o `WRITE_EXTERNAL_STORAGE` en el manifiesto.
 
-- [Arranque directo](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-directboot) muestra cómo almacenar los datos en un almacenamiento cifrado de dispositivo que siempre está disponible mientras el dispositivo arranca antes y después de que se escriban las credenciales de usuario (PIN, patrón o contraseña).
+- [Arranque directo](/samples/xamarin/monodroid-samples/android-n-directboot) muestra cómo almacenar los datos en un almacenamiento cifrado de dispositivo que siempre está disponible mientras el dispositivo arranca antes y después de que se escriban las credenciales de usuario (PIN, patrón o contraseña).
 
 ## <a name="summary"></a>Resumen
 

@@ -5,12 +5,12 @@ description: Visual Studio para Mac puede usarse para compilar e integrar códig
 author: mikeparker104
 ms.author: miparker
 ms.date: 11/07/2019
-ms.openlocfilehash: 42a59570d727657b2f3c23bd9d1f37e1205717d0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 80878ec36eb319ff6c798788493469793efdcf56
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73842817"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457996"
 ---
 # <a name="use-cc-libraries-with-xamarin"></a>Uso de bibliotecas de C/C++ con Xamarin
 
@@ -18,19 +18,19 @@ ms.locfileid: "73842817"
 
 Xamarin permite a los desarrolladores crear aplicaciones móviles nativas multiplataforma con Visual Studio. Por lo general, los enlaces de C# se utilizan para exponer los componentes de la plataforma a los desarrolladores. Sin embargo, hay ocasiones en las que las aplicaciones de Xamarin necesitan trabajar con códigos base. A veces, los equipos simplemente no tienen el tiempo, el presupuesto o los recursos necesarios para portar a C# un código base grande, probado correctamente y muy optimizado.
 
-[Visual C++ para desarrollo móvil multiplataforma](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) permite que los códigos de C/C++ y C# se compile como parte de la misma solución, lo que ofrece muchas ventajas, por ejemplo, una experiencia de depuración unificada. Microsoft ha usado C/C++ y Xamarin de esta manera para ofrecer aplicaciones como [Hyperlapse Mobile](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) y [Pix Camera](https://www.microsoft.com/microsoftpix).
+[Visual C++ para desarrollo móvil multiplataforma](/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) permite que los códigos de C/C++ y C# se compile como parte de la misma solución, lo que ofrece muchas ventajas, por ejemplo, una experiencia de depuración unificada. Microsoft ha usado C/C++ y Xamarin de esta manera para ofrecer aplicaciones como [Hyperlapse Mobile](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) y [Pix Camera](https://www.microsoft.com/microsoftpix).
 
 Sin embargo, en algunos casos es recomendable (u obligatorio) tener activos los procesos y las herramientas de C/C++, además de mantener el código de la biblioteca desacoplado de la aplicación, tratando la biblioteca como algo similar a un componente de terceros. En estas situaciones, el desafío no solo consiste en exponer los miembros pertinentes a C#, sino en administrar la biblioteca como una dependencia. Y, por supuesto, automatizar todo lo posible este proceso.  
 
 En esta publicación se describe un enfoque general para este escenario y se describe un ejemplo sencillo.
 
-## <a name="background"></a>Fondo
+## <a name="background"></a>Segundo plano
 
 C/C++ se considera un lenguaje multiplataforma, pero se debe prestar mucha atención para asegurarse de que el código fuente sea realmente multiplataforma. Se debe usar solamente el código de C/C++ que admitan todos los compiladores de destino, y no debe haber ningún código específico del compilador o de la plataforma incluido condicionalmente (o, en su defecto, que haya poco).
 
 En última instancia, el código debe compilarse y ejecutarse correctamente en todas las plataformas de destino, por lo tanto, se reduce la similitud entre las plataformas (y los compiladores) de destino. Los problemas pueden seguir surgiendo por pequeñas diferencias entre los compiladores y, por lo tanto, cada vez es más importante realizar pruebas exhaustivas (preferiblemente automatizadas) en cada plataforma de destino.  
 
-## <a name="high-level-approach"></a>Enfoque general
+## <a name="high-level-approach"></a>Enfoque de alto nivel
 
 La ilustración siguiente representa el enfoque de cuatro fases que se usa para transformar el código fuente de C/C++ en una biblioteca de Xamarin multiplataforma que se comparte a través de NuGet y que, a continuación, se consume en una aplicación de Xamarin.Forms.
 
@@ -81,7 +81,7 @@ Los pasos proporcionados son específicos de **Visual Studio para Mac**, pero l
 
 Para seguir adelante, el desarrollador necesitará lo siguiente:
 
-- [Línea de comandos de NuGet (CLI)](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference#macoslinux)
+- [Línea de comandos de NuGet (CLI)](/nuget/tools/nuget-exe-cli-reference#macoslinux)
 
 - [*Visual Studio* *para Mac*](https://visualstudio.microsoft.com/downloads)
 
@@ -90,7 +90,7 @@ Para seguir adelante, el desarrollador necesitará lo siguiente:
 
 ## <a name="creating-the-native-libraries-stage-1"></a>Creación de las bibliotecas nativas (fase 1)
 
-La funcionalidad de la biblioteca nativa se basa en el ejemplo de [Tutorial: Crear y utilizar una biblioteca estática (C++)](https://docs.microsoft.com/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017).
+La funcionalidad de la biblioteca nativa se basa en el ejemplo de [Tutorial: Crear y utilizar una biblioteca estática (C++)](/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017).
 
 En este tutorial se pasa por alto la primera fase, donde se compilan las bibliotecas nativas, ya que la biblioteca se proporciona como una dependencia de terceros en este escenario. Las bibliotecas nativas precompiladas se incluyen junto con el [código de ejemplo](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin) o [se pueden descargar](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin/Sample/Artefacts) directamente.
 
@@ -250,7 +250,7 @@ Ahora la carpeta **libs** debe aparecer de la siguiente manera:
     - Conexión inteligente
 
     > [!NOTE]
-    > El uso de un tipo de proyecto de biblioteca de enlace junto con una [referencia nativa](https://docs.microsoft.com/xamarin/cross-platform/macios/native-references) incrusta la biblioteca estática y permite que se vincule automáticamente a la aplicación de Xamarin.iOS que hace referencia a ella (incluso cuando se incluye a través de un paquete de NuGet).
+    > El uso de un tipo de proyecto de biblioteca de enlace junto con una [referencia nativa](../macios/native-references.md) incrusta la biblioteca estática y permite que se vincule automáticamente a la aplicación de Xamarin.iOS que hace referencia a ella (incluso cuando se incluye a través de un paquete de NuGet).
 
 5. Abra **ApiDefinition.cs**, eliminando el código comentado con plantilla (dejando solo el espacio de nombres `MathFuncs`) y, a continuación, realice el mismo paso para **Structs.cs**. 
 
@@ -289,7 +289,7 @@ Ahora, escriba el código de C# para llamar a la biblioteca nativa. El objetivo 
     ```
 
     > [!NOTE]
-    > Un objeto [SafeHandle](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle?view=netframework-4.7.2) es la manera preferida de trabajar con recursos no administrados en código administrado. Esto abstrae una gran cantidad de código reutilizable relacionado con la finalización crítica y el ciclo de vida de los objetos. Después, el propietario de este identificador puede tratarlo como cualquier otro recurso administrado y no tendrá que implementar el [patrón desechable](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose) completo. 
+    > Un objeto [SafeHandle](/dotnet/api/system.runtime.interopservices.safehandle?view=netframework-4.7.2) es la manera preferida de trabajar con recursos no administrados en código administrado. Esto abstrae una gran cantidad de código reutilizable relacionado con la finalización crítica y el ciclo de vida de los objetos. Después, el propietario de este identificador puede tratarlo como cualquier otro recurso administrado y no tendrá que implementar el [patrón desechable](/dotnet/standard/garbage-collection/implementing-dispose) completo. 
 
 #### <a name="creating-the-internal-wrapper-class"></a>Creación de la clase interna contenedora
 
@@ -497,7 +497,7 @@ Para que la biblioteca esté empaquetada y distribuida a través de NuGet, la so
     ```
 
     > [!NOTE]
-    > Consulte el documento de [referencia de nuspec](https://docs.microsoft.com/nuget/reference/nuspec) para obtener más detalles sobre el esquema que se usa para este manifiesto.
+    > Consulte el documento de [referencia de nuspec](/nuget/reference/nuspec) para obtener más detalles sobre el esquema que se usa para este manifiesto.
 
 5. Agregue un elemento `<files>` como elemento secundario del elemento `<package>` (justo debajo de `<metadata>`), identificando cada archivo con un elemento `<file>` independiente:
 
@@ -588,7 +588,7 @@ La forma más sencilla de la fuente de NuGet es un directorio local:
 
 1. Establezca **Configuración de compilación** en **Versión** y ejecute una compilación con **COMANDO + B**.
 2. Abra **Terminal** y cambie el directorio a uno que contenga el archivo **nuspec**.
-3. En **Terminal**, ejecute el comando **nuget pack** que especifica el archivo **nuspec**, la **versión** (por ejemplo, 1.0.0) y el **directorio de salida** mediante la carpeta creada en el [paso anterior](https://docs.microsoft.com/xamarin/cross-platform/cpp/index#creating-a-local-nuget-feed), es decir, **local-nuget-feed**. Por ejemplo:
+3. En **Terminal**, ejecute el comando **nuget pack** que especifica el archivo **nuspec**, la **versión** (por ejemplo, 1.0.0) y el **directorio de salida** mediante la carpeta creada en el [paso anterior](#preparing-a-local-packages-directory), es decir, **local-nuget-feed**. Por ejemplo:
 
     ```bash
     nuget pack MathFuncs.nuspec -Version 1.0.0 -OutputDirectory ~/local-nuget-feed
@@ -598,9 +598,9 @@ La forma más sencilla de la fuente de NuGet es un directorio local:
 
 ### <a name="optional-using-a-private-nuget-feed-with-azure-devops"></a>Uso de una fuente de NuGet privada con Azure DevOps (opcional)
 
-Se describe una técnica más sólida en el artículo de [introducción a los paquetes de NuGet en Azure DevOps](https://docs.microsoft.com/azure/devops/artifacts/get-started-nuget?view=vsts&tabs=new-nav#publish-a-package), que muestra cómo crear una fuente privada e insertar el paquete (generado en el paso anterior) en esa fuente.
+Se describe una técnica más sólida en el artículo de [introducción a los paquetes de NuGet en Azure DevOps](/azure/devops/artifacts/get-started-nuget?tabs=new-nav&view=vsts#publish-a-package), que muestra cómo crear una fuente privada e insertar el paquete (generado en el paso anterior) en esa fuente.
 
-Es ideal que este flujo de trabajo esté totalmente automatizado, por ejemplo, con [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index?view=vsts). Para obtener más información, consulte el artículo de [introducción a Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/index?view=vsts).
+Es ideal que este flujo de trabajo esté totalmente automatizado, por ejemplo, con [Azure Pipelines](/azure/devops/pipelines/index?view=vsts). Para obtener más información, consulte el artículo de [introducción a Azure Pipelines](/azure/devops/pipelines/get-started/index?view=vsts).
 
 ## <a name="consuming-the-net-wrapper-from-a-xamarinforms-app"></a>Consumo del paquete de NuGet desde una aplicación de Xamarin.Forms
 
@@ -648,7 +648,7 @@ Para completar el tutorial, cree una **aplicación de Xamarin.Forms** para consu
     > [!NOTE]
     > En este caso, no es necesario especificar un **nombre de usuario** ni una **contraseña**. 
 
-4. Haga clic en **Aceptar**.
+4. Haga clic en **OK**.
 
 ### <a name="referencing-the-package"></a>Hacer referencia al paquete
 
@@ -763,15 +763,15 @@ En este artículo se explica cómo crear una aplicación de Xamarin.Forms que us
 
 ### <a name="downloads"></a>Descargas
 
-- [Herramientas de línea de comandos (CLI) de NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference#macoslinux)
+- [Herramientas de línea de comandos (CLI) de NuGet](/nuget/tools/nuget-exe-cli-reference#macoslinux)
 - [Visual Studio](https://visualstudio.microsoft.com/vs)
 
 ### <a name="examples"></a>Ejemplos
 
 - [Desarrollo móvil multiplataforma de Hyperlapse con C++](https://blogs.msdn.microsoft.com/vcblog/2015/06/26/hyperlapse-cross-platform-mobile-development-with-visual-c-and-xamarin/)
 - [Microsoft PIX (C++ y Xamarin)](https://devblogs.microsoft.com/xamarin/microsoft-research-ships-intelligent-apps-with-the-power-of-c-and-ai/)
-- [Puerto de ejemplo Mono San Angeles](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk/)
+- [Puerto de ejemplo Mono San Angeles](/samples/xamarin/monodroid-samples/sanangeles-ndk/)
 
-### <a name="further-reading"></a>Información adicional
+### <a name="further-reading"></a>Lecturas adicionales
 
 [Artículos relacionados con el contenido de esta publicación](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin#wrapping-up)

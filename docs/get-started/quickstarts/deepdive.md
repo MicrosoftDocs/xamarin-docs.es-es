@@ -13,14 +13,14 @@ ms.date: 11/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d1670506fa78b39825368fc91d2452a44ddf8f03
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8bfa78ef334829ab228d691368ec44ac71d415ad
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939924"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433512"
 ---
-# <a name="xamarinforms-quickstart-deep-dive"></a>Análisis detallado de inicio rápido de Xamarin.Forms
+# <a name="no-locxamarinforms-quickstart-deep-dive"></a>Análisis detallado de inicio rápido de Xamarin.Forms
 
 En [Inicio rápido de Xamarin.Forms](~/get-started/index.yml) se ha creado la aplicación Notes. En este artículo se revisa lo que se ha compilado para comprender los aspectos fundamentales del funcionamiento de las aplicaciones de Xamarin.Forms.
 
@@ -39,7 +39,7 @@ Los proyectos son:
 - Notes.iOS: este proyecto incluye el código específico de iOS y es el punto de entrada de la aplicación iOS.
 - Notes.UWP: este proyecto incluye el código específico de Plataforma universal de Windows (UWP) y es el punto de entrada de la aplicación para UWP.
 
-## <a name="anatomy-of-a-xamarinforms-application"></a>Anatomía de una aplicación de Xamarin.Forms
+## <a name="anatomy-of-a-no-locxamarinforms-application"></a>Anatomía de una aplicación de Xamarin.Forms
 
 En la captura de pantalla siguiente se muestra el contenido del proyecto de biblioteca de .NET Standard Notes en Visual Studio:
 
@@ -65,7 +65,7 @@ Los proyectos son:
 - Notes.Android: este proyecto incluye el código específico de Android y es el punto de entrada de las aplicaciones Android.
 - Notes.iOS: este proyecto incluye el código específico de iOS y es el punto de entrada de las aplicaciones iOS.
 
-## <a name="anatomy-of-a-xamarinforms-application"></a>Anatomía de una aplicación de Xamarin.Forms
+## <a name="anatomy-of-a-no-locxamarinforms-application"></a>Anatomía de una aplicación de Xamarin.Forms
 
 En la captura de pantalla siguiente se muestra el contenido del proyecto de biblioteca de .NET Standard Notes en Visual Studio para Mac:
 
@@ -540,8 +540,8 @@ También es recomendable el libro de Charles Petzold titulado [_Creación de apl
 - [Enlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Controls Reference](~/xamarin-forms/user-interface/controls/index.md) (Referencia de controles)
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Ejemplos de Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
-- [Getting Started Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms%20get%20started) (Ejemplos de introducción)
+- [Ejemplos de Xamarin.Forms](/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Getting Started Samples](/samples/browse/?products=xamarin&term=Xamarin.Forms%2bget%2bstarted) (Ejemplos de introducción)
 - [Referencia de la API Xamarin.Forms](xref:Xamarin.Forms)
 - [Aprendizaje autoguiado gratuito (vídeo)](https://university.xamarin.com/self-guided/)
 

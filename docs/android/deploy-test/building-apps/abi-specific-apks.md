@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 0520439b89458b7f73a025cd8d6b2cf8fc41dac0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 0a066b9f1c75093257e364070e48f0cfbeb565ce
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76940634"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91455097"
 ---
 # <a name="building-abi-specific-apks"></a>Compilar APK específicos de ABI
 
@@ -157,7 +157,7 @@ Una vez finalizada la tarea de Rake, habrá tres carpetas `bin` con el archivo `
 [![Ubicaciones de las carpetas específicas de la plataforma que contienen xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
 
 > [!NOTE]
-> El proceso de compilación que se describe en esta guía se puede implementar en uno de muchos sistemas de compilación diferentes. Aunque no tenemos un ejemplo ya escrito, también debería ser posible con [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) o [Fake](https://fsharp.github.io/FAKE/).
+> El proceso de compilación que se describe en esta guía se puede implementar en uno de muchos sistemas de compilación diferentes. Aunque no tenemos un ejemplo ya escrito, también debería ser posible con [Powershell](/powershell/) / [psake](https://github.com/psake/psake) o [Fake](https://fsharp.github.io/FAKE/).
 
 ## <a name="summary"></a>Resumen
 
@@ -165,6 +165,6 @@ En esta guía se proporcionan algunas sugerencias con la creación del APK de An
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [OneABIPerAPK (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/oneabiperapk)
+- [OneABIPerAPK (ejemplo)](/samples/xamarin/monodroid-samples/oneabiperapk)
 - [Publicar una aplicación](~/android/deploy-test/publishing/index.md)
 - [Multiple APK Support for Google Play](https://developer.android.com/google/play/publishing/multiple-apks.html) (Compatibilidad con varios APK en Google Play)

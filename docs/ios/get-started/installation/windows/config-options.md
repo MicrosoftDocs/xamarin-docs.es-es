@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/16/2018
-ms.openlocfilehash: c5c819221bc08f1c39bde9b5900c2f9f9889764d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 0f57c10ea263a3dcf882d2cf75a57105e7f7d0d4
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73022530"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434530"
 ---
 # <a name="configuring-visual-studio-for-ios-development"></a>Configuración de Visual Studio para el desarrollo de iOS
 
@@ -27,7 +27,7 @@ Visual Studio 2019 o Visual Studio 2017 deben usar la misma versión de Xamari
 - Si usa la versión preliminar de Visual Studio 2019, seleccione el canal de actualizaciones **Alfa** en Visual Studio para Mac.
 
 > [!NOTE]
-> A partir de [Visual Studio 2017 versión 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), Visual Studio 2017 detecta automáticamente si el host de compilación de Mac usa la misma versión de Xamarin.iOS que Windows. Si hay una discrepancia entre las versiones, Visual Studio 2017 le ofrece instalar la versión correcta de forma remota en el host de compilación de Mac. Para obtener más información, eche un vistazo a la sección [Aprovisionamiento automático de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning) de la guía [Emparejar con Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+> A partir de [Visual Studio 2017 versión 15.6](/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), Visual Studio 2017 detecta automáticamente si el host de compilación de Mac usa la misma versión de Xamarin.iOS que Windows. Si hay una discrepancia entre las versiones, Visual Studio 2017 le ofrece instalar la versión correcta de forma remota en el host de compilación de Mac. Para obtener más información, eche un vistazo a la sección [Aprovisionamiento automático de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning) de la guía [Emparejar con Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 ## <a name="ios-toolbar"></a>Barra de herramientas de iOS
 

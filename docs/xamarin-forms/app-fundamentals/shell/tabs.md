@@ -10,12 +10,12 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9ecdc3aca3264b52163d35e29659f434f521147f
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 59c7435273d7c01f93ef0bbfb0240e3917f8b716
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918619"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563021"
 ---
 # <a name="no-locxamarinforms-shell-tabs"></a>Pestañas de Xamarin.Forms Shell
 
@@ -301,6 +301,6 @@ Además, también se puede aplicar estilo a las pestañas mediante Hojas de esti
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Xaminals (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xaminals (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Navegación de ShellXamarin.Forms](navigation.md)
 - [Propiedades específicas de Xamarin.Forms CSS Shell](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

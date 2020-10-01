@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 21fd8eff64d374e52e64194524a8c096cdf4d90e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: c07f9099f3b76ed86a235883ce335ce19a426b99
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027038"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457892"
 ---
 # <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>¿Qué controladores USB son necesario para depurar Android en Windows?
 
@@ -26,7 +26,7 @@ Otros dispositivos requieren controladores USB publicados de forma específica p
 
 Según el fabricante, puede resultar difícil rastrear el controlador USB exacto necesario. Algunas alternativas para probar aplicaciones de Android desarrolladas en Windows, incluido el uso de un emulador de Android o de servicios de prueba externos. Algunas de ellas son:
 
-- [Prueba de App Center](https://docs.microsoft.com/appcenter/test-cloud/): los servicios de pruebas en la nube se ejecutan en cientos de dispositivos Android reales.
+- [Prueba de App Center](/appcenter/test-cloud/): los servicios de pruebas en la nube se ejecutan en cientos de dispositivos Android reales.
 
 - [Emulador de Visual Studio para Android](https://visualstudio.microsoft.com/vs/msft-android-emulator/)
 

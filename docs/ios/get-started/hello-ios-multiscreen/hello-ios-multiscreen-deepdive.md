@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 8a9a38c24af3e14cd6930cbb27717ba184dd0235
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 3020bb588f79ce4faf471488c116516402642b73
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996414"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437279"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Análisis detallado de Hello, iOS Multiscreen
 
@@ -203,6 +203,6 @@ A continuación vamos a aprender a crear aplicaciones multiplataforma con Xamari
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Hola, iOS (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Hola, iOS (ejemplo)](/samples/xamarin/ios-samples/hello-ios)
 - [Directrices de la interfaz humana de iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portal de aprovisionamiento de iOS](https://developer.apple.com/ios/manage/overview/index.action)

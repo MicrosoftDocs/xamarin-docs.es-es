@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: b937cc653275f509b7f759af5c3d995e84381cb2
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 94bb87e10b8cab2a9a37c7701b59d621f6329b8d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997350"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436180"
 ---
 # <a name="hello-ios-multiscreen--quickstart"></a>Inicio rápido de Hello, iOS Multiscreen
 
@@ -26,7 +26,7 @@ En el [análisis detallado incluido](~/ios/get-started/hello-ios-multiscreen/hel
 
 ## <a name="requirements"></a>Requisitos
 
-Este guía parte del punto en que se quedó el documento Hello, iOS, y es necesario completar el [Inicio rápido de Hello, iOS](~/ios/get-started/hello-ios/index.md). Descargue la versión completa de la aplicación Phoneword desde el [Ejemplo de Hello, iOS](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios).
+Este guía parte del punto en que se quedó el documento Hello, iOS, y es necesario completar el [Inicio rápido de Hello, iOS](~/ios/get-started/hello-ios/index.md). Descargue la versión completa de la aplicación Phoneword desde el [Ejemplo de Hello, iOS](/samples/xamarin/ios-samples/hello-ios).
 
 ::: zone pivot="macos"
 
@@ -34,7 +34,7 @@ Este guía parte del punto en que se quedó el documento Hello, iOS, y es necesa
 
 En este tutorial se agregará una pantalla Historial de llamadas a nuestra aplicación **Phoneword**.
 
-1. Abra la aplicación **Phoneword** en Visual Studio para Mac. Si es necesario, la aplicación completa de Phoneword de la guía [Tutorial de Hello, iOS](~/ios/get-started/hello-ios/index.md) puede descargarse [aquí](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios).
+1. Abra la aplicación **Phoneword** en Visual Studio para Mac. Si es necesario, la aplicación completa de Phoneword de la guía [Tutorial de Hello, iOS](~/ios/get-started/hello-ios/index.md) puede descargarse [aquí](/samples/xamarin/ios-samples/hello-ios).
 
 2. Abra el archivo **Main.storyboard** desde el **Panel de solución**:
 
@@ -275,7 +275,7 @@ Enhorabuena por completar su primera aplicación multipantalla de Xamarin.iOS.
 
 En este tutorial se agregará una pantalla Historial de llamadas a nuestra aplicación **Phoneword**.
 
-1. Abra la aplicación **Phoneword** en Visual Studio. Si es necesario, descargue la [aplicación completa de Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) de la guía [Tutorial de Hello, iOS](~/ios/get-started/hello-ios/index.md). Recuerde que es necesario conectarse a un equipo [Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para utilizar el Diseñador de iOS y el Simulador de iOS.
+1. Abra la aplicación **Phoneword** en Visual Studio. Si es necesario, descargue la [aplicación completa de Phoneword](/samples/xamarin/ios-samples/hello-ios) de la guía [Tutorial de Hello, iOS](~/ios/get-started/hello-ios/index.md). Recuerde que es necesario conectarse a un equipo [Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para utilizar el Diseñador de iOS y el Simulador de iOS.
 
 2. Empiece por editar la interfaz de usuario. Abra el archivo **Main.storyboard** desde el **Explorador de soluciones** y asegúrese de establecer **Ver como** en _iPhone 6_:
 
@@ -517,6 +517,6 @@ La aplicación ahora puede controlar la navegación con ambos objetos Segue de g
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Hola, iOS (ejemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Hola, iOS (ejemplo)](/samples/xamarin/ios-samples/hello-ios)
 - [Directrices de la interfaz humana de iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portal de aprovisionamiento de iOS](https://developer.apple.com/ios/manage/overview/index.action)

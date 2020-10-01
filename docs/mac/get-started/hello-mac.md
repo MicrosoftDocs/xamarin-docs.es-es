@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 09/02/2018
-ms.openlocfilehash: fe052fee9bd72164ce0d739f01cc1c21a9517cc6
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 49a4597aec37c1a9be550f62f4f97dd8fe7def08
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997168"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430626"
 ---
 # <a name="hello-mac-walkthrough"></a>Tutorial Hello, Mac
 
@@ -39,7 +39,7 @@ El desarrollo de aplicaciones de Xamarin.Mac requiere:
 
 - Un equipo Mac con macOS High Sierra (10.13) o posterior.
 - [Xcode 10 o posterior](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
-- La última versión de [Xamarin.Mac y Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation/).
+- La última versión de [Xamarin.Mac y Visual Studio para Mac](/visualstudio/mac/installation/).
 
 Para ejecutar una aplicación compilada con Xamarin.Mac, necesitará:
 
@@ -579,9 +579,9 @@ Una vez aprendidos los conceptos básicos del trabajo con una aplicación de Xam
 - [Collection Views](~/mac/user-interface/collection-view.md) (Vistas de colección): en este artículo, se explica cómo trabajar con vistas de colección en una aplicación de Xamarin.Mac. En él, se describe cómo crear y mantener vistas de colección en Interface Builder y Xcode, cómo exponer los elementos de la vista de colección al código mediante salidas y acciones, rellenar vistas de colección y finalmente responder a las vistas de colección en código de C#.
 - [Working with Images](~/mac/app-fundamentals/image.md) (Trabajar con imágenes): en este artículo, se explica cómo trabajar con imágenes e iconos en una aplicación de Xamarin.Mac. En él, se describe cómo crear y mantener las imágenes necesarias para crear el icono de una aplicación y usar imágenes tanto en código de C# como en Interface Builder de Xcode.
 
-La [galería de ejemplos de Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac) contiene ejemplos de código listos para usar para ayudar a obtener información de Xamarin.Mac.
+La [galería de ejemplos de Mac](/samples/browse/?products=xamarin&term=Xamarin.Mac) contiene ejemplos de código listos para usar para ayudar a obtener información de Xamarin.Mac.
 
-Una aplicación de Xamarin.Mac completa que incluye muchas de las características que un usuario esperaría encontrar en una aplicación típica de Mac es la [aplicación de ejemplo de SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter es un editor de código fuente simple que proporciona compatibilidad con la finalización de código y el resaltado de sintaxis simple.
+Una aplicación de Xamarin.Mac completa que incluye muchas de las características que un usuario esperaría encontrar en una aplicación típica de Mac es la [aplicación de ejemplo de SourceWriter](/samples/xamarin/mac-samples/sourcewriter). SourceWriter es un editor de código fuente simple que proporciona compatibilidad con la finalización de código y el resaltado de sintaxis simple.
 
 El código de SourceWriter se ha comentado completamente y, si están disponibles, se han proporcionado vínculos de métodos o tecnologías clave a información relevante en la documentación de Xamarin.Mac.
 
@@ -591,5 +591,5 @@ En este artículo, se han tratado los conceptos básicos de una aplicación est�
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de Hello, Mac (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac)
+- [Ejemplo de Hello, Mac (ejemplo)](/samples/xamarin/mac-samples/hello-mac)
 - [Directrices de la interfaz humana de macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

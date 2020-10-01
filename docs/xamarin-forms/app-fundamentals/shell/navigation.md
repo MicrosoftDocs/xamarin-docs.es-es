@@ -1,6 +1,6 @@
 ---
-title: 'title: "Xamarin.Forms: Navegación de shell" description: "Xamarin.Forms: Las aplicaciones de shell pueden usar una experiencia de navegación basada en el URI que permite desplazarse a cualquier página de la aplicación, sin necesidad de seguir una jerarquía de navegación establecida."'
-description: 'ms.prod: xamarin ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/02/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Navegación en Xamarin.Forms Shell
+description: Las aplicaciones de Xamarin.Forms Shell pueden usar una experiencia de navegación basada en el URI que permite desplazarse a cualquier página de la aplicación, sin tener que seguir una jerarquía de navegación establecida.
 ms.prod: xamarin
 ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 04/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e67d49f300a8a98ec5685c33abf98f5b2ded08ed
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 6cf4932c3265d1d66200ae12ba448a758586f11c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84132397"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563151"
 ---
-# <a name="xamarinforms-shell-navigation"></a>Navegación en Xamarin.Forms Shell
+# <a name="no-locxamarinforms-shell-navigation"></a>Navegación en Xamarin.Forms Shell
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
@@ -372,4 +372,4 @@ La propiedad `Command` se establece en `ICommand` para ejecutarse cuando se pres
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Xaminals (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xaminals (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

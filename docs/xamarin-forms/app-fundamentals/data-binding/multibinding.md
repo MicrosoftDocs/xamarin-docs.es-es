@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/18/2020
-ms.openlocfilehash: 0aafe01fcbde6cf1aacf3e2dd47444d4b77021e2
-ms.sourcegitcommit: 79ba3deb031c8a60d0841bb3dbeaaf65daf2b224
+ms.openlocfilehash: 0c10e73d8d6c2dcafacbb069eaf905a227030b87
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85846377"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557535"
 ---
 # <a name="xamarinforms-multi-bindings"></a>Enlaces múltiples de Xamarin.Forms
 
@@ -273,7 +273,7 @@ Para más información sobre los enlaces relativos, consulte [Enlaces relativos 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
+- [Data Binding Demos (sample)](/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
 - [Formato de cadena de Xamarin.Forms](string-formatting.md)
 - [Reservas de enlace de Xamarin.Forms](binding-fallbacks.md)
 - [Enlaces relativos de Xamarin.Forms](relative-bindings.md)

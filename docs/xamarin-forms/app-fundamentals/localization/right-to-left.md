@@ -11,12 +11,12 @@ ms.date: 05/07/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 212674472706a36c66436a3955ab7b988f8e246b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: fe27c00752723ac34d614c510f1305b197933715
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137558"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558172"
 ---
 # <a name="right-to-left-localization"></a>Localización de derecha a izquierda
 
@@ -77,7 +77,7 @@ La configuración regional de derecha a izquierda necesaria debe agregarse como 
 
 ![Idiomas compatibles de Info.plist](rtl-images/ios-locales.png "Idiomas compatibles de Info.plist")
 
-Para obtener más información, consulte [Localization Basics in iOS](https://docs.microsoft.com/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios) (Introducción a la localización en iOS).
+Para obtener más información, consulte [Localization Basics in iOS](../../../ios/app-fundamentals/localization/index.md#localization-basics-in-ios) (Introducción a la localización en iOS).
 
 A continuación, se puede probar la localización de derecha a izquierda cambiando el idioma y la región del dispositivo o el simulador a una configuración regional de derecha a izquierda que se haya especificado en **Info.plist**.
 
@@ -197,4 +197,4 @@ Este enfoque es útil para las aplicaciones que siempre requieren un diseño de 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Aplicación de ejemplo TodoLocalizedRTL](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)
+- [Aplicación de ejemplo TodoLocalizedRTL](/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)

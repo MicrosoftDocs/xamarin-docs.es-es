@@ -1,5 +1,5 @@
 ---
-title: Android Speech
+title: Voz de Android
 description: En este artículo se tratan los aspectos básicos del uso del espacio de nombres de Android.Speech muy eficaz. Desde su inicio, Android ha podido reconocer la voz y representarla como texto. Se trata de un proceso relativamente sencillo. En el caso de texto a voz, sin embargo, el proceso es más complicado, ya que no solo es necesario tener en cuenta el motor de voz, sino también los idiomas disponibles e instalados desde el sistema de texto a voz (TTS).
 ms.prod: xamarin
 ms.assetid: FA3B8EC4-34D2-47E3-ACEA-BD34B28115B9
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/02/2018
-ms.openlocfilehash: e8c7d1a4fb3537644ed3b7737158a5e50abcdae5
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ce94179fe0ae7f3df1f2fa5ead20ec09fd6f8f5e
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73019768"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457918"
 ---
-# <a name="android-speech"></a>Android Speech
+# <a name="android-speech"></a>Voz de Android
 
 _En este artículo se tratan los aspectos básicos del uso del espacio de nombres de Android.Speech muy eficaz. Desde su inicio, Android ha podido reconocer la voz y representarla como texto. Se trata de un proceso relativamente sencillo. En el caso de texto a voz, sin embargo, el proceso es más complicado, ya que no solo es necesario tener en cuenta el motor de voz, sino también los idiomas disponibles e instalados desde el sistema de texto a voz (TTS)._
 
@@ -47,7 +47,7 @@ Sin inflexión (énfasis en palabras específicas o partes de palabras), se trat
 
 Sin un procesamiento de audio bastante eficaz para hacer uso de la inflexión y un grado de inteligencia artificial (AI) para comprender el contexto, el software no puede siquiera empezar a comprender lo que se dijo; lo más sencillo que un teléfono puede hacer es convertir la voz a texto.
 
-## <a name="setting-up"></a>Configuración
+## <a name="setting-up"></a>Instalación
 
 Antes de usar el sistema de voz, siempre es aconsejable comprobar para asegurarse de que el dispositivo tiene un micrófono. No tendría mucho sentido tratar de ejecutar la aplicación en un bloc de notas de Kindle o Google sin un micrófono instalado.
 
@@ -123,7 +123,7 @@ protected override void OnActivityResult(int requestCode, Result resultVal, Inte
 }
 ```
 
-## <a name="text-to-speech"></a>Texto a voz
+## <a name="text-to-speech"></a>Text to Speech
 
 Texto a voz no es suficiente para convertir la voz en texto y se basa en dos componentes clave: un motor de texto a voz instalado en el dispositivo y un idioma que se está instalando.
 
@@ -231,8 +231,8 @@ En esta guía hemos analizado los aspectos básicos de la conversión de texto a
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [DependencyService de Xamarin.Forms](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice//)
-- [Texto a voz (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-texttospeech)
-- [Voz a texto (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-speechtotext)
+- [Xamarin.Forms DependencyService](/samples/xamarin/xamarin-forms-samples/dependencyservice//)
+- [Texto a voz (ejemplo)](/samples/xamarin/monodroid-samples/platformfeatures-texttospeech)
+- [Voz a texto (ejemplo)](/samples/xamarin/monodroid-samples/platformfeatures-speechtotext)
 - [Espacio de nombres Android.Speech](xref:Android.Speech)
 - [Espacio de nombres Android.Speech.Tts](xref:Android.Speech.Tts)

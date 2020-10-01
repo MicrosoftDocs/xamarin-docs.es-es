@@ -1,6 +1,6 @@
 ---
-title: 'title: "Xamarin.Forms: Enlaces relativos" description: "En este artículo se explica cómo crear enlaces relativos mediante el uso de la extensión de marcado RelativeSource para establecer el origen de enlace en relación con la posición del destino de enlace."'
-description: 'ms.prod: xamarin ms.assetid: CC64BB1D-8303-46B1-94B6-4EF2F20317A8 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/04/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Enlaces relativos de Xamarin.Forms
+description: En este artículo se explica cómo crear enlaces relativos mediante el uso de la extensión de marcado RelativeSource para establecer el origen de enlace en relación con la posición del destino de enlace.
 ms.prod: xamarin
 ms.assetid: CC64BB1D-8303-46B1-94B6-4EF2F20317A8
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 12/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8d4e2696e6027f07b7b8e638cd1e0f1d65a5503d
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 24fa816519b05b46c38015fa602a4e70fbc07d16
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84139716"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560395"
 ---
-# <a name="xamarinforms-relative-bindings"></a>Enlaces relativos de Xamarin.Forms
+# <a name="no-locxamarinforms-relative-bindings"></a>Enlaces relativos de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -186,6 +186,6 @@ Para obtener más información sobre las plantillas de control, consulte [Planti
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
+- [Data Binding Demos (sample)](/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Plantillas de control de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/control-template.md)

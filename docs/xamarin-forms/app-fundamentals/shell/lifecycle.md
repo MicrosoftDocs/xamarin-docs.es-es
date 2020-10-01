@@ -1,6 +1,6 @@
 ---
-title: 'title: "Xamarin.Forms: Ciclo de vida del shell" description: "Las aplicaciones del shell respetan el ciclo de vida de Xamarin.Forms; se genera un evento Appearing si una página está a punto de aparecer en la pantalla y un evento Disappearing si una página está a punto de desaparecer de la pantalla."'
-description: 'ms.prod: xamarin ms.assetid: 4E4EE50E-3BB4-441D-8355-CD9CD26ED1D0 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 07/25/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Ciclo de vida de Xamarin.Forms Shell
+description: Las aplicaciones del shell respetan el ciclo de vida de Xamarin.Forms; se genera un evento Appearing si una página está a punto de aparecer en la pantalla y se genera un evento Disappearing si una página está a punto de desaparecer de la pantalla.
 ms.prod: xamarin
 ms.assetid: 4E4EE50E-3BB4-441D-8355-CD9CD26ED1D0
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 07/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3a7a46187d861098b61f638a3fb460d890b081dd
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 1b2abf7925eabb79b1918a9b9fedb0ba7ecced38
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84138728"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563164"
 ---
-# <a name="xamarinforms-shell-lifecycle"></a>Ciclo de vida de Xamarin.Forms Shell
+# <a name="no-locxamarinforms-shell-lifecycle"></a>Ciclo de vida de Xamarin.Forms Shell
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
@@ -42,6 +42,6 @@ Para obtener más información sobre la navegación modal, consulte [Páginas mo
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Xaminals (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xaminals (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Ciclo de vida de la aplicación de Xamarin.Forms](~/xamarin-forms/app-fundamentals/app-lifecycle.md)
 - [Páginas modales de Xamarin.Forms](~/xamarin-forms/app-fundamentals/navigation/modal.md)

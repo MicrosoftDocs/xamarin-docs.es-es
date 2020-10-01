@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 9e36189c771ed0c91a6030fd0ab615ab9af4dd52
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 27631d19ea157c1af08666b55a067e729b806434
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73026718"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453641"
 ---
 # <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>¿Qué versión de Xamarin.Android agrega compatibilidad con Lollipop?
 
@@ -22,7 +22,7 @@ ms.locfileid: "73026718"
 - [Xamarin.Android 4.17](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.17/index.md) agrega compatibilidad con la versión preliminar de Android L.
 - [Xamarin.Android 4.20](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.20/index.md) agrega compatibilidad con la versión preliminar de Android L.
 
-Xamarin solo admite activamente la versión estable actual de las herramientas de Xamarin. La siguiente información se proporciona "tal cual" para las versiones anteriores de las herramientas. Para obtener la información más reciente sobre las versiones de Xamarin, consulte las [notas de la versión](https://docs.microsoft.com/xamarin/whats-new/#product-release-notes).
+Xamarin solo admite activamente la versión estable actual de las herramientas de Xamarin. La siguiente información se proporciona "tal cual" para las versiones anteriores de las herramientas. Para obtener la información más reciente sobre las versiones de Xamarin, consulte las [notas de la versión](/xamarin/android/release-notes/).
 
 ## <a name="missing-androidjar-for-api-level-21-in-android-l-preview"></a>"Falta android.jar para el nivel de API 21" en la versión preliminar de Android L
 

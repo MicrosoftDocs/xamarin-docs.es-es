@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: b7d69e99327aa3d3e3e1f5e5dbc61697d1fb9b71
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 1b24648f70041abb092c93f41e999b68e8f26a26
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75489172"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453264"
 ---
 # <a name="using-native-libraries"></a>Uso de bibliotecas nativas
 
@@ -52,9 +52,9 @@ Para depurar código nativo de C++ en el proyecto, siga estos pasos:
 2. Desplácese hacia abajo hasta **Opciones de depuración**.
 3. En el menú desplegable del **Depurador**, seleccione **C++** (en lugar del predeterminado **.NET [Xamarin]** ).
 
-Para más información, los desarrolladores de C++ para Visual Studio pueden ver el ejemplo [SanAngeles_NativeDebug](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk) para intentar depurar C++ desde Visual Studio 2019 o Visual Studio 2017 con Xamarin y consultar nuestra [entrada de blog](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/).
+Para más información, los desarrolladores de C++ para Visual Studio pueden ver el ejemplo [SanAngeles_NativeDebug](/samples/xamarin/monodroid-samples/sanangeles-ndk) para intentar depurar C++ desde Visual Studio 2019 o Visual Studio 2017 con Xamarin y consultar nuestra [entrada de blog](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [SanAngeles_NativeDebug (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk)
+- [SanAngeles_NativeDebug (ejemplo)](/samples/xamarin/monodroid-samples/sanangeles-ndk)
 - [Desarrollo de aplicaciones nativas de Xamarin Android](https://blogs.msdn.microsoft.com/vcblog/2015/02/23/developing-xamarin-android-native-applications/)

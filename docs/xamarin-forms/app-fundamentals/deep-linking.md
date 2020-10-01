@@ -11,12 +11,12 @@ ms.date: 11/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d2bd0bf696e652e95e0feb88cca7cf685b14433b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 5c5d95c3d326961db9d56631a0d7190d64ede72a
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936505"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556066"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexación de la aplicación y vinculación en profundidad
 
@@ -251,7 +251,7 @@ En este artículo se explica cómo usar la indexación de la aplicación y la vi
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Muestra de vinculación en profundidad](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
+- [Muestra de vinculación en profundidad](/samples/xamarin/xamarin-forms-samples/deeplinking)
 - [API de búsqueda iOS](~/ios/platform/search/index.md)
 - [Vinculación de aplicaciones en Android 6.0](~/android/platform/app-linking.md)
 - [AppLinkEntry](xref:Xamarin.Forms.AppLinkEntry)

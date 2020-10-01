@@ -12,14 +12,14 @@ ms.date: 02/07/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 05560ae7c3d255140c0782e5f442dd2356d86cad
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9794f429744611654ce883b48aa828b997ec881f
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937428"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435443"
 ---
-# <a name="style-a-cross-platform-xamarinforms-application"></a>Estilo de una aplicación de Xamarin.Forms multiplataforma
+# <a name="style-a-cross-platform-no-locxamarinforms-application"></a>Estilo de una aplicación de Xamarin.Forms multiplataforma
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
 
@@ -34,7 +34,7 @@ En el inicio rápido se describe cómo aplicar estilo a una aplicación Xamarin.
 
 ### <a name="prerequisites"></a>Requisitos previos
 
-Antes de intentar este inicio rápido, debe completar correctamente el [inicio rápido](database.md) anterior. También puede descargar el [ejemplo del inicio rápido anterior](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/) y usarlo como punto de partida para este.
+Antes de intentar este inicio rápido, debe completar correctamente el [inicio rápido](database.md) anterior. También puede descargar el [ejemplo del inicio rápido anterior](/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/) y usarlo como punto de partida para este.
 
 ::: zone pivot="windows"
 
@@ -326,5 +326,5 @@ Para obtener más información sobre los aspectos básicos del desarrollo de apl
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Notes (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
+- [Notes (ejemplo)](/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
 - [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md)

@@ -10,14 +10,14 @@ ms.date: 10/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fc3776934a4c109b2527132b11c6c6a93b7d9f9e
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 47b459945aec4ef8f1c3fa9729efd82461aec0e0
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138864"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561968"
 ---
-# <a name="xamarinforms-reusable-roundeffect"></a>RoundEffect reutilizable de Xamarin.Forms
+# <a name="no-locxamarinforms-reusable-roundeffect"></a>RoundEffect reutilizable de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
 
@@ -224,6 +224,6 @@ La clase `RoundEffect` se puede aplicar a cualquier control que se derive de `Vi
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Aplicación de ejemplo de RoundEffect](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
+- [Aplicación de ejemplo de RoundEffect](/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
 - [Introducción a los efectos](~/xamarin-forms/app-fundamentals/effects/introduction.md)
 - [Crear un efecto](~/xamarin-forms/app-fundamentals/effects/creating.md)

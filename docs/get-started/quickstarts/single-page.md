@@ -12,14 +12,14 @@ ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cc09f93a8d86b96324435bf63cd3d19b51242ed2
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 96b3e6bd055c0bc89ae7bcbb66c8b3f48b21ad17
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931812"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436234"
 ---
-# <a name="create-a-single-page-xamarinforms-application"></a>Creación de una aplicación de Xamarin.Forms de una página
+# <a name="create-a-single-page-no-locxamarinforms-application"></a>Creación de una aplicación de Xamarin.Forms de una página
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 
@@ -506,5 +506,5 @@ Para convertir esta aplicación de página única en una de varias páginas, con
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Notes (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
+- [Notes (ejemplo)](/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 - [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md)

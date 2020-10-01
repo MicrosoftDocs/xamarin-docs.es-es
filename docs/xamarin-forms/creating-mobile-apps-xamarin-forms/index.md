@@ -10,12 +10,12 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: de85e9108244230e9c0a740b1aa9140ecf92a033
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: af6da36e242ae2d967d795b61d65a38e5e43e22b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997402"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557288"
 ---
 # <a name="creating-mobile-apps-with-no-locxamarinforms-book"></a>Creación de aplicaciones móviles con el libro de Xamarin.Forms
 
@@ -88,7 +88,7 @@ Estos resúmenes también indican que el material del capítulo podría estar [u
 
 ## <a name="ways-in-which-the-book-is-outdated"></a>Por qué el libro está obsoleto
 
-Desde la publicación de *Creación de aplicaciones móviles con Xamarin.Forms* , se han agregado varias características nuevas a Xamarin.Forms. Estas nuevas características se describen en los artículos individuales de la documentación de [Xamarin.Forms](/xamarin/).
+Desde la publicación de *Creación de aplicaciones móviles con Xamarin.Forms* , se han agregado varias características nuevas a Xamarin.Forms. Estas nuevas características se describen en los artículos individuales de la documentación de [Xamarin.Forms](../../index.yml).
 
 Otros cambios han provocado que parte del contenido del libro no esté actualizado:
 
@@ -131,5 +131,5 @@ En el repositorio de GitHub [**Xamarin-Forms-Book-samples**](https://github.com/
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Blog de MS Press](https://blogs.msdn.microsoft.com/microsoft_press/2016/03/31/free-ebook-creating-mobile-apps-with-xamarin-forms/)
+- [Blog de MS Press](/archive/blogs/microsoft_press/free-ebook-creating-mobile-apps-with-xamarin-forms)
 - [Código de ejemplo del libro](https://github.com/xamarin/xamarin-forms-book-samples)

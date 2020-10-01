@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: ab401c24fc486ba69fe01aff76e1a9b7d53122d0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: da074d5df9033e4a86c4b38ca76d7cb1373ab205
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028030"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91455214"
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: Inicio rápido
 
@@ -535,4 +535,4 @@ Ahora es el momento de analizar las herramientas y los conocimientos que ha apre
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Iconos de aplicación de Xamarin para Android (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
-- [Phoneword (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)
+- [Phoneword (ejemplo)](/samples/xamarin/monodroid-samples/phoneword)

@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: jondouglas
 ms.author: jodou
 ms.date: 02/13/2020
-ms.openlocfilehash: 93336f5a741cf9643288163f2bf1d8ef44ea52d2
-ms.sourcegitcommit: d42dadc6da584953865b1adb616489d91a7b25d0
+ms.openlocfilehash: baeabf2cde7e0aabe3439d698e63636810069705
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86473442"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454616"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>Aceleración de hardware para el rendimiento del emulador (Hyper-V y HAXM)
 
@@ -37,7 +37,7 @@ Aun así, Android Emulator se ejecuta demasiado despacio si la aceleración de h
 Las tecnologías de virtualización siguientes están disponibles para la aceleración de Android Emulator:
 
 1. **Hyper-V y Windows Hypervisor Platform (WHPX) de Microsoft**.
-   [Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/) es una característica de virtualización de Windows que permite ejecutar sistemas de equipos virtualizados en un equipo host físico.
+   [Hyper-V](/virtualization/hyper-v-on-windows/) es una característica de virtualización de Windows que permite ejecutar sistemas de equipos virtualizados en un equipo host físico.
 
 2. **Hardware Accelerated Execution Manager (HAXM) de Intel**.
    HAXM es un motor de virtualización para los equipos que ejecutan CPU de Intel.

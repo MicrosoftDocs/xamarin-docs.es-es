@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/07/2018
-ms.openlocfilehash: 3e57e0cd2fa87db8035fa68995b69f231151fa09
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 7583cfcb4f1a22167b95370f1376aa70d61188a0
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020525"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454057"
 ---
 # <a name="creating-a-custom-contentprovider"></a>Creación de un ContentProvider personalizado
 
@@ -303,4 +303,4 @@ protected void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [SimpleContentProvider (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-simplecontentprovider)
+- [SimpleContentProvider (ejemplo)](/samples/xamarin/monodroid-samples/platformfeatures-simplecontentprovider)

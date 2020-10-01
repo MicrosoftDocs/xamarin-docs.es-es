@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: a5135d9bb481afcaefc851e392196a87b8ef80dd
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 8d4b60a2e8e53b5b3f97a781b7f1888239541f1a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997207"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431871"
 ---
 # <a name="debugging-xamarinios-apps"></a>Depurar aplicaciones Xamarin.iOS
 
@@ -126,7 +126,7 @@ Seleccione **Condiciones...** para mostrar el menú _Configuración de punto de 
 
 Aquí podrá escribir la condición bajo la que desea que se produzca el punto de interrupción
 
-Para obtener más información sobre el uso de condiciones de punto de interrupción en las versiones anteriores de Visual Studio, consulte la [Documentación de Visual Studio](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints) sobre este tema.
+Para obtener más información sobre el uso de condiciones de punto de interrupción en las versiones anteriores de Visual Studio, consulte la [Documentación de Visual Studio](/visualstudio/debugger/using-breakpoints) sobre este tema.
 
 -----
 
@@ -160,7 +160,7 @@ Estos son:
 - **Depurar paso a paso con instrucciones(F10)** : esto también ejecutará la siguiente línea de código. Si la siguiente línea es una llamada de función, Depurar paso a paso con instrucciones se detendrá en la primera línea de la función, lo que le permitirá continuar con la depuración línea por línea de la función. Si la línea siguiente no es una función, se comportará igual Paso a paso por procedimientos.
 - **Paso a paso para salir (MAYÚS + F11)** : volverá a la línea donde se llamó la función actual.
 
-Para acceder a documentación más exhaustiva sobre la depuración, vea [Navegar por el código con el depurador de Visual Studio](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger).
+Para acceder a documentación más exhaustiva sobre la depuración, vea [Navegar por el código con el depurador de Visual Studio](/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
 -----
 

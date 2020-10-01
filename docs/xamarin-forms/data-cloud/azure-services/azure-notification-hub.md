@@ -11,12 +11,12 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 - Firebase
-ms.openlocfilehash: 5a069595aa12852a4a861de9bac52eebd7247e48
-ms.sourcegitcommit: 14d67a2db82e67471584b1749e0d5b9ec0c0c09b
+ms.openlocfilehash: 721785fe2eeb35f0ef04d1a7854afe4039a66849
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88228630"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561838"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-no-locxamarinforms"></a>Envío y recepción de notificaciones push con Azure Notification Hubs y Xamarin.Forms
 
@@ -279,7 +279,7 @@ Los mensajes entrantes se convierten en una notificación local con el método `
 La notificación local y el ejemplo `Intent` requieren que el usuario realice la acción de pulsar en la notificación. Esto es deseable si el usuario debe realizar una acción antes de que cambie el estado de la aplicación. Aunque en algunos casos puede que quiera acceder a los datos del mensaje sin necesidad de una acción del usuario. En el ejemplo anterior también se envía el mensaje directamente a la instancia actual de `MainPage` con el método `SendMessageToMainPage`. En producción, si implementa ambos métodos para un solo tipo de mensaje, el objeto `MainPage` obtiene mensajes duplicados si el usuario pulsa la notificación.
 
 > [!NOTE]
-> La aplicación Android solo recibe notificaciones push si se ejecuta en primer o en segundo plano. Para recibir notificaciones push cuando el elemento `Activity` principal no se esté ejecutando, debe implementar un servicio que esté fuera del ámbito de este ejemplo. Para obtener más información, vea [Creación de servicios de Android](/xamarin/android/app-fundamentals/services/).
+> La aplicación Android solo recibe notificaciones push si se ejecuta en primer o en segundo plano. Para recibir notificaciones push cuando el elemento `Activity` principal no se esté ejecutando, debe implementar un servicio que esté fuera del ámbito de este ejemplo. Para obtener más información, vea [Creación de servicios de Android](../../../android/app-fundamentals/services/index.md).
 
 ### <a name="add-incoming-notifications-to-the-no-locxamarinforms-ui"></a>Adición de notificaciones entrantes a la interfaz de usuario de Xamarin.Forms
 

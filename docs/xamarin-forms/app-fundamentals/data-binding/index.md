@@ -10,14 +10,14 @@ ms.date: 05/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9abbe60865cbf5fb9082b5f4882c27fe095b36ac
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 88b2bd5a0fe6720a4e14e6327715690bfd74a185
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946460"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556807"
 ---
-# <a name="xamarinforms-data-binding"></a>Enlace de datos de Xamarin.Forms
+# <a name="no-locxamarinforms-data-binding"></a>Enlace de datos de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -38,7 +38,7 @@ Uno de los dos objetos implicados en un enlace de datos es casi siempre un eleme
 - Otro derivado de `View`, normalmente en la misma página.
 - Un objeto en un archivo de código.
 
-En los programas de demo, como los del ejemplo [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos), los enlaces de datos entre dos derivados de `View` a menudo se muestran con fines de claridad y simplicidad. Pero se pueden aplicar los mismos principios a los enlaces de datos entre un `View` y otros objetos. Cuando se compila una aplicación con la arquitectura Model-View-ViewModel (MVVM), la clase con los datos subyacentes a menudo se denomina ViewModel.
+En los programas de demo, como los del ejemplo [**DataBindingDemos**](/samples/xamarin/xamarin-forms-samples/databindingdemos), los enlaces de datos entre dos derivados de `View` a menudo se muestran con fines de claridad y simplicidad. Pero se pueden aplicar los mismos principios a los enlaces de datos entre un `View` y otros objetos. Cuando se compila una aplicación con la arquitectura Model-View-ViewModel (MVVM), la clase con los datos subyacentes a menudo se denomina ViewModel.
 
 En los siguientes artículos se abordan los enlaces de datos:
 
@@ -84,6 +84,6 @@ Use enlaces compilados para mejorar el rendimiento del enlace de datos.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
+- [Data Binding Demos (sample)](/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
 - [Capítulo sobre el enlace de datos del libro Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/markup-extensions/index.md)

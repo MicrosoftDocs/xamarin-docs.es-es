@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/16/2019
-ms.openlocfilehash: 76696c094634c90fc0f9d445b932e04f53bc87c7
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 9754018d48a64c3f3df27f3c0979939ee3cbfee3
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73022523"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435408"
 ---
 # <a name="xamarinios-installation"></a>Instalación de Xamarin.iOS
 
-## <a name="required-components"></a>Componentes obligatorios
+## <a name="required-components"></a>Componentes necesarios
 
 Para compilar para Xamarin.iOS, se requiere lo siguiente:
 
@@ -33,7 +33,7 @@ La última versión de Xcode se puede descargar desde el [Centro para desarrolla
 
 ## <a name="mac-installation"></a>Instalación para Mac
 
-Para obtener instrucciones acerca de cómo instalar Xamarin.iOS en un equipo Mac, consulte la guía [Instalación en un equipo Mac](https://docs.microsoft.com/visualstudio/mac/installation).
+Para obtener instrucciones acerca de cómo instalar Xamarin.iOS en un equipo Mac, consulte la guía [Instalación en un equipo Mac](/visualstudio/mac/installation).
 
 ## <a name="windows-installation"></a>Instalación en el equipo Windows
 

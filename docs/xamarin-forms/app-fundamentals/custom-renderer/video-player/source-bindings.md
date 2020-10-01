@@ -10,18 +10,18 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c02764d6160bb8ce2481a3cf67e357933d25934f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d417f5e0b2b0bea5a3e129c87e94b289dc7201ed
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133736"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562488"
 ---
 # <a name="binding-video-sources-to-the-player"></a>Enlazar orígenes de vídeo con el reproductor
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
-Cuando la propiedad `Source` de la vista `VideoPlayer` se establece en un nuevo archivo de vídeo, el vídeo existente deja de reproducirse y se inicia el nuevo vídeo. Esto se demuestra mediante la página **Seleccionar vídeo web** del ejemplo [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos). En esta página, se incluye un elemento `ListView` con los títulos de los tres vídeos a los que se hace referencia en el archivo **App.xaml**:
+Cuando la propiedad `Source` de la vista `VideoPlayer` se establece en un nuevo archivo de vídeo, el vídeo existente deja de reproducirse y se inicia el nuevo vídeo. Esto se demuestra mediante la página **Seleccionar vídeo web** del ejemplo [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos). En esta página, se incluye un elemento `ListView` con los títulos de los tres vídeos a los que se hace referencia en el archivo **App.xaml**:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -144,4 +144,4 @@ Como con la primera página **Seleccionar vídeo web**, de manera inicial no se 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de reproductor de vídeo (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [Demostraciones de reproductor de vídeo (ejemplo)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

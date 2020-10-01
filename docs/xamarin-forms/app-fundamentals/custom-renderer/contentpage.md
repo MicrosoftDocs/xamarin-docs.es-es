@@ -10,12 +10,12 @@ ms.date: 11/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: adbceca38fca2cbe65c739f0d7fe26f18bdf5450
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 4d9749c110019f2cf711c1df56196d3296223641
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939859"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557977"
 ---
 # <a name="customizing-a-contentpage"></a>Personalización de una página de contenido
 
@@ -37,7 +37,7 @@ El proceso de representación puede aprovecharse para implementar las personaliz
 
 Ahora se analizará en detalle cada elemento, para implementar un `CameraPage` que proporciona una fuente de la cámara en vivo y la capacidad de capturar una foto.
 
-## <a name="creating-the-xamarinforms-page"></a>Creación de la página Xamarin.Forms
+## <a name="creating-the-no-locxamarinforms-page"></a>Creación de la página Xamarin.Forms
 
 Puede agregarse una [`ContentPage`](xref:Xamarin.Forms.ContentPage) sin modificar al proyecto de Xamarin.Forms compartido, como se muestra en el siguiente ejemplo de código XAML:
 
@@ -76,7 +76,7 @@ public class CameraPageCS : ContentPage
 
 Una instancia de la `CameraPage` se usará para mostrar la fuente de la cámara en directo en cada plataforma. La personalización del control se llevará a cabo en el representador personalizado, por lo que no se requiere ninguna implementación adicional en la clase `CameraPage`.
 
-## <a name="consuming-the-xamarinforms-page"></a>Consumo de la página de Xamarin.Forms
+## <a name="consuming-the-no-locxamarinforms-page"></a>Consumo de la página de Xamarin.Forms
 
 La aplicación de Xamarin.Forms debe mostrar la `CameraPage` vacía. Esto se produce cuando se pulsa un botón en la instancia de `MainPage`, lo que a su vez ejecuta el método `OnTakePhotoButtonClicked`, como se muestra en el siguiente ejemplo de código:
 
@@ -196,7 +196,7 @@ namespace CustomRenderer.Droid
 
 La llamada al método de la clase base `OnElementChanged` crea una instancia de un control `ViewGroup` de Android, que es un grupo de vistas. Solo se procesa la secuencia en directo de cámara si el representador aún no está unido a un elemento existente de Xamarin.Forms, y siempre que exista una instancia de la página que se representa mediante el representador personalizado.
 
-Después se personaliza la página mediante la invocación de una serie de métodos que usan la API de `Camera` para proporcionar la secuencia en directo desde la cámara y la capacidad de capturar una foto, antes de que se invoque al método `AddView` para agregar la interfaz de usuario de la transmisión de cámara en vivo al `ViewGroup`. Tenga en cuenta que en Android también es necesario reemplazar el método `OnLayout` para realizar operaciones de medida y de diseño en la vista. Para obtener más información, vea el [ejemplo de representador de ContentPage](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage).
+Después se personaliza la página mediante la invocación de una serie de métodos que usan la API de `Camera` para proporcionar la secuencia en directo desde la cámara y la capacidad de capturar una foto, antes de que se invoque al método `AddView` para agregar la interfaz de usuario de la transmisión de cámara en vivo al `ViewGroup`. Tenga en cuenta que en Android también es necesario reemplazar el método `OnLayout` para realizar operaciones de medida y de diseño en la vista. Para obtener más información, vea el [ejemplo de representador de ContentPage](/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage).
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>Creación del representador de página en UWP
 
@@ -245,7 +245,7 @@ La llamada al método `OnElementChanged` de la clase base crea una instancia de 
 Al implementar un representador personalizado que derive de `PageRenderer` en UWP, el método `ArrangeOverride` también debe implementarse para organizar los controles de página, ya que el representador de base no sabe qué hacer con ellos. En caso contrario, da como resultado una página en blanco. Por lo tanto, en este ejemplo el método `ArrangeOverride` llama al método `Arrange` en la instancia de `Page`.
 
 > [!NOTE]
-> Es importante detener y eliminar los objetos que proporcionan acceso a la cámara en una aplicación de UWP. Si no lo hace puede interferir con otras aplicaciones que intentan acceder a la cámara del dispositivo. Para obtener más información, vea [Display the camera preview](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) (Mostar la vista previa de la cámara).
+> Es importante detener y eliminar los objetos que proporcionan acceso a la cámara en una aplicación de UWP. Si no lo hace puede interferir con otras aplicaciones que intentan acceder a la cámara del dispositivo. Para obtener más información, vea [Display the camera preview](/windows/uwp/audio-video-camera/simple-camera-preview-access) (Mostar la vista previa de la cámara).
 
 ## <a name="summary"></a>Resumen
 
@@ -253,4 +253,4 @@ En este artículo se mostró cómo crear un representador personalizado para la 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [CustomRendererContentPage (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage) (CustomRendererContentPage [ejemplo])
+- [CustomRendererContentPage (sample)](/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage) (CustomRendererContentPage [ejemplo])

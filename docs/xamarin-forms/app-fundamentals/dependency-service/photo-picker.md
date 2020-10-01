@@ -10,12 +10,12 @@ ms.date: 03/06/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9f999d56fbf178be160e91756643c127d574b090
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 083c8b97d158f817dbe98212bc244e8d1cac845c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84197551"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556781"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>Seleccionar una foto de la biblioteca de imágenes
 
@@ -86,7 +86,7 @@ namespace DependencyServiceDemos.iOS
 
 El método `GetImageStreamAsync` crea un elemento `UIImagePickerController` y lo inicializa para seleccionar imágenes desde la biblioteca de fotos. Se necesitan dos controladores de eventos: uno para cuando el usuario seleccione una foto y otro para cuando cancele la visualización de la biblioteca de fotos. Después, el método `PresentViewController` muestra la biblioteca de fotos al usuario.
 
-En este momento, el método `GetImageStreamAsync` tiene que devolver un objeto `Task<Stream>` al código que realiza la llamada. Esta tarea solo se completa cuando el usuario termina de interactuar con la biblioteca de fotos y se llama a uno de los controladores de eventos. Para situaciones como esta, la clase [`TaskCompletionSource`](https://msdn.microsoft.com/library/dd449174(v=vs.110).aspx) es esencial. La clase proporciona un objeto `Task` al tipo genérico adecuado para devolver desde el método `GetImageStreamAsync` y, después, se puede enviar una señal a la clase cuando se complete la tarea.
+En este momento, el método `GetImageStreamAsync` tiene que devolver un objeto `Task<Stream>` al código que realiza la llamada. Esta tarea solo se completa cuando el usuario termina de interactuar con la biblioteca de fotos y se llama a uno de los controladores de eventos. Para situaciones como esta, la clase [`TaskCompletionSource`](/dotnet/api/system.threading.tasks.taskcompletionsource-1) es esencial. La clase proporciona un objeto `Task` al tipo genérico adecuado para devolver desde el método `GetImageStreamAsync` y, después, se puede enviar una señal a la clase cuando se complete la tarea.
 
 Se llama al controlador de eventos `FinishedPickingMedia` cuando el usuario ha seleccionado una imagen. Pero el controlador proporciona un objeto `UIImage` y el elemento `Task` tiene que devolver un objeto `Stream` de .NET. Esto se realiza en dos pasos: Primero, el objeto `UIImage` se convierte a un archivo PNG o JPEG en memoria almacenado en un objeto `NSData` y, después, el objeto `NSData` se convierte a un objeto `Stream` de .NET. Una llamada al método `SetResult` del objeto `TaskCompletionSource` completa la tarea al proporcionar el objeto `Stream`:
 
@@ -297,6 +297,6 @@ async void OnPickPhotoButtonClicked(object sender, EventArgs e)
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [DependencyService (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/) (DependencyService [ejemplo])
+- [DependencyService (sample)](/samples/xamarin/xamarin-forms-samples/dependencyservice/) (DependencyService [ejemplo])
 - [Seleccionar una foto de la galería (iOS)](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery)
 - [Seleccionar una imagen (Android)](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image)

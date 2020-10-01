@@ -10,12 +10,12 @@ ms.date: 07/30/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 821eafab6896d8771ba38332a43c0cbc319797a7
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: a0ec978c1947cde4bd6f7fd619ad8cd2f0dbdbce
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917838"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563047"
 ---
 # <a name="no-locxamarinforms-shell-flyout"></a>Control flotante de Xamarin.Forms Shell
 
@@ -690,7 +690,7 @@ Además, se pueden definir y aplicar clases de estilo personalizadas a objetos `
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Xaminals (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xaminals (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Clases de estilo de Xamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/style-class.md)
 - [Administrador de estado visual de Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md)
 - [Pinceles de Xamarin.Forms](~/xamarin-forms/user-interface/brushes/index.md)

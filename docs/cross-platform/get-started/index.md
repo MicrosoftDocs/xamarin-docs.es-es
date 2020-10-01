@@ -7,12 +7,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 04/10/2017
-ms.openlocfilehash: bc7a5217f3260eb36e45a683b5520347c22641b0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: da3148022f1280a18fd398e7c960c1a8440c0200
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73016385"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456813"
 ---
 # <a name="building-mobile-apps"></a>Creación de aplicaciones móviles
 
@@ -44,7 +44,7 @@ En este artículo, se describe el ciclo de vida de desarrollo de software con re
 
 Si elige Xamarin y tiene en cuenta varios aspectos del diseño y desarrollo de las aplicaciones móviles, podrá compartir gran cantidad de código entre plataformas móviles, reducir el tiempo de comercialización, aprovechar el talento existente, satisfacer la demanda de acceso móvil del cliente y reducir la complejidad multiplataforma. En este documento se describen las instrucciones clave para materializar estas ventajas en aplicaciones de utilidad y productividad.
 
-### <a name="introducing-visual-studio-for-mac"></a>[Presentación de Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/)
+### <a name="introducing-visual-studio-for-mac"></a>[Presentación de Visual Studio para Mac](/visualstudio/mac/)
 
 Más información sobre Visual Studio para Mac, el Entorno de desarrollo integrado (IDE) de macOS.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/23/2018
-ms.openlocfilehash: 746433293c52d7071a3289962ea021f716fd0cfe
-ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
+ms.openlocfilehash: 69c99d6aa132bb5326085f752b9220054e9f3e69
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88186179"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453927"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>Almacenamiento y acceso a archivos con Xamarin.Android
 
@@ -81,7 +81,7 @@ Para maximizar el uso compartido de código, las aplicaciones de Xamarin.Android
 
 ### <a name="reading-or-writing-to-files-on-internal-storage"></a>Lectura y escritura en archivos en el almacenamiento interno
 
-Se puede usar cualquiera de las [API de C# para escribir](https://docs.microsoft.com/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file) en un archivo; solo se necesita obtener la ruta de acceso al archivo que se encuentra en el directorio asignado a la aplicación. Se recomienda encarecidamente que se usen las versiones asincrónicas de las API de .NET para minimizar los problemas que pueden asociarse con el acceso a archivos que bloquean el subproceso principal.
+Se puede usar cualquiera de las [API de C# para escribir](/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file) en un archivo; solo se necesita obtener la ruta de acceso al archivo que se encuentra en el directorio asignado a la aplicación. Se recomienda encarecidamente que se usen las versiones asincrónicas de las API de .NET para minimizar los problemas que pueden asociarse con el acceso a archivos que bloquean el subproceso principal.
 
 Este fragmento de código es un ejemplo de escritura de un entero en un archivo de texto UTF-8 en el directorio de almacenamiento interno de una aplicación:
 

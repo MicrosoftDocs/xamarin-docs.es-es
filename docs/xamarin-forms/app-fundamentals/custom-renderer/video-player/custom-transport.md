@@ -10,12 +10,12 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c72f68f327b6c0df6959d37ed4bf390e3bd7f31d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5d48c699ed89e91452efe84749a1dedac18a34f5
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135010"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562735"
 ---
 # <a name="custom-video-transport-controls"></a>Controles de transporte de vídeo personalizados
 
@@ -662,4 +662,4 @@ En una aplicación de producción, es probable que quiera usar sus propias imág
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de reproductor de vídeo (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [Demostraciones de reproductor de vídeo (ejemplo)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

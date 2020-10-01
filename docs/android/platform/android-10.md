@@ -5,12 +5,12 @@ ms.assetid: B3342772-FB88-4B7F-BC15-8BC78EED749E
 author: JonDouglas
 ms.author: jodou
 ms.date: 09/17/2019
-ms.openlocfilehash: b26d99c131e9759da3077a767476de38712bcb18
-ms.sourcegitcommit: a9280318bf7bb69e4e5744ee739e76a9cba36b28
+ms.openlocfilehash: 1ce0233a45211ee91b9f1e30247ac18cdd5c5a66
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82047578"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454304"
 ---
 # <a name="android-10-with-xamarin"></a>Android 10 con Xamarin
 
@@ -22,7 +22,7 @@ Android 10 ahora está disponible en Google. Una serie de nuevas característic
 
 Este artículo está estructurado para ayudarle a empezar a desarrollar aplicaciones de Xamarin.Android para Android 10. Explica cómo instalar las actualizaciones necesarias, configurar el SDK y preparar un emulador o un dispositivo para realizar pruebas. También proporciona un esquema de las nuevas características de Android 10 y proporciona código fuente de ejemplo que muestra cómo usar algunas de las características clave de Android 10.
 
-Xamarin.Android 10.0 proporciona compatibilidad con Android 10. Para más información sobre la compatibilidad de Xamarin.Android para Android 10, consulte las [notas de la versión de Xamarin.Android 10.0](https://docs.microsoft.com/xamarin/android/release-notes/10/10.0).
+Xamarin.Android 10.0 proporciona compatibilidad con Android 10. Para más información sobre la compatibilidad de Xamarin.Android para Android 10, consulte las [notas de la versión de Xamarin.Android 10.0](/xamarin/android/release-notes/10/10.0).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -53,7 +53,7 @@ Cada uno de estos pasos se explica con detalle a continuación:
 
 Se recomienda Visual Studio 2019 para crear aplicaciones de Android 10 con Xamarin.
 
-Si usa Visual Studio 2019, actualice a Visual Studio 2019 versión 16.3 o posterior (para obtener instrucciones, consulte [Actualización de Visual Studio a la versión más reciente](https://docs.microsoft.com/visualstudio/install/update-visual-studio)). En macOS, actualice a Visual Studio 2019 para Mac 8.3 o posterior (para obtener instrucciones, consulte [Actualizar Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/update)).
+Si usa Visual Studio 2019, actualice a Visual Studio 2019 versión 16.3 o posterior (para obtener instrucciones, consulte [Actualización de Visual Studio a la versión más reciente](/visualstudio/install/update-visual-studio)). En macOS, actualice a Visual Studio 2019 para Mac 8.3 o posterior (para obtener instrucciones, consulte [Actualizar Visual Studio para Mac](/visualstudio/mac/update)).
 
 ### <a name="install-the-android-sdk"></a>Instalación de Android SDK
 
@@ -64,15 +64,15 @@ Para crear un proyecto con Xamarin.Android 10.0, primero debe usar el administr
 
     ![Selección del repositorio de Administrador de Android SDK](~/android/platform/android-10-images/sdkrepository.png)
 
-3. Instale los paquetes de la **plataforma del SDK de Android 10**, que se muestran como **Android SDK Platform 29** en la pestaña **Plataformas** (para más información acerca del uso del Administrador de SDK, consulte [Configuración del SDK de Android para Xamarin.Android](https://docs.microsoft.com/xamarin/android/get-started/installation/android-sdk)):
+3. Instale los paquetes de la **plataforma del SDK de Android 10**, que se muestran como **Android SDK Platform 29** en la pestaña **Plataformas** (para más información acerca del uso del Administrador de SDK, consulte [Configuración del SDK de Android para Xamarin.Android](../get-started/installation/android-sdk.md)):
 
     ![Pestaña Plataforma del Administrador de Android SDK](~/android/platform/android-10-images/sdkplatforms.png)
 
 ### <a name="create-a-xamarinandroid-project"></a>Creación de un proyecto de Xamarin.Android
 
-Cree un nuevo proyecto de Xamarin.Android. Si no está familiarizado con el desarrollo de Android con Xamarin, consulte [Hello, Android](https://docs.microsoft.com/xamarin/android/get-started/hello-android/index) para aprender sobre la creación de proyectos de Xamarin.Android.
+Cree un nuevo proyecto de Xamarin.Android. Si no está familiarizado con el desarrollo de Android con Xamarin, consulte [Hello, Android](../get-started/hello-android/index.md) para aprender sobre la creación de proyectos de Xamarin.Android.
 
-Cuando cree un proyecto de Android, asegúrese de configurar las opciones de versión para Android 10.0. Por ejemplo, para que el proyecto tenga como destino Android 10, debe configurar el nivel de API de Android de destino del proyecto como **Android 10.0 (API 29)** . Esto incluye la **versión de la plataforma de destino** y la **versión de Android SDK de destino** a la API 29 o posterior. (Para más información sobre los niveles de API de Android, consulte [Descripción de los niveles de API de Android](https://docs.microsoft.com/xamarin/android/app-fundamentals/android-api-levels)).
+Cuando cree un proyecto de Android, asegúrese de configurar las opciones de versión para Android 10.0. Por ejemplo, para que el proyecto tenga como destino Android 10, debe configurar el nivel de API de Android de destino del proyecto como **Android 10.0 (API 29)** . Esto incluye la **versión de la plataforma de destino** y la **versión de Android SDK de destino** a la API 29 o posterior. (Para más información sobre los niveles de API de Android, consulte [Descripción de los niveles de API de Android](../app-fundamentals/android-api-levels.md)).
 
 ![Plataforma de destino de Xamarin.Android](~/android/platform/android-10-images/targetframework.png)
 
@@ -80,7 +80,7 @@ Cuando cree un proyecto de Android, asegúrese de configurar las opciones de ver
 
 Si usa un dispositivo físico, como un píxel, puede descargar la actualización de Android 10. Para ello, vaya a la configuración Sistema > Actualización del sistema > Comprobar actualizaciones en el teléfono. Si prefiere que el dispositivo parpadee, consulte las instrucciones para hacer parpadear una [imagen de fábrica](https://developers.google.com/android/images) o [imagen de OTA](https://developers.google.com/android/ota) en el dispositivo.
 
-Si usa un emulador, cree un dispositivo virtual para el nivel de API 29 y seleccione una imagen basada en x86. Para más información sobre el uso del Administrador de dispositivos Android para crear y administrar dispositivos virtuales, consulte [Administración de dispositivos virtuales con Android Device Manager](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/device-manager). Para más información sobre cómo iniciar y depurar con Android Emulator, consulte [Depuración en Android Emulator](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator).
+Si usa un emulador, cree un dispositivo virtual para el nivel de API 29 y seleccione una imagen basada en x86. Para más información sobre el uso del Administrador de dispositivos Android para crear y administrar dispositivos virtuales, consulte [Administración de dispositivos virtuales con Android Device Manager](../get-started/installation/android-emulator/device-manager.md). Para más información sobre cómo iniciar y depurar con Android Emulator, consulte [Depuración en Android Emulator](../deploy-test/debugging/debug-on-emulator.md).
 
 ## <a name="new-features"></a>Características nuevas
 

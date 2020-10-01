@@ -10,14 +10,14 @@ ms.date: 08/16/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2c5ce10aa0a1137ad4e4832d5dc931c902b82810
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 24a9a351dbe6932b09add2ee7c3111256e013201
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946213"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560694"
 ---
-# <a name="xamarinforms-binding-fallbacks"></a>Conmutación por recuperación de enlaces de Xamarin.Forms
+# <a name="no-locxamarinforms-binding-fallbacks"></a>Conmutación por recuperación de enlaces de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -109,4 +109,4 @@ Cuando la propiedad `TargetNullValue` no está establecida en una expresión de 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
+- [Data Binding Demos (sample)](/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])

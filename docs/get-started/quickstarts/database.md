@@ -12,12 +12,12 @@ ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a28e391c6bacd460f095c94e30b2d9433a5191e4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8f19595fdabd663312e6346deaed65f85aed1280
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931804"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436977"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Almacenamiento de datos en una base de datos de SQLite.NET local
 
@@ -35,7 +35,7 @@ En el inicio rápido se le guía sobre cómo almacenar datos en una base de dato
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Antes de intentar este inicio rápido, debe completar correctamente el [inicio rápido](multi-page.md) anterior. También puede descargar el [ejemplo del inicio rápido anterior](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/) y usarlo como punto de partida para este.
+Antes de intentar este inicio rápido, debe completar correctamente el [inicio rápido](multi-page.md) anterior. También puede descargar el [ejemplo del inicio rápido anterior](/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/) y usarlo como punto de partida para este.
 
 ::: zone pivot="windows"
 
@@ -486,5 +486,5 @@ Para aplicar estilo a la aplicación con estilos XAML, continúe con el inicio r
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Notes (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
+- [Notes (ejemplo)](/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
 - [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md)

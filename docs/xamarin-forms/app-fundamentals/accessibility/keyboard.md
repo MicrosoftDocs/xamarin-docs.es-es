@@ -10,14 +10,14 @@ ms.date: 05/09/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 47770b4f57da530677dead051fc657ab24e776f5
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: db0591f89447a2ae083f5ac73f6e002b4d0ee6f8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933814"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561357"
 ---
-# <a name="keyboard-accessibility-in-xamarinforms"></a>Accesibilidad del teclado en Xamarin.Forms
+# <a name="keyboard-accessibility-in-no-locxamarinforms"></a>Accesibilidad del teclado en Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
@@ -149,4 +149,4 @@ Las propiedades `TabIndex` y `IsTabStop` se admiten en los siguientes controles,
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Accesibilidad (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
+- [Accesibilidad (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)

@@ -10,12 +10,12 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4a9dca7556e9e08915e7e8915a0c01cd1ce6f676
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 13d9ddb5ba13960b4ed5af8f4fdb98b486b7e93e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935725"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562280"
 ---
 # <a name="customizing-a-map-pin"></a>Personalización de un anclado de mapa
 
@@ -650,11 +650,11 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 
 Este método abre un explorador web y navega a la dirección almacenada en la propiedad `Url` de la instancia de `CustomPin`. Tenga en cuenta que la dirección se definió al crear la colección `CustomPin` en el proyecto de biblioteca de .NET Standard.
 
-Para obtener más información sobre cómo personalizar una instancia de `MapControl`, vea [Introducción a ubicación y mapas](https://msdn.microsoft.com/library/windows/apps/mt219699.aspx) en MSDN.
+Para obtener más información sobre cómo personalizar una instancia de `MapControl`, vea [Introducción a ubicación y mapas](/windows/uwp/maps-and-location/) en MSDN.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Xamarin.Forms Map](~/xamarin-forms/user-interface/map/index.md) (Mapa de Xamarin.Forms)
 - [Maps in Xamarin.iOS](~/ios/user-interface/controls/ios-maps/index.md) (Mapas en Xamarin.iOS)
 - [API de Maps](~/android/platform/maps-and-location/maps/maps-api.md)
-- [Customized Pin (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin) (Marca personalizada [ejemplo])
+- [Customized Pin (sample)](/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin) (Marca personalizada [ejemplo])

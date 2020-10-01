@@ -1,6 +1,6 @@
 ---
-title: 'title: "Xamarin.Forms: Enlace de convertidores de valores" description: "En este artículo se explica cómo convertir los valores dentro de un enlace de datos de Xamarin.Forms mediante la implementación de un convertidor de valores (que también se denomina convertidor de enlaces o convertidor de valores de enlace)."'
-description: 'ms.prod: xamarin ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/05/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Enlace de convertidores de valores de Xamarin.Forms
+description: En este artículo se explica cómo convertir los valores dentro de un enlace de datos de Xamarin.Forms mediante la implementación de un convertidor de valores (que también se denomina convertidor de enlaces o convertidor de valores de enlace).
 ms.prod: xamarin
 ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e1a4faabc8f0703b497062a8c5d587221692dab7
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 2a5912d18787543b05b3937f2b8b5c6a36b04873
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84139768"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556820"
 ---
-# <a name="xamarinforms-binding-value-converters"></a>Enlace de convertidores de valores de Xamarin.Forms
+# <a name="no-locxamarinforms-binding-value-converters"></a>Enlace de convertidores de valores de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -54,7 +54,7 @@ Se llama al método `ConvertBack` cuando los datos se mueven desde el destino al
 
 Si el enlace de datos también incluye una configuración `StringFormat`, se invoca el convertidor de valores antes de que se le dé formato de cadena al resultado.
 
-La página **Enable Buttons** (Habilitar botones) en el ejemplo de [**Data Binding Demos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demostraciones de enlace de datos) muestra cómo utilizar este convertidor de valores en un enlace de datos. Se crea una instancia de `IntToBoolConverter` en el diccionario de recursos de la página. Después se le hace referencia con una extensión de marcado `StaticResource` para establecer la propiedad `Converter` en dos enlaces de datos. Es muy común compartir los convertidores de tipos de datos entre varios enlaces de datos en la página:
+La página **Enable Buttons** (Habilitar botones) en el ejemplo de [**Data Binding Demos**](/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demostraciones de enlace de datos) muestra cómo utilizar este convertidor de valores en un enlace de datos. Se crea una instancia de `IntToBoolConverter` en el diccionario de recursos de la página. Después se le hace referencia con una extensión de marcado `StaticResource` para establecer la propiedad `Converter` en dos enlaces de datos. Es muy común compartir los convertidores de tipos de datos entre varios enlaces de datos en la página:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -469,5 +469,5 @@ Este es el resultado:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
+- [Data Binding Demos (sample)](/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
 - [Capítulo sobre el enlace de datos del libro Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

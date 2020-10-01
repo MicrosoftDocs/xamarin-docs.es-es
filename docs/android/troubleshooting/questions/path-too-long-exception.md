@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/29/2018
-ms.openlocfilehash: ffe88546ff58387865d71268bd64ec05c8aec3c5
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: d58cb676b347caac00c39a381de94954219d1865
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73026787"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456865"
 ---
 # <a name="how-do-i-resolve-a-pathtoolongexception-error"></a>¿Cómo se puede resolver un error PathTooLongException?
 
@@ -24,7 +24,7 @@ Por ejemplo, se podría generar una ruta de acceso como la siguiente durante una
 
 **C:\\Some\\Directory\\Solution\\Project\\obj\\Debug\\__library_projects__\\Xamarin.Forms.Platform.Android\\library_project_imports\\assets**
 
-En Windows (donde la longitud máxima de una ruta de acceso es [260 caracteres](https://msdn.microsoft.com/library/windows/desktop/aa365247.aspx)), se podría producir un error **PathTooLongException** al compilar el proyecto si una ruta de acceso generada supera la longitud máxima. 
+En Windows (donde la longitud máxima de una ruta de acceso es [260 caracteres](/windows/win32/fileio/naming-a-file)), se podría producir un error **PathTooLongException** al compilar el proyecto si una ruta de acceso generada supera la longitud máxima. 
 
 ## <a name="fix"></a>Solución
 
@@ -41,7 +41,7 @@ Para establecer esta propiedad manualmente, agregue la siguiente propiedad de MS
 </PropertyGroup>
 ```
 
-Si no se corrige el error **PathTooLongException**, otro método consiste en especificar una [raíz de salida intermedia común](https://blogs.msdn.microsoft.com/kirillosenkov/2015/04/04/using-a-common-intermediate-and-output-directory-for-your-solution/) para los proyectos de la solución. Para ello, establezca `IntermediateOutputPath` en el archivo **.csproj** del proyecto. Intente usar una ruta de acceso relativamente corta. Por ejemplo:
+Si no se corrige el error **PathTooLongException**, otro método consiste en especificar una [raíz de salida intermedia común](/archive/blogs/kirillosenkov/using-a-common-intermediate-and-output-directory-for-your-solution) para los proyectos de la solución. Para ello, establezca `IntermediateOutputPath` en el archivo **.csproj** del proyecto. Intente usar una ruta de acceso relativamente corta. Por ejemplo:
 
 ```xml
 <PropertyGroup>

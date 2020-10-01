@@ -10,12 +10,12 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a414127c01d26db6bf7b462d6fc5a7f9ae44dddc
-ms.sourcegitcommit: 69bd0fdc698c9b0c0d73217776d7084f32ae88ae
+ms.openlocfilehash: e1d2a443a6005050c518e21e4e0f2df64c2aab0c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90832285"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562631"
 ---
 # <a name="no-locxamarinforms-dual-screen"></a>Doble pantalla de Xamarin.Forms
 
@@ -49,7 +49,7 @@ Siga estos pasos para agregar funcionalidades de doble pantalla a una aplicació
 
 Si la clase `DualScreenInfo` o el diseño `TwoPaneView` no funcionan del modo esperado, revise de nuevo las instrucciones de configuración de esta página. La omisión o la incorrecta configuración del método `Init` o de los valores de atributo de `ConfigurationChanges` son causas comunes de error.
 
-Revise los [ejemplos de doble pantalla de Xamarin.Forms](https://docs.microsoft.com/dual-screen/xamarin/samples) para obtener orientación adicional y una implementación de referencia.
+Revise los [ejemplos de doble pantalla de Xamarin.Forms](/dual-screen/xamarin/samples) para obtener orientación adicional y una implementación de referencia.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -60,4 +60,4 @@ Una vez que haya agregado NuGet, agregue características de doble pantalla a la
 - [Clase auxiliar DualScreenInfo](dual-screen-info.md): la clase `DualScreenInfo` permite determinar en qué panel se encuentra la vista, qué tamaño tiene, en qué posición está el dispositivo, el ángulo de la bisagra y mucho más.
 - [Desencadenadores de pantalla doble](triggers.md): el espacio de nombres de [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) incluye dos desencadenadores de estado que desencadenan un cambio de [`VisualState`](xref:Xamarin.Forms.VisualState) cuando varía el modo de visualización del diseño adjunto o de la ventana.
 
-Para obtener más información, consulte la [documentación sobre la doble pantalla para desarrolladores](https://docs.microsoft.com/dual-screen/).
+Para obtener más información, consulte la [documentación sobre la doble pantalla para desarrolladores](/dual-screen/).

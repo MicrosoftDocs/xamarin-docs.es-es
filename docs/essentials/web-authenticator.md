@@ -8,14 +8,14 @@ ms.date: 03/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e86ebcd55f3a36da1ad5c7c13bb50e7fc9094010
-ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
+ms.openlocfilehash: c4437f05eddd6885f88fc57ddc108f4fc9f4376d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226812"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433525"
 ---
-# <a name="xamarinessentials-web-authenticator"></a>Xamarin.Essentials: Autenticador web
+# <a name="no-locxamarinessentials-web-authenticator"></a>Xamarin.Essentials: Autenticador web
 
 La clase **WebAuthenticator** permite iniciar flujos basados en explorador que escuchan una devolución de llamada a una dirección URL específica registrada en la aplicación.
 
@@ -23,7 +23,7 @@ La clase **WebAuthenticator** permite iniciar flujos basados en explorador que e
 
 Muchas aplicaciones requieren la adición de la autenticación de usuario y esto suele significar permitir que los usuarios inicien sesión en sus cuentas de inicio de sesión existentes de Microsoft, Facebook, Google y ahora Apple.
 
-La [biblioteca de autenticación de Microsoft (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) proporciona una excelente solución llave en mano para agregar la autenticación a la aplicación. Hay incluso compatibilidad con las aplicaciones de Xamarin en su paquete NuGet de cliente.
+La [biblioteca de autenticación de Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) proporciona una excelente solución llave en mano para agregar la autenticación a la aplicación. Hay incluso compatibilidad con las aplicaciones de Xamarin en su paquete NuGet de cliente.
 
 Si le interesa usar su propio servicio web para la autenticación, es posible usar **WebAuthenticator** para implementar la funcionalidad del lado cliente.
 
@@ -153,7 +153,7 @@ En UWP, se usa `WebAuthenticationBroker` si se admite; de lo contrario, se usa e
 
 Según las [directrices de revisión de Apple](https://developer.apple.com/app-store/review/guidelines/#sign-in-with-apple), si su aplicación usa cualquier servicio de inicio de sesión social para autenticarse, también debe ofrecer el inicio de sesión de Apple como una opción.
 
-Para agregar el inicio de sesión de Apple a sus aplicaciones, primero necesitará [configurar la aplicación para que use el inicio de sesión de Apple](https://docs.microsoft.com/xamarin/ios/platform/ios13/sign-in).
+Para agregar el inicio de sesión de Apple a sus aplicaciones, primero necesitará [configurar la aplicación para que use el inicio de sesión de Apple](../ios/platform/ios13/sign-in.md).
 
 Para iOS 13 y versiones posteriores, deberá llamar al método `AppleSignInAuthenticator.AuthenticateAsync()`. De este modo, se usará la API de inicio de sesión de Apple nativa de forma subyacente para que los usuarios obtengan la mejor experiencia posible en estos dispositivos. Puede escribir el código compartido para usar la API correcta en tiempo de ejecución de la siguiente manera:
 
@@ -190,7 +190,7 @@ var accessToken = r?.AccessToken;
 
 Es posible usar la API `WebAuthenticator` con cualquier servicio back-end web.  Para usarla con una aplicación de ASP.NET Core, primero debe configurar la aplicación web con los pasos siguientes:
 
-1. Configure los [proveedores de autenticación social externos](https://docs.microsoft.com/aspnet/core/security/authentication/social/?view=aspnetcore-3.1&tabs=visual-studio) que desee en una aplicación web de ASP.NET Core.
+1. Configure los [proveedores de autenticación social externos](/aspnet/core/security/authentication/social/?tabs=visual-studio&view=aspnetcore-3.1) que desee en una aplicación web de ASP.NET Core.
 2. Establezca el esquema de autenticación predeterminado en `CookieAuthenticationDefaults.AuthenticationScheme` en la llamada `.AddAuthentication()`.
 3. Use `.AddCookie()` en la llamada `.AddAuthentication()` de Startup.cs.
 4. Todos los proveedores deben configurarse con `.SaveTokens = true;`.

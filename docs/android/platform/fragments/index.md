@@ -1,20 +1,20 @@
 ---
-title: Fragmentos
-description: Android 3.0 presentó los fragmentos, en los que se muestra cómo admitir diseños más flexibles para los diferentes tamaños de pantalla de los teléfonos y las tabletas. En este artículo se explica cómo usar los fragmentos para desarrollar aplicaciones de Xamarin.Android y cómo admitir fragmentos en dispositivos anteriores a Android 3.0 (nivel de API 11).
+title: Fragments
+description: Android 3.0 presentó los fragmentos, en los que se muestra cómo admitir diseños más flexibles para los diferentes tamaños de pantalla de los teléfonos y las tabletas. En este artículo se explica cómo usar los fragmentos para desarrollar aplicaciones de Xamarin.Android y cómo admitir fragmentos en dispositivos anteriores a Android 3.0 (nivel de API 11).
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2018
-ms.openlocfilehash: 5d243429fe4f61768568a634b205055c1ad94297
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 960f64c05bcc474a7e197c06990840d5e9b88caf
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020251"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453849"
 ---
-# <a name="fragments"></a>Fragmentos
+# <a name="fragments"></a>Fragments
 
 _Android 3.0 presentó los fragmentos, en los que se muestra cómo admitir diseños más flexibles para los diferentes tamaños de pantalla de los teléfonos y las tabletas. En este artículo se explica cómo usar los fragmentos para desarrollar aplicaciones de Xamarin.Android y cómo admitir fragmentos en dispositivos anteriores a Android 3.0 (nivel de API 11)._
 
@@ -60,6 +60,6 @@ Es posible usar fragmentos en versiones anteriores de Android mediante el paquet
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Galería de Honeycomb (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/honeycombgallery)
+- [Galería de Honeycomb (ejemplo)](/samples/xamarin/monodroid-samples/honeycombgallery)
 - [Fragmentos](https://developer.android.com/guide/topics/fundamentals/fragments.html)
 - [Paquete de soporte técnico](https://developer.android.com/sdk/compatibility-library.html)

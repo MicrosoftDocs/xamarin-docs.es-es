@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: d877f415bb96024bb41edc2be9aec108ae248e88
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 11feb8e3e10e12bfb2c647182ec4ba953ab34e24
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020034"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456904"
 ---
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Cómo usar Google Maps y la ubicación con Xamarin.Android
 
@@ -31,7 +31,7 @@ En primer lugar, se explica cómo aprovechar la aplicación de mapas integrada d
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MapsAndLocationDemo_v3 (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/mapsandlocationdemo-v3)
+- [MapsAndLocationDemo_v3 (ejemplo)](/samples/xamarin/monodroid-samples/mapsandlocationdemo-v3)
 - [Ciclo de vida de la actividad](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Obtención de una clave de la API de Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
 - [Lista de intenciones: invocación de aplicaciones de Google en dispositivos Android](https://developer.android.com/guide/appendix/g-app-intents.html)

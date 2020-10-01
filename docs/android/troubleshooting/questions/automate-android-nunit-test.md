@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2018
-ms.openlocfilehash: 1246eeac63a0ae232396d4c2fd69d8bf516f5e3e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: c8c9e721bc46d9071bb2af479a5e1d37b93fce27
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027001"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91458204"
 ---
 # <a name="how-do-i-automate-an-android-nunit-test-project"></a>¿Cómo se automatiza un proyecto de prueba de NUnit de Android?
 
 > [!NOTE]
-> En esta guía se explica cómo automatizar un proyecto de prueba de NUnit de Android, no un proyecto de Xamarin.UITest. Las guías de Xamarin.UITest se encuentran [aquí](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest).
+> En esta guía se explica cómo automatizar un proyecto de prueba de NUnit de Android, no un proyecto de Xamarin.UITest. Las guías de Xamarin.UITest se encuentran [aquí](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest).
 
 Al crear un proyecto de **Aplicación de prueba unitaria (Android)** en Visual Studio (o un proyecto de **Android Unit Test** [Prueba unitaria de Android] en Visual Studio para Mac), este proyecto no ejecutará automáticamente las pruebas de forma predeterminada.
 Para ejecutar pruebas de NUnit en un dispositivo de destino, puede crear una subclase [Android.App.Instrumentation](xref:Android.App.Instrumentation) que se inicie con el siguiente comando: 

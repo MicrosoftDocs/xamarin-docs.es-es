@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 173af9638f4e7b2da39a89dd745ec53f54cf6c39
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 4ba1daeb94706efc9d27136c6bd4b4d13e774689
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937571"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437200"
 ---
 # <a name="xamarinios-api-design"></a>Diseño de la API de Xamarin.iOS
 
@@ -26,7 +26,7 @@ El entorno de ejecución de bajo nivel para comunicarse con código de Objective
 
 Estos son algunos de los principios de diseño de los enlaces de Xamarin.iOS (también se aplican a Xamarin.Mac, los enlaces Mono para Objective-C en macOS):
 
-- Siga las [instrucciones de diseño de los marcos](https://docs.microsoft.com/dotnet/standard/design-guidelines).
+- Siga las [instrucciones de diseño de los marcos](/dotnet/standard/design-guidelines).
 - Permita a los desarrolladores crear subclases de clases de Objective-C:
 
   - Derive de una clase existente.
@@ -665,7 +665,7 @@ Xamarin.iOS tiene un recolector de elementos no utilizados que se encargará de 
 
 Una forma práctica de ayudar a los desarrolladores a liberar objetos que podrían encapsular grandes bloques de memoria (por ejemplo, un elemento `UIImage` podría parecer simplemente un puntero inocente, pero apuntar a una imagen de 2 megabytes) y otros recursos importantes y finitos (como un búfer de descodificación de vídeo) es exponer la interfaz `IDisposable`.
 
-NSObject implementa la interfaz IDisposable y también el [patrón .NET Dispose](https://msdn.microsoft.com/library/fs2xkftw.aspx). Esto permite a los desarrolladores que aplican la subclase NSObject invalidar el comportamiento de Dispose y liberar sus propios recursos a petición. Por ejemplo, considere este controlador de vistas que se mantiene en torno a un montón de imágenes:
+NSObject implementa la interfaz IDisposable y también el [patrón .NET Dispose](/dotnet/standard/garbage-collection/implementing-dispose). Esto permite a los desarrolladores que aplican la subclase NSObject invalidar el comportamiento de Dispose y liberar sus propios recursos a petición. Por ejemplo, considere este controlador de vistas que se mantiene en torno a un montón de imágenes:
 
 ```csharp
 class MenuViewController : UIViewController {

@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
-ms.openlocfilehash: ff68666d9f0385b159b9ac9908ff997f53715308
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 34416145fcf66f28d80a35a7d4dbc9b2fc2c6351
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571940"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454486"
 ---
 # <a name="android-emulator-troubleshooting"></a>Solución de problemas de Android Emulator
 
@@ -195,7 +195,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName HypervisorPlatform -All
 
 Cuando se completen estos comandos, reinicie. 
 
-Para obtener más información sobre cómo habilitar Hyper-V (incluidas las técnicas para habilitar Hyper-V mediante la herramienta de Administración y mantenimiento de imágenes de implementación), vea [Instalar Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
+Para obtener más información sobre cómo habilitar Hyper-V (incluidas las técnicas para habilitar Hyper-V mediante la herramienta de Administración y mantenimiento de imágenes de implementación), vea [Instalar Hyper-V](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 
 ### <a name="haxm-issues"></a>Problemas de HAXM
 

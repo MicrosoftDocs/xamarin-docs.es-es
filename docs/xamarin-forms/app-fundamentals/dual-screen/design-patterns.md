@@ -10,12 +10,12 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 74f06f88cd974d774d3b2527505bb45b3db03191
-ms.sourcegitcommit: 69bd0fdc698c9b0c0d73217776d7084f32ae88ae
+ms.openlocfilehash: 9b553a2fc3dea0d2793cb337142eacf0419ad994
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90832312"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556079"
 ---
 # <a name="no-locxamarinforms-dual-screen-design-patterns"></a>Modelos de diseño de doble pantalla de Xamarin.Forms
 
@@ -271,5 +271,5 @@ El patrón complementario muestra cómo se podría usar la segunda pantalla para
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [DualScreen (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
+- [DualScreen (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 - [Creación de aplicaciones para dispositivos de doble pantalla](index.md)

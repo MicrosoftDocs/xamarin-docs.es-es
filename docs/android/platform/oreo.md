@@ -8,12 +8,12 @@ ms.custom: video
 author: davidortinau
 ms.author: daortin
 ms.date: 07/06/2018
-ms.openlocfilehash: 56430f8c4988c16a31f9806b0ffb8b6355d6340b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 4c017f7b27d646155bb5c8e556955f495bde6be7
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020001"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457567"
 ---
 # <a name="oreo-features"></a>Características de Oreo
 
@@ -61,17 +61,17 @@ Para agregar compatibilidad con Android Oreo a Visual Studio, haga lo siguiente
 
 - Si usa Visual Studio 2017:
 
-    1. Actualice a Visual Studio 2017 versión 15.7 o posterior (consulte [Actualización de Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/update-visual-studio)).
+    1. Actualice a Visual Studio 2017 versión 15.7 o posterior (consulte [Actualización de Visual Studio 2017](/visualstudio/install/update-visual-studio)).
 
     2. Use el [Administrador de SDK](~/android/get-started/installation/android-sdk.md) para instalar el nivel de API 26.0 o posterior.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-- Actualice a la versión estable más reciente de Visual Studio para Mac, tal y como se explica en [Actualización de Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/update).
+- Actualice a la versión estable más reciente de Visual Studio para Mac, tal y como se explica en [Actualización de Visual Studio para Mac](/visualstudio/mac/update).
 
 -----
 
-Para más información sobre la compatibilidad de Xamarin con Android Oreo, consulte las [notas de la versión de Xamarin.Android 8.0](https://docs.microsoft.com/xamarin/android/release-notes/8/8.0/).
+Para más información sobre la compatibilidad de Xamarin con Android Oreo, consulte las [notas de la versión de Xamarin.Android 8.0](/xamarin/android/release-notes/8/8.0/).
 
 ### <a name="install-the-android-sdk"></a>Instalación de Android SDK
 
@@ -194,7 +194,7 @@ Android Oreo presenta diversas nuevas características y funcionalidades, como c
 Los *canales de notificación* son categorías definidas por la aplicación para las notificaciones.
 Puede crear un canal de notificación para cada tipo de notificación que tenga que enviar y puede crear canales de notificación que reflejen las elecciones realizadas por los usuarios de la aplicación. La nueva característica de canales de notificación permite proporcionar a los usuarios un control minucioso de los distintos tipos de notificaciones. Por ejemplo, si está implementando una aplicación de mensajería, puede crear canales de notificación independientes para cada grupo de conversación creado por un usuario.
 
-[Canales de notificación](~/android/app-fundamentals/notifications/local-notifications.md#notif-chan) explica cómo crear un canal de notificación y usarlo para publicar notificaciones locales. Para ver un ejemplo de código del mundo real, consulte el ejemplo [NotificationChannels](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-notificationchannels); en esta aplicación de ejemplo se administran dos canales y se establecen otras opciones de notificación.
+[Canales de notificación](~/android/app-fundamentals/notifications/local-notifications.md#notif-chan) explica cómo crear un canal de notificación y usarlo para publicar notificaciones locales. Para ver un ejemplo de código del mundo real, consulte el ejemplo [NotificationChannels](/samples/xamarin/monodroid-samples/android-o-notificationchannels); en esta aplicación de ejemplo se administran dos canales y se establecen otras opciones de notificación.
 
 ### <a name="notification-badges"></a>Señales de notificación
 
@@ -246,7 +246,7 @@ Cuando la aplicación necesita una fuente, se crea un objeto `FontsRequest` (qu
 
 Cuando se llama al método `RequestFonts`, este comprueba primero si la fuente está guardada en la caché local (de una llamada anterior a `RequestFont`). Si no está guardada en caché, llama al proveedor de fuentes, recupera la fuente de forma asincrónica y luego pasa los resultados de nuevo a la aplicación invocando el método `OnTypeFaceRetrieved`.
 
-En el ejemplo de [fuentes descargables](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts) se muestra cómo usar la característica de fuentes descargables que se presenta en Android Oreo. 
+En el ejemplo de [fuentes descargables](/samples/xamarin/monodroid-samples/android-o-downloadablefonts) se muestra cómo usar la característica de fuentes descargables que se presenta en Android Oreo. 
 
 Para obtener más información sobre la descarga de fuentes, consulte el tema [Fuentes descargables](https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts.html) para desarrolladores de Android.
 
@@ -254,7 +254,7 @@ Para obtener más información sobre la descarga de fuentes, consulte el tema [F
 
 Nueva característica _Autorrelleno de Framework_ de Android Oreo facilita a los usuarios el control de tareas repetitivas tales como el inicio de sesión, la creación de cuentas y las transacciones de tarjetas de crédito. Los usuarios pierden menos tiempo volviendo a escribir la información (lo que puede dar lugar a errores de entrada). Para que la aplicación pueda trabajar con la característica Autorrelleno de Framework, se debe habilitar un servicio de autorrelleno en la configuración del sistema (los usuarios pueden habilitar o deshabilitar el autorelleno).
 
-En el ejemplo [AutofillFramework](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-autofillframework) se muestra el uso de la característica Autorrelleno de Framework. Incluye implementaciones de actividades de cliente con vistas que se deben autorellenar y un servicio que puede proporcionar datos de autorrelleno a las actividades de cliente.
+En el ejemplo [AutofillFramework](/samples/xamarin/monodroid-samples/android-o-autofillframework) se muestra el uso de la característica Autorrelleno de Framework. Incluye implementaciones de actividades de cliente con vistas que se deben autorellenar y un servicio que puede proporcionar datos de autorrelleno a las actividades de cliente.
 
 Para obtener más información sobre la nueva característica Autorrelleno y cómo optimizar la aplicación para autorelleno, consulte el tema [Autorrelleno de Framework](https://developer.android.com/guide/topics/text/autofill.html) para desarrolladores de Android.
 
@@ -274,7 +274,7 @@ Para especificar cómo debe comportarse la actividad cuando está en modo PIP, u
 
 - [SetPictureInPictureParams](https://developer.android.com/reference/android/app/Activity.html#setPictureInPictureParams%28android.app.PictureInPictureParams%29): actualiza los valores de configuración de PIP de la actividad (por ejemplo, un cambio en la relación de aspecto).
 
-En el ejemplo [PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture) se muestra el uso básico del modo de imagen en imagen (PiP) para dispositivos de mano que se presenta en Oreo. En el ejemplo se reproduce un vídeo que continúa ininterrumpidamente mientras cambia de un modo de visualización a otro o de una actividad a otra.
+En el ejemplo [PictureInPicture](/samples/xamarin/monodroid-samples/android-o-pictureinpicture) se muestra el uso básico del modo de imagen en imagen (PiP) para dispositivos de mano que se presenta en Oreo. En el ejemplo se reproduce un vídeo que continúa ininterrumpidamente mientras cambia de un modo de visualización a otro o de una actividad a otra.
 
 ### <a name="other-features"></a>Otras características
 
@@ -306,19 +306,19 @@ Las aplicaciones que tienen como destino Android Oreo o posterior deben modifica
 
 Hay varios ejemplos de Xamarin.Android disponibles para mostrarle cómo sacar provecho de las características de Android Oreo:
 
-- [NotificationsChannels](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-notificationchannels) muestra el uso del nuevo sistema de canales de notificación que se presenta en Android Oreo. En este ejemplo se administran dos canales de notificaciones: uno con la importancia predeterminada y el otro con importancia alta.
+- [NotificationsChannels](/samples/xamarin/monodroid-samples/android-o-notificationchannels) muestra el uso del nuevo sistema de canales de notificación que se presenta en Android Oreo. En este ejemplo se administran dos canales de notificaciones: uno con la importancia predeterminada y el otro con importancia alta.
 
-- [PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture) muestra el uso básico del modo de imagen en imagen (PiP) para dispositivos de mano que se presenta en Oreo. En el ejemplo se reproduce un vídeo que continúa ininterrumpidamente mientras cambia de un modo de visualización a otro o de una actividad a otra.
+- [PictureInPicture](/samples/xamarin/monodroid-samples/android-o-pictureinpicture) muestra el uso básico del modo de imagen en imagen (PiP) para dispositivos de mano que se presenta en Oreo. En el ejemplo se reproduce un vídeo que continúa ininterrumpidamente mientras cambia de un modo de visualización a otro o de una actividad a otra.
 
-- [AutofillFramework](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-autofillframework) muestra el uso del la característica Autorrelleno de Framework. Incluye implementaciones de actividades de cliente con vistas que se deben autorellenar y un servicio que puede proporcionar datos de autorrelleno a las actividades de cliente.
+- [AutofillFramework](/samples/xamarin/monodroid-samples/android-o-autofillframework) muestra el uso del la característica Autorrelleno de Framework. Incluye implementaciones de actividades de cliente con vistas que se deben autorellenar y un servicio que puede proporcionar datos de autorrelleno a las actividades de cliente.
 
-- [Fuentes descargables](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts) proporciona un ejemplo de cómo usar la característica de fuentes descargables descrita anteriormente.
+- [Fuentes descargables](/samples/xamarin/monodroid-samples/android-o-downloadablefonts) proporciona un ejemplo de cómo usar la característica de fuentes descargables descrita anteriormente.
 
-- [EmojiCompat](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-emojicompat) muestra el uso de la biblioteca de compatibilidad con EmojiCompat. Puede usar esta biblioteca para impedir que la aplicación muestre caracteres Emoji que faltan como caracteres "tofu".
+- [EmojiCompat](/samples/xamarin/monodroid-samples/android-o-emojicompat) muestra el uso de la biblioteca de compatibilidad con EmojiCompat. Puede usar esta biblioteca para impedir que la aplicación muestre caracteres Emoji que faltan como caracteres "tofu".
 
-- [Intención de actualizaciones de ubicación pendientes](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdpendintent) muestra el uso de la API de ubicación para obtener actualizaciones sobre la ubicación de un dispositivo mediante un `PendingIntent`.
+- [Intención de actualizaciones de ubicación pendientes](/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdpendintent) muestra el uso de la API de ubicación para obtener actualizaciones sobre la ubicación de un dispositivo mediante un `PendingIntent`.
 
-- El [servicio de actualizaciones de ubicación en primer plano](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdfgservice) muestra cómo usar la API de ubicación para obtener actualizaciones sobre la ubicación de un dispositivo mediante un servicio en primer plano enlazado e iniciado.
+- El [servicio de actualizaciones de ubicación en primer plano](/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdfgservice) muestra cómo usar la API de ubicación para obtener actualizaciones sobre la ubicación de un dispositivo mediante un servicio en primer plano enlazado e iniciado.
 
 ## <a name="video"></a>Vídeo
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: 2650bda7115cd132e87bf669914320f63214e295
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c152579ef1458db50359551bc7ed6632daf3d92f
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933229"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436869"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introducción a Xamarin.iOS para Visual Studio
 
@@ -37,7 +37,7 @@ Hay una serie de opciones de configuración disponibles para poder decidir cuál
 
 En cualquier caso, debe seguir estos pasos:
 
-- [Instalación de Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation)
+- [Instalación de Visual Studio para Mac](/visualstudio/mac/installation)
 - [Instalar las herramientas de Xamarin en Windows](~/get-started/installation/windows.md)
 
 ## <a name="connecting-to-the-mac"></a>Conexión al equipo Mac

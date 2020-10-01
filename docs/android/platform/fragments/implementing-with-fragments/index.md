@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2018
-ms.openlocfilehash: b601fc37cc75dcd43c3688de8d302f0a47a06b35
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ab680020f62548eed4d1da0e4dbb13434a6d8ce7
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027422"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453953"
 ---
 # <a name="implementing-fragments---walkthrough"></a>Implementación de fragmentos: tutorial
 
@@ -33,7 +33,7 @@ Por último, si la aplicación se ejecuta en una tableta:
 
 [![Aplicación que se ejecuta en una tableta Android](./images/intro-screenshot-tablet-sml.png)](./images/intro-screenshot-tablet.png#lightbox)
 
-Esta aplicación de ejemplo se puede adaptar fácilmente a los distintos factores de forma y orientaciones con cambios mínimos en el código mediante el uso de fragmentos y [Diseños alternativos](/xamarin/android/app-fundamentals/resources-in-android/alternate-resources).
+Esta aplicación de ejemplo se puede adaptar fácilmente a los distintos factores de forma y orientaciones con cambios mínimos en el código mediante el uso de fragmentos y [Diseños alternativos](../../../app-fundamentals/resources-in-android/alternate-resources.md).
 
 Los datos de la aplicación se encontrarán en dos matrices de cadenas codificadas de forma rígida en la aplicación como matrices de cadenas de C#. Cada una de las matrices actuará como el origen de datos para un fragmento.  Una matriz contendrá el nombre de algunas obras de Shakespeare y la otra matriz contendrá una cita de esa obra. Cuando se inicia la aplicación, mostrará los nombres de las obras en `ListFragment`. Cuando el usuario hace clic en una obra en `ListFragment`, la aplicación iniciará otra actividad que mostrará la cita.
 
@@ -50,7 +50,7 @@ En la [segunda parte de este tutorial](./walkthrough-landscape.md) se explicará
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [FragmentsWalkthrough (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fragmentswalkthrough)
+- [FragmentsWalkthrough (ejemplo)](/samples/xamarin/monodroid-samples/fragmentswalkthrough)
 - [Información general del diseñador](~/android/user-interface/android-designer/index.md)
 - [Implementación de fragmentos](https://developer.android.com/guide/topics/fundamentals/fragments.html)
 - [Paquete de soporte técnico](https://developer.android.com/sdk/compatibility-library.html)

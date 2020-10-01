@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 7a3fd9e22bcf037ec669c77ac919035b0d04b942
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 4616d5eb9dde29faaf1e2fefe5e3e9917fdc078e
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84567936"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456722"
 ---
 # <a name="kitkat-features"></a>Características de KitKat
 
@@ -699,6 +699,6 @@ En este artículo se presentan algunas de las nuevas API disponibles en Android�
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de KitKat](https://docs.microsoft.com/samples/xamarin/monodroid-samples/kitkat)
+- [Ejemplo de KitKat](/samples/xamarin/monodroid-samples/kitkat)
 - [Interfaces API de Android 4.4](https://developer.android.com/about/versions/android-4.4.html)
 - [Android KitKat](https://developer.android.com/about/versions/kitkat.html)

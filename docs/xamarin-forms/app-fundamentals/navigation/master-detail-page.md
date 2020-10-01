@@ -10,14 +10,14 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3a65e9bb90f01bcb5e0b1182a21d998e2335da9a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d29dafd5bcdf991f275580850d77a4923d37286e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934529"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563060"
 ---
-# <a name="xamarinforms-master-detail-page"></a>Página maestra y de detalles de Xamarin.Forms
+# <a name="no-locxamarinforms-master-detail-page"></a>Página maestra y de detalles de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
 
@@ -296,5 +296,5 @@ En este artículo se ha explicado cómo usar una instancia de [`MasterDetailPage
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Páginas de Xamarin.Forms](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
-- [MasterDetailPage (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
+- [MasterDetailPage (ejemplo)](/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
 - [MasterDetailPage](xref:Xamarin.Forms.MasterDetailPage)

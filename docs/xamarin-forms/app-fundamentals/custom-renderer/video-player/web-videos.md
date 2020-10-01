@@ -10,12 +10,12 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b4269b768d6dd9a0eadbbe557f701f8a43b74c99
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 113265ffd26fcb1daf1cc85867e55f3e8ebd091f
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133684"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557951"
 ---
 # <a name="playing-a-web-video"></a>Reproducción de un vídeo web
 
@@ -452,7 +452,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="setting-a-url-source"></a>Establecimiento de un origen de dirección URL
 
-Con la implementación de estas propiedades en los tres representadores, es posible reproducir un vídeo desde un origen de dirección URL. La página **Play Web Video** (Reproducir vídeo web) del programa [**VideoPlayDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) se define con el siguiente archivo XAML:
+Con la implementación de estas propiedades en los tres representadores, es posible reproducir un vídeo desde un origen de dirección URL. La página **Play Web Video** (Reproducir vídeo web) del programa [**VideoPlayDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) se define con el siguiente archivo XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -524,4 +524,4 @@ Como alternativa, puede establecer la propiedad `Source` de un archivo de vídeo
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de reproductor de vídeo (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [Demostraciones de reproductor de vídeo (ejemplo)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

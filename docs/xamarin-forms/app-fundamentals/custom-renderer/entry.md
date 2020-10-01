@@ -10,12 +10,12 @@ ms.date: 11/26/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d5a5dc7de2835038079a1bdf8af5be44a173f86e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: a96e81314ad48ab0618083c215048e0678d09768
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939833"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557379"
 ---
 # <a name="customizing-an-entry"></a>Personalización de una entrada
 
@@ -212,4 +212,4 @@ En este artículo se ha mostrado cómo crear un representador de control persona
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [CustomRendererEntry (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry) (CustomRendererEntry [ejemplo])
+- [CustomRendererEntry (sample)](/samples/xamarin/xamarin-forms-samples/customrenderers-entry) (CustomRendererEntry [ejemplo])

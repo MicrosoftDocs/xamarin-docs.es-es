@@ -10,20 +10,20 @@ ms.date: 05/01/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c14215071a1d9d3ec804c307fa6edbbe4ddcf8e9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8a7c62ec6d7329227abd8f52644212341098185f
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139781"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556443"
 ---
-# <a name="xamarinforms-binding-mode"></a>Modo de enlace de Xamarin.Forms
+# <a name="no-locxamarinforms-binding-mode"></a>Modo de enlace de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 En el [artículo anterior](basic-bindings.md), las páginas **Enlace de código alternativo** y **Enlace XAML alternativo** contenían un objeto `Label` con su propiedad `Scale` enlazada a la propiedad `Value` de un elemento `Slider`. Como el valor inicial de `Slider` es 0, la propiedad `Scale` de `Label` se establece en 0 en lugar de 1, y el elemento `Label` desaparece.
 
-En el ejemplo [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos), la página **Enlace inverso** es similar a los programas del artículo anterior, salvo que el enlace de datos se define en `Slider` en lugar de `Label`:
+En el ejemplo [**DataBindingDemos**](/samples/xamarin/xamarin-forms-samples/databindingdemos), la página **Enlace inverso** es similar a los programas del artículo anterior, salvo que el enlace de datos se define en `Slider` en lugar de `Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -686,5 +686,5 @@ En el artículo siguiente verá cómo especificar los [**formatos de cadena**](s
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
+- [Data Binding Demos (sample)](/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
 - [Capítulo sobre el enlace de datos del libro Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 12/02/2016
-ms.openlocfilehash: 2cb2e90355cf93903c7a3b7e1beb65528d09d82d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: b5e089e488835de910626801e78dbd261456861f
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027981"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454499"
 ---
 # <a name="hello-android"></a>Hello, Android
 
@@ -23,12 +23,12 @@ _En esta guía de dos partes, compilará su primera aplicación Xamarin.Android 
 
 En la primera parte de esta guía, creará una aplicación que convierte un número de teléfono alfanumérico especificado por el usuario en un número de teléfono numérico y, después, llama a ese número.
 
-## <a name="part-2-deep-dive"></a>[Parte 2: profundización](~/android/get-started/hello-android/hello-android-deepdive.md)
+## <a name="part-2-deep-dive"></a>[Parte 2: análisis detallado](~/android/get-started/hello-android/hello-android-deepdive.md)
 
 En la segunda parte de este documento, revisará lo que ha creado y obtendrá unos conocimientos básicos sobre el funcionamiento de las aplicaciones de Android.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Introducción a Android](https://developer.android.com/training/index.html)
-- [Depurar en Visual Studio](https://docs.microsoft.com/visualstudio/debugger/)
+- [Depurar en Visual Studio](/visualstudio/debugger/)
 - [Recetas de Visual Studio para Mac: Depuración](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging)

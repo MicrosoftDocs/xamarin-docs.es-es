@@ -9,18 +9,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: b8f7d882306ed5c00404ae7a050da8e02a49d609
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 91583ff57c7336f6dabf7e83301ebfde7274ddbd
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75607911"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454785"
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: Inicio rápido
 
 _Esta guía de dos partes expande la aplicación Phoneword para controlar una segunda pantalla. Por el camino, se presentan bloques de creación básicos de aplicaciones Android con un análisis más profundo de la arquitectura de Android._
 
-En la parte del tutorial de esta guía agregará una segunda pantalla a la aplicación [Phoneword](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) para realizar un seguimiento del historial de números traducidos mediante la aplicación. La [aplicación final](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phonewordmultiscreen) tendrá una segunda pantalla en la que se mostrarán los números "traducidos", como se muestra en la captura de pantalla de la derecha:
+En la parte del tutorial de esta guía agregará una segunda pantalla a la aplicación [Phoneword](/samples/xamarin/monodroid-samples/phoneword) para realizar un seguimiento del historial de números traducidos mediante la aplicación. La [aplicación final](/samples/xamarin/monodroid-samples/phonewordmultiscreen) tendrá una segunda pantalla en la que se mostrarán los números "traducidos", como se muestra en la captura de pantalla de la derecha:
 
 [![Capturas de pantalla de la aplicación de ejemplo](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
@@ -29,7 +29,7 @@ La sección complementaria [Análisis detallado](~/android/get-started/hello-and
 ## <a name="requirements"></a>Requisitos
 
 Dado que esta guía continúa desde donde lo deja [Hello, Android](~/android/get-started/hello-android/index.md), requiere la finalización de [Hello, Android: inicio rápido](~/android/get-started/hello-android/hello-android-quickstart.md).
-Si quiere pasar directamente al tutorial siguiente, puede descargar la versión completa de [Phoneword](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) (de Hello, Android: inicio rápido) y usarla para empezar el tutorial.
+Si quiere pasar directamente al tutorial siguiente, puede descargar la versión completa de [Phoneword](/samples/xamarin/monodroid-samples/phoneword) (de Hello, Android: inicio rápido) y usarla para empezar el tutorial.
 
 ## <a name="walkthrough"></a>Tutorial
 
@@ -322,5 +322,5 @@ Enhorabuena por completar su primera aplicación multipantalla de Xamarin.Androi
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Iconos de aplicación y pantallas de inicio (ZIP) de Xamarin](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
-- [Phoneword (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)
-- [PhonewordMultiscreen (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phonewordmultiscreen)
+- [Phoneword (ejemplo)](/samples/xamarin/monodroid-samples/phoneword)
+- [PhonewordMultiscreen (ejemplo)](/samples/xamarin/monodroid-samples/phonewordmultiscreen)

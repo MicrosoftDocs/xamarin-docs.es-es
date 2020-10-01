@@ -10,14 +10,14 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ea0d38946a773dc7571a08f999be5eb6500bfc9b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7ba5224c23eaed6b7c37312f8a765556d0263d9c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934503"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563034"
 ---
-# <a name="xamarinforms-modal-pages"></a>Páginas modales de Xamarin.Forms
+# <a name="no-locxamarinforms-modal-pages"></a>Páginas modales de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
 
@@ -256,5 +256,5 @@ En este artículo se mostró cómo navegar a páginas modales. Una página modal
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Page Navigation](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) (Navegación de páginas)
-- [Modal (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal) (Modal [ejemplo])
-- [PassingData (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata) (PassingData [ejemplo])
+- [Modal (sample)](/samples/xamarin/xamarin-forms-samples/navigation-modal) (Modal [ejemplo])
+- [PassingData (sample)](/samples/xamarin/xamarin-forms-samples/navigation-passingdata) (PassingData [ejemplo])

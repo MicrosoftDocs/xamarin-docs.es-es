@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 4a4b6ee7a123683a9d5a140c46c0b3542767ffa3
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: a3fd03ece3618172e68539e2a92e8924e85e2ce5
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027524"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453888"
 ---
 # <a name="fingerprint-authentication"></a>Autenticación de huella digital
 
@@ -53,8 +53,8 @@ Ya debe haber una huella digital inscrita en el dispositivo para cada usuario qu
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Aplicación de ejemplo de la guía de huellas digitales](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fingerprintguide)
-- [Ejemplo de cuadro de diálogo de huellas digitales](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)
+- [Aplicación de ejemplo de la guía de huellas digitales](/samples/xamarin/monodroid-samples/fingerprintguide)
+- [Ejemplo de cuadro de diálogo de huellas digitales](/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)
 - [Solicitar permisos en tiempo de ejecución](https://developer.android.com/training/permissions/requesting.html)
 - [android.hardware.fingerprint](https://developer.android.com/reference/android/hardware/fingerprint/package-summary.html)
 - [android.support.v4.hardware.fingerprint](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/package-summary.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
-ms.openlocfilehash: af926b518c55bd0d6c73180e512dd669e93778f7
-ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
+ms.openlocfilehash: d75ec48bf9736297c31e0bb5af5a71de4332c66b
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853067"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454278"
 ---
 # <a name="walkthrough-bind-an-android-kotlin-library"></a>Tutorial: Enlace de una biblioteca de Kotlin en Android
 
@@ -27,7 +27,7 @@ El objetivo de este documento es describir un enfoque de alto nivel para abordar
 
 ## <a name="background"></a>Fondo
 
-Kotlin se presentó en febrero 2016 y se posicionó como alternativa al compilador de Java estándar en Android Studio para 2017. Más adelante, en 2019, Google anunció que el lenguaje de programación Kotlin se convertía en su lenguaje preferido para los desarrolladores de aplicaciones Android. El enfoque de enlace de alto nivel es similar al [proceso de enlace de las bibliotecas normales de Java](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/), aunque hay unos cuantos pasos importantes específicos de Kotlin.
+Kotlin se presentó en febrero 2016 y se posicionó como alternativa al compilador de Java estándar en Android Studio para 2017. Más adelante, en 2019, Google anunció que el lenguaje de programación Kotlin se convertía en su lenguaje preferido para los desarrolladores de aplicaciones Android. El enfoque de enlace de alto nivel es similar al [proceso de enlace de las bibliotecas normales de Java](../binding-java-library/index.md), aunque hay unos cuantos pasos importantes específicos de Kotlin.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -103,7 +103,7 @@ El archivo AAR es un archivo Android, que contiene el código fuente y los recur
 
 El segundo paso consiste en preparar el archivo de transformación de metadatos, que usa Xamarin.Android para generar las clases de C# respectivas. Un proyecto de enlace de Xamarin.Android detectará todas las clases y miembros nativos de un archivo Android determinado y, posteriormente, generará un archivo XML con los metadatos adecuados. El archivo de transformación de metadatos creado manualmente se aplica a la línea de base generada anteriormente para crear el archivo de definición XML utilizado para generar el código de C#.
 
-Los metadatos usan sintaxis de  [XPath](https://www.w3.org/TR/xpath/) , y los utiliza el generador de enlaces para influir en la creación del ensamblado de enlace. En el artículo sobre [metadatos de enlace de Java](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata) se proporciona más información sobre las transformaciones, que se podría aplicar:
+Los metadatos usan sintaxis de  [XPath](https://www.w3.org/TR/xpath/) , y los utiliza el generador de enlaces para influir en la creación del ensamblado de enlace. En el artículo sobre [metadatos de enlace de Java](../binding-java-library/customizing-bindings/java-bindings-metadata.md) se proporciona más información sobre las transformaciones, que se podría aplicar:
 
 1. Cree un archivo **Metadata.xml** vacío:
 
@@ -198,7 +198,7 @@ Los metadatos usan sintaxis de  [XPath](https://www.w3.org/TR/xpath/) , y los 
     Los genéricos de Java y Kotlin no son compatibles con los enlaces de Xamarin.Android, por lo que se crea un método generalizado de C# para acceder a la API genérica. Como solución alternativa, puede crear una biblioteca de Kotlin de contenedor y exponer las API necesarias con establecimiento inflexible de tipos sin genéricos. Como alternativa, puede crear aplicaciones auxiliares en el lado C# para solucionar el problema de la misma manera a través de las API con establecimiento inflexible de tipos.
 
     > [!TIP]
-    > Al transformar los metadatos, se pueden aplicar los cambios al enlace generado. En el artículo sobre el [enlace de la biblioteca de Java](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/) se explica en detalle cómo se generan y procesan los metadatos.
+    > Al transformar los metadatos, se pueden aplicar los cambios al enlace generado. En el artículo sobre el [enlace de la biblioteca de Java](../binding-java-library/index.md) se explica en detalle cómo se generan y procesan los metadatos.
 
 ## <a name="build-a-binding-library"></a>Compilación de una biblioteca de enlaces
 
@@ -342,8 +342,8 @@ Ahora debería tener una aplicación de Xamarin.Android básica que use una bibl
 - [Visual Studio para Mac](https://visualstudio.microsoft.com/downloads)
 - [Descompilador de Java](http://java-decompiler.github.io/)
 - [Biblioteca de Kotlin de BubblePicker](https://github.com/igalata/Bubble-Picker)
-- [Enlace de una biblioteca Java](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/)
+- [Enlace de una biblioteca Java](../binding-java-library/index.md)
 - [XPath](https://www.w3.org/TR/xpath/)
-- [Metadatos de enlaces de Java](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata)
+- [Metadatos de enlaces de Java](../binding-java-library/customizing-bindings/java-bindings-metadata.md)
 - [Xamarin.Kotlin.StdLib NuGet](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/)
 - [Repositorio del proyecto de ejemplo](https://github.com/alexeystrakh/xamarin-binding-kotlin-framework)

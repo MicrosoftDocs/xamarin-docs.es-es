@@ -9,14 +9,14 @@ ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 061bc1cfe785ad080092ba21340f7d38bc499ed9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f4bb252448abe3c2987def143634d15b5cae194c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84801951"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433501"
 ---
-# <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Almacenamiento seguro
+# <a name="no-locxamarinessentials-secure-storage"></a>Xamarin.Essentials: Almacenamiento seguro
 
 La clase **SecureStorage** ayuda a almacenar pares de clave-valor sencillos de manera segura.
 
@@ -154,7 +154,7 @@ En algunos casos, los datos de KeyChain se sincronizan con iCloud y es posible q
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) se usa para cifrar valores de manera segura en dispositivos de UWP.
+[DataProtectionProvider](/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) se usa para cifrar valores de manera segura en dispositivos de UWP.
 
 Los valores cifrados se almacenan en `ApplicationData.Current.LocalSettings`, dentro de un contenedor con el nombre **[ID-APLICACIÓN].xamarinessentials**.
 

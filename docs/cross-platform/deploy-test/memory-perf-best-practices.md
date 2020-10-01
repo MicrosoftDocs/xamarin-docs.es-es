@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 89b5dc2ae296b9e9033c45bf93c87de83054f721
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: f7f5d7daed42eeb3a36dd9b0d09b31a06b0de142
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996492"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457957"
 ---
 # <a name="cross-platform-performance"></a>Rendimiento multiplataforma
 
@@ -207,7 +207,7 @@ double Compute(double x)
 
 La inicialización diferida se produce la primera vez que se accede a la propiedad `Lazy<T>.Value`. El tipo encapsulado se crea y se devuelve en el primer acceso y se almacena para cualquier acceso futuro.
 
-Para más información sobre la inicialización diferida, vea [Lazy Initialization (Inicialización diferida)](https://msdn.microsoft.com/library/dd997286(v=vs.110).aspx).
+Para más información sobre la inicialización diferida, vea [Lazy Initialization (Inicialización diferida)](/dotnet/framework/performance/lazy-initialization).
 
 <a name="async"></a>
 

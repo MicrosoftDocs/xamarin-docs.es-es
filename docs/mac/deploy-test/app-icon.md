@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: d0acd44561b220507aafda7af05cd2862f6c9009
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: fdc132143905db6cc32ebd9aeb07268e69bf2070
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73021700"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434691"
 ---
 # <a name="application-icon-for-xamarinmac-apps"></a>Icono para aplicaciones Xamarin.Mac
 
@@ -108,7 +108,7 @@ En este artículo se ha descrito en detalle cómo se trabaja con las imágenes n
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MacImages (ejemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
+- [MacImages (ejemplo)](/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Working with Images (Trabajo con imágenes)](~/mac/app-fundamentals/image.md)
 - [macOS Human Interface Guidelines - Icons and Images](https://developer.apple.com/macos/human-interface-guidelines/icons-and-images/image-size-and-resolution/) (Directrices de interfaz humana de macOS: iconos e imágenes)

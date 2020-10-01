@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: fb1ba92be9527d490b3d34bd4c0e454b0a750837
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 52c44efa335d81004ce2e3dbf0d9160640118bea
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73019985"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453550"
 ---
 # <a name="marshmallow-features"></a>Características de Marshmallow
 
@@ -131,7 +131,7 @@ Muchos de los cambios introducidos en Android Marshmallow se centran en mejorar 
 El sistema de permisos de Android se ha optimizado y simplificado significativamente a partir de Android Lollipop. En Android Marshmallow, los usuarios conceden permisos según el caso en tiempo de ejecución en lugar de en el momento de la instalación. Para admitir esta característica en Android Marshmallow y versiones posteriores, diseñe la aplicación para que solicite permisos al usuario en tiempo de ejecución (en el contexto en el que se necesitan los permisos). Este cambio facilita que los usuarios empiecen a usar la aplicación inmediatamente, ya que simplifica el proceso de instalación y actualización de la aplicación. 
 
 Consulte [Solicitud de permisos en tiempo de ejecución en Android Marshmallow](https://blog.xamarin.com/requesting-runtime-permissions-in-android-marshmallow/) para obtener más información (incluidos ejemplos de código) sobre la implementación de permisos en tiempo de ejecución en aplicaciones de Xamarin.Android.
-Xamarin también proporciona una aplicación de ejemplo que muestra cómo funcionan los permisos en tiempo de ejecución en Android Marshmallow y versiones posteriores: [RuntimePermissions](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-runtimepermissions).
+Xamarin también proporciona una aplicación de ejemplo que muestra cómo funcionan los permisos en tiempo de ejecución en Android Marshmallow y versiones posteriores: [RuntimePermissions](/samples/xamarin/monodroid-samples/android-m-runtimepermissions).
 
 En esta aplicación de ejemplo se muestra lo siguiente:
 
@@ -160,7 +160,7 @@ Los vínculos y las aplicaciones de ejemplo que se describen a continuación pue
 En los dispositivos que admiten hardware de análisis de huellas digitales, puede usar la nueva clase `FingerPrintManager` para autenticar a un usuario.
 Para obtener más información sobre la característica de autenticación con huellas digitales de Android Marshmallow, vea [Autenticación con huella digital](https://developer.android.com/preview/api-overview.html#fingerprint-authentication).
 
-Xamarin proporciona una aplicación de ejemplo que muestra cómo usar huellas digitales registradas para autenticar a un usuario en la aplicación: [FingerprintDialog](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog).
+Xamarin proporciona una aplicación de ejemplo que muestra cómo usar huellas digitales registradas para autenticar a un usuario en la aplicación: [FingerprintDialog](/samples/xamarin/monodroid-samples/android-m-fingerprintdialog).
 
 Para utilizar esta aplicación de ejemplo:
 
@@ -182,7 +182,7 @@ Hay disponible una aplicación de ejemplo que muestra cómo usar Voice Interacti
 Con la nueva característica *Confirmar credenciales* de Android Marshmallow, los usuarios ya no tendrán que recordar y escribir las contraseñas específicas de la aplicación mediante su autenticación en función del tiempo durante el cual su dispositivo ha estado desbloqueado.
 Para ello, use el nuevo método `SetUserAuthenticationValidityDurationSeconds` de `KeyGenerator`. Use el método `CreateConfirmDeviceCredentialIntent` de `KeyGuardManager` para volver a autenticar al usuario desde dentro de la aplicación. Para más información sobre esta nueva característica en Android Marshmallow, vea [Confirmar credenciales](https://developer.android.com/preview/api-overview.html#confirm-credential).
 
-Xamarin proporciona una aplicación de ejemplo que muestra cómo usar las credenciales del dispositivo (como PIN, patrón o contraseña) en la aplicación: [ConfirmCredential](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-confirmcredential)
+Xamarin proporciona una aplicación de ejemplo que muestra cómo usar las credenciales del dispositivo (como PIN, patrón o contraseña) en la aplicación: [ConfirmCredential](/samples/xamarin/monodroid-samples/android-m-confirmcredential)
 
 Para utilizar esta aplicación de ejemplo:
 
@@ -227,7 +227,7 @@ Android Lollipop presentó el [diseño de materiales](https://www.google.com/des
 Para aprovechar las ventajas de la [biblioteca de compatibilidad de diseño](https://developer.android.com/tools/support-library/features.html#design) en la aplicación Xamarin.Android, descargue e instale el paquete NuGet de [Diseño de la biblioteca de compatibilidad de Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.Design/).
 
 Consulte [Diseño bonito de materiales con la biblioteca de diseño de compatibilidad de Android](https://blog.xamarin.com/add-beautiful-material-design-with-the-android-support-design-library/) para más información (incluidos ejemplos de código) sobre el uso de la biblioteca de compatibilidad de diseño de materiales en aplicaciones Xamarin.Android.
-Xamarin proporciona una aplicación de ejemplo que presenta una demostración de la nueva biblioteca de diseño de Android en Xamarin.Android &ndash; [Cheesesquare](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-cheesesquare).
+Xamarin proporciona una aplicación de ejemplo que presenta una demostración de la nueva biblioteca de diseño de Android en Xamarin.Android &ndash; [Cheesesquare](/samples/xamarin/monodroid-samples/android50-cheesesquare).
 Este ejemplo muestra las siguientes características de la biblioteca de diseño:
 
 - Barra de herramientas de contracción
@@ -258,6 +258,6 @@ En este artículo se presentó Android Marshmallow y se explicó cómo instalar 
 - [Obtener Android SDK](https://developer.android.com/sdk/index.html#Other)
 - [Información general de la característica](https://developer.android.com/preview/api-overview.html)
 - [Notas de la versión](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1.99/index.md)
-- [RuntimePermissions (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-runtimepermissions)
-- [ConfirmCredential (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-confirmcredential)
-- [FingerprintDialog (ejemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)
+- [RuntimePermissions (ejemplo)](/samples/xamarin/monodroid-samples/android-m-runtimepermissions)
+- [ConfirmCredential (ejemplo)](/samples/xamarin/monodroid-samples/android-m-confirmcredential)
+- [FingerprintDialog (ejemplo)](/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)
