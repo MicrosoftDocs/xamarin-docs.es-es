@@ -10,12 +10,12 @@ ms.date: 11/07/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 733ec985f4d285f26aca62930868970026847825
-ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
+ms.openlocfilehash: afcf182fe093a9bb02ea23f53d0f568fd83c862c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426882"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563320"
 ---
 # <a name="no-locxamarinforms-tabbedpage"></a>TabbedPage de Xamarin.Forms
 
@@ -238,8 +238,8 @@ Al seleccionar otra pestaña se muestra el objeto [`ContentPage`](xref:Xamarin.F
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [TabbedPageWithNavigationPage (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
-- [TabbedPage (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpage)
+- [TabbedPageWithNavigationPage (ejemplo)](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
+- [TabbedPage (ejemplo)](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpage)
 - [Navegación jerárquica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md)
 - [Páginas de Xamarin.Forms](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
 - [TabbedPage API](xref:Xamarin.Forms.TabbedPage)

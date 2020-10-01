@@ -10,12 +10,12 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 08bfb86f040bfbce834df5a5d98231afae92e78d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a4b092d90b3afa2197c1db576545d233eb6e208d
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133773"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563515"
 ---
 # <a name="implementing-a-video-player"></a>Implementación de un reproductor de vídeo
 
@@ -23,7 +23,7 @@ ms.locfileid: "84133773"
 
 A veces es conveniente reproducir archivos de vídeo en una aplicación de Xamarin.Forms. En esta serie de artículos se explica cómo escribir representadores personalizados para iOS, Android y la Plataforma universal de Windows (UWP) para una clase de Xamarin.Forms denominada `VideoPlayer`.
 
-En el ejemplo [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos), todos los archivos que implementan y admiten `VideoPlayer` están en carpetas denominadas `FormsVideoLibrary` y se identifican con el espacio de nombres `FormsVideoLibrary` o los espacios de nombres que empiezan por `FormsVideoLibrary`. Esta organización y nomenclatura debería hacer que resulte más fácil copiar los archivos del reproductor de vídeo en su propia solución de Xamarin.Forms.
+En el ejemplo [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos), todos los archivos que implementan y admiten `VideoPlayer` están en carpetas denominadas `FormsVideoLibrary` y se identifican con el espacio de nombres `FormsVideoLibrary` o los espacios de nombres que empiezan por `FormsVideoLibrary`. Esta organización y nomenclatura debería hacer que resulte más fácil copiar los archivos del reproductor de vídeo en su propia solución de Xamarin.Forms.
 
 `VideoPlayer` puede reproducir archivos de vídeo de tres tipos de orígenes:
 
@@ -71,4 +71,4 @@ Todos los reproductores de vídeo de la plataforma tienen una barra de posición
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de reproductor de vídeo (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [Demostraciones de reproductor de vídeo (ejemplo)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

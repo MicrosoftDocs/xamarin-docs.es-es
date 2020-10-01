@@ -10,12 +10,12 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 00dfec5b48507c83f43d0622c11770ecec304ea6
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: f0d8766420f876898a3f10c2f23a35a0b0afeb43
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917556"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563476"
 ---
 # <a name="no-locxamarinforms-shell-search"></a>Búsqueda en Xamarin.Forms Shell
 
@@ -336,5 +336,5 @@ Además, la clase `SearchHandler` proporciona los métodos reemplazables siguien
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Xaminals (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xaminals (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Navegación en Xamarin.Forms Shell](navigation.md)

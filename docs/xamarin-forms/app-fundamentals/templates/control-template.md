@@ -1,6 +1,6 @@
 ---
-title: 'title: "Plantillas de control de Xamarin.Forms" description: "Las plantillas de control de Xamarin.Formsdefinen la estructura visual de los controles personalizados derivados de ContentView y las páginas derivadas de ContentPage."'
-description: 'ms.prod: xamarin ms.assetid: 8B8E2360-6531-44A3-A7C8-9A8808DE9B86 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/13/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Plantillas de control de Xamarin.Forms
+description: Las plantillas de control de Xamarin.Forms definen la estructura visual de los controles personalizados derivados de ContentView y las páginas derivadas de ContentPage.
 ms.prod: xamarin
 ms.assetid: 8B8E2360-6531-44A3-A7C8-9A8808DE9B86
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 01/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 44eebed2a49fbdda5504f9a09873f93466d0326c
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 575169459433725ae3f3a7db675fc65caef1494e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84132553"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563450"
 ---
-# <a name="xamarinforms-control-templates"></a>Plantillas de control de Xamarin.Forms
+# <a name="no-locxamarinforms-control-templates"></a>Plantillas de control de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
 
@@ -637,7 +637,7 @@ Para más información sobre los enlaces relativos, consulte [Enlaces relativos 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ControlTemplateDemos (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
+- [ControlTemplateDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
 - [ContentView de Xamarin.Forms](~/xamarin-forms/user-interface/layouts/contentview.md)
 - [Enlaces relativos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md)
 - [Diccionarios de recursos de Xamarin.Forms](~/xamarin-forms/xaml/resource-dictionaries.md)

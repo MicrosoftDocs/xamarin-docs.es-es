@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 54fc52c2f2460726fe1c22149d4e7cc0e8a92609
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: da0e3775f400c965ee59a762884e638e3379c8df
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028072"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454863"
 ---
 # <a name="xamarinandroid-environment"></a>Entorno de Xamarin.Android
 
@@ -32,11 +32,11 @@ Las propiedades del sistema de Android se establecen para todos los procesos del
 
 A partir de Xamarin.Android 4.6, las propiedades del sistema y las variables de entorno se pueden establecer o invalidar por cada aplicación agregando un *archivo de entorno* al proyecto. Un archivo de entorno es un archivo de texto sin formato Unix con una [**acción de compilación** de `AndroidEnvironment`](~/android/deploy-test/building-apps/build-process.md).
 El archivo de entorno contiene líneas con el formato *clave=valor*.
-Los comentarios son líneas que comienzan por `#`. Las líneas en blanco se omiten.
+Los comentarios son líneas que comienzan por `#`. Se omiten las líneas en blanco.
 
 Si la *clave* comienza con una letra mayúscula, entonces se trata como una variable de entorno y **setenv**(3) se usa para establecer la variable de entorno en el *valor* especificado durante el inicio del proceso.
 
-Si la *clave* comienza con una letra minúscula, se trata como una propiedad del sistema Android y el *valor* es el *valor predeterminado*: las propiedades del sistema de Android que controlan el comportamiento de ejecución de Xamarin.Android se buscan primero en el almacén de propiedades del sistema de Android y, si no existe ningún valor, se usa el valor especificado en el archivo de entorno. El objetivo es permitir que se use `adb shell setprop` para invalidar los valores que proceden del archivo de entorno con fines de diagnóstico.
+Si la *clave* comienza con una letra minúscula, la *clave* se trata como una propiedad del sistema de Android y el *valor* es el *valor predeterminado*: las propiedades del sistema de Android que controlan el comportamiento de ejecución de Xamarin.Android se buscan primero desde el almacén de propiedades del sistema de Android y, si no existe ningún valor, se usa el valor especificado en el archivo de entorno. El objetivo es permitir que se use `adb shell setprop` para invalidar los valores que proceden del archivo de entorno con fines de diagnóstico.
 
 ## <a name="xamarinandroid-environment-variables"></a>Variables de entorno de Xamarin.Android
 
@@ -44,9 +44,9 @@ Xamarin.Android admite la variable `XA_HTTP_CLIENT_HANDLER_TYPE`, que se puede e
 
 ### `XA_HTTP_CLIENT_HANDLER_TYPE`
 
-El tipo completo de ensamblado que debe heredar de [HttpMessageHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpmessagehandler?view=xamarinandroid-7.1) y que se construye a partir de la [construcción predeterminada`HttpClient()`](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=xamarinandroid-7.1#System_Net_Http_HttpClient__ctor).
+El tipo completo de ensamblado que debe heredar de [HttpMessageHandler](/dotnet/api/system.net.http.httpmessagehandler?view=xamarinandroid-7.1) y que se construye a partir de la [construcción predeterminada`HttpClient()`](/dotnet/api/system.net.http.httpclient.-ctor?view=xamarinandroid-7.1#System_Net_Http_HttpClient__ctor).
 
-En Xamarin.Android 6.1, esta variable de entorno no se establece de forma predeterminada, y se usa [HttpClientHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1).
+En Xamarin.Android 6.1, esta variable de entorno no se establece de forma predeterminada, y se usa [HttpClientHandler](/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1).
 
 Como alternativa, puede especificarse el valor `Xamarin.Android.Net.AndroidClientHandler` para usar [`java.net.URLConnection`](xref:Java.Net.URLConnection)
 para el acceso a la red, que *puede* permitir el uso de TLS 1.2 cuando Android lo admita.
@@ -89,11 +89,11 @@ Esto equivale a hacer que la propiedad del sistema `debug.mono.log` contenga `gc
 Controla qué información adicional registrará Xamarin.Android en `adb logcat`.
 Es una cadena separada por comas (`,`), que contiene uno de los siguientes valores:
 
-- `all`: imprimir *todos* los mensajes. En raras ocasiones es una buena idea, ya que incluye mensajes `lref`.
-- `assembly`: imprimir `.apk` y ensamblar los mensajes de análisis.
-- `gc`: imprimir los mensajes relacionados con GC.
-- `gref`: imprimir los mensajes de referencia global de JNI.
-- `lref`: imprimir los mensajes de referencia local de JNI.
+- `all`: se imprimen *todos* los mensajes. En raras ocasiones es una buena idea, ya que incluye mensajes `lref`.
+- `assembly`: se imprime `.apk` y se ensamblan los mensajes de análisis.
+- `gc`: se imprimen los mensajes relacionados con GC.
+- `gref`: se imprimen los mensajes de referencia global de JNI.
+- `lref`: se imprimen los mensajes de referencia local de JNI.
   > [!NOTE]
   > Este valor *en realidad* enviará correo basura a `adb logcat`.
   > En Xamarin.Android 5.1, también creará un archivo `.__override__/lrefs.txt`, que puede volverse *gigantesco*.
@@ -105,8 +105,8 @@ Es una cadena separada por comas (`,`), que contiene uno de los siguientes valor
 El valor de la propiedad del sistema `debug.mono.max_grefc` es un entero.
 Su valor *invalida* el recuento de GREF máximo detectado para el dispositivo de destino.
 
-*Tenga en cuenta lo siguiente:* Solo se puede usar con `adb shell setprop
-debug.mono.max_grefc`, ya que el valor no estará disponible a tiempo con un archivo **environment.txt**.
+*Nota:* Solo se puede usar con `adb shell setprop
+debug.mono.max_grefc` ya que el valor no estará disponible a tiempo con un archivo **environment.txt**.
 
 ### `debug.mono.profile`
 
@@ -133,7 +133,7 @@ La propiedad del sistema `debug.mono.wref` permite invalidar el mecanismo de ref
 - `jni`: se usan referencias débiles de JNI, creadas por `JNIEnv::NewWeakGlobalRef()` y destruidas por `JNIEnv::DeleteWeakGlobalREf()`.
 - `java`: se usan referencias globales de JNI con instancias `java.lang.WeakReference` de referencia.
 
-De forma predeterminada, se usa `java`, hasta API-7 y en API-19 (Kit Kat) con ART habilitado. (API-8 agregó referencias de `jni` y referencias `jni` de *interrupción* de ART).
+De forma predeterminada, se usa `java`, hasta API-7 y en API-19 (Kit Kat) con ART habilitado. (API-8 agregó referencias de `jni` y ART *interrumpe las referencias de * `jni`).
 
 Esta propiedad del sistema es útil para pruebas y determinadas formas de investigación.
 *En general*, no se debe cambiar.

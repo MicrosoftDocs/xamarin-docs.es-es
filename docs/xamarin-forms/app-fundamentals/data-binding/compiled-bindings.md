@@ -1,6 +1,6 @@
 ---
-title: 'title: "Xamarin.Forms: Enlaces compilados" description: "En este artículo se explica cómo usar enlaces compilados para mejorar el rendimiento del enlace de datos en las aplicaciones de Xamarin.Forms."'
-description: 'ms.prod: xamarin ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 09/18/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Enlaces compilados de Xamarin.Forms
+description: En este artículo se explica cómo usar enlaces compilados para mejorar el rendimiento del enlace de datos en las aplicaciones de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 09/18/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 094691796fed9653f2a2e468ccb1c33d1a408a49
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 1bc2ed53b12e6953033760b072d38353c65a6708
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571563"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563463"
 ---
-# <a name="xamarinforms-compiled-bindings"></a>Enlaces compilados de Xamarin.Forms
+# <a name="no-locxamarinforms-compiled-bindings"></a>Enlaces compilados de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -178,4 +178,4 @@ Estas diferencias de rendimiento se pueden ampliar en dispositivos móviles, dep
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
+- [Data Binding Demos (sample)](/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demos de enlace de datos [ejemplo])
