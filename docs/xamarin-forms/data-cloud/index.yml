@@ -13,12 +13,12 @@ metadata:
   no-loc:
   - Xamarin.Forms
   - Xamarin.Essentials
-  ms.openlocfilehash: eed87cca333da2459e3a03f1bc2da6e10e32c9fd
-  ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+  ms.openlocfilehash: a4749311ef19caa8c3ce0dc29783421666900610
+  ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/28/2020
-  ms.locfileid: "84127016"
+  ms.lasthandoff: 09/30/2020
+  ms.locfileid: "91557041"
 landingContent:
 - title: Almacenamiento de datos local
   linkLists:
@@ -77,7 +77,7 @@ landingContent:
     - text: REST
       url: authentication/rest.md
     - text: Proveedor de identidades
-      url: authentication/oauth.md
+      url: ../../essentials/web-authenticator.md
     - text: Azure Active Directory B2C
       url: authentication/azure-ad-b2c.md
     - text: Autenticación de base de datos de documentos de Azure Cosmos DB
