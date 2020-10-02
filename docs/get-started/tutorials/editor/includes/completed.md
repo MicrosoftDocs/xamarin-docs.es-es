@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5c3d829038692635284c447e11ab08ad2afe6885
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: a99ce9ed5046c782a9cbdb09a6dec495900c3a32
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71059807"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451515"
 ---
 Ha completado el tutorial, donde ha aprendido a:
 
@@ -23,6 +23,6 @@ Para obtener más información sobre los conceptos básicos de creación de apli
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [EditorTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-editortutorial/)
+- [EditorTutorial (sample)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-editortutorial/)
 - [Guía sobre los editores de Xamarin.Forms](~/xamarin-forms/user-interface/text/editor.md)
 - [API de los editores](xref:Xamarin.Forms.Editor)
