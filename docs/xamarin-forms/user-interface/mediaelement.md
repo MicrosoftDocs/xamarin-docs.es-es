@@ -10,12 +10,12 @@ ms.date: 02/18/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e868eccf446ab22879a66e6e507d810b7e0e13d7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 43702453d1defc3b5a63aba845231f514913d7c5
+ms.sourcegitcommit: 1649554b8c08369b713d20246154455c0ba7d1c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559771"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91712556"
 ---
 # <a name="no-locxamarinforms-mediaelement"></a>Xamarin.Forms MediaElement
 
@@ -534,7 +534,7 @@ Una barra de volumen personalizada se puede implementar mediante un [`Slider`](x
 En este ejemplo, los [`Slider`](xref:Xamarin.Forms.Slider) datos enlazan su `Value` propiedad a la [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) propiedad de [`MediaElement`](xref:Xamarin.Forms.MediaElement) . Esto es posible porque la `Volume` propiedad usa un `TwoWay` enlace. Por lo tanto, el cambio de la propiedad provocará `Value` el cambio de la `Volume` propiedad.
 
 > [!NOTE]
-> La [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) propiedad tiene una devolución de llamada vlidation que garantiza que su valor es mayor o igual que 0,0 y menor o igual que 1,0.
+> La [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) propiedad tiene una devolución de llamada de validación que garantiza que su valor es mayor o igual que 0,0 y menor o igual que 1,0.
 
 Para obtener más información acerca del uso de un [`Slider`](xref:Xamarin.Forms.Slider) [ Xamarin.Forms control deslizante](~/xamarin-forms/user-interface/slider.md) , vea
 
