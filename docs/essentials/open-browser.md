@@ -4,25 +4,56 @@ description: La clase Browser de Xamarin.Essentials permite que una aplicación 
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 04/02/2019
+ms.date: 09/24/2020
 ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 997c6b66b5dba43eb440130f3f58d31a5a274815
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0c38949e9c8c0a957a7afa37206683588ffbb4cf
+ms.sourcegitcommit: 3a15d9b29d65139b18dcf0871fe00cffb2a56357
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84802244"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353413"
 ---
-# <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Explorador
+# <a name="no-locxamarinessentials-browser"></a>Xamarin.Essentials: Explorador
 
 La clase **Browser** permite que una aplicación abra un vínculo web en el explorador optimizado preferido del sistema o en el explorador externo.
 
 ## <a name="get-started"></a>Primeros pasos
 
 [!include[](~/essentials/includes/get-started.md)]
+
+Para acceder a la función de **Browser**, se requiere la siguiente configuración específica para la plataforma.
+
+# <a name="android"></a>[Android](#tab/android)
+
+Si la versión de Android de destino del proyecto se establece en **Android 11 (R API 30)** , debe actualizar el manifiesto de Android con las consultas que se usan con los nuevos [requisitos de visibilidad de los paquetes](https://developer.android.com/preview/privacy/package-visibility).
+
+Abra el archivo **AndroidManifest.xml** de la carpeta **Propiedades** y agregue lo siguiente dentro del nodo **manifest**:
+
+```xml
+<queries>
+  <intent>
+    <action android:name="android.intent.action.VIEW" />
+    <data android:scheme="http"/>
+  </intent>
+  <intent>
+    <action android:name="android.intent.action.VIEW" />
+    <data android:scheme="https"/>
+  </intent>
+</queries>
+```
+
+# <a name="ios"></a>[iOS](#tab/ios)
+
+No se requiere configuración adicional.
+
+# <a name="uwp"></a>[UWP](#tab/uwp)
+
+No hay diferencias entre las plataformas.
+
+-----
 
 ## <a name="using-browser"></a>Uso de Browser
 

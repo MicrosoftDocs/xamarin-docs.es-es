@@ -10,12 +10,12 @@ ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1f180173a42654c54c5686e423ba20d9586271ea
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b2309d6ec6712be32f6e972fab130a542fbec857
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136713"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557431"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>Resumen del capítulo 18. MVVM
 
@@ -45,7 +45,7 @@ La interfaz `INotifyPropertyChanged` declara un evento único denominado [`Prope
 
 ### <a name="a-viewmodel-clock"></a>Un reloj de Modelo de vista
 
-[`DateTimeViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DateTimeViewModel.cs) en la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit) define una propiedad de tipo `DateTime` que cambia en función de un temporizador. La clase implementa `INotifyPropertyChanged` y activa el evento `PropertyChanged` cada vez que cambia la propiedad `DateTime`.
+[`DateTimeViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DateTimeViewModel.cs) en la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit) define una propiedad de tipo `DateTime` que cambia en función de un temporizador. La clase implementa `INotifyPropertyChanged` y activa el evento `PropertyChanged` cada vez que cambia la propiedad `DateTime`.
 
 En el ejemplo [**MvvmClock**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/MvvmClock) se crea una instancia de este Modelo de vista y se usan enlaces de datos al Modelo de vista para mostrar la información de fecha y hora actualizada.
 
@@ -55,13 +55,13 @@ Las propiedades de un Modelo de vista pueden ser más interactivas, como se mues
 
 ### <a name="a-color-viewmodel"></a>Un Modelo de vista de colores
 
-[`ColorViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ColorViewModel.cs) en la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit) integra los modelos de color RGB y HSL. Esto se muestra en el ejemplo [**HslSliders**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/HslSliders):
+[`ColorViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ColorViewModel.cs) en la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit) integra los modelos de color RGB y HSL. Esto se muestra en el ejemplo [**HslSliders**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/HslSliders):
 
 [![Captura de pantalla triple de TK](images/ch18fg08-small.png "Modelo de color HSL")](images/ch18fg08-large.png#lightbox "Modelo de color HSL")
 
 ### <a name="streamlining-the-viewmodel"></a>Optimización del Modelo de vista
 
-El código de los Modelos de vista se puede simplificar mediante la definición de un método `OnPropertyChanged` que use el atributo [`CallerMemberName`](xref:System.Runtime.CompilerServices.CallerMemberNameAttribute), que obtiene automáticamente el nombre de la propiedad que realiza la llamada. La clase [`ViewModelBase`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ViewModelBase.cs) de la biblioteca [**Xamarin. FormsBook. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit) lo hace y proporciona una clase base para los Modelos de vista.
+El código de los Modelos de vista se puede simplificar mediante la definición de un método `OnPropertyChanged` que use el atributo [`CallerMemberName`](xref:System.Runtime.CompilerServices.CallerMemberNameAttribute), que obtiene automáticamente el nombre de la propiedad que realiza la llamada. La clase [`ViewModelBase`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ViewModelBase.cs) de la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit) lo hace y proporciona una clase base para ViewModels.
 
 ## <a name="the-command-interface"></a>Interfaz de comandos
 
@@ -90,7 +90,7 @@ Los elementos `Button` se pueden reemplazar fácilmente por objetos `TapGestureR
 
 ### <a name="a-calculator-almost"></a>Una calculadora, casi
 
-En el ejemplo [**AddingMachine**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/AddingMachine) se usan los métodos `Execute` y `CanExecute` de `ICommand`. Usa una clase [`AdderViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) en la biblioteca [**Xamarin. FormsBook. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs). El Modelo de vista contiene seis propiedades de tipo `ICommand`. Se inicializan desde el [constructor `Command`](xref:Xamarin.Forms.Command.%23ctor(System.Action)) y el [constructor `Command`](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) de `Command` y el [constructor `Command<T>`](https://docs.microsoft.com/dotnet/api/xamarin.forms.command.-ctor?view=xamarin-forms#Xamarin_Forms_Command__ctor_System_Action_System_Object__System_Func_System_Object_System_Boolean__) de `Command<T>`. Todas las claves numéricas del equipo que agrega están enlazadas a la propiedad que se inicializa con `Command<T>`, y un argumento `string` a `Execute` y `CanExecute` identifica la clave determinada.
+En el ejemplo [**AddingMachine**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/AddingMachine) se usan los métodos `Execute` y `CanExecute` de `ICommand`. Usa una clase [`AdderViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) en la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs). El Modelo de vista contiene seis propiedades de tipo `ICommand`. Se inicializan desde el [constructor `Command`](xref:Xamarin.Forms.Command.%23ctor(System.Action)) y el [constructor `Command`](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) de `Command` y el [constructor `Command<T>`](/dotnet/api/xamarin.forms.command.-ctor?view=xamarin-forms#Xamarin_Forms_Command__ctor_System_Action_System_Object__System_Func_System_Object_System_Boolean__) de `Command<T>`. Todas las claves numéricas del equipo que agrega están enlazadas a la propiedad que se inicializa con `Command<T>`, y un argumento `string` a `Execute` y `CanExecute` identifica la clave determinada.
 
 ## <a name="viewmodels-and-the-application-lifecycle"></a>Modelos de vista y el ciclo de vida de la aplicación
 

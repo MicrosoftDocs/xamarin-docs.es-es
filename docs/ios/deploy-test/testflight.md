@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 1f86227573fc5e9dc39d4781125c49a067e8967d
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 35adaf4a5cf9ce103cb36320692ad8307b9d1354
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997493"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91564126"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Uso de TestFlight para distribuir aplicaciones Xamarin.iOS
 
@@ -52,9 +52,9 @@ El flujo de trabajo siguiente describe los pasos necesarios para empezar a usar 
 3. Administrar las pruebas beta:
     - Agregue los metadatos.
     - Agregar usuarios internos:
-      - 25 usuarios como máximo.
+      - 100 usuarios como máximo, cada usuario puede probar hasta 30 dispositivos.
     - Agregar usuarios externos:
-      - 1000 usuarios como máximo.
+      - 10 000 usuarios como máximo.
       - Requiere una revisión de prueba beta, que debe ser conforme a las directrices de Apple.
 4. Reciba comentarios de los usuarios, tome las medidas oportunas y vuelva al paso 2.
 
@@ -187,7 +187,7 @@ Los evaluadores internos son miembros de su equipo de desarrollo a quienes se ha
 - **Legal**: el agente de equipo es el único usuario administrador a quien se asignará el rol Legal. Dicho rol le permite firmar contratos legales.
 - **Técnico**: un usuario técnico puede cambiar la mayoría de las propiedades relativas a una aplicación. Por ejemplo, puede editar la información de la aplicación, cargar un archivo binario y enviar una aplicación para que se revise.
 
-Cada compilación se puede compartir con un máximo de 25 miembros.
+Cada compilación se puede compartir con un máximo de 100 miembros, cada uno de los cuales puede realizar pruebas en hasta 30 dispositivos.
 
 Para agregar evaluadores, vaya a **Usuarios y roles** en la pantalla principal de iTunes Connect:
 
@@ -221,7 +221,7 @@ Para enviar la aplicación para que se revise, haga clic en el texto **Enviar pa
 
 Para que la aplicación pase la revisión, debe escribir todos los metadatos necesarios en la página Información de la versión beta de TestFlight.
 
-Ahora puede empezar a preparar invitaciones y agregar a hasta 2000 evaluadores externos a través de la pestaña Evaluadores externos; para ello, escriba su correo electrónico, nombre y apellido, como se muestra en la captura de pantalla siguiente. El correo electrónico que escriba no debe ser su ID de Apple; es solo el correo electrónico en que recibirán la invitación.
+Ahora puede empezar a preparar invitaciones y agregar a hasta 10 000 evaluadores externos a través de la pestaña Evaluadores externos; para ello, escriba su correo electrónico, nombre y apellido, tal como se muestra en la captura de pantalla siguiente. El correo electrónico que escriba no debe ser su ID de Apple; es solo el correo electrónico en que recibirán la invitación.
 
 [![Invitación a los evaluadores](testflight-images/add-external.png)](testflight-images/add-external.png#lightbox)
 

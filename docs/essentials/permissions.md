@@ -5,18 +5,18 @@ ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
 author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
-ms.date: 01/06/2020
+ms.date: 09/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d594e627fed21c3c2a73770313fcae29695370c5
-ms.sourcegitcommit: a658de488a6da916145ed4aa016825565110e767
+ms.openlocfilehash: 12631abacc56edf88d375d4be89e71a9a4588d03
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86972563"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436374"
 ---
-# <a name="xamarinessentials-permissions"></a>Xamarin.Essentials: Permisos
+# <a name="no-locxamarinessentials-permissions"></a>Xamarin.Essentials: Permisos
 
 La clase **Permissions** proporciona la capacidad de comprobar y solicitar permisos en tiempo de ejecución.
 
@@ -67,6 +67,13 @@ Al usar los elementos `CheckStatusAsync` o `RequestAsync`, se devuelve un estado
 * Deshabilitado: la característica está deshabilitada en el dispositivo.
 * Concedido: el usuario concedió el permiso o se ha concedido automáticamente.
 * Restringido: en un estado restringido.
+
+
+## <a name="explain-why-permission-is-needed"></a>Explicación de por qué se necesita el permiso
+
+![API de versión preliminar](~/media/shared/preview.png)
+
+Es un procedimiento recomendado explicar el motivo por el que la aplicación necesita un permiso específico. En iOS debe especificar una cadena que se muestre al usuario. Android no tiene esta capacidad y, además, el estado de permiso tiene como valor predeterminado Deshabilitado. Esto limita la capacidad de saber si el usuario ha denegado el permiso o si es la primera vez que se le solicita. El método `ShouldShowRationale` se puede usar para determinar si se debe mostrar una interfaz de usuario educativa. Si el método devuelve `true`, esto se debe a que el usuario ha denegado o deshabilitado el permiso en el pasado. Otras plataformas siempre devolverán `false` cuando se llame a este método.
 
 ## <a name="available-permissions"></a>Permisos disponibles
 
@@ -192,7 +199,7 @@ Después, puede llamar al nuevo permiso desde el proyecto de Android.
 await Permissions.RequestAsync<ReadWriteStoragePermission>();
 ```
 
-Si quiere llamar a esta API desde el código compartido, puede crear una interfaz y usar un [servicio de dependencia](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/dependency-service/) para efectuar el registro y obtener la implementación.
+Si quiere llamar a esta API desde el código compartido, puede crear una interfaz y usar un [servicio de dependencia](../xamarin-forms/app-fundamentals/dependency-service/index.md) para efectuar el registro y obtener la implementación.
 
 ```csharp
 public interface IReadWritePermission
@@ -235,21 +242,21 @@ if (status != PermissionStatus.Granted)
 
 # <a name="android"></a>[Android](#tab/android)
 
-Los permisos deben tener los atributos coincidentes establecidos en el archivo de manifiesto de Android.
+Los permisos deben tener los atributos coincidentes establecidos en el archivo de manifiesto de Android. El estado de permiso tiene como valor predeterminado Denegado.
 
-Obtenga más información en el documento [Permisos en Xamarin.Android](https://docs.microsoft.com/xamarin/android/app-fundamentals/permissions).
+Obtenga más información en el documento [Permisos en Xamarin.Android](../android/app-fundamentals/permissions.md).
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-Los permisos deben tener una cadena coincidente en el archivo `Info.plist`. Después de que se solicita y deniega un permiso, ya no aparece ningún elemento emergente al solicitar el permiso por segunda vez. Debe solicitar al usuario que ajuste la configuración manualmente en la pantalla Configuración de la aplicación en iOS.
+Los permisos deben tener una cadena coincidente en el archivo `Info.plist`. Después de que se solicita y deniega un permiso, ya no aparece ningún elemento emergente al solicitar el permiso por segunda vez. Debe solicitar al usuario que ajuste la configuración manualmente en la pantalla Configuración de la aplicación en iOS. El estado de permiso tiene como valor predeterminado Desconocido.
 
-Obtenga más información en el documento [Características de seguridad y privacidad de iOS](https://docs.microsoft.com/xamarin/ios/app-fundamentals/security-privacy).
+Obtenga más información en el documento [Características de seguridad y privacidad de iOS](../ios/app-fundamentals/security-privacy.md).
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-Los permisos deben tener funcionalidades coincidentes declaradas en el manifiesto de paquete.
+Los permisos deben tener funcionalidades coincidentes declaradas en el manifiesto de paquete. El estado de permiso tiene como valor predeterminado Desconocido en la mayoría de casos.
 
-Obtenga más información en el documento [Declaración de las funcionalidades de la aplicación](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
+Obtenga más información en el documento [Declaración de las funcionalidades de la aplicación](/windows/uwp/packaging/app-capability-declarations).
 
 --------------
 

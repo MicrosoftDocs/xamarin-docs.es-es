@@ -9,14 +9,14 @@ ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: acc0c48776c7a91e9e5a060928564bc6e0c1d775
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 60a5fbaa8386d0ecdc5d205b3262e05406cec4a6
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84801821"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556248"
 ---
-# <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferencias
+# <a name="no-locxamarinessentials-preferences"></a>Xamarin.Essentials: Preferencias
 
 La clase **Preferences** ayuda a almacenar las preferencias de la aplicación en un almacén de clave y valor.
 
@@ -62,7 +62,7 @@ Para quitar todas las preferencias:
 Preferences.Clear();
 ```
 
-Además de estos métodos, cada una toma un valor `sharedName` opcional que se puede usar para crear contenedores adicionales para la preferencia. Lea los detalles de implementación de la plataforma a continuación.
+Los métodos anteriores también toman un elemento `sharedName` opcional que se puede usar a fin de crear contenedores adicionales para las preferencias. Lea los detalles de implementación de la plataforma a continuación.
 
 ## <a name="supported-data-types"></a>Tipos de datos admitidos
 
@@ -81,7 +81,7 @@ En **Preferences** se admiten los tipos de datos siguientes:
 Las preferencias se almacenan de forma nativa, lo que permite integrar la configuración en la configuración nativa del sistema. Siga la documentación y los ejemplos de la plataforma para integrarlos con ella:
 
 * Apple: [Implementación de un lote de configuración de iOS](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
-* [Ejemplo de preferencias de la aplicación de iOS](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
+* [Ejemplo de preferencias de la aplicación de iOS](/samples/xamarin/ios-samples/appprefs/)
 * [Configuración de watchOS](https://developer.xamarin.com/guides/ios/watch/working-with/settings/)
 * Android: [Introducción a las pantallas de configuración](https://developer.android.com/guide/topics/ui/settings.html)
 
@@ -93,15 +93,15 @@ Los valores de `DateTime` se almacenan en un formato binario de 64 bits (entero
 
 # <a name="android"></a>[Android](#tab/android)
 
-Todos los datos se almacenan en [Preferencias compartidas](https://developer.android.com/training/data-storage/shared-preferences.html). Si no se especifica ningún `sharedName`, se usan las preferencias compartidas predeterminadas; en caso contrario, el nombre se usa para obtener una preferencia compartida **privada** con el nombre especificado.
+Todos los datos se almacenan en [Preferencias compartidas](https://developer.android.com/training/data-storage/shared-preferences.html). Si no se especifica ningún elemento `sharedName`, se usan las preferencias compartidas predeterminadas; de lo contrario, el nombre se usa para obtener una preferencia compartida **privada** con el nombre especificado.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-[NSUserDefaults](https://docs.microsoft.com/xamarin/ios/app-fundamentals/user-defaults) se usa para almacenar valores en dispositivos iOS. Si no se especifica ningún `sharedName`, se usa `StandardUserDefaults`; en caso contrario, el nombre se usa para crear un `NSUserDefaults` con el nombre especificado que se usa para el `NSUserDefaultsType.SuiteName`.
+[NSUserDefaults](../ios/app-fundamentals/user-defaults.md) se usa para almacenar valores en dispositivos iOS. Si no se especifica ningún `sharedName`, se usa `StandardUserDefaults`; en caso contrario, el nombre se usa para crear un `NSUserDefaults` con el nombre especificado que se usa para el `NSUserDefaultsType.SuiteName`.
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) se usa para almacenar los valores en el dispositivo. Si no se especifica ningún `sharedName`, se usa `LocalSettings`; en caso contrario, el nombre se usa para crear un contenedor dentro de `LocalSettings`.
+[ApplicationDataContainer](/uwp/api/windows.storage.applicationdatacontainer) se usa para almacenar los valores en el dispositivo. Si no se especifica ningún elemento `sharedName`, se usa `LocalSettings`; en caso contrario, el nombre se usa para crear un contenedor dentro de `LocalSettings`.
 
 `LocalSettings` también tiene la siguiente restricción de que el nombre de cada valor puede tener una longitud máxima de 255 caracteres. Cada valor puede tener un tamaño máximo de 8 KB y cada valor compuesto puede tener un tamaño máximo de 64 KB.
 
@@ -109,11 +109,11 @@ Todos los datos se almacenan en [Preferencias compartidas](https://developer.and
 
 ## <a name="persistence"></a>Persistencia
 
-Al desinstalar la aplicación se quitarán todas las _Preferencias_. Hay una excepción, para las aplicaciones que se destinan y se ejecutan en Android 6.0 (nivel de API 23) o versiones posteriores en las que se usa [__Copia de seguridad automática__](https://developer.android.com/guide/topics/data/autobackup). Esta característica está activada de forma predeterminada y conserva los datos de aplicación, incluidas las __preferencias compartidas__, que son las que usa la API **Preferences**. Se puede deshabilitar si se sigue la [documentación](https://developer.android.com/guide/topics/data/autobackup) de Google.
+La desinstalación de la aplicación hará que se quiten todas las _preferencias_, con la excepción de las aplicaciones que tienen como destino y se ejecutan en Android 6.0 (nivel de API 23), o una versión posterior, que usan [__copia de seguridad automática__](https://developer.android.com/guide/topics/data/autobackup). Esta característica está activada de forma predeterminada y conserva los datos de aplicación, incluidas las __preferencias compartidas__, que son las que usa la API **Preferences**. Se puede deshabilitar si se sigue la [documentación](https://developer.android.com/guide/topics/data/autobackup) de Google.
 
 ## <a name="limitations"></a>Limitaciones
 
-Cuando se almacena una cadena, esta API está pensada para almacenar pequeñas cantidades de texto.  El rendimiento puede ser inferior si se intenta usar para almacenar grandes cantidades de texto.
+Cuando se almacena una cadena, esta API está pensada para almacenar pequeñas cantidades de texto. El rendimiento puede ser inferior si se intenta usar para almacenar grandes cantidades de texto.
 
 ## <a name="api"></a>API
 

@@ -1,21 +1,9 @@
 ---
-title: Implementación de una vista
-description: En este artículo se explica cómo crear un representador personalizado para un control personalizado de Xamarin.Forms que se usa para mostrar una secuencia de vídeo en vista previa desde la cámara del dispositivo.
-ms.prod: xamarin
-ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/10/2018
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8215454f80614c0c7cca79af5cf51e2dd96453ae
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929498"
+title: Descripción de Implementación de una vista: En este artículo se explica cómo crear un representador personalizado para un control personalizado de Xamarin.Forms que se usa para mostrar una secuencia de vídeo en vista previa desde la cámara del dispositivo.
+ms.prod: xamarin ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 05/10/2018 no-loc:
+- "Xamarin.Forms"
+- "Xamarin.Essentials"
+
 ---
 # <a name="implementing-a-view"></a>Implementación de una vista
 
@@ -331,4 +319,4 @@ En este artículo se ha mostrado cómo crear un representador personalizado para
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [CustomRendererView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-view) (CustomRendererView [ejemplo])
+- [CustomRendererView (sample)](/samples/xamarin/xamarin-forms-samples/customrenderers-view) (CustomRendererView [ejemplo])

@@ -5,20 +5,47 @@ ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.custom: video
 ms.author: jamont
-ms.date: 08/20/2019
+ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: eba2b6decc74c63e6b2790287842e6cc9b237bd2
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 059405d4e3219162022b3f8c0208ee5cc4ac2d38
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84802369"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434547"
 ---
-# <a name="xamarinessentials-email"></a>Xamarin.Essentials: Correo electrónico
+# <a name="no-locxamarinessentials-email"></a>Xamarin.Essentials: Correo electrónico
 
 La clase **Email** permite que una aplicación abra la aplicación de correo electrónico predeterminada con información especificada incluido el asunto, el cuerpo y los destinatarios (PARA, CC, CCO).
+
+Para acceder a la función de **Email**, se requiere la siguiente configuración específica para la plataforma.
+
+# <a name="android"></a>[Android](#tab/android)
+
+Si la versión de Android de destino del proyecto se establece en **Android 11 (R API 30)** , debe actualizar el manifiesto de Android con las consultas que se usan con los nuevos [requisitos de visibilidad de los paquetes](https://developer.android.com/preview/privacy/package-visibility).
+
+Abra el archivo **AndroidManifest.xml** de la carpeta **Propiedades** y agregue lo siguiente dentro del nodo **manifest**:
+
+```xml
+<queries>
+  <intent>
+    <action android:name="android.intent.action.SENDTO" />
+    <data android:scheme="mailto" />
+  </intent>
+</queries>
+```
+
+# <a name="ios"></a>[iOS](#tab/ios)
+
+No se requiere configuración adicional.
+
+# <a name="uwp"></a>[UWP](#tab/uwp)
+
+No hay diferencias entre las plataformas.
+
+-----
 
 ## <a name="get-started"></a>Primeros pasos
 
@@ -102,7 +129,7 @@ No hay diferencias entre las plataformas.
 
 Solo admite `PlainText`, ya que el formato `BodyFormat` que intenta enviar `Html` producirá una excepción `FeatureNotSupportedException`.
 
-No todos los clientes de correo electrónico admiten el envío de datos adjuntos. Para obtener más información, consulte la [documentación](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email).
+No todos los clientes de correo electrónico admiten el envío de datos adjuntos. Para obtener más información, consulte la [documentación](/windows/uwp/contacts-and-calendar/sending-email).
 
 -----
 

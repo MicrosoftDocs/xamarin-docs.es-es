@@ -10,14 +10,14 @@ ms.date: 06/12/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f4d43a0c9c4878733d65b170c27e744b397aa4d0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2d63ac91031fc4a2cc127272a075f15a8ea81f4e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138364"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555287"
 ---
-# <a name="xamarinforms-dependencyservice-introduction"></a>Introducción a DependencyService de Xamarin.Forms
+# <a name="no-locxamarinforms-dependencyservice-introduction"></a>Introducción a DependencyService de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
@@ -159,5 +159,5 @@ Para obtener más información sobre la resolución de implementaciones de plata
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de DependencyService (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
+- [Demostraciones de DependencyService (ejemplo)](/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 - [Registro y resolución de DependencyService de Xamarin.Forms](registration-and-resolution.md)

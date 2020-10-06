@@ -10,14 +10,14 @@ ms.date: 12/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 341e1454c37d1fd20423204c95337e580eba7ecb
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cadefcf4eb3fbc1c8e5c1e2545ef5f4a98eb64e7
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573409"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561320"
 ---
-# <a name="automation-properties-in-xamarinforms"></a>Propiedades de automatización de Xamarin.Forms
+# <a name="automation-properties-in-no-locxamarinforms"></a>Propiedades de automatización de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
@@ -174,4 +174,4 @@ En Android, los valores de propiedad `AutomationProperties.Name` o `AutomationPr
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Propiedades asociadas](~/xamarin-forms/xaml/attached-properties.md)
-- [Accesibilidad (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
+- [Accesibilidad (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
