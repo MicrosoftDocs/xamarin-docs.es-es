@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/02/2017
-ms.openlocfilehash: 67638a261cd9a6e8c356924d47ea4adb4eae6a80
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: efac76338af710e716decf47635652bf8de74910
+ms.sourcegitcommit: 6d347e1d7641ac1d2b389fb1dc7a6882a08f7c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91430992"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91851514"
 ---
 # <a name="macos-apis-for-xamarinmac-developers"></a>API de macOS para desarrolladores de Xamarin. Mac
 
@@ -33,8 +33,8 @@ La declaración se puede leer de izquierda a derecha:
 - El `-` prefijo significa que es un método de instancia (no estático). + significa que es un método de clase (estático)
 - `(BOOL)` es el tipo de valor devuelto (bool en C#)
 - `canDragRowsWithIndexes` es la primera parte del nombre.
-- `(NSIndexSet *)rowIndexes` es el primer parámetro y su tipo. El primer parámetro tiene el formato: `(Type) pararmName`
-- `atPoint:(NSPoint)mouseDownPoint` es el segundo parámetro y su tipo. Cada parámetro después del primero tiene el formato: `selectorPart:(Type) pararmName`
+- `(NSIndexSet *)rowIndexes` es el primer parámetro y su tipo. El primer parámetro tiene el formato: `(Type) paramName`
+- `atPoint:(NSPoint)mouseDownPoint` es el segundo parámetro y su tipo. Cada parámetro después del primero tiene el formato: `selectorPart:(Type) paramName`
 - El nombre completo de este selector de mensajes es: `canDragRowsWithIndexes:atPoint:` . Tenga en cuenta que `:` , al final, es importante.
 - El enlace de C# de Xamarin. Mac real es: `bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
 
@@ -45,7 +45,7 @@ Esta invocación del selector se puede leer de la misma manera:
 ```
 
 - La instancia `v` tiene su `canDragRowsWithIndexes:atPoint` selector denominado con dos parámetros, `set` y `point` , pasados.
-- En C#, la invocación del método tiene el siguiente aspecto: `x.CanDragRows (set, point);`
+- En C#, la invocación del método tiene el siguiente aspecto: `v.CanDragRows (set, point);`
 
 <a name="finding_selector"></a>
 

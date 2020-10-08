@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/31/2018
-ms.openlocfilehash: 702ca70e220d8e4d28a1a2ddc6be40daae052d58
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 75edc03706908df365bfda05229a8081ef50a4ac
+ms.sourcegitcommit: db5173f26edbb94b0ec60ab9a708fa04478480f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91456125"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91853295"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Remote Notifications with Firebase Cloud Messaging (Notificaciones remotas con Firebase Cloud Messaging)
 
@@ -476,7 +476,7 @@ La cadena larga etiquetada con **token** es el token de identificador de instanc
 Log.Debug(TAG, "google app id: " + GetString(Resource.String.google_app_id));
 ```
 
-El `google_app_id` valor registrado en la ventana de salida debe coincidir con el `mobilesdk_app_id` valor registrado en **google-services.jsen**.
+El `google_app_id` valor registrado en la ventana de salida debe coincidir con el `mobilesdk_app_id` valor registrado en **google-services.jsen**. `Resource.String.google_app_id`Genera MSBuild al procesar **google-services.js**. 
 
 ### <a name="send-a-message"></a>Envío de un mensaje
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: b70a4693f356fdf83ca2f7fee9615855a5569712
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 65cc67516442ea2602812a3b1f6ff4f0c71abb05
+ms.sourcegitcommit: 6d347e1d7641ac1d2b389fb1dc7a6882a08f7c00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437022"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91851553"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introducción a los guiones gráficos en Xamarin. iOS
 
@@ -78,7 +78,7 @@ Hay diferentes tipos de transiciones, cada una de las cuales proporciona control
 
  iOS 8 presentó [las clases de tamaño](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) para permitir que un archivo de guión gráfico de iOS funcione con todos los tamaños de pantalla disponibles, lo que permite a los desarrolladores crear una interfaz de usuario para todos los dispositivos iOS. De forma predeterminada, todas las aplicaciones de Xamarin. iOS nuevas usarán clases de tamaño. Para usar clases de tamaño de un proyecto anterior, consulte la guía de [Introducción a guiones gráficos unificados](~/ios/user-interface/storyboards/unified-storyboards.md) .
 
-Cualquier aplicación que use clases de tamaño también usará el nuevo [*objetos segue adaptable*](~/ios/user-interface/storyboards/unified-storyboards.md). Al usar clases de tamaño, recuerde que no vamos a especificar directamente el tiempo que estamos usando un iPhone o iPad. En otras palabras, vamos a crear una interfaz de usuario que siempre tendrá el mismo aspecto, independientemente de la cantidad de espacio real con el que tenga que trabajar. El trabajo de objetos segue adaptable es juzgar el entorno y determinar el mejor modo de presentar el contenido. A continuación se muestran los objetos segue adaptables:
+Cualquier aplicación que use clases de tamaño también usará el nuevo [*objetos segue adaptable*](~/ios/user-interface/storyboards/unified-storyboards.md). Cuando use clases de tamaño, recuerde que no vamos a especificar directamente si usamos un iPhone o un iPad. En otras palabras, vamos a crear una interfaz de usuario que siempre tendrá el mismo aspecto, independientemente de la cantidad de espacio real con el que tenga que trabajar. El trabajo de objetos segue adaptable es juzgar el entorno y determinar el mejor modo de presentar el contenido. A continuación se muestran los objetos segue adaptables:
 
 [![La lista desplegable Adaptive objetos segue](images/adaptivesegue.png)](images/adaptivesegue.png#lightbox)
 
@@ -326,7 +326,7 @@ Antes de comenzar, siga los pasos 1 a 8 anteriores. En estos pasos se crea nuest
 
     [![Líneas centrales](images/passwordvc.png)](images/passwordvc.png#lightbox)
 
-2. Cree un segue entre el botón ir a rosa y el controlador de vista; para ello, presione Ctrl y arrastre desde el *PinkButton* hasta el *PinkViewController*, **y seleccione Activar al pasar** el mouse.
+2. Cree un segue entre el botón ir a rosa y el controlador de vista, Ctrl-Dragging desde el *PinkButton* al *PinkViewController*y seleccionando la opción de **inserciones** al pasar el mouse.
 
 3. Haga clic en segue y asígnele el *identificador* `SegueToPink` :
 
