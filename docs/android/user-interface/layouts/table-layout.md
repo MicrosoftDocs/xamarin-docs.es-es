@@ -5,23 +5,23 @@ ms.assetid: 0C7B9C95-5E5F-A069-BA37-984E49F7DCAD
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
-ms.date: 02/06/2018
-ms.openlocfilehash: 4175b1fa62b2bc0e4209d13934c2bdbdd1e2a085
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.date: 10/08/2020
+ms.openlocfilehash: e33dbae13dc9b7af7649777f16bf5d23e11209ad
+ms.sourcegitcommit: 124d845f8d2768353e8b7fe1ab1d959a589367f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028745"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91872269"
 ---
 # <a name="xamarinandroid-tablelayout"></a>TableLayout de Xamarin. Android
 
-[`TableLayout`](xref:Android.Widget.TableLayout) es una [`ViewGroup`](xref:Android.Views.ViewGroup)
-que muestra los [`View`](xref:Android.Views.View) secundarios
+[`TableLayout`](xref:Android.Widget.TableLayout) es un [`ViewGroup`](xref:Android.Views.ViewGroup)
+que muestra secundario [`View`](xref:Android.Views.View)
 elementos de filas y columnas.
 
 Inicie un nuevo proyecto denominado **HelloTableLayout**.
 
-Abra el archivo **Resources/layout/main. axml** e inserte lo siguiente:
+Abra el archivo **Resources/layout/content_main.xml** e inserte lo siguiente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -30,71 +30,109 @@ Abra el archivo **Resources/layout/main. axml** e inserte lo siguiente:
     android:layout_height="fill_parent"
     android:stretchColumns="1">
 
-    <TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_column="1"
             android:text="Open..."
             android:padding="3dip"/>
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Ctrl-O"
             android:gravity="right"
             android:padding="3dip"/>
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_column="1"
             android:text="Save..."
             android:padding="3dip"/>
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Ctrl-S"
             android:gravity="right"
             android:padding="3dip"/>
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_column="1"
             android:text="Save As..."
             android:padding="3dip"/>
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Ctrl-Shift-S"
             android:gravity="right"
             android:padding="3dip"/>
     </TableRow>
 
     <View
+        android:layout_width="wrap_content"
         android:layout_height="2dip"
         android:background="#FF909090"/>
 
-    <TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="X"
             android:padding="3dip"/>
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Import..."
             android:padding="3dip"/>
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="X"
             android:padding="3dip"/>
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Export..."
             android:padding="3dip"/>
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Ctrl-E"
             android:gravity="right"
             android:padding="3dip"/>
     </TableRow>
 
     <View
+        android:layout_width="wrap_content"
         android:layout_height="2dip"
         android:background="#FF909090"/>
 
-    <TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_column="1"
             android:text="Quit"
             android:padding="3dip"/>
@@ -102,10 +140,10 @@ Abra el archivo **Resources/layout/main. axml** e inserte lo siguiente:
 </TableLayout>
 ```
 
-Observe cómo es similar a la estructura de una tabla HTML. El [`TableLayout`](xref:Android.Widget.TableLayout)
-el elemento es como el elemento de `<table>` HTML; [`TableRow`](xref:Android.Widget.TableRow)
-es como un elemento `<tr>`; pero para las celdas, puede usar cualquier tipo de [`View`](xref:Android.Views.View) elemento. En este ejemplo, un [`TextView`](xref:Android.Widget.TextView)
-se utiliza para cada celda. Entre algunas de las filas, también hay una [`View`](xref:Android.Views.View)básica, que se utiliza para dibujar una línea horizontal.
+Observe cómo es similar a la estructura de una tabla HTML. [`TableLayout`](xref:Android.Widget.TableLayout)
+el elemento es como el `<table>` elemento HTML; [`TableRow`](xref:Android.Widget.TableRow)
+es como un `<tr>` elemento; pero para las celdas, puede usar cualquier tipo de [`View`](xref:Android.Views.View) elemento. En este ejemplo, un [`TextView`](xref:Android.Widget.TextView)
+se utiliza para cada celda. Entre algunas de las filas, también hay un básico [`View`](xref:Android.Views.View) , que se usa para dibujar una línea horizontal.
 
 Asegúrese de que la actividad **HelloTableLayout** carga este diseño en el [`OnCreate()`](xref:Android.App.Activity.OnCreate*)
 forma
@@ -118,11 +156,11 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-El método [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)) carga el archivo de diseño para el [`Activity`](xref:Android.App.Activity), especificado por el identificador de recurso &mdash; `Resource.Layout.Main` hace referencia al archivo de diseño **Resources/layout/main. axml** .
+El [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*) método) carga el archivo de diseño para el [`Activity`](xref:Android.App.Activity) , especificado por el identificador de recurso &mdash; `Resource.Layout.Main` hace referencia al archivo de diseño **Resources/layout/main. axml** .
 
-Ejecute la aplicación. Debería ver lo siguiente:
+Ejecute la aplicación. Verá lo siguiente:
 
-[![captura de pantalla de ejemplo de la aplicación TableLayout que muestra varias filas de la tabla](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
+[![Captura de pantalla de ejemplo de la aplicación TableLayout que muestra varias filas de la tabla](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
 
 ## <a name="references"></a>Referencias
 

@@ -10,16 +10,19 @@ ms.date: 03/27/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 182256fd572a370a7b322898b1e24ade12e971fd
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4221cd313ca8fbc3f3f9f886e3bd3f774c7472f7
+ms.sourcegitcommit: 27f33b0a83b9dc871ad9fb207a1c9960ef197d9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127388"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91897952"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usar datos de tiempo de diseño con el vista previa de XAML
 
 _Algunos diseños son difíciles de visualizar sin datos. Use estas sugerencias para sacar el máximo partido de las páginas con gran cantidad de datos en el visor de vistas previas de XAML._
+
+> [!NOTE]
+> Si usa Windows Presentation Foundation (WPF) o UWP, consulte [usar datos de tiempo de diseño con el diseñador XAML para aplicaciones de escritorio](/visualstudio/xaml-tools/xaml-designtime-data) .
 
 ## <a name="design-time-data-basics"></a>Aspectos básicos de los datos de tiempo de diseño
 
@@ -41,7 +44,7 @@ Por ejemplo, puede Agregar texto a una etiqueta que normalmente tiene datos enla
 
 [![Datos de tiempo de diseño con texto en una etiqueta](xaml-previewer-images/designtimedata-label-sm.png "Datos de tiempo de diseño con texto como etiqueta")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
-En este ejemplo, sin `d:Text` , el previsor de XAML no mostraría nada para la etiqueta. En su lugar, muestra "nombre". donde la etiqueta tendrá datos reales en tiempo de ejecución.
+En este ejemplo, sin `d:Text` , el previsor de XAML no mostraría nada para la etiqueta. En su lugar, muestra "Name!" donde la etiqueta tendrá datos reales en tiempo de ejecución.
 
 Puede usar `d:` con cualquier atributo de un Xamarin.Forms control, como colores, tamaños de fuente y espaciado. Incluso puede agregarlo al propio control:
 
@@ -148,4 +151,4 @@ Se trata de un problema conocido y se corregirá en una próxima versión de Vis
 
 ### <a name="the-xaml-previewer-stopped-working"></a>El previsor de XAML dejó de funcionar
 
-Intente cerrar y volver a abrir el archivo XAML, y limpie y recompile el proyecto.
+Pruebe a cerrar y volver a abrir el archivo XAML, y limpie y vuelva a compilar el proyecto.
