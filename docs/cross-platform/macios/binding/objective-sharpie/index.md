@@ -6,18 +6,18 @@ ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2017
-ms.openlocfilehash: 4d6ab6cf48c5c365a4d8d05ef108a4d3a5d16134
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 7fe8c563b78459959a5c8b50883ed539040f7a7b
+ms.sourcegitcommit: 37f5b0380df75da6e2b09ef39a8e71deb50bfe0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016190"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91943602"
 ---
 # <a name="creating-bindings-with-objective-sharpie"></a>Crear enlaces con Sharpie objetivo
 
 _En esta sección se proporciona una introducción a Objective Sharpie, la herramienta de línea de comandos de Xamarin que se usa para automatizar el proceso de creación de un enlace a una biblioteca de Objective-C._
 
-- [Información general](#overview) & [historial](#history)
+- [Información general](#overview)  &  [Historial](#history) de
 - [Introducción](get-started.md)
 - [Herramientas y comandos](tools.md)
 - [Características](platform/index.md)
@@ -30,7 +30,7 @@ _En esta sección se proporciona una introducción a Objective Sharpie, la herra
 Objective Sharpie es una herramienta de línea de comandos que ayuda a arrancar el primer paso de un enlace.
 Funciona mediante el análisis de los archivos de encabezado de una biblioteca nativa para asignar la API pública en la [definición de enlace](~/cross-platform/macios/binding/objective-c-libraries.md#The_API_definition_file) (un proceso que previamente se hizo manualmente).
 
-Objective Sharpie usa archivos de encabezado de análisis de Clang, por lo que el enlace es lo más exacto y completo posible. Esto puede reducir en gran medida el tiempo y el esfuerzo que se tarda en generar un enlace de calidad.
+Objective Sharpie usa Clang para analizar los archivos de encabezado, por lo que el enlace es lo más exacto y completo posible. Esto puede reducir en gran medida el tiempo y el esfuerzo que se tarda en generar un enlace de calidad.
 
 > [!IMPORTANT]
 > Objective Sharpie es una herramienta para desarrolladores de Xamarin experimentados con conocimiento avanzado de Objective-C (y por extensión, C). Antes de intentar enlazar una biblioteca de Objective-C, debe tener un conocimiento sólido de cómo crear la biblioteca nativa en la línea de comandos (y una buena comprensión de cómo funciona la biblioteca nativa).
