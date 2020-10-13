@@ -6,12 +6,12 @@ ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
 author: davidortinau
 ms.author: daortin
 ms.date: 07/18/2018
-ms.openlocfilehash: 1a71b84d1068fef1730196bafb0f0d7e2a948c5c
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: bd8314e0f84dd74477782a1cfdcb6b91953ecdcd
+ms.sourcegitcommit: 827daa78c090bf79a1b55da45bb8012a1723b720
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936921"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997522"
 ---
 # <a name="shared-projects-code-sharing"></a>Uso compartido de código de proyectos compartidos
 
@@ -59,7 +59,7 @@ La adición de una referencia a un proyecto compartido se realiza de la misma ma
 
 ![Referencia del proyecto a un proyecto compartido](shared-projects-images/xs-reference.png)
 
-Una vez que otra biblioteca o aplicación hace referencia al proyecto compartido, puede compilar la solución y ver los errores en el código. Cuando _dos o más_ proyectos hacen referencia al proyecto compartido, aparece un menú en la parte superior izquierda del editor de código fuente que muestra elegir qué proyectos hacen referencia a este archivo.
+Una vez que otra biblioteca o aplicación hace referencia al proyecto compartido, puede compilar la solución y ver los errores en el código. Cuando _dos o más_ proyectos hacen referencia al proyecto compartido, aparece un menú en la parte superior izquierda del editor de código fuente que muestra los proyectos que hacen referencia a este archivo.
 
 ## <a name="shared-project-options"></a>Opciones de proyecto compartido
 
