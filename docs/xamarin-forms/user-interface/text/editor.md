@@ -10,12 +10,12 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 42f89f09bd84127fd19bc3ab64794bdac7f145d7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 257962516b8a183e63c49b22bc2be108364d9425
+ms.sourcegitcommit: e7d6f8bb074c08d87f7507ad5f1377cfacefa32a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561630"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92041891"
 ---
 # <a name="no-locxamarinforms-editor"></a>Xamarin.Forms Editor
 
@@ -133,7 +133,7 @@ El resultado es que los caracteres del texto mostrados por [`Editor`](xref:Xamar
 
 ## <a name="auto-size-an-editor"></a>Cambiar automáticamente el tamaño de un editor
 
-Se [`Editor`](xref:Xamarin.Forms.Editor) puede establecer el tamaño automático de su contenido estableciendo la [`Editor.AutoSize`](xref:Xamarin.Forms.Editor.AutoSize) propiedad en [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) , que es un valor de la [`EditoAutoSizeOption`](xref:Xamarin.Forms.EditorAutoSizeOption) enumeración. Esta enumeración tiene dos valores:
+Se [`Editor`](xref:Xamarin.Forms.Editor) puede establecer el tamaño automático de su contenido estableciendo la [`Editor.AutoSize`](xref:Xamarin.Forms.Editor.AutoSize) propiedad en [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) , que es un valor de la [`EditorAutoSizeOption`](xref:Xamarin.Forms.EditorAutoSizeOption) enumeración. Esta enumeración tiene dos valores:
 
 - [`Disabled`](xref:Xamarin.Forms.EditorAutoSizeOption.Disabled) indica que el cambio de tamaño automático está deshabilitado y es el valor predeterminado.
 - [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) indica que el cambio de tamaño automático está habilitado.
@@ -304,7 +304,7 @@ Asegúrese de que los colores de fondo y de texto que elija se pueden usar en ca
 > [!NOTE]
 > La [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase, de la que [`Entry`](xref:Xamarin.Forms.Entry) hereda, también tiene [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused) eventos y.
 
-### <a name="completed"></a>Completado
+### <a name="completed"></a>Completed
 
 El `Completed` evento se utiliza para reaccionar a la finalización de una interacción con `Editor` . `Completed` se genera cuando el usuario finaliza la entrada con un campo escribiendo la tecla RETURN en el teclado (o presionando la tecla TAB en UWP). El controlador del evento es un controlador de eventos genérico que toma el remitente y `EventArgs` :
 
