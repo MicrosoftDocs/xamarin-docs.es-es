@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/02/2018
-ms.openlocfilehash: 66d2f66f0118e84778b25fc0e872099439510ce2
-ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
+ms.openlocfilehash: 44003e55ee88db727c26def56b3363dbf6c982e9
+ms.sourcegitcommit: 124d845f8d2768353e8b7fe1ab1d959a589367f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226851"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91872282"
 ---
 # <a name="signing-the-android-application-package"></a>Firmar el paquete de aplicación de Android
 
@@ -154,3 +154,8 @@ El APK ya se puede copiar en el Finder y enviar a su destino final. Es convenien
 ## <a name="next-steps"></a>Pasos siguientes
 
 Una vez que el paquete de aplicación se haya firmado para su lanzamiento, es necesario publicarlo. En las secciones siguientes se describen varias formas de publicar una aplicación.
+
+
+## <a name="related-links"></a>Vínculos relacionados
+
+- [Generación de almacén de claves de Android](https://developer.android.com/studio/publish/app-signing#generate-key)
