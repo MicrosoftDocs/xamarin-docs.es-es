@@ -9,12 +9,12 @@ ms.date: 09/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 12631abacc56edf88d375d4be89e71a9a4588d03
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 01902942c750a3cd278d648fa82499af4c5d3ab6
+ms.sourcegitcommit: dac04cec56290fb19034f3e135708f6966a8f035
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436374"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92169974"
 ---
 # <a name="no-locxamarinessentials-permissions"></a>Xamarin.Essentials: Permisos
 
@@ -44,7 +44,7 @@ var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>()
 
 Se produce una excepción `PermissionException` si no se declara el permiso necesario.
 
-Es mejor comprobar el estado del permiso antes de solicitarlo. Cada sistema operativo devuelve un estado predeterminado diferente si nunca se ha solicitado el usuario. iOS devuelve `Unknown`, mientras que otros devuelven `Denied`.
+Es mejor comprobar el estado del permiso antes de solicitarlo. Cada sistema operativo devuelve un estado predeterminado diferente si nunca se ha solicitado el usuario. iOS devuelve `Unknown`, mientras que otros devuelven `Denied`. Si el estado es `Granted`, no es necesario realizar otras llamadas. En iOS, si el estado es `Denied`, debe pedir al usuario que cambie el permiso en la configuración, y en Android puede llamar a `ShouldShowRationale` para detectar si el usuario ya denegó el permiso en el pasado.
 
 ## <a name="requesting-permissions"></a>Solicitar permisos
 
@@ -56,7 +56,7 @@ var status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
 
 Se produce una excepción `PermissionException` si no se declara el permiso necesario.
 
-Tenga en cuenta que, en algunas plataformas, una solicitud de permiso solo se puede activar una vez. El desarrollador debe controlar otros mensajes para comprobar si un permiso tiene el estado `Denied` y pedir al usuario que lo active manualmente.
+Tenga en cuenta que, en algunas plataformas, una solicitud de permiso solo se puede activar una vez. El desarrollador debe controlar otros mensajes para comprobar si un permiso tiene el estado `Denied` y pedir al usuario que lo active manualmente. 
 
 ## <a name="permission-status"></a>Estado del permiso
 
@@ -114,12 +114,24 @@ Aquí se muestra un patrón de uso general para controlar los permisos.
 public async Task<PermissionStatus> CheckAndRequestLocationPermission()
 {
     var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
-    if (status != PermissionStatus.Granted)
+    
+    if (status == PermissionStatus.Granted)
+        return status;
+        
+    
+    if (status == PermissionStatus.Denied && DeviceInfo.Platform == DevicePlatform.iOS)
     {
-        status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+        // Prompt the user to turn on in settings
+        // On iOS once a permission has been denied it may not be requested again from the application
+        return status;
     }
+    
+    if (Permissions.ShouldShowRationale<Permissions.LocationWhenInUse>())
+    {
+        // Prompt the user with additional information as to why the permission is needed
+    }   
 
-    // Additionally could prompt the user to turn on in settings
+    status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
 
     return status;
 }
