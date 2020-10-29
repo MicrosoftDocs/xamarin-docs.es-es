@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 12/14/2016
-ms.openlocfilehash: 3f69f10274c413a107a40b2f404b3227cfee67cf
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 89f3de944004404cdc1f4d192426a50f6746fe73
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936751"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92928612"
 ---
 # <a name="hello-watchos--walkthrough"></a>Hola, watchos: tutorial
 
@@ -22,7 +22,7 @@ Una vez que haya creado una solución que siga los pasos de [instalación e inst
 - La extensión de inspección que contiene el código de programa de la aplicación de inspección. etc
 - La aplicación de inspección, que contiene los recursos de imagen y guion gráfico que se representan en el reloj.
 
-Compruebe que las [referencias son correctas](~/ios/watchos/get-started/project-references.md): que la aplicación primaria tiene una referencia a la extensión y que la extensión tiene una referencia a la aplicación de inspección.
+Compruebe que las [referencias son correctas](~/ios/watchos/get-started/project-references.md): que la aplicación primaria tiene una referencia a la aplicación Watch y que la aplicación Watch tiene una referencia a la extensión.
 
 Confirme que los identificadores de lote siguen la \* Convención. watchkitextension \* . watchkitapp y que el archivo info. plist de la extensión tiene el valor de **identificador de paquete WKApp** establecido en el identificador de paquete de la aplicación de inspección.
 
@@ -40,12 +40,12 @@ Ahora debería poder ejecutar la aplicación de inspección, pero como el archiv
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Haga doble clic en interface. Storyboard en la aplicación de inspección para iniciar Xamarin iOS Designer (si está en un equipo Mac, también puede hacer clic con el botón derecho y **abrirlo con > Xcode Interface Builder**).
+Haga doble clic en interface. Storyboard en la aplicación de inspección para iniciar Xamarin iOS Designer (si está en un equipo Mac, también puede hacer clic con el botón derecho y **abrirlo con > Xcode Interface Builder** ).
 
 1. Asegúrese de que los paneles **cuadro de herramientas** y **propiedades** estén visibles,
 1. Haga clic para seleccionar el controlador de interfaz,
-1. Establezca el identificador y el título del controlador de interfaz en **interfaceController** y **HI Watch**.
-1. Compruebe que la **clase** está establecida en **InterfaceController**
+1. Establezca el identificador y el título del controlador de interfaz en **interfaceController** y **HI Watch** .
+1. Compruebe que la **clase** está establecida en  **InterfaceController**
 
     ![Establecer el identificador y el título del controlador de interfaz en interfaceController y HI Watch](hello-watch-images/interfacecontrollerattributes.png)
 
@@ -54,9 +54,9 @@ Haga doble clic en interface. Storyboard en la aplicación de inspección para i
 Haga doble clic en interface. Storyboard en la aplicación de inspección para editarlo con Xamarin iOS Designer en Visual Studio:
 
 1. Abra el panel Propiedades.
-1. Cambie la clase a **InterfaceController**;
+1. Cambie la clase a **InterfaceController** ;
 1. Haga clic en el controlador de interfaz; etc
-1. Establezca el identificador y el título del controlador de interfaz en **interfaceController** y **HI Watch**.
+1. Establezca el identificador y el título del controlador de interfaz en **interfaceController** y **HI Watch** .
 
     ![Establecer el identificador y el título del controlador de interfaz en interfaceController y HI Watch](hello-watch-images/vs-interfacecontrollerattributes.png)
 
@@ -82,7 +82,7 @@ Cree la interfaz de usuario:
 
 1. Seleccione el botón del guión gráfico y vaya a la lista de **eventos** del panel de **propiedades** .
 
-1. Cree una nueva **acción** escribiendo `OnButtonPress` y presionando **entrar**.
+1. Cree una nueva **acción** escribiendo `OnButtonPress` y presionando **entrar** .
   La acción aparecerá en la lista y se creará automáticamente un método parcial en C#.
 
 ![La acción OnButtonPress agregada a un botón](hello-watch-images/buttonaction.png)
@@ -125,7 +125,7 @@ partial class InterfaceController
 }
 ```
 
-Ahora Abra **InterfaceController.CS** (*no* InterfaceController.Designer.CS) y agregue el código siguiente:
+Ahora Abra **InterfaceController.CS** ( *no* InterfaceController.Designer.CS) y agregue el código siguiente:
 
 ```csharp
 int clickCount = 0;
@@ -140,7 +140,7 @@ Este código debe ser bastante transparente: la variable de instancia `clickCoun
 
 Si aún no es el proyecto de inicio,
 
-1. Haga clic con el botón derecho en el proyecto de extensión de inspección y elija **establecer como proyecto de inicio**.
+1. Haga clic con el botón derecho en el proyecto de extensión de inspección y elija **establecer como proyecto de inicio** .
 
 1. Establezca el destino de implementación en una imagen del simulador compatible con el kit de inspección (como iPhone 6 iOS 8,2).
 

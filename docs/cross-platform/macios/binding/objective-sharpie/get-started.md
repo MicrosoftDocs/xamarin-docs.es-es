@@ -6,12 +6,12 @@ ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2017
-ms.openlocfilehash: 35f2db71f582c7e6e30448cf32ba4d95033652bf
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 5bee8df72290cab3ed6d5c23fef6c2ae2f1a2559
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570991"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92928521"
 ---
 # <a name="getting-started-with-objective-sharpie"></a>Introducción con Objective Sharpie
 
@@ -22,13 +22,13 @@ ms.locfileid: "84570991"
 
 ## <a name="installing-objective-sharpie"></a>Instalación del objetivo Sharpie
 
-Objective Sharpie es actualmente una herramienta de línea de comandos independiente para Mac OS X 10,10 y versiones más recientes, y _no es un producto de Xamarin totalmente compatible_. Solo la pueden usar desarrolladores avanzados para ayudar a crear un proyecto de enlace a una biblioteca de Objective-C de terceros.
+Objective Sharpie es actualmente una herramienta de línea de comandos independiente para Mac OS X 10,10 y versiones más recientes, y _no es un producto de Xamarin totalmente compatible_ . Solo la pueden usar desarrolladores avanzados para ayudar a crear un proyecto de enlace a una biblioteca de Objective-C de terceros.
 
 Objective Sharpie se puede descargar como un instalador de paquetes estándar de OS X.
 Ejecute el instalador y siga todas las indicaciones en pantalla del Asistente para la instalación:
 
 - **Versión actual: 3,4**
-  - [Descargar la última versión](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie.pkg)
+  - [Descargar la última versión](https://aka.ms/objective-sharpie)
   - [Anuncio del Foro](https://forums.xamarin.com/discussion/104800/objective-sharpie-3-4)
 
 > [!TIP]
