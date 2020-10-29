@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: jonpryor
 ms.author: jopryo
 ms.date: 09/23/2020
-ms.openlocfilehash: 90efe2533f971180124d044ec39ddcf1591b9d36
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 8a23e973687ac9f775042685122d558788fc7be7
+ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91455045"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92897447"
 ---
 # <a name="build-items"></a>Elementos de compilación
 
@@ -77,7 +77,7 @@ Con el examen de la ruta de acceso, el nombre del directorio principal de la bib
 
 ### <a name="item-attribute-name"></a>Nombre del atributo de elemento
 
-**** Abi&ndash;: especifica la ABI de la biblioteca nativa.
+ Abi&ndash;: especifica la ABI de la biblioteca nativa.
 
 ```xml
 <ItemGroup>
@@ -107,11 +107,11 @@ Quizás los usuarios más avanzados deseen que recursos diferentes se usen en di
   <AndroidResource Include="Resources-Debug\values\strings.xml"/>
 </ItemGroup>
 <PropertyGroup>
-  <MonoAndroidResourcePrefix>Resources;Resources-Debug<MonoAndroidResourcePrefix>
+  <MonoAndroidResourcePrefix>Resources;Resources-Debug</MonoAndroidResourcePrefix>
 </PropertyGroup>
 ```
 
-**** LogicalName&ndash;: especifica la ruta de acceso a los recursos de manera explícita. Permite la creación de &ldquo;alias&rdquo; de archivos para que estén disponibles con varios nombres de recursos distintos.
+ LogicalName&ndash;: especifica la ruta de acceso a los recursos de manera explícita. Permite la creación de &ldquo;alias&rdquo; de archivos para que estén disponibles con varios nombres de recursos distintos.
 
 ```xml
 <ItemGroup Condition="'$(Configuration)'!='Debug'">

@@ -10,12 +10,12 @@ ms.date: 03/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3240906cdf964bcf798137e640a82dbd1e2341d9
-ms.sourcegitcommit: a662910a6ba14d241e01047739eb1cd87aa7d884
+ms.openlocfilehash: b441e5fd5ef045bf90244b4b69f868fe858e002d
+ms.sourcegitcommit: ba052b0990499d8191bcb25291c6ccd8d1ff26fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88029726"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92493317"
 ---
 # <a name="xamarin-hot-restart-preview"></a>Reinicio rápido de Xamarin (versión preliminar)
 
@@ -36,9 +36,9 @@ El reinicio rápido de Xamarin permite probar rápidamente los cambios en la apl
 ## <a name="initial-setup"></a>Instalación inicial
 
 > [!NOTE]
-> El reinicio rápido de Xamarin está deshabilitado de forma predeterminada en la versión preliminar. Puede habilitarlo en **Herramientas > Opciones > Entorno > Características de versión preliminar > Habilitar el reinicio rápido de Xamarin**.
+> El reinicio rápido de Xamarin está deshabilitado de forma predeterminada en la versión preliminar. Puede habilitarlo en **Herramientas > Opciones > Entorno > Características de versión preliminar > Habilitar el reinicio rápido de Xamarin** .
 
-1. Asegúrese de que el proyecto de iOS está establecido como proyecto de inicio y la configuración de compilación en **Depuración|iPhone**.
+1. Asegúrese de que el proyecto de iOS está establecido como proyecto de inicio y la configuración de compilación en **Depuración|iPhone** .
 
    1. Si se trata de un proyecto existente, vaya a **Compilar > Configuration Manager...** y asegúrese de que **Implementación** está habilitado para el proyecto de iOS.
 
@@ -48,19 +48,19 @@ El reinicio rápido de Xamarin permite probar rápidamente los cambios en la apl
 
 3. Si iTunes no está instalado, haga clic en **Descargar iTunes** para descargar el instalador. Haga clic en **Siguiente** cuando se complete la instalación de iTunes.
 
-4. Conecte un dispositivo iOS al equipo. Si un dispositivo ya estaba conectado, desconéctelo y vuelva a conectarlo. El nombre del dispositivo aparecerá en el asistente una vez que se haya detectado. Haga clic en **Siguiente**.
+4. Conecte un dispositivo iOS al equipo. Si un dispositivo ya estaba conectado, desconéctelo y vuelva a conectarlo. El nombre del dispositivo aparecerá en el asistente una vez que se haya detectado. Haga clic en **Siguiente** .
 
-5. Escriba las credenciales de la cuenta de desarrollador de Apple y haga clic en **Siguiente**.
+5. Escriba las credenciales de la cuenta de desarrollador de Apple y haga clic en **Siguiente** .
 
-6. Seleccione un equipo de desarrollo mediante el menú desplegable para habilitar el [ aprovisionamiento automático](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md) en el proyecto. Haga clic en **Finalizar**.
+6. Seleccione un equipo de desarrollo mediante el menú desplegable para habilitar el [ aprovisionamiento automático](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md) en el proyecto. Haga clic en **Finalizar** .
 
 > [!NOTE]
 > Se recomienda el uso del aprovisionamiento automático para que se puedan configurar fácilmente dispositivos iOS adicionales para la implementación. Pero puede deshabilitarlo y seguir usando el aprovisionamiento manual si los perfiles de aprovisionamiento correctos están presentes.
 
 ## <a name="use-xamarin-hot-restart"></a>Uso del reinicio rápido de Xamarin
-Después de la instalación inicial, el dispositivo conectado aparecerá en el menú desplegable de destino de depuración. Para depurar la aplicación, seleccione el dispositivo en la lista desplegable y haga clic en el botón **Ejecutar**. Es posible que vea un mensaje de Visual Studio en el que se le pide que inicie manualmente la aplicación en el dispositivo para poder iniciar la sesión de depuración.
+Después de la instalación inicial, el dispositivo conectado aparecerá en el menú desplegable de destino de depuración. Para depurar la aplicación, seleccione el dispositivo en la lista desplegable y haga clic en el botón **Ejecutar** . Es posible que vea un mensaje de Visual Studio en el que se le pide que inicie manualmente la aplicación en el dispositivo para poder iniciar la sesión de depuración.
 
-Puede realizar modificaciones en los archivos de código durante la depuración y después presionar el botón **Reiniciar** de la barra de herramientas de depuración, o bien **Ctrl+Mayús+F5**, para reiniciar la sesión de depuración con los nuevos cambios aplicados:
+Puede realizar modificaciones en los archivos de código durante la depuración y después presionar el botón **Reiniciar** de la barra de herramientas de depuración, o bien **Ctrl+Mayús+F5** , para reiniciar la sesión de depuración con los nuevos cambios aplicados:
 
 [![Captura de pantalla de la barra de herramientas de depuración con el botón Reiniciar resaltado.](hot-restart-images/restart.png)](hot-restart-images/toolbar.png)
 
@@ -77,7 +77,6 @@ También puede usar el símbolo de preprocesador `HOTRESTART` para impedir que s
 
 ## <a name="troubleshoot"></a>Solucionar problemas
 
-- El asistente para la instalación no detectará iTunes si se ha instalado desde Microsoft Store. Primero tendrá que desinstalar esa versión y, después, descargar el [instalador desde Apple](https://go.microsoft.com/fwlink/?linkid=2101014).
 - Hay un problema conocido en el que tener habilitadas compilaciones específicas del dispositivo impide que la aplicación entre en el modo de depuración. La solución consiste en deshabilitarlo en **Propiedades > Compilación de iOS** y reintentar la depuración. Este problema se corregirá en futuras versiones.
 - Si la aplicación ya está en el dispositivo, es posible que se produzca un error `AMDeviceStartHouseArrestService` al intentar realizar la implementación con el reinicio rápido. La solución alternativa consiste en desinstalar la aplicación en el dispositivo y volver a implementarla.
 - Si escribe un identificador de Apple que no forme parte del Programa para Desarrolladores de Apple, podría mostrarse el siguiente error: `Authentication Error. Xcode 7.3 or later is required to continue developing with your Apple ID`. Debe tener una cuenta de desarrollador de Apple válida para usar el reinicio rápido de Xamarin en dispositivos iOS. 

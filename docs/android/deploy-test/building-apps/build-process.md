@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 09/11/2020
-ms.openlocfilehash: d89f686be99dc8ae8d1aada12dcbe94d857424d7
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 4a89cfbb2406b6a5cda125044d43736dfa02d791
+ms.sourcegitcommit: 01ccefd54c0ced724784dbe1aec9ecfc9b00e633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91454967"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92630236"
 ---
 # <a name="build-process"></a>Proceso de compilación
 
@@ -22,9 +22,9 @@ El proceso de compilación de Xamarin.Android es responsable de pegarlo todo jun
 
 En términos generales, hay dos tipos de paquetes de aplicación de Android (archivos `.apk`) que puede generar el sistema de compilación de Xamarin.Android:
 
-- Compilaciones de **versión**, que son totalmente autocontenidas y no requieren la ejecución de paquetes adicionales. Estos son los paquetes que se proporcionarían a una tienda de aplicaciones.
+- Compilaciones de **versión** , que son totalmente autocontenidas y no requieren la ejecución de paquetes adicionales. Estos son los paquetes que se proporcionarían a una tienda de aplicaciones.
 
-- Compilaciones de **depuración**, los que no.
+- Compilaciones de **depuración** , los que no.
 
 No es por casualidad que estos correspondan al elemento de MSBuild `Configuration` que genera el paquete.
 
@@ -77,7 +77,7 @@ Las propiedades de MSBuild siguientes se utilizan para controlar la generación 
 
 ## <a name="signing-properties"></a>Propiedades de firma
 
-Las propiedades de firma controlan cómo se firma el paquete de aplicación para que se pueda instalar en un dispositivo Android. Para permitir una iteración de compilación más rápida, las tareas de Xamarin.Android no firman paquetes durante el proceso de compilación, porque es un proceso bastante lento. En su lugar, se firman (si es necesario) antes de la instalación o durante la exportación, por medio del IDE o del destino de compilación *Install*. Al invocar el destino *SignAndroidPackage* se produce un paquete con el sufijo `-Signed.apk` en el directorio de salida.
+Las propiedades de firma controlan cómo se firma el paquete de aplicación para que se pueda instalar en un dispositivo Android. Para permitir una iteración de compilación más rápida, las tareas de Xamarin.Android no firman paquetes durante el proceso de compilación, porque es un proceso bastante lento. En su lugar, se firman (si es necesario) antes de la instalación o durante la exportación, por medio del IDE o del destino de compilación *Install* . Al invocar el destino *SignAndroidPackage* se produce un paquete con el sufijo `-Signed.apk` en el directorio de salida.
 
 De forma predeterminada, el destino de firma genera una nueva clave de firma de depuración, si es necesario. Si desea usar una clave específica, por ejemplo, en un servidor de compilación, se usan las propiedades siguientes de MSBuild:
 
@@ -145,7 +145,7 @@ Tenga en cuenta esta recomendación sobre la extensión del proceso de compilaci
 
 ## <a name="target-definitions"></a>Definiciones de destino
 
-Las partes del proceso de compilación específicas de Xamarin.Android se definen en `$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets`, pero también se requieren los destinos normales específicos del lenguaje, como *Microsoft.CSharp.targets*, para compilar el ensamblado.
+Las partes del proceso de compilación específicas de Xamarin.Android se definen en `$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets`, pero también se requieren los destinos normales específicos del lenguaje, como *Microsoft.CSharp.targets* , para compilar el ensamblado.
 
 Las siguientes propiedades de compilación deben establecerse antes de importar los destinos de lenguaje:
 
@@ -157,7 +157,7 @@ Las siguientes propiedades de compilación deben establecerse antes de importar 
 </PropertyGroup>
 ```
 
-Todos estos destinos y propiedades se pueden incluir para C# mediante la importación de *Xamarin.Android.CSharp.targets*:
+Todos estos destinos y propiedades se pueden incluir para C# mediante la importación de *Xamarin.Android.CSharp.targets* :
 
 ```xml
 <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

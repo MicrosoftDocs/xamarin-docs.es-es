@@ -11,12 +11,12 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 - Firebase
-ms.openlocfilehash: 721785fe2eeb35f0ef04d1a7854afe4039a66849
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6135d8caec196ded385bc0f962f007c41d20e2cb
+ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561838"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92897508"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-no-locxamarinforms"></a>Envío y recepción de notificaciones push con Azure Notification Hubs y Xamarin.Forms
 
@@ -122,7 +122,7 @@ public static class AppConstants
 Personalice los valores siguientes de `AppConstants` para conectar la aplicación de ejemplo al centro de notificaciones de Azure:
 
 * `NotificationHubName`: use el nombre del centro de notificaciones de Azure que ha creado en Azure Portal.
-* `ListenConnectionString`: este valor se encuentra en el centro de notificaciones de Azure, en **Directivas de acceso**.
+* `ListenConnectionString`: este valor se encuentra en el centro de notificaciones de Azure, en **Directivas de acceso** .
 
 La captura de pantalla siguiente muestra dónde se encuentran estos valores en Azure Portal:
 
@@ -278,9 +278,6 @@ Los mensajes entrantes se convierten en una notificación local con el método `
 
 La notificación local y el ejemplo `Intent` requieren que el usuario realice la acción de pulsar en la notificación. Esto es deseable si el usuario debe realizar una acción antes de que cambie el estado de la aplicación. Aunque en algunos casos puede que quiera acceder a los datos del mensaje sin necesidad de una acción del usuario. En el ejemplo anterior también se envía el mensaje directamente a la instancia actual de `MainPage` con el método `SendMessageToMainPage`. En producción, si implementa ambos métodos para un solo tipo de mensaje, el objeto `MainPage` obtiene mensajes duplicados si el usuario pulsa la notificación.
 
-> [!NOTE]
-> La aplicación Android solo recibe notificaciones push si se ejecuta en primer o en segundo plano. Para recibir notificaciones push cuando el elemento `Activity` principal no se esté ejecutando, debe implementar un servicio que esté fuera del ámbito de este ejemplo. Para obtener más información, vea [Creación de servicios de Android](../../../android/app-fundamentals/services/index.md).
-
 ### <a name="add-incoming-notifications-to-the-no-locxamarinforms-ui"></a>Adición de notificaciones entrantes a la interfaz de usuario de Xamarin.Forms
 
 La clase `MainActivity` necesita obtener permiso para controlar las notificaciones y administrar los datos de los mensajes entrantes. En el siguiente código se muestra la implementación completa de `MainActivity`:
@@ -396,7 +393,7 @@ void RegisterForRemoteNotifications()
     if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
     {
         UNUserNotificationCenter.Current.RequestAuthorization(UNAuthorizationOptions.Alert |
-            UNAuthorizationOptions.Sound |
+            UNAuthorizationOptions.Badge |
             UNAuthorizationOptions.Sound,
             (granted, error) =>
             {
@@ -513,7 +510,7 @@ void ProcessNotification(NSDictionary options, bool fromFinishedLaunching)
 
 ## <a name="test-notifications-in-the-azure-portal"></a>Prueba de notificaciones en Azure Portal
 
-Azure Notification Hubs permite comprobar que la aplicación puede recibir mensajes de prueba. La sección **Envío de prueba** del centro de notificaciones permite seleccionar la plataforma de destino y enviar un mensaje. Al establecer **Envío a la expresión de etiqueta** en `default`, se envían mensajes a las aplicaciones que han registrado una plantilla para la etiqueta `default`. Al hacer clic en el botón **Enviar**, se genera un informe que incluye el número de dispositivos a los que llega el mensaje. En la captura de pantalla siguiente se muestra una prueba de notificación de Android en Azure Portal:
+Azure Notification Hubs permite comprobar que la aplicación puede recibir mensajes de prueba. La sección **Envío de prueba** del centro de notificaciones permite seleccionar la plataforma de destino y enviar un mensaje. Al establecer **Envío a la expresión de etiqueta** en `default`, se envían mensajes a las aplicaciones que han registrado una plantilla para la etiqueta `default`. Al hacer clic en el botón **Enviar** , se genera un informe que incluye el número de dispositivos a los que llega el mensaje. En la captura de pantalla siguiente se muestra una prueba de notificación de Android en Azure Portal:
 
 ![Captura de pantalla de un mensaje de prueba del centro de notificaciones de Azure](azure-notification-hub-images/azure-notification-hub-test-send.png "Mensaje de prueba del centro de notificaciones de Azure")
 
