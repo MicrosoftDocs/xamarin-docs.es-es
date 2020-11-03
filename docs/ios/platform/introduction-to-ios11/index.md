@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/19/2017
-ms.openlocfilehash: 35de7c5cf8fdb46f5bba0552e767ac00ee0fe34f
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 09b3ef1446f489b8f9077d59f74fee7cf157ca50
+ms.sourcegitcommit: 836d54779190b1bef1b43bc0c2016c9b3034bfda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437344"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281292"
 ---
 # <a name="introduction-to-ios-11"></a>Introducción a iOS 11
 
-![Ejemplo de ARKit](images/arkit.png) ![Colocar objetos de AR](images/arkit2.png) ![Ejemplo de CoreML](images/coreml.png) ![Ejemplo de MapKit](images/mapkit.png) ![Ejemplo de vista de rectángulos](images/vision1.png) ![Ejemplo de las caras de visión](images/vision2.png) ![Ejemplo de arrastrar y colocar](images/drag-drop.png) ![Ejemplo de arrastrar y colocar](images/drag-drop2.png) ![Ejemplo de SiriKit](images/sirikit.png)
+![Ejemplo de ARKit](images/arkit.png) ![Colocar objetos de AR](images/arkit2.png) ![Ejemplo de CoreML](images/coreml.png) ![Ejemplo de MapKit](images/mapkit.png) ![Ejemplo de vista de rectángulos](images/vision1.png) ![Ejemplo de las caras de visión](images/vision2.png) ![Arrastrar y colocar ejemplo 1](images/drag-drop.png) ![Arrastrar y colocar ejemplo 2](images/drag-drop2.png) ![Ejemplo de SiriKit](images/sirikit.png)
 
 iOS 11 incluye muchas características nuevas y mejoras de la marca en una variedad de marcos de trabajo:
 
@@ -27,7 +27,6 @@ Apple ha introducido actualizaciones de arquitectura, nuevos cambios visuales y 
 ## <a name="arkit"></a>[ARKit](arkit/index.md)
 
 ARKit aporta una realidad aumentada a iOS, lo que permite a los usuarios interactuar con el mundo a través de la cámara del dispositivo.
-Con Xamarin, también puede usar [ARKit con UrhoSharp](arkit/urhosharp.md).
 
 ## <a name="coreml"></a>[CoreML](coreml.md)
 
@@ -63,7 +62,6 @@ Tenemos una serie de [ejemplos](/samples/browse/?products=xamarin&term=Xamarin.i
 
 - [Ejemplo de ARKit](/samples/xamarin/ios-samples/ios11-arkitsample)
 - [ARKit colocar objetos](/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
-- [ARKit y UrhoSharp](arkit/urhosharp.md)
 - [Ejemplo de reconocimiento de imagen CoreML](/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
 - [CoreML con el modelo personalizado de Azure](/samples/xamarin/ios-samples/ios11-coremlazuremodel)
 - [Ejemplo de lector de etiquetas CoreNFC](/samples/xamarin/ios-samples/ios11-nfctagreader)

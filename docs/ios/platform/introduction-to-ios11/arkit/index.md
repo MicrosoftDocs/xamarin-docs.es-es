@@ -7,21 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: 6803ecf2303ff2c91265f3ac8352a7aa15e74d40
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 6e96a57d2425d99839b723520ac24bafa57cc1a3
+ms.sourcegitcommit: 836d54779190b1bef1b43bc0c2016c9b3034bfda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436201"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281266"
 ---
 # <a name="introduction-to-arkit-in-xamarinios"></a>Introducción a ARKit en Xamarin. iOS
 
 _Realidad aumentada para iOS 11_
 
-ARKit permite una amplia variedad de aplicaciones y juegos de realidad aumentada. En esta sección se describen los temas siguientes:
-
-- [Introducción con ARKit](#gettingstarted)
-- [Uso de ARKit con UrhoSharp](urhosharp.md)
+ARKit permite una amplia variedad de aplicaciones y juegos de realidad aumentada.
 
 <a name="gettingstarted"></a>
 
@@ -107,12 +104,11 @@ SceneView.Session.Pause();
 
 El código anterior da como resultado una aplicación ARKit simple. Los ejemplos más complejos esperan que el controlador de vistas que hospeda la sesión de realidad aumentada implemente `IARSCNViewDelegate` , y que se implementen métodos adicionales.
 
-ARKit proporciona muchas características más sofisticadas, como el seguimiento de superficie y la interacción del usuario. Vea la [demostración de UrhoSharp](urhosharp.md) para obtener un ejemplo de cómo combinar el seguimiento de ARKit con UrhoSharp.
+ARKit proporciona muchas características más sofisticadas, como el seguimiento de superficie y la interacción del usuario.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Realidad aumentada (Apple)](https://developer.apple.com/arkit/)
-- [Uso de ARKit con UrhoSharp](urhosharp.md)
 - [Ejemplo de ARKit simple (jet)](/samples/xamarin/ios-samples/ios11-arkitsample)
 - [ARKit colocar objetos (ejemplo)](/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
 - [Introducción a ARKit-aumento de la realidad de iOS (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/602/)

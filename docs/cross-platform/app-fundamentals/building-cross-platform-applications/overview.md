@@ -6,18 +6,18 @@ ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 72b41854160d0810bbc4a58972f638ef920a4068
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: bdf641ca15919958627850e000c117eeedd12de9
+ms.sourcegitcommit: 836d54779190b1bef1b43bc0c2016c9b3034bfda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91457489"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281253"
 ---
 # <a name="building-cross-platform-applications-overview"></a>Información general sobre la creación de aplicaciones multiplataforma
 
 En esta guía se presenta la plataforma Xamarin y cómo diseñar una aplicación multiplataforma para maximizar el uso del código y ofrecer una experiencia nativa de alta calidad en todas las plataformas móviles principales: iOS, Android y Windows Phone.
 
-El enfoque que se usa en este documento suele ser aplicable a las aplicaciones de productividad y a las aplicaciones de juegos. sin embargo, el enfoque se centra en la productividad y la utilidad (aplicaciones que no son de juego). Consulte la [Introducción al documento de monogame](~/graphics-games/monogame/introduction/index.md) o consulte [Visual Studio Tools para Unity](/visualstudio/cross-platform/visual-studio-tools-for-unity) para obtener instrucciones sobre el desarrollo de juegos multiplataforma.
+El enfoque que se usa en este documento suele ser aplicable a las aplicaciones de productividad y a las aplicaciones de juegos. sin embargo, el enfoque se centra en la productividad y la utilidad (aplicaciones que no son de juego). Consulte [Visual Studio Tools para Unity](/visualstudio/cross-platform/visual-studio-tools-for-unity) para obtener instrucciones sobre el desarrollo de juegos multiplataforma.
 
 La frase "escribir una vez, ejecutar en todas partes" se usa a menudo para Extol las virtudes de un único código base que se ejecuta sin modificar en varias plataformas. Aunque tiene la ventaja de reutilización del código, este enfoque conduce a menudo a aplicaciones que tienen un conjunto de características con el menor nivel de nominador y una interfaz de usuario de aspecto genérico que no encaja bien en ninguna de las plataformas de destino.
 
@@ -34,7 +34,7 @@ A continuación se muestra un resumen de los puntos clave para crear aplicacione
 1. En Windows, usará XAML para el nivel de presentación, creado en el diseñador de la interfaz de usuario de Visual Studio o Blend.
 1. En Mac, usará guiones gráficos para el nivel de presentación creado en Xcode.
 
-Los proyectos de Xamarin. Forms se admiten en todas las plataformas y permiten crear interfaces de usuario que se pueden compartir entre plataformas mediante el XAML de Xamarin. Forms. 
+Los proyectos de Xamarin. Forms se admiten en todas las plataformas y permiten crear interfaces de usuario que se pueden compartir entre plataformas mediante el XAML de Xamarin. Forms.
 
 La cantidad de reutilización del código dependerá en gran medida de la cantidad de código que se mantenga en el núcleo compartido y de la cantidad de código que sea específico de la interfaz de usuario. El código principal es todo lo que no interactúa directamente con el usuario, sino que proporciona servicios para las partes de la aplicación que recopilarán y mostrarán esta información.
 
