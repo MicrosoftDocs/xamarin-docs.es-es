@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
-ms.openlocfilehash: ebb9baf7bb1a6da96615eac65d5384cb7a05a9d6
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: d7f66d9bda014337ae6108ab42158faa856632bb
+ms.sourcegitcommit: 4f0223cf13e14d35c52fa72a026b1c7696bf8929
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91457606"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93278343"
 ---
 # <a name="binding-objective-c-libraries"></a>Enlace de bibliotecas de Objective-C
 
@@ -37,14 +37,14 @@ Puede usar el proyecto de [ejemplo enlace de iOS](https://github.com/xamarin/mon
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 La forma más fácil de crear un enlace es crear un proyecto de enlace de Xamarin. iOS.
-Puede hacerlo desde Visual Studio para Mac seleccionando el tipo de proyecto, la biblioteca de **> de iOS > biblioteca de enlaces**:
+Puede hacerlo desde Visual Studio para Mac seleccionando el tipo de proyecto, la biblioteca de **> de iOS > biblioteca de enlaces** :
 
 [![Para ello, seleccione el tipo Visual Studio para Mac de proyecto, biblioteca de enlaces de la biblioteca de iOS](objective-c-libraries-images/00-sml.png)](objective-c-libraries-images/00.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 La forma más fácil de crear un enlace es crear un proyecto de enlace de Xamarin. iOS.
-Para ello, puede hacerlo desde Visual Studio en Windows. para ello, seleccione el tipo de proyecto, **Visual C# > biblioteca de enlaces de > de iOS (iOS)**:
+Para ello, puede hacerlo desde Visual Studio en Windows. para ello, seleccione el tipo de proyecto, **Visual C# > biblioteca de enlaces de > de iOS (iOS)** :
 
 [![Biblioteca de enlaces de iOS iOS](objective-c-libraries-images/00vs-sml.png)](objective-c-libraries-images/00vs.png#lightbox)
 
@@ -445,7 +445,7 @@ class MyDelegate : NSObject, IUITableViewDelegate {
 }
 ```
 
-La implementación de los métodos de interfaz se exporta automáticamente con el nombre correcto, por lo que es equivalente a esto:
+La implementación de los métodos de interfaz necesarios se exporta con el nombre correcto, por lo que es equivalente a esto:
 
 ```csharp
 class MyDelegate : NSObject, IUITableViewDelegate {
@@ -456,7 +456,29 @@ class MyDelegate : NSObject, IUITableViewDelegate {
 }
 ```
 
-No importa si la interfaz se implementa de forma implícita o explícita.
+Esto funcionará para todos los miembros de protocolo necesarios, pero hay un caso especial con selectores opcionales que se deben tener en cuenta.
+Los miembros de protocolo opcionales se tratan de forma idéntica al utilizar la clase base:
+
+```
+public class UrlSessionDelegate : NSUrlSessionDownloadDelegate {
+    public override void DidWriteData (NSUrlSession session, NSUrlSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite)
+```
+
+sin embargo, cuando se usa la interfaz de protocolo, es necesario agregar [Export]. El IDE lo agregará mediante Autocompletar cuando lo agregue a partir de invalidación. 
+
+```
+public class UrlSessionDelegate : NSObject, INSUrlSessionDownloadDelegate {
+    [Export ("URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:")]
+    public void DidWriteData (NSUrlSession session, NSUrlSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite)
+```
+
+Hay una pequeña diferencia de comportamiento entre ambos en tiempo de ejecución.
+
+- Los usuarios de la clase base (NSUrlSessionDownloadDelegate en el ejemplo) proporcionan todos los selectores obligatorios y opcionales, y devuelven valores predeterminados razonables.
+- Los usuarios de la interfaz (INSUrlSessionDownloadDelegate en el ejemplo) solo responden a los selectores exactos proporcionados.
+
+Algunas clases raras pueden comportarse de forma diferente aquí. Sin embargo, en casi todos los casos es seguro usar cualquiera de ellos.
+
 
 <a name="Binding_Class_Extensions"></a>
 
@@ -779,7 +801,7 @@ interface MyUIViewExtension {
 }
 ```
 
-Lo anterior creará una `MyUIViewExtension` clase que contiene el `MakeBackgroundRed` método de extensión.  Esto significa que ahora puede llamar a "MakeBackgroundRed" en cualquier `UIView` subclase, lo que le proporciona la misma funcionalidad que obtendría en Objective-C. En algunos otros casos, las categorías se utilizan para no extender una clase de sistema, sino para organizar la funcionalidad exclusivamente con fines de decoración.  Así:
+Lo anterior creará una `MyUIViewExtension` clase que contiene el `MakeBackgroundRed` método de extensión.  Esto significa que ahora puede llamar a "MakeBackgroundRed" en cualquier `UIView` subclase, lo que le proporciona la misma funcionalidad que obtendría en Objective-C. En algunos otros casos, las categorías se utilizan para no extender una clase de sistema, sino para organizar la funcionalidad exclusivamente con fines de decoración.  Por ejemplo:
 
 ```csharp
 @interface SocialNetworking (Twitter)
