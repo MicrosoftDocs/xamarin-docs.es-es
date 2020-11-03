@@ -9,24 +9,24 @@ ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 059405d4e3219162022b3f8c0208ee5cc4ac2d38
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 577628237d1e7433c2ad06466a2e804808874108
+ms.sourcegitcommit: d8627a500a9b8a07615aef9822c9b1dba2bf6650
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91434547"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92629641"
 ---
 # <a name="no-locxamarinessentials-email"></a>Xamarin.Essentials: Correo electrónico
 
 La clase **Email** permite que una aplicación abra la aplicación de correo electrónico predeterminada con información especificada incluido el asunto, el cuerpo y los destinatarios (PARA, CC, CCO).
 
-Para acceder a la función de **Email**, se requiere la siguiente configuración específica para la plataforma.
+Para acceder a la función de **Email** , se requiere la siguiente configuración específica para la plataforma.
 
 # <a name="android"></a>[Android](#tab/android)
 
 Si la versión de Android de destino del proyecto se establece en **Android 11 (R API 30)** , debe actualizar el manifiesto de Android con las consultas que se usan con los nuevos [requisitos de visibilidad de los paquetes](https://developer.android.com/preview/privacy/package-visibility).
 
-Abra el archivo **AndroidManifest.xml** de la carpeta **Propiedades** y agregue lo siguiente dentro del nodo **manifest**:
+Abra el archivo **AndroidManifest.xml** de la carpeta **Propiedades** y agregue lo siguiente dentro del nodo **manifest** :
 
 ```xml
 <queries>
@@ -39,7 +39,14 @@ Abra el archivo **AndroidManifest.xml** de la carpeta **Propiedades** y agregue 
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-No se requiere configuración adicional.
+En iOS 9 y versiones posteriores, Apple aplica los esquemas que una aplicación puede consultar. Para consultar si el correo electrónico es un destino válido, se debe especificar el esquema `mailto` en LSApplicationQueriesSchemes en el archivo Info.plist.
+
+```xml
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>mailto</string>
+</array>
+```
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 

@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: bde05cfeecaeba389224bbbdb7ae01fcb7bcb56c
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: da84a7faf2e08f35d364d7301102027342792f61
+ms.sourcegitcommit: 01ccefd54c0ced724784dbe1aec9ecfc9b00e633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91434113"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92630262"
 ---
 # <a name="hello-ios--quickstart"></a>Inicio rápido de Hello, iOS
 
@@ -56,7 +56,7 @@ Antes de comenzar, descargue el [conjunto de iconos de aplicación de Xamarin](h
 
 En este tutorial se muestra cómo crear una aplicación llamada Phoneword que convierte un número de teléfono alfanumérico en un número de teléfono numérico.
 
-1. Inicie Visual Studio para Mac desde la carpeta **Aplicaciones** o desde **Spotlight**:
+1. Inicie Visual Studio para Mac desde la carpeta **Aplicaciones** o desde **Spotlight** :
 
     ![Pantalla de inicio](hello-ios-quickstart-images/image2new.png)
 
@@ -64,11 +64,11 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 
     ![Solución de iOS](hello-ios-quickstart-images/image3new.png)
 
-2. Desde el **cuadro de diálogo Nueva solución**, elija la plantilla **iOS > Aplicación > Aplicación de vista única**, asegurándose de que C# está seleccionado. Haga clic en **Siguiente**:
+2. Desde el **cuadro de diálogo Nueva solución** , elija la plantilla **iOS > Aplicación > Aplicación de vista única** , asegurándose de que C# está seleccionado. Haga clic en **Siguiente** :
 
     ![Elija Aplicación de vista única](hello-ios-quickstart-images/image4new.png)
 
-3. Configure la aplicación. Asígnele el **nombre** `Phoneword_iOS` y deje todo lo demás en su valor predeterminado. Haga clic en **Siguiente**:
+3. Configure la aplicación. Asígnele el **nombre** `Phoneword_iOS` y deje todo lo demás en su valor predeterminado. Haga clic en **Siguiente** :
 
     ![Escriba el nombre de la aplicación](hello-ios-quickstart-images/image5new.png)
 
@@ -78,13 +78,13 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 
 5. Haga clic en **Crear** para crear la **solución**.
 
-6. Haga doble clic en el archivo **Main.storyboard** en el **Panel de solución** para abrirlo. Esto proporciona una manera de crear visualmente una interfaz de usuario:
+6. Haga doble clic en el archivo **Main.storyboard** en el **Panel de solución** para abrirlo. Asegúrese de abrir el archivo mediante Visual Studio iOS Designer (haga clic con el botón derecho en el guion gráfico y seleccione **Abrir con > iOS Designer** ). Esto proporciona una manera de crear visualmente una interfaz de usuario:
 
     ![Diseñador de iOS](hello-ios-quickstart-images/image7new.png)
 
     Tenga en cuenta que las _clases de tamaño_ están habilitadas de forma predeterminada. Vea la guía [Guiones gráficos unificados](~/ios/user-interface/storyboards/unified-storyboards.md) para más información sobre ellos.
 
-7. En el **panel del cuadro de herramientas**, escriba "etiqueta" en la barra de búsqueda y arrastre una **etiqueta** a la superficie de diseño (el área en el centro):
+7. En el **panel del cuadro de herramientas** , escriba "etiqueta" en la barra de búsqueda y arrastre una **etiqueta** a la superficie de diseño (el área en el centro):
 
     ![Arrastre una etiqueta a la superficie de diseño del área central](hello-ios-quickstart-images/image8new.png)
 
@@ -99,7 +99,7 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 
     ![Establezca la etiqueta en Escriba una Phoneword](hello-ios-quickstart-images/image10.png)
 
-10. Busque "campo de texto" dentro del Cuadro de herramientas y arrastre un **Campo de texto** desde el **Cuadro de herramientas** a la superficie de diseño y colóquelo bajo la **Etiqueta**. Ajuste el ancho hasta que el **Campo de texto** tenga el mismo ancho que la **Etiqueta**:
+10. Busque "campo de texto" dentro del Cuadro de herramientas y arrastre un **Campo de texto** desde el **Cuadro de herramientas** a la superficie de diseño y colóquelo bajo la **Etiqueta**. Ajuste el ancho hasta que el **Campo de texto** tenga el mismo ancho que la **Etiqueta** :
 
     ![Iguale el ancho del campo de texto al de la etiqueta](hello-ios-quickstart-images/image12new.png)
 
@@ -107,7 +107,7 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 
     ![Cambie la propiedad Title a 1-855-XAMARIN](hello-ios-quickstart-images/image13new.png)
 
-12. Arrastre un **Botón** desde el **Cuadro de herramientas** hasta la superficie de diseño y colóquelo debajo del **Campo de texto**. Ajuste el ancho para que el **Botón** tenga el mismo ancho que el **Campo de texto** y la **Etiqueta**:
+12. Arrastre un **Botón** desde el **Cuadro de herramientas** hasta la superficie de diseño y colóquelo debajo del **Campo de texto**. Ajuste el ancho para que el **Botón** tenga el mismo ancho que el **Campo de texto** y la **Etiqueta** :
 
     ![Ajuste el ancho para que el botón tenga el mismo ancho que el campo de texto y la etiqueta](hello-ios-quickstart-images/image14new.png)
 
@@ -115,7 +115,7 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 
     ![Cambie la propiedad Title a Traducir](hello-ios-quickstart-images/image15new.png)
 
-14. Repita los dos pasos anteriores y arrastre un **Botón** desde el **Cuadro de herramientas** a la superficie de diseño y colóquelo debajo del primer **Botón**. Ajuste el ancho de modo que el **Botón** sea tan ancho como el primer **Botón**:
+14. Repita los dos pasos anteriores y arrastre un **Botón** desde el **Cuadro de herramientas** a la superficie de diseño y colóquelo debajo del primer **Botón**. Ajuste el ancho de modo que el **Botón** sea tan ancho como el primer **Botón** :
 
     ![Ajuste el ancho para que el botón tenga el mismo ancho que el primero](hello-ios-quickstart-images/image16new.png)
 
@@ -125,11 +125,11 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 
     Para guardar los cambios, vaya a **Archivo > Guardar** o presione **⌘ + s**.
 
-16. Debe agregarse lógica a la aplicación para convertir números de teléfono de formato alfanumérico a numérico. Agregue un nuevo archivo al proyecto. Para ello, haga clic con el botón derecho en el proyecto **Phoneword_iOS** en el **Panel de solución** y seleccione **Agregar > Nuevo archivo…** , o presione **⌘ + n**:
+16. Debe agregarse lógica a la aplicación para convertir números de teléfono de formato alfanumérico a numérico. Agregue un nuevo archivo al proyecto. Para ello, haga clic con el botón derecho en el proyecto **Phoneword_iOS** en el **Panel de solución** y seleccione **Agregar > Nuevo archivo…** , o presione **⌘ + n** :
 
     ![Agregue un nuevo archivo al proyecto](hello-ios-quickstart-images/image18.png)
 
-17. En el cuadro de diálogo **Nuevo archivo**, seleccione **General > Clase vacía** y asigne el nombre `PhoneTranslator` al nuevo archivo:
+17. En el cuadro de diálogo **Nuevo archivo** , seleccione **General > Clase vacía** y asigne el nombre `PhoneTranslator` al nuevo archivo:
 
     ![Seleccione Clase vacía y asigne el nombre PhoneTranslator al nuevo archivo](hello-ios-quickstart-images/image19.png)
 
@@ -203,7 +203,7 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 
     ![Agregue código para conectar la interfaz de usuario](hello-ios-quickstart-images/image20new.png)
 
-20. Empiece por la conexión del `TranslateButton`. En la clase **ViewController**, busque el método `ViewDidLoad` y agregue el código siguiente debajo de la llamada a `base.ViewDidLoad()`:
+20. Empiece por la conexión del `TranslateButton`. En la clase **ViewController** , busque el método `ViewDidLoad` y agregue el código siguiente debajo de la llamada a `base.ViewDidLoad()`:
 
     ```csharp
     string translatedNumber = "";
@@ -280,7 +280,7 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 > [!NOTE]
 > Antes de continuar con este tutorial, se debe haber conectado ya a su Mac desde Visual Studio. Esto es porque Xamarin.iOS se basa en las herramientas de Apple para generar e iniciar las aplicaciones y el diseñador de iOS. Para realizar la configuración, siga los pasos de la guía [Emparejar con Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-1. Inicie Visual Studio desde el menú **Inicio**:
+1. Inicie Visual Studio desde el menú **Inicio** :
 
     ![Pantalla de inicio](hello-ios-quickstart-images/image001-.png)
 
@@ -298,11 +298,11 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 
     Si no es así, no hay ninguna conexión a su host de compilación de Mac. Siga los pasos descritos en la [guía de configuración](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para conectarse.
 
-1. Abra el archivo **Main.storyboard** en el diseñador de iOS haciendo doble clic en él en el **Explorador de soluciones**:
+1. Abra el archivo **Main.storyboard** en el diseñador de iOS haciendo doble clic en él en el **Explorador de soluciones** :
 
     ![Diseñador de iOS](hello-ios-quickstart-images/vs-image7.png)
 
-1. Abra la pestaña **Cuadro de herramientas**, escriba "etiqueta" en la barra de búsqueda y arrastre una **etiqueta** a la superficie de diseño (el área en el centro):
+1. Abra la pestaña **Cuadro de herramientas** , escriba "etiqueta" en la barra de búsqueda y arrastre una **etiqueta** a la superficie de diseño (el área en el centro):
 
     ![Arrastre una etiqueta a la superficie de diseño del área central](hello-ios-quickstart-images/vs-image8.png)
 
@@ -317,7 +317,7 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
     > [!NOTE]
     > Puede mostrar las **Propiedades** o el **Cuadro de herramientas** en cualquier momento si navega al menú **Vista**.
 
-1. Busque "campo de texto" dentro del Cuadro de herramientas y arrastre un **Campo de texto** desde el **Cuadro de herramientas** a la superficie de diseño y colóquelo bajo la **Etiqueta**. Ajuste el ancho hasta que el **Campo de texto** tenga el mismo ancho que la **Etiqueta**:
+1. Busque "campo de texto" dentro del Cuadro de herramientas y arrastre un **Campo de texto** desde el **Cuadro de herramientas** a la superficie de diseño y colóquelo bajo la **Etiqueta**. Ajuste el ancho hasta que el **Campo de texto** tenga el mismo ancho que la **Etiqueta** :
 
     ![Ajuste el ancho hasta que el campo de texto tenga el mismo ancho que la etiqueta](hello-ios-quickstart-images/vs-image12.png)
 
@@ -325,7 +325,7 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 
     ![Cambie la propiedad Text a 1-855-XAMARIN](hello-ios-quickstart-images/vs-image13.png)
 
-1. Arrastre un **Botón** desde el **Cuadro de herramientas** hasta la superficie de diseño y colóquelo debajo del **Campo de texto**. Ajuste el ancho para que el **Botón** tenga el mismo ancho que el **Campo de texto** y la **Etiqueta**:
+1. Arrastre un **Botón** desde el **Cuadro de herramientas** hasta la superficie de diseño y colóquelo debajo del **Campo de texto**. Ajuste el ancho para que el **Botón** tenga el mismo ancho que el **Campo de texto** y la **Etiqueta** :
 
     ![Ajuste el ancho para que el botón tenga el mismo ancho que el campo de texto y la etiqueta](hello-ios-quickstart-images/vs-image14.png)
 
@@ -333,7 +333,7 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 
     ![Cambie la propiedad Title a Traducir](hello-ios-quickstart-images/vs-image15.png)
 
-1. Repita los dos pasos anteriores y arrastre un **Botón** desde el **Cuadro de herramientas** a la superficie de diseño y colóquelo debajo del primer **Botón**. Ajuste el ancho de modo que el **Botón** sea tan ancho como el primer **Botón**:
+1. Repita los dos pasos anteriores y arrastre un **Botón** desde el **Cuadro de herramientas** a la superficie de diseño y colóquelo debajo del primer **Botón**. Ajuste el ancho de modo que el **Botón** sea tan ancho como el primer **Botón** :
 
     ![Ajuste el ancho para que el botón tenga el mismo ancho que el primero](hello-ios-quickstart-images/vs-image16.png)
 
@@ -343,7 +343,7 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 
     Guarde los cambios, seleccionando **Archivo > Guardar todo** o presionando **Ctrl + s**.
 
-1. Agregue código para convertir números de teléfono de formato alfanumérico a numérico. Para hacerlo, agregue un nuevo archivo al proyecto haciendo clic con el botón derecho en el proyecto **Phoneword** en el **Explorador de soluciones** y seleccionando **Agregar > Nuevo elemento...** , o presionando **Ctrl + Mayús + A**:
+1. Agregue código para convertir números de teléfono de formato alfanumérico a numérico. Para hacerlo, agregue un nuevo archivo al proyecto haciendo clic con el botón derecho en el proyecto **Phoneword** en el **Explorador de soluciones** y seleccionando **Agregar > Nuevo elemento...** , o presionando **Ctrl + Mayús + A** :
 
     ![Agregue código para convertir números de teléfono de formato alfanumérico a numérico](hello-ios-quickstart-images/vs-image18.png)
 
@@ -424,7 +424,7 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 
     ![Lógica agregada para controlar las interacciones con los botones](hello-ios-quickstart-images/vs-image20.png)
 
-1. Empiece por la conexión del `TranslateButton`. En la clase **ViewController**, busque el método `ViewDidLoad`. Agregue lo siguiente al código del botón dentro de `ViewDidLoad`, debajo de la llamada a `base.ViewDidLoad()`:
+1. Empiece por la conexión del `TranslateButton`. En la clase **ViewController** , busque el método `ViewDidLoad`. Agregue lo siguiente al código del botón dentro de `ViewDidLoad`, debajo de la llamada a `base.ViewDidLoad()`:
 
     ```csharp
     string translatedNumber = "";

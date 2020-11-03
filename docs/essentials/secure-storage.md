@@ -9,12 +9,12 @@ ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f4bb252448abe3c2987def143634d15b5cae194c
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 4a5190ef3e9f61fdb6d08f9cd68202e55a4faead
+ms.sourcegitcommit: 58247fe066ad271ee43c8967ac3301fdab6ca2d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91433501"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92629591"
 ---
 # <a name="no-locxamarinessentials-secure-storage"></a>Xamarin.Essentials: Almacenamiento seguro
 
@@ -24,7 +24,7 @@ La clase **SecureStorage** ayuda a almacenar pares de clave-valor sencillos de m
 
 [!include[](~/essentials/includes/get-started.md)]
 
-Para acceder a la funcionalidad **SecureStorage**, se requiere la siguiente configuración específica para la plataforma:
+Para acceder a la funcionalidad **SecureStorage** , se requiere la siguiente configuración específica para la plataforma:
 
 # <a name="android"></a>[Android](#tab/android)
 
@@ -46,7 +46,7 @@ Puede elegir deshabilitar Copia de seguridad automática para toda la aplicació
 ### <a name="selective-backup"></a>Copia de seguridad selectiva
 Es posible configurar Copia de seguridad automática para deshabilitar la copia de seguridad de contenido específico. Puede crear un conjunto de reglas personalizadas para excluir los elementos `SecureStore` de la copia de seguridad.
 
-1. Establezca el atributo `android:fullBackupContent` en **AndroidManifest.xml**:
+1. Establezca el atributo `android:fullBackupContent` en **AndroidManifest.xml** :
 
     ```xml
     <application ...
@@ -66,7 +66,7 @@ Es posible configurar Copia de seguridad automática para deshabilitar la copia 
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-Cuando desarrolle en el **emulador de iOS**, habilite el derecho **Keychain** y agregue un grupo de acceso de cadena de claves para el identificador de agrupación de la aplicación.
+Cuando desarrolle en el **emulador de iOS** , habilite el derecho **Keychain** y agregue un grupo de acceso de cadena de claves para el identificador de agrupación de la aplicación.
 
 Abra **Entitlements.plist** en el proyecto de iOS, busque el derecho **Keychain** y habilítelo. Esto agregará automáticamente el identificador de la aplicación como grupo.
 
@@ -130,11 +130,14 @@ Para quitar todas las claves, llame a:
 SecureStorage.RemoveAll();
 ```
 
+> [!TIP]
+> Es posible que se produzca una excepción al llamar a `GetAsync` o `SetAsync`. Esto puede deberse a que un dispositivo no admita el almacenamiento seguro, las claves de cifrado cambiantes o los daños en los datos. Es mejor controlar esto mediante la eliminación y posterior reincorporación del valor, si es posible.
+
 ## <a name="platform-implementation-specifics"></a>Detalles de implementación de la plataforma
 
 # <a name="android"></a>[Android](#tab/android)
 
-[Android KeyStore](https://developer.android.com/training/articles/keystore.html) se usa para almacenar la clave de cifrado con la que se cifra el valor antes de guardarlo en [Preferencias compartidas](https://developer.android.com/training/data-storage/shared-preferences.html) con un nombre de archivo **[ID-PAQUETE-APLICACIÓN].xamarinessentials**.  La clave (no una clave criptográfica, la _clave_ para el _valor_) usada en el archivo de preferencias compartido es un _hash MD5_ de la clave pasada a las API `SecureStorage`.
+[Android KeyStore](https://developer.android.com/training/articles/keystore.html) se usa para almacenar la clave de cifrado con la que se cifra el valor antes de guardarlo en [Preferencias compartidas](https://developer.android.com/training/data-storage/shared-preferences.html) con un nombre de archivo **[ID-PAQUETE-APLICACIÓN].xamarinessentials**.  La clave (no una clave criptográfica, la _clave_ para el _valor_ ) usada en el archivo de preferencias compartido es un _hash MD5_ de la clave pasada a las API `SecureStorage`.
 
 **Nivel de API 23 y superior**
 
@@ -142,7 +145,7 @@ En los niveles de API más nuevos, una clave **AES** se obtiene de Android KeySt
 
 **Nivel de API 22 e inferior**
 
-En los niveles de API anteriores, Android KeyStore solo admite el almacenamiento de claves **RSA**, que se usa con una cifra **RSA/ECB/PKCS1Padding** para cifrar una clave **AES** (generada de manera aleatoria en tiempo de ejecución) y se almacena en el archivo de preferencias compartidas en la clave _SecureStorageKey_, si todavía no se ha generado una.
+En los niveles de API anteriores, Android KeyStore solo admite el almacenamiento de claves **RSA** , que se usa con una cifra **RSA/ECB/PKCS1Padding** para cifrar una clave **AES** (generada de manera aleatoria en tiempo de ejecución) y se almacena en el archivo de preferencias compartidas en la clave _SecureStorageKey_ , si todavía no se ha generado una.
 
 **SecureStorage** usa la API [Preferences](preferences.md) y sigue la misma persistencia de datos que se describe en la documentación sobre [Preferencias](preferences.md#persistence). Si se actualiza un dispositivo desde Nivel de API 22 o inferior a Nivel de API 23 y superior, se seguirá usando este tipo de cifrado a menos que la aplicación se desinstale o se llame a **RemoveAll**.
 

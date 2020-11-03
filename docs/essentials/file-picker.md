@@ -8,12 +8,12 @@ ms.date: 09/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b3ee20de5534329f9e4686c908fe923ba94f3fff
-ms.sourcegitcommit: 744f977b0595f489c592e29c8a3ba548fde02b6f
+ms.openlocfilehash: e997ae3137110e18df9eed90ef07bfa2703e8088
+ms.sourcegitcommit: 58247fe066ad271ee43c8967ac3301fdab6ca2d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414719"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92629605"
 ---
 # <a name="no-locxamarinessentials-file-picker"></a>Xamarin.Essentials: Selector de archivos
 
@@ -25,7 +25,7 @@ La clase **FilePicker** permite a un usuario seleccionar uno o varios archivos d
 
 [!include[](~/essentials/includes/get-started.md)]
 
-Para acceder a la función de **FilePicker**, se requiere la siguiente configuración específica para la plataforma.
+Para acceder a la función de **FilePicker** , se requiere la siguiente configuración específica para la plataforma.
 
 # <a name="android"></a>[Android](#tab/android)
 
@@ -45,7 +45,7 @@ Abra el archivo **AndroidManifest.xml** de la carpeta **Propiedades** y agregue 
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 ```
 
-O haga clic con el botón derecho en el proyecto de Android y abra las propiedades del proyecto. En **Manifiesto de Android**, busque el área **Permisos requeridos:** y active este permiso. Esto actualizará automáticamente el archivo **AndroidManifest.xml**.
+O haga clic con el botón derecho en el proyecto de Android y abra las propiedades del proyecto. En **Manifiesto de Android** , busque el área **Permisos requeridos:** y active este permiso. Esto actualizará automáticamente el archivo **AndroidManifest.xml**.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
@@ -56,6 +56,9 @@ No se requiere configuración adicional.
 No se requiere configuración adicional.
 
 -----
+
+> [!TIP]
+> Se debe llamar a todos los métodos del subproceso de interfaz de usuario porque Xamarin.Essentialscontrola automáticamente las solicitudes y comprobaciones de permisos.
 
 ## <a name="pick-file"></a>Selección de un archivo
 

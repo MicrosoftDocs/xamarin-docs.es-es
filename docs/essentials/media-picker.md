@@ -8,12 +8,12 @@ ms.date: 09/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7c4299abf9c461a16f67ccf3d8caf03d5e568f13
-ms.sourcegitcommit: 827daa78c090bf79a1b55da45bb8012a1723b720
+ms.openlocfilehash: 9a988803b5e18ab91ff65a2b4976158458f68274
+ms.sourcegitcommit: 58247fe066ad271ee43c8967ac3301fdab6ca2d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997511"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92629566"
 ---
 # <a name="no-locxamarinessentials-media-picker"></a>Xamarin.Essentials: Selector de archivos multimedia
 
@@ -25,7 +25,7 @@ La clase **MediaPicker** permite al usuario escoger o tomar una foto o vídeo en
 
 [!include[](~/essentials/includes/get-started.md)]
 
-Para acceder a la función de **MediaPicker**, se requiere la siguiente configuración específica para la plataforma.
+Para acceder a la función de **MediaPicker** , se requiere la siguiente configuración específica para la plataforma.
 
 # <a name="android"></a>[Android](#tab/android)
 
@@ -56,7 +56,7 @@ Abra el archivo **AndroidManifest.xml** de la carpeta **Propiedades** y agregue 
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-O haga clic con el botón derecho en el proyecto de Android y abra las propiedades del proyecto. En **Manifiesto de Android**, busque el área **Permisos requeridos:** y active estos permisos. Esto actualizará automáticamente el archivo **AndroidManifest.xml**.
+O haga clic con el botón derecho en el proyecto de Android y abra las propiedades del proyecto. En **Manifiesto de Android** , busque el área **Permisos requeridos:** y active estos permisos. Esto actualizará automáticamente el archivo **AndroidManifest.xml**.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
@@ -77,7 +77,7 @@ Asegúrese de actualizar el elemento `<string>` de cada una de ellas a una descr
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-En `Package.appxmanifest` en **Capacidades**, asegúrese de que las capacidades `Microphone` y `Webcam` están activadas.
+En `Package.appxmanifest` en **Capacidades** , asegúrese de que las capacidades `Microphone` y `Webcam` están activadas.
 
 -----
 
@@ -91,6 +91,9 @@ La clase `MediaPicker` tiene los métodos siguientes que devuelven un elemento `
 * `CaptureVideoAsync`: abre la cámara para grabar un vídeo.
 
 Cada método toma opcionalmente un parámetro `MediaPickerOptions` que permite establecer el elemento `Title` en algunos sistemas operativos que se muestran a los usuarios.
+
+> [!TIP]
+> Se debe llamar a todos los métodos del subproceso de interfaz de usuario porque Xamarin.Essentialscontrola automáticamente las solicitudes y comprobaciones de permisos.
 
 ## <a name="general-usage"></a>Uso general
 

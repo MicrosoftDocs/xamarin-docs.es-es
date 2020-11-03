@@ -6,16 +6,16 @@ ms.assetid: 4CB2F270-908A-4A89-B852-70BC04066E8C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/04/2020
+ms.date: 10/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d3eb7edbb24c7e28ee375e1de85f6a7597ec63ac
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: af56e84598f73693a8cb0e93573b789a716c194a
+ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561020"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92897473"
 ---
 # <a name="add-drag-and-drop-gesture-recognizers"></a>Incorporación de reconocedores de gesto de arrastrar y colocar
 
@@ -30,7 +30,7 @@ Un gesto de arrastrar y colocar permite arrastrar elementos y sus paquetes de da
 >
 > El reconocimiento de los gestos de arrastrar y colocar se admite en iOS, Android y la Plataforma universal de Windows (UWP). Sin embargo, en iOS se requiere una plataforma mínima de iOS 11.
 
-El *origen de arrastre*, que es el elemento en el que se inicia el gesto de arrastrar, puede proporcionar los datos que se van a transferir rellenando un objeto de paquete de datos. Cuando el origen de arrastre se libera, se produce la colocación. Es entonces cuando el *destino de colocación*, que es el elemento bajo el origen de arrastre, procesa el paquete de datos.
+El *origen de arrastre* , que es el elemento en el que se inicia el gesto de arrastrar, puede proporcionar los datos que se van a transferir rellenando un objeto de paquete de datos. Cuando el origen de arrastre se libera, se produce la colocación. Es entonces cuando el *destino de colocación* , que es el elemento bajo el origen de arrastre, procesa el paquete de datos.
 
 El proceso para habilitar la función de arrastrar y colocar en una aplicación es el siguiente:
 
@@ -50,7 +50,7 @@ En Xamarin.Forms, la clase `DragGestureRecognizer` proporciona el reconocimiento
 - `CanDrag`, de tipo `bool`, que indica si el elemento al que está asociado el reconocedor de gestos puede ser un origen de arrastre. El valor predeterminado de esta propiedad es `false`.
 - `DragStartingCommand`, de tipo `ICommand`, que se ejecuta cuando un gesto de arrastrar se reconoce por primera vez.
 - `DragStartingCommandParameter`, de tipo `object`, que es el parámetro que se pasa a `DragStartingCommand`.
-- `DropCompletedCommmand`, de tipo `ICommand`, que se ejecuta cuando el origen de arrastre se coloca.
+- `DropCompletedCommand`, de tipo `ICommand`, que se ejecuta cuando el origen de arrastre se coloca.
 - `DropCompletedCommandParameter`, de tipo `object`, que es el parámetro que se pasa a `DropCompletedCommand`.
 
 Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
@@ -79,6 +79,8 @@ En este ejemplo, se puede iniciar un gesto de arrastrar en [`Image`](xref:Xamari
 
 > [!TIP]
 > En iOS, Android y UWP, un gesto de arrastrar se inicia con una pulsación larga seguida de un arrastre.
+
+Para obtener un ejemplo de uso de comandos `DragGestureRecognizer`, vea el [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
 
 ## <a name="build-a-data-package"></a>Creación de un paquete de datos
 
@@ -211,6 +213,8 @@ En el ejemplo de XAML siguiente se muestra `DropGestureRecognizer`, que se adjun
 ```
 
 En este ejemplo, cuando un origen de arrastre se coloca en el destino de colocación [`Image`](xref:Xamarin.Forms.Image), el origen de arrastre se copia en el destino de colocación, siempre que dicho origen de arrastre sea una clase [`ImageSource`](xref:Xamarin.Forms.ImageSource). Esto se produce porque Xamarin.Forms copia automáticamente las imágenes arrastradas, y el texto, en destinos de colocación compatibles.
+
+Para obtener un ejemplo de uso de comandos `DropGestureRecognizer`, vea el [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
 
 ## <a name="handle-the-dragover-event"></a>Controlar el evento DragOver
 

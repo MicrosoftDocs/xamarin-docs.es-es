@@ -10,12 +10,12 @@ ms.date: 06/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: da3c6c2f55f1cdbed1b3c4e1bb16c4f78e32cf23
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 9e8c0eeb70393cd3a5c6db7b99146b69b79ec14d
+ms.sourcegitcommit: 01ccefd54c0ced724784dbe1aec9ecfc9b00e633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556053"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92630249"
 ---
 # <a name="no-locxamarinforms-dependencyservice-registration-and-resolution"></a>Registro y resolución de DependencyService de Xamarin.Forms
 
@@ -36,7 +36,7 @@ El registro se puede realizar con [`DependencyAttribute`](xref:Xamarin.Forms.Dep
 
 [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) se puede usar para registrar una implementación de la plataforma con [`DependencyService`](xref:Xamarin.Forms.DependencyService). El atributo indica que el tipo especificado proporciona una implementación concreta de la interfaz.
 
-En el siguiente ejemplo se muestra el uso de [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) para registrar la implementación en iOS de la interfaz de `IDeviceOrientationService`:
+En el siguiente ejemplo se usa [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) para registrar la implementación de iOS de la interfaz `IDeviceOrientationService`:
 
 ```csharp
 using Xamarin.Forms;
@@ -65,7 +65,7 @@ De forma similar, las implementaciones de la interfaz de `IDeviceOrientationServ
 
 Los métodos [`DependencyService.Register`](xref:Xamarin.Forms.DependencyService.Register*), y el método `RegisterSingleton`, se pueden usar para registrar una implementación de la plataforma con [`DependencyService`](xref:Xamarin.Forms.DependencyService).
 
-En el siguiente ejemplo se muestra el uso del método [`Register`](xref:Xamarin.Forms.DependencyService.Register*) para registrar la implementación en iOS de la interfaz de `IDeviceOrientationService`:
+En el siguiente ejemplo se usa el método [`Register`](xref:Xamarin.Forms.DependencyService.Register*) para registrar la implementación de iOS de la interfaz `IDeviceOrientationService`:
 
 ```csharp
 [Register("AppDelegate")]
