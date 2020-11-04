@@ -118,10 +118,5 @@
           href: effects/image-filters.md
         - name: Filtros de color
           href: effects/color-filters.md
-    - name: Ejemplos independientes de la plataforma
-      href: ~/graphics-games/skiasharp/introduction.md
-      items:
-        - name: Notas específicas de la plataforma
-          href: ~/graphics-games/skiasharp/platform.md
     - name: referencia de API
       href: /dotnet/api/skiasharp/
