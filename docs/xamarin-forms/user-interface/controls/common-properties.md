@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Formspropiedades, métodos y eventos de controles comunes
+title: Xamarin.Forms propiedades, métodos y eventos de controles comunes
 description: En este artículo se describen las propiedades, los métodos y los eventos comunes definidos en la clase VisualElement, que se suelen usar en las clases derivadas.
 ms.prod: xamarin
 ms.assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D
@@ -10,14 +10,14 @@ ms.date: 07/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b4c0ef44f528e3cbc56a27e98a1c38246736ff8c
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: c709331b743d6d6ac1f72fe87dae342b4478a920
+ms.sourcegitcommit: 9a83e49eb4d2afb8b3a99ac2347f4b9f8a19e76b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918341"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93330967"
 ---
-# <a name="no-locxamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Formspropiedades, métodos y eventos de controles comunes
+# <a name="no-locxamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Forms propiedades, métodos y eventos de controles comunes
 
 La Xamarin.Forms `VisualElement` clase es la clase base para la mayoría de los controles utilizados en una Xamarin.Forms aplicación. La `VisualElement` clase define muchas [propiedades](#properties), [métodos](#methods)y [eventos](#events) que se usan en las clases derivadas.
 
@@ -31,7 +31,7 @@ La `AnchorX` propiedad es un `double` valor que define el punto central en el ej
 
 ### [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)
 
-La `AnchorY` propiedad es un `double` valor que define el punto central en el eje X para las transformaciones como la escala y la rotación. El valor predeterminado es 0,5.
+La `AnchorY` propiedad es un `double` valor que define el punto central en el eje Y para las transformaciones como la escala y la rotación. El valor predeterminado es 0,5.
 
 ### `Background`
 
@@ -51,11 +51,11 @@ La `Bounds` propiedad es un objeto de solo lectura `Rectangle` que representa el
 
 ### `Clip`
 
-La `Clip` propiedad es un `Geometry` objeto que define el contorno del contenido de un elemento. Para definir un clip, use un `Geometry` objeto como `EllipseGeometry` para establecer la propiedad del elemento `Clip` . Solo se verá el área que está dentro de la región de la geometría. Para obtener más información, consulte [clip con Geometry](~/xamarin-forms/user-interface/shapes/geometries.md#clip-with-a-geometry).
+La `Clip` propiedad es un `Geometry` objeto que define el contorno del contenido de un elemento. Para definir un clip, use un `Geometry` objeto como `EllipseGeometry` para establecer la propiedad del elemento `Clip` . Solo se verá el área que está dentro de la región de la geometría. Para obtener más información, vea [Recorte con una geometría](~/xamarin-forms/user-interface/shapes/geometries.md#clip-with-a-geometry).
 
 ### [`Effects`](xref:Xamarin.Forms.Element.Effects)
 
-La `Effects` propiedad es `List` de `Effect` objetos, heredada de `Element` (XREF: Xamarin.Forms . Element). Los efectos permiten personalizar los controles nativos y se suelen usar para pequeños cambios de estilo. Para obtener más información sobre la `Effect` clase, vea [ Xamarin.Forms efectos](~/xamarin-forms/app-fundamentals/effects/index.md).
+La `Effects` propiedad es `List` de `Effect` objetos, heredada de la [`Element`](xref:Xamarin.Forms.Element) clase. Los efectos permiten personalizar los controles nativos y se suelen usar para pequeños cambios de estilo. Para obtener más información sobre la `Effect` clase, vea [ Xamarin.Forms efectos](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 ### [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection)
 
@@ -239,7 +239,7 @@ El `Unfocused` evento se desencadena cuando la `VisualElement` instancia pierde 
 
 ## <a name="units-of-measurement"></a>Unidades de medida
 
-Todas las plataformas Android, iOS y UWP tienen unidades de medida diferentes que pueden variar en los dispositivos. Xamarin.Formsutiliza una unidad de medida independiente de la plataforma que normaliza las unidades entre dispositivos y plataformas. Hay 160 unidades por pulgada, o 64 unidades por centímetro, en Xamarin.Forms .
+Todas las plataformas Android, iOS y UWP tienen unidades de medida diferentes que pueden variar en los dispositivos. Xamarin.Forms utiliza una unidad de medida independiente de la plataforma que normaliza las unidades entre dispositivos y plataformas. Hay 160 unidades por pulgada, o 64 unidades por centímetro, en Xamarin.Forms .
 
 ## <a name="request-properties"></a>Propiedades de solicitud
 
@@ -272,7 +272,7 @@ El comportamiento es indefinido cuando el valor mínimo es mayor que el valor ab
 
 ### <a name="minimum-properties-within-a-grid"></a>Propiedades mínimas dentro de una cuadrícula
 
-`Grid`los diseños tienen su propio sistema para ajustar el tamaño relativo de las filas y las columnas. El uso de `MinimumWidthRequest` o `MinimumHeightRequest` dentro de un `Grid` diseño no tendrá ningún efecto. Para obtener más información, vea [ Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md).
+`Grid` los diseños tienen su propio sistema para ajustar el tamaño relativo de las filas y las columnas. El uso de `MinimumWidthRequest` o `MinimumHeightRequest` dentro de un `Grid` diseño no tendrá ningún efecto. Para obtener más información, vea [ Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
