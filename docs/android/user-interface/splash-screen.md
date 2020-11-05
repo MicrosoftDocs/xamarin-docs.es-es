@@ -7,22 +7,22 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/02/2019
-ms.openlocfilehash: 2b0b68be5cd36d908c7e152137b14b41a7a0b947
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: bd24fbf6ce99e87c6a7f4ccd8cceef6cbe826f0f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91458178"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370538"
 ---
 # <a name="splash-screen"></a>Pantalla de presentación
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/monodroid-samples/splashscreen)
 
 _Una aplicación Android tarda algún tiempo en iniciarse, sobre todo cuando la aplicación se inicia por primera vez en un dispositivo. Una pantalla de presentación puede mostrar el progreso de inicio al usuario o para indicar la personalización de marca._
 
 ## <a name="overview"></a>Información general
 
-Una aplicación Android tarda algún tiempo en iniciarse, especialmente durante la primera vez que la aplicación se ejecuta en un dispositivo (en ocasiones, esto se conoce como _Inicio en frío_). La pantalla de presentación puede mostrar el progreso de inicio del usuario, o puede mostrar información de personalización de marca para identificar y promover la aplicación.
+Una aplicación Android tarda algún tiempo en iniciarse, especialmente durante la primera vez que la aplicación se ejecuta en un dispositivo (en ocasiones, esto se conoce como _Inicio en frío_ ). La pantalla de presentación puede mostrar el progreso de inicio del usuario, o puede mostrar información de personalización de marca para identificar y promover la aplicación.
 
 En esta guía se describe una técnica para implementar una pantalla de presentación en una aplicación de Android. Se tratan los pasos siguientes:
 
@@ -50,7 +50,7 @@ La pantalla de presentación se implementa como una actividad que muestra la mar
 
 La pantalla de presentación mostrará un XML que se podrá dibujar en el fondo de la actividad de la pantalla de presentación. Es necesario usar una imagen de mapa de imágenes (como PNG o JPG) para que se muestre la imagen.
 
-La aplicación de ejemplo define una **splash_screen.xml**denominada dibujable. Este dibujo usa una [lista de capas](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) para centrar la imagen de la pantalla de presentación en la aplicación, tal como se muestra en el siguiente código XML:
+La aplicación de ejemplo define una **splash_screen.xml** denominada dibujable. Este dibujo usa una [lista de capas](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) para centrar la imagen de la pantalla de presentación en la aplicación, tal como se muestra en el siguiente código XML:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -81,7 +81,7 @@ Para obtener más información sobre `Drawable` los objetos, consulte la [docume
 
 ### <a name="implementing-a-theme"></a>Implementar un tema
 
-Para crear un tema personalizado para la actividad de la pantalla de presentación, edite (o agregue) los valores de archivo **/styles.xml** y cree un nuevo `style` elemento para la pantalla de presentación. A continuación se muestra un archivo de **valores o style.xml** de ejemplo con un `style` denominado mi **. Splash**:
+Para crear un tema personalizado para la actividad de la pantalla de presentación, edite (o agregue) los valores de archivo **/styles.xml** y cree un nuevo `style` elemento para la pantalla de presentación. A continuación se muestra un archivo de **valores o style.xml** de ejemplo con un `style` denominado mi **. Splash** :
 
 ```xml
 <resources>
@@ -167,7 +167,7 @@ Para agregar una pantalla de presentación para el modo horizontal, siga estos p
 
 1. En la carpeta **Resources/drawable** , agregue la versión horizontal de la imagen de la pantalla de presentación que desee usar. En este ejemplo, **splash_logo_land.png** es la versión horizontal del logotipo que se usó en los ejemplos anteriores (usa el uso de letras en blanco en lugar de azul).
 
-2. En la carpeta **Resources/drawable** , cree una versión horizontal de la `layer-list` dibujable que se definió anteriormente (por ejemplo, **splash_screen_land.xml**). En este archivo, establezca la ruta de acceso del mapa de bits en la versión horizontal de la imagen de la pantalla de presentación. En el ejemplo siguiente, **splash_screen_land.xml** usa **splash_logo_land.png**:
+2. En la carpeta **Resources/drawable** , cree una versión horizontal de la `layer-list` dibujable que se definió anteriormente (por ejemplo, **splash_screen_land.xml** ). En este archivo, establezca la ruta de acceso del mapa de bits en la versión horizontal de la imagen de la pantalla de presentación. En el ejemplo siguiente, **splash_screen_land.xml** usa **splash_logo_land.png** :
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>

@@ -10,18 +10,18 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 00b6251f530a4927d069ae92ec919645a06baf15
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 1a9a8b8dc31369b5774935a2e8fca5cf17faa24b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555403"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371253"
 ---
 # <a name="skiasharp-noise-and-composing"></a>SkiaSharp ruido y composición
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Los gráficos vectoriales simples tienden a parecer poco naturales. Las líneas rectas, las curvas suaves y los colores sólidos no se asemejan a las imperfecciones de los objetos del mundo real. Al trabajar en los gráficos generados por el equipo para el _Tron_de películas 1982, Computer científico Ken Perl comenzó a desarrollar algoritmos que usaban procesos aleatorios para proporcionar a estas imágenes texturas más realistas. En 1997, Ken Perl ha ganado una Premio a la Academia de logros técnicos. Su trabajo ha sido conocido como Perlen el ruido y se admite en SkiaSharp. Este es un ejemplo:
+Los gráficos vectoriales simples tienden a parecer poco naturales. Las líneas rectas, las curvas suaves y los colores sólidos no se asemejan a las imperfecciones de los objetos del mundo real. Al trabajar en los gráficos generados por el equipo para el _Tron_ de películas 1982, Computer científico Ken Perl comenzó a desarrollar algoritmos que usaban procesos aleatorios para proporcionar a estas imágenes texturas más realistas. En 1997, Ken Perl ha ganado una Premio a la Academia de logros técnicos. Su trabajo ha sido conocido como Perlen el ruido y se admite en SkiaSharp. Este es un ejemplo:
 
 ![Ejemplo de ruido de Perlen](noise-images/NoiseSample.png "Ejemplo de ruido de Perlen")
 
@@ -47,7 +47,7 @@ El `numOctaves` valor es un entero de 1 o superior. Se relaciona con un factor d
 
 El `seed` parámetro es el punto inicial para el generador de números aleatorios. Aunque se especifica como un valor de punto flotante, la fracción se trunca antes de usarse y 0 es igual que 1.
 
-La página de **ruido de Perlen** en el ejemplo [ **SkiaSharpFormsDemos**)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) le permite experimentar con varios valores de los `baseFrequency` `numOctaves` argumentos y. Este es el archivo XAML:
+La página de **ruido de Perlen** en el ejemplo [ **SkiaSharpFormsDemos** )](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) le permite experimentar con varios valores de los `baseFrequency` `numOctaves` argumentos y. Este es el archivo XAML:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>

@@ -10,16 +10,16 @@ ms.date: 01/12/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: be5b2854c2f546e2194bd4dc95db77c9dcaf0760
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 01f625d9ecfb91bc36013b7f6d45fb3d275e8bee
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562813"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370837"
 ---
 # <a name="no-locxamarinforms-cells"></a>Xamarin.Forms Celdas
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _Xamarin.Forms las celdas se pueden agregar a los controles ListView y TableViews._
 

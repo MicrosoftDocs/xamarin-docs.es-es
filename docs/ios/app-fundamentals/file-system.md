@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 11/12/2018
-ms.openlocfilehash: ef632b4bff3313de82c71cb5839ecdc24c9242ad
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: ffb49329b38705d097520b24d53285d5dbf15167
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91431483"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371812"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Acceso al sistema de archivos en Xamarin. iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/filesystemsamplecode)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/ios-samples/filesystemsamplecode)
 
 Puede usar Xamarin. iOS y las `System.IO` clases de la *biblioteca de clases base (BCL) de .net* para tener acceso al sistema de archivos de iOS. La clase `File` le permite crear, eliminar y leer archivos, mientras que la clase `Directory` le permite crear, eliminar o enumerar el contenido de directorios. También puede utilizar `Stream` subclases, que pueden proporcionar un mayor grado de control sobre las operaciones de archivo (como la compresión o la búsqueda de posición dentro de un archivo).
 
@@ -155,7 +155,7 @@ Para marcar un archivo para su inclusión, haga clic con el botón derecho en lo
 
 Es importante comprender que el sistema de archivos de iOS distingue *entre mayúsculas y minúsculas*. La distinción de mayúsculas y minúsculas significa que los nombres de archivos y directorios deben coincidir exactamente: **README.txt** y **readme.txt** se considerarían nombres de archivo diferentes.
 
-Esto puede resultar confuso para los desarrolladores de .NET que están más familiarizados con el sistema de archivos de Windows, que no distingue *entre mayúsculas y minúsculas* : los **archivos**, **archivos**y **archivos** harían todo en el mismo directorio.
+Esto puede resultar confuso para los desarrolladores de .NET que están más familiarizados con el sistema de archivos de Windows, que no distingue *entre mayúsculas y minúsculas* : los **archivos** , **archivos** y **archivos** harían todo en el mismo directorio.
 
 > [!WARNING]
 > El simulador de iOS no distingue entre mayúsculas y minúsculas.
@@ -169,7 +169,7 @@ Debido a esta diferencia confusa, se recomienda usar el `System.IO.Path.Combine`
 
 ## <a name="application-sandbox"></a>Espacio aislado de la aplicación
 
-El acceso de la aplicación al sistema de archivos (y otros recursos, como la red y las características de hardware) está limitado por motivos de seguridad. Esta restricción se conoce como *espacio aislado*de la aplicación. En lo que respecta al sistema de archivos, la aplicación se limita a crear y eliminar archivos y directorios en su directorio particular.
+El acceso de la aplicación al sistema de archivos (y otros recursos, como la red y las características de hardware) está limitado por motivos de seguridad. Esta restricción se conoce como *espacio aislado* de la aplicación. En lo que respecta al sistema de archivos, la aplicación se limita a crear y eliminar archivos y directorios en su directorio particular.
 
 El directorio particular es una ubicación única en el sistema de archivos donde se almacena la aplicación y todos sus datos. No puede elegir (o cambiar) la ubicación del directorio principal de la aplicación; sin embargo, iOS y Xamarin. iOS proporcionan propiedades y métodos para administrar los archivos y directorios dentro de.
 
@@ -200,7 +200,7 @@ A continuación se enumeran estos directorios, cómo determinar su ruta de acces
 
 |Directorio|Descripción|
 |---|---|
-|[ApplicationName]. aplicación/|**En iOS 7 y versiones anteriores**, este es el `ApplicationBundle` directorio donde se almacena el archivo ejecutable de la aplicación. La estructura de directorios que se crea en la aplicación existe en este directorio (por ejemplo, imágenes y otros tipos de archivo que se han marcado como recursos en el proyecto de Visual Studio para Mac).<br /><br />Si necesita tener acceso a los archivos de contenido dentro de la agrupación de aplicaciones, la ruta de acceso a este directorio está disponible a través de la `NSBundle.MainBundle.BundlePath` propiedad.|
+|[ApplicationName]. aplicación/|**En iOS 7 y versiones anteriores** , este es el `ApplicationBundle` directorio donde se almacena el archivo ejecutable de la aplicación. La estructura de directorios que se crea en la aplicación existe en este directorio (por ejemplo, imágenes y otros tipos de archivo que se han marcado como recursos en el proyecto de Visual Studio para Mac).<br /><br />Si necesita tener acceso a los archivos de contenido dentro de la agrupación de aplicaciones, la ruta de acceso a este directorio está disponible a través de la `NSBundle.MainBundle.BundlePath` propiedad.|
 |Documentos|Use este directorio para almacenar los documentos de usuario y los archivos de datos de la aplicación.<br /><br />El contenido de este directorio puede ponerse a disposición del usuario a través del uso compartido de archivos de iTunes (aunque esta opción está deshabilitada de forma predeterminada). Agregue una `UIFileSharingEnabled` clave booleana al archivo info. plist para permitir que los usuarios tengan acceso a estos archivos.<br /><br />Incluso si una aplicación no habilita el uso compartido de archivos de inmediato, debe evitar colocar los archivos que deben ocultarse de los usuarios en este directorio (por ejemplo, los archivos de base de datos, a menos que desee compartirlos). Siempre que los archivos confidenciales permanezcan ocultos, estos archivos no se expondrán (y, potencialmente, se moverán, modificarán o eliminarán en iTunes) si el uso compartido de archivos está habilitado en una versión futura.<br /><br /> Puede usar el `Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments)` método para obtener la ruta de acceso al directorio de documentos de la aplicación.<br /><br />ITunes realiza una copia de seguridad del contenido de este directorio.|
 |Biblioteca|El directorio Library es un buen lugar para almacenar archivos que no son creados directamente por el usuario, como bases de datos u otros archivos generados por la aplicación. El contenido de este directorio nunca se expone al usuario a través de iTunes.<br /><br />Puede crear sus propios subdirectorios en la biblioteca; sin embargo, aquí ya hay algunos directorios creados por el sistema que debe tener en cuenta, incluidas las preferencias y las cachés.<br /><br />ITunes realiza una copia de seguridad del contenido de este directorio (excepto el subdirectorio de caché). Se hará una copia de seguridad de los directorios personalizados que cree en la biblioteca.|
 |Biblioteca/preferencias/|Los archivos de preferencias específicos de la aplicación se almacenan en este directorio. No cree estos archivos directamente. En su lugar, use la `NSUserDefaults` clase.<br /><br />ITunes realiza una copia de seguridad del contenido de este directorio.|
@@ -263,7 +263,7 @@ Los usuarios solo pueden tener acceso a los elementos de nivel superior de este 
 
 Los usuarios que modifiquen el contenido de la carpeta documentos pueden causar problemas si no son cuidados. La aplicación debe tener esto en cuenta y ser resistente a las actualizaciones destructivas de la carpeta documentos.
 
-En el código de ejemplo de este artículo se crea un archivo y una carpeta en la carpeta documentos (en **SampleCode.CS**) y se habilita el uso compartido de archivos en el archivo **info. plist** . En esta captura de pantalla se muestra cómo aparecen en iTunes:
+En el código de ejemplo de este artículo se crea un archivo y una carpeta en la carpeta documentos (en **SampleCode.CS** ) y se habilita el uso compartido de archivos en el archivo **info. plist** . En esta captura de pantalla se muestra cómo aparecen en iTunes:
 
 [![En esta captura de pantalla se muestra cómo aparecen los archivos en iTunes](file-system-images/15-itunes-file-sharing-example-sml.png)](file-system-images/15-itunes-file-sharing-example.png#lightbox)
 
@@ -319,7 +319,7 @@ Puesto que las extensiones de aplicaciones se ejecutan como parte de una aplicac
 
 ### <a name="configure-an-app-group"></a>Configurar un grupo de aplicaciones
 
-La ubicación compartida se configura mediante un [grupo de aplicaciones](https://developer.apple.com/library/archive/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19), que se configura en la sección **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles) del [Centro para desarrolladores de iOS](https://developer.apple.com/devcenter/ios/). También se debe hacer referencia a este valor en el archivo **contitles. plist**de cada proyecto.
+La ubicación compartida se configura mediante un [grupo de aplicaciones](https://developer.apple.com/library/archive/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19), que se configura en la sección **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles) del [Centro para desarrolladores de iOS](https://developer.apple.com/devcenter/ios/). También se debe hacer referencia a este valor en el archivo **contitles. plist** de cada proyecto.
 
 Para obtener información sobre cómo crear y configurar un grupo de aplicaciones, consulte la guía de [funcionalidades del grupo de aplicaciones](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) .
 

@@ -10,16 +10,16 @@ ms.date: 02/17/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a8aea2617d31289266e792afba773973eddb2d93
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 46e4147b61d4d78ec30e047452720c422e7b1dc9
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562241"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371864"
 ---
 # <a name="style-inheritance-in-no-locxamarinforms"></a>Herencia de estilo en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _Los estilos pueden heredar de otros estilos para reducir la duplicación y habilitar la reutilización._
 

@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2e0c4d247f3ecf9c1b8e077c4a96712e9ed138ca
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 1d50c03fcea043c4b29db4a82ee3dc1712c288df
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562956"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372085"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>Guardar mapas de bits de SkiaSharp en archivos
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Después de que una aplicación SkiaSharp haya creado o modificado un mapa de bits, es posible que la aplicación desee guardar el mapa de bits en la biblioteca de fotos del usuario:
 
@@ -34,7 +34,7 @@ Esta tarea abarca dos pasos:
 
 La mayoría de los formatos de archivo de mapa de bits populares de hoy en día usan la compresión para reducir el espacio de almacenamiento. Las dos amplias categorías de técnicas de compresión se denominan pérdidas _y_ _pérdida_ de tipos. Estos términos indican si el algoritmo de compresión da como resultado la pérdida de datos.
 
-El formato de pérdida más popular fue desarrollado por el grupo de expertos fotográficos Unidos y se denomina JPEG. El algoritmo de compresión JPEG analiza la imagen mediante una herramienta matemática denominada _transformación de coseno discreto_e intenta quitar datos que no son fundamentales para conservar la fidelidad visual de la imagen. El grado de compresión se puede controlar con una configuración a la que se hace referencia normalmente como _calidad_. La configuración de mayor calidad produce archivos de mayor tamaño.
+El formato de pérdida más popular fue desarrollado por el grupo de expertos fotográficos Unidos y se denomina JPEG. El algoritmo de compresión JPEG analiza la imagen mediante una herramienta matemática denominada _transformación de coseno discreto_ e intenta quitar datos que no son fundamentales para conservar la fidelidad visual de la imagen. El grado de compresión se puede controlar con una configuración a la que se hace referencia normalmente como _calidad_. La configuración de mayor calidad produce archivos de mayor tamaño.
 
 En cambio, un algoritmo de compresión sin pérdida de datos analiza la imagen en busca de repeticiones y patrones de píxeles que se pueden codificar de forma que se reduzcan los datos, pero no se pierda la información. Los datos de mapa de bits originales se pueden restaurar completamente desde el archivo comprimido. El formato de archivo comprimido sin pérdida primario que se usa hoy en día es Portable Network Graphics (PNG).
 
@@ -458,7 +458,7 @@ El mapa de bits que guarda la página **formatos de archivo guardados** es 600-p
 
 |Formato|Calidad|Size|
 |------|------:|---:|
-| PNG | N/D | 492K |
+| PNG | No aplicable | 492K |
 | JPEG | 0 | 2.95 k |
 |      | 50 | 22.1 k |
 |      | 100 | 206K |
@@ -476,7 +476,7 @@ El artículo sobre cómo [**pintar el dedo en SkiaSharp**](../paths/finger-paint
 
 La página **con el dedo pintar con guardar** en el ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) también conserva todo el dibujo en una colección de `SKPath` objetos, pero también representa el dibujo en un mapa de bits, que puede guardar en la biblioteca de fotos.
 
-Gran parte de este programa es similar al programa de pintura con el **dedo** original. Una mejora es que el archivo XAML ahora crea instancias de los botones con la etiqueta **Clear** y **Save**:
+Gran parte de este programa es similar al programa de pintura con el **dedo** original. Una mejora es que el archivo XAML ahora crea instancias de los botones con la etiqueta **Clear** y **Save** :
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -705,7 +705,7 @@ En el ejemplo [**SpinPaint**](/samples/xamarin/xamarin-forms-samples/skiasharpfo
 
 [![Girar dibujo](saving-images/SpinPaint.png "Girar dibujo")](saving-images/SpinPaint-Large.png#lightbox)
 
-El botón **Guardar** de la `SpinPaint` clase es similar a la **pintura con dedo** en que guarda la imagen en un nombre de carpeta fijo (**SpainPaint**) y un nombre de archivo construido a partir de la fecha y la hora.
+El botón **Guardar** de la `SpinPaint` clase es similar a la **pintura con dedo** en que guarda la imagen en un nombre de carpeta fijo ( **SpainPaint** ) y un nombre de archivo construido a partir de la fecha y la hora.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

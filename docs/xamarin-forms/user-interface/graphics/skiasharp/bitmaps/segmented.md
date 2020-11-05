@@ -10,16 +10,16 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9a39433a0bad518055542adb190f4f441675ddfb
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: fe63f3fdab5d508ab0202fbfe93bdc223f97d28a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556378"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370181"
 ---
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>Presentación segmentada de mapas de bits SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 El `SKCanvas` objeto SkiaSharp define un método denominado `DrawBitmapNinePatch` y dos métodos denominados `DrawBitmapLattice` que son muy similares. Ambos métodos representan un mapa de bits al tamaño de un rectángulo de destino, pero en lugar de ajustar el mapa de bits uniformemente, muestran partes del mapa de bits en sus dimensiones de píxeles y ajustan otras partes del mapa de bits para que quepa el rectángulo:
 
@@ -110,7 +110,7 @@ public class NinePatchDisplayPage : ContentPage
 
 El `centerRect` rectángulo abarca la matriz central de 16 círculos. Los círculos de las esquinas se muestran en sus dimensiones de píxeles y todo lo demás se ajusta en consecuencia:
 
-[![Presentación de nueve revisiones](segmented-images/NinePatchDisplay.png "Presentación de nueve revisiones")](segmented-images/NinePatchDisplay-Large.png#lightbox)
+[![Presentación de nueve revisiones](segmented-images/NinePatchDisplay.png "Nine-Patch Mostrar")](segmented-images/NinePatchDisplay-Large.png#lightbox)
 
 La página UWP tiene un tamaño de 500 píxeles de ancho y, por tanto, muestra las filas superior e inferior como una serie de círculos del mismo tamaño. De lo contrario, todos los círculos que no están en las esquinas se ajustan para formar puntos suspensivos.
 
@@ -182,7 +182,7 @@ Las `XDivs` propiedades y `YDivs` se establecen en matrices de solo dos enteros,
 
 La pantalla es idéntica a la del programa anterior:
 
-[![Revisión de Lattice Nine](segmented-images/LatticeNinePatch.png "Revisión de Lattice Nine")](segmented-images/LatticeNinePatch-Large.png#lightbox)
+[![Revisión de Lattice Nine](segmented-images/LatticeNinePatch.png "Nine-Patch Lattice")](segmented-images/LatticeNinePatch-Large.png#lightbox)
 
 La página de **presentación de Lattice** divide el mapa de bits en 16 rectángulos:
 

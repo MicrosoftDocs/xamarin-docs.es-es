@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f0d552db24e89c3bc10ca6f38f9e8f936bd4290d
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 4caf352024d7ae2a89d49ff021f0f90f35fdd8eb
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555767"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372215"
 ---
 # <a name="page-toolbar-placement-on-windows"></a>Colocación de la barra de herramientas de página en Windows
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esta Plataforma universal de Windows específica de la plataforma se usa para cambiar la posición de una barra de herramientas en un [`Page`](xref:Xamarin.Forms.Page) y se consume en XAML estableciendo la [`Page.ToolbarPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Page.ToolbarPlacementProperty) propiedad adjunta en un valor de la [`ToolbarPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement) enumeración:
 
@@ -45,7 +45,7 @@ El `Page.On<Windows>` método especifica que este específico de la plataforma s
 
 El resultado es que la ubicación especificada de la barra de herramientas se aplica a la [`Page`](xref:Xamarin.Forms.Page) instancia:
 
-[![Ubicación de la barra de herramientas específica de la plataforma](page-toolbar-placement-images/toolbar-placement.png)](page-toolbar-placement-images/toolbar-placement-large.png#lightbox "Ubicación de la barra de herramientas específica de la plataforma")
+[![Ubicación de la barra de herramientas específica de la plataforma](page-toolbar-placement-images/toolbar-placement.png)](page-toolbar-placement-images/toolbar-placement-large.png#lightbox "Platform-Specific de colocación de la barra de herramientas")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

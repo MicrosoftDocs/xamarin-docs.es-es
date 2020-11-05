@@ -10,16 +10,16 @@ ms.date: 09/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fa3769d2533a5a6b482c92b832d54506e4954250
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 18a9347de9297c4c853cf695d169992ca60ace36
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560148"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372020"
 ---
 # <a name="no-locxamarinforms-listview"></a>Xamarin.Forms ListView
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistview)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithlistview)
 
 [`ListView`](xref:Xamarin.Forms.ListView) es una vista para presentar listas de datos, especialmente listas largas que requieren desplazamiento.
 

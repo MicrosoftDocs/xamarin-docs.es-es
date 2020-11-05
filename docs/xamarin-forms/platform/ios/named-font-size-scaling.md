@@ -10,16 +10,16 @@ ms.date: 06/28/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e693565bf34b2ab17992aed72d022315a33b87e3
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: bdf910443295a4a54ea76aa39ee67f1c3aeb10d4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563671"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372345"
 ---
 # <a name="accessibility-scaling-for-named-font-sizes-on-ios"></a>Escalado de accesibilidad para tamaños de fuente con nombre en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Este específico de la plataforma iOS deshabilita el escalado de accesibilidad para tamaños de fuente con nombre. Se consume en XAML estableciendo la `Application.EnableAccessibilityScalingForNamedFontSizes` propiedad Bindable en `false` :
 

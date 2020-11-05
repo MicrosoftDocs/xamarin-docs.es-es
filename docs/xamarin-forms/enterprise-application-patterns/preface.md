@@ -10,16 +10,19 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6ea63fc483025fc6f9b0c7f379b6dfdc6ca30de8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f1c5af73c7c7fd160f715d7dbfab26c72cb06a31
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198084"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371552"
 ---
 # <a name="preface-to-enterprise-app-development"></a>Preceder al desarrollo de aplicaciones empresariales
 
-En este libro electrónico se proporcionan instrucciones sobre la creación de aplicaciones empresariales multiplataforma con Xamarin.Forms . Xamarin.Formses un kit de herramientas de interfaz de usuario multiplataforma que permite a los desarrolladores crear fácilmente diseños de interfaz de usuario nativa que se pueden compartir entre plataformas, como iOS, Android y el Plataforma universal de Windows (UWP). Proporciona una solución completa para aplicaciones de negocio a empleado (B2E), de negocio a negocio (B2B) y de negocio a consumidor (B2C), lo que proporciona la capacidad de compartir código en todas las plataformas de destino y ayudar a reducir el costo total de propiedad (TCO).
+> [!NOTE]
+> Este libro electrónico se publicó en el muelle de 2017 y no se ha actualizado desde entonces. Hay mucho en el libro que sigue siendo útil, pero parte del material es obsoleto.
+
+En este libro electrónico se proporcionan instrucciones sobre la creación de aplicaciones empresariales multiplataforma con Xamarin.Forms . Xamarin.Forms es un kit de herramientas de interfaz de usuario multiplataforma que permite a los desarrolladores crear fácilmente diseños de interfaz de usuario nativa que se pueden compartir entre plataformas, como iOS, Android y el Plataforma universal de Windows (UWP). Proporciona una solución completa para aplicaciones de negocio a empleado (B2E), de negocio a negocio (B2B) y de negocio a consumidor (B2C), lo que proporciona la capacidad de compartir código en todas las plataformas de destino y ayudar a reducir el costo total de propiedad (TCO).
 
 En esta guía se proporcionan instrucciones arquitectónicas para desarrollar aplicaciones empresariales adaptables, mantenibles y comprobables Xamarin.Forms . Se proporciona orientación sobre cómo implementar MVVM, la inserción de dependencias, la navegación, la validación y la administración de la configuración, mientras se mantiene el acoplamiento flexible. Además, también hay instrucciones sobre cómo realizar la autenticación y la autorización con IdentityServer, el acceso a los datos de microservicios en contenedor y las pruebas unitarias.
 

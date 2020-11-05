@@ -10,16 +10,16 @@ ms.date: 11/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2336a4fbd92a7e9158d332de1ea2e2b018d144ce
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: db7101d5e50dc6ee7840023f6ec4efeb2c52150b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556664"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370200"
 ---
 # <a name="simple-animations-in-no-locxamarinforms"></a>Animaciones simples en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
 
 _La clase ViewExtensions proporciona métodos de extensión que se pueden usar para construir animaciones simples. En este artículo se muestra cómo crear y cancelar animaciones mediante la clase ViewExtensions._
 

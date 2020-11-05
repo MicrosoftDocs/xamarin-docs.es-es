@@ -11,16 +11,16 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.custom: video
-ms.openlocfilehash: d6944da583679d58885c20d327b3e43e176eb6fa
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 520af44a307c8d493f550bbaeaa009bcdc94d8e0
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563359"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371617"
 ---
 # <a name="dynamic-styles-in-no-locxamarinforms"></a>Estilos dinámicos en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 
 _Los estilos no responden a los cambios de propiedad y permanecen sin cambios durante la ejecución de una aplicación. Por ejemplo, después de asignar un estilo a un elemento visual, si una de las instancias del establecedor se modifica, se quita o se agrega una nueva instancia de establecedor, los cambios no se aplicarán al elemento visual. Sin embargo, las aplicaciones pueden responder dinámicamente a los cambios de estilo en tiempo de ejecución mediante recursos dinámicos._
 

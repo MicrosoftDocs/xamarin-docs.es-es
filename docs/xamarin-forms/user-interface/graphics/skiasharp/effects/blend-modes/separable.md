@@ -10,18 +10,18 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0fd934a305e34bb7406a0379a0882873e3400fe8
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 3480c2fe2ef94a2a1beee9a924a59cd90d3a42b3
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558367"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370811"
 ---
 # <a name="the-separable-blend-modes"></a>Modos de fusión separables
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Como vimos en el artículo [**SkiaSharp Porter-Duff Blend modes**](porter-duff.md), los modos de mezcla Porter-Duff generalmente realizan operaciones de recorte. Los modos de fusión separables son diferentes. Los modos separables modifican los componentes de color rojo, verde y azul de una imagen. Los modos de mezcla separables pueden mezclar colores para demostrar que la combinación de rojo, verde y azul es realmente blanca:
+Como vimos en el artículo [**SkiaSharp Porter-Duff modos de fusión**](porter-duff.md), los modos de fusión Porter-Duff suelen realizar operaciones de recorte. Los modos de fusión separables son diferentes. Los modos separables modifican los componentes de color rojo, verde y azul de una imagen. Los modos de mezcla separables pueden mezclar colores para demostrar que la combinación de rojo, verde y azul es realmente blanca:
 
 ![Colores primarios](separable-images/SeparableSample.png "Colores primarios")
 

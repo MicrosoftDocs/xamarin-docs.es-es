@@ -10,16 +10,16 @@ ms.date: 09/30/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 319afff4572c02e363fef6296aca06ba290923c2
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 8992f2a649b1d3998a24a11cdf7e51d768a3cd09
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562839"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371344"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introducción a XAML
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _En una Xamarin.Forms aplicación, XAML se usa principalmente para definir el contenido visual de una página y funciona junto con un archivo de código subyacente de C#._
 
@@ -37,21 +37,21 @@ En Windows, inicie Visual Studio 2019 y, en la ventana Inicio, haga clic en **cr
 
 ![Ventana nueva solución](get-started-with-xaml-images/win/new-solution-2019.png)
 
-En la ventana **Crear un proyecto nuevo**, seleccione **Móvil** en la lista desplegable **Tipo de proyecto**, elija la plantilla **Aplicación móvil (Xamarin.Forms)** y haga clic en el botón **Siguiente**:
+En la ventana **Crear un proyecto nuevo** , seleccione **Móvil** en la lista desplegable **Tipo de proyecto** , elija la plantilla **Aplicación móvil (Xamarin.Forms)** y haga clic en el botón **Siguiente** :
 
 ![Ventana nuevo proyecto](get-started-with-xaml-images/win/new-project-2019.png)
 
 En la ventana **configurar el nuevo proyecto** , establezca el **nombre del proyecto** en **XamlSamples** (o el que prefiera) y haga clic en el botón **crear** .
 
-En el cuadro de diálogo **nueva aplicación multiplataforma** , haga clic en **en blanco**y haga clic en el botón **Aceptar** :
+En el cuadro de diálogo **nueva aplicación multiplataforma** , haga clic en **en blanco** y haga clic en el botón **Aceptar** :
 
 ![Cuadro de diálogo Nueva aplicación](get-started-with-xaml-images/win/new-cross-platform-app.png)
 
-Se crean cuatro proyectos en la solución: **XamlSamples** .net Standard Library, **XamlSamples. Android**, **XamlSamples. iOS**y la solución plataforma universal de Windows, **XamlSamples. UWP**.
+Se crean cuatro proyectos en la solución: **XamlSamples** .net Standard Library, **XamlSamples. Android** , **XamlSamples. iOS** y la solución plataforma universal de Windows, **XamlSamples. UWP**.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-En Visual Studio para Mac, seleccione **archivo > nueva solución** en el menú. En el cuadro de diálogo **nuevo proyecto** , seleccione **aplicación multiplataforma >** a la izquierda y **aplicación de formularios en blanco** (*no* **aplicación de formularios**) en la lista de plantillas:
+En Visual Studio para Mac, seleccione **archivo > nueva solución** en el menú. En el cuadro de diálogo **nuevo proyecto** , seleccione **aplicación multiplataforma >** a la izquierda y **aplicación de formularios en blanco** ( *no* **aplicación de formularios** ) en la lista de plantillas:
 
 ![Cuadro de diálogo nuevo proyecto 1](get-started-with-xaml-images/mac/newprojectdialog1.png)
 
@@ -69,7 +69,7 @@ En el siguiente cuadro de diálogo, puede seleccionar una ubicación para el pro
 
 Presione **crear**
 
-Se crean tres proyectos en la solución: **XamlSamples** .net Standard Library, **XamlSamples. Android**y **XamlSamples. iOS**.
+Se crean tres proyectos en la solución: **XamlSamples** .net Standard Library, **XamlSamples. Android** y **XamlSamples. iOS**.
 
 -----
 
@@ -81,15 +81,15 @@ A menos que necesite escribir código específico de la plataforma, el proyecto 
 
 Dentro de la biblioteca de .NET Standard de **XamlSamples** hay un par de archivos con los nombres siguientes:
 
-- **App. Xaml**, el archivo XAML; etc
-- **App.Xaml.CS**, un archivo *de código subyacente* de C# asociado al archivo XAML.
+- **App. Xaml** , el archivo XAML; etc
+- **App.Xaml.CS** , un archivo *de código subyacente* de C# asociado al archivo XAML.
 
 Deberá hacer clic en la flecha situada junto a **app. Xaml** para ver el archivo de código subyacente.
 
 Tanto **app. Xaml** como **app.Xaml.CS** contribuyen a una clase denominada `App` que se deriva de `Application` . La mayoría de las demás clases con archivos XAML contribuyen a una clase que deriva de `ContentPage` ; esos archivos usan XAML para definir el contenido visual de una página completa. Esto se aplica a los otros dos archivos del proyecto **XamlSamples** :
 
-- **Mainpage. Xaml**, el archivo XAML; etc
-- **Mainpage.Xaml.CS**, el archivo de código subyacente de C#.
+- **Mainpage. Xaml** , el archivo XAML; etc
+- **Mainpage.Xaml.CS** , el archivo de código subyacente de C#.
 
 El archivo **mainpage. Xaml** tiene el siguiente aspecto (aunque el formato puede ser un poco diferente):
 
@@ -156,13 +156,13 @@ Para los objetos visuales más interesantes, lo único que necesita es XAML más
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Para agregar otras clases basadas en XAML `ContentPage` al proyecto, seleccione el proyecto de biblioteca **XamlSamples** .net Standard, haga clic con el botón derecho y seleccione **Agregar > nuevo elemento..**.. En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **elementos de Visual C# > Xamarin.Forms página de contenido de >** (no página de **contenido (C#)**, que crea una página de solo código, o una **vista de contenido**, que no es una página). Asigne un nombre a la página, por ejemplo, **HelloXamlPage**:
+Para agregar otras clases basadas en XAML `ContentPage` al proyecto, seleccione el proyecto de biblioteca **XamlSamples** .net Standard, haga clic con el botón derecho y seleccione **Agregar > nuevo elemento..**.. En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **elementos de Visual C# > Xamarin.Forms página de contenido de >** (no página de **contenido (C#)** , que crea una página de solo código, o una **vista de contenido** , que no es una página). Asigne un nombre a la página, por ejemplo, **HelloXamlPage** :
 
 ![Cuadro de diálogo Agregar nuevo elemento](get-started-with-xaml-images/win/add-new-item-dialog-2019.png)
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Para agregar otras clases basadas en XAML `ContentPage` al proyecto, seleccione el proyecto de biblioteca **XamlSamples** .net Standard e invoque el elemento de menú **archivo > nuevo archivo** . A la izquierda del cuadro de diálogo **nuevo archivo** , seleccione **formularios** a la izquierda y **Forms ContentPage XAML** (no **Forms ContentPage**, que crea una página de solo código, o una **vista de contenido**, que no es una página). Asigne un nombre a la página, por ejemplo, **HelloXamlPage**:
+Para agregar otras clases basadas en XAML `ContentPage` al proyecto, seleccione el proyecto de biblioteca **XamlSamples** .net Standard e invoque el elemento de menú **archivo > nuevo archivo** . A la izquierda del cuadro de diálogo **nuevo archivo** , seleccione **formularios** a la izquierda y **Forms ContentPage XAML** (no **Forms ContentPage** , que crea una página de solo código, o una **vista de contenido** , que no es una página). Asigne un nombre a la página, por ejemplo, **HelloXamlPage** :
 
 ![Cuadro de diálogo Nuevo archivo](get-started-with-xaml-images/mac/newfiledialog.png)
 
@@ -287,7 +287,7 @@ Al establecer la `Content` propiedad de la página, se reemplaza el valor de la 
 
 [![Texto de etiqueta girado](get-started-with-xaml-images/helloxaml1.png)](get-started-with-xaml-images/helloxaml1-large.png#lightbox)
 
-Puede volver a `MainPage` usar el botón ** atrás<** en iOS, con la flecha izquierda en la parte superior de la página o en la parte inferior del teléfono en Android, o mediante la flecha izquierda en la parte superior de la página en Windows 10.
+Puede volver a `MainPage` usar el botón **atrás<** en iOS, con la flecha izquierda en la parte superior de la página o en la parte inferior del teléfono en Android, o mediante la flecha izquierda en la parte superior de la página en Windows 10.
 
 No dude en experimentar con el código XAML para diferentes maneras de representar `Label` . Si necesita insertar caracteres Unicode en el texto, puede usar la sintaxis XML estándar. Por ejemplo, para poner el saludo en Comillas inteligentes, use:
 
@@ -299,7 +299,7 @@ Este es su aspecto:
 
 ## <a name="xaml-and-code-interactions"></a>Interacciones de código y XAML
 
-El ejemplo **HelloXamlPage** contiene solo un único `Label` en la página, pero esto es muy inusual. La mayoría `ContentPage` de los derivados establecen la `Content` propiedad en un diseño de algún tipo, como `StackLayout` . La `Children` propiedad de `StackLayout` se define como de tipo `IList<View>` , pero realmente es un objeto de tipo `ElementCollection<View>` y esa colección se puede rellenar con varias vistas u otros diseños. En XAML, estas relaciones de elementos primarios y secundarios se establecen con la jerarquía XML normal. A continuación se muestra un archivo XAML para una nueva página denominada **XamlPlusCodePage**:
+El ejemplo **HelloXamlPage** contiene solo un único `Label` en la página, pero esto es muy inusual. La mayoría `ContentPage` de los derivados establecen la `Content` propiedad en un diseño de algún tipo, como `StackLayout` . La `Children` propiedad de `StackLayout` se define como de tipo `IList<View>` , pero realmente es un objeto de tipo `ElementCollection<View>` y esa colección se puede rellenar con varias vistas u otros diseños. En XAML, estas relaciones de elementos primarios y secundarios se establecen con la jerarquía XML normal. A continuación se muestra un archivo XAML para una nueva página denominada **XamlPlusCodePage** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -432,7 +432,7 @@ El método se define como `async` porque el `DisplayAlert` método es asincróni
 
 Ha visto que un objeto definido en XAML puede desencadenar un evento que se administra en el archivo de código subyacente y que el archivo de código subyacente puede tener acceso a un objeto definido en XAML utilizando el nombre asignado a él con el `x:Name` atributo. Estas son las dos formas fundamentales en que interactúan el código y XAML.
 
-Puede obtener información adicional sobre cómo funciona XAML examinando el **archivo XamlPlusCode.Xaml.g.CS**recién generado, que ahora incluye cualquier nombre asignado a cualquier `x:Name` atributo como campo privado. Esta es una versión simplificada de ese archivo:
+Puede obtener información adicional sobre cómo funciona XAML examinando el **archivo XamlPlusCode.Xaml.g.CS** recién generado, que ahora incluye cualquier nombre asignado a cualquier `x:Name` atributo como campo privado. Esta es una versión simplificada de ese archivo:
 
 ```csharp
 public partial class XamlPlusCodePage : ContentPage {

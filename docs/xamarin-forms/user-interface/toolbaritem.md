@@ -10,16 +10,16 @@ ms.date: 07/29/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c6aabe5931dce51889432e7d5dce2be40631ffe2
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 59954a16cbf1fb01c974968848596138469ab9b2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556508"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371214"
 ---
 # <a name="no-locxamarinforms-toolbaritem"></a>Xamarin.Forms ToolbarItem
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 
 La Xamarin.Forms [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) clase es un tipo especial de botón que se puede Agregar a la `Page` colección de un objeto `ToolbarItems` . Cada `ToolbarItem` objeto aparecerá como un botón en la barra de navegación de la aplicación. Una `ToolbarItem` instancia puede tener un icono y aparecer como un elemento de menú primario o secundario. La `ToolbarItem` clase hereda de [`MenuItem`](xref:Xamarin.Forms.MenuItem) .
 

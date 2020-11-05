@@ -10,16 +10,16 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 94f77fd70fee595efd341ff7372828b12661442d
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: b44a3fa34044327be6a928588397c3371f196336
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561734"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371136"
 ---
 # <a name="no-locxamarinforms-switch"></a>Xamarin.Forms Conmutador
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
 
 El Xamarin.Forms [`Switch`](xref:Xamarin.Forms.Switch) control es un botón de alternancia horizontal que el usuario puede manipular para alternar entre los Estados on y OFF, que están representados por un `boolean` valor. La `Switch` clase hereda de [`View`](xref:Xamarin.Forms.View) .
 
