@@ -10,14 +10,17 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bf0315d2d077e06ff3ded4d66814afe050fdfad4
-ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
+ms.openlocfilehash: be8b0866a6d16fdec62f7c6cd3f4fc3e6de3168d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88186205"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374906"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>Comunicación entre componentes débilmente acoplados
+
+> [!NOTE]
+> Este libro electrónico se publicó en el muelle de 2017 y no se ha actualizado desde entonces. Hay mucho en el libro que sigue siendo útil, pero parte del material es obsoleto.
 
 El patrón de publicación y suscripción es un patrón de mensajería en el que los publicadores envían mensajes sin tener conocimiento de los destinatarios, que se conocen como suscriptores. Del mismo modo, los suscriptores escuchan mensajes específicos, sin tener conocimiento de ningún publicador.
 
@@ -55,19 +58,19 @@ Para obtener más información sobre [`MessagingCenter`](xref:Xamarin.Forms.Mess
 
 ## <a name="defining-a-message"></a>Definir un mensaje
 
-[`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter)los mensajes son cadenas que se usan para identificar mensajes. En el ejemplo de código siguiente se muestran los mensajes definidos dentro de la aplicación móvil eShopOnContainers:
+[`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) los mensajes son cadenas que se usan para identificar mensajes. En el ejemplo de código siguiente se muestran los mensajes definidos dentro de la aplicación móvil eShopOnContainers:
 
 ```csharp
-public class MessageKeys  
+public class MessageKeys  
 {  
-    // Add product to basket  
-    public const string AddProduct = "AddProduct";  
+    // Add product to basket  
+    public const string AddProduct = "AddProduct";  
 
-    // Filter  
-    public const string Filter = "Filter";  
+    // Filter  
+    public const string Filter = "Filter";  
 
-    // Change selected Tab programmatically  
-    public const string ChangeTab = "ChangeTab";  
+    // Change selected Tab programmatically  
+    public const string ChangeTab = "ChangeTab";  
 }
 ```
 
@@ -78,7 +81,7 @@ En este ejemplo, los mensajes se definen mediante constantes. La ventaja de este
 Los publicadores informan a los suscriptores de un mensaje con una de las sobrecargas de [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*). En el ejemplo de código siguiente se muestra cómo publicar el `AddProduct` mensaje:
 
 ```csharp
-MessagingCenter.Send(this, MessageKeys.AddProduct, catalogItem);
+MessagingCenter.Send(this, MessageKeys.AddProduct, catalogItem);
 ```
 
 En este ejemplo, el [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) método especifica tres argumentos:
@@ -97,12 +100,12 @@ El [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) método publicará el mens
 Los suscriptores pueden registrarse para recibir un mensaje mediante una de las sobrecargas de [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*). En el ejemplo de código siguiente se muestra cómo la aplicación móvil eShopOnContainers se suscribe y procesa el `AddProduct` mensaje:
 
 ```csharp
-MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(  
-    this, MessageKeys.AddProduct, async (sender, arg) =>  
+MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(  
+    this, MessageKeys.AddProduct, async (sender, arg) =>  
 {  
-    BadgeCount++;  
+    BadgeCount++;  
 
-    await AddCatalogItemAsync(arg);  
+    await AddCatalogItemAsync(arg);  
 });
 ```
 
@@ -118,7 +121,7 @@ Es posible que un suscriptor no necesite controlar cada instancia de un mensaje 
 Los suscriptores pueden cancelar la suscripción a los mensajes que ya no quieren recibir. Esto se logra con una de las [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) sobrecargas, tal y como se muestra en el ejemplo de código siguiente:
 
 ```csharp
-MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessageKeys.AddProduct);
+MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessageKeys.AddProduct);
 ```
 
 En este ejemplo, la [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) Sintaxis del método refleja los argumentos de tipo especificados cuando se suscribe para recibir el `AddProduct` mensaje.

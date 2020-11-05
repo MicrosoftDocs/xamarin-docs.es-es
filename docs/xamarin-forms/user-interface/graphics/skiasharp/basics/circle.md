@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 538a3ea3bd5b2293f93047d9796a185abfa5f2b9
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 39e9effa1c43a4456a1e75e391e14804e2aa0011
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556599"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375101"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Dibujar un círculo simple en SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Conozca los aspectos básicos del dibujo de SkiaSharp, incluidos los lienzos y los objetos Paint_
 
@@ -109,7 +109,7 @@ La [`Style`](xref:SkiaSharp.SKPaint.Style) propiedad indica que desea *trazar* u
 - [`Stroke`](xref:SkiaSharp.SKPaintStyle.Stroke)
 - [`StrokeAndFill`](xref:SkiaSharp.SKPaintStyle.StrokeAndFill)
 
-El valor predeterminado es `Fill`. Utilice la tercera opción para trazar la línea y rellenar el interior con el mismo color.
+De manera predeterminada, es `Fill`. Utilice la tercera opción para trazar la línea y rellenar el interior con el mismo color.
 
 Establezca la [`Color`](xref:SkiaSharp.SKPaint.Color) propiedad en un valor de tipo [`SKColor`](xref:SkiaSharp.SKColor) . Una manera de obtener un `SKColor` valor es convertir un Xamarin.Forms `Color` valor en un `SKColor` valor mediante el método de extensión [`ToSKColor`](xref:SkiaSharp.Views.Forms.Extensions.ToSKColor*) . La [`Extensions`](xref:SkiaSharp.Views.Forms.Extensions) clase del `SkiaSharp.Views.Forms` espacio de nombres incluye otros métodos que convierten entre Xamarin.Forms valores y valores de SkiaSharp.
 

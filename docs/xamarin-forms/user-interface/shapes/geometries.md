@@ -10,18 +10,18 @@ ms.date: 06/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c6c6fb0ea9d3e2b728072fa36c3cdb2a86ade131
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6fe7ce75af14e25fa3dc213f0fb5ed99a2e70a87
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559329"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374828"
 ---
 # <a name="no-locxamarinforms-shapes-geometries"></a>Xamarin.Forms Formas: geometrías
 
 ![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 La `Geometry` clase y las clases que derivan de ella permiten describir la geometría de una forma 2D. `Geometry` los objetos pueden ser simples, como rectángulos y círculos, o compuestos, creados a partir de dos o más objetos Geometry. Además, se pueden crear geometrías más complejas que incluyen arcos y curvas.
 
@@ -38,7 +38,7 @@ Las `Geometry` `Shape` clases y parecen similares, ya que ambos describen las fo
 Las siguientes clases tienen propiedades que se pueden establecer en `Geometry` objetos:
 
 - La `Path` clase utiliza `Geometry` para describir su contenido. Puede representar una `Geometry` estableciendo la `Path.Data` propiedad en un `Geometry` objeto y estableciendo las `Path` `Fill` propiedades y del objeto `Stroke` .
-- La [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase tiene una `Clip` propiedad, de tipo `Geometry` , que define el contorno del contenido de un elemento. Cuando la `Clip` propiedad se establece en un `Geometry` objeto, solo se verá el área que está dentro de la región de `Geometry` . Para obtener más información, consulte [clip con Geometry](#clip-with-a-geometry).
+- La [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase tiene una `Clip` propiedad, de tipo `Geometry` , que define el contorno del contenido de un elemento. Cuando la `Clip` propiedad se establece en un `Geometry` objeto, solo se verá el área que está dentro de la región de `Geometry` . Para obtener más información, vea [Recorte con una geometría](#clip-with-a-geometry).
 
 Las clases que derivan de la `Geometry` clase se pueden agrupar en tres categorías: geometrías simples, geometrías de trazado y geometrías compuestas.
 

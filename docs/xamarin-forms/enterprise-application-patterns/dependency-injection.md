@@ -10,35 +10,38 @@ ms.date: 11/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8aea3ad36f6c35e9faf2771fc6b54c378c304afb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3facf6e1e5796d8e17488f3c018cba23e5f99b7f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933606"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375361"
 ---
 # <a name="dependency-injection"></a>Inserción de dependencias
+
+> [!NOTE]
+> Este libro electrónico se publicó en el muelle de 2017 y no se ha actualizado desde entonces. Hay mucho en el libro que sigue siendo útil, pero parte del material es obsoleto.
 
 Normalmente, se invoca un constructor de clase al crear instancias de un objeto y los valores que necesita el objeto se pasan como argumentos al constructor. Este es un ejemplo de inserción de dependencias y, específicamente, se conoce como *inserción de constructores*. Las dependencias que necesita el objeto se insertan en el constructor.
 
 Al especificar las dependencias como tipos de interfaz, la inserción de dependencias permite desacoplar los tipos concretos del código que depende de estos tipos. Normalmente usa un contenedor que contiene una lista de registros y asignaciones entre las interfaces y los tipos abstractos, y los tipos concretos que implementan o amplían estos tipos.
 
-También hay otros tipos de inserción de dependencias, como la inserción de un *establecedor de propiedad*y la *inserción de llamadas de método*, pero se suelen considerar. Por lo tanto, este capítulo se centrará únicamente en realizar la inserción de constructores con un contenedor de inserción de dependencias.
+También hay otros tipos de inserción de dependencias, como la inserción de un *establecedor de propiedad* y la *inserción de llamadas de método* , pero se suelen considerar. Por lo tanto, este capítulo se centrará únicamente en realizar la inserción de constructores con un contenedor de inserción de dependencias.
 
 ## <a name="introduction-to-dependency-injection"></a>Introducción a la inserción de dependencias
 
 La inserción de dependencias es una versión especializada del patrón de inversión de control (IoC), donde el problema que se invierte es el proceso de obtención de la dependencia necesaria. Con la inserción de dependencias, otra clase es responsable de insertar las dependencias en un objeto en tiempo de ejecución. En el ejemplo de código siguiente se muestra cómo `ProfileViewModel` se estructura la clase cuando se usa la inserción de dependencias:
 
 ```csharp
-public class ProfileViewModel : ViewModelBase  
+public class ProfileViewModel : ViewModelBase  
 {  
-    private IOrderService _orderService;  
+    private IOrderService _orderService;  
 
-    public ProfileViewModel(IOrderService orderService)  
-    {  
-        _orderService = orderService;  
-    }  
-    ...  
+    public ProfileViewModel(IOrderService orderService)  
+    {  
+        _orderService = orderService;  
+    }  
+    ...  
 }
 ```
 
@@ -66,7 +69,7 @@ En TinyIoC, el `TinyIoCContainer` tipo proporciona el contenedor de inserción d
 
 **Figura 3-1:** Dependencias cuando se usa la inserción de dependencias
 
-En tiempo de ejecución, el contenedor debe saber en qué implementación de la `IOrderService` interfaz debe crear una instancia, antes de poder crear una instancia de un `ProfileViewModel` objeto. Esto implica:
+En tiempo de ejecución, el contenedor debe saber en qué implementación de la `IOrderService` interfaz debe crear una instancia, antes de poder crear una instancia de un `ProfileViewModel` objeto. Esto implica lo siguiente:
 
 - El contenedor que decide cómo crear una instancia de un objeto que implementa la `IOrderService` interfaz. Esto se conoce como *registro*.
 - Contenedor que crea una instancia del objeto que implementa la `IOrderService` interfaz y el `ProfileViewModel` objeto. Esto se conoce como *resolución*.
@@ -116,7 +119,7 @@ _container.Register<ProfileViewModel>();
 
 De forma predeterminada, cada registro de clase concreta se configura como una instancia múltiple para que todos los objetos dependientes reciban una nueva instancia. Por lo tanto, cuando `ProfileViewModel` se resuelva el, se creará una nueva instancia de y el contenedor insertará sus dependencias necesarias.
 
-## <a name="resolution"></a>Resolución
+## <a name="resolution"></a>Solución
 
 Una vez registrado un tipo, se puede resolver o insertar como una dependencia. Cuando se resuelve un tipo y el contenedor necesita crear una nueva instancia, inserta las dependencias en la instancia.
 

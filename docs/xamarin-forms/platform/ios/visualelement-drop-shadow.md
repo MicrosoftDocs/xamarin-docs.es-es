@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2e54182ca5c1f2afbc107011aea6b84af864e78d
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2e4c669ee24c72cc5962feff0ec8e55b54f7d372
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562356"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375127"
 ---
 # <a name="visualelement-drop-shadows-on-ios"></a>VisualElement quitar sombras en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esta plataforma específica de iOS se usa para habilitar una sombra paralela en un [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Se consume en XAML estableciendo la [`VisualElement.IsShadowEnabled`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsShadowEnabledProperty) propiedad adjunta en `true` , junto con una serie de propiedades adjuntas adicionales opcionales que controlan la sombra paralela:
 

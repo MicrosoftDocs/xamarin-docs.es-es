@@ -10,16 +10,16 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1427b6f8461c74ded933fe562a7d17221790383a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c266cdee5a0949edc6ade7fff81816d0405af27f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562319"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374893"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>Mostrar mapas de bits SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 El asunto de los mapas de bits SkiaSharp se presentó en el artículo **[conceptos básicos de mapas de bits en SkiaSharp](../basics/bitmaps.md)**. En este artículo se mostraron tres maneras de cargar mapas de bits y tres formas de mostrar los mapas de bits. En este artículo se revisan las técnicas para cargar mapas de bits y se profundiza en el uso de los `DrawBitmap` métodos de `SKCanvas` .
 
@@ -27,7 +27,7 @@ El asunto de los mapas de bits SkiaSharp se presentó en el artículo **[concept
 
 Los `DrawBitmapLattice` `DrawBitmapNinePatch` métodos y se describen en el artículo **[presentación segmentada de mapas de bits de SkiaSharp](segmented.md)**.
 
-Los ejemplos de esta página proceden de la aplicación **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** . En la Página principal de la aplicación, elija **SkiaSharp mapas de bits**y, a continuación, vaya a la sección **visualización de mapas de bits** .
+Los ejemplos de esta página proceden de la aplicación **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** . En la Página principal de la aplicación, elija **SkiaSharp mapas de bits** y, a continuación, vaya a la sección **visualización de mapas de bits** .
 
 ## <a name="loading-a-bitmap"></a>Cargar un mapa de bits
 
@@ -622,7 +622,7 @@ Estas son algunas combinaciones de opciones:
 
 [![Modos de escalado](displaying-images/ScalingModes.png "Modos de escalado")](displaying-images/ScalingModes-Large.png#lightbox)
 
-La página de **subconjunto de rectángulos** tiene prácticamente el mismo archivo XAML que los **modos de escalado**, pero el archivo de código subyacente define un subconjunto rectangular del mapa de bits proporcionado por el `SOURCE` campo: 
+La página de **subconjunto de rectángulos** tiene prácticamente el mismo archivo XAML que los **modos de escalado** , pero el archivo de código subyacente define un subconjunto rectangular del mapa de bits proporcionado por el `SOURCE` campo: 
 
 ```csharp
 public partial class ScalingModesPage : ContentPage

@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 27d19773d86c125cd5574f7a281c37c26ef643fd
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: cfcdd52187fe8e3af258aedb25e8c0df85cbea4e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563203"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375499"
 ---
 # <a name="webview-mixed-content-on-android"></a>Contenido mixto de WebView en Android
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Este control específico de la plataforma Android determina si [`WebView`](xref:Xamarin.Forms.WebView) puede mostrar contenido mixto en aplicaciones destinadas a la API 21 o posterior. El contenido mixto es contenido que se carga inicialmente a través de una conexión HTTPS, pero que carga recursos (como imágenes, audio, vídeo, hojas de estilos y scripts) a través de una conexión HTTP. Se consume en XAML estableciendo la [`WebView.MixedContentMode`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WebView.MixedContentModeProperty) propiedad adjunta en un valor de la [`MixedContentHandling`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) enumeración:
 

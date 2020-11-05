@@ -10,16 +10,16 @@ ms.date: 05/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: df3189455102cedab232e0c629e63f65e242c9b5
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 3029bfeb8179e4bf6a7b9103b22719c19fb38920
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560057"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375465"
 ---
 # <a name="no-locxamarinforms-map-control"></a>Xamarin.Forms Control de mapa
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 El [`Map`](xref:Xamarin.Forms.Maps.Map) control es una vista multiplataforma para mostrar y anotar asignaciones. Usa el control de asignación nativa para cada plataforma, lo que proporciona una experiencia de mapas rápida y familiar a los usuarios:
 

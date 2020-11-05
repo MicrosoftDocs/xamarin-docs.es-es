@@ -10,18 +10,18 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 845e5842f91a1da415509631ec2472330d972dfb
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 78425617d95758d3663cb9f2c5ac9bebb463bd68
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559160"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374763"
 ---
 # <a name="no-locxamarinforms-shapes-line"></a>Xamarin.Forms Formas: línea
 
 ![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 La `Line` clase se deriva de la `Shape` clase y se puede usar para dibujar líneas. Para obtener información sobre las propiedades que la `Line` clase hereda de la `Shape` clase, vea [ Xamarin.Forms formas](index.md).
 
@@ -56,7 +56,7 @@ En el siguiente ejemplo de XAML se muestra cómo dibujar una línea:
 
 En este ejemplo, se dibuja una línea diagonal roja desde (40, 0) a (0120):
 
-![Línea](line-images/line.png "Línea")
+![Line](line-images/line.png "Línea")
 
 Dado que `X1` las `Y1` propiedades,, `X2` y `Y2` tienen valores predeterminados de 0, es posible dibujar algunas líneas con la sintaxis mínima:
 

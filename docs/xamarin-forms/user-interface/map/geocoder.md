@@ -10,16 +10,16 @@ ms.date: 10/22/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d6a63e952d7466dc4b7f2d3e8cfc39d6c63e4daf
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 12ba6e8f9bb1c547ad5a15e2e79f74c29b74ad12
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559979"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375452"
 ---
 # <a name="no-locxamarinforms-map-geocoding"></a>Xamarin.Forms Geocodificación de mapas
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 El [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) espacio de nombres proporciona una [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) clase, que convierte entre las direcciones de cadena y las coordenadas de latitud y longitud que se almacenan en [`Position`](xref:Xamarin.Forms.Maps.Position) objetos. Para obtener más información sobre el [`Position`](xref:Xamarin.Forms.Maps.Position) struct, vea [asignación de posición y distancia](position-distance.md).
 

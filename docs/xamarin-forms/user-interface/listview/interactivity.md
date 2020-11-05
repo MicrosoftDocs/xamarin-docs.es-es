@@ -10,16 +10,16 @@ ms.date: 09/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d665a80d6f1e0319fc9dc8696db379cf781ee833
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 4a922a841452e5e934cc7dcb88a9f84373ae3ded
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560122"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375504"
 ---
 # <a name="listview-interactivity"></a>Interactividad de ListView
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
 
 La Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) clase admite la interacción del usuario con los datos que presenta.
 
@@ -181,7 +181,7 @@ listView.RefreshControlColor = Color.Red;
 
 Las siguientes capturas de pantallas muestran la incorporación de cambios a la actualización cuando el usuario extrae:
 
-![Incorporación de cambios de ListView a la actualización en curso](interactivity-images/refresh-start.png)
+![Extracción de ListView para actualizar In-Progress](interactivity-images/refresh-start.png)
 
 Las siguientes capturas de pantallas muestran la extracción a la actualización después de que el usuario haya lanzado la extracción, con el control de número que se muestra mientras [`ListView`](xref:Xamarin.Forms.ListView) se está actualizando:
 

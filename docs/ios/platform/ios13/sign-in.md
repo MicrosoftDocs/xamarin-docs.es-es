@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: d8c458ad30d7e281427dad0e29092c55fede7347
-ms.sourcegitcommit: fc689c1a6b641c124378dedc1bd157d96fc759a7
+ms.openlocfilehash: 5cbe3f36d1aeb12be671b14a4f76c79764e814e6
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71319528"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375010"
 ---
 # <a name="sign-in-with-apple-in-xamarinios"></a>Inicio de sesión con Apple en Xamarin. iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios13-addingthesigninwithappleflowtoyourapp/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/ios-samples/ios13-addingthesigninwithappleflowtoyourapp/)
 
 Iniciar sesión con Apple es un nuevo servicio que proporciona protección de identidad para los usuarios de servicios de autenticación de terceros. A partir de iOS 13, Apple requiere que cualquier aplicación nueva que use servicios de autenticación de terceros también debe proporcionar el inicio de sesión con Apple. Las aplicaciones existentes que se están actualizando no necesitan agregar el inicio de sesión con Apple hasta el 2020 de abril.
 
@@ -28,7 +28,7 @@ Antes de compilar y ejecutar una aplicación con el inicio de sesión con Apple,
 
 1. Cree un nuevo identificador de ID. de **aplicación** .
 2. Establezca una descripción en el campo **Descripción** .
-3. Elija un identificador de agrupación explícito `com.xamarin.AddingTheSignInWithAppleFlowToYourApp` y establezca en el campo.
+3. Elija un identificador de agrupación **explícito** y establezca `com.xamarin.AddingTheSignInWithAppleFlowToYourApp` en el campo.
 4. Habilite el **Inicio de sesión con** la funcionalidad de Apple y registre la nueva identidad.
 5. Cree un nuevo perfil de aprovisionamiento con la nueva identidad.
 6. Descárguelo e instálelo en el dispositivo.
@@ -36,7 +36,7 @@ Antes de compilar y ejecutar una aplicación con el inicio de sesión con Apple,
 
 ## <a name="check-sign-in-status"></a>Comprobar el estado de inicio de sesión
 
-Cuando se inicie la aplicación, o cuando necesite comprobar por primera vez el estado de autenticación de un usuario, cree `ASAuthorizationAppleIdProvider` una instancia de y compruebe el estado actual:
+Cuando se inicie la aplicación, o cuando necesite comprobar por primera vez el estado de autenticación de un usuario, cree una instancia de `ASAuthorizationAppleIdProvider` y compruebe el estado actual:
 
 ```csharp
 var appleIdProvider = new ASAuthorizationAppleIdProvider ();
@@ -65,11 +65,11 @@ appleIdProvider.GetCredentialState (KeychainItem.CurrentUserIdentifier, (credent
 });
 ```
 
-En este código `FinishedLaunching` , al `LoginViewController` que se llama `AppDelegate.cs`durante en, la aplicación se encargará `NotFound` de que el estado sea y presente al usuario. Si el estado ha `Authorized` devuelto `Revoked`o, se puede presentar una acción diferente al usuario.
+En este código, al que se llama durante `FinishedLaunching` en `AppDelegate.cs` , la aplicación se encargará de que el estado sea `NotFound` y presente al `LoginViewController` usuario. Si el estado ha devuelto `Authorized` o `Revoked` , se puede presentar una acción diferente al usuario.
 
 ## <a name="a-loginviewcontroller-for-sign-in-with-apple"></a>Un LoginViewController para iniciar sesión con Apple
 
-Que `UIViewController` implementa la lógica de inicio de sesión y proporciona inicio de sesión con Apple `IASAuthorizationControllerDelegate` debe `IASAuthorizationControllerPresentationContextProviding` implementar y como `LoginViewController` en el ejemplo siguiente.
+`UIViewController`Que implementa la lógica de inicio de sesión y proporciona inicio de sesión con Apple debe implementar `IASAuthorizationControllerDelegate` y `IASAuthorizationControllerPresentationContextProviding` como en el `LoginViewController` ejemplo siguiente.
 
 ```csharp
 public partial class LoginViewController : UIViewController, IASAuthorizationControllerDelegate, IASAuthorizationControllerPresentationContextProviding {
@@ -131,9 +131,9 @@ public partial class LoginViewController : UIViewController, IASAuthorizationCon
 
 ![Animación de una aplicación de ejemplo con el inicio de sesión con Apple](sign-in-images/sign-in-flow.png)
 
-En este código de ejemplo se comprueba el estado `PerformExistingAccountSetupFlows` de inicio de sesión actual en y se conecta a la vista actual como delegado. Si se encuentra una credencial existente de la cadena de claves de iCloud o una credencial de identificador de Apple, se le pedirá al usuario que la use.
+En este código de ejemplo se comprueba el estado de inicio de sesión actual en `PerformExistingAccountSetupFlows` y se conecta a la vista actual como delegado. Si se encuentra una credencial existente de la cadena de claves de iCloud o una credencial de identificador de Apple, se le pedirá al usuario que la use.
 
-Apple proporciona `ASAuthorizationAppleIdButton`un botón específicamente para este propósito. Cuando se toca, el botón desencadenará el flujo de trabajo controlado `HandleAuthorizationAppleIDButtonPress`en el método.
+Apple proporciona `ASAuthorizationAppleIdButton` un botón específicamente para este propósito. Cuando se toca, el botón desencadenará el flujo de trabajo controlado en el método `HandleAuthorizationAppleIDButtonPress` .
 
 ## <a name="handling-authorization"></a>Controlar la autorización
 

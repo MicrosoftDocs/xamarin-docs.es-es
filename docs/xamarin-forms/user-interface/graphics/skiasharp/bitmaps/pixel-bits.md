@@ -10,16 +10,16 @@ ms.date: 07/11/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7f0b7c61d44170ab97b060a16693287c28903660
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6e3edf7d0e7630429f8f1c76009987ee8a4b737a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562969"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375335"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>Obtener acceso a bits de píxel de mapa de bits SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Como vio en el artículo [**Guardar mapas de bits de SkiaSharp en archivos**](saving.md), los mapas de bits se almacenan generalmente en archivos con formato comprimido, como JPEG o PNG. En el restraer, un mapa de bits de SkiaSharp almacenado en memoria no se comprime. Se almacena como una serie secuencial de píxeles. Este formato sin comprimir facilita la transferencia de mapas de bits a una superficie de presentación.
 
