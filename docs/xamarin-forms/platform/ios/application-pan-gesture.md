@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5bea8b58d8b80ced97856fc7c981afdd5c2102a7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f1baf5d71cc25a1f84ff683e9d0072f34715c0da
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562410"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373242"
 ---
 # <a name="simultaneous-pan-gesture-recognition-on-ios"></a>Reconocimiento simultáneo de gestos de pan en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Cuando un [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) se adjunta a una vista dentro de una vista de desplazamiento, los movimientos de la panorámica se capturan mediante `PanGestureRecognizer` y no se pasan a la vista de desplazamiento. Por lo tanto, la vista de desplazamiento ya no se desplazará.
 

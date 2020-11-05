@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 22e020ad585c39671d3e3cc8ec47f55c8c41c90c
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: a3f5b920a3717bb70454eb16a5f830e6472413eb
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563762"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373190"
 ---
 # <a name="entry-font-size-on-ios"></a>Tamaño de fuente de entrada en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esta plataforma específica de iOS se usa para escalar el tamaño de fuente de un [`Entry`](xref:Xamarin.Forms.Entry) para asegurarse de que el texto introducido quepa en el control. Se consume en XAML estableciendo la [`Entry.AdjustsFontSizeToFitWidth`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.AdjustsFontSizeToFitWidthProperty) propiedad adjunta en un `boolean` valor:
 
@@ -54,7 +54,7 @@ entry.On<iOS>().SetAdjustsFontSizeToFitWidth(!entry.On<iOS>().AdjustsFontSizeToF
 
 El resultado es que se escala el tamaño de fuente del [`Entry`](xref:Xamarin.Forms.Entry) control para asegurarse de que el texto introducido quepa en el control:
 
-![Ajustar el tamaño de fuente de entrada específico de la plataforma](entry-font-size-images/entry-font-size.png)
+![Ajustar el tamaño de fuente de entrada Platform-Specific](entry-font-size-images/entry-font-size.png)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -10,16 +10,16 @@ ms.date: 08/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 827b5618dce019e2dedb773f270fe1090da5d616
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2a9291a56ffa1a05f8e2041033279363f8ec4d34
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562514"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374152"
 ---
 # <a name="skiasharp-mask-filters"></a>Filtros de máscara de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Los filtros de máscara son efectos que manipulan la geometría y el canal alfa de objetos gráficos. Para usar un filtro de máscara, establezca la [`MaskFilter`](xref:SkiaSharp.SKPaint.MaskFilter) propiedad de `SKPaint` en un objeto de tipo [`SKMaskFilter`](xref:SkiaSharp.SKMaskFilter) que haya creado mediante una llamada a uno de los `SKMaskFilter` métodos estáticos.
 

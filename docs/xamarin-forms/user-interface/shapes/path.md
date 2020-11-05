@@ -10,18 +10,18 @@ ms.date: 06/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 80b0bcd84602fc999764e7e0896a44f83401a9dd
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 62bfb13f3aa4c09da76eca6723a34e6e8a72853d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558900"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373736"
 ---
 # <a name="no-locxamarinforms-shapes-path"></a>Xamarin.Forms Formas: ruta de acceso
 
 ![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 La `Path` clase se deriva de la `Shape` clase y se puede usar para dibujar curvas y formas complejas. Estas curvas y formas suelen describirse mediante `Geometry` objetos. Para obtener información sobre las propiedades que la `Path` clase hereda de la `Shape` clase, vea [ Xamarin.Forms formas](index.md).
 

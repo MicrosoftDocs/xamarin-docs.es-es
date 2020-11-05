@@ -10,18 +10,18 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8c6d139e47974247ce4af6bfa6c32331fcf7c824
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 92bcdd2c86387f229b9acf066456985c4a7ad514
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563138"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373671"
 ---
 # <a name="skiasharp-bitmap-tiling"></a>Mosaico de mapa de bits SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/catclock)
 
 Como ha visto en los dos artículos anteriores, la [`SKShader`](xref:SkiaSharp.SKShader) clase puede crear degradados lineales o circulares. Este artículo se centra en el `SKShader` objeto que utiliza un mapa de bits para colocar en mosaico un área. El mapa de bits se puede repetir horizontal y verticalmente, en su orientación original, o bien voltearse horizontal y verticalmente de forma alternativa. El volteo evita discontinuidades entre los mosaicos:
 
@@ -369,7 +369,7 @@ Si la transformación se aplica al mosaico individual, se debe girar cada imagen
 
 En la sección [**alineación de mosaicos**](#tile-alignment), verá un ejemplo de una transformación translate aplicada al sombreador.
 
-El ejemplo de [**reloj de gato**](/samples/xamarin/xamarin-forms-samples/catclock) independiente (que no forma parte de **SkiaSharpFormsDemos**) simula un fondo de grano de madera mediante mosaicos de mapas de bits basados en este mapa de bits cuadrado de 240 píxeles:
+El ejemplo de [**reloj de gato**](/samples/xamarin/xamarin-forms-samples/catclock) independiente (que no forma parte de **SkiaSharpFormsDemos** ) simula un fondo de grano de madera mediante mosaicos de mapas de bits basados en este mapa de bits cuadrado de 240 píxeles:
 
 ![Grano de madera](bitmap-tiling-images/WoodGrain.png "Grano de madera")
 
@@ -655,7 +655,7 @@ public class ChainLinkFencePage : ContentPage
 
 Tenga en cuenta que el sombreador gira 45 grados, por lo que está orientado como una barrera de vínculo de cadena real:
 
-[![Barrera de vínculo de cadena](bitmap-tiling-images/ChainLinkFence.png "Barrera de vínculo de cadena")](bitmap-tiling-images/ChainLinkFence-Large.png#lightbox)
+[![Barrera de vínculo de cadena](bitmap-tiling-images/ChainLinkFence.png "Chain-Link barrera")](bitmap-tiling-images/ChainLinkFence-Large.png#lightbox)
 
 ## <a name="animating-bitmap-tiles"></a>Animar iconos de mapa de bits
 

@@ -10,16 +10,16 @@ ms.date: 09/20/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b5c1310e300373fe75cbcd1464220acf989516ba
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2aebd86b4b15dec1a79cb60057e0c04f2e196ac5
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555689"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372904"
 ---
 # <a name="refreshview-pull-direction-on-windows"></a>Dirección de extracción de RefreshView en Windows
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esta Plataforma universal de Windows específica de la plataforma permite cambiar la dirección de extracción de un para que `RefreshView` coincida con la orientación del control desplazable que muestra los datos. Se consume en XAML estableciendo la `RefreshView.RefreshPullDirection` propiedad Bindable en un valor de la `RefreshPullDirection` enumeración:
 

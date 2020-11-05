@@ -10,16 +10,16 @@ ms.date: 03/12/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a8e8388a6a460b3a2958d3ab3b9a4c9c34ea1831
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 3cf29c550a6ef3e4f12bdc3a1525d33b53198220
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556469"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374399"
 ---
 # <a name="create-a-no-locxamarinforms-visual-renderer"></a>Creación de un Xamarin.Forms representador visual
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 
 Xamarin.Forms Visual permite crear representadores y aplicarlos de forma selectiva a los [`VisualElement`](xref:Xamarin.Forms.VisualElement) objetos, sin tener que realizar vistas de subclases Xamarin.Forms . Se usará un representador que especifique un `IVisual` tipo, como parte de su `ExportRendererAttribute` , para representar en las vistas, en lugar del representador predeterminado. En el momento de la selección del representador, la `Visual` propiedad de la vista se inspecciona y se incluye en el proceso de selección del representador.
 

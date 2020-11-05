@@ -10,16 +10,16 @@ ms.date: 12/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: afa5ccf8f4d4485ae7a9a45bcbc745bddee20f5c
-ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
+ms.openlocfilehash: 4331b29c54b5f7c59daf0a9e04cd398693e79201
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92897486"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374711"
 ---
 # <a name="no-locxamarinforms-local-databases"></a>Xamarin.Forms Bases de datos locales
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/todo)
 
 El motor de base de Xamarin.Forms datos SQLite permite a las aplicaciones cargar y guardar objetos de datos en código compartido. La aplicación de ejemplo usa una tabla de base de datos de SQLite para almacenar los elementos de la lista de tareas. En este artículo se describe cómo usar SQLite.Net en código compartido para almacenar y recuperar información en una base de datos local.
 
@@ -259,7 +259,7 @@ Para obtener más información, consulte la [documentación de SQLite](https://w
 
 De forma predeterminada, SQLite usa un diario de reversión tradicional. Una copia del contenido de la base de datos sin modificar se escribe en un archivo de reversión independiente y, a continuación, los cambios se escriben directamente en el archivo de base de datos. La confirmación se produce cuando se elimina el diario de reversión.
 
-El registro de Write-Ahead (WAL) escribe los cambios en un archivo de WAL independiente en primer lugar. En el modo WAL, una confirmación es un registro especial que se anexa al archivo WAL, lo que permite que se produzcan varias transacciones en un único archivo de WAL. Un archivo WAL se vuelve a combinar en el archivo de base de datos en una operación especial denominada _punto de control_ .
+El registro de Write-Ahead (WAL) escribe los cambios en un archivo de WAL independiente en primer lugar. En el modo WAL, una confirmación es un registro especial que se anexa al archivo WAL, lo que permite que se produzcan varias transacciones en un único archivo de WAL. Un archivo WAL se vuelve a combinar en el archivo de base de datos en una operación especial denominada _punto de control_.
 
 WAL puede ser más rápido para las bases de datos locales, ya que los lectores y los escritores no se bloquean entre sí, lo que permite que las operaciones de lectura y escritura estén simultáneas. Sin embargo, el modo WAL no permite cambios en el _tamaño de página_ , agrega asociaciones de archivo adicionales a la base de datos y agrega la operación de _punto de comprobación_ adicional.
 

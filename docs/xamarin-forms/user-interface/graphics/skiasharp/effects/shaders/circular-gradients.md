@@ -10,16 +10,16 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ec84ac906ac146f37ba5b161a898582ce483bc95
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: db2baea124f013d3b35451e62bd67c32dcebc470
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556677"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373606"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>Los degradados circulares SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 La [`SKShader`](xref:SkiaSharp.SKShader) clase define métodos estáticos para crear cuatro tipos diferentes de degradados. El artículo sobre el [**degradado lineal SkiaSharp**](linear-gradient.md) describe el [`CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) método. En este artículo se tratan los otros tres tipos de degradados, que se basan en círculos.
 
@@ -215,7 +215,7 @@ Si ha rellenado todo el lienzo con este degradado, verá que es rojo dentro del 
 
 ## <a name="radial-gradients-for-masking"></a>Degradados radiales para enmascaramiento
 
-Al igual que los degradados lineales, los degradados radiales pueden incorporar colores transparentes o parcialmente transparentes. Esta característica es útil para un proceso denominado _enmascaramiento_, que oculta parte de una imagen para acentuar otra parte de la imagen.
+Al igual que los degradados lineales, los degradados radiales pueden incorporar colores transparentes o parcialmente transparentes. Esta característica es útil para un proceso denominado _enmascaramiento_ , que oculta parte de una imagen para acentuar otra parte de la imagen.
 
 La página de la **máscara de degradado radial** muestra un ejemplo. El programa carga uno de los mapas de bits de recursos. Los `CENTER` `RADIUS` campos y se determinan a partir de un examen del mapa de bits y hacen referencia a un área que se debe resaltar. El `PaintSurface` controlador comienza por calcular un rectángulo para mostrar el mapa de bits y, a continuación, lo muestra en ese rectángulo:
 
@@ -285,7 +285,7 @@ Después de dibujar el mapa de bits, algunos códigos simples convierten `CENTER
 
 [![Máscara de degradado radial](circular-gradients-images/RadialGradientMask.png "Máscara de degradado radial")](circular-gradients-images/RadialGradientMask-Large.png#lightbox)
 
-Este enfoque no es la mejor manera de enmascarar un mapa de bits. El problema es que la máscara tiene principalmente un color de blanco, que se eligió para coincidir con el fondo del lienzo. Si el fondo es algún otro color &mdash; o quizás un degradado en sí &mdash; , no coincidirá. En el artículo [SkiaSharp Porter-Duff Blend modes,](../blend-modes/porter-duff.md)se muestra un enfoque mejor para el enmascaramiento.
+Este enfoque no es la mejor manera de enmascarar un mapa de bits. El problema es que la máscara tiene principalmente un color de blanco, que se eligió para coincidir con el fondo del lienzo. Si el fondo es algún otro color &mdash; o quizás un degradado en sí &mdash; , no coincidirá. En el artículo [SkiaSharp Porter-Duff modos de combinación](../blend-modes/porter-duff.md)se muestra un enfoque mejor para el enmascaramiento.
 
 ## <a name="radial-gradients-for-specular-highlights"></a>Degradados radiales para reflejos especulares
 

@@ -10,16 +10,16 @@ ms.date: 08/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8a14390afc04c1a0b2ccb5199350b69a9645a794
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: ba5fd2e8488f1f28f6bdc02b85c8e41fa212be32
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563554"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373749"
 ---
 # <a name="no-locxamarinforms-frame"></a>Xamarin.Forms Grama
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 
 La Xamarin.Forms [`Frame`](xref:Xamarin.Forms.Frame) clase es un diseño que se usa para ajustar una vista con un borde que se puede configurar con color, sombra y otras opciones. Los marcos se suelen usar para crear bordes alrededor de los controles, pero se pueden usar para crear una interfaz de usuario más compleja. Para obtener más información, consulte [uso avanzado de fotogramas](#advanced-frame-usage).
 

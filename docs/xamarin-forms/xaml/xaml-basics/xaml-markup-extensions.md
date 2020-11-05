@@ -10,16 +10,16 @@ ms.date: 03/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9923a7f0605a7ca5d9d81269c3d855e92fbccaf4
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: b934885369882dea2c3a5de1954b428fcfcbac59
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91564087"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374607"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensiones de marcado XAML
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _Las extensiones de marcado XAML constituyen una característica importante de XAML que permite establecer las propiedades en objetos o valores a los que se hace referencia indirectamente desde otros orígenes. Las extensiones de marcado XAML son especialmente importantes para compartir objetos y hacer referencia a constantes usadas en una aplicación, pero encuentran su utilidad más grande en los enlaces de datos._
 
@@ -398,7 +398,7 @@ Necesitará declaraciones de espacio de nombres XML adicionales para tener acces
 xmlns:local="clr-namespace:XamlSamples"
 ```
 
-También puede definir declaraciones de espacios de nombres XML para espacios de nombres de .NET en cualquier ensamblado al que haga referencia la biblioteca .NET Standard. Por ejemplo, este es un `sys` prefijo para el espacio de nombres estándar de .net `System` , que se encuentra en el ensamblado **netstandard** . Dado que se trata de otro ensamblado, también debe especificar el nombre del ensamblado, en este caso **netstandard**:
+También puede definir declaraciones de espacios de nombres XML para espacios de nombres de .NET en cualquier ensamblado al que haga referencia la biblioteca .NET Standard. Por ejemplo, este es un `sys` prefijo para el espacio de nombres estándar de .net `System` , que se encuentra en el ensamblado **netstandard** . Dado que se trata de otro ensamblado, también debe especificar el nombre del ensamblado, en este caso **netstandard** :
 
 ```csharp
 xmlns:sys="clr-namespace:System;assembly=netstandard"

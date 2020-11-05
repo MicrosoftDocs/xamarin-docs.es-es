@@ -10,16 +10,16 @@ ms.date: 07/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6d4c9be2166881824e798e9cb801a5720ab55178
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 58210aaaa7c017c50ba3e2aee3e8402c1b76be16
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557861"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373931"
 ---
 # <a name="dependency-resolution-in-no-locxamarinforms"></a>Resolución de dependencias Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)
 
 _En este artículo se explica cómo insertar un método de resolución de dependencias en Xamarin.Forms para que el contenedor de inserción de dependencias de una aplicación controle la creación y la duración de los representadores personalizados, los efectos y las implementaciones de DependencyService. Los ejemplos de código de este artículo se han tomado del ejemplo de [resolución de dependencias mediante contenedores](/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo) ._
 
@@ -305,7 +305,7 @@ Cuando [`DependencyService.Resolve<T>`](xref:Xamarin.Forms.DependencyService.Res
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Resolución de dependencias mediante contenedores (ejemplo)](/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)
-- [Inserción de dependencias](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)
+- [Inserción de dependencia](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)
 - [Implementación de un reproductor de vídeo](~/xamarin-forms/app-fundamentals/custom-renderer/video-player/index.md)
 - [Invocar eventos a partir de efectos](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)
 - [Seleccionar una foto de la biblioteca de imágenes](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

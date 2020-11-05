@@ -10,20 +10,20 @@ ms.date: 12/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 071a7de630d7d7b7582e3c9fa8906919e92d1fb5
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c027ef35462e6d2d43acf4ea5241a38abe15d41f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562007"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374282"
 ---
 # <a name="loading-xaml-at-runtime-in-no-locxamarinforms"></a>Cargar XAML en tiempo de ejecución en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
 
 El [`Xamarin.Forms.Xaml`](xref:Xamarin.Forms.Xaml) espacio de nombres incluye dos [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) métodos de extensión que se pueden usar para cargar y analizar XAML en tiempo de ejecución.
 
-## <a name="background"></a>Segundo plano
+## <a name="background"></a>Información previa
 
 Cuando Xamarin.Forms se construye una clase XAML, [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) se llama indirectamente al método. Esto se debe a que el archivo de código subyacente de una clase XAML llama al `InitializeComponent` método desde su constructor:
 
@@ -37,7 +37,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Cuando Visual Studio compila un proyecto que contiene un archivo XAML, analiza el archivo XAML para generar un archivo de código de C# (por ejemplo, **mainpage.Xaml.g.CS**) que contiene la definición del `InitializeComponent` método:
+Cuando Visual Studio compila un proyecto que contiene un archivo XAML, analiza el archivo XAML para generar un archivo de código de C# (por ejemplo, **mainpage.Xaml.g.CS** ) que contiene la definición del `InitializeComponent` método:
 
 ```csharp
 private void InitializeComponent()

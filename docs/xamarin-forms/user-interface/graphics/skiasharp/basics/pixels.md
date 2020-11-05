@@ -10,16 +10,16 @@ ms.date: 02/09/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3df3a606c54d7367079638d48330dfe1b214043b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 5f12dbd4ef0cfea9d276fd8c939afab585541ece
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563190"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373905"
 ---
 # <a name="pixels-and-device-independent-units"></a>Píxeles y unidades independientes del dispositivo
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explorar las diferencias entre las coordenadas de SkiaSharp y las Xamarin.Forms coordenadas_
 
@@ -29,7 +29,7 @@ En este artículo se exploran las diferencias en el sistema de coordenadas usado
 
 Si ha estado programando durante Xamarin.Forms un tiempo, es posible que tenga una idea para las Xamarin.Forms coordenadas y los tamaños. Es posible que los círculos dibujados en los dos artículos anteriores le parezcan algo pequeños.
 
-Esos círculos *son* pequeños en comparación con los Xamarin.Forms tamaños. De forma predeterminada, SkiaSharp dibuja en unidades de píxeles mientras Xamarin.Forms que basa las coordenadas y los tamaños en una unidad independiente del dispositivo establecida por la plataforma subyacente. (Puede encontrar más información sobre el Xamarin.Forms sistema de coordenadas en el [capítulo 5. Trabajar con tamaños](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) del libro *crear Mobile Apps con Xamarin.Forms *).
+Esos círculos *son* pequeños en comparación con los Xamarin.Forms tamaños. De forma predeterminada, SkiaSharp dibuja en unidades de píxeles mientras Xamarin.Forms que basa las coordenadas y los tamaños en una unidad independiente del dispositivo establecida por la plataforma subyacente. (Puede encontrar más información sobre el Xamarin.Forms sistema de coordenadas en el [capítulo 5. Trabajar con tamaños](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) del libro *crear Mobile Apps con Xamarin.Forms* ).
 
 La página del programa [**SkewSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) titulado **tamaño de superficie** usa la salida de texto SkiaSharp para mostrar el tamaño de la superficie de presentación de tres orígenes diferentes:
 

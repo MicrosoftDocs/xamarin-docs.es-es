@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 162683c4fabb0a8b6deed1fb30bd7a7dece1f597
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: cd1271df727b3b37c49f744e0893703b9c2460d5
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562293"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373723"
 ---
 # <a name="large-page-titles-on-ios"></a>Títulos de páginas grandes en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esta plataforma específica de iOS se usa para mostrar el título de la página como un título grande en la barra de navegación de un [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) , para los dispositivos que usan iOS 11 o superior. Un título grande se alinea a la izquierda y usa una fuente mayor, y pasa a un título estándar a medida que el usuario comienza a desplazar el contenido, de modo que el estado real de la pantalla se utiliza de forma eficaz. Sin embargo, en la orientación horizontal, el título volverá al centro de la barra de navegación para optimizar el diseño del contenido. Se consume en XAML estableciendo la `NavigationPage.PrefersLargeTitles` propiedad adjunta en un `boolean` valor:
 
@@ -100,7 +100,7 @@ switch (On<iOS>().LargeTitleDisplay())
 
 El resultado es que `LargeTitleDisplayMode` se aplica un especificado a [`Page`](xref:Xamarin.Forms.Page) , que controla el comportamiento del título grande:
 
-![Efecto de desenfoque específico de la plataforma](page-large-title-images/large-title.png)
+![Efecto de desenfoque Platform-Specific](page-large-title-images/large-title.png)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

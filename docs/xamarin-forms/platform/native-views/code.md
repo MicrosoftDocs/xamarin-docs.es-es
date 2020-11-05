@@ -10,16 +10,16 @@ ms.date: 04/27/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 71df780c648bcaa5a2ca4db388b52ac77a64d158
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 32997a1453ca52abdfa0cac60e7637ae3367eeb2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560551"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374204"
 ---
 # <a name="native-views-in-c"></a>Vistas nativas en C\#
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
 
 _Se puede hacer referencia directamente a las vistas nativas de iOS, Android y UWP desde Xamarin.Forms las páginas creadas con C#. En este artículo se muestra cómo agregar vistas nativas a un Xamarin.Forms diseño creado con C# y cómo invalidar el diseño de vistas personalizadas para corregir el uso de la API de medición._
 
@@ -29,7 +29,7 @@ Cualquier Xamarin.Forms control que permita `Content` establecer o que tenga una
 
 En las siguientes capturas de pantallas se muestran vistas específicas de la plataforma que se han agregado a un Xamarin.Forms [`StackLayout`](xref:Xamarin.Forms.StackLayout) :
 
-[![StackLayout que contiene vistas específicas de la plataforma](code-images/screenshots-sml.png)](code-images/screenshots.png#lightbox "StackLayout que contiene vistas específicas de la plataforma")
+[![StackLayout que contiene Platform-Specific vistas](code-images/screenshots-sml.png)](code-images/screenshots.png#lightbox "StackLayout que contiene Platform-Specific vistas")
 
 La capacidad de agregar vistas específicas de la plataforma a un Xamarin.Forms diseño está habilitada por dos métodos de extensión en cada plataforma:
 
@@ -38,11 +38,11 @@ La capacidad de agregar vistas específicas de la plataforma a un Xamarin.Forms 
 
 El uso de estos métodos en un Xamarin.Forms proyecto compartido requiere la importación del espacio de nombres específico de la plataforma adecuado Xamarin.Forms :
 
-- **iOS**: Xamarin.Forms.Platform.iOS
-- **Android**: Xamarin.Forms.Platform.Android
+- **iOS** : Xamarin.Forms.Platform.iOS
+- **Android** : Xamarin.Forms.Platform.Android
 - **Plataforma universal de Windows (UWP)** : Xamarin.Forms.Platform.UWP
 
-## <a name="adding-platform-specific-views-on-each-platform"></a>Adición de vistas específicas de la plataforma en cada plataforma
+## <a name="adding-platform-specific-views-on-each-platform"></a>Adición de Platform-Specific vistas en cada plataforma
 
 En las secciones siguientes se muestra cómo agregar vistas específicas de la plataforma a un Xamarin.Forms diseño en cada plataforma.
 

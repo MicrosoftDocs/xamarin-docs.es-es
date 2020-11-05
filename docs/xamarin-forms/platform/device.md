@@ -10,16 +10,16 @@ ms.date: 07/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8eff115e894f77aeacff0f6c072bfd338fa19844
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c28f10441e624a316762c5e677f613335a3f0f94
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560512"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373268"
 ---
 # <a name="no-locxamarinforms-device-class"></a>Xamarin.Forms Clase de dispositivo
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithdevice)
 
 La [`Device`](xref:Xamarin.Forms.Device) clase contiene una serie de propiedades y métodos para ayudar a los desarrolladores a personalizar el diseño y la funcionalidad para cada plataforma.
 
@@ -247,7 +247,7 @@ Si el código dentro del temporizador interactúa con la interfaz de usuario (po
 
 ## <a name="interact-with-the-ui-from-background-threads"></a>Interacción con la interfaz de usuario desde subprocesos en segundo plano
 
-La mayoría de los sistemas operativos, incluidos iOS, Android y el Plataforma universal de Windows, utilizan un modelo de subprocesamiento único para el código que implica la interfaz de usuario. Este subproceso se llama a menudo el *subproceso principal* o el *subproceso*de la interfaz de usuario. Una consecuencia de este modelo es que todo el código que tiene acceso a los elementos de la interfaz de usuario se debe ejecutar en el subproceso principal de la aplicación.
+La mayoría de los sistemas operativos, incluidos iOS, Android y el Plataforma universal de Windows, utilizan un modelo de subprocesamiento único para el código que implica la interfaz de usuario. Este subproceso se llama a menudo el *subproceso principal* o el *subproceso* de la interfaz de usuario. Una consecuencia de este modelo es que todo el código que tiene acceso a los elementos de la interfaz de usuario se debe ejecutar en el subproceso principal de la aplicación.
 
 A veces, las aplicaciones utilizan subprocesos en segundo plano para realizar operaciones que pueden tardar mucho tiempo, como recuperar datos de un servicio Web. Si el código que se ejecuta en un subproceso en segundo plano necesita acceder a los elementos de la interfaz de usuario, debe ejecutar ese código en el subproceso principal.
 

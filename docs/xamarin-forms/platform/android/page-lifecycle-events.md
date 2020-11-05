@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d4a8690e7361d58a07f4fbfa7aac8aac839c2ea3
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: af3954df9db94a56e1097b2de0451d6486916fa2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91564022"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374529"
 ---
 # <a name="page-lifecycle-events-on-android"></a>Eventos del ciclo de vida de la página en Android
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esta plataforma Android específica se usa para deshabilitar los [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) [`Appearing`](xref:Xamarin.Forms.Page.Appearing) eventos de página y en la pausa y reanudación de la aplicación, respectivamente, para las aplicaciones que usan AppCompat. Además, incluye la posibilidad de controlar si se muestra el teclado en pantalla al reanudar, en caso de que se muestre en pausa, siempre que el modo de funcionamiento del teclado en pantalla esté establecido en [`WindowSoftInputModeAdjust.Resize`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize) .
 
@@ -58,7 +58,7 @@ El `Application.Current.On<Android>` método especifica que este específico de 
 
 El resultado es que los [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) [`Appearing`](xref:Xamarin.Forms.Page.Appearing) eventos de página y no se activarán en la pausa y la reanudación de la aplicación, respectivamente, y que si se mostró el teclado en pantalla cuando se pausó la aplicación, también se mostrará cuando se reanude la aplicación:
 
-[![Eventos de ciclo de vida específicos de la plataforma](page-lifecycle-events-images/keyboard-on-resume.png)](page-lifecycle-events-images/keyboard-on-resume-large.png#lightbox "Eventos de ciclo de vida específicos de la plataforma")
+[![Eventos de ciclo de vida específicos de la plataforma](page-lifecycle-events-images/keyboard-on-resume.png)](page-lifecycle-events-images/keyboard-on-resume-large.png#lightbox "Eventos del ciclo de vida Platform-Specific")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

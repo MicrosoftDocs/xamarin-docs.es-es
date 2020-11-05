@@ -10,16 +10,16 @@ ms.date: 03/23/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2a6e19d25cefb4b8fcd870a9b590f129b2d9d85b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: eb0c8bd01c9cab8a4048c0ee3deacad7afd56899
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557886"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373901"
 ---
 # <a name="the-rotate-transform"></a>Transformación de rotación
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explore los efectos y las animaciones posibles con la transformación girar SkiaSharp_
 
@@ -258,7 +258,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Los `revolveDegrees` `rotateDegrees` campos y están animados. Este programa utiliza una técnica de animación diferente basada en la Xamarin.Forms [`Animation`](xref:Xamarin.Forms.Animation) clase. (Esta clase se describe en el [capítulo 22 sobre *Cómo crear Xamarin.Forms Mobile Apps con * ](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf)) la `OnAppearing` invalidación crea dos `Animation` objetos con métodos de devolución de llamada y, a continuación, llama a `Commit` en ellos para una duración de animación:
+Los `revolveDegrees` `rotateDegrees` campos y están animados. Este programa utiliza una técnica de animación diferente basada en la Xamarin.Forms [`Animation`](xref:Xamarin.Forms.Animation) clase. (Esta clase se describe en el [capítulo 22 sobre *Cómo crear Xamarin.Forms Mobile Apps con*](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf)) la `OnAppearing` invalidación crea dos `Animation` objetos con métodos de devolución de llamada y, a continuación, llama a `Commit` en ellos para una duración de animación:
 
 ```csharp
 protected override void OnAppearing()

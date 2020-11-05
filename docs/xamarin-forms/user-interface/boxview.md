@@ -10,16 +10,16 @@ ms.date: 07/26/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3fba761d2740f323fb55e80d8cb4e3ba3d8e7cad
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 32571724c945c4bbd845943ac72fc959c42d584a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563606"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374360"
 ---
 # <a name="no-locxamarinforms-boxview"></a>Xamarin.Forms BoxView
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/boxview-basicboxview)
 
 [`BoxView`](xref:Xamarin.Forms.BoxView) representa un rectángulo simple con el ancho, el alto y el color especificados. Puede usar `BoxView` para la decoración, los gráficos rudimentarios y la interacción con el usuario a través de la entrada táctil.
 
@@ -349,7 +349,7 @@ El programa **GameOfLife** también incluye una `LifeGrid` clase que encapsula g
 
 El programa [**DotMatrixClock**](/samples/xamarin/xamarin-forms-samples/boxview-dotmatrixclock) crea 210 `BoxView` elementos para simular los puntos de una pantalla de matriz de puntos de 5 por 7 antigua. Puede leer la hora en modo vertical u horizontal, pero es más grande en horizontal:
 
-[![Reloj de matriz de puntos](boxview-images/dotmatrixclock-small.png "Reloj de matriz de puntos")](boxview-images/dotmatrixclock-large.png#lightbox "Reloj de matriz de puntos")
+[![Reloj de matriz de puntos](boxview-images/dotmatrixclock-small.png "Dot-Matrix reloj")](boxview-images/dotmatrixclock-large.png#lightbox "Dot-Matrix reloj")
 
 El archivo XAML hace poco más que crear una instancia del que se `AbsoluteLayout` usa para el reloj:
 

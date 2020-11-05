@@ -10,16 +10,16 @@ ms.date: 01/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: df2cf99ef0ea1fcbb1b52dda7abb6c8cfdd2d2e7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f50dde4bb96f43c6487cb40889746514f23d9d44
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561539"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374087"
 ---
 # <a name="no-locxamarinforms-bindable-properties"></a>Xamarin.Forms Propiedades enlazables
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
 Las propiedades enlazables extienden la funcionalidad de propiedad de CLR mediante la copia de seguridad de una propiedad con un [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) tipo, en lugar de hacer una copia de seguridad de una propiedad con un campo. El propósito de las propiedades enlazables es proporcionar un sistema de propiedades que admita el enlace de datos, los estilos, las plantillas y los valores establecidos mediante relaciones de elementos primarios y secundarios. Además, las propiedades enlazables pueden proporcionar valores predeterminados, la validación de los valores de propiedad y las devoluciones de llamada que supervisan los cambios de propiedad.
 

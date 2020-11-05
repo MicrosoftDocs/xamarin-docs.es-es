@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 128d7271175846f415aa115c377bad0e0e2adaf5
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: e028c506745bfd61aaff8e530a4f13d2429864ff
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563970"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373919"
 ---
 # <a name="scrollview-content-touches-on-ios"></a>El contenido de ScrollView se toca en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Un temporizador implícito se desencadena cuando un gesto táctil comienza en un [`ScrollView`](xref:Xamarin.Forms.ScrollView) en iOS y el `ScrollView` decide, en función de la acción del usuario dentro del intervalo del temporizador, si debe controlar el gesto o pasarlo a su contenido. De forma predeterminada, iOS `ScrollView` retrasa los toques de contenido, pero puede causar problemas en algunas circunstancias con el `ScrollView` contenido que no gana el gesto cuando debería. Por lo tanto, este control es específico de la plataforma, tanto si `ScrollView` controla un gesto táctil como si lo pasa a su contenido. Se consume en XAML estableciendo la `ScrollView.ShouldDelayContentTouches` propiedad adjunta en un `boolean` valor:
 
@@ -60,7 +60,7 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 
 El resultado es que [`ScrollView`](xref:Xamarin.Forms.ScrollView) puede deshabilitar el retraso de la recepción de contenido que recibe los toques, de modo que en este escenario [`Slider`](xref:Xamarin.Forms.Slider) reciba el gesto en lugar de la [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) Página de [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) :
 
-[![El contenido de retraso de ScrollView toca la plataforma específica](scrollview-content-touches-images/scrollview-delay-content-touches.png)](scrollview-content-touches-images/scrollview-delay-content-touches-large.png#lightbox "El contenido de retraso de ScrollView toca la plataforma específica")
+[![El contenido de retraso de ScrollView toca la plataforma específica](scrollview-content-touches-images/scrollview-delay-content-touches.png)](scrollview-content-touches-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView retrasar el contenido Platform-Specific")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

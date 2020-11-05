@@ -10,14 +10,17 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cc0528e7696130a772e93be67526ea9d6b10373f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 78609a6e91a2783d869bafbd88679cfc9be00795
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936531"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374165"
 ---
 # <a name="the-model-view-viewmodel-pattern"></a>Patrón Model-View-ViewModel
+
+> [!NOTE]
+> Este libro electrónico se publicó en el muelle de 2017 y no se ha actualizado desde entonces. Hay mucho en el libro que sigue siendo útil, pero parte del material es obsoleto.
 
 La Xamarin.Forms experiencia del desarrollador normalmente implica la creación de una interfaz de usuario en XAML y, a continuación, la adición de código subyacente que funciona en la interfaz de usuario. A medida que se modifican las aplicaciones y aumentan el tamaño y el ámbito, pueden surgir problemas de mantenimiento complejos. Estos problemas incluyen el acoplamiento estrecho entre los controles de interfaz de usuario y la lógica de negocios, lo que aumenta el costo de realizar modificaciones en la interfaz de usuario y la dificultad de las pruebas unitarias de este tipo de código.
 
@@ -29,7 +32,7 @@ Hay tres componentes principales en el patrón MVVM: el modelo, la vista y el mo
 
 ![Patrón MVVM](mvvm-images/mvvm.png)
 
-**Figura 2-1**: patrón MVVM
+**Figura 2-1** : patrón MVVM
 
 Además de comprender las responsabilidades de cada componente, también es importante entender cómo interactúan entre sí. En un nivel alto, la vista "conoce" el modelo de vista y el modelo de vista "conoce" el modelo, pero el modelo no es consciente del modelo de vista y el modelo de vista no es consciente de la vista. Por lo tanto, el modelo de vista aísla la vista del modelo y permite que el modelo evolucione independientemente de la vista.
 
@@ -95,11 +98,11 @@ En las secciones siguientes se describen los enfoques principales para conectar 
 El enfoque más sencillo consiste en que la vista cree mediante declaración instancias de su modelo de vista correspondiente en XAML. Cuando se construya la vista, también se construirá el objeto de modelo de vista correspondiente. Este enfoque se muestra en el ejemplo de código siguiente:
 
 ```xaml
-<ContentPage ... xmlns:local="clr-namespace:eShop">  
-    <ContentPage.BindingContext>  
-        <local:LoginViewModel />  
-    </ContentPage.BindingContext>  
-    ...  
+<ContentPage ... xmlns:local="clr-namespace:eShop">  
+    <ContentPage.BindingContext>  
+        <local:LoginViewModel />  
+    </ContentPage.BindingContext>  
+    ...  
 </ContentPage>
 ```
 
@@ -112,10 +115,10 @@ Esta construcción declarativa y la asignación del modelo de vista por la vista
 Una vista puede tener código en el archivo de código subyacente que hace que el modelo de vista se asigne a su [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) propiedad. Esto se suele realizar en el constructor de la vista, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
-public LoginView()  
+public LoginView()  
 {  
-    InitializeComponent();  
-    BindingContext = new LoginViewModel(navigationService);  
+    InitializeComponent();  
+    BindingContext = new LoginViewModel(navigationService);  
 }
 ```
 
@@ -136,27 +139,27 @@ viewModelBase:ViewModelLocator.AutoWireViewModel="true"
 La `AutoWireViewModel` propiedad es una propiedad enlazable que se inicializa en false y, cuando su valor cambia, `OnAutoWireViewModelChanged` se llama al controlador de eventos. Este método resuelve el modelo de vista de la vista. En el ejemplo de código siguiente se muestra cómo se consigue esto:
 
 ```csharp
-private static void OnAutoWireViewModelChanged(BindableObject bindable, object oldValue, object newValue)  
+private static void OnAutoWireViewModelChanged(BindableObject bindable, object oldValue, object newValue)  
 {  
-    var view = bindable as Element;  
-    if (view == null)  
-    {  
-        return;  
-    }  
+    var view = bindable as Element;  
+    if (view == null)  
+    {  
+        return;  
+    }  
 
-    var viewType = view.GetType();  
-    var viewName = viewType.FullName.Replace(".Views.", ".ViewModels.");  
-    var viewAssemblyName = viewType.GetTypeInfo().Assembly.FullName;  
-    var viewModelName = string.Format(  
-        CultureInfo.InvariantCulture, "{0}Model, {1}", viewName, viewAssemblyName);  
+    var viewType = view.GetType();  
+    var viewName = viewType.FullName.Replace(".Views.", ".ViewModels.");  
+    var viewAssemblyName = viewType.GetTypeInfo().Assembly.FullName;  
+    var viewModelName = string.Format(  
+        CultureInfo.InvariantCulture, "{0}Model, {1}", viewName, viewAssemblyName);  
 
-    var viewModelType = Type.GetType(viewModelName);  
-    if (viewModelType == null)  
-    {  
-        return;  
-    }  
-    var viewModel = _container.Resolve(viewModelType);  
-    view.BindingContext = viewModel;  
+    var viewModelType = Type.GetType(viewModelName);  
+    if (viewModelType == null)  
+    {  
+        return;  
+    }  
+    var viewModel = _container.Resolve(viewModelType);  
+    view.BindingContext = viewModel;  
 }
 ```
 
@@ -190,18 +193,18 @@ Las aplicaciones deben diseñarse para el uso correcto de la notificación de ca
 La aplicación móvil eShopOnContainers usa la `ExtendedBindableObject` clase para proporcionar notificaciones de cambios, que se muestra en el ejemplo de código siguiente:
 
 ```csharp
-public abstract class ExtendedBindableObject : BindableObject  
+public abstract class ExtendedBindableObject : BindableObject  
 {  
-    public void RaisePropertyChanged<T>(Expression<Func<T>> property)  
-    {  
-        var name = GetMemberInfo(property).Name;  
-        OnPropertyChanged(name);  
-    }  
+    public void RaisePropertyChanged<T>(Expression<Func<T>> property)  
+    {  
+        var name = GetMemberInfo(property).Name;  
+        OnPropertyChanged(name);  
+    }  
 
-    private MemberInfo GetMemberInfo(Expression expression)  
-    {  
-        ...  
-    }  
+    private MemberInfo GetMemberInfo(Expression expression)  
+    {  
+        ...  
+    }  
 }
 ```
 
@@ -210,17 +213,17 @@ La clase de Xamarin. Forms [`BindableObject`](xref:Xamarin.Forms.BindableObject)
 Cada clase de modelo de vista de la aplicación móvil eShopOnContainers se deriva de la `ViewModelBase` clase, que a su vez se deriva de la `ExtendedBindableObject` clase. Por lo tanto, cada clase de modelo de vista usa el `RaisePropertyChanged` método en la `ExtendedBindableObject` clase para proporcionar la notificación de cambio de propiedad. En el ejemplo de código siguiente se muestra cómo la aplicación móvil eShopOnContainers invoca la notificación de cambio de propiedad mediante una expresión lambda:
 
 ```csharp
-public bool IsLogin  
+public bool IsLogin  
 {  
-    get  
-    {  
-        return _isLogin;  
-    }  
-    set  
-    {  
-        _isLogin = value;  
-        RaisePropertyChanged(() => IsLogin);  
-    }  
+    get  
+    {  
+        return _isLogin;  
+    }  
+    set  
+    {  
+        _isLogin = value;  
+        RaisePropertyChanged(() => IsLogin);  
+    }  
 }
 ```
 
@@ -230,7 +233,7 @@ Tenga en cuenta que el uso de una expresión lambda de esta manera implica un pe
 
 En Mobile Apps, las acciones se invocan normalmente en respuesta a una acción del usuario, como un clic de botón, que se puede implementar creando un controlador de eventos en el archivo de código subyacente. Sin embargo, en el patrón MVVM, la responsabilidad de implementar la acción se basa en el modelo de vista y se debe evitar la colocación del código en el código subyacente.
 
-Los comandos proporcionan una manera cómoda de representar acciones que se pueden enlazar a controles en la interfaz de usuario. Encapsulan el código que implementa la acción y ayudan a mantenerla desacoplada de su representación visual en la vista. Xamarin.Formsincluye controles que se pueden conectar mediante declaración a un comando, y estos controles invocarán el comando cuando el usuario interactúe con el control.
+Los comandos proporcionan una manera cómoda de representar acciones que se pueden enlazar a controles en la interfaz de usuario. Encapsulan el código que implementa la acción y ayudan a mantenerla desacoplada de su representación visual en la vista. Xamarin.Forms incluye controles que se pueden conectar mediante declaración a un comando, y estos controles invocarán el comando cuando el usuario interactúe con el control.
 
 Los comportamientos también permiten que los controles se conecten mediante declaración a un comando. Sin embargo, los comportamientos se pueden usar para invocar una acción asociada a un intervalo de eventos generados por un control. Por lo tanto, los comportamientos abordan muchos de los mismos escenarios que los controles habilitados para comandos, a la vez que proporcionan un mayor grado de flexibilidad y control. Además, los comportamientos también se pueden usar para asociar objetos de comando o métodos con controles que no se diseñaron específicamente para interactuar con los comandos.
 
@@ -243,7 +246,7 @@ Dentro de un modelo de vista, debe haber un objeto de tipo [`Command`](xref:Xama
 En el código siguiente se muestra cómo una [`Command`](xref:Xamarin.Forms.Command) instancia de, que representa un comando de registro, se construye especificando un delegado para el `Register` método de modelo de vista:
 
 ```csharp
-public ICommand RegisterCommand => new Command(Register);
+public ICommand RegisterCommand => new Command(Register);
 ```
 
 El comando se expone a la vista a través de una propiedad que devuelve una referencia a un `ICommand` . Cuando `Execute` se llama al método en el [`Command`](xref:Xamarin.Forms.Command) objeto, simplemente reenvía la llamada al método en el modelo de vista a través del delegado que se especificó en el `Command` constructor.
@@ -251,13 +254,13 @@ El comando se expone a la vista a través de una propiedad que devuelve una refe
 Un comando puede invocar un método asincrónico mediante el uso de las `async` `await` palabras clave y al especificar el delegado del comando `Execute` . Esto indica que la devolución de llamada es `Task` y se debe esperar. Por ejemplo, el código siguiente muestra cómo una [`Command`](xref:Xamarin.Forms.Command) instancia de, que representa un comando de inicio de sesión, se construye especificando un delegado para el `SignInAsync` método de modelo de vista:
 
 ```csharp
-public ICommand SignInCommand => new Command(async () => await SignInAsync());
+public ICommand SignInCommand => new Command(async () => await SignInAsync());
 ```
 
 Los parámetros se pueden pasar a `Execute` las `CanExecute` acciones y mediante la [`Command<T>`](xref:Xamarin.Forms.Command) clase para crear una instancia del comando. Por ejemplo, el código siguiente muestra cómo `Command<T>` se utiliza una instancia para indicar que el `NavigateAsync` método necesitará un argumento de tipo `string` :
 
 ```csharp
-public ICommand NavigateCommand => new Command<string>(NavigateAsync);
+public ICommand NavigateCommand => new Command<string>(NavigateAsync);
 ```
 
 En las [`Command`](xref:Xamarin.Forms.Command) clases y [`Command<T>`](xref:Xamarin.Forms.Command) , el delegado del `CanExecute` método en cada constructor es opcional. Si no se especifica un delegado, `Command` devolverá `true` para `CanExecute` . Sin embargo, el modelo de vista puede indicar un cambio en el `CanExecute` Estado del comando llamando al `ChangeCanExecute` método en el `Command` objeto. Esto hace que `CanExecuteChanged` se genere el evento. Los controles de la interfaz de usuario que estén enlazados al comando actualizarán su estado habilitado para reflejar la disponibilidad del comando enlazado a datos.
@@ -267,11 +270,11 @@ En las [`Command`](xref:Xamarin.Forms.Command) clases y [`Command<T>`](xref:Xama
 En el ejemplo de código siguiente se muestra cómo [`Grid`](xref:Xamarin.Forms.Grid) `LoginView` se enlaza a en la `RegisterCommand` clase mediante `LoginViewModel` una instancia de [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) :
 
 ```xaml
-<Grid Grid.Column="1" HorizontalOptions="Center">  
-    <Label Text="REGISTER" TextColor="Gray"/>  
-    <Grid.GestureRecognizers>  
-        <TapGestureRecognizer Command="{Binding RegisterCommand}" NumberOfTapsRequired="1" />  
-    </Grid.GestureRecognizers>  
+<Grid Grid.Column="1" HorizontalOptions="Center">  
+    <Label Text="REGISTER" TextColor="Gray"/>  
+    <Grid.GestureRecognizers>  
+        <TapGestureRecognizer Command="{Binding RegisterCommand}" NumberOfTapsRequired="1" />  
+    </Grid.GestureRecognizers>  
 </Grid>
 ```
 
@@ -292,44 +295,44 @@ La `BindableBehavior<T>` clase proporciona un método reemplazable `OnAttachedTo
 La aplicación móvil eShopOnContainers incluye una `EventToCommandBehavior` clase, que ejecuta un comando en respuesta a un evento que se está produciendo. Esta clase se deriva de la `BindableBehavior<T>` clase para que el comportamiento pueda enlazar y ejecutar un `ICommand` especificado por una `Command` propiedad cuando se consume el comportamiento. En el ejemplo de código siguiente se muestra la clase `EventToCommandBehavior`:
 
 ```csharp
-public class EventToCommandBehavior : BindableBehavior<View>  
+public class EventToCommandBehavior : BindableBehavior<View>  
 {  
-    ...  
-    protected override void OnAttachedTo(View visualElement)  
-    {  
-        base.OnAttachedTo(visualElement);  
+    ...  
+    protected override void OnAttachedTo(View visualElement)  
+    {  
+        base.OnAttachedTo(visualElement);  
 
-        var events = AssociatedObject.GetType().GetRuntimeEvents().ToArray();  
-        if (events.Any())  
-        {  
-            _eventInfo = events.FirstOrDefault(e => e.Name == EventName);  
-            if (_eventInfo == null)  
-                throw new ArgumentException(string.Format(  
-                        "EventToCommand: Can't find any event named '{0}' on attached type",   
-                        EventName));  
+        var events = AssociatedObject.GetType().GetRuntimeEvents().ToArray();  
+        if (events.Any())  
+        {  
+            _eventInfo = events.FirstOrDefault(e => e.Name == EventName);  
+            if (_eventInfo == null)  
+                throw new ArgumentException(string.Format(  
+                        "EventToCommand: Can't find any event named '{0}' on attached type",   
+                        EventName));  
 
-            AddEventHandler(_eventInfo, AssociatedObject, OnFired);  
-        }  
-    }  
+            AddEventHandler(_eventInfo, AssociatedObject, OnFired);  
+        }  
+    }  
 
-    protected override void OnDetachingFrom(View view)  
-    {  
-        if (_handler != null)  
-            _eventInfo.RemoveEventHandler(AssociatedObject, _handler);  
+    protected override void OnDetachingFrom(View view)  
+    {  
+        if (_handler != null)  
+            _eventInfo.RemoveEventHandler(AssociatedObject, _handler);  
 
-        base.OnDetachingFrom(view);  
-    }  
+        base.OnDetachingFrom(view);  
+    }  
 
-    private void AddEventHandler(  
-            EventInfo eventInfo, object item, Action<object, EventArgs> action)  
-    {  
-        ...  
-    }  
+    private void AddEventHandler(  
+            EventInfo eventInfo, object item, Action<object, EventArgs> action)  
+    {  
+        ...  
+    }  
 
-    private void OnFired(object sender, EventArgs eventArgs)  
-    {  
-        ...  
-    }  
+    private void OnFired(object sender, EventArgs eventArgs)  
+    {  
+        ...  
+    }  
 }
 ```
 
@@ -343,13 +346,13 @@ La ventaja de utilizar `EventToCommandBehavior` para ejecutar un comando cuando 
 
 ```xaml
 <ListView>  
-    <ListView.Behaviors>  
-        <behaviors:EventToCommandBehavior             
-            EventName="ItemTapped"  
-            Command="{Binding OrderDetailCommand}"  
-            EventArgsConverter="{StaticResource ItemTappedEventArgsConverter}" />  
-    </ListView.Behaviors>  
-    ...  
+    <ListView.Behaviors>  
+        <behaviors:EventToCommandBehavior             
+            EventName="ItemTapped"  
+            Command="{Binding OrderDetailCommand}"  
+            EventArgsConverter="{StaticResource ItemTappedEventArgsConverter}" />  
+    </ListView.Behaviors>  
+    ...  
 </ListView>
 ```
 

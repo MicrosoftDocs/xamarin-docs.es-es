@@ -1,6 +1,6 @@
 ---
-title: 'Patrones de aplicación empresarial con el libro electrónico de :::no-loc(Xamarin.Forms):::'
-description: 'En este libro electrónico se proporcionan instrucciones arquitectónicas para desarrollar aplicaciones empresariales adaptables, mantenibles y comprobables :::no-loc(Xamarin.Forms)::: .'
+title: Patrones de aplicación empresarial con el libro electrónico de Xamarin.Forms
+description: En este libro electrónico se proporcionan instrucciones arquitectónicas para desarrollar aplicaciones empresariales adaptables, mantenibles y comprobables Xamarin.Forms .
 ms.prod: xamarin
 ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
 ms.technology: xamarin-forms
@@ -8,20 +8,23 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 no-loc:
-- ':::no-loc(Xamarin.Forms):::'
-- ':::no-loc(Xamarin.Essentials):::'
-ms.openlocfilehash: 549fe496cdb1d68d091d5fb3ed247ccef5a111a8
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1b8d33ba98dfeda8db23e516a989ebbfe1db9a66
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996167"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373008"
 ---
-# <a name="enterprise-application-patterns-using-no-locxamarinforms-ebook"></a>Patrones de aplicación empresarial con el libro electrónico de :::no-loc(Xamarin.Forms):::
+# <a name="enterprise-application-patterns-using-no-locxamarinforms-ebook"></a>Patrones de aplicación empresarial con el libro electrónico de Xamarin.Forms
 
-_Instrucciones arquitectónicas para desarrollar aplicaciones empresariales adaptables, mantenibles y comprobables :::no-loc(Xamarin.Forms):::_
+_Instrucciones arquitectónicas para desarrollar aplicaciones empresariales adaptables, mantenibles y comprobables Xamarin.Forms_
 
 ![Patrones de aplicaciones empresariales mediante::: no-LOC (Xamarin. Forms)::: eBook](images/cover-sml.png)
+
+> [!NOTE]
+> Este libro electrónico se publicó en el muelle de 2017 y no se ha actualizado desde entonces. Hay mucho en el libro que sigue siendo útil, pero parte del material es obsoleto.
 
 En este libro electrónico se proporcionan instrucciones sobre cómo implementar el patrón Model-View-ViewModel (MVVM), la inserción de dependencias, la navegación, la validación y la administración de configuración, a la vez que se mantiene el acoplamiento flexible. Además, también hay instrucciones sobre cómo realizar la autenticación y la autorización con IdentityServer, el acceso a los datos de microservicios en contenedor y las pruebas unitarias.
 
@@ -45,11 +48,11 @@ Los contenedores de inserción de dependencias reducen el acoplamiento entre obj
 
 ## <a name="communicating-between-loosely-coupled-components"></a>[Comunicación entre componentes débilmente acoplados](communicating-between-loosely-coupled-components.md)
 
-La clase [`MessagingCenter`](xref::::no-loc(Xamarin.Forms):::.MessagingCenter) de :::no-loc(Xamarin.Forms)::: implementa el patrón de publicación y suscripción, lo que permite la comunicación basada en mensajes entre los componentes que no se recomienda vincular mediante referencias de tipo y objeto. Este mecanismo permite a los publicadores y suscriptores comunicarse sin tener una referencia mutua, lo que ayuda a reducir las dependencias entre los componentes, a la vez que permite que los componentes se desarrollen y prueben de forma independiente.
+La clase [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) de Xamarin.Forms implementa el patrón de publicación y suscripción, lo que permite la comunicación basada en mensajes entre los componentes que no se recomienda vincular mediante referencias de tipo y objeto. Este mecanismo permite a los publicadores y suscriptores comunicarse sin tener una referencia mutua, lo que ayuda a reducir las dependencias entre los componentes, a la vez que permite que los componentes se desarrollen y prueben de forma independiente.
 
 ## <a name="navigation"></a>[Navegación](navigation.md)
 
-:::no-loc(Xamarin.Forms):::incluye compatibilidad para la navegación de páginas, que suele ser el resultado de la interacción del usuario con la interfaz de usuario, o de la propia aplicación, como resultado de los cambios internos en el estado controlado por lógica. Sin embargo, la navegación puede ser compleja de implementar en aplicaciones que usan el patrón MVVM.
+Xamarin.Forms incluye compatibilidad para la navegación de páginas, que suele ser el resultado de la interacción del usuario con la interfaz de usuario, o de la propia aplicación, como resultado de los cambios internos en el estado controlado por lógica. Sin embargo, la navegación puede ser compleja de implementar en aplicaciones que usan el patrón MVVM.
 
 En este capítulo se presenta una `NavigationService` clase, que se usa para realizar la navegación del modelo de vista primero desde los modelos de vista. Colocar la lógica de navegación en las clases del modelo de vista significa que la lógica se puede ejecutar a través de pruebas automatizadas. Además, el modelo de vista puede implementar la lógica para controlar la navegación para asegurarse de que se aplican ciertas reglas de negocios.
 
@@ -69,7 +72,7 @@ Los microservicios ofrecen un enfoque para el desarrollo y la implementación de
 
 ## <a name="authentication-and-authorization"></a>[Autenticación y autorización](authentication-and-authorization.md)
 
-Hay muchos enfoques para integrar la autenticación y la autorización en una :::no-loc(Xamarin.Forms)::: aplicación que se comunica con una aplicación web MVC de ASP.net. Aquí, la autenticación y la autorización se realizan con un microservicio de identidad en contenedor que usa IdentityServer 4. IdentityServer es un marco de OpenID Connect y OAuth 2,0 de código abierto para ASP.NET Core que se integra con ASP.NET Core identidad para realizar la autenticación de token de portador.
+Hay muchos enfoques para integrar la autenticación y la autorización en una Xamarin.Forms aplicación que se comunica con una aplicación web MVC de ASP.net. Aquí, la autenticación y la autorización se realizan con un microservicio de identidad en contenedor que usa IdentityServer 4. IdentityServer es un marco de OpenID Connect y OAuth 2,0 de código abierto para ASP.NET Core que se integra con ASP.NET Core identidad para realizar la autenticación de token de portador.
 
 ## <a name="accessing-remote-data"></a>[Acceso a datos remotos](accessing-remote-data.md)
 

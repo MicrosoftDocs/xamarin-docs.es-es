@@ -10,16 +10,16 @@ ms.date: 12/05/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 14d26c1360c1c1b7997598ef1263e3dd62e3c013
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 487ff8114a36212c1e7d413cc9bd1f4f2c016faa
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561786"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374438"
 ---
 # <a name="search-data-with-azure-search-and-no-locxamarinforms"></a>Buscar datos con Azure Search y Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 
 _Azure Search es un servicio en la nube que proporciona capacidades de indexación y consulta para los datos cargados. Esto elimina los requisitos de infraestructura y las complejidades del algoritmo de búsqueda tradicionalmente asociadas a la implementación de la funcionalidad de búsqueda en una aplicación. En este artículo se muestra cómo usar la biblioteca de búsqueda de Microsoft Azure para integrar Azure Search en una Xamarin.Forms aplicación._
 
@@ -44,7 +44,7 @@ Azure Search también admite la recuperación de sugerencias basadas en la entra
 > [!NOTE]
 > Si no tiene una [suscripción a Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), cree una [cuenta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de empezar.
 
-## <a name="setup"></a>Configurar
+## <a name="setup"></a>Configuración
 
 El proceso para integrar Azure Search en una Xamarin.Forms aplicación es el siguiente:
 

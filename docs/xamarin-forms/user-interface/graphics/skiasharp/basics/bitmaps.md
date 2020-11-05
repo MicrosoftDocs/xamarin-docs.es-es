@@ -10,16 +10,16 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a62d8f8e04d97b45fff779739d817defce1414f2
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 3b73aabd184060e273d7a1e3e20f6e78eb0ba0d1
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556872"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373554"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>Conceptos básicos de mapas de bits en SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Cargar mapas de bits de varios orígenes y mostrarlos._
 

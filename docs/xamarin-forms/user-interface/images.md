@@ -10,16 +10,16 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 824d5ca711495c8a8ad663034e77506468efd397
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2ea65a646add3f42ee88e5cd884e80131b9964bf
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556196"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373840"
 ---
 # <a name="images-in-no-locxamarinforms"></a>Imágenes en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithimages)
 
 _Las imágenes se pueden compartir entre plataformas con Xamarin.Forms , se pueden cargar específicamente para cada plataforma o se pueden descargar para su visualización._
 
@@ -53,10 +53,10 @@ Las imágenes se pueden cargar desde un [archivo local](#local-images), un [recu
 
 Los archivos de imagen se pueden agregar a cada proyecto de aplicación y se puede hacer referencia a ellos desde el Xamarin.Forms código compartido. Este método de distribución de imágenes es necesario cuando las imágenes son específicas de la plataforma, por ejemplo, al usar resoluciones diferentes en plataformas diversas, o bien al emplear diseños que difieren ligeramente.
 
-Para usar una sola imagen en todas las aplicaciones, se *debe usar el mismo nombre de archivo en*todas las plataformas y debe ser un nombre de recurso de Android válido (es decir, solo letras minúsculas, números, el carácter de subrayado y el período permitido).
+Para usar una sola imagen en todas las aplicaciones, se *debe usar el mismo nombre de archivo en* todas las plataformas y debe ser un nombre de recurso de Android válido (es decir, solo letras minúsculas, números, el carácter de subrayado y el período permitido).
 
-- **iOS** : la manera preferida de administrar y admitir imágenes ya que Ios 9 es usar **conjuntos de imágenes del catálogo de activos**, que deben contener todas las versiones de una imagen necesarias para admitir varios dispositivos y factores de escala para una aplicación. Para obtener más información, consulte [Agregar imágenes a un conjunto de imágenes del catálogo de recursos](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
-- **Android** : incluya imágenes en el directorio  **Resources/drawable** con la **acción de compilación: AndroidResource**. También se pueden proporcionar versiones alta y baja de PPP de una imagen (en **los** subdirectorios de recursos con nombre adecuados, como **drawable-ldpi**, **drawable-hdpi**y **drawable-xhdpi**).
+- **iOS** : la manera preferida de administrar y admitir imágenes ya que Ios 9 es usar **conjuntos de imágenes del catálogo de activos** , que deben contener todas las versiones de una imagen necesarias para admitir varios dispositivos y factores de escala para una aplicación. Para obtener más información, consulte [Agregar imágenes a un conjunto de imágenes del catálogo de recursos](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
+- **Android** : incluya imágenes en el directorio  **Resources/drawable** con la **acción de compilación: AndroidResource**. También se pueden proporcionar versiones alta y baja de PPP de una imagen (en **los** subdirectorios de recursos con nombre adecuados, como **drawable-ldpi** , **drawable-hdpi** y **drawable-xhdpi** ).
 - **Plataforma universal de Windows (UWP)** : de forma predeterminada, las imágenes se deben colocar en el directorio raíz de la aplicación con la **acción de compilación: contenido**. Como alternativa, las imágenes se pueden colocar en un directorio diferente que, a continuación, se especifican con una plataforma específica. Para obtener más información, consulte [Directorio de imagen predeterminado en Windows](~/xamarin-forms/platform/windows/default-image-directory.md).
 
 > [!IMPORTANT]
@@ -95,7 +95,7 @@ iOS, Android y UWP incluyen compatibilidad con distintas resoluciones de imagen,
 
 La mejor manera de administrar imágenes desde iOS 9 es arrastrar imágenes para cada resolución necesaria para el conjunto de imágenes del catálogo de activos adecuado. Para obtener más información, consulte [Agregar imágenes a un conjunto de imágenes del catálogo de recursos](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
-Antes de iOS 9, las versiones de retina de la imagen podrían colocarse en la carpeta de **recursos** : dos y tres veces la resolución con los **@2x** **@3x** sufijos o en el nombre de archivo antes de la extensión de archivo (por ejemplo, **myimage@2x.png**). Sin embargo, Apple ha dejado de usar este método de trabajo con imágenes en una aplicación iOS. Para obtener más información, vea [tamaños de imagen y nombres de archivo](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
+Antes de iOS 9, las versiones de retina de la imagen podrían colocarse en la carpeta de **recursos** : dos y tres veces la resolución con los **@2x** **@3x** sufijos o en el nombre de archivo antes de la extensión de archivo (por ejemplo, **myimage@2x.png** ). Sin embargo, Apple ha dejado de usar este método de trabajo con imágenes en una aplicación iOS. Para obtener más información, vea [tamaños de imagen y nombres de archivo](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
 Las imágenes de resolución alternativas de Android deben colocarse en [directorios con nombre especial](https://developer.android.com/guide/practices/screens_support.html) en el proyecto de Android, tal como se muestra en la siguiente captura de pantalla:
 
@@ -120,7 +120,7 @@ Algunos controles tienen propiedades que muestran una imagen, como:
 
 Las imágenes incrustadas también se incluyen con una aplicación (como las imágenes locales), pero en lugar de tener una copia de la imagen en la estructura de archivos de cada aplicación, el archivo de imagen se incrusta en el ensamblado como un recurso. Se recomienda este método de distribución de imágenes cuando se usan imágenes idénticas en cada plataforma y es especialmente adecuado para crear componentes, ya que la imagen se incluye en el código.
 
-Para insertar una imagen en un proyecto, haga clic con el botón derecho para agregar nuevos elementos y seleccione la imagen/s que desea agregar. De forma predeterminada, la imagen tendrá la **acción de compilación: ninguno**; debe establecerse en acción de **compilación: EmbeddedResource**.
+Para insertar una imagen en un proyecto, haga clic con el botón derecho para agregar nuevos elementos y seleccione la imagen/s que desea agregar. De forma predeterminada, la imagen tendrá la **acción de compilación: ninguno** ; debe establecerse en acción de **compilación: EmbeddedResource**.
 
 <!-- markdownlint-disable MD001 -->
 

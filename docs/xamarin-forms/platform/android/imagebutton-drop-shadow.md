@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c355816ec1b89801814b217cad8a23be2f453226
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 0f33d3e10b549e6e3e45d35a259ece71bf68724c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563801"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373333"
 ---
 # <a name="imagebutton-drop-shadows-on-android"></a>Sombras paralelas de colocación en Android
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esta plataforma Android específica se usa para habilitar una sombra paralela en un `ImageButton` . Se consume en XAML estableciendo la `ImageButton.IsShadowEnabled` propiedad enlazable en `true` , junto con una serie de propiedades adicionales enlazables opcionales que controlan la sombra paralela:
 

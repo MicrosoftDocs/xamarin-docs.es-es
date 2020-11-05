@@ -10,16 +10,16 @@ ms.date: 03/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 63a939e7093bcbe52f1aed376253c7aa78b078bf
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2a7aa9ec588879eb4f59e42cf9848d6e3c560625
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563853"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373801"
 ---
 # <a name="create-a-custom-layout-in-no-locxamarinforms"></a>Crear un diseño personalizado en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
 _Xamarin.Forms define cinco clases de diseño: StackLayout, AbsoluteLayout, RelativeLayout, Grid y FlexLayout, y cada una de ellas organiza sus elementos secundarios de manera diferente. Sin embargo, a veces es necesario organizar el contenido de la página mediante un diseño no proporcionado por Xamarin.Forms . En este artículo se explica cómo escribir una clase de diseño personalizada y se muestra una clase WrapLayout con distinción de orientación que organiza sus elementos secundarios horizontalmente por la página y, a continuación, ajusta la presentación de los elementos secundarios posteriores a filas adicionales._
 
@@ -29,7 +29,7 @@ Cada elemento visual es responsable de determinar su propio tamaño preferido, l
 
 Se requiere un conocimiento exhaustivo de los Xamarin.Forms ciclos de diseño e invalidación para crear un diseño personalizado. Ahora se analizarán estos ciclos.
 
-## <a name="layout"></a>Diseño
+## <a name="layout"></a>Layout
 
 El diseño comienza en la parte superior del árbol visual con una página y continúa a través de todas las ramas del árbol visual para abarcar todos los elementos visuales de una página. Los elementos que son elementos primarios de otros elementos son responsables de ajustar el tamaño y la posición de sus elementos secundarios en relación con ellos mismos.
 
@@ -50,7 +50,7 @@ Cada Xamarin.Forms clase que tiene una `Content` propiedad o `Children` tiene un
 Además, cada clase que deriva de [`Layout`](xref:Xamarin.Forms.Layout) o [`Layout<View>`](xref:Xamarin.Forms.Layout`1) debe invalidar el [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) método, que es donde una clase de diseño determina el tamaño que debe realizar las llamadas a [ `Measure` ] (XREF: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) de sus elementos secundarios.
 
 > [!NOTE]
-> Los elementos determinan su tamaño en función de las *restricciones*, que indican la cantidad de espacio disponible para un elemento dentro del elemento primario del elemento. Restricciones que se pasan a [ `Measure` ] (XREF: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) y [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) los métodos pueden oscilar entre 0 y `Double.PositiveInfinity` . Un elemento está *restringido*, o *totalmente restringido*, cuando recibe una llamada a su [ `Measure` ] (XREF: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) con argumentos no infinitos: el elemento está restringido a un tamaño determinado. Un elemento no está *restringido*, o *parcialmente restringido*, cuando recibe una llamada a su `Measure` método con al menos un argumento igual a `Double.PositiveInfinity` : se puede considerar que la restricción infinita indica el ajuste automático de tamaño.
+> Los elementos determinan su tamaño en función de las *restricciones* , que indican la cantidad de espacio disponible para un elemento dentro del elemento primario del elemento. Restricciones que se pasan a [ `Measure` ] (XREF: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) y [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) los métodos pueden oscilar entre 0 y `Double.PositiveInfinity` . Un elemento está *restringido* , o *totalmente restringido* , cuando recibe una llamada a su [ `Measure` ] (XREF: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) con argumentos no infinitos: el elemento está restringido a un tamaño determinado. Un elemento no está *restringido* , o *parcialmente restringido* , cuando recibe una llamada a su `Measure` método con al menos un argumento igual a `Double.PositiveInfinity` : se puede considerar que la restricción infinita indica el ajuste automático de tamaño.
 
 ## <a name="invalidation"></a>Invalidación
 
@@ -73,15 +73,15 @@ La [`Layout`](xref:Xamarin.Forms.Layout) clase también define un [`InvalidateLa
 El proceso para crear un diseño personalizado es el siguiente:
 
 1. Cree una clase que se derive de la clase `Layout<View>`. Para obtener más información, vea [crear un WrapLayout](#create-a-wraplayout).
-1. [*opcional*] Agregue propiedades, respaldadas por propiedades enlazables, para los parámetros que se deben establecer en la clase de diseño. Para obtener más información, vea [Agregar propiedades respaldadas por propiedades enlazables](#add-properties-backed-by-bindable-properties).
+1. [ *opcional* ] Agregue propiedades, respaldadas por propiedades enlazables, para los parámetros que se deben establecer en la clase de diseño. Para obtener más información, vea [Agregar propiedades respaldadas por propiedades enlazables](#add-properties-backed-by-bindable-properties).
 1. Invalide el [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) método para invocar [ `Measure` ] (XREF: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) en todos los elementos secundarios del diseño y devuelven un tamaño solicitado para el diseño. Para obtener más información, vea [invalidar el método de la acción](#override-the-onmeasure-method).
 1. Invalide el [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) método para invocar [ `Layout` ] (XREF: Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . Rectangle)) en todos los elementos secundarios del diseño. Error al invocar [ `Layout` ] (XREF: Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . Rectangle)) en cada elemento secundario de un diseño, el elemento secundario no recibirá nunca un tamaño o una posición correctos y, por lo tanto, el elemento secundario no estará visible en la página. Para obtener más información, vea [invalidar el método LayoutChildren](#override-the-layoutchildren-method).
 
     > [!NOTE]
     > Al enumerar los elementos secundarios en [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) y [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) invalida, omita cualquier elemento secundario cuya [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) propiedad esté establecida en `false` . Esto garantizará que el diseño personalizado no deja espacio para los elementos secundarios invisibles.
 
-1. [*opcional*] Invalide el [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) método para recibir una notificación cuando se agreguen o quiten elementos secundarios del diseño. Para obtener más información, vea [invalidar el método InvalidateLayout](#override-the-invalidatelayout-method).
-1. [*opcional*] Invalide el [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) método para recibir una notificación cuando uno de los elementos secundarios del diseño cambie de tamaño. Para obtener más información, vea [invalidar el método OnChildMeasureInvalidated](#override-the-onchildmeasureinvalidated-method).
+1. [ *opcional* ] Invalide el [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) método para recibir una notificación cuando se agreguen o quiten elementos secundarios del diseño. Para obtener más información, vea [invalidar el método InvalidateLayout](#override-the-invalidatelayout-method).
+1. [ *opcional* ] Invalide el [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) método para recibir una notificación cuando uno de los elementos secundarios del diseño cambie de tamaño. Para obtener más información, vea [invalidar el método OnChildMeasureInvalidated](#override-the-onchildmeasureinvalidated-method).
 
 > [!NOTE]
 > Tenga en cuenta que la [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) invalidación no se invocará si el tamaño del diseño se rige por su elemento primario, en lugar de sus elementos secundarios. Sin embargo, se invocará la invalidación si una o ambas restricciones son infinitas, o si la clase de diseño tiene valores no predeterminados [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) o de [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) propiedad. Por esta razón, la [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) invalidación no puede depender de los tamaños secundarios obtenidos durante la [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) llamada al método. En su lugar, `LayoutChildren` debe invocar [ `Measure` ] (XREF: Xamarin.Forms . VisualElement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) en los elementos secundarios del diseño, antes de invocar [ `Layout` ] (XREF: Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . Rectangle)). Como alternativa, el tamaño de los elementos secundarios obtenidos en la `OnMeasure` invalidación se puede almacenar en caché para evitar las `Measure` invocaciones posteriores en la `LayoutChildren` invalidación, pero la clase de diseño deberá saber cuándo es necesario obtener los tamaños de nuevo. Para obtener más información, consulte [calcular y almacenar en caché datos de diseño](#calculate-and-cache-layout-data).
@@ -92,7 +92,7 @@ A continuación, la clase de diseño se puede consumir agregándola a un [`Page`
 
 La aplicación de ejemplo muestra una clase con distinción de orientación `WrapLayout` que organiza los elementos secundarios horizontalmente por la página y, a continuación, ajusta la presentación de los elementos secundarios posteriores a filas adicionales.
 
-La `WrapLayout` clase asigna la misma cantidad de espacio para cada elemento secundario, conocido como el *tamaño de celda*, en función del tamaño máximo de los elementos secundarios. Los elementos secundarios menores que el tamaño de la celda se pueden colocar dentro de la celda en función de sus [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) valores de propiedad y.
+La `WrapLayout` clase asigna la misma cantidad de espacio para cada elemento secundario, conocido como el *tamaño de celda* , en función del tamaño máximo de los elementos secundarios. Los elementos secundarios menores que el tamaño de la celda se pueden colocar dentro de la celda en función de sus [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) valores de propiedad y.
 
 La `WrapLayout` definición de clase se muestra en el ejemplo de código siguiente:
 
@@ -339,7 +339,7 @@ La `WrapLayout` clase se puede consumir colocándolo en un [`Page`](xref:Xamarin
 </ContentPage>
 ```
 
-A continuación se muestra el código de C# equivalente:
+El código de C# equivalente se muestra a continuación:
 
 ```csharp
 public class ImageWrapLayoutPageCS : ContentPage
@@ -415,6 +415,6 @@ El número de columnas de cada fila depende del tamaño de la fotografía, el an
 - [WrapLayout (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [Diseños personalizados](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
 - [Crear diseños personalizados en Xamarin.Forms (vídeo)](https://www.youtube.com/watch?v=sxjOqNZFhKU)
-- [Diseño\<T>](xref:Xamarin.Forms.Layout`1)
+- [Layout\<T>](xref:Xamarin.Forms.Layout`1)
 - [Diseño](xref:Xamarin.Forms.Layout)
 - [VisualElement](xref:Xamarin.Forms.VisualElement)

@@ -11,16 +11,16 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7e59cddbe9192f29ca1636c567131aad60157066
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f1ceadb6d7985f5d448fe729a42e0cf0a3d5d6f6
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556586"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374477"
 ---
 # <a name="no-locxamarinforms-visual-state-manager"></a>Xamarin.Forms Administrador de estado visual
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
 
 _Use el administrador de estado visual para realizar cambios en los elementos XAML en función de los Estados visuales establecidos desde el código._
 
@@ -408,7 +408,7 @@ Ahora todas las `Entry` vistas de esta página responden de la misma manera a su
 
 En la tabla siguiente se enumeran los Estados visuales que se definen en Xamarin.Forms :
 
-| Clase | States | Más información |
+| Class | States | Más información |
 | ----- | ------ | ---------------- |
 | `Button` | `Pressed` | [Estados visuales del botón](~/xamarin-forms/user-interface/button.md#button-visual-states) |
 | `CheckBox` | `IsChecked` | [Estados visuales de la casilla](~/xamarin-forms/user-interface/checkbox.md#checkbox-visual-states) |

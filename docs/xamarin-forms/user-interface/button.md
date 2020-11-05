@@ -10,16 +10,16 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fba8dcb344f79c21815a58cff0d8132967381cca
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6534d25e46ecdd5fcdcd9c525aa49b8e2ded5f49
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556742"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374217"
 ---
 # <a name="no-locxamarinforms-button"></a>Xamarin.Forms Botón
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
 
 _El botón responde a una pulsación o clic que dirige una aplicación para llevar a cabo una tarea determinada._
 
@@ -59,7 +59,7 @@ La página de **clics del botón básico** en el ejemplo [**ButtonDemos**](/samp
 
 De forma predeterminada, `Button` es rectangular, pero puede asignarle esquinas redondeadas mediante la [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) propiedad, como se describe a continuación en la sección [**apariencia del botón**](#button-appearance).
 
-La [`Text`](xref:Xamarin.Forms.Button.Text) propiedad especifica el texto que aparece en `Button` . El [`Clicked`](xref:Xamarin.Forms.Button.Clicked) evento se establece en un controlador de eventos denominado `OnButtonClicked` . Este controlador se encuentra en el archivo de código subyacente, **BasicButtonClickPage.Xaml.CS**:
+La [`Text`](xref:Xamarin.Forms.Button.Text) propiedad especifica el texto que aparece en `Button` . El [`Clicked`](xref:Xamarin.Forms.Button.Clicked) evento se establece en un controlador de eventos denominado `OnButtonClicked` . Este controlador se encuentra en el archivo de código subyacente, **BasicButtonClickPage.Xaml.CS** :
 
 ```csharp
 public partial class BasicButtonClickPage : ContentPage
@@ -133,7 +133,7 @@ Todo se realiza en el constructor de la clase. Dado que el `Clicked` controlador
 button.Clicked += async (sender, args) => await label.RelRotateTo(360, 1000);
 ```
 
-Por supuesto, también puede definir el controlador de eventos como un método independiente (al igual que el `OnButtonClick` método en el **clic de botón básico**) y asociar ese método al evento:
+Por supuesto, también puede definir el controlador de eventos como un método independiente (al igual que el `OnButtonClick` método en el **clic de botón básico** ) y asociar ese método al evento:
 
 ```csharp
 button.Clicked += OnButtonClicked;
@@ -631,7 +631,7 @@ class ToggleButton : Button
 
 El `ToggleButton` constructor adjunta un controlador al `Clicked` evento para que pueda cambiar el valor de la `IsToggled` propiedad. El `OnIsToggledChanged` método desencadena el `Toggled` evento.
 
-La última línea del `OnIsToggledChanged` método llama al método estático `VisualStateManager.GoToState` con las dos cadenas de texto "ToggledOn" y "ToggledOff". Puede leer sobre este método y cómo la aplicación puede responder a los Estados visuales en el artículo [** Xamarin.Forms Visual State Manager**](~/xamarin-forms/user-interface/visual-state-manager.md).
+La última línea del `OnIsToggledChanged` método llama al método estático `VisualStateManager.GoToState` con las dos cadenas de texto "ToggledOn" y "ToggledOff". Puede leer sobre este método y cómo la aplicación puede responder a los Estados visuales en el artículo [**Xamarin.Forms Visual State Manager**](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 Dado que `ToggleButton` realiza la llamada a `VisualStateManager.GoToState` , la propia clase no necesita incluir recursos adicionales para cambiar la apariencia del botón en función de su `IsToggled` Estado. Es responsabilidad del código XAML que hospeda `ToggleButton` .
 

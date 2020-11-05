@@ -10,18 +10,18 @@ ms.date: 07/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: be4b868a2f38063f3a46d57ecb190b377eb89dce
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 01dba502f6a561aac122e9fa44d7b257c76c5b4b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563593"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374334"
 ---
 # <a name="no-locxamarinforms-brushes-linear-gradients"></a>Xamarin.Forms Pinceles: degradados lineales
 
 ![API de vista previa](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
 La `LinearGradientBrush` clase se deriva de la `GradientBrush` clase y pinta un área con un degradado lineal, que combina dos o más colores a lo largo de una línea conocida como el eje de degradado. `GradientStop` los objetos se utilizan para especificar los colores del degradado y sus posiciones. Para obtener más información sobre los `GradientStop` objetos, consulte [ Xamarin.Forms brushes: gradientes](gradient.md).
 

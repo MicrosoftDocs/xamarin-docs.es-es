@@ -10,16 +10,16 @@ ms.date: 06/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f8d81e037d63a7144263ce4b3520647e6829bd57
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 11f33c07d2a98e326717f284f0b5d6308a65a693
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557262"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374724"
 ---
 # <a name="file-handling-in-no-locxamarinforms"></a>Control de archivos en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
 _El control de archivos con Xamarin.Forms se puede lograr mediante el uso de código en una biblioteca de .net Standard o mediante el uso de recursos incrustados._
 
@@ -63,7 +63,7 @@ Estas operaciones se demuestran en la aplicación de ejemplo, donde se incluye u
 
 ## <a name="loading-files-embedded-as-resources"></a>Cargar archivos insertados como recursos
 
-Para insertar un archivo en un ensamblado de **.NET Standard**, cree o agregue un archivo y asegúrese de usar esta **acción de compilación: EmbeddedResource**.
+Para insertar un archivo en un ensamblado de **.NET Standard** , cree o agregue un archivo y asegúrese de usar esta **acción de compilación: EmbeddedResource**.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -75,7 +75,7 @@ Para insertar un archivo en un ensamblado de **.NET Standard**, cree o agregue u
 
 -----
 
-`GetManifestResourceStream` se usa para acceder al archivo incrustado mediante su **identificador de recurso**. De forma predeterminada, el identificador de recurso es el nombre de archivo con el prefijo del espacio de nombres predeterminado para el proyecto en el que está incrustado; en este caso, el ensamblado es **WorkingWithFiles** y el nombre de archivo es **LibTextResource.txt**, por lo que el identificador de recurso es `WorkingWithFiles.LibTextResource.txt` .
+`GetManifestResourceStream` se usa para acceder al archivo incrustado mediante su **identificador de recurso**. De forma predeterminada, el identificador de recurso es el nombre de archivo con el prefijo del espacio de nombres predeterminado para el proyecto en el que está incrustado; en este caso, el ensamblado es **WorkingWithFiles** y el nombre de archivo es **LibTextResource.txt** , por lo que el identificador de recurso es `WorkingWithFiles.LibTextResource.txt` .
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
@@ -113,8 +113,8 @@ Los proyectos compartidos también pueden contener archivos como recursos incrus
 
 Hay disponibles dos soluciones a este problema con los proyectos compartidos:
 
-- **Sincronizar los proyectos**: edite las propiedades del proyecto para cada plataforma con el fin de usar el mismo nombre de ensamblado y el **mismo** espacio de nombres predeterminado. Después, este valor se puede “codificar de forma rígida” como el prefijo para los identificadores de recursos incrustados en el proyecto compartido.
-- **Directivas de compilador #if**: use directivas de compilador para establecer el prefijo de identificador de recurso correcto y use ese valor para crear de forma dinámica el identificador de recurso correcto.
+- **Sincronizar los proyectos** : edite las propiedades del proyecto para cada plataforma con el fin de usar el mismo nombre de ensamblado y el **mismo** espacio de nombres predeterminado. Después, este valor se puede “codificar de forma rígida” como el prefijo para los identificadores de recursos incrustados en el proyecto compartido.
+- **Directivas de compilador #if** : use directivas de compilador para establecer el prefijo de identificador de recurso correcto y use ese valor para crear de forma dinámica el identificador de recurso correcto.
 
 A continuación, se muestra un ejemplo de código de la segunda opción. Las directivas de compilador se usan para seleccionar el prefijo del recurso codificado de forma rígida (que suele ser el mismo que el espacio de nombres predeterminado del proyecto al que se hace referencia). Después, la variable `resourcePrefix` se usa para crear un identificador de recurso válido al concatenarlo con el nombre de archivo del recurso incrustado.
 
@@ -135,13 +135,13 @@ Stream stream = assembly.GetManifestResourceStream
 
 ### <a name="organizing-resources"></a>Organización de recursos
 
-En los ejemplos anteriores, se da por supuesto que el archivo está insertado en el directorio raíz del proyecto de la biblioteca de .NET Standard, por lo que el identificador de recurso tendría el formato **EspacioDeNombres.NombreDeArchivo.Extensión**, como `WorkingWithFiles.LibTextResource.txt` y `WorkingWithFiles.iOS.SharedTextResource.txt`.
+En los ejemplos anteriores, se da por supuesto que el archivo está insertado en el directorio raíz del proyecto de la biblioteca de .NET Standard, por lo que el identificador de recurso tendría el formato **EspacioDeNombres.NombreDeArchivo.Extensión** , como `WorkingWithFiles.LibTextResource.txt` y `WorkingWithFiles.iOS.SharedTextResource.txt`.
 
-Los recursos incrustados se pueden organizar en carpetas. Cuando un recurso incrustado se coloca en una carpeta, el nombre de carpeta se convierte en parte del identificador de recurso (separado por puntos), de forma que el formato del identificador de recurso se convierte en **EspacioDeNombres.Carpeta.NombreDeArchivo.Extensión**. Al colocar los archivos usados en la aplicación de ejemplo en una carpeta **MyFolder**, los identificadores de recurso correspondientes serían `WorkingWithFiles.MyFolder.LibTextResource.txt` y `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
+Los recursos incrustados se pueden organizar en carpetas. Cuando un recurso incrustado se coloca en una carpeta, el nombre de carpeta se convierte en parte del identificador de recurso (separado por puntos), de forma que el formato del identificador de recurso se convierte en **EspacioDeNombres.Carpeta.NombreDeArchivo.Extensión**. Al colocar los archivos usados en la aplicación de ejemplo en una carpeta **MyFolder** , los identificadores de recurso correspondientes serían `WorkingWithFiles.MyFolder.LibTextResource.txt` y `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
 
 ### <a name="debugging-embedded-resources"></a>Depurar recursos incrustados
 
-Como a veces es difícil comprender por qué no se carga un recurso específico, puede agregarse de forma temporal el siguiente código de depuración a una aplicación para ayudar a confirmar que los recursos se han configurado correctamente. En el panel **Errores**, se mostrarán todos los recursos incrustados conocidos en el ensamblado específico para ayudar a depurar los problemas de carga de recursos.
+Como a veces es difícil comprender por qué no se carga un recurso específico, puede agregarse de forma temporal el siguiente código de depuración a una aplicación para ayudar a confirmar que los recursos se han configurado correctamente. En el panel **Errores** , se mostrarán todos los recursos incrustados conocidos en el ensamblado específico para ayudar a depurar los problemas de carga de recursos.
 
 ```csharp
 using System.Reflection;

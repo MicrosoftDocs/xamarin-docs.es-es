@@ -10,16 +10,16 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a77ebb07a09c1bbd2df482c81040f271cdf8f56e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: ea590c0390ab045e5cf8b526aee66c2408d1b784
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556352"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374672"
 ---
 # <a name="the-non-separable-blend-modes"></a>Modos de mezcla no separables
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Como vimos en el artículo [**SkiaSharp modos de mezcla**](separable.md)separables, los modos de mezcla separables realizan operaciones en los canales rojo, verde y azul por separado. Los modos de mezcla no separables no. Al trabajar con los niveles de matiz, saturación y luminosidad del color, los modos de mezcla no separables pueden modificar los colores de maneras interesantes:
 
@@ -29,7 +29,7 @@ Como vimos en el artículo [**SkiaSharp modos de mezcla**](separable.md)separabl
 
 Para comprender los modos de mezcla no separables, es necesario tratar los píxeles de origen y de destino como colores en el modelo Hue-saturación-luminosidad. (La luminosidad también se denomina luminosidad).
 
-El modelo de color HSL se analizó en el artículo [**integración con Xamarin.Forms **](../../basics/integration.md) y un programa de ejemplo en ese artículo permite experimentar con los colores HSL. Puede crear un `SKColor` valor mediante valores de matiz, saturación y luminosidad con el método estático [`SKColor.FromHsl`](xref:SkiaSharp.SKColor.FromHsl*) .
+El modelo de color HSL se analizó en el artículo [**integración con Xamarin.Forms**](../../basics/integration.md) y un programa de ejemplo en ese artículo permite experimentar con los colores HSL. Puede crear un `SKColor` valor mediante valores de matiz, saturación y luminosidad con el método estático [`SKColor.FromHsl`](xref:SkiaSharp.SKColor.FromHsl*) .
 
 El matiz representa la longitud de onda dominante del color. Los valores de matiz oscilan entre 0 y 360 y se recorren las principales sumas y sustractivas: rojo es el valor 0, el amarillo es 60, el verde es 120, el aguamarina es 180, el azul es 240, el magenta es de 300 y el ciclo vuelve a rojo en 360.
 
@@ -211,11 +211,11 @@ Por lo general, no es el caso que desee usar uno de los modos de mezcla no separ
 
 ## <a name="a-matte-for-a-separable-mode"></a>Un mate para un modo separable
 
-Este es uno de los mapas de bits incluidos como un recurso en el ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . El nombre de archivo es **Banana.jpg**:
+Este es uno de los mapas de bits incluidos como un recurso en el ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . El nombre de archivo es **Banana.jpg** :
 
 ![Monkey de banana](non-separable-images/Banana.jpg "Monkey de banana")
 
-Es posible crear un mate que abarque solo el plátano. También es un recurso en el ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . El nombre de archivo es **BananaMatte.png**:
+Es posible crear un mate que abarque solo el plátano. También es un recurso en el ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . El nombre de archivo es **BananaMatte.png** :
 
 ![Mate de banana](non-separable-images/BananaMatte.png "Mate de banana")
 

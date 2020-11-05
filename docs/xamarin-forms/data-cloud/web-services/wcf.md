@@ -10,16 +10,16 @@ ms.date: 03/28/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 596fab91a1f64e0fb6c5483e354c2ef15fd24346
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 8d6b489ff31333e87c28796c7de49bf0e59bff9d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557925"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373580"
 ---
 # <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>Consumir un servicio Web de Windows Communication Foundation (WCF)
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
 
 _WCF es el marco unificado de Microsoft para la creación de aplicaciones orientadas a servicios. Permite a los desarrolladores compilar aplicaciones distribuidas seguras, con transacciones y de confianza, e interoperables. En este artículo se muestra cómo consumir un servicio de Protocolo simple de acceso a objetos (SOAP) de WCF desde una Xamarin.Forms aplicación de._
 
@@ -63,11 +63,11 @@ Para obtener más información sobre el modelo de datos que se usa en la aplicac
 
 Se debe generar un *proxy* para consumir un servicio WCF, lo que permite que la aplicación se conecte al servicio. El proxy se construye mediante el consumo de metadatos de servicio que definen los métodos y la configuración de servicio asociada. Estos metadatos se exponen en forma de un documento de lenguaje de descripción de servicios web (WSDL) generado por el servicio Web. El proxy se puede compilar mediante el Microsoft WCF Web Service Reference Provider en Visual Studio 2017 para agregar una referencia de servicio para el servicio Web a una biblioteca de .NET Standard. Una alternativa a la creación del proxy mediante el Microsoft WCF Web Service Reference Provider en Visual Studio 2017 es usar la herramienta de utilidad de metadatos de ServiceModel (svcutil.exe). Para obtener más información, vea [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/).
 
-Las clases de proxy generadas proporcionan métodos para consumir los servicios web que usan el modelo de diseño del modelo de programación asincrónica (APM). En este patrón, una operación asincrónica se implementa como dos métodos denominados *BeginOperationName* y *EndOperationName*, que comienzan y finalizan la operación asincrónica.
+Las clases de proxy generadas proporcionan métodos para consumir los servicios web que usan el modelo de diseño del modelo de programación asincrónica (APM). En este patrón, una operación asincrónica se implementa como dos métodos denominados *BeginOperationName* y *EndOperationName* , que comienzan y finalizan la operación asincrónica.
 
-El método *BeginOperationName* comienza la operación asincrónica y devuelve un objeto que implementa la `IAsyncResult` interfaz. Después de llamar a *BeginOperationName*, una aplicación puede seguir ejecutando instrucciones en el subproceso que realiza la llamada, mientras que la operación asincrónica tiene lugar en un subproceso del grupo de subprocesos.
+El método *BeginOperationName* comienza la operación asincrónica y devuelve un objeto que implementa la `IAsyncResult` interfaz. Después de llamar a *BeginOperationName* , una aplicación puede seguir ejecutando instrucciones en el subproceso que realiza la llamada, mientras que la operación asincrónica tiene lugar en un subproceso del grupo de subprocesos.
 
-Para cada llamada a *BeginOperationName*, la aplicación también debe llamar a *EndOperationName* para obtener los resultados de la operación. El valor devuelto de *EndOperationName* es el mismo tipo devuelto por el método de servicio Web sincrónico. Por ejemplo, el `EndGetTodoItems` método devuelve una colección de `TodoItem` instancias de. El método *EndOperationName* también incluye un `IAsyncResult` parámetro que debe establecerse en la instancia devuelta por la llamada correspondiente al método *BeginOperationName* .
+Para cada llamada a *BeginOperationName* , la aplicación también debe llamar a *EndOperationName* para obtener los resultados de la operación. El valor devuelto de *EndOperationName* es el mismo tipo devuelto por el método de servicio Web sincrónico. Por ejemplo, el `EndGetTodoItems` método devuelve una colección de `TodoItem` instancias de. El método *EndOperationName* también incluye un `IAsyncResult` parámetro que debe establecerse en la instancia devuelta por la llamada correspondiente al método *BeginOperationName* .
 
 La biblioteca TPL (Task Parallel Library) puede simplificar el proceso de consumo de un par de métodos Begin/end de APM encapsulando las operaciones asincrónicas en el mismo `Task` objeto. Esta encapsulación la proporcionan varias sobrecargas del `TaskFactory.FromAsync` método.
 

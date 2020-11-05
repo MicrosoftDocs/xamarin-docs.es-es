@@ -10,16 +10,16 @@ ms.date: 03/23/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5ea4fa88925925ba7c81f47c30875c3419603ab8
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 56254d4a5d255f2db05ff82f224df4ddff04ab1f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555468"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373099"
 ---
 # <a name="the-scale-transform"></a>Transformación de escala
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Detección de la transformación de escala SkiaSharp para escalar objetos a distintos tamaños_
 

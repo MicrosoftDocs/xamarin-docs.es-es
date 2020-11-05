@@ -10,16 +10,16 @@ ms.date: 08/19/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e34144f253b19796ea6ec83cb3873fe373aeb914
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: aec9f0ec0b3092a5f84f183fb90cfc8bc9da7324
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560616"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374230"
 ---
 # <a name="no-locxamarinforms-in-xamarin-native-projects"></a>Xamarin.Forms en proyectos nativos de Xamarin
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/native2forms)
 
 Normalmente, una Xamarin.Forms aplicación incluye una o varias páginas que se derivan de [`ContentPage`](xref:Xamarin.Forms.ContentPage) y estas páginas se comparten entre todas las plataformas de un proyecto de biblioteca de .net Standard o un proyecto compartido. Sin embargo, los formularios nativos permiten `ContentPage` Agregar páginas derivadas directamente a aplicaciones de Xamarin. iOS, Xamarin. Android y UWP nativas. En comparación con el hecho de que el proyecto nativo consuma `ContentPage` páginas derivadas de un proyecto de biblioteca de .net Standard o un proyecto compartido, la ventaja de agregar páginas directamente a proyectos nativos es que las páginas se pueden extender con vistas nativas. Las vistas nativas se pueden denominar en XAML con `x:Name` y se puede hacer referencia a ellas desde el código subyacente. Para obtener más información sobre las vistas nativas, vea [vistas nativas](~/xamarin-forms/platform/native-views/index.md).
 
@@ -27,7 +27,7 @@ El proceso de consumo de una Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.Co
 
 1. Agregue el Xamarin.Forms paquete NuGet al proyecto nativo.
 1. Agregue la [`ContentPage`](xref:Xamarin.Forms.ContentPage) Página derivada de y las dependencias al proyecto nativo.
-1. Llame al método `Forms.Init` .
+1. Llame al método `Forms.Init`.
 1. Construya una instancia de la [`ContentPage`](xref:Xamarin.Forms.ContentPage) Página derivada de y conviértala en el tipo nativo adecuado mediante uno de los siguientes métodos de extensión: `CreateViewController` para iOS, `CreateSupportFragment` para Android o `CreateFrameworkElement` para UWP.
 1. Navegue a la representación de tipo nativo de la [`ContentPage`](xref:Xamarin.Forms.ContentPage) Página derivada de mediante la API de navegación nativa.
 

@@ -10,16 +10,16 @@ ms.date: 03/05/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a9eacc76fb3da6296039a713e15c4eaa30828d44
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 9cb48c5ddca6f5e6f6aeba76d27d9cd2c95dd450
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560967"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373684"
 ---
 # <a name="searchbar-style-on-ios"></a>Estilo barra en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Este control específico de la plataforma iOS determina si [`SearchBar`](xref:Xamarin.Forms.SearchBar) tiene un fondo. Se consume en XAML estableciendo la `SearchBar.SearchBarStyle` propiedad Bindable en un valor de la `UISearchBarStyle` enumeración:
 

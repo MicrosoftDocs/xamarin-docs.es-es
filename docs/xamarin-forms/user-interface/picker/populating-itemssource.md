@@ -10,16 +10,16 @@ ms.date: 02/26/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 395536752fb0d581408d0b8f91ef623d926aeeb4
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c08ef265cb3cf08f9d7015503f8038d9180a2c18
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559550"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373151"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>Configuración de la propiedad ItemsSource de un selector
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
 
 _La vista selector es un control para seleccionar un elemento de texto de una lista de datos. En este artículo se explica cómo rellenar un selector con datos estableciendo la propiedad ItemsSource y cómo responder a la selección de elementos por parte del usuario._
 
@@ -50,7 +50,7 @@ Un [`Picker`](xref:Xamarin.Forms.Picker) se puede rellenar con datos establecien
 > [!NOTE]
 > Tenga en cuenta que el elemento `x:Array` requiere un atributo `Type` que indica el tipo de los elementos de la matriz.
 
-A continuación se muestra el código de C# equivalente:
+El código de C# equivalente se muestra a continuación:
 
 ```csharp
 var monkeyList = new List<string>();
@@ -79,7 +79,7 @@ En el ejemplo de código siguiente se muestra cómo recuperar el [`SelectedItem`
 <Label Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />
 ```
 
-A continuación se muestra el código de C# equivalente:
+El código de C# equivalente se muestra a continuación:
 
 ```csharp
 var monkeyNameLabel = new Label();
@@ -117,7 +117,7 @@ Este método obtiene el [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedInde
         ItemDisplayBinding="{Binding Name}" />
 ```
 
-A continuación se muestra el código de C# equivalente:
+El código de C# equivalente se muestra a continuación:
 
 ```csharp
 var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
@@ -155,7 +155,7 @@ El enlace de datos se puede usar para establecer un objeto en el [`SelectedItem`
 <Label Text="{Binding SelectedMonkey.Details}" ... />
 ```
 
-A continuación se muestra el código de C# equivalente:
+El código de C# equivalente se muestra a continuación:
 
 ```csharp
 var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };

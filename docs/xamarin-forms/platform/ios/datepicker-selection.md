@@ -10,16 +10,16 @@ ms.date: 01/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f8b98d103021864aeb589787224f90bdaed17146
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 8668ef01e7fac02243934f145eb2e3f4ff4a6a8a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563788"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373216"
 ---
 # <a name="datepicker-item-selection-on-ios"></a>Selección de elementos del DatePicker en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Estos controles específicos de la plataforma iOS cuando se selecciona el elemento en un objeto [`DatePicker`](xref:Xamarin.Forms.DatePicker) , lo que permite al usuario especificar la selección de elementos que se produce al examinar elementos del control o solo una vez que se presiona el botón **listo** . Se consume en XAML estableciendo la `DatePicker.UpdateMode` propiedad adjunta en un valor de la `UpdateMode` enumeración:
 
@@ -66,7 +66,7 @@ switch (datePicker.On<iOS>().UpdateMode())
 
 El resultado es que `UpdateMode` se aplica un especificado a [`DatePicker`](xref:Xamarin.Forms.DatePicker) , que controla cuándo se produce la selección de elementos:
 
-[![Captura de pantalla de los modos de actualización de DatePicker](datepicker-selection-images/datepicker-updatemode.png "Específico de la plataforma DatePicker UpdateMode")](datepicker-selection-images/datepicker-updatemode-large.png#lightbox "Específico de la plataforma DatePicker UpdateMode")
+[![Captura de pantalla de los modos de actualización de DatePicker](datepicker-selection-images/datepicker-updatemode.png "Platform-Specific DatePicker UpdateMode")](datepicker-selection-images/datepicker-updatemode-large.png#lightbox "Platform-Specific DatePicker UpdateMode")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

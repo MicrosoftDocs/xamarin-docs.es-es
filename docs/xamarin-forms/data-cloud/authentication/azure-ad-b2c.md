@@ -10,16 +10,16 @@ ms.date: 12/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: be1de99ba42e58e375792b0a4e03d1847e2e3c87
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c24c8eb2ea4801037621cdc82f49073c89115817
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562891"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374376"
 ---
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Autenticación de usuarios con Azure Active Directory B2C
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
 
 _Azure Active Directory B2C proporciona administración de identidades en la nube para aplicaciones web y móviles orientadas al consumidor. En este artículo se muestra cómo usar Azure Active Directory B2C para integrar la administración de identidades en una aplicación móvil con la biblioteca de autenticación de Microsoft._
 
@@ -70,7 +70,7 @@ La biblioteca de autenticación de Microsoft espera que la **dirección URL de r
 
 ![URI de redireccionamiento personalizado en la vista de propiedades de la aplicación de Azure](azure-ad-b2c-images/azure-redirect-uri.png)
 
-La dirección URL se usará más adelante tanto en el **ApplicationManifest.xml** Android como en el archivo **info. plist**de iOS.
+La dirección URL se usará más adelante tanto en el **ApplicationManifest.xml** Android como en el archivo **info. plist** de iOS.
 
 En el proyecto de ejemplo, edite el archivo **constants.CS** para establecer el `clientId` campo en el identificador de la **aplicación**. En el código siguiente se muestra cómo se debe establecer este valor si el identificador de la aplicación es `1234abcd` :
 
@@ -110,7 +110,7 @@ public static class Constants
 
 El paquete NuGet de la biblioteca de autenticación de Microsoft (MSAL) debe agregarse al proyecto compartido, .NET Standard y los proyectos de plataforma de una Xamarin.Forms solución. MSAL incluye una `PublicClientApplicationBuilder` clase que construye un objeto que se adhiere a la `IPublicClientApplication` interfaz. MSAL emplea `With` cláusulas para proporcionar parámetros adicionales al constructor y a los métodos de autenticación.
 
-En el proyecto de ejemplo, el código subyacente de **app. Xaml** define las propiedades estáticas denominadas `AuthenticationClient` y `UIParent` , y crea instancias del `AuthenticationClient` objeto en el constructor. La `WithIosKeychainSecurityGroup` cláusula proporciona un nombre de grupo de seguridad para las aplicaciones de iOS. La `WithB2CAuthority` cláusula proporciona la **autoridad**o directiva predeterminada que se utilizará para autenticar a los usuarios. La `WithRedirectUri` cláusula indica a la instancia de Notification hubs de Azure el URI de redireccionamiento que se usará si se especifican varios URI. En el ejemplo siguiente se muestra cómo crear una instancia de `PublicClientApplication` :
+En el proyecto de ejemplo, el código subyacente de **app. Xaml** define las propiedades estáticas denominadas `AuthenticationClient` y `UIParent` , y crea instancias del `AuthenticationClient` objeto en el constructor. La `WithIosKeychainSecurityGroup` cláusula proporciona un nombre de grupo de seguridad para las aplicaciones de iOS. La `WithB2CAuthority` cláusula proporciona la **autoridad** o directiva predeterminada que se utilizará para autenticar a los usuarios. La `WithRedirectUri` cláusula indica a la instancia de Notification hubs de Azure el URI de redireccionamiento que se usará si se especifican varios URI. En el ejemplo siguiente se muestra cómo crear una instancia de `PublicClientApplication` :
 
 ```csharp
 public partial class App : Application
@@ -169,7 +169,7 @@ public partial class LoginPage : ContentPage
 }
 ```
 
-El `OnLoginButtonClicked` controlador de eventos (que se desencadena cuando se hace clic en el botón de inicio de sesión) llama a `AcquireTokenAsync` . La biblioteca MSAL abre automáticamente el explorador de dispositivos móviles y navega a la página de inicio de sesión. La dirección URL de inicio de sesión, denominada **entidad de certificación**, es una combinación del nombre de inquilino y las directivas definidas en el archivo **constants.CS** . Si el usuario elige la opción Olvidó la contraseña, se devuelve a la aplicación con una excepción, lo que inicia la experiencia de olvido de contraseña. En el ejemplo siguiente se muestra el proceso de autenticación:
+El `OnLoginButtonClicked` controlador de eventos (que se desencadena cuando se hace clic en el botón de inicio de sesión) llama a `AcquireTokenAsync` . La biblioteca MSAL abre automáticamente el explorador de dispositivos móviles y navega a la página de inicio de sesión. La dirección URL de inicio de sesión, denominada **entidad de certificación** , es una combinación del nombre de inquilino y las directivas definidas en el archivo **constants.CS** . Si el usuario elige la opción Olvidó la contraseña, se devuelve a la aplicación con una excepción, lo que inicia la experiencia de olvido de contraseña. En el ejemplo siguiente se muestra el proceso de autenticación:
 
 ```csharp
 public partial class LoginPage : ContentPage
@@ -207,7 +207,7 @@ public partial class LoginPage : ContentPage
 }
 ```
 
-El `OnForgotPassword` método es similar al proceso de inicio de sesión, pero implementa una directiva personalizada. `OnForgotPassword` utiliza una sobrecarga diferente de `AcquireTokenAsync` , que permite proporcionar una **autoridad**específica. En el ejemplo siguiente se muestra cómo proporcionar una **entidad de certificación** personalizada al adquirir un token:
+El `OnForgotPassword` método es similar al proceso de inicio de sesión, pero implementa una directiva personalizada. `OnForgotPassword` utiliza una sobrecarga diferente de `AcquireTokenAsync` , que permite proporcionar una **autoridad** específica. En el ejemplo siguiente se muestra cómo proporcionar una **entidad de certificación** personalizada al adquirir un token:
 
 ```csharp
 public partial class LoginPage : ContentPage
@@ -260,7 +260,7 @@ En iOS, el esquema de la dirección URL personalizada que se registró con Azure
 
 !["Registrar un esquema de dirección URL personalizado en iOS"](azure-ad-b2c-images/customurl-ios.png)
 
-MSAL también requiere derechos de cadena de claves en iOS, registrados en **Entitilements. plist**, tal como se muestra en la siguiente captura de pantalla:
+MSAL también requiere derechos de cadena de claves en iOS, registrados en **Entitilements. plist** , tal como se muestra en la siguiente captura de pantalla:
 
 !["Configuración de los derechos de aplicación en iOS"](azure-ad-b2c-images/entitlements-ios.png)
 

@@ -10,16 +10,16 @@ ms.date: 01/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d6a8674f0cffe534b1ee83f20ab255766fbfcbda
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 4dd8655d4cd84f7d4214801e55677706eb67efa7
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557405"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374685"
 ---
 # <a name="default-image-directory-on-windows"></a>Directorio de imágenes predeterminado en Windows
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Este Plataforma universal de Windows específico de la plataforma define el directorio del proyecto desde el que se cargarán los recursos de imagen. Se consume en XAML estableciendo el `Application.ImageDirectory` en un `string` que representa el directorio del proyecto que contiene los recursos de imagen:
 

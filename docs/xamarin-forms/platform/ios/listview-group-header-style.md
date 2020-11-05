@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b8be4610a327fb9902d62efb061406bff16de484
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 8a856dd74bb319436dbe1c8506d34dfcdb268834
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557483"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374178"
 ---
 # <a name="listview-group-header-style-on-ios"></a>Estilo de encabezado de grupo de ListView en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Este control específico de la plataforma iOS determina si [`ListView`](xref:Xamarin.Forms.ListView) las celdas de encabezado flotan durante el desplazamiento. Se consume en XAML estableciendo la `ListView.GroupHeaderStyle` propiedad Bindable en un valor de la `GroupHeaderStyle` enumeración:
 

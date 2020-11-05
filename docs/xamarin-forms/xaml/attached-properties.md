@@ -1,5 +1,5 @@
 ---
-title: Propiedades asociadas
+title: Propiedades adjuntas
 description: En este artículo se proporciona una introducción a las propiedades adjuntas y se muestra cómo crearlas y consumirlas.
 ms.prod: xamarin
 ms.assetid: 6E9DCDC3-A0E4-46A6-BAA9-4FEB6DF8A5A8
@@ -10,16 +10,16 @@ ms.date: 06/02/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 61edbb347b4d3466d1ca756208adb5d173d63b34
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: b3db63018bc8d927b9e9041c762b1989cfb17679
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561552"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374100"
 ---
-# <a name="attached-properties"></a>Propiedades asociadas
+# <a name="attached-properties"></a>Propiedades adjuntas
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
 
 
 Las propiedades adjuntas permiten a un objeto asignar un valor para una propiedad que su propia clase no define. Por ejemplo, los elementos secundarios pueden utilizar las propiedades adjuntas para informar a su elemento primario de cómo deben presentarse en la interfaz de usuario. El [`Grid`](xref:Xamarin.Forms.Grid) control permite especificar la fila y la columna de un elemento secundario mediante el establecimiento de las `Grid.Row` `Grid.Column` propiedades adjuntas y. `Grid.Row` y `Grid.Column` son propiedades adjuntas porque se establecen en elementos que son elementos secundarios de un `Grid` , en lugar de en el `Grid` propio.

@@ -10,16 +10,16 @@ ms.date: 05/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d535956e03ac02e2cf0c5d7528ee8e363a2a1e55
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 9b22b46cb5452e558328c383ed97e66a60cfc166
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561656"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374139"
 ---
 # <a name="no-locxamarinforms-webview"></a>Xamarin.Forms WebView
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
 [`WebView`](xref:Xamarin.Forms.WebView) es una vista para mostrar contenido web y HTML en la aplicación:
 
@@ -175,7 +175,7 @@ A continuación, se deben proporcionar las implementaciones de la interfaz para 
 
 #### <a name="ios"></a>iOS
 
-En iOS, el contenido web debe estar ubicado en el directorio raíz del proyecto o en el directorio de **recursos** con la acción de compilación *BundleResource*, como se muestra a continuación:
+En iOS, el contenido web debe estar ubicado en el directorio raíz del proyecto o en el directorio de **recursos** con la acción de compilación *BundleResource* , como se muestra a continuación:
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -333,7 +333,7 @@ Eso es todo.
 
 ![Botones de navegación de vista previa](webview-images/in-app-browser.png)
 
-## <a name="events"></a>Events
+## <a name="events"></a>Eventos
 
 WebView genera los siguientes eventos para ayudarle a responder a los cambios en el estado:
 
@@ -430,7 +430,7 @@ Para `WebView` que funcione, debe asegurarse de que los permisos se establecen p
 - **Android** &ndash; solo se requiere `INTERNET`  cuando se muestra el contenido de la red. El contenido local no requiere ningún permiso especial.
 - **iOS** &ndash; no requiere ningún permiso especial.
 
-## <a name="layout"></a>Diseño
+## <a name="layout"></a>Layout
 
 A diferencia de la mayoría de las demás Xamarin.Forms vistas, `WebView` requiere que `HeightRequest` y `WidthRequest` estén especificados cuando se incluyen en StackLayout o RelativeLayout. Si no se especifican esas propiedades, `WebView` no se representará.
 
@@ -557,9 +557,9 @@ Hay disponible una versión preliminar del enlazador para corregir este problema
 
 Los requisitos previos para que funcionen son los siguientes:
 
-- ** Xamarin.Forms 4,5 o superior**. Xamarin.Forms se requiere 4,6, o posterior, si la aplicación usa el material visual.
+- **Xamarin.Forms 4,5 o superior**. Xamarin.Forms se requiere 4,6, o posterior, si la aplicación usa el material visual.
 - **Xamarin. iOS 13.10.0.17 o superior**. Compruebe la versión de Xamarin. iOS [en Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). Esta versión de Xamarin. iOS se incluye con Visual Studio para Mac 8.4.1 y Visual Studio 16.4.3.
-- **Quite las referencias `UIWebView` a **. El código no debe tener ninguna referencia a `UIWebView` o a clases que hagan uso de `UIWebView` .
+- **Quite las referencias `UIWebView` a**. El código no debe tener ninguna referencia a `UIWebView` o a clases que hagan uso de `UIWebView` .
 
 Para obtener más información sobre cómo detectar y quitar `UIWebView` referencias, vea [UIWebView deprecated](~/ios/user-interface/controls/webview.md#uiwebview-deprecation).
 

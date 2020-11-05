@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fe9a93e8e5a35df98587efc0dc3ad6192653d173
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 527ae4eee614e1b3c6225c6cd2b220030faa7f3e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563710"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372488"
 ---
 # <a name="listview-separator-style-on-ios"></a>Estilo de separador de ListView en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Este control específico de la plataforma iOS determina si el separador entre las celdas de un [`ListView`](xref:Xamarin.Forms.ListView) usa el ancho completo de `ListView` . Se consume en XAML estableciendo la [`ListView.SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView.SeparatorStyleProperty) propiedad adjunta en un valor de la [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) enumeración:
 
@@ -51,7 +51,7 @@ El `ListView.On<iOS>` método especifica que este específico de la plataforma s
 
 El resultado es que un [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) valor especificado se aplica a [`ListView`](xref:Xamarin.Forms.ListView) , que controla el ancho del separador entre las celdas:
 
-![Específico de la plataforma ListView SeparatorStyle](listview-separator-style-images/listview-separatorstyle.png)
+![Platform-Specific ListView SeparatorStyle](listview-separator-style-images/listview-separatorstyle.png)
 
 > [!NOTE]
 > Una vez que el estilo del separador se ha establecido en `FullWidth` , no se puede volver a cambiar a `Default` en tiempo de ejecución.

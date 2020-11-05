@@ -11,16 +11,16 @@ ms.date: 07/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 39a6dbcbd5e825c6630bfb60b61bf00a308fdc0e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 656a9dbec5f0520b4167c482b227ea863eb4c412
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562787"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373541"
 ---
 # <a name="styling-no-locxamarinforms-apps-using-cascading-style-sheets-css"></a>Aplicación de estilos a Xamarin.Forms aplicaciones mediante hojas de estilo CSS (CSS)
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 
 _Xamarin.Forms admite el estilo de los elementos visuales mediante Hojas de estilo CSS (CSS)._
 
@@ -363,19 +363,19 @@ Actualmente no se admiten los siguientes selectores:
 
 ## <a name="property-reference"></a>Referencia de propiedades
 
-Las siguientes propiedades CSS son compatibles con Xamarin.Forms (en la columna **valores** , los tipos están en _cursiva_, mientras que los literales de cadena son `gray` ):
+Las siguientes propiedades CSS son compatibles con Xamarin.Forms (en la columna **valores** , los tipos están en _cursiva_ , mientras que los literales de cadena son `gray` ):
 
 |Propiedad|Se aplica a|Valores|Ejemplo|
 |---|---|---|---|
 |`align-content`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial` |`align-content: space-between;`|
 |`align-items`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| `flex-end` \| `initial` |`align-items: flex-start;`|
 |`align-self`|`VisualElement`| `auto` \| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| `flex-end` \| `initial`|`align-self: flex-end;`|
-|`background-color`|`VisualElement`|_color_ \| `initial` |`background-color: springgreen;`|
-|`background-image`|`Page`|_cadena_ \|`initial` |`background-image: bg.png;`|
-|`border-color`|`Button`, `Frame`, `ImageButton`|_color_ \| `initial`|`border-color: #9acd32;`|
+|`background-color`|`VisualElement`|_color_ \| de `initial` |`background-color: springgreen;`|
+|`background-image`|`Page`|_string_ \| `initial` |`background-image: bg.png;`|
+|`border-color`|`Button`, `Frame`, `ImageButton`|_color_ \| de `initial`|`border-color: #9acd32;`|
 |`border-radius`|`BoxView`, `Button`, `Frame`, `ImageButton`|_doble_ \|`initial` |`border-radius: 10;`|
 |`border-width`|`Button`, `ImageButton`|_doble_ \|`initial` |`border-width: .5;`|
-|`color`|`ActivityIndicator`, `BoxView`, `Button`, `CheckBox`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `ProgressBar`, `SearchBar`, `Switch`, `TimePicker`|_color_ \| `initial` |`color: rgba(255, 0, 0, 0.3);`|
+|`color`|`ActivityIndicator`, `BoxView`, `Button`, `CheckBox`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `ProgressBar`, `SearchBar`, `Switch`, `TimePicker`|_color_ \| de `initial` |`color: rgba(255, 0, 0, 0.3);`|
 |`column-gap`|`Grid`|_doble_ \|`initial`|`column-gap: 9;`|
 |`direction`|`VisualElement`|`ltr` \| `rtl` \| `inherit` \| `initial` |`direction: rtl;`|
 |`flex-direction`|`FlexLayout`| `column` \| `columnreverse` \| `row` \| `rowreverse` \| `row-reverse` \| `column-reverse` \| `initial`|`flex-direction: column-reverse;`|
@@ -383,7 +383,7 @@ Las siguientes propiedades CSS son compatibles con Xamarin.Forms (en la columna 
 |`flex-grow`|`VisualElement`|valor _float_ \|`initial`|`flex-grow: 1.5;`|
 |`flex-shrink`|`VisualElement`|valor _float_ \|`initial`|`flex-shrink: 1;`|
 |`flex-wrap`|`VisualElement`| `nowrap` \| `wrap` \| `reverse` \| `wrap-reverse` \| `initial`|`flex-wrap: wrap-reverse;`|
-|`font-family`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_cadena_ \|`initial` |`font-family: Consolas;`|
+|`font-family`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_string_ \| `initial` |`font-family: Consolas;`|
 |`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_doble_ \| _namedsize_ \|  `initial` |`font-size: 12;`|
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold` \| `italic` \| `initial` |`font-style: bold;`|
 |`height`|`VisualElement`|_doble_ \|`initial` |`min-height: 250;`|
@@ -411,7 +411,7 @@ Las siguientes propiedades CSS son compatibles con Xamarin.Forms (en la columna 
 |`text-decoration`|`Label`, `Span`|`none` \| `underline` \| `strikethrough` \| `line-through` \| `initial`|`text-decoration: underline, line-through;`|
 |`text-transform`|`Button`,`Editor`, `Entry`, `Label`, `SearchBar`, `SearchHandler`|`none` \| `default` \| `uppercase` \| `lowercase` \| `initial` |`text-transform: uppercase;`|
 |`transform`|`VisualElement`| `none`, `rotate`, `rotateX`, `rotateY`, `scale`, `scaleX`, `scaleY`, `translate`, `translateX`, `translateY`, `initial` |`transform: rotate(180), scaleX(2.5);`|
-|`transform-origin`|`VisualElement`| _Double_, _Double_ \|`initial` |`transform-origin: 7.5, 12.5;`|
+|`transform-origin`|`VisualElement`| _Double_ , _Double_ \|`initial` |`transform-origin: 7.5, 12.5;`|
 |`vertical-align`|`Label`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`|`vertical-align: bottom;`|
 |`visibility`|`VisualElement`|`true` \| `visible` \| `false` \| `hidden` \| `collapse` \| `initial`|`visibility: hidden;`|
 |`width`|`VisualElement`|_doble_ \|`initial`|`min-width: 320;`|
@@ -431,42 +431,42 @@ Además, no hay ningún `inherit` valor y, por tanto, no se admite la herencia. 
 
 ### <a name="no-locxamarinforms-specific-properties"></a>Xamarin.Forms propiedades específicas
 
-Xamarin.FormsTambién se admiten las siguientes propiedades CSS específicas (en la columna **valores** , los tipos son _cursiva_, mientras que los literales de cadena son `gray` ):
+Xamarin.FormsTambién se admiten las siguientes propiedades CSS específicas (en la columna **valores** , los tipos son _cursiva_ , mientras que los literales de cadena son `gray` ):
 
 |Propiedad|Se aplica a|Valores|Ejemplo|
 |---|---|---|---|
-|`-xf-bar-background-color`|`NavigationPage`, `TabbedPage`|_color_ \| `initial` |`-xf-bar-background-color: teal;`|
-|`-xf-bar-text-color`|`NavigationPage`, `TabbedPage`|_color_ \| `initial` |`-xf-bar-text-color: gray`|
+|`-xf-bar-background-color`|`NavigationPage`, `TabbedPage`|_color_ \| de `initial` |`-xf-bar-background-color: teal;`|
+|`-xf-bar-text-color`|`NavigationPage`, `TabbedPage`|_color_ \| de `initial` |`-xf-bar-text-color: gray`|
 |`-xf-horizontal-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-horizontal-scroll-bar-visibility: never;`|
 |`-xf-max-length`|`Entry`, `Editor`, `SearchBar`|_int_ \| `initial` |`-xf-max-length: 20;`|
-|`-xf-max-track-color`|`Slider`|_color_ \| `initial` |`-xf-max-track-color: red;`|
-|`-xf-min-track-color`|`Slider`|_color_ \| `initial` |`-xf-min-track-color: yellow;`|
+|`-xf-max-track-color`|`Slider`|_color_ \| de `initial` |`-xf-max-track-color: red;`|
+|`-xf-min-track-color`|`Slider`|_color_ \| de `initial` |`-xf-min-track-color: yellow;`|
 |`-xf-orientation`|`ScrollView`, `StackLayout`| `horizontal` \| `vertical` \| `both` \| `initial`. `both` solo se admite en `ScrollView` . |`-xf-orientation: horizontal;`|
 |`-xf-placeholder`|`Entry`, `Editor`, `SearchBar`|texto entre comillas _quoted text_ \|`initial` |`-xf-placeholder: Enter name;`|
-|`-xf-placeholder-color`|`Entry`, `Editor`, `SearchBar`|_color_ \| `initial` |`-xf-placeholder-color: green;`|
+|`-xf-placeholder-color`|`Entry`, `Editor`, `SearchBar`|_color_ \| de `initial` |`-xf-placeholder-color: green;`|
 |`-xf-spacing`|`StackLayout`|_doble_ \|`initial` |`-xf-spacing: 8;`|
-|`-xf-thumb-color`|`Slider`, `Switch`|_color_ \| `initial` |`-xf-thumb-color: limegreen;`|
+|`-xf-thumb-color`|`Slider`, `Switch`|_color_ \| de `initial` |`-xf-thumb-color: limegreen;`|
 |`-xf-vertical-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-vertical-scroll-bar-visibility: always;`|
 |`-xf-vertical-text-alignment`|`Label`| `start` \| `center` \| `end` \| `initial`|`-xf-vertical-text-alignment: end;`|
-|`-xf-visual`|`VisualElement`|_cadena_ \|`initial` |`-xf-visual: material;`|
+|`-xf-visual`|`VisualElement`|_string_ \| `initial` |`-xf-visual: material;`|
 
 ### <a name="no-locxamarinforms-shell-specific-properties"></a>Xamarin.Forms Propiedades específicas del shell
 
-Xamarin.FormsTambién se admiten las siguientes propiedades CSS específicas del shell (en la columna **valores** , los tipos son _cursiva_, mientras que los literales de cadena son `gray` ):
+Xamarin.FormsTambién se admiten las siguientes propiedades CSS específicas del shell (en la columna **valores** , los tipos son _cursiva_ , mientras que los literales de cadena son `gray` ):
 
 |Propiedad|Se aplica a|Valores|Ejemplo|
 |---|---|---|---|
-|`-xf-flyout-background`|`Shell`|_color_ \| `initial` |`-xf-flyout-background: red;`|
-|`-xf-shell-background`|`Element`|_color_ \| `initial` |`-xf-shell-background: green;`|
-|`-xf-shell-disabled`|`Element`|_color_ \| `initial` |`-xf-shell-disabled: blue;`|
-|`-xf-shell-foreground`|`Element`|_color_ \| `initial` |`-xf-shell-foreground: yellow;`|
-|`-xf-shell-tabbar-background`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-background: white;`|
-|`-xf-shell-tabbar-disabled`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-disabled: black;`|
-|`-xf-shell-tabbar-foreground`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-foreground: gray;`|
-|`-xf-shell-tabbar-title`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-title: lightgray;`|
-|`-xf-shell-tabbar-unselected`|`Element`|_color_ \| `initial` |`-xf-shell-tabbar-unselected: cyan;`|
-|`-xf-shell-title`|`Element`|_color_ \| `initial` |`-xf-shell-title: teal;`|
-|`-xf-shell-unselected`|`Element`|_color_ \| `initial` |`-xf-shell-unselected: limegreen;`|
+|`-xf-flyout-background`|`Shell`|_color_ \| de `initial` |`-xf-flyout-background: red;`|
+|`-xf-shell-background`|`Element`|_color_ \| de `initial` |`-xf-shell-background: green;`|
+|`-xf-shell-disabled`|`Element`|_color_ \| de `initial` |`-xf-shell-disabled: blue;`|
+|`-xf-shell-foreground`|`Element`|_color_ \| de `initial` |`-xf-shell-foreground: yellow;`|
+|`-xf-shell-tabbar-background`|`Element`|_color_ \| de `initial` |`-xf-shell-tabbar-background: white;`|
+|`-xf-shell-tabbar-disabled`|`Element`|_color_ \| de `initial` |`-xf-shell-tabbar-disabled: black;`|
+|`-xf-shell-tabbar-foreground`|`Element`|_color_ \| de `initial` |`-xf-shell-tabbar-foreground: gray;`|
+|`-xf-shell-tabbar-title`|`Element`|_color_ \| de `initial` |`-xf-shell-tabbar-title: lightgray;`|
+|`-xf-shell-tabbar-unselected`|`Element`|_color_ \| de `initial` |`-xf-shell-tabbar-unselected: cyan;`|
+|`-xf-shell-title`|`Element`|_color_ \| de `initial` |`-xf-shell-title: teal;`|
+|`-xf-shell-unselected`|`Element`|_color_ \| de `initial` |`-xf-shell-unselected: limegreen;`|
 
 ### <a name="color"></a>Color
 
@@ -503,7 +503,7 @@ Se admiten los siguientes valores que no distinguen mayúsculas de minúsculas `
 
 El significado exacto de cada valor depende de la `namedsize` plataforma y depende de la vista.
 
-## <a name="functions"></a>Funciones
+## <a name="functions"></a>Functions
 
 Se pueden especificar degradados lineales y radiales mediante las `linear-gradient()` funciones de y `radial-gradient()` CSS, respectivamente. El resultado de estas funciones debe asignarse a la `background` propiedad de un control.
 
