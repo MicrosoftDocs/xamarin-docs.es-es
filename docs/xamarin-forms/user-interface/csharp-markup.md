@@ -10,22 +10,22 @@ ms.date: 05/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a07931bfa53a5e4d77c2755b08745b8dd962b695
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: e874543b356ffe5dd821c6c2f20e487d79919449
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557158"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367925"
 ---
 # <a name="no-locxamarinforms-c-markup"></a>Xamarin.Forms Marcado de C#
 
 ![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 
 El marcado de C# es un conjunto opcional de métodos y clases auxiliares fluidas para simplificar el proceso de creación de interfaces de usuario declarativas Xamarin.Forms en C#. La API fluida proporcionada por el marcado de C# está disponible en el `Xamarin.Forms.Markup` espacio de nombres.
 
-Al igual que con XAML, el marcado de C# permite una separación limpia entre el marcado de la interfaz de usuario y la lógica de la interfaz de usuario. Esto se puede lograr separando el marcado de la interfaz de usuario y la lógica de la interfaz de usuario en archivos de clase parcial distintos. Por ejemplo, para una página de inicio de sesión, el marcado de la interfaz de usuario se encontraba en un archivo denominado *LoginPage.CS*, mientras que la lógica de la interfaz de usuario se encontraba en un archivo denominado *LoginPage.Logic.CS*.
+Al igual que con XAML, el marcado de C# permite una separación limpia entre el marcado de la interfaz de usuario y la lógica de la interfaz de usuario. Esto se puede lograr separando el marcado de la interfaz de usuario y la lógica de la interfaz de usuario en archivos de clase parcial distintos. Por ejemplo, para una página de inicio de sesión, el marcado de la interfaz de usuario se encontraba en un archivo denominado *LoginPage.CS* , mientras que la lógica de la interfaz de usuario se encontraba en un archivo denominado *LoginPage.Logic.CS*.
 
 El marcado de C# está disponible en Xamarin.Forms 4,6. Sin embargo, actualmente es experimental y solo se puede usar agregando la siguiente línea de código al archivo *app.CS* :
 
@@ -231,7 +231,7 @@ new Label { Text = "Tap Me" }
 
 Dado que un reconocedor de gestos es un `BindableObject` , puede utilizar los `Bind` `BindCommand` métodos de extensión y al inicializarlo. También puede inicializar tipos de reconocedor de gestos personalizados con el `Gesture<TGestureElement, TGestureRecognizer>` método de extensión.
 
-## <a name="layout"></a>Diseño
+## <a name="layout"></a>Layout
 
 El marcado de C# incluye una serie de métodos de extensión de diseño que admiten la colocación de vistas en diseños y contenido en vistas:
 
@@ -529,10 +529,10 @@ Para obtener más información sobre las características específicas de la pla
 
 Un orden recomendado y una agrupación de propiedades y métodos auxiliares es:
 
-- **Propósito**: cualquier propiedad o método auxiliar cuyo valor identifique el propósito del control (por ejemplo `Text` ,, `Placeholder` `Assign` ).
-- **Otros**: todas las propiedades o métodos auxiliares que no son de diseño ni de enlace, en la misma línea o en varias líneas.
-- **Diseño**: el diseño se ordena de forma ascendente: filas y columnas, opciones de diseño, margen, tamaño, relleno y alineación del contenido.
-- **BIND**: el enlace de datos se realiza al final de la cadena de métodos, con una propiedad enlazada por línea. Si la propiedad enlazable *predeterminada* está enlazada, debe estar al final de la cadena de métodos.
+- **Propósito** : cualquier propiedad o método auxiliar cuyo valor identifique el propósito del control (por ejemplo `Text` ,, `Placeholder` `Assign` ).
+- **Otros** : todas las propiedades o métodos auxiliares que no son de diseño ni de enlace, en la misma línea o en varias líneas.
+- **Diseño** : el diseño se ordena de forma ascendente: filas y columnas, opciones de diseño, margen, tamaño, relleno y alineación del contenido.
+- **BIND** : el enlace de datos se realiza al final de la cadena de métodos, con una propiedad enlazada por línea. Si la propiedad enlazable *predeterminada* está enlazada, debe estar al final de la cadena de métodos.
 
 En el código siguiente se muestra un ejemplo de la siguiente Convención:
 

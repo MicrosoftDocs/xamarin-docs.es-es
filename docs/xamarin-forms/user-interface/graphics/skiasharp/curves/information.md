@@ -10,16 +10,16 @@ ms.date: 09/12/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cf9ebb819d5b424963170d563575c4900bbed28b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 64a81b04961ebb0d03f661e99839b7ed78d710f2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556365"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368679"
 ---
 # <a name="path-information-and-enumeration"></a>Enumeración e información de trazado
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Obtener información sobre las rutas de acceso y enumerar el contenido_
 
@@ -141,7 +141,7 @@ Los miembros de la [`SKPathMeasureMatrixFlags`](xref:SkiaSharp.SKPathMeasureMatr
 
 La página de la **media de UNICYCLE** anima una figura de palo en un UNICYCLE que parece moverse hacia delante y hacia atrás a lo largo de una curva Bézier cúbica:
 
-[![Captura de pantalla triple de la página de la media de UNICYCLE](information-images/unicyclehalfpipe-small.png)](information-images/unicyclehalfpipe-large.png#lightbox "Captura de pantalla triple de la página de la media de UNICYCLE")
+[![Captura de pantalla triple de la página Half-Pipe de UNICYCLE](information-images/unicyclehalfpipe-small.png)](information-images/unicyclehalfpipe-large.png#lightbox "Captura de pantalla triple de la página Half-Pipe de UNICYCLE")
 
 El `SKPaint` objeto que se usa para contornear la media canalización y UNICYCLE se define como un campo en la `UnicycleHalfPipePage` clase. También se define el `SKPath` objeto de UNICYCLE:
 

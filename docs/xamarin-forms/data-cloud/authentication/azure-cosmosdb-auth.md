@@ -10,16 +10,16 @@ ms.date: 06/16/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2dacbc18fdbc7d9c7bd38d5ddfad2157e3a0a503
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: caa4f78d70f583c22fb4a00fd85b91ec7357013a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563294"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369745"
 ---
 # <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-no-locxamarinforms"></a>Autentique a los usuarios con una base de datos de documentos Azure Cosmos DB y Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 
 _Azure Cosmos DB bases de datos de documentos admiten colecciones con particiones, que pueden abarcar varios servidores y particiones, a la vez que admiten un almacenamiento y un rendimiento ilimitados. En este artículo se explica cómo combinar el control de acceso con colecciones con particiones, de modo que un usuario solo pueda tener acceso a sus propios documentos en una Xamarin.Forms aplicación._
 
@@ -51,7 +51,7 @@ El agente de token de recursos es un servicio de API Web de nivel intermedio, ho
 
 Para obtener más información acerca de la creación de particiones Cosmos DB, consulte [partición y escalado en Azure Cosmos dB](/azure/cosmos-db/partition-data/). Para obtener más información sobre el control de acceso de Cosmos DB, consulte [proteger el acceso a los datos de Cosmos dB](/azure/cosmos-db/secure-access-to-data/) y [el control de acceso en la API de SQL](/rest/api/documentdb/access-control-on-documentdb-resources/).
 
-## <a name="setup"></a>Configurar
+## <a name="setup"></a>Configuración
 
 El proceso para integrar el agente de token de recursos en una Xamarin.Forms aplicación es el siguiente:
 

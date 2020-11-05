@@ -10,18 +10,18 @@ ms.date: 02/18/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 43702453d1defc3b5a63aba845231f514913d7c5
-ms.sourcegitcommit: 1649554b8c08369b713d20246154455c0ba7d1c0
+ms.openlocfilehash: 0daae3edcfbf95d75c566b3ce10f20c83d099e13
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91712556"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368354"
 ---
 # <a name="no-locxamarinforms-mediaelement"></a>Xamarin.Forms MediaElement
 
 ![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
 
 [`MediaElement`](xref:Xamarin.Forms.MediaElement) es una vista para reproducir vídeo y audio. Los medios admitidos por la plataforma subyacente se pueden reproducir desde los orígenes siguientes:
 
@@ -324,7 +324,7 @@ Por lo general, no es necesario examinar la [`CurrentState`](xref:Xamarin.Forms.
 
 ## <a name="implement-custom-transport-controls"></a>Implementar controles de transporte personalizados
 
-Los controles de transporte de un reproductor multimedia incluyen los botones que realizan las funciones de **reproducción**, **pausa**y **detención**. Estos botones suelen identificarse con iconos conocidos en lugar de texto, y las funciones **Reproducir** y **Pausa** suelen combinarse en un mismo botón.
+Los controles de transporte de un reproductor multimedia incluyen los botones que realizan las funciones de **reproducción** , **pausa** y **detención**. Estos botones suelen identificarse con iconos conocidos en lugar de texto, y las funciones **Reproducir** y **Pausa** suelen combinarse en un mismo botón.
 
 De forma predeterminada, los [`MediaElement`](xref:Xamarin.Forms.MediaElement) controles de reproducción están deshabilitados. Esto le permite controlar `MediaElement` mediante programación o proporcionando sus propios controles de transporte. Para ello, `MediaElement` incluye [`Play`](xref:Xamarin.Forms.MediaElement.Play) [`Pause`](xref:Xamarin.Forms.MediaElement.Pause) [`Stop`](xref:Xamarin.Forms.MediaElement.Stop) los métodos, y.
 
@@ -377,7 +377,7 @@ En el ejemplo de XAML siguiente se muestra una página que contiene un [`MediaEl
 </ContentPage>
 ```
 
-En este ejemplo, los controles de transporte personalizados se definen como [`Button`](xref:Xamarin.Forms.Button) objetos. Sin embargo, solo hay dos `Button` objetos, donde el primero `Button` representa **Play** y **PAUSE**, y el segundo `Button` representa **Stop**. [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) los objetos se usan para habilitar y deshabilitar los botones, y para cambiar el primer botón entre **reproducir** y **pausar**. Para obtener más información acerca de los desencadenadores de datos, vea [ Xamarin.Forms desencadenadores](~/xamarin-forms/app-fundamentals/triggers.md).
+En este ejemplo, los controles de transporte personalizados se definen como [`Button`](xref:Xamarin.Forms.Button) objetos. Sin embargo, solo hay dos `Button` objetos, donde el primero `Button` representa **Play** y **PAUSE** , y el segundo `Button` representa **Stop**. [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) los objetos se usan para habilitar y deshabilitar los botones, y para cambiar el primer botón entre **reproducir** y **pausar**. Para obtener más información acerca de los desencadenadores de datos, vea [ Xamarin.Forms desencadenadores](~/xamarin-forms/app-fundamentals/triggers.md).
 
 El archivo de código subyacente tiene los controladores para los [`Clicked`](xref:Xamarin.Forms.Button.Clicked) eventos:
 

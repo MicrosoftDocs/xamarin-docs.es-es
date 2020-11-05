@@ -10,20 +10,20 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: dd1ef993fc2184561f01dad99aa01858251f8f73
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 1c345edf4c9980497d1fcd877a9142819afa9b56
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560681"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368655"
 ---
 # <a name="skiasharp-blend-modes"></a>Modos de combinación de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Estos artículos se centran en la [`BlendMode`](xref:SkiaSharp.SKPaint.BlendMode) propiedad de [`SKPaint`](xref:SkiaSharp.SKPaint) . La `BlendMode` propiedad es de tipo [`SKBlendMode`](xref:SkiaSharp.SKBlendMode) , una enumeración con 29 miembros.
 
-La `BlendMode` propiedad determina lo que ocurre cuando un objeto gráfico (a menudo denominado _origen_) se representa encima de los objetos gráficos existentes (denominados _destino_). Normalmente, esperamos que el nuevo objeto gráfico oculte los objetos debajo de él. Pero esto solo sucede porque el modo de mezcla predeterminado es `SKBlendMode.SrcOver` , lo que significa que el origen se dibuja _sobre_ el destino. Los otros 28 miembros de `SKBlendMode` causan otros efectos. En la programación de gráficos, la técnica de combinar objetos gráficos de varias maneras se denomina _composición_.
+La `BlendMode` propiedad determina lo que ocurre cuando un objeto gráfico (a menudo denominado _origen_ ) se representa encima de los objetos gráficos existentes (denominados _destino_ ). Normalmente, esperamos que el nuevo objeto gráfico oculte los objetos debajo de él. Pero esto solo sucede porque el modo de mezcla predeterminado es `SKBlendMode.SrcOver` , lo que significa que el origen se dibuja _sobre_ el destino. Los otros 28 miembros de `SKBlendMode` causan otros efectos. En la programación de gráficos, la técnica de combinar objetos gráficos de varias maneras se denomina _composición_.
 
 ## <a name="the-skblendmodes-enumeration"></a>La enumeración SKBlendModes
 
@@ -51,7 +51,7 @@ Los nombres de estas tres categorías tendrán un significado mayor en los debat
 
 Estos modos de mezcla se describen _aproximadamente_ en el mismo orden en el documento de **nivel 1 de composición y mezcla** de W3C, pero hay algunas diferencias: el `Src` modo se denomina _copia_ en el documento W3C y `Plus` se llama _más claro_. En el documento W3C se define un modo de mezcla _normal_ que no se incluye en `SKBlendModes` porque sería igual que `SrcOver` . El `Modulate` modo de mezcla (en la parte superior de la primera columna) no se incluye en el documento de W3C y la explicación del `Multiply` modo precede a `Screen` .
 
-Dado que el `Modulate` modo de mezcla es único para Skia, se tratará como un modo Porter-Duff adicional y como un modo separable.
+Dado que el `Modulate` modo de mezcla es único para Skia, se tratará como un modo de Porter-Duff adicional y como un modo separable.
 
 ## <a name="the-importance-of-transparency"></a>La importancia de la transparencia
 
@@ -81,9 +81,9 @@ Verá este fondo rojo detrás de los gráficos de SkiaSharp porque el lienzo de 
 
 En el artículo [**SkiaSharp transparencia**](../../basics/transparency.md) se mostraron algunas técnicas básicas para usar la transparencia con el fin de organizar varios gráficos en una imagen compuesta. Los modos de mezcla van más allá de eso, pero la transparencia sigue siendo fundamental para los modos de mezcla.
 
-## <a name="skiasharp-porter-duff-blend-modes"></a>[SkiaSharp Porter-Duff Blend modes](porter-duff.md)
+## <a name="skiasharp-porter-duff-blend-modes"></a>[SkiaSharp Porter-Duff modos de fusión](porter-duff.md)
 
-Use los modos de mezcla Porter-Duff para crear escenas basadas en imágenes de origen y de destino.
+Use los modos Porter-Duff Blend para crear escenas basadas en imágenes de origen y de destino.
 
 ## <a name="skiasharp-separable-blend-modes"></a>[Modos de fusión separables de SkiaSharp](separable.md)
 

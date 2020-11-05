@@ -1,5 +1,5 @@
 ---
-title: Usar el inicio de sesión con Apple paraXamarin.Forms
+title: Usar el inicio de sesión con Apple para Xamarin.Forms
 description: Aprenda a implementar el inicio de sesión con Apple en sus Xamarin.Forms aplicaciones móviles.
 ms.prod: xamarin
 ms.assetid: 2E47E7F2-93D4-4CA3-9E66-247466D25E4D
@@ -10,16 +10,16 @@ ms.date: 09/10/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fb37f8fb2d01154bf2e749e685c4e96c12d6bc5e
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ca039e45bd7456f2cde2a733748777cddee0e8a8
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139495"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368614"
 ---
-# <a name="use-sign-in-with-apple-in-xamarinforms"></a>Usar el inicio de sesión con Apple enXamarin.Forms
+# <a name="use-sign-in-with-apple-in-no-locxamarinforms"></a>Usar el inicio de sesión con Apple en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/signinwithapple/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/signinwithapple/)
 
 Iniciar sesión con Apple es para todas las aplicaciones nuevas de iOS 13 que usan servicios de autenticación de terceros. Los detalles de implementación entre iOS y Android son bastante diferentes. En esta guía se explica cómo puede hacerlo hoy mismo en Xamarin.Forms .
 
@@ -34,8 +34,8 @@ Este ejemplo ofrece una implementación de bien fundamentadas para que Apple Sig
 
 Usamos dos Azure Functions para ayudar con el flujo de autenticación:
 
-1. `applesignin_auth`: Genera la dirección URL de autorización de inicio de sesión de Apple y la redirige a ella.  Haremos esto en el lado del servidor, en lugar de en la aplicación móvil, para que podamos almacenar en caché el `state` y validarlo cuando los servidores de Apple envíen una devolución de llamada.
-2. `applesignin_callback`: Controla la devolución de llamada POST de Apple y intercambia de forma segura el código de autorización para un token de acceso y un token de identificador.  Por último, redirige de nuevo al esquema de URI de la aplicación, devolviendo los tokens en un fragmento de dirección URL.
+1. `applesignin_auth` : Genera la dirección URL de autorización de inicio de sesión de Apple y la redirige a ella.  Haremos esto en el lado del servidor, en lugar de en la aplicación móvil, para que podamos almacenar en caché el `state` y validarlo cuando los servidores de Apple envíen una devolución de llamada.
+2. `applesignin_callback` : Controla la devolución de llamada POST de Apple y intercambia de forma segura el código de autorización para un token de acceso y un token de identificador.  Por último, redirige de nuevo al esquema de URI de la aplicación, devolviendo los tokens en un fragmento de dirección URL.
 
 La aplicación móvil se registra para controlar el esquema de URI personalizado que hemos seleccionado (en este caso `xamarinformsapplesignin://` ), por lo que la `applesignin_callback` función puede retransmitir los tokens de vuelta a él.
 
@@ -46,7 +46,7 @@ Cuando el usuario inicia la autenticación, se producen los pasos siguientes:
 3. El usuario escribe sus credenciales de forma segura en la página de autorización de inicio de sesión de Apple hospedada en los servidores de Apple.
 4. Una vez que el flujo de inicio de sesión de Apple finaliza en los servidores de Apple, Apple redirige a la `redirect_uri` que será la `applesignin_callback` función de Azure.
 5. La solicitud de Apple enviada a la `applesignin_callback` función se valida para asegurarse de `state` que se devuelve el correcto y que las notificaciones del token de identificador son válidas.
-6. La `applesignin_callback` función de Azure intercambia el `code` publicado por Apple para un token de _acceso_, un _token de actualización_y un _token de identificador_ (que contiene notificaciones sobre el ID. de usuario, el nombre y el correo electrónico).
+6. La `applesignin_callback` función de Azure intercambia el `code` publicado por Apple para un token de _acceso_ , un _token de actualización_ y un _token de identificador_ (que contiene notificaciones sobre el ID. de usuario, el nombre y el correo electrónico).
 7. `applesignin_callback`Finalmente, la función de Azure redirige de nuevo al esquema de URI de la aplicación ( `xamarinformsapplesignin://` ) anexando un fragmento de URI con los tokens (por ejemplo, `xamarinformsapplesignin://#access_token=...&refresh_token=...&id_token=...` ).
 8. La aplicación móvil analiza el fragmento de URI en `AppleAccount` y valida que la `nonce` demanda recibida coincida con la `nonce` generada al inicio del flujo.
 9. La aplicación móvil ya está autenticada.
@@ -59,12 +59,12 @@ Este ejemplo utiliza Azure Functions. Como alternativa, un controlador de ASP.NE
 
 Deben configurarse varias opciones de configuración de la aplicación al usar Azure Functions:
 
-- `APPLE_SIGNIN_KEY_ID`: Este es el `KeyId` anterior.
+- `APPLE_SIGNIN_KEY_ID` : Este es el `KeyId` anterior.
 - `APPLE_SIGNIN_TEAM_ID`: Suele ser el identificador de equipo que se encuentra en el [Perfil de pertenencia](https://developer.apple.com/account/#/membership) _._
-- `APPLE_SIGNIN_SERVER_ID`: Este es el `ServerId` anterior.  *No* es el identificador de la _agrupación_de aplicaciones, sino el *identificador* del *identificador de servicios* que creó.
-- `APPLE_SIGNIN_APP_CALLBACK_URI`: Este es el esquema de URI personalizado que quiere redirigir de nuevo a la aplicación con.  En este ejemplo `xamarinformsapplesignin://` se utiliza.
-- `APPLE_SIGNIN_REDIRECT_URI`-La *dirección URL de redireccionamiento* que se configura al crear el *identificador de servicios* en la sección de configuración *de inicio de sesión de Apple* .  Para probarlo, podría ser similar a lo siguiente:`http://local.test:7071/api/applesignin_callback`
-- `APPLE_SIGNIN_P8_KEY`: El contenido de texto del `.p8` archivo, con todas las `\n` nuevas líneas quitadas, por lo que es una cadena larga.
+- `APPLE_SIGNIN_SERVER_ID`: Este es el `ServerId` anterior.  *No* es el identificador de la _agrupación_ de aplicaciones, sino el *identificador* del *identificador de servicios* que creó.
+- `APPLE_SIGNIN_APP_CALLBACK_URI` : Este es el esquema de URI personalizado que quiere redirigir de nuevo a la aplicación con.  En este ejemplo `xamarinformsapplesignin://` se utiliza.
+- `APPLE_SIGNIN_REDIRECT_URI` -La *dirección URL de redireccionamiento* que se configura al crear el *identificador de servicios* en la sección de configuración *de inicio de sesión de Apple* .  Para probarlo, podría ser similar a lo siguiente: `http://local.test:7071/api/applesignin_callback`
+- `APPLE_SIGNIN_P8_KEY` : El contenido de texto del `.p8` archivo, con todas las `\n` nuevas líneas quitadas, por lo que es una cadena larga.
 
 ### <a name="security-considerations"></a>Consideraciones sobre la seguridad
 

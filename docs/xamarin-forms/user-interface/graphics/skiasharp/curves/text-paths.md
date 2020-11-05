@@ -10,16 +10,16 @@ ms.date: 08/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c78d6777db4e8dcc3a8302d418f1c87440dc90a5
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 3da24f803c6d41564c2c4d556a108a324aa78dc4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562059"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369993"
 ---
 # <a name="paths-and-text-in-skiasharp"></a>Rutas de acceso y texto en SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explorar la intersección de rutas de acceso y texto_
 

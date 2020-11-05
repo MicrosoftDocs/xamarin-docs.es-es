@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 844e04b91910152954973f7e6f10c0d56acadf22
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 404e84e9da1df8a44fa176a17f2407e314ae7968
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563695"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368321"
 ---
 # <a name="main-thread-control-updates-on-ios"></a>Actualizaciones principales del control de subprocesos en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Este específico de la plataforma iOS permite realizar actualizaciones del diseño y la representación del control en el subproceso principal, en lugar de realizarse en un subproceso en segundo plano. Rara vez es necesario, pero en algunos casos puede impedir bloqueos. Su consumido en XAML estableciendo la `Application.HandleControlUpdatesOnMainThread` propiedad enlazable en `true` :
 

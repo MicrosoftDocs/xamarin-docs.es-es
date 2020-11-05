@@ -10,16 +10,16 @@ ms.date: 07/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 074af11d7873ed44c0a48f923f7560dd50cea6a5
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 21e06560bd67683496b10c8e8c9c3fff520fc36a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563242"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368172"
 ---
 # <a name="path-effects-in-skiasharp"></a>Efectos de la ruta de acceso en SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Descubrir los distintos efectos de trazado que permiten usar las rutas de acceso para el trazado y el relleno_
 
@@ -421,13 +421,13 @@ Una cadena o cable de distribución de peso uniforme se bloquea en forma de una 
 
 `y = a · cosh(x / a)`
 
-*Cosh* es la función coseno hiperbólica. Para *x* igual a 0, *cosh* es cero e *y* es igual *a*. Este es el centro de la catenaria. Al igual que la función de *coseno* , se dice que *cosh* es *par*, lo que significa que *cosh (– x)* es igual a *cosh (x)* y los valores aumentan para aumentar los argumentos positivos o negativos. Estos valores describen las curvas que forman los lados de la catenaria.
+*Cosh* es la función coseno hiperbólica. Para *x* igual a 0, *cosh* es cero e *y* es igual *a*. Este es el centro de la catenaria. Al igual que la función de *coseno* , se dice que *cosh* es *par* , lo que significa que *cosh (– x)* es igual a *cosh (x)* y los valores aumentan para aumentar los argumentos positivos o negativos. Estos valores describen las curvas que forman los lados de la catenaria.
 
 Buscar el valor adecuado de para ajustar la *catenaria a las* dimensiones de la página del teléfono no es un cálculo directo. Si *w* y *h* son el ancho y el alto de un rectángulo, el valor óptimo de *un* satisface la siguiente ecuación:
 
 `cosh(w / 2 / a) = 1 + h / a`
 
-El método siguiente de la [`LinkedChainPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) clase incorpora esa igualdad haciendo referencia a las dos expresiones de la izquierda y derecha del signo igual como `left` y `right` . Para valores *pequeños de,* `left` es mayor que `right` ; para los valores grandes de *a*, `left` es menor que `right` . El `while` bucle se reduce en un valor óptimo de *un*:
+El método siguiente de la [`LinkedChainPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) clase incorpora esa igualdad haciendo referencia a las dos expresiones de la izquierda y derecha del signo igual como `left` y `right` . Para valores *pequeños de,* `left` es mayor que `right` ; para los valores grandes de *a* , `left` es menor que `right` . El `while` bucle se reduce en un valor óptimo de *un* :
 
 ```csharp
 float FindOptimumA(float width, float height)
@@ -691,7 +691,7 @@ Por esta razón, el programa calcula primero un valor denominado `length` que es
 
 ## <a name="from-path-to-path-again"></a>Volver a la ruta de acceso
 
-En la parte inferior del `DrawSurface` controlador de la **cinta transportadora**, comente la `canvas.DrawPath` llamada y reemplácela por el código siguiente:
+En la parte inferior del `DrawSurface` controlador de la **cinta transportadora** , comente la `canvas.DrawPath` llamada y reemplácela por el código siguiente:
 
 ```csharp
 SKPath newPath = new SKPath();

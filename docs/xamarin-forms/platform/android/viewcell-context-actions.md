@@ -10,16 +10,16 @@ ms.date: 09/24/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6cbdea3656daa4df894a79edc70453c78e3844bc
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: e829c7f3763d25574b9ca70c1118ee9521633b48
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556755"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368471"
 ---
 # <a name="viewcell-context-actions-on-android"></a>Acciones de contexto ViewCell en Android
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 De forma predeterminada Xamarin.Forms , en 4,3, cuando un [`ViewCell`](xref:Xamarin.Forms.ViewCell) en una aplicación de Android define acciones de contexto para cada elemento en [`ListView`](xref:Xamarin.Forms.ListView) , el menú acciones de contexto se actualiza cuando se cambia el elemento seleccionado en el `ListView` . Sin embargo, en las versiones anteriores del Xamarin.Forms menú acciones de contexto no se actualizaba y este comportamiento se denomina `ViewCell` modo heredado. Este modo heredado puede producir un comportamiento incorrecto si `ListView` usa un [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) para establecer su a `ItemTemplate` partir de [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) objetos que definen diferentes acciones de contexto.
 

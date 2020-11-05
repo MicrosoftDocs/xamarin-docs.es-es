@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3baadfcb06a595c5809dbabd484a8f886ab84aec
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: e041c766d0a4beefb8b4c74b9024c7554c818511
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562371"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368640"
 ---
 # <a name="soft-keyboard-input-mode-on-android"></a>Modo de entrada de teclado de software en Android
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esta plataforma Android específica se usa para establecer el modo de funcionamiento de un área de entrada de teclado en pantalla y se utiliza en XAML estableciendo la [`Application.WindowSoftInputModeAdjust`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Application.WindowSoftInputModeAdjustProperty) propiedad adjunta en un valor de la [`WindowSoftInputModeAdjust`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust) enumeración:
 
@@ -45,7 +45,7 @@ El `Application.On<Android>` método especifica que este específico de la plata
 
 El resultado es que el modo de funcionamiento del área de entrada de teclado en pantalla se puede establecer cuando un control de entrada tiene el foco:
 
-[![Modo operativo de teclado en pantalla específico de la plataforma](soft-keyboard-input-mode-images/pan-resize.png)](soft-keyboard-input-mode-images/pan-resize-large.png#lightbox "Modo operativo de teclado en pantalla específico de la plataforma")
+[![Modo operativo de teclado en pantalla específico de la plataforma](soft-keyboard-input-mode-images/pan-resize.png)](soft-keyboard-input-mode-images/pan-resize-large.png#lightbox "Modo operativo de teclado en pantalla Platform-Specific")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

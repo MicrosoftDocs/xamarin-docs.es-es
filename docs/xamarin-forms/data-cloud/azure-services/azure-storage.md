@@ -10,16 +10,16 @@ ms.date: 12/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cba4c670e9e092eef92f7b37eefc750782c94367
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: bd726a5e5d6064ecb9aa1c862697e08a9c4733f4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563840"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370122"
 ---
 # <a name="store-and-access-data-in-azure-storage-from-no-locxamarinforms"></a>Almacenar y obtener acceso a los datos de Azure Storage desde Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 
 _Azure Storage es una solución de almacenamiento en la nube escalable que se puede usar para almacenar datos estructurados y no estructurados. En este artículo se muestra cómo usar Xamarin.Forms para almacenar datos binarios y de texto en Azure Storage y cómo obtener acceso a los datos._
 
@@ -61,11 +61,11 @@ Un BLOB es un archivo de cualquier tipo y tamaño. Azure Storage admite tres tip
 
 Un BLOB se carga en Azure Storage y se descarga de Azure Storage, como un flujo de bytes. Por lo tanto, los archivos se deben convertir en una secuencia de bytes antes de la carga y volver a convertirlos a su representación original después de la descarga.
 
-Cada objeto almacenado en Azure Storage tiene una dirección URL única. El nombre de la cuenta de almacenamiento forma el subdominio de esa dirección y la combinación de subdominio y nombre de dominio forma un *punto de conexión* para la cuenta de almacenamiento. Por ejemplo, si la cuenta de almacenamiento se denomina *mystorageaccount*, el punto de conexión de BLOB predeterminado de la cuenta de almacenamiento es `https://mystorageaccount.blob.core.windows.net` .
+Cada objeto almacenado en Azure Storage tiene una dirección URL única. El nombre de la cuenta de almacenamiento forma el subdominio de esa dirección y la combinación de subdominio y nombre de dominio forma un *punto de conexión* para la cuenta de almacenamiento. Por ejemplo, si la cuenta de almacenamiento se denomina *mystorageaccount* , el punto de conexión de BLOB predeterminado de la cuenta de almacenamiento es `https://mystorageaccount.blob.core.windows.net` .
 
 La dirección URL para el acceso a un objeto en una cuenta de almacenamiento se crea anexando la ubicación del objeto en la cuenta de almacenamiento al extremo. Por ejemplo, una dirección de BLOB tendrá el formato `https://mystorageaccount.blob.core.windows.net/mycontainer/myblob` .
 
-## <a name="setup"></a>Configurar
+## <a name="setup"></a>Configuración
 
 El proceso para integrar una cuenta de Azure Storage en una Xamarin.Forms aplicación de es el siguiente:
 

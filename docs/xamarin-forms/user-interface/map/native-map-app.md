@@ -10,16 +10,16 @@ ms.date: 10/30/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ede34258650c378a45ee694f90de1e8b249acf71
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: cbd61d956b17df556cb4bb452f60b0e41b31b707
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559888"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368250"
 ---
 # <a name="launch-the-native-map-app-from-no-locxamarinforms"></a>Inicie la aplicación de asignación nativa desde Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 La aplicación de asignación nativa en cada plataforma se puede iniciar desde una Xamarin.Forms aplicación mediante la Xamarin.Essentials `Launcher` clase. Esta clase permite a una aplicación abrir otra aplicación a través de su esquema de URI personalizado. La funcionalidad del iniciador se puede invocar con el `OpenAsync` método, pasando `string` un `Uri` argumento o que representa el esquema de la dirección URL personalizada que se va a abrir. Para obtener más información acerca de Xamarin.Essentials , vea [Xamarin.Essentials](~/essentials/index.md?context=xamarin/xamarin-forms) .
 

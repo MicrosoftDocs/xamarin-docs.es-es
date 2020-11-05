@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/16/2019
-ms.openlocfilehash: 526de99f32a8682cbe6862e46f90c674cf7d3dc6
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: a092b5f84ebf0481652f5093a4898e44a55e19f8
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91430367"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369563"
 ---
 # <a name="use-touch-id-and-face-id-with-xamarinios"></a>Uso de Touch ID y el identificador de caras con Xamarin. iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-faceidsample/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/ios-samples/ios11-faceidsample/)
 
 iOS admite dos sistemas de autenticación biométricos:
 

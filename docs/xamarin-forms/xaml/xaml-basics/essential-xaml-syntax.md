@@ -10,16 +10,16 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e8afb0aa2a36a73af6c63e48a6c1048d8b69cf90
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 23d24ab7477bb7d9e95e4d78f25f334ae13a8ea2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563983"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368523"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintaxis XAML esencial
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _XAML está diseñado principalmente para crear instancias e inicializar objetos. Pero a menudo, las propiedades se deben establecer en objetos complejos que no se pueden representar fácilmente como cadenas XML y, en ocasiones, las propiedades definidas por una clase deben establecerse en una clase secundaria. Estas dos necesidades requieren las características esenciales de la sintaxis XAML de los elementos de propiedad y las propiedades adjuntas._
 
@@ -172,7 +172,7 @@ Este es el principio del archivo XAML para una `GridDemoPage` clase, que muestra
 
 Observe la sintaxis abreviada para definir celdas de tamaño automático, celdas de anchos de píxel y alto y configuración de estrella.
 
-## <a name="attached-properties"></a>Propiedades asociadas
+## <a name="attached-properties"></a>Propiedades adjuntas
 
 Acaba de observar que `Grid` requiere elementos de propiedad para las `RowDefinitions` colecciones y `ColumnDefinitions` para definir las filas y columnas. Sin embargo, también debe haber alguna manera para que el programador indique la fila y la columna donde reside cada elemento secundario de `Grid` .
 

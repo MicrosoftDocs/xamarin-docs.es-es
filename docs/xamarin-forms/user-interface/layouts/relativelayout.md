@@ -11,16 +11,16 @@ ms.custom: contperfq1
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d350ceee778c9f9ba9f25555a89a925558c6d38b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 26c7294b816dbfeb42a7a313ec9b8ad1dcbf6583
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556846"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369251"
 ---
 # <a name="no-locxamarinforms-relativelayout"></a>Xamarin.Forms RelativeLayout
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-relativelayoutdemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-relativelayoutdemos)
 
 [![::: no-LOC (Xamarin. Forms)::: RelativeLayout](relativelayout-images/layouts.png)](relativelayout-images/layouts-large.png#lightbox)
 
@@ -110,7 +110,7 @@ En las capturas de pantalla siguientes se muestra el diseño resultante:
 
 ![Los elementos secundarios se colocan en un RelativeLayout con valores absolutos](relativelayout-images/absolute-values.png)
 
-A continuación se muestra el código de C# equivalente:
+El código de C# equivalente se muestra a continuación:
 
 ```csharp
 public class StylishHeaderDemoPageCS : ContentPage

@@ -10,16 +10,16 @@ ms.date: 02/26/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d65352022057ce32bd969950c2165ad530c05bbb
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 8904f3392e935b3d8aa08d87d208bdb46ac37b30
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559628"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368079"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>Adición de datos a la colección de elementos de un selector
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
 
 _La vista selector es un control para seleccionar un elemento de texto de una lista de datos. En este artículo se explica cómo rellenar un selector con datos agregándolo a la colección de elementos y cómo responder a la selección de elementos por parte del usuario._
 
@@ -42,7 +42,7 @@ Antes de Xamarin.Forms 2.3.4, el proceso de rellenar un [`Picker`](xref:Xamarin.
 </Picker>
 ```
 
-A continuación se muestra el código de C# equivalente:
+El código de C# equivalente se muestra a continuación:
 
 ```csharp
 var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };

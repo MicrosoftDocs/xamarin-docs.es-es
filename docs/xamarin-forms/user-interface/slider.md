@@ -10,16 +10,16 @@ ms.date: 02/27/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4d53f999e27aa5aea852f09e8650ea66aac1d9b9
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 364cda6372986113e8a782a061783e0ca5455f3b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558835"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368549"
 ---
 # <a name="no-locxamarinforms-slider"></a>Xamarin.Forms Hasta
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 
 _Use un control deslizante para seleccionar entre un intervalo de valores continuos._
 
@@ -298,7 +298,7 @@ Por ejemplo, para el intervalo predeterminado de 0 a 1, la `StepFrequency` propi
 
 ### <a name="the-stepslider-solution"></a>La solución StepSlider
 
-Un más versátil `StepSlider` se describe en el [capítulo 27. Los representadores personalizados](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) del libro que *crean Xamarin.Forms Mobile Apps con *. `StepSlider`Es similar a `Slider` , pero agrega una `Steps` propiedad para especificar el número de valores entre `Minimum` y `Maximum` .
+Un más versátil `StepSlider` se describe en el [capítulo 27. Los representadores personalizados](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) del libro que *crean Xamarin.Forms Mobile Apps con*. `StepSlider`Es similar a `Slider` , pero agrega una `Steps` propiedad para especificar el número de valores entre `Minimum` y `Maximum` .
 
 ## <a name="sliders-for-color-selection"></a>Controles deslizantes para la selección de color
 

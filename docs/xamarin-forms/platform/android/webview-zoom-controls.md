@@ -10,16 +10,16 @@ ms.date: 05/09/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1e41efd4bf100205f20b8f4e02a74fad193134a4
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 12c8eafd9768ee0da232ead4aac6cd6bdc3c9a2d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556430"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369615"
 ---
 # <a name="webview-zoom-on-android"></a>Zoom de WebView en Android
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Este específico de la plataforma Android permite el aumento del zoom y un control de zoom en un [`WebView`](xref:Xamarin.Forms.WebView) . Se consume en XAML estableciendo las `WebView.EnableZoomControls` `WebView.DisplayZoomControls` propiedades enlazables y en `boolean` valores:
 
