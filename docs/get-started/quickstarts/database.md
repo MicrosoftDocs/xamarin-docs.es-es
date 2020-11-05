@@ -13,10 +13,10 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 0992f7db22d79e58db0306bc09329f2852ef9489
-ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
+ms.sourcegitcommit: 145bd7550d19088c84949ecf5b1cc39002183234
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
+ms.lasthandoff: 11/02/2020
 ms.locfileid: "92897525"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Almacenamiento de datos en una base de datos de SQLite.NET local
@@ -53,8 +53,8 @@ Antes de intentar este inicio rápido, debe completar correctamente el [inicio r
 
     > [!NOTE]
     > Hay varios paquetes NuGet con nombres similares. El paquete correcto tiene estos atributos:
-    > - **Propietarios** : praeclarum
-    > - **Autores** : SQLite-net
+    > - **Propietarios:** praeclarum
+    > - **Autores:** SQLite-net
     > - **Vínculo de NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
     > A pesar del nombre del paquete, este paquete NuGet puede usarse en proyectos de .NET Standard.
@@ -270,8 +270,8 @@ Antes de intentar este inicio rápido, debe completar correctamente el [inicio r
 
     > [!NOTE]
     > Hay varios paquetes NuGet con nombres similares. El paquete correcto tiene estos atributos:
-    > - **Propietarios** : praeclarum
-    > - **Autores** : SQLite-net
+    > - **Propietarios:** praeclarum
+    > - **Autores:** SQLite-net
     > - **Vínculo de NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
     > A pesar del nombre del paquete, este paquete NuGet puede usarse en proyectos de .NET Standard.
