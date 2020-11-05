@@ -10,16 +10,16 @@ ms.date: 02/10/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3731f35ab03edf9b65c3adca7a2091c2a609b552
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 4831ed148e186783667046afd49bf490c666b87b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563398"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367080"
 ---
 # <a name="custom-animations-in-no-locxamarinforms"></a>Animaciones personalizadas en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
 
 _La clase Animation es el bloque de creación de todas las Xamarin.Forms animaciones, con los métodos de extensión de la clase ViewExtensions que crea uno o varios objetos Animation. En este artículo se muestra cómo usar la clase Animation para crear y cancelar animaciones, sincronizar varias animaciones y crear animaciones personalizadas que animan propiedades que no están animadas por los métodos de animación existentes._
 
@@ -49,13 +49,13 @@ Tenga en cuenta que [ `Commit` ] (XREF: Xamarin.Forms . Animation. Commit () Xam
 
 Los siguientes argumentos se especifican en el `Commit` método:
 
-- El primer argumento (*propietario*) identifica el propietario de la animación. Puede ser el elemento visual en el que se aplica la animación u otro elemento visual, como la página.
-- El segundo argumento (*Name*) identifica la animación con un nombre. El nombre se combina con el propietario para identificar de forma única la animación. Esta identificación única se puede usar para determinar si la animación se está ejecutando ([ `AnimationIsRunning` ] (XREF: Xamarin.Forms . AnimationExtensions. AnimationIsRunning ( Xamarin.Forms . IAnimatable, System. String))) o para cancelarla ([ `AbortAnimation` ] (XREF: Xamarin.Forms . AnimationExtensions. AbortAnimation ( Xamarin.Forms . IAnimatable, System. String))).
-- El tercer argumento (*Rate*) indica el número de milisegundos entre cada llamada al método de devolución de llamada definido en el [`Animation`](xref:Xamarin.Forms.Animation) constructor.
-- El cuarto argumento (*length*) indica la duración de la animación, en milisegundos.
-- El quinto argumento (*aceleración*) define la función de aceleración que se va a usar en la animación. Como alternativa, se puede especificar la función de aceleración como argumento para el [`Animation`](xref:Xamarin.Forms.Animation) constructor. Para obtener más información sobre las funciones de aceleración, consulte [funciones de aceleración](~/xamarin-forms/user-interface/animation/easing.md).
-- El sexto argumento (*finalizado*) es una devolución de llamada que se ejecutará cuando se complete la animación. Esta devolución de llamada toma dos argumentos, con el primer argumento que indica un valor final, y el segundo argumento es un `bool` que se establece en `true` si se canceló la animación. Como alternativa, la devolución de llamada *finalizada* se puede especificar como argumento para el [`Animation`](xref:Xamarin.Forms.Animation) constructor. Sin embargo, con una sola animación, si se especifican devoluciones de llamada *terminadas* tanto en el `Animation` constructor como en el `Commit` método, solo se ejecutará la devolución de llamada especificada en el `Commit` método.
-- El séptimo argumento (*REPEAT*) es una devolución de llamada que permite repetir la animación. Se llama al final de la animación y `true` la devolución indica que se debe repetir la animación.
+- El primer argumento ( *propietario* ) identifica el propietario de la animación. Puede ser el elemento visual en el que se aplica la animación u otro elemento visual, como la página.
+- El segundo argumento ( *Name* ) identifica la animación con un nombre. El nombre se combina con el propietario para identificar de forma única la animación. Esta identificación única se puede usar para determinar si la animación se está ejecutando ([ `AnimationIsRunning` ] (XREF: Xamarin.Forms . AnimationExtensions. AnimationIsRunning ( Xamarin.Forms . IAnimatable, System. String))) o para cancelarla ([ `AbortAnimation` ] (XREF: Xamarin.Forms . AnimationExtensions. AbortAnimation ( Xamarin.Forms . IAnimatable, System. String))).
+- El tercer argumento ( *Rate* ) indica el número de milisegundos entre cada llamada al método de devolución de llamada definido en el [`Animation`](xref:Xamarin.Forms.Animation) constructor.
+- El cuarto argumento ( *length* ) indica la duración de la animación, en milisegundos.
+- El quinto argumento ( *aceleración* ) define la función de aceleración que se va a usar en la animación. Como alternativa, se puede especificar la función de aceleración como argumento para el [`Animation`](xref:Xamarin.Forms.Animation) constructor. Para obtener más información sobre las funciones de aceleración, consulte [funciones de aceleración](~/xamarin-forms/user-interface/animation/easing.md).
+- El sexto argumento ( *finalizado* ) es una devolución de llamada que se ejecutará cuando se complete la animación. Esta devolución de llamada toma dos argumentos, con el primer argumento que indica un valor final, y el segundo argumento es un `bool` que se establece en `true` si se canceló la animación. Como alternativa, la devolución de llamada *finalizada* se puede especificar como argumento para el [`Animation`](xref:Xamarin.Forms.Animation) constructor. Sin embargo, con una sola animación, si se especifican devoluciones de llamada *terminadas* tanto en el `Animation` constructor como en el `Commit` método, solo se ejecutará la devolución de llamada especificada en el `Commit` método.
+- El séptimo argumento ( *REPEAT* ) es una devolución de llamada que permite repetir la animación. Se llama al final de la animación y `true` la devolución indica que se debe repetir la animación.
 
 El efecto general es crear una animación que aumente la [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) propiedad de un [`Image`](xref:Xamarin.Forms.Image) de 1 a 2, más de 2 segundos (2000 milisegundos), mediante la [`Linear`](xref:Xamarin.Forms.Easing.Linear) función de aceleración. Cada vez que se completa la animación, su `Scale` propiedad se restablece en 1 y la animación se repite.
 

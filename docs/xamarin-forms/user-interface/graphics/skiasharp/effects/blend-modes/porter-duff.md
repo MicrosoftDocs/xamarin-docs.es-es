@@ -1,6 +1,6 @@
 ---
-title: Porter-Duff modos de Blend
-description: Use los modos de mezcla Porter-Duff para crear escenas basadas en imágenes de origen y de destino.
+title: Modos de Porter-Duff Blend
+description: Use los modos Porter-Duff Blend para crear escenas basadas en imágenes de origen y de destino.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5
@@ -10,18 +10,18 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 12e3e95b0f87d0e93d157bebe057874430866c2b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 104039bdb211eb823c4306071804e9680793840a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560785"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365845"
 ---
-# <a name="porter-duff-blend-modes"></a>Porter-Duff modos de Blend
+# <a name="porter-duff-blend-modes"></a>Modos de Porter-Duff Blend
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Los modos de mezcla Porter-Duff se denominan después de Thomas Porter y Tom Duff, que desarrollaron un álgebra de la composición mientras trabajaba con Lucasfilm. Las [_imágenes digitales de composición_](https://graphics.pixar.com/library/Compositing/paper.pdf) de papel se publicaron en el problema 1984 de julio de los _gráficos de equipos_, páginas 253 a 259. Estos modos de mezcla son esenciales para la composición, que consiste en ensamblar varias imágenes en una escena compuesta:
+Los modos de Porter-Duff Blend se denominan después de Thomas Porter y Tom Duff, que desarrolló un álgebra de la composición mientras trabajaba para Lucasfilm. Las [_imágenes digitales de composición_](https://graphics.pixar.com/library/Compositing/paper.pdf) de papel se publicaron en el problema 1984 de julio de los _gráficos de equipos_ , páginas 253 a 259. Estos modos de mezcla son esenciales para la composición, que consiste en ensamblar varias imágenes en una escena compuesta:
 
 ![Ejemplo de Porter-Duff](porter-duff-images/PorterDuffSample.png "Ejemplo de Porter-Duff")
 
@@ -47,15 +47,15 @@ Los píxeles transparentes del origen permiten mostrar el fondo, mientras que lo
 
 Sin embargo, es posible especificar un modo de mezcla diferente para un efecto diferente. Si especifica `SKBlendMode.DstOver` , en el área donde se entrecruzan el origen y el destino, el destino aparece en lugar del origen:
 
-![Destino de Porter-Duff](porter-duff-images/PorterDuffDstOver.png "Destino de Porter-Duff")
+![Destino de Porter-Duff](porter-duff-images/PorterDuffDstOver.png "Porter-Duff destino")
 
 El `SKBlendMode.DstIn` modo de mezcla muestra solo el área donde el destino y el origen intersecan con el color de destino:
 
-![Destino de Porter-Duff en](porter-duff-images/PorterDuffDstIn.png "Destino de Porter-Duff en")
+![Destino de Porter-Duff en](porter-duff-images/PorterDuffDstIn.png "Porter-Duff destino en")
 
 El modo de mezcla de `SKBlendMode.Xor` (Exclusive o) hace que no aparezca nada donde se superpongan las dos áreas:
 
-![Porter-Duff or exclusivo](porter-duff-images/PorterDuffXor.png "Porter-Duff or exclusivo")
+![Porter-Duff or exclusivo](porter-duff-images/PorterDuffXor.png "Porter-Duff exclusivo o")
 
 Los rectángulos de origen y destino de color dividen de forma eficaz la superficie de presentación en cuatro áreas únicas que se pueden colorear de varias maneras correspondientes a la presencia de los rectángulos de origen y de destino:
 
@@ -69,7 +69,7 @@ Hacia el final de la _composición de imágenes digitales_ (página 256), Porter
 
 Skia agrega un modo decimocuarto denominado `Modulate` que es muy similar a `Plus` , salvo que se multiplican los colores de origen y de destino. Se puede tratar como un modo de mezcla Porter-Duff adicional.
 
-Estos son los 14 modos Porter-Duff, tal y como se define en SkiaSharp. En la tabla se muestra cómo se colorea cada una de las tres áreas que no están en blanco en el diagrama anterior:
+Estos son los 14 modos Porter-Duff tal y como se define en SkiaSharp. En la tabla se muestra cómo se colorea cada una de las tres áreas que no están en blanco en el diagrama anterior:
 
 | Mode       | Destination | Intersección | Source |
 | ---------- |:-----------:|:------------:|:------:|
@@ -85,7 +85,7 @@ Estos son los 14 modos Porter-Duff, tal y como se define en SkiaSharp. En la tab
 | `SrcATop`  | X           | Source       |        |
 | `DstATop`  |             | Destination  | X      |
 | `Xor`      | X           |              | X      |
-| `Plus`     | X           | Sum          | X      |
+| `Plus`     | X           | Suma          | X      |
 | `Modulate` |             | Producto      |        | 
 
 Estos modos de mezcla son simétricos. El origen y el destino se pueden intercambiar y todos los modos siguen estando disponibles.
@@ -262,9 +262,9 @@ public class PorterDuffGridPage : ContentPage
 
 Este es el resultado:
 
-[![Porter-Duff Grid](porter-duff-images/PorterDuffGrid.png "Porter-Duff Grid")](porter-duff-images/PorterDuffGrid-Large.png#lightbox)
+[![Porter-Duff Grid](porter-duff-images/PorterDuffGrid.png "Cuadrícula de Porter-Duff")](porter-duff-images/PorterDuffGrid-Large.png#lightbox)
 
-Querrá convencerse de que la transparencia es fundamental para el funcionamiento correcto de los modos de mezcla Porter-Duff. La `PorterDuffCanvasView` clase contiene un total de tres llamadas al `Canvas.Clear` método. Todos ellos usan el método sin parámetros, que establece todos los píxeles en transparentes:
+Querrá convencerse de que la transparencia es fundamental para el funcionamiento correcto de los modos de fusión Porter-Duff. La `PorterDuffCanvasView` clase contiene un total de tres llamadas al `Canvas.Clear` método. Todos ellos usan el método sin parámetros, que establece todos los píxeles en transparentes:
 
 ```csharp
 canvas.Clear();
@@ -280,7 +280,7 @@ Después de ese cambio, algunos de los modos de fusión parecerá que funcionan,
 
 Podría haber una tentación de reemplazar los mapas de bits en la página de **cuadrícula Porter-Duff** con `DrawRect` llamadas más sencillas. Que funcionará para el rectángulo de destino, pero no para el rectángulo de origen. El rectángulo de origen debe englobar algo más que el área de color azulada. El rectángulo de origen debe incluir un área transparente que se corresponda con el área de color del destino. Solo se aplicarán estos modos de mezcla.
 
-## <a name="using-mattes-with-porter-duff"></a>Uso de Matters con Porter-Duff
+## <a name="using-mattes-with-porter-duff"></a>Usar mates con Porter-Duff
 
 La página de composición de la **pared del brick** muestra un ejemplo de una tarea de composición clásica: una imagen se debe ensamblar desde varias partes, incluido un mapa de bits con un fondo que se debe eliminar. Este es el **SeatedMonkey.jpg** mapa de bits con el fondo problemático:
 
@@ -366,9 +366,9 @@ public partial class BrickWallCompositingPage : ContentPage
 
 Cuando el programa se ejecuta por primera vez, no hay nada visible excepto `Button` :
 
-[![Paso 0 de composición de la pared de ladrillo](porter-duff-images/BrickWallCompositing0.png "Paso 0 de composición de la pared de ladrillo")](porter-duff-images/BrickWallCompositing0-Large.png#lightbox)
+[![Paso 0 de composición de la pared de ladrillo](porter-duff-images/BrickWallCompositing0.png "Brick-Wall paso de composición 0")](porter-duff-images/BrickWallCompositing0-Large.png#lightbox)
 
-Si presiona la `Button` vez, `step` se incrementará a 1 y el `PaintSurface` controlador muestra ahora **SeatedMonkey.jpg**:
+Si presiona la `Button` vez, `step` se incrementará a 1 y el `PaintSurface` controlador muestra ahora **SeatedMonkey.jpg** :
 
 ```csharp
 public partial class BrickWallCompositingPage : ContentPage
@@ -392,7 +392,7 @@ public partial class BrickWallCompositingPage : ContentPage
 
 No hay ningún `SKPaint` objeto y, por lo tanto, ningún modo de mezcla. El mapa de bits aparece en la parte inferior de la pantalla:
 
-[![Paso 1 de composición de la pared de ladrillo](porter-duff-images/BrickWallCompositing1.png "Paso 1 de composición de la pared de ladrillo")](porter-duff-images/BrickWallCompositing1-Large.png#lightbox)
+[![Paso 1 de composición de la pared de ladrillo](porter-duff-images/BrickWallCompositing1.png "Brick-Wall el paso 1 de composición")](porter-duff-images/BrickWallCompositing1-Large.png#lightbox)
 
 Presione de `Button` nuevo y `step` aumente a 2. Este es el paso fundamental para mostrar el archivo **SeatedMonkeyMatte.png** :
 
@@ -419,7 +419,7 @@ public partial class BrickWallCompositingPage : ContentPage
 
 El modo de mezcla es `SKBlendMode.DstIn` , lo que significa que el destino se conservará en las áreas correspondientes a las áreas no transparentes del origen. El resto del rectángulo de destino correspondiente al mapa de bits original se vuelve transparente:
 
-[![Paso 2 de composición de la pared de ladrillo](porter-duff-images/BrickWallCompositing2.png "Paso 2 de composición de la pared de ladrillo")](porter-duff-images/BrickWallCompositing2-Large.png#lightbox)
+[![Paso 2 de composición de la pared de ladrillo](porter-duff-images/BrickWallCompositing2.png "Brick-Wall el paso 2 de composición")](porter-duff-images/BrickWallCompositing2-Large.png#lightbox)
 
 Se ha quitado el fondo. 
 
@@ -456,7 +456,7 @@ public partial class BrickWallCompositingPage : ContentPage
 
 Dado que este Sidewalk debe ir detrás de Monkey, el modo de mezcla es `DstOver` . El destino solo aparece cuando el fondo es transparente:
 
-[![Paso 3 de composición de la pared de ladrillo](porter-duff-images/BrickWallCompositing3.png "Paso 3 de composición de la pared de ladrillo")](porter-duff-images/BrickWallCompositing3-Large.png#lightbox)
+[![Paso 3 de composición de la pared de ladrillo](porter-duff-images/BrickWallCompositing3.png "Brick-Wall el paso 3 de composición")](porter-duff-images/BrickWallCompositing3-Large.png#lightbox)
 
 El último paso es agregar un muro de bricks. El programa usa el icono de mapa de bits de la pared del brick disponible como la propiedad estática `BrickWallTile` en la `AlgorithmicBrickWallPage` clase. Se agrega una transformación de traslación a la `SKShader.CreateBitmap` llamada para desplazar los mosaicos de modo que la fila inferior sea un icono completo:
 
@@ -489,15 +489,15 @@ public partial class BrickWallCompositingPage : ContentPage
 
 Para mayor comodidad, la `DrawRect` llamada muestra este sombreador en todo el lienzo, pero el `DstOver` modo limita la salida a solo el área del lienzo que sigue siendo transparente:
 
-[![Paso 4 de composición de la pared de ladrillo](porter-duff-images/BrickWallCompositing4.png "Paso 4 de composición de la pared de ladrillo")](porter-duff-images/BrickWallCompositing4-Large.png#lightbox)
+[![Paso 4 de composición de la pared de ladrillo](porter-duff-images/BrickWallCompositing4.png "Brick-Wall el paso 4 de composición")](porter-duff-images/BrickWallCompositing4-Large.png#lightbox)
 
 Obviamente, hay otras maneras de crear esta escena. Se puede crear a partir de un segundo plano y avanzar hasta el primer plano. Sin embargo, el uso de los modos de mezcla ofrece más flexibilidad. En concreto, el uso del mate permite que el fondo de un mapa de bits se excluya de la escena compuesta.
 
-Como aprendió en el [recorte del artículo con rutas de acceso y regiones](../../curves/clipping.md), la `SKCanvas` clase define tres tipos de recortes, que corresponden a los [`ClipRect`](xref:SkiaSharp.SKCanvas.ClipRect*) [`ClipPath`](xref:SkiaSharp.SKCanvas.ClipPath*) métodos, y [`ClipRegion`](xref:SkiaSharp.SKCanvas.ClipRegion*) . Los modos de mezcla Porter-Duff agregan otro tipo de recorte, lo que permite restringir una imagen a todo lo que se puede dibujar, incluidos los mapas de bits. Esencialmente, el mate usado en la **composición de la pared del brick** define un área de recorte.
+Como aprendió en el [recorte del artículo con rutas de acceso y regiones](../../curves/clipping.md), la `SKCanvas` clase define tres tipos de recortes, que corresponden a los [`ClipRect`](xref:SkiaSharp.SKCanvas.ClipRect*) [`ClipPath`](xref:SkiaSharp.SKCanvas.ClipPath*) métodos, y [`ClipRegion`](xref:SkiaSharp.SKCanvas.ClipRegion*) . Los modos Porter-Duff Blend agregan otro tipo de recorte, lo que permite restringir una imagen a todo lo que se puede dibujar, incluidos los mapas de bits. Esencialmente, el mate usado en la **composición de la pared del brick** define un área de recorte.
 
 ## <a name="gradient-transparency-and-transitions"></a>Transparencia y transiciones de degradado
 
-En los ejemplos de los modos de mezcla Porter-Duff mostrados anteriormente en este artículo se incluyen todas las imágenes implicadas de píxeles opacos y píxeles transparentes, pero no píxeles parcialmente transparentes. También se definen las funciones de modo de mezcla para esos píxeles. La tabla siguiente es una definición más formal de los modos de mezcla Porter-Duff que usa la notación que se encuentra en la referencia de Skia [**SkBlendMode**](https://skia.org/user/api/SkBlendMode_Reference). (Dado **que la referencia de SkBlendMode** es una referencia de Skia, se usa la sintaxis de C++).
+Los ejemplos de los modos de Porter-Duff Blend mostrados anteriormente en este artículo tienen todas las imágenes implicadas que se componían de píxeles opacos y píxeles transparentes, pero no píxeles parcialmente transparentes. También se definen las funciones de modo de mezcla para esos píxeles. La tabla siguiente es una definición más formal de los modos de Porter-Duff Blend que usan la notación que se encuentra en la referencia de Skia [**SkBlendMode**](https://skia.org/user/api/SkBlendMode_Reference). (Dado **que la referencia de SkBlendMode** es una referencia de Skia, se usa la sintaxis de C++).
 
 Conceptualmente, los componentes rojo, verde, azul y alfa de cada píxel se convierten de bytes a números de punto flotante en el intervalo de 0 a 1. En el canal alfa, 0 es completamente transparente y 1 es totalmente opaco.
 
@@ -529,7 +529,7 @@ El resultado se muestra entre corchetes con el canal alfa y el color RGB separad
 | `Plus`     | [SA + da, SC + DC] |
 | `Modulate` | Valida Da, SC · CD | 
 
-Estas operaciones son más fáciles de analizar cuando **da** y **SA** son 0 o 1. Por ejemplo, para el `SrcOver` modo predeterminado, si **SA** es 0, **SC** también es 0 y el resultado es **[da, DC]**, el alfa y el color de destino. Si **SA** es 1, el resultado es **[SA, SC]**, el alfa de origen y el color, o **[1, SC]**.
+Estas operaciones son más fáciles de analizar cuando **da** y **SA** son 0 o 1. Por ejemplo, para el `SrcOver` modo predeterminado, si **SA** es 0, **SC** también es 0 y el resultado es **[da, DC]** , el alfa y el color de destino. Si **SA** es 1, el resultado es **[SA, SC]** , el alfa de origen y el color, o **[1, SC]**.
 
 Los `Plus` `Modulate` modos y son ligeramente diferentes de los demás en que los nuevos colores pueden ser el resultado de la combinación del origen y del destino. El `Plus` modo se puede interpretar con componentes de byte o con componentes de punto flotante. En la página de **cuadrícula Porter-Duff** mostrada anteriormente, el color de destino es **(0xC0, 0x80, 0x00)** y el color de origen es **(0x00, 0x80, 0xC0)**. Cada par de componentes se agrega pero la suma se fija en 0xFF. El resultado es el color **(0xC0, 0xFF, 0xC0)**. Este es el color que se muestra en la intersección.
 
@@ -652,13 +652,13 @@ public partial class PorterDuffTransparencyPage : ContentPage
 }
 ```
 
-Este programa demuestra que los modos de mezcla Porter-Duff se pueden usar con objetos gráficos distintos de los mapas de bits. Sin embargo, el origen debe incluir un área transparente. Este es el caso aquí porque el degradado rellena el rectángulo, pero parte del degradado es transparente.
+Este programa demuestra que los modos Porter-Duff Blend se pueden usar con objetos gráficos distintos de los mapas de bits. Sin embargo, el origen debe incluir un área transparente. Este es el caso aquí porque el degradado rellena el rectángulo, pero parte del degradado es transparente.
 
 A continuación se muestran tres ejemplos:
 
 [![Transparencia Porter-Duff](porter-duff-images/PorterDuffTransparency.png "Transparencia Porter-Duff")](porter-duff-images/PorterDuffTransparency-Large.png#lightbox)
 
-La configuración del destino y el origen son muy similares a los diagramas que se muestran en la página 255 de las [_imágenes digitales de composición_](https://graphics.pixar.com/library/Compositing/paper.pdf) de Porter-Duff originales, pero en esta página se muestra cómo se comportan correctamente los modos de mezcla para las áreas de transparencia parcial.
+La configuración del destino y el origen son muy similares a los diagramas que se muestran en la página 255 del documento original Porter-Duff componer [_imágenes digitales_](https://graphics.pixar.com/library/Compositing/paper.pdf) comparadas, pero en esta página se demuestra que los modos de mezcla están correctamente comportados para áreas de transparencia parcial.
 
 Puede usar degradados transparentes para algunos efectos diferentes. Una posibilidad es enmascaramiento, que es similar a la técnica que se muestra en la sección [**degradados radiales para enmascaramiento**](../shaders/circular-gradients.md#radial-gradients-for-masking) de la **Página de degradados circulares SkiaSharp**. Gran parte de la página de la **máscara de composición** es similar a la del programa anterior. Carga un recurso de mapa de bits y determina un rectángulo en el que se va a mostrar. Un degradado radial se crea en función de un centro y un radio predeterminados:
 
@@ -740,7 +740,7 @@ Todas las áreas transparentes del lienzo son de color rosa:
 
 [![Máscara de composición](porter-duff-images/CompositingMask.png "Máscara de composición")](porter-duff-images/CompositingMask-Large.png#lightbox)
 
-También puede usar los modos Porter-Duff y degradados parcialmente transparentes para las transiciones de una imagen a otra. La página **transiciones de degradado** incluye un `Slider` para indicar un nivel de progreso en la transición de 0 a 1, y `Picker` para elegir el tipo de transición que desee:
+También puede utilizar modos de Porter-Duff y degradados parcialmente transparentes para las transiciones de una imagen a otra. La página **transiciones de degradado** incluye un `Slider` para indicar un nivel de progreso en la transición de 0 a 1, y `Picker` para elegir el tipo de transición que desee:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

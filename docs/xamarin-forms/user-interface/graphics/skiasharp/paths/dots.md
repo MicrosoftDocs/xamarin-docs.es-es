@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5064a53b140c26acdc5149f5495cc002e657a9b0
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 56a652f6f8ff2c4e9780d72117241d79f71210b5
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91564009"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367399"
 ---
 # <a name="dots-and-dashes-in-skiasharp"></a>Puntos y guiones en SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Domine las complejidades del dibujo de líneas de puntos y guiones en SkiaSharp_
 
@@ -27,7 +27,7 @@ SkiaSharp permite dibujar líneas que no son sólidas, sino que se componen de p
 
 ![Línea de puntos](dots-images/dottedlinesample.png)
 
-Esto se hace con un *efecto de ruta de acceso*, que es una instancia de la [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) clase que se establece en la [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) propiedad de `SKPaint` . Puede crear un efecto de trazado (o combinar los efectos de la ruta de acceso) mediante uno de los métodos de creación estáticos definidos por `SKPathEffect` . ( `SKPathEffect` es uno de los seis efectos que admite SkiaSharp; los demás se describen en la sección [**SkiaSharp Effect**](../effects/index.md)).
+Esto se hace con un *efecto de ruta de acceso* , que es una instancia de la [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) clase que se establece en la [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) propiedad de `SKPaint` . Puede crear un efecto de trazado (o combinar los efectos de la ruta de acceso) mediante uno de los métodos de creación estáticos definidos por `SKPathEffect` . ( `SKPathEffect` es uno de los seis efectos que admite SkiaSharp; los demás se describen en la sección [**SkiaSharp Effect**](../effects/index.md)).
 
 Para dibujar líneas de puntos o guiones, se usa el [`SKPathEffect.CreateDash`](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) método estático. Hay dos argumentos: el primero es una matriz de `float` valores que indican las longitudes de los puntos y guiones, y la longitud de los espacios que hay entre ellos. Esta matriz debe tener un número par de elementos y debe haber al menos dos elementos. (Puede haber cero elementos en la matriz, pero el resultado es una línea sólida). Si hay dos elementos, el primero es la longitud de un punto o un guión, y el segundo es la longitud del espacio antes del punto o guión siguiente. Si hay más de dos elementos, se encuentran en este orden: longitud de guión, longitud de hueco, longitud de guión, longitud de hueco, etc.
 

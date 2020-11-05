@@ -10,20 +10,20 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 75d19e41243076da127d58defdabeca908d900cd
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 7e27db7cd05c1997d3ac889b36aca5e3716d2d08
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556092"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367600"
 ---
 # <a name="lines-and-stroke-caps"></a>Líneas y extremos de trazo
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Aprenda a usar SkiaSharp para dibujar líneas con distintos extremos de trazo_
 
-En SkiaSharp, la representación de una sola línea es muy diferente de la representación de una serie de líneas rectas conectadas. Sin embargo, incluso cuando se dibujan líneas individuales, a menudo es necesario asignar a las líneas un ancho de trazo determinado. A medida que estas líneas se vuelven más anchas, la apariencia de los extremos de las líneas también es importante. La apariencia del final de la línea se denomina extremo del *trazo*:
+En SkiaSharp, la representación de una sola línea es muy diferente de la representación de una serie de líneas rectas conectadas. Sin embargo, incluso cuando se dibujan líneas individuales, a menudo es necesario asignar a las líneas un ancho de trazo determinado. A medida que estas líneas se vuelven más anchas, la apariencia de los extremos de las líneas también es importante. La apariencia del final de la línea se denomina extremo del *trazo* :
 
 ![Las tres opciones de extremos de trazo](lines-images/strokecapsexample.png)
 

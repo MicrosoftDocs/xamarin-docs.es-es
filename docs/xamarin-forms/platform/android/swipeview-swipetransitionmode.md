@@ -10,16 +10,16 @@ ms.date: 12/11/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a1c05fb6ea81827be97d1d49a8066a755ac0a1b7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: a848b9b58961a643ed674f5a61ac38b7b2dc8334
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560668"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366924"
 ---
 # <a name="swipeview-swipe-transition-mode-on-android"></a>SwipeView deslizar el modo de transición en Android
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Este control específico de la plataforma Android controla la transición que se usa al abrir `SwipeView` . Se consume en XAML estableciendo la `SwipeView.SwipeTransitionMode` propiedad Bindable en un valor de la `SwipeTransitionMode` enumeración:
 

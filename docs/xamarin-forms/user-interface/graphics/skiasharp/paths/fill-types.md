@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: aa427035dc33b617bed14e0c6aa0b0db27efca7f
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 63833e80b15bb27ab656825b4b1f6b1e3eb31670
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556573"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367821"
 ---
 # <a name="the-path-fill-types"></a>Tipos de relleno del trazado
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Descubra los distintos efectos posibles con los tipos de relleno de ruta de SkiaSharp_
 
@@ -173,7 +173,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Normalmente, el tipo de relleno de trazado debe afectar solo a los rellenos y no a los trazos, pero los dos `Inverse` modos afectan tanto a los rellenos como a los trazos. En el caso de los rellenos, los dos `Inverse` tipos rellenan áreas de forma opuesta para que el área fuera de la estrella se rellene. En el caso de los trazos, los dos `Inverse` tipos colorean todo, excepto el trazo. El uso de estos tipos de relleno inversos puede producir algunos efectos impares, como se muestra en la captura de pantalla de iOS:
 
-[![Captura de pantalla triple de la página de estrella de cinco puntas](fill-types-images/fivepointedstar-small.png)](fill-types-images/fivepointedstar-large.png#lightbox "Captura de pantalla triple de la página de estrella de cinco puntas")
+[![Captura de pantalla triple de la página Five-Pointed Star](fill-types-images/fivepointedstar-small.png)](fill-types-images/fivepointedstar-large.png#lightbox "Captura de pantalla triple de la página Five-Pointed Star")
 
 En la captura de pantalla de Android se muestran los efectos típicos pares-impares y de bobinado, pero el orden del trazo y del relleno también afecta a los resultados.
 

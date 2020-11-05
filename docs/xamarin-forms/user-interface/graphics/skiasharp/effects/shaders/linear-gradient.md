@@ -10,22 +10,22 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2cc0806af28360cf4bf2bb7e382e8d0a423abab9
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 9d2ac2eec5422068243ac43e78092e25c10652f5
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555533"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366794"
 ---
 # <a name="the-skiasharp-linear-gradient"></a>El degradado lineal SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-La [`SKPaint`](xref:SkiaSharp.SKPaint) clase define una [`Color`](xref:SkiaSharp.SKPaint.Color) propiedad que se usa para trazar líneas o rellenar áreas con un color sólido. También puede trazar líneas o rellenar áreas con _degradados_, que son mezclas graduales de colores:
+La [`SKPaint`](xref:SkiaSharp.SKPaint) clase define una [`Color`](xref:SkiaSharp.SKPaint.Color) propiedad que se usa para trazar líneas o rellenar áreas con un color sólido. También puede trazar líneas o rellenar áreas con _degradados_ , que son mezclas graduales de colores:
 
 ![Ejemplo de degradado lineal](linear-gradient-images/LinearGradientSample.png "Ejemplo de degradado lineal")
 
-El tipo más básico de degradado es un degradado _lineal_ . La combinación de colores se produce en una línea (denominada _línea de degradado_) de un punto a otro. Las líneas perpendiculares a la línea de degradado tienen el mismo color. Puede crear un degradado lineal mediante uno de los dos [`SKShader.CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) métodos estáticos. La diferencia entre las dos sobrecargas es que una incluye una transformación de matriz y la otra no. 
+El tipo más básico de degradado es un degradado _lineal_ . La combinación de colores se produce en una línea (denominada _línea de degradado_ ) de un punto a otro. Las líneas perpendiculares a la línea de degradado tienen el mismo color. Puede crear un degradado lineal mediante uno de los dos [`SKShader.CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) métodos estáticos. La diferencia entre las dos sobrecargas es que una incluye una transformación de matriz y la otra no. 
 
 Estos métodos devuelven un objeto de tipo [`SKShader`](xref:SkiaSharp.SKShader) que se establece en la [`Shader`](xref:SkiaSharp.SKPaint.Shader) propiedad de `SKPaint` . Si la `Shader` propiedad no es null, invalida la `Color` propiedad. Cualquier línea que esté contorneada o cualquier área que se rellene con este `SKPaint` objeto se basa en el degradado, en lugar del color sólido.
 

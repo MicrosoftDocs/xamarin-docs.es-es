@@ -10,16 +10,16 @@ ms.date: 02/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bf85bb3bf6f694aa5eefa8512b8391084228598e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: dc85f93110d2faec69ae42823a121b6d16fdfe7f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563528"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367782"
 ---
 # <a name="layout-options-in-no-locxamarinforms"></a>Opciones de diseño en Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
 
 _Cada Xamarin.Forms vista tiene las propiedades HorizontalOptions y VerticalOptions, de tipo LayoutOptions. En este artículo se explica el efecto que tiene cada valor de LayoutOptions en la alineación y la expansión de una vista._
 
@@ -53,7 +53,7 @@ Los `StartAndExpand` `CenterAndExpand` valores,, `EndAndExpand` y `FillAndExpand
 > [!NOTE]
 > El valor predeterminado de las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) y [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) de una vista es [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill).
 
-## <a name="alignment"></a>Alignment
+## <a name="alignment"></a>Asociación
 
 La alineación controla cómo se coloca una vista dentro de su diseño primario cuando el diseño primario contiene espacio no utilizado (es decir, el diseño primario es mayor que el tamaño combinado de todos sus elementos secundarios).
 
@@ -76,7 +76,7 @@ En el siguiente ejemplo de código XAML se muestra una orientación vertical [`S
 </StackLayout>
 ```
 
-A continuación se muestra el código de C# equivalente:
+El código de C# equivalente se muestra a continuación:
 
 ```csharp
 Content = new StackLayout
@@ -124,7 +124,7 @@ En el siguiente ejemplo de código XAML se muestra una orientación vertical [`S
 </StackLayout>
 ```
 
-A continuación se muestra el código de C# equivalente:
+El código de C# equivalente se muestra a continuación:
 
 ```csharp
 Content = new StackLayout

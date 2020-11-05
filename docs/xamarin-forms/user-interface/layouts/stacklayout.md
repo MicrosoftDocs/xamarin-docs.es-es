@@ -10,16 +10,16 @@ ms.date: 05/11/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0c8e7c0e3edb581e13944ce48e2241f035791574
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: fcd5f3deb2c7645988cd70b3556b718151df99fd
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556859"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366677"
 ---
 # <a name="no-locxamarinforms-stacklayout"></a>Xamarin.Forms StackLayout
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
 
 [![::: no-LOC (Xamarin. Forms)::: StackLayout](stacklayout-images/layouts.png "::: no-LOC (Xamarin. Forms)::: StackLayout")](stacklayout-images/layouts-large.png#lightbox "::: no-LOC (Xamarin. Forms)::: StackLayout")
 
@@ -213,7 +213,7 @@ Las [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalO
 > [!TIP]
 > No establezca las [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) propiedades y de a [`StackLayout`](xref:Xamarin.Forms.StackLayout) menos que necesite. Los valores predeterminados de `LayoutOptions.Fill` y `LayoutOptions.FillAndExpand` permiten la optimización de diseño óptima. Cambiar estas propiedades tiene un costo y consume memoria, incluso cuando se vuelven a establecer en los valores predeterminados.
 
-### <a name="alignment"></a>Alignment
+### <a name="alignment"></a>Asociación
 
 En el siguiente ejemplo de XAML se establecen las preferencias de alineación en cada vista secundaria del [`StackLayout`](xref:Xamarin.Forms.StackLayout) :
 

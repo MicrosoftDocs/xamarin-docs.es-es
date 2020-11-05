@@ -11,16 +11,16 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3d2620014c9554712c746b98de3b9a0eeaa20864
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 1c660c04e89c56f10435964425b2b20dbf5c8eb3
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562761"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365872"
 ---
 # <a name="no-locxamarinforms-xaml-basics"></a>Xamarin.Forms Conceptos básicos de XAML
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 El lenguaje de marcado de aplicaciones extensible (XAML) es un lenguaje basado en XML creado por Microsoft como una alternativa a código de programación para la creación de instancias e inicialización de objetos, y la organización de esos objetos en jerarquías de elementos primarios y secundarios. XAML se ha adaptado a varias tecnologías de .NET Framework, pero ha encontrado su utilidad más importante para definir el diseño de las interfaces de usuario en el Windows Presentation Foundation (WPF), Silverlight, el Windows Runtime y el Plataforma universal de Windows (UWP).
 
@@ -54,7 +54,7 @@ Estas características *no* son extensiones XML. XAML es completamente XML legal
 
 ## <a name="requirements"></a>Requisitos
 
-En este artículo se supone que está familiarizado con Xamarin.Forms . En este artículo también se da por hecho que está familiarizado con XML, incluida la descripción del uso de las declaraciones de espacios de nombres XML y el *elemento*de términos, la *etiqueta*y el *atributo*.
+En este artículo se supone que está familiarizado con Xamarin.Forms . En este artículo también se da por hecho que está familiarizado con XML, incluida la descripción del uso de las declaraciones de espacios de nombres XML y el *elemento* de términos, la *etiqueta* y el *atributo*.
 
 Cuando esté familiarizado con Xamarin.Forms y XML, empiece a leer la [parte 1. Introducción con XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md).
 

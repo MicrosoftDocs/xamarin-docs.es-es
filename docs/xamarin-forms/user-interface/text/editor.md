@@ -10,16 +10,16 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 257962516b8a183e63c49b22bc2be108364d9425
-ms.sourcegitcommit: e7d6f8bb074c08d87f7507ad5f1377cfacefa32a
+ms.openlocfilehash: 0a0517f0eac552f18a88d84bafba2e7e1e1f2631
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92041891"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367561"
 ---
 # <a name="no-locxamarinforms-editor"></a>Xamarin.Forms Editor
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 El [`Editor`](xref:Xamarin.Forms.Editor) control se usa para aceptar la entrada de varias líneas.
 
@@ -304,7 +304,7 @@ Asegúrese de que los colores de fondo y de texto que elija se pueden usar en ca
 > [!NOTE]
 > La [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase, de la que [`Entry`](xref:Xamarin.Forms.Entry) hereda, también tiene [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused) eventos y.
 
-### <a name="completed"></a>Completed
+### <a name="completed"></a>Completado
 
 El `Completed` evento se utiliza para reaccionar a la finalización de una interacción con `Editor` . `Completed` se genera cuando el usuario finaliza la entrada con un campo escribiendo la tecla RETURN en el teclado (o presionando la tecla TAB en UWP). El controlador del evento es un controlador de eventos genérico que toma el remitente y `EventArgs` :
 

@@ -10,16 +10,16 @@ ms.date: 02/28/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ebff259519776718f41ab0fcc0a7abb0c692dac6
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 7d1cb1d9fa418cd16cb25519680e526864c9917c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563424"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367730"
 ---
 # <a name="no-locxamarinforms-web-services-introduction"></a>Xamarin.Forms Introducción a servicios Web
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
 _En este tema se proporciona un tutorial de la Xamarin.Forms aplicación de ejemplo que muestra cómo comunicarse con distintos servicios Web. Aunque cada servicio Web utiliza una aplicación de ejemplo independiente, son funcionalmente similares y comparten clases comunes._
 
@@ -45,7 +45,7 @@ El proyecto de código compartido para cada aplicación de ejemplo consta de tre
 
 |Carpeta|Propósito|
 |--- |--- |
-|Datos|Contiene las clases e interfaces utilizadas para administrar los elementos de datos y comunicarse con el servicio Web. Como mínimo, incluye la `TodoItemManager` clase, que se expone a través de una propiedad en la `App` clase para invocar las operaciones del servicio Web.|
+|data|Contiene las clases e interfaces utilizadas para administrar los elementos de datos y comunicarse con el servicio Web. Como mínimo, incluye la `TodoItemManager` clase, que se expone a través de una propiedad en la `App` clase para invocar las operaciones del servicio Web.|
 |Modelos|Contiene las clases de modelo de datos para la aplicación. Como mínimo, incluye la `TodoItem` clase, que modela un único elemento de datos utilizado por la aplicación. La carpeta también puede incluir cualquier clase adicional que se use para modelar los datos de usuario.|
 |Vistas|Contiene las páginas de la aplicación. Normalmente, se compone de `TodoListPage` las `TodoItemPage` clases y y cualquier clase adicional que se use para la autenticación.|
 

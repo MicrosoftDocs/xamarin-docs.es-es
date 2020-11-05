@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6e25654fb856935c119d731df5db3eaa2d501930
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 7df914ae5b6de38b5179f5b1139b9c41e9559198
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560252"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367457"
 ---
 # <a name="visualelement-access-keys-on-windows"></a>Claves de acceso de VisualElement en Windows
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Las claves de acceso son métodos abreviados de teclado que mejoran la facilidad de uso y la accesibilidad de las aplicaciones en el Plataforma universal de Windows (UWP) al proporcionar una manera intuitiva de que los usuarios naveguen rápidamente e interactúen con la interfaz de usuario visible de la aplicación a través de un teclado en lugar de hacerlo a través de un toque o un mouse. Son combinaciones de la tecla Alt y una o varias claves alfanuméricas, normalmente presionadas secuencialmente. Los métodos abreviados de teclado se admiten automáticamente para las teclas de acceso que utilizan un solo carácter alfanumérico.
 

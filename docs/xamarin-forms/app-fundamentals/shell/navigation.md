@@ -10,12 +10,12 @@ ms.date: 04/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6cf4932c3265d1d66200ae12ba448a758586f11c
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: ee027399aec51bb7ae4fac15e9c706c65d3af235
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563151"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92928638"
 ---
 # <a name="no-locxamarinforms-shell-navigation"></a>Navegación en Xamarin.Forms Shell
 
@@ -41,7 +41,7 @@ La navegación se realiza mediante la invocación del método `GoToAsync`, desde
 
 La navegación se realiza en una aplicación de Shell mediante la especificación de un URI al que navegar. Los URI de navegación pueden tener tres componentes:
 
-- Una *ruta*, que define la ruta de acceso al contenido que existe como parte de la jerarquía visual de Shell.
+- Una *ruta* , que define la ruta de acceso al contenido que existe como parte de la jerarquía visual de Shell.
 - Una *página*. Las páginas que no existen en la jerarquía visual de Shell se pueden insertar en la pila de navegación desde cualquier lugar dentro de una aplicación de Shell. Por ejemplo, una página de detalles de elementos no se definirá en la jerarquía visual de Shell, pero se puede insertar en la pila de navegación si es necesario.
 - Uno o varios *parámetros de consulta*. Los parámetros de consulta son parámetros que se pueden pasar a la página de destino durante la navegación.
 
@@ -213,8 +213,8 @@ Los siguientes formatos de ruta no son válidos:
 
 | Formato | Explicación |
 | --- | --- |
-| *route* o /*route* | Las rutas de la jerarquía visual no se pueden insertar en la pila de navegación. |
-| //*page* o ///*page* | Actualmente, las rutas globales no pueden ser la única página en la pila de navegación. Por lo tanto, no se admite el enrutamiento absoluto a rutas globales. |
+| *route* o / *route* | Las rutas de la jerarquía visual no se pueden insertar en la pila de navegación. |
+| //*page* o /// *page* | Actualmente, las rutas globales no pueden ser la única página en la pila de navegación. Por lo tanto, no se admite el enrutamiento absoluto a rutas globales. |
 
 El uso de cualquiera de estos formatos de ruta dará como resultado una excepción `Exception`.
 
@@ -254,9 +254,6 @@ La clase `Shell` define un evento `Navigating`, que se desencadena cuando está 
 
 Además, la clase `ShellNavigatingEventArgs` proporciona un método `Cancel` que se puede usar para cancelar la navegación.
 
-> [!NOTE]
-> El evento `Navigated` se desencadena por el método `OnNavigating` reemplazable de la clase `Shell`.
-
 La clase `Shell` también define un evento `Navigated`, que se desencadena cuando se ha completado la navegación. El objeto `ShellNavigatedEventArgs` que acompaña al evento `Navigating` proporciona las siguientes propiedades:
 
 | Propiedad. | Tipo | Descripción |
@@ -264,9 +261,6 @@ La clase `Shell` también define un evento `Navigated`, que se desencadena cuand
 | `Current` | `ShellNavigationState` | Identificador URI de la página actual. |
 | `Previous`| `ShellNavigationState` | Identificador URI de la página anterior. |
 | `Source`  | `ShellNavigationSource` | El tipo de navegación que se ha producido. |
-
-> [!NOTE]
-> El evento `Navigating` se desencadena por el método `OnNavigated` reemplazable de la clase `Shell`.
 
 Las clases `ShellNavigatedEventArgs` y `ShellNavigatingEventArgs` tienen ambas propiedades `Source`, de tipo `ShellNavigationSource`. Esta enumeración proporciona los valores siguientes:
 

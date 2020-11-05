@@ -10,16 +10,16 @@ ms.date: 08/22/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e63d92cde5925561dae4217c3c46af2c2c59f795
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c6179f94b43f12a7bf4b91a05702c0539f3c8658
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563996"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367795"
 ---
 # <a name="skiasharp-effects"></a>Efectos SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 La [`SKPaint`](xref:SkiaSharp.SKPaint) clase SkiaSharp define seis propiedades que se pueden clasificar en términos generales de _efectos_. Se trata de propiedades que modifican la presentación normal de gráficos de alguna manera. Los efectos de SkiaSharp se dividen en seis categorías:
 
@@ -33,7 +33,7 @@ Establezca la [`Shader`](xref:SkiaSharp.SKPaint.Shader) propiedad de `SKPaint` e
 
 ## <a name="blend-modes"></a>[Modos de fusión](blend-modes/index.md)
 
-Establezca la [`BlendMode`](xref:SkiaSharp.SKPaint.BlendMode) propiedad de `SKPaint` en un miembro de la [`SKBlendMode`](xref:SkiaSharp.SKBlendMode) enumeración para controlar lo que ocurre cuando se muestra un gráfico de origen en un destino. SkiaSharp admite todos los modos de composición y combinación de CSS, incluidos los modos Porter-Duff, los modos de mezcla separables y los modos de mezcla no separables.
+Establezca la [`BlendMode`](xref:SkiaSharp.SKPaint.BlendMode) propiedad de `SKPaint` en un miembro de la [`SKBlendMode`](xref:SkiaSharp.SKBlendMode) enumeración para controlar lo que ocurre cuando se muestra un gráfico de origen en un destino. SkiaSharp admite todos los modos de composición y mezcla de CSS, incluidos los modos de Porter-Duff, los modos de mezcla separables y los modos de mezcla no separables.
 
 ## <a name="mask-filters"></a>[Filtros de máscara](mask-filters.md)
 

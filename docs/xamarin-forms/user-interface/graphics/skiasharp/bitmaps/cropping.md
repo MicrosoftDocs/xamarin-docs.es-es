@@ -10,16 +10,16 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 45634695050dc6f74a9b1617a2180481e3788d11
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 639b9db51d4a9f0bb0ddd55a3d35bcbda7e31962
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557327"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366469"
 ---
 # <a name="cropping-skiasharp-bitmaps"></a>Recortar mapas de bits de SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 En el artículo [**creación y dibujo de mapas de bits de SkiaSharp**](drawing.md) se describe cómo se `SKBitmap` puede pasar un objeto a un `SKCanvas` constructor. Cualquier método de dibujo llamado en ese lienzo hace que los gráficos se representen en el mapa de bits. Estos métodos de dibujo incluyen `DrawBitmap` , lo que significa que esta técnica permite transferir parte o todo un mapa de bits a otro mapa de bits, quizás con las transformaciones aplicadas.
 
@@ -535,7 +535,7 @@ Verá que el rectángulo de recorte está restringido a una característica de r
 
 ## <a name="dividing-a-bitmap-into-tiles"></a>Dividir un mapa de bits en mosaicos
 
-Una Xamarin.Forms versión del rompecabezas 14-15 famoso apareció en el capítulo 22 del libro [_creación de Mobile Apps con Xamarin.Forms _](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) y se puede descargar como [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle). Sin embargo, el rompecabezas se vuelve más divertido (y a menudo más desafiante) cuando se basa en una imagen de su propia biblioteca de fotos.
+Una Xamarin.Forms versión del rompecabezas 14-15 famoso apareció en el capítulo 22 del libro [_creación de Mobile Apps con Xamarin.Forms_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) y se puede descargar como [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle). Sin embargo, el rompecabezas se vuelve más divertido (y a menudo más desafiante) cuando se basa en una imagen de su propia biblioteca de fotos.
 
 Esta versión del rompecabezas 14-15 forma parte de la aplicación **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** y consta de una serie de páginas con el título **Photo Puzzle**.
 

@@ -10,16 +10,16 @@ ms.date: 05/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 220b8a49f4f261568a653af16e333885edec23f8
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 5b3a20c621ac76ac3b18ba5c503b8dc2b962ef1b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562878"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366820"
 ---
 # <a name="perceived-emotion-recognition-using-the-face-api"></a>Reconocimiento de emociones percibido mediante el Face API
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 El Face API puede realizar la detección de emociones para detectar enojo, desprecio, asco, miedo, felicidad, neutralidad, tristeza y sorpresa, en una expresión facial en función de las anotaciones percibidas por los codificadores humanos. Sin embargo, es importante tener en cuenta que las expresiones faciales solas no representan necesariamente los Estados internos de las personas.
 

@@ -10,16 +10,16 @@ ms.date: 03/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 78bd93e2f6556480ae7d2903771d7d6303dda148
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: cd7c29f835b34b4c5ffb9a5af589815a09546a87
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558381"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365914"
 ---
 # <a name="native-views-in-xaml"></a>Vistas nativas en XAML
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
 
 _Se puede hacer referencia directamente a las vistas nativas de iOS, Android y el Plataforma universal de Windows desde Xamarin.Forms los archivos XAML. Las propiedades y los controladores de eventos se pueden establecer en las vistas nativas y pueden interactuar con las Xamarin.Forms vistas. En este artículo se muestra cómo consumir vistas nativas de Xamarin.Forms archivos XAML._
 
@@ -109,7 +109,7 @@ La página también contiene un conmutador nativo para cada plataforma. Cada con
 ![Conmutador nativo deshabilitado modificador nativo ](xaml-images/native-switch-disabled.png)
  ![ habilitado](xaml-images/native-switch-enabled.png)
 
-Los enlaces bidireccionales se admiten automáticamente siempre que la propiedad nativa implementa `INotifyPropertyChanged` , o admite la observación de valor de clave (KVO) en iOS o es `DependencyProperty` en UWP. Sin embargo, muchas vistas nativas no admiten la notificación de cambio de propiedad. Para estas vistas, puede especificar un [`UpdateSourceEventName`](xref:Xamarin.Forms.Binding.UpdateSourceEventName) valor de propiedad como parte de la expresión de enlace. Esta propiedad debe establecerse en el nombre de un evento en la vista nativa que indica cuándo ha cambiado la propiedad de destino. A continuación, cuando cambia el valor del modificador nativo, `Binding` se notifica a la clase que el usuario ha cambiado el valor del modificador y el valor de la `NativeSwitchPageViewModel.IsSwitchOn` propiedad se ha actualizado.
+Los enlaces bidireccionales se admiten automáticamente siempre que la propiedad nativa implementa `INotifyPropertyChanged` , o admite Key-Value observando (KVO) en iOS o es `DependencyProperty` en UWP. Sin embargo, muchas vistas nativas no admiten la notificación de cambio de propiedad. Para estas vistas, puede especificar un [`UpdateSourceEventName`](xref:Xamarin.Forms.Binding.UpdateSourceEventName) valor de propiedad como parte de la expresión de enlace. Esta propiedad debe establecerse en el nombre de un evento en la vista nativa que indica cuándo ha cambiado la propiedad de destino. A continuación, cuando cambia el valor del modificador nativo, `Binding` se notifica a la clase que el usuario ha cambiado el valor del modificador y el valor de la `NativeSwitchPageViewModel.IsSwitchOn` propiedad se ha actualizado.
 
 ## <a name="pass-arguments-to-native-views"></a>Pasar argumentos a vistas nativas
 

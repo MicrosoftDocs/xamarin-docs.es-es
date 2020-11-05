@@ -10,16 +10,16 @@ ms.date: 07/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d9a96de5520a03b2ef51426be2c589c736ca2396
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: eeaf62c684100ff9fd5bb9ffd15162bdb4c6afd6
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562397"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366534"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>Animar mapas de bits SkiaSharp
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Las aplicaciones que animan gráficos SkiaSharp generalmente llaman a `InvalidateSurface` en `SKCanvasView` una velocidad fija, a menudo cada 16 milisegundos. Al invalidar la superficie, se desencadena una llamada al `PaintSurface` controlador para volver a dibujar la pantalla. A medida que los objetos visuales se vuelven a dibujar 60 veces por segundo, parecen estar animados sin problemas.
 
@@ -37,13 +37,13 @@ En el segundo ejemplo se muestra cómo usar SkiaSharp para representar un archiv
 
 ## <a name="bitmap-animation"></a>Animación de mapa de bits
 
-El conjunto Mandelbrot es visualmente fascinante pero computionally largo. (Para obtener una explicación del conjunto de Mandelbrot y las matemáticas que se usan aquí, consulte el [capítulo 20 de _creación de Mobile Apps con a Xamarin.Forms _ ](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) partir de la página 666. En la descripción siguiente se da por supuesto que el conocimiento en segundo plano).
+El conjunto Mandelbrot es visualmente fascinante pero computionally largo. (Para obtener una explicación del conjunto de Mandelbrot y las matemáticas que se usan aquí, consulte el [capítulo 20 de _creación de Mobile Apps con a Xamarin.Forms_](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) partir de la página 666. En la descripción siguiente se da por supuesto que el conocimiento en segundo plano).
 
 En el ejemplo de [**animación de Mandelbrot**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima) se usa la animación de mapas de bits para simular un zoom continuo de un punto fijo en el conjunto de Mandelbrot. El zoom se hace seguido del zoom y, a continuación, el ciclo se repite siempre o hasta que el programa finaliza.
 
-El programa se prepara para esta animación creando hasta 50 mapas de bits que almacena en el almacenamiento local de la aplicación. Cada mapa de bits abarca la mitad del ancho y el alto del plano complejo como mapa de bits anterior. (En el programa, se dice que estos mapas de bits representan _niveles de zoom_enteros). Los mapas de bits se muestran en la secuencia. El escalado de cada mapa de bits se anima para proporcionar una progresión fluida de un mapa de bits a otro.
+El programa se prepara para esta animación creando hasta 50 mapas de bits que almacena en el almacenamiento local de la aplicación. Cada mapa de bits abarca la mitad del ancho y el alto del plano complejo como mapa de bits anterior. (En el programa, se dice que estos mapas de bits representan _niveles de zoom_ enteros). Los mapas de bits se muestran en la secuencia. El escalado de cada mapa de bits se anima para proporcionar una progresión fluida de un mapa de bits a otro.
 
-Al igual que el último programa descrito en el capítulo 20 de _creación de Mobile Apps Xamarin.Forms con _, el cálculo del conjunto de Mandelbrot en la animación de **Mandelbrot** es un método asincrónico con ocho parámetros. Los parámetros incluyen un punto central complejo y un ancho y alto del plano complejo que rodea ese punto central. Los tres parámetros siguientes son el ancho y el alto de píxel del mapa de bits que se va a crear y un número máximo de iteraciones para el cálculo recursivo. El `progress` parámetro se usa para mostrar el progreso de este cálculo. El `cancelToken` parámetro no se usa en este programa:
+Al igual que el último programa descrito en el capítulo 20 de _creación de Mobile Apps Xamarin.Forms con_ , el cálculo del conjunto de Mandelbrot en la animación de **Mandelbrot** es un método asincrónico con ocho parámetros. Los parámetros incluyen un punto central complejo y un ancho y alto del plano complejo que rodea ese punto central. Los tres parámetros siguientes son el ancho y el alto de píxel del mapa de bits que se va a crear y un número máximo de iteraciones para el cálculo recursivo. El `progress` parámetro se usa para mostrar el progreso de este cálculo. El `cancelToken` parámetro no se usa en este programa:
 
 ```csharp
 static class Mandelbrot
@@ -182,9 +182,9 @@ public partial class MainPage : ContentPage
 }
 ```
 
-En algún momento, es probable que desee cambiar el `COUNT` valor a 50 para ver el intervalo completo de la animación. Los valores por encima de 50 no son útiles. En torno a un nivel de zoom de 48 o por lo tanto, la resolución de números de punto flotante de precisión doble es insuficiente para el cálculo del conjunto de Mandelbrot. Este problema se describe en la página 684 de _creación de Xamarin.Forms Mobile Apps con _.
+En algún momento, es probable que desee cambiar el `COUNT` valor a 50 para ver el intervalo completo de la animación. Los valores por encima de 50 no son útiles. En torno a un nivel de zoom de 48 o por lo tanto, la resolución de números de punto flotante de precisión doble es insuficiente para el cálculo del conjunto de Mandelbrot. Este problema se describe en la página 684 de _creación de Xamarin.Forms Mobile Apps con_.
 
-El `center` valor es muy importante. Este es el foco del zoom de animación. Los tres valores del archivo son los que se usan en las tres capturas de pantallas finales del capítulo 20 de la _creación de Mobile Apps con Xamarin.Forms _ en la página 684, pero puede experimentar con el programa de ese capítulo para obtener uno de sus propios valores.
+El `center` valor es muy importante. Este es el foco del zoom de animación. Los tres valores del archivo son los que se usan en las tres capturas de pantallas finales del capítulo 20 de la _creación de Mobile Apps con Xamarin.Forms_ en la página 684, pero puede experimentar con el programa de ese capítulo para obtener uno de sus propios valores.
 
 El ejemplo de **animación de Mandelbrot** almacena estos `COUNT` mapas de bits en el almacenamiento de la aplicación local. 50 los mapas de bits requieren más de 20 megabytes de almacenamiento en el dispositivo, por lo que es posible que desee saber cuánto almacenamiento están ocupando estos mapas de bits y, en algún momento, puede que desee eliminarlos todos. Este es el propósito de estos dos métodos en la parte inferior de la `MainPage` clase:
 

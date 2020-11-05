@@ -10,16 +10,16 @@ ms.date: 04/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 01e439812c3935e890acf0b9b83579b5813d8e21
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 5c49ee7022166983f55bca4a39dd726412b070c8
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563957"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366209"
 ---
 # <a name="device-orientation"></a>Orientación del dispositivo
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
 
 Es importante tener en cuenta cómo se utilizará la aplicación y cómo se puede incorporar la orientación horizontal para mejorar la experiencia del usuario. Los diseños individuales se pueden diseñar para acomodar varias orientaciones y el mejor uso del espacio disponible. En el nivel de aplicación, el giro se puede deshabilitar o habilitar.
 
@@ -43,7 +43,7 @@ En Visual Studio para Mac, abra el proyecto de iOS y Abra **info. plist**. En la
 
 ![Información de implementación de iPhone en Visual Studio para Mac](device-orientation-images/orientation-vsmac.png)
 
-Si prefiere editar los valores mediante una interfaz de editor de valores clave, seleccione la pestaña **origen**> en la parte inferior de la pantalla:
+Si prefiere editar los valores mediante una interfaz de editor de valores clave, seleccione la pestaña **origen** > en la parte inferior de la pantalla:
 
 ![Orientaciones de dispositivos compatibles en Visual Studio para Mac](device-orientation-images/orientation-source-vsmac.png)
 
@@ -76,9 +76,9 @@ Xamarin. Android admite varias opciones para especificar la orientación:
 - **ReversePortrait** &ndash; hace que la aplicación use la orientación vertical, orientada a la dirección opuesta de la habitual, para que aparezca "al revés".
 - **FullSensor** &ndash; hace que la aplicación se base en datos del sensor para seleccionar la orientación correcta (fuera del posible 4).
 - **FullUser** &ndash; hace que la aplicación use las preferencias de orientación del usuario. Si está habilitada la rotación automática, se pueden usar las cuatro orientaciones.
-- **UserLandscape** &ndash; _ \[ No compatible \] _ hace que la aplicación utilice la orientación horizontal, a menos que el usuario tenga habilitada la rotación automática, en cuyo caso usará el sensor para determinar la orientación. Esta opción interrumpirá la compilación.
-- **UserPortrait** &ndash; _ \[ No compatible \] _ hace que la aplicación utilice la orientación vertical, a menos que el usuario tenga habilitada la rotación automática, en cuyo caso usará el sensor para determinar la orientación. Esta opción interrumpirá la compilación.
-- **Bloqueado** &ndash; _ \[ No compatible \] _ hace que la aplicación use la orientación de la pantalla, sea cual sea el inicio, sin responder a los cambios en la orientación física del dispositivo. Esta opción interrumpirá la compilación.
+- **UserLandscape** &ndash; _\[ No compatible \]_ hace que la aplicación utilice la orientación horizontal, a menos que el usuario tenga habilitada la rotación automática, en cuyo caso usará el sensor para determinar la orientación. Esta opción interrumpirá la compilación.
+- **UserPortrait** &ndash; _\[ No compatible \]_ hace que la aplicación utilice la orientación vertical, a menos que el usuario tenga habilitada la rotación automática, en cuyo caso usará el sensor para determinar la orientación. Esta opción interrumpirá la compilación.
+- **Bloqueado** &ndash; _\[ No compatible \]_ hace que la aplicación use la orientación de la pantalla, sea cual sea el inicio, sin responder a los cambios en la orientación física del dispositivo. Esta opción interrumpirá la compilación.
 
 Tenga en cuenta que las API nativas de Android proporcionan un gran control sobre cómo se administra la orientación, incluidas las opciones que contradicen explícitamente las preferencias expresadas del usuario.
 

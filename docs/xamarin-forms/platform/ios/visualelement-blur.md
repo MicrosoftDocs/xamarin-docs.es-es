@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6a81e5a589e99a62aeaea58707228afd03016a8c
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f02de8bc2bf0ed1091c73c3a91f748400f8615b7
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563944"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367587"
 ---
 # <a name="visualelement-blur-on-ios"></a>VisualElement desenfoque en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esta plataforma específica de iOS se usa para desenfocar el contenido que se encuentra debajo de él y se puede aplicar a cualquiera [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Se consume en XAML estableciendo la [`VisualElement.BlurEffect`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.BlurEffectProperty) propiedad adjunta en un valor de la [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) enumeración:
 
@@ -49,7 +49,7 @@ El `BoxView.On<iOS>` método especifica que este específico de la plataforma so
 
 El resultado es que [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) se aplica un especificado a la [`BoxView`](xref:Xamarin.Forms.BoxView) instancia de, que desenfoca el [`Image`](xref:Xamarin.Forms.Image) superpuesto por debajo de él:
 
-![Efecto de desenfoque específico de la plataforma](applying-blur-images/blur-effect.png)
+![Efecto de desenfoque Platform-Specific](applying-blur-images/blur-effect.png)
 
 > [!NOTE]
 > Al agregar un efecto de desenfoque a un [`VisualElement`](xref:Xamarin.Forms.VisualElement) , los eventos de toque seguirán recibiendo `VisualElement` .
