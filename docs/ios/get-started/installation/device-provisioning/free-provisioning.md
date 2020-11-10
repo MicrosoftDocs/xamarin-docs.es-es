@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/16/2018
-ms.openlocfilehash: 951b019a4a0bf503629b6ac63853bd5b1c818bce
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 8bb67b11543fedb628298d6dc467ebdca9da17c8
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73022756"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92928547"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Aprovisionamiento gratuito para aplicaciones Xamarin.iOS
 
@@ -35,7 +35,7 @@ Para implementar sus aplicaciones Xamarin.iOS en un dispositivo con el aprovisio
 - La aplicación Xamarin.iOS debe usar un id. de aplicación explícito en lugar de un id. de aplicación de carácter comodín.
 - El identificador de agrupación utilizado en su aplicación de Xamarin.iOS debe ser único y no puede haberse usado en ninguna otra aplicación anteriormente. Cualquier identificador de agrupación que se use con el aprovisionamiento gratuito **no podrá** volver a usarse.
 - Si ya ha distribuido una aplicación, no podrá implementarla con el aprovisionamiento gratuito.
-- Si su aplicación usa App Services, necesitará crear un perfil de aprovisionamiento como se detalla en la guía de [aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services). 
+- Si su aplicación usa App Services, necesitará crear un perfil de aprovisionamiento como se detalla en la guía de [aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services).
 
 Consulte la sección de [limitaciones](#limitations) de este documento para obtener más información acerca de las limitaciones asociadas al aprovisionamiento gratuito, así como las [guías de distribución de aplicaciones](~/ios/deploy-test/app-distribution/index.md) para obtener más información acerca de la distribución de aplicaciones iOS.
 
@@ -47,7 +47,7 @@ Siga estos pasos para probar su aplicación Xamarin.iOS con el aprovisionamiento
 
 1. Si no tiene ningún ID de Apple, [créelo](https://appleid.apple.com).
 2. Abra Xcode y navegue hasta **Xcode > Preferencias**.
-3. En **Cuentas**, use el botón **+** para agregar su id. de Apple existente. Debería tener un aspecto similar al de la siguiente captura de pantalla:
+3. En **Cuentas** , use el botón **+** para agregar su id. de Apple existente. Debería tener un aspecto similar al de la siguiente captura de pantalla:
 
     ![Preferencias de Xcode: Cuentas](free-provisioning-images/launchapp1.png "Preferencias de Xcode: Cuentas")
 
@@ -63,7 +63,7 @@ Siga estos pasos para probar su aplicación Xamarin.iOS con el aprovisionamiento
     ![Selección de un esquema de compilación de Xcode](free-provisioning-images/xcodescheme.png "Selección de un esquema de compilación de Xcode")
 
 9. Abra la configuración de proyecto de la aplicación. Para ello, seleccione el nodo superior en el **navegador de proyectos** de Xcode.
-10. En **General > Identidad**, asegúrese de que el **identificador de agrupación** _coincida exactamente_ con el identificador de agrupación de su aplicación Xamarin.iOS.
+10. En **General > Identidad** , asegúrese de que el **identificador de agrupación** _coincida exactamente_ con el identificador de agrupación de su aplicación Xamarin.iOS de Info.plist.
 
     ![Establecimiento de un identificador de lote](free-provisioning-images/launchapp5.png "Establecimiento de un identificador de lote")
 
@@ -71,8 +71,8 @@ Siga estos pasos para probar su aplicación Xamarin.iOS con el aprovisionamiento
     > Xcode solo creará un perfil de aprovisionamiento para un id. de aplicación explícito. Además, debe ser idéntico al identificador de aplicación de su aplicación Xamarin.iOS.
     > Si difieren, no podrá usar el aprovisionamiento gratuito para implementar su aplicación Xamarin.iOS.
 
-11. En **Información sobre la implementación**, asegúrese de que el destino de la implementación coincida con la versión de iOS instalada en su dispositivo iOS conectado, o bien que sea inferior a esta.
-12. En **Firma**, seleccione **Administrar firma automáticamente** y seleccione su equipo en la lista desplegable:
+11. En **Información sobre la implementación** , asegúrese de que el destino de la implementación coincida con la versión de iOS instalada en su dispositivo iOS conectado, o bien que sea inferior a esta.
+12. En **Firma** , seleccione **Administrar firma automáticamente** y seleccione su equipo en la lista desplegable:
 
     ![Administrar la firma automáticamente](free-provisioning-images/launchapp6.png "Administrar la firma automáticamente")
 
@@ -91,10 +91,10 @@ Siga estos pasos para probar su aplicación Xamarin.iOS con el aprovisionamiento
 
 1. Conecte su dispositivo iOS al host de compilación Mac mediante USB o de forma [inalámbrica](~/ios/deploy-test/wireless-deployment.md).
 2. En el **Panel de solución** de Visual Studio para Mac, haga doble clic en **Info.plist**.
-3. En **Firma**, seleccione **Aprovisionamiento manual**.
+3. En **Firma** , seleccione **Aprovisionamiento manual**.
 4. Haga clic en el botón **Firma de agrupación de iOS…** .
-5. Para **Configuración**, seleccione **Depurar**.
-6. Para **Plataforma**, seleccione **iPhone**.
+5. Para **Configuración** , seleccione **Depurar**.
+6. Para **Plataforma** , seleccione **iPhone**.
 7. Seleccione la **identidad de firma** creada por Xcode.
 8. Seleccione el **perfil de aprovisionamiento** creado por Xcode.
 
@@ -112,12 +112,12 @@ Siga estos pasos para probar su aplicación Xamarin.iOS con el aprovisionamiento
 2. Conecte su dispositivo iOS al host de compilación Mac mediante USB o de forma [inalámbrica](~/ios/deploy-test/wireless-deployment.md).
 3. En el **Explorador de soluciones** de Visual Studio 2019 o Visual Studio 2017, haga clic con el botón derecho en su proyecto Xamarin.iOS y seleccione **Propiedades**.
 4. Navegue hasta **Firma de agrupación de iOS**.
-5. Para **Configuración**, seleccione **Depurar**.
-6. Para **Plataforma**, seleccione **iPhone**.
+5. Para **Configuración** , seleccione **Depurar**.
+6. Para **Plataforma** , seleccione **iPhone**.
 7. Seleccione **Aprovisionamiento manual**.
 8. Seleccione la **identidad de firma** creada por Xcode.
 9. Seleccione el **perfil de aprovisionamiento** creado por Xcode.
-    
+
     ![Establecimiento de la identidad de firma y el perfil de aprovisionamiento](free-provisioning-images/setprofile-w157.png "Establecimiento de la identidad de firma y el perfil de aprovisionamiento")
 
     > [!TIP]
@@ -133,7 +133,7 @@ Siga estos pasos para probar su aplicación Xamarin.iOS con el aprovisionamiento
 Apple ha impuesto varias limitaciones sobre cuándo y cómo puede usar el aprovisionamiento gratuito para ejecutar su aplicación en un dispositivo iOS, garantizando que solo puede implementar en *su* dispositivo:
 
 - El acceso a iTunes Connect está limitado y, por lo tanto, los servicios como la publicación en el App Store y TestFlight no están disponibles para desarrolladores que aprovisionan sus aplicaciones de manera gratuita. Se necesita una cuenta de Apple Developer (Enterprise o Personal) para distribuir mediante medios Ad Hoc e internos.
-- Los perfiles de aprovisionamiento creados con el aprovisionamiento gratuito expirarán tras una semana y las identidades de firma lo harán tras un año. 
+- Los perfiles de aprovisionamiento creados con el aprovisionamiento gratuito expirarán tras una semana y las identidades de firma lo harán tras un año.
 - Puesto que Xcode solo creará perfiles de aprovisionamiento para identificadores de aplicación explícitos, necesitará seguir las [instrucciones anteriores](#testing-on-device-with-free-provisioning) para cada aplicación que quiera instalar.
 - El aprovisionamiento de la mayoría de los servicios de aplicación tampoco es posible con el aprovisionamiento gratuito. Esto incluye Apple Pay, Game Center, iCloud, las compras desde la aplicación, las notificaciones de inserción y Wallet. Apple proporciona una lista completa de las capacidades en su guía de [capacidades admitidas (iOS)](https://help.apple.com/developer-account/#/dev21218dfd6). Para aprovisionar su aplicación para su uso con servicios de aplicación, consulte las guías para [trabajar con capacidades](~/ios/deploy-test/provisioning/capabilities/index.md).
 

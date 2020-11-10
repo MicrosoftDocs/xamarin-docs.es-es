@@ -5,12 +5,12 @@ ms.assetid: B3342772-FB88-4B7F-BC15-8BC78EED749E
 author: JonDouglas
 ms.author: jodou
 ms.date: 09/17/2019
-ms.openlocfilehash: 1ce0233a45211ee91b9f1e30247ac18cdd5c5a66
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: d3e04daeb3957e0006f5746a730488ff455da18d
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91454304"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92928573"
 ---
 # <a name="android-10-with-xamarin"></a>Android 10 con Xamarin
 
@@ -28,10 +28,10 @@ Xamarin.Android 10.0 proporciona compatibilidad con Android 10. Para más info
 
 Para usar las características de Android 10 en aplicaciones basadas en Xamarin, se requiere lo siguiente:
 
-- **Visual Studio**: se recomienda Visual Studio 2019. En Windows, actualice a Visual Studio 2019 versión 16.3 o posterior. En macOS, actualice a Visual Studio 2019 para Mac versión 8.3 o posterior.
-- **Xamarin.Android**: Xamarin.Android 10.0 o posterior debe instalarse con Visual Studio (Xamarin.Android se instala automáticamente como parte de la carga de trabajo de **desarrollo móvil con .NET** en Windows y se instala como parte del **instalador de Visual Studio para Mac**).
-- **Kit para desarrolladores de Java**: el desarrollo de Xamarin.Android 10.0 requiere JDK 8. La distribución de Microsoft de OpenJDK se instala automáticamente como parte de Visual Studio.
-- **Android SDK**: Android SDK (API 29) o posterior debe estar instalado mediante el Administrador de Android SDK.
+- **Visual Studio** : se recomienda Visual Studio 2019. En Windows, actualice a Visual Studio 2019 versión 16.3 o posterior. En macOS, actualice a Visual Studio 2019 para Mac versión 8.3 o posterior.
+- **Xamarin.Android** : Xamarin.Android 10.0 o posterior debe instalarse con Visual Studio (Xamarin.Android se instala automáticamente como parte de la carga de trabajo de **desarrollo móvil con .NET** en Windows y se instala como parte del **instalador de Visual Studio para Mac** ).
+- **Kit para desarrolladores de Java** : el desarrollo de Xamarin.Android 10.0 requiere JDK 8. La distribución de Microsoft de OpenJDK se instala automáticamente como parte de Visual Studio.
+- **Android SDK** : Android SDK (API 29) o posterior debe estar instalado mediante el Administrador de Android SDK.
 
 ## <a name="get-started"></a>Primeros pasos
 
@@ -64,7 +64,7 @@ Para crear un proyecto con Xamarin.Android 10.0, primero debe usar el administr
 
     ![Selección del repositorio de Administrador de Android SDK](~/android/platform/android-10-images/sdkrepository.png)
 
-3. Instale los paquetes de la **plataforma del SDK de Android 10**, que se muestran como **Android SDK Platform 29** en la pestaña **Plataformas** (para más información acerca del uso del Administrador de SDK, consulte [Configuración del SDK de Android para Xamarin.Android](../get-started/installation/android-sdk.md)):
+3. Instale los paquetes de la **plataforma del SDK de Android 10** , que se muestran como **Android SDK Platform 29** en la pestaña **Plataformas** (para más información acerca del uso del Administrador de SDK, consulte [Configuración del SDK de Android para Xamarin.Android](../get-started/installation/android-sdk.md)):
 
     ![Pestaña Plataforma del Administrador de Android SDK](~/android/platform/android-10-images/sdkplatforms.png)
 
@@ -88,31 +88,31 @@ Android 10 presenta una variedad de características nuevas. Algunas de estas n
 
 ## <a name="enhance-your-app-with-android-10-features-and-apis"></a>Mejora de la aplicación con características y API de Android 10
 
-Después, cuando esté listo, profundice en Android 10 y obtenga información sobre las [nuevas características y API](https://developer.android.com/preview/api-overview.html) que puede usar. Estas son algunas de las características principales con las que empezar a trabajar.
+Después, cuando esté listo, profundice en Android 10 y obtenga información sobre las[nuevas características y API](https://developer.android.com/preview/api-overview.html) que puede usar. Estas son algunas de las características principales con las que empezar a trabajar.
 
 Estas características se recomiendan para todas las aplicaciones:
 
-- **Compatibilidad con un tema oscuro** para garantizar una experiencia unificada para aquellos usuarios que habiliten el [tema oscuro](https://developer.android.com/preview/features/darktheme)en todo el sistema o habilitar  [Force Dark](https://developer.android.com/preview/features/darktheme#force_dark).
+- **Tema oscuro:** garantice una experiencia unificada para aquellos usuarios que habiliten el tema oscuro agregando un [tema oscuro](https://developer.android.com/preview/features/darktheme) o habilitando [Forzar oscuro](https://developer.android.com/preview/features/darktheme#force_dark).
 
 ![Tema oscuro](~/android/platform/android-10-images/darktheme.png)
 
-- **Compatibilidad [con la navegación mediante gestos](https://developer.android.com/preview/features/gesturalnav)**  en la aplicación al ir de extremo a extremo y asegurarse de que los gestos personalizados se complementen con los gestos de navegación del sistema.
+- **Compatibilidad[ con la navegación mediante gestos en la aplicación](https://developer.android.com/preview/features/gesturalnav)** al ir de extremo a extremo y asegurarse de que los gestos personalizados se complementen con los gestos de navegación del sistema.
 
 ![Navegación mediante gestos](~/android/platform/android-10-images/gesturenavigation.png)
 
-- **Optimización para dispositivos plegables:**  para ofrecer experiencias de vanguardia en los dispositivos innovadores actuales mediante la  [optimización para dispositivos plegables](https://developer.android.com/preview/features/foldables).
+- **Optimización para dispositivos plegables** : ofrezca experiencias integrales y fluidas en los innovadores dispositivos plegables que hay disponibles actualmente mediante la [optimización para dispositivos plegables](https://developer.android.com/guide/topics/ui/foldables).
 
 ![Dispositivo plegable](~/android/platform/android-10-images/foldable.png)
 
 Se recomiendan estas características si es pertinente para su aplicación:
 
-- **Notificaciones más interactivas:**  si las notificaciones incluyen mensajes, habilite [respuestas y acciones sugeridas en las notificaciones](https://developer.android.com/preview/features#smart-suggestions) para atraer a los usuarios y permitirles actuar al instante.
-- **Mejor biometría:**  si usa la autenticación biométrica, vaya a [BiometricPrompt](https://developer.android.com/reference/androidx/biometric/BiometricPrompt), la manera preferida de admitir la autenticación mediante huellas digitales en dispositivos modernos.
-- **Grabación enriquecida:**  para admitir la grabación de subtítulos o juegos y habilitar [la captura de reproducción de audio](https://developer.android.com/preview/features/playback-capture). Es una excelente manera de llegar a más usuarios y hacer que la aplicación sea más accesible.
-- **Mejores códecs:**  para aplicaciones multimedia, pruebe [AV1](https://en.wikipedia.org/wiki/AV1) para el streaming de vídeo y [HDR10 +](https://en.wikipedia.org/wiki/High-dynamic-range_video#HDR10+) para un vídeo de alto rango dinámico. Para el streaming de voz y música, puede usar la codificación [Opus](http://opus-codec.org/) y, para los músicos, está disponible una [API de MIDI nativa](https://developer.android.com/preview/features/midi) .
-- **Mejores API de red:**  si la aplicación administra dispositivos IoT a través de Wi-Fi, pruebe las nuevas  [API de conexión de red](https://developer.android.com/preview/features#peer2peer) para funciones como la configuración, descarga o impresión.
+- **Más notificaciones interactivas:** si las notificaciones incluyen mensajes, habilite[respuestas y acciones sugeridas en las notificaciones](https://developer.android.com/preview/features#smart-suggestions) para atraer a los usuarios y permitirles actuar al instante.
+- **Mejor biometría:** si usa la autenticación biométrica, vaya a [BiometricPrompt](https://developer.android.com/reference/androidx/biometric/BiometricPrompt), la manera preferida de admitir la autenticación mediante huellas digitales en dispositivos modernos.
+- **Grabación enriquecida:** para admitir los subtítulos o la grabación de juegos, habilite la [captura de reproducción de audio](https://developer.android.com/preview/features/playback-capture). Es una excelente manera de llegar a más usuarios y hacer que la aplicación sea más accesible.
+- **Mejores códecs:** para aplicaciones multimedia, pruebe [AV1](https://en.wikipedia.org/wiki/AV1) para el streaming de vídeo y [HDR10 +](https://en.wikipedia.org/wiki/High-dynamic-range_video#HDR10+) para un vídeo de alto rango dinámico. Para el streaming de voz y música, puede usar la codificación [Opus](http://opus-codec.org/) y, para los músicos, está disponible una[API de MIDI nativa](https://developer.android.com/preview/features/midi).
+- **Mejores API de red:** si la aplicación administra dispositivos IoT a través de Wi-Fi, pruebe las nuevas [API de conexión de red](https://developer.android.com/preview/features#peer2peer) para funciones como la configuración, descarga o impresión.
 
-Estas son solo algunas de las muchas características y API nuevas de Android 10. Para verlas todas, visite el sitio de [Android 10 para desarrolladores](https://developer.android.com/about/versions/10/highlights).
+Estas son solo algunas de las muchas características y API nuevas de Android 10. Para verlas todas, visite el sitio de [Android 10 para desarrolladores](https://developer.android.com/about/versions/10/highlights).
 
 ## <a name="behavior-changes"></a>Cambios de comportamiento
 

@@ -10,12 +10,12 @@ ms.date: 01/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 575169459433725ae3f3a7db675fc65caef1494e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c89c6b50335405b56349e502f95b9d2975a04f73
+ms.sourcegitcommit: 145bd7550d19088c84949ecf5b1cc39002183234
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563450"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93185511"
 ---
 # <a name="no-locxamarinforms-control-templates"></a>Plantillas de control de Xamarin.Forms
 
@@ -172,7 +172,7 @@ Las capturas de pantallas siguientes muestran que `CardViewControlTemplate` se h
 La extensión de marcado `TemplateBinding` enlaza una propiedad de un elemento que se encuentra en una clase [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) a una propiedad pública definida por el control personalizado, o la página, con plantilla. Cuando se usa `TemplateBinding`, permite que las propiedades del control actúen como parámetros para la plantilla. Por consiguiente, cuando se establece una propiedad de un control personalizado, o una página, con plantilla, ese valor se pasa al elemento que contiene `TemplateBinding`.
 
 > [!IMPORTANT]
-> La extensión de marcado `TemplateBinding` es una alternativa a la creación de una clase [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) que usa la extensión de marcado `RelativeSource` para establecer el elemento `BindingContext` del elemento raíz de la plantilla en su elemento primario con plantilla. La extensión de marcado `TemplateBinding` elimina el enlace `RelativeSource` y reemplaza las expresiones `Binding` por las expresiones `TemplateBinding`.
+> La expresión de marcado `TemplateBinding` permite quitar el enlace de `RelativeSource` de la plantilla de control anterior y reemplazar las expresiones de `Binding`.
 
 La extensión de marcado `TemplateBinding` define las siguientes propiedades:
 
@@ -253,7 +253,7 @@ En el siguiente ejemplo de XAML se muestra una clase [`ControlTemplate`](xref:Xa
 
 En este ejemplo, la extensión de marcado `TemplateBinding` resuelve las expresiones de enlace a partir de las propiedades de cada objeto `CardView`. Las capturas de pantallas siguientes muestran que `CardViewControlTemplate` se ha aplicado a tres objetos `CardView`:
 
-[![Capturas de pantallas de objetos CardView con plantilla, en iOS y Android](control-template-images/templatebinding-controltemplate.png "Objetos CardView con plantilla")](control-template-images/templatebinding-controltemplate-large.png#lightbox "Objetos CardView con plantilla")
+[![Capturas de pantallas de objetos CardView con plantilla](control-template-images/templatebinding-controltemplate.png "Objetos CardView con plantilla")](control-template-images/templatebinding-controltemplate-large.png#lightbox "Objetos CardView con plantilla")
 
 > [!IMPORTANT]
 > El uso de la extensión de marcado `TemplateBinding` es equivalente a establecer el elemento `BindingContext` del elemento raíz de la plantilla en su elemento primario con plantilla con la extensión de marcado `RelativeSource` y, luego, resolver los enlaces de objetos secundarios con la extensión de marcado `Binding`. De hecho, la extensión de marcado `TemplateBinding` crea un elemento `Binding` cuyo valor de `Source` es `RelativeBindingSource.TemplatedParent`.
@@ -549,7 +549,7 @@ public partial class AccessTemplateElementPage : HeaderFooterPage
 
 En este ejemplo, se recupera el objeto [`Label`](xref:Xamarin.Forms.Label) llamado `changeThemeLabel` una vez que se ha creado una instancia de `ControlTemplate`. Luego, la clase `AccessTemplateElementPage` puede acceder a `changeThemeLabel` y manipularlo. Las capturas de pantalla siguientes muestran que se ha cambiado el texto mostrado por el `Label`:
 
-[![Capturas de pantallas del objeto de página con plantilla, en iOS y Android](control-template-images/get-named-element.png "ContentPage con plantilla")](control-template-images/get-named-element-large.png#lightbox "ContentPage con plantilla")
+[![Capturas de pantallas de objeto de página con plantilla](control-template-images/get-named-element.png "ContentPage con plantilla")](control-template-images/get-named-element-large.png#lightbox "ContentPage con plantilla")
 
 ## <a name="bind-to-a-viewmodel"></a>Enlace a ViewModel
 
@@ -625,13 +625,13 @@ En este ejemplo, el elemento `BindingContext` de la página se establece en una 
 
 En este ejemplo, el elemento raíz de [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) es un objeto [`Frame`](xref:Xamarin.Forms.Frame). El objeto `Frame` usa la extensión de marcado `RelativeSource` para establecer su `BindingContext` en el elemento primario con plantilla. Las expresiones de enlace del objeto `Frame` y sus elementos secundarios se resuelven a partir de propiedades `CardView`, por la herencia de `BindingContext` del elemento `Frame` raíz. Las capturas de pantallas siguientes muestran la página con la colección `People`, que consta de tres elementos:
 
-[![Capturas de pantallas de objetos CardView con plantilla, en iOS y Android](control-template-images/viewmodel-controltemplate.png "Objetos CardView con plantilla")](control-template-images/viewmodel-controltemplate-large.png#lightbox "Objetos CardView con plantilla")
+[![Capturas de pantallas de tres objetos CardView con plantilla](control-template-images/viewmodel-controltemplate.png "Objetos CardView con plantilla")](control-template-images/viewmodel-controltemplate-large.png#lightbox "Objetos CardView con plantilla")
 
 Mientras que los objetos [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) enlazan a propiedades de su elemento primario con plantilla, el elemento [`Button`](xref:Xamarin.Forms.Button) de la plantilla de control enlaza a su elemento primario con plantilla y al elemento `DeletePersonCommand` de ViewModel. Esto se debe a que la propiedad `Button.Command` vuelve a definir su origen de enlace como el contexto de enlace del antecesor cuyo tipo de contexto de enlace es `PeopleViewModel`, que es el elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). Luego, la parte `Path` de las expresiones de enlace puede resolver la propiedad `DeletePersonCommand`. Sin embargo, la propiedad `Button.CommandParameter` no modifica su origen de enlace, sino que la hereda de su elemento primario en la clase [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate). Por lo tanto, la propiedad `CommandParameter` enlaza a la propiedad `CardTitle` de `CardView`.
 
 El efecto general de los enlaces [`Button`](xref:Xamarin.Forms.Button) es que cuando se pulsa el elemento `Button`, se ejecuta el elemento `DeletePersonCommand` de la clase `PeopleViewModel`, y se pasa el valor de la propiedad `CardName` a `DeletePersonCommand`. Como resultado, el objeto `CardView` especificado se quita del diseño enlazable:
 
-[![Capturas de pantallas de objetos CardView con plantilla, en iOS y Android](control-template-images/viewmodel-itemdeleted.png "Objetos CardView con plantilla")](control-template-images/viewmodel-itemdeleted-large.png#lightbox "Objetos CardView con plantilla")
+[![Capturas de pantallas de dos objetos CardView con plantilla](control-template-images/viewmodel-itemdeleted.png "Objetos CardView con plantilla")](control-template-images/viewmodel-itemdeleted-large.png#lightbox "Objetos CardView con plantilla")
 
 Para más información sobre los enlaces relativos, consulte [Enlaces relativos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
