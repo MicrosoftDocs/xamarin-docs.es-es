@@ -10,16 +10,16 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d29dafd5bcdf991f275580850d77a4923d37286e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 46f88b1672690645a8e71aba2c0dbe44d7b123cd
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563060"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368770"
 ---
 # <a name="no-locxamarinforms-master-detail-page"></a>Página maestra y de detalles de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
 
 _MasterDetailPage de Xamarin.Forms es una página que administra dos páginas relacionadas de información: una página maestra que presenta elementos y una página de detalles que presenta detalles sobre los elementos de la página maestra. En este artículo se explica cómo usar una instancia de MasterDetailPage y cómo navegar entre sus páginas de información._
 
@@ -254,11 +254,11 @@ Las capturas de pantalla siguientes muestran la página de detalles `ContactPage
 
 La forma en que [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) administre las páginas maestra y de detalles depende de si la aplicación se ejecuta en un teléfono o tableta, de la orientación del dispositivo y del valor de la propiedad [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior). Esta propiedad determina cómo se muestra la página de detalles. Sus posibles valores son:
 
-- **Default**: las páginas se muestran con el valor predeterminado de la plataforma.
-- **Popover**: la página de detalles cubre, o cubre parcialmente, la página maestra.
-- **Split**: la página maestra se muestra a la izquierda y la página de detalles a la derecha.
-- **SplitOnLandscape**: se usa una pantalla dividida cuando el dispositivo está en orientación horizontal.
-- **SplitOnPortrait**: se usa una pantalla dividida cuando el dispositivo está en orientación vertical.
+- **Default** : las páginas se muestran con el valor predeterminado de la plataforma.
+- **Popover** : la página de detalles cubre, o cubre parcialmente, la página maestra.
+- **Split** : la página maestra se muestra a la izquierda y la página de detalles a la derecha.
+- **SplitOnLandscape** : se usa una pantalla dividida cuando el dispositivo está en orientación horizontal.
+- **SplitOnPortrait** : se usa una pantalla dividida cuando el dispositivo está en orientación vertical.
 
 En el siguiente ejemplo de código XAML se muestra cómo establecer la propiedad [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) en una instancia de [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage):
 

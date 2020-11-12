@@ -10,16 +10,16 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 113265ffd26fcb1daf1cc85867e55f3e8ebd091f
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 29d3dbc29424089b9e5c492395ccbadfa0a69ae7
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557951"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373411"
 ---
 # <a name="playing-a-web-video"></a>Reproducción de un vídeo web
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 La clase `VideoPlayer` define una propiedad `Source` que se usa para especificar el origen del archivo de vídeo, así como una propiedad `AutoPlay`. El valor predeterminado de `AutoPlay` es `true`, lo que significa que el vídeo se debería comenzar a reproducir de forma automática después de establecer `Source`:
 
@@ -466,7 +466,7 @@ Con la implementación de estas propiedades en los tres representadores, es posi
 </ContentPage>
 ```
 
-La clase `VideoSourceConverter` convierte la cadena en un elemento `UriVideoSource`. Cuando se desplaza a la página **Play Web Video**, se empieza a cargar el vídeo y se inicia la reproducción cuando se ha descargado y almacenado en búfer una cantidad de datos suficiente. El vídeo tiene aproximadamente 10 minutos de duración:
+La clase `VideoSourceConverter` convierte la cadena en un elemento `UriVideoSource`. Cuando se desplaza a la página **Play Web Video** , se empieza a cargar el vídeo y se inicia la reproducción cuando se ha descargado y almacenado en búfer una cantidad de datos suficiente. El vídeo tiene aproximadamente 10 minutos de duración:
 
 [![Reproducir vídeo web](web-videos-images/playwebvideo-small.png "Reproducir vídeo web")](web-videos-images/playwebvideo-large.png#lightbox "Reproducir vídeo web")
 

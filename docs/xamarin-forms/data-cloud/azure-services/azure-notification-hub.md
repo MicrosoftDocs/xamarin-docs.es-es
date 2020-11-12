@@ -11,16 +11,16 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 - Firebase
-ms.openlocfilehash: 6135d8caec196ded385bc0f962f007c41d20e2cb
-ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
+ms.openlocfilehash: 498e3b0bd2cb88df3e04dc19c66dbe671a8378dd
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92897508"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374451"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-no-locxamarinforms"></a>Envío y recepción de notificaciones push con Azure Notification Hubs y Xamarin.Forms
 
-[![Descarga de ejemplo](~/media/shared/download.png)Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
+[![Descarga de ejemplo](~/media/shared/download.png)Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
 
 Las notificaciones push entregan información de un sistema back-end a una aplicación móvil. Apple, Google y otras plataformas tienen su propio servicio de notificaciones push (PNS). Azure Notification Hubs permite centralizar las notificaciones multiplataforma para que la aplicación de back-end pueda comunicarse con un solo centro de conectividad, que se encarga de distribuir las notificaciones al PNS específico de cada plataforma.
 
@@ -122,7 +122,7 @@ public static class AppConstants
 Personalice los valores siguientes de `AppConstants` para conectar la aplicación de ejemplo al centro de notificaciones de Azure:
 
 * `NotificationHubName`: use el nombre del centro de notificaciones de Azure que ha creado en Azure Portal.
-* `ListenConnectionString`: este valor se encuentra en el centro de notificaciones de Azure, en **Directivas de acceso** .
+* `ListenConnectionString`: este valor se encuentra en el centro de notificaciones de Azure, en **Directivas de acceso**.
 
 La captura de pantalla siguiente muestra dónde se encuentran estos valores en Azure Portal:
 

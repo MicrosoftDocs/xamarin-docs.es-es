@@ -10,16 +10,16 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3a085226da3c63f4f151bc657976bba384c02170
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6cc6b1a33f2334239d2135d6ffe72c24d2243335
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561149"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374750"
 ---
 # <a name="reusable-effectbehavior"></a>EffectBehavior reutilizable
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
 
 _Los comportamientos son una manera útil de agregar un efecto a un control, quitando el código de control de efecto reutilizable de los archivos de código subyacente. En este artículo se explica cómo crear y consumir un comportamiento de Xamarin.Forms para agregar un efecto a un control._
 
@@ -29,8 +29,8 @@ La clase `EffectBehavior` es un comportamiento personalizado de Xamarin.Forms re
 
 Para usar el comportamiento, se deben establecer las propiedades de comportamiento siguientes:
 
-- **Group**: el valor del atributo [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) para la clase del efecto.
-- **Name**: el valor del atributo [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) para la clase del efecto.
+- **Group** : el valor del atributo [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) para la clase del efecto.
+- **Name** : el valor del atributo [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) para la clase del efecto.
 
 Para obtener más información sobre los efectos, vea [Efectos](~/xamarin-forms/app-fundamentals/effects/index.md).
 

@@ -12,16 +12,16 @@ ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 96b3e6bd055c0bc89ae7bcbb66c8b3f48b21ad17
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: b550aed2dd2038a48fa4eafcf1ed1d874a08eb03
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436234"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375530"
 ---
 # <a name="create-a-single-page-no-locxamarinforms-application"></a>Creación de una aplicación de Xamarin.Forms de una página
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 
 En este inicio rápido aprenderá a:
 
@@ -49,28 +49,28 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
     ![nuevo proyecto](single-page-images/vs/new-solution-2019.png)
 
-2. En la ventana **Crear un proyecto nuevo**, seleccione **Móvil** en la lista desplegable **Tipo de proyecto**, elija la plantilla **Aplicación móvil (Xamarin.Forms)** y haga clic en el botón **Siguiente**:
+2. En la ventana **Crear un proyecto nuevo** , seleccione **Móvil** en la lista desplegable **Tipo de proyecto** , elija la plantilla **Aplicación móvil (Xamarin.Forms)** y haga clic en el botón **Siguiente** :
 
     ![Plantillas de proyectos multiplataforma](single-page-images/vs/new-project-2019.png)
 
-3. En el cuadro de diálogo **Configure su nuevo proyecto**, establezca **Nombre del proyecto** en **Notes**, elija una ubicación adecuada para el proyecto y haga clic en el botón **Crear**:
+3. En el cuadro de diálogo **Configure su nuevo proyecto** , establezca **Nombre del proyecto** en **Notes** , elija una ubicación adecuada para el proyecto y haga clic en el botón **Crear** :
 
     ![Configurar el proyecto](single-page-images/vs/configure-project.png)
 
     > [!IMPORTANT]
     > Los fragmentos de XAML y C# en este inicio rápido requieren que la solución se denomine **Notes**. El uso de otro nombre dará como resultado errores de compilación al copiar el código de este inicio rápido en la solución.
 
-4. En el cuadro de diálogo **New Cross Platform App** (Nueva aplicación multiplataforma), haga clic en **En blanco** y después en el botón **Aceptar**:
+4. En el cuadro de diálogo **New Cross Platform App** (Nueva aplicación multiplataforma), haga clic en **En blanco** y después en el botón **Aceptar** :
 
     ![Nueva aplicación multiplataforma](single-page-images/vs/new-app-2019.png)
 
     Para obtener más información sobre la biblioteca de .NET Standard creada, vea [Anatomía de una aplicación de Xamarin.Forms](deepdive.md#anatomy-of-a-xamarinforms-application) en [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md).
 
-5. En el **Explorador de soluciones**, en el proyecto **Notes**, haga doble clic en **MainPage.xaml** para abrirlo:
+5. En el **Explorador de soluciones** , en el proyecto **Notes** , haga doble clic en **MainPage.xaml** para abrirlo:
 
     ![Abrir MainPage.xaml](single-page-images/vs/open-mainpage-xaml-2019.png)
 
-6. En **MainPage.xaml**, quite todo el código de plantilla y sustitúyalo por el siguiente código:
+6. En **MainPage.xaml** , quite todo el código de plantilla y sustitúyalo por el siguiente código:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -103,11 +103,11 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
     Guarde los cambios en **MainPage.xaml** presionando **CTRL+S** y cierre el archivo.
 
-7. En el **Explorador de soluciones**, en el proyecto **Notes**, expanda **MainPage.xaml** y haga doble clic en **MainPage.xaml.cs** para abrirlo:
+7. En el **Explorador de soluciones** , en el proyecto **Notes** , expanda **MainPage.xaml** y haga doble clic en **MainPage.xaml.cs** para abrirlo:
 
     ![Abrir MainPage.xaml.cs](single-page-images/vs/open-mainpage-codebehind-2019.png)
 
-8. En **MainPage.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código:
+8. En **MainPage.xaml.cs** , quite todo el código de plantilla y sustitúyalo por el siguiente código:
 
     ```csharp
     using System;
@@ -147,7 +147,7 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
     }
     ```
 
-    Este código define un campo `_fileName`, que hace referencia a un archivo denominado `notes.txt` que almacenará los datos de la nota en la carpeta de datos de la aplicación local para la aplicación. Cuando se ejecuta el constructor de páginas, el archivo se lee, si existe, y se muestra en el [`Editor`](xref:Xamarin.Forms.Editor). Al presionar el control [`Button`](xref:Xamarin.Forms.Button) **Guardar**, se ejecuta el controlador de eventos `OnSaveButtonClicked`, que guarda el contenido de `Editor` en el archivo. Al presionar el control `Button` **Eliminar**, se ejecuta el controlador de eventos `OnDeleteButtonClicked`, que elimina el archivo, siempre que exista, y quita cualquier texto de `Editor`. Para obtener más información sobre la interacción del usuario, vea [Respuesta a la interacción del usuario](deepdive.md#responding-to-user-interaction) en [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md).
+    Este código define un campo `_fileName`, que hace referencia a un archivo denominado `notes.txt` que almacenará los datos de la nota en la carpeta de datos de la aplicación local para la aplicación. Cuando se ejecuta el constructor de páginas, el archivo se lee, si existe, y se muestra en el [`Editor`](xref:Xamarin.Forms.Editor). Al presionar el control [`Button`](xref:Xamarin.Forms.Button) **Guardar** , se ejecuta el controlador de eventos `OnSaveButtonClicked`, que guarda el contenido de `Editor` en el archivo. Al presionar el control `Button` **Eliminar** , se ejecuta el controlador de eventos `OnDeleteButtonClicked`, que elimina el archivo, siempre que exista, y quita cualquier texto de `Editor`. Para obtener más información sobre la interacción del usuario, vea [Respuesta a la interacción del usuario](deepdive.md#responding-to-user-interaction) en [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md).
 
     Guarde los cambios en **MainPage.xaml.cs** presionando **CTRL+S** y cierre el archivo.
 
@@ -203,24 +203,24 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
     ![nuevo proyecto](single-page-images/vs/new-solution.png)
 
-2. En el cuadro de diálogo **Nuevo proyecto**, haga clic en **Multiplataforma**, seleccione la plantilla **Aplicación móvil (Xamarin.Forms)** , establezca el nombre en **Notes**, elija una ubicación adecuada para el proyecto y haga clic en el botón **Aceptar**:
+2. En el cuadro de diálogo **Nuevo proyecto** , haga clic en **Multiplataforma** , seleccione la plantilla **Aplicación móvil (Xamarin.Forms)** , establezca el nombre en **Notes** , elija una ubicación adecuada para el proyecto y haga clic en el botón **Aceptar** :
 
     ![Plantillas de proyectos multiplataforma](single-page-images/vs/new-project.png)
 
     > [!IMPORTANT]
     > Los fragmentos de XAML y C# en este inicio rápido requieren que la solución se denomine **Notes**. El uso de otro nombre dará como resultado errores de compilación al copiar el código de este inicio rápido en la solución.
 
-3. En el cuadro de diálogo **New Cross Platform App** (Nueva aplicación multiplataforma), haga clic en **Aplicación en blanco**, seleccione **.NET Standard** como estrategia de código de uso compartido y haga clic en el botón **Aceptar**:
+3. En el cuadro de diálogo **New Cross Platform App** (Nueva aplicación multiplataforma), haga clic en **Aplicación en blanco** , seleccione **.NET Standard** como estrategia de código de uso compartido y haga clic en el botón **Aceptar** :
 
     ![Nueva aplicación multiplataforma](single-page-images/vs/new-app.png)
 
     Para obtener más información sobre la biblioteca de .NET Standard creada, vea [Anatomía de una aplicación de Xamarin.Forms](deepdive.md#anatomy-of-a-xamarinforms-application) en [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md).
 
-4. En el **Explorador de soluciones**, en el proyecto **Notes**, haga doble clic en **MainPage.xaml** para abrirlo:
+4. En el **Explorador de soluciones** , en el proyecto **Notes** , haga doble clic en **MainPage.xaml** para abrirlo:
 
     ![Abrir MainPage.xaml](single-page-images/vs/open-mainpage-xaml.png)
 
-5. En **MainPage.xaml**, quite todo el código de plantilla y sustitúyalo por el siguiente código:
+5. En **MainPage.xaml** , quite todo el código de plantilla y sustitúyalo por el siguiente código:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -253,11 +253,11 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
     Guarde los cambios en **MainPage.xaml** presionando **CTRL+S** y cierre el archivo.
 
-6. En el **Explorador de soluciones**, en el proyecto **Notes**, expanda **MainPage.xaml** y haga doble clic en **MainPage.xaml.cs** para abrirlo:
+6. En el **Explorador de soluciones** , en el proyecto **Notes** , expanda **MainPage.xaml** y haga doble clic en **MainPage.xaml.cs** para abrirlo:
 
     ![Abrir MainPage.xaml.cs](single-page-images/vs/open-mainpage-codebehind.png)
 
-7. En **MainPage.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código:
+7. En **MainPage.xaml.cs** , quite todo el código de plantilla y sustitúyalo por el siguiente código:
 
     ```csharp
     using System;
@@ -297,7 +297,7 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
     }
     ```
 
-    Este código define un campo `_fileName`, que hace referencia a un archivo denominado `notes.txt` que almacenará los datos de la nota en la carpeta de datos de la aplicación local para la aplicación. Cuando se ejecuta el constructor de páginas, el archivo se lee, si existe, y se muestra en el [`Editor`](xref:Xamarin.Forms.Editor). Al presionar el control [`Button`](xref:Xamarin.Forms.Button) **Guardar**, se ejecuta el controlador de eventos `OnSaveButtonClicked`, que guarda el contenido de `Editor` en el archivo. Al presionar el control `Button` **Eliminar**, se ejecuta el controlador de eventos `OnDeleteButtonClicked`, que elimina el archivo, siempre que exista, y quita cualquier texto de `Editor`. Para obtener más información sobre la interacción del usuario, vea [Respuesta a la interacción del usuario](deepdive.md#responding-to-user-interaction) en [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md).
+    Este código define un campo `_fileName`, que hace referencia a un archivo denominado `notes.txt` que almacenará los datos de la nota en la carpeta de datos de la aplicación local para la aplicación. Cuando se ejecuta el constructor de páginas, el archivo se lee, si existe, y se muestra en el [`Editor`](xref:Xamarin.Forms.Editor). Al presionar el control [`Button`](xref:Xamarin.Forms.Button) **Guardar** , se ejecuta el controlador de eventos `OnSaveButtonClicked`, que guarda el contenido de `Editor` en el archivo. Al presionar el control `Button` **Eliminar** , se ejecuta el controlador de eventos `OnDeleteButtonClicked`, que elimina el archivo, siempre que exista, y quita cualquier texto de `Editor`. Para obtener más información sobre la interacción del usuario, vea [Respuesta a la interacción del usuario](deepdive.md#responding-to-user-interaction) en [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md).
 
     Guarde los cambios en **MainPage.xaml.cs** presionando **CTRL+S** y cierre el archivo.
 
@@ -349,19 +349,19 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
 ## <a name="get-started-with-visual-studio-for-mac"></a>Introducción a Visual Studio para Mac
 
-1. Para crear un proyecto, inicie Visual Studio para Mac y, en la ventana de inicio, haga clic en **Nuevo**:
+1. Para crear un proyecto, inicie Visual Studio para Mac y, en la ventana de inicio, haga clic en **Nuevo** :
 
     ![Nueva solución](single-page-images/vsmac/new-project.png)
 
-2. En el cuadro de diálogo **Elija una plantilla para el nuevo proyecto**, haga clic en **Multiplataforma > Aplicación**, seleccione la plantilla **Aplicación de Forms en blanco** y haga clic en el botón **Siguiente**:
+2. En el cuadro de diálogo **Elija una plantilla para el nuevo proyecto** , haga clic en **Multiplataforma > Aplicación** , seleccione la plantilla **Aplicación de Forms en blanco** y haga clic en el botón **Siguiente** :
 
     ![Elegir una plantilla](single-page-images/vsmac/choose-template.png)
 
-3. En el cuadro de diálogo **Configurar su nueva aplicación de Forms en blanco**, asigne a la nueva aplicación el nombre **Notes**, asegúrese de que el botón de radio **Usar .NET Standard** esté seleccionado y haga clic en el botón **Siguiente**:    
+3. En el cuadro de diálogo **Configurar su nueva aplicación de Forms en blanco** , asigne a la nueva aplicación el nombre **Notes** , asegúrese de que el botón de radio **Usar .NET Standard** esté seleccionado y haga clic en el botón **Siguiente** :    
 
     ![Configurar la aplicación de Forms](single-page-images/vsmac/configure-app.png)
 
-4. En el cuadro de diálogo **Configurar su nueva aplicación de Forms en blanco**, deje los nombres de solución y de proyecto establecidos en **Notes**, elija una ubicación adecuada para el proyecto y haga clic en el botón **Crear** para crearlo:
+4. En el cuadro de diálogo **Configurar su nueva aplicación de Forms en blanco** , deje los nombres de solución y de proyecto establecidos en **Notes** , elija una ubicación adecuada para el proyecto y haga clic en el botón **Crear** para crearlo:
 
     ![Configurar el proyecto de Forms](single-page-images/vsmac/configure-project.png)
 
@@ -370,11 +370,11 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
     Para obtener más información sobre la biblioteca de .NET Standard creada, vea [Anatomía de una aplicación de Xamarin.Forms](deepdive.md#anatomy-of-a-xamarinforms-application) en [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md).
 
-5. En el **Panel de solución**, en el proyecto **Notes**, haga doble clic en **MainPage.xaml** para abrirlo:
+5. En el **Panel de solución** , en el proyecto **Notes** , haga doble clic en **MainPage.xaml** para abrirlo:
 
     ![MainPage.xaml](single-page-images/vsmac/mainpage-xaml.png)
 
-6. En **MainPage.xaml**, quite todo el código de plantilla y sustitúyalo por el siguiente código:
+6. En **MainPage.xaml** , quite todo el código de plantilla y sustitúyalo por el siguiente código:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -405,13 +405,13 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
     Este código define mediante declaración la interfaz de usuario para la página, que consta de una instancia de [`Label`](xref:Xamarin.Forms.Label) para mostrar texto, una instancia de [`Editor`](xref:Xamarin.Forms.Editor) para entrada de texto y dos instancias de [`Button`](xref:Xamarin.Forms.Button) que dirigen la aplicación para guardar o eliminar un archivo. Las dos instancias de `Button` se disponen horizontalmente en [`Grid`](xref:Xamarin.Forms.Grid), mientras que `Label`, `Editor` y `Grid` se disponen verticalmente en [`StackLayout`](xref:Xamarin.Forms.StackLayout). Para obtener más información sobre la creación de la interfaz de usuario, vea [Interfaz de usuario](deepdive.md#user-interface) en [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md).
 
-    Guarde los cambios en **MainPage.xaml** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
+    Guarde los cambios en **MainPage.xaml** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S** ) y cierre el archivo.
 
-7. En el **Panel de solución**, en el proyecto **Notes**, expanda **MainPage.xaml** y haga doble clic en **MainPage.xaml.cs** para abrirlo:
+7. En el **Panel de solución** , en el proyecto **Notes** , expanda **MainPage.xaml** y haga doble clic en **MainPage.xaml.cs** para abrirlo:
 
     ![MainPage.xaml.cs](single-page-images/vsmac/mainpage-xaml-cs.png)
 
-8. En **MainPage.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código:
+8. En **MainPage.xaml.cs** , quite todo el código de plantilla y sustitúyalo por el siguiente código:
 
     ```csharp
     using System;
@@ -451,19 +451,19 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
     }
     ```
 
-    Este código define un campo `_fileName`, que hace referencia a un archivo denominado `notes.txt` que almacenará los datos de la nota en la carpeta de datos de la aplicación local para la aplicación. Cuando se ejecuta el constructor de páginas, el archivo se lee, si existe, y se muestra en el [`Editor`](xref:Xamarin.Forms.Editor). Al presionar el control [`Button`](xref:Xamarin.Forms.Button) **Guardar**, se ejecuta el controlador de eventos `OnSaveButtonClicked`, que guarda el contenido de `Editor` en el archivo. Al presionar el control `Button` **Eliminar**, se ejecuta el controlador de eventos `OnDeleteButtonClicked`, que elimina el archivo, siempre que exista, y quita cualquier texto de `Editor`. Para obtener más información sobre la interacción del usuario, vea [Respuesta a la interacción del usuario](deepdive.md#responding-to-user-interaction) en [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md).
+    Este código define un campo `_fileName`, que hace referencia a un archivo denominado `notes.txt` que almacenará los datos de la nota en la carpeta de datos de la aplicación local para la aplicación. Cuando se ejecuta el constructor de páginas, el archivo se lee, si existe, y se muestra en el [`Editor`](xref:Xamarin.Forms.Editor). Al presionar el control [`Button`](xref:Xamarin.Forms.Button) **Guardar** , se ejecuta el controlador de eventos `OnSaveButtonClicked`, que guarda el contenido de `Editor` en el archivo. Al presionar el control `Button` **Eliminar** , se ejecuta el controlador de eventos `OnDeleteButtonClicked`, que elimina el archivo, siempre que exista, y quita cualquier texto de `Editor`. Para obtener más información sobre la interacción del usuario, vea [Respuesta a la interacción del usuario](deepdive.md#responding-to-user-interaction) en [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md).
 
-    Guarde los cambios en **MainPage.xaml.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
+    Guarde los cambios en **MainPage.xaml.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S** ) y cierre el archivo.
 
 ### <a name="building-the-quickstart"></a>Compilación del inicio rápido
 
-1. En Visual Studio para Mac, seleccione el elemento de menú **Compilación > Compilar todo** (o pulse **&#8984; + B**). El proyecto se compilará y aparecerá un mensaje de operación correcta en la barra de herramientas de Visual Studio para Mac.
+1. En Visual Studio para Mac, seleccione el elemento de menú **Compilación > Compilar todo** (o pulse **&#8984; + B** ). El proyecto se compilará y aparecerá un mensaje de operación correcta en la barra de herramientas de Visual Studio para Mac.
 
       ![Compilación correcta](single-page-images/vsmac/build-successful.png)
 
     Si hay errores, repita los pasos anteriores y corrija los errores hasta que la solución se compile correctamente.
 
-2. En el **Panel de solución**, seleccione el proyecto **Notes.iOS**, haga clic con el botón derecho y seleccione **Establecer como proyecto de inicio**:
+2. En el **Panel de solución** , seleccione el proyecto **Notes.iOS** , haga clic con el botón derecho y seleccione **Establecer como proyecto de inicio** :
 
       ![Establecer iOS como proyecto de inicio](single-page-images/vsmac/set-startup-project-ios.png)
 
@@ -477,7 +477,7 @@ Para más información sobre estos requisitos previos, vea [Instalación de Xama
 
     Para obtener más información sobre cómo se inicia la aplicación en cada plataforma, vea [Inicio de la aplicación en cada plataforma](deepdive.md#launching-the-application-on-each-platform) en [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md).
 
-4. En el **Panel de solución**, seleccione el proyecto **Notes.Droid**, haga clic con el botón derecho y seleccione **Establecer como proyecto de inicio**:
+4. En el **Panel de solución** , seleccione el proyecto **Notes.Droid** , haga clic con el botón derecho y seleccione **Establecer como proyecto de inicio** :
 
       ![Establecer Android como proyecto de inicio](single-page-images/vsmac/set-startup-project-android.png)
 

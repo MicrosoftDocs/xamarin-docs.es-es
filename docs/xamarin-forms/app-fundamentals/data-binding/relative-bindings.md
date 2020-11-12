@@ -10,16 +10,16 @@ ms.date: 12/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 24fa816519b05b46c38015fa602a4e70fbc07d16
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 859f5d3c196a572aa22a5f5a29801ad4ee44441a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560395"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374594"
 ---
 # <a name="no-locxamarinforms-relative-bindings"></a>Enlaces relativos de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Los enlaces relativos proporcionan la capacidad de establecer el origen de enlace en relación con la posición del destino de enlace. Se crean con la extensión de marcado `RelativeSource` y se establecen como la propiedad `Source` de una expresión de enlace.
 

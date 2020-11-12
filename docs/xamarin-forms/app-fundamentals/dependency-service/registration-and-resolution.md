@@ -10,16 +10,16 @@ ms.date: 06/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9e8c0eeb70393cd3a5c6db7b99146b69b79ec14d
-ms.sourcegitcommit: 01ccefd54c0ced724784dbe1aec9ecfc9b00e633
+ms.openlocfilehash: a3112191b7392ee3fcc0f383682acf40cf8f65cd
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92630249"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373476"
 ---
 # <a name="no-locxamarinforms-dependencyservice-registration-and-resolution"></a>Registro y resolución de DependencyService de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
 Al usar [`DependencyService`](xref:Xamarin.Forms.DependencyService) de Xamarin.Forms para invocar la funcionalidad de la plataforma nativa, las implementaciones de la plataforma deben estar registradas con `DependencyService` y, después, resolverse desde código compartido para poder invocarse.
 

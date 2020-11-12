@@ -12,12 +12,12 @@ ms.date: 05/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e6670faf921248c007c20307fddb6a34057c5202
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: d2bb00eeadb3862d25032da45860f1cc12e3aad2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436672"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369901"
 ---
 # <a name="build-your-first-no-locxamarinforms-app"></a>Compilación de la primera aplicación de Xamarin.Forms
 
@@ -29,7 +29,7 @@ _Vea este vídeo y siga el tutorial para crear una primera aplicación móvil co
 
 ## <a name="step-by-step-instructions-for-windows"></a>Instrucciones paso a paso para Windows
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Siga estos pasos, junto con el vídeo anterior:
 
@@ -55,7 +55,7 @@ Siga estos pasos, junto con el vídeo anterior:
 
     ![Lista desplegable Crear Android Emulator](images/win-2019/debug-dropdown.png)
 
-7. En la pantalla de creación del emulador, use la configuración predeterminada y haga clic en el botón **Crear**:
+7. En la pantalla de creación del emulador, use la configuración predeterminada y haga clic en el botón **Crear** :
 
     [![Pantalla de creación de Android Emulator](images/win-2019/create-emulator-sml.png)](images/win-2019/create-emulator.png#lightbox)
 
@@ -63,7 +63,7 @@ Siga estos pasos, junto con el vídeo anterior:
 
     ![Emulador de Android en el Administrador de dispositivos](images/win-2019/start-emulator.png)
 
-9. Ahora en Visual Studio 2019 se debería mostrar el nombre del nuevo emulador en el botón **Depurar**:
+9. Ahora en Visual Studio 2019 se debería mostrar el nombre del nuevo emulador en el botón **Depurar** :
 
     ![Nombre del emulador de Android en el botón Depurar](images/win-2019/debug-emulator-name.png)
 
@@ -75,13 +75,13 @@ Siga estos pasos, junto con el vídeo anterior:
 
 La aplicación se puede personalizar para agregar funcionalidad interactiva. Realice los pasos siguientes para agregar la interacción del usuario a la aplicación:
 
-1. Edite **MainPage.xaml**, agregando este XAML antes del final de `</StackLayout>`:
+1. Edite **MainPage.xaml** , agregando este XAML antes del final de `</StackLayout>`:
 
     ```xaml
     <Button Text="Click Me" Clicked="Button_Clicked" />
     ```
 
-2. Edite **MainPage.xaml**, agregando este código al final de la clase:
+2. Edite **MainPage.xaml** , agregando este código al final de la clase:
 
     ```csharp
     int count = 0;
@@ -114,7 +114,7 @@ En este vídeo se describe el proceso de compilación y prueba de una aplicació
 
 ## <a name="step-by-step-instructions-for-windows"></a>Instrucciones paso a paso para Windows
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Siga estos pasos, junto con el vídeo anterior:
 
@@ -122,21 +122,21 @@ Siga estos pasos, junto con el vídeo anterior:
 
     [![Aplicación móvil (Xamarin.Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
 
-2. Asegúrese de que **Android** y **iOS** están seleccionados, con uso compartido del código **.NET Standard**:
+2. Asegúrese de que **Android** y **iOS** están seleccionados, con uso compartido del código **.NET Standard** :
 
     [![Android y iOS, con .NET Standard](images/win/02-sml.png)](images/win/02.png#lightbox)
 
 3. Espere hasta que se restauren los paquetes de NuGet (aparecerá un mensaje de "Restauración completada" en la barra de estado).
 
-4. Inicie Android Emulator presionando el botón de depuración (o el elemento de menú **Depurar > Iniciar depuración**).
+4. Inicie Android Emulator presionando el botón de depuración (o el elemento de menú **Depurar > Iniciar depuración** ).
 
-5. Edite **MainPage.xaml**, agregando este XAML antes del final de `</StackLayout>`:
+5. Edite **MainPage.xaml** , agregando este XAML antes del final de `</StackLayout>`:
 
     ```xaml
     <Button Text="Click Me" Clicked="Button_Clicked" />
     ```
 
-6. Edite **MainPage.xaml**, agregando este código al final de la clase:
+6. Edite **MainPage.xaml** , agregando este código al final de la clase:
 
     ```csharp
     int count = 0;
@@ -161,15 +161,15 @@ Siga estos pasos, junto con el vídeo anterior:
 
 ## <a name="step-by-step-instructions-for-mac"></a>Instrucciones paso a paso para Mac
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Siga estos pasos, junto con el vídeo anterior:
 
-1. Elija **Archivo > Nueva solución...** o presione el botón **Nuevo proyecto...** y, posteriormente, seleccione **Multiplataforma > Aplicación > Aplicación de Forms en blanco**:
+1. Elija **Archivo > Nueva solución...** o presione el botón **Nuevo proyecto...** y, posteriormente, seleccione **Multiplataforma > Aplicación > Aplicación de Forms en blanco** :
 
     [![Aplicación de Forms en blanco](images/01-sml.png)](images/01.png#lightbox)
 
-2. Asegúrese de que **Android** y **iOS** están seleccionados, con uso compartido del código **.NET Standard**:
+2. Asegúrese de que **Android** y **iOS** están seleccionados, con uso compartido del código **.NET Standard** :
 
     [![Android y iOS, con .NET Standard](images/02-sml.png)](images/02.png#lightbox)
 
@@ -177,15 +177,15 @@ Siga estos pasos, junto con el vídeo anterior:
 
     ![Aplicación de Android](images/03-sml.png)
 
-4. Inicie Android Emulator presionando el botón de depuración (o **Ejecutar > Iniciar depuración**).
+4. Inicie Android Emulator presionando el botón de depuración (o **Ejecutar > Iniciar depuración** ).
 
-5. Edite **MainPage.xaml**, agregando este XAML antes del final de `</StackLayout>`:
+5. Edite **MainPage.xaml** , agregando este XAML antes del final de `</StackLayout>`:
 
     ```xaml
     <Button Text="Click Me" Clicked="Handle_Clicked" />
     ```
 
-6. Edite **MainPage.xaml**, agregando este código al final de la clase:
+6. Edite **MainPage.xaml** , agregando este código al final de la clase:
 
     ```csharp
     int count = 0;
@@ -200,7 +200,7 @@ Siga estos pasos, junto con el vídeo anterior:
 
     ![Aplicación de Android](images/07-sml.png)
 
-8. Haga clic con el botón derecho para establecer iOS en el **Proyecto de inicio**:
+8. Haga clic con el botón derecho para establecer iOS en el **Proyecto de inicio** :
 
     [![Establecer el proyecto de inicio en iOS](images/08-sml.png)](images/08.png#lightbox)
 

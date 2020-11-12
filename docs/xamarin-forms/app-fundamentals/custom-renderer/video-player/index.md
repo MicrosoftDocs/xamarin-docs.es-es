@@ -10,16 +10,16 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a4b092d90b3afa2197c1db576545d233eb6e208d
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 34c3e2bb09c6e285f38b3c17bab2e10debe1d890
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563515"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367262"
 ---
 # <a name="implementing-a-video-player"></a>Implementación de un reproductor de vídeo
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 A veces es conveniente reproducir archivos de vídeo en una aplicación de Xamarin.Forms. En esta serie de artículos se explica cómo escribir representadores personalizados para iOS, Android y la Plataforma universal de Windows (UWP) para una clase de Xamarin.Forms denominada `VideoPlayer`.
 
@@ -31,7 +31,7 @@ En el ejemplo [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/cust
 - Un recurso insertado en la aplicación de plataforma
 - La biblioteca de vídeos del dispositivo
 
-Los reproductores de vídeo necesitan *controles de transporte*, que son botones para reproducir y pausar el vídeo, y una barra de posición que muestra el progreso a través del vídeo y permite al usuario ir rápidamente a una ubicación diferente. `VideoPlayer` puede usar los controles de transporte y la barra de posición proporcionados por la plataforma (como se muestra más adelante), o puede proporcionar controles de transporte personalizados y una barra de posición. Este es el programa que se ejecuta en iOS, Android y la Plataforma universal de Windows:
+Los reproductores de vídeo necesitan *controles de transporte* , que son botones para reproducir y pausar el vídeo, y una barra de posición que muestra el progreso a través del vídeo y permite al usuario ir rápidamente a una ubicación diferente. `VideoPlayer` puede usar los controles de transporte y la barra de posición proporcionados por la plataforma (como se muestra más adelante), o puede proporcionar controles de transporte personalizados y una barra de posición. Este es el programa que se ejecuta en iOS, Android y la Plataforma universal de Windows:
 
 [![Reproducir vídeo web](web-videos-images/playwebvideo-small.png "Reproducir vídeo web")](web-videos-images/playwebvideo-large.png#lightbox "Reproducir vídeo web")
 
@@ -63,7 +63,7 @@ Cuando se crea un vídeo con la cámara del dispositivo, el archivo de vídeo se
 
 ## <a name="custom-video-transport-controls"></a>[Controles de transporte de vídeo personalizados](custom-transport.md)
 
-Aunque los reproductores de vídeo en cada plataforma proporcionan sus propios controles de transporte en forma de botones para **reproducir** y **pausar**, puede suprimir la presentación de estos botones y proporcionar los suyos propios. En este artículo se muestra cómo hacerlo.
+Aunque los reproductores de vídeo en cada plataforma proporcionan sus propios controles de transporte en forma de botones para **reproducir** y **pausar** , puede suprimir la presentación de estos botones y proporcionar los suyos propios. En este artículo se muestra cómo hacerlo.
 
 ## <a name="custom-video-positioning"></a>[Barra de posición de vídeo personalizada](custom-positioning.md)
 

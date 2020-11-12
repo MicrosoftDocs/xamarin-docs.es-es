@@ -10,16 +10,16 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8e8c52c03534ca5d8b653eed4d8fc2c8f39edf61
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 9f72541bddcadabe4ce4fa71c2a4dfcae3c3c898
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562644"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374984"
 ---
 # <a name="hierarchical-navigation"></a>Navegación jerárquica
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
 
 _La clase NavigationPage proporciona una experiencia de navegación jerárquica en la que el usuario puede navegar por las páginas hacia adelante y hacia atrás, como quiera. La clase implementa la navegación como una pila de objetos de página en la que el último en entrar es el primero en salir (LIFO). En este artículo se muestra cómo utilizar la clase NavigationPage para realizar la navegación en una pila de páginas._
 

@@ -10,16 +10,16 @@ ms.date: 11/07/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: afcf182fe093a9bb02ea23f53d0f568fd83c862c
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: d5c380a5ce6e76b0f9275b09d2943be479ef09e4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563320"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370902"
 ---
 # <a name="no-locxamarinforms-tabbedpage"></a>TabbedPage de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 
 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) de Xamarin.Forms consta de una lista de pestañas y un área de detalles mayor. Cada pestaña carga contenido en el área de detalles. En las capturas de pantalla siguientes se muestra un elemento `TabbedPage` en iOS y Android:
 
@@ -109,7 +109,7 @@ Al seleccionar otra pestaña se muestra el objeto [`ContentPage`](xref:Xamarin.F
 
 [![Captura de pantalla de un elemento TabbedPage que contiene pestañas, en iOS y Android](tabbed-page-images/tabbedpage-week.png "TabbedPage con pestañas")](tabbed-page-images/tabbedpage-week-large.png#lightbox "TabbedPage con pestañas")
 
-En la pestaña **Programar**, el objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage) está encapsulado en un objeto [`NavigationPage`](xref:Xamarin.Forms.NavigationPage).
+En la pestaña **Programar** , el objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage) está encapsulado en un objeto [`NavigationPage`](xref:Xamarin.Forms.NavigationPage).
 
 > [!WARNING]
 > Aunque se puede colocar un objeto [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) en un elemento [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), no se recomienda colocar un elemento `TabbedPage` en un objeto `NavigationPage`. Esto se debe a que, en iOS, un elemento `UITabBarController` siempre actúa como contenedor de `UINavigationController`. Para obtener más información, vea [Combined View Controller Interfaces](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/CombiningViewControllers.html) (Interfaces combinadas del controlador de vistas) en la biblioteca para desarrolladores de iOS.

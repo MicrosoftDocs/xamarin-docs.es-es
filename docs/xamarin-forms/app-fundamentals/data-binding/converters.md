@@ -10,20 +10,20 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2a5912d18787543b05b3937f2b8b5c6a36b04873
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 7a2d7251f3896994ab75aba07c2fb03af6558c4e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556820"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370928"
 ---
 # <a name="no-locxamarinforms-binding-value-converters"></a>Enlace de convertidores de valores de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Los enlaces de datos normalmente transfieren datos desde una propiedad de origen a una propiedad de destino y, en algunos casos, desde la propiedad de destino a la propiedad de origen. Esta transferencia es sencilla cuando las propiedades de origen y destino son del mismo tipo, o cuando un tipo se puede convertir al otro mediante una conversión implícita. Cuando no es así, debe realizarse una conversión de tipos.
 
-En el artículo [**String Formatting**](string-formatting.md) (Formato de cadena), vio cómo puede usar la propiedad `StringFormat` de un enlace de datos para convertir cualquier tipo en una cadena. Para otros tipos de conversiones, deberá escribir código especializado en una clase que implementa la interfaz de [`IValueConverter`](xref:Xamarin.Forms.IValueConverter). (La Plataforma universal de Windows contiene una clase similar denominada [`IValueConverter`](/uwp/api/Windows.UI.Xaml.Data.IValueConverter/) en el espacio de nombres `Windows.UI.Xaml.Data`, pero este `IValueConverter` está en el espacio de nombres `Xamarin.Forms`.) Las clases que implementan `IValueConverter` se denominan *convertidores de valores*, pero también se denominan a menudo *convertidores de enlaces* o *convertidores de valores de enlace*.
+En el artículo [**String Formatting**](string-formatting.md) (Formato de cadena), vio cómo puede usar la propiedad `StringFormat` de un enlace de datos para convertir cualquier tipo en una cadena. Para otros tipos de conversiones, deberá escribir código especializado en una clase que implementa la interfaz de [`IValueConverter`](xref:Xamarin.Forms.IValueConverter). (La Plataforma universal de Windows contiene una clase similar denominada [`IValueConverter`](/uwp/api/Windows.UI.Xaml.Data.IValueConverter/) en el espacio de nombres `Windows.UI.Xaml.Data`, pero este `IValueConverter` está en el espacio de nombres `Xamarin.Forms`.) Las clases que implementan `IValueConverter` se denominan *convertidores de valores* , pero también se denominan a menudo *convertidores de enlaces* o *convertidores de valores de enlace*.
 
 ## <a name="the-ivalueconverter-interface"></a>La interfaz de IValueConverter
 

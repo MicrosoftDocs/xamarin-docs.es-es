@@ -10,16 +10,16 @@ ms.date: 08/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cbd1bdd097bc205f82f98574df5c356b03769e29
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 85492866c5d613b9688d215f5979192c32bb7263
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562657"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375210"
 ---
 # <a name="add-a-swipe-gesture-recognizer"></a>Incorporación de un reconocedor de gesto de deslizar rápidamente
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
 
 _Un gesto de deslizar rápidamente se produce cuando un dedo se mueve a través de la pantalla en dirección horizontal o vertical y, a menudo, se usa para iniciar la navegación a través del contenido. Los ejemplos de código en este artículo están sacados del ejemplo [Swipe Gesture](/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture) (Gesto de deslizar rápidamente)._
 

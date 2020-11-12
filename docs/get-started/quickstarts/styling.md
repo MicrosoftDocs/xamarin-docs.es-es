@@ -12,16 +12,16 @@ ms.date: 02/07/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9794f429744611654ce883b48aa828b997ec881f
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 099c95af190fc9b43c8e8497eebdeec44aed36cd
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91435443"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368445"
 ---
 # <a name="style-a-cross-platform-no-locxamarinforms-application"></a>Estilo de una aplicación de Xamarin.Forms multiplataforma
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
 
 En este inicio rápido aprenderá a:
 
@@ -42,7 +42,7 @@ Antes de intentar este inicio rápido, debe completar correctamente el [inicio r
 
 1. Inicie Visual Studio y abra la solución Notes.
 
-2. En el **Explorador de soluciones**, en el proyecto **Notes**, haga doble clic en **App.xaml** para abrirlo. Después, reemplace el código existente con el siguiente:
+2. En el **Explorador de soluciones** , en el proyecto **Notes** , haga doble clic en **App.xaml** para abrirlo. Después, reemplace el código existente con el siguiente:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -80,7 +80,7 @@ Antes de intentar este inicio rápido, debe completar correctamente el [inicio r
 
     Presione **CTRL+S** para guardar los cambios en **App.xaml** y cierre el archivo.
 
-3. En el **Explorador de soluciones**, en el proyecto **Notes**, haga doble clic en **NotesPage.xaml** para abrirlo. Después, reemplace el código existente con el siguiente:
+3. En el **Explorador de soluciones** , en el proyecto **Notes** , haga doble clic en **NotesPage.xaml** para abrirlo. Después, reemplace el código existente con el siguiente:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -120,7 +120,7 @@ Antes de intentar este inicio rápido, debe completar correctamente el [inicio r
 
     Presione **CTRL+S** para guardar los cambios en **NotesPage.xaml** y cierre el archivo.
 
-4. En el **Explorador de soluciones**, en el proyecto **Notes**, haga doble clic en **NoteEntryPage.xaml** para abrirlo. Después, reemplace el código existente con el siguiente:
+4. En el **Explorador de soluciones** , en el proyecto **Notes** , haga doble clic en **NoteEntryPage.xaml** para abrirlo. Después, reemplace el código existente con el siguiente:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -180,7 +180,7 @@ Antes de intentar este inicio rápido, debe completar correctamente el [inicio r
 
 1. Inicie Visual Studio para Mac y abra el proyecto Notes.
 
-2. En el **Panel de solución**, en el proyecto **Notes**, haga doble clic en **App.xaml** para abrirlo. Después, reemplace el código existente con el siguiente:
+2. En el **Panel de solución** , en el proyecto **Notes** , haga doble clic en **App.xaml** para abrirlo. Después, reemplace el código existente con el siguiente:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -216,9 +216,9 @@ Antes de intentar este inicio rápido, debe completar correctamente el [inicio r
 
     En este código se define un valor [`Thickness`](xref:Xamarin.Forms.Thickness), una serie de valores [`Color`](xref:Xamarin.Forms.Color) y estilos implícitos para los objetos [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) y [`ContentPage`](xref:Xamarin.Forms.ContentPage). Tenga en cuenta que estos estilos, que están en el objeto [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) de nivel de aplicación, se pueden consumir en toda la aplicación. Para obtener más información sobre los estilos XAML, vea [Aplicación de estilos](deepdive.md#styling) en [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md).
 
-    Para guardar los cambios en **App.xaml**, seleccione **Archivo > Guardar** (o presione **&#8984; + S**) y cierre el archivo.
+    Para guardar los cambios en **App.xaml** , seleccione **Archivo > Guardar** (o presione **&#8984; + S** ) y cierre el archivo.
 
-3. En el **Panel de solución**, en el proyecto **Notes**, haga doble clic en **NotesPage.xaml** para abrirlo. Después, reemplace el código existente con el siguiente:
+3. En el **Panel de solución** , en el proyecto **Notes** , haga doble clic en **NotesPage.xaml** para abrirlo. Después, reemplace el código existente con el siguiente:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -256,9 +256,9 @@ Antes de intentar este inicio rápido, debe completar correctamente el [inicio r
 
     Este código agrega un estilo implícito para [`ListView`](xref:Xamarin.Forms.ListView) al objeto [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) de nivel de página, y establece la propiedad `ListView.Margin` en un valor definido en el objeto `ResourceDictionary` de nivel de la aplicación. Tenga en cuenta que el estilo implícito `ListView` se ha agregado al objeto `ResourceDictionary` de nivel de página, porque solo lo usa `NotesPage`. Para obtener más información sobre los estilos XAML, vea [Aplicación de estilos](deepdive.md#styling) en [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md).
 
-    Para guardar los cambios en **NotesPage.xaml**, seleccione **Archivo > Guardar** (o bien presione **&#8984; + S**) y cierre el archivo.
+    Para guardar los cambios en **NotesPage.xaml** , seleccione **Archivo > Guardar** (o bien presione **&#8984; + S** ) y cierre el archivo.
 
-4. En el **Panel de solución**, en el proyecto **Notes**, haga doble clic en **NoteEntryPage.xaml** para abrirlo. Después, reemplace el código existente con el siguiente:
+4. En el **Panel de solución** , en el proyecto **Notes** , haga doble clic en **NoteEntryPage.xaml** para abrirlo. Después, reemplace el código existente con el siguiente:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -305,7 +305,7 @@ Antes de intentar este inicio rápido, debe completar correctamente el [inicio r
 
     Este código agrega estilos implícitos para las vistas [`Editor`](xref:Xamarin.Forms.Editor) y [`Button`](xref:Xamarin.Forms.Button) al objeto [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) de nivel de página, y establece la propiedad `StackLayout.Margin` en un valor definido en el objeto `ResourceDictionary` de nivel de la aplicación. Tenga en cuenta que los estilos implícitos `Editor` y `Button` sen ha agregado al objeto `ResourceDictionary` de nivel de página, porque solo los usa `NoteEntryPage`. Para obtener más información sobre los estilos XAML, vea [Aplicación de estilos](deepdive.md#styling) en [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md).
 
-    Para guardar los cambios en **NoteEntryPage.xaml**, seleccione **Archivo > Guardar** (o bien presione **&#8984; + S**) y cierre el archivo.
+    Para guardar los cambios en **NoteEntryPage.xaml** , seleccione **Archivo > Guardar** (o bien presione **&#8984; + S** ) y cierre el archivo.
 
 5. Compile y ejecute el proyecto en cada plataforma. Para más información, vea [Compilación del inicio rápido](single-page.md#building-the-quickstart).
 

@@ -10,16 +10,16 @@ ms.date: 08/16/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 24a9a351dbe6932b09add2ee7c3111256e013201
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: d288d43bcee5719c1ab3667812e5bac4891bb188
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560694"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366326"
 ---
 # <a name="no-locxamarinforms-binding-fallbacks"></a>Conmutación por recuperación de enlaces de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 En ocasiones, los enlaces de datos producen errores, porque no se puede resolver el origen de enlace o porque el enlace se realiza correctamente pero devuelve un valor `null`. Si bien estos escenarios se pueden controlar con los convertidores de valor, u otro código adicional, los enlaces de datos pueden hacerse más sólidos mediante la definición de valores de reserva para su uso si se produce un error en el proceso de enlace. Esto puede realizarse mediante la definición de las propiedades [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) y [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) en una expresión de enlace. Dado que estas propiedades residen en la clase [`BindingBase`](xref:Xamarin.Forms.BindingBase), pueden usarse con enlaces, enlaces múltiples, enlaces compilados y la extensión de marcado `Binding`.
 
@@ -53,7 +53,7 @@ Esta es la ejecución del programa:
 
 ![Enlace FallbackValue](binding-fallbacks-images/bindingunavailable-detail-cropped.png "Enlace FallbackValue")
 
-Cuando el `FallbackValue` propiedad no está establecida en una expresión de enlace y la ruta de acceso del enlace o parte de la ruta de acceso no se resuelve, [`BindableProperty.DefaultValue`](xref:Xamarin.Forms.BindableProperty.DefaultValue) se establece en el destino. Sin embargo, cuando la propiedad `FallbackValue` está establecida y la ruta de acceso del enlace o parte de la ruta de acceso no se resuelve, el valor de la propiedad del valor `FallbackValue` se establece en el destino. Por lo tanto, en la página **MonkeyDetail**, [`Label`](xref:Xamarin.Forms.Label) muestra el mensaje "Population size unknown" ("Tamaño de la población desconocido"), porque al elemento enlazado le falta una propiedad `Population`.
+Cuando el `FallbackValue` propiedad no está establecida en una expresión de enlace y la ruta de acceso del enlace o parte de la ruta de acceso no se resuelve, [`BindableProperty.DefaultValue`](xref:Xamarin.Forms.BindableProperty.DefaultValue) se establece en el destino. Sin embargo, cuando la propiedad `FallbackValue` está establecida y la ruta de acceso del enlace o parte de la ruta de acceso no se resuelve, el valor de la propiedad del valor `FallbackValue` se establece en el destino. Por lo tanto, en la página **MonkeyDetail** , [`Label`](xref:Xamarin.Forms.Label) muestra el mensaje "Population size unknown" ("Tamaño de la población desconocido"), porque al elemento enlazado le falta una propiedad `Population`.
 
 > [!IMPORTANT]
 > Un convertidor de valores definido no se ejecuta en una expresión de enlace cuando la propiedad [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) está establecida.

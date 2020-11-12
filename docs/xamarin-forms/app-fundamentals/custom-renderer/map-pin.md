@@ -10,16 +10,16 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 13d9ddb5ba13960b4ed5af8f4fdb98b486b7e93e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f4e0387b6b64c5a3bf801a31c6e333b6f514df1d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562280"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367376"
 ---
 # <a name="customizing-a-map-pin"></a>Personalización de un anclado de mapa
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
 
 _En este artículo se explica cómo crear un representador personalizado para el control de mapa, que muestra un mapa nativo con una marca personalizada y una vista personalizada de los datos de marca en cada plataforma._
 
@@ -176,7 +176,7 @@ Las siguientes capturas de pantalla muestran el mapa antes y después de la pers
 
 ![Control de mapa antes y después de la personalización](map-pin-images/map-layout-ios.png)
 
-En iOS la marca se denomina *anotación* y puede ser una imagen personalizada o una marca definida por el sistema de varios colores. Opcionalmente las anotaciones pueden mostrar una *llamada*, que se muestra en respuesta a que el usuario seleccione la anotación. La llamada muestra las propiedades `Label` y `Address` de la instancia `Pin`, con vistas adicionales a la derecha y a la izquierda. En la captura de pantalla anterior, la vista adicional izquierda es la imagen de un mono y la vista adicional derecha es el botón *Información*.
+En iOS la marca se denomina *anotación* y puede ser una imagen personalizada o una marca definida por el sistema de varios colores. Opcionalmente las anotaciones pueden mostrar una *llamada* , que se muestra en respuesta a que el usuario seleccione la anotación. La llamada muestra las propiedades `Label` y `Address` de la instancia `Pin`, con vistas adicionales a la derecha y a la izquierda. En la captura de pantalla anterior, la vista adicional izquierda es la imagen de un mono y la vista adicional derecha es el botón *Información*.
 
 El siguiente ejemplo de código muestra el representador personalizado para la plataforma iOS:
 
@@ -349,7 +349,7 @@ Las siguientes capturas de pantalla muestran el mapa antes y después de la pers
 
 ![Control de mapa antes y después de la personalización](map-pin-images/map-layout-android.png)
 
-En Android la marca se denomina *marcador* y puede ser una imagen personalizada o un marcador definido por el sistema de varios colores. Los marcadores pueden mostrar una *ventana de información*, que se muestra en la respuesta para el usuario que pulsa en el marcador. Muestra la ventana de información de las propiedades `Label` y `Address` de la instancia `Pin` y se pueden personalizar para incluir otro tipo de contenido. Con todo, solo una ventana de información puede mostrarse al mismo tiempo.
+En Android la marca se denomina *marcador* y puede ser una imagen personalizada o un marcador definido por el sistema de varios colores. Los marcadores pueden mostrar una *ventana de información* , que se muestra en la respuesta para el usuario que pulsa en el marcador. Muestra la ventana de información de las propiedades `Label` y `Address` de la instancia `Pin` y se pueden personalizar para incluir otro tipo de contenido. Con todo, solo una ventana de información puede mostrarse al mismo tiempo.
 
 En el ejemplo de código siguiente se muestra el representador personalizado para la plataforma Android:
 

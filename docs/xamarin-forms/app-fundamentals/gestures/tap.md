@@ -10,16 +10,16 @@ ms.date: 01/21/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fef28c88c0de0bd14eb1ab5868dc6433456184e1
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: d0b9b5a568a94208d5e177c88d2e73edb54b735c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563437"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375192"
 ---
 # <a name="add-a-tap-gesture-recognizer"></a>Incorporación de un reconocedor de gesto de pulsar
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)
 
 _El gesto de pulsar se usa para la detección de pulsaciones y se implementa con la clase TapGestureRecognizer._
 
@@ -43,7 +43,7 @@ Cuando se establece [`NumberOfTapsRequired`](xref:Xamarin.Forms.TapGestureRecogn
 
 ## <a name="using-xaml"></a>Uso de Xaml
 
-Un reconocedor de gestos se puede agregar a un control en Xaml mediante propiedades adjuntas. La sintaxis para agregar un elemento [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) a una imagen se muestra a continuación (en este caso se define un evento de *pulsación doble*):
+Un reconocedor de gestos se puede agregar a un control en Xaml mediante propiedades adjuntas. La sintaxis para agregar un elemento [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) a una imagen se muestra a continuación (en este caso se define un evento de *pulsación doble* ):
 
 ```xaml
 <Image Source="tapped.jpg">

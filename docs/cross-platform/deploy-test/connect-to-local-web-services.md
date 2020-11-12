@@ -6,16 +6,16 @@ ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/29/2020
-ms.openlocfilehash: 9520f4e81403869542cf758627b8e3cfc9fabdd8
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 2b289e5ffe4fba5c2f20caf0cf1d59cd277767f9
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91457983"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373424"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>Conexión a servicios web locales desde simuladores de iOS y emuladores de Android
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 
 Muchas aplicaciones móviles consumen servicios web. Durante la fase de desarrollo, es habitual implementar un servicio web localmente y consumirlo desde una aplicación móvil que se ejecuta en el simulador de iOS o el emulador de Android. De esta forma, se evita tener que implementar el servicio web en un punto de conexión hospedado y permite una experiencia de depuración sencilla porque tanto la aplicación móvil como el servicio web se ejecutan localmente.
 

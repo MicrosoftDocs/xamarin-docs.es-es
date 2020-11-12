@@ -10,16 +10,16 @@ ms.date: 10/08/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d24ff6831bb8b52d840ff2db7c13c3eb674b7bd8
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 5ccff2fd24537be0bbf2d809b20a00bc35667c95
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555793"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366872"
 ---
 # <a name="no-locxamarinforms-messagingcenter"></a>MessagingCenter de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
 
 El patrón de publicación y suscripción es un patrón de mensajería en el que los publicadores envían mensajes sin tener conocimiento de los destinatarios, que se conocen como suscriptores. Del mismo modo, los suscriptores escuchan mensajes específicos, sin tener conocimiento de ningún publicador.
 
@@ -94,7 +94,7 @@ En este ejemplo, el método [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Sub
 Los suscriptores pueden cancelar la suscripción a los mensajes que ya no quieren recibir. Para ello, hay que usar una de las sobrecargas de [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*).
 
 ```csharp
-MessagingCenter.Unsubscribe<MainPage>(this, "Hi");
+MessagingCenter.Unsubscribe<MainPage>(this, "Hi");
 ```
 
 En este ejemplo, el método [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) cancela la suscripción del objeto de `this` al mensaje `Hi` enviado por el tipo `MainPage`.
@@ -102,7 +102,7 @@ En este ejemplo, el método [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.U
 Se debe cancelar la suscripción a los mensajes que contienen datos de la sobrecarga [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) y que especifican dos argumentos genéricos:
 
 ```csharp
-MessagingCenter.Unsubscribe<MainPage, string>(this, "Hi");
+MessagingCenter.Unsubscribe<MainPage, string>(this, "Hi");
 ```
 
 En este ejemplo, el método [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) cancela la suscripción del objeto `this` al mensaje `Hi` enviado por el tipo `MainPage`, cuyos datos de carga son un elemento `string`.

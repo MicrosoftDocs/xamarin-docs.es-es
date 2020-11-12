@@ -10,16 +10,16 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8e05420e41509c82c1912a4639159fb58b1a30dc
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f2ec170a1e622586c4f025452ee334774fbaf5aa
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558588"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369784"
 ---
 # <a name="no-locxamarinforms-string-formatting"></a>Formato de cadena de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 A veces es conveniente usar enlaces de datos para mostrar la representación de cadena de un objeto o valor. Por ejemplo, es posible que quiera utilizar una `Label` para mostrar el valor actual de un `Slider`. En este enlace de datos, `Slider` es el origen y el destino es la propiedad `Text` de `Label`.
 
@@ -132,7 +132,7 @@ Esta es la ejecución del programa:
 
 Cuando se usa `Label` y `StringFormat` para mostrar el valor de una vista que también es el destino de una clase ViewModel, puede definir el enlace de la vista para `Label` o desde el ViewModel a `Label`. En general, el segundo enfoque es mejor porque comprueba que funcionan los enlaces entre View y ViewModel.
 
-Este método se muestra en el ejemplo **Mejor selector de colores**, que usa el mismo ViewModel que el programa **Selector de colores simple** que aparece en el artículo [**Xamarin.Forms Binding Mode**](binding-mode.md) (Modo de enlace de Xamarin.Forms):
+Este método se muestra en el ejemplo **Mejor selector de colores** , que usa el mismo ViewModel que el programa **Selector de colores simple** que aparece en el artículo [**Xamarin.Forms Binding Mode**](binding-mode.md) (Modo de enlace de Xamarin.Forms):
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

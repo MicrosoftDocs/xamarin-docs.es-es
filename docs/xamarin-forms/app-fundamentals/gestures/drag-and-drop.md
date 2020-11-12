@@ -10,18 +10,18 @@ ms.date: 10/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: af56e84598f73693a8cb0e93573b789a716c194a
-ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
+ms.openlocfilehash: 30e77d4978e9a191c1ba19e80109f9854cc46f8f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92897473"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375244"
 ---
 # <a name="add-drag-and-drop-gesture-recognizers"></a>Incorporación de reconocedores de gesto de arrastrar y colocar
 
 ![API de versión preliminar](~/media/shared/preview.png)
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)
+[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)
 
 Un gesto de arrastrar y colocar permite arrastrar elementos y sus paquetes de datos asociados desde una ubicación en pantalla a otra ubicación mediante un gesto continuo. Arrastrar y colocar puede tener lugar en una sola aplicación o puede iniciarse en una aplicación y finalizar en otra.
 
@@ -80,7 +80,7 @@ En este ejemplo, se puede iniciar un gesto de arrastrar en [`Image`](xref:Xamari
 > [!TIP]
 > En iOS, Android y UWP, un gesto de arrastrar se inicia con una pulsación larga seguida de un arrastre.
 
-Para obtener un ejemplo de uso de comandos `DragGestureRecognizer`, vea el [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
+Para obtener un ejemplo de uso de comandos `DragGestureRecognizer`, vea el [ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
 
 ## <a name="build-a-data-package"></a>Creación de un paquete de datos
 
@@ -214,7 +214,7 @@ En el ejemplo de XAML siguiente se muestra `DropGestureRecognizer`, que se adjun
 
 En este ejemplo, cuando un origen de arrastre se coloca en el destino de colocación [`Image`](xref:Xamarin.Forms.Image), el origen de arrastre se copia en el destino de colocación, siempre que dicho origen de arrastre sea una clase [`ImageSource`](xref:Xamarin.Forms.ImageSource). Esto se produce porque Xamarin.Forms copia automáticamente las imágenes arrastradas, y el texto, en destinos de colocación compatibles.
 
-Para obtener un ejemplo de uso de comandos `DropGestureRecognizer`, vea el [ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
+Para obtener un ejemplo de uso de comandos `DropGestureRecognizer`, vea el [ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
 
 ## <a name="handle-the-dragover-event"></a>Controlar el evento DragOver
 

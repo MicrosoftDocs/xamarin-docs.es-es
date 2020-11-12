@@ -11,16 +11,16 @@ ms.date: 11/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5c5d95c3d326961db9d56631a0d7190d64ede72a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 99da232d13202aadc338ff419042998f646b7c28
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556066"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373073"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexación de la aplicación y vinculación en profundidad
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/deeplinking)
 
 _La indexación de la aplicación permite a aplicaciones que de lo contrario se olvidarían tras unos pocos usos mantener su pertinencia al aparecer en los resultados de la búsqueda. La vinculación en profundidad permite a las aplicaciones responder a un resultado de la búsqueda que contiene datos de aplicación, normalmente al navegar a una página a la que se hace referencia a partir de un vínculo profundo. En este artículo se explica cómo usar la indexación de la aplicación y la vinculación en profundidad para que el contenido de las aplicaciones Xamarin.Forms permita efectuar búsquedas en dispositivos iOS y Android._
 
@@ -68,8 +68,8 @@ En la plataforma Android, se deben cumplir los siguientes requisitos previos par
 Una vez cumplidos estos requisitos previos, para usar la indexación de la aplicación y la vinculación en profundidad de Xamarin.Forms en la plataforma Android es necesaria la siguiente configuración adicional:
 
 1. Instale el paquete NuGet [Xamarin.Forms.AppLinks](https://www.nuget.org/packages/Xamarin.Forms.AppLinks/) en el proyecto de la aplicación de Android.
-1. En el archivo **MainActivity.cs**, agregue una declaración para usar el espacio de nombres `Xamarin.Forms.Platform.Android.AppLinks`.
-1. En el archivo **MainActivity.cs**, agregue una declaración para usar el espacio de nombres `Firebase`.
+1. En el archivo **MainActivity.cs** , agregue una declaración para usar el espacio de nombres `Xamarin.Forms.Platform.Android.AppLinks`.
+1. En el archivo **MainActivity.cs** , agregue una declaración para usar el espacio de nombres `Firebase`.
 1. En un explorador web, cree un nuevo proyecto con la [consola Firebase](https://console.firebase.google.com/).
 1. En la consola Firebase, agregue Firebase a la aplicación Android y escriba los datos necesarios.
 1. Descargue el archivo **google-services.json** resultante.
@@ -81,7 +81,7 @@ FirebaseApp.InitializeApp(this);
 AndroidAppLinks.Init(this);
 ```
 
-Al agregar **google-services.json** al proyecto (y al establecer la acción de compilación *GoogleServicesJson*\*), el proceso de compilación extraerá la clave de API y el id. de cliente. A continuación, las credenciales se agregarán al archivo de manifiesto generado.
+Al agregar **google-services.json** al proyecto (y al establecer la acción de compilación *GoogleServicesJson* \*), el proceso de compilación extraerá la clave de API y el id. de cliente. A continuación, las credenciales se agregarán al archivo de manifiesto generado.
 
 > [!NOTE]
 > En este artículo, los términos vínculos de aplicación y vínculos profundos suelen usarse indistintamente. Sin embargo, en Android estos términos tienen significados diferentes. En Android, un vínculo profundo es un filtro de intención que permite a los usuarios especificar directamente una actividad concreta en la aplicación. Al hacer clic en un vínculo profundo se puede abrir un cuadro de diálogo de desambiguación, que permite al usuario seleccionar una de las distintas aplicaciones que pueden controlar la dirección URL. Un vínculo de aplicación de Android es un vínculo profundo basado en la dirección URL de su sitio web, que se ha verificado que pertenece al sitio web. Al hacer clic en un vínculo de aplicación, se abre la aplicación si está instalada, sin que se abra un cuadro de diálogo de desambiguación.

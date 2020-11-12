@@ -10,18 +10,18 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d417f5e0b2b0bea5a3e129c87e94b289dc7201ed
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 812adbbb4a9572d38dd57a3edd5c1a561909f1b0
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562488"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374971"
 ---
 # <a name="binding-video-sources-to-the-player"></a>Enlazar orígenes de vídeo con el reproductor
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
-Cuando la propiedad `Source` de la vista `VideoPlayer` se establece en un nuevo archivo de vídeo, el vídeo existente deja de reproducirse y se inicia el nuevo vídeo. Esto se demuestra mediante la página **Seleccionar vídeo web** del ejemplo [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos). En esta página, se incluye un elemento `ListView` con los títulos de los tres vídeos a los que se hace referencia en el archivo **App.xaml**:
+Cuando la propiedad `Source` de la vista `VideoPlayer` se establece en un nuevo archivo de vídeo, el vídeo existente deja de reproducirse y se inicia el nuevo vídeo. Esto se demuestra mediante la página **Seleccionar vídeo web** del ejemplo [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos). En esta página, se incluye un elemento `ListView` con los títulos de los tres vídeos a los que se hace referencia en el archivo **App.xaml** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -80,7 +80,7 @@ Cuando se carga la primera página, no se selecciona ningún elemento en `ListVi
 
 [![Seleccionar vídeo web](source-bindings-images/selectwebvideo-small.png "Seleccionar vídeo web")](source-bindings-images/selectwebvideo-large.png#lightbox "Seleccionar vídeo web")
 
-La propiedad `Source` de `VideoPlayer` se complementa con una propiedad enlazable, lo que quiere decir que puede ser el objetivo de un enlace de datos. Esto se demuestra mediante la página **Enlazar a VideoPlayer**. El marcado del archivo es compatible con la clase siguiente **BindToVideoPlayer.xaml**, que encapsula un título para un vídeo y un objeto correspondiente `VideoSource`:
+La propiedad `Source` de `VideoPlayer` se complementa con una propiedad enlazable, lo que quiere decir que puede ser el objetivo de un enlace de datos. Esto se demuestra mediante la página **Enlazar a VideoPlayer**. El marcado del archivo es compatible con la clase siguiente **BindToVideoPlayer.xaml** , que encapsula un título para un vídeo y un objeto correspondiente `VideoSource`:
 
 ```csharp
 namespace VideoPlayerDemos
@@ -99,7 +99,7 @@ namespace VideoPlayerDemos
 }
 ```
 
-El elemento `ListView` del archivo **BindToVideoPlayer.xaml** contiene una matriz de estos objetos `VideoInfo` y cada uno se inicializa con un título del vídeo y el objeto `UriVideoSource` del diccionario de recursos en **App.xaml**:
+El elemento `ListView` del archivo **BindToVideoPlayer.xaml** contiene una matriz de estos objetos `VideoInfo` y cada uno se inicializa con un título del vídeo y el objeto `UriVideoSource` del diccionario de recursos en **App.xaml** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -140,7 +140,7 @@ El elemento `ListView` del archivo **BindToVideoPlayer.xaml** contiene una matri
 
 La propiedad `Source` del elemento `VideoPlayer` se enlaza al elemento `ListView`. El elemento `Path` del enlace se especifica como `SelectedItem.VideoSource`, que es un trazado compuesto formado por dos propiedades: `SelectedItem` es una propiedad de `ListView`. El elemento seleccionado es del tipo `VideoInfo`, que tiene una propiedad `VideoSource`.
 
-Como con la primera página **Seleccionar vídeo web**, de manera inicial no se selecciona ningún elemento desde `ListView`, por lo que necesita seleccionar uno de los vídeos para que empiece a reproducirse.
+Como con la primera página **Seleccionar vídeo web** , de manera inicial no se selecciona ningún elemento desde `ListView`, por lo que necesita seleccionar uno de los vídeos para que empiece a reproducirse.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

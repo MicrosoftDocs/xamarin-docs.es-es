@@ -10,16 +10,16 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 154219f58c22005de0a0a2171aeedd04ec9f9ff9
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 4fd8c91ccf18e72c4e5881261637b7f41b2f3c79
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557964"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373619"
 ---
 # <a name="no-locxamarinforms-binding-path"></a>Enlace de ruta de acceso de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 En todos los ejemplos de enlace de datos anteriores, la propiedad [`Path`](xref:Xamarin.Forms.Binding.Path) de la clase `Binding` (o la propiedad [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) de la extensión de marcado `Binding`) se había establecido en una sola propiedad. En realidad es posible establecer `Path` en una *subpropiedad* (una propiedad de una propiedad), o bien en un miembro de una colección.
 
@@ -38,7 +38,7 @@ La propiedad `Time` de `TimePicker` es de tipo `TimeSpan`, pero es posible que q
 
 La propiedad `Time` es de tipo `TimeSpan`, que tiene una propiedad `TotalSeconds`. Las propiedades `Time` y `TotalSeconds` se conectan simplemente con un punto. Los elementos de la cadena `Path` siempre hacen referencia a propiedades y no a los tipos de estas propiedades.
 
-Ese y otros muchos ejemplos se muestran en la página **Variaciones de la ruta de acceso**:
+Ese y otros muchos ejemplos se muestran en la página **Variaciones de la ruta de acceso** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

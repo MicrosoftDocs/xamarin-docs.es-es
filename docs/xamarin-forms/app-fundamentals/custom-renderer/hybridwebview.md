@@ -10,16 +10,16 @@ ms.date: 03/31/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3d0cbae406861565d91b0bbc9f39d661c547ca1e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: dcfb713da09a9dab1974110e161d8045132f6b2f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561162"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375023"
 ---
 # <a name="customizing-a-webview"></a>Personalización de WebView
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
 
 _Un objeto `WebView` de Xamarin.Forms es una vista que muestra contenido web y HTML en la aplicación. En este artículo se explica cómo crear un representador personalizado que extienda `WebView` para permitir la invocación de código de C# desde JavaScript._
 
@@ -148,7 +148,7 @@ El proceso para crear la clase del representador personalizado es el siguiente:
 
 1. Cree una subclase de la clase `WkWebViewRenderer` en iOS y de la clase `WebViewRenderer` en Android y UWP, que representa el control personalizado.
 1. Invalide el método `OnElementChanged` que representa el objeto [`WebView`](xref:Xamarin.Forms.WebView) y escriba lógica para personalizarlo. Este método se llama cuando se crea un objeto `HybridWebView`.
-1. Agregue un atributo `ExportRenderer` a la clase del representador personalizado o *AssemblyInfo.cs*, para especificar que se va a usar para representar el control personalizado de Xamarin.Forms. Este atributo se usa para registrar al representador personalizado con Xamarin.Forms.
+1. Agregue un atributo `ExportRenderer` a la clase del representador personalizado o *AssemblyInfo.cs* , para especificar que se va a usar para representar el control personalizado de Xamarin.Forms. Este atributo se usa para registrar al representador personalizado con Xamarin.Forms.
 
 > [!NOTE]
 > Para la mayoría de los elementos de Xamarin.Forms, proporcionar un representador personalizado en cada proyecto de la plataforma es un paso opcional. Si no se registra un representador personalizado, se usará el representador predeterminado de la clase base del control. Pero los representadores personalizados son necesarios en cada proyecto de plataforma al representar un elemento [View](xref:Xamarin.Forms.View).

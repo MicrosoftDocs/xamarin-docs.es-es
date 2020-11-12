@@ -11,16 +11,16 @@ ms.date: 11/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fac41e57d13815dcd202521d16ae4730e1d99cfa
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: cb811972d622ffdcf6042e030528a88fb18abaf7
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555871"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369810"
 ---
 # <a name="no-locxamarinforms-string-and-image-localization"></a>Localización de cadenas e imágenes de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
 
 La localización es el proceso de adaptación de una aplicación para cumplir los requisitos lingüísticos o culturales específicos de un mercado objetivo. Para llevar a cabo la localización, es posible que haya que traducir el texto y las imágenes de una aplicación a varios idiomas. Una aplicación localizada muestra automáticamente el texto traducido en función de la configuración de la referencia cultural del dispositivo móvil:
 
@@ -57,7 +57,7 @@ Una vez agregado el archivo, se pueden agregar filas para cada recurso de texto:
 
 ![Especificación de los recursos de texto predeterminados en un archivo .resx](text-images/pc-default-strings.png)
 
-La opción desplegable **Modificador de acceso** determina el modo en que Visual Studio genera la clase utilizada para acceder a los recursos. Al establecer el modificador de acceso en **Público** o **Interno**, se genera una clase generada con el nivel de accesibilidad especificado. Si el modificador de acceso se establece en **Sin generación de código**, no se genera un archivo de clase. El archivo de recursos predeterminado debe configurarse para generar un archivo de clase, lo que se traduce en que se agrega un archivo con la extensión **.designer.cs** al proyecto.
+La opción desplegable **Modificador de acceso** determina el modo en que Visual Studio genera la clase utilizada para acceder a los recursos. Al establecer el modificador de acceso en **Público** o **Interno** , se genera una clase generada con el nivel de accesibilidad especificado. Si el modificador de acceso se establece en **Sin generación de código** , no se genera un archivo de clase. El archivo de recursos predeterminado debe configurarse para generar un archivo de clase, lo que se traduce en que se agrega un archivo con la extensión **.designer.cs** al proyecto.
 
 Una vez creado el archivo de recursos predeterminado, se pueden crear archivos adicionales para cada referencia cultural que admita la aplicación. Cada archivo de recursos adicional debe incluir la referencia cultural de la traducción en el nombre del archivo y debe tener el **Modificador de acceso** establecido en **Sin generación de código**.
 
@@ -67,7 +67,7 @@ Al iniciarse, la aplicación intenta resolver una solicitud de recursos por orde
 1. AppResources.en.resx
 1. AppResources.resx (predeterminado)
 
-En la captura de pantalla siguiente se muestra un archivo de traducción al español denominado **AppResources.es.cs**:
+En la captura de pantalla siguiente se muestra un archivo de traducción al español denominado **AppResources.es.cs** :
 
 ![Especificación de los recursos de texto en español predeterminados en un archivo .resx](text-images/pc-spanish-strings.png)
 
@@ -112,7 +112,7 @@ Al iniciarse, la aplicación intenta resolver una solicitud de recursos por orde
 1. AppResources.en.resx
 1. AppResources.resx (predeterminado)
 
-Los archivos de traducción de idioma deben tener los mismos valores de **Nombre** especificados como archivo predeterminado. En el XML siguiente se muestra un archivo de traducción al español denominado **AppResources.es.resx**:
+Los archivos de traducción de idioma deben tener los mismos valores de **Nombre** especificados como archivo predeterminado. En el XML siguiente se muestra un archivo de traducción al español denominado **AppResources.es.resx** :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -134,7 +134,7 @@ Los archivos de traducción de idioma deben tener los mismos valores de **Nombre
 
 ## <a name="specify-the-default-culture"></a>Especificación de la referencia cultural predeterminada
 
-Para que los archivos de recursos funcionen correctamente, la aplicación debe tener un valor de `NeutralResourcesLanguage` especificado. En el proyecto compartido, hay que personalizar el archivo **AssemblyInfo.cs** para especificar la referencia cultural predeterminada. En el código siguiente se muestra cómo establecer el valor de `NeutralResourcesLanguage` en **en-US** en el archivo **AssemblyInfo.cs**:
+Para que los archivos de recursos funcionen correctamente, la aplicación debe tener un valor de `NeutralResourcesLanguage` especificado. En el proyecto compartido, hay que personalizar el archivo **AssemblyInfo.cs** para especificar la referencia cultural predeterminada. En el código siguiente se muestra cómo establecer el valor de `NeutralResourcesLanguage` en **en-US** en el archivo **AssemblyInfo.cs** :
 
 ```csharp
 using System.Resources;
@@ -151,13 +151,13 @@ using System.Resources;
 > [!WARNING]
 > Si no especifica el atributo `NeutralResourcesLanguage`, la clase `ResourceManager` devuelve valores `null` para las referencias culturales que no incluyan un archivo de recursos específico. Cuando se especifica la referencia cultural predeterminada, la clase `ResourceManager` devuelve los resultados del archivo resx predeterminado para las referencias culturales no admitidas. Por lo tanto, se recomienda especificar siempre el valor de `NeutralResourcesLanguage` para que se muestre el texto de las referencias culturales no admitidas.
 
-Una vez que se ha creado un archivo de recursos predeterminado y se ha especificado la referencia cultural predeterminada en el archivo **AssemblyInfo.cs**, la aplicación puede recuperar cadenas localizadas durante el inicio.
+Una vez que se ha creado un archivo de recursos predeterminado y se ha especificado la referencia cultural predeterminada en el archivo **AssemblyInfo.cs** , la aplicación puede recuperar cadenas localizadas durante el inicio.
 
 Para obtener más información sobre los archivos de recursos, vea [Creación de archivos de recursos para aplicaciones .NET](/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
 
 ## <a name="specify-supported-languages-on-ios"></a>Especificación de los idiomas admitidos en iOS
 
-En iOS, debe declarar todos los idiomas admitidos en el archivo **Info.plist** del proyecto. En el archivo **Info.plist**, use la vista **Origen** para establecer una matriz para la clave `CFBundleLocalizations` y proporcione valores que se correspondan a los archivos Resx. Además, asegúrese de establecer un idioma esperado a través de la clave `CFBundleDevelopmentRegion`:
+En iOS, debe declarar todos los idiomas admitidos en el archivo **Info.plist** del proyecto. En el archivo **Info.plist** , use la vista **Origen** para establecer una matriz para la clave `CFBundleLocalizations` y proporcione valores que se correspondan a los archivos Resx. Además, asegúrese de establecer un idioma esperado a través de la clave `CFBundleDevelopmentRegion`:
 
 ![Captura de pantalla del editor de Info.plist en la que se muestra la sección Localizaciones](text-images/info-plist.png)
 
@@ -187,7 +187,7 @@ Para obtener más información, vea [Especificación de los idiomas predetermina
 
 ## <a name="localize-text-in-no-locxamarinforms"></a>Localización de texto en Xamarin.Forms
 
-El texto se localiza en Xamarin.Forms mediante la clase `AppResources` generada. Esta clase se denomina según el nombre del archivo de recursos predeterminado. Dado que el archivo de recursos del proyecto de ejemplo se denomina **AppResources.cs**, Visual Studio genera una clase coincidente denominada `AppResources`. Las propiedades estáticas se generan en la clase `AppResources` para cada fila del archivo de recursos. Las siguientes propiedades estáticas se generan en la clase `AppResources` de la aplicación de ejemplo:
+El texto se localiza en Xamarin.Forms mediante la clase `AppResources` generada. Esta clase se denomina según el nombre del archivo de recursos predeterminado. Dado que el archivo de recursos del proyecto de ejemplo se denomina **AppResources.cs** , Visual Studio genera una clase coincidente denominada `AppResources`. Las propiedades estáticas se generan en la clase `AppResources` para cada fila del archivo de recursos. Las siguientes propiedades estáticas se generan en la clase `AppResources` de la aplicación de ejemplo:
 
 - AddButton
 - NotesLabel

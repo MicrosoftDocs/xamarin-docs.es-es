@@ -10,16 +10,16 @@ ms.date: 08/05/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c014396f9670ece93295c2c8da1738f9dc7dae9e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 103839c7016b7e9776e80f3f3459f8dc92b3bcbb
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555988"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371656"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Pasar parámetros de efecto como propiedades adjuntas
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
 
 _Las propiedades adjuntas se pueden usar para definir los parámetros de efecto que responden a los cambios de propiedades en tiempo de ejecución. En este artículo se muestra cómo usar las propiedades adjuntas para pasar parámetros a un efecto y cambiar un parámetro en tiempo de ejecución._
 
@@ -104,8 +104,8 @@ public static class ShadowEffect
 
 La clase `LabelShadowEffect` anidada, que crea subclases de la clase [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect), admite la adición y eliminación de efectos. La clase `RoutingEffect` representa un efecto independiente de la plataforma que encapsula un efecto interno, que suele ser específico de la plataforma. Esto simplifica el proceso de eliminación del efecto, ya que no hay ningún acceso en tiempo de compilación a la información de tipo para un efecto específico de la plataforma. El constructor `LabelShadowEffect` llama al constructor de clase base, y se pasa un parámetro que consiste en la concatenación del nombre del grupo de resolución y el identificador único que se ha especificado en cada clase de efecto específica de la plataforma. Esto habilita la adición y eliminación del efecto en el método `OnHasShadowChanged`, como se indica a continuación:
 
-- **Adición de efectos**: se agrega una nueva instancia de `LabelShadowEffect` a la colección [`Effects`](xref:Xamarin.Forms.Element.Effects) del control. Esto reemplaza al uso del método [`Effect.Resolve`](xref:Xamarin.Forms.Effect.Resolve(System.String)) para agregar el efecto.
-- **Eliminación de efectos**: se recupera y se quita la primera instancia de `LabelShadowEffect` en la colección [`Effects`](xref:Xamarin.Forms.Element.Effects) del control.
+- **Adición de efectos** : se agrega una nueva instancia de `LabelShadowEffect` a la colección [`Effects`](xref:Xamarin.Forms.Element.Effects) del control. Esto reemplaza al uso del método [`Effect.Resolve`](xref:Xamarin.Forms.Effect.Resolve(System.String)) para agregar el efecto.
+- **Eliminación de efectos** : se recupera y se quita la primera instancia de `LabelShadowEffect` en la colección [`Effects`](xref:Xamarin.Forms.Element.Effects) del control.
 
 ## <a name="consuming-the-effect"></a>Consumo del efecto
 

@@ -10,16 +10,16 @@ ms.date: 04/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 29fb1300e62d15130e999f6816e2afefcd3fba3b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 1f2484fe7c6dee1f1b4df1318263624f3f50f604
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562605"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367197"
 ---
 # <a name="no-locxamarinforms-triggers"></a>Desencadenadores de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
 Los desencadenadores permiten expresar acciones de forma declarativa en XAML que cambian la apariencia de controles en función de eventos o cambios en propiedades. Además, los desencadenadores de estado, que son un grupo especializado de desencadenadores, definen cuándo se debe aplicar la clase [`VisualState`](xref:Xamarin.Forms.VisualState).
 
@@ -44,13 +44,13 @@ En este ejemplo se muestra un desencadenador que cambia un color de fondo `Entry
 
 Las partes importantes de la declaración del desencadenador son:
 
-- **TargetType**: tipo de control al que se aplica el desencadenador.
+- **TargetType** : tipo de control al que se aplica el desencadenador.
 
-- **Property**: propiedad en el control que se supervisa.
+- **Property** : propiedad en el control que se supervisa.
 
-- **Value**: valor, cuando se produce para la propiedad supervisada, que hace que el desencadenador se active.
+- **Value** : valor, cuando se produce para la propiedad supervisada, que hace que el desencadenador se active.
 
-- **Setter**: colección de elementos `Setter` que se puede agregar cuando se cumple la condición del desencadenador. Debe especificar los elementos `Property` y `Value` que se van a establecer.
+- **Setter** : colección de elementos `Setter` que se puede agregar cuando se cumple la condición del desencadenador. Debe especificar los elementos `Property` y `Value` que se van a establecer.
 
 - **EnterActions y ExitActions** (no mostrados): se escriben en código y se pueden usar además de los elementos `Setter` (o en su lugar). [Se describen abajo](#enteractions-and-exitactions).
 

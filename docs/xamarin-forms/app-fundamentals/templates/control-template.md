@@ -10,16 +10,16 @@ ms.date: 01/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c89c6b50335405b56349e502f95b9d2975a04f73
-ms.sourcegitcommit: 145bd7550d19088c84949ecf5b1cc39002183234
+ms.openlocfilehash: ad65c46f216af9a24eb02ab55411f0a89ac61100
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93185511"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374620"
 ---
 # <a name="no-locxamarinforms-control-templates"></a>Plantillas de control de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
 
 Las plantillas de control de Xamarin.Forms permiten definir la estructura visual de los controles personalizados derivados de [`ContentView`](xref:Xamarin.Forms.ContentView) y las páginas derivadas de [`ContentPage`](xref:Xamarin.Forms.ContentPage). Las plantillas de control separan la interfaz de usuario (IU) de un control personalizado, o de una página, de la lógica que implementa el control o la página. También se puede insertar contenido adicional en el control personalizado (o en la página) con plantilla en una ubicación predefinida.
 
