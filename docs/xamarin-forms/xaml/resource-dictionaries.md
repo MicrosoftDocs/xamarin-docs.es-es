@@ -6,17 +6,17 @@ ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/01/2020
+ms.date: 11/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.custom: video
-ms.openlocfilehash: 90068096eced1fd1ddd2eb59b845eb4d5e41286f
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 60d16183e1a2ea162c97bbf8b30636a5a9999204
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93368887"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590275"
 ---
 # <a name="no-locxamarinforms-resource-dictionaries"></a>Xamarin.Forms diccionarios de recursos
 
@@ -133,7 +133,7 @@ Cuando los recursos comparten claves, los recursos definidos en un nivel inferio
 
 ## <a name="stand-alone-resource-dictionaries"></a>Diccionarios de recursos independientes
 
-Una clase derivada de [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) también puede estar en un archivo independiente independiente. El archivo resultante se puede compartir entre aplicaciones.
+Una clase derivada de [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) también puede estar en un archivo XAML independiente. Después, el archivo XAML puede compartirse entre aplicaciones.
 
 Para crear este tipo de archivo, agregue una nueva **vista de contenido** o elemento de página de **contenido** al proyecto (pero no una vista de **contenido** o una página de **contenido** con solo un archivo de C#). Elimine el archivo de código subyacente y, en el archivo XAML, cambie el nombre de la clase base de [`ContentView`](xref:Xamarin.Forms.ContentView) o [`ContentPage`](xref:Xamarin.Forms.ContentPage) a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . Además, quite el `x:Class` atributo de la etiqueta raíz del archivo.
 
@@ -167,6 +167,17 @@ En el ejemplo de XAML siguiente se muestra un [`ResourceDictionary`](xref:Xamari
 ```
 
 En este ejemplo, [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) contiene un único recurso, que es un objeto de tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) . **MyResourceDictionary. Xaml** se puede usar combinándolos en otro diccionario de recursos.
+
+De forma predeterminada, el vinculador quitará los archivos XAML independientes de las compilaciones de versión cuando el comportamiento del vinculador se establezca en vincular todos los ensamblados. Para asegurarse de que los archivos XAML independientes permanecen en una versión de lanzamiento:
+
+1. Agregue un `Preserve` atributo personalizado al ensamblado que contenga los archivos XAML independientes. Para obtener más información, consulte [preservación del código](~/ios/deploy-test/linker.md).
+1. Establezca el `Preserve` atributo en el nivel de ensamblado:
+
+    ```csharp
+    [assembly:Preserve(AllMembers = true)]
+    ```
+
+Para obtener más información sobre la vinculación, consulte [vinculación de aplicaciones de Xamarin. iOS](~/ios/deploy-test/linker.md) y [vinculación en Android](~/android/deploy-test/linker.md).
 
 ## <a name="merged-resource-dictionaries"></a>Diccionarios de recursos combinados
 
@@ -239,7 +250,9 @@ Cuando [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) los recurso
 - [Diccionarios de recursos (ejemplo)](/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Estilos de Xamarin.Forms](~/xamarin-forms/user-interface/styles/index.md)
-- [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
+- [Vinculación de aplicaciones de Xamarin.iOS](~/ios/deploy-test/linker.md)
+- [Vincular en Android](~/android/deploy-test/linker.md)
+- [API de ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 
 ## <a name="related-video"></a>Vídeo relacionado
 

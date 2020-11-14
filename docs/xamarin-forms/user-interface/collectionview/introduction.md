@@ -1,21 +1,21 @@
 ---
 title: Xamarin.Forms Introducción a CollectionView
-description: La CollectionView es una vista flexible y eficaz para presentar listas de datos con diferentes especificaciones de diseño.
+description: La CollectionView es una alternativa flexible y eficaz a ListView.
 ms.prod: xamarin
 ms.assetid: 5C08F687-B9E6-4CE4-8726-F287F6D0B6A7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/11/2019
+ms.date: 11/05/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a46214af677cd164a4e55b06cf386533d3130ccb
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 1ad9ef36471b14ad44b108189b94bb22d1b3db41
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93370577"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590264"
 ---
 # <a name="no-locxamarinforms-collectionview-introduction"></a>Xamarin.Forms Introducción a CollectionView
 
@@ -24,6 +24,8 @@ ms.locfileid: "93370577"
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) es una vista para presentar listas de datos con diferentes especificaciones de diseño. Pretende proporcionar una alternativa más flexible y de rendimiento a [`ListView`](xref:Xamarin.Forms.ListView) . Por ejemplo, las siguientes capturas de pantallas muestran un `CollectionView` que usa una cuadrícula vertical de dos columnas y que permite la selección múltiple:
 
 [![Captura de pantalla de un diseño de cuadrícula vertical de CollectionView, en iOS y Android](introduction-images/verticalgrid-multipleselection.png "Diseño de cuadrícula vertical de CollectionView con selección múltiple")](introduction-images/verticalgrid-multipleselection-large.png#lightbox "Diseño de cuadrícula vertical de CollectionView con selección múltiple")
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) debe usarse para presentar listas de datos que requieren desplazamiento o selección. Se puede usar un diseño enlazable cuando los datos que se van a mostrar no requieren desplazamiento o selección. Para obtener más información, vea [diseños enlazables en Xamarin.Forms ](~/xamarin-forms/user-interface/layouts/bindable-layouts.md).
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) está disponible en Xamarin.Forms 4,3.
 
@@ -44,7 +46,7 @@ Aunque las [`CollectionView`](xref:Xamarin.Forms.CollectionView) [`ListView`](xr
 
 ## <a name="move-from-listview-to-collectionview"></a>Pasar de ListView a CollectionView
 
-[`ListView`](xref:Xamarin.Forms.ListView) las implementaciones en Xamarin.Forms implementaciones existentes se pueden migrar a [`CollectionView`](xref:Xamarin.Forms.CollectionView) implementaciones con la ayuda de la siguiente tabla:
+[`ListView`](xref:Xamarin.Forms.ListView) las implementaciones en Xamarin.Forms aplicaciones existentes se pueden migrar a [`CollectionView`](xref:Xamarin.Forms.CollectionView) implementaciones con la ayuda de la tabla siguiente:
 
 | Concepto | API de las vistas de lista | CollectionView |
 |---|---|---|
@@ -64,3 +66,4 @@ Aunque las [`CollectionView`](xref:Xamarin.Forms.CollectionView) [`ListView`](xr
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [CollectionView (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [Diseños enlazables en Xamarin.Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)

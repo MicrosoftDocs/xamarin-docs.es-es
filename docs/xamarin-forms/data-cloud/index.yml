@@ -13,12 +13,12 @@ metadata:
   no-loc:
   - Xamarin.Forms
   - Xamarin.Essentials
-  ms.openlocfilehash: a4749311ef19caa8c3ce0dc29783421666900610
-  ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+  ms.openlocfilehash: 134d4ed0f23d8886fb0d92017f4bf36d6af817c2
+  ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 09/30/2020
-  ms.locfileid: "91557041"
+  ms.lasthandoff: 11/13/2020
+  ms.locfileid: "94590225"
 landingContent:
 - title: Almacenamiento de datos local
   linkLists:
@@ -42,8 +42,6 @@ landingContent:
       url: azure-services/azure-search.md
     - text: Azure Functions
       url: azure-services/azure-functions.md
-    - text: Servicio Azure SignalR
-      url: azure-services/azure-signalr.md
 - title: Azure Cognitive Services
   linkLists:
   - linkListType: concept

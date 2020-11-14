@@ -6,16 +6,16 @@ ms.assetid: A2C1BD59-1A16-4E26-A825-0338E2AF9E65
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/19/2020
+ms.date: 11/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c774b795fce50b32f01b50c29cb71dd5fd02585c
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 4f60a48d2d8b43ea08ccc36401103d8987e48b1c
+ms.sourcegitcommit: f920ac0724f09e5c9b4f36be1995a5a17a6d9f95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373528"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94591052"
 ---
 # <a name="no-locxamarinforms-shapes-path-markup-syntax"></a>Xamarin.Forms Formas: sintaxis de marcado de trazados
 
@@ -43,7 +43,13 @@ En el ejemplo anterior, la sintaxis de marcado de trazados especifica un punto d
 En la sintaxis de marcado de trazado, no se necesitan espacios antes ni después de los comandos. Además, no es necesario separar dos números con una coma o un espacio en blanco, pero esto solo se puede lograr cuando la cadena no es ambigua.
 
 > [!TIP]
-> El lenguaje de marcado de rutas de acceso usa una sintaxis compatible con las definiciones de rutas de acceso de imágenes SVG (Scalable Vector Graphics), por lo que puede ser útil para migrar gráficos del formato SVG.
+> La sintaxis de marcado de rutas de acceso es compatible con las definiciones de rutas de acceso de imágenes SVG (Scalable Vector Graphics), por lo que puede ser útil para migrar gráficos del formato SVG.
+
+Mientras que la sintaxis de marcado de la ruta de acceso está diseñada para el consumo en XAML, se puede convertir en un `Geometry` objeto en código invocando el `ConvertFromInvariantString` método en la `PathGeometryConverter` clase:
+
+```csharp
+Geometry pathData = (Geometry)new PathGeometryConverter().ConvertFromInvariantString("M13.908992,16.207977 L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983Z");
+```
 
 ## <a name="move-command"></a>Comando de movimiento
 

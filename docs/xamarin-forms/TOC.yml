@@ -545,7 +545,7 @@ items:
                 href: user-interface/animation/custom.md
           - name: Pinceles
             items:
-              - name: Introducción
+              - name: Información general
                 href: user-interface/brushes/index.md
               - name: Colores sólidos
                 href: user-interface/brushes/solidcolor.md
@@ -948,8 +948,6 @@ items:
             href: data-cloud/azure-services/azure-search.md
           - name: Comprobación de
             href: data-cloud/azure-services/azure-functions.md
-          - name: Servicio Azure SignalR
-            href: data-cloud/azure-services/azure-signalr.md
       - name: Azure Cognitive Services
         items:
           - name: Información general de Cognitive Services

@@ -7,19 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2020
+ms.custom: contperfq2
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6dea987a5c4d9562a4a202e7f73aba979137676b
-ms.sourcegitcommit: 72abbb8f793333b8640c90d2f9c41353fbb38293
+ms.openlocfilehash: c6fdbaf8d218044de9a4fe30ffe7e3df05619bdb
+ms.sourcegitcommit: f920ac0724f09e5c9b4f36be1995a5a17a6d9f95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93343475"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94591078"
 ---
 # <a name="fonts-in-no-locxamarinforms"></a>Fuentes en Xamarin.Forms
 
-[![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithfonts)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithfonts)
 
 De forma predeterminada, Xamarin.Forms usa una fuente del sistema definida por cada plataforma. Sin embargo, los controles que muestran texto definen propiedades que puede usar para cambiar esta fuente:
 

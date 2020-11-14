@@ -10,12 +10,12 @@ ms.date: 09/17/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1872f86c0e7be6ab07b4e962d17be7d8030c1d96
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 557c82ac9318faaef5628a15989af2982a7f5ba4
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373164"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590420"
 ---
 # <a name="no-locxamarinforms-collectionview-scrolling"></a>Xamarin.Forms Desplazamientos de CollectionView
 
@@ -132,12 +132,12 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
 
 Este código de ejemplo produce el desplazamiento mínimo necesario para desplazar el elemento a la vista:
 
-[![Captura de pantalla de una lista de CollectionView vertical con un elemento desplazado en la vista, en iOS y Android](scrolling-images/scrolltoposition-makevisible.png "Lista de CollectionView vertical con elemento desplazado")](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "Lista de CollectionView vertical con elemento desplazado")
+[![Captura de pantalla de una lista de CollectionView vertical con ScrollToPosition. MakeVisible, en iOS y Android](scrolling-images/scrolltoposition-makevisible.png "Lista de CollectionView vertical con elemento desplazado")](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "Lista de CollectionView vertical con elemento desplazado")
 
 > [!NOTE]
 > El [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) miembro se utiliza de forma predeterminada si `position` no se especifica el argumento al llamar al `ScrollTo` método.
 
-### <a name="start"></a>Inicio
+### <a name="start"></a>Start
 
 El [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) miembro indica que el elemento debe desplazarse hasta el inicio de la vista:
 
@@ -147,7 +147,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 Este código de ejemplo hace que el elemento se desplace hasta el inicio de la vista:
 
-[![Captura de pantalla de una lista de CollectionView vertical con un elemento desplazado en la vista, en iOS y Android](scrolling-images/scrolltoposition-start.png "Lista de CollectionView vertical con elemento desplazado")](scrolling-images/scrolltoposition-start-large.png#lightbox "Lista de CollectionView vertical con elemento desplazado")
+[![Captura de pantalla de una lista de CollectionView vertical con ScrollToPosition. Start, en iOS y Android](scrolling-images/scrolltoposition-start.png "Lista de CollectionView vertical con elemento desplazado")](scrolling-images/scrolltoposition-start-large.png#lightbox "Lista de CollectionView vertical con elemento desplazado")
 
 ### <a name="center"></a>Center
 
@@ -159,7 +159,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 Este código de ejemplo hace que el elemento se desplace hasta el centro de la vista:
 
-[![Captura de pantalla de una lista de CollectionView vertical con un elemento desplazado en la vista, en iOS y Android](scrolling-images/scrolltoposition-center.png "Lista de CollectionView vertical con elemento desplazado")](scrolling-images/scrolltoposition-center-large.png#lightbox "Lista de CollectionView vertical con elemento desplazado")
+[![Captura de pantalla de una lista de CollectionView vertical con ScrollToPosition. Center, en iOS y Android](scrolling-images/scrolltoposition-center.png "Lista de CollectionView vertical con elemento desplazado")](scrolling-images/scrolltoposition-center-large.png#lightbox "Lista de CollectionView vertical con elemento desplazado")
 
 ### <a name="end"></a>End
 
@@ -171,17 +171,17 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.End);
 
 Este código de ejemplo hace que el elemento se desplace hasta el final de la vista:
 
-[![Captura de pantalla de una lista de CollectionView vertical con un elemento desplazado en la vista, en iOS y Android](scrolling-images/scrolltoposition-end.png "Lista de CollectionView vertical con elemento desplazado")](scrolling-images/scrolltoposition-end-large.png#lightbox "Lista de CollectionView vertical con elemento desplazado")
+[![Captura de pantalla de una lista de CollectionView vertical con ScrollToPosition. end, en iOS y Android](scrolling-images/scrolltoposition-end.png "Lista de CollectionView vertical con elemento desplazado")](scrolling-images/scrolltoposition-end-large.png#lightbox "Lista de CollectionView vertical con elemento desplazado")
 
 ## <a name="control-scroll-position-when-new-items-are-added"></a>Controlar la posición de desplazamiento cuando se agregan nuevos elementos
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) define una `ItemsUpdatingScrollMode` propiedad, que está respaldada por una propiedad enlazable. Esta propiedad obtiene o establece un `ItemsUpdatingScrollMode` valor de enumeración que representa el comportamiento de desplazamiento de `CollectionView` cuando se agregan nuevos elementos a él. La enumeración `ItemsUpdatingScrollMode` define los miembros siguientes:
 
-- `KeepItemsInView` ajusta el desplazamiento de desplazamiento para mantener el primer elemento visible que se muestra cuando se agregan nuevos elementos.
-- `KeepScrollOffset` mantiene el desplazamiento de desplazamiento con respecto al principio de la lista cuando se agregan nuevos elementos.
-- `KeepLastItemInView` ajusta el desplazamiento de desplazamiento para mantener visible el último elemento cuando se agregan nuevos elementos.
+- `KeepItemsInView` mantiene el primer elemento de la lista que se muestra cuando se agregan nuevos elementos.
+- `KeepScrollOffset` garantiza que la posición de desplazamiento actual se mantiene cuando se agregan nuevos elementos.
+- `KeepLastItemInView` ajusta el desplazamiento de desplazamiento para mantener el último elemento de la lista que se muestra cuando se agregan nuevos elementos.
 
-El valor predeterminado de la `ItemsUpdatingScrollMode` propiedad es `KeepItemsInView` . Por lo tanto, cuando se agreguen nuevos elementos a un [`CollectionView`](xref:Xamarin.Forms.CollectionView) primer elemento visible de la lista, se mostrarán. Para asegurarse de que los elementos recién agregados siempre estén visibles en la parte inferior de la lista, la `ItemsUpdatingScrollMode` propiedad debe establecerse en `KeepLastItemInView` :
+El valor predeterminado de la `ItemsUpdatingScrollMode` propiedad es `KeepItemsInView` . Por lo tanto, cuando se agreguen nuevos elementos al [`CollectionView`](xref:Xamarin.Forms.CollectionView) primer elemento de la lista, se mostrarán. Para asegurarse de que el último elemento de la lista se muestra cuando se agregan nuevos elementos, establezca la `ItemsUpdatingScrollMode` propiedad en `KeepLastItemInView` :
 
 ```xaml
 <CollectionView ItemsUpdatingScrollMode="KeepLastItemInView">
@@ -237,7 +237,7 @@ La [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) enumeración 
 > [!IMPORTANT]
 > El valor de la [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) propiedad solo se respeta cuando la [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) propiedad está establecida en `Mandatory` , o `MandatorySingle` .
 
-#### <a name="start"></a>Inicio
+#### <a name="start"></a>Start
 
 El `SnapPointsAlignment.Start` miembro indica que los puntos de ajuste están alineados con el borde inicial de los elementos.
 

@@ -6,16 +6,16 @@ ms.assetid: 6CEBCFE6-5577-4F68-9709-431062609153
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
+ms.date: 11/05/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 831bef32a5f10a1383dc9e9c2e57f2f0e705b196
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: e689620a943719f769e897676dbd2628e5f1558c
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93366183"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590455"
 ---
 # <a name="no-locxamarinforms-collectionview-emptyview"></a>Xamarin.Forms CollectionView EmptyView
 
@@ -75,23 +75,28 @@ La [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) propiedad se puede esta
             </DataTemplate>
         </CollectionView.ItemTemplate>
         <CollectionView.EmptyView>
-            <StackLayout>
-                <Label Text="No results matched your filter."
-                       Margin="10,25,10,10"
-                       FontAttributes="Bold"
-                       FontSize="18"
-                       HorizontalOptions="Fill"
-                       HorizontalTextAlignment="Center" />
-                <Label Text="Try a broader filter?"
-                       FontAttributes="Italic"
-                       FontSize="12"
-                       HorizontalOptions="Fill"
-                       HorizontalTextAlignment="Center" />
-            </StackLayout>
+            <ContentView>
+                <StackLayout HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="CenterAndExpand">
+                    <Label Text="No results matched your filter."
+                           Margin="10,25,10,10"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="Try a broader filter?"
+                           FontAttributes="Italic"
+                           FontSize="12"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </ContentView>
         </CollectionView.EmptyView>
     </CollectionView>
 </StackLayout>
 ```
+
+En este ejemplo, lo que parece que se ha agregado un redundante es [`ContentView`](xref:Xamarin.Forms) el elemento raíz de [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) . Esto se debe a que internamente, `EmptyView` se agrega a un contenedor nativo que no proporciona ningún contexto para el Xamarin.Forms diseño. Por lo tanto, para colocar las vistas que componen su `EmptyView` , debe agregar un diseño raíz, cuyo elemento secundario es un diseño que puede colocarse en el diseño raíz.
 
 El código de C# equivalente es el siguiente:
 
@@ -99,12 +104,15 @@ El código de C# equivalente es el siguiente:
 SearchBar searchBar = new SearchBar { ... };
 CollectionView collectionView = new CollectionView
 {
-    EmptyView = new StackLayout
+    EmptyView = new ContentView
     {
-        Children =
+        Content = new StackLayout
         {
-            new Label { Text = "No results matched your filter.", ... },
-            new Label { Text = "Try a broader filter?", ... }
+            Children =
+            {
+                new Label { Text = "No results matched your filter.", ... },
+                new Label { Text = "Try a broader filter?", ... }
+            }
         }
     }
 };

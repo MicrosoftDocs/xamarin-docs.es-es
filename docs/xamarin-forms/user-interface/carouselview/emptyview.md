@@ -10,12 +10,12 @@ ms.date: 10/03/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 948a0194ef6b6d672f04737698991c835f1181fc
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 5aa20e29e22df9de1d6cdd6208e56fa2e0fe0325
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93374126"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590355"
 ---
 # <a name="no-locxamarinforms-carouselview-emptyview"></a>Xamarin.Forms CarouselView EmptyView
 
@@ -69,19 +69,22 @@ La [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) propiedad se puede esta
                Placeholder="Filter" />
     <CarouselView ItemsSource="{Binding Monkeys}">
         <CarouselView.EmptyView>
-            <StackLayout>
-                <Label Text="No results matched your filter."
-                       Margin="10,25,10,10"
-                       FontAttributes="Bold"
-                       FontSize="18"
-                       HorizontalOptions="Fill"
-                       HorizontalTextAlignment="Center" />
-                <Label Text="Try a broader filter?"
-                       FontAttributes="Italic"
-                       FontSize="12"
-                       HorizontalOptions="Fill"
-                       HorizontalTextAlignment="Center" />
-            </StackLayout>
+            <ContentView>
+                <StackLayout HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="CenterAndExpand">
+                    <Label Text="No results matched your filter."
+                           Margin="10,25,10,10"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="Try a broader filter?"
+                           FontAttributes="Italic"
+                           FontSize="12"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </ContentView>
         </CarouselView.EmptyView>
         <CarouselView.ItemTemplate>
             ...
@@ -90,18 +93,23 @@ La [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) propiedad se puede esta
 </StackLayout>
 ```
 
+En este ejemplo, lo que parece que se ha agregado un redundante es [`ContentView`](xref:Xamarin.Forms) el elemento raíz de [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) . Esto se debe a que internamente, `EmptyView` se agrega a un contenedor nativo que no proporciona ningún contexto para el Xamarin.Forms diseño. Por lo tanto, para colocar las vistas que componen su `EmptyView` , debe agregar un diseño raíz, cuyo elemento secundario es un diseño que puede colocarse en el diseño raíz.
+
 El código de C# equivalente es el siguiente:
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
 CarouselView carouselView = new CarouselView
 {
-    EmptyView = new StackLayout
+    EmptyView = new ContentView
     {
-        Children =
+        Content = new StackLayout
         {
-            new Label { Text = "No results matched your filter.", ... },
-            new Label { Text = "Try a broader filter?", ... }
+            Children =
+            {
+                new Label { Text = "No results matched your filter.", ... },
+                new Label { Text = "Try a broader filter?", ... }
+            }
         }
     }
 };

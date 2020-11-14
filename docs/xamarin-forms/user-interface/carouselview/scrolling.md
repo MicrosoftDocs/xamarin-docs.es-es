@@ -10,12 +10,12 @@ ms.date: 01/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 945b6656895b4c148ac4b138af0c4922f9e3bc8f
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 58d0da21c81586a2cee2268c5d2df668eab0515a
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93365702"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590303"
 ---
 # <a name="no-locxamarinforms-carouselview-scrolling"></a>Xamarin.Forms Desplazar CarouselView
 
@@ -135,7 +135,7 @@ Este código de ejemplo produce el desplazamiento mínimo necesario para desplaz
 > [!NOTE]
 > El [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) miembro se utiliza de forma predeterminada si `position` no se especifica el argumento al llamar al `ScrollTo` método.
 
-### <a name="start"></a>Inicio
+### <a name="start"></a>Start
 
 El [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) miembro indica que el elemento debe desplazarse hasta el inicio de la vista:
 
@@ -169,11 +169,11 @@ Este código de ejemplo hace que el elemento se desplace hasta el final de la vi
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) define una `ItemsUpdatingScrollMode` propiedad, que está respaldada por una propiedad enlazable. Esta propiedad obtiene o establece un `ItemsUpdatingScrollMode` valor de enumeración que representa el comportamiento de desplazamiento de `CarouselView` cuando se agregan nuevos elementos a él. La enumeración `ItemsUpdatingScrollMode` define los miembros siguientes:
 
-- `KeepItemsInView` ajusta el desplazamiento de desplazamiento para mantener el primer elemento visible que se muestra cuando se agregan nuevos elementos.
-- `KeepScrollOffset` mantiene el desplazamiento de desplazamiento con respecto al principio de la lista cuando se agregan nuevos elementos.
-- `KeepLastItemInView` ajusta el desplazamiento de desplazamiento para mantener visible el último elemento cuando se agregan nuevos elementos.
+- `KeepItemsInView` mantiene el primer elemento de la lista que se muestra cuando se agregan nuevos elementos.
+- `KeepScrollOffset` garantiza que la posición de desplazamiento actual se mantiene cuando se agregan nuevos elementos.
+- `KeepLastItemInView` ajusta el desplazamiento de desplazamiento para mantener el último elemento de la lista que se muestra cuando se agregan nuevos elementos.
 
-El valor predeterminado de la `ItemsUpdatingScrollMode` propiedad es `KeepItemsInView` . Por lo tanto, cuando se agreguen nuevos elementos a un [`CarouselView`](xref:Xamarin.Forms.CarouselView) primer elemento visible de la lista, se mostrarán. Para asegurarse de que los elementos recién agregados siempre estén visibles en la parte inferior de la lista, la `ItemsUpdatingScrollMode` propiedad debe establecerse en `KeepLastItemInView` :
+El valor predeterminado de la `ItemsUpdatingScrollMode` propiedad es `KeepItemsInView` . Por lo tanto, cuando se agreguen nuevos elementos al [`CarouselView`](xref:Xamarin.Forms.CarouselView) primer elemento de la lista, se mostrarán. Para asegurarse de que el último elemento de la lista se muestra cuando se agregan nuevos elementos, establezca la `ItemsUpdatingScrollMode` propiedad en `KeepLastItemInView` :
 
 ```xaml
 <CarouselView ItemsUpdatingScrollMode="KeepLastItemInView">
@@ -231,7 +231,7 @@ La [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) enumeración 
 > [!IMPORTANT]
 > El valor de la [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) propiedad solo se respeta cuando la [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) propiedad está establecida en `Mandatory` , o `MandatorySingle` .
 
-#### <a name="start"></a>Inicio
+#### <a name="start"></a>Start
 
 El `SnapPointsAlignment.Start` miembro indica que los puntos de ajuste están alineados con el borde inicial de los elementos. En el siguiente ejemplo de XAML se muestra cómo establecer este miembro de enumeración:
 
