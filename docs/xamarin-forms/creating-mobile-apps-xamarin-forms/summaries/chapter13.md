@@ -10,19 +10,19 @@ ms.date: 07/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 43caf088ad6cb816f049e7862a287c17839c2170
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 011ef7c73e756c938589124676fa3d9c14a3b556
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136778"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374852"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Resumen del capítulo 13. Mapas de bits
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
 
 > [!NOTE]
-> En las notas de esta página se indican las áreas en las que Xamarin.Forms difiere del material presentado en el libro.
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
 El elemento [`Image`](xref:Xamarin.Forms.Image) de Xamarin.Forms muestra un mapa de bits. Todas las plataformas de Xamarin.Forms admiten los formatos de archivo JPEG, PNG, GIF y BMP.
 
@@ -110,7 +110,7 @@ En el ejemplo [**BitmapStreams**](https://github.com/xamarin/xamarin-forms-book-
 
 ### <a name="generating-bitmaps-at-run-time"></a>Generación de mapas de bits en tiempo de ejecución
 
-Todas las plataformas Xamarin.Forms admiten el formato de archivo BMP sin comprimir, que es fácil de construir en el código y luego almacenar en un elemento `MemoryStream`. Esta técnica permite la creación algorítmica de mapas de bits en tiempo de ejecución, tal y como se implementa en la clase [`BmpMaker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/BmpMaker.cs) de la biblioteca de**Xamarin.FormsBook.Toolkit**.
+Todas las plataformas Xamarin.Forms admiten el formato de archivo BMP sin comprimir, que es fácil de construir en el código y luego almacenar en un elemento `MemoryStream`. Esta técnica permite la creación algorítmica de mapas de bits en tiempo de ejecución, tal y como se implementa en la clase [`BmpMaker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/BmpMaker.cs) de la biblioteca de **Xamarin.FormsBook.Toolkit**.
 
 El ejemplo [**DiyGradientBitmap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/DiyGradientBitmap) de "Hágalo usted mismo" muestra el uso de `BmpMaker` para crear un mapa de bits con una imagen de degradado.
 

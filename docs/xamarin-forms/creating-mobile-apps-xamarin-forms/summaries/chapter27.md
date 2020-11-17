@@ -10,19 +10,19 @@ ms.date: 07/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4b0a3e14126dc8c92a1d1b60db7dbb2afd8e8c12
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6b117688e1bf85266c274a44e6a4b1fda1ef5134
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136596"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375153"
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>Resumen del capítulo 27. Representadores personalizados
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27)
 
-> [!NOTE] 
-> En las notas de esta página se indican las áreas en las que Xamarin.Forms difiere del material presentado en el libro.
+> [!NOTE]
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
 Un elemento de Xamarin.Forms como `Button` se representa con un botón específico de la plataforma encapsulado en una clase denominada `ButtonRenderer`.  Esta es la [versión de iOS de `ButtonRenderer`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/ButtonRenderer.cs), la [versión de Android de `ButtonRenderer`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/Renderers/ButtonRenderer.cs) y la [versión de UWP de `ButtonRenderer`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.UAP/ButtonRenderer.cs).
 
@@ -39,7 +39,7 @@ Puede ver el código fuente en GitHub mediante estos vínculos:
 - [ **Xamarin.Forms.Platform.UAP**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform.UAP)
 
 > [!NOTE]
-> Los ensamblados de `WinRT` mencionados en el libro ya no forman parte de esta solución. 
+> Los ensamblados de `WinRT` mencionados en el libro ya no forman parte de esta solución.
 
 El ejemplo [**PlatformClassHierarchy**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/PlatformClassHierarchy) muestra una jerarquía de clases para los ensamblados que son válidos para la plataforma en ejecución.
 
@@ -80,9 +80,9 @@ Todos los derivados de `ViewRenderer` contienen un atributo `ExportRenderer` en 
 
 ## <a name="renderers-and-properties"></a>Representadores y propiedades
 
-El siguiente conjunto de representadores implementa el dibujo de elipse, y se encuentra en los distintos proyectos de la solución [**Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform).
+El siguiente conjunto de representadores implementa el dibujo de elipse, y se encuentra en los distintos proyectos de la solución [ **Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform).
 
-La clase [`EllipseView`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/EllipseView.cs) se encuentra en la plataforma **Xamarin.FormsBook.Platform**. La clase es similar a `BoxView` y define solo una propiedad única: `Color` de tipo `Color`.
+La [`EllipseView`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/EllipseView.cs) clase se encuentra en la plataforma **Xamarin.FormsBook.Platform**. La clase es similar a `BoxView` y define solo una propiedad única: `Color` de tipo `Color`.
 
 Los representadores pueden transferir los valores de propiedad establecidos en `View` al objeto nativo invalidando el método `OnElementPropertyChanged` en el representador. Dentro de este método (y dentro de la mayor parte del representador), hay dos propiedades disponibles:
 

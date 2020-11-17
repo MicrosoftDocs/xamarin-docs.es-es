@@ -10,16 +10,19 @@ ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9a0206354254f79756e29f834c85837240736eca
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: bdbc795c0669115f822e6908590a3754af31a2d0
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136661"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373996"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Resumen del capítulo 23. Desencadenadores y comportamientos
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)
+
+> [!NOTE]
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
 Los desencadenadores y los comportamientos son similares, ya que ambos están diseñados para usarse en archivos XAML con el fin de simplificar las interacciones de los elementos más allá del uso de los enlaces de datos y para ampliar la funcionalidad de los elementos XAML. Los desencadenadores y los comportamientos casi siempre se usan con objetos visuales de la interfaz de usuario.
 
@@ -73,7 +76,7 @@ También es posible ejecutar un poco de código basado en un desencadenador. Est
 
 Para usar esto, debe escribir una clase que derive de [`TriggerAction<T>`](xref:Xamarin.Forms.TriggerAction`1), generalmente `TriggerAction<VisualElement>`. Puede definir las propiedades de esta clase. Se trata de propiedades de CLR sin formato en lugar de propiedades enlazables porque `TriggerAction` no se deriva de `BindableObject`. Debe reemplazar el método [`Invoke`](xref:Xamarin.Forms.TriggerAction`1.Invoke*) al que se llama cuando se invoca la acción. El argumento es el elemento de destino.
 
-La clase [`ScaleAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ScaleAction.cs) de la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) es un ejemplo. Llama a la propiedad `ScaleTo` para animar la propiedad `Scale` de un elemento. Dado que una de sus propiedades es de tipo `Easing`, la clase [`EasingConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/EasingConverter.cs) permite usar los campos estáticos `Easing` estándar en XAML.
+La clase [`ScaleAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ScaleAction.cs) de la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) es un ejemplo. Llama a la propiedad `ScaleTo` para animar la propiedad `Scale` de un elemento. Dado que una de sus propiedades es de tipo `Easing`, la clase [`EasingConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/EasingConverter.cs) permite usar los campos estáticos `Easing` estándar en XAML.
 
 En el ejemplo [**EntrySwell**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EntrySwell) se muestra cómo invocar `ScaleAction` desde objetos `EventTrigger` que supervisan los eventos `Focused` y `Unfocused`.
 
@@ -88,7 +91,7 @@ En el ejemplo [**EnterExitSwell**](https://github.com/xamarin/xamarin-forms-book
 
 ### <a name="more-event-triggers"></a>Más desencadenadores de eventos
 
-La clase [`ScaleUpAndDownAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ScaleUpAndDownAction.cs) de la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) llama a `ScaleTo` dos veces para escalar y reducir verticalmente. En el ejemplo [**ButtonGrowth**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ButtonGrowth) se usa esto con un estilo `EventTrigger` para proporcionar comentarios visuales cuando se presiona un elemento `Button`. Esta animación doble también es posible mediante dos acciones en la colección de tipo [`DelayedScaleAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DelayedScaleAction.cs).
+La clase [`ScaleUpAndDownAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ScaleUpAndDownAction.cs) de la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) llama a `ScaleTo` dos veces para escalar y reducir verticalmente. En el ejemplo [**ButtonGrowth**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ButtonGrowth) se usa esto con un estilo `EventTrigger` para proporcionar comentarios visuales cuando se presiona un elemento `Button`. Esta animación doble también es posible mediante dos acciones en la colección de tipo [`DelayedScaleAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DelayedScaleAction.cs).
 
 La clase [`ShiverAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ShiverAction.cs) de la biblioteca **Xamarin.FormsBook.Toolkit** define una acción Shiver personalizable. En el ejemplo [**ShiverButtonDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ShiverButtonDemo) se muestra este comportamiento.
 
@@ -137,13 +140,13 @@ Todo lo que puede hacer con un desencadenador, también puede hacerlo con un com
 
 El argumento es el elemento al que está asociado el comportamiento. Por lo general, el método `OnAttachedTo` asocia algunos controladores de eventos y `OnDetachingFrom` los desasocia. Dado que este tipo de clase normalmente guarda algún estado, normalmente no se puede compartir en `Style`.
 
-El ejemplo [**BehaviorEntryValidation**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BehaviorEntryValidation) es similar a **TriggerEntryValidation**, salvo que usa un comportamiento; la clase [`NumericValidationBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationBehavior.cs) de la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit).
+El ejemplo [**BehaviorEntryValidation**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BehaviorEntryValidation) es similar a **TriggerEntryValidation**, salvo que usa un comportamiento; la clase [`NumericValidationBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationBehavior.cs) de la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit).
 
 ### <a name="behaviors-with-properties"></a>Comportamientos con propiedades
 
 `Behavior<T>` deriva de `Behavior`, que se deriva de `BindableObject`, de modo que las propiedades enlazables se pueden definir en un comportamiento. Estas propiedades pueden estar activas en los enlaces de datos.
 
-Esto se muestra en el programa [**EmailValidationDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EmailValidationDemo) que usa la clase [`ValidEmailBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ValidEmailBehavior.cs) en la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit). `ValidEmailBehavior` tiene una propiedad enlazable de solo lectura y sirve como origen en los enlaces de datos.
+Esto se muestra en el programa [**EmailValidationDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EmailValidationDemo) que usa la clase [`ValidEmailBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ValidEmailBehavior.cs) en la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit). `ValidEmailBehavior` tiene una propiedad enlazable de solo lectura y sirve como origen en los enlaces de datos.
 
 El ejemplo [**EmailValidationConv**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EmailValidationConv) utiliza este mismo comportamiento para mostrar otro tipo de indicador para indicar que una dirección de correo electrónico es válida.
 
@@ -151,13 +154,13 @@ El ejemplo [**EmailValidationTrigger**](https://github.com/xamarin/xamarin-forms
 
 ### <a name="toggles-and-check-boxes"></a>Alternancia y casillas
 
-Es posible encapsular el comportamiento de un botón de alternancia en una clase, como [`ToggleBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBehavior.cs) en la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) y, a continuación, definir todos los objetos visuales para la alternancia completa en XAML.
+Es posible encapsular el comportamiento de un botón de alternancia en una clase, como [`ToggleBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBehavior.cs) en la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) y, a continuación, definir todos los objetos visuales para la alternancia completa en XAML.
 
 En el ejemplo [**ToggleLabel**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ToggleLabel) se usa `ToggleBehavior` con `DataTrigger` para usar `Label` con dos cadenas de texto para la alternancia.
 
 El ejemplo [**FormattedTextToggle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/FormattedTextToggle) amplía este concepto cambiando entre dos objetos `FormattedString`.
 
-La clase [`ToggleBase`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) de la biblioteca **Xamarin.FormsBook.Toolkit** deriva de `ContentView`, define una propiedad `IsToggled` e incorpora un elemento `ToggleBehavior` para la lógica de alternancia. De este modo, resulta más fácil definir el botón de alternancia en XAML, tal como se muestra en el ejemplo [**TraditionalCheckBox**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox).
+La clase [`ToggleBase`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) de la biblioteca **Xamarin.FormsBook.Toolkit** se deriva de `ContentView`, define una propiedad `IsToggled` e incorpora un elemento `ToggleBehavior` para la lógica de alternancia. De este modo, resulta más fácil definir el botón de alternancia en XAML, tal como se muestra en el ejemplo [**TraditionalCheckBox**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox).
 
 [**SwitchCloneDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/SwitchCloneDemo) incluye una clase [`SwitchClone`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter23/SwitchCloneDemo/SwitchCloneDemo/SwitchCloneDemo/SwitchClone.cs) que se deriva de `ToggleBase` y usa una clase [`TranslateAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TranslateAction.cs) para construir un botón de alternancia similar a `Switch` de Xamarin.Forms.
 
@@ -165,7 +168,7 @@ La clase [`ToggleBase`](https://github.com/xamarin/xamarin-forms-book-samples/bl
 
 ### <a name="responding-to-taps"></a>Respuesta a pulsaciones
 
-Una desventaja de `EventTrigger` es que no se puede adjuntar a `TapGestureRecognizer` para responder a las pulsaciones. Solucionar ese problema es el propósito de [`TapBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TapBehavior.cs) en [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit).
+Una desventaja de `EventTrigger` es que no se puede adjuntar a `TapGestureRecognizer` para responder a las pulsaciones. Solucionar ese problema es el propósito de [`TapBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TapBehavior.cs) en [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit).
 
 En el ejemplo [**BoxViewTapShiver**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BoxViewTapShiver) se usa `TapBehavior` para usar el elemento `ShiverAction` anterior para los elementos `BoxView` que se pulsan.
 
@@ -173,7 +176,7 @@ En el ejemplo [**ShiverViews**](https://github.com/xamarin/xamarin-forms-book-sa
 
 ### <a name="radio-buttons"></a>Botones de radio
 
-La biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) también tiene una clase [`RadioBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RadioBehavior.cs) para crear botones de radio agrupados por un nombre de grupo `string`.
+La biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit)también tiene una clase [`RadioBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RadioBehavior.cs) para crear botones de radio agrupados por un nombre de grupo `string`.
 
 El programa [**RadioLabels**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioLabels) usa cadenas de texto para su botón de radio. En el ejemplo [**RadioStyle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioStyle) se usa `Style` para la diferencia de la apariencia entre los botones seleccionados y no seleccionados. En el ejemplo [**RadioImages**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioImages) se usan imágenes en casillas para sus botones de radio:
 
@@ -183,7 +186,7 @@ En el ejemplo [**TraditionalRadios**](https://github.com/xamarin/xamarin-forms-b
 
 ### <a name="fades-and-orientation"></a>Atenuaciones y orientación
 
-El ejemplo final, [**MultiColorSliders**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/MultiColorSliders), permite cambiar entre tres vistas de selección de color diferentes mediante botones de radio. Las tres vistas se intensifican y atenúan con [`FadeEnableAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/FadeEnableAction.cs) en la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit).
+El ejemplo final, [**MultiColorSliders**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/MultiColorSliders), permite cambiar entre tres vistas de selección de color diferentes mediante botones de radio. Las tres vistas se intensifican y atenúan con [`FadeEnableAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/FadeEnableAction.cs) en la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit).
 
 El programa también responde a los cambios de orientación entre vertical y horizontal con [`GridOrientationBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/GridOrientationBehavior.cs) en la biblioteca **Xamarin.FormsBook.Toolkit**.
 

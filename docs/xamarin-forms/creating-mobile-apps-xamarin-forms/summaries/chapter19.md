@@ -10,19 +10,19 @@ ms.date: 07/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0eafdeffb6783a0ed54fdf23e6d10de24e2b4c6f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9bdab5d64f1edc60ca58993b7848f97b7125023b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136700"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374048"
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>Resumen del capítulo 19 Vistas de colecciones
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19)
 
-> [!NOTE] 
-> En las notas de esta página se indican las áreas en las que Xamarin.Forms difiere del material presentado en el libro.
+> [!NOTE]
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
 Xamarin.Forms define tres vistas que mantienen colecciones y muestran sus elementos:
 
@@ -46,9 +46,9 @@ También puede usar `SelectedIndex` para inicializar el elemento seleccionado, p
 
 ### <a name="data-binding-the-picker"></a>Enlace de datos con Picker
 
-La propiedad `SelectedIndex` está respaldada por una propiedad enlazable, pero `Items` no lo está, por lo que es difícil usar el enlace de datos con `Picker`. Una solución es usar `Picker` junto con un objeto [`ObjectToIndexConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ObjectToIndexConverter.cs) como el de la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit). [**PickerBinding**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/PickerBinding) muestra cómo funciona esto.
+La propiedad `SelectedIndex` está respaldada por una propiedad enlazable, pero `Items` no lo está, por lo que es difícil usar el enlace de datos con `Picker`. Una solución es usar `Picker` junto con un objeto [`ObjectToIndexConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ObjectToIndexConverter.cs) como el de la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit). [**PickerBinding**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/PickerBinding) muestra cómo funciona esto.
 
-> [!NOTE] 
+> [!NOTE]
 > El objeto `Picker` de Xamarin.Forms ahora incluye las propiedades `ItemsSource` y `SelectedItem` que admiten el enlace de datos. Consulte [Picker](~/xamarin-forms/user-interface/picker/index.md).
 
 ## <a name="rendering-data-with-listview"></a>Representación de datos con ListView
@@ -88,7 +88,7 @@ El ejemplo [**ObservableLogger**](https://github.com/xamarin/xamarin-forms-book-
 
 De forma predeterminada, una vista `ListView` muestra los elementos de su colección mediante el método `ToString` de cada elemento. Un enfoque mejor implica definir una plantilla para mostrar los elementos.
 
-Para experimentar con esta característica, puede usar la clase [`NamedColor`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColor.cs) en la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit). Esta clase define una propiedad `All` estática de tipo `IList<NamedColor>` que contiene 141 objetos `NamedColor` correspondientes a los campos públicos de la estructura `Color`.
+Para experimentar con esta característica, puede usar la clase [`NamedColor`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColor.cs) en la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit). Esta clase define una propiedad `All` estática de tipo `IList<NamedColor>` que contiene 141 objetos `NamedColor` correspondientes a los campos públicos de la estructura `Color`.
 
 En el ejemplo [**NaiveNamedColorList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/NaiveNamedColorList) se establece el objeto `ItemsSource` de una vista `ListView` en esta propiedad `NamedColor.All`, pero solo se muestran los nombres de clase completos de los objetos `NamedColor`.
 
@@ -118,7 +118,7 @@ Obtener el tamaño correcto para todas las plataformas puede resultar complicado
 
 `ListView` admite la agrupación de los elementos y la navegación entre esos grupos. La propiedad `ItemsSource` se debe establecer en una colección de colecciones: El objeto que `ItemsSource` establece debe implementar `IEnumerable` y cada elemento de la colección también debe implementar `IEnumerable`. Cada grupo debe incluir dos propiedades: una descripción de texto del grupo y una abreviatura de tres letras.
 
-La clase [`NamedColorGroup`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColorGroup.cs) de la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) crea siete grupos de objetos `NamedColor`. En el ejemplo [**ColorGroupList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ColorGroupList) se muestra cómo usar estos grupos con la propiedad [`IsGroupingEnabled`](xref:Xamarin.Forms.ListView.IsGroupingEnabled) de `ListView` establecida en `true` y las propiedades [`GroupDisplayBinding`](xref:Xamarin.Forms.ListView.GroupDisplayBinding) y [`GroupShortNameBinding`](xref:Xamarin.Forms.ListView.GroupShortNameBinding) enlazadas a las propiedades de cada grupo.
+La clase [`NamedColorGroup`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColorGroup.cs) de la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) crea siete grupos de objetos `NamedColor`. En el ejemplo [**ColorGroupList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ColorGroupList) se muestra cómo usar estos grupos con la propiedad [`IsGroupingEnabled`](xref:Xamarin.Forms.ListView.IsGroupingEnabled) de `ListView` establecida en `true` y las propiedades [`GroupDisplayBinding`](xref:Xamarin.Forms.ListView.GroupDisplayBinding) y [`GroupShortNameBinding`](xref:Xamarin.Forms.ListView.GroupShortNameBinding) enlazadas a las propiedades de cada grupo.
 
 ### <a name="custom-group-headers"></a>Encabezados de grupo personalizados
 
@@ -126,7 +126,7 @@ Para crear encabezados personalizados para los grupos de `ListView`, reemplace l
 
 ### <a name="listview-and-interactivity"></a>ListView e interactividad
 
-Por lo general, una aplicación obtiene la interacción del usuario con una vista `ListView` adjuntando un controlador al evento `ItemSelected` o [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped), o estableciendo un enlace de datos en la propiedad `SelectedItem`. Pero algunos tipos de celda (`EntryCell` y `SwitchCell`) permiten la interacción con el usuario, y también es posible crear celdas personalizadas que interactúen con el usuario. [**InteractiveListView**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/InteractiveListView) crea 100 instancias de [`ColorViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ColorViewModel.cs) y permite que el usuario cambie cada color mediante un trío de elementos `Slider`. El programa también hace uso de [`ColorToContrastColorConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ColorToContrastColorConverter.cs) en la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit).
+Por lo general, una aplicación obtiene la interacción del usuario con una vista `ListView` adjuntando un controlador al evento `ItemSelected` o [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped), o estableciendo un enlace de datos en la propiedad `SelectedItem`. Pero algunos tipos de celda (`EntryCell` y `SwitchCell`) permiten la interacción con el usuario, y también es posible crear celdas personalizadas que interactúen con el usuario. [**InteractiveListView**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/InteractiveListView) crea 100 instancias de [`ColorViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ColorViewModel.cs) y permite que el usuario cambie cada color mediante un trío de elementos `Slider`. El programa también hace uso de [`ColorToContrastColorConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ColorToContrastColorConverter.cs) en la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit).
 
 ## <a name="listview-and-mvvm"></a>ListView y MVVM
 
@@ -167,7 +167,7 @@ El elemento [**CellContextMenu**](https://github.com/xamarin/xamarin-forms-book-
 ### <a name="varying-the-visuals"></a>Variación de los objetos visuales
 
 A veces, querrá pequeñas variaciones de los objetos visuales de los elementos de la vista `ListView` en función de una propiedad. Por ejemplo, cuando el promedio de puntuación de un alumno cae por debajo de 2,0, la propiedad [**ColorCodedStudents**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ColorCodedStudents) muestra el nombre del alumno en rojo.
-Esto se logra mediante el uso de un convertidor de valores de enlace, [`ThresholdToObjectConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ThresholdToObjectConverter.cs), en la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit).
+Esto se logra mediante el uso de un convertidor de valores de enlace, [`ThresholdToObjectConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ThresholdToObjectConverter.cs), en la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit).
 
 ### <a name="refreshing-the-content"></a>Actualización de la memoria caché
 
@@ -217,7 +217,7 @@ En el ejemplo [**EntryForm**](https://github.com/xamarin/xamarin-forms-book-samp
 
 ### <a name="custom-cells"></a>Celdas personalizadas
 
-El ejemplo [**ConditionalCells**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ConditionalCells) se expande en **EntryForm**. La clase [`ProgrammerInformation`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter19/EntryForm/EntryForm/EntryForm/PersonalInformation.cs) incluye una propiedad booleana que rige la aplicabilidad de dos propiedades adicionales. Para estas dos propiedades adicionales, el programa utilice un elemento `PickerCell` personalizado basado en los ejemplos [PickerCell.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/PickerCell.xaml) y [PickerCell.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/PickerCell.xaml.cs) de la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit).
+El ejemplo [**ConditionalCells**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ConditionalCells) se expande en **EntryForm**. La clase [`ProgrammerInformation`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter19/EntryForm/EntryForm/EntryForm/PersonalInformation.cs) incluye una propiedad booleana que rige la aplicabilidad de dos propiedades adicionales. Para estas dos propiedades adicionales, el programa utiliza un elemento `PickerCell` personalizado basado en los ejemplos [PickerCell.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/PickerCell.xaml) y [PickerCell.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/PickerCell.xaml.cs) de la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit).
 
 Aunque las propiedades `IsEnabled` de los dos elementos `PickerCell` se enlazan a la propiedad booleana en `ProgrammerInformation`, esta técnica no parece funcionar, lo que solicita el ejemplo siguiente.
 

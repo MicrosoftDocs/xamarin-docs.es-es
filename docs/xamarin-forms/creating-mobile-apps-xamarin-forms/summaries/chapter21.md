@@ -10,16 +10,19 @@ ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 32393108f84ea3a57079c86b6a9a8e628ceca03a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cb822c7ac2a05dc9f0d51f51e9737add4395b84d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136674"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374035"
 ---
 # <a name="summary-of-chapter-21-transforms"></a>Resumen del capítulo 21. Transformaciones
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21)
+
+> [!NOTE]
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
 Una vista de Xamarin.Forms aparece en la pantalla en una ubicación y con un tamaño determinados por su elemento primario, que generalmente es un derivado de `Layout` o `Layout<View>`. La propiedad *transform* es una característica de Xamarin.Forms que puede modificar esa ubicación, tamaño o incluso orientación.
 
@@ -100,7 +103,7 @@ En el ejemplo [**CircularText**](https://github.com/xamarin/xamarin-forms-book-s
 
 ### <a name="an-analog-clock"></a>Un reloj analógico
 
-La biblioteca [**Xamarin. FormsBook. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) contiene una clase [`AnalogClockViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AnalogClockViewModel.cs) que calcula los ángulos para las manecillas de un reloj. Para evitar las dependencias de plataforma en ViewModel, la clase usa `Task.Delay` en lugar de un temporizador para buscar un nuevo valor de `DateTime`.
+La biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) contiene una clase [`AnalogClockViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AnalogClockViewModel.cs) que calcula los ángulos para las manecillas de un reloj. Para evitar las dependencias de plataforma en ViewModel, la clase usa `Task.Delay` en lugar de un temporizador para buscar un nuevo valor de `DateTime`.
 
 También incluido en **Xamarin.FormsBook.Toolkit**, es una clase [`SecondTickConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondTickConverter.cs) que implementa `IValueConverter` y sirve para redondear un segundo ángulo al segundo más cercano.
 
@@ -110,7 +113,7 @@ En [**BoxViewClock**](https://github.com/xamarin/xamarin-forms-book-samples/tree
 
 [![Captura de pantalla triple del reloj BoxView](images/ch21fg17-small.png "Superficie del reloj analógico")](images/ch21fg17-large.png#lightbox "Superficie del reloj analógico")
 
-Además, una clase [`SecondBackEaseConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondBackEaseConverter.cs) en **Xamarin.FormsBook.Toolkit** hace que parezca que la segunda manecilla se retrasas un poco antes de avanzar y, a continuación, volver a la posición correcta.
+Además, una clase [`SecondBackEaseConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondBackEaseConverter.cs) en **Xamarin.FormsBook.Toolkit** hace que parezca que la segunda manecilla se retrasa un poco antes de avanzar y, a continuación, volver a la posición correcta.
 
 ### <a name="vertical-sliders"></a>¿Controles deslizante verticales?
 

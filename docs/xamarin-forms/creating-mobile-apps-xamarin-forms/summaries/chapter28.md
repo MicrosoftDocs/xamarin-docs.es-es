@@ -10,19 +10,19 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 301dc65c7909603e117717a993959e3c73fa2d32
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 25b5ad1ef7b1d5d3c545d7977ad735c18affef8e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133411"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375119"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Resumen del capítulo 28. Ubicación y mapas
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
 
 > [!NOTE]
-> En las notas de esta página se indican las áreas en las que Xamarin.Forms difiere del material presentado en el libro.
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
 Xamarin.Forms admite un elemento [`Map`](xref:Xamarin.Forms.Maps.Map) derivado de `View`. Debido a los requisitos de la plataforma especial implicados en el uso de mapas, se implementan en un ensamblado independiente, **Xamarin.Forms.Maps**, e implican un espacio de nombres diferente: `Xamarin.Forms.Maps`.
 
@@ -61,7 +61,7 @@ Las clases `Map` de Xamarin.Forms no incluyen instalaciones para obtener la ubic
 
 ### <a name="the-location-tracker-api"></a>API de seguimiento de ubicación
 
-La solución [**Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) contiene código para una API de seguimiento de ubicación. La estructura [`GeographicLocation`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/GeographicLocation.cs) encapsula una latitud y una longitud. La interfaz [`ILocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/ILocationTracker.cs) define dos métodos para iniciar y pausar el seguimiento de la ubicación, y un evento cuando hay una nueva ubicación disponible.
+La solución [ **Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) contiene código para una API de herramienta de seguimiento de ubicación. La estructura [`GeographicLocation`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/GeographicLocation.cs) encapsula una latitud y una longitud. La interfaz [`ILocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/ILocationTracker.cs) define dos métodos para iniciar y pausar el seguimiento de la ubicación, y un evento cuando hay una nueva ubicación disponible.
 
 #### <a name="the-ios-location-manager"></a>Administrador de ubicación en iOS
 
@@ -97,7 +97,7 @@ Las aplicaciones Android que obtienen la ubicación del usuario deben tener un p
 
 Una aplicación de la Plataforma universal de Windows debe tener una funcionalidad de dispositivo `location` marcada en el archivo Package.appxmanifest.
 
-## <a name="working-with-xamarinformsmaps"></a>Trabajar con Xamarin.Forms.Maps
+## <a name="working-with-no-locxamarinformsmaps"></a>Trabajar con Xamarin.Forms.Maps
 
 Hay varios requisitos implicados en el uso de la clase `Map`.
 
@@ -141,7 +141,7 @@ Puede mostrar diferentes tipos de mapas estableciendo la propiedad `Map` en [`Ma
 - [`Satellite`](xref:Xamarin.Forms.Maps.MapType.Satellite)
 - [`Hybrid`](xref:Xamarin.Forms.Maps.MapType.Hybrid)
 
-En el archivo [MapTypesPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypesPage.xaml) se muestra cómo usar un botón de radio para seleccionar el tipo de mapa. Hace uso de la clase [`RadioButtonManager`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RadioButtonManager.cs) en la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) y una clase basada en el archivo [MapTypeRadioButton.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypeRadioButton.xaml).
+En el archivo [MapTypesPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypesPage.xaml) se muestra cómo usar un botón de radio para seleccionar el tipo de mapa. Hace uso de la clase [`RadioButtonManager`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RadioButtonManager.cs) en la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) y una clase basada en el archivo [MapTypeRadioButton.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypeRadioButton.xaml).
 
 ### <a name="map-coordinates"></a>Coordenadas de mapa
 
@@ -176,7 +176,7 @@ El archivo [MapCoordinatesPage.xaml](https://github.com/xamarin/xamarin-forms-bo
 
 ### <a name="position-extensions"></a>Extensiones de posición
 
-Una nueva biblioteca para este libro denominada [**Xamarin.FormsBook.Toolkit.Maps**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit.Maps) contiene tipos específicos de mapa pero independientes de la plataforma. La clase [`PositionExtensions`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit.Maps/Xamarin.FormsBook.Toolkit.Maps/PositionExtensions.cs) tiene un método `ToString` para `Position` y un método para calcular la distancia entre dos valores `Position`.
+Una nueva biblioteca para este libro denominada [ **Xamarin.FormsBook.Toolkit.Maps**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit.Maps) contiene tipos específicos de mapa pero independientes de la plataforma. La clase [`PositionExtensions`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit.Maps/Xamarin.FormsBook.Toolkit.Maps/PositionExtensions.cs) tiene un método `ToString` para `Position` y un método para calcular la distancia entre dos valores `Position`.
 
 ### <a name="setting-an-initial-location"></a>Establecimiento de una ubicación inicial
 

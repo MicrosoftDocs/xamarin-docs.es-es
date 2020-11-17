@@ -10,16 +10,19 @@ ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 09622adc269027b589a7345a7d4411c3dcecbf0c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4ab09546bb2a1dcbc221f3819bc891ce096ce569
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136648"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373979"
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>Resumen del capítulo 24. Navegación de páginas
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24)
+
+> [!NOTE]
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
 Muchas aplicaciones se componen de varias páginas entre las que se desplaza el usuario. La aplicación siempre tiene una página *principal* o página de *inicio* y, desde ahí, el usuario se desplaza a otras páginas, que se mantienen en una pila para volver a ellas. En el [**Capítulo 25. Variedades de página**](chapter25.md) se describen opciones de navegación adicionales.
 
@@ -164,7 +167,7 @@ El intermediario de la clase `App` o el enfoque ViewModel son idóneos cuando la
 
 En general, un programa de varias páginas que entra en suspensión debe ir a la misma página cuando se restaure. Esto significa que dicho programa debe guardar el contenido de la pila de navegación. En esta sección se muestra cómo automatizar este proceso en una clase diseñada para este fin. Esta clase también llama a las páginas individuales para permitirles guardar y restaurar su estado.
 
-La biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) define una interfaz llamada [`IPersistantPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/IPersistentPage.cs) que pueden implementar las clases para guardar y restaurar elementos en el diccionario `Properties`.
+La biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) define una interfaz llamada [`IPersistantPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/IPersistentPage.cs) que pueden implementar las clases para guardar y restaurar elementos en el diccionario `Properties`.
 
 La clase [`MultiPageRestorableApp`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/MultiPageRestorableApp.cs) de la biblioteca **Xamarin.FormsBook.Toolkit** se deriva de `Application`. Luego, puede derivar la clase de `App` de `MultiPageRestorableApp` y realizar algunas tareas de mantenimiento.
 

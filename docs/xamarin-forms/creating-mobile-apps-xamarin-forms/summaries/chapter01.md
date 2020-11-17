@@ -10,19 +10,19 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 48b2fb429d206f6582886c94d4d99839d790dc8d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1af4b990d388436c04a2feb0abe3d4e3a8bc6756
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136934"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370460"
 ---
-# <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Resumen del capítulo 1. ¿Cómo encaja Xamarin.Forms?
+# <a name="summary-of-chapter-1-how-does-no-locxamarinforms-fit-in"></a>Resumen del capítulo 1. ¿Cómo encaja Xamarin.Forms?
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter01)
 
 > [!NOTE]
-> En las notas de esta página se indican las áreas en las que Xamarin.Forms difiere del material presentado en el libro.
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
 Uno de los trabajos menos agradables en programación es la migración de una base de código de una plataforma a otra, especialmente si esa plataforma implica un lenguaje de programación diferente. Existe la tentación, al migrar el código, de refactorizarlo también, pero si ambas plataformas deben mantenerse en paralelo, las diferencias entre las dos bases de código harán que el mantenimiento futuro sea más difícil.
 
@@ -43,7 +43,7 @@ Los desarrolladores pueden usar la plataforma Xamarin para escribir aplicaciones
 > [!NOTE]
 > Las bibliotecas de clases portables se han sustituido por las bibliotecas .NET estándar. Todo el código de ejemplo del libro se ha convertido para usar bibliotecas .NET Standard.
 
-## <a name="introducing-xamarinforms"></a>Presentación de Xamarin.Forms
+## <a name="introducing-no-locxamarinforms"></a>Presentación de Xamarin.Forms
 
 Cuando el destino son varias plataformas móviles, Xamarin.Forms permite compartir aún más el código. Un único programa escrito para Xamarin.Forms puede tener como destino estas plataformas:
 
@@ -58,7 +58,7 @@ La mayor parte de un programa de Xamarin.Forms se encuentra en una biblioteca o 
 
 Las API de Xamarin.Forms se asignan a controles nativos en cada plataforma, de modo que cada plataforma mantiene su aspecto característico:
 
-[![Captura de pantalla triple del uso compartido de objetos visuales de la plataforma](images/ch01fg03-small.png "Controles de Xamarin.Forms en cada plataforma")](images/ch01fg03-large.png#lightbox "Controles de Xamarin.Forms en cada plataforma")
+[![Captura de pantalla triple del uso compartido de objetos visuales de la plataforma](images/ch01fg03-small.png "Xamarin.Forms Controles en cada plataforma")](images/ch01fg03-large.png#lightbox "Xamarin.Forms Controles en cada plataforma")
 
 Las capturas de pantallas de izquierda a derecha muestran un teléfono iPhone y uno Android:
 

@@ -10,21 +10,21 @@ ms.date: 07/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ad71dc5f5389f1676698a761a138b3f76ffa9fa0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 75c79c7a5300cf5708bb46740bec11f84b59c786
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136687"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374029"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Resumen del capítulo 20. Asincronía y E/S de archivos
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)
 
-> [!NOTE] 
-> En las notas de esta página se indican las áreas en las que Xamarin.Forms difiere del material presentado en el libro.
+> [!NOTE]
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
- Una interfaz gráfica de usuario debe responder de forma secuencial a los eventos de entrada del usuario. Esto implica que todo el procesamiento de eventos de entrada del usuario debe realizarse en un único subproceso, a menudo denominado *subproceso principal* o *subproceso de interfaz de usuario*.
+Una interfaz gráfica de usuario debe responder de forma secuencial a los eventos de entrada del usuario. Esto implica que todo el procesamiento de eventos de entrada del usuario debe realizarse en un único subproceso, a menudo denominado *subproceso principal* o *subproceso de interfaz de usuario*.
 
 Los usuarios esperan que las interfaces gráficas de usuario respondan. Esto significa que un programa debe procesar rápidamente los eventos de entrada del usuario. Si eso no es posible, el procesamiento se debe relegar a subprocesos secundarios de ejecución.
 
@@ -102,13 +102,13 @@ El código que muestra este nuevo enfoque estará en una biblioteca para que lo 
 
 Es ventajoso almacenar código reutilizable en bibliotecas. Esto es obviamente más difícil cuando diferentes partes del código reutilizable son para sistemas operativos completamente diferentes.
 
-En la solución [**Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) se muestra un enfoque. Esta solución contiene siete proyectos diferentes:
+En la solución [ **Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) se muestra un enfoque. Esta solución contiene siete proyectos diferentes:
 
-- [**Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform), un PCL normal de Xamarin.Forms
-- [**Xamarin.FormsBook.Platform.iOS**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS), una biblioteca de clases de iOS
-- [**Xamarin.FormsBook.Platform.Android**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android), una biblioteca de clases de Android
-- [**Xamarin.FormsBook.Platform.UWP**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.UWP), una biblioteca de clases universales de Windows
-- [**Xamarin.FormsBook.Platform.WinRT**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT), un proyecto compartido para el código que es común a todas la plataformas de Windows
+- [ **Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform), un PCL normal de Xamarin.Forms
+- [ **Xamarin.FormsBook.Platform.iOS**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS), una biblioteca de clases de iOS
+- [ **Xamarin.FormsBook.Platform.Android**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android), una biblioteca de clases de Android
+- [ **Xamarin.FormsBook.Platform.UWP**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.UWP), una biblioteca de clases universales de Windows
+- [ **Xamarin.FormsBook.Platform.WinRT**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT), un proyecto compartido para el código que es común a todas la plataformas de Windows
 
 Todos los proyectos de plataforma individuales (a excepción de **Xamarin.FormsBook.Platform.WinRT**) tienen referencias a **Xamarin.FormsBook.Platform**. Los tres proyectos de Windows tienen una referencia a **Xamarin.FormsBook.Platform.WinRT**.
 

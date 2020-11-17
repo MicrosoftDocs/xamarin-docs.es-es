@@ -10,16 +10,19 @@ ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: deb46d1a70e7c707c998be8669b4af3b8e8d7ead
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 377de0ff7e48971f9214cf86aec19ce14859139e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136609"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366235"
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>Resumen del capítulo 26. Diseños personalizados
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26)
+
+> [!NOTE]
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
 Xamarin.Forms incluye varias clases derivadas de [`Layout<View>`](xref:Xamarin.Forms.Layout`1):
 
@@ -156,13 +159,13 @@ La clase `Layout` define un método protegido similar denominado [`InvalidateLay
 
 ### <a name="a-layout-with-properties"></a>Un diseño con propiedades
 
-En la clase [`WrapLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/WrapLayout.cs) de [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) se supone que todos sus elementos secundarios tienen el mismo tamaño, y se ajustan los elementos secundarios de una fila (o columna) a la siguiente. Define una propiedad `Orientation` como `StackLayout`, y las propiedades `ColumnSpacing` y `RowSpacing` como `Grid`, y almacena en caché los tamaños secundarios.
+En la clase [`WrapLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/WrapLayout.cs) de [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) se supone que todos sus elementos secundarios tienen el mismo tamaño, y se ajustan los elementos secundarios de una fila (o columna) a la siguiente. Define una propiedad `Orientation` como `StackLayout`, y las propiedades `ColumnSpacing` y `RowSpacing` como `Grid`, y almacena en caché los tamaños secundarios.
 
 En el ejemplo de [**PhotoWrap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/PhotoWrap) se coloca un `WrapLayout` en un `ScrollView` para mostrar las fotos en existencias.
 
 ### <a name="no-unconstrained-dimensions-allowed"></a>No se permiten dimensiones sin restricciones.
 
-El valor [`UniformGridLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/UniformGridLayout.cs) de la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) está diseñada para mostrar todos sus elementos secundarios en su interior. Por lo tanto, no puede tratar con dimensiones sin restricciones y genera una excepción si se encuentra una.
+El valor [`UniformGridLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/UniformGridLayout.cs) de la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) está diseñada para mostrar todos sus elementos secundarios en su interior. Por lo tanto, no puede tratar con dimensiones sin restricciones y genera una excepción si se encuentra una.
 
 En el ejemplo [**PhotoGrid**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/PhotoGrid) se muestra `UniformGridLayout`:
 
@@ -179,13 +182,13 @@ La clase `Layout` define dos métodos que le permiten desplazar un elemento secu
 
 En el caso de los elementos secundarios superpuestos, los elementos secundarios al final de la colección aparecen visualmente encima de los elementos secundarios al principio de la colección.
 
-La clase [`OverlapLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/OverlapLayout.cs) de la biblioteca [**Xamarin. FormsBook. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) define una propiedad asociada para indicar el orden de representación y, por tanto, permitir que uno de sus elementos secundarios se muestre encima de los demás. En el ejemplo [**StudentCardFile**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/StudentCardFile) se muestra lo siguiente:
+La clase [`OverlapLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/OverlapLayout.cs) de la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) define una propiedad asociada para indicar el orden de representación y, por tanto, permitir que uno de sus elementos secundarios se muestre encima de los demás. En el ejemplo [**StudentCardFile**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/StudentCardFile) se muestra lo siguiente:
 
 [![Captura de pantalla triple de la cuadrícula de archivos de la tarjeta de alumnos](images/ch26fg10-small.png "Superposición de elementos secundarios de diseño")](images/ch26fg10-large.png#lightbox "Superposición de elementos secundarios de diseño")
 
 ### <a name="more-attached-bindable-properties"></a>Más propiedades enlazables asociadas
 
-La clase [`CartesianLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CartesianLayout.cs) de la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) define las propiedades enlazables asociadas para especificar dos valores de `Point` y un valor de grosor y manipula los elementos de `BoxView` para que se parezca a las líneas.
+La clase [`CartesianLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CartesianLayout.cs) de la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) define las propiedades enlazables asociadas para especificar dos valores de `Point` y un valor de grosor y manipula los elementos de `BoxView` para que se parezca a las líneas.
 
 El ejemplo [**UnitCube**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/UnitCube) se usa para dibujar un cubo 3D.
 

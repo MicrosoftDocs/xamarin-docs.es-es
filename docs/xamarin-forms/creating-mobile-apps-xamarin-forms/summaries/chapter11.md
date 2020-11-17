@@ -10,22 +10,25 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: edc3dfd97457fe93a04edd82574f6ed419f5fdc1
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e2858d0606cf9c5c97a3457b5b29f620e7da2bad
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136804"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375140"
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>Resumen del capítulo 11. La infraestructura enlazable
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
 
+> [!NOTE]
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
+
 Cada programador de C# está familiarizado con las *propiedades* de C#. Las propiedades contienen un descriptor de acceso *set* o un descriptor de acceso *get*. A menudo se les llama *propiedades de CLR* en el contexto de Common Language Runtime.
 
 Xamarin.Forms establece una definición de propiedad mejorada denominada *propiedad enlazable* encapsulada por la clase [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) y admitida por la clase [`BindableObject`](xref:Xamarin.Forms.BindableObject). Estas clases están relacionadas, pero son bastante distintas: `BindableProperty` se utiliza para definir la propiedad en sí; `BindableObject` es como `object` en que es una clase base para las clases que definen propiedades enlazables.
 
-## <a name="the-xamarinforms-class-hierarchy"></a>Jerarquía de clases de Xamarin.Forms
+## <a name="the-no-locxamarinforms-class-hierarchy"></a>Jerarquía de clases de Xamarin.Forms
 
 En el ejemplo [**ClassHierarchy**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy) se usa la reflexión para mostrar una jerarquía de clases de Xamarin.Forms y mostrar el rol fundamental que desempeña `BindableObject` en esta jerarquía. `BindableObject` se deriva de `Object` y es la clase primaria de [`Element`](xref:Xamarin.Forms.Element) de la que se deriva [`VisualElement`](xref:Xamarin.Forms.VisualElement). Se trata de la clase primaria de [`Page`](xref:Xamarin.Forms.Page) y [`View`](xref:Xamarin.Forms.View), que es la clase primaria de [`Layout`](xref:Xamarin.Forms.Layout):
 
@@ -63,7 +66,7 @@ Del mismo modo, el método [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetB
 
 Puede definir sus propias propiedades enlazables mediante el método estático [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) para crear un campo estático de solo lectura de tipo `BindableProperty`.
 
-Esto se muestra en la clase [`AltLabel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AltLabel.cs) de la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit). La clase se deriva de `Label` y permite especificar un tamaño de fuente en puntos. Se muestra en el ejemplo [**PointSizedText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/PointSizedText).
+Esto se muestra en la clase [`AltLabel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AltLabel.cs) de la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit). La clase se deriva de `Label` y permite especificar un tamaño de fuente en puntos. Se muestra en el ejemplo [**PointSizedText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/PointSizedText).
 
 Se requieren cuatro argumentos del método `BindableProperty.Create`:
 

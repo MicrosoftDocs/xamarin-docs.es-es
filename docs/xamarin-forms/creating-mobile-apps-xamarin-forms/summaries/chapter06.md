@@ -10,16 +10,19 @@ ms.date: 07/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f9bafbf4af2a89acd02d436604e882be87cbde8c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8a95f4a88ea0adff78475dab8699308fbe49aa46
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136843"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370213"
 ---
 # <a name="summary-of-chapter-6-button-clicks"></a>Resumen del capítulo 6. Clics de botón
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
+
+> [!NOTE]
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
 [`Button`](xref:Xamarin.Forms.Button) es la vista que permite al usuario iniciar un comando. Un elemento `Button` se identifica mediante texto (y, opcionalmente, una imagen, como se muestra en [Capítulo 13, Mapas de bits](chapter13.md)). Por consiguiente, `Button` define muchas de las mismas propiedades que `Label`:
 
@@ -83,7 +86,7 @@ Una llamada a `OnResume` indica que el programa no terminó después de la últi
 
 Se produce una llamada a `OnStart` durante el inicio del programa. No es necesario esperar hasta esta llamada de método para tener acceso al diccionario de `Properties` porque ya se ha restaurado el contenido al llamar al constructor `App`.
 
-El ejemplo [**PersistentKeypad**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/PersistentKeypad) es muy similar a**SimplestKeypad**, salvo que el programa utiliza la invalidación `OnSleep` para guardar la entrada del teclado actual y el constructor de página para restaurar los datos.
+El ejemplo [**PersistentKeypad**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/PersistentKeypad) es muy similar a **SimplestKeypad**, salvo que el programa utiliza la invalidación `OnSleep` para guardar la entrada del teclado actual y el constructor de página para restaurar los datos.
 
 > [!NOTE]
 > Otro enfoque para guardar la configuración del programa lo proporciona la clase [Preferences](~/essentials/preferences.md) de Xamarin.Essentials.

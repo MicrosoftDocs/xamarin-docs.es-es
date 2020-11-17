@@ -10,19 +10,19 @@ ms.date: 07/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ece93730100001e8339a5f50cdb7ac437d96fa62
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 721d68db48843ee614f16d4c4237f2c753319561
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136739"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373489"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>Resumen del capítulo 16. Enlace de datos
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16)
 
-> [!NOTE] 
-> En las notas de esta página se indican las áreas en las que Xamarin.Forms difiere del material presentado en el libro.
+> [!NOTE]
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
 Los programadores a menudo se encuentran escribiendo controladores de eventos que detectan cuándo ha cambiado una propiedad de un objeto, y lo usan para cambiar el valor de una propiedad en otro objeto. Este proceso se puede automatizar con la técnica del *enlace de datos*. Los enlaces de datos se definen normalmente en XAML y pasan a formar parte de la definición de la interfaz de usuario.
 
@@ -128,7 +128,7 @@ La propiedad [`Path`](xref:Xamarin.Forms.Binding.Path) de `Binding` se llama as�
 
 Cuando las propiedades de origen y de destino de un enlace son tipos diferentes, puede aplicar conversiones a los tipos mediante un convertidor de enlace. Se trata de una clase que implementa la interfaz [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) y contiene dos métodos: [`Convert`](xref:Xamarin.Forms.IValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)) para convertir el origen en destino y [`ConvertBack`](xref:Xamarin.Forms.IValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)) para convertir el destino en origen.
 
-La clase [`IntToBoolConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/IntToBoolConverter.cs) de la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) es un ejemplo de cómo convertir `int` en `bool`. Se demuestra en el ejemplo [**ButtonEnabler**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/ButtonEnabler), que solo habilita `Button` si se ha escrito al menos un carácter en `Entry`.
+La clase [`IntToBoolConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/IntToBoolConverter.cs) de la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) es un ejemplo de cómo convertir `int` en `bool`. Se demuestra en el ejemplo [**ButtonEnabler**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/ButtonEnabler), que solo habilita `Button` si se ha escrito al menos un carácter en `Entry`.
 
 La clase [`BoolToStringConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/BoolToStringConverter.cs) convierte `bool` en `string` y define dos propiedades para especificar qué texto se debe devolver para los valores `false` y `true`.
 [`BoolToColorConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/BoolToColorConverter.cs) es similar. En el ejemplo [**SwitchText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/SwitchText) se muestra el uso de estos dos convertidores para mostrar textos distintos en diferentes colores basados en una configuración de `Switch`.

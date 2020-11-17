@@ -10,16 +10,19 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5aa62927efe0a9803efbddaef97ac6557edccd6c
-ms.sourcegitcommit: c3329ab25d377907d8804cdd5e26dc84a274f39c
+ms.openlocfilehash: 09011647428e2af1bdfcdb2f9def8da64ef84144
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88130908"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374853"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>Resumen del capítulo 14. Diseño absoluto
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
+
+> [!NOTE]
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
 Como `StackLayout`, [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) se deriva de `Layout<View>` y hereda una propiedad `Children`. `AbsoluteLayout` implementa un sistema de diseño que requiere que el programador especifique las posiciones de sus elementos secundarios y, opcionalmente, su tamaño. La posición se especifica en la esquina superior izquierda del elemento secundario en relación con la esquina superior izquierda de `AbsoluteLayout` en unidades independientes del dispositivo. `AbsoluteLayout` también implementa una característica de posicionamiento y ajuste de tamaño proporcional.
 

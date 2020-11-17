@@ -10,19 +10,19 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e8feb636057f1e11c7df90236dee44697203d51c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6dec0c3e3fc4d25aecfe4e4141c4cc285fd7f8d8
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136866"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366196"
 ---
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>Resumen del capítulo 9. Llamadas de API específicas de la plataforma
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
 
-> [!NOTE] 
-> En las notas de esta página se indican las áreas en las que Xamarin.Forms difiere del material presentado en el libro.
+> [!NOTE]
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
 A veces es necesario ejecutar código que varíe según la plataforma. En este capítulo se exploran las técnicas.
 
@@ -40,7 +40,7 @@ En el ejemplo [**PlatInfoSap2**](https://github.com/xamarin/xamarin-forms-book-s
 
 ## <a name="dependencyservice-and-the-portable-class-library"></a>DependencyService y la biblioteca de clases portable
 
-> [!NOTE] 
+> [!NOTE]
 > Las bibliotecas de clases portables se han sustituido por las bibliotecas .NET Standard. Todo el código de ejemplo del libro se ha convertido para usar bibliotecas .NET Standard.
 
 Normalmente, una biblioteca no puede tener acceso a las clases de los proyectos de aplicación. Esta restricción parece evitar que la técnica que se muestra en **PlatInfoSap2** se use en una biblioteca. Aun así, Xamarin.Forms contiene una clase denominada [`DependencyService`](xref:Xamarin.Forms.DependencyService) que usa la reflexión de .NET para acceder a las clases públicas del proyecto de aplicación desde la biblioteca.

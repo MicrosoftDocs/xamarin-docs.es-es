@@ -10,16 +10,19 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8f23034df684e778677e4f2e480e1c41807536fb
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b2083a8dd17749074258c8bd5e6d1a7374c758f9
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136817"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368497"
 ---
 # <a name="summary-of-chapter-10-xaml-markup-extensions"></a>Resumen del capítulo 10. Extensiones de marcado XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10)
+
+> [!NOTE]
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
 Normalmente, el analizador de XAML convierte cualquier cadena establecida como un valor de atributo en el tipo de la propiedad basándose en las conversiones estándar de los tipos de datos de .NET básicos, o en un derivado de [`TypeConverter`](xref:Xamarin.Forms.TypeConverter) asociado a la propiedad o su tipo con [`TypeConverterAttribute`](xref:Xamarin.Forms.TypeConverterAttribute).
 
@@ -92,7 +95,7 @@ Utilice [`x:Array`](xref:Xamarin.Forms.Xaml.ArrayExtension) para definir una mat
 
 Puede crear sus propias extensiones de marcado XAML escribiendo una clase que implemente la interfaz [`IMarkupExtension`](xref:Xamarin.Forms.Xaml.IMarkupExtension) con un método [`ProvideValue`](xref:Xamarin.Forms.Xaml.IMarkupExtension.ProvideValue(System.IServiceProvider)).
 
-La clase [`HslColorExtension`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/HslColorExtension.cs) cumple esos requisitos. Crea un valor de tipo `Color` basándose en los valores de las propiedades denominadas `H`, `S`, `L` y `A`. Esta clase es el primer elemento de una biblioteca de Xamarin.Forms denominada [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) que se crea y usa en el transcurso de este libro.
+La clase [`HslColorExtension`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/HslColorExtension.cs) cumple esos requisitos. Crea un valor de tipo `Color` basándose en los valores de las propiedades denominadas `H`, `S`, `L` y `A`. Esta clase es el primer elemento de una biblioteca de Xamarin.Forms denominada [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) que se crea y usa en el transcurso de este libro.
 
 En el ejemplo [**CustomExtensionDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/CustomExtensionDemo) se muestra cómo hacer referencia a esta biblioteca y utilizar la extensión de marcado personalizada.
 

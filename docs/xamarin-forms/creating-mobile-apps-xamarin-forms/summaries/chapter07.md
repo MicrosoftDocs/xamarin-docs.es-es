@@ -10,19 +10,19 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0b92988e1e838072fca0d8a284455a62db05e757
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d69c5c96138024f6a45d71013b259b2c47a20da3
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136869"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370188"
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>Resumen del capítulo 7. XAML o código
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
 
 > [!NOTE]
-> En las notas de esta página se indican las áreas en las que Xamarin.Forms difiere del material presentado en el libro.
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
 Xamarin.Forms admite un lenguaje de marcado basado en XML denominado lenguaje XAML. XAML proporciona una alternativa a C# para definir el diseño de la interfaz de usuario de una aplicación de Xamarin.Forms y para definir enlaces entre elementos de la interfaz de usuario y datos subyacentes.
 

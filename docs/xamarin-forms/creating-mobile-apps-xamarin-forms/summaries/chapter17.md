@@ -10,16 +10,19 @@ ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6dd13c0f592831c6488afac6727bcac734e9136a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d2904270b601b6602457873e8b0180c13a0d6d95
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136726"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373463"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Resumen del capítulo 17. Dominio de la cuadrícula
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
+
+> [!NOTE]
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
 [`Grid`](xref:Xamarin.Forms.Grid) es un eficaz mecanismo de diseño que organiza sus elementos secundarios en filas y columnas de celdas. A diferencia del elemento `table` de HTML similar, `Grid` es exclusivamente para fines de diseño y no para presentación.
 
@@ -103,7 +106,7 @@ En el ejemplo [**KeypadGrid**](https://github.com/xamarin/xamarin-forms-book-sam
 
 `Grid` puede ayudar a estructurar un programa para que responda a los cambios de orientación. En el ejemplo [**GridRgbSliders**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridRgbSliders) se muestra una técnica que mueve un elemento entre una segunda fila de un teléfono con orientación vertical y la segunda columna de un teléfono con orientación horizontal.
 
-El programa inicializa `Slider` elementos en un intervalo de 0 a 255 y usa enlaces de datos para mostrar el valor de los controles deslizantes en formato hexadecimal. Dado que los valores de `Slider` son números de punto flotante, y la cadena de formato .NET para el formato hexadecimal solo funciona con enteros, una clase [`DoubleToIntConvert`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DoubleToIntConverter.cs) en la biblioteca [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) sirve de ayuda.
+El programa inicializa `Slider` elementos en un intervalo de 0 a 255 y usa enlaces de datos para mostrar el valor de los controles deslizantes en formato hexadecimal. Dado que los valores de `Slider` son números de punto flotante, y la cadena de formato .NET para el formato hexadecimal solo funciona con enteros, una clase [`DoubleToIntConvert`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DoubleToIntConverter.cs) en la biblioteca [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) sirve de ayuda.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

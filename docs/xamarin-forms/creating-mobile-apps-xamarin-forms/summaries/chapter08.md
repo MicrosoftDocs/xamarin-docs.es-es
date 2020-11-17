@@ -10,16 +10,19 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 90db8b4f11095a2a56c82c3f563844efbcf7e2b1
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a88f0ef4e04bf6884f1b49811663f611d3e54a0a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136830"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366222"
 ---
 # <a name="summary-of-chapter-8-code-and-xaml-in-harmony"></a>Resumen del capítulo 8. Código y XAML en armonía
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)
+
+> [!NOTE]
+> Este libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Gran parte del libro sigue siendo útil, pero algunos de los materiales están anticuados y algunos temas ya no son completamente correctos o completos.
 
 En este capítulo se explora XAML más profundamente y, en particular, cómo interactúan el código y XAML.
 
