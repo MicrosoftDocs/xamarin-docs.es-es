@@ -10,12 +10,12 @@ ms.date: 04/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fb9d5243e5be4d99d741349564854c9c54e7a1bb
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: f29bacf3546b2148a3d97c3c1ccaa44e02872be8
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373294"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590316"
 ---
 # <a name="no-locxamarinforms-shell-navigation"></a>Navegación en Xamarin.Forms Shell
 
@@ -41,7 +41,7 @@ La navegación se realiza mediante la invocación del método `GoToAsync`, desde
 
 La navegación se realiza en una aplicación de Shell mediante la especificación de un URI al que navegar. Los URI de navegación pueden tener tres componentes:
 
-- Una *ruta* , que define la ruta de acceso al contenido que existe como parte de la jerarquía visual de Shell.
+- Una *ruta*, que define la ruta de acceso al contenido que existe como parte de la jerarquía visual de Shell.
 - Una *página*. Las páginas que no existen en la jerarquía visual de Shell se pueden insertar en la pila de navegación desde cualquier lugar dentro de una aplicación de Shell. Por ejemplo, una página de detalles de elementos no se definirá en la jerarquía visual de Shell, pero se puede insertar en la pila de navegación si es necesario.
 - Uno o varios *parámetros de consulta*. Los parámetros de consulta son parámetros que se pueden pasar a la página de destino durante la navegación.
 
@@ -149,20 +149,24 @@ En este ejemplo se navega a la página de la ruta `monkeys`, donde dicha ruta se
 
 ### <a name="relative-routes"></a>Rutas relativas
 
-La navegación se puede realizar también mediante la especificación de un URI relativo válido como argumento del método `GoToAsync`. El sistema de enrutamiento intenta hacer coincidir el URI con un objeto `ShellContent`. Por lo tanto, si todas las rutas de una aplicación son únicas, la navegación se puede realizar con solo especificar el nombre de ruta único como un URI relativo:
+La navegación se puede realizar también mediante la especificación de un URI relativo válido como argumento del método `GoToAsync`. El sistema de enrutamiento intenta hacer coincidir el URI con un objeto `ShellContent`. Por lo tanto, si todas las rutas de una aplicación son únicas, la navegación se puede realizar con solo especificar el nombre de ruta único como un URI relativo.
+
+Se admiten los formatos siguientes de ruta relativa:
+
+| Formato | Descripción |
+| --- | --- |
+| *route* | En la jerarquía de ruta se buscará la ruta especificada, hacia arriba desde la posición actual. La página que coincida se insertará en la pila de navegación. |
+| /*route* | La jerarquía de ruta se buscará a partir de la ruta especificada, hacia abajo desde la posición actual. La página que coincida se insertará en la pila de navegación. |
+| //*route* | En la jerarquía de ruta se buscará la ruta especificada, hacia arriba desde la posición actual. La página que coincida reemplazará la pila de navegación. |
+| ///*route* | En la jerarquía de ruta se buscará la ruta especificada, hacia abajo desde la posición actual. La página que coincida reemplazará la pila de navegación. |
+
+En el ejemplo siguiente se navega a la página de la ruta `monkeydetails`:
 
 ```csharp
 await Shell.Current.GoToAsync("monkeydetails");
 ```
 
-En este ejemplo se navega a la página de la ruta `monkeydetails`.
-
-Además, se admiten los siguientes formatos de ruta relativa:
-
-| Formato | Descripción |
-| --- | --- |
-| //*route* | En la jerarquía de ruta se buscará la ruta especificada, hacia arriba desde la ruta mostrada actualmente. |
-| ///*route* | En la jerarquía de ruta se buscará la ruta especificada, hacia abajo desde la ruta mostrada actualmente. |
+En este ejemplo, la ruta `monkeyDetails` se busca hacia arriba en la jerarquía hasta que se encuentra la página que coincide. Cuando se encuentra, se inserta en la pila de navegación.
 
 #### <a name="contextual-navigation"></a>Navegación contextual
 
@@ -185,13 +189,13 @@ La navegación hacia atrás se puede llevar a cabo especificando ".." como argum
 await Shell.Current.GoToAsync("..");
 ```
 
-La navegación hacia atrás con ".." también se puede combinar con una ruta, como aquí:
+La navegación hacia atrás con ".." también se puede combinar con una ruta:
 
 ```csharp
 await Shell.Current.GoToAsync("../route");
 ```
 
-En este ejemplo, el efecto general es navegar hacia atrás y, después, navegar a la ruta especificada.
+En este ejemplo, se realiza la navegación hacia atrás y, después, se navega a la ruta especificada.
 
 > [!IMPORTANT]
 > Desplazarse hacia atrás y luego a una ruta especificada solo es posible si la navegación hacia atrás sitúa al usuario en la ubicación actual en la jerarquía de rutas para navegar a la ruta especificada.
@@ -202,10 +206,20 @@ Del mismo modo, es posible desplazarse hacia atrás varias veces y, seguidamente
 await Shell.Current.GoToAsync("../../route");
 ```
 
-En este ejemplo, el efecto general es navegar hacia atrás dos veces y, después, navegar a la ruta especificada.
+En este ejemplo, la navegación hacia atrás se realiza dos veces y, después, se navega a la ruta especificada.
+
+Además, los datos se pueden pasar a través de las propiedades de consulta al navegar hacia atrás:
+
+```csharp
+await Shell.Current.GoToAsync($"..?parameterToPassBack={parameterValueToPassBack}");
+```
+
+En este ejemplo, se realiza la navegación hacia atrás y el valor del parámetro de consulta se pasa al parámetro de consulta en la página anterior.
 
 > [!NOTE]
-> Al navegar con "..", también se pueden pasar datos. Para más información, vea [Pasar datos](#pass-data).
+> Los parámetros de consulta se pueden anexar a cualquier solicitud de navegación hacia atrás.
+
+Para obtener más información sobre cómo pasar datos al navegar, vea [Pasar datos](#pass-data).
 
 ### <a name="invalid-routes"></a>Rutas no válidas
 
@@ -213,8 +227,8 @@ Los siguientes formatos de ruta no son válidos:
 
 | Formato | Explicación |
 | --- | --- |
-| *route* o / *route* | Las rutas de la jerarquía visual no se pueden insertar en la pila de navegación. |
-| //*page* o /// *page* | Actualmente, las rutas globales no pueden ser la única página en la pila de navegación. Por lo tanto, no se admite el enrutamiento absoluto a rutas globales. |
+| *route* o /*route* | Las rutas de la jerarquía visual no se pueden insertar en la pila de navegación. |
+| //*page* o ///*page* | Actualmente, las rutas globales no pueden ser la única página en la pila de navegación. Por lo tanto, no se admite el enrutamiento absoluto a rutas globales. |
 
 El uso de cualquiera de estos formatos de ruta dará como resultado una excepción `Exception`.
 
@@ -239,6 +253,22 @@ La clase `Tab` define una propiedad `Stack`, de tipo `IReadOnlyList<Page>`, que 
 - `OnPopToRootAsync`, devuelve `Task`, y se llama cuando se llama a `INavigation.OnPopToRootAsync`.
 - `OnPushAsync`, devuelve `Task`, y se llama cuando se llama a `INavigation.PushAsync`.
 - `OnRemovePage`, que se llama cuando se llama a `INavigation.RemovePage`.
+
+Por ejemplo, en el código siguiente de ejemplo se indica cómo invalidar el método `OnRemovePage`:
+
+```csharp
+public class MyTab : Tab
+{
+    protected override void OnRemovePage(Page page)
+    {
+        base.OnRemovePage(page);
+
+        // Custom logic
+    }
+}
+```
+
+Después, los objetos `MyTab` se pueden consumir en la jerarquía visual de Shell en lugar de los objetos `Tab`.
 
 ## <a name="navigation-events"></a>Eventos de navegación
 

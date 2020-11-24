@@ -11,12 +11,12 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 - Firebase
-ms.openlocfilehash: 498e3b0bd2cb88df3e04dc19c66dbe671a8378dd
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: b560eedb1968db791c57620686c4ddb854153b1c
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93374451"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590407"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-no-locxamarinforms"></a>Envío y recepción de notificaciones push con Azure Notification Hubs y Xamarin.Forms
 
@@ -142,8 +142,10 @@ Realice los pasos siguientes para configurar la aplicación Android a fin de rec
 1. [Invalide](#override-firebasemessagingservice-to-handle-messages) `FirebaseMessagingService` para controlar los mensajes.
 1. [Agregue](#add-incoming-notifications-to-the-xamarinforms-ui) notificaciones entrantes a la interfaz de usuario de Xamarin.Forms.
 
-> [!NOTE]
-> La acción de compilación `GoogleServicesJson` forma parte del paquete NuGet `Xamarin.GooglePlayServices.Base`. Visual Studio 2019 establece las acciones de compilación disponibles durante el inicio. Si no ve `GoogleServicesJson` como acción de compilación, reinicie Visual Studio 2019 después de instalar los paquetes NuGet.
+La acción de compilación `GoogleServicesJson` forma parte del paquete NuGet `Xamarin.GooglePlayServices.Base`. Visual Studio 2019 establece las acciones de compilación disponibles durante el inicio. Si no ve `GoogleServicesJson` como acción de compilación, reinicie Visual Studio 2019 después de instalar los paquetes NuGet.
+
+> [!IMPORTANT]
+> La entrega de notificaciones de inserción mientras la aplicación está en suspensión requiere el uso de AndroidX. Para obtener información sobre cómo migrar a AndroidX, vea [Migración de AndroidX en ](~/xamarin-forms/platform/android/androidx-migration.md)Xamarin.Forms.
 
 ### <a name="configure-android-manifest"></a>Configuración del manifiesto de Android
 
@@ -510,7 +512,7 @@ void ProcessNotification(NSDictionary options, bool fromFinishedLaunching)
 
 ## <a name="test-notifications-in-the-azure-portal"></a>Prueba de notificaciones en Azure Portal
 
-Azure Notification Hubs permite comprobar que la aplicación puede recibir mensajes de prueba. La sección **Envío de prueba** del centro de notificaciones permite seleccionar la plataforma de destino y enviar un mensaje. Al establecer **Envío a la expresión de etiqueta** en `default`, se envían mensajes a las aplicaciones que han registrado una plantilla para la etiqueta `default`. Al hacer clic en el botón **Enviar** , se genera un informe que incluye el número de dispositivos a los que llega el mensaje. En la captura de pantalla siguiente se muestra una prueba de notificación de Android en Azure Portal:
+Azure Notification Hubs permite comprobar que la aplicación puede recibir mensajes de prueba. La sección **Envío de prueba** del centro de notificaciones permite seleccionar la plataforma de destino y enviar un mensaje. Al establecer **Envío a la expresión de etiqueta** en `default`, se envían mensajes a las aplicaciones que han registrado una plantilla para la etiqueta `default`. Al hacer clic en el botón **Enviar**, se genera un informe que incluye el número de dispositivos a los que llega el mensaje. En la captura de pantalla siguiente se muestra una prueba de notificación de Android en Azure Portal:
 
 ![Captura de pantalla de un mensaje de prueba del centro de notificaciones de Azure](azure-notification-hub-images/azure-notification-hub-test-send.png "Mensaje de prueba del centro de notificaciones de Azure")
 

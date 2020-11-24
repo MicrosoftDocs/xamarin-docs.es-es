@@ -6,16 +6,16 @@ ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/07/2019
+ms.date: 11/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d5c380a5ce6e76b0f9275b09d2943be479ef09e4
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: ef4c8717b419d1be4c4050f86b183385d6c10072
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93370902"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590342"
 ---
 # <a name="no-locxamarinforms-tabbedpage"></a>TabbedPage de Xamarin.Forms
 
@@ -27,15 +27,17 @@ ms.locfileid: "93370902"
 
 En iOS, la lista de pestañas aparece en la parte inferior de la pantalla y el área de detalles está arriba. Cada pestaña está formada por un título y un icono, que debe ser un archivo PNG con un canal alfa. En orientación vertical, los iconos de la barra de pestañas aparecen encima de los títulos de pestañas. En orientación horizontal, los iconos y los títulos aparecen unos al lado de otros. Además, se puede mostrar una barra de pestañas normal o compacta, dependiendo del dispositivo y la orientación. Si hay más de cinco pestañas, aparece una pestaña **Más** que puede usarse para acceder a las demás pestañas. Para información sobre los requisitos de los iconos, consulte [Tamaño de los iconos de la barra de pestañas](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/custom-icons#tab-bar-icon-size) en developer.apple.com.
 
-> [!TIP]
-> El elemento `TabbedRenderer` para iOS tiene un método reemplazable `GetIcon` que se puede usar para cargar iconos de pestaña desde un origen especificado. Esta invalidación permite usar imágenes SVG como iconos en un elemento `TabbedPage`. Además, se pueden proporcionar versiones seleccionadas y sin seleccionar de un icono.
-
 En Android, la lista de pestañas aparece en la parte superior de la pantalla y el área de detalles está debajo. Cada pestaña está formada por un título y un icono, que debe ser un archivo PNG con un canal alfa. Sin embargo, se pueden mover las pestañas a la parte inferior de la pantalla con una plataforma específica. Si hay más de cinco pestañas, y la lista de pestañas está en la parte inferior de la pantalla, aparece una pestaña *Más* que puede usarse para acceder a las demás pestañas. Para información sobre los requisitos de los iconos, consulte [Pestañas](https://material.io/components/tabs/#) en material.io y [Compatibilidad con distintas densidades de píxeles](https://developer.android.com/training/multiscreen/screendensities) en developer.android.com. Para información sobre cómo mover las pestañas a la parte inferior de la pantalla, consulte [Establecimiento de la posición y el color de la barra de herramientas de TabbedPage](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md).
 
-> [!TIP]
-> El elemento `TabbedPageRenderer` para Android AppCompat tiene un método reemplazable `SetTabIconImageSource` que se puede usar para cargar iconos de pestaña desde un elemento `Drawable` personalizado. Esta invalidación permite usar imágenes SVG como iconos en un elemento `TabbedPage` y funciona con barras de pestañas superiores e inferiores.
-
 En la Plataforma universal de Windows (UWP), la lista de pestañas aparece en la parte superior de la pantalla y el área de detalles se muestra debajo. Cada pestaña está formada por un título. Sin embargo, se pueden agregar iconos a cada pestaña con una plataforma específica. Para más información, consulte [Iconos de TabbedPage en Windows](~/xamarin-forms/platform/windows/tabbedpage-icons.md).
+
+> [!TIP]
+> Los archivos de Gráficos vectoriales escalables (SVG) se pueden mostrar como iconos de pestaña en un elemento [`TabbedPage`](xref:Xamarin.Forms.TabbedPage):
+>
+> - La clase `TabbedRenderer` para iOS tiene un método reemplazable `GetIcon` que se puede usar para cargar iconos de pestaña desde un origen especificado. Además, en caso necesario se pueden proporcionar versiones seleccionadas y sin seleccionar de un icono.
+> - La clase `TabbedPageRenderer` para Android AppCompat tiene un método reemplazable `SetTabIconImageSource` que se puede usar para cargar iconos de pestaña desde un elemento `Drawable` personalizado. Como alternativa, los archivos SVG se pueden convertir en recursos Drawable vectoriales, que Xamarin.Forms puede mostrar de forma automática. Para obtener más información sobre cómo convertir archivos SVG en recursos Drawable vectoriales, vea [Cómo agregar gráficos vectoriales de varias densidades](https://developer.android.com/studio/write/vector-asset-studio) en developer.android.com.
+>
+> Para obtener más información, vea [TabbedPage de Xamarin.Forms con iconos de pestaña de SVG](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithsvgtabicons).
 
 ## <a name="create-a-tabbedpage"></a>Creación de TabbedPage
 
@@ -109,7 +111,7 @@ Al seleccionar otra pestaña se muestra el objeto [`ContentPage`](xref:Xamarin.F
 
 [![Captura de pantalla de un elemento TabbedPage que contiene pestañas, en iOS y Android](tabbed-page-images/tabbedpage-week.png "TabbedPage con pestañas")](tabbed-page-images/tabbedpage-week-large.png#lightbox "TabbedPage con pestañas")
 
-En la pestaña **Programar** , el objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage) está encapsulado en un objeto [`NavigationPage`](xref:Xamarin.Forms.NavigationPage).
+En la pestaña **Programar**, el objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage) está encapsulado en un objeto [`NavigationPage`](xref:Xamarin.Forms.NavigationPage).
 
 > [!WARNING]
 > Aunque se puede colocar un objeto [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) en un elemento [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), no se recomienda colocar un elemento `TabbedPage` en un objeto `NavigationPage`. Esto se debe a que, en iOS, un elemento `UITabBarController` siempre actúa como contenedor de `UINavigationController`. Para obtener más información, vea [Combined View Controller Interfaces](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/CombiningViewControllers.html) (Interfaces combinadas del controlador de vistas) en la biblioteca para desarrolladores de iOS.
@@ -240,6 +242,7 @@ Al seleccionar otra pestaña se muestra el objeto [`ContentPage`](xref:Xamarin.F
 
 - [TabbedPageWithNavigationPage (ejemplo)](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 - [TabbedPage (ejemplo)](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpage)
+- [TabbedPage con iconos de pestaña de SVG](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithsvgtabicons)
 - [Navegación jerárquica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md)
 - [Páginas de Xamarin.Forms](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
 - [TabbedPage API](xref:Xamarin.Forms.TabbedPage)

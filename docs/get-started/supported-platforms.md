@@ -6,24 +6,24 @@ ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/22/2020
+ms.date: 11/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f93af19587cf962ac0c852599157261a087dadbc
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cfb5c7ce11ca2eab5aedfd1b6f862a750fcff6e3
+ms.sourcegitcommit: bda07768b51e6d24f897ccae16e152dc7a83effa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84197546"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94595338"
 ---
-# <a name="xamarinforms-supported-platforms"></a>Plataformas admitidas para Xamarin.Forms
+# <a name="no-locxamarinforms-supported-platforms"></a>Plataformas admitidas para Xamarin.Forms
 
 Las aplicaciones en Xamarin.Forms se pueden escribir para los siguientes sistemas operativos:
 
 - iOS 9 o versiones posteriores.
 - Android 4.4 (API 19) o versiones posteriores ([más detalles](#android-platform-support)). Pero se recomienda Android 5.0 (API 21) como la API mínima. Esto garantiza la compatibilidad total con todas las bibliotecas de compatibilidad de Android, a la vez que se destina a la mayoría de los dispositivos Android.
-- Plataforma universal de Windows de Windows 10.
+- Plataforma universal de Windows de Windows 10, compilación 10.0.16299.0 o una superior para compatibilidad con .NET Standard 2.0. Sin embargo, se recomienda la compilación 10.0.18362.0 o una superior.
 
 Las aplicaciones en Xamarin.Forms para iOS, Android y la Plataforma universal de Windows (UWP) se pueden compilar en Visual Studio. Pero se necesita un equipo Mac en red para el desarrollo de iOS con la última versión de Xcode y la versión mínima de macOS que especifica Apple. Para más información, vea [Requisitos de Windows](~/cross-platform/get-started/requirements.md#windows-requirements).
 

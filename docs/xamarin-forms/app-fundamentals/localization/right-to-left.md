@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/07/2018
+ms.date: 11/05/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 05f5e79f9df59859c4514150ec591e0a96912ed5
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 676e0f062d3ed83cf433188e646f1e96f84a77cc
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93368783"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590277"
 ---
 # <a name="right-to-left-localization"></a>Localización de derecha a izquierda
 
@@ -187,7 +187,10 @@ Las aplicaciones de Xamarin.Android se pueden forzar para que siempre usen un di
 Window.DecorView.LayoutDirection = LayoutDirection.Rtl;
 ```
 
-Este enfoque es útil para las aplicaciones que siempre requieren un diseño de derecha a izquierda y elimina el requisito para establecer la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+> [!NOTE]
+> Este enfoque requiere que la aplicación esté configurada para admitir el diseño de derecha a izquierda. Para obtener más información, vea [Configuración de la plataforma Android](#android).
+
+Este enfoque es útil para las aplicaciones que siempre requieren un diseño de derecha a izquierda y elimina el requisito para establecer la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) de la mayoría de los controles. Sin embargo, algunos controles, como [`CollectionView`](xref:Xamarin.Forms.CollectionView), no respetan la propiedad `LayoutDirection` y requieren que se establezca la propiedad `FlowDirection`.
 
 ## <a name="right-to-left-language-support-with-xamarinuniversity"></a>Vídeo de Xamarin.University sobre la compatibilidad de idiomas de derecha a izquierda
 
