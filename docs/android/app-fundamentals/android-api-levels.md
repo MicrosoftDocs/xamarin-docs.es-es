@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018
-ms.openlocfilehash: 188cc5b2ffba4540766edf0403d3a55228a21d6d
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: bb41a6e4ea477ed0a7932df441678e53a304aa35
+ms.sourcegitcommit: 8fa0cb9ccbc107d697aa5b9113a4e5d1e75d6eb9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84568989"
+ms.lasthandoff: 11/27/2020
+ms.locfileid: "96303094"
 ---
 # <a name="understanding-android-api-levels"></a>Descripción de los niveles de API de Android
 
@@ -31,8 +31,8 @@ Xamarin. Android expone tres configuraciones de proyecto de nivel de API de Andr
 Para poder configurar un nivel de API para el proyecto, debe instalar los componentes de la plataforma SDK para ese nivel de API. Para obtener más información acerca de cómo descargar e instalar los componentes de Android SDK, consulte [Android SDK Setup](~/android/get-started/installation/android-sdk.md).
 
 > [!NOTE]
-> A partir de agosto de 2018, la consola de Google Play requerirá que las nuevas aplicaciones tengan como destino el nivel de API 26 (Android 8,0) o posterior.
-Las aplicaciones existentes deberán tener como destino el nivel de API 26 o superior a partir de noviembre de 2018. Para obtener más información, consulte [mejorar la seguridad y el rendimiento de las aplicaciones en Google Play durante años](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html).
+> A partir de agosto de 2020, la consola de Google Play requiere que las nuevas aplicaciones tengan como destino el nivel de API 29 (Android 10,0) o posterior.
+Las aplicaciones existentes son necesarias para tener como destino el nivel de API 29 o superior a partir de noviembre de 2020. Para obtener más información, consulte [requisitos de nivel de API de destino para la consola de Play](https://support.google.com/googleplay/android-developer/answer/9859152#targetsdk) en "creación y configuración de la aplicación" en la documentación de la consola de Play.
 
 <!-- markdownlint-disable MD001 -->
 
@@ -104,7 +104,7 @@ Esta configuración se usa para garantizar que la funcionalidad necesaria para e
 
 ## <a name="project-api-level-settings"></a>Configuración de nivel de API del proyecto
 
-En las secciones siguientes se explica cómo usar SDK Manager para preparar el entorno de desarrollo para los niveles de API a los que desea dirigirse, seguido de una explicación detallada de cómo configurar el *marco de trabajo de destino*, la *versión mínima de Android*y la configuración de versión de Android de *destino* en Xamarin. Android.
+En las secciones siguientes se explica cómo usar SDK Manager para preparar el entorno de desarrollo para los niveles de API a los que desea dirigirse, seguido de una explicación detallada de cómo configurar el *marco de trabajo de destino*, la *versión mínima de Android* y la configuración de versión de Android de *destino* en Xamarin. Android.
 
 ### <a name="android-sdk-platforms"></a>Plataformas Android SDK
 
@@ -142,7 +142,7 @@ Establezca la versión de .NET Framework de destino seleccionando un nivel de AP
 
 ### <a name="minimum-android-version"></a>Versión mínima de Android
 
-La *versión mínima de Android* (también conocida como `minSdkVersion` ) es la versión más antigua del sistema operativo Android (es decir, el nivel de API más bajo) que puede instalar y ejecutar la aplicación. De forma predeterminada, una aplicación solo se puede instalar en dispositivos que coincidan con la configuración de la plataforma de destino o superior; Si la configuración de versión *mínima de Android es anterior* a la configuración de la plataforma de destino, la aplicación también puede ejecutarse en versiones anteriores de Android. Por ejemplo, si establece la plataforma de destino en **android 7,1 (nougat)** y establece la versión mínima de Android en **Android 4.0.3 (sandwich**de helado), la aplicación se puede instalar en cualquier plataforma desde el nivel de API 15 hasta el nivel de API 25, ambos inclusive.
+La *versión mínima de Android* (también conocida como `minSdkVersion` ) es la versión más antigua del sistema operativo Android (es decir, el nivel de API más bajo) que puede instalar y ejecutar la aplicación. De forma predeterminada, una aplicación solo se puede instalar en dispositivos que coincidan con la configuración de la plataforma de destino o superior; Si la configuración de versión *mínima de Android es anterior* a la configuración de la plataforma de destino, la aplicación también puede ejecutarse en versiones anteriores de Android. Por ejemplo, si establece la plataforma de destino en **android 7,1 (nougat)** y establece la versión mínima de Android en **Android 4.0.3 (sandwich** de helado), la aplicación se puede instalar en cualquier plataforma desde el nivel de API 15 hasta el nivel de API 25, ambos inclusive.
 
 Aunque la aplicación puede compilarse e instalarse correctamente en este intervalo de plataformas, esto no garantiza que se *ejecute* correctamente en todas estas plataformas. Por ejemplo, si la aplicación se instala en **android 5,0 (Lollipop)** y el código llama a una API que solo está disponible en **Android 7,1 (nougat)** y versiones más recientes, la aplicación obtendrá un error en tiempo de ejecución y, posiblemente, se bloqueará. Por lo tanto, el código debe asegurarse &ndash; en tiempo de ejecución de &ndash; que solo llama a las API admitidas por el dispositivo Android en el que se está ejecutando. En otras palabras, el código debe incluir comprobaciones explícitas en tiempo de ejecución para asegurarse de que la aplicación usa las API más recientes solo en los dispositivos que son lo suficientemente recientes como para admitirlos.
 [Las comprobaciones en tiempo de ejecución de las versiones de Android](#runtimechecks), más adelante en esta guía, explica cómo agregar estas comprobaciones en tiempo de ejecución al código.
@@ -251,7 +251,7 @@ Esto se debe a que no hay ninguna página de **compilación > aplicación Androi
 
 -----
 
-La versión mínima de Android y la configuración de versión de Android de destino no están disponibles porque la biblioteca resultante no es una aplicación independiente &ndash; . la biblioteca puede ejecutarse en cualquier versión de Android, en función de la aplicación con la que está empaquetada. Puede especificar cómo se va a *compilar*la biblioteca, pero no puede predecir en qué nivel de API de plataforma se ejecutará la biblioteca. Teniendo esto en cuenta, deben tenerse en cuenta los siguientes procedimientos recomendados al consumir o crear bibliotecas:
+La versión mínima de Android y la configuración de versión de Android de destino no están disponibles porque la biblioteca resultante no es una aplicación independiente &ndash; . la biblioteca puede ejecutarse en cualquier versión de Android, en función de la aplicación con la que está empaquetada. Puede especificar cómo se va a *compilar* la biblioteca, pero no puede predecir en qué nivel de API de plataforma se ejecutará la biblioteca. Teniendo esto en cuenta, deben tenerse en cuenta los siguientes procedimientos recomendados al consumir o crear bibliotecas:
 
 - **Al utilizar una biblioteca** &ndash; de Android Si está consumiendo una biblioteca de Android en la aplicación, asegúrese de establecer la configuración de la plataforma de destino de la aplicación en un nivel de API que sea *al menos tan alto como* el de la versión de .NET Framework de destino de la biblioteca.
 
@@ -261,7 +261,7 @@ Se recomiendan estas prácticas recomendadas para evitar la situación en la que
 
 ## <a name="summary"></a>Resumen
 
-En esta guía se explica cómo se usan los niveles de API de Android para administrar la compatibilidad de aplicaciones en diferentes versiones de Android. Proporcionó pasos detallados para configurar la *plataforma de destino*de Xamarin. Android, la *versión mínima de Android*y la configuración de proyecto de versión de Android de *destino* . Se proporcionan instrucciones para usar el administrador de Android SDK para instalar paquetes de SDK, se incluyen ejemplos de cómo escribir código para tratar con diferentes niveles de API en tiempo de ejecución y se explica cómo administrar los niveles de API al crear o usar bibliotecas de Android. También proporciona una lista completa que relaciona los niveles de API con los números de versión de Android (como Android 4,4), los nombres de versión de Android (como KitKat) y los códigos de versión de compilación de Xamarin. Android.
+En esta guía se explica cómo se usan los niveles de API de Android para administrar la compatibilidad de aplicaciones en diferentes versiones de Android. Proporcionó pasos detallados para configurar la *plataforma de destino* de Xamarin. Android, la *versión mínima de Android* y la configuración de proyecto de versión de Android de *destino* . Se proporcionan instrucciones para usar el administrador de Android SDK para instalar paquetes de SDK, se incluyen ejemplos de cómo escribir código para tratar con diferentes niveles de API en tiempo de ejecución y se explica cómo administrar los niveles de API al crear o usar bibliotecas de Android. También proporciona una lista completa que relaciona los niveles de API con los números de versión de Android (como Android 4,4), los nombres de versión de Android (como KitKat) y los códigos de versión de compilación de Xamarin. Android.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
