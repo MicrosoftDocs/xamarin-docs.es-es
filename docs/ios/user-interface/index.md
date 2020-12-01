@@ -7,27 +7,31 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/21/2017
-ms.openlocfilehash: a749324c2963290c45b0e003af1518d1d517b30d
-ms.sourcegitcommit: dde593cf9dedf4a056ffef86bcf2fa0640412a4d
+ms.openlocfilehash: 4d98e061ae935605613eb0d2a9c10b3866b610c9
+ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794680"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96439407"
 ---
 # <a name="building-user-interfaces-with-xamarinios"></a>Creación de interfaces de usuario con Xamarin. iOS
 
-## <a name="introduction-to-storyboardsiosuser-interfacestoryboardsindexmd"></a>[Introducción a guiones gráficos](~/ios/user-interface/storyboards/index.md)
+## <a name="storyboards"></a>[Guiones gráficos](~/ios/user-interface/storyboards/index.md)
 
-Un guion gráfico es una representación visual de la apariencia y el flujo de la aplicación. Xamarin ha introducido un diseñador para permitir que las aplicaciones de Xamarin. iOS aprovechen los guiones gráficos, por lo que puede diseñar la pantalla de la aplicación visualmente y acceder a C# las vistas, los controladores y objetos segue con para obtener un mayor control. También puede consultar [esta guía](~/ios/user-interface/designer/introduction.md) para obtener una explicación y un tutorial del Xamarin Designer para iOS
+Un guion gráfico es una representación visual de la apariencia y el flujo de la aplicación. Visual Studio para Mac le permite interactuar con el Interface Builder de Xcode para diseñar la pantalla de la aplicación visualmente, así como acceder a las vistas, los controladores y objetos segue con C# para obtener más control. 
 
-## <a name="ios-designeriosuser-interfacedesignerindexmd"></a>[iOS Designer](~/ios/user-interface/designer/index.md)
+## <a name="ios-designer"></a>[iOS Designer](~/ios/user-interface/designer/index.md)
+
+> [!WARNING]
+> IOS Designer comenzará a quedar obsoleto en Visual Studio 2019, versión 16,8 y Visual Studio 2019 para Mac versión 8,8.
+> La manera recomendada de compilar interfaces de usuario de iOS es directamente en un equipo Mac con Xcode. Para obtener más información, consulte [diseñar interfaces de usuario con Xcode](~/ios/user-interface/storyboards/index.md). 
 
 Hemos creado un diseñador para el formato de guión gráfico de iOS que está totalmente integrado en Visual Studio para Mac. IOS Designer mantiene la compatibilidad total con el formato de guion gráfico, de modo que los archivos se pueden editar en Xcode o en Visual Studio para Mac. Además, el editor admite características avanzadas, como los controles personalizados que se representan en tiempo de diseño en el editor.
 
-## <a name="user-interface-in-iosiosuser-interfaceios-uiindexmd"></a>[Interfaz de usuario de iOS](~/ios/user-interface/ios-ui/index.md)
+## <a name="user-interface-in-ios"></a>[Interfaz de usuario de iOS](~/ios/user-interface/ios-ui/index.md)
 
 Explica cómo trabajar con la interfaz de usuario de iOS en una aplicación de Xamarin. iOS, como la API de apariencia, la creación de objetos de interfaz de usuario, opciones de diseño, cómo proporcionar comentarios hápticos y cómo trabajar con el subproceso de interfaz de usuario.
 
-## <a name="user-interface-controlsiosuser-interfacecontrolsindexmd"></a>[Controles de interfaz de usuario](~/ios/user-interface/controls/index.md)
+## <a name="user-interface-controls"></a>[Controles de interfaz de usuario](~/ios/user-interface/controls/index.md)
 
-Xamarin. iOS expone todos los objetos de interfaz de usuario nativa que proporciona Apple. Se pueden agregar fácilmente a las aplicaciones de Xamarin. iOS mediante el diseñador de iOS, Interface Builder de Xcode o mediante programación. Independientemente del método que elija, Xamarin. iOS expone todas las propiedades y los métodos de los objetos de la C#interfaz de usuario en.
+Xamarin. iOS expone todos los objetos de interfaz de usuario nativa que proporciona Apple. Se pueden agregar fácilmente a las aplicaciones de Xamarin. iOS mediante el diseñador de iOS, Interface Builder de Xcode o mediante programación. Independientemente del método que elija, Xamarin. iOS expone todas las propiedades y métodos de los objetos de la interfaz de usuario en C#.

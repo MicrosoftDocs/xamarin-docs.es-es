@@ -7,19 +7,20 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a58fc58b429a8a16437773289cd4d7286bbff81
-ms.sourcegitcommit: d2aa3a8bf9a60b6708db55b10b0c6893c06d3256
+ms.openlocfilehash: 07226b22243f3d463ce2630e1f12a94f83ddd64a
+ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93331494"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96439444"
 ---
 # <a name="building-user-interfaces-with-the-ios-designer"></a>Creación de interfaces de usuario con el diseñador de iOS
 
 _El Xamarin Designer para iOS es un diseñador visual para los formatos de guion gráfico y Interface Builder de iOS que está totalmente integrado con Visual Studio para Mac y Visual Studio. IOS Designer mantiene la compatibilidad total con los formatos Storyboard y. Xib, de modo que los archivos se pueden editar en Visual Studio para Mac o Visual Studio además de los Interface Builder de Xcode. Además, el Xamarin Designer para iOS admite características avanzadas, como los controles personalizados que se representan en tiempo de diseño en el editor._
 
 > [!WARNING]
-> La manera recomendada de compilar interfaces de usuario de iOS ahora es directamente en un equipo Mac con Xcode. Puede encontrar más información [aquí](~/ios/user-interface/ios-use-xcode.md).
+> IOS Designer comenzará a quedar obsoleto en Visual Studio 2019, versión 16,8 y Visual Studio 2019 para Mac versión 8,8.
+> La manera recomendada de compilar interfaces de usuario de iOS es directamente en un equipo Mac con Xcode. Para obtener más información, consulte [diseñar interfaces de usuario con Xcode](../storyboards/index.md). 
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 

@@ -7,14 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: ad07d6e7381c646273eae8fe6aaecb2d487027f7
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: f4b161159423bc7e5d6d99e9dfd4407532106979
+ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436799"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96439457"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>uso de los controles personalizados con iOS Designer
+
+> [!WARNING]
+> IOS Designer comenzará a quedar obsoleto en Visual Studio 2019, versión 16,8 y Visual Studio 2019 para Mac versión 8,8.
+> La manera recomendada de compilar interfaces de usuario de iOS es directamente en un equipo Mac con Xcode. Para obtener más información, consulte [diseñar interfaces de usuario con Xcode](../storyboards/index.md). 
 
 ## <a name="requirements"></a>Requisitos
 
@@ -198,7 +202,7 @@ En esta guía se da por supuesto que está familiarizado con el contenido que se
 
     [![Ejecución de una aplicación de ejemplo](ios-designable-controls-walkthrough-images/10-app.png)](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
-## <a name="adding-design-time-properties"></a>Agregar propiedades en tiempo de diseño
+## <a name="adding-design-time-properties"></a>Agregar propiedades de Design-Time
 
 El diseñador también incluye compatibilidad en tiempo de diseño para los controles personalizados del tipo de propiedad Numeric, Enumeration, String, bool, CGSize, UIColor y UIImage. Para demostrar, vamos a agregar una propiedad a `ScratchTicketView` para establecer la imagen que está "desactivada".
 
@@ -262,9 +266,9 @@ Incluir un `ExportAttribute` y un `BrowsableAttribute` con el argumento establec
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se describe cómo crear un control personalizado, así como usarlo en una aplicación de iOS mediante el diseñador de iOS. Vimos cómo crear y compilar el control para que esté disponible para una aplicación en el cuadro de **herramientas**del diseñador. Además, analizamos cómo implementar el control para que se represente correctamente en tiempo de diseño y en tiempo de ejecución, así como en cómo exponer las propiedades del control personalizado en el diseñador.
+En este artículo se describe cómo crear un control personalizado, así como usarlo en una aplicación de iOS mediante el diseñador de iOS. Vimos cómo crear y compilar el control para que esté disponible para una aplicación en el cuadro de **herramientas** del diseñador. Además, analizamos cómo implementar el control para que se represente correctamente en tiempo de diseño y en tiempo de ejecución, así como en cómo exponer las propiedades del control personalizado en el diseñador.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [ScratchTicket (ejemplo)](/samples/xamarin/ios-samples/scratchticket)
-- [imágenes necesarias (ejemplo)](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)
+- [Imágenes necesarias (ejemplo)](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)

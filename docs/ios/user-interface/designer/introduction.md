@@ -7,16 +7,20 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/31/2018
-ms.openlocfilehash: 7c6b5a4dd2f6f5d4992d84d5d8690a6dda3d20e3
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 07f3e313a743c9d95f8baf2be7a31f16c6ca4f7e
+ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91432762"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96439482"
 ---
 # <a name="ios-designer-basics"></a>aspectos básicos del diseñador de iOS
 
 _En esta guía se presenta el Xamarin Designer para iOS. Muestra cómo usar el diseñador de iOS para diseñar visualmente controles, cómo obtener acceso a esos controles en el código y cómo editar propiedades._
+
+> [!WARNING]
+> IOS Designer comenzará a quedar obsoleto en Visual Studio 2019, versión 16,8 y Visual Studio 2019 para Mac versión 8,8.
+> La manera recomendada de compilar interfaces de usuario de iOS es directamente en un equipo Mac con Xcode. Para obtener más información, consulte [diseñar interfaces de usuario con Xcode](../storyboards/index.md). 
 
 El Xamarin Designer para iOS es un diseñador de interfaz visual similar al Interface Builder de Xcode y el Android Designer. Algunas de sus muchas características incluyen una integración perfecta con Visual Studio para Windows y Mac, edición de arrastrar y colocar, una interfaz para configurar controladores de eventos y la capacidad de representar controles personalizados.
 
@@ -68,13 +72,13 @@ Algunos controles, como las etiquetas que contienen texto estático, se pueden a
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Para tener acceso y manipular el botón en el código, debe tener un identificador único. Proporcione un identificador único; para ello, seleccione el botón, abra el **Panel de propiedades**y establezca su campo **nombre** en un valor como "SubmitButton":
+Para tener acceso y manipular el botón en el código, debe tener un identificador único. Proporcione un identificador único; para ello, seleccione el botón, abra el **Panel de propiedades** y establezca su campo **nombre** en un valor como "SubmitButton":
 
 [![Establecer el nombre de un botón en el Panel de propiedades](introduction-images/4-settingbuttonname-vsmac.png "Establecer el nombre de un botón en el Panel de propiedades")](introduction-images/4-settingbuttonname-vsmac-large.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Para tener acceso y manipular el botón en el código, debe tener un identificador único. Proporcione un identificador único; para ello, seleccione el botón, abra la **ventana Propiedades**y establezca su campo **nombre** en un valor como "SubmitButton":
+Para tener acceso y manipular el botón en el código, debe tener un identificador único. Proporcione un identificador único; para ello, seleccione el botón, abra la **ventana Propiedades** y establezca su campo **nombre** en un valor como "SubmitButton":
 
 [![Establecer el nombre de un botón en la ventana Propiedades](introduction-images/4-settingbuttonname-vs.png "Establecer el nombre de un botón en la ventana Propiedades")](introduction-images/4-settingbuttonname-vs-large.png#lightbox)
 
@@ -298,10 +302,10 @@ Una vez expandida, la barra de herramientas inferior muestra todos los dispositi
 
 Tenga en cuenta que la selección de un dispositivo y la orientación solo cambia el modo en que el diseñador de iOS muestra una vista previa del diseño. Independientemente de la selección actual, las restricciones recién agregadas se aplican a todos los dispositivos y orientaciones, a menos que se haya usado el botón **Editar rasgos** para especificar lo contrario.
 
-Cuando se [habilitan](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes) [las clases de tamaño](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) , el botón **Editar rasgos** aparecerá en la barra de herramientas inferior expandida.  Al hacer clic en el botón **Editar rasgos** , se muestran las opciones para crear una variación de interfaz basada en la clase de tamaño representada por el dispositivo seleccionado y la orientación. Considera los ejemplos siguientes:
+Cuando se [habilitan](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes) [las clases de tamaño](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) , el botón **Editar rasgos** aparecerá en la barra de herramientas inferior expandida.  Al hacer clic en el botón **Editar rasgos** , se muestran las opciones para crear una variación de interfaz basada en la clase de tamaño representada por el dispositivo seleccionado y la orientación. Considere los siguientes ejemplos:
 
 - Si se selecciona **iPhone se**  /  **verticalmente**, el elemento flotante proporcionará opciones para crear una variación de interfaz para la clase de ancho compacto, tamaño de alto normal. 
-- Si **iPad Pro 9.7"**  /  **Landscape**  /  está seleccionada la**pantalla completa** de iPad Pro 9,7 "horizontal, el elemento flotante proporcionará opciones para crear una variación de interfaz para la clase de ancho normal, tamaño de alto normal.
+- Si **iPad Pro 9.7"**  /  **Landscape**  /  está seleccionada la **pantalla completa** de iPad Pro 9,7 "horizontal, el elemento flotante proporcionará opciones para crear una variación de interfaz para la clase de ancho normal, tamaño de alto normal.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 

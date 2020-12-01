@@ -7,16 +7,20 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 5c8a852a37e2cd5c679283bc4d078f19e6e5d241
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 593f03588d691071d4a231d9ed788391530d5608
+ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939690"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96439430"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Controles personalizados en el Xamarin Designer para iOS
 
 _El Xamarin Designer para iOS admite la representación de controles personalizados creados en el proyecto o a los que se hace referencia desde orígenes externos como el almacén de componentes de Xamarin._
+
+> [!WARNING]
+> IOS Designer comenzará a quedar obsoleto en Visual Studio 2019, versión 16,8 y Visual Studio 2019 para Mac versión 8,8.
+> La manera recomendada de compilar interfaces de usuario de iOS es directamente en un equipo Mac con Xcode. Para obtener más información, consulte [diseñar interfaces de usuario con Xcode](../storyboards/index.md). 
 
 El Xamarin Designer para iOS es una herramienta eficaz para visualizar la interfaz de usuario de una aplicación y proporciona compatibilidad con la edición WYSIWYG para la mayoría de las vistas y los controladores de vistas de iOS. La aplicación también puede contener controles personalizados que extienden los que están integrados en iOS. Si estos controles personalizados se escriben teniendo en cuenta algunas instrucciones, también se pueden representar en el diseñador de iOS, lo que proporciona una experiencia de edición incluso más enriquecida. En este documento se examinan esas directrices.
 
@@ -24,9 +28,9 @@ El Xamarin Designer para iOS es una herramienta eficaz para visualizar la interf
 
 En la superficie de diseño se representará un control que cumpla todos los requisitos siguientes:
 
-1. Es una subclase directa o indirecta de [UIView](xref:UIKit.UIView) o [UIViewController](xref:UIKit.UIViewController). Otras subclases [NSObject](xref:Foundation.NSObject) aparecerán como un icono en la superficie de diseño.
-2. Tiene un [RegisterAttribute](xref:Foundation.RegisterAttribute) para exponerlo a Objective-C.
-3. Tiene [el constructor IntPtr necesario](~/ios/internals/api-design/index.md).
+1. Es una subclase directa o indirecta de  [UIView](xref:UIKit.UIView) o  [UIViewController](xref:UIKit.UIViewController). Otras subclases [NSObject](xref:Foundation.NSObject) aparecerán como un icono en la superficie de diseño.
+2. Tiene un  [RegisterAttribute](xref:Foundation.RegisterAttribute) para exponerlo a Objective-C.
+3. Tiene  [el constructor IntPtr necesario](~/ios/internals/api-design/index.md).
 4. Implementa la interfaz [IComponent](xref:System.ComponentModel.IComponent) o tiene un [DesignTimeVisibleAttribute](xref:System.ComponentModel.DesignTimeVisibleAttribute) establecido en true.
 
 Los controles definidos en el código que cumplan los requisitos anteriores aparecerán en el diseñador cuando su proyecto contenedor se compile para el simulador. De forma predeterminada, todos los controles personalizados aparecerán en la sección **componentes personalizados** del **cuadro de herramientas**. Sin embargo, el [CategoryAttribute](xref:System.ComponentModel.CategoryAttribute) se puede aplicar a la clase del control personalizado para especificar una sección diferente.
@@ -38,7 +42,7 @@ El diseñador no admite la carga de bibliotecas de otros fabricantes de Objectiv
 Una propiedad declarada por un control personalizado aparecerá en el panel de propiedades si se cumplen las condiciones siguientes:
 
 1. La propiedad tiene un captador y un establecedor públicos.
-1. La propiedad tiene un [ExportAttribute](xref:Foundation.ExportAttribute) , así como un [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) establecido en true.
+1. La propiedad tiene un  [ExportAttribute](xref:Foundation.ExportAttribute) , así como un  [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) establecido en true.
 1. El tipo de propiedad es un tipo numérico, un tipo de enumeración, una cadena, bool, [SizeF](xref:System.Drawing.SizeF), [UIColor](xref:UIKit.UIColor)o [UIImage](xref:UIKit.UIImage). Esta lista de tipos admitidos puede expandirse en el futuro.
 
 La propiedad también se puede decorar con un [DisplayNameAttribute](xref:System.ComponentModel.DisplayNameAttribute) para especificar la etiqueta que se muestra en el panel de propiedades.
@@ -124,10 +128,10 @@ public class CustomView : UIView {
 
 El `CustomView` componente expone una `Counter` propiedad que el desarrollador puede establecer en el diseñador de iOS. Sin embargo, independientemente del valor que se establezca en el diseñador, el valor de la `Counter` propiedad siempre será cero (0). El motivo es el siguiente:
 
-- Una instancia de `CustomControl` se infla a partir del archivo de guion gráfico.
-- Se establecen las propiedades modificadas en el diseñador de iOS (como establecer el valor de `Counter` en dos (2), por ejemplo).
-- El `AwakeFromNib` método se ejecuta y se realiza una llamada al método del componente `Initialize` .
-- Dentro `Initialize` del valor de la `Counter` propiedad se restablece a cero (0).
+- Una instancia de  `CustomControl` se infla a partir del archivo de guion gráfico.
+- Se establecen las propiedades modificadas en el diseñador de iOS (como establecer el valor de  `Counter` en dos (2), por ejemplo).
+- El  `AwakeFromNib` método se ejecuta y se realiza una llamada al método del componente  `Initialize` .
+- Dentro  `Initialize` del valor de la  `Counter` propiedad se restablece a cero (0).
 
 Para corregir la situación anterior, inicialice la `Counter` propiedad en otra parte (como en el constructor del componente) o no invalide el `AwakeFromNib` método y llame a `Initialize` si el componente no requiere ninguna inicialización adicional fuera de lo que controlan actualmente sus constructores.
 
@@ -135,7 +139,7 @@ Para corregir la situación anterior, inicialice la `Counter` propiedad en otra 
 
 En la superficie de diseño, un control personalizado debe cumplir algunas restricciones:
 
-- Los recursos del lote de aplicaciones no están disponibles en el modo de diseño. Las imágenes están disponibles cuando se cargan a través de [los métodos UIImage](xref:UIKit.UIImage) .
+- Los recursos del lote de aplicaciones no están disponibles en el modo de diseño. Las imágenes están disponibles cuando se cargan a través de  [los métodos UIImage](xref:UIKit.UIImage) .
 - Las operaciones asincrónicas, como las solicitudes Web, no se deben realizar en modo de diseño. La superficie de diseño no admite animaciones ni otras actualizaciones asincrónicas en la interfaz de usuario del control.
 
 Un control personalizado puede implementar [IComponent](xref:System.ComponentModel.IComponent) y utilizar la propiedad [DesignMode](xref:System.ComponentModel.ISite.DesignMode) para comprobar si está en la superficie de diseño. En este ejemplo, la etiqueta mostrará "modo de diseño" en la superficie de diseño y "tiempo de ejecución" en tiempo de ejecución:

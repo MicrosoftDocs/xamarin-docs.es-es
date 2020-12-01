@@ -7,14 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 44297e32821721d483a265e7d2a69016f4e1a87b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 37d90bc42e843dd3b3c8f07689e0e229225ff57d
+ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86940028"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96439465"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Diseño automático con el Xamarin Designer para iOS
+
+> [!WARNING]
+> IOS Designer comenzará a quedar obsoleto en Visual Studio 2019, versión 16,8 y Visual Studio 2019 para Mac versión 8,8.
+> La manera recomendada de compilar interfaces de usuario de iOS es directamente en un equipo Mac con Xcode. Para obtener más información, consulte [diseñar interfaces de usuario con Xcode](../storyboards/index.md). 
 
 El diseño automático (también denominado "diseño adaptable") es un enfoque de diseño con capacidad de respuesta. A diferencia del sistema de diseño de transición, donde la ubicación de cada elemento está codificada de forma rígida en un punto de la pantalla, el diseño automático trata sobre las *relaciones* : las posiciones de los elementos en relación con otros elementos en la superficie de diseño. En el corazón del diseño automático está la idea de restricciones o reglas que definen la ubicación de un elemento o conjunto de elementos en el contexto de otros elementos de la pantalla. Dado que los elementos no están asociados a una posición concreta en la pantalla, las restricciones ayudan a crear un diseño adaptable que tenga un aspecto correcto en diferentes tamaños de pantalla y orientaciones de dispositivo.
 
@@ -30,7 +34,7 @@ En esta guía se da por supuesto que conoce los componentes del diseñador en la
 
 Una restricción es una representación matemática de la relación entre dos elementos de la pantalla. Representar una posición del elemento de la interfaz de usuario como una relación matemática resuelve varios problemas asociados con la codificación rígida de la ubicación de un elemento de la interfaz de usuario. Por ejemplo, si fuera a colocar un botón 20px desde la parte inferior de la pantalla en el modo vertical, la posición del botón quedaría fuera de la pantalla en modo horizontal. Para evitar esto, podríamos establecer una restricción que coloque el borde inferior del botón 20px desde la parte inferior de la vista. La posición del borde del botón se calcularía entonces como *Button. Bottom = View. Bottom-20px*, que colocaría el botón 20px desde la parte inferior de la vista en el modo vertical y horizontal. La capacidad de calcular la ubicación en función de una relación matemática es lo que hace que las restricciones resulten útiles en el diseño de la interfaz de usuario.
 
-Cuando se establece una restricción, se crea un `NSLayoutConstraint` objeto que toma como argumentos los objetos que se van a restringir y las propiedades, o *atributos*, sobre los que actuará la restricción. En el diseñador de iOS, los atributos incluyen bordes como el *izquierdo*, *derecho*, *superior*e *inferior* de un elemento. También incluyen atributos de tamaño como el *alto* y el *ancho*, y la ubicación del punto central, *CenterX* y *CenterY*. Por ejemplo, cuando se agrega una restricción a la posición del límite izquierdo de dos botones, el diseñador genera el código siguiente en segundo plano:
+Cuando se establece una restricción, se crea un `NSLayoutConstraint` objeto que toma como argumentos los objetos que se van a restringir y las propiedades, o *atributos*, sobre los que actuará la restricción. En el diseñador de iOS, los atributos incluyen bordes como el *izquierdo*, *derecho*, *superior* e *inferior* de un elemento. También incluyen atributos de tamaño como el *alto* y el *ancho*, y la ubicación del punto central, *CenterX* y *CenterY*. Por ejemplo, cuando se agrega una restricción a la posición del límite izquierdo de dos botones, el diseñador genera el código siguiente en segundo plano:
 
 ```csharp
 View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, NSLayoutRelation.Equal, Button2, NSLayoutAttribute.Left, 1, 10));
@@ -77,7 +81,7 @@ La **W** establecerá width y **H** establecerá la restricción de alto. Al com
 
 Cuatro cuadros combinados para restricciones de espaciado muestran las vistas vecinas para delimitar la restricción
 
-## <a name="surface-based-constraint-editing"></a>Edición de restricciones basada en superficies
+## <a name="surface-based-constraint-editing"></a>Surface-Based la edición de restricciones
 
 Para una edición de restricciones más ajustada, podemos interactuar con las restricciones directamente en la superficie de diseño. En esta sección se presentan los conceptos básicos de la edición de restricciones basada en superficies, incluidos los controles de espaciado de PIN, las áreas de colocación y el trabajo con distintos tipos de restricciones.
 
@@ -89,13 +93,13 @@ La herramienta de diseñador de iOS ofrece dos tipos de controles para manipular
 
 Para ello, hay que seleccionar el botón modo de restricciones en la barra de restricciones.
 
-Los 4 identificadores en forma de T de cada lado del elemento definen los bordes *superior*, *derecho*, *inferior*e *izquierdo* del elemento para una restricción. Los dos identificadores en forma de I de la derecha e inferior del elemento definen las restricciones de *alto* y *ancho* , respectivamente. El cuadrado intermedio controla las restricciones *CenterX* y *CenterY* .
+Los 4 identificadores en forma de T de cada lado del elemento definen los bordes *superior*, *derecho*, *inferior* e *izquierdo* del elemento para una restricción. Los dos identificadores en forma de I de la derecha e inferior del elemento definen las restricciones de *alto* y *ancho* , respectivamente. El cuadrado intermedio controla las restricciones *CenterX* y *CenterY* .
 
 Para crear una restricción, seleccione un identificador y arrástrelo a cualquier parte de la superficie de diseño. Al iniciar el arrastre, aparecerá una serie de líneas o cuadros verdes en la superficie que indica lo que puede restringir. Por ejemplo, en la siguiente captura de pantalla, se está restringiendo el lado superior del botón central:
 
  [![Restringir el lado superior del botón central](designer-auto-layout-images/image07.png)](designer-auto-layout-images/image07.png#lightbox)
 
-Tenga en cuenta las tres líneas verdes de guiones en los otros dos botones. Las líneas verdes indican *áreas de colocación*o los atributos de otros elementos a los que se puede restringir. En la captura de pantalla anterior, los otros dos botones ofrecen 3 áreas de colocación verticales ( *inferior*, *central*y *superior*) para restringir nuestro botón. La línea verde discontinua en la parte superior de la vista significa que el controlador de vista ofrece una restricción en la parte superior de la vista, y el cuadro verde sólido significa que el controlador de vista ofrece una restricción debajo de la guía de diseño superior.
+Tenga en cuenta las tres líneas verdes de guiones en los otros dos botones. Las líneas verdes indican *áreas de colocación* o los atributos de otros elementos a los que se puede restringir. En la captura de pantalla anterior, los otros dos botones ofrecen 3 áreas de colocación verticales ( *inferior*, *central* y *superior*) para restringir nuestro botón. La línea verde discontinua en la parte superior de la vista significa que el controlador de vista ofrece una restricción en la parte superior de la vista, y el cuadro verde sólido significa que el controlador de vista ofrece una restricción debajo de la guía de diseño superior.
 
 > [!IMPORTANT]
 > Las guías de diseño son tipos especiales de destinos de restricción que nos permiten crear restricciones Top y bottom que tienen en cuenta la presencia de barras del sistema, como barras de estado o barras de herramientas. Uno de los principales usos es tener una aplicación compatible entre iOS 6 e iOS 7, ya que la versión más reciente tiene la vista de contenedor que se extiende por debajo de la barra de estado. Para obtener más información sobre la guía de diseño superior, consulte la [documentación de Apple](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2).
@@ -226,7 +230,7 @@ La clave aquí está llamando al `LayoutIfNeeded` método de la vista primaria d
 
 ## <a name="summary"></a>Resumen
 
-En esta guía se ha introducido el diseño de iOS auto (o "adaptativo") y el concepto de restricciones como representaciones matemáticas de las relaciones entre los elementos de la superficie de diseño. Se describe cómo habilitar el diseño automático en el diseñador de iOS, trabajar con la **barra de herramientas de restricciones**y editar restricciones individualmente en la superficie de diseño. A continuación, se explica cómo solucionar tres problemas de restricciones comunes. Por último, se mostró cómo modificar restricciones en el código.
+En esta guía se ha introducido el diseño de iOS auto (o "adaptativo") y el concepto de restricciones como representaciones matemáticas de las relaciones entre los elementos de la superficie de diseño. Se describe cómo habilitar el diseño automático en el diseñador de iOS, trabajar con la **barra de herramientas de restricciones** y editar restricciones individualmente en la superficie de diseño. A continuación, se explica cómo solucionar tres problemas de restricciones comunes. Por último, se mostró cómo modificar restricciones en el código.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
