@@ -140,9 +140,11 @@
       items:
         - name: Información general
           href: user-interface/index.md
-        - name: Guiones gráficos
+        - name: Diseño con Xcode
           href: user-interface/storyboards/index.md
           items:
+            - name: Guiones gráficos
+              href: user-interface/storyboards/indepth-storyboard.md
             - name: Guiones gráficos unificados
               href: user-interface/storyboards/unified-storyboards.md
         - name: Diseñador de iOS
