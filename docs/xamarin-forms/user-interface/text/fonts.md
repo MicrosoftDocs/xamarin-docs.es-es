@@ -11,12 +11,12 @@ ms.custom: contperfq2
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c6fdbaf8d218044de9a4fe30ffe7e3df05619bdb
-ms.sourcegitcommit: f920ac0724f09e5c9b4f36be1995a5a17a6d9f95
+ms.openlocfilehash: 271c6c5e510a892919b5d87c4dbc38ad8e9d657d
+ms.sourcegitcommit: 342cfbd2502ad92cadada4fa9aec669b99d7830a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94591078"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604578"
 ---
 # <a name="fonts-in-no-locxamarinforms"></a>Fuentes en Xamarin.Forms
 
@@ -24,7 +24,7 @@ ms.locfileid: "94591078"
 
 De forma predeterminada, Xamarin.Forms usa una fuente del sistema definida por cada plataforma. Sin embargo, los controles que muestran texto definen propiedades que puede usar para cambiar esta fuente:
 
-- `FontAttributes`, de tipo `FontAttributes` , que es una enumeración con tres miembros: `None` , `Build` y `Italic` . El valor predeterminado de esta propiedad es `None`.
+- `FontAttributes`, de tipo `FontAttributes` , que es una enumeración con tres miembros: `None` , `Bold` y `Italic` . El valor predeterminado de esta propiedad es `None`.
 - `FontSize`, de tipo `double`.
 - `FontFamily`, de tipo `string`.
 
@@ -107,8 +107,8 @@ Hay una serie de técnicas que se pueden usar para intentar derivar las fuentes 
 
 Las fuentes personalizadas se pueden agregar al Xamarin.Forms proyecto compartido y usarse en proyectos de plataforma sin ningún trabajo adicional. El proceso para llevarlo a cabo es el siguiente:
 
-1. Agregue la fuente al Xamarin.Forms proyecto compartido como un recurso incrustado ( **acción de compilación: EmbeddedResource** ).
-1. Registre el archivo de fuente con el ensamblado, en un archivo como **AssemblyInfo.CS** , mediante el `ExportFont` atributo. También se puede especificar un alias opcional.
+1. Agregue la fuente al Xamarin.Forms proyecto compartido como un recurso incrustado (**acción de compilación: EmbeddedResource**).
+1. Registre el archivo de fuente con el ensamblado, en un archivo como **AssemblyInfo.CS**, mediante el `ExportFont` atributo. También se puede especificar un alias opcional.
 
 En el ejemplo siguiente se muestra la fuente Lobster-Regular que se registra con el ensamblado, junto con un alias:
 

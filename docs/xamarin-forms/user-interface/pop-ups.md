@@ -10,12 +10,12 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5f70420690a9d81e5697c2e0bfefdf107aed9c86
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: f1caf08cf0fc2fdba6c9a9156280f9d3dafe0322
+ms.sourcegitcommit: 342cfbd2502ad92cadada4fa9aec669b99d7830a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93375426"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604565"
 ---
 # <a name="display-pop-ups"></a>Mostrar elementos emergentes
 
@@ -46,6 +46,9 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 ```
 
 [![DisplayAlert](pop-ups-images/alert2-sml.png "Cuadro de diálogo de alerta con dos botones")](pop-ups-images/alert2.png#lightbox "Cuadro de diálogo de alerta con dos botones")
+
+> [!WARNING]
+> De forma predeterminada, las claves de acceso de UWP se pueden activar cuando se muestra una alerta. Para obtener más información, consulte [VisualElement Access Keys in Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
 
 ## <a name="guide-users-through-tasks"></a>Guiar a los usuarios a través de tareas
 
@@ -109,6 +112,9 @@ string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", initialV
 Este código muestra una respuesta predefinida de 10, limita el número de caracteres que se pueden introducir en 2 y muestra el teclado numérico para la entrada del usuario:
 
 [![Captura de pantalla de un símbolo del sistema modal, en iOS y Android](pop-ups-images/keyboard-prompt.png "Símbolo del sistema modal")](pop-ups-images/keyboard-prompt-large.png#lightbox "Símbolo del sistema modal")
+
+> [!WARNING]
+> De forma predeterminada, las claves de acceso de UWP se pueden activar cuando se muestra un mensaje. Para obtener más información, consulte [VisualElement Access Keys in Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
