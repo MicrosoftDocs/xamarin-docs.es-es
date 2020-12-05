@@ -26,12 +26,12 @@
           href: live-player/install.md
         - name: Aplicación de Xamarin Live Player
           href: live-player/player.md
-        - name: Solución de problemas
+        - name: Solucionar problemas
           href: live-player/troubleshooting.md
-    - name: Generador de perfiles
+    - name: generador de perfiles
       href: profiler/index.md
       items:
-        - name: Solución de problemas
+        - name: Solucionar problemas
           href: profiler/troubleshooting.md
         - name: Notas de la versión
           href: /xamarin/tools/profiler/release-notes/
@@ -44,7 +44,7 @@
           href: workbooks/workbook.md
         - name: Métodos abreviados de teclado del editor
           href: workbooks/keybindings.md
-        - name: Solución de problemas
+        - name: Solucionar problemas
           href: workbooks/troubleshooting/index.md
           items:
             - name: Problemas conocidos generales y soluciones alternativas
