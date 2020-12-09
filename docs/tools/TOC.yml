@@ -26,84 +26,15 @@
           href: live-player/install.md
         - name: Aplicación de Xamarin Live Player
           href: live-player/player.md
-        - name: Solucionar problemas
+        - name: Solución de problemas
           href: live-player/troubleshooting.md
-    - name: generador de perfiles
+    - name: Generador de perfiles
       href: profiler/index.md
       items:
         - name: Solucionar problemas
           href: profiler/troubleshooting.md
         - name: Notas de la versión
           href: /xamarin/tools/profiler/release-notes/
-    - name: Workbooks
-      href: workbooks/index.md
-      items:
-        - name: Instalación y requisitos
-          href: workbooks/install.md
-        - name: Libros interactivos
-          href: workbooks/workbook.md
-        - name: Métodos abreviados de teclado del editor
-          href: workbooks/keybindings.md
-        - name: Solucionar problemas
-          href: workbooks/troubleshooting/index.md
-          items:
-            - name: Problemas conocidos generales y soluciones alternativas
-              href: workbooks/troubleshooting/general.md
-            - name: Libros sobre problemas con Android
-              href: workbooks/troubleshooting/android.md
-        - name: SDK de integración
-          href: workbooks/sdk/index.md
-          items:
-            - name: Introducción a la arquitectura
-              href: workbooks/sdk/architecture.md
-            - name: Temas de integración avanzada
-              href: workbooks/sdk/integrations.md
-            - name: Representaciones en Xamarin Workbooks
-              href: workbooks/sdk/representations.md
-            - name: Depuración de integraciones
-              href: workbooks/sdk/debugging.md
-            - name: Integraciones de ejemplo
-              href: workbooks/sdk/samples.md
-        - name: Notas de la versión
-          href: /xamarin/tools/inspector/release-notes/
-    - name: Inserción de .NET
-      href: dotnet-embedding/index.md
-      items:
-        - name: Introducción
-          href: dotnet-embedding/get-started/index.md
-          items:
-            - name: Instalación
-              href: dotnet-embedding/get-started/install/install.md
-            - name: C
-              href: dotnet-embedding/get-started/c.md
-            - name: Java
-              href: dotnet-embedding/get-started/java/index.md
-              items:
-                - name: Android
-                  href: dotnet-embedding/get-started/java/android.md
-            - name: Objective-C
-              href: dotnet-embedding/get-started/objective-c/index.md
-              items:
-                - name: iOS
-                  href: dotnet-embedding/get-started/objective-c/ios.md
-                - name: macOS
-                  href: dotnet-embedding/get-started/objective-c/macos.md
-        - name: Android
-          href: dotnet-embedding/android/index.md
-          items:
-            - name: Devoluciones de llamada de Android
-              href: dotnet-embedding/android/callbacks.md
-        - name: Objective-C
-          href: dotnet-embedding/objective-c/index.md
-          items:
-            - name: Prácticas recomendadas
-              href: dotnet-embedding/objective-c/best-practices.md
-            - name: Plataformas
-              href: dotnet-embedding/objective-c/platforms.md
-        - name: Limitaciones
-          href: dotnet-embedding/limitations.md
-        - name: Notas de la versión
-          href: /xamarin/tools/dotnet-embedding/release-notes/
     - name: Integración continua
       href: ci/index.md
       items:
