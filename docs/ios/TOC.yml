@@ -602,6 +602,8 @@
           href: /xamarin/essentials/release-notes/
         - name: Solución de problemas
           href: ~/essentials/troubleshooting.md?context=xamarin/ios
+        - name: Xamarin.Essentials en Q&A
+          href: /answers/topics/dotnet-xamarinessentials.html
     - name: Datos y servicios en la nube
       items:
         - name: Información general
@@ -1005,6 +1007,8 @@
               href: ~/essentials/version-tracking.md?context=xamarin/watchos
             - name: Solución de problemas
               href: ~/essentials/troubleshooting.md?context=xamarin/watchos
+            - name: Xamarin.Essentials en Q&A
+              href: /answers/topics/dotnet-xamarinessentials.html
         - name: Implementación y pruebas
           href: watchos/deploy-test/index.md
           items:
@@ -1014,6 +1018,8 @@
               href: watchos/deploy-test/appstore.md
         - name: Solución de problemas
           href: watchos/troubleshooting.md
+        - name: Xamarin watchOS en Q&A
+          href: /answers/topics/dotnet-watchos.html
     - name: tvOS
       items:
         - name: Información general
@@ -1096,6 +1102,8 @@
               href: ~/essentials/version-tracking.md?context=xamarin/tvos
             - name: Solución de problemas
               href: ~/essentials/troubleshooting.md?context=xamarin/tvos
+            - name: Xamarin.Essentials en Q&A
+              href: /answers/topics/dotnet-xamarinessentials.html
         - name: Interfaz de usuario
           href: tvos/user-interface/index.md
           items:
@@ -1142,6 +1150,10 @@
               href: tvos/internals/assemblies.md
             - name: Marcos de trabajo
               href: tvos/internals/frameworks.md
+        - name: Xamarin.tvOS en Q&A
+          href: /answers/topics/dotnet-tvos.html
+    - name: Xamarin.iOS en Q&A
+      href: /answers/topics/dotnet-ios.html
     - name: Notas de la versión
       href: /xamarin/ios/release-notes/
     - name: Muestras

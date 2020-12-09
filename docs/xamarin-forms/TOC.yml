@@ -145,6 +145,8 @@ items:
             href: xaml/field-modifiers.md
           - name: Carga de XAML en tiempo de ejecución
             href: xaml/runtime-load.md
+      - name: XAML de Xamarin.Forms en Q&A
+        href: /answers/topics/dotnet-xamarinforms-xaml.html
   - name: Principios de la aplicación
     items:
       - name: Información general
@@ -545,7 +547,7 @@ items:
                 href: user-interface/animation/custom.md
           - name: Pinceles
             items:
-              - name: Información general
+              - name: Introducción
                 href: user-interface/brushes/index.md
               - name: Colores sólidos
                 href: user-interface/brushes/solidcolor.md
@@ -922,6 +924,8 @@ items:
         href: /xamarin/essentials/release-notes/
       - name: Solución de problemas
         href: ~/essentials/troubleshooting.md?context=xamarin/xamarin-forms
+      - name: Xamarin.Essentials en Q&A
+        href: /answers/topics/dotnet-xamarinessentials.html
   - name: Datos y Azure Cloud Services
     items:
       - name: Información general
@@ -1030,6 +1034,8 @@ items:
             href: troubleshooting/questions/android-linkassemblies-error.md
           - name: '¿Por qué mi proyecto de Xamarin.Forms.Maps para Android produce el siguiente error: COMPILETODALVIK : UNEXPECTED TOP-LEVEL ERROR?'
             href: troubleshooting/questions/maps-compiletodalvik-error.md
+  - name: Xamarin.Forms en Q&A
+    href: /answers/topics/dotnet-xamarinforms.html
   - name: Notas de la versión
     href: /xamarin/xamarin-forms/release-notes/
   - name: Muestras

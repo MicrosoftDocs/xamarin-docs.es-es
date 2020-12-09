@@ -1,4 +1,4 @@
-- name: Primeros pasos
+- name: Introducción
   href: index.yml
   expanded: true
   items:
@@ -82,3 +82,5 @@
           href: ~/xamarin-forms/data-cloud/index.yml
     - name: Guía de desarrollo
       href: ~/cross-platform/index.yml
+    - name: Xamarin.Forms en Q&A
+      href: /answers/topics/dotnet-xamarinforms.html

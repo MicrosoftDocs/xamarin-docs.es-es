@@ -57,21 +57,21 @@
           href: app-fundamentals/nuget-manual.md
         - name: Uso de bibliotecas de C o C++ en aplicaciones multiplataforma
           href: cpp/index.md
-    - name: Compatibilidad con lenguajes
+    - name: Compatibilidad con idiomas
       href: platform/index.md
       items:
-        - name: 'C#'
+        - name: C#
           items:
             - name: Información general sobre la compatibilidad con Async
               href: platform/async.md
             - name: "Características del lenguaje C#\_6"
               href: platform/csharp-six.md
-        - name: 'F#'
+        - name: F#
           href: platform/fsharp/index.md
           items:
-            - name: Primeros pasos
+            - name: Introducción
               href: platform/fsharp/overview.md
-            - name: 'Ejemplos de F#'
+            - name: Ejemplos de F#
               href: platform/fsharp/samples.md
         - name: Visual Basic
           href: platform/visual-basic/index.md
@@ -125,7 +125,7 @@
               href: desktop/controls/wpf.md
         - name: Guía de migración
           href: desktop/porting.md
-        - name: Muestras
+        - name: Ejemplos
           href: desktop/samples.md
     - name: Solución de problemas
       href: troubleshooting/index.md
@@ -172,5 +172,7 @@
               href: troubleshooting/questions/vs-config-manager.md
         - name: Actualización de referencias de componentes en NuGet
           href: troubleshooting/component-nuget.md
-    - name: Muestras
+    - name: Desarrollo multiplataforma en Q&A
+      href: /answers/topics/dotnet-crossplatform-general.html
+    - name: Ejemplos
       href: samples/index.md

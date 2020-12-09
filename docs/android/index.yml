@@ -10,12 +10,12 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 01/27/2020
-  ms.openlocfilehash: 593d8d20433222e1b18fd65b86a7586aa5560933
-  ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+  ms.openlocfilehash: 4cd192b0580067a24b497febda2e843a7c997b62
+  ms.sourcegitcommit: 342cfbd2502ad92cadada4fa9aec669b99d7830a
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 09/29/2020
-  ms.locfileid: "91454291"
+  ms.lasthandoff: 12/04/2020
+  ms.locfileid: "96604254"
 landingContent:
 - title: Introducción
   linkLists:
@@ -31,6 +31,10 @@ landingContent:
       url: ~/android/get-started/hello-android-multiscreen/index.md
     - text: Xamarin para desarrolladores de Java
       url: ~/android/get-started/java-developers.md
+  - linkListType: get-started
+    links:
+    - text: Xamarin.Android en Q&A
+      url: /answers/topics/dotnet-android.html
 - title: Aspectos básicos de la aplicación
   linkLists:
   - linkListType: concept
@@ -53,7 +57,7 @@ landingContent:
       url: ~/android/app-fundamentals/permissions.md
     - text: Gestos y entrada táctil
       url: ~/android/app-fundamentals/touch/index.md
-    - text: Más información >
+    - text: Ver más >
       url: ~/android/app-fundamentals/index.md
 - title: Interfaz de usuario
   linkLists:
@@ -93,7 +97,7 @@ landingContent:
       url: ~/android/platform/android-job-scheduler.md
     - text: Mapas y ubicación
       url: ~/android/platform/maps-and-location/index.md
-    - text: Más información >
+    - text: Ver más >
       url: ~/android/platform/index.md
 - title: Xamarin.Essentials
   linkLists:
@@ -101,7 +105,7 @@ landingContent:
     links:
     - text: Acerca de
       url: ~/essentials/index.md?context=xamarin/android
-    - text: Introducción
+    - text: Primeros pasos
       url: ~/essentials/get-started.md?context=xamarin/android
     - text: Compatibilidad de plataformas y características
       url: ~/essentials/platform-feature-support.md?context=xamarin/android
@@ -145,13 +149,13 @@ landingContent:
       url: ~/android/deploy-test/signing/index.md
     - text: Publicar una aplicación
       url: ~/android/deploy-test/publishing/index.md
-    - text: Más información >
+    - text: Ver más >
       url: ~/android/deploy-test/index.md
 - title: Conceptos avanzados y funcionamiento interno
   linkLists:
   - linkListType: concept
     links:
-    - text: Arquitectura
+    - text: Architecture
       url: ~/android/internals/architecture.md
     - text: Ensamblados disponibles
       url: ~/cross-platform/internals/available-assemblies.md?context=xamarin/android

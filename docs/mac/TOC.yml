@@ -81,7 +81,7 @@
               href: platform/introduction-to-macos-sierra/modern-cocoa-apps.md
             - name: Cambios adicionales en el marco de macOS Sierra
               href: platform/introduction-to-macos-sierra/additional-framework-changes.md
-            - name: Solución de problemas
+            - name: Solucionar problemas
               href: platform/introduction-to-macos-sierra/troubleshooting.md
         - name: Enlace de bibliotecas Mac
           href: platform/binding.md
@@ -221,6 +221,8 @@
           href: troubleshooting/troubleshooting.md
         - name: Mensajes de error (mmp)
           href: troubleshooting/mmp-errors.md
+    - name: Xamarin.Mac en Q&A
+      href: /answers/topics/dotnet-macos.html
     - name: Notas de la versión
       href: /xamarin/mac/release-notes/
     - name: Muestras
