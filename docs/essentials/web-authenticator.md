@@ -8,12 +8,12 @@ ms.date: 03/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3df31f500290189bb9ce36148729a7b1d22df3ae
-ms.sourcegitcommit: 9bf375b43907384551188ec6f0ebd3290b3e9295
+ms.openlocfilehash: 04090a2e9d97f1a5f4dae8fa850a39c3465ba05b
+ms.sourcegitcommit: 0c31f1398ec1de1a2b18ec7f25f30630df968db1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436959"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544674"
 ---
 # <a name="no-locxamarinessentials-web-authenticator"></a>Xamarin.Essentials: Autenticador web
 
@@ -40,7 +40,7 @@ El procedimiento recomendado es usar un back-end web como una capa intermedia en
 
 [!include[](~/essentials/includes/get-started.md)]
 
-Para acceder a la funcionalidad de **WebAuthenticator** , se requiere la siguiente configuración específica para la plataforma.
+Para acceder a la funcionalidad de **WebAuthenticator**, se requiere la siguiente configuración específica para la plataforma.
 
 # <a name="android"></a>[Android](#tab/android)
 
@@ -200,7 +200,14 @@ else
     r = await WebAuthenticator.AuthenticateAsync(authUrl, callbackUrl);
 }
 
-var accessToken = r?.AccessToken;
+var authToken = string.Empty;
+if (r.Properties.TryGetValue("name", out var name) && !string.IsNullOrEmpty(name))
+    authToken += $"Name: {name}{Environment.NewLine}";
+if (r.Properties.TryGetValue("email", out var email) && !string.IsNullOrEmpty(email))
+    authToken += $"Email: {email}{Environment.NewLine}";
+
+// Note that Apple Sign In has an IdToken and not an AccessToken
+authToken += r?.AccessToken ?? r?.IdToken;
 ```
 
 > [!TIP]
