@@ -10,12 +10,12 @@ ms.date: 05/09/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 011ef1fcb2de53cb1f1aa6f0b2c3953e9240d132
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: bdc26b0745e48295c2040440d5eab90b7850b145
+ms.sourcegitcommit: 342cfbd2502ad92cadada4fa9aec669b99d7830a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93374503"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604487"
 ---
 # <a name="keyboard-accessibility-in-no-locxamarinforms"></a>Accesibilidad del teclado en Xamarin.Forms
 
@@ -75,6 +75,9 @@ Las reglas siguientes aplican cuando se usa el orden de tabulación predetermina
 - Los conflictos relacionados con `TabIndex` se resuelven por orden de declaración.
 
 Tras definirse un orden de tabulación, al presionar la tecla TAB se recorrerá cíclicamente el foco a través de controles en orden de `TabIndex` ascendente, con un ajuste alrededor del principio una vez alcanzado el control final.
+
+> [!WARNING]
+> En la Plataforma universal de Windows, la propiedad `TabIndex` de cada control se debe establecer en `int.MaxValue` para que el orden de tabulación sea idéntico al orden de la declaración del control.
 
 El siguiente ejemplo de XAML muestra la propiedad `TabIndex` establecida en los controles de entrada para habilitar la navegación por tabulación de la columna en primer lugar:
 
