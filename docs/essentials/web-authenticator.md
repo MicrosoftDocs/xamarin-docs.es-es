@@ -8,12 +8,12 @@ ms.date: 03/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 04090a2e9d97f1a5f4dae8fa850a39c3465ba05b
-ms.sourcegitcommit: 0c31f1398ec1de1a2b18ec7f25f30630df968db1
+ms.openlocfilehash: f05868bbf8da9597c4290ba687f767f3995ba437
+ms.sourcegitcommit: 07ee6a95f77f9a12fadb857e549cdcdb1928c7d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544674"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904989"
 ---
 # <a name="no-locxamarinessentials-web-authenticator"></a>Xamarin.Essentials: Autenticador web
 
@@ -46,9 +46,6 @@ Para acceder a la funcionalidad de **WebAuthenticator**, se requiere la siguient
 
 Android requiere una configuración del filtro de intención para controlar el identificador URI de devolución de llamada. Esto se realiza con facilidad mediante la creación de subclases de la clase `WebAuthenticatorCallbackActivity`:
 
-> [!NOTE]
-> Considere la posibilidad de implementar [vínculos a aplicaciones Android](https://developer.android.com/training/app-links/) para controlar el identificador URI de devolución de llamada y asegurarse de que la aplicación es la única que se puede registrar para controlar el identificador URI de devolución de llamada.
-
 ```csharp
 const string CALLBACK_SCHEME = "myapp";
 
@@ -58,17 +55,6 @@ const string CALLBACK_SCHEME = "myapp";
     DataScheme = CALLBACK_SCHEME)]
 public class WebAuthenticationCallbackActivity : Xamarin.Essentials.WebAuthenticatorCallbackActivity
 {
-}
-```
-
-También tendrá que volver a llamar a Essentials desde la invalidación `OnResume` en `MainActivity`:
-
-```csharp
-protected override void OnResume()
-{
-    base.OnResume();
-
-    Xamarin.Essentials.Platform.OnResume();
 }
 ```
 
@@ -91,9 +77,6 @@ En iOS, deberá agregar el patrón del identificador URI de devolución de llama
     </dict>
 </array>
 ```
-
-> [!NOTE]
-> Considere la posibilidad de usar [vínculos a aplicaciones universales](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content) para registrar el identificador URI de devolución de llamada de la aplicación como un procedimiento recomendado.
 
 También tendrá que invalidar los métodos `OpenUrl` y `ContinueUserActivity` de `AppDelegate` para llamar a Essentials:
 

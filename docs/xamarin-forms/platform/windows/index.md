@@ -6,22 +6,22 @@ ms.assetid: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/16/2020
+ms.date: 12/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0cdbd39f0217b0e4d175eb2443250eb3df8dd046
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d5f65deaad97bd69641fa4cc577d9a476106ac3a
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936180"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940361"
 ---
 # <a name="windows-platform-features"></a>Características de la plataforma Windows
 
 El desarrollo Xamarin.Forms de aplicaciones para plataformas Windows requiere Visual Studio. La [Página plataformas compatibles](~/get-started/supported-platforms.md) contiene más información sobre los requisitos previos.
 
-![Xamarin.FormsAplicaciones que se ejecutan en Windows](images/allhanselman.png)
+![:: no-LOC (Xamarin. Forms)::: aplicaciones que se ejecutan en Windows](images/allhanselman.png)
 
 ## <a name="platform-specifics"></a>Características específicas de las plataformas
 
@@ -38,11 +38,12 @@ Se proporciona la siguiente funcionalidad específica de la plataforma para las 
 - Habilitar la compatibilidad con gestos de TAP en un [`ListView`](xref:Xamarin.Forms.ListView) . Para obtener más información, vea [controles SelectionMode en Windows](listview-selectionmode.md).
 - Habilitar la dirección de extracción de un `RefreshView` que se va a cambiar. Para obtener más información, consulte [dirección de extracción de RefreshView en Windows](refreshview-pulldirection.md).
 - Habilitación de [`SearchBar`](xref:Xamarin.Forms.SearchBar) para interactuar con el motor de revisión ortográfica. Para obtener más información, consulte [barra spell check en Windows](searchbar-spell-check.md).
+- Establecer el subproceso en el que un [`WebView`](xref:Xamarin.Forms.WebView) hospeda su contenido. Para obtener más información, vea [modo de ejecución de WebView en Windows](webview-executionmode.md).
 - Habilitación de [`WebView`](xref:Xamarin.Forms.WebView) para mostrar las alertas de JavaScript en un cuadro de diálogo de mensaje de UWP. Para obtener más información, vea [alertas de JavaScript de WebView en Windows](webview-javascript-alert.md).
 
 Se proporciona la siguiente funcionalidad específica de la plataforma para Xamarin.Forms las páginas en UWP:
 
-- Contraer la [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) barra de navegación. Para obtener más información, consulte [barra de navegación MasterDetailPage en Windows](masterdetailpage-navigation-bar.md).
+- Contraer la [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage) barra de navegación. Para obtener más información, consulte [barra de navegación FlyoutPage en Windows](flyoutpage-navigation-bar.md).
 - Establecer opciones de colocación de la barra de herramientas. Para obtener más información, vea [Ubicación de la barra de herramientas de página en Windows](page-toolbar-placement.md).
 - Habilitar iconos de página para mostrar en una [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) barra de herramientas. Para más información, consulte [Iconos de TabbedPage en Windows](tabbedpage-icons.md).
 
@@ -55,7 +56,7 @@ Se proporciona la siguiente funcionalidad específica de la plataforma para la X
 Las Xamarin.Forms plantillas disponibles en Visual Studio contienen un proyecto plataforma universal de Windows (UWP).
 
 > [!NOTE]
-> Xamarin.Forms1. x y 2. x admiten _Windows Phone 8 Silverlight_, _Windows Phone 8,1_y _Windows 8.1_ desarrollo de aplicaciones. Sin embargo, estos tipos de proyecto están desusados.
+> Xamarin.Forms 1. x y 2. x admiten _Windows Phone 8 Silverlight_, _Windows Phone 8,1_ y _Windows 8.1_ desarrollo de aplicaciones. Sin embargo, estos tipos de proyecto están desusados.
 
 ## <a name="getting-started"></a>Introducción
 

@@ -13,12 +13,12 @@ metadata:
   no-loc:
   - Xamarin.Forms
   - Xamarin.Essentials
-  ms.openlocfilehash: 7575022a50bc5a16d4da80a6be2ae63691836d94
-  ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+  ms.openlocfilehash: 469d3c45e4e537afc164776426752abc098a7592
+  ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/28/2020
-  ms.locfileid: "84138611"
+  ms.lasthandoff: 01/06/2021
+  ms.locfileid: "97940257"
 landingContent:
 - title: Android
   linkLists:
@@ -28,8 +28,6 @@ landingContent:
       url: android/listview-fast-scrolling.md
     - text: Deslizamiento de página TabbedPage
       url: android/tabbedpage-page-swiping.md
-    - text: Diseño de materiales
-      url: android/appcompat-material-design.md
     - text: Elevación VisualElement
       url: android/visualelement-elevation.md
     - text: Ver más >

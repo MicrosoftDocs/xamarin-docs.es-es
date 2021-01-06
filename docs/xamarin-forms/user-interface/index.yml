@@ -13,12 +13,12 @@ metadata:
   no-loc:
   - Xamarin.Forms
   - Xamarin.Essentials
-  ms.openlocfilehash: c9551fd6035f65931e476d16cb40887dcd0425db
-  ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
+  ms.openlocfilehash: de8dce1de6236d5d6b260afaa24527a61925a533
+  ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 08/13/2020
-  ms.locfileid: "88181477"
+  ms.lasthandoff: 01/06/2021
+  ms.locfileid: "97940283"
 landingContent:
 - title: Referencia de controles
   linkLists:
@@ -44,16 +44,12 @@ landingContent:
     links:
     - text: BoxView
       url: boxview.md
-    - text: Expander
-      url: expander.md
     - text: Imagen
       url: images.md
     - text: Etiqueta
       url: text/label.md
     - text: Asignación
       url: map/index.md
-    - text: MediaElement
-      url: mediaelement.md
     - text: Formas
       url: shapes/index.md
     - text: WebView

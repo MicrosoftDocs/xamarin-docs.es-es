@@ -10,12 +10,12 @@ ms.date: 05/09/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 49fd8c563509d88b80fcb91b5e6298b8a5bb3363
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 20d8bb1140599b5b858c52fde1e54393e66d7bd1
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93372306"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940556"
 ---
 # <a name="home-indicator-visibility-on-ios"></a>Visibilidad del indicador de inicio en iOS
 
@@ -48,7 +48,7 @@ El resultado es que se puede controlar la visibilidad del indicador de inicio en
 ![Captura de pantalla de la visibilidad del indicador de inicio en una página de iOS](page-home-indicator-images/home-indicator-visibility.png "Visibilidad del indicador de página principal")
 
 > [!NOTE]
-> Este específico de la plataforma se puede aplicar a los [`ContentPage`](xref:Xamarin.Forms.ContentPage) [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) objetos,, [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) y [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) .
+> Este específico de la plataforma se puede aplicar a los [`ContentPage`](xref:Xamarin.Forms.ContentPage) [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage) objetos,, [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) y [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) .
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e028c506745bfd61aaff8e530a4f13d2429864ff
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 072f5db9115069fad547bb363865a609e5167ce8
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373919"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939945"
 ---
 # <a name="scrollview-content-touches-on-ios"></a>El contenido de ScrollView se toca en iOS
 
@@ -24,12 +24,12 @@ ms.locfileid: "93373919"
 Un temporizador implícito se desencadena cuando un gesto táctil comienza en un [`ScrollView`](xref:Xamarin.Forms.ScrollView) en iOS y el `ScrollView` decide, en función de la acción del usuario dentro del intervalo del temporizador, si debe controlar el gesto o pasarlo a su contenido. De forma predeterminada, iOS `ScrollView` retrasa los toques de contenido, pero puede causar problemas en algunas circunstancias con el `ScrollView` contenido que no gana el gesto cuando debería. Por lo tanto, este control es específico de la plataforma, tanto si `ScrollView` controla un gesto táctil como si lo pasa a su contenido. Se consume en XAML estableciendo la `ScrollView.ShouldDelayContentTouches` propiedad adjunta en un `boolean` valor:
 
 ```xaml
-<MasterDetailPage ...
+<FlyoutPage ...
                   xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
-    <MasterDetailPage.Master>
+    <FlyoutPage.Flyout>
         <ContentPage Title="Menu" BackgroundColor="Blue" />
-    </MasterDetailPage.Master>
-    <MasterDetailPage.Detail>
+    </FlyoutPage.Flyout>
+    <FlyoutPage.Detail>
         <ContentPage>
             <ScrollView x:Name="scrollView" ios:ScrollView.ShouldDelayContentTouches="false">
                 <StackLayout Margin="0,20">
@@ -38,8 +38,8 @@ Un temporizador implícito se desencadena cuando un gesto táctil comienza en un
                 </StackLayout>
             </ScrollView>
         </ContentPage>
-    </MasterDetailPage.Detail>
-</MasterDetailPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>
 ```
 
 Como alternativa, se puede usar desde C# con la API fluida:
@@ -58,7 +58,7 @@ El `ScrollView.On<iOS>` método especifica que este específico de la plataforma
 scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDelayContentTouches());
 ```
 
-El resultado es que [`ScrollView`](xref:Xamarin.Forms.ScrollView) puede deshabilitar el retraso de la recepción de contenido que recibe los toques, de modo que en este escenario [`Slider`](xref:Xamarin.Forms.Slider) reciba el gesto en lugar de la [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) Página de [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) :
+El resultado es que [`ScrollView`](xref:Xamarin.Forms.ScrollView) puede deshabilitar el retraso de la recepción de contenido que recibe los toques, de modo que en este escenario [`Slider`](xref:Xamarin.Forms.Slider) reciba el gesto en lugar de la [`Detail`](xref:Xamarin.Forms.FlyoutPage.Detail) Página de [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage) :
 
 [![El contenido de retraso de ScrollView toca la plataforma específica](scrollview-content-touches-images/scrollview-delay-content-touches.png)](scrollview-content-touches-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView retrasar el contenido Platform-Specific")
 

@@ -6,16 +6,16 @@ ms.assetid: 854D97E5-D119-4BE2-AE7C-BD428792C992
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/11/2020
+ms.date: 09/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c6b6a5a538d69d396f8b30381fd1d0b73d3f0e9f
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: d8187c82033a872752a314b03950793cad4ac0d1
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373827"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939165"
 ---
 # <a name="no-locxamarinforms-carouselview-interaction"></a>Xamarin.Forms Interacción con CarouselView
 
@@ -28,6 +28,7 @@ ms.locfileid: "93373827"
 - `CurrentItemChangedCommandParameter`, de tipo `object`, que es el parámetro que se pasa a `CurrentItemChangedCommand`.
 - `IsBounceEnabled`, de tipo `bool` , que especifica si `CarouselView` se rebotará en un límite de contenido. El valor predeterminado es `true`.
 - `IsSwipeEnabled`, de tipo `bool` , que determina si un gesto de deslizar rápidamente cambiará el elemento mostrado. El valor predeterminado es `true`.
+- `Loop`, de tipo `bool` , que determina si `CarouselView` proporciona acceso en bucle a su colección de elementos. El valor predeterminado es `true`.
 - `Position`, de tipo `int` , el índice del elemento actual de la colección subyacente. Esta propiedad tiene un modo de enlace predeterminado de `TwoWay` , y tiene un valor 0 cuando no hay datos para mostrar.
 - `PositionChangedCommand`, de tipo `ICommand` , que se ejecuta cuando cambia la posición.
 - `PositionChangedCommandParameter`, de tipo `object`, que es el parámetro que se pasa a `PositionChangedCommand`.
@@ -355,6 +356,10 @@ La `CurrentItem` propiedad se puede borrar estableciéndolo, o el objeto al que 
 ## <a name="disable-bounce"></a>Deshabilitar rebote
 
 De forma predeterminada, [`CarouselView`](xref:Xamarin.Forms.CarouselView) rebota los elementos en los límites de contenido. Esto se puede deshabilitar estableciendo la `IsBounceEnabled` propiedad en `false` .
+
+## <a name="disable-loop"></a>Deshabilitar bucle
+
+De forma predeterminada, [`CarouselView`](xref:Xamarin.Forms.CarouselView) proporciona acceso en bucle a su colección de elementos. Por consiguiente, al pasar el dedo hacia atrás desde el primer elemento de la colección se mostrará el último elemento de la colección. Del mismo modo, el deslizamiento hacia delante desde el último elemento de la colección volverá al primer elemento de la colección. Este comportamiento se puede deshabilitar estableciendo la `Loop` propiedad en `false` .
 
 ## <a name="disable-swipe-interaction"></a>Deshabilitar la interacción de deslizar rápidamente
 

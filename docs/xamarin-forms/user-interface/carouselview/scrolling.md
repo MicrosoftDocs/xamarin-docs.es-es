@@ -6,20 +6,18 @@ ms.assetid: 92D7B618-07FA-4343-9D0F-212525E92C39
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/28/2020
+ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 58d0da21c81586a2cee2268c5d2df668eab0515a
-ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
+ms.openlocfilehash: 4c05e6fef969e002befe2afadb8e7db9e477aaba
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94590303"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940517"
 ---
 # <a name="no-locxamarinforms-carouselview-scrolling"></a>Xamarin.Forms Desplazar CarouselView
-
-![API de versión preliminar](~/media/shared/preview.png)
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
@@ -135,7 +133,7 @@ Este código de ejemplo produce el desplazamiento mínimo necesario para desplaz
 > [!NOTE]
 > El [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) miembro se utiliza de forma predeterminada si `position` no se especifica el argumento al llamar al `ScrollTo` método.
 
-### <a name="start"></a>Start
+### <a name="start"></a>Inicio
 
 El [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) miembro indica que el elemento debe desplazarse hasta el inicio de la vista:
 
@@ -231,7 +229,7 @@ La [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) enumeración 
 > [!IMPORTANT]
 > El valor de la [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) propiedad solo se respeta cuando la [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) propiedad está establecida en `Mandatory` , o `MandatorySingle` .
 
-#### <a name="start"></a>Start
+#### <a name="start"></a>Inicio
 
 El `SnapPointsAlignment.Start` miembro indica que los puntos de ajuste están alineados con el borde inicial de los elementos. En el siguiente ejemplo de XAML se muestra cómo establecer este miembro de enumeración:
 

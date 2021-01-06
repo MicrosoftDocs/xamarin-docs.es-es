@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f02de8bc2bf0ed1091c73c3a91f748400f8615b7
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 4c688e6f2e4ac29eea9298f5e0f3c58403cd2ec1
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93367587"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940309"
 ---
 # <a name="visualelement-blur-on-ios"></a>VisualElement desenfoque en iOS
 
@@ -27,10 +27,8 @@ Esta plataforma específica de iOS se usa para desenfocar el contenido que se en
 <ContentPage ...
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
   ...
-  <AbsoluteLayout HorizontalOptions="Center">
-      <Image Source="monkeyface.png" />
-      <BoxView x:Name="boxView" ios:VisualElement.BlurEffect="ExtraLight" HeightRequest="300" WidthRequest="300" />
-  </AbsoluteLayout>
+  <Image Source="monkeyface.png"
+         ios:VisualElement.BlurEffect="ExtraLight" />
   ...
 </ContentPage>
 ```
@@ -42,12 +40,17 @@ using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 ...
 
-boxView.On<iOS>().UseBlurEffect(BlurEffectStyle.ExtraLight);
+image.On<iOS>().UseBlurEffect(BlurEffectStyle.ExtraLight);
 ```
 
-El `BoxView.On<iOS>` método especifica que este específico de la plataforma solo se ejecutará en iOS. [ `VisualElement.UseBlurEffect` ] (XREF: Xamarin.Forms . PlatformConfiguration. iOSSpecific. VisualElement. UseBlurEffect ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . VisualElement}, Xamarin.Forms . PlatformConfiguration. iOSSpecific. BlurEffectStyle)), en el [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) espacio de nombres, se usa para aplicar el efecto de desenfoque, y la [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) enumeración proporciona cuatro valores: [`None`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.None) , [`ExtraLight`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.ExtraLight) , [`Light`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.Light) y [`Dark`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.Dark) .
+El `Image.On<iOS>` método especifica que este específico de la plataforma solo se ejecutará en iOS. [ `VisualElement.UseBlurEffect` ] (XREF: Xamarin.Forms . PlatformConfiguration. iOSSpecific. VisualElement. UseBlurEffect ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . VisualElement}, Xamarin.Forms . PlatformConfiguration. iOSSpecific. BlurEffectStyle)), en el [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) espacio de nombres, se usa para aplicar el efecto de desenfoque, y la [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) enumeración proporciona cuatro valores:
 
-El resultado es que [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) se aplica un especificado a la [`BoxView`](xref:Xamarin.Forms.BoxView) instancia de, que desenfoca el [`Image`](xref:Xamarin.Forms.Image) superpuesto por debajo de él:
+- [`None`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.None)
+- [`ExtraLight`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.ExtraLight)
+- [`Light`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.Light)
+- [`Dark`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.Dark)
+
+El resultado es que [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) se aplica un especificado a [`Image`](xref:Xamarin.Forms.Image) :
 
 ![Efecto de desenfoque Platform-Specific](applying-blur-images/blur-effect.png)
 

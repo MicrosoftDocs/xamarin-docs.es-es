@@ -6,20 +6,18 @@ ms.assetid: 07DE3D66-1820-4642-BDDF-84146D40C99D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/02/2020
+ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e8e41ef3b17c253132668ac7be5ed448695f3685
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: f66ae6e6947b5dade5302def5a7f89904bf701fe
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373866"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940010"
 ---
 # <a name="no-locxamarinforms-shapes-path-transforms"></a>Xamarin.Forms Formas: transformaciones de trazado
-
-![API de versión preliminar](~/media/shared/preview.png)
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -60,7 +58,6 @@ En el ejemplo siguiente se muestra cómo rotar un `Path` objeto:
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Center"
       HeightRequest="100"
@@ -105,7 +102,6 @@ En el ejemplo siguiente se muestra cómo escalar un `Path` objeto:
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Center"
       HeightRequest="100"
@@ -144,7 +140,6 @@ En el ejemplo siguiente se muestra cómo sesgar un `Path` objeto:
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Center"
       HeightRequest="100"
@@ -178,7 +173,6 @@ En el ejemplo siguiente se muestra cómo trasladar un `Path` objeto:
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Center"
       HeightRequest="100"
@@ -209,7 +203,6 @@ En el ejemplo siguiente se muestra cómo realizar una transformación compuesta 
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Center"
       HeightRequest="100"
@@ -261,7 +254,6 @@ En el ejemplo siguiente se muestra cómo realizar una transformación compuesta 
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Center"
       HeightRequest="100"
@@ -351,7 +343,6 @@ En el ejemplo siguiente se muestra cómo transformar un `Path` objeto mediante `
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Center"
       Data="M13.908992,16.207977L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983z">
@@ -375,7 +366,6 @@ Como alternativa, se puede escribir en una forma simplificada que usa un convert
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Center"
       Data="M13.908992,16.207977L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983z">
@@ -391,7 +381,6 @@ Además, el ejemplo anterior se puede simplificar aún más si se especifican lo
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Center"
       RenderTransform="1.5 1 0 1 10 100"

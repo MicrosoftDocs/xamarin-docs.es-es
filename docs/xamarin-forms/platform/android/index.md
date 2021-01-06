@@ -10,12 +10,12 @@ ms.date: 12/11/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cce3fbf6f80b8a0fddff2ed2b2af027721faf59d
-ms.sourcegitcommit: bfe713c038a0d6c4362da4c3221d7aee9ab03d2b
+ms.openlocfilehash: 76b0d9eff175755d6fc13178a864ae99b345efd3
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805614"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940205"
 ---
 # <a name="android-platform-features"></a>Características de la plataforma Android
 
@@ -64,8 +64,6 @@ Originalmente, el Xamarin.Forms proyecto de Android predeterminado usaba un esti
 
 Xamarin.Forms Los proyectos de Android ahora usan `FormsAppCompatActivity` como la clase base de su actividad principal. Esta clase usa las características de **AppCompat** proporcionadas por Android para implementar temas de diseño de materiales.
 
-Para agregar temas de diseño de materiales al Xamarin.Forms proyecto de Android, siga las [instrucciones de instalación para la compatibilidad con AppCompat](appcompat-material-design.md)
-
 Este es el ejemplo **todo** con el valor predeterminado `FormsApplicationActivity` :
 
 [![Aplicación de ejemplo todo sin AppCompat](images/before-appcompat-sml.png)](images/before-appcompat.png#lightbox "Aplicación de ejemplo todo sin AppCompat")
@@ -80,7 +78,3 @@ Y este es el mismo código después de actualizar el proyecto para usar `FormsAp
 ## <a name="androidx-migration"></a>Migración de AndroidX
 
 AndroidX reemplaza a la biblioteca de compatibilidad de Android. Para obtener información sobre AndroidX y cómo migrar una Xamarin.Forms aplicación para usar las bibliotecas de AndroidX, consulte [migración Xamarin.Forms de AndroidX en ](~/xamarin-forms/platform/android/androidx-migration.md).
-
-## <a name="related-links"></a>Vínculos relacionados
-
-- [Agregar compatibilidad con el diseño de materiales](appcompat-material-design.md)

@@ -6,20 +6,18 @@ ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/26/2020
+ms.date: 10/05/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c9ebee7914d8d2ccfb284910f31d87999b22701f
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: de3d7df922a0b6bdc6644e2684c6f01176abbe42
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93369654"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940504"
 ---
 # <a name="no-locxamarinforms-swipeview"></a>Xamarin.Forms SwipeView
-
-![API de versión preliminar](~/media/shared/preview.png)
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
 
@@ -27,18 +25,13 @@ ms.locfileid: "93369654"
 
 [![Captura de pantalla de SwipeView deslizar rápidamente los elementos en una CollectionView, en iOS y Android](swipeview-images/swipeview-collectionview.png "SwipeView deslizar rápidamente los elementos")](swipeview-images/swipeview-collectionview-large.png#lightbox "SwipeView deslizar rápidamente los elementos")
 
-`SwipeView` está disponible en Xamarin.Forms 4,4. Sin embargo, actualmente es experimental y solo se puede usar agregando la siguiente línea de código a la `AppDelegate` clase en iOS, a la `MainActivity` clase en Android o a la `App` clase en UWP, antes de llamar a `Forms.Init` :
-
-```csharp
-Forms.SetFlags("SwipeView_Experimental");
-```
-
 `SwipeView` define las siguientes propiedades:
 
 - `LeftItems`, de tipo `SwipeItems` , que representa los elementos de deslizamiento que se pueden invocar cuando se pasa el dedo por el control hacia la izquierda.
 - `RightItems`, de tipo `SwipeItems` , que representa los elementos de deslizamiento que se pueden invocar cuando se pasa el dedo por el control hacia la derecha.
 - `TopItems`, de tipo `SwipeItems` , que representa los elementos de deslizamiento que se pueden invocar cuando el control se desliza hacia arriba hacia abajo.
 - `BottomItems`, de tipo `SwipeItems` , que representa los elementos de deslizamiento que se pueden invocar cuando se pasa el dedo hacia arriba en el control.
+- `Threshold`, de tipo `double` , que representa el número de unidades independientes del dispositivo que desencadenan un gesto de deslizamiento para mostrar completamente los elementos de deslizamiento.
 
 Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
@@ -186,7 +179,7 @@ La apariencia de cada `SwipeItem` se define mediante una combinación de las `Te
 
 [![Captura de pantalla de SwipeView deslizar rápidamente los elementos, en iOS y Android](swipeview-images/swipeview-swipeitems.png "SwipeView deslizar rápidamente los elementos")](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView deslizar rápidamente los elementos")
 
-Cuando `SwipeItem` se puntea en, su `Invoked` evento se activa y se controla mediante su controlador de eventos registrado. Como alternativa, la `Command` propiedad se puede establecer en una `ICommand` implementación que se ejecutará cuando `SwipeItem` se invoque.
+Cuando `SwipeItem` se puntea en, su `Invoked` evento se activa y se controla mediante su controlador de eventos registrado. Además, se `MenuItem.Clicked` desencadena el evento. Como alternativa, la `Command` propiedad se puede establecer en una `ICommand` implementación que se ejecutará cuando `SwipeItem` se invoque.
 
 > [!NOTE]
 > Cuando se define la apariencia de un `SwipeItem` solo mediante las `Text` `IconImageSource` propiedades o, el contenido siempre se centra.
@@ -234,6 +227,30 @@ Los `SwipeStarted` `SwipeChanging` eventos, y `SwipeEnded` notifican la direcci�
 - `Left` indica que se ha producido un deslizamiento a la izquierda.
 - `Up` indica que se ha producido un deslizamiento hacia arriba.
 - `Down` indica que se ha producido un deslizamiento hacia abajo.
+
+## <a name="swipe-threshold"></a>Umbral de deslizar rápidamente
+
+`SwipeView` incluye una `Threshold` propiedad, de tipo `double` , que representa el número de unidades independientes del dispositivo que desencadenan un gesto de deslizamiento para mostrar completamente los elementos de deslizamiento.
+
+En el ejemplo siguiente se muestra un `SwipeView` que establece la `Threshold` propiedad:
+
+```xaml
+<SwipeView Threshold="200">
+    <SwipeView.LeftItems>
+        <SwipeItems>
+            <SwipeItem Text="Favorite"
+                       IconImageSource="favorite.png"
+                       BackgroundColor="LightGreen" />
+        </SwipeItems>
+    </SwipeView.LeftItems>
+    <!-- Content -->
+</SwipeView>
+```
+
+En este ejemplo, `SwipeView` se debe pasar el dedo por unidades independientes del dispositivo 200 antes de que `SwipeItem` se revele por completo.
+
+> [!NOTE]
+> Actualmente, la `Threshold` propiedad solo se implementa en iOS y Android.
 
 ## <a name="swipe-mode"></a>Modo de deslizar rápidamente
 

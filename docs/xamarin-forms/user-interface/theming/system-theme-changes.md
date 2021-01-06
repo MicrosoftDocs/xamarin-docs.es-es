@@ -10,12 +10,12 @@ ms.date: 08/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0275e3d26b86807b113ed78a00c0654809f10990
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 421fdc3eed86ed93fe0416843867553778abd0c5
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93370954"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940530"
 ---
 # <a name="respond-to-system-theme-changes-in-no-locxamarinforms-applications"></a>Responder a los cambios de tema del sistema en Xamarin.Forms las aplicaciones
 
@@ -33,6 +33,7 @@ Se deben cumplir los siguientes requisitos para Xamarin.Forms que respondan a un
 - iOS 13 o posterior.
 - Android 10 (API 29) o superior.
 - Compilación 14393 o posterior de UWP.
+- macOS 10,14 o superior.
 
 En las siguientes capturas de pantallas se muestran páginas con tema, para temas del sistema claros y oscuros en iOS y Android:
 

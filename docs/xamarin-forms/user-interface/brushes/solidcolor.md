@@ -6,20 +6,18 @@ ms.assetid: 4225D40A-16C1-40E1-ACBE-23E321E7FDE4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/27/2020
+ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3260f934eb3cfe147b218b65e981928a4683555e
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 3be026df3d6c60ecef81a7409245941f34b8d563
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93372709"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940023"
 ---
 # <a name="no-locxamarinforms-brushes-solid-colors"></a>Xamarin.Forms Pinceles: colores sólidos
-
-![API de vista previa](~/media/shared/preview.png "Esta API se encuentra en versión preliminar.")
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 

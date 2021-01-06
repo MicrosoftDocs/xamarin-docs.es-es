@@ -10,16 +10,14 @@ ms.date: 11/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4f60a48d2d8b43ea08ccc36401103d8987e48b1c
-ms.sourcegitcommit: f920ac0724f09e5c9b4f36be1995a5a17a6d9f95
+ms.openlocfilehash: 542d06970cb414b7590cd13757b4e4902af3dd7f
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94591052"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939087"
 ---
 # <a name="no-locxamarinforms-shapes-path-markup-syntax"></a>Xamarin.Forms Formas: sintaxis de marcado de trazados
-
-![API de versión preliminar](~/media/shared/preview.png)
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -27,7 +25,6 @@ Xamarin.Forms la sintaxis de marcado de trazados le permite especificar de forma
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Data="M13.908992,16.207977 L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983Z" />
 ```
 
@@ -102,7 +99,7 @@ En esta sintaxis, *y* es un `double` que representa la coordenada y del punto fi
 
 ### <a name="elliptical-arc-command"></a>Comando de arco elíptico
 
-El comando de arco elíptico crea un arco elíptico entre el punto actual y el punto final especificado. La sintaxis de este comando es: `A` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *Endpoint* or `a` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint*.
+El comando de arco elíptico crea un arco elíptico entre el punto actual y el punto final especificado. La sintaxis de este comando es: `A` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *Endpoint* or `a` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* .
 
 En esta sintaxis:
 
@@ -118,7 +115,7 @@ Para obtener información sobre cómo crear un arco elíptico como un `PathGeome
 
 ### <a name="cubic-bezier-curve-command"></a>Comando de curva Bézier cúbica
 
-El comando de curva Bézier cúbica crea una curva Bézier cúbica entre el punto actual y el punto final especificado utilizando los dos puntos de control especificados. La sintaxis de este comando es: `C` *controlPoint1* *controlPoint2* *Endpoint* o `c` *controlPoint1* *controlPoint2* *endPoint*.
+El comando de curva Bézier cúbica crea una curva Bézier cúbica entre el punto actual y el punto final especificado utilizando los dos puntos de control especificados. La sintaxis de este comando es: `C` *controlPoint1* *controlPoint2* *Endpoint* o `c` *controlPoint1* *controlPoint2* .
 
 En esta sintaxis:
 

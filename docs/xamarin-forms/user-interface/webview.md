@@ -10,12 +10,12 @@ ms.date: 05/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9b22b46cb5452e558328c383ed97e66a60cfc166
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 05de8c554864108b90433c335074c61fc3def8cf
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93374139"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939958"
 ---
 # <a name="no-locxamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -175,7 +175,7 @@ A continuación, se deben proporcionar las implementaciones de la interfaz para 
 
 #### <a name="ios"></a>iOS
 
-En iOS, el contenido web debe estar ubicado en el directorio raíz del proyecto o en el directorio de **recursos** con la acción de compilación *BundleResource* , como se muestra a continuación:
+En iOS, el contenido web debe estar ubicado en el directorio raíz del proyecto o en el directorio de **recursos** con la acción de compilación *BundleResource*, como se muestra a continuación:
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -418,6 +418,9 @@ Una aplicación puede volver a usar la clase de iOS `UIWebView` para implementar
 [assembly: ExportRenderer(typeof(Xamarin.Forms.WebView), typeof(Xamarin.Forms.Platform.iOS.WebViewRenderer))]
 ```
 
+> [!NOTE]
+> En Xamarin.Forms 5,0, se ha `WebViewRenderer` quitado la clase. Por lo tanto, Xamarin.Forms 5,0 no contiene una referencia al `UIWebView` control.
+
 `WebView` de forma predeterminada, en Android es tan rápido como el explorador integrado.
 
 La [WebView de UWP](/windows/uwp/design/controls-and-patterns/web-view) usa el motor de representación de Microsoft Edge. Los dispositivos de escritorio y tableta deben ver el mismo rendimiento que usar el explorador Edge.
@@ -552,6 +555,9 @@ En este ejemplo, `Cookie` se agrega un único al `CookieContainer` objeto, que s
 ## <a name="uiwebview-deprecation-and-app-store-rejection-itms-90809"></a>UIWebView desuso y rechazo de la tienda de aplicaciones (ITMS-90809)
 
 A partir del 2020 de abril, [Apple rechazará las aplicaciones](https://developer.apple.com/news/?id=12232019b) que siguen usando la API en desuso `UIWebView` . Aunque Xamarin.Forms ha cambiado a `WKWebView` como valor predeterminado, todavía hay una referencia al SDK anterior en los Xamarin.Forms archivos binarios. El comportamiento actual del [enlazador de iOS](~/ios/deploy-test/linker.md) no lo quita y, como resultado, la `UIWebView` API en desuso seguirá apareciendo como referencia desde la aplicación cuando se envíe a la tienda de aplicaciones.
+
+> [!IMPORTANT]
+> En Xamarin.Forms 5,0, se ha `WebViewRenderer` quitado la clase. Por lo tanto, Xamarin.Forms 5,0 no contiene una referencia al `UIWebView` control.
 
 Hay disponible una versión preliminar del enlazador para corregir este problema. Para habilitar la vista previa, debe proporcionar un argumento adicional `--optimize=experimental-xforms-product-type` al enlazador.
 

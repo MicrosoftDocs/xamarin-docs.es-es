@@ -6,27 +6,22 @@ ms.assetid: 4E749FE8-852C-46DA-BB1E-652936106357
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/30/2020
+ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 07765fdb9f67f21415db495da1b635b0507b7ed1
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6db938f01e4ac1f886149145046668202b119431
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559212"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939763"
 ---
 # <a name="no-locxamarinforms-shapes"></a>Xamarin.Forms Colocar
-
-![API de versión preliminar](~/media/shared/preview.png)
 
 Un `Shape` es un tipo de [`View`](xref:Xamarin.Forms.View) que permite dibujar una forma en la pantalla. `Shape` los objetos se pueden usar dentro de las clases de diseño y la mayoría de los controles, ya que la `Shape` clase se deriva de la `View` clase.
 
 Xamarin.Forms Las formas están disponibles en el `Xamarin.Forms.Shapes` espacio de nombres de iOS, Android, MacOS, el plataforma universal de Windows (UWP) y el Windows Presentation Foundation (WPF).
-
-> [!IMPORTANT]
-> Xamarin.Forms Las formas actualmente son experimentales y solo se pueden usar si se establece la `Shapes_Experimental` marca. Para más información, vea [Marcas experimentales](~/xamarin-forms/internals/experimental-flags.md).
 
 `Shape` define las siguientes propiedades:
 
@@ -38,7 +33,7 @@ Xamarin.Forms Las formas están disponibles en el `Xamarin.Forms.Shapes` espacio
 - `StrokeLineCap`, de tipo `PenLineCap` , describe la forma al principio y al final de una línea o segmento. El valor predeterminado de esta propiedad es `PenLineCap.Flat`.
 - `StrokeLineJoin`, de tipo `PenLineJoin` , especifica el tipo de combinación que se usa en los vértices de una forma. El valor predeterminado de esta propiedad es `PenLineJoin.Miter`.
 - `StrokeMiterLimit`, de tipo `double` , especifica el límite en la proporción de la longitud del ángulo en la mitad `StrokeThickness` de una forma. El valor predeterminado de esta propiedad es 10,0.
-- `StrokeThickness`, de tipo `double` , indica el ancho del contorno de la forma. El valor predeterminado de esta propiedad es 0,0.
+- `StrokeThickness`, de tipo `double` , indica el ancho del contorno de la forma. El valor predeterminado de esta propiedad es 1,0.
 
 Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que pueden ser destinos de los enlaces de datos, y con estilo.
 
@@ -84,7 +79,6 @@ En el siguiente código XAML se muestra cómo establecer la `Aspect` propiedad:
 ```xaml
 <Path Aspect="Uniform"
       Stroke="Yellow"
-      StrokeThickness="1"
       Fill="Red"
       BackgroundColor="LightGray"
       HorizontalOptions="Start"

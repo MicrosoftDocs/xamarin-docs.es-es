@@ -6,16 +6,16 @@ ms.assetid: E6F124C7-A161-4C1F-AF40-52F0935E54DE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/14/2016
+ms.date: 09/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 50b64b394314ae2f63ab1f756f1cc73ba29e59e7
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 6ec4c16249aadce668b9fe33dad661e1f7e7ee9e
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93372852"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939035"
 ---
 # <a name="easing-functions-in-no-locxamarinforms"></a>Funciones de aceleración en Xamarin.Forms
 
@@ -54,6 +54,9 @@ await image.TranslateTo(0, -200, 2000, Easing.BounceOut);
 ```
 
 Al especificar una función de aceleración para una animación, la velocidad de la animación no es lineal y produce el efecto proporcionado por la función de aceleración. Al omitir una función de aceleración al crear una animación, la animación utiliza la [`Linear`](xref:Xamarin.Forms.Easing.Linear) función de aceleración predeterminada, que genera una velocidad lineal.
+
+> [!NOTE]
+> Xamarin.Forms 5,0 incluye un convertidor de tipos que convierte una representación de cadena de una función de entradas y salidas lentas en el [`Easing`](xref:Xamarin.Forms.Easing) miembro de enumeración adecuado. Este convertidor de tipos se invoca automáticamente en cualquier propiedad de tipo `Easing` que se establezca en XAML.
 
 Para obtener más información sobre el uso de los métodos de extensión de animación en la [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) clase, vea [animaciones simples](~/xamarin-forms/user-interface/animation/simple.md). La clase también puede usar las funciones de aceleración [`Animation`](xref:Xamarin.Forms.Animation) . Para obtener más información, vea [animaciones personalizadas](~/xamarin-forms/user-interface/animation/custom.md).
 
