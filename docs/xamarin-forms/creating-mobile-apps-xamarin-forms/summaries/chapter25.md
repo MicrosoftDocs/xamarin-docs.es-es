@@ -10,12 +10,12 @@ ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 05b7821a08140dda411842c5f978be2027fcc033
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: f37006e15ad4cc2c6c8d03f3c88c1c8f57fe4fd5
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373983"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940075"
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>Resumen del capítulo 25. Variedades de páginas
 
@@ -122,5 +122,5 @@ Sin embargo, esto es problemático en iOS. Solo se pueden mostrar algunos elemen
 
 - [Texto completo del capítulo 25 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch25-Apr2016.pdf)
 - [Ejemplos del capítulo 25](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25)
-- [Página maestra y de detalles](~/xamarin-forms/app-fundamentals/navigation/master-detail-page.md)
+- [Página maestra y de detalles](~/xamarin-forms/app-fundamentals/navigation/flyoutpage.md)
 - [Fichas](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)

@@ -10,12 +10,12 @@ ms.date: 09/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 374444307ef0b6cc6354d2f660834762bb566434
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 4df1afb80cc8b261d9bc6d022fe814fd411c0c3c
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93367964"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940088"
 ---
 # <a name="introduction-to-no-locxamarinforms-data-templates"></a>Introducción a las plantillas de datos de Xamarin.Forms
 
@@ -117,17 +117,6 @@ La invalidación de `Person.ToString` podría devolver una cadena con formato fo
 ## <a name="creating-a-datatemplate"></a>Creación de una plantilla de datos
 
 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) se usa para especificar la apariencia de los datos, y normalmente se utiliza el enlace de datos para mostrar los datos. Un escenario de uso común es cuando se muestran datos de una colección de objetos en un control [`ListView`](xref:Xamarin.Forms.ListView). Por ejemplo, cuando se enlaza un elemento `ListView` a una colección de objetos `Person`, la propiedad `ListView.ItemTemplate` se establecerá en un elemento `DataTemplate` que define la apariencia de cada objeto `Person` de `ListView`. `DataTemplate` contendrá los elementos que se enlazan a los valores de propiedad de cada objeto `Person`. Para más información sobre el enlace de datos, consulte [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) (Aspectos básicos del enlace de datos).
-
-Se puede usar un elemento [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) como un valor para las propiedades siguientes:
-
-- [`ListView.HeaderTemplate`](xref:Xamarin.Forms.ListView.HeaderTemplate)
-- [`ListView.FooterTemplate`](xref:Xamarin.Forms.ListView.FooterTemplate)
-- [`ListView.GroupHeaderTemplate`](xref:Xamarin.Forms.ListView.GroupHeaderTemplate)
-- [`ItemsView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1), que es heredado por [`ListView`](xref:Xamarin.Forms.ListView).
-- [`MultiPage.ItemTemplate`](xref:Xamarin.Forms.MultiPage`1), que es heredado por [`CarouselPage`](xref:Xamarin.Forms.CarouselPage), [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) y [`TabbedPage`](xref:Xamarin.Forms.TabbedPage).
-
-> [!NOTE]
-> Tenga en cuenta que aunque [`TableView`](xref:Xamarin.Forms.TableView) usa objetos [`Cell`](xref:Xamarin.Forms.Cell), no usa un elemento [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Esto se debe a que los enlaces de datos siempre se establecen directamente en objetos `Cell`.
 
 Una instancia de [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que se coloca como un elemento secundario directo de las propiedades enumeradas anteriormente se conoce como una *plantilla insertada*. Como alternativa, se puede definir un elemento `DataTemplate` como un recurso de nivel de control, de página o de aplicación. La elección de dónde se puede definir una instancia de [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) afecta a dónde se puede usar:
 

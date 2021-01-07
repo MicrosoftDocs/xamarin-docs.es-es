@@ -10,12 +10,12 @@ ms.date: 07/29/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 76f9b4e243af908e5d00ba8b812dfd143104fe65
-ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
+ms.openlocfilehash: 2a35966bfdf203a77fc3943e224d77fb087dcc45
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426856"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940491"
 ---
 # <a name="no-locxamarinforms-shell-custom-renderers"></a>Representadores personalizados de Xamarin.Forms Shell
 
@@ -109,7 +109,7 @@ namespace Xaminals.Droid
 La clase `MyShellRenderer` invalida el método `CreateToolbarAppearanceTracker` y devuelve una instancia de la clase `MyShellToolbarAppearanceTracker`. La clase `MyShellToolbarAppearanceTracker`, que se deriva de la clase `ShellToolbarAppearanceTracker`, se muestra en el ejemplo siguiente:
 
 ```csharp
-using Android.Support.V7.Widget;
+using AndroidX.AppCompat.Widget;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 

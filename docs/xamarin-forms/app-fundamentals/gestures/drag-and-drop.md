@@ -10,27 +10,23 @@ ms.date: 10/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 30e77d4978e9a191c1ba19e80109f9854cc46f8f
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 4bd8715d7eb4fa593d62021721f9403672652754
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93375244"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940465"
 ---
 # <a name="add-drag-and-drop-gesture-recognizers"></a>Incorporación de reconocedores de gesto de arrastrar y colocar
-
-![API de versión preliminar](~/media/shared/preview.png)
 
 [![Descargar el ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)
 
 Un gesto de arrastrar y colocar permite arrastrar elementos y sus paquetes de datos asociados desde una ubicación en pantalla a otra ubicación mediante un gesto continuo. Arrastrar y colocar puede tener lugar en una sola aplicación o puede iniciarse en una aplicación y finalizar en otra.
 
 > [!IMPORTANT]
-> El reconocedor de gesto de arrastrar y colocar Xamarin.Forms es actualmente experimental y solo se puede usar estableciendo la marca `DragAndDrop_Experimental`. Para más información, vea [Marcas experimentales](~/xamarin-forms/internals/experimental-flags.md).
->
 > El reconocimiento de los gestos de arrastrar y colocar se admite en iOS, Android y la Plataforma universal de Windows (UWP). Sin embargo, en iOS se requiere una plataforma mínima de iOS 11.
 
-El *origen de arrastre* , que es el elemento en el que se inicia el gesto de arrastrar, puede proporcionar los datos que se van a transferir rellenando un objeto de paquete de datos. Cuando el origen de arrastre se libera, se produce la colocación. Es entonces cuando el *destino de colocación* , que es el elemento bajo el origen de arrastre, procesa el paquete de datos.
+El *origen de arrastre*, que es el elemento en el que se inicia el gesto de arrastrar, puede proporcionar los datos que se van a transferir rellenando un objeto de paquete de datos. Cuando el origen de arrastre se libera, se produce la colocación. Es entonces cuando el *destino de colocación*, que es el elemento bajo el origen de arrastre, procesa el paquete de datos.
 
 El proceso para habilitar la función de arrastrar y colocar en una aplicación es el siguiente:
 

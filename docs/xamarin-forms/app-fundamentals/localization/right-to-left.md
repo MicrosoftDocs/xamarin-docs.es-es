@@ -11,12 +11,12 @@ ms.date: 11/05/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 676e0f062d3ed83cf433188e646f1e96f84a77cc
-ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
+ms.openlocfilehash: 5d06b0467a5029fec6d0c92a683114b9e0d04685
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94590277"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940192"
 ---
 # <a name="right-to-left-localization"></a>Localización de derecha a izquierda
 
@@ -128,7 +128,6 @@ La localización de derecha a izquierda de Xamarin.Forms actualmente tiene una s
 - El control de la ubicación del botón [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), la ubicación de elementos de barra de herramientas y la animación de transición lo lleva a cabo la configuración regional del dispositivo, en lugar de la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
 - La dirección de deslizamiento de [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) no realiza la acción.
 - El contenido visual de [`Image`](xref:Xamarin.Forms.Image) no se invierte.
-- El control de la orientación de [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) y [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])) lo lleva a cabo la configuración regional del dispositivo, en lugar de la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
 - El contenido de [`WebView`](xref:Xamarin.Forms.WebView) no respeta la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
 - Debe agregarse una propiedad `TextDirection`, para controlar la alineación del texto.
 
@@ -146,7 +145,7 @@ La localización de derecha a izquierda de Xamarin.Forms actualmente tiene una s
 ### <a name="uwp"></a>UWP
 
 - El control de la alineación del texto de [`Editor`](xref:Xamarin.Forms.Editor) lo lleva a cabo la configuración regional del dispositivo, en lugar de la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
-- Los elementos secundarios [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) no heredan la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- Los elementos secundarios [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage) no heredan la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
 - El control de la alineación del texto de [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) lo lleva a cabo la configuración regional del dispositivo, en lugar de la propiedad [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
 
 ## <a name="force-right-to-left-layout"></a>Forzar el diseño de derecha a izquierda
