@@ -1,5 +1,6 @@
 ---
 title: ¿Cómo migrar mi aplicación a Xamarin.Forms 5,0?
+description: Cómo migrar la aplicación a Xamarin.Forms 5,0, con el foco en Android en UWP.
 ms.assetid: AD04FEE9-B8F5-4CA5-AB31-EF1225867E4B
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -10,12 +11,12 @@ ms.date: 10/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a97cd62906ea7a75609d957e3a85a268807c4f46
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: 8f93d20dac789abed57f8f41bf41778ad50a5fb5
+ms.sourcegitcommit: 995ee23d93e08dceb8754cc6c682cd2f4594345b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97940857"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97972323"
 ---
 # <a name="how-do-i-migrate-my-app-to-no-locxamarinforms-50"></a>¿Cómo migrar mi aplicación a Xamarin.Forms 5,0?
 
@@ -111,10 +112,10 @@ ToolbarResource = Resource.Layout.Toolbar;
 
 ## <a name="uwp"></a>UWP
 
-Xamarin.Forms 5,0 recomienda una versión de plataforma de destino de >= 10.0.17763.0 para los proyectos de UWP. La versión de la plataforma de destino se puede establecer en Visual Studio o en el archivo UWP. csproj:
+Xamarin.Forms 5,0 recomienda una versión de plataforma de destino de >= 10.0.18362.0 para los proyectos de UWP. La versión de la plataforma de destino se puede establecer en Visual Studio o en el archivo UWP. csproj:
 
 ```xml
-<TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17763.0</TargetPlatformVersion>
+<TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
 ```
 
 Se generará una advertencia de compilación si el proyecto de UWP usa una versión de plataforma de destino inferior.
