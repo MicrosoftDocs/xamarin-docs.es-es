@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 8d5f5ff1cfe7876862371a9732f0ab8186bbeeba
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 8d5f0b06a804e9b9af7bb15111c70e4505c79fd0
+ms.sourcegitcommit: 40a56bbc1e038a9181101580ad18a4584edb5ab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91457643"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025518"
 ---
 # <a name="toolbar-compatibility"></a>Compatibilidad de barra de herramientas
 
@@ -45,7 +45,7 @@ A continuación, agregue el paquete de la [biblioteca de compatibilidad de Andro
 
 [![Captura de pantalla del paquete de AppCompat de V7 seleccionado en administrar paquetes NuGet](toolbar-compatibility-images/01-appcompat-nuget-sml.png)](toolbar-compatibility-images/01-appcompat-nuget.png#lightbox)
 
-Cuando se instala este NuGet, también se instalan otros paquetes NuGet si aún no están presentes (como **Xamarin. Android. support. Animated. Vector. drawable**, **Xamarin. Android. support. V4**y **Xamarin. Android. support. Vector. drawable**). Para obtener más información sobre la instalación de paquetes NuGet, consulte [Tutorial: incluir un NuGet en el proyecto](/visualstudio/mac/nuget-walkthrough). 
+Cuando se instala este NuGet, también se instalan otros paquetes NuGet si aún no están presentes (como **Xamarin. Android. support. Animated. Vector. drawable**, **Xamarin. Android. support. V4** y **Xamarin. Android. support. Vector. drawable**). Para obtener más información sobre la instalación de paquetes NuGet, consulte [Tutorial: incluir un NuGet en el proyecto](/visualstudio/mac/nuget-walkthrough). 
 
 ## <a name="use-an-appcompat-theme-and-toolbar"></a>Usar un tema y una barra de herramientas de AppCompat
 
@@ -166,7 +166,7 @@ Del mismo modo, edite **Resources/menu/edit_menus.xml** y reemplace su contenido
 
 ## <a name="subclass-appcompatactivity"></a>Subclase AppCompatActivity
 
-El último paso de la conversión es modificar para `MainActivity` que sea una subclase de `AppCompactActivity` . Edite **MainActivity.CS** y agregue las siguientes `using` instrucciones: 
+El último paso de la conversión es modificar para `MainActivity` que sea una subclase de `AppCompatActivity` . Edite **MainActivity.CS** y agregue las siguientes `using` instrucciones: 
 
 ```csharp
 using Android.Support.V7.App;
