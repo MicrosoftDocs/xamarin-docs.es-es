@@ -6,16 +6,16 @@ ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/05/2020
+ms.date: 01/11/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: de3d7df922a0b6bdc6644e2684c6f01176abbe42
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: d0ebae93405cb115a0f1e87453ab9b438202ef30
+ms.sourcegitcommit: 1decf2c65dc4c36513f7dd459a5df01e170a036f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97940504"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98115254"
 ---
 # <a name="no-locxamarinforms-swipeview"></a>Xamarin.Forms SwipeView
 
@@ -37,12 +37,11 @@ Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamar
 
 Además, `SwipeView` hereda la [`Content`](xref:Xamarin.Forms.ContentView.Content) propiedad de la [`ContentView`](xref:Xamarin.Forms.ContentView) clase. La `Content` propiedad es la propiedad de contenido de la `SwipeView` clase y, por tanto, no es necesario establecer explícitamente.
 
-La `SwipeView` clase también define cuatro eventos:
+La `SwipeView` clase también define tres eventos:
 
 - `SwipeStarted` se desencadena cuando se inicia un deslizamiento. El `SwipeStartedEventArgs` objeto que acompaña a este evento tiene una `SwipeDirection` propiedad, de tipo `SwipeDirection` .
 - `SwipeChanging` se desencadena cuando se mueve el dedo. El `SwipeChangingEventArgs` objeto que acompaña a este evento tiene una `SwipeDirection` propiedad, de tipo `SwipeDirection` y una `Offset` propiedad de tipo `double` .
-- `SwipeEnded` se desencadena cuando finaliza un deslizamiento. El `SwipeEndedEventArgs` objeto que acompaña a este evento tiene una `SwipeDirection` propiedad, de tipo `SwipeDirection` .
-- `CloseRequested` se desencadena cuando se cierran los elementos de deslizamiento.
+- `SwipeEnded` se desencadena cuando finaliza un deslizamiento. El `SwipeEndedEventArgs` objeto que acompaña a este evento tiene una `SwipeDirection` propiedad, de tipo `SwipeDirection` y una `IsOpen` propiedad de tipo `bool` .
 
 Además, `SwipeView` incluye `Open` métodos y `Close` , que abren y cierran los elementos de deslizamiento mediante programación, respectivamente.
 
@@ -346,7 +345,7 @@ En este ejemplo, el objeto `SwipeItemView` incluye un objeto [`StackLayout`](xre
 
 ## <a name="open-and-close-a-swipeview-programmatically"></a>Abrir y cerrar un SwipeView mediante programación
 
-`SwipeView` incluye `Open` `Close` métodos y, que abren y cierran los elementos de deslizamiento mediante programación, respectivamente.
+`SwipeView` incluye `Open` `Close` métodos y, que abren y cierran los elementos de deslizamiento mediante programación, respectivamente. De forma predeterminada, estos métodos animarán `SwipeView` cuando se abran o cierren.
 
 El `Open` método requiere un `OpenSwipeItem` argumento, para especificar la dirección desde la que se `SwipeView` abrirá. La `OpenSwipeItem` enumeración tiene cuatro miembros:
 
@@ -354,6 +353,8 @@ El `Open` método requiere un `OpenSwipeItem` argumento, para especificar la dir
 - `TopItems`, que indica que se `SwipeView` abrirá desde la parte superior para mostrar los elementos de deslizamiento en la `TopItems` colección.
 - `RightItems`, que indica que se `SwipeView` abrirá desde la derecha para mostrar los elementos que se desconectan en la `RightItems` colección.
 - `BottomItems`, que indica que se `SwipeView` abrirá desde la parte inferior, para mostrar los elementos de deslizamiento en `BottomItems` la colección.
+
+Además, el `Open` método también acepta un argumento opcional `bool` que define si se `SwipeView` animará cuando se abra.
 
 Dado un `SwipeView` denominado `swipeView` , en el ejemplo siguiente se muestra cómo abrir un `SwipeView` para mostrar los elementos de deslizamiento en la `LeftItems` colección:
 
@@ -368,7 +369,7 @@ swipeView.Close();
 ```
 
 > [!NOTE]
-> Cuando `Close` se invoca el método, `CloseRequested` se desencadena el evento.
+> El `Close` método también acepta un `bool` argumento opcional que define si se `SwipeView` animará cuando se cierre.
 
 ## <a name="disable-a-swipeview"></a>Deshabilitar un SwipeView
 

@@ -1,5 +1,5 @@
 ---
-title: Migración de AndroidX enXamarin.Forms
+title: Migración de AndroidX en Xamarin.Forms
 description: En este artículo se explica por qué existe AndroidX y cómo migrar a AndroidX en la Xamarin.Forms aplicación.
 ms.prod: xamarin
 ms.assetid: 98884003-E65A-4EB4-842D-66CFE27344A4
@@ -10,16 +10,19 @@ ms.date: 01/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c2df309a8a12a05a4b492bb66977aa2411142850
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3ef1d0322018e5c404204fdaf9f4816891cc39f3
+ms.sourcegitcommit: 1decf2c65dc4c36513f7dd459a5df01e170a036f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138273"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98115137"
 ---
-# <a name="androidx-migration-in-xamarinforms"></a>Migración de AndroidX enXamarin.Forms
+# <a name="androidx-migration-in-no-locxamarinforms"></a>Migración de AndroidX en Xamarin.Forms
 
 AndroidX reemplaza a la biblioteca de compatibilidad de Android. En este artículo se explica por qué existe AndroidX, cómo afecta Xamarin.Forms y cómo migrar la aplicación para usar las bibliotecas de AndroidX.
+
+> [!IMPORTANT]
+> Si va a migrar una aplicación a Xamarin.Forms 5,0, consulte [Cómo migrar mi aplicación a Xamarin.Forms 5,0?](~/xamarin-forms/troubleshooting/questions/forms5-migration.md).
 
 ## <a name="history-of-androidx"></a>Historial de AndroidX
 
@@ -36,11 +39,11 @@ AndroidX es un sustituto de la biblioteca de soporte técnico, que ya no se mant
 
 Google creó un proceso de migración denominado Jetifier con AndroidX. El Jetifier inspecciona el código de bytes jar durante el proceso de compilación y reasigna las referencias de la biblioteca de compatibilidad, tanto en el código de la aplicación como en las dependencias, a su AndroidX equivalente.
 
-En una Xamarin.Forms aplicación, al igual que en una aplicación de Java de Android, las dependencias jar se deben migrar a AndroidX. Sin embargo, también se deben migrar los enlaces de Xamarin para que apunten a los archivos JAR subyacentes y correctos. Xamarin.Formsse ha agregado compatibilidad con la migración automática de AndroidX en la versión 4,5.
+En una Xamarin.Forms aplicación, al igual que en una aplicación de Java de Android, las dependencias jar se deben migrar a AndroidX. Sin embargo, también se deben migrar los enlaces de Xamarin para que apunten a los archivos JAR subyacentes y correctos. Xamarin.Forms se ha agregado compatibilidad con la migración automática de AndroidX en la versión 4,5.
 
 Para obtener más información sobre AndroidX, consulte [información general sobre AndroidX](https://developer.android.com/jetpack/androidx) en Developer.Android.com.
 
-## <a name="automatic-migration-in-xamarinforms"></a>Migración automática enXamarin.Forms
+## <a name="automatic-migration-in-no-locxamarinforms"></a>Migración automática en Xamarin.Forms
 
 Para migrar automáticamente a AndroidX, un Xamarin.Forms proyecto debe:
 
@@ -76,5 +79,6 @@ Una vez que se resuelven los paquetes que faltan, al volver a compilar el proyec
 
 ## <a name="related-links"></a>Vínculos relacionados
 
+- [¿Cómo migrar mi aplicación a Xamarin.Forms 5,0?](~/xamarin-forms/troubleshooting/questions/forms5-migration.md)
 - [Introducción a la biblioteca de compatibilidad de Android](https://developer.android.com/topic/libraries/support-library/index) en Developer.Android.com
 - [Información general de AndroidX](https://developer.android.com/jetpack/androidx) en Developer.Android.com

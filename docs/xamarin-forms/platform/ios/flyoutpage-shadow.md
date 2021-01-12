@@ -10,16 +10,16 @@ ms.date: 03/05/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0b05cb37a2399f438b9003e39341feb138bce490
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: 9f601ed1cfd7938a2340650604b925339328f29d
+ms.sourcegitcommit: 1decf2c65dc4c36513f7dd459a5df01e170a036f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97940821"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98115228"
 ---
 # <a name="flyoutpage-shadow-on-ios"></a>FlyoutPage sombra en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Este control específico de la plataforma determina si la página de detalles de una [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage) tiene una sombra aplicada, al revelar la página de control flotante. Se consume en XAML estableciendo la `FlyoutPage.ApplyShadow` propiedad Bindable en `true` :
 
@@ -56,6 +56,6 @@ El resultado es que la página de detalles de un [`FlyoutPage`](xref:Xamarin.For
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API de iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
