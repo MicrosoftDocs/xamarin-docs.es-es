@@ -10,12 +10,12 @@ ms.date: 07/09/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 612200a23c198cbb1127119548c0a1dcc2928645
-ms.sourcegitcommit: cd0c0999b53e825b60471bfbfd4144cfcd783587
+ms.openlocfilehash: 8c543b481091a1b5f1a4efc2935a9c86c276686a
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86225473"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940426"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>Clases base y controles nativos del representador
 
@@ -47,7 +47,7 @@ En la tabla siguiente se enumeran las clases de representador y control nativo q
 |Página|Representador|iOS|Android|Android (AppCompat)|UWP|
 |--- |--- |--- |--- |--- |--- |
 |[`ContentPage`](xref:Xamarin.Forms.ContentPage)|[PageRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/contentpage.md)|UIViewController|ViewGroup||FrameworkElement|
-|[`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)|PhoneMasterDetailRenderer (iOS: teléfono), TabletMasterDetailPageRenderer (iOS: tableta), MasterDetailRenderer (Android), MasterDetailPageRenderer (Android AppCompat), MasterDetailPageRenderer (UWP)|UIViewController (teléfono), UISplitViewController (tableta)|DrawerLayout (v4)|DrawerLayout (v4)|FrameworkElement (Control personalizado)|
+|[`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage)|PhoneFlyoutPageRenderer (iOS – Teléfono), TabletFlyoutPageRenderer (iOS – Tableta), MasterDetailRenderer (Android), FlyoutPageRenderer (Android AppCompat), FlyoutPageRenderer (UWP)|UIViewController (teléfono), UISplitViewController (tableta)|DrawerLayout (v4)|DrawerLayout (v4)|FrameworkElement (Control personalizado)|
 |[`NavigationPage`](xref:Xamarin.Forms.NavigationPage)|NavigationRenderer (iOS y Android), NavigationPageRenderer (AppCompat Android), NavigationPageRenderer (UWP)|UIToolbar|ViewGroup|ViewGroup|FrameworkElement (Control personalizado)|
 |[`TabbedPage`](xref:Xamarin.Forms.TabbedPage)|TabbedRenderer (iOS y Android), TabbedPageRenderer (Android AppCompat), TabbedPageRenderer (UWP)|UIView|ViewPager|ViewPager|FrameworkElement (Pivot)|
 |[`TemplatedPage`](xref:Xamarin.Forms.TemplatedPage)|PageRenderer|UIViewController|ViewGroup||FrameworkElement|
@@ -93,7 +93,6 @@ En la tabla siguiente se enumeran las clases de representador y control nativo q
 |[`Line`](xref:Xamarin.Forms.Shapes.Line)|LineRenderer|CALayer|Ver||Línea|
 |[`ListView`](xref:Xamarin.Forms.ListView)|[ListViewRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/listview.md)|UITableView|ListView||ListView|
 |[`Map`](xref:Xamarin.Forms.Maps.Map)|[MapRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)|MKMapView|MapView||MapControl|
-|[`MediaElement`](xref:Xamarin.Forms.MediaElement)|MediaElementRenderer|UIView||VideoView|MediaElement|
 |[`Path`](xref:Xamarin.Forms.Shapes.Path)|PathRenderer|CALayer|Ver||Ruta de acceso|
 |[`Picker`](xref:Xamarin.Forms.Picker)|PickerRenderer|UITextField|EditText|EditText|ComboBox|
 |[`Polygon`](xref:Xamarin.Forms.Shapes.Polygon)|PolygonRenderer|CALayer|Ver||Polígono|
@@ -110,9 +109,6 @@ En la tabla siguiente se enumeran las clases de representador y control nativo q
 |[`TableView`](xref:Xamarin.Forms.TableView)|TableViewRenderer|UITableView|ListView||ListView|
 |[`TimePicker`](xref:Xamarin.Forms.TimePicker)|TimePickerRenderer|UITextField|EditText||TimePicker|
 |[`WebView`](xref:Xamarin.Forms.WebView)|WkWebViewRenderer (iOS), WebViewRenderer (Android y UWP)|WkWebView|WebView||WebView|
-
-> [!NOTE]
-> El control `Expander` se implementa usando un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) con animación. Por lo tanto, no tiene ningún representador de plataforma.
 
 ## <a name="cells"></a>Celdas
 

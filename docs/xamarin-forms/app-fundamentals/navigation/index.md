@@ -10,18 +10,18 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 65aa0f060e4d48834017a334d69b2f21645825f3
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d976048b15c1fc545e1fbdc6c911e3cb4542d4f2
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937194"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939100"
 ---
-# <a name="xamarinforms-navigation"></a>Navegación en Xamarin.Forms
+# <a name="no-locxamarinforms-navigation"></a>Navegación en Xamarin.Forms
 
 _Xamarin.Forms proporciona una serie de experiencias de navegación de páginas diferente, en función del tipo de página que se use._
 
-Tipos de página de ![Xamarin.Forms](images/page-types.png)
+![Xamarin.Forms Tipos de página](images/page-types.png)
 
 Como alternativa, las aplicaciones de Xamarin.Forms Shell usan una experiencia de navegación basada en URI que no obliga a una jerarquía de navegación del conjunto. Para obtener más información, consulte [Navegación en Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/navigation.md).
 
@@ -37,9 +37,9 @@ La clase [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) proporciona una e
 
 [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) de Xamarin.Forms es una página que los usuarios pueden deslizar de lado a lado para navegar por páginas de contenido, como una galería.
 
-## <a name="masterdetailpage"></a>[MasterDetailPage](master-detail-page.md)
+## <a name="flyoutpage"></a>[FlyoutPage](flyoutpage.md)
 
-[`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) de Xamarin.Forms es una página que administra dos páginas de información relacionada: una página maestra que presenta elementos y una página de detalles que muestra detalles sobre elementos de la página maestra.
+Xamarin.Forms [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage) es una página que administra dos páginas de información relacionada: una página de control flotante que presenta elementos y una página de detalles que muestra detalles sobre los elementos de la página de control flotante.
 
 ## <a name="modal-pages"></a>[Páginas modales](modal.md)
 

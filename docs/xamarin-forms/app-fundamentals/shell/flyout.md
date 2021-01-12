@@ -10,18 +10,18 @@ ms.date: 07/30/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 90f06c0379cc40a946970ad4248dc8527ee34f3a
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 4faa0923e074460ef254db319dfcfd01cc832dce
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93372787"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940141"
 ---
 # <a name="no-locxamarinforms-shell-flyout"></a>Control flotante de Xamarin.Forms Shell
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
-El control flotante es el menú raíz de una aplicación de Shell y es accesible por medio de un icono o al deslizar el dedo desde el lado de la pantalla. El control flotante consta de un encabezado opcional, elementos de control flotante y elementos de menú opcionales:
+El control flotante es el menú raíz de una aplicación de Shell y es accesible por medio de un icono o al deslizar el dedo desde el lado de la pantalla. El control flotante consta de un encabezado opcional, elementos flotantes, elementos de menú opcionales y un pie de página opcional:
 
 ![Captura de pantalla de un control flotante anotado de Shell](flyout-images/flyout-annotated.png "Control flotante anotado")
 
@@ -133,6 +133,59 @@ En el ejemplo siguiente se muestra cómo contraer el encabezado de control flota
     ...
 </Shell>
 ```
+
+## <a name="flyout-footer"></a>Pie de página de control flotante
+
+El pie de página de control flotante es el contenido que aparece opcionalmente en la parte inferior del control flotante y su apariencia se define mediante un elemento `object` que se puede establecer mediante el valor de la propiedad `Shell.FlyoutFooter`:
+
+```xaml
+<Shell.FlyoutFooter>
+    <controls:FlyoutFooter />
+</Shell.FlyoutFooter>
+```
+
+El tipo `FlyoutFooter` se muestra en el ejemplo siguiente:
+
+```xaml
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="Xaminals.Controls.FlyoutFooter">
+    <StackLayout>
+        <Label Text="Xaminals"
+               TextColor="GhostWhite"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}"
+               TextColor="GhostWhite"
+               HorizontalOptions="Center" />
+    </StackLayout>
+</ContentView>
+```
+
+El resultado es el siguiente pie de página de control flotante:
+
+![Captura de pantalla del pie de página de control flotante](flyout-images/flyout-footer.png "Pie de página de control flotante")
+
+Como alternativa, la apariencia del pie de página de control flotante se puede definir estableciendo la propiedad `Shell.FlyoutFooterTemplate` en un objeto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
+
+```xaml
+<Shell.FlyoutFooterTemplate>
+    <DataTemplate>
+        <StackLayout>
+            <Label Text="Xaminals"
+                   TextColor="GhostWhite"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+            <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}"
+                   TextColor="GhostWhite"
+                   HorizontalOptions="Center" />
+        </StackLayout>
+    </DataTemplate>
+</Shell.FlyoutFooterTemplate>
+```
+
+El pie de página de control flotante se fija en la parte inferior del control flotante y puede tener cualquier altura. Además, el pie de página nunca oculta ningún elemento de menú.
 
 ## <a name="flyout-background-image"></a>Imagen de fondo del control flotante
 

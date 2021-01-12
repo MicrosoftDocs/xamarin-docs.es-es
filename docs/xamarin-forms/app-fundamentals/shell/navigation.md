@@ -6,16 +6,16 @@ ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/02/2020
+ms.date: 10/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f29bacf3546b2148a3d97c3c1ccaa44e02872be8
-ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
+ms.openlocfilehash: 5fb215ea92035965b48fff85ef4ccc70edc65fdf
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94590316"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939191"
 ---
 # <a name="no-locxamarinforms-shell-navigation"></a>Navegación en Xamarin.Forms Shell
 
@@ -27,6 +27,7 @@ Xamarin.Forms Shell incluye una experiencia de navegación basada en el URI que 
 
 - `BackButtonBehavior`, de tipo `BackButtonBehavior`, una propiedad adjunta que define el comportamiento del botón Atrás.
 - `CurrentItem`, de tipo `FlyoutItem`, el valor de `FlyoutItem` seleccionado actualmente.
+- `CurrentPage`, de tipo `Page`, la página presentada actualmente.
 - `CurrentState`, de tipo `ShellNavigationState`, el estado de navegación actual de `Shell`.
 - `Current`, de tipo `Shell`, un alias con el tipo convertido para `Application.Current.MainPage`.
 
@@ -282,7 +283,7 @@ La clase `Shell` define un evento `Navigating`, que se desencadena cuando está 
 | `CanCancel`  | `bool` | Valor que indica si es posible cancelar la navegación. |
 | `Cancelled`  | `bool` | Valor que indica si la navegación se ha cancelado. |
 
-Además, la clase `ShellNavigatingEventArgs` proporciona un método `Cancel` que se puede usar para cancelar la navegación.
+Además, la clase `ShellNavigatingEventArgs` proporciona un método `Cancel`, que se puede usar para cancelar la navegación, y un método `GetDeferral`, que devuelve un token de `ShellNavigatingDeferral` que se puede usar para completar la navegación. Para obtener más información sobre el aplazamiento de la navegación, vea [Aplazamiento de navegación](#navigation-deferral).
 
 La clase `Shell` también define un evento `Navigated`, que se desencadena cuando se ha completado la navegación. El objeto `ShellNavigatedEventArgs` que acompaña al evento `Navigating` proporciona las siguientes propiedades:
 
@@ -316,6 +317,35 @@ void OnNavigating(object sender, ShellNavigatingEventArgs e)
     }
 }
 ```
+
+## <a name="navigation-deferral"></a>Aplazamiento de navegación
+
+La navegación de shell se puede interceptar y completar o cancelar según lo que elija el usuario. Esto se puede conseguir invalidando el método `OnNavigating` de la subclase `Shell` y, después, llamando al método `GetDeferral` en el objeto `ShellNavigatingEventArgs`. Este método devuelve un token de `ShellNavigatingDeferral` que tiene un método `Complete`, que se puede usar para completar la solicitud de navegación:
+
+```csharp
+public MyShell : Shell
+{
+    // ...
+    protected override async void OnNavigating(ShellNavigatingEventArgs args)
+    {
+        base.OnNavigating(args);
+
+        ShellNavigatingDeferral token = args.GetDeferral();
+        var result = await DisplayActionSheet("Navigate?", "Cancel", "Yes", "No");
+
+        if (result != "Yes")
+        {
+            args.Cancel();
+        }
+        token.Complete();
+    }    
+}
+```
+
+En este ejemplo, se muestra una hoja de acción que invita al usuario a completar la solicitud de navegación o cancelarla. La navegación se cancela invocando el método `Cancel` en el objeto `ShellNavigatingEventArgs`. La navegación se completa invocando el método `Complete` en el token de `ShellNavigatingDeferral` obtenido mediante el método `GetDeferral` en el objeto `ShellNavigatingEventArgs`.
+
+> [!IMPORTANT]
+> El método `GoToAsync` generará una excepción `InvalidOperationException` si un usuario intenta navegar mientras hay un aplazamiento de navegación pendiente.
 
 ## <a name="pass-data"></a>Pasar datos
 

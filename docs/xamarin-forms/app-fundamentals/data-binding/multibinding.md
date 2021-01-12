@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2020
-ms.openlocfilehash: 79d27cf9d6ba01235962b43ee7f05c904c265c2f
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: ad9171aa6138b12d66ba8289c4e68766ce733e97
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93370850"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939127"
 ---
 # <a name="xamarinforms-multi-bindings"></a>Enlaces múltiples de Xamarin.Forms
 
@@ -271,29 +271,30 @@ Los objetos `MultiBinding` admiten enlaces relativos, lo cual proporciona la cap
 
 ```xaml
 <ContentPage ...
-             xmlns:local="clr-namespace:DataBindingDemos">
+             xmlns:local="clr-namespace:DataBindingDemos"
+             xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit">
     <ContentPage.Resources>
         <local:AllTrueMultiConverter x:Key="AllTrueConverter" />
 
         <ControlTemplate x:Key="CardViewExpanderControlTemplate">
-            <Expander BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
-                      IsExpanded="{Binding IsExpanded, Source={RelativeSource TemplatedParent}}"
-                      BackgroundColor="{Binding CardColor}">
-                <Expander.IsVisible>
+            <xct:Expander BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
+                          IsExpanded="{Binding IsExpanded, Source={RelativeSource TemplatedParent}}"
+                          BackgroundColor="{Binding CardColor}">
+                <xct:Expander.IsVisible>
                     <MultiBinding Converter="{StaticResource AllTrueConverter}">
                         <Binding Path="IsExpanded" />
                         <Binding Path="IsEnabled" />
                     </MultiBinding>
-                </Expander.IsVisible>
-                <Expander.Header>
+                </xct:Expander.IsVisible>
+                <xct:Expander.Header>
                     <Grid>
                         <!-- XAML that defines Expander header goes here -->
                     </Grid>
-                </Expander.Header>
+                </xct:Expander.Header>
                 <Grid>
                     <!-- XAML that defines Expander content goes here -->
                 </Grid>
-            </Expander>
+            </xct:Expander>
         </ControlTemplate>
     </ContentPage.Resources>
 
@@ -309,6 +310,9 @@ Los objetos `MultiBinding` admiten enlaces relativos, lo cual proporciona la cap
     </StackLayout>
 </ContentPage>
 ```
+
+> [!NOTE]
+> El control `Expander` ahora forma parte de Xamarin Community Toolkit.
 
 En este ejemplo, el modo de enlace relativo `TemplatedParent` se utiliza para enlazar desde una plantilla de control a la instancia de objeto de tiempo de ejecución a la que se aplica la plantilla. El elemento `Expander`, que es el elemento raíz de [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate), tiene su `BindingContext` establecido en la instancia de objeto de tiempo de ejecución a la que se aplica la plantilla. Por lo tanto, `Expander` y sus elementos secundarios resuelven sus expresiones de enlace, y los objetos [`Binding`](xref:Xamarin.Forms.Binding), con las propiedades del objeto `CardViewExpander`. El elemento `MultiBinding` usa la instancia de `AllTrueMultiConverter` para establecer la propiedad `Expander.IsVisible` en `true`, siempre que los dos objetos [`Binding`](xref:Xamarin.Forms.Binding) se evalúen como `true`. De lo contrario, la propiedad `Expander.IsVisible` se establece en `false`.
 

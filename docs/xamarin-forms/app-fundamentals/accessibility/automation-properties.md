@@ -10,12 +10,12 @@ ms.date: 12/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 98cf9f67188f67c4575823024106e100f6f22608
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 53f6a44ef28e00613ed0ee4e05a4e86a26bc7a6a
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93374516"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940582"
 ---
 # <a name="automation-properties-in-no-locxamarinforms"></a>Propiedades de automatización de Xamarin.Forms
 
@@ -145,11 +145,11 @@ En las secciones siguientes se describen los pormenores que supone el hecho de e
 
 En Android, para establecer el texto que el lector de pantalla leerá para la flecha Atrás de la barra de acciones [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), defina las propiedades `AutomationProperties.Name` y `AutomationProperties.HelpText` en [`Page`](xref:Xamarin.Forms.Page). Sin embargo, tenga en cuenta que esto no se aplicará a los botones Atrás del sistema operativo.
 
-### <a name="masterdetailpage"></a>MasterDetailPage
+### <a name="flyoutpage"></a>FlyoutPage
 
-En iOS y la Plataforma Universal de Windows (UWP), para establecer el texto que el lector de pantalla leerá para el botón de alternancia en [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), defina las propiedades `AutomationProperties.Name` y `AutomationProperties.HelpText` en `MasterDetailPage`, o bien en la propiedad `IconImageSource` de la página `Master`.
+En iOS y la Plataforma Universal de Windows (UWP), para establecer el texto que el lector de pantalla leerá para el botón de alternancia en [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage), defina las propiedades `AutomationProperties.Name` y `AutomationProperties.HelpText` en `FlyoutPage`, o bien en la propiedad `IconImageSource` de la página `Flyout`.
 
-En Android, para establecer el texto que el lector de pantalla leerá para el botón de alternancia en [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), agregue los recursos de cadena al proyecto de Android:
+En Android, para establecer el texto que el lector de pantalla leerá para el botón de alternancia en [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage), agregue los recursos de cadena al proyecto de Android:
 
 ```xml
 <resources>
@@ -159,11 +159,11 @@ En Android, para establecer el texto que el lector de pantalla leerá para el bo
 </resources>
 ```
 
-A continuación, defina la `AutomationId` propiedad de la propiedad `IconImageSource` de la página `Master` en la cadena que corresponda:
+A continuación, defina la `AutomationId` propiedad de la propiedad `IconImageSource` de la página `Flyout` en la cadena que corresponda:
 
 ```csharp
-var master = new ContentPage { ... };
-master.IconImageSource.AutomationId = "btnMDPAutomationID";
+var flyout = new ContentPage { ... };
+flyout.IconImageSource.AutomationId = "btnMDPAutomationID";
 ```
 
 ### <a name="toolbaritem"></a>ToolbarItem
