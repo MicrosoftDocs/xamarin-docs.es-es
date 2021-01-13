@@ -10,12 +10,12 @@ ms.date: 12/01/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 55a710ace10834cffdecb5247c2df410e8e1396e
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: d9f6f5e2d27f04dadfa2b830703bb36355072c44
+ms.sourcegitcommit: c9f62ed4bab516be18606e87e89e01f57b4ad17e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97939828"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163496"
 ---
 # <a name="no-locxamarinforms-experimental-flags"></a>Xamarin.Forms marcas experimentales
 
@@ -85,7 +85,8 @@ En la tabla siguiente se enumeran las marcas experimentales de las característi
 | `DragAndDrop_Experimental` | 5.0 |
 | `FastRenderers_Experimental` | 4.0 |
 | `IndicatorView_Experimental` | 4,7 |
-| `Markup_Experimental` | 5.0 |
+| `Markup_Experimental` | 5,0 (se ha migrado al kit de herramientas de Xamarin Community) |
+| `MediaElement_Experimental` | 5,0 (se ha migrado al kit de herramientas de Xamarin Community) |
 | `RadioButton_Experimental` | 5.0 |
 | `Shapes_Experimental` | 5.0 |
 | `Shell_Experimental` | 4.0  |

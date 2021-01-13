@@ -10,12 +10,12 @@ ms.date: 09/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ce3dd92c09fb40ea1b864e0c613223ce8bf99e36
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: a2259d9784d9b55be636e92452562a13f0750b14
+ms.sourcegitcommit: c9f62ed4bab516be18606e87e89e01f57b4ad17e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97940374"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163509"
 ---
 # <a name="simple-animations-in-no-locxamarinforms"></a>Animaciones simples en Xamarin.Forms
 
@@ -25,7 +25,7 @@ _La clase ViewExtensions proporciona métodos de extensión que se pueden usar p
 
 La [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) clase proporciona los siguientes métodos de extensión que se pueden usar para crear animaciones simples:
 
-- [ `CancelAnimations` ] (XREF: Xamarin.Forms . ViewExtensions. CancelAnimations ( Xamarin.Forms . VisualElement)) cancela cualquier animación.
+- [ `CancelAnimations` ] (XREF: Xamarin.Forms . ViewExtensions. CancelAnimations ( Xamarin.Forms . VisualElement) cancela cualquier animación.
 - [ `FadeTo` ] (XREF: Xamarin.Forms . ViewExtensions. Desvaneceto ( Xamarin.Forms . VisualElement, System. Double, System. UInt32, Xamarin.Forms . La aceleración)) anima la [`Opacity`](xref:Xamarin.Forms.VisualElement.Opacity) propiedad de un [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
 - [ `RelScaleTo` ] (XREF: Xamarin.Forms . ViewExtensions. RelScaleTo ( Xamarin.Forms . VisualElement, System. Double, System. UInt32, Xamarin.Forms . La aceleración)) aplica un aumento incremental animado o una disminución a la [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) propiedad de [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
 - [ `RotateTo` ] (XREF: Xamarin.Forms . ViewExtensions. Rotato ( Xamarin.Forms . VisualElement, System. Double, System. UInt32, Xamarin.Forms . La aceleración)) anima la [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) propiedad de un [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
@@ -84,7 +84,7 @@ Las capturas de pantallas siguientes muestran la rotación relativa en curso en 
 
 ![Animación de rotación relativa](simple-images/relrotateto.png)
 
-### <a name="scaling"></a>Escalado
+### <a name="scaling"></a>Ampliación
 
 En el ejemplo de código siguiente se muestra cómo utilizar el [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) método para animar la [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) propiedad de un [`Image`](xref:Xamarin.Forms.Image) :
 
