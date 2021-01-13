@@ -6,16 +6,16 @@ ms.assetid: 98884003-E65A-4EB4-842D-66CFE27344A4
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 01/22/2020
+ms.date: 01/13/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3ef1d0322018e5c404204fdaf9f4816891cc39f3
-ms.sourcegitcommit: 1decf2c65dc4c36513f7dd459a5df01e170a036f
+ms.openlocfilehash: b24ab21bf7ae5812916a968da3a59169b975e33a
+ms.sourcegitcommit: 86663f94f8eddb808eb4504cd32ddaf217b6406c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98115137"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98166633"
 ---
 # <a name="androidx-migration-in-no-locxamarinforms"></a>Migración de AndroidX en Xamarin.Forms
 
@@ -45,15 +45,16 @@ Para obtener más información sobre AndroidX, consulte [información general so
 
 ## <a name="automatic-migration-in-no-locxamarinforms"></a>Migración automática en Xamarin.Forms
 
-Para migrar automáticamente a AndroidX, un Xamarin.Forms proyecto debe:
+Para migrar automáticamente a AndroidX, un Xamarin.Forms proyecto de plataforma Android debe:
 
 - Versión 29 de la API de destino, o superior.
 - Use la Xamarin.Forms versión 4,5 o posterior.
+- Tienen dependencias directas o transitivas en las bibliotecas de compatibilidad con Android.
 
 Una vez que haya confirmado estos valores en el proyecto, compile la aplicación de Android en Visual Studio 2019. Durante el proceso de compilación, se inspecciona el lenguaje intermedio (IL) y las dependencias de la biblioteca de soporte y los enlaces se intercambian con las dependencias de AndroidX. Si la aplicación tiene todas las dependencias de AndroidX necesarias para compilar, observará que no hay ninguna diferencia en el proceso de compilación.
 
-> [!NOTE]
-> Debe mantener las referencias a la biblioteca de soporte en el proyecto. Se usan para compilar la aplicación antes de que el proceso de migración Inspeccione el IL resultante y transforme las dependencias.
+> [!IMPORTANT]
+> La migración manual a AndroidX dará lugar al proceso de compilación más rápido para la aplicación y es el enfoque recomendado para la migración de AndroidX. Esto implica reemplazar las dependencias de la biblioteca de compatibilidad con las dependencias de AndroidX y actualizar el código para consumir tipos AndroidX. Para obtener más información, consulte [uso de tipos AndroidX](~/xamarin-forms/troubleshooting/questions/forms5-migration.md#use-androidx-types).
 
 Si se detectan dependencias de AndroidX que no forman parte del proyecto, se genera un error de compilación que indica qué paquetes de AndroidX faltan. A continuación se muestra un ejemplo de error de compilación:
 
@@ -82,3 +83,5 @@ Una vez que se resuelven los paquetes que faltan, al volver a compilar el proyec
 - [¿Cómo migrar mi aplicación a Xamarin.Forms 5,0?](~/xamarin-forms/troubleshooting/questions/forms5-migration.md)
 - [Introducción a la biblioteca de compatibilidad de Android](https://developer.android.com/topic/libraries/support-library/index) en Developer.Android.com
 - [Información general de AndroidX](https://developer.android.com/jetpack/androidx) en Developer.Android.com
+- [Asignaciones de clases AndroidX](https://github.com/xamarin/AndroidX/blob/master/mappings/androidx-class-mapping.csv)
+- [Ensamblados de AndroidX](https://github.com/xamarin/AndroidX/blob/master/mappings/androidx-assemblies.csv)

@@ -11,12 +11,12 @@ ms.date: 10/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8f93d20dac789abed57f8f41bf41778ad50a5fb5
-ms.sourcegitcommit: 995ee23d93e08dceb8754cc6c682cd2f4594345b
+ms.openlocfilehash: 2a8aa964dd2f18998e15d68df72f3cee1bd0ac5a
+ms.sourcegitcommit: 86663f94f8eddb808eb4504cd32ddaf217b6406c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97972323"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98166646"
 ---
 # <a name="how-do-i-migrate-my-app-to-no-locxamarinforms-50"></a>¿Cómo migrar mi aplicación a Xamarin.Forms 5,0?
 
@@ -96,7 +96,7 @@ Esto puede realizarse mediante la actualización de las `using` instrucciones pa
 | `Android.Support.V7.App` | `AndroidX.AppCompat.App` |
 | `Android.Support.V7.Widget` | `AndroidX.AppCompat.Widget` |
 
-Para obtener una lista completa de las asignaciones de clases de las bibliotecas de compatibilidad con AndroidX, vea [support Library Class mappings](https://developer.android.com/jetpack/androidx/migrate/class-mappings) on Developer.Android.com.
+Para obtener una lista completa de las asignaciones de clases de las bibliotecas de compatibilidad con AndroidX, consulte [asignaciones de clases de AndroidX](https://github.com/xamarin/AndroidX/blob/master/mappings/androidx-class-mapping.csv) en github.com. Para obtener una lista completa de las asignaciones de ensamblados de las bibliotecas de compatibilidad a AndroidX, consulte [ensamblados de AndroidX](https://github.com/xamarin/AndroidX/blob/master/mappings/androidx-assemblies.csv) en github.com
 
 #### <a name="remove-axml-files"></a>Quitar archivos AXML
 
@@ -124,3 +124,5 @@ Se generará una advertencia de compilación si el proyecto de UWP usa una versi
 
 - [Características movidas desde Xamarin.Forms](https://github.com/xamarin/XamarinCommunityToolkit/wiki/Features-moved-from-Xamarin.Forms)
 - [Migración de AndroidX en Xamarin.Forms](~/xamarin-forms/platform/android/androidx-migration.md)
+- [Asignaciones de clases AndroidX](https://github.com/xamarin/AndroidX/blob/master/mappings/androidx-class-mapping.csv)
+- [Ensamblados de AndroidX](https://github.com/xamarin/AndroidX/blob/master/mappings/androidx-assemblies.csv)
