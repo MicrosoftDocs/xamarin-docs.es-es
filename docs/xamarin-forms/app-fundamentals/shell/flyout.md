@@ -6,16 +6,16 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/30/2020
+ms.date: 01/12/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4faa0923e074460ef254db319dfcfd01cc832dce
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: bad3a19de5a8feae2ca2fd02c1a454ac379e9f42
+ms.sourcegitcommit: 1decf2c65dc4c36513f7dd459a5df01e170a036f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97940141"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98115163"
 ---
 # <a name="no-locxamarinforms-shell-flyout"></a>Control flotante de Xamarin.Forms Shell
 
@@ -63,6 +63,20 @@ Además, el control flotante se puede abrir y cerrar mediante programación si s
 ```csharp
 Shell.Current.FlyoutIsPresented = false;
 ```
+
+## <a name="flyout-width-and-height"></a>Anchura y altura de un control flotante
+
+La anchura y altura de un control flotante se pueden personalizar estableciendo las propiedades adjuntas `Shell.FlyoutWidth` y `Shell.FlyoutHeight` en valores `double`:
+
+```xaml
+<Shell ...
+       FlyoutWidth="400"
+       FlyoutHeight="200">
+    ...
+</Shell>
+```
+
+De esta forma, se permiten escenarios como la expansión del control flotante en toda la pantalla o la reducción de su altura para que no tape la barra de pestañas.
 
 ## <a name="flyout-header"></a>Encabezado de control flotante
 
@@ -540,7 +554,23 @@ Además, los elementos [`Grid`](xref:Xamarin.Forms.Grid), [`Image`](xref:Xamarin
 > [!NOTE]
 > Esta misma plantilla también se puede usar con los objetos `MenuItem`.
 
-## <a name="flyoutitem-tab-order"></a>Orden de tabulación de FlyoutItem
+## <a name="set-flyoutitem-visibility"></a>Establecimiento de la visibilidad de FlyoutItem
+
+De forma predeterminada, los elementos de control flotante se ven en dicho control. Sin embargo, se puede ocultar un elemento del control flotante estableciendo la propiedad adjunta `Shell.FlyoutItemIsVisible`, que tiene un valor predeterminado de `true`, en `false`:
+
+```xaml
+<Shell ...>
+    <FlyoutItem ...
+                Shell.FlyoutItemIsVisible="False">
+        ...
+    </FlyoutItem>
+</Shell>
+```
+
+> [!NOTE]
+> La propiedad adjunta `Shell.FlyoutItemIsVisible` se puede establecer en los objetos `FlyoutItem`, `MenuItem`, `Tab` y `ShellContent`.
+
+## <a name="set-flyoutitem-tab-order"></a>Establecimiento del orden de pestañas de FlyoutItem
 
 De forma predeterminada, el orden de tabulación de los objetos `FlyoutItem` es el mismo orden en que se enumeran en XAML o se agregan mediante programación a una colección secundaria. Este es el orden en que se navegará por los objetos `FlyoutItem` con un teclado y, con frecuencia, este orden predeterminado es el mejor orden posible.
 
@@ -588,6 +618,54 @@ En este ejemplo, la propiedad `CurrentItem` está establecida en la clase `Shell
 ```csharp
 Shell.Current.CurrentItem = aboutItem;
 ```
+
+## <a name="replace-flyout-content"></a>Reemplazo del contenido de un control flotante
+
+Los elementos de un control flotante, que representan su contenido, pueden reemplazarse opcionalmente por contenido propio estableciendo la propiedad enlazable `Shell.FlyoutContent` en un valor `object`:
+
+```xaml
+<Shell.FlyoutContent>
+    <CollectionView BindingContext="{x:Reference shell}"
+                    IsGrouped="True"
+                    ItemsSource="{Binding FlyoutItems}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Label Text="{Binding Title}"
+                       TextColor="White"
+                       FontSize="Large" />
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</Shell.FlyoutContent>
+```
+
+En este ejemplo, el contenido del control flotante se reemplaza por un valor [`CollectionView`](xref:Xamarin.Forms.CollectionView) que muestra el título de cada elemento en la colección `FlyoutItems`.
+
+> [!NOTE]
+> La propiedad `FlyoutItems`, en la clase `Shell`, es una colección de solo lectura de elementos de control flotante.
+
+Como alternativa, el contenido del control flotante se puede definir estableciendo la propiedad `Shell.FlyoutContentTemplate` en un valor [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
+
+```xaml
+<Shell.FlyoutContentTemplate>
+    <DataTemplate>
+        <CollectionView BindingContext="{x:Reference shell}"
+                        IsGrouped="True"
+                        ItemsSource="{Binding FlyoutItems}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Title}"
+                           TextColor="White"
+                           FontSize="Large" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </DataTemplate>
+</Shell.FlyoutContentTemplate>
+```
+
+> [!IMPORTANT]
+> Opcionalmente, se puede mostrar un encabezado de control flotante encima del contenido del control. También se puede mostrar un pie de página de control flotante debajo del contenido del control. Si el contenido del control flotante es desplazable, el shell intentará respetar el comportamiento de desplazamiento del encabezado de control flotante.
 
 ## <a name="menu-items"></a>Elementos de menú
 

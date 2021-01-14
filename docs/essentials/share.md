@@ -4,17 +4,17 @@ description: La clase Share de Xamarin.Essentials permite que una aplicación co
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 01/06/2020
+ms.date: 01/04/2021
 ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0870dd94c15f1bd94d5c6864b3d4caeb96349f32
-ms.sourcegitcommit: 83793378b28e8ef8624406309b4ecd41aa1a3a14
+ms.openlocfilehash: 67c3aad219cdc71fd9d88783ca42803dfd1fe4f4
+ms.sourcegitcommit: 995ee23d93e08dceb8754cc6c682cd2f4594345b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503272"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97972284"
 ---
 # <a name="no-locxamarinessentials-share"></a>Xamarin.Essentials: Compartir
 
@@ -60,7 +60,7 @@ public class ShareTest
 
 Interfaz de usuario para compartir con una aplicación externa que aparece cuando se realiza la solicitud:
 
-![Compartir](images/share.png)
+![Uso compartido en UI de aplicaciones externas](images/share.png)
 
 ## <a name="file"></a>Archivo
 
@@ -81,8 +81,6 @@ await Share.RequestAsync(new ShareFileRequest
 ```
 
 ## <a name="multiple-files"></a>Varios archivos
-
-![API de versión preliminar](~/media/shared/preview.png)
 
 El uso compartido de varios archivos difiere con respecto al de un único archivo solo en la posibilidad de enviar varios archivos a la vez:
 
