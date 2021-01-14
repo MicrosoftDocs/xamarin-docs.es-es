@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/09/2018
-ms.openlocfilehash: 418a0196849099da03983085aca9ceed2077207b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 480ec0d4a815d62422e31a4110af52ca1628d1f7
+ms.sourcegitcommit: d4d293174a8324ce82b8f961ae6eadce294cafd7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030915"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98194905"
 ---
 # <a name="where-can-i-find-the-dsym-file-to-symbolicate-ios-crash-logs"></a>¿Dónde puedo encontrar el archivo .dSYM para resolver símbolos de registros de bloqueo de iOS?
 
@@ -20,7 +20,7 @@ Al compilar una aplicación de iOS con Visual Studio para Mac o Visual Studio 20
 
 - Si ha habilitado las compilaciones específicas del dispositivo, el. dSYM se puede encontrar en el siguiente directorio:
 
-    **&lt;directorio de proyecto&gt;/bin/&lt;Platform&gt;/&lt;Configuration&gt;/Device-Builds/&lt;Device&gt;-&lt;os-version&gt;/**
+    **&lt;Project Directory &gt; /bin/ &lt; Platform &gt; / &lt; Configuration &gt; /Device-Builds/ &lt; Device &gt; - &lt; os-version&gt;/**
 
     Por ejemplo:
   
@@ -28,7 +28,7 @@ Al compilar una aplicación de iOS con Visual Studio para Mac o Visual Studio 20
 
 - Si no ha habilitado las compilaciones específicas del dispositivo, el. dSYM se puede encontrar en el siguiente directorio:
 
-    **&lt;directorio de proyecto&gt;/bin/&lt;Platform&gt;/&lt;Configuration&gt;/**
+    **&lt;configuración de &gt; la &lt; plataforma de/bin/ &gt; / de directorio de proyecto &lt;&gt;/**
 
     Por ejemplo:
 
@@ -39,5 +39,5 @@ Al compilar una aplicación de iOS con Visual Studio para Mac o Visual Studio 20
 
 ## <a name="see-also"></a>Vea también
 
-- [Symbolicating de archivos de bloqueo de iOS (Xamarin. iOS)](https://www.jmillerdev.net/symbolicating-ios-crash-files-xamarin-ios/)
+- [Symbolicating de archivos de bloqueo de iOS (Xamarin. iOS)](https://www.jmillerdev.com/symbolicating-ios-crash-files-xamarin-ios/)
 - [Desmitificación de los registros de bloqueo de la aplicación iOS](https://www.raywenderlich.com/23704/demystifying-ios-application-crash-logs)
