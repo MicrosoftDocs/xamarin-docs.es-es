@@ -6,16 +6,16 @@ ms.assetid: E220F054-32EE-424C-A7E5-6156BE271519
 ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
-ms.date: 03/14/2020
+ms.date: 01/14/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ca79a8a4059a303b6f4bfa152d645311a6056ffd
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 62c7be9bd737b4d1860dca9f75cdde6acfadaa96
+ms.sourcegitcommit: 99e340360e8615fbc2971f48d6856f8701594825
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563892"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204104"
 ---
 # <a name="xaml-hot-reload-for-no-locxamarinforms"></a>Recarga activa de XAML para Xamarin.Forms
 
@@ -40,9 +40,10 @@ Si se inicia desde una plantilla, la recarga activa de XAML está activada de fo
 
 Si está trabajando desde una solución existente Xamarin.Forms , no se requiere ninguna instalación adicional para usar la recarga activa de XAML, pero es posible que tenga que comprobar la configuración para garantizar la mejor experiencia. En primer lugar, habilítelo en la configuración del IDE:
 
-* En Windows, active la casilla **Habilitar recarga activa de Xamarin** en **herramientas**  >  **Opciones**,  >  **Xamarin**  >  **recarga en caliente**de Xamarin.
-* En Mac, active la casilla **Habilitar la recarga activa de Xamarin** en herramientas de preferencias de **Visual Studio**  >  **Preferences**  >  para la**Tools for Xamarin**  >  **recarga activa**de Xamarin XAML.
-  * En versiones anteriores de Visual Studio para Mac, el menú se encuentra en **Visual Studio**  >  **Preferences**  >  **Projects**  >  **Xamarin Hot Reload**.
+* En Windows, active la casilla **Habilitar recarga activa de XAML** (y las plataformas necesarias) en **herramientas**  >  **Opciones**  >  **depurar**  >  **recargas activas**.
+  * En versiones anteriores de Visual Studio 2019, la casilla se encuentra en **herramientas**  >  **Opciones** de  >    >  **recarga en caliente** de Xamarin.
+* En Mac, active la casilla **Habilitar la recarga activa de Xamarin** en herramientas de preferencias de **Visual Studio**  >    >  para la  >  **recarga activa** de Xamarin XAML.
+  * En versiones anteriores de Visual Studio para Mac, la casilla se encuentra en el menú de preferencias de **Visual Studio** proyectos de la  >    >    >  **recarga en caliente de Xamarin**.
 
 Después, en la configuración de compilación de iOS y Android, compruebe que el enlazador está establecido en "no vincular" o "vincular ninguno". Para usar la recarga activa de XAML con un dispositivo iOS físico, también tiene que activar **la casilla habilitar el intérprete mono** (visual Studio 16,4 y versiones posteriores) o Add **--Interpreter** para **Mtouch args adicionales** (Visual Studio 16,3 y versiones anteriores).
 
@@ -60,7 +61,7 @@ La recarga activa de XAML admite la depuración simultánea en Visual Studio y V
 * **Windows** [Cómo: establecer proyectos de inicio múltiples](/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2019)
 * **Mac** [establecer varios proyectos de inicio](/visualstudio/mac/set-startup-projects?view=vsmac-2019)
 
-## <a name="known-limitations"></a>Restricciones conocidas
+## <a name="known-limitations"></a>Limitaciones conocidas
 
 * Xamarin.FormsTodavía *no* se admiten otros destinos, como UWP y MacOS. [Aquí](https://developercommunity.visualstudio.com/idea/661682/xaml-hot-reload-for-xamarinforms-on-uwp.html)puede realizar un seguimiento del progreso del soporte técnico de UWP.
 * No se pueden agregar, quitar ni cambiar el nombre de archivos o paquetes NuGet durante una sesión de recarga activa de XAML. Si agrega o quita un archivo o un paquete de NuGet, vuelva a compilar y volver a implementar la aplicación para seguir usando la recarga activa de XAML.
