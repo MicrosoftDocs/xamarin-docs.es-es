@@ -10,16 +10,16 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ad3b5d76816710d45cd1d8e738771e39555401fa
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: ea0be2136b354ef7a613904799481079bcae52ad
+ms.sourcegitcommit: 1decf2c65dc4c36513f7dd459a5df01e170a036f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97940644"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98115241"
 ---
 # <a name="no-locxamarinforms-flyoutpage"></a>FlyoutPage de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-flyoutpage)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/navigation-flyoutpage)
 
 Normalmente, una página de control flotante presenta una lista de elementos, como se muestra en las siguientes capturas de pantalla:
 
@@ -294,5 +294,5 @@ public class MainPageCS : FlyoutPage
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Páginas de Xamarin.Forms](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
-- [FlyoutPage (ejemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-flyoutpage)
+- [FlyoutPage (ejemplo)](/samples/xamarin/xamarin-forms-samples/navigation-flyoutpage)
 - [API FlyoutPage](xref:Xamarin.Forms.FlyoutPage)

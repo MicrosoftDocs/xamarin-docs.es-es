@@ -5,16 +5,16 @@ ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
 author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
-ms.date: 09/22/2020
+ms.date: 01/04/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 25677d79b29902ed0cdd0b2ed08da021d7ef9e6f
-ms.sourcegitcommit: d2daaa6ca5fe630f80d5a8151985d9f96a2fc93b
+ms.openlocfilehash: 3d0ec65b363f727834b12e6a12e832fbcf446ea9
+ms.sourcegitcommit: 995ee23d93e08dceb8754cc6c682cd2f4594345b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96513023"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97972362"
 ---
 # <a name="no-locxamarinessentials-permissions"></a>Xamarin.Essentials: Permisos
 
@@ -70,8 +70,6 @@ Al usar los elementos `CheckStatusAsync` o `RequestAsync`, se devuelve un estado
 
 
 ## <a name="explain-why-permission-is-needed"></a>Explicación de por qué se necesita el permiso
-
-![API de versión preliminar](~/media/shared/preview.png)
 
 Es un procedimiento recomendado explicar el motivo por el que la aplicación necesita un permiso específico. En iOS debe especificar una cadena que se muestre al usuario. Android no tiene esta capacidad y, además, el estado de permiso tiene como valor predeterminado Deshabilitado. Esto limita la capacidad de saber si el usuario ha denegado el permiso o si es la primera vez que se le solicita. El método `ShouldShowRationale` se puede usar para determinar si se debe mostrar una interfaz de usuario educativa. Si el método devuelve `true`, esto se debe a que el usuario ha denegado o deshabilitado el permiso en el pasado. Otras plataformas siempre devolverán `false` cuando se llame a este método.
 

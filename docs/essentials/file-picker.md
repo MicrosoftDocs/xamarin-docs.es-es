@@ -4,22 +4,20 @@ description: La clase FilePicker de Xamarin.Essentials permite a un usuario sele
 ms.assetid: 00bdbd57-56b1-47ca-8abe-cebe1b01f61a
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 09/22/2020
+ms.date: 01/04/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f98f0cdea812a91bbe6caf1e248e468d9a960ac6
-ms.sourcegitcommit: 8fa0cb9ccbc107d697aa5b9113a4e5d1e75d6eb9
+ms.openlocfilehash: 797f7e80ac389776f921021ef3b1a9ab16b3f53b
+ms.sourcegitcommit: 995ee23d93e08dceb8754cc6c682cd2f4594345b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2020
-ms.locfileid: "96303043"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97972336"
 ---
 # <a name="no-locxamarinessentials-file-picker"></a>Xamarin.Essentials: Selector de archivos
 
 La clase **FilePicker** permite a un usuario seleccionar uno o varios archivos del dispositivo.
-
-![API de versión preliminar](~/media/shared/preview.png)
 
 ## <a name="get-started"></a>Introducción
 

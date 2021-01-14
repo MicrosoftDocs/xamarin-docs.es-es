@@ -10,12 +10,12 @@ ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f37006e15ad4cc2c6c8d03f3c88c1c8f57fe4fd5
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: d9d0d75a393cc30ffaf698625cd49cf0ce5b5741
+ms.sourcegitcommit: 1decf2c65dc4c36513f7dd459a5df01e170a036f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97940075"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98115267"
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>Resumen del capítulo 25. Variedades de páginas
 
@@ -33,7 +33,7 @@ Estos tipos de página proporcionan opciones de navegación más sofisticadas qu
 
 ## <a name="master-and-detail"></a>Principal y detalles
 
-[`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) define dos propiedades de tipo `Page`: [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) y [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail). Por lo general, cada una de estas propiedades se establece en `ContentPage`. `MasterDetailPage` muestra estas dos páginas y cambia entre ellas.
+[`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) define dos propiedades de tipo `Page`: [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) y `Detail`. Por lo general, cada una de estas propiedades se establece en `ContentPage`. `MasterDetailPage` muestra estas dos páginas y cambia entre ellas.
 
 Hay dos maneras fundamentales de cambiar entre estas dos páginas:
 
@@ -62,7 +62,7 @@ El ejemplo [**SchoolAndDetail**](https://github.com/xamarin/xamarin-forms-book-s
 
 Las propiedades `Master` y `Detail` se definen con árboles visuales en el archivo [SchoolAndDetailPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml), que se deriva de `MasterDetailPage`. Esta disposición permite establecer enlaces de datos entre las páginas maestra y de detalles.
 
-Ese archivo XAML también establece la propiedad [`IsPresented`](xref:Xamarin.Forms.MasterDetailPage.IsPresented) de `MasterDetailPage` en `True`. Esto hace que la página maestra se muestre en el inicio; de forma predeterminada, se muestra la página de detalles. El archivo [SchoolAndDetailPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml.cs) establece `IsPresented` en `false` cuando se selecciona un elemento de `ListView` en la página maestra. A continuación, se muestra la página de detalles:
+Ese archivo XAML también establece la propiedad `IsPresented` de `MasterDetailPage` en `True`. Esto hace que la página maestra se muestre en el inicio; de forma predeterminada, se muestra la página de detalles. El archivo [SchoolAndDetailPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml.cs) establece `IsPresented` en `false` cuando se selecciona un elemento de `ListView` en la página maestra. A continuación, se muestra la página de detalles:
 
 [![Captura de pantalla triple de la página de la escuela y de detalles](images/ch25fg09-small.png "Página de detalles de MasterDetailPage")](images/ch25fg09-large.png#lightbox "Página de detalles de MasterDetailPage")
 
@@ -70,8 +70,8 @@ Ese archivo XAML también establece la propiedad [`IsPresented`](xref:Xamarin.Fo
 
 Aunque Xamarin.Forms proporciona una interfaz de usuario para cambiar entre las vistas maestra y de detalles, puede proporcionar la suya propia. Para ello:
 
-- Establezca la propiedad [`IsGestureEnabled`](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabled) en `false` para deshabilitar el deslizamiento rápido.
-- Invalide el método [`ShouldShowToolbarButton`](xref:Xamarin.Forms.MasterDetailPage.ShouldShowToolbarButton) y devuelva `false` para ocultar los botones de la barra de herramientas en Windows 8.1 y Windows Phone 8.1.
+- Establezca la propiedad `IsGestureEnabled` en `false` para deshabilitar el deslizamiento rápido.
+- Invalide el método `ShouldShowToolbarButton` y devuelva `false` para ocultar los botones de la barra de herramientas en Windows 8.1 y Windows Phone 8.1.
 
 A continuación, debe proporcionar un medio para cambiar entre las páginas maestra y de detalles, como se muestra en el ejemplo [**ColorsDetail**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/ColorsDetails).
 

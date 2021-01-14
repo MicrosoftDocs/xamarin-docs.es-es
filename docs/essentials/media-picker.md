@@ -4,28 +4,26 @@ description: La clase MediaPicker de Xamarin.Essentials permite al usuario escog
 ms.assetid: 23460875-6cf9-4440-a97b-46c55b0bca69
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 09/22/2020
+ms.date: 01/04/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 32d05208250a4e9927aac50caa5a42c1c6c59bcb
-ms.sourcegitcommit: 4f0223cf13e14d35c52fa72a026b1c7696bf8929
+ms.openlocfilehash: 4d080ab13bb04b8502ad547234d5b9592af406e1
+ms.sourcegitcommit: 995ee23d93e08dceb8754cc6c682cd2f4594345b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93278369"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97972258"
 ---
 # <a name="no-locxamarinessentials-media-picker"></a>Xamarin.Essentials: Selector de archivos multimedia
 
 La clase **MediaPicker** permite al usuario escoger o tomar una foto o vídeo en el dispositivo.
 
-![API de versión preliminar](~/media/shared/preview.png)
-
 ## <a name="get-started"></a>Introducción
 
 [!include[](~/essentials/includes/get-started.md)]
 
-Para acceder a la función de **MediaPicker** , se requiere la siguiente configuración específica para la plataforma.
+Para acceder a la función de **MediaPicker**, se requiere la siguiente configuración específica para la plataforma.
 
 # <a name="android"></a>[Android](#tab/android)
 
@@ -56,7 +54,7 @@ Abra el archivo **AndroidManifest.xml** de la carpeta **Propiedades** y agregue 
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-O haga clic con el botón derecho en el proyecto de Android y abra las propiedades del proyecto. En **Manifiesto de Android** , busque el área **Permisos requeridos:** y active estos permisos. Esto actualizará automáticamente el archivo **AndroidManifest.xml**.
+O haga clic con el botón derecho en el proyecto de Android y abra las propiedades del proyecto. En **Manifiesto de Android**, busque el área **Permisos requeridos:** y active estos permisos. Esto actualizará automáticamente el archivo **AndroidManifest.xml**.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
@@ -77,7 +75,7 @@ Asegúrese de actualizar el elemento `<string>` de cada una de ellas a una descr
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-En `Package.appxmanifest` en **Capacidades** , asegúrese de que las capacidades `Microphone` y `Webcam` están activadas.
+En `Package.appxmanifest` en **Capacidades**, asegúrese de que las capacidades `Microphone` y `Webcam` están activadas.
 
 -----
 
