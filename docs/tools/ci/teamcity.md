@@ -1,19 +1,19 @@
 ---
-title: Usar el equipo City con Xamarin
+title: Uso de TeamCity con Xamarin
 description: En esta guía se explican los pasos implicados en el uso de TeamCity para compilar aplicaciones móviles y después enviarlas a App Center prueba.
 ms.prod: xamarin
 ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
 author: davidortinau
 ms.author: daortin
 ms.date: 04/01/2020
-ms.openlocfilehash: a7118cc3ce9c0a5c4254bb5921800fe38acd85a0
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 553f40a407fa8003a6545214a545f00b01fb0ed6
+ms.sourcegitcommit: b75c369adb8e02a429b6c0fed8ba4a855099bf01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91458230"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98555040"
 ---
-# <a name="using-team-city-with-xamarin"></a>Usar el equipo City con Xamarin
+# <a name="using-teamcity-with-xamarin"></a>Uso de TeamCity con Xamarin
 
 _En esta guía se explican los pasos implicados en el uso de TeamCity para compilar aplicaciones móviles y después enviarlas a App Center prueba._
 
@@ -59,7 +59,7 @@ Un paso fundamental en la configuración de un servidor de compilación es insta
 1. **Visual Studio para Mac** : Esto incluye Xamarin. iOS y Xamarin. Android.
 2. **Iniciar sesión en el almacén de componentes de Xamarin** : este paso es opcional y solo es necesario si la aplicación usa componentes del almacén de componentes de Xamarin. Iniciar sesión de forma proactiva en el almacén de componentes en este momento impedirá que se produzcan problemas cuando una compilación de TeamCity intente compilar la aplicación.
 3. **Xcode** : Xcode es necesario para compilar y firmar aplicaciones de iOS.
-4. **Herramientas de línea de comandos de Xcode** : esto se describe en el paso 1 de la sección de instalación de la guía de [actualización de Ruby with rbenv](https://github.com/calabash/calabash-ios/wiki) .
+4. **Herramientas de Command-Line de Xcode** : esto se describe en el paso 1 de la sección de instalación de la guía de [actualización de Ruby with rbenv](https://github.com/calabash/calabash-ios/wiki) .
 5. **Identidad de firma & perfiles de aprovisionamiento** : importe los certificados y el perfil de aprovisionamiento a través de Xcode. Consulte la guía de Apple sobre la [exportación de identidades de firma y perfiles de aprovisionamiento](https://developer.apple.com/library/ios/recipes/xcode_help-accounts_preferences/articles/export_signing_assets.html) para obtener más detalles.
 6. **Keystores de Android** : Copie el keystores de Android necesario en un directorio al que el usuario TeamCity tenga acceso, es decir, `~/Documents/keystores/MyAndroidApp1` .
 7. **Calabash** : este paso es opcional si la aplicación tiene pruebas escritas con calabash. Consulte la guía de [instalación de calabash en OS X Mavericks](https://github.com/calabash/calabash-ios/wiki) y la guía de [actualización de Ruby with rbenv](https://github.com/calabash/calabash-ios/wiki) para obtener más información.
@@ -81,7 +81,7 @@ Aunque es posible que TeamCity controle todos los aspectos de la compilación y 
 
 El script de compilación puede ser tan simple como un archivo de PowerShell (en Windows) o un script de Bash (en OS X). Al crear el script de compilación, hay varias opciones para los lenguajes de scripting:
 
-- [**Inclinación**](https://github.com/jimweirich/rake) : se trata de un lenguaje específico de dominio (DSL) para compilar proyectos, basado en Ruby. El uso de inclinación tiene la ventaja de la popularidad y el completo ecosistema de las bibliotecas.
+- [**Inclinación**](https://github.com/jimweirich/rake) : se trata de un lenguaje Domain-Specific (DSL) para compilar proyectos, basado en Ruby. El uso de inclinación tiene la ventaja de la popularidad y el completo ecosistema de las bibliotecas.
 
 - [**psake**](https://github.com/psake/psake) : se trata de una biblioteca de Windows PowerShell para compilar software
 
