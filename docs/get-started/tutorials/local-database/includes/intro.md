@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8f379e8639846d9a6424c4aaadf83ff89d7a8684
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 62706082496732f60136e4283d5ff7a087488dd3
+ms.sourcegitcommit: b75c369adb8e02a429b6c0fed8ba4a855099bf01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71107352"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98557129"
 ---
 Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
 
@@ -12,7 +12,7 @@ Antes de intentar este tutorial, debe haber completado correctamente lo siguient
 - Tutorial sobre el [diseño de pila](~/get-started/tutorials/stacklayout/index.yml) (StackLayout).
 - Tutorial sobre los [botones](~/get-started/tutorials/button/index.yml) (Button).
 - Tutorial sobre las [entradas](~/get-started/tutorials/entry/index.yml) (Entry).
-- Tutorial sobre las [vistas de lista](~/get-started/tutorials/listview/index.yml) (ListView).
+- Tutorial sobre [CollectionView](~/get-started/tutorials/collectionview/index.yml).
 
 En este tutorial, aprenderá a:
 
