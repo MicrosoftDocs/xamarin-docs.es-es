@@ -13,12 +13,12 @@ metadata:
   no-loc:
   - Xamarin.Forms
   - Xamarin.Essentials
-  ms.openlocfilehash: f75d0311559e1dd1a5ac33fe8ba9f2abcdb2c4be
-  ms.sourcegitcommit: 342cfbd2502ad92cadada4fa9aec669b99d7830a
+  ms.openlocfilehash: 3e892c7087584ccf18264683919aa73bd2eb1995
+  ms.sourcegitcommit: b75c369adb8e02a429b6c0fed8ba4a855099bf01
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 12/04/2020
-  ms.locfileid: "96604331"
+  ms.lasthandoff: 01/18/2021
+  ms.locfileid: "98555001"
 landingContent:
 - title: Diseños
   linkLists:
@@ -42,8 +42,8 @@ landingContent:
       url: editor/index.yml
     - text: Imagen
       url: image/index.yml
-    - text: ListView
-      url: listview/index.yml
+    - text: CollectionView
+      url: collectionview/index.yml
     - text: Elementos emergentes
       url: pop-ups/index.yml
 - title: Conceptos básicos sobre aplicaciones

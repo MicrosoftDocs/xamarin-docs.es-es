@@ -60,7 +60,7 @@
         - name: Diseño de cuadrícula
           href: tutorials/grid/index.yml
         - name: Listas
-          href: tutorials/listview/index.yml
+          href: tutorials/collectionview/index.yml
         - name: Elementos emergentes
           href: tutorials/pop-ups/index.yml
         - name: Ciclo de vida de la aplicación

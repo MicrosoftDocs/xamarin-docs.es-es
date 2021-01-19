@@ -59,7 +59,7 @@ items:
           - name: Diseño de cuadrícula
             href: ~/get-started/tutorials/grid/index.yml
           - name: Listas
-            href: ~/get-started/tutorials/listview/index.yml
+            href: ~/get-started/tutorials/collectionview/index.yml
           - name: Elementos emergentes
             href: ~/get-started/tutorials/pop-ups/index.yml
           - name: Ciclo de vida de la aplicación
