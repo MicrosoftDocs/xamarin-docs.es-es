@@ -10,12 +10,12 @@ ms.date: 04/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5c49ee7022166983f55bca4a39dd726412b070c8
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 955cb8371e6363f617738dcf2fe4a6eb27dcb032
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93366209"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98608863"
 ---
 # <a name="device-orientation"></a>Orientación del dispositivo
 
@@ -43,7 +43,7 @@ En Visual Studio para Mac, abra el proyecto de iOS y Abra **info. plist**. En la
 
 ![Información de implementación de iPhone en Visual Studio para Mac](device-orientation-images/orientation-vsmac.png)
 
-Si prefiere editar los valores mediante una interfaz de editor de valores clave, seleccione la pestaña **origen** > en la parte inferior de la pantalla:
+Si prefiere editar los valores mediante una interfaz de editor de valores clave, seleccione la pestaña **origen**> en la parte inferior de la pantalla:
 
 ![Orientaciones de dispositivos compatibles en Visual Studio para Mac](device-orientation-images/orientation-source-vsmac.png)
 
@@ -147,11 +147,11 @@ Las reglas anteriores también se aplican al implementar interfaces para varios 
 
 Considere la siguiente aplicación, que se muestra en vertical:
 
-![Aplicación fotográfica en vertical](device-orientation-images/photo-stack-portrait.png)
+![La captura de pantalla muestra la aplicación fotográfica StackLayout en vertical.](device-orientation-images/photo-stack-portrait.png)
 
 y horizontal:
 
-![Aplicación fotográfica en horizontal](device-orientation-images/photo-stack-landscape.png)
+![La captura de pantalla muestra la aplicación fotográfica StackLayout en horizontal.](device-orientation-images/photo-stack-landscape.png)
 
 Esto se logra con el código XAML siguiente:
 
@@ -221,11 +221,11 @@ Tenga en cuenta lo siguiente:
 
 Considere la siguiente aplicación, que se muestra en vertical:
 
-![Aplicación fotográfica en vertical](device-orientation-images/photo-abs-portrait.png)
+![La captura de pantalla muestra la aplicación fotográfica AbsoluteLayout en vertical.](device-orientation-images/photo-abs-portrait.png)
 
 y horizontal:
 
-![Aplicación fotográfica en horizontal](device-orientation-images/photo-abs-landscape.png)
+![La captura de pantalla muestra la aplicación fotográfica AbsoluteLayout en horizontal.](device-orientation-images/photo-abs-landscape.png)
 
 Esto se logra con el código XAML siguiente:
 
@@ -273,11 +273,11 @@ Tenga en cuenta lo siguiente:
 
 Considere la siguiente aplicación, que se muestra en vertical:
 
-![Aplicación fotográfica en vertical](device-orientation-images/photo-rel-portrait.png)
+![La captura de pantalla muestra la aplicación fotográfica RelativeLayout en vertical.](device-orientation-images/photo-rel-portrait.png)
 
 y horizontal:
 
-![Aplicación fotográfica en horizontal](device-orientation-images/photo-rel-landscape.png)
+![La captura de pantalla muestra la aplicación fotográfica RelativeLayout en horizontal.](device-orientation-images/photo-rel-landscape.png)
 
 Esto se logra con el código XAML siguiente:
 
@@ -364,11 +364,11 @@ Tenga en cuenta lo siguiente:
 
 Considere la siguiente aplicación, que se muestra en vertical:
 
-![Aplicación fotográfica en vertical](device-orientation-images/photo-grid-portrait.png)
+![La captura de pantalla muestra la cuadrícula de aplicación fotográfica en vertical.](device-orientation-images/photo-grid-portrait.png)
 
 y horizontal:
 
-![Aplicación fotográfica en horizontal](device-orientation-images/photo-grid-landscape.png)
+![La captura de pantalla muestra la cuadrícula de aplicación fotográfica en horizontal.](device-orientation-images/photo-grid-landscape.png)
 
 Esto se logra con el código XAML siguiente:
 

@@ -10,12 +10,12 @@ ms.date: 05/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 05de8c554864108b90433c335074c61fc3def8cf
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: 3fe1b7d56e71cac0b7a5a7b4e2bc68710241f13f
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97939958"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609162"
 ---
 # <a name="no-locxamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -25,7 +25,7 @@ ms.locfileid: "97939958"
 
 ![En el explorador de aplicaciones](webview-images/in-app-browser.png)
 
-## <a name="content"></a>Contenido
+## <a name="content"></a>Content
 
 `WebView` admite los siguientes tipos de contenido:
 
@@ -329,7 +329,7 @@ public partial class InAppBrowserXaml : ContentPage
 }
 ```
 
-Eso es todo.
+Ya está.
 
 ![Botones de navegación de vista previa](webview-images/in-app-browser.png)
 
@@ -386,11 +386,11 @@ void webviewNavigated(object sender, WebNavigatedEventArgs e)
 
 Esto da como resultado el siguiente resultado (cargando):
 
-![Ejemplo de evento de navegación de vista en WebView](webview-images/loading-start.png)
+![En la captura de pantalla se muestra el evento de navegación de WebView durante la carga.](webview-images/loading-start.png)
 
 Finalizó la carga:
 
-![Ejemplo de evento de navegación de vista en WebView](webview-images/loading-end.png)
+![La captura de pantalla muestra el evento de navegación de WebView después de la carga.](webview-images/loading-end.png)
 
 ## <a name="reloading-content"></a>Recarga de contenido
 
@@ -433,7 +433,7 @@ Para `WebView` que funcione, debe asegurarse de que los permisos se establecen p
 - **Android** &ndash; solo se requiere `INTERNET`  cuando se muestra el contenido de la red. El contenido local no requiere ningún permiso especial.
 - **iOS** &ndash; no requiere ningún permiso especial.
 
-## <a name="layout"></a>Layout
+## <a name="layout"></a>Diseño
 
 A diferencia de la mayoría de las demás Xamarin.Forms vistas, `WebView` requiere que `HeightRequest` y `WidthRequest` estén especificados cuando se incluyen en StackLayout o RelativeLayout. Si no se especifican esas propiedades, `WebView` no se representará.
 

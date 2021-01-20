@@ -10,12 +10,12 @@ ms.date: 02/09/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5f12dbd4ef0cfea9d276fd8c939afab585541ece
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 04f0a056b83c3ebb298e284fefc93d83dfc57b52
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373905"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609006"
 ---
 # <a name="pixels-and-device-independent-units"></a>Píxeles y unidades independientes del dispositivo
 
@@ -29,7 +29,7 @@ En este artículo se exploran las diferencias en el sistema de coordenadas usado
 
 Si ha estado programando durante Xamarin.Forms un tiempo, es posible que tenga una idea para las Xamarin.Forms coordenadas y los tamaños. Es posible que los círculos dibujados en los dos artículos anteriores le parezcan algo pequeños.
 
-Esos círculos *son* pequeños en comparación con los Xamarin.Forms tamaños. De forma predeterminada, SkiaSharp dibuja en unidades de píxeles mientras Xamarin.Forms que basa las coordenadas y los tamaños en una unidad independiente del dispositivo establecida por la plataforma subyacente. (Puede encontrar más información sobre el Xamarin.Forms sistema de coordenadas en el [capítulo 5. Trabajar con tamaños](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) del libro *crear Mobile Apps con Xamarin.Forms* ).
+Esos círculos *son* pequeños en comparación con los Xamarin.Forms tamaños. De forma predeterminada, SkiaSharp dibuja en unidades de píxeles mientras Xamarin.Forms que basa las coordenadas y los tamaños en una unidad independiente del dispositivo establecida por la plataforma subyacente. (Puede encontrar más información sobre el Xamarin.Forms sistema de coordenadas en el [capítulo 5. Trabajar con tamaños](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) del libro *crear Mobile Apps con Xamarin.Forms*).
 
 La página del programa [**SkewSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) titulado **tamaño de superficie** usa la salida de texto SkiaSharp para mostrar el tamaño de la superficie de presentación de tres orígenes diferentes:
 
@@ -104,7 +104,7 @@ El método comienza la primera línea de texto con una coordenada X de 20 (para 
 
 Esta es la ejecución del programa:
 
-[![Captura de pantalla triple de la página tamaño de la superficie](pixels-images/surfacesize-small.png)](pixels-images/surfacesize-large.png#lightbox "Captura de pantalla triple de la página tamaño de la superficie")
+[![Las capturas de pantallas muestran la aplicación de tamaño de superficie que se ejecuta en dos dispositivos móviles.](pixels-images/surfacesize-small.png)](pixels-images/surfacesize-large.png#lightbox "Captura de pantalla triple de la página tamaño de la superficie")
 
 Como puede ver, la `CanvasSize` propiedad de `SKCanvasView` y la `Size` propiedad del `SKImageInfo` valor son coherentes en la notificación de las dimensiones de píxeles. Las `Height` `Width` propiedades y de `SKCanvasView` son Xamarin.Forms propiedades y notifican el tamaño de la vista en las unidades independientes del dispositivo definidas por la plataforma.
 
@@ -147,7 +147,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Aquí se ejecuta:
 
-[![Captura de pantalla triple de la página tamaño de la superficie](pixels-images/ellipsefill-small.png)](pixels-images/ellipsefill-large.png#lightbox "Captura de pantalla triple de la página tamaño de la superficie")
+[![Las capturas de pantallas muestran la aplicación de relleno de elipse que se ejecuta en dos dispositivos móviles.](pixels-images/ellipsefill-small.png)](pixels-images/ellipsefill-large.png#lightbox "Captura de pantalla triple de la página tamaño de la superficie")
 
 El otro [`DrawOval`](xref:SkiaSharp.SKCanvas.DrawOval(SkiaSharp.SKRect,SkiaSharp.SKPaint)) método tiene un [`SKRect`](xref:SkiaSharp.SKRect) argumento, que es un rectángulo definido en términos de las coordenadas X e y de la esquina superior izquierda y la esquina inferior derecha. La elipse rellena ese rectángulo, lo que sugiere que podría ser posible usarlo en la página de **relleno de la elipse** de la siguiente manera:
 
