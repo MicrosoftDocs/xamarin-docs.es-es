@@ -11,16 +11,16 @@ ms.date: 05/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 17db86eb6e6c767498f1d8b550b923377b905364
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 948dd586a3b60897531cc96187f288687668f60b
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557444"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609097"
 ---
 # <a name="wpf-platform-setup"></a>Configuración de la plataforma WPF
 
-![Vista previa](~/media/shared/preview.png)
+![Etiqueta de vista previa](~/media/shared/preview.png)
 
 Xamarin.Forms tiene compatibilidad con la versión preliminar de Windows Presentation Foundation (WPF), en .NET Framework y en .NET Core 3. En este artículo se muestra cómo agregar un proyecto de WPF que tiene como destino .NET Framework a una Xamarin.Forms solución.
 
@@ -37,7 +37,7 @@ Siga estas instrucciones para agregar una aplicación de WPF que se ejecutará e
 
 2. En la ventana **Agregar un nuevo proyecto** , seleccione **C#** en la lista desplegable **idiomas** , seleccione **Windows** en el menú desplegable **plataformas** y seleccione **escritorio** en la lista desplegable tipo de **proyecto** . En la lista de tipos de proyecto, elija **aplicación WPF (.NET Framework)**:
 
-    ![Agregar un nuevo proyecto de WPF](wpf-images/add-project.png "Agregar un nuevo proyecto de WPF")
+    ![Captura de pantalla que muestra el cuadro de diálogo Agregar un nuevo proyecto con la aplicación W P F seleccionada.](wpf-images/add-project.png "Agregar un nuevo proyecto de WPF")
 
     Presione el botón **siguiente** .
 
@@ -46,11 +46,11 @@ Siga estas instrucciones para agregar una aplicación de WPF que se ejecutará e
 
 3. En la ventana **configurar el nuevo proyecto** , escriba un nombre para el proyecto con una extensión de **WPF** , por ejemplo, **BoxViewClock. WPF**. Haga clic en el botón **examinar** , seleccione la carpeta **BoxViewClock** y presione **Seleccionar carpeta** para colocar el proyecto de WPF en el mismo directorio que los demás proyectos de la solución:
 
-    ![Agregar un nuevo proyecto de WPF](wpf-images/configure-project.png "Agregar un nuevo proyecto de WPF")
+    ![Captura de pantalla que muestra el cuadro de diálogo Configurar el nuevo proyecto con valores para el nombre, la ubicación y el marco de trabajo del proyecto.](wpf-images/configure-project.png "Agregar un nuevo proyecto de WPF")
 
     Presione el botón **crear** para crear el proyecto.
 
-4. En el **Explorador de soluciones**, haga clic con el botón derecho en el nuevo proyecto **BoxViewClock. WPF** y seleccione **administrar paquetes NuGet..**.. Seleccione la pestaña **examinar** y busque ** Xamarin.Forms . Plataforma. WPF**:
+4. En el **Explorador de soluciones**, haga clic con el botón derecho en el nuevo proyecto **BoxViewClock. WPF** y seleccione **administrar paquetes NuGet..**.. Seleccione la pestaña **examinar** y busque **Xamarin.Forms . Plataforma. WPF**:
 
     ![Seleccionar el paquete NuGet](wpf-images/select-nuget-package.png "Seleccionar el paquete NuGet")
 
@@ -66,7 +66,7 @@ Siga estas instrucciones para agregar una aplicación de WPF que se ejecutará e
 
     Presione el botón **Aceptar** .
 
-7. Edite el archivo **MainWindow. Xaml** del proyecto de WPF. En la `Window` etiqueta, agregue una declaración de espacio de nombres XML para ** Xamarin.Forms . **Ensamblado y espacio de nombres de Platform. WPF:
+7. Edite el archivo **MainWindow. Xaml** del proyecto de WPF. En la `Window` etiqueta, agregue una declaración de espacio de nombres XML para **Xamarin.Forms .** Ensamblado y espacio de nombres de Platform. WPF:
 
     ```xaml
     xmlns:wpf="clr-namespace:Xamarin.Forms.Platform.WPF;assembly=Xamarin.Forms.Platform.WPF"
@@ -154,7 +154,7 @@ Puede ajustar el tamaño inicial de la ventana en el archivo **MainWindow. Xaml*
 Title="BoxViewClock" Height="450" Width="800"
 ```
 
-## <a name="issues"></a>Issues
+## <a name="issues"></a>Incidencias
 
 Se trata de una versión preliminar, por lo que debe esperar que no todo esté listo para la producción. No todos los paquetes NuGet para Xamarin.Forms están preparados para WPF y es posible que algunas características no funcionen por completo.
 

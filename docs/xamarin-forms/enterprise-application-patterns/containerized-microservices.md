@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 310a4e94a91eeb0d8d1c1f6ccb6fa30f0ff1f563
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 30c2f39a299b59022df8d651762df0dd7023e264
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93366573"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98608967"
 ---
 # <a name="containerized-microservices"></a>Microservicios en contenedores
 
@@ -28,7 +28,7 @@ Especialmente en lo que respecta a la edad de la nube, es que los componentes in
 
 ![Enfoque de escalado de aplicaciones monolíticas](containerized-microservices-images/monolithicapp.png)
 
-**Figura 8-1** : enfoque de escalado de aplicaciones monolíticas
+**Figura 8-1**: enfoque de escalado de aplicaciones monolíticas
 
 ## <a name="microservices"></a>Microservicios
 
@@ -36,9 +36,9 @@ Los microservicios ofrecen un enfoque diferente para el desarrollo y la implemen
 
 Los microservicios se pueden escalar horizontalmente de forma independiente, en comparación con las aplicaciones monolíticas de Giant que se escalan juntos. Esto significa que un área funcional específica, que requiere más capacidad de procesamiento o ancho de banda de red para admitir la demanda, se puede escalar en lugar de escalar horizontalmente otras áreas de la aplicación. En la figura 8-2 se muestra este enfoque, donde se implementan y escalan microservicios de forma independiente, y se crean instancias de servicios entre equipos.
 
-![Enfoque de escalado de aplicaciones de microservicios](containerized-microservices-images/microservicesapp.png)
+![En el diagrama se muestran dos aplicaciones con mosaicos que representan distintas áreas funcionales y seis rectángulos que hospedan varias áreas funcionales de ambas aplicaciones.](containerized-microservices-images/microservicesapp.png)
 
-**Figura 8-2** : enfoque de escalado de aplicaciones de microservicios
+**Figura 8-2**: enfoque de escalado de aplicaciones de microservicios
 
 La escalabilidad horizontal de microservicios puede ser casi instantánea, lo que permite a una aplicación adaptarse a las cargas cambiantes. Por ejemplo, un único microservicio en la funcionalidad orientada a la Web de una aplicación podría ser el único microservicio de la aplicación que necesita escalar horizontalmente para controlar el tráfico entrante adicional.
 
@@ -70,9 +70,9 @@ Un contenedor es un entorno operativo aislado, controlado por recursos y portát
 
 Hay muchas similitudes entre contenedores y máquinas virtuales, como se muestra en la figura 8-3.
 
-![Enfoque de escalado de aplicaciones de microservicios](containerized-microservices-images/containersvsvirtualmachines.png)
+![En el diagrama se muestra una comparación entre Virtual Machines y contenedores, donde las máquinas virtuales tienen tres aplicaciones en silos en un invitado O S, con un hipervisor y un host O S, y los contenedores tienen tres aplicaciones hospedadas en un motor de contenedor en un solo sistema operativo.](containerized-microservices-images/containersvsvirtualmachines.png)
 
-**Figura 8-3** : comparación de máquinas virtuales y contenedores
+**Figura 8-3**: comparación de máquinas virtuales y contenedores
 
 Un contenedor ejecuta un sistema operativo, tiene un sistema de archivos y se puede acceder a él a través de una red como si fuera una máquina física o virtual. Sin embargo, la tecnología y los conceptos que usan los contenedores son muy diferentes de las máquinas virtuales. Las máquinas virtuales incluyen las aplicaciones, las dependencias necesarias y un sistema operativo invitado completo. Los contenedores incluyen la aplicación y sus dependencias, pero comparten el sistema operativo con otros contenedores, que se ejecutan como procesos aislados en el sistema operativo host (aparte de los contenedores de Hyper-V que se ejecutan dentro de una máquina virtual especial por contenedor). Por lo tanto, los contenedores comparten recursos y normalmente requieren menos recursos que las máquinas virtuales.
 
@@ -92,7 +92,7 @@ La aplicación de referencia de eShopOnContainers usa Docker para hospedar cuatr
 
 ![microservicios de back-end de la aplicación de referencia eShopOnContainers](containerized-microservices-images/microservicesarchitecture.png)
 
-**Figura 8-4** : microservicios de back-end de la aplicación de referencia eShopOnContainers
+**Figura 8-4**: microservicios de back-end de la aplicación de referencia eShopOnContainers
 
 La arquitectura de los servicios back-end de la aplicación de referencia se descompone en varios subsistemas autónomos en forma de los microservicios y contenedores de colaboración. Cada microservicio proporciona un área única de funcionalidad: un servicio de identidad, un servicio de catálogo, un servicio de pedidos y un servicio de cesta.
 
@@ -104,9 +104,9 @@ Para obtener más información acerca de la aplicación de referencia, consulte 
 
 La aplicación móvil eShopOnContainers se comunica con los microservicios de back-end en contenedor mediante la comunicación *directa de cliente a microservicio* , que se muestra en la figura 8-5.
 
-![Enfoque de escalado de aplicaciones de microservicios](containerized-microservices-images/directclienttomicroservicecommunication.png)
+![En el diagrama se muestra una aplicación hospedada en un dispositivo móvil conectado a tres microservicios de back-end, cada uno con su propia web A un contenedor P I.](containerized-microservices-images/directclienttomicroservicecommunication.png)
 
-**Figura 8-5** : comunicación directa de cliente a microservicio
+**Figura 8-5**: comunicación directa de cliente a microservicio
 
 Con la comunicación directa de cliente a microservicio, la aplicación móvil realiza solicitudes a cada microservicio directamente a través de su punto de conexión público, con un puerto TCP diferente por microservicio. En producción, el punto de conexión normalmente se asigna al equilibrador de carga del microservicio, que distribuye las solicitudes entre las instancias disponibles.
 
@@ -137,7 +137,7 @@ El bus de eventos eShopOnContainers, implementado mediante RabbitMQ, proporciona
 
 ![Comunicación de uno a varios](containerized-microservices-images/eventdrivencommunication.png)
 
-**Figura 8-9** : comunicación de uno a varios
+**Figura 8-9**: comunicación de uno a varios
 
 Este enfoque de comunicación uno a varios usa eventos para implementar transacciones empresariales que abarcan varios servicios, lo que garantiza la coherencia final entre los servicios. Una transacción de coherencia final se compone de una serie de pasos distribuidos. Por lo tanto, cuando el microservicio de Perfil de usuario recibe el comando UpdateUser, actualiza los detalles del usuario en su base de datos y publica el evento UserUpdated en el bus de eventos. Tanto el microservicio de cesta como el microservicio de pedidos se han suscrito para recibir este evento y, en respuesta, actualizar la información de comprador en sus bases de datos respectivas.
 

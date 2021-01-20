@@ -10,12 +10,12 @@ ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e78acc88c9f159fdeb797663f1c90283ed0d803b
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: 3daf08c688be41652ae2573b0bf58e2ace2072c6
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97939789"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609149"
 ---
 # <a name="no-locxamarinforms-shapes-fill-rules"></a>Xamarin.Forms Formas: reglas de relleno
 
@@ -101,11 +101,11 @@ En el siguiente ejemplo de XAML se crea y se representa una forma compuesta, con
 
 En este ejemplo, se muestra una forma compuesta formada por una serie de anillos concéntricos:
 
-![Forma compuesta con regla de relleno distinto de cero](fillrule-images/nonzero.png "Forma compuesta con regla de relleno distinto de cero")
+![En el diagrama se muestran cuatro círculos concéntricos, todos rellenados.](fillrule-images/nonzero.png "Forma compuesta con regla de relleno distinto de cero")
 
 En la forma compuesta, observe que se rellenan todos los anillos. Esto se debe a que todos los segmentos se ejecutan en la misma dirección, por lo que un rayo dibujado desde cualquier punto cruzará uno o más segmentos y la suma de las cruces no será igual a cero:
 
-![Forma compuesta anotada con regla de relleno distinto de cero](fillrule-images/nonzero-annotated.png "Forma compuesta anotada con regla de relleno distinto de cero")
+![Diagrama muestra los círculos del diagrama anterior con flechas direccionales y un rayo anotado con + 1 para cada círculo que cruza.](fillrule-images/nonzero-annotated.png "Forma compuesta anotada con regla de relleno distinto de cero")
 
 En la imagen anterior, las flechas rojas representan la dirección en la que se dibujan los segmentos y la flecha negra representa un rayo arbitrario que se ejecuta desde un punto en el anillo más interno. A partir de un valor de cero, para cada segmento que cruza el radio, se agrega un valor de uno porque el segmento cruza el radio de izquierda a derecha.
 
@@ -172,11 +172,11 @@ Se necesita una forma más compleja con segmentos que se ejecuten en diferentes 
 
 En este ejemplo, se dibuja una serie de segmentos de arco que no están cerrados:
 
-![Forma compuesta con regla de relleno distinto de cero](fillrule-images/nonzero-gaps.png "Forma compuesta con regla de relleno distinto de cero")
+![En el diagrama se muestran cuatro círculos concéntricos, con el máximo y el tercio del más externo rellenado.](fillrule-images/nonzero-gaps.png "Forma compuesta con regla de relleno distinto de cero")
 
 En la imagen anterior, no se rellena el tercer arco desde el centro. Esto se debe a que la suma de los valores de un rayo determinado que cruza los segmentos en su ruta de acceso es cero:
 
-![Forma compuesta anotada con regla de relleno distinto de cero](fillrule-images/nonzero-gaps-annotated.png "Forma compuesta anotada con regla de relleno distinto de cero")
+![En el diagrama se muestran los círculos del diagrama anterior con flechas direccionales y dos rayos anotados con + 1 o – 1 para cada círculo que crucen.](fillrule-images/nonzero-gaps-annotated.png "Forma compuesta anotada con regla de relleno distinto de cero")
 
 En la imagen anterior, el círculo rojo representa un punto, las líneas negras representan rayos arbitrarios que salen del punto en la región no rellena y las flechas rojas representan la dirección en la que se dibujan los segmentos. Como se puede observar, la suma de los valores de los rayos que cruzan los segmentos es cero:
 

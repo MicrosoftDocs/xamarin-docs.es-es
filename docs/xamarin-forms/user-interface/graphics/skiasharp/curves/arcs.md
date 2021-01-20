@@ -10,12 +10,12 @@ ms.date: 05/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5f48300b6c974bbbb0106f1afaa6c863f8159c58
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 6aa52ff13dccbf6c7b65f7006195997971a7cac2
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93374646"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609786"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Tres maneras de dibujar un arco
 
@@ -219,7 +219,7 @@ Para ver su aspecto sin la "explosión", simplemente comente la `Translate` llam
 
 ## <a name="the-tangent-arc"></a>Arco tangente
 
-El segundo tipo de arco compatible con `SKPath` es el *arco tangente* , por lo que se llama a porque el arco es la circunferencia de un círculo que es tangente a dos líneas conectadas.
+El segundo tipo de arco compatible con `SKPath` es el *arco tangente*, por lo que se llama a porque el arco es la circunferencia de un círculo que es tangente a dos líneas conectadas.
 
 Se agrega un arco tangente a un trazado con una llamada al  [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,System.Single)) método con dos `SKPoint` parámetros, o la [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,System.Single,System.Single)) sobrecarga con parámetros independientes `Single` para los puntos:
 
@@ -235,7 +235,7 @@ El `ArcTo` método implica tres puntos:
 
 - El punto actual del contorno, o el punto (0,0) si no se `MoveTo` ha llamado a.
 - El primer argumento de punto para el `ArcTo` método, denominado *punto de esquina*
-- El segundo argumento de punto a `ArcTo` , denominado *punto de destino* :
+- El segundo argumento de punto a `ArcTo` , denominado *punto de destino*:
 
 ![Tres puntos que comienzan un arco tangente](arcs-images/tangentarcthreepoints.png)
 
@@ -257,7 +257,7 @@ Si las dos líneas se unen en cualquier ángulo, se puede insertar ese círculo 
 
 La curva que se agrega al contorno no toca ninguno de los puntos especificados en el `ArcTo` método. Consta de una línea recta desde el punto actual hasta el primer punto tangente y un arco que termina en el segundo punto tangente, mostrado aquí en rojo:
 
-![Arco de tangente resaltado entre las dos líneas](arcs-images/tangentarchighlight.png)
+![Diagrama muestra el diagrama anterior anotado con una línea roja que muestra el arco de tangente resaltado entre las dos líneas.](arcs-images/tangentarchighlight.png)
 
 Esta es la línea recta final y el arco que se agregan al contorno:
 
