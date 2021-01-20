@@ -1,15 +1,12 @@
 ---
-ms.openlocfilehash: 5fe6bab32a70c8af03bdca2151312d44fbf3834e
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 7a5acca4169b1f763e178e0a05b01548765ff45d
+ms.sourcegitcommit: 4d260b655cb52b990dda79c239a9721f2e964625
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91451536"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98570811"
 ---
-Las solicitudes REST se realizan a través de HTTP utilizando los mismos verbos HTTP que utilizan los exploradores web para recuperar páginas y enviar datos a los servidores. En este ejercicio, creará una clase que utiliza el verbo GET para recuperar datos desde la API web [OpenWeatherMap](https://openweathermap.org/). Esta API web puede utilizarse para recuperar datos de pronóstico meteorológico para una ubicación especificada. El uso de esta API web requiere registrarse para una clave de API.
-
-> [!div class="nextstepaction"]
-> [Registro para obtener una clave de API](https://home.openweathermap.org/users/sign_up)
+Las solicitudes REST se realizan a través de HTTP utilizando los mismos verbos HTTP que utilizan los exploradores web para recuperar páginas y enviar datos a los servidores. En este ejercicio, creará una clase que use el verbo GET para recuperar datos de repositorio para .NET de la API web de GitHub.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -20,74 +17,51 @@ Las solicitudes REST se realizan a través de HTTP utilizando los mismos verbos 
     {
         public static class Constants
         {
-            public const string OpenWeatherMapEndpoint = "https://api.openweathermap.org/data/2.5/weather";
-            public const string OpenWeatherMapAPIKey = "INSERT_API_KEY_HERE";
+            public const string GitHubReposEndpoint = "https://api.github.com/orgs/dotnet/repos";
         }
     }
     ```
 
-    Este código define dos constantes. La constante `OpenWeatherMapEndpoint` define el punto de conexión en el que se realizarán solicitudes web, y la constante `OpenWeatherMapAPIKey` define la clave de API personal para el servicio [OpenWeatherMap](https://openweathermap.org/).
+    Este código define una única constante, que es el punto de conexión en el que se efectuarán las solicitudes web.
 
-    > [!IMPORTANT]
-    > Debe establecer la clave de API de OpenWeatherMap personal como el valor de la constante `OpenWeatherMapAPIKey`.
-
-1. En el **Explorador de soluciones**, agregue una nueva clase denominada `WeatherData` al proyecto **WebServicesTutorial**. Después, en **WeatherData.cs**, quite todo el código de plantilla y sustitúyalo por el código siguiente:
+1. En el **Explorador de soluciones**, agregue una nueva clase denominada `Repository` al proyecto **WebServicesTutorial**. Después, en **Repository.cs**, quite todo el código de la plantilla y sustitúyalo por el siguiente:
 
     ```csharp
+    using System;
     using Newtonsoft.Json;
 
     namespace WebServiceTutorial
     {
-        public class WeatherData
+        public class Repository
         {
             [JsonProperty("name")]
-            public string Title { get; set; }
+            public string Name { get; set; }
 
-            [JsonProperty("weather")]
-            public Weather[] Weather { get; set; }
+            [JsonProperty("description")]
+            public string Description { get; set; }
 
-            [JsonProperty("main")]
-            public Main Main { get; set; }
+            [JsonProperty("html_url")]
+            public Uri GitHubHomeUrl { get; set; }
 
-            [JsonProperty("visibility")]
-            public long Visibility { get; set; }
+            [JsonProperty("homepage")]
+            public Uri Homepage { get; set; }
 
-            [JsonProperty("wind")]
-            public Wind Wind { get; set; }
-        }
-
-        public class Main
-        {
-            [JsonProperty("temp")]
-            public double Temperature { get; set; }
-
-            [JsonProperty("humidity")]
-            public long Humidity { get; set; }
-        }
-
-        public class Weather
-        {
-            [JsonProperty("main")]
-            public string Visibility { get; set; }
-        }
-
-        public class Wind
-        {
-            [JsonProperty("speed")]
-            public double Speed { get; set; }
+            [JsonProperty("watchers")]
+            public int Watchers { get; set; }
         }
     }
     ```
 
-    Este código define cuatro clases que se usan para modelar los datos JSON recuperados del servicio web. Cada propiedad está decorada con un atributo `JsonProperty`, que contiene un nombre de campo JSON. Newtonsoft.Json usará esta asignación de nombres de campo JSON a las propiedades CLR al deserializar los datos JSON en objetos de modelo.
+    Este código define una clase `Repository` que se usa para modelar los datos JSON recuperados del servicio web. Cada propiedad está decorada con un atributo `JsonProperty`, que contiene un nombre de campo JSON. Newtonsoft.Json usará esta asignación de nombres de campo JSON a las propiedades CLR al deserializar los datos JSON en objetos de modelo.
 
     > [!NOTE]
-    > Las definiciones de clase anteriores se han simplificado y no modelan completamente los datos JSON recuperados del servicio web. Para obtener un ejemplo de modelo de datos completo, vea el ejemplo de [Weather App](/samples/xamarin/xamarin-forms-samples/weather/).
+    > La definición de clase anterior se ha simplificado, y no modela completamente los datos JSON recuperados del servicio web.
 
 1. En el **Explorador de soluciones**, agregue una nueva clase denominada `RestService` al proyecto **WebServiceTutorial**. Después, en **RestService.cs**, quite todo el código de plantilla y sustitúyalo por el código siguiente:
 
     ```csharp
     using System;
+    using System.Collections.Generic;
     using System.Diagnostics;
     using System.Net.Http;
     using System.Threading.Tasks;
@@ -104,16 +78,16 @@ Las solicitudes REST se realizan a través de HTTP utilizando los mismos verbos 
                 _client = new HttpClient();
             }
 
-            public async Task<WeatherData> GetWeatherDataAsync(string uri)
+            public async Task<List<Repository>> GetRepositoriesAsync(string uri)
             {
-                WeatherData weatherData = null;
+                List<Repository> repositories = null;
                 try
                 {
                     HttpResponseMessage response = await _client.GetAsync(uri);
                     if (response.IsSuccessStatusCode)
                     {
                         string content = await response.Content.ReadAsStringAsync();
-                        weatherData = JsonConvert.DeserializeObject<WeatherData>(content);
+                        repositories = JsonConvert.DeserializeObject<List<Repository>>(content);
                     }
                 }
                 catch (Exception ex)
@@ -121,13 +95,13 @@ Las solicitudes REST se realizan a través de HTTP utilizando los mismos verbos 
                     Debug.WriteLine("\tERROR {0}", ex.Message);
                 }
 
-                return weatherData;
+                return repositories;
             }
         }
     }
     ```
 
-    Este código define un único método, `GetWeatherDataAsync`, que recupera datos meteorológicos de una ubicación especificada de la API web [OpenWeatherMap](https://openweathermap.org/). Este método utiliza el método `HttpClient.GetAsync` para enviar una solicitud GET a la API web especificada mediante el argumento `uri`. La API web envía una respuesta que se almacena en un objeto `HttpResponseMessage`. La respuesta incluye un código de estado HTTP, que indica si la solicitud HTTP se realizó correctamente o no. Siempre que la solicitud se realice correctamente, la API web responde con el código de estado HTTP 200 (OK) y una respuesta JSON, que se encuentra en la propiedad `HttpResponseMessage.Content`. Estos datos JSON se leen en un elemento `string` mediante el método `HttpContent.ReadAsStringAsync` antes de que se deserialicen en un objeto `WeatherData` mediante el método `JsonConvert.DeserializeObject`. Este método usa las asignaciones entre los nombres de campo JSON y las propiedades CLR, que se definen en la clase `WeatherData`, para realizar la deserialización.
+    Este código define un único método, `GetRepositoriesAsync`, que recupera datos de repositorio para .NET de la API web de GitHub. Este método utiliza el método `HttpClient.GetAsync` para enviar una solicitud GET a la API web especificada mediante el argumento `uri`. La API web envía una respuesta que se almacena en un objeto `HttpResponseMessage`. La respuesta incluye un código de estado HTTP, que indica si la solicitud HTTP se realizó correctamente o no. Siempre que la solicitud se realice correctamente, la API web responde con el código de estado HTTP 200 (OK) y una respuesta JSON, que se encuentra en la propiedad `HttpResponseMessage.Content`. Estos datos JSON se leen en un elemento `string` mediante el método `HttpContent.ReadAsStringAsync` antes de que se deserialicen en un objeto `List<Repository>` mediante el método `JsonConvert.DeserializeObject`. Este método usa las asignaciones entre los nombres de campo JSON y las propiedades CLR, que se definen en la clase `Repository`, para realizar la deserialización.
 
 1. Compile la solución para asegurarse de que no haya errores.
 
@@ -140,74 +114,51 @@ Las solicitudes REST se realizan a través de HTTP utilizando los mismos verbos 
     {
         public static class Constants
         {
-            public static string OpenWeatherMapEndpoint = "https://api.openweathermap.org/data/2.5/weather";
-            public static string OpenWeatherMapAPIKey = "INSERT_API_KEY_HERE";
+            public const string GitHubReposEndpoint = "https://api.github.com/orgs/dotnet/repos";
         }
     }
     ```
 
-    Este código define dos constantes. La constante `OpenWeatherMapEndpoint` define el punto de conexión en el que se realizarán solicitudes web, y la constante `OpenWeatherMapAPIKey` define la clave de API personal para el servicio [OpenWeatherMap](https://openweathermap.org/).
+    Este código define una única constante, que es el punto de conexión en el que se efectuarán las solicitudes web.
 
-    > [!IMPORTANT]
-    > Debe establecer la clave de API de OpenWeatherMap personal como el valor de la constante `OpenWeatherMapAPIKey`.
-
-1. En el **Panel de solución**, agregue una nueva clase denominada `WeatherData` al proyecto **WebServicesTutorial**. Después, en **WeatherData.cs**, quite todo el código de plantilla y sustitúyalo por el código siguiente:
+1. En el **Panel de solución**, agregue una nueva clase denominada `Repository` al proyecto **WebServicesTutorial**. Después, en **Repository.cs**, quite todo el código de la plantilla y sustitúyalo por el siguiente:
 
     ```csharp
+    using System;
     using Newtonsoft.Json;
 
     namespace WebServiceTutorial
     {
-        public class WeatherData
+        public class Repository
         {
             [JsonProperty("name")]
-            public string Title { get; set; }
+            public string Name { get; set; }
 
-            [JsonProperty("weather")]
-            public Weather[] Weather { get; set; }
+            [JsonProperty("description")]
+            public string Description { get; set; }
 
-            [JsonProperty("main")]
-            public Main Main { get; set; }
+            [JsonProperty("html_url")]
+            public Uri GitHubHomeUrl { get; set; }
 
-            [JsonProperty("visibility")]
-            public long Visibility { get; set; }
+            [JsonProperty("homepage")]
+            public Uri Homepage { get; set; }
 
-            [JsonProperty("wind")]
-            public Wind Wind { get; set; }
-        }
-
-        public class Main
-        {
-            [JsonProperty("temp")]
-            public double Temperature { get; set; }
-
-            [JsonProperty("humidity")]
-            public long Humidity { get; set; }
-        }
-
-        public class Weather
-        {
-            [JsonProperty("main")]
-            public string Visibility { get; set; }
-        }
-
-        public class Wind
-        {
-            [JsonProperty("speed")]
-            public double Speed { get; set; }
+            [JsonProperty("watchers")]
+            public int Watchers { get; set; }
         }
     }
     ```
 
-    Este código define cuatro clases que se usan para modelar los datos JSON recuperados del servicio web. Cada propiedad está decorada con un atributo `JsonProperty`, que contiene un nombre de campo JSON. Newtonsoft.Json usará esta asignación de nombres de campo JSON a las propiedades CLR al deserializar los datos JSON en objetos de modelo.
+    Este código define una clase `Repository` que se usa para modelar los datos JSON recuperados del servicio web. Cada propiedad está decorada con un atributo `JsonProperty`, que contiene un nombre de campo JSON. Newtonsoft.Json usará esta asignación de nombres de campo JSON a las propiedades CLR al deserializar los datos JSON en objetos de modelo.
 
     > [!NOTE]
-    > Las definiciones de clase anteriores se han simplificado y no modelan completamente los datos JSON recuperados del servicio web. Para obtener un ejemplo de modelo de datos completo, vea el ejemplo de [Weather App](/samples/xamarin/xamarin-forms-samples/weather/).
+    > La definición de clase anterior se ha simplificado, y no modela completamente los datos JSON recuperados del servicio web.
 
 1. En el **Panel de solución**, agregue una nueva clase denominada `RestService` al proyecto **WebServiceTutorial**. Después, en **RestService.cs**, quite todo el código de plantilla y sustitúyalo por el código siguiente:
 
     ```csharp
     using System;
+    using System.Collections.Generic;
     using System.Diagnostics;
     using System.Net.Http;
     using System.Threading.Tasks;
@@ -224,16 +175,16 @@ Las solicitudes REST se realizan a través de HTTP utilizando los mismos verbos 
                 _client = new HttpClient();
             }
 
-            public async Task<WeatherData> GetWeatherDataAsync(string uri)
+            public async Task<List<Repository>> GetRepositoriesAsync(string uri)
             {
-                WeatherData weatherData = null;
+                List<Repository> repositories = null;
                 try
                 {
                     HttpResponseMessage response = await _client.GetAsync(uri);
                     if (response.IsSuccessStatusCode)
                     {
                         string content = await response.Content.ReadAsStringAsync();
-                        weatherData = JsonConvert.DeserializeObject<WeatherData>(content);
+                        repositories = JsonConvert.DeserializeObject<List<Repository>>(content);
                     }
                 }
                 catch (Exception ex)
@@ -241,12 +192,12 @@ Las solicitudes REST se realizan a través de HTTP utilizando los mismos verbos 
                     Debug.WriteLine("\tERROR {0}", ex.Message);
                 }
 
-                return weatherData;
+                return repositories;
             }
         }
     }
     ```
 
-    Este código define un único método, `GetWeatherDataAsync`, que recupera datos meteorológicos de una ubicación especificada de la API web [OpenWeatherMap](https://openweathermap.org/). Este método utiliza el método `HttpClient.GetAsync` para enviar una solicitud GET a la API web especificada mediante el argumento `uri`. La API web envía una respuesta que se almacena en un objeto `HttpResponseMessage`. La respuesta incluye un código de estado HTTP, que indica si la solicitud HTTP se realizó correctamente o no. Siempre que la solicitud se realice correctamente, la API web responde con el código de estado HTTP 200 (OK) y una respuesta JSON, que se encuentra en la propiedad `HttpResponseMessage.Content`. Estos datos JSON se leen en un elemento `string` mediante el método `HttpContent.ReadAsStringAsync` antes de que se deserialicen en un objeto `WeatherData` mediante el método `JsonConvert.DeserializeObject`. Este método usa las asignaciones entre los nombres de campo JSON y las propiedades CLR, que se definen en la clase `WeatherData`, para realizar la deserialización.
+    Este código define un único método, `GetRepositoriesAsync`, que recupera datos de repositorio para .NET de la API web de GitHub. Este método utiliza el método `HttpClient.GetAsync` para enviar una solicitud GET a la API web especificada mediante el argumento `uri`. La API web envía una respuesta que se almacena en un objeto `HttpResponseMessage`. La respuesta incluye un código de estado HTTP, que indica si la solicitud HTTP se realizó correctamente o no. Siempre que la solicitud se realice correctamente, la API web responde con el código de estado HTTP 200 (OK) y una respuesta JSON, que se encuentra en la propiedad `HttpResponseMessage.Content`. Estos datos JSON se leen en un elemento `string` mediante el método `HttpContent.ReadAsStringAsync` antes de que se deserialicen en un objeto `List<Repository>` mediante el método `JsonConvert.DeserializeObject`. Este método usa las asignaciones entre los nombres de campo JSON y las propiedades CLR, que se definen en la clase `Repository`, para realizar la deserialización.
 
 1. Compile la solución para asegurarse de que no haya errores.

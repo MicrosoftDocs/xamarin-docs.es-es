@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 90f3f9ff5ed29a1ae2c93e355fc15bc6550d78dd
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: bf46d8ab4ca124bc36dd971513a78147e71a0039
+ms.sourcegitcommit: 4d260b655cb52b990dda79c239a9721f2e964625
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "77135079"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98570786"
 ---
-En este ejercicio se creará una interfaz de usuario para consumir la clase `RestService`, que a su vez recupera datos de la API web [OpenWeatherMap](https://openweathermap.org/).
+En este ejercicio, creará una interfaz de usuario para usar la clase `RestService`, que recupera datos de repositorio para .NET de la API web de GitHub. Una vista [`CollectionView`](xref:Xamarin.Forms.CollectionView) mostrará los datos recuperados.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -17,64 +17,38 @@ En este ejercicio se creará una interfaz de usuario para consumir la clase `Res
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  x:Class="WebServiceTutorial.MainPage">
-        <Grid Margin="20,35,20,20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.4*" />
-                <ColumnDefinition Width="0.6*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-            </Grid.RowDefinitions>
-            <Entry x:Name="cityEntry"
-                   Grid.ColumnSpan="2"
-                   Text="Seattle" />
-            <Button Grid.ColumnSpan="2"
-                    Grid.Row="1"
-                    Text="Get Weather"
-                    Clicked="OnButtonClicked" />                
-            <Label Grid.Row="2"
-                   Text="Location:" />
-            <Label Grid.Row="2"
-                   Grid.Column="1"
-                   Text="{Binding Title}" />            
-            <Label Grid.Row="3"
-                   Text="Temperature:" />
-            <Label Grid.Row="3"
-                   Grid.Column="1"
-                   Text="{Binding Main.Temperature}" />            
-            <Label Grid.Row="4"
-                   Text="Wind Speed:" />
-            <Label Grid.Row="4"
-                   Grid.Column="1"
-                   Text="{Binding Wind.Speed}" />            
-            <Label Grid.Row="5"
-                   Text="Humidity:" />
-            <Label Grid.Row="5"
-                   Grid.Column="1"
-                   Text="{Binding Main.Humidity}" />            
-            <Label Grid.Row="6"
-                   Text="Visibility:" />
-            <Label Grid.Row="6"
-                   Grid.Column="1"
-                   Text="{Binding Weather[0].Visibility}" />
-        </Grid>
+        <StackLayout Margin="20,35,20,20">
+            <Button Text="Get Repository Data"
+                    Clicked="OnButtonClicked" />
+            <CollectionView x:Name="collectionView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding Name}"
+                                   FontSize="Medium" />
+                            <Label Text="{Binding Description}"
+                                   TextColor="Silver"
+                                   FontSize="Small" />
+                            <Label Text="{Binding GitHubHomeUrl}"
+                                   TextColor="Gray"
+                                   FontSize="Caption" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
     </ContentPage>
     ```
 
-    Este código define mediante declaración la interfaz de usuario de la página, que consta de un elemento [`Entry`](xref:Xamarin.Forms.Entry), un elemento [`Button`](xref:Xamarin.Forms.Button) y una serie de instancias de [`Label`](xref:Xamarin.Forms.Label) en un elemento [`Grid`](xref:Xamarin.Forms.Grid). El elemento `Entry` se rellena previamente con "Seattle" estableciendo su propiedad [`Text`](xref:Xamarin.Forms.InputView.Text). El elemento `Button` establece su evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) en un controlador de eventos denominado `OnButtonClicked` que se creará en el paso siguiente. La mitad de la instancias de `Label` muestran texto estático y las instancias restantes establecen un enlace de datos a las propiedades de `WeatherData`. En tiempo de ejecución, las instancias de `Label` que utilizan el enlace de datos buscarán en sus respectivas propiedades [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) el objeto `WeatherData` que se utilizará en sus expresiones de enlace. Para obtener más información sobre el enlace de datos, vea [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Button`](xref:Xamarin.Forms.Button) y una vista [`CollectionView`](xref:Xamarin.Forms.CollectionView). El elemento `Button` establece su evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) en un controlador de eventos denominado `OnButtonClicked` que se creará en el paso siguiente. La vista `CollectionView` establece la propiedad [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) en un valor [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), que define la apariencia de cada elemento en `CollectionView`. El elemento secundario de `DataTemplate` es un valor [`StackLayout`](xref:Xamarin.Forms.StackLayout), que contiene tres objetos [`Label`](xref:Xamarin.Forms.Label). Los objetos `Label` enlazan sus propiedades [`Text`](xref:Xamarin.Forms.Label.Text) con las propiedades `Name`, `Description` y `GitHubHomeUrl` de cada objeto `Repository`. Para obtener más información sobre el enlace de datos, vea [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
-    Además, el objeto [`Entry`](xref:Xamarin.Forms.Entry) tiene un nombre que se especifica con el atributo `x:Name`. Esto permite al archivo de código subyacente tener acceso al objeto con el nombre que se le ha asignado.
+    Además, el objeto [`CollectionView`](xref:Xamarin.Forms.CollectionView) tiene un nombre que se especifica con el atributo `x:Name`. Esto permite al archivo de código subyacente tener acceso al objeto con el nombre que se le ha asignado.
 
 1. En el **Explorador de soluciones**, en el proyecto **WebServiceTutorial**, expanda **MainPage.xaml** y haga doble clic en **MainPage.xaml.cs** para abrirlo. Después, en **MainPage.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el código siguiente:
 
     ```csharp
     using System;
+    using System.Collections.Generic;
     using Xamarin.Forms;
 
     namespace WebServiceTutorial
@@ -91,42 +65,22 @@ En este ejercicio se creará una interfaz de usuario para consumir la clase `Res
 
             async void OnButtonClicked(object sender, EventArgs e)
             {
-                if (!string.IsNullOrWhiteSpace(cityEntry.Text))
-                {
-                    WeatherData weatherData = await _restService.GetWeatherDataAsync(GenerateRequestUri(Constants.OpenWeatherMapEndpoint));
-                    BindingContext = weatherData;
-                }
-            }
-
-            string GenerateRequestUri(string endpoint)
-            {
-                string requestUri = endpoint;
-                requestUri += $"?q={cityEntry.Text}";
-                requestUri += "&units=imperial"; // or units=metric
-                requestUri += $"&APPID={Constants.OpenWeatherMapAPIKey}";
-                return requestUri;
+                List<Repository> repositories = await _restService.GetRepositoriesAsync(Constants.GitHubReposEndpoint);
+                collectionView.ItemsSource = repositories;
             }
         }
     }
     ```
 
-    El método `OnButtonClicked`, que se ejecuta cuando se pulsa [`Button`](xref:Xamarin.Forms.Button), invoca el método `RestService.GetWeatherDataAsync` para recuperar datos meteorológicos de la ciudad cuyo nombre se ha indicado en el elemento [`Entry`](xref:Xamarin.Forms.Entry). El método `GetWeatherDataAsync` requiere un argumento `string` que representa el URI de la API web que se invoca, dicho argumento lo produce el método `GenerateRequestUri`. Este método toma la dirección de punto de conexión almacenada en la constante `OpenWeatherMapEndpoint` y le agrega parámetros de consulta que especifican:
+    El método `OnButtonClicked`, que se ejecuta cuando se pulsa el objeto [`Button`](xref:Xamarin.Forms.Button), invoca el método `RestService.GetRepositoriesAsync` para recuperar datos de repositorio para .NET de la API web de GitHub. El método `GetRepositoriesAsync` requiere un argumento `string` que representa el URI de la API web que se invoca; el campo `Constants.GitHubReposEndpoint` devuelve dicho argumento.
 
-    - Ciudad para la que se solicitan datos meteorológicos.
-    - Unidades en las que se devolverán los datos meteorológicos.
-    - Clave de API personal.
+    Después de recuperar los datos solicitados, la propiedad [`CollectionView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) se establece en los datos recuperados.
 
-    Después de recuperar los datos meteorológicos solicitados, el elemento [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la página se establece en el objeto `WeatherData`. Para obtener más información sobre la propiedad `BindingContext`, vea [Enlaces con un contexto de enlace](~/xamarin-forms/app-fundamentals/data-binding/basic-bindings.md#bindings-with-a-binding-context) en la guía de [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido. Pulse el objeto [`Button`](xref:Xamarin.Forms.Button) a fin de recuperar datos de repositorio para .NET de GitHub:
 
-    > [!IMPORTANT]
-    > La propiedad [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) se hereda a través del árbol visual. Por lo tanto, como ya se ha establecido en el objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage), los objetos secundarios del elemento `ContentPage` heredan su valor, incluyendo las instancias de [`Label`](xref:Xamarin.Forms.Label).
+    [![Captura de pantalla de una serie de repositorios para .NET de GitHub, en iOS y Android](../images/consume-web-service.png)](../images/consume-web-service-large.png#lightbox)
 
-1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido. Pulse [`Button`](xref:Xamarin.Forms.Button) para recuperar los datos meteorológicos actuales para Seattle:
-
-    [![Captura de pantalla de datos meteorológicos de Seattle, en iOS y Android](../images/consume-web-service.png "Datos meteorológicos de Seattle")](../images/consume-web-service-large.png#lightbox "Datos meteorológicos de Seattle")
-
-    > [!IMPORTANT]
-    > Debe establecerse la clave de API de OpenWeatherMap personal como el valor de la constante `OpenWeatherMapAPIKey` en la clase `Constants`.
+    Para obtener más información sobre cómo usar servicios web basados en REST en Xamarin.Forms, vea [Consumo de servicios web RESTful (guía)](~/xamarin-forms/data-cloud/web-services/rest.md).
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -137,66 +91,38 @@ En este ejercicio se creará una interfaz de usuario para consumir la clase `Res
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  x:Class="WebServiceTutorial.MainPage">
-        <Grid Margin="20,35,20,20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.4*" />
-                <ColumnDefinition Width="0.6*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-            </Grid.RowDefinitions>
-            <Entry x:Name="cityEntry"
-                   Grid.ColumnSpan="2"
-                   Text="Seattle" />
-            <Button Grid.ColumnSpan="2"
-                    Grid.Row="1"
-                    Text="Get Weather"
-                    Clicked="OnButtonClicked" />                
-            <Label Grid.Row="2"
-                   Text="Location:" />
-            <Label Grid.Row="2"
-                   Grid.Column="1"
-                   Text="{Binding Title}" />            
-            <Label Grid.Row="3"
-                   Text="Temperature:" />
-            <Label Grid.Row="3"
-                   Grid.Column="1"
-                   Text="{Binding Main.Temperature}" />            
-            <Label Grid.Row="4"
-                   Text="Wind Speed:" />
-            <Label Grid.Row="4"
-                   Grid.Column="1"
-                   Text="{Binding Wind.Speed}" />            
-            <Label Grid.Row="5"
-                   Text="Humidity:" />
-            <Label Grid.Row="5"
-                   Grid.Column="1"
-                   Text="{Binding Main.Humidity}" />            
-            <Label Grid.Row="6"
-                   Text="Visibility:" />
-            <Label Grid.Row="6"
-                   Grid.Column="1"
-                   Text="{Binding Weather[0].Visibility}" />
-        </Grid>
+        <StackLayout Margin="20,35,20,20">
+            <Button Text="Get Repository Data"
+                    Clicked="OnButtonClicked" />
+            <CollectionView x:Name="collectionView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding Name}"
+                                   FontSize="Medium" />
+                            <Label Text="{Binding Description}"
+                                   TextColor="Silver"
+                                   FontSize="Small" />
+                            <Label Text="{Binding GitHubHomeUrl}"
+                                   TextColor="Gray"
+                                   FontSize="Caption" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
     </ContentPage>
     ```
 
-    Este código define mediante declaración la interfaz de usuario de la página, que consta de un elemento [`Entry`](xref:Xamarin.Forms.Entry), un elemento [`Button`](xref:Xamarin.Forms.Button) y una serie de instancias de [`Label`](xref:Xamarin.Forms.Label) en un elemento [`Grid`](xref:Xamarin.Forms.Grid). El elemento `Entry` se rellena previamente con "Seattle" estableciendo su propiedad [`Text`](xref:Xamarin.Forms.InputView.Text). El elemento `Button` establece su evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) en un controlador de eventos denominado `OnButtonClicked` que se creará en el paso siguiente. La mitad de la instancias de `Label` muestran texto estático y las instancias restantes establecen un enlace de datos a las propiedades de `WeatherData`. En tiempo de ejecución, las instancias de `Label` que utilizan el enlace de datos buscarán en sus respectivas propiedades [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) el objeto `WeatherData` que se utilizará en sus expresiones de enlace. Para obtener más información sobre el enlace de datos, vea [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+    Este código define mediante declaración la interfaz de usuario de la página, que consiste en un objeto [`Button`](xref:Xamarin.Forms.Button) y una vista [`CollectionView`](xref:Xamarin.Forms.CollectionView). El elemento `Button` establece su evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) en un controlador de eventos denominado `OnButtonClicked` que se creará en el paso siguiente. La vista `CollectionView` establece la propiedad [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) en un valor [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), que define la apariencia de cada elemento en `CollectionView`. El elemento secundario de `DataTemplate` es un valor [`StackLayout`](xref:Xamarin.Forms.StackLayout), que contiene tres objetos [`Label`](xref:Xamarin.Forms.Label). Los objetos `Label` enlazan sus propiedades [`Text`](xref:Xamarin.Forms.Label.Text) con las propiedades `Name`, `Description` y `GitHubHomeUrl` de cada objeto `Repository`. Para obtener más información sobre el enlace de datos, vea [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
-    Además, el objeto [`Entry`](xref:Xamarin.Forms.Entry) tiene un nombre que se especifica con el atributo `x:Name`. Esto permite al archivo de código subyacente tener acceso al objeto con el nombre que se le ha asignado.
-
-    Para obtener más información sobre cómo usar servicios web basados en REST en Xamarin.Forms, vea [Consumo de servicios web RESTful (guía)](~/xamarin-forms/data-cloud/web-services/rest.md).
+    Además, el objeto [`CollectionView`](xref:Xamarin.Forms.CollectionView) tiene un nombre que se especifica con el atributo `x:Name`. Esto permite al archivo de código subyacente tener acceso al objeto con el nombre que se le ha asignado.
 
 1. En el **Panel de solución**, en el proyecto **WebServiceTutorial**, expanda **MainPage.xaml** y haga doble clic en **MainPage.xaml.cs** para abrirlo. Después, en **MainPage.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el código siguiente:
 
     ```csharp
     using System;
+    using System.Collections.Generic;
     using Xamarin.Forms;
 
     namespace WebServiceTutorial
@@ -213,41 +139,19 @@ En este ejercicio se creará una interfaz de usuario para consumir la clase `Res
 
             async void OnButtonClicked(object sender, EventArgs e)
             {
-                if (!string.IsNullOrWhiteSpace(cityEntry.Text))
-                {
-                    WeatherData weatherData = await _restService.GetWeatherDataAsync(GenerateRequestUri(Constants.OpenWeatherMapEndpoint));
-                    BindingContext = weatherData;
-                }
-            }
-
-            string GenerateRequestUri(string endpoint)
-            {
-                string requestUri = endpoint;
-                requestUri += $"?q={cityEntry.Text}";
-                requestUri += "&units=imperial"; // or units=metric
-                requestUri += $"&APPID={Constants.OpenWeatherMapAPIKey}";
-                return requestUri;
+                List<Repository> repositories = await _restService.GetRepositoriesAsync(Constants.GitHubReposEndpoint);
+                collectionView.ItemsSource = repositories;
             }
         }
     }
     ```
 
-    El método `OnButtonClicked`, que se ejecuta cuando se pulsa [`Button`](xref:Xamarin.Forms.Button), invoca el método `RestService.GetWeatherDataAsync` para recuperar datos meteorológicos de la ciudad cuyo nombre se ha indicado en el elemento [`Entry`](xref:Xamarin.Forms.Entry). El método `GetWeatherDataAsync` requiere un argumento `string` que representa el URI de la API web que se invoca, dicho argumento lo produce el método `GenerateRequestUri`. Este método toma la dirección de punto de conexión almacenada en la constante `OpenWeatherMapEndpoint` y le agrega parámetros de consulta que especifican:
+    El método `OnButtonClicked`, que se ejecuta cuando se pulsa el objeto [`Button`](xref:Xamarin.Forms.Button), invoca el método `RestService.GetRepositoriesAsync` para recuperar datos de repositorio para .NET de la API web de GitHub. El método `GetRepositoriesAsync` requiere un argumento `string` que representa el URI de la API web que se invoca; el campo `Constants.GitHubReposEndpoint` devuelve dicho argumento.
 
-    - Ciudad para la que se solicitan datos meteorológicos.
-    - Unidades en las que se devolverán los datos meteorológicos.
-    - Clave de API personal.
+    Después de recuperar los datos solicitados, la propiedad [`CollectionView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) se establece en los datos recuperados.
 
-    Después de recuperar los datos meteorológicos solicitados, el elemento [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la página se establece en el objeto `WeatherData`. Para obtener más información sobre la propiedad `BindingContext`, vea [Enlaces con un contexto de enlace](~/xamarin-forms/app-fundamentals/data-binding/basic-bindings.md#bindings-with-a-binding-context) en la guía de [Enlace de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido. Pulse el objeto [`Button`](xref:Xamarin.Forms.Button) a fin de recuperar datos de repositorio para .NET de GitHub:
 
-    > [!IMPORTANT]
-    > La propiedad [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) se hereda a través del árbol visual. Por lo tanto, como ya se ha establecido en el objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage), los objetos secundarios del elemento `ContentPage` heredan su valor, incluyendo las instancias de [`Label`](xref:Xamarin.Forms.Label).
-
-1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido. Pulse [`Button`](xref:Xamarin.Forms.Button) para recuperar los datos meteorológicos actuales para Seattle:
-
-    [![Captura de pantalla de datos meteorológicos de Seattle, en iOS y Android](../images/consume-web-service.png "Datos meteorológicos de Seattle")](../images/consume-web-service-large.png#lightbox "Datos meteorológicos de Seattle")
-
-    > [!IMPORTANT]
-    > Debe establecerse la clave de API de OpenWeatherMap personal como el valor de la constante `OpenWeatherMapAPIKey` en la clase `Constants`.
+    [![Captura de pantalla de una serie de repositorios para .NET de GitHub, en iOS y Android](../images/consume-web-service.png)](../images/consume-web-service-large.png#lightbox)
 
     Para obtener más información sobre cómo usar servicios web basados en REST en Xamarin.Forms, vea [Consumo de servicios web RESTful (guía)](~/xamarin-forms/data-cloud/web-services/rest.md).

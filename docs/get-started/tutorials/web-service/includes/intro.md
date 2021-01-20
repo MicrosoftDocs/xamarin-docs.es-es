@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: 338b03ae5e52b06c6ddc225b418ee2bc7d5e5ffc
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: e46c86def8a22450cf8087cf36a6bb05dd24ef70
+ms.sourcegitcommit: 4d260b655cb52b990dda79c239a9721f2e964625
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71107356"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98570806"
 ---
 Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
 
 - Inicio rápido [Creación de una primera aplicación de Xamarin.Forms](~/get-started/first-app/index.md).
-- Tutorial sobre la [cuadrícula](~/get-started/tutorials/grid/index.yml) (Grid).
+- Tutorial sobre el [diseño de pila](~/get-started/tutorials/stacklayout/index.yml) (StackLayout).
 - Tutorial sobre las [etiquetas](~/get-started/tutorials/label/index.yml) (Label).
 - Tutorial sobre los [botones](~/get-started/tutorials/button/index.yml) (Button).
-- Tutorial sobre las [entradas](~/get-started/tutorials/entry/index.yml) (Entry).
+- Tutorial sobre [CollectionView](~/get-started/tutorials/collectionview/index.yml).
 
 En este tutorial aprenderá a:
 
@@ -22,6 +22,6 @@ En este tutorial aprenderá a:
 > - Crear las clases del servicio web.
 > - Usar las clases del servicio web.
 
-Va a usar Visual Studio 2019, o Visual Studio para Mac, para crear una aplicación sencilla que demuestre cómo recuperar datos desde un servicio web [OpenWeatherMap](https://openweathermap.org/). En las capturas de pantalla siguientes se muestra la aplicación final:
+Va a usar Visual Studio 2019, o Visual Studio para Mac, para crear una aplicación sencilla que muestre cómo recuperar datos de repositorio para .NET de la API web de GitHub. Los datos recuperados se mostrarán en una vista [`CollectionView`](xref:Xamarin.Forms.CollectionView). En las capturas de pantalla siguientes se muestra la aplicación final:
 
-[![Captura de pantalla de datos meteorológicos de Seattle, en iOS y Android](../images/consume-web-service.png "Datos meteorológicos de Seattle")](../images/consume-web-service-large.png#lightbox "Datos meteorológicos de Seattle")
+[![Captura de pantalla de una serie de repositorios para .NET de GitHub, en iOS y Android](../images/consume-web-service.png)](../images/consume-web-service-large.png#lightbox)
