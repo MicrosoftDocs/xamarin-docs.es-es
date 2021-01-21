@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: da0e3775f400c965ee59a762884e638e3379c8df
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: ab5b02e34afa4ff0c839f3f16cc9391e267c2f8a
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91454863"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98608759"
 ---
 # <a name="xamarinandroid-environment"></a>Entorno de Xamarin.Android
 
@@ -79,7 +79,7 @@ Contiene una lista de variables de entorno separada por `|`.
 
 ### `debug.mono.gc`
 
-El valor de la propiedad del sistema `debug.mono.debug` es un entero.
+El valor de la propiedad del sistema `debug.mono.gc` es un entero.
 Si `1`, se debe registrar entonces la información de GC.
 
 Esto equivale a hacer que la propiedad del sistema `debug.mono.log` contenga `gc`.
@@ -133,7 +133,7 @@ La propiedad del sistema `debug.mono.wref` permite invalidar el mecanismo de ref
 - `jni`: se usan referencias débiles de JNI, creadas por `JNIEnv::NewWeakGlobalRef()` y destruidas por `JNIEnv::DeleteWeakGlobalREf()`.
 - `java`: se usan referencias globales de JNI con instancias `java.lang.WeakReference` de referencia.
 
-De forma predeterminada, se usa `java`, hasta API-7 y en API-19 (Kit Kat) con ART habilitado. (API-8 agregó referencias de `jni` y ART *interrumpe las referencias de * `jni`).
+De forma predeterminada, se usa `java`, hasta API-7 y en API-19 (Kit Kat) con ART habilitado. (API-8 agregó referencias de `jni` y ART *interrumpe las referencias de* `jni`).
 
 Esta propiedad del sistema es útil para pruebas y determinadas formas de investigación.
 *En general*, no se debe cambiar.
