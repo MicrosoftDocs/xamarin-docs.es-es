@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/09/2016
-ms.openlocfilehash: cace68a1b85a4404774ca88ec697d419920d05cb
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: cf10633d06c338f5067f768b9097c9b1836d6f59
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91432907"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628831"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Usar iCloud con Xamarin. iOS
 
@@ -28,7 +28,7 @@ Hay cuatro tipos de almacenamiento disponibles:
 
 - **Archivos y directorios individuales** : para administrar muchos archivos diferentes directamente en el sistema de archivos.
 
-En este documento se describen los dos primeros tipos, pares clave-valor y subclases UIDocument, y cómo usar esas características en Xamarin. iOS.
+En este documento se describen los dos primeros tipos Key-Value pares y las subclases UIDocument, y cómo usar esas características en Xamarin. iOS.
 
 > [!IMPORTANT]
 > Apple [proporciona herramientas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ayudar a los desarrolladores a tratar correctamente el Reglamento general de protección de datos (RGPD) de la Unión Europea.
@@ -63,7 +63,7 @@ Seleccione y active la opción **documentos & datos** .
 - **Debe usar un dispositivo para probar iCloud** ; no funcionará en el simulador.
 De hecho, en realidad se necesitan dos o más dispositivos que han iniciado sesión con el mismo ID de Apple para ver iCloud en acción.
 
-## <a name="key-value-storage"></a>Almacenamiento de clave-valor
+## <a name="key-value-storage"></a>Almacenamiento Key-Value
 
 El almacenamiento de clave-valor está diseñado para pequeñas cantidades de datos que un usuario podría desear conservar en los dispositivos, como la última página que se vio en un libro o revista. No se debe usar el almacenamiento de clave-valor para los datos de copia de seguridad.
 
@@ -404,9 +404,9 @@ Los usuarios pueden administrar los documentos de iCloud en el directorio **docu
 
 Los usuarios también recibirán advertencias diferentes cuando intenten quitar una aplicación habilitada para iCloud de su dispositivo, para informarles del estado de los documentos de iCloud relacionados con la aplicación.
 
- [![Cuadro de diálogo de ejemplo cuando el usuario intenta quitar una aplicación habilitada para iCloud de su dispositivo](introduction-to-icloud-images/icloud-delete1.png)](introduction-to-icloud-images/icloud-delete1.png#lightbox)
+ [![Captura de pantalla que muestra una advertencia para las actualizaciones de documentos pendientes.](introduction-to-icloud-images/icloud-delete1.png)](introduction-to-icloud-images/icloud-delete1.png#lightbox)
 
- [![Cuadro de diálogo de ejemplo cuando el usuario intenta quitar una aplicación habilitada para iCloud de su dispositivo](introduction-to-icloud-images/icloud-delete2.png)](introduction-to-icloud-images/icloud-delete2.png#lightbox)
+ [![En la captura de pantalla se muestra una advertencia para Delete i Cloud.](introduction-to-icloud-images/icloud-delete2.png)](introduction-to-icloud-images/icloud-delete2.png#lightbox)
 
 ## <a name="icloud-backup"></a>Copia de seguridad de iCloud
 

@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/31/2017
-ms.openlocfilehash: 9a31cd31f7cbfb4748991d45204ca867b5d62c8c
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: c33317835ff07826e8b9276c4f5cdc13c04c2680
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436620"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628818"
 ---
 # <a name="vision-framework-in-xamarinios"></a>Vision Framework en Xamarin. iOS
 
 Vision Framework agrega una serie de nuevas características de procesamiento de imágenes a iOS 11, entre las que se incluyen:
 
 - [Detección de rectángulos](#rectangles)
-- [Detección facial](#faces)
+- [Detección de caras](#faces)
 - Machine Learning el análisis de imágenes (se explica en [CoreML](~/ios/platform/introduction-to-ios11/coreml.md))
 - Detección de códigos de barras
 - Análisis de alineación de imagen
@@ -27,7 +27,7 @@ Vision Framework agrega una serie de nuevas características de procesamiento de
 - Detección de horizonte
 - Seguimiento de & de detección de objetos
 
-![Fotografía con tres rectángulos detectados](vision-images/found-rectangles-tiny.png) ![Fotografía con dos caras detectadas](vision-images/xamarin-home-faces-tiny.png)
+![Fotografía con tres rectángulos detectados.](vision-images/found-rectangles-tiny.png) ![Fotografía con dos caras detectadas.](vision-images/xamarin-home-faces-tiny.png)
 
 La detección y el Detección de caras de los rectángulos se describen con más detalle a continuación.
 
@@ -96,7 +96,7 @@ El `OverlayRectangles` método en el ejemplo **VisionRectangles** tiene tres fun
 
 Vea el [origen del ejemplo](/samples/xamarin/ios-samples/ios11-visionrectangles) para el método CoreGraphics exacto.
 
-![Fotografía con tres rectángulos detectados](vision-images/found-rectangles-phone-sml.png)
+![Fotografía con tres rectángulos detectados en un dispositivo móvil.](vision-images/found-rectangles-phone-sml.png)
 
 ### <a name="5-further-processing"></a>5. procesamiento adicional
 
@@ -169,7 +169,7 @@ El `OverlayRectangles` método en el ejemplo **VisionFaces** tiene tres funcione
 
 Vea el [origen del ejemplo](/samples/xamarin/ios-samples/ios11-visionfaces) para el método CoreGraphics exacto.
 
-![Fotografía con dos caras detectadas](vision-images/found-faces-phone-sml.png)
+![Fotografía con dos caras detectadas en un dispositivo móvil.](vision-images/found-faces-phone-sml.png)
 
 ### <a name="5-further-processing"></a>5. procesamiento adicional
 

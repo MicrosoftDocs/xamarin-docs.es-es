@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2018
-ms.openlocfilehash: 79dcab73c379cecb5108a88cc8bbb2eab33af05c
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 81dc3d23ea606a525fcc1bbffafa7d3bfdf6b332
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91457112"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628870"
 ---
 # <a name="creating-a-watch-face"></a>Creación de una esfera del reloj
 
@@ -23,11 +23,11 @@ _En esta guía se explica cómo implementar un servicio de reloj de observación
 En este tutorial, se crea un servicio básico de la guía de observación para ilustrar los aspectos básicos de la creación de una superficie de inspección 1,0 personalizada de un desgaste de Android.
 El servicio de la esfera de reloj inicial muestra una simple inspección digital que muestra la hora actual en horas y minutos:
 
-[![Superficie de inspección digital](creating-a-watchface-images/01-initial-face.png "Captura de pantalla de ejemplo de la superficie de la inspección digital inicial")](creating-a-watchface-images/01-initial-face.png#lightbox)
+[![Captura de pantalla que muestra la superficie de inspección digital inicial.](creating-a-watchface-images/01-initial-face.png "Captura de pantalla de ejemplo de la superficie de la inspección digital inicial")](creating-a-watchface-images/01-initial-face.png#lightbox)
 
 Después de desarrollar y probar esta superficie de inspección digital, se agrega más código para actualizarla a una esfera de inspección analógica más sofisticada con tres manos:
 
-[![Superficie de inspección analógica](creating-a-watchface-images/02-example-watchface.png "Captura de pantalla de ejemplo de la superficie de inspección analógica final")](creating-a-watchface-images/02-example-watchface.png#lightbox)
+[![Captura de pantalla que muestra la superficie de inspección analógica final.](creating-a-watchface-images/02-example-watchface.png "Captura de pantalla de ejemplo de la superficie de inspección analógica final")](creating-a-watchface-images/02-example-watchface.png#lightbox)
 
 Ver los servicios faciales se agrupan e instalan como parte de una aplicación de desgaste de 1,0. En los siguientes ejemplos, no `MainActivity` contiene nada más que el código de la plantilla de aplicación de desgaste 1,0, de modo que el servicio de reloj de inspección se puede empaquetar e implementar en Smart Watch como parte de la aplicación. En efecto, esta aplicación servirá exclusivamente como vehículo para obtener el servicio de reloj de observación cargado en el dispositivo (o emulador) de desgaste 1,0 para la depuración y las pruebas.
 
@@ -340,7 +340,7 @@ Compile e implemente la aplicación en el dispositivo de desgaste. Debería ver 
 
 Esto cambia la parte del reloj del dispositivo de desgaste para usar el servicio de la esfera de inspección personalizada implementada hasta el momento:
 
-[![Superficie de inspección digital](creating-a-watchface-images/12-digital-watchface.png "Reloj digital personalizado en ejecución en el dispositivo de desgaste")](creating-a-watchface-images/12-digital-watchface.png#lightbox)
+[![La captura de pantalla muestra una inspección digital personalizada que se ejecuta en el dispositivo de desgaste.](creating-a-watchface-images/12-digital-watchface.png "Reloj digital personalizado en ejecución en el dispositivo de desgaste")](creating-a-watchface-images/12-digital-watchface.png#lightbox)
 
 Se trata de una esfera de inspección relativamente crudo porque la implementación de la aplicación es tan mínima (por ejemplo, no incluye un fondo de la esfera de reloj y no llama `Paint` a los métodos de suavizado de contorno para mejorar la apariencia).
 Sin embargo, implementa la funcionalidad básica necesaria para crear una superficie de inspección personalizada.
@@ -361,11 +361,11 @@ En el resto de este tutorial, `MyWatchFaceService` se actualiza para mostrar una
 
 5. Actualiza automáticamente la hora a la que tiene lugar un cambio de zona horaria.
 
-Antes de implementar los cambios de código siguientes, descargue [drawable.zip](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/Resources/drawable.zip?raw=true), descomprima y mueva los archivos. png descomprimidos a **Resources/drawable** (sobrescriba el **preview.png**anterior). Agregue los nuevos archivos. png al `WatchFace` proyecto.
+Antes de implementar los cambios de código siguientes, descargue [drawable.zip](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/Resources/drawable.zip?raw=true), descomprima y mueva los archivos. png descomprimidos a **Resources/drawable** (sobrescriba el **preview.png** anterior). Agregue los nuevos archivos. png al `WatchFace` proyecto.
 
 ### <a name="update-engine-features"></a>Características del motor de actualización
 
-El paso siguiente es actualizar **MyWatchFaceService.CS** a una implementación que dibuja una esfera de inspección analógica y admite nuevas características. Reemplace el contenido de **MyWatchFaceService.CS** por la versión analógica del código de la fuente de inspección en [MyWatchFaceService.CS](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/WatchFace/MyWatchFaceService.cs) (puede cortar y pegar este origen en el **MyWatchFaceService.CS**existente).
+El paso siguiente es actualizar **MyWatchFaceService.CS** a una implementación que dibuja una esfera de inspección analógica y admite nuevas características. Reemplace el contenido de **MyWatchFaceService.CS** por la versión analógica del código de la fuente de inspección en [MyWatchFaceService.CS](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/WatchFace/MyWatchFaceService.cs) (puede cortar y pegar este origen en el **MyWatchFaceService.CS** existente).
 
 Esta versión de **MyWatchFaceService.CS** agrega más código a los métodos existentes e incluye métodos invalidados adicionales para agregar más funcionalidad. En las secciones siguientes se proporciona una visita guiada del código fuente.
 
@@ -463,7 +463,7 @@ Application.Context.UnregisterReceiver (timeZoneReceiver);
 
 Compile e implemente de nuevo la aplicación en el dispositivo de desgaste. Seleccione la esfera de reloj del selector de caras de inspección como antes. La vista previa en el selector de inspección se muestra a la izquierda y la nueva esfera de inspección se muestra a la derecha:
 
-[![Superficie de inspección analógica](creating-a-watchface-images/13-analog-watchface.png "Aspecto analógico mejorado en el selector y en el dispositivo")](creating-a-watchface-images/13-analog-watchface.png#lightbox)
+[![La captura de pantalla muestra una superficie analógica mejorada en el selector y en el dispositivo.](creating-a-watchface-images/13-analog-watchface.png "Aspecto analógico mejorado en el selector y en el dispositivo")](creating-a-watchface-images/13-analog-watchface.png#lightbox)
 
 En esta captura de pantalla, la segunda mano se mueve una vez por segundo. Al ejecutar este código en un dispositivo de desgaste, la segunda mano desaparece cuando el reloj entra en el modo ambiente.
 

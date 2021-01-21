@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: e32042c4b7e7d67e219611014d3a06ad9ed17b9d
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 76ce375e611ddc8ee21d76e7947601319bf9dba8
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91432461"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628948"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitarea para iPad en Xamarin. iOS
 
@@ -158,7 +158,7 @@ La **pestaña de comandos** abrirá un conmutador de aplicación que permite al 
 
 Si una aplicación de iOS 9 incluye métodos abreviados de teclado, el usuario puede mantener presionadas las teclas **comando**, **opción** o **control** para mostrarlas en un elemento emergente:
 
-[![Menú emergente de métodos abreviados de teclado](multitasking-images/keyboard02.png)](multitasking-images/keyboard02.png#lightbox)
+[![Captura de pantalla que muestra los métodos abreviados de teclado para una aplicación.](multitasking-images/keyboard02.png)](multitasking-images/keyboard02.png#lightbox)
 
 #### <a name="defining-custom-keyboard-shortcuts"></a>Definición de métodos abreviados de teclado personalizados
 
@@ -192,9 +192,9 @@ En primer lugar, reemplazamos la `CanBecomeFirstResponder` propiedad y devolvemo
 
 A continuación, invalide la `KeyCommands` propiedad y cree un nuevo `UIKeyCommand` para la pulsación de tecla del **comando N** . Cuando se activa la pulsación de tecla, se llama al `NewEntry` método (que se expone a iOS 9 mediante el `Export` comando) para realizar la acción solicitada.
 
-Si ejecutamos esta aplicación en un iPad con un teclado de hardware conectado y el comando Types **-N**de usuario, se agregará una nueva entrada a la lista. Si el usuario mantiene presionada la tecla de **comando** , se mostrará la lista de accesos directos:
+Si ejecutamos esta aplicación en un iPad con un teclado de hardware conectado y el comando Types **-N** de usuario, se agregará una nueva entrada a la lista. Si el usuario mantiene presionada la tecla de **comando** , se mostrará la lista de accesos directos:
 
-[![Menú emergente de métodos abreviados de teclado](multitasking-images/keyboard03.png)](multitasking-images/keyboard03.png#lightbox)
+[![Captura de pantalla que muestra el nuevo acceso directo de entrada para una aplicación.](multitasking-images/keyboard03.png)](multitasking-images/keyboard03.png#lightbox)
 
 Vea la [aplicación](/samples/xamarin/ios-samples/ios9-multitask) de ejemplo para obtener una implementación de ejemplo.
 

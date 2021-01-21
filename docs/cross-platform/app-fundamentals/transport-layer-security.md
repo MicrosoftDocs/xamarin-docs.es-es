@@ -6,12 +6,12 @@ ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
 author: davidortinau
 ms.author: daortin
 ms.date: 04/20/2018
-ms.openlocfilehash: fda004fe32b8f7d047298608a500cf72c4e9f06c
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 2beb33915d1dd03184d784ea998f91fcb64f423f
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91453376"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628909"
 ---
 # <a name="transport-layer-security-tls-12"></a>Seguridad de la capa de transporte (TLS) 1.2
 
@@ -35,7 +35,7 @@ Actualice la **implementación de HttpClient** y las opciones de **implementaci�
 
 Esta configuración se puede encontrar en **las propiedades del proyecto > opciones de Android** y, a continuación, en el botón **Opciones avanzadas** :
 
-[![Configuración de HttpClient y TLS en Visual Studio](transport-layer-security-images/android-win-sml.png)](transport-layer-security-images/android-win.png#lightbox)
+[![Configure HttpClient y TLS en Visual Studio para dispositivos Android.](transport-layer-security-images/android-win-sml.png)](transport-layer-security-images/android-win.png#lightbox)
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -53,13 +53,13 @@ Actualice la opción de **implementación de HttpClient** para habilitar la segu
 
 Esta configuración se puede encontrar en **las propiedades del proyecto > compilación de iOS**:
 
-[![Configuración de HttpClient y TLS en Visual Studio](transport-layer-security-images/ios-win-sml.png)](transport-layer-security-images/ios-win.png#lightbox)
+[![Configure HttpClient y TLS en Visual Studio para dispositivos i O S.](transport-layer-security-images/ios-win-sml.png)](transport-layer-security-images/ios-win.png#lightbox)
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Esta configuración se puede encontrar en **Opciones del proyecto > Compilar > pestaña compilación de iOS** :
 
-[![Configuración de HttpClient en Visual Studio para Mac](transport-layer-security-images/ios-mac-sml.png)](transport-layer-security-images/ios-mac.png#lightbox)
+[![Configure HttpClient en Visual Studio para Mac para dispositivos i O S.](transport-layer-security-images/ios-mac-sml.png)](transport-layer-security-images/ios-mac.png#lightbox)
 
 -----
 
