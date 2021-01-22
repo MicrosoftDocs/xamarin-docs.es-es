@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 855ca4a56915578fdd2560110bc3231f122d0dc9
-ms.sourcegitcommit: 99aa05bd9b5e3f66d134066b860f41b54fa2d850
+ms.openlocfilehash: 11427616ce20e47fb2b4d87c62098ececd3ed972
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82109663"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98689642"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 Para completar este tutorial debe tener Visual Studio 2019 (versión más reciente), con la carga de trabajo **Desarrollo para dispositivos móviles con .NET** instalada. Además, necesita un equipo Mac emparejado para compilar la aplicación del tutorial en iOS. Para obtener información sobre la instalación de la plataforma de Xamarin, consulte [Instalación de Xamarin](~/get-started/installation/index.md). Para obtener información sobre cómo conectar Visual Studio 2019 a un host de compilación de Mac, consulte [Emparejar con Mac para el desarrollo de Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-1. Inicie Visual Studio y cree una aplicación de Xamarin.Forms en blanco llamada **ImageTutorial**. Asegúrese de que la aplicación use .NET Standard como mecanismo de código compartido.
+1. Inicie Visual Studio y cree una aplicación de Xamarin.Forms en blanco llamada **ImageTutorial**.
 
     > [!IMPORTANT]
     > Los fragmentos de código de C# y XAML en este tutorial necesitan que la solución se denomine **ImageTutorial**. El uso de otro nombre dará como resultado errores de compilación al copiar el código de este tutorial en la solución.
@@ -49,7 +49,7 @@ Para completar este tutorial debe tener Visual Studio 2019 (versión más recien
 
 Para completar este tutorial debe tener instalado Visual Studio para Mac (versión más reciente) con compatibilidad con la plataforma de iOS y Android. Además, también necesitará Xcode (versión más reciente). Para obtener más información sobre la instalación de la plataforma de Xamarin, consulte [Instalación de Xamarin](~/get-started/installation/index.md).
 
-1. Inicie Visual Studio para Mac y cree una aplicación de Xamarin.Forms en blanco llamada **ImageTutorial**. Asegúrese de que la aplicación use .NET Standard como mecanismo de código compartido.
+1. Inicie Visual Studio para Mac y cree una aplicación de Xamarin.Forms en blanco llamada **ImageTutorial**.
 
     > [!IMPORTANT]
     > Los fragmentos de código de C# y XAML en este tutorial necesitan que la solución se denomine **ImageTutorial**. El uso de otro nombre dará como resultado errores de compilación al copiar el código de este tutorial en la solución.
