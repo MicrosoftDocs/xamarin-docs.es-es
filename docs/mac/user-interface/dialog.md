@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: f4d90960547fb43d6681667daadde1ce71fc105a
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 484a40aa744cae382fccca3698df0cb9344863fa
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91431760"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697558"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Cuadros de diálogo en Xamarin. Mac
 
@@ -118,7 +118,7 @@ Para agregar una nueva ventana, haga lo siguiente:
     [![Seleccionar un controlador de vista de la biblioteca](dialog-images/new01.png)](dialog-images/new01.png#lightbox)
 3. En el **Inspector de identidad**, escriba `CustomDialogController` para el **nombre de clase**: 
 
-    [![Establecer el nombre de clase](dialog-images/new02.png)](dialog-images/new02.png#lightbox)
+    [![Establecer el nombre de la clase en CustomDialogController.](dialog-images/new02.png)](dialog-images/new02.png#lightbox)
 4. Vuelva a Visual Studio para Mac, permita que se sincronice con Xcode y cree el `CustomDialogController.h` archivo.
 5. Vuelva a Xcode y diseñe la interfaz: 
 
@@ -272,8 +272,8 @@ Para crear una hoja personalizada en Xamarin. Mac, haga lo siguiente:
     [![Seleccionar el tipo de segue de hoja](dialog-images/sheet02.png)](dialog-images/sheet02.png#lightbox)
 5. En el **Inspector de identidad**, asigne un nombre a la **clase** del controlador de vista `SheetViewController` : 
 
-    [![Establecer el nombre de clase](dialog-images/sheet03.png)](dialog-images/sheet03.png#lightbox)
-6. Defina las **salidas** y **las acciones**necesarias: 
+    [![Establecer el nombre de la clase en SheetViewController.](dialog-images/sheet03.png)](dialog-images/sheet03.png#lightbox)
+6. Defina las **salidas** y **las acciones** necesarias: 
 
     [![Definición de las salidas y acciones necesarias](dialog-images/sheet04.png)](dialog-images/sheet04.png#lightbox)
 7. Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos.
@@ -496,20 +496,20 @@ Para agregar una nueva ventana, haga lo siguiente:
 7. Diseño del diseño de la barra de herramientas:
 
     [![Diseño de la barra de herramientas](dialog-images/pref06.png)](dialog-images/pref06.png#lightbox)
-8. Control: haga clic y arrastre desde cada botón de la **barra de herramientas** hasta las vistas que creó anteriormente. Seleccione un tipo de segue **personalizado** :
+8. Control-Click y arrastre desde cada **botón** de la barra de herramientas hasta las vistas que creó anteriormente. Seleccione un tipo de segue **personalizado** :
 
-    [![Establecimiento del tipo segue](dialog-images/pref07.png)](dialog-images/pref07.png#lightbox)
+    [![Establecer un tipo de segue personalizado.](dialog-images/pref07.png)](dialog-images/pref07.png#lightbox)
 9. Seleccione el nuevo segue y establezca la **clase** en `ReplaceViewSegue` :
 
     [![Establecimiento de la clase segue](dialog-images/pref08.png)](dialog-images/pref08.png#lightbox)
 10. En el **Diseñador** de la barra de menús del superficie de diseño, en el menú de la aplicación seleccione **preferencias...**, control-haga clic y arrastre hasta la ventana de preferencias para crear un segue de **presentación** :
 
-    [![Establecimiento del tipo segue](dialog-images/pref09.png)](dialog-images/pref09.png#lightbox)
+    [![Establecer el tipo de segue arrastrando las preferencias a la ventana Preferencias.](dialog-images/pref09.png)](dialog-images/pref09.png#lightbox)
 11. Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos.
 
 Si ejecutamos el código y seleccionamos las **preferencias...** en el menú de la **aplicación**, se mostrará la ventana:
 
-[![Ventana de preferencias de ejemplo](dialog-images/pref10.png)](dialog-images/pref10.png#lightbox)
+[![Una ventana de preferencias de ejemplo que muestra el perfil de Word.](dialog-images/pref10.png)](dialog-images/pref10.png#lightbox)
 
 Para obtener más información sobre cómo trabajar con ventanas y barras de herramientas, consulte la documentación de las [barras de herramientas](~/mac/user-interface/toolbar.md) y [ventanas](~/mac/user-interface/window.md) .
 
@@ -519,7 +519,7 @@ Para obtener más información sobre cómo trabajar con ventanas y barras de her
 
 En una aplicación típica de macOS, cuando el usuario realiza cambios en cualquiera de las preferencias de usuario de la aplicación, esos cambios se guardan automáticamente. La forma más fácil de controlarlo en una aplicación de Xamarin. Mac es crear una sola clase para administrar todas las preferencias del usuario y compartirla en todo el sistema.
 
-En primer lugar, agregue una nueva `AppPreferences` clase al proyecto y herede de `NSObject` . Las preferencias se diseñarán para usar el [enlace de datos y el código de valor de clave](~/mac/app-fundamentals/databinding.md) , lo que hará que el proceso de creación y mantenimiento de los formularios de preferencias sea mucho más sencillo. Puesto que las preferencias se componen de una pequeña cantidad de tipos de valores simples, use el integrado `NSUserDefaults` para almacenar y recuperar valores.
+En primer lugar, agregue una nueva `AppPreferences` clase al proyecto y herede de `NSObject` . Las preferencias se diseñarán para usar el [enlace de datos y la codificación de Key-Value](~/mac/app-fundamentals/databinding.md) , lo que hará que el proceso de creación y mantenimiento de los formularios de preferencias sea mucho más sencillo. Puesto que las preferencias se componen de una pequeña cantidad de tipos de valores simples, use el integrado `NSUserDefaults` para almacenar y recuperar valores.
 
 Edite el `AppPreferences.cs` archivo y haga que tenga el aspecto siguiente:
 
@@ -902,7 +902,7 @@ namespace SourceWriter
 
 Con todos estos cambios en su lugar, si el usuario edita las preferencias de la aplicación y cierra la ventana de preferencias, los cambios se aplicarán a todas las ventanas abiertas:
 
-[![Ventana de preferencias de ejemplo](dialog-images/prefs14.png)](dialog-images/prefs14.png#lightbox)
+[![Una ventana de preferencias de ejemplo, que se muestra con varias ventanas abiertas.](dialog-images/prefs14.png)](dialog-images/prefs14.png#lightbox)
 
 <a name="The_Open_Dialog"></a>
 

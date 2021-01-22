@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 04c33b59e2a1bab7fb401ffdc49d120bcfd679d0
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 53ffd71704201c87d5e30dea0f8da46189d6e75b
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436833"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697532"
 ---
 # <a name="manual-camera-controls-in-xamarinios"></a>Controles de cámara manuales en Xamarin. iOS
 
@@ -332,7 +332,7 @@ Para implementar las características anteriores, la `AVCaptureDevice` clase se 
 
 Para tomar el control manual de la posición de la lente, el dispositivo de captura debe estar en modo de enfoque bloqueado. Ejemplo:
 
- `CaptureDevice.FocusMode = AVCaptureFocusMode.Locked;`
+ `CaptureDevice.FocusMode = AVCaptureFocusMode.Locked;`
 
 El `SetFocusModeLocked` método del dispositivo de captura se usa para ajustar la posición de la lente de la cámara. Se puede proporcionar una rutina de devolución de llamada opcional para recibir una notificación cuando el cambio surta efecto. Ejemplo:
 
@@ -348,7 +348,7 @@ Tal como se ha mostrado en el código anterior, el dispositivo de captura debe e
 
 Con el código de configuración de la captura de AV general en su lugar, `UIViewController` se puede Agregar al guión gráfico de la aplicación y configurarlo de la manera siguiente:
 
-[![Un UIViewController se puede Agregar al guión gráfico de las aplicaciones y configurarse como se muestra aquí.](intro-to-manual-camera-controls-images/image5.png)](intro-to-manual-camera-controls-images/image5.png#lightbox)
+[![Un UIViewController se puede Agregar al guión gráfico de las aplicaciones y configurarse como se muestra aquí para el ejemplo de enfoque manual.](intro-to-manual-camera-controls-images/image5.png)](intro-to-manual-camera-controls-images/image5.png#lightbox)
 
 La vista contiene los siguientes elementos principales:
 
@@ -539,7 +539,7 @@ iOS 7 y versiones posteriores, proporcionan los siguientes controles de exposici
 Además de las características ya proporcionadas por iOS 7 y versiones posteriores, las siguientes características están ahora disponibles para controlar la exposición en iOS 8:
 
 - Exposición personalizada totalmente manual.
-- Get, Set y key-value ven la velocidad de IOS y obturador (duración).
+- Get, Set y Key-Value observar la velocidad de IOS y obturador (duración).
 
 Para implementar las características anteriores, se ha `AVCaptureExposureModeCustom` agregado un nuevo modo. Cuando la cámara en es el modo personalizado, se puede usar el siguiente código para ajustar la duración de la exposición e ISO:
 
@@ -572,7 +572,7 @@ Tal como se ha mostrado en el código anterior, el dispositivo de captura debe e
 
 Con el código de configuración de la captura de AV general en su lugar, `UIViewController` se puede Agregar al guión gráfico de la aplicación y configurarlo de la manera siguiente:
 
-[![Un UIViewController se puede Agregar al guión gráfico de las aplicaciones y configurarse como se muestra aquí.](intro-to-manual-camera-controls-images/image12.png)](intro-to-manual-camera-controls-images/image12.png#lightbox)
+[![Un UIViewController se puede Agregar al guión gráfico de las aplicaciones y configurarse como se muestra aquí para el ejemplo de exposición manual.](intro-to-manual-camera-controls-images/image12.png)](intro-to-manual-camera-controls-images/image12.png#lightbox)
 
 La vista contiene los siguientes elementos principales:
 
@@ -827,7 +827,7 @@ Y la aplicación puede supervisar la `AdjustingWhiteBalance` propiedad para ver 
 Además de las características ya proporcionadas por iOS 7 y versiones posteriores, las siguientes características están ahora disponibles para controlar el equilibrio de blancos en iOS 8:
 
 - Control totalmente manual del aumento de RGB del dispositivo.
-- Get, Set y key-value observan el aumento de RGB del dispositivo.
+- Get, Set y Key-Value observar el aumento de RGB del dispositivo.
 - Compatibilidad con el balance de blanco mediante una tarjeta gris.
 - Rutinas de conversión a y desde espacios de colores independientes del dispositivo.
 
@@ -872,7 +872,7 @@ El dispositivo de captura debe estar bloqueado para la configuración antes de q
 
 Con el código de configuración de la captura de AV general en su lugar, `UIViewController` se puede Agregar al guión gráfico de la aplicación y configurarlo de la manera siguiente:
 
-[![Un UIViewController se puede Agregar al guión gráfico de las aplicaciones y configurarse como se muestra aquí.](intro-to-manual-camera-controls-images/image18.png)](intro-to-manual-camera-controls-images/image18.png#lightbox)
+[![Un UIViewController se puede Agregar al guión gráfico de las aplicaciones y configurarse como se muestra aquí para el ejemplo de balance de blanco manual.](intro-to-manual-camera-controls-images/image18.png)](intro-to-manual-camera-controls-images/image18.png#lightbox)
 
 La vista contiene los siguientes elementos principales:
 
@@ -1152,7 +1152,7 @@ Teniendo en cuenta esta información, echemos un vistazo a un ejemplo del uso de
 
 Con el código de configuración de la captura de AV general en su lugar, `UIViewController` se puede Agregar al guión gráfico de la aplicación y configurarlo de la manera siguiente:
 
-[![Un UIViewController se puede Agregar al guión gráfico de las aplicaciones y configurarse como se muestra aquí.](intro-to-manual-camera-controls-images/image23.png)](intro-to-manual-camera-controls-images/image23.png#lightbox)
+[![Un UIViewController se puede Agregar al guión gráfico de las aplicaciones y configurarse como se muestra aquí ejemplo de captura de corchetes.](intro-to-manual-camera-controls-images/image23.png)](intro-to-manual-camera-controls-images/image23.png#lightbox)
 
 La vista contiene los siguientes elementos principales:
 

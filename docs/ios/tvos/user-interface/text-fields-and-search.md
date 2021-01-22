@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: ae54f4f4cfb9b2c604be9c55d2a47303fb22485e
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: e5a872fc18ca918b45181646ff4b279e1441f39b
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91435565"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697545"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Trabajar con campos de texto y búsqueda de tvOS en Xamarin
 
@@ -94,7 +94,7 @@ Para obtener más información, consulte referencia de la [clase UISearchControl
 
 La forma más fácil de trabajar con campos de texto en una aplicación Xamarin. tvOS es agregarlos al diseño de la interfaz de usuario mediante el diseñador de iOS.
 
-Siga estos pasos:
+Haga lo siguiente:
 
 <!-- markdownlint-disable MD001 -->
 
@@ -107,10 +107,10 @@ Siga estos pasos:
 1. Seleccione los **campos de texto** y asigne a cada uno un **nombre** único en la pestaña **Widget** del **Panel de propiedades**:
 
     [![Ficha widget del Panel de propiedades](text-fields-and-search-images/text03.png)](text-fields-and-search-images/text03.png#lightbox)
-1. En la sección **campo de texto** , puede definir elementos como la sugerencia de marcador de **posición** y el **valor**predeterminado:
+1. En la sección **campo de texto** , puede definir elementos como la sugerencia de marcador de **posición** y el **valor** predeterminado:
 
     [![Sección campo de texto](text-fields-and-search-images/text04.png)](text-fields-and-search-images/text04.png#lightbox)
-1. Desplácese hacia abajo para definir propiedades como la revisión **ortográfica**, el **capitalización** y el **tipo de teclado**predeterminado:
+1. Desplácese hacia abajo para definir propiedades como la revisión **ortográfica**, el **capitalización** y el **tipo de teclado** predeterminado:
 
     [![Revisión ortográfica, capitalización y el tipo de teclado predeterminado](text-fields-and-search-images/text05.png)](text-fields-and-search-images/text05.png#lightbox)
 1. Guarde los cambios en el guion gráfico.
@@ -123,11 +123,11 @@ Siga estos pasos:
     [![Un campo de texto](text-fields-and-search-images/text02-vs.png)](text-fields-and-search-images/text02-vs.png#lightbox)
 1. Seleccione los **campos de texto** y asigne a cada uno un **nombre** único en la pestaña **Widget** del **Explorador de propiedades**:
 
-    [![La pestaña widget](text-fields-and-search-images/text03-vs.png)](text-fields-and-search-images/text03-vs.png#lightbox)
-1. En la sección **campo de texto** , puede definir elementos como la sugerencia de marcador de **posición** y el **valor**predeterminado:
+    [![La pestaña widget, donde puede especificar un nombre para cada campo de texto.](text-fields-and-search-images/text03-vs.png)](text-fields-and-search-images/text03-vs.png#lightbox)
+1. En la sección **campo de texto** , puede definir elementos como la sugerencia de marcador de **posición** y el **valor** predeterminado:
 
     [![Sección campo de texto](text-fields-and-search-images/text04-vs.png)](text-fields-and-search-images/text04-vs.png#lightbox)
-1. Desplácese hacia abajo para definir propiedades como la revisión **ortográfica**, el **capitalización** y el **tipo de teclado**predeterminado:
+1. Desplácese hacia abajo para definir propiedades como la revisión **ortográfica**, el **capitalización** y el **tipo de teclado** predeterminado:
 
     [![Revisión ortográfica, capitalización y el tipo de teclado predeterminado](text-fields-and-search-images/text05-vs.png)](text-fields-and-search-images/text05-vs.png#lightbox)
 1. Guarde los cambios en el guion gráfico.
@@ -148,7 +148,7 @@ Opcionalmente, puede usar los `Started` `Ended` eventos de campo de texto y para
 
 La forma más fácil de trabajar con campos de búsqueda en una aplicación de Xamarin. tvOS es agregarlos al diseño de la interfaz de usuario mediante el diseñador de la interfaz.
 
-Siga estos pasos:
+Haga lo siguiente:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -158,11 +158,11 @@ Siga estos pasos:
     [![Un controlador de vista de colección](text-fields-and-search-images/search02.png)](text-fields-and-search-images/search02.png#lightbox)
 1. En la pestaña **Widget** del **Panel de propiedades**, use `SearchResultsViewController` para la **clase** y `SearchResults` para el identificador de **guión gráfico**:
 
-    [![La pestaña widget](text-fields-and-search-images/search03.png)](text-fields-and-search-images/search03.png#lightbox)
+    [![La pestaña widget en Visual Studio para Mac donde puede especificar la clase y el guión gráfico D.](text-fields-and-search-images/search03.png)](text-fields-and-search-images/search03.png#lightbox)
 1. Seleccione el **prototipo de celda** en la superficie de diseño.
 1. En la pestaña **Widget** del **Explorador de propiedades**, use `SearchResultCell` para la **clase** y `ImageCell` para el **identificador**:
 
-    [![La pestaña widget](text-fields-and-search-images/search04.png)](text-fields-and-search-images/search04.png#lightbox)
+    [![La pestaña widget en Visual Studio para Mac donde puede especificar la clase y el identificador.](text-fields-and-search-images/search04.png)](text-fields-and-search-images/search04.png#lightbox)
 1. Diseñe el diseño del **prototipo de celda** y exponga cada elemento con un **nombre** único en la pestaña **Widget** del explorador de **propiedades**:
 
     [![Diseño del prototipo de celda](text-fields-and-search-images/search05.png)](text-fields-and-search-images/search05.png#lightbox)
@@ -176,11 +176,11 @@ Siga estos pasos:
     [![Un controlador de vista de colección](text-fields-and-search-images/seach02-vs.png)](text-fields-and-search-images/seach02-vs.png#lightbox)
 1. En la pestaña **Widget** del **Explorador de propiedades**, use `SearchResultsViewController` para la **clase** y `SearchResults` para el **identificador de guión gráfico**:
 
-    [![La pestaña widget](text-fields-and-search-images/search03-vs.png)](text-fields-and-search-images/search03-vs.png#lightbox)
+    [![La pestaña widget, donde puede especificar la clase y el guión gráfico D.](text-fields-and-search-images/search03-vs.png)](text-fields-and-search-images/search03-vs.png#lightbox)
 1. Seleccione el **prototipo de celda** en la superficie de diseño.
 1. En la pestaña **Widget** del **Explorador de propiedades**, use `SearchResultCell` para la **clase** y `ImageCell` para el **identificador**:
 
-    [![La pestaña widget](text-fields-and-search-images/search04-vs.png)](text-fields-and-search-images/search04-vs.png#lightbox)
+    [![La pestaña widget, donde puede especificar la clase y el identificador.](text-fields-and-search-images/search04-vs.png)](text-fields-and-search-images/search04-vs.png#lightbox)
 1. Diseñe el diseño del **prototipo de celda** y exponga cada elemento con un **nombre** único en la pestaña **Widget** del explorador de **propiedades**:
 
     [![Diseño del prototipo de celda](text-fields-and-search-images/search05-vs.png)](text-fields-and-search-images/search05-vs.png#lightbox)

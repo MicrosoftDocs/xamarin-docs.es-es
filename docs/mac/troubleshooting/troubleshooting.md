@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 683915d238f6c8aee10957285ad4438316e1e037
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 723278bb5b0a76d9fd2560209385bd4cfdac54a9
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84567152"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697506"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Sugerencias para la solución de problemas de Xamarin. Mac
 
@@ -47,10 +47,10 @@ En la mayoría de los casos, el depurador de Visual Studio para Mac detectará l
 La depuración de estos programas puede ser frustrante, ya que la búsqueda de la información necesaria puede ser difícil. Estos son algunos de los métodos que pueden ayudar:
 
 - Asegúrese de que la versión de macOS indicada en **info. plist** sea la misma que la versión de MacOS instalada actualmente en el equipo.
-- Compruebe la salida de la aplicación Visual Studio para Mac (**Ver**  ->  **paneles**  ->  **resultado**de la aplicación) para los seguimientos de la pila o la salida en rojo del coco que puede describir la salida.
+- Compruebe la salida de la aplicación Visual Studio para Mac (**Ver**  ->  **paneles**  ->  **resultado** de la aplicación) para los seguimientos de la pila o la salida en rojo del coco que puede describir la salida.
 - Ejecute la aplicación desde la línea de comandos y examine el resultado (en la aplicación **terminal** ) mediante:
 
-  `MyApp.app/Contents/MacOS/MyApp`(donde `MyApp` es el nombre de la aplicación)
+  `MyApp.app/Contents/MacOS/MyApp` (donde `MyApp` es el nombre de la aplicación)
 - Puede aumentar la salida agregando "MONO_LOG_LEVEL" al comando en la línea de comandos, por ejemplo:
 
   `MONO_LOG_LEVEL=debug MyApp.app/Contents/MacOS/MyApp`
@@ -70,7 +70,7 @@ En las secciones siguientes se tratan los problemas conocidos y sus soluciones.
 
 El depurador se conecta a las aplicaciones de Xamarin. Mac a través de TCP, lo que significa que, de forma predeterminada, cuando se habilita el espacio aislado, no se puede conectar a la aplicación, por lo que si se intenta ejecutar la aplicación sin los permisos adecuados habilitados, se obtiene un error que indica que *no se puede conectar al depurador*.
 
-[![Editar los derechos](troubleshooting-images/debug01.png "Editar los derechos")](troubleshooting-images/debug01-large.png#lightbox)
+[![Editar los derechos en el espacio aislado de la aplicación.](troubleshooting-images/debug01.png "Editar los derechos")](troubleshooting-images/debug01-large.png#lightbox)
 
 El permiso **permitir conexiones de red salientes (cliente)** es el requerido para el depurador, lo que permite la depuración de forma normal. Dado que no se puede depurar sin él, hemos actualizado el `CompileEntitlements` destino de para `msbuild` que agregue automáticamente ese permiso a los derechos de cualquier aplicación que esté en un espacio aislado para las compilaciones de depuración únicamente. Las compilaciones de versión deben usar los derechos especificados en el archivo de derechos, sin modificar.
 
@@ -78,7 +78,7 @@ El permiso **permitir conexiones de red salientes (cliente)** es el requerido pa
 
 Al incluir bibliotecas de terceros en la aplicación de Xamarin. Mac, podría obtener un error con el formato "System. NotSupportedException: no hay datos disponibles para la codificación 437" al intentar compilar y ejecutar la aplicación. Por ejemplo, las bibliotecas, como `Ionic.Zip.ZipFile` , pueden producir esta excepción durante la operación.
 
-Para solucionarlo, abra las opciones del proyecto de Xamarin. Mac, vaya a la internacionalización de la **compilación de Mac**  >  **Internationalization** y Compruebe la internacionalización **occidental** :
+Para solucionarlo, abra las opciones del proyecto de Xamarin. Mac, vaya a la internacionalización de la **compilación de Mac**  >   y Compruebe la internacionalización **occidental** :
 
 [![Edición de las opciones de compilación](troubleshooting-images/issue01.png "Edición de las opciones de compilación")](troubleshooting-images/issue01-large.png#lightbox)
 
@@ -102,7 +102,7 @@ Si hace doble clic en el archivo **contitles. plist** , se mostrará el editor d
 
 [![Editar los derechos](troubleshooting-images/entitlements02.png "Editar los derechos")](troubleshooting-images/entitlements02-large.png#lightbox)
 
-En el caso de los proyectos existentes de Xamarin. Mac, tendrá que crear manualmente el archivo **contitles. plist** haciendo clic con el botón derecho en el proyecto en el **Panel de solución** y seleccionando **Agregar**  >  **nuevo archivo..**.. A continuación, seleccione la lista de propiedades vacía de **Xamarin. Mac**  >  **Empty Property List**:
+En el caso de los proyectos existentes de Xamarin. Mac, tendrá que crear manualmente el archivo **contitles. plist** haciendo clic con el botón derecho en el proyecto en el **Panel de solución** y seleccionando **Agregar**  >  **nuevo archivo..**.. A continuación, seleccione la lista de propiedades vacía de **Xamarin. Mac**  >  :
 
 ![Agregar una nueva lista de propiedades](troubleshooting-images/entitlements03.png "Agregar una nueva lista de propiedades")
 

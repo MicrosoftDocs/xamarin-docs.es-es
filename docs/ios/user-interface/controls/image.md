@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/13/2018
-ms.openlocfilehash: 900a4bf3407b4a3d37f6102ff4b10292edf4bd25
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 2350c068b0a719e8d633c0f96712aec40e7865aa
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91434048"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697480"
 ---
 # <a name="displaying-images-with-xamarinios"></a>Mostrar imágenes con Xamarin. iOS
 
@@ -59,7 +59,7 @@ El directorio de **recursos** debe tener el mismo nombre y todos los archivos de
 
 En el diseñador de iOS, use una **vista de imagen** para mostrar una imagen o una serie animada de imágenes. A continuación se muestra el icono de **vista de imagen** del cuadro de herramientas:
 
- [![ImageView en el cuadro de herramientas](image-images/image35a.png)](image-images/image35.png#lightbox)
+ [![Icono de ImageView en el cuadro de herramientas.](image-images/image35a.png)](image-images/image35.png#lightbox)
 
 Arrastre la **vista imagen** desde el **cuadro de herramientas** hasta el controlador de vista. A continuación, en la **vista imagen > imagen** , la lista desplegable proporcionará una lista de todos los archivos de imagen disponibles en el proyecto. Seleccione cualquiera de ellas para agregarla a la vista de imagen.
 

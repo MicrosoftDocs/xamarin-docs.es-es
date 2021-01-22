@@ -6,12 +6,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: e6bbc9d7d404136984e3d1ec93186dc85691c751
-ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
+ms.openlocfilehash: b9e0f5d01d7843c25af3af3cddefbe0740f018a3
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439746"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697519"
 ---
 # <a name="storyboards-in-xamarinios"></a>Guiones gráficos en Xamarin. iOS
 
@@ -57,7 +57,7 @@ Al hacer clic con el mouse, aparece un menú que le permite elegir la acción pa
 [![La lista desplegable Action segue con clases de tamaño](images/16new.png)](images/16new.png#lightbox)
 
 > [!IMPORTANT]
-> Si usa VMWare para su máquina virtual de Windows, Ctrl + clic se asigna como el botón _secundario_ del mouse de forma predeterminada. Para crear un segue, edite las preferencias del **teclado a través de** los  >  métodos abreviados de teclado de mouse **& Mouse**  >  **Mouse Shortcuts** y reasigne el **botón secundario** , como se muestra a continuación:
+> Si usa VMWare para su máquina virtual de Windows, Ctrl + clic se asigna como el botón _secundario_ del mouse de forma predeterminada. Para crear un segue, edite las preferencias del **teclado a través de** los  >  métodos abreviados de teclado de mouse **& Mouse**  >   y reasigne el **botón secundario** , como se muestra a continuación:
 >
 > [![Configuración de preferencias del teclado y del mouse](images/image22.png)](images/image22.png#lightbox)
 >
@@ -83,7 +83,7 @@ Cualquier aplicación que use clases de tamaño también usará el nuevo [*objet
 
 |Segue|Descripción|
 |--- |--- |
-|Presentación|Esto es muy similar a un segue de extracción, pero tiene en cuenta el contenido de la pantalla.|
+|Mostrar|Esto es muy similar a un segue de extracción, pero tiene en cuenta el contenido de la pantalla.|
 |Mostrar detalles|Si la aplicación muestra una vista maestra y de detalles (por ejemplo, en un controlador de vista de división en un iPad), el contenido reemplazará la vista de detalles. Si la aplicación muestra solo el maestro o detalle, el contenido reemplazará la parte superior de la pila del controlador de vista.|
 |Presentación|Es similar al segue modal y permite seleccionar los estilos de presentación y de transición.|
 |Presentación de elemento flotante|Esto presenta el contenido como un elemento flotante.|
@@ -205,11 +205,11 @@ En la captura de pantalla siguiente se muestran dos controladores de vista en la
 
 6. Esta aplicación se desplazará a otra vista, así que agregue una vista más al guion gráfico, como antes. Llámelo `PinkViewController` y establezca esos valores de la misma manera que con `MainViewController` .
 
-    [![Agregar un controlador de vista adicional](images/add-additional-view-controller.png)](images/add-additional-view-controller.png#lightbox)
+    [![Captura de pantalla que muestra el guión gráfico con tres vistas.](images/add-additional-view-controller.png)](images/add-additional-view-controller.png#lightbox)
 
 7. Puesto que el controlador de vistas tendrá un fondo rosa, establezca esa propiedad en el panel atributos mediante la lista desplegable junto a `Background` .
 
-    [![Agregar un controlador de vista adicional](images/set-pink-background.png)](images/set-pink-background.png#lightbox)
+    [![Captura de pantalla que muestra el guión gráfico del paso anterior con la pantalla situada más a la derecha cambiada a un fondo rosa.](images/set-pink-background.png)](images/set-pink-background.png#lightbox)
 
 8. Dado que deseamos `MainViewController` que navegue hasta el `PinkViewController` , el primero necesitará un botón para interactuar con él. Utilice la biblioteca para agregar un botón a `MainViewController` .
 
