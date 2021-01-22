@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016
-ms.openlocfilehash: 96873e1bff34a4ef3ed76d675ca0a2b5c03f0d72
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 9c0ece6880726993b88293f13a549c16c1e91d05
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997246"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697701"
 ---
 # <a name="watchos-project-references-in-xamarin"></a>Referencias de proyectos de watchos en Xamarin
 
@@ -26,11 +26,11 @@ Para ver las referencias, haga doble clic en los nodos referencias de cada proye
 
 - **aplicación de inspección** de referencias de **aplicación de iPhone**
 
-  ![Aplicación de inspección de referencias de aplicación de iPhone](project-references-images/catalog-reference1.png)
+  ![Captura de pantalla que muestra la pestaña proyectos.](project-references-images/catalog-reference1.png)
 
 - La **aplicación de inspección** hace referencia a la extensión de la **aplicación Watch**
 
-  ![Aplicación de inspección de referencias de aplicación de iPhone](project-references-images/catalog-reference2.png)
+  ![Captura de pantalla que muestra la pestaña proyectos con MyWatchApp DOT OnWatchExtension seleccionada.](project-references-images/catalog-reference2.png)
 
 - La **extensión de la aplicación inspección** no hace referencia a ninguno de los otros proyectos
 
@@ -41,11 +41,11 @@ Para ver las referencias, haga doble clic en los nodos referencias de cada proye
 También debe asegurarse de que los **identificadores de paquete** sean correctos.
 Los tres proyectos deben tener el *mismo* prefijo de identificador, con los dos proyectos de inspección que tienen extensiones predefinidas de `watchkitextension` y `watchkitapp` , como se indica a continuación (en el ejemplo **WatchKitCatalog** ):
 
-- Proyecto Unificado de Xamarin. iOS:`com.xamarin.WatchKitCatalog`
+- Proyecto Unificado de Xamarin. iOS: `com.xamarin.WatchKitCatalog`
 
-- Proyecto de extensión WatchKit-`com.xamarin.WatchKitCatalog.watchkitextension`
+- Proyecto de extensión WatchKit- `com.xamarin.WatchKitCatalog.watchkitextension`
 
-- Proyecto de la aplicación de inspección:`com.xamarin.WatchKitCatalog.watchkitapp`
+- Proyecto de la aplicación de inspección: `com.xamarin.WatchKitCatalog.watchkitapp`
 
 Asegúrese también de que la configuración de **info. plist** sea correcta:
 

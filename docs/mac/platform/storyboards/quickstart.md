@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: f6dbbd85a11c492227f0e19ca1a561595660bf20
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 39e8e63c7612df95123e1e32edbfb3a8c28ffe37
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937584"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697714"
 ---
-# <a name="storyboards-in-xamarinmac-quick-start"></a>Guiones gráficos en Xamarin. Mac: Inicio rápido
+# <a name="storyboards-in-xamarinmac--quick-start"></a>Guiones gráficos en Xamarin. Mac: Inicio rápido
 
-Como introducción rápida al uso de guiones gráficos para definir la interfaz de usuario de una aplicación de Xamarin. Mac, vamos a iniciar un nuevo proyecto de Xamarin. Mac. Seleccione **Mac**  >  **App**  >  **aplicación de coco** de aplicación Mac y haga clic en el botón **siguiente** :
+Como introducción rápida al uso de guiones gráficos para definir la interfaz de usuario de una aplicación de Xamarin. Mac, vamos a iniciar un nuevo proyecto de Xamarin. Mac. Seleccione   >    >  **aplicación de coco** de aplicación Mac y haga clic en el botón **siguiente** :
 
 [![Adición de una nueva aplicación de coco](quickstart-images/qs01.png)](quickstart-images/qs01.png#lightbox)
 
@@ -30,7 +30,7 @@ Use el **nombre de proyecto** y el nombre de la **solución** predeterminados y 
 
 En el **Explorador de soluciones**, haga doble clic en el `Main.storyboard` archivo para abrirlo para su edición en el Interface Builder de Xcode:
 
-[![Editar el guion gráfico en Xcode](quickstart-images/qs04.png)](quickstart-images/qs04.png#lightbox)
+[![Editar el guion gráfico en Xcode Interface Builder.](quickstart-images/qs04.png)](quickstart-images/qs04.png#lightbox)
 
 Como puede ver más arriba, el guión gráfico predeterminado define la barra de menús de la aplicación y su ventana principal con el controlador de vista de ti y la vista. En nuestra aplicación de ejemplo, vamos a crear una interfaz de usuario que tiene una _vista de contenido_ principal en un lado y una _vista de inspector_ en el segundo.
 
@@ -58,7 +58,7 @@ Desde aquí, haremos clic en los cuatro iconos i en el cuadro de límite situado
 
 Si vuelve a Visual Studio para Mac y ejecuta el proyecto, observe que la vista de texto cambia automáticamente de tamaño para rellenar el lado izquierdo de la vista en dos paneles cuando se cambia el tamaño de la ventana o la División:
 
-[![Un ejemplo de la aplicación en ejecución](quickstart-images/qs10.png)](quickstart-images/qs10.png#lightbox)
+[![Un ejemplo de la aplicación en ejecución, que muestra texto en el panel izquierdo de la ventana.](quickstart-images/qs10.png)](quickstart-images/qs10.png#lightbox)
 
 Como vamos a usar el lado derecho de la vista en dos paneles como un área de inspector, queremos que tenga un tamaño menor y permita que se contraiga. Vuelva a Xcode y edite la vista para el lado derecho seleccionándola en el Superficie de diseño y haciendo clic en el **Inspector size**. Desde aquí, escriba un **ancho** de `250` :
 
@@ -70,7 +70,7 @@ A continuación, seleccione el elemento dividido que representa el lado derecho,
 
 Si vuelve a Visual Studio para Mac y ejecuta el proyecto ahora, observe que el lado derecho mantiene el tamaño más pequeño y se cambia el tamaño de la ventana:
 
-[![Un ejemplo de la aplicación en ejecución](quickstart-images/qs13.png)](quickstart-images/qs13.png#lightbox)
+[![Un ejemplo de la aplicación en ejecución, mostrando texto en el panel izquierdo más grande de la ventana.](quickstart-images/qs13.png)](quickstart-images/qs13.png#lightbox)
 
 <a name="Defining-a-Presentation-Segue"></a>
 
@@ -80,19 +80,19 @@ Vamos a diseñar el lado derecho de la vista en dos paneles para que actúe como
 
 Agregaremos un botón al inspector y un controlador de vista al Superficie de diseño. Cambiaremos el tamaño del controlador de vista para que sea el tamaño que deseamos que tenga nuestro elemento flotante y le agregue cuatro botones. A continuación, **haremos** clic en el botón en la vista del inspector y lo arrastramos hasta el controlador de vista que representará nuestra elemento flotante:
 
-[![Arrastrar para crear un nuevo segue](quickstart-images/qs14.png)](quickstart-images/qs14.png#lightbox)
+[![Arrastrando para crear un nuevo segue en el controlador de vista.](quickstart-images/qs14.png)](quickstart-images/qs14.png#lightbox)
 
 En el menú emergente, seleccionaremos **elemento flotante**: 
 
-[![Seleccionar el tipo de segue](quickstart-images/qs15.png)](quickstart-images/qs15.png#lightbox)
+[![Seleccionar el tipo de segue de elemento flotante desde el controlador de vista.](quickstart-images/qs15.png)](quickstart-images/qs15.png#lightbox)
 
 Por último, seleccionaremos el segue en el Superficie de diseño y estableceremos el **borde preferido** en **izquierda**. A continuación, se va a arrastrar una línea desde la **vista de delimitador** hasta el botón al que se desea adjuntar los elemento flotante:
 
-[![Arrastrar para crear un nuevo segue](quickstart-images/qs16.png)](quickstart-images/qs16.png#lightbox)
+[![Arrastrar para crear un nuevo segue adjuntando la vista del delimitador al botón.](quickstart-images/qs16.png)](quickstart-images/qs16.png#lightbox)
 
 Si regresamos a Visual Studio para Mac, ejecutamos la aplicación y hacemos clic en el botón **None (ninguno** ) del inspector, se mostrará el elemento flotante:
 
-[![Ejemplo de segue en ejecución](quickstart-images/qs17.png)](quickstart-images/qs17.png#lightbox)
+[![Un ejemplo de segue en ejecución, que muestra elemento flotante.](quickstart-images/qs17.png)](quickstart-images/qs17.png#lightbox)
 
 <a name="Creating-App-Preferences"></a>
 
@@ -102,7 +102,7 @@ La mayoría de las aplicaciones estándar de macOS proporcionan un _cuadro de di
 
 Para definir una ventana de cuadro de diálogo de preferencias estándar, arrastre primero un controlador de vista de pestaña hasta el Superficie de diseño:
 
-[![Editar el guion gráfico en Xcode](quickstart-images/qs18.png)](quickstart-images/qs18.png#lightbox)
+[![Editar el guion gráfico en Xcode arrastrando primero el controlador de vista de pestaña hasta el Superficie de diseño.](quickstart-images/qs18.png)](quickstart-images/qs18.png#lightbox)
 
 De nuevo, esto incorporará automáticamente dos controladores de vista secundarios. Por ejemplo, vamos a agregar una etiqueta a cada vista que se centrará en ella:
 
@@ -114,11 +114,11 @@ A continuación, queremos mostrar la ventana Preferencias cuando el usuario sele
 
 En el elemento emergente, seleccionaremos **modal** para mostrar esta ventana como un cuadro de diálogo modal:
 
-[![Seleccionar el tipo de segue](quickstart-images/qs21.png)](quickstart-images/qs21.png#lightbox)
+[![Seleccionar el tipo de segue modal en el menú de segue de acción.](quickstart-images/qs21.png)](quickstart-images/qs21.png#lightbox)
 
 Si se guardan los cambios, vuelva a Visual Studio para Mac, ejecute la aplicación y seleccione el elemento de menú **preferencias...** , se mostrará el cuadro de diálogo nuevas preferencias:
 
-[![Ejemplo de segue en ejecución](quickstart-images/qs22.png)](quickstart-images/qs22.png#lightbox)
+[![Un ejemplo de segue en ejecución, que muestra el cuadro de diálogo nuevas preferencias.](quickstart-images/qs22.png)](quickstart-images/qs22.png#lightbox)
 
 Es posible que observe que esto no parece una ventana de diálogo de preferencias de aplicación estándar de macOS. Para solucionarlo, incluya dos archivos de imagen en la carpeta de la aplicación de Xamarin. Mac `Resources` en el **Explorador de soluciones** y vuelva al Interface Builder de Xcode.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 0b0bfc650ffa271a7616d7c6e6a436fafa2664c8
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9521c059e853b71050dda43c9f49ce688f43ffe2
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932605"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98608954"
 ---
 # <a name="set-up-device-for-development"></a>Configurar el dispositivo para el desarrollo
 
@@ -67,7 +67,7 @@ Vaya a **Configuración > Opciones del desarrollador** y habilite **Depuración 
 
 Una vez que la pestaña **Opciones del desarrollador** está disponible en **Ajustes > Sistema**, ábrala para mostrar las opciones del desarrollador:
 
-[![Pantalla de opciones del desarrollador en Android 9.0](set-up-device-for-development-images/usb-debugging-sml.png)](set-up-device-for-development-images/usb-debugging.png#lightbox)
+[![Pantalla de opciones de desarrollador en Android](set-up-device-for-development-images/usb-debugging-sml.png)](set-up-device-for-development-images/usb-debugging.png#lightbox)
 
 Desde aquí puede habilitar las opciones del desarrollador, como la depuración de USB y el modo Permanecer activo.
 

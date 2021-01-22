@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 05/24/2017
-ms.openlocfilehash: 0d95ecb1997ba70a2994d74bacdedd334f2b4c61
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 78ae9a4dae15b65dbeaa884ebf7022e2787dc2a0
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91429727"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697649"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Vistas de colección en Xamarin. Mac
 
@@ -32,7 +32,7 @@ Es posible que desee echar un vistazo a la sección [exponer clases y métodos d
 
 ## <a name="about-collection-views"></a>Acerca de las vistas de colección
 
-El objetivo principal de una vista de colección ( `NSCollectionView` ) es organizar visualmente un grupo de objetos de forma organizada mediante un diseño de vista de colección ( `NSCollectionViewLayout` ), con cada objeto individual ( `NSCollectionViewItem` ) obteniendo su propia vista en la colección más grande. Las vistas de colección funcionan mediante el enlace de datos y las técnicas de codificación de valor de clave y, como tal, debe leer la documentación sobre el [enlace de datos y la codificación de valores de clave](~/mac/app-fundamentals/databinding.md) antes de continuar con este artículo.
+El objetivo principal de una vista de colección ( `NSCollectionView` ) es organizar visualmente un grupo de objetos de forma organizada mediante un diseño de vista de colección ( `NSCollectionViewLayout` ), con cada objeto individual ( `NSCollectionViewItem` ) obteniendo su propia vista en la colección más grande. Las vistas de colección funcionan mediante el enlace de datos y Key-Value técnicas de codificación y, como tal, debe leer la documentación sobre el [enlace de datos y la Key-Value de código](~/mac/app-fundamentals/databinding.md) antes de continuar con este artículo.
 
 La vista de colección no tiene ningún elemento de vista de colección estándar integrado (como un esquema o una vista de tabla), por lo que el desarrollador es responsable de diseñar e implementar una _vista de prototipo_ mediante otros controles AppKit, como campos de imagen, campos de texto, etiquetas, etc. Esta vista de prototipo se usará para mostrar y trabajar con cada elemento administrado por la vista de colección y se almacena en un `.xib` archivo.
 
@@ -42,7 +42,7 @@ Dado que el desarrollador es responsable de la apariencia de un elemento de vist
 
 ## <a name="defining-the-data-model"></a>Definir el modelo de datos
 
-Antes de enlazar datos a una vista de colección en Interface Builder, se debe definir una clase compatible con la codificación de clave-valor (KVC)/Key-Value observando (KVO) en la aplicación de Xamarin. Mac para que actúe como _modelo de datos_ para el enlace. El modelo de datos proporciona todos los datos que se mostrarán en la colección y recibirá cualquier modificación de los datos que el usuario realice en la interfaz de usuario mientras se ejecuta la aplicación.
+Antes de enlazar datos a una vista de colección en Interface Builder, se debe definir una clase compatible con Key-Value (KVC)/Key-Value observando (KVO) en la aplicación de Xamarin. Mac para que actúe como _modelo de datos_ para el enlace. El modelo de datos proporciona todos los datos que se mostrarán en la colección y recibirá cualquier modificación de los datos que el usuario realice en la interfaz de usuario mientras se ejecuta la aplicación.
 
 Tome el ejemplo de una aplicación que administra un grupo de empleados; la clase siguiente podría usarse para definir el modelo de datos:
 
@@ -197,10 +197,10 @@ El enlace de datos con una vista de colección es muy similar al enlace con una 
 
 Dado que la vista de colección no incluye un prototipo de celda predeterminado, el desarrollador deberá agregar uno o varios `.xib` archivos a la aplicación de Xamarin. Mac para definir el diseño y el contenido de las celdas individuales.
 
-Siga estos pasos:
+Haga lo siguiente:
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar**  >  **nuevo archivo..** .
-2. Seleccione **Mac**  >  **controlador de vista**de Mac y asígnele un nombre (por `EmployeeItem` ejemplo, en este ejemplo) y haga clic en el botón **nuevo** para crear: 
+2. Seleccione   >  **controlador de vista** de Mac y asígnele un nombre (por `EmployeeItem` ejemplo, en este ejemplo) y haga clic en el botón **nuevo** para crear: 
 
     ![Agregar un nuevo controlador de vista](collection-view-images/proto01.png)
 
@@ -573,7 +573,7 @@ Los `ItemsSelected` `ItemsDeselected` métodos y se reemplazan y se usan para es
 
 Con todas las piezas de soporte técnico necesarias en su lugar, se puede editar el guión gráfico principal y agregarle una vista de colección.
 
-Siga estos pasos:
+Haga lo siguiente:
 
 1. Haga doble clic en el `Main.Storyboard` archivo en el **Explorador de soluciones** para abrirlo para su edición en el Interface Builder de Xcode.
 2. Arrastre una vista de colección a la vista principal y cambie su tamaño para rellenar la vista:
@@ -581,10 +581,10 @@ Siga estos pasos:
     ![Agregar una vista de colección al diseño](collection-view-images/collection01.png)
 3. Con la vista de recopilación seleccionada, use el editor de restricciones para anclarlo a la vista cuando se cambie el tamaño:
 
-    ![Agregar restricciones](collection-view-images/collection02.png)
+    ![La captura de pantalla muestra cómo agregar nuevas restricciones.](collection-view-images/collection02.png)
 4. Asegúrese de que la vista de recopilación está seleccionada en el **superficie de diseño** (y no en la vista de desplazamiento o el **recorte** con **borde** que la contiene), cambie al **Editor del asistente** y cree una **salida** para la vista de recopilación:
 
-    ![Agregar restricciones](collection-view-images/collection03.png)
+    ![Captura de pantalla que muestra el editor de asistentes donde puede crear una salida.](collection-view-images/collection03.png)
 5. Guarde los cambios y vuelva a Visual Studio para realizar la sincronización.
 
 <a name="Bringing-it-all-Together"></a>
@@ -751,7 +751,7 @@ var item = collectionView.MakeItem("EmployeeCell", indexPath) as EmployeeItemCon
 ...
 ```
 
-Además, el tipo del controlador de vistas **debe** coincidir exactamente con el nombre del `.xib` archivo que define **exactly**el prototipo. En el caso de este ejemplo, `EmployeeItemController` y `EmployeeItemController.xib` .
+Además, el tipo del controlador de vistas **debe** coincidir exactamente con el nombre del `.xib` archivo que define el prototipo. En el caso de este ejemplo, `EmployeeItemController` y `EmployeeItemController.xib` .
 
 El diseño real de los elementos de la vista de colección se controla mediante una clase de diseño de vista de colección y se puede cambiar dinámicamente en tiempo de ejecución mediante la asignación de una nueva instancia a la `CollectionViewLayout` propiedad. Al cambiar esta propiedad, se actualiza la apariencia de la vista de colección sin animar el cambio.
 
@@ -813,7 +813,7 @@ public override void ViewDidLoad()
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se ha realizado una visión detallada del trabajo con las vistas de colección en una aplicación de Xamarin. Mac. En primer lugar, se examinó la exposición de una clase de C# a Objective-C mediante el uso de código de clave-valor (KVC) y la observación de clave-valor (KVO). A continuación, se mostró cómo usar una clase compatible con KVO y cómo enlazarla a las vistas de colección del Interface Builder de Xcode. Por último, se ha mostrado cómo interactuar con las vistas de colección en el código de C#.
+En este artículo se ha realizado una visión detallada del trabajo con las vistas de colección en una aplicación de Xamarin. Mac. En primer lugar, se examinó la exposición de una clase de C# a Objective-C mediante el uso de la codificación de Key-Value (KVC) y Key-Value observar (KVO). A continuación, se mostró cómo usar una clase compatible con KVO y cómo enlazarla a las vistas de colección del Interface Builder de Xcode. Por último, se ha mostrado cómo interactuar con las vistas de colección en el código de C#.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

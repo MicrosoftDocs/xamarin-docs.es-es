@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/11/2017
-ms.openlocfilehash: a2e8e6d1fdf3f51f015dccf12a6a3b455ceff741
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 0bfb4168e3d990ae1afb3ee2022553053c383083
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91432743"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697597"
 ---
 # <a name="progress-and-activity-indicators-in-xamarinios"></a>Indicadores de progreso y actividad en Xamarin. iOS
 
@@ -38,7 +38,7 @@ Un indicador de actividad se implementa a través de la [`UIActivityIndictorView
 
 Si usa el diseñador de iOS para crear la interfaz de usuario, el indicador de actividad se puede Agregar al diseño desde el cuadro de herramientas. Las siguientes propiedades se pueden ajustar desde el Panel de propiedades:
 
-![Panel de propiedades](progress-activity-indicator-images/progress-indicator1.png)
+![Captura de pantalla que muestra el Panel de propiedades en el que puede modificar las propiedades de estilo, color y comportamiento.](progress-activity-indicator-images/progress-indicator1.png)
 
 ### <a name="managing-activity-indicator-behavior"></a>Administrar el comportamiento del indicador de actividad
 
@@ -63,7 +63,7 @@ Una barra de progreso presenta como una línea que se llena con color para indic
 Apple tiene las siguientes sugerencias para trabajar con barras de progreso:
 
 - **Informar de forma precisa** de las barras de progreso siempre debe ser una representación precisa del tiempo necesario para completar una tarea. No se tergiversa nunca el tiempo para que la aplicación parezca ocupada.
-- **Usar para duraciones bien definidas** : la barra de progreso no solo debe mostrar que se está llevando a cabo una tarea larga, sino proporcionar al usuario e indicar la cantidad de la tarea que se ha completado y una estimación del tiempo restante.
+- **Usar en duraciones de Well-Defined** : la barra de progreso no debe mostrar solo que se está llevando a cabo una tarea larga, sino proporcionar al usuario e indicar qué parte de la tarea se ha completado y una estimación del tiempo restante.
 
 ### <a name="implementing-an-progress-bar"></a>Implementar una barra de progreso
 
@@ -75,7 +75,7 @@ También puede Agregar una barra de progreso a la interfaz de usuario al usar el
 
 Las siguientes propiedades se pueden ajustar en el panel de propiedades:
 
-![Panel de propiedades](progress-activity-indicator-images/progress-indicator3.png)
+![Captura de pantalla muestra el Panel de propiedades en el que puede modificar las propiedades de estilo, progreso, matiz de progreso, seguimiento de matiz, imagen de progreso y seguimiento de la imagen.](progress-activity-indicator-images/progress-indicator3.png)
 
 ### <a name="managing-progress-bar-behavior"></a>Administrar el comportamiento de la barra de progreso
 

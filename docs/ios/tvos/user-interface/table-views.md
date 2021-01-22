@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 364aa1ebc70517ee8378e603922486ae29adf6c1
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: a3ae6b794ce94ddc5dffdb13dec53eef52b23800
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436445"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697623"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Trabajar con vistas de tabla tvOS en Xamarin
 
@@ -70,7 +70,7 @@ Para comenzar, haga lo siguiente:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-1. En Visual Studio para Mac, inicie un nuevo proyecto de aplicación de tvOS **tvOS**y seleccione  >  **App**  >  **aplicación de vista única** de tvOS y haga clic en el botón **siguiente** : 
+1. En Visual Studio para Mac, inicie un nuevo proyecto de aplicación de tvOS y seleccione  >    >  **aplicación de vista única** de tvOS y haga clic en el botón **siguiente** : 
 
     [![Seleccionar una aplicación de vista única](table-views-images/table02.png)](table-views-images/table02.png#lightbox)
 1. Escriba un **nombre** para la aplicación y haga clic en **siguiente**: 
@@ -132,13 +132,13 @@ Para comenzar, haga lo siguiente:
     [![Diseño de la interfaz de usuario](table-views-images/table08-vs.png)](table-views-images/table08-vs.png#lightbox)
 1. Tendrá que seleccionar todas las partes de la vista de tabla y asignarle un **nombre de clase** personalizado en la pestaña **Widget** del **Explorador de propiedades** para que pueda acceder a ella más adelante en el código de C#. Por ejemplo, el **controlador de vista de tabla**: 
 
-    [![La pestaña widget](table-views-images/table09-vs.png)](table-views-images/table09-vs.png#lightbox)
+    [![La pestaña widget del explorador de propiedades, donde se asigna un nombre de clase.](table-views-images/table09-vs.png)](table-views-images/table09-vs.png#lightbox)
 1. Asegúrese de crear una clase personalizada para el **controlador de vista de tabla**, la vista de **tabla** y las **celdas de prototipo**. Visual Studio para Mac agregará las clases personalizadas al árbol del proyecto a medida que se crean: 
 
     [![Clases personalizadas en el árbol del proyecto](table-views-images/table10-vs.png)](table-views-images/table10-vs.png#lightbox)
 1. A continuación, seleccione la vista de tabla en el Superficie de diseño y ajuste sus propiedades según sea necesario. Como el número de **celdas de prototipo** y el **estilo** (simple o agrupado): 
 
-    [![La pestaña widget](table-views-images/table11-vs.png)](table-views-images/table11-vs.png#lightbox)
+    [![La pestaña widget, donde puede cambiar las propiedades según sea necesario.](table-views-images/table11-vs.png)](table-views-images/table11-vs.png#lightbox)
 1. Para cada **celda prototipo**, selecciónela y asigne un **identificador** único en la pestaña **Widget** del **Explorador de propiedades**. Este paso es _muy importante_ , ya que necesitará este identificador más adelante al rellenar la tabla. Por ejemplo: `AttrCell`: 
 
     [![Asignar un identificador](table-views-images/table12-vs.png)](table-views-images/table12-vs.png#lightbox)
@@ -147,7 +147,7 @@ Para comenzar, haga lo siguiente:
     [![La lista desplegable de estilo](table-views-images/table13-vs.png)](table-views-images/table13-vs.png#lightbox)
 1. Asigne un **nombre** único a cada elemento de la interfaz de usuario en el diseño de la celda prototipo en la pestaña **Widget** del **Explorador de propiedades** para que pueda acceder a ellos más adelante en el código de C#: 
 
-    [![La pestaña widget](table-views-images/table14-vs.png)](table-views-images/table14-vs.png#lightbox)
+    [![La pestaña widget, donde puede asignar un nombre para cada elemento U I.](table-views-images/table14-vs.png)](table-views-images/table14-vs.png#lightbox)
 1. Repita el paso anterior para todas las celdas de prototipo de la vista de tabla.
 1. A continuación, asigne clases personalizadas al resto del diseño de la interfaz de usuario, diseñe la vista de detalles y asigne **nombres** únicos a cada elemento de la interfaz de usuario en la vista de detalles para que pueda tener acceso a ellos también en C#. Por ejemplo: 
 
@@ -210,7 +210,7 @@ namespace tvTable
 }
 ```
 
-Esta clase proporciona las propiedades para almacenar la información sobre un **atracción**determinado.
+Esta clase proporciona las propiedades para almacenar la información sobre un **atracción** determinado.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -278,7 +278,7 @@ namespace tvTable
 }
 ```
 
-Esta clase contiene toda la información sobre una **ciudad**de destino, una colección de **atracciones** para esa ciudad y proporciona dos métodos auxiliares ( `AddAttraction` ) para que sea más fácil agregar atracciones a la ciudad.
+Esta clase contiene toda la información sobre una **ciudad** de destino, una colección de **atracciones** para esa ciudad y proporciona dos métodos auxiliares ( `AddAttraction` ) para que sea más fácil agregar atracciones a la ciudad.
 
 <a name="The-Table-Data-Source"></a>
 

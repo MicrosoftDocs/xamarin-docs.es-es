@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: c5ad40c375320ed21acb3f0a75c5c66f2efc7824
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7a3839cb7c747879f1549fb8f6715fded62d45bb
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938677"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697727"
 ---
 # <a name="working-with-watchos-settings-in-xamarin"></a>Trabajar con la configuración de watchos en Xamarin
 
@@ -34,7 +34,7 @@ En la **aplicación de iPhone** de la solución (*no* la aplicación de inspecci
 
    ![Cambiar el nombre de la agrupación](settings-images/settings-rename.png)
 
-3. Agregue una nueva clave `ApplicationGroupContainerIdentifier` al archivo **root. plist** con el valor establecido en el grupo de aplicaciones que ha configurado (por ejemplo, `group.com.xamarin.WatchSettings`en el ejemplo):
+3. Agregue una nueva clave `ApplicationGroupContainerIdentifier` al archivo **root. plist** con el valor establecido en el grupo de aplicaciones que ha configurado (por ejemplo, `group.com.xamarin.WatchSettings` en el ejemplo):
 
    [![Agregar una clave de ApplicationGroupContainerIdentifier al archivo root. plist](settings-images/settings-appgroup-sml.png)](settings-images/settings-appgroup.png#lightbox)
 
@@ -62,7 +62,7 @@ var userName = shared.StringForKey ("name_preference");
 
 Los usuarios interactuarán con la configuración a través de la nueva aplicación de **Apple Watch** en su iPhone. Esta aplicación permite al usuario Mostrar u ocultar aplicaciones en el reloj y editar también la configuración expuesta mediante el uso **de Settings-Watch. bundle**.
 
-![Ejemplo de configuración de la aplicación](settings-images/applewatch-1.png) ![Ejemplo de configuración de la aplicación](settings-images/applewatch-2.png)
+![La captura de pantalla muestra WatchKitSettings en la aplicación.](settings-images/applewatch-1.png) ![La captura de pantalla muestra WatchTodo en la aplicación.](settings-images/applewatch-2.png)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

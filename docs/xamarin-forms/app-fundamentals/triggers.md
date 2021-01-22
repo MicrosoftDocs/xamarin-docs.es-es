@@ -10,12 +10,12 @@ ms.date: 04/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1f2484fe7c6dee1f1b4df1318263624f3f50f604
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 6f54ec3afd3d53d4a7bee40159bccff2d23f44f6
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93367197"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609057"
 ---
 # <a name="no-locxamarinforms-triggers"></a>Desencadenadores de Xamarin.Forms
 
@@ -44,13 +44,13 @@ En este ejemplo se muestra un desencadenador que cambia un color de fondo `Entry
 
 Las partes importantes de la declaración del desencadenador son:
 
-- **TargetType** : tipo de control al que se aplica el desencadenador.
+- **TargetType**: tipo de control al que se aplica el desencadenador.
 
-- **Property** : propiedad en el control que se supervisa.
+- **Property**: propiedad en el control que se supervisa.
 
-- **Value** : valor, cuando se produce para la propiedad supervisada, que hace que el desencadenador se active.
+- **Value**: valor, cuando se produce para la propiedad supervisada, que hace que el desencadenador se active.
 
-- **Setter** : colección de elementos `Setter` que se puede agregar cuando se cumple la condición del desencadenador. Debe especificar los elementos `Property` y `Value` que se van a establecer.
+- **Setter**: colección de elementos `Setter` que se puede agregar cuando se cumple la condición del desencadenador. Debe especificar los elementos `Property` y `Value` que se van a establecer.
 
 - **EnterActions y ExitActions** (no mostrados): se escriben en código y se pueden usar además de los elementos `Setter` (o en su lugar). [Se describen abajo](#enteractions-and-exitactions).
 
@@ -521,8 +521,8 @@ En el siguiente ejemplo de XAML, se muestra una clase [`Style`](xref:Xamarin.For
 
 En este ejemplo, la clase [`Style`](xref:Xamarin.Forms.Style) implícita se destina a objetos [`Grid`](xref:Xamarin.Forms.Grid). Cuando la propiedad [`IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) de [`CheckBox`](xref:Xamarin.Forms.CheckBox) es `false`, el color de fondo de `Grid` se establece en blanco. Cuando la propiedad `CheckBox.IsChecked` se convierte en `true`, se desencadena un cambio de [`VisualState`](xref:Xamarin.Forms.VisualState), y el color de fondo de `Grid` cambia a negro:
 
-[![Captura de pantalla de un cambio de estado visual desencadenado en iOS y Android](triggers-images/comparestatetrigger-unchecked.png "Ejemplo de CompareStateTrigger")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "Ejemplo de CompareStateTrigger")
-[![Captura de pantalla de un cambio de estado visual desencadenado en iOS y Android](triggers-images/comparestatetrigger-checked.png "Ejemplo de CompareStateTrigger")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "Ejemplo de CompareStateTrigger")
+[![Captura de pantalla de un cambio de estado visual desencadenado, en iOS y Android, con el desencadenador desactivado.](triggers-images/comparestatetrigger-unchecked.png "Ejemplo de CompareStateTrigger")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "Ejemplo de CompareStateTrigger")
+[![Captura de pantalla de un cambio de estado visual desencadenado, en iOS y Android, con el desencadenador activado.](triggers-images/comparestatetrigger-checked.png "Ejemplo de CompareStateTrigger")](triggers-images/comparestatetrigger-checked-large.png#lightbox "Ejemplo de CompareStateTrigger")
 
 ### <a name="device-state-trigger"></a>Desencadenador de estado de dispositivos
 

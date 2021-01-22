@@ -10,12 +10,12 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bfac785e6bfa3dce698d5657d0be1079e675ecc6
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 7420c5883856379db98001fce2fd36bf576cc2fb
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93366352"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609084"
 ---
 # <a name="no-locxamarinforms-shell-search"></a>Búsqueda en Xamarin.Forms Shell
 
@@ -102,11 +102,11 @@ El método `MonkeySearchHandler.OnQueryChanged` devuelve un elemento `List` de o
 
 La propiedad `ShowsResults` está establecida en `true`, de modo que se muestran sugerencias de búsqueda cuando el usuario escribe una consulta de búsqueda:
 
-[![Captura de pantalla de resultados de la búsqueda en una clase SearchHandler de Shell, en iOS y Android](search-images/search-results.png "Resultados de la búsqueda de la clase SearchHandler de Shell")](search-images/search-results-large.png#lightbox "Resultados de la búsqueda de la clase SearchHandler de Shell")
+[![Captura de pantalla de resultados de búsqueda en una clase SearchHandler de Shell, en iOS y Android, con resultados para la cadena parcial M.](search-images/search-results.png "Resultados de la búsqueda de la clase SearchHandler de Shell")](search-images/search-results-large.png#lightbox "Resultados de la búsqueda de la clase SearchHandler de Shell")
 
 A medida que cambia la consulta de búsqueda, se actualiza el área de sugerencias de búsqueda:
 
-[![Captura de pantalla de resultados de la búsqueda en una clase SearchHandler de Shell, en iOS y Android](search-images/search-results-change.png "Resultados de la búsqueda de la clase SearchHandler de Shell")](search-images/search-results-change-large.png#lightbox "Resultados de la búsqueda de la clase SearchHandler de Shell")
+[![Captura de pantalla de resultados de búsqueda en una clase SearchHandler de Shell, en iOS y Android, con resultados para la cadena parcial M o n.](search-images/search-results-change.png "Resultados de la búsqueda de la clase SearchHandler de Shell")](search-images/search-results-change-large.png#lightbox "Resultados de la búsqueda de la clase SearchHandler de Shell")
 
 Cuando se selecciona un resultado de búsqueda, hay un desplazamiento hasta `MonkeyDetailPage` y se muestran datos sobre el mono seleccionado:
 

@@ -9,12 +9,12 @@ author: davidortinau
 ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: fd1361f00bf10089f7a9dead5a5adaa1e7c29727
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 13b66f3484f274c04282ef1964107fcb53c62e38
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571589"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609799"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Administración de dispositivos virtuales con Android Device Manager
 
@@ -228,7 +228,7 @@ Para iniciar Android Device Manager, haga clic en **Herramientas > Device Manage
 
 Si aparece el siguiente cuadro de diálogo de error al inicio, consulte la sección [Solución de problemas](#troubleshooting) para obtener soluciones alternativas:
 
-![Cuadro de diálogo de error de instancia de Android SDK](device-manager-images/mac/04-sdk-instance-error.png)
+![Captura de pantalla en la que se muestra el cuadro de diálogo de error de instancia de Android SDK para la información sobre solución de problemas.](device-manager-images/mac/04-sdk-instance-error.png)
 
 ## <a name="main-screen"></a>Pantalla principal
 
@@ -401,7 +401,7 @@ Después de realizar este cambio en **user.config**, podrá iniciar Android Devi
 
 Si no está instalado, podría ver este cuadro de diálogo de error en el inicio:
 
-![Cuadro de diálogo de error de instancia de Android SDK](device-manager-images/win/32-sdk-instance-error.png)
+![Captura de pantalla en la que se muestra el cuadro de diálogo de error de instancia de Android SDK.](device-manager-images/win/32-sdk-instance-error.png)
 
 Si ve este cuadro de diálogo de error, haga clic en **Abrir SDK Manager** para abrir Android SDK Manager. En Android SDK Manager, haga clic en la pestaña **Herramientas** e instale los siguientes paquetes:
 

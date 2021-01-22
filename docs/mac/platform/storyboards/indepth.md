@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: c90a51d8d849dc95ca9465dd55910bcd5b50e43e
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 53f8dda128facc29a0bfbb67b2dfbd263504b3b4
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91430143"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697688"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Trabajar con guiones gráficos en Xamarin. Mac
 
@@ -41,7 +41,7 @@ controller.ShowWindow(this);
 
 `FromName`Carga el archivo de guion gráfico con el nombre especificado que se ha incluido en el paquete de la aplicación. `InstantiateControllerWithIdentifier`Crea una instancia del controlador de vista con la identidad especificada. La identidad se establece en el Interface Builder de Xcode al diseñar la interfaz de usuario:
 
-[![Establecer el identificador de guión gráfico](indepth-images/sb02.png)](indepth-images/sb02.png#lightbox)
+[![Establecer el identificador de guión gráfico en Interface Builder.](indepth-images/sb02.png)](indepth-images/sb02.png#lightbox)
 
 Opcionalmente, puede usar el `InstantiateInitialController` método para cargar el controlador de vista al que se ha asignado el controlador inicial en Interface Builder:
 
@@ -74,7 +74,7 @@ Se han agregado varios métodos nuevos a la `NSViewController` clase para admiti
 
 ### <a name="the-responder-chain"></a>Cadena del respondedor
 
-Además, `NSViewControllers` ahora forman parte de la cadena de _respuesta_de la ventana:
+Además, `NSViewControllers` ahora forman parte de la cadena de _respuesta_ de la ventana:
 
 [![Cadena del respondedor](indepth-images/vc01.png)](indepth-images/vc01.png#lightbox)
 
@@ -303,14 +303,14 @@ Para agregar una referencia a una escena específica, un guion gráfico externo 
     [![Diseñar el diseño en Xcode](indepth-images/ref07.png)](indepth-images/ref07.png#lightbox)
 3. En el **Inspector de identidad**, escriba un **identificador de guión gráfico** para el controlador de ventana de la nueva escena: 
 
-    [![Establecer el identificador de guión gráfico](indepth-images/ref08.png)](indepth-images/ref08.png#lightbox)
+    [![Establecer el guión gráfico D en AltScene bajo Identity.](indepth-images/ref08.png)](indepth-images/ref08.png#lightbox)
 4. Abra el guion gráfico al que va a agregar la referencia en Interface Builder.
 5. Arrastre una **referencia de guion gráfico** desde la **biblioteca de objetos** hasta el superficie de diseño: 
 
     [![Seleccionar una referencia de guion gráfico de la biblioteca](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 6. En el **Inspector de identidad**, seleccione el nombre del **guión gráfico** y el **ID. de referencia** (identificador de guión gráfico) de la escena que creó anteriormente: 
 
-    [![Establecimiento del identificador de referencia](indepth-images/ref09.png)](indepth-images/ref09.png#lightbox)
+    [![Establecer la referencia en AltScene en la referencia de guion gráfico.](indepth-images/ref09.png)](indepth-images/ref09.png#lightbox)
 7. Control: haga clic en un widget de interfaz de usuario (como un botón) en una escena existente y cree un nuevo segue en la **referencia de guion gráfico** que acaba de crear. En el menú emergente, seleccione **Mostrar** para completar el segue: 
 
     [![Establecimiento del tipo segue](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
@@ -331,13 +331,13 @@ Para agregar una referencia a una escena específica del mismo guión gráfico, 
     [![Editar el guion gráfico en Xcode](indepth-images/ref11.png)](indepth-images/ref11.png#lightbox)
 3. En el **Inspector de identidad**, escriba un **identificador de guión gráfico** para el controlador de ventana de la nueva escena: 
 
-    [![Establecer el identificador de guión gráfico](indepth-images/ref12.png)](indepth-images/ref12.png#lightbox)
+    [![Establecer el guión gráfico D en IntScene bajo Identity.](indepth-images/ref12.png)](indepth-images/ref12.png#lightbox)
 4. Arrastre una **referencia de guion gráfico** desde el **cuadro de herramientas** hasta el superficie de diseño: 
 
     [![Seleccionar una referencia de guion gráfico de la biblioteca](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 5. En **Inspector de atributos**, seleccione **ID. de referencia** (identificador de guión gráfico) de la escena que creó anteriormente: 
 
-    [![Establecimiento del identificador de referencia](indepth-images/ref13.png)](indepth-images/ref13.png#lightbox)
+    [![Establecer la referencia en IntScene en la referencia de guion gráfico.](indepth-images/ref13.png)](indepth-images/ref13.png#lightbox)
 6. Control: haga clic en un widget de interfaz de usuario (como un botón) en una escena existente y cree un nuevo segue en la **referencia de guion gráfico** que acaba de crear. En el menú emergente, seleccione **Mostrar** para completar el segue: 
 
     [![Seleccionar el tipo de segue](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 

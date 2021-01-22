@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/02/2018
-ms.openlocfilehash: 44003e55ee88db727c26def56b3363dbf6c982e9
-ms.sourcegitcommit: 124d845f8d2768353e8b7fe1ab1d959a589367f7
+ms.openlocfilehash: 07c20be730d73b080d99b2fecb88b26115c37bc2
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91872282"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609032"
 ---
 # <a name="signing-the-android-application-package"></a>Firmar el paquete de aplicación de Android
 
@@ -28,7 +28,7 @@ En [Archivo para publicar](~/android/deploy-test/release-prep/index.md#archive),
 
 En [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive) (Archivo para publicar), el cuadro de diálogo **Sign and Distribute…** (Firmar y distribuir…) ofrece dos opciones para la distribución. Seleccione **Ad-Hoc** (Ad hoc) y haga clic en **Siguiente**:
 
-[![Cuadro de diálogo Firmar y distribuir](images/xs/01-select-ad-hoc-sml.png)](images/xs/01-select-ad-hoc.png#lightbox)
+[![Cuadro de diálogo Firmar y distribuir; Seleccionar canal de distribución de Android.](images/xs/01-select-ad-hoc-sml.png)](images/xs/01-select-ad-hoc.png#lightbox)
 
 -----
 
@@ -125,7 +125,7 @@ En la captura de pantalla siguiente se muestra un ejemplo de la aplicación list
 Tal como se muestra aquí, se ha agregado un nuevo certificado en el almacén de claves. Para publicar una aplicación en Google Play, haga clic en **Cancelar** y vaya a [Publicación en Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md).
 En caso contrario, haga clic en **Siguiente** para publicar la aplicación *ad hoc* (para la distribución independiente) como se muestra en este ejemplo:
 
-[![Cuadro de diálogo Firmar y distribuir](images/xs/04-select-identity-sml.png)](images/xs/04-select-identity.png#lightbox)
+[![Cuadro de diálogo Firmar y distribuir; Identidad de firma de Android.](images/xs/04-select-identity-sml.png)](images/xs/04-select-identity.png#lightbox)
 
 En el cuadro de diálogo **Publish as Ad Hoc** (Publicar como ad hoc) se incluye un resumen de la aplicación firmada antes de su publicación. Si esta información es correcta, haga clic en **Publicar**.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 719436835f5d104930adfe8cd7aa95de326784e9
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: e320e5e3ad7942f371e01baaade753a2bb35f76e
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91432090"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697662"
 ---
 # <a name="layout-options-in-xamarinios"></a>Opciones de diseño en Xamarin. iOS
 
@@ -25,11 +25,11 @@ Hay dos mecanismos diferentes para controlar el diseño cuando se cambia el tama
 
 Cuando un usuario cambia el tamaño de una ventana, por ejemplo, cuando se gira el dispositivo y la orientación cambia, el sistema cambiará automáticamente el tamaño de las vistas dentro de esa ventana según sus reglas de ajuste automático de tamaño. Estas reglas se pueden establecer en C# mediante la `AutoresizingMask` propiedad de `UIView` o en el **Panel de propiedades** del diseñador de iOS, como se muestra a continuación:
 
- [![Diseñador de Visual Studio para Mac](layout-options-images/image41.png)](layout-options-images/image41.png#lightbox)
+ [![Captura de pantalla que muestra el Panel de propiedades del diseñador I O S.](layout-options-images/image41.png)](layout-options-images/image41.png#lightbox)
 
 Cuando se selecciona un control, esto le permite especificar manualmente la ubicación y las dimensiones del control, así como elegir el comportamiento de ajuste automático de **tamaño** . Como se muestra en la captura de pantalla siguiente, se pueden usar los muelles y los montantes del control de ajuste automático de tamaño para definir la relación de la vista seleccionada con su elemento primario:
 
- [![Diseñador de Visual Studio para Mac](layout-options-images/image42.png)](layout-options-images/image42.png#lightbox)
+ [![Captura de pantalla que muestra el control de ajuste automático de tamaño en el Panel de propiedades del diseñador I O S.](layout-options-images/image42.png)](layout-options-images/image42.png#lightbox)
 
 Al ajustar un *muelle* , se cambiará el tamaño de la vista basándose en el ancho o el alto de la vista primaria. Al ajustar *una forma, la* vista mantendrá una distancia constante entre sí misma y su vista primaria, en ese borde concreto.
 
@@ -54,11 +54,11 @@ imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutor
 
 También podemos ajustar los controles mediante el diseñador. Si selecciona las transformaciones que se muestran a continuación, la imagen permanecerá alineada a la derecha sin ser cortada en la parte inferior de la vista:
 
- [![Autorotación](layout-options-images/autoresize.png)](layout-options-images/autoresize.png#lightbox)
+ [![Captura de pantalla que muestra el control de ajuste automático de tamaño con la izquierda y la parte inferior seleccionadas. ](layout-options-images/autoresize.png)](layout-options-images/autoresize.png#lightbox)
 
 Estas capturas de pantalla muestran cómo cambian el tamaño o la posición de los controles cuando se gira la pantalla:
 
- [![Autorotación](layout-options-images/image44a.png)](layout-options-images/image44a.png#lightbox)
+ [![Captura de pantalla muestra un dispositivo móvil mostrado en vertical y horizontal con texto y gráfico ajustado.](layout-options-images/image44a.png)](layout-options-images/image44a.png#lightbox)
 
 Tenga en cuenta que la vista de texto y el campo de texto se ajustan para mantener los mismos márgenes izquierdo y derecho, debido a la `FlexibleWidth` configuración. La imagen tiene el margen superior e izquierdo flexible, lo que significa que conserva los márgenes inferior y derecho, manteniendo la imagen en la vista cuando se gira la pantalla. Normalmente, los diseños complejos requieren una combinación de estos valores en todos los controles visibles para mantener la coherencia de la interfaz de usuario y evitar que los controles se superpongan cuando cambien los límites de la vista (debido a la rotación u otro evento de cambio de tamaño).
 

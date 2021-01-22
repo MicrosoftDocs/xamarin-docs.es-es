@@ -10,12 +10,12 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f4e0387b6b64c5a3bf801a31c6e333b6f514df1d
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 81a273091d14f8da908d1d52751f262b3a00027c
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93367376"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609071"
 ---
 # <a name="customizing-a-map-pin"></a>Personalización de un anclado de mapa
 
@@ -174,9 +174,9 @@ En las secciones siguientes se describe la implementación de cada clase de repr
 
 Las siguientes capturas de pantalla muestran el mapa antes y después de la personalización:
 
-![Control de mapa antes y después de la personalización](map-pin-images/map-layout-ios.png)
+![Capturas de pantalla en las que se muestra un dispositivo móvil con una chincheta estándar y una chincheta anotada.](map-pin-images/map-layout-ios.png)
 
-En iOS la marca se denomina *anotación* y puede ser una imagen personalizada o una marca definida por el sistema de varios colores. Opcionalmente las anotaciones pueden mostrar una *llamada* , que se muestra en respuesta a que el usuario seleccione la anotación. La llamada muestra las propiedades `Label` y `Address` de la instancia `Pin`, con vistas adicionales a la derecha y a la izquierda. En la captura de pantalla anterior, la vista adicional izquierda es la imagen de un mono y la vista adicional derecha es el botón *Información*.
+En iOS la marca se denomina *anotación* y puede ser una imagen personalizada o una marca definida por el sistema de varios colores. Opcionalmente las anotaciones pueden mostrar una *llamada*, que se muestra en respuesta a que el usuario seleccione la anotación. La llamada muestra las propiedades `Label` y `Address` de la instancia `Pin`, con vistas adicionales a la derecha y a la izquierda. En la captura de pantalla anterior, la vista adicional izquierda es la imagen de un mono y la vista adicional derecha es el botón *Información*.
 
 El siguiente ejemplo de código muestra el representador personalizado para la plataforma iOS:
 
@@ -347,9 +347,9 @@ Para obtener más información sobre cómo personalizar una instancia de `MKMapV
 
 Las siguientes capturas de pantalla muestran el mapa antes y después de la personalización:
 
-![Control de mapa antes y después de la personalización](map-pin-images/map-layout-android.png)
+![Capturas de pantalla en las que se muestra un dispositivo móvil con un marcador estándar y un marcador personalizado.](map-pin-images/map-layout-android.png)
 
-En Android la marca se denomina *marcador* y puede ser una imagen personalizada o un marcador definido por el sistema de varios colores. Los marcadores pueden mostrar una *ventana de información* , que se muestra en la respuesta para el usuario que pulsa en el marcador. Muestra la ventana de información de las propiedades `Label` y `Address` de la instancia `Pin` y se pueden personalizar para incluir otro tipo de contenido. Con todo, solo una ventana de información puede mostrarse al mismo tiempo.
+En Android la marca se denomina *marcador* y puede ser una imagen personalizada o un marcador definido por el sistema de varios colores. Los marcadores pueden mostrar una *ventana de información*, que se muestra en la respuesta para el usuario que pulsa en el marcador. Muestra la ventana de información de las propiedades `Label` y `Address` de la instancia `Pin` y se pueden personalizar para incluir otro tipo de contenido. Con todo, solo una ventana de información puede mostrarse al mismo tiempo.
 
 En el ejemplo de código siguiente se muestra el representador personalizado para la plataforma Android:
 
@@ -510,7 +510,7 @@ Para obtener más información sobre cómo personalizar una instancia de `MapVie
 
 Las siguientes capturas de pantalla muestran el mapa antes y después de la personalización:
 
-![Control de mapa antes y después de la personalización](map-pin-images/map-layout-uwp.png)
+![Capturas de pantalla en las que se muestra un dispositivo móvil con un icono de mapa estándar y un icono de mapa personalizado.](map-pin-images/map-layout-uwp.png)
 
 En la UWP la marca se denomina *icono de mapa* y puede ser una imagen personalizada o la imagen predeterminada definida por el sistema. Un icono de mapa puede mostrar un `UserControl`, que se muestra en la respuesta para el usuario que pulsa en el icono de mapa. El `UserControl` puede mostrar cualquier contenido, incluyendo las propiedades `Label` y `Address` de la instancia `Pin`.
 

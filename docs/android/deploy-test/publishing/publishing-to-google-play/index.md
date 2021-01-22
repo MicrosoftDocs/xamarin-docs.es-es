@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 04e83fc68218216fe36cce67e43b83e8ad8feaa5
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 5205538679aa0c4ca66e37c7aa1924fb1d2479b3
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80070781"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98608992"
 ---
 # <a name="publishing-to-google-play"></a>Publicación en Google Play
 
@@ -29,7 +29,7 @@ El tamaño máximo de un APK publicado en Google Play es de 100 MB. Si una aplic
 
 Google Play no está disponible en todo el mundo. Es posible que en algunas ubicaciones no se admita la distribución de aplicaciones.
 
-## <a name="becoming-a-publisher"></a>Convertirse en editor
+## <a name="becoming-a-publisher"></a>Conviértase en anunciante
 
 Para publicar aplicaciones en Google Play, es necesario tener una cuenta de editor. Para suscribirse a una cuenta de editor, siga estos pasos:
 
@@ -44,7 +44,7 @@ Google Play no se admite en todos los países del mundo. Las listas de países m
 
 1. [Ubicaciones admitidas para el registro de comerciantes y desarrolladores](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324): se trata de una lista de todos los países en los que los desarrolladores pueden registrarse como comerciantes y vender aplicaciones de pago.
 
-1. [Ubicaciones admitidas para la distribución de aplicaciones a usuarios de Google Play](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294): se trata de una lista de todos los países en los que se pueden distribuir aplicaciones.
+1. [Ubicaciones admitidas para la distribución de aplicaciones a usuarios de Google Play](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294) &ndash; Se trata de una lista de todos los países en los que se pueden distribuir aplicaciones.
 
 ### <a name="preparing-promotional-assets"></a>Preparación de los recursos promocionales
 
@@ -124,7 +124,7 @@ En [Creating a New Certificate (Crear un certificado)](~/android/deploy-test/sig
 5. Firme la aplicación con el certificado.
 6. Publique la aplicación firmada en Google Play.
 
-En [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive) (Archivo para publicar), el cuadro de diálogo **Canal de distribución** ofrece dos opciones para la distribución: **Ad Hoc** y **Google Play**. Si aparece el cuadro de diálogo **Signing Identity (Identidad de firma)** , haga clic en **Atrás** para volver al cuadro de diálogo **Distribution Channel (Canal de distribución)** . Selección de **Google Play**:
+En [Archive for Publishing (Archivo para publicar)](~/android/deploy-test/release-prep/index.md#archive), el cuadro de diálogo **Distribution Channel (Canal de distribución)** ofrece dos opciones para la distribución: **Ad hoc** y **Google Play**. Si aparece el cuadro de diálogo **Signing Identity (Identidad de firma)**, haga clic en **Atrás** para volver al cuadro de diálogo **Distribution Channel (Canal de distribución)**. Selección de **Google Play**:
 
 [![Cuadro de diálogo Canal de distribución](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
@@ -138,7 +138,7 @@ En el cuadro de diálogo **Cuentas de Google Play**, haga clic en el botón **+*
 
 En el cuadro de diálogo **Register Google API Access (Registrar acceso de API de Google)** debe proporcionar el _id. de cliente_ y el _secreto de cliente_ que proporcionan acceso a la API a su cuenta de desarrollador Google Play:
 
-[![Cuadro de diálogo Registrar acceso de API de Google](images/vs/04-register-google-api-access-sml.png)](images/vs/04-register-google-api-access.png#lightbox)
+[![Cuadro de diálogo Register Google API Access (Registrar acceso de API de Google) en Cuentas de Google Play](images/vs/04-register-google-api-access-sml.png)](images/vs/04-register-google-api-access.png#lightbox).
 
 En la siguiente sección se explica cómo crear un nuevo proyecto de API de Google y generar el _id. de cliente_ y el _secreto de cliente_ que se necesitan.
 
@@ -181,7 +181,7 @@ El siguiente paso es crear un cliente de OAuth para la aplicación, si aún no s
 
 Vaya a la página **Configuración**.
 
-[![Icono Settings (Configuración)](images/02-google-play-developer-console-sml.png)](images/02-google-play-developer-console.png#lightbox)
+[![Icono Configuración](images/02-google-play-developer-console-sml.png)](images/02-google-play-developer-console.png#lightbox)
 
 En la página **Configuración**, seleccione **Acceso a la API** y haga clic en **CREAR CLIENTE DE OAUTH** para crear un nuevo cliente de OAuth:
 
@@ -234,7 +234,7 @@ Después, se muestra el cuadro de diálogo **Pista de Google Play**. Google Play
 
 Elija qué pista de Google Play se utilizará para cargar la aplicación y haga clic en **Cargar**.
 
-[![Cuenta agregada a las cuentas de Google Play](images/vs/08-google-play-track-sml.png)](images/vs/07-account-added.png#lightbox)
+[![Cuenta agregada a una pista de Google Play](images/vs/08-google-play-track-sml.png)](images/vs/08-google-play-track.png#lightbox)
 
 Para obtener más información sobre las pruebas de Google Play, vea [Configurar una prueba abierta, cerrada o interna](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en).
 
@@ -263,7 +263,7 @@ Si se produce este error, cargue un APK manualmente, por ejemplo, una compilaci�
 
 [![Ya se actualizó un APK con el código de versión (1)](images/vs/13-version-code-error-sml.png)](images/vs/13-version-code-error.png#lightbox)
 
-Para resolver este error, vuelva a compilar la aplicación con un número de versión diferente y reenvíela a Google Play mediante el cuadro de diálogo **Distribution Channel (Canal de distribución)** .
+Para resolver este error, vuelva a compilar la aplicación con un número de versión diferente y reenvíela a Google Play mediante el cuadro de diálogo **Distribution Channel (Canal de distribución)**.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -275,7 +275,7 @@ Si se aceptan el id. de cliente y el secreto de cliente, se mostrará el mensaje
 
 [![Mensaje de registro correcto](images/xs/04-registration-successful-sml.png)](images/xs/04-registration-successful.png#lightbox)
 
-En el cuadro de diálogo **Google Play Account (Cuenta de Google Play)** , seleccione una cuenta de Google y una pista para cargar la aplicación:
+En el cuadro de diálogo **Google Play Account (Cuenta de Google Play)**, seleccione una cuenta de Google y una pista para cargar la aplicación:
 
 [![Cuadro de diálogo para elegir una cuenta de Google](images/xs/05-choose-google-account-sml.png)](images/xs/05-choose-google-account.png#lightbox)
 
@@ -306,7 +306,7 @@ Tenga en cuenta que se debe haber enviado antes un APK a Google Play Store para 
 
 > _Google Play solicita que cargue manualmente el primer APK de esta aplicación. Puede usar un APK ad hoc para ello._
 
-o
+or
 
 > _No application was found for the given package name. [404] (No se ha encontrado ninguna aplicación con el nombre de paquete especificado. [404])_
 
