@@ -10,12 +10,12 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b44a3fa34044327be6a928588397c3371f196336
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 760d6f6e6d57a1ab9a6537e8974e85e26195d8cb
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93371136"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758024"
 ---
 # <a name="no-locxamarinforms-switch"></a>Xamarin.Forms Conmutador
 
@@ -53,7 +53,7 @@ Switch switchControl = new Switch { IsToggled = true };
 
 ## <a name="switch-appearance"></a>Cambiar apariencia
 
-Además de las propiedades que [`Switch`](xref:Xamarin.Forms.Switch) heredan de la [`View`](xref:Xamarin.Forms.View) clase, `Switch` también define `OnColor` `ThumbColor` las propiedades y. La `OnColor` propiedad se puede establecer para definir el `Switch` color cuando se cambia a su estado, **on** y la `ThumbColor` propiedad se puede establecer para definir el `Color` de la Thumb del conmutador. En el ejemplo siguiente se muestra cómo crear una instancia `Switch` de en XAML con estas propiedades establecidas:
+Además de las propiedades que [`Switch`](xref:Xamarin.Forms.Switch) heredan de la [`View`](xref:Xamarin.Forms.View) clase, `Switch` también define `OnColor` `ThumbColor` las propiedades y. La `OnColor` propiedad se puede establecer para definir el `Switch` color cuando se cambia a su estado,  y la `ThumbColor` propiedad se puede establecer para definir el `Color` de la Thumb del conmutador. En el ejemplo siguiente se muestra cómo crear una instancia `Switch` de en XAML con estas propiedades establecidas:
 
 ```xaml
 <Switch OnColor="Orange"
@@ -68,7 +68,7 @@ Switch switch = new Switch { OnColor = Color.Orange, ThumbColor = Color.Green };
 
 En la captura de pantalla siguiente se muestra el `Switch` en sus Estados **de alternancia on** y **OFF** , con las `OnColor` `ThumbColor` propiedades y establecidas:
 
-![Captura de pantalla de los cambios en los Estados activado y desactivado, en iOS y Android](switch-images/switch-states-colors.png "Conmutadores en iOS y Android")
+![Captura de pantalla de los cambios en los Estados activado y desactivado, en iOS y Android con los colores modificados.](switch-images/switch-states-colors.png "Conmutadores en iOS y Android")
 
 ## <a name="respond-to-a-switch-state-change"></a>Responder a un cambio de estado del conmutador
 

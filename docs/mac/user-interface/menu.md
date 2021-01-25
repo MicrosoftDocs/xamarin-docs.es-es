@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: c607e4668e4754edaec50a4c8b24776c7bb5844e
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 884b14cdb268fe417388a9007bc1c8990114f7e7
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91430785"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758141"
 ---
 # <a name="menus-in-xamarinmac"></a>Menús en Xamarin. Mac
 
@@ -47,7 +47,7 @@ Según Apple y, de forma predeterminada, todas las aplicaciones de macOS tienen 
 - **Menú de Apple** : este menú proporciona acceso a los elementos de todo el sistema que están disponibles para el usuario en todo momento, independientemente de la aplicación que se esté ejecutando. Estos elementos no pueden ser modificados por el desarrollador.
 - **Menú** de la aplicación: este menú muestra el nombre de la aplicación en negrita y ayuda al usuario a identificar la aplicación que se está ejecutando actualmente. Contiene elementos que se aplican a la aplicación en su totalidad y no a un documento o proceso determinado, como salir de la aplicación.
 - **Menú Archivo** : elementos usados para crear, abrir o guardar documentos con los que funciona la aplicación. Si la aplicación no está basada en documentos, se puede cambiar el nombre o quitar este menú.
-- **Menú Edición** : contiene comandos como **cortar**, **copiar**y **pegar** que se usan para editar o modificar elementos en la interfaz de usuario de la aplicación.
+- **Menú Edición** : contiene comandos como **cortar**, **copiar** y **pegar** que se usan para editar o modificar elementos en la interfaz de usuario de la aplicación.
 - **Menú Formato** : Si la aplicación funciona con texto, este menú contiene comandos para ajustar el formato del texto.
 - **Menú Ver** : contiene comandos que afectan al modo en que se muestra (visualiza) el contenido en la interfaz de usuario de la aplicación.
 - **Menús específicos** de la aplicación: son los menús específicos de la aplicación (por ejemplo, un menú de marcadores de un explorador Web). Deberían aparecer entre los menús **Ver** y **ventana** de la barra.
@@ -64,7 +64,7 @@ Siempre que se crea un nuevo proyecto de Xamarin. Mac, se obtiene automáticamen
 
 Haga doble clic en el archivo **Main. Storyboard** para abrirlo para su edición en el Interface Builder de Xcode y se mostrará la interfaz del editor de menús:
 
-[![Edición de la interfaz de usuario en Xcode](menu-images/defaultbar01.png "Edición de la interfaz de usuario en Xcode")](menu-images/defaultbar01-large.png#lightbox)
+[![Editar la interfaz de usuario en Xcode, mostrando el guión gráfico de punto principal.](menu-images/defaultbar01.png "Edición de la interfaz de usuario en Xcode")](menu-images/defaultbar01-large.png#lightbox)
 
 Desde aquí, podemos hacer clic en elementos como el elemento de menú **abrir** en el menú **archivo** y editar o ajustar sus propiedades en el **Inspector de atributos**:
 
@@ -80,7 +80,7 @@ Si selecciona el **primer respondedor** en la **jerarquía** de la interfaz y se
 
 [![Ver todas las acciones asociadas](menu-images/defaultbar04.png "Ver todas las acciones asociadas")](menu-images/defaultbar04-large.png#lightbox) 
 
-¿Por qué es importante? En la siguiente sección verá cómo funcionan estas acciones definidas automáticamente con otros elementos de la interfaz de usuario de Cocoa para habilitar y deshabilitar automáticamente los elementos de menú, así como proporcionar funcionalidad integrada para los elementos.
+¿Por qué esto es importante? En la siguiente sección verá cómo funcionan estas acciones definidas automáticamente con otros elementos de la interfaz de usuario de Cocoa para habilitar y deshabilitar automáticamente los elementos de menú, así como proporcionar funcionalidad integrada para los elementos.
 
 Más adelante vamos a usar estas acciones integradas para habilitar y deshabilitar elementos del código y proporcionar nuestra propia funcionalidad cuando se seleccionan.
 
@@ -92,7 +92,7 @@ Si fuera la ejecución de una aplicación de Xamarin. Mac recién creada antes d
 
 ![Un elemento de menú habilitado](menu-images/appmenu03.png "Un elemento de menú habilitado")
 
-Mientras que otros elementos de menú, como **cortar**, **copiar**y **pegar** , no son:
+Mientras que otros elementos de menú, como **cortar**, **copiar** y **pegar** , no son:
 
 ![Elementos de menú deshabilitados](menu-images/appmenu04.png "Elementos de menú deshabilitados")
 
@@ -108,7 +108,7 @@ Guarde los cambios en el diseño de la interfaz de usuario y vuelva a cambiar el
 
 ![Los elementos de menú se habilitan o deshabilitan automáticamente](menu-images/appmenu07.png "Los elementos de menú se habilitan o deshabilitan automáticamente")
 
-Observe cómo los elementos **cortar**, **copiar**y **pegar** se habilitan automáticamente y son totalmente funcionales, todo ello sin escribir una sola línea de código. 
+Observe cómo los elementos **cortar**, **copiar** y **pegar** se habilitan automáticamente y son totalmente funcionales, todo ello sin escribir una sola línea de código. 
 
 ¿Qué ocurre aquí? Recuerde las acciones predefinidas integradas que se conectan a los elementos de menú predeterminados (como se indicó anteriormente), la mayoría de los elementos de la interfaz de usuario de coco que forman parte de macOS han integrado enlaces a acciones específicas (como `copy:` ). De modo que, cuando se agregan a una ventana, activa y selecciona, se habilitan automáticamente el elemento de menú correspondiente o los elementos adjuntos a esa acción. Si el usuario selecciona ese elemento de menú, se llama a la funcionalidad integrada en el elemento de la interfaz de usuario y se ejecuta sin intervención del desarrollador.
 
@@ -435,7 +435,7 @@ public void defineKeyword (NSObject sender) {
 }
 ```
 
-A continuación, haga doble clic en el archivo de guion gráfico de la aplicación en el **Panel de solución** para abrirlo para su edición en el Interface Builder de Xcode. Seleccione el **primer respondedor** en la **escena**de la aplicación y, a continuación, cambie al **Inspector de atributos**:
+A continuación, haga doble clic en el archivo de guion gráfico de la aplicación en el **Panel de solución** para abrirlo para su edición en el Interface Builder de Xcode. Seleccione el **primer respondedor** en la **escena** de la aplicación y, a continuación, cambie al **Inspector de atributos**:
 
 ![Inspector de atributos](menu-images/action01.png "Inspector de atributos")
 
@@ -465,7 +465,7 @@ En esta sección, veremos cómo quitar los elementos de menú que no necesitamos
 
 Haga doble clic en el archivo **Main. Storyboard** en el **Panel de solución** para abrirlo para su edición:
 
-[![Edición de la interfaz de usuario en Xcode](menu-images/maint01.png "Edición de la interfaz de usuario en Xcode")](menu-images/maint01-large.png#lightbox)
+[![Haga doble clic en el archivo de guion gráfico para editar la interfaz de usuario en Xcode.](menu-images/maint01.png "Edición de la interfaz de usuario en Xcode")](menu-images/maint01-large.png#lightbox)
 
 Para nuestra aplicación de Xamarin. Mac específica, no vamos a usar el menú **vista** predeterminada, por lo que vamos a quitarlo. En la **jerarquía** de la interfaz, seleccione el elemento de menú **Ver** que forma parte de la barra de menús principal:
 
@@ -529,8 +529,8 @@ Vamos a hacer lo siguiente:
     [![Seleccionar el tipo de acción](menu-images/maint17.png "Seleccionar el tipo de acción")](menu-images/maint17-large.png#lightbox)
 3. Escriba el **nombre** "phraseAddress" y presione el botón **conectar** para crear la nueva acción: 
 
-    [![Configurar la acción](menu-images/maint18.png "Configurar la acción")](menu-images/maint18-large.png#lightbox)
-4. Repita los pasos anteriores para los elementos de menú **fecha**, **saludo**y **firma** : 
+    [![Configurar la acción escribiendo un nombre.](menu-images/maint18.png "Configurar la acción")](menu-images/maint18-large.png#lightbox)
+4. Repita los pasos anteriores para los elementos de menú **fecha**, **saludo** y **firma** : 
 
     [![Acciones completadas](menu-images/maint19.png "Acciones completadas")](menu-images/maint19-large.png#lightbox)
 5. Guarde los cambios en la barra de menús.
@@ -895,7 +895,7 @@ Los menús contextuales aparecen cuando el usuario hace clic con el botón derec
 
 Vamos a editar el archivo **Main. Storyboard** en Xcode y agregaremos una ventana de **ventana** a nuestro diseño, estableceremos su **clase** en "NSPanel" en el **Inspector de identidad**, agregaremos un nuevo elemento de **Asistente** al menú **ventana** y adjuntarlo a la ventana nueva mediante una **presentación segue**:
 
-[![Establecimiento del tipo segue](menu-images/context01.png "Establecimiento del tipo segue")](menu-images/context01-large.png#lightbox)
+[![Establecer el tipo segue en el archivo de guión gráfico de punto principal.](menu-images/context01.png "Establecimiento del tipo segue")](menu-images/context01-large.png#lightbox)
 
 Vamos a hacer lo siguiente:
 
@@ -910,7 +910,7 @@ Vamos a hacer lo siguiente:
     [![Arrastrar para crear un segue](menu-images/context04.png "Arrastrar para crear un segue")](menu-images/context04-large.png#lightbox)
 4. En el cuadro de diálogo emergente, seleccione **menú**: 
 
-    ![Establecimiento del tipo segue](menu-images/context05.png "Establecimiento del tipo segue")
+    ![Para establecer el tipo segue, seleccione el menú de las salidas en el menú contextual de la etiqueta.](menu-images/context05.png "Establecimiento del tipo segue")
 5. En el **Inspector de identidad**, establezca la clase del controlador de vista en "PanelViewController": 
 
     [![Establecimiento de la clase segue](menu-images/context10.png "Establecimiento de la clase segue")](menu-images/context10-large.png#lightbox)
@@ -918,10 +918,10 @@ Vamos a hacer lo siguiente:
 7. Cambie al **Editor del asistente** y seleccione el archivo **PanelViewController. h** .
 8. Cree una acción para el elemento de menú de **documento** llamado `propertyDocument` : 
 
-    [![Configurar la acción](menu-images/context06.png "Configurar la acción")](menu-images/context06-large.png#lightbox)
+    [![Configurar la acción denominada propertyDocument.](menu-images/context06.png "Configurar la acción")](menu-images/context06-large.png#lightbox)
 9. Repita la creación de acciones para los elementos de menú restantes: 
 
-    [![Las acciones necesarias](menu-images/context07.png "Las acciones necesarias")](menu-images/context07-large.png#lightbox)
+    [![Repetir acciones para los elementos de menú restantes.](menu-images/context07.png "Las acciones necesarias")](menu-images/context07-large.png#lightbox)
 10. Por último, cree una salida para la **etiqueta de propiedad** denominada `propertyLabel` : 
 
     [![Configuración de la salida](menu-images/context08.png "Configuración de la salida")](menu-images/context08-large.png#lightbox)
@@ -1008,18 +1008,18 @@ Cuando el usuario hace clic con el botón secundario del mouse en el icono de la
 
 Vamos a crear un menú acoplable personalizado para nuestra aplicación haciendo lo siguiente:
 
-1. En Visual Studio para Mac, haga clic con el botón derecho en el proyecto de la aplicación y seleccione **Agregar**  >  **nuevo archivo..** . En el cuadro de diálogo nuevo archivo, seleccione la definición de interfaz vacía de **Xamarin. Mac**  >  **Empty Interface Definition**, use "DockMenu" como **nombre** y haga clic en el botón **nuevo** para crear el nuevo archivo **DockMenu. Xib** :
+1. En Visual Studio para Mac, haga clic con el botón derecho en el proyecto de la aplicación y seleccione **Agregar**  >  **nuevo archivo..** . En el cuadro de diálogo nuevo archivo, seleccione la definición de interfaz vacía de **Xamarin. Mac**  >  , use "DockMenu" como **nombre** y haga clic en el botón **nuevo** para crear el nuevo archivo **DockMenu. Xib** :
 
     ![Agregar una definición de interfaz vacía](menu-images/dock02.png "Agregar una definición de interfaz vacía")
-2. En el **Panel de solución**, haga doble clic en el archivo **DockMenu. Xib** para abrirlo para su edición en Xcode. Cree un nuevo **menú** con los siguientes elementos: **Dirección**, **fecha**, **saludo**y **firma** . 
+2. En el **Panel de solución**, haga doble clic en el archivo **DockMenu. Xib** para abrirlo para su edición en Xcode. Cree un nuevo **menú** con los siguientes elementos: **Dirección**, **fecha**, **saludo** y **firma** . 
 
     [![Diseño de la interfaz de usuario](menu-images/dock03.png "Diseño de la interfaz de usuario")](menu-images/dock03-large.png#lightbox)
-3. A continuación, vamos a conectar los nuevos elementos de menú a las acciones existentes que hemos creado para el menú personalizado en la sección anterior [Agregar, editar y eliminar menús](#Adding,_Editing_and_Deleting_Menus) . Cambie al **Inspector de conexión** y seleccione el **primer respondedor** en la **jerarquía**de la interfaz. Desplácese hacia abajo y busque la `phraseAddress:` acción. Arrastre una línea desde el círculo en esa acción hasta el elemento de menú **Dirección** :
+3. A continuación, vamos a conectar los nuevos elementos de menú a las acciones existentes que hemos creado para el menú personalizado en la sección anterior [Agregar, editar y eliminar menús](#Adding,_Editing_and_Deleting_Menus) . Cambie al **Inspector de conexión** y seleccione el **primer respondedor** en la **jerarquía** de la interfaz. Desplácese hacia abajo y busque la `phraseAddress:` acción. Arrastre una línea desde el círculo en esa acción hasta el elemento de menú **Dirección** :
 
-    [![Arrastrar para conectar una acción](menu-images/dock04.png "Arrastrar para conectar una acción")](menu-images/dock04-large.png#lightbox)
+    [![Arrastrar una línea hasta el elemento de menú dirección.](menu-images/dock04.png "Arrastrar para conectar una acción")](menu-images/dock04-large.png#lightbox)
 4. Repita el procedimiento con todos los demás elementos de menú que los asocian a sus acciones correspondientes: 
 
-    [![Las acciones necesarias](menu-images/dock05.png "Las acciones necesarias")](menu-images/dock05-large.png#lightbox)
+    [![Repetición de otros elementos de menú que los asocian a sus acciones correspondientes.](menu-images/dock05.png "Las acciones necesarias")](menu-images/dock05-large.png#lightbox)
 5. A continuación, seleccione la **aplicación** en la jerarquía de la **interfaz**. En el **Inspector de conexión**, arrastre una línea desde el círculo en la `dockMenu` salida hasta el menú que acabamos de crear:
 
     [![Arrastrar la conexión hacia arriba en la salida](menu-images/dock06.png "Arrastrar la conexión hacia arriba en la salida")](menu-images/dock06-large.png#lightbox)
@@ -1051,10 +1051,10 @@ Vamos a crear un botón emergente personalizado para nuestra aplicación haciend
 1. Edite el archivo **Main. Storyboard** en Xcode y arrastre un **botón emergente** desde el **Inspector de biblioteca** hasta la ventana del **Panel** que hemos creado en la sección de [menús contextuales](#Contextual_Menus) : 
 
     [![Agregar un botón emergente](menu-images/popup01.png "Agregar un botón emergente")](menu-images/popup01-large.png#lightbox)
-2. Agregue un nuevo elemento de menú y establezca los títulos de los elementos de la ventana emergente en: **Dirección**, **fecha**, **saludo**y **firma** . 
+2. Agregue un nuevo elemento de menú y establezca los títulos de los elementos de la ventana emergente en: **Dirección**, **fecha**, **saludo** y **firma** . 
 
     [![Configurar los elementos de menú](menu-images/popup02.png "Configurar los elementos de menú")](menu-images/popup02-large.png#lightbox)
-3. A continuación, vamos a conectar los nuevos elementos de menú a las acciones existentes que hemos creado para el menú personalizado en la sección anterior [Agregar, editar y eliminar menús](#Adding,_Editing_and_Deleting_Menus) . Cambie al **Inspector de conexión** y seleccione el **primer respondedor** en la **jerarquía**de la interfaz. Desplácese hacia abajo y busque la `phraseAddress:` acción. Arrastre una línea desde el círculo en esa acción hasta el elemento de menú **Dirección** : 
+3. A continuación, vamos a conectar los nuevos elementos de menú a las acciones existentes que hemos creado para el menú personalizado en la sección anterior [Agregar, editar y eliminar menús](#Adding,_Editing_and_Deleting_Menus) . Cambie al **Inspector de conexión** y seleccione el **primer respondedor** en la **jerarquía** de la interfaz. Desplácese hacia abajo y busque la `phraseAddress:` acción. Arrastre una línea desde el círculo en esa acción hasta el elemento de menú **Dirección** : 
 
     [![Arrastrar para conectar una acción](menu-images/popup03.png "Arrastrar para conectar una acción")](menu-images/popup03-large.png#lightbox)
 4. Repita el procedimiento con todos los demás elementos de menú que los asocian a sus acciones correspondientes: 

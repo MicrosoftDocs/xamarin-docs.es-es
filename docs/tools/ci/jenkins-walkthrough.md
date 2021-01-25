@@ -6,12 +6,12 @@ ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 0ce1d4d0b74330b623b6d933e385222a71a38ec4
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: eb792f7b2e24e5a3a25fd48ed0ec60cbaceea107
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91458165"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758128"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Uso de Jenkins con Xamarin
 
@@ -81,15 +81,15 @@ La personalización de Jenkins es opcional y no tiene que realizarse cada vez qu
 
 Si es necesario personalizar Jenkins, haga clic en el botón **cambiar valores predeterminados** . Esto le presentará dos cuadros de diálogo consecutivos: uno que solicita parámetros de la línea de comandos de Java y otro que solicita parámetros de la línea de comandos de Jenkins. En las dos capturas de pantallas siguientes se muestran estos dos cuadros de diálogo:
 
-[![En esta captura de pantalla se muestran los cuadros de diálogo](jenkins-walkthrough-images/image6.png)](jenkins-walkthrough-images/image6.png#lightbox)
+[![En esta captura de pantalla se muestra el cuadro de diálogo que solicita parámetros de la línea de comandos de Java.](jenkins-walkthrough-images/image6.png)](jenkins-walkthrough-images/image6.png#lightbox)
 
-[![En esta captura de pantalla se muestran los cuadros de diálogo](jenkins-walkthrough-images/image7.png)](jenkins-walkthrough-images/image7.png#lightbox)
+[![En esta captura de pantalla se muestra el cuadro de diálogo que solicita los parámetros de la línea de comandos de Jenkins.](jenkins-walkthrough-images/image7.png)](jenkins-walkthrough-images/image7.png#lightbox)
 
 Una vez que Jenkins se está ejecutando, es posible que desee establecerlo como un elemento de inicio de sesión para que se inicie cada vez que el usuario inicie sesión en el equipo. Para ello, haga clic con el botón derecho en el icono de Jenkins en el Dock y elija **Opciones... > abrir en Inicio de sesión**, como se muestra en la siguiente captura de pantalla:
 
 [![Para ello, haga clic con el botón derecho en el icono de Jenkins en el Dock y elija OptionsOpen en Inicio de sesión, tal como se muestra en esta captura de pantalla.](jenkins-walkthrough-images/image8.png)](jenkins-walkthrough-images/image8.png#lightbox)
 
-Esto hará que Jenkins. app se inicie automáticamente cada vez que el usuario inicie sesión, pero no cuando se inicie el equipo. Se puede especificar una cuenta de usuario que OS X usará para iniciar sesión automáticamente en el momento del arranque. Abra las **preferencias del sistema**y seleccione el icono **usuarios & grupos** como se muestra en esta captura de pantalla:
+Esto hará que Jenkins. app se inicie automáticamente cada vez que el usuario inicie sesión, pero no cuando se inicie el equipo. Se puede especificar una cuenta de usuario que OS X usará para iniciar sesión automáticamente en el momento del arranque. Abra las **preferencias del sistema** y seleccione el icono **usuarios & grupos** como se muestra en esta captura de pantalla:
 
 [![Abra las preferencias del sistema y seleccione el icono grupos de usuarios, tal como se muestra en esta captura de pantalla.](jenkins-walkthrough-images/image9.png)](jenkins-walkthrough-images/image9.png#lightbox)
 
@@ -175,7 +175,7 @@ En la página **Configurar seguridad global** , active la casilla **Habilitar se
 
 [![En la página Configurar seguridad global, active la casilla habilitar seguridad y aparecerá el formulario Access Control, similar a esta captura de pantalla.](jenkins-walkthrough-images/image19.png)](jenkins-walkthrough-images/image19.png#lightbox)
 
-Alterne el botón de radio para la **base de datos de usuario de Jenkins** en la **sección dominio de seguridad**y asegúrese de que la **opción permitir a los usuarios registrarse** también esté activada, como se muestra en la siguiente captura de pantalla:
+Alterne el botón de radio para la **base de datos de usuario de Jenkins** en la **sección dominio de seguridad** y asegúrese de que la **opción permitir a los usuarios registrarse** también esté activada, como se muestra en la siguiente captura de pantalla:
 
 [![Alterne el botón de radio para la base de datos de usuario de Jenkins en la sección dominio Kerberos y asegúrese de que la opción permitir a los usuarios registrarse también esté activada](jenkins-walkthrough-images/image20.png)](jenkins-walkthrough-images/image20.png#lightbox)
 
@@ -266,7 +266,7 @@ Cuando se ha iniciado una compilación, el cuadro de diálogo historial de compi
 
 Si el trabajo se realiza correctamente, se mostrará un círculo azul. Si se produce un error en el trabajo, se mostrará un círculo rojo.
 
-Para ayudar a solucionar problemas que pueden surgir como parte de la compilación, Jenkins capturará todos los resultados de la consola del trabajo. Para ver la salida de la consola, haga clic en el trabajo en el **historial de compilación**y, a continuación, en el vínculo salida de la **consola** en el menú de la izquierda. En la captura de pantalla siguiente se muestra el vínculo de salida de la **consola** , así como algunos de los resultados de un trabajo correcto:
+Para ayudar a solucionar problemas que pueden surgir como parte de la compilación, Jenkins capturará todos los resultados de la consola del trabajo. Para ver la salida de la consola, haga clic en el trabajo en el **historial de compilación** y, a continuación, en el vínculo salida de la **consola** en el menú de la izquierda. En la captura de pantalla siguiente se muestra el vínculo de salida de la **consola** , así como algunos de los resultados de un trabajo correcto:
 
 ![En esta captura de pantalla se muestra el vínculo de salida de la consola, así como algunos de los resultados de un trabajo correcto.](jenkins-walkthrough-images/image31.png)
 
@@ -323,7 +323,7 @@ Una vez agregado el paso de compilación al proyecto, rellene los campos de form
 
 ![Una vez agregado el paso de compilación al proyecto, rellene los campos de formulario que aparecen.](jenkins-walkthrough-images/image37.png)
 
-Este paso de compilación se ejecutará `xbuild` en la carpeta **$Workspace** . El archivo de compilación de MSBuild se establece en el archivo **Xamarin. Android. csproj** . Los **argumentos** de la línea de comandos especifican una versión de lanzamiento del **PackageForAndroid**de destino. El producto de este paso será un APK que se encuentra en la siguiente ubicación:
+Este paso de compilación se ejecutará `xbuild` en la carpeta **$Workspace** . El archivo de compilación de MSBuild se establece en el archivo **Xamarin. Android. csproj** . Los **argumentos** de la línea de comandos especifican una versión de lanzamiento del **PackageForAndroid** de destino. El producto de este paso será un APK que se encuentra en la siguiente ubicación:
 
 ```
 $WORKSPACE/[PROJECT NAME]/bin/Release

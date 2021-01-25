@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: d8c5cc10b4bce507f7a1d7896a41730745b08cbd
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 5be17553c3c51a3fd0d746711b1714011988497f
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91431646"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758115"
 ---
 # <a name="table-views-in-xamarinmac"></a>Vistas de tabla en Xamarin. Mac
 
@@ -67,7 +67,7 @@ Arrastre una vista de tabla hasta el controlador de vista en el editor de la **i
 
 Seleccione la vista de tabla en la jerarquía de la **interfaz** y las siguientes propiedades están disponibles en el **Inspector de atributos**:
 
-[![Inspector de atributo](table-view-images/edit05.png)](table-view-images/edit05.png#lightbox)
+[![Captura de pantalla que muestra las propiedades disponibles en el inspector de atributos.](table-view-images/edit05.png)](table-view-images/edit05.png#lightbox)
 
 - **Modo de contenido** : permite usar las vistas ( `NSView` ) o las celdas ( `NSCell` ) para mostrar los datos de las filas y columnas. A partir de macOS 10,7, debe utilizar las vistas.
 - **Floating Group Rows** : Si `true` es, la vista de tabla dibujará celdas agrupadas como si fueran flotantes.
@@ -97,7 +97,7 @@ Seleccione la vista de tabla en la jerarquía de la **interfaz** y las siguiente
 
 Seleccione una columna de la tabla en la jerarquía de la **interfaz** y las siguientes propiedades estarán disponibles en el **Inspector de atributos**:
 
-[![Inspector de atributo](table-view-images/edit06.png)](table-view-images/edit06.png#lightbox)
+[![Captura de pantalla muestra las propiedades disponibles para una columna de tabla en el inspector de atributos.](table-view-images/edit06.png)](table-view-images/edit06.png#lightbox)
 
 - **Título** : establece el título de la columna.
 - **Alineación** : establece la alineación del texto dentro de las celdas.
@@ -115,19 +115,19 @@ Vamos a seleccionar cada columna en la vista de tabla y asignaremos a la primera
 
 Seleccione una vista de celda de tabla ( `NSTableViewCell` ) en la **jerarquía** de la interfaz y las siguientes propiedades están disponibles en el **Inspector de atributos**:
 
-[![Inspector de atributo](table-view-images/edit07.png)](table-view-images/edit07.png#lightbox)
+[![Captura de pantalla muestra las propiedades disponibles para una vista de celda de tabla en el inspector de atributos.](table-view-images/edit07.png)](table-view-images/edit07.png#lightbox)
 
 Estas son todas las propiedades de una vista estándar. También tiene la opción de cambiar el tamaño de las filas de esta columna aquí.
 
 Seleccione una celda de vista de tabla (de forma predeterminada, es `NSTextField` ) en la **jerarquía** de la interfaz y las siguientes propiedades están disponibles en el inspector de **atributos**:
 
-[![Inspector de atributo](table-view-images/edit08.png)](table-view-images/edit08.png#lightbox)
+[![Captura de pantalla muestra las propiedades disponibles para una celda de vista de tabla en el inspector de atributos.](table-view-images/edit08.png)](table-view-images/edit08.png#lightbox)
 
 Tendrá todas las propiedades de un campo de texto estándar para establecer aquí. De forma predeterminada, se usa un campo de texto estándar para mostrar los datos de una celda de una columna.
 
 Seleccione una vista de celda de tabla ( `NSTableFieldCell` ) en la **jerarquía** de la interfaz y las siguientes propiedades están disponibles en el **Inspector de atributos**:
 
-[![Inspector de atributo](table-view-images/edit09.png)](table-view-images/edit09.png#lightbox)
+[![Captura de pantalla muestra las propiedades disponibles para una celda de vista de tabla diferente en el inspector de atributos.](table-view-images/edit09.png)](table-view-images/edit09.png#lightbox)
 
 La configuración más importante aquí es:
 
@@ -159,10 +159,10 @@ El proceso es el mismo para cualquier elemento de vista de tabla que desee expon
 2. Seleccione la vista de tabla de la jerarquía de la **interfaz**, haga clic en el control y arrástrela hasta el `ViewController.h` archivo.
 3. Cree una **salida** para la vista de tabla denominada `ProductTable` : 
 
-    [![Configuración de una salida](table-view-images/edit13.png)](table-view-images/edit13.png#lightbox)
+    [![Captura de pantalla muestra una conexión de salida creada para la vista de tabla denominada ProductTable.](table-view-images/edit13.png)](table-view-images/edit13.png#lightbox)
 4. Cree **salidas** para las columnas de las tablas, también denominadas `ProductColumn` y `DetailsColumn` : 
 
-    [![Configuración de una salida](table-view-images/edit14.png)](table-view-images/edit14.png#lightbox)
+    [![Captura de pantalla que muestra las conexiones de salida creadas para otras vistas de tabla.](table-view-images/edit14.png)](table-view-images/edit14.png#lightbox)
 5. Guarde los cambios y vuelva a Visual Studio para Mac sincronizar con Xcode.
 
 A continuación, escribiremos el código para mostrar algunos datos de la tabla cuando se ejecute la aplicación.
@@ -173,7 +173,7 @@ A continuación, escribiremos el código para mostrar algunos datos de la tabla 
 
 Con nuestra vista de tabla diseñada en Interface Builder y expuesta a través de una **salida**, es necesario crear el código de C# para rellenarlo.
 
-En primer lugar, vamos a crear una nueva `Product` clase para almacenar la información de las filas individuales. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione **General**  >  **clase vacía**general, escriba `Product` para el **nombre** y haga clic en el botón **nuevo** :
+En primer lugar, vamos a crear una nueva `Product` clase para almacenar la información de las filas individuales. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione   >  **clase vacía** general, escriba `Product` para el **nombre** y haga clic en el botón **nuevo** :
 
 [![Crear una clase vacía](table-view-images/populate01.png)](table-view-images/populate01.png#lightbox)
 
@@ -207,7 +207,7 @@ namespace MacTables
 
 ```
 
-A continuación, es necesario crear una subclase de `NSTableDataSource` para proporcionar los datos de la tabla tal y como se solicitan. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione **General**  >  **clase vacía**general, escriba `ProductTableDataSource` para el **nombre** y haga clic en el botón **nuevo** .
+A continuación, es necesario crear una subclase de `NSTableDataSource` para proporcionar los datos de la tabla tal y como se solicitan. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione   >  **clase vacía** general, escriba `ProductTableDataSource` para el **nombre** y haga clic en el botón **nuevo** .
 
 Edite el `ProductTableDataSource.cs` archivo y haga que tenga el aspecto siguiente:
 
@@ -246,7 +246,7 @@ namespace MacTables
 
 Esta clase tiene almacenamiento para los elementos de la vista de tabla e invalida el `GetRowCount` para devolver el número de filas de la tabla.
 
-Por último, es necesario crear una subclase de `NSTableDelegate` para proporcionar el comportamiento de la tabla. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione **General**  >  **clase vacía**general, escriba `ProductTableDelegate` para el **nombre** y haga clic en el botón **nuevo** .
+Por último, es necesario crear una subclase de `NSTableDelegate` para proporcionar el comportamiento de la tabla. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione   >  **clase vacía** general, escriba `ProductTableDelegate` para el **nombre** y haga clic en el botón **nuevo** .
 
 Edite el `ProductTableDelegate.cs` archivo y haga que tenga el aspecto siguiente:
 
@@ -333,7 +333,7 @@ public override void AwakeFromNib ()
 
 Si ejecutamos la aplicación, se muestra lo siguiente:
 
-[![Ejecución de una aplicación de ejemplo](table-view-images/populate02.png)](table-view-images/populate02.png#lightbox)
+[![Captura de pantalla que muestra una ventana denominada tabla de productos con tres entradas.](table-view-images/populate02.png)](table-view-images/populate02.png#lightbox)
 
 <a name="Sorting_by_Column"></a>
 
@@ -341,11 +341,11 @@ Si ejecutamos la aplicación, se muestra lo siguiente:
 
 Vamos a permitir que el usuario ordene los datos de la tabla haciendo clic en un encabezado de columna. En primer lugar, haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo en Interface Builder. Seleccione la `Product` columna, escriba `Title` para la **clave de ordenación**, `compare:` para el **selector** y seleccione `Ascending` para el **pedido**:
 
-[![Establecer el criterio de ordenación](table-view-images/sort01.png)](table-view-images/sort01.png#lightbox)
+[![Captura de pantalla que muestra el Interface Builder en el que puede establecer el criterio de ordenación para la columna product.](table-view-images/sort01.png)](table-view-images/sort01.png#lightbox)
 
 Seleccione la `Details` columna, escriba `Description` para la **clave de ordenación**, `compare:` para el **selector** y seleccione `Ascending` para el **pedido**:
 
-[![Establecer el criterio de ordenación](table-view-images/sort02.png)](table-view-images/sort02.png#lightbox)
+[![Captura de pantalla que muestra el Interface Builder en el que puede establecer el criterio de ordenación para la columna de detalles.](table-view-images/sort02.png)](table-view-images/sort02.png#lightbox)
 
 Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
 
@@ -403,7 +403,7 @@ Si ejecutamos la aplicación y hacemos clic en los encabezados de columna, las f
 
 Si desea permitir que el usuario seleccione una sola fila, haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo en Interface Builder. Seleccione la vista de tabla en la jerarquía de la **interfaz** y desactive la casilla **múltiple** en el **Inspector de atributos**:
 
-[![Inspector de atributo](table-view-images/select01.png)](table-view-images/select01.png#lightbox)
+[![Captura de pantalla que muestra el Interface Builder en el que puede seleccionar múltiplos en el inspector de atributos.](table-view-images/select01.png)](table-view-images/select01.png#lightbox)
 
 Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
 
@@ -431,7 +431,7 @@ La vista de tabla ( `NSTableView` ) contiene los siguientes métodos para trabaj
 
 Si desea permitir que el usuario seleccione varias filas, haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo en Interface Builder. Seleccione la vista de tabla en la jerarquía de la **interfaz** y active la casilla **múltiple** en el **Inspector de atributos**:
 
-[![Inspector de atributo](table-view-images/select02.png)](table-view-images/select02.png#lightbox)
+[![Captura de pantalla muestra el Interface Builder donde puede seleccionar varios para permitir la selección de varias filas.](table-view-images/select02.png)](table-view-images/select02.png#lightbox)
 
 Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
 
@@ -490,7 +490,7 @@ El `GetNextTypeSelectMatch` método toma el determinado `searchString` y devuelv
 
 Si ejecutamos la aplicación y escribemos un carácter, se selecciona una fila:
 
-[![Ejecución de una aplicación de ejemplo](table-view-images/type02.png)](table-view-images/type02.png#lightbox)
+[![Captura de pantalla que muestra el resultado de la ejecución de la aplicación.](table-view-images/type02.png)](table-view-images/type02.png#lightbox)
 
 <a name="Reordering_Columns"></a>
 
@@ -498,7 +498,7 @@ Si ejecutamos la aplicación y escribemos un carácter, se selecciona una fila:
 
 Si desea permitir que el usuario arrastre columnas de reordenación en la vista de tabla, haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo en Interface Builder. Seleccione la vista de tabla en la jerarquía de la **interfaz** y active la casilla **reordenación** en el **Inspector de atributos**:
 
-[![Inspector de atributo](table-view-images/reorder01.png)](table-view-images/reorder01.png#lightbox)
+[![Captura de pantalla que muestra el Interface Builder en el que puede seleccionar Reodering en el inspector de atributos.](table-view-images/reorder01.png)](table-view-images/reorder01.png#lightbox)
 
 Si asignamos un valor a la propiedad **autosave** y comprobamos el campo de **información de columna** , los cambios que se realicen en el diseño de la tabla se guardarán automáticamente y se restaurarán la próxima vez que se ejecute la aplicación.
 
@@ -909,11 +909,11 @@ Si el usuario elige eliminar, se quitará la fila y se volverá a dibujar la tab
 
 ## <a name="data-binding-table-views"></a>Vistas de tabla de enlace de datos
 
-Mediante el uso de la codificación de valores clave y técnicas de enlace de datos en la aplicación de Xamarin. Mac, puede reducir considerablemente la cantidad de código que debe escribir y mantener para rellenar y trabajar con los elementos de la interfaz de usuario. También tiene la ventaja de desacoplar aún más los datos de copia de seguridad (_modelo de datos_) de la interfaz de usuario de front-end (_Model-View-Controller_), lo que permite un diseño de aplicaciones más sencillo y flexible.
+Mediante el uso de Key-Value técnicas de enlace de datos y codificación en la aplicación de Xamarin. Mac, puede reducir considerablemente la cantidad de código que debe escribir y mantener para rellenar y trabajar con los elementos de la interfaz de usuario. También tiene la ventaja de desacoplar aún más los datos de copia de seguridad (_modelo de datos_) de la interfaz de usuario de front-end (_Model-View-Controller_), lo que permite un diseño de aplicaciones más sencillo y flexible.
 
-La codificación de valores clave (KVC) es un mecanismo para tener acceso indirectamente a las propiedades de un objeto, mediante claves (cadenas con formato especial) para identificar propiedades en lugar de tener acceso a ellas a través de variables de instancia o métodos de descriptor de acceso ( `get/set` ). Mediante la implementación de los descriptores de acceso compatibles con el código clave-valor en la aplicación de Xamarin. Mac, obtiene acceso a otras características de macOS como la observación de clave-valor (KVO), el enlace de datos, los enlaces de cacao y la creación de scripts.
+La codificación de Key-Value (KVC) es un mecanismo para tener acceso indirectamente a las propiedades de un objeto, mediante claves (cadenas con formato especial) para identificar propiedades en lugar de tener acceso a ellas a través de variables de instancia o métodos de descriptor de acceso ( `get/set` ). Mediante la implementación de Key-Value los descriptores de acceso compatibles con el código en la aplicación de Xamarin. Mac, obtiene acceso a otras características de macOS como Key-Value observando (KVO), enlace de datos, datos principales, enlaces de cacao y creación de scripts.
 
-Para obtener más información, vea la sección enlace de datos de la [vista de tabla](~/mac/app-fundamentals/databinding.md#Table_View_Data_Binding) de nuestra documentación sobre el enlace de [datos y el código de valor de clave](~/mac/app-fundamentals/databinding.md) .
+Para obtener más información, vea la sección [enlace de datos](~/mac/app-fundamentals/databinding.md#Table_View_Data_Binding) de la vista de tabla de nuestro enlace de [datos y Key-Value](~/mac/app-fundamentals/databinding.md) documentación de codificación.
 
 <a name="Summary"></a>
 

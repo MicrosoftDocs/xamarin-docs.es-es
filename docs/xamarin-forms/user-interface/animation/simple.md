@@ -10,12 +10,12 @@ ms.date: 09/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a2259d9784d9b55be636e92452562a13f0750b14
-ms.sourcegitcommit: c9f62ed4bab516be18606e87e89e01f57b4ad17e
+ms.openlocfilehash: 4078fa50e2e86d80e1e5b35321223deea5adeab7
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98163509"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758063"
 ---
 # <a name="simple-animations-in-no-locxamarinforms"></a>Animaciones simples en Xamarin.Forms
 
@@ -25,7 +25,7 @@ _La clase ViewExtensions proporciona métodos de extensión que se pueden usar p
 
 La [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) clase proporciona los siguientes métodos de extensión que se pueden usar para crear animaciones simples:
 
-- [ `CancelAnimations` ] (XREF: Xamarin.Forms . ViewExtensions. CancelAnimations ( Xamarin.Forms . VisualElement) cancela cualquier animación.
+- [ `CancelAnimations` ] (XREF: Xamarin.Forms . ViewExtensions. CancelAnimations ( Xamarin.Forms . VisualElement)) cancela cualquier animación.
 - [ `FadeTo` ] (XREF: Xamarin.Forms . ViewExtensions. Desvaneceto ( Xamarin.Forms . VisualElement, System. Double, System. UInt32, Xamarin.Forms . La aceleración)) anima la [`Opacity`](xref:Xamarin.Forms.VisualElement.Opacity) propiedad de un [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
 - [ `RelScaleTo` ] (XREF: Xamarin.Forms . ViewExtensions. RelScaleTo ( Xamarin.Forms . VisualElement, System. Double, System. UInt32, Xamarin.Forms . La aceleración)) aplica un aumento incremental animado o una disminución a la [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) propiedad de [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
 - [ `RotateTo` ] (XREF: Xamarin.Forms . ViewExtensions. Rotato ( Xamarin.Forms . VisualElement, System. Double, System. UInt32, Xamarin.Forms . La aceleración)) anima la [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) propiedad de un [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
@@ -221,7 +221,7 @@ En las siguientes capturas de pantallas se muestran varias rotaciones en curso e
 
 ## <a name="canceling-animations"></a>Cancelar animaciones
 
-Una aplicación puede cancelar una o varias animaciones con una llamada a [CancelAnimations '] (XREF: Xamarin.Forms . ViewExtensions. CancelAnimations ( Xamarin.Forms . VisualElement)), como se muestra en el ejemplo de código siguiente:
+Una aplicación puede cancelar una o varias animaciones con una llamada a [ `CancelAnimations` ] (XREF: Xamarin.Forms . ViewExtensions. CancelAnimations ( Xamarin.Forms . VisualElement)), como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 image.CancelAnimations();

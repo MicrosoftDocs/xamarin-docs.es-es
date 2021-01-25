@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: c5120fead9084b50912fb4ea1e8cfa100f4b3bbe
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: f10c2f54c2440e97faa6491efcaa48ec109d0008
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436322"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758102"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Esquematizar vistas en Xamarin. Mac
 
@@ -66,7 +66,7 @@ Arrastre una vista de esquema en el controlador de vista en el editor de la **in
 
 Seleccione la vista esquema en la **jerarquía** de la interfaz y las siguientes propiedades están disponibles en el **Inspector de atributos**:
 
-[![Inspector de atributo](outline-view-images/edit05.png)](outline-view-images/edit05.png#lightbox)
+[![Captura de pantalla que muestra las propiedades disponibles en el inspector de atributos.](outline-view-images/edit05.png)](outline-view-images/edit05.png#lightbox)
 
 - **Columna de esquema** : columna de la tabla en la que se muestran los datos jerárquicos.
 - **Columna de esquema autoguardado** : Si `true` es, la columna de esquema se guardará y restaurará automáticamente entre las ejecuciones de la aplicación.
@@ -101,7 +101,7 @@ Seleccione la vista esquema en la **jerarquía** de la interfaz y las siguientes
 
 Seleccione una columna de la tabla en la jerarquía de la **interfaz** y las siguientes propiedades estarán disponibles en el **Inspector de atributos**:
 
-[![Inspector de atributo](outline-view-images/edit06.png)](outline-view-images/edit06.png#lightbox)
+[![Captura de pantalla muestra las propiedades disponibles para la columna de tabla seleccionada en el inspector de atributos.](outline-view-images/edit06.png)](outline-view-images/edit06.png#lightbox)
 
 - **Título** : establece el título de la columna.
 - **Alineación** : establece la alineación del texto dentro de las celdas.
@@ -119,19 +119,19 @@ Vamos a seleccionar cada columna en la vista de tabla y asignaremos a la primera
 
 Seleccione una vista de celda de tabla ( `NSTableViewCell` ) en la **jerarquía** de la interfaz y las siguientes propiedades están disponibles en el **Inspector de atributos**:
 
-[![Inspector de atributo](outline-view-images/edit07.png)](outline-view-images/edit07.png#lightbox)
+[![Captura de pantalla muestra las propiedades disponibles para la celda de la tabla seleccionada en el inspector de atributos.](outline-view-images/edit07.png)](outline-view-images/edit07.png#lightbox)
 
 Estas son todas las propiedades de una vista estándar. También tiene la opción de cambiar el tamaño de las filas de esta columna aquí.
 
 Seleccione una celda de vista de tabla (de forma predeterminada, es `NSTextField` ) en la **jerarquía** de la interfaz y las siguientes propiedades están disponibles en el inspector de **atributos**:
 
-[![Inspector de atributo](outline-view-images/edit08.png)](outline-view-images/edit08.png#lightbox)
+[![Captura de pantalla muestra las propiedades disponibles para la celda de vista de tabla seleccionada en el inspector de atributos.](outline-view-images/edit08.png)](outline-view-images/edit08.png#lightbox)
 
 Tendrá todas las propiedades de un campo de texto estándar para establecer aquí. De forma predeterminada, se usa un campo de texto estándar para mostrar los datos de una celda de una columna.
 
 Seleccione una vista de celda de tabla ( `NSTableFieldCell` ) en la **jerarquía** de la interfaz y las siguientes propiedades están disponibles en el **Inspector de atributos**:
 
-[![Inspector de atributo](outline-view-images/edit09.png)](outline-view-images/edit09.png#lightbox)
+[![Captura de pantalla muestra las propiedades disponibles para la celda de vista de tabla seleccionada.](outline-view-images/edit09.png)](outline-view-images/edit09.png#lightbox)
 
 La configuración más importante aquí es:
 
@@ -163,10 +163,10 @@ El proceso es el mismo para cualquier elemento de la vista de esquema que desee 
 2. Seleccione la vista de esquema en la jerarquía de la **interfaz**, haga clic en el control y arrástrela hasta el `ViewController.h` archivo.
 3. Cree una **salida** para la vista de esquema denominada `ProductOutline` :
 
-    [![Configuración de una salida](outline-view-images/edit13.png)](outline-view-images/edit13.png#lightbox)
+    [![Captura de pantalla que muestra una toma denominada ProductOutline en el inspector de atributos.](outline-view-images/edit13.png)](outline-view-images/edit13.png#lightbox)
 4. Cree **salidas** para las columnas de las tablas, también denominadas `ProductColumn` y `DetailsColumn` :
 
-    [![Configuración de una salida](outline-view-images/edit14.png)](outline-view-images/edit14.png#lightbox)
+    [![Captura de pantalla que muestra una toma denominada DetailsColumn en el inspector de atributos.](outline-view-images/edit14.png)](outline-view-images/edit14.png#lightbox)
 5. Guarde los cambios y vuelva a Visual Studio para Mac sincronizar con Xcode.
 
 A continuación, escribiremos el código para mostrar algunos datos del esquema cuando se ejecute la aplicación.
@@ -177,7 +177,7 @@ A continuación, escribiremos el código para mostrar algunos datos del esquema 
 
 Con nuestra vista de esquema diseñada en Interface Builder y expuesta a través de una **salida**, es necesario crear el código de C# para rellenarlo.
 
-En primer lugar, vamos a crear una nueva `Product` clase para almacenar la información de las filas y grupos de subproductos individuales. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione **General**  >  **clase vacía**general, escriba `Product` para el **nombre** y haga clic en el botón **nuevo** :
+En primer lugar, vamos a crear una nueva `Product` clase para almacenar la información de las filas y grupos de subproductos individuales. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione   >  **clase vacía** general, escriba `Product` para el **nombre** y haga clic en el botón **nuevo** :
 
 [![Crear una clase vacía](outline-view-images/populate01.png)](outline-view-images/populate01.png#lightbox)
 
@@ -219,7 +219,7 @@ namespace MacOutlines
 }
 ```
 
-A continuación, es necesario crear una subclase de `NSOutlineDataSource` para proporcionar los datos para el esquema que se solicitan. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione **General**  >  **clase vacía**general, escriba `ProductOutlineDataSource` para el **nombre** y haga clic en el botón **nuevo** .
+A continuación, es necesario crear una subclase de `NSOutlineDataSource` para proporcionar los datos para el esquema que se solicitan. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione   >  **clase vacía** general, escriba `ProductOutlineDataSource` para el **nombre** y haga clic en el botón **nuevo** .
 
 Edite el `ProductTableDataSource.cs` archivo y haga que tenga el aspecto siguiente:
 
@@ -282,7 +282,7 @@ namespace MacOutlines
 
 Esta clase tiene almacenamiento para los elementos de la vista de esquema e invalida el `GetChildrenCount` para devolver el número de filas de la tabla. `GetChild`Devuelve un elemento primario o secundario específico (tal y como lo solicita la vista de esquema) y `ItemExpandable` define el elemento especificado como primario o secundario.
 
-Por último, es necesario crear una subclase de `NSOutlineDelegate` para proporcionar el comportamiento de nuestro esquema. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione **General**  >  **clase vacía**general, escriba `ProductOutlineDelegate` para el **nombre** y haga clic en el botón **nuevo** .
+Por último, es necesario crear una subclase de `NSOutlineDelegate` para proporcionar el comportamiento de nuestro esquema. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione   >  **clase vacía** general, escriba `ProductOutlineDelegate` para el **nombre** y haga clic en el botón **nuevo** .
 
 Edite el `ProductOutlineDelegate.cs` archivo y haga que tenga el aspecto siguiente:
 
@@ -443,7 +443,7 @@ Si ejecutamos la aplicación y hacemos clic en los encabezados de columna, las f
 
 Si desea permitir que el usuario seleccione una sola fila, haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo en Interface Builder. Seleccione la vista esquema en la **jerarquía** de la interfaz y desactive la casilla **múltiple** en el **Inspector de atributos**:
 
-[![Inspector de atributo](outline-view-images/select01.png)](outline-view-images/select01.png#lightbox)
+[![Captura de pantalla que muestra el inspector de atributos, donde puede cambiar la configuración múltiple.](outline-view-images/select01.png)](outline-view-images/select01.png#lightbox)
 
 Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
 
@@ -465,7 +465,7 @@ Esto permitirá al usuario seleccionar cualquier fila única en la vista de esqu
 
 Si desea permitir que el usuario seleccione varias filas, haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo en Interface Builder. Seleccione la vista esquema en la **jerarquía** de la interfaz y active la casilla **múltiple** en el **Inspector de atributos**:
 
-[![Inspector de atributo](outline-view-images/select02.png)](outline-view-images/select02.png#lightbox)
+[![Captura de pantalla que muestra el inspector de atributos, donde puede seleccionar varios.](outline-view-images/select02.png)](outline-view-images/select02.png#lightbox)
 
 Guarde los cambios y vuelva a Visual Studio para Mac para sincronizarlos con Xcode.
 
@@ -515,7 +515,7 @@ El `GetNextTypeSelectMatch` método toma el determinado `searchString` y devuelv
 
 Si desea permitir que el usuario arrastre columnas de reordenación en la vista de esquema, haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo en Interface Builder. Seleccione la vista esquema en la **jerarquía** de la interfaz y active la casilla **reordenación** en el **Inspector de atributos**:
 
-[![Inspector de atributo](outline-view-images/reorder01.png)](outline-view-images/reorder01.png#lightbox)
+[![Captura de pantalla que muestra el inspector de atributos, donde puede seleccionar reordenación.](outline-view-images/reorder01.png)](outline-view-images/reorder01.png#lightbox)
 
 Si asignamos un valor a la propiedad **autosave** y comprobamos el campo de **información de columna** , los cambios que se realicen en el diseño de la tabla se guardarán automáticamente y se restaurarán la próxima vez que se ejecute la aplicación.
 
@@ -672,11 +672,11 @@ Para obtener más información, consulte la sección [uso de imágenes con las v
 
 ## <a name="data-binding-outline-views"></a>Enlace de datos, vistas de esquema
 
-Mediante el uso de la codificación de valores clave y técnicas de enlace de datos en la aplicación de Xamarin. Mac, puede reducir considerablemente la cantidad de código que debe escribir y mantener para rellenar y trabajar con los elementos de la interfaz de usuario. También tiene la ventaja de desacoplar aún más los datos de copia de seguridad (_modelo de datos_) de la interfaz de usuario de front-end (_Model-View-Controller_), lo que permite un diseño de aplicaciones más sencillo y flexible.
+Mediante el uso de Key-Value técnicas de enlace de datos y codificación en la aplicación de Xamarin. Mac, puede reducir considerablemente la cantidad de código que debe escribir y mantener para rellenar y trabajar con los elementos de la interfaz de usuario. También tiene la ventaja de desacoplar aún más los datos de copia de seguridad (_modelo de datos_) de la interfaz de usuario de front-end (_Model-View-Controller_), lo que permite un diseño de aplicaciones más sencillo y flexible.
 
-La codificación de valores clave (KVC) es un mecanismo para tener acceso indirectamente a las propiedades de un objeto, mediante claves (cadenas con formato especial) para identificar propiedades en lugar de tener acceso a ellas a través de variables de instancia o métodos de descriptor de acceso ( `get/set` ). Mediante la implementación de los descriptores de acceso compatibles con el código clave-valor en la aplicación de Xamarin. Mac, obtiene acceso a otras características de macOS como la observación de clave-valor (KVO), el enlace de datos, los enlaces de cacao y la creación de scripts.
+La codificación de Key-Value (KVC) es un mecanismo para tener acceso indirectamente a las propiedades de un objeto, mediante claves (cadenas con formato especial) para identificar propiedades en lugar de tener acceso a ellas a través de variables de instancia o métodos de descriptor de acceso ( `get/set` ). Mediante la implementación de Key-Value los descriptores de acceso compatibles con el código en la aplicación de Xamarin. Mac, obtiene acceso a otras características de macOS como Key-Value observando (KVO), enlace de datos, datos principales, enlaces de cacao y creación de scripts.
 
-Para obtener más información, vea la sección sobre el enlace de datos de la [vista de esquema](~/mac/app-fundamentals/databinding.md#Outline_View_Data_Binding) de nuestra documentación sobre el enlace de [datos y el código de valor de clave](~/mac/app-fundamentals/databinding.md) .
+Para obtener más información, vea la sección sobre el [enlace de datos](~/mac/app-fundamentals/databinding.md#Outline_View_Data_Binding) de la vista de esquema de nuestro enlace de [datos y Key-Value](~/mac/app-fundamentals/databinding.md) documentación de codificación.
 
 <a name="Summary"></a>
 

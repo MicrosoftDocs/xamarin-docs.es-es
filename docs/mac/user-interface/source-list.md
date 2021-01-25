@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: ae82918c1f87e47be9446e80f99ebc4dc967c078
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: fb9764acb23c40815ed4a95580e80a4ac63970df
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91431939"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758050"
 ---
 # <a name="source-lists-in-xamarinmac"></a>Listas de origen en Xamarin. Mac
 
@@ -48,7 +48,7 @@ Puesto que una lista de origen comparte gran parte del comportamiento y la funci
 
 Una lista de origen es un tipo especial de vista de esquema que se usa para mostrar el origen de una acción, como la barra lateral en Finder o iTunes. A diferencia de las vistas de esquema, antes de definir nuestra lista de origen en Interface Builder, vamos a crear las clases de respaldo en Xamarin. Mac.
 
-En primer lugar, vamos a crear una nueva `SourceListItem` clase para almacenar los datos de la lista de origen. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione **General**  >  **clase vacía**general, escriba `SourceListItem` para el **nombre** y haga clic en el botón **nuevo** :
+En primer lugar, vamos a crear una nueva `SourceListItem` clase para almacenar los datos de la lista de origen. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione   >  **clase vacía** general, escriba `SourceListItem` para el **nombre** y haga clic en el botón **nuevo** :
 
 [![Agregar una clase vacía](source-list-images/source01.png)](source-list-images/source01.png#lightbox)
 
@@ -270,7 +270,7 @@ namespace MacOutlines
 }
 ```
 
-En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione **General**  >  **clase vacía**general, escriba `SourceListDataSource` para el **nombre** y haga clic en el botón **nuevo** . Haga que el `SourceListDataSource.cs` archivo tenga el aspecto siguiente:
+En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione   >  **clase vacía** general, escriba `SourceListDataSource` para el **nombre** y haga clic en el botón **nuevo** . Haga que el `SourceListDataSource.cs` archivo tenga el aspecto siguiente:
 
 ```csharp
 using System;
@@ -354,7 +354,7 @@ namespace MacOutlines
 
 Esto proporcionará los datos de la lista de origen.
 
-En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione **General**  >  **clase vacía**general, escriba `SourceListDelegate` para el **nombre** y haga clic en el botón **nuevo** . Haga que el `SourceListDelegate.cs` archivo tenga el aspecto siguiente:
+En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione   >  **clase vacía** general, escriba `SourceListDelegate` para el **nombre** y haga clic en el botón **nuevo** . Haga que el `SourceListDelegate.cs` archivo tenga el aspecto siguiente:
 
 ```csharp
 using System;
@@ -446,7 +446,7 @@ namespace MacOutlines
 
 Esto proporcionará el comportamiento de nuestra lista de origen.
 
-Por último, en el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione **General**  >  **clase vacía**general, escriba `SourceListView` para el **nombre** y haga clic en el botón **nuevo** . Haga que el `SourceListView.cs` archivo tenga el aspecto siguiente:
+Por último, en el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **nuevo archivo..** . Seleccione   >  **clase vacía** general, escriba `SourceListView` para el **nombre** y haga clic en el botón **nuevo** . Haga que el `SourceListView.cs` archivo tenga el aspecto siguiente:
 
 ```csharp
 using System;
@@ -532,11 +532,11 @@ Esto crea una subclase personalizada y reutilizable de `NSOutlineView` ( `Source
 
 Ahora, vamos a diseñar nuestra lista de origen en Interface Builder. Haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo en Interface Builder y arrastre una vista en dos paneles desde el **Inspector de biblioteca**, agréguelo al controlador de vistas y establézcalo para que cambie de tamaño con la vista del editor de **restricciones**:
 
-[![Modificar restricciones](source-list-images/source00.png)](source-list-images/source00.png#lightbox)
+[![Editar restricciones en el Interface Builder.](source-list-images/source00.png)](source-list-images/source00.png#lightbox)
 
 A continuación, arrastre una lista de origen desde el **Inspector de biblioteca**, agréguela al lado izquierdo de la vista en dos paneles y establézcalo para que cambie de tamaño con la vista del **Editor de restricciones**:
 
-[![Modificar restricciones](source-list-images/source02.png)](source-list-images/source02.png#lightbox)
+[![Editar restricciones arrastrando una lista de origen a la vista en dos paneles.](source-list-images/source02.png)](source-list-images/source02.png#lightbox)
 
 A continuación, cambie a la **vista identidad**, seleccione la lista origen y cambie su **clase** a `SourceListView` :
 
