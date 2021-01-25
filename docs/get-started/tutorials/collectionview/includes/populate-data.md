@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 590acbe98b2d67a10bed0fc66de0350da888d319
-ms.sourcegitcommit: b75c369adb8e02a429b6c0fed8ba4a855099bf01
+ms.openlocfilehash: ff37327e1fd942382c3eb81b8c6bcc0041347b0e
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98558952"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98689908"
 ---
 Un elemento [`CollectionView`](xref:Xamarin.Forms.CollectionView) se rellena con datos mediante la propiedad [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource), que es de tipo `IEnumerable`. El paso anterior rellenó `CollectionView` en XAML con una matriz de cadenas. Sin embargo, `CollectionView` normalmente se rellena con datos de una colección, definida en código, que implementa `IEnumerable`.
 
@@ -191,6 +191,8 @@ En este ejercicio, modificará el proyecto **CollectionViewTutorial** para relle
 
     El elemento [`CollectionView`](xref:Xamarin.Forms.CollectionView) muestra la propiedad `Name` de cada `Monkey` de la colección `Monkeys`. Esto es porque, de forma predeterminada, el elemento `CollectionView` llama al método `ToString` al mostrar los objetos de una colección (que se ha invalidado en la clase `Monkey` para devolver el valor de propiedad `Name`).
 
+    En Visual Studio, detenga la aplicación.
+
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. En el **Panel de solución**, en el proyecto **CollectionViewTutorial**, agregue una clase denominada `Monkey` que contenga el siguiente código:
@@ -371,3 +373,5 @@ En este ejercicio, modificará el proyecto **CollectionViewTutorial** para relle
     [![Captura de pantalla de un elemento CollectionView rellenado con datos de una colección, en iOS y Android](../images/populate-data.png "CollectionView que muestra datos de una colección")](../images/populate-data-large.png#lightbox "CollectionView que muestra datos de una colección")
 
     El elemento [`CollectionView`](xref:Xamarin.Forms.CollectionView) muestra la propiedad `Name` de cada `Monkey` de la colección `Monkeys`. Esto es porque, de forma predeterminada, el elemento `CollectionView` llama al método `ToString` al mostrar los objetos de una colección (que se ha invalidado en la clase `Monkey` para devolver el valor de propiedad `Name`).
+
+    En Visual Studio para Mac, detenga la aplicación.

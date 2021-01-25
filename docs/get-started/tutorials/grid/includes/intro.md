@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cbf301b341f78ae8d8826580d30a13393716f56c
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 24fdf5849e94fb80cad40635a44cc8da434d83cc
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71059806"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634902"
 ---
 Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
 
@@ -21,3 +21,5 @@ En este tutorial aprenderá a:
 Va a usar Visual Studio 2019, o Visual Studio para Mac, para crear una aplicación sencilla que demuestre cómo diseñar controles dentro de un [`Grid`](xref:Xamarin.Forms.Grid). En las capturas de pantalla siguientes se muestra la aplicación final:
 
 [![Captura de pantalla de una cuadrícula que tiene contenido que abarca varias columnas y filas, en iOS y Android](../images/span-columns-rows.png "Cuadrícula con contenido que abarca filas y columnas")](../images/span-columns-rows-large.png#lightbox "Cuadrícula con contenido que abarca filas y columnas")
+
+También usará la [Recarga activa de XAML para Xamarin.Forms](~/xamarin-forms/xaml/hot-reload.md) para ver cambios en la UI sin tener que volver a compilar su aplicación.

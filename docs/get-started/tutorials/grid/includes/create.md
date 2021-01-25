@@ -1,16 +1,18 @@
 ---
-ms.openlocfilehash: b1a041f1a2baae9b06de023f6eae9c6598b80061
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 9932dbf5f03ba148fa49a24026738a870c21cfd5
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "72678738"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634905"
 ---
+Las vistas [`Grid`](xref:Xamarin.Forms.Grid) son un diseño que permite organizar los elementos secundarios en filas y columnas, que pueden tener tamaños proporcionales o absolutos. De forma predeterminada, las vistas `Grid` contienen una fila y una columna.
+
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 Para completar este tutorial debe tener Visual Studio 2019 (versión más reciente), con la carga de trabajo **Desarrollo para dispositivos móviles con .NET** instalada. Además, necesita un equipo Mac emparejado para compilar la aplicación del tutorial en iOS. Para obtener información sobre la instalación de la plataforma de Xamarin, consulte [Instalación de Xamarin](~/get-started/installation/index.md). Para obtener información sobre cómo conectar Visual Studio 2019 a un host de compilación de Mac, consulte [Emparejar con Mac para el desarrollo de Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-1. Inicie Visual Studio y cree una aplicación de Xamarin.Forms en blanco llamada **GridTutorial**. Asegúrese de que la aplicación use .NET Standard como mecanismo de código compartido.
+1. Inicie Visual Studio y cree una aplicación de Xamarin.Forms en blanco llamada **GridTutorial**.
 
     > [!IMPORTANT]
     > Los fragmentos de código de C# y XAML en este tutorial necesitan que la solución se denomine **GridTutorial**. El uso de otro nombre dará como resultado errores de compilación al copiar el código de este tutorial en la solución.
@@ -45,7 +47,7 @@ Para completar este tutorial debe tener Visual Studio 2019 (versión más recien
 
 Para completar este tutorial debe tener instalado Visual Studio para Mac (versión más reciente) con compatibilidad con la plataforma de iOS y Android. Además, también necesitará Xcode (versión más reciente). Para obtener más información sobre la instalación de la plataforma de Xamarin, consulte [Instalación de Xamarin](~/get-started/installation/index.md).
 
-1. Inicie Visual Studio para Mac y cree una aplicación de Xamarin.Forms en blanco llamada **GridTutorial**. Asegúrese de que la aplicación use .NET Standard como mecanismo de código compartido.
+1. Inicie Visual Studio para Mac y cree una aplicación de Xamarin.Forms en blanco llamada **GridTutorial**.
 
     > [!IMPORTANT]
     > Los fragmentos de código de C# y XAML en este tutorial necesitan que la solución se denomine **GridTutorial**. El uso de otro nombre dará como resultado errores de compilación al copiar el código de este tutorial en la solución.

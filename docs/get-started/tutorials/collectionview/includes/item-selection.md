@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 41c1c8ae97c62a3eb2a73681b215e7687d0e473c
-ms.sourcegitcommit: b75c369adb8e02a429b6c0fed8ba4a855099bf01
+ms.openlocfilehash: 456bc5fc0c30563c5950f4cacf3e3e7bdb177134
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98558947"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98689693"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -34,6 +34,8 @@ ms.locfileid: "98558947"
     [![Captura de pantalla de un elemento CollectionView que responde a la selección de elementos en iOS y Android](../images/item-selection.png "Selección de elementos CollectionView")](../images/item-selection-large.png#lightbox "Selección de elementos CollectionView")
 
     Establezca un punto de interrupción en el controlador de eventos `OnSelectionChanged` y seleccione un elemento en [`CollectionView`](xref:Xamarin.Forms.CollectionView). Examine el valor de la variable `selectedItem` para asegurarse de que contenga los datos del elemento seleccionado.
+
+    En Visual Studio, detenga la aplicación.
 
     Para obtener más información sobre la selección de elementos, consulte [Selección de CollectionView de Xamarin.Forms](~/xamarin-forms/user-interface/collectionview/selection.md).
 
@@ -65,5 +67,7 @@ ms.locfileid: "98558947"
     [![Captura de pantalla de un elemento CollectionView que responde a la selección de elementos en iOS y Android](../images/item-selection.png "Selección de elementos CollectionView")](../images/item-selection-large.png#lightbox "Selección de elementos CollectionView")
 
     Establezca un punto de interrupción en el controlador de eventos `OnSelectionChanged` y seleccione un elemento en [`CollectionView`](xref:Xamarin.Forms.CollectionView). Examine el valor de la variable `selectedItem` para asegurarse de que contenga los datos del elemento seleccionado.
+
+    En Visual Studio para Mac, detenga la aplicación.
 
     Para obtener más información sobre la selección de elementos, consulte [Selección de CollectionView de Xamarin.Forms](~/xamarin-forms/user-interface/collectionview/selection.md).

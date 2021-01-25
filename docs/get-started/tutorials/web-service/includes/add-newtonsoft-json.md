@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3d20c4f0149c632863eace633abb759eca49a786
-ms.sourcegitcommit: 4d260b655cb52b990dda79c239a9721f2e964625
+ms.openlocfilehash: 4517415e2431193e56728e3bb1a24e3c7d119ca4
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98570712"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634970"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -40,11 +40,11 @@ Para completar este tutorial debe tener instalado Visual Studio para Mac (versi�
 
     Para obtener más información sobre la biblioteca de .NET Standard creada, vea [Anatomía de una aplicación de Xamarin.Forms](~/get-started/first-app/index.md) en [Análisis detallado de inicio rápido de Xamarin.Forms](~/get-started/first-app/index.md).
 
-1. En **Panel de solución**, seleccione el proyecto **WebServiceTutorial**, haga clic con el botón derecho y seleccione **Agregar > Agregar paquetes NuGet…**:
+1. En **Panel de solución**, seleccione el proyecto **WebServiceTutorial**, haga clic con el botón derecho y seleccione **Administrar paquetes NuGet…** :
 
     ![Captura de pantalla del elemento de menú Agregar paquetes NuGet siendo seleccionado](../images/vsmac/add-nuget-packages.png "Elemento de menú Agregar paquetes NuGet")
 
-1. En la ventana **Agregar paquetes**, busque el paquete NuGet **Newtonsoft.Json**, selecciónelo y haga clic en el botón **Agregar paquete** para agregarlo al proyecto:
+1. En la ventana **Administrar paquetes NuGet**, busque el paquete NuGet **Newtonsoft.Json**, selecciónelo y haga clic en el botón **Agregar paquete** para agregarlo al proyecto:
 
     ![Captura de pantalla del paquete NuGet Newtonsoft.Json en el Administrador de paquetes NuGet](../images/vsmac/add-package.png "Paquete Newtonsoft.Json NuGet Package")
 

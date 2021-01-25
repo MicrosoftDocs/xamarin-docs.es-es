@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b11a5972c2aabace8a6991a82f5719f34450297d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: b39d337c80a50fb6a3899b609eac1e73ed9bcb6d
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "67841516"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98689791"
 ---
 En este ejercicio, agregará clases de acceso a datos al proyecto **LocalDatabaseTutorial**, que se usará para conservar datos sobre personas en la base de datos.
 
@@ -118,6 +118,8 @@ En este ejercicio, agregará clases de acceso a datos al proyecto **LocalDatabas
     > [!IMPORTANT]
     > La ventaja de exponer la base de datos como un singleton es que se crea una conexión de base de datos única que se mantiene abierta mientras la aplicación se ejecuta, lo que evita el gasto de abrir y cerrar el archivo de base de datos cada vez que se realiza una operación de base de datos.
 
+    Para obtener más información sobre el modelo de diseño singleton, vea [Design Patterns: Singleton](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Design-Patterns-Singleton) (Modelos de diseño: singleton).    
+
 1. Compile la solución para asegurarse de que no haya errores.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
@@ -229,5 +231,7 @@ En este ejercicio, agregará clases de acceso a datos al proyecto **LocalDatabas
 
     > [!IMPORTANT]
     > La ventaja de exponer la base de datos como un singleton es que se crea una conexión de base de datos única que se mantiene abierta mientras la aplicación se ejecuta, lo que evita el gasto de abrir y cerrar el archivo de base de datos cada vez que se realiza una operación de base de datos.
+
+    Para obtener más información sobre el modelo de diseño singleton, vea [Design Patterns: Singleton](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Design-Patterns-Singleton) (Modelos de diseño: singleton).
 
 1. Compile la solución para asegurarse de que no haya errores.

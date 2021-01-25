@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bd9d4bbd04f504400bd14bb3a18bf4c2b16a5849
-ms.sourcegitcommit: b75c369adb8e02a429b6c0fed8ba4a855099bf01
+ms.openlocfilehash: e2b6e6a6902fcf67e92f58da15771ce0ed8a6075
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98558940"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98689738"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -48,6 +48,8 @@ Para completar este tutorial debe tener Visual Studio 2019 (versión más recien
 
     [![Captura de pantalla de un elemento CollectionView en iOS y Android](../images/create-collectionview.png "CollectionView que muestra datos")](../images/create-collectionview-large.png#lightbox "CollectionView que muestra datos")
 
+    En Visual Studio, detenga la aplicación.
+
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Para completar este tutorial debe tener instalado Visual Studio para Mac (versión más reciente) con compatibilidad con la plataforma de iOS y Android. Además, también necesitará Xcode (versión más reciente). Para obtener más información sobre la instalación de la plataforma de Xamarin, consulte [Instalación de Xamarin](~/get-started/installation/index.md).
@@ -89,3 +91,5 @@ Para completar este tutorial debe tener instalado Visual Studio para Mac (versi�
 1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
 
     [![Captura de pantalla de un elemento CollectionView en iOS y Android](../images/create-collectionview.png "CollectionView que muestra datos")](../images/create-collectionview-large.png#lightbox "CollectionView que muestra datos")
+
+    En Visual Studio para Mac, detenga la aplicación.

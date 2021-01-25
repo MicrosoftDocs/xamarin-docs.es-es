@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 87eb021e6cc571a9a5522697cde2aa11ee991308
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 9ff398b53e88f38589733b1caac623e564e1ed39
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "66193785"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634845"
 ---
 
 Xamarin.Forms tiene un elemento emergente modal, conocido como una hoja de acciones, que se puede usar para guiar a los usuarios en la realización de una tarea. En este ejercicio, usará el método [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) de la clase [`Page`](xref:Xamarin.Forms.Page) para mostrar una hoja de acciones que guía a los usuarios en la realización de una tarea.
@@ -39,7 +39,9 @@ Xamarin.Forms tiene un elemento emergente modal, conocido como una hoja de accio
 
     [![Captura de pantalla de una hoja de acción en iOS y Android](../images/actionsheet.png "Hoja de acciones que guía a los usuarios a través de una tarea")](../images/actionsheet-large.png#lightbox "Hoja de acciones que guía a los usuarios a través de una tarea")
 
-    Tenga en cuenta que, tras seleccionar una alternativa en el cuadro de diálogo de la hoja de acciones, la selección aparece en la ventana **Salida** de Visual Studio.
+    Tenga en cuenta que, tras seleccionar una alternativa en el cuadro de diálogo de la hoja de acciones, la selección aparece en la ventana **Salida** de Visual Studio. Si esta ventana no está visible, puede mostrarse seleccionando la opción de menú **Ver > Salida**.
+
+    En Visual Studio, detenga la aplicación.
 
     Para más información sobre cómo mostrar hojas de acciones, consulte [Guiar a los usuarios a través de tareas](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) en la guía [Mostrar elementos emergentes](~/xamarin-forms/user-interface/pop-ups.md).
 
@@ -73,6 +75,8 @@ Xamarin.Forms tiene un elemento emergente modal, conocido como una hoja de accio
 
     [![Captura de pantalla de una hoja de acción en iOS y Android](../images/actionsheet.png "Hoja de acciones que guía a los usuarios a través de una tarea")](../images/actionsheet-large.png#lightbox "Hoja de acciones que guía a los usuarios a través de una tarea")
 
-    Tenga en cuenta que, tras seleccionar una alternativa en el cuadro de diálogo de la hoja de acciones, la selección aparece en la ventana **Salida de la aplicación** de Visual Studio para Mac.
+    Tenga en cuenta que, tras seleccionar una alternativa en el cuadro de diálogo de la hoja de acciones, la selección aparece en la ventana **Salida de la aplicación** de Visual Studio para Mac. Si esta ventana no está visible, puede mostrarse seleccionando la opción de menú **Ver > Otras ventanas > Salida de la aplicación**.
+
+    En Visual Studio para Mac, detenga la aplicación.
 
     Para más información sobre cómo mostrar hojas de acciones, consulte [Guiar a los usuarios a través de tareas](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) en la guía [Mostrar elementos emergentes](~/xamarin-forms/user-interface/pop-ups.md).

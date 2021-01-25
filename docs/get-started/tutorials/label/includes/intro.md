@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ff3a0477c6b8a2bf30693ff05a4a992ad053d2b9
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 4922151676190c9f79b640d9c32887b811c842b1
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71107351"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98689987"
 ---
 Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
 
@@ -22,3 +22,5 @@ En este tutorial aprenderá a:
 Va a usar Visual Studio 2019, o Visual Studio para Mac, para crear una aplicación sencilla que demuestre cómo mostrar texto en [`Label`](xref:Xamarin.Forms.Label). En las capturas de pantalla siguientes se muestra la aplicación final:
 
 [![Captura de pantalla de una etiqueta que muestra texto con formato, en iOS y Android](../images/label-formatted-text.png "Etiqueta con texto con formato")](../images/label-formatted-text-large.png#lightbox "Etiqueta con texto con formato")
+
+También usará la [Recarga activa de XAML para Xamarin.Forms](~/xamarin-forms/xaml/hot-reload.md) para ver cambios en la UI sin tener que volver a compilar su aplicación.

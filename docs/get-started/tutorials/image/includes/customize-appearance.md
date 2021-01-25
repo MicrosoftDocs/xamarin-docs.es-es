@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 58ed33adbc25e026431609370075c24c3b6ba690
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 42d1f79b22e25e46f81f7c5a77389fd578a4d894
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574640"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98690112"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -24,9 +24,11 @@ ms.locfileid: "84574640"
 
     Además, la propiedad [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) especifica que la imagen se centrará horizontalmente.
 
-1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido:
+1. Si la aplicación se sigue ejecutando, guarde los cambios hechos al archivo, y la interfaz de usuario de la aplicación se actualizará automáticamente en su simulador o emulador. De lo contrario, en la barra de herramientas de Visual Studio, presione el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido:
 
     [![Captura de pantalla de una imagen de tamaño diferente en iOS y Android](../images/customize-appearance.png "Tamaño de la imagen en cada plataforma")](../images/customize-appearance-large.png#lightbox "Tamaño de la imagen en cada plataforma")
+
+    En Visual Studio, detenga la aplicación.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -46,6 +48,8 @@ ms.locfileid: "84574640"
 
     Además, la propiedad [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) especifica que la imagen se centrará horizontalmente.
 
-1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
+1. Si la aplicación se sigue ejecutando, guarde los cambios hechos al archivo, y la interfaz de usuario de la aplicación se actualizará automáticamente en su simulador o emulador. De lo contrario, en la barra de herramientas de Visual Studio para Mac, presione el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
 
     [![Captura de pantalla de una imagen de tamaño diferente en iOS y Android](../images/customize-appearance.png "Tamaño de la imagen en cada plataforma")](../images/customize-appearance-large.png#lightbox "Tamaño de la imagen en cada plataforma")
+
+    En Visual Studio para Mac, detenga la aplicación.

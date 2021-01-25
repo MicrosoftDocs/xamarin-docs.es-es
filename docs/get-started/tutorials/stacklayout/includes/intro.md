@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8820d52a2a41ce3c5de9cf1176d5a8a90a987900
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: d5acf27dfbda0dcd31b00600cee2f16b98aaa70a
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71107355"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634797"
 ---
 Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
 
@@ -21,3 +21,5 @@ En este tutorial aprenderá a:
 Va a usar Visual Studio 2019, o Visual Studio para Mac, para crear una aplicación sencilla que demuestre cómo alinear controles dentro de un [`StackLayout`](xref:Xamarin.Forms.StackLayout). En las capturas de pantalla siguientes se muestra la aplicación final:
 
 [![Captura de pantalla de vistas secundarias en un elemento StackLayout, con las opciones de alineación y expansión establecidas, en iOS y Android](../images/alignment-expansion-reduced.png "StackLayout que contiene instancia de etiqueta con la alineación y la expansión establecidas")](../images/alignment-expansion-large.png#lightbox "StackLayout que contiene instancia de etiqueta con la alineación y la expansión establecidas")
+
+También usará la [Recarga activa de XAML para Xamarin.Forms](~/xamarin-forms/xaml/hot-reload.md) para ver cambios en la UI sin tener que volver a compilar su aplicación.

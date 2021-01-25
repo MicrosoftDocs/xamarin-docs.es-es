@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 48af50d31013f696879174a5cf108ab9fde92d0b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f4fccbfe7e00a353682b0dfe787c291b38e5cd76
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "61343479"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98690122"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -23,9 +23,11 @@ ms.locfileid: "61343479"
     > [!NOTE]
     > Para algunos escenarios de entrada de texto, como escribir una contraseña, el corrector ortográfico y la predicción de texto proporcionan una experiencia negativa y, por tanto, deben deshabilitarse.
 
-1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido. Escriba texto en [`Entry`](xref:Xamarin.Forms.Entry) y observe que cada carácter se sustituye por un carácter de máscara de contraseña y que el número máximo de caracteres que se puede especificar son 15:
+1. Si la aplicación se sigue ejecutando, guarde los cambios hechos al archivo, y la interfaz de usuario de la aplicación se actualizará automáticamente en su simulador o emulador. De lo contrario, en la barra de herramientas de Visual Studio, presione el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido. Escriba texto en [`Entry`](xref:Xamarin.Forms.Entry) y observe que cada carácter se sustituye por un carácter de máscara de contraseña y que el número máximo de caracteres que se puede especificar son 15:
 
     [![Captura de pantalla de una entrada con texto enmascarado por caracteres de contraseña, en iOS y Android](../images/customize-behavior.png "Entrada con caracteres de contraseña enmascarados")](../images/customize-behavior-large.png#lightbox "Entrada con caracteres de contraseña enmascarados")
+
+    En Visual Studio, detenga la aplicación.
 
     Para obtener más información sobre la personalización del comportamiento de [`Entry`](xref:Xamarin.Forms.Entry), consulte la guía de la [Entrada de Xamarin.Forms](~/xamarin-forms/user-interface/text/entry.md).
 
@@ -46,8 +48,10 @@ ms.locfileid: "61343479"
     > [!NOTE]
     > Para algunos escenarios de entrada de texto, como escribir una contraseña, el corrector ortográfico y la predicción de texto proporcionan una experiencia negativa y, por tanto, deben deshabilitarse.
 
-1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido. Escriba texto en [`Entry`](xref:Xamarin.Forms.Entry) y observe que cada carácter se sustituye por un carácter de máscara de contraseña y que el número máximo de caracteres que se puede especificar son 15:
+1. Si la aplicación se sigue ejecutando, guarde los cambios hechos al archivo, y la interfaz de usuario de la aplicación se actualizará automáticamente en su simulador o emulador. De lo contrario, en la barra de herramientas de Visual Studio para Mac, presione el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido. Escriba texto en [`Entry`](xref:Xamarin.Forms.Entry) y observe que cada carácter se sustituye por un carácter de máscara de contraseña y que el número máximo de caracteres que se puede especificar son 15:
 
     [![Captura de pantalla de una entrada con texto enmascarado por caracteres de contraseña, en iOS y Android](../images/customize-behavior.png "Entrada con caracteres de contraseña enmascarados")](../images/customize-behavior-large.png#lightbox "Entrada con caracteres de contraseña enmascarados")
+
+    En Visual Studio para Mac, detenga la aplicación.
 
     Para obtener más información sobre la personalización del comportamiento de [`Entry`](xref:Xamarin.Forms.Entry), consulte la guía de la [Entrada de Xamarin.Forms](~/xamarin-forms/user-interface/text/entry.md).

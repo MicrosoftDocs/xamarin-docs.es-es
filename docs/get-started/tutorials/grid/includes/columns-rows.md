@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e1705e9311d4875a5b866ac5acb7d20aa107a2bb
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+ms.openlocfilehash: 624d7f2866767bbb748988a3c486718d7691faf6
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83435420"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634909"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -44,7 +44,7 @@ ms.locfileid: "83435420"
     > [!NOTE]
     > El espaciado entre columnas y filas en una [`Grid`](xref:Xamarin.Forms.Grid) se puede establecer con las propiedades [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) y [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing). Para obtener más información, consulte [Espaciado](~/xamarin-forms/user-interface/layouts/grid.md#space-between-rows-and-columns) en la guía [Cuadrícula de Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
-1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido:
+1. Si la aplicación se sigue ejecutando, guarde los cambios hechos al archivo, y la interfaz de usuario de la aplicación se actualizará automáticamente en su simulador o emulador. De lo contrario, en la barra de herramientas de Visual Studio, presione el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido:
 
     [![Captura de pantalla de una cuadrícula que tiene contenido que aparece en columnas y filas, en iOS y Android](../images/columns-rows.png "Cuadrícula con contenido en columnas y filas")](../images/columns-rows-large.png#lightbox "Cuadrícula con contenido en columnas y filas")
 
@@ -86,6 +86,6 @@ ms.locfileid: "83435420"
     > [!NOTE]
     > El espaciado entre columnas y filas en una [`Grid`](xref:Xamarin.Forms.Grid) se puede establecer con las propiedades [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) y [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing). Para obtener más información, consulte [Espaciado](~/xamarin-forms/user-interface/layouts/grid.md#space-between-rows-and-columns) en la guía [Cuadrícula de Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
-1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
+1. Si la aplicación se sigue ejecutando, guarde los cambios hechos al archivo, y la interfaz de usuario de la aplicación se actualizará automáticamente en su simulador o emulador. De lo contrario, en la barra de herramientas de Visual Studio para Mac, presione el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
 
     [![Captura de pantalla de una cuadrícula que tiene contenido que aparece en columnas y filas, en iOS y Android](../images/columns-rows.png "Cuadrícula con contenido en columnas y filas")](../images/columns-rows-large.png#lightbox "Cuadrícula con contenido en columnas y filas")

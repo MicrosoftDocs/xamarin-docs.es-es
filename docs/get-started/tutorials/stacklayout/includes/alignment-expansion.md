@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 97e52d593e2b59d127da324d8ad74ad7b2096cdd
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+ms.openlocfilehash: f9bacad9732a47a143aadb3efa9096b51a22f97a
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83343424"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634804"
 ---
 El tamaño y la posición de las vistas secundarias dentro de un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) dependen de los valores de las propiedades [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) y [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) de las vistas secundarias, y de los valores de las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) y [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions).
 
@@ -51,7 +51,7 @@ Las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions)
     > [!NOTE]
     > El valor predeterminado de las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) y [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) de una vista es [`Fill`](xref:Xamarin.Forms.LayoutOptions.Fill).
 
-1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido:
+1. Si la aplicación se sigue ejecutando, guarde los cambios hechos al archivo, y la interfaz de usuario de la aplicación se actualizará automáticamente en su simulador o emulador. De lo contrario, en la barra de herramientas de Visual Studio, presione el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador remoto de iOS elegido:
 
     [![Captura de pantalla de vistas secundarias en un elemento StackLayout, con las opciones de alineación y expansión establecidas, en iOS y Android](../images/alignment-expansion.png "StackLayout que contiene instancia de etiqueta con la alineación y la expansión establecidas")](../images/alignment-expansion-large.png#lightbox "StackLayout que contiene instancia de etiqueta con la alineación y la expansión establecidas")
 
@@ -66,6 +66,8 @@ Las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions)
 
     > [!IMPORTANT]
     > Cuando se usa todo el espacio de un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout), las preferencias de expansión no tienen ningún efecto.
+
+    En Visual Studio, detenga la aplicación.
 
     Para obtener más información sobre la alineación y la expansión, vea [Opciones de diseño de Xamarin.Forms](~/xamarin-forms/user-interface/layouts/layout-options.md).
 
@@ -107,7 +109,7 @@ Las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions)
     > [!NOTE]
     > El valor predeterminado de las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) y [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) de una vista es [`Fill`](xref:Xamarin.Forms.LayoutOptions.Fill).
 
-1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
+1. Si la aplicación se sigue ejecutando, guarde los cambios hechos al archivo, y la interfaz de usuario de la aplicación se actualizará automáticamente en su simulador o emulador. De lo contrario, en la barra de herramientas de Visual Studio para Mac, presione el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
 
     [![Captura de pantalla de vistas secundarias en un elemento StackLayout, con las opciones de alineación y expansión establecidas, en iOS y Android](../images/alignment-expansion.png "StackLayout que contiene instancia de etiqueta con la alineación y la expansión establecidas")](../images/alignment-expansion-large.png#lightbox "StackLayout que contiene instancia de etiqueta con la alineación y la expansión establecidas")
 
@@ -122,5 +124,7 @@ Las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions)
 
     > [!IMPORTANT]
     > Cuando se usa todo el espacio de un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout), las preferencias de expansión no tienen ningún efecto.
+
+    En Visual Studio para Mac, detenga la aplicación.
 
     Para obtener más información sobre la alineación y la expansión, vea [Opciones de diseño de Xamarin.Forms](~/xamarin-forms/user-interface/layouts/layout-options.md).

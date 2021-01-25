@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4464b5cc4220072de3d55d76f568dab938d3d805
-ms.sourcegitcommit: b75c369adb8e02a429b6c0fed8ba4a855099bf01
+ms.openlocfilehash: 6118d4ee8d2fa56a3b14d3d280db4991a36874fc
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98558941"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98689774"
 ---
 Anteriormente, [`CollectionView`](xref:Xamarin.Forms.CollectionView) se ha rellenado con datos mediante el enlace de datos. Aun así, pese al enlace de datos con una colección, donde cada objeto de la colección ha definido varios elementos de datos, solo se ha mostrado un elemento de datos por objeto (la propiedad `Name` del objeto `Monkey`).
 
@@ -49,6 +49,8 @@ En este ejercicio, modificará el proyecto **CollectionViewTutorial** de forma q
 
     [![Captura de pantalla de un elemento CollectionView cuyos elementos están basados en una plantilla de datos](../images/customize-item-appearance.png "CollectionView que muestra datos basados en plantilla")](../images/customize-item-appearance-large.png#lightbox "CollectionView que muestra datos basados en plantilla")
 
+    En Visual Studio, detenga la aplicación.
+
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. En **MainPage.xaml**, modifique la declaración [`CollectionView`](xref:Xamarin.Forms.CollectionView) para personalizar la apariencia de cada elemento de datos:
@@ -87,3 +89,5 @@ En este ejercicio, modificará el proyecto **CollectionViewTutorial** de forma q
 1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en Android Emulator o en el simulador de iOS elegido:
 
     [![Captura de pantalla de un elemento CollectionView cuyos elementos están basados en una plantilla de datos](../images/customize-item-appearance.png "CollectionView que muestra datos basados en plantilla")](../images/customize-item-appearance-large.png#lightbox "CollectionView que muestra datos basados en plantilla")
+
+    En Visual Studio para Mac, detenga la aplicación.
