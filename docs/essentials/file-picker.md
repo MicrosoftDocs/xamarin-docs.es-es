@@ -8,12 +8,12 @@ ms.date: 01/04/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 797f7e80ac389776f921021ef3b1a9ab16b3f53b
-ms.sourcegitcommit: 995ee23d93e08dceb8754cc6c682cd2f4594345b
+ms.openlocfilehash: 7a9701a1607333022b7356f4485f041d66b410c6
+ms.sourcegitcommit: 3a68a8a48eb5a0ea7d6e0f861e2f7ecefcc49715
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97972336"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98810735"
 ---
 # <a name="no-locxamarinessentials-file-picker"></a>Xamarin.Essentials: Selector de archivos
 
@@ -60,7 +60,7 @@ No se requiere configuración adicional.
 
 ## <a name="pick-file"></a>Selección de un archivo
 
-El método `FilePicker.PickAsync()` permite al usuario seleccionar un archivo desde el dispositivo. Se pueden seleccionar diferentes elementos `PickOptions` al llamar al método, lo que permite especificar el título que se va a mostrar y los tipos de archivo que el usuario puede elegir. De forma predeterminada 
+El método `FilePicker.PickAsync()` permite al usuario seleccionar un archivo desde el dispositivo. Se pueden seleccionar diferentes elementos `PickOptions` al llamar al método, lo que permite especificar el título que se va a mostrar y los tipos de archivo que el usuario puede elegir. De forma predeterminada
 
 ```csharp
 async Task<FileResult> PickAndShow(PickOptions options)
@@ -123,6 +123,8 @@ No hay diferencias entre las plataformas.
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
 No hay diferencias entre las plataformas.
+
+-----
 
 ## <a name="api"></a>API
 

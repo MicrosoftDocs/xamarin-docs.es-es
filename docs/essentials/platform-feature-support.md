@@ -8,12 +8,12 @@ ms.date: 08/20/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9c21e4c746224902b4dcc317b53d751d33c45df1
-ms.sourcegitcommit: 86663f94f8eddb808eb4504cd32ddaf217b6406c
+ms.openlocfilehash: cb172ff7d86229d4ee0cebc2e3ea6bc326e7fa29
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98166672"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758037"
 ---
 # <a name="platform-support"></a>Compatibilidad de la plataforma
 
@@ -49,7 +49,7 @@ Guía de iconos:
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | [Acelerómetro](accelerometer.md?context=xamarin/xamarin-forms) | ![Compatible con Android](~/media/shared/yes.png "Compatible con Android") | ![Compatible con iOS](~/media/shared/yes.png "Compatible con iOS") | ![Compatible con UWP](~/media/shared/yes.png "Compatible con UWP") | ![Compatible con watchOS](~/media/shared/yes.png "Compatible con watchOS") | ![No compatible con tvOS](~/media/shared/no.png "No compatible con tvOS") | ![Compatible con Tizen](~/media/shared/yes.png "Compatible con Tizen") | ![No compatible con macOS](~/media/shared/no.png "No compatible con macOS") |
 | [Acciones de aplicación](app-actions.md?context=xamarin/xamarin-forms) | ![Compatible con Android](~/media/shared/yes.png "Compatible con Android") | ![Compatible con iOS](~/media/shared/yes.png "Compatible con iOS") | ![Compatible con UWP](~/media/shared/yes.png "Compatible con UWP") | ![No compatible con watchOS](~/media/shared/no.png "No compatible con watchOS") | ![No compatible con tvOS](~/media/shared/no.png "No compatible con tvOS") | ![No compatible con Tizen](~/media/shared/no.png "No compatible con Tizen") | ![No compatible con macOS](~/media/shared/no.png "No compatible con macOS") |
-| [Información de la aplicación](app-information.md?context=xamarin/xamarin-forms) | ![Compatible con Android](~/media/shared/yes.png "Compatible con Android") | ![Compatible con iOS](~/media/shared/yes.png "Compatible con iOS") | ![Compatible con UWP](~/media/shared/yes.png "Compatible con UWP") | ![Compatible con watchOS](~/media/shared/no.png "No compatible con watchOS") | ![Compatible con tvOS](~/media/shared/yes.png "Compatible con tvOS") | ![Compatible con Tizen](~/media/shared/yes.png "Compatible con Tizen") | ![Compatible con macOS](~/media/shared/yes.png "Compatible con macOS") |
+| [Información de la aplicación](app-information.md?context=xamarin/xamarin-forms) | ![Compatible con Android](~/media/shared/yes.png "Compatible con Android") | ![Compatible con iOS](~/media/shared/yes.png "Compatible con iOS") | ![Compatible con UWP](~/media/shared/yes.png "Compatible con UWP") | ![No compatible con watchOS](~/media/shared/no.png "No compatible con watchOS") | ![Compatible con tvOS](~/media/shared/yes.png "Compatible con tvOS") | ![Compatible con Tizen](~/media/shared/yes.png "Compatible con Tizen") | ![Compatible con macOS](~/media/shared/yes.png "Compatible con macOS") |
 | [Tema de la aplicación](app-theme.md?context=xamarin/xamarin-forms) | ![Compatible con Android](~/media/shared/yes.png "Compatible con Android") | ![Compatible con iOS](~/media/shared/yes.png "Compatible con iOS") | ![Compatible con UWP](~/media/shared/yes.png "Compatible con UWP") | ![Compatible con watchOS](~/media/shared/yes.png "Compatible con watchOS") | ![No compatible con tvOS](~/media/shared/no.png "No compatible con tvOS") | ![Compatible con Tizen](~/media/shared/yes.png "Compatible con Tizen") | ![Compatible con macOS](~/media/shared/yes.png "Compatible con macOS") |
 | [Barómetro](barometer.md?context=xamarin/xamarin-forms) | ![Compatible con Android](~/media/shared/yes.png "Compatible con Android") | ![Compatible con iOS](~/media/shared/yes.png "Compatible con iOS") | ![Compatible con UWP](~/media/shared/yes.png "Compatible con UWP") | ![Compatible con watchOS](~/media/shared/yes.png "Compatible con watchOS") | ![No compatible con tvOS](~/media/shared/no.png "No compatible con tvOS") | ![Compatible con Tizen](~/media/shared/yes.png "Compatible con Tizen") | ![No compatible con macOS](~/media/shared/no.png "No compatible con macOS") |
 | [Batería](battery.md?context=xamarin/xamarin-forms) | ![Compatible con Android](~/media/shared/yes.png "Compatible con Android") | ![Compatible con iOS](~/media/shared/yes.png "Compatible con iOS") | ![Compatible con UWP](~/media/shared/yes.png "Compatible con UWP") | ![Compatibilidad limitada con watchOS](~/media/shared/warn.png "Compatibilidad limitada con watchOS") | ![No compatible con tvOS](~/media/shared/no.png "No compatible con tvOS") | ![Compatibilidad limitada con Tizen](~/media/shared/warn.png "Compatibilidad limitada con Tizen") | ![Compatible con macOS](~/media/shared/yes.png "Compatible con macOS") |
