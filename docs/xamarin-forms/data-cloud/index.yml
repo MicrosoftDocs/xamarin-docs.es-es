@@ -13,12 +13,12 @@ metadata:
   no-loc:
   - Xamarin.Forms
   - Xamarin.Essentials
-  ms.openlocfilehash: 134d4ed0f23d8886fb0d92017f4bf36d6af817c2
-  ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
+  ms.openlocfilehash: e8679b8d43736f4355ba127a043394ac30dadb89
+  ms.sourcegitcommit: 9ab5a1e346e20f54e8b7aa655fd3d117b43978cc
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/13/2020
-  ms.locfileid: "94590225"
+  ms.lasthandoff: 02/01/2021
+  ms.locfileid: "99223664"
 landingContent:
 - title: Almacenamiento de datos local
   linkLists:
@@ -35,7 +35,7 @@ landingContent:
     - text: Base de datos de documentos de Azure Cosmos DB
       url: azure-services/azure-cosmosdb.md
     - text: Centros de notificaciones de Azure
-      url: azure-services/azure-notification-hub.md
+      url: /azure/developer/mobile-apps/notification-hubs-backend-service-xamarin-forms
     - text: Azure Storage
       url: azure-services/azure-storage.md
     - text: Azure Search

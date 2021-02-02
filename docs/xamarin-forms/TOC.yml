@@ -196,23 +196,6 @@ items:
             href: app-fundamentals/custom-renderer/hybridwebview.md
           - name: Implementación de una vista
             href: app-fundamentals/custom-renderer/view.md
-          - name: Implementación de un reproductor de vídeo
-            href: app-fundamentals/custom-renderer/video-player/index.md
-            items:
-              - name: Creación de reproductores de vídeo de plataforma
-                href: app-fundamentals/custom-renderer/video-player/player-creation.md
-              - name: Reproducción de un vídeo web
-                href: app-fundamentals/custom-renderer/video-player/web-videos.md
-              - name: Enlazar orígenes de vídeo con el reproductor
-                href: app-fundamentals/custom-renderer/video-player/source-bindings.md
-              - name: Carga de vídeos de recursos de aplicación
-                href: app-fundamentals/custom-renderer/video-player/loading-resources.md
-              - name: Acceder a la biblioteca de vídeos del dispositivo
-                href: app-fundamentals/custom-renderer/video-player/accessing-library.md
-              - name: Controles de transporte de vídeo personalizados
-                href: app-fundamentals/custom-renderer/video-player/custom-transport.md
-              - name: Barra de posición de vídeo personalizada
-                href: app-fundamentals/custom-renderer/video-player/custom-positioning.md
       - name: Enlace de datos
         href: app-fundamentals/data-binding/index.md
         items:
@@ -932,7 +915,7 @@ items:
           - name: Base de datos de documentos de Azure Cosmos DB
             href: data-cloud/azure-services/azure-cosmosdb.md
           - name: Centros de notificaciones de Azure
-            href: data-cloud/azure-services/azure-notification-hub.md
+            href: /azure/developer/mobile-apps/notification-hubs-backend-service-xamarin-forms
           - name: Almacenamiento de Azure
             href: data-cloud/azure-services/azure-storage.md
           - name: Azure Search
