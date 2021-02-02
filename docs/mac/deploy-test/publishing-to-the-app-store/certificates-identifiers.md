@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 12/17/2019
-ms.openlocfilehash: 2b2bfe9925a99c2ba7f1366ea28d5c72e2e1da88
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ae62a695670f50c5385b9279c6d6de79b6d59fb7
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76725546"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697571"
 ---
 # <a name="certificates-and-identifiers-in-xamarinmac"></a>Certificados e identificadores en Xamarin.Mac
 
@@ -51,12 +51,12 @@ Debe registrar un identificador de aplicación para cada aplicación. Para crear
 1. Presione "+" (signo más) o **Register an App ID** (Registrar un identificador de aplicación):
 
     > [!div class="mx-imgBorder"]
-    > [![Introducción a los identificadores de aplicación](certificates-identifiers-images/appid01.png)](certificates-identifiers-images/appid01-large.png#lightbox)
+    > [![La captura de pantalla muestra Introducción con los identificadores de aplicación en certificados, identificadores y perfiles.](certificates-identifiers-images/appid01.png)](certificates-identifiers-images/appid01-large.png#lightbox)
 
 1. Elija **App IDs** (Id. de aplicación).
 
     > [!div class="mx-imgBorder"]
-    > [![Introducción a los identificadores de aplicación](certificates-identifiers-images/appid02.png)](certificates-identifiers-images/appid02-large.png#lightbox)
+    > [![La captura de pantalla muestra la opción de registrar un nuevo identificador.](certificates-identifiers-images/appid02.png)](certificates-identifiers-images/appid02-large.png#lightbox)
 
 1. Escriba una **descripción** y seleccione los **App Services** (Servicios de aplicación) que la aplicación vaya a necesitar: a. La plataforma debe ser **macOS** a. Elija una **descripción** (solo se usa en este portal) a. Escriba el **identificador de paquete**, que debe coincidir con **Info.plist** a. Selección de las funciones que requiere la aplicación
 
@@ -97,12 +97,12 @@ Para crear un perfil de aprovisionamiento para realizar pruebas, el desarrollado
 1. Escriba un **Nombre** y el **UUID** del equipo que va a agregar y haga clic en el botón **Continuar**. Revise la información y haga clic en el botón **Registrar**:
 
     > [!div class="mx-imgBorder"]
-    > [![Escribir la información del equipo nuevo](certificates-identifiers-images/device02.png)](certificates-identifiers-images/device02-large.png#lightbox)
+    > [![La captura de pantalla muestra la página para registrar un nuevo dispositivo, donde puede escribir el nombre y el uuid.](certificates-identifiers-images/device02.png)](certificates-identifiers-images/device02-large.png#lightbox)
 
 1. Revisión y confirmación de los datos especificados:
 
     > [!div class="mx-imgBorder"]
-    > [![Escribir la información del equipo nuevo](certificates-identifiers-images/device03.png)](certificates-identifiers-images/device03-large.png#lightbox)
+    > [![La captura de pantalla muestra la página para registrar un nuevo dispositivo, donde puede confirmar el nombre y el uuid.](certificates-identifiers-images/device03.png)](certificates-identifiers-images/device03-large.png#lightbox)
 
 ## <a name="create-certificates"></a>Crear certificados
 

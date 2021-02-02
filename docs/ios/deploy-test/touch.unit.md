@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: f5796ee17e947494d1e22f750bc43ff823d56d55
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 98855bb51552edcd567e3b99740f0be04034e388
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937285"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628974"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Pruebas unitarias de Xamarin.iOS
 
@@ -112,7 +112,7 @@ El ejecutor de pruebas permite ver qué pruebas se registran y seleccionar indiv
 
 Puede ejecutar accesorios de prueba individuales si selecciona el accesorio de texto en las vistas anidadas o puede ejecutar todas las pruebas con "Run Everything (Ejecutar todo)". Si ejecuta la prueba predeterminada que se supone que incluye una prueba correcta, una incorrecta y una omitida. Este es el aspecto del informe, y puede ir directamente a las pruebas incorrectas y obtener más información sobre el error:
 
-[![Informe de ejemplo](touch.unit-images/05-sml.png)](touch.unit-images/05.png#lightbox) [![Informe de ejemplo](touch.unit-images/06-sml.png)](touch.unit-images/06.png#lightbox) [![Informe de ejemplo](touch.unit-images/07-sml.png)](touch.unit-images/07.png#lightbox)
+[![Captura de pantalla que muestra un informe de ejemplo, pantalla de Test Runner.](touch.unit-images/05-sml.png)](touch.unit-images/05.png#lightbox) [![Captura de pantalla que muestra un informe de ejemplo, pantalla de pruebas.](touch.unit-images/06-sml.png)](touch.unit-images/06.png#lightbox) [![Captura de pantalla que muestra un informe de ejemplo, pantalla de prueba con el estado de la prueba.](touch.unit-images/07-sml.png)](touch.unit-images/07.png#lightbox)
 
 También puede ir a la ventana Application Output (Resultado de aplicación) del IDE para ver qué pruebas se ejecutan y su estado actual.
 

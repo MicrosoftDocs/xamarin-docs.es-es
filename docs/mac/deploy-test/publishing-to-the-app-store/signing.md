@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 84a764054567bc504b3432a503a1072362e374dd
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7e2d676b577e835bafe5cdd8d6bc48229a1a1a06
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938494"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697584"
 ---
 # <a name="signing-xamarinmac-apps-with-a-developer-id"></a>Firma de aplicaciones Xamarin.Mac con un identificador de desarrollador
 
@@ -34,9 +34,9 @@ Antes de compilar, asegúrese de que ha seleccionado la configuración correcta 
 
 Al compilar la aplicación, se le solicitará al desarrollador que use los dos certificados:
 
- [![Permitir el acceso a llaves](signing-images/image57.png)](signing-images/image57.png#lightbox)
+ [![Captura de pantalla que muestra el cuadro de diálogo de permitir acceso para codesign.](signing-images/image57.png)](signing-images/image57.png#lightbox)
 
- [![Permitir el acceso a llaves](signing-images/image58.png)](signing-images/image58.png#lightbox)
+ [![Captura de pantalla que muestra el cuadro de diálogo de permitir acceso para la compilación del producto.](signing-images/image58.png)](signing-images/image58.png#lightbox)
 
 Una vez que se ha compilado la aplicación, el desarrollador puede hacer clic con el botón derecho en el proyecto y seleccionar **Abrir carpeta contenedora** para buscar el archivo de paquete (en el directorio `bin/Release`). Este archivo de paquete incluye un instalador para la aplicación, por lo que se puede distribuir a cualquier usuario de macOS para su instalación.
 

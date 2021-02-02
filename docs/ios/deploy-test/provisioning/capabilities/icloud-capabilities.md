@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 1932bc8bf5362a284ed62aa241170264826baa9e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 22f047871d203aa8604dd3331c4397c7607e332e
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84567559"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628883"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Capacidades de iCloud en Xamarin.iOS
 
@@ -47,11 +47,11 @@ En los siguientes pasos se le guiará a través de este procedimiento:
 
 3. Escriba una **descripción** y un **identificador** único para el contenedor de iCloud: 
     
-    ![Pantalla de registro del contenedor de iCloud](icloud-capabilities-images/image24.png)
+    ![Captura de pantalla que muestra el registro de un contenedor de iCloud.](icloud-capabilities-images/image24.png)
 
 4. Presione **Continue** (Continuar), asegúrese de que la información es correcta y presione **Register** (Registrar) para crear el contenedor de iCloud:  
     
-    ![Pantalla de registro del contenedor de iCloud](icloud-capabilities-images/image25.png)
+    ![Captura de pantalla muestra la opción de confirmar el contenedor de iCloud.](icloud-capabilities-images/image25.png)
 
 Para crear un nuevo identificador de aplicación y agregar un contenedor a este, haga lo siguiente:
 
@@ -107,6 +107,6 @@ En la siguiente lista se describen los pasos adicionales que se deben seguir:
 
 * Use el espacio de nombres del marco en su aplicación.
 * Agregue los derechos necesarios a la aplicación. En la guía [Trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) se proporciona información sobre los derechos necesarios y sobre cómo agregarlos.
-* En la opción  **Firma de lote de iOS** de la aplicación, asegúrese de que  **Derechos personalizados** esté establecido en **Entitlements.plist**. Esta  _no_ es la configuración predeterminada para las compilaciones de depuración y del simulador de iOS.
+* En la opción **Firma de lote de iOS** de la aplicación, asegúrese de que **Derechos personalizados** esté establecido en **Entitlements.plist**. Esta _no_ es la configuración predeterminada para las compilaciones de depuración y del simulador de iOS.
 
 Si experimenta problemas con servicios de aplicaciones, vea la sección [Solución de problemas](~/ios/deploy-test/provisioning/capabilities/index.md) de la guía principal.

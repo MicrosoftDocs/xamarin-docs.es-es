@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: 1f556e7b63cabcb2a0909927df4970d367338694
-ms.sourcegitcommit: 2d41e287ccf937efa24813151e371298b2b4a582
+ms.openlocfilehash: af5678c5ed6fe5376588f39d9f878d03c7de9f9f
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91102289"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98629000"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publicación de aplicaciones Xamarin.iOS en el App Store
 
@@ -193,7 +193,7 @@ Los nuevos proyectos Xamarin.iOS se establecen automáticamente en las _configur
 
     Las opciones de firma del lote del proyecto deberían parecerse a lo siguiente:
 
-    ![Configuración de firma de lote de iOS](publishing-to-the-app-store-images/bundleSigning-w157.png "Configuración de firma de lote de iOS")
+    ![En la captura de pantalla se muestra la configuración de la firma del lote de iOS.](publishing-to-the-app-store-images/bundleSigning-w157.png "Configuración de firma de lote de iOS")
 
 14. Vaya a la pestaña **Opciones de IPA de iOS**.
 15. Asegúrese de que **Configuración** esté establecido en **Versión** y **Plataforma** en **iPhone**.
@@ -204,7 +204,7 @@ Los nuevos proyectos Xamarin.iOS se establecen automáticamente en las _configur
 
 17. Para especificar un nombre de archivo .ipa que difiere del nombre del proyecto de Xamarin.iOS, escríbalo en el campo **Nombre del paquete**.
 
-    ![Configuración de firma de lote de iOS](publishing-to-the-app-store-images/ipaOptions-w157.png "Configuración de firma de lote de iOS")
+    ![En la captura de pantalla se muestran las opciones de IPA de iOS.](publishing-to-the-app-store-images/ipaOptions-w157.png "Configuración de firma de lote de iOS")
 
 18. Guarde la configuración de compilación y ciérrela.
 

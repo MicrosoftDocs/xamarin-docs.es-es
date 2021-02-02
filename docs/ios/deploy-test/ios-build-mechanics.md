@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 52a6c3c996e2d5df204b6d0df40368bc835e990f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 90e14fdd81168563e105e62d9aefd81fdc5f0168
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936778"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628805"
 ---
 # <a name="ios-build-mechanics"></a>Mecanismos de compilación de iOS
 
@@ -67,7 +67,7 @@ Total time: 1554 ms
 
 Las herramientas de Xamarin técnicamente funcionan en cualquier equipo Mac que pueda ejecutar OS X 10.10 Yosemite o posterior. Sin embargo, el rendimiento del equipo Mac puede afectar a las experiencias de desarrollador y a los tiempos de compilación.
 
-En el estado desconectado, Visual Studio en Windows solo realiza la fase de compilación de C# y no intenta realizar la vinculación o compilación AOT, empaquetar la aplicación en un lote  _.app_ o firmar el lote de aplicaciones. (La fase de compilación de C# no suele crear cuellos de botella de rendimiento). Intente identificar en qué parte de la canalización la compilación se está ralentizando; para ello, compile directamente en el host de compilación de Mac en Visual Studio para Mac.
+En el estado desconectado, Visual Studio en Windows solo realiza la fase de compilación de C# y no intenta realizar la vinculación o compilación AOT, empaquetar la aplicación en un lote _.app_ o firmar el lote de aplicaciones. (La fase de compilación de C# no suele crear cuellos de botella de rendimiento). Intente identificar en qué parte de la canalización la compilación se está ralentizando; para ello, compile directamente en el host de compilación de Mac en Visual Studio para Mac.
 
 Además, uno de los puntos más comunes en los que se produce lentitud es la conexión de red entre el equipo Windows y el host de compilación de Mac. Esto puede deberse a un obstáculo físico en la red, cuando se usa una conexión inalámbrica o si hay que recorrer un equipo saturado (como un servicio en la nube en Mac).
 
@@ -97,7 +97,7 @@ Teniendo en cuenta la información anterior, en la lista siguiente se proporcion
 
 En la captura de pantalla siguiente se ilustra cómo establecer estas opciones para el simulador en las opciones de iOS:
 
-[![Configuración de las opciones](ios-build-mechanics-images/image3.png)](ios-build-mechanics-images/image3.png#lightbox)
+[![Captura de pantalla que muestra las opciones del proyecto, incluido el comportamiento del enlazador, los argumentos mtouch adicionales y la optimización de las imágenes PNG.](ios-build-mechanics-images/image3.png)](ios-build-mechanics-images/image3.png#lightbox)
 
 ## <a name="device-tricks"></a>Trucos de dispositivos
 
@@ -125,7 +125,7 @@ Minimizar el tamaño de la aplicación también puede reducir el tiempo de compi
   - La compilación de una única arquitectura (por ejemplo, ARM64) es más rápida que un archivo binario FAT (por ejemplo, ARMv7 + ARM64).
   - Evite optimizar los archivos PNG al depurar.
   - Considere la posibilidad de vincular todos los ensamblados. Optimice cada ensamblado. 
-  - Deshabilite la creación de símbolos de depuración con  `--dsym=false`. Sin embargo, debe tener en cuenta que, al deshabilitar esto, los informes de bloqueo solo pueden resolverse en el equipo que compiló la aplicación, y solo si la aplicación no se quitó.
+  - Deshabilite la creación de símbolos de depuración con `--dsym=false`. Sin embargo, debe tener en cuenta que, al deshabilitar esto, los informes de bloqueo solo pueden resolverse en el equipo que compiló la aplicación, y solo si la aplicación no se quitó.
 
 Algunos aspectos que deben evitarse son:
 
@@ -148,7 +148,7 @@ Consejos adicionales
 
 En la captura de pantalla siguiente se ilustra cómo establecer estas opciones para el simulador en las opciones de iOS:
 
-[![Configuración de las opciones](ios-build-mechanics-images/image4.png)](ios-build-mechanics-images/image4.png#lightbox)
+[![Captura de pantalla que muestra las opciones del proyecto, incluido el comportamiento del enlazador, las arquitecturas admitidas y otras opciones.](ios-build-mechanics-images/image4.png)](ios-build-mechanics-images/image4.png#lightbox)
 
 ## <a name="using-the-linker"></a>Uso del enlazador
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 35adaf4a5cf9ce103cb36320692ad8307b9d1354
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f2aa56982df0a2ec27b677dbe7d12ec9c3289041
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91564126"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758089"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Uso de TestFlight para distribuir aplicaciones Xamarin.iOS
 
@@ -37,9 +37,14 @@ Todos los evaluadores deben probar la aplicación, al menos, en un dispositivo i
 
 ## <a name="provisioning"></a>Aprovisionamiento
 
-Para probar las compilaciones con TestFlight, deberá crear un *perfil de distribución del App Store* con los nuevos derechos beta. Este derecho permite realizar pruebas beta a través de TestFlight, y cualquier **nuevo** perfil de distribución del App Store contiene automáticamente este derecho. Puede seguir las instrucciones detalladas de la guía [Crear un perfil de distribución](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioningprofile) para generar un perfil nuevo.
+Para probar las compilaciones con TestFlight, deberá crear un **perfil de distribución del App Store** con los nuevos derechos beta. Este derecho permite realizar pruebas beta a través de TestFlight, y cualquier **nuevo** perfil de distribución del App Store contiene automáticamente este derecho. Puede seguir las instrucciones detalladas de la guía [Crear un perfil de distribución](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioningprofile) para generar un perfil nuevo.
 
 Puede confirmar que el perfil de distribución contiene los derechos de la versión beta cuando [valide la compilación en Xcode](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md), como se muestra a continuación:
+
+1. Abra XCode en el host de compilación de Mac después de archivar la aplicación.
+2. Seleccione el menú **Ventana > Organizador**.
+3. Seleccione **Archivos** a la izquierda.
+4. Seleccione el archivo que desea validar y haga clic en el botón **Validar**.
 
 [![Envío de la aplicación a Apple](testflight-images/validate-build.png)](testflight-images/validate-build.png#lightbox)
 

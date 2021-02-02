@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: bff3b2a7c1e273c7a03ae341dd663ebc722791eb
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 79e700f17f365895cd2cdaa015f4a8fe9e95bb79
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571745"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628857"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Trabajar con capacidades en Xamarin.iOS
 
@@ -82,7 +82,7 @@ Las capacidades se agregan a **Entitlements.plist** en Visual Studio para Mac. P
 
 2. Abra el archivo **Entitlements.plist** y seleccione la capacidad que quiere agregar:
 
-    ![Agregar capacidades al archivo entitlements.plist](images/image17.png)
+    ![Captura de pantalla que muestra el contenido del archivo Entitlements.plist.](images/image17.png)
 
     Al seleccionar una capacidad suceden dos cosas:
     - Esa característica se agrega al Id. de aplicación.
@@ -90,7 +90,7 @@ Las capacidades se agregan a **Entitlements.plist** en Visual Studio para Mac. P
 
     Visual Studio para Mac le avisa una vez que se han realizado estas tareas mediante el siguiente mensaje de correcto:
 
-    ![Agregar capacidades al archivo entitlements.plist](images/image18.png)
+    ![Captura de pantalla que muestra la notificación cuando finaliza el aprovisionamiento automático.](images/image18.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
