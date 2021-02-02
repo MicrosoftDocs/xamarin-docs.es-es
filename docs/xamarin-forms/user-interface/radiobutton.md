@@ -10,14 +10,14 @@ ms.date: 10/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e57003825e0ea77d54ec528b18328e98f3d1b81e
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: f1f36329c36dfae3f2ca0754ecbb867520d4c530
+ms.sourcegitcommit: bd8ce0ae64698246db92a6c4396983290dc54a22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97939898"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99427751"
 ---
-# <a name="no-locxamarinforms-radiobutton"></a>Xamarin.Forms Índices
+# <a name="xamarinforms-radiobutton"></a>Xamarin.Forms Índices
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
 
@@ -175,13 +175,13 @@ En el siguiente ejemplo de XAML se muestra cómo agrupar objetos explícitamente
 
 ```xaml
 <Label Text="What's your favorite color?" />
-<RadioButton Text="Red"
+<RadioButton Content="Red"
              GroupName="colors" />
-<RadioButton Text="Green"
+<RadioButton Content="Green"
              GroupName="colors" />
-<RadioButton Text="Blue"
+<RadioButton Content="Blue"
              GroupName="colors" />
-<RadioButton Text="Other"
+<RadioButton Content="Other"
              GroupName="colors" />
 ```
 
@@ -215,7 +215,7 @@ Un botón de radio tiene dos estados: seleccionado o sin seleccionar. Cuando se 
 Cuando la `IsChecked` propiedad cambia, ya sea a través de la manipulación de usuario o mediante programación, se `CheckedChanged` desencadena el evento. Se puede registrar un controlador de eventos para este evento para responder al cambio:
 
 ```xaml
-<RadioButton Text="Red"
+<RadioButton Content="Red"
              GroupName="colors"
              CheckedChanged="OnColorsRadioButtonCheckedChanged" />
 ```
@@ -298,10 +298,10 @@ En el siguiente ejemplo de XAML se muestra cómo definir un estado visual para l
     </ContentPage.Resources>
     <StackLayout>
         <Label Text="What's your favorite mode of transport?" />
-        <RadioButton Text="Car" />
-        <RadioButton Text="Bike" />
-        <RadioButton Text="Train" />
-        <RadioButton Text="Walking" />
+        <RadioButton Content="Car" />
+        <RadioButton Content="Bike" />
+        <RadioButton Content="Train" />
+        <RadioButton Content="Walking" />
     </StackLayout>
 </ContentPage>
 ```
@@ -312,7 +312,7 @@ En este ejemplo, la clase [`Style`](xref:Xamarin.Forms.Style) implícita se dest
 
 Para obtener más información sobre los estados visuales, vea [Administrador de estado visual de Xamarin.Forms](~/xamarin-forms/user-interface/visual-state-manager.md).
 
-## <a name="redefine-radiobutton-appearance"></a>Redefinir apariencia de RadioButton
+## <a name="redefine-radiobutton-appearance"></a>Redefinición de la apariencia de RadioButton
 
 De forma predeterminada, [`RadioButton`](xref:Xamarin.Forms.RadioButton) los objetos usan representadores de plataforma para usar controles nativos en plataformas admitidas. Sin embargo, `RadioButton` la estructura visual se puede redefinir con un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) , para que `RadioButton` los objetos tengan una apariencia idéntica en todas las plataformas. Esto es posible porque la [`RadioButton`](xref:Xamarin.Forms.RadioButton) clase hereda de la [`TemplatedView`](xref:Xamarin.Forms.TemplatedView) clase.
 
