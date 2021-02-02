@@ -29,8 +29,8 @@ La clase `EffectBehavior` es un comportamiento personalizado de Xamarin.Forms re
 
 Para usar el comportamiento, se deben establecer las propiedades de comportamiento siguientes:
 
-- **Group** : el valor del atributo [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) para la clase del efecto.
-- **Name** : el valor del atributo [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) para la clase del efecto.
+- **Group**: el valor del atributo [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) para la clase del efecto.
+- **Name**: el valor del atributo [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) para la clase del efecto.
 
 Para obtener más información sobre los efectos, vea [Efectos](~/xamarin-forms/app-fundamentals/effects/index.md).
 
