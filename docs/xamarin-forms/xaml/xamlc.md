@@ -1,23 +1,23 @@
 ---
-title: Compilación XAML enXamarin.Forms
+title: Compilación XAML en Xamarin.Forms
 description: En este artículo se explica cómo se puede compilar XAML directamente en lenguaje intermedio (IL) con el Xamarin.Forms compilador XAML (XAMLC).
 ms.prod: xamarin
 ms.assetid: 9A2D10A6-5DFC-485F-A75A-2F7B98314025
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/22/2018
+ms.date: 02/03/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: eebbb3040175118320639bcb4482ec77b5c16ac7
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8d53f80372062f4830d92213110f01d005f92018
+ms.sourcegitcommit: 4f274920d1fe906cda0bf83b8e928b3b50147d40
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137298"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99509889"
 ---
-# <a name="xaml-compilation-in-xamarinforms"></a>Compilación XAML enXamarin.Forms
+# <a name="xaml-compilation-in-xamarinforms"></a>Compilación XAML en Xamarin.Forms
 
 _XAML se puede compilar de forma opcional directamente en lenguaje intermedio (IL) con el compilador XAML (XAMLC)._
 
@@ -27,7 +27,7 @@ La compilación de XAML ofrece una serie de ventajas:
 - Reduce parte del tiempo de carga y creación de instancias para los elementos XAML.
 - Facilita reducir el tamaño de archivo del ensamblado final al dejar de incluir archivos .xaml.
 
-La compilación XAML está deshabilitada de forma predeterminada para garantizar la compatibilidad con versiones anteriores. Se puede habilitar en el nivel de ensamblado y de clase agregando el [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) atributo.
+La compilación XAML está deshabilitada de forma predeterminada en el marco de trabajo. Sin embargo, está habilitada en las plantillas para los proyectos nuevos. Se puede habilitar o deshabilitar explícitamente ( `XamlCompilationOptions.Skip` ) en el nivel de ensamblado y de clase agregando el [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) atributo.
 
 En el ejemplo de código siguiente se muestra cómo habilitar la compilación XAML en el nivel de ensamblado:
 
@@ -40,6 +40,8 @@ namespace PhotoApp
   ...
 }
 ```
+
+Aunque el atributo se puede colocar en cualquier parte, un buen lugar para ponerlo está en **AssemblyInfo.CS**.
 
 En este ejemplo, se realizará la comprobación en tiempo de compilación de todo el código XAML incluido en el ensamblado, con errores de XAML que se informan en tiempo de compilación en lugar de en tiempo de ejecución. Por lo tanto, el `assembly` prefijo del [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) atributo especifica que el atributo se aplica a todo el ensamblado.
 
