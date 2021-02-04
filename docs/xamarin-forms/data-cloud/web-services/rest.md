@@ -6,16 +6,16 @@ ms.assetid: B540910C-9C51-416A-AAB9-057BF76489C3
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/28/2020
+ms.date: 02/03/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3146d1c1de66c0b2bc2e9c2d86a7a50d406ecd7e
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: a3fd59ecbaf85f24515deba8562060aadc6d2165
+ms.sourcegitcommit: 10c7dd16fe78226053d1d036492b6c9102fc421b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373372"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99540966"
 ---
 # <a name="consume-a-restful-web-service"></a>Consumo de un servicio web RESTful
 
@@ -59,7 +59,7 @@ El servicio REST se escribe utilizando ASP.NET Core y proporciona las operacione
 |Obtención de una lista de tareas pendientes|GET|/api/todoitems/|
 |Crear un nuevo elemento de tareas pendientes|POST|/api/todoitems/|Un TodoItem con formato JSON|
 |Actualizar una tarea pendiente|PUT|/api/todoitems/|Un TodoItem con formato JSON|
-|Eliminar una tarea pendiente|Delete|/api/todoitems/{id}|
+|Eliminar una tarea pendiente|DELETE|/api/todoitems/{id}|
 
 La mayoría de los URI incluyen el `TodoItem` identificador de la ruta de acceso. Por ejemplo, para eliminar el `TodoItem` cuyo identificador es `6bb8a868-dba1-4f1a-93b7-24ebce87e243` , el cliente envía una solicitud DELETE a `http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243` . Para obtener más información sobre el modelo de datos utilizado en la aplicación de ejemplo, vea [modelar los datos](~/xamarin-forms/data-cloud/web-services/introduction.md).
 
@@ -211,8 +211,17 @@ El servicio REST envía un código de Estado HTTP en la `HttpResponseMessage.IsS
 - **400 (solicitud incorrecta)** : el servidor no entiende la solicitud.
 - **404 (no encontrado)** : el recurso solicitado no existe en el servidor.
 
+### <a name="local-development"></a>Desarrollo local
+
+Si está desarrollando el servicio Web REST localmente con un marco de trabajo como ASP.NET Core API Web, puede depurar el servicio Web y la aplicación móvil al mismo tiempo. En este escenario, debe habilitar el tráfico HTTP de texto no cifrado para iOS Simualtor y el emulador de Android. Para obtener información sobre la configuración del proyecto para permitir la comunicación, consulte [conexión a servicios web locales](~/cross-platform/deploy-test/connect-to-local-web-services.md).
+
 ## <a name="related-links"></a>Vínculos relacionados
 
+- [Microsoft Learn: consumir servicios web REST en aplicaciones Xamarin](/learn/modules/consume-rest-services/)
+- [Microsoft Learn: creación de una API Web con ASP.NET Core](/learn/modules/build-web-api-aspnet-core/)
 - [Creación de servicios back-end para aplicaciones móviles nativas](/aspnet/core/mobile/native-mobile-backend/)
 - [TodoREST (ejemplo)](/samples/xamarin/xamarin-forms-samples/webservices-todorest)
-- [HttpClient](/dotnet/api/system.net.http.httpclient)
+- [API de HttpClient](xref:System.Net.Http.HttpClient)
+- [Configuración de seguridad de red de Android](https://devblogs.microsoft.com/xamarin/cleartext-http-android-network-security/)
+- [Seguridad de transporte de aplicaciones de iOS](~/ios/app-fundamentals/ats.md)
+- [Conexión a servicios web locales](~/cross-platform/deploy-test/connect-to-local-web-services.md)

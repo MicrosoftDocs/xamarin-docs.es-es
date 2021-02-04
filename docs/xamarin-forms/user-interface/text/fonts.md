@@ -11,14 +11,14 @@ ms.custom: contperf-fy21q2
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 146c67655c420611b2a0901efa6cc22ef780713e
-ms.sourcegitcommit: c5e72d2ca4152b62ab6583f0dbe84b3ba29d8283
+ms.openlocfilehash: 16da3964a565428f5e80924684ed073886c5386c
+ms.sourcegitcommit: 10c7dd16fe78226053d1d036492b6c9102fc421b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97677548"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99540979"
 ---
-# <a name="fonts-in-no-locxamarinforms"></a>Fuentes en Xamarin.Forms
+# <a name="fonts-in-xamarinforms"></a>Fuentes en Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithfonts)
 
@@ -203,11 +203,11 @@ Xamarin.Forms define los campos de la [`NamedSize`](xref:Xamarin.Forms.NamedSize
 
 | Miembro | iOS | Android | UWP |
 | --- | --- | --- | --- |
-| `Default` | 16 | 14 | 14 |
-| `Micro` | 11 | 10 | 15,667 |
-| `Small` | 13 | 14 | 18,667 |
-| `Medium` | 16 | 17 | 22,667 |
-| `Large` | 20 | 22 | 32 |
+| `Default` | 17 | 14 | 14 |
+| `Micro` | 12 | 10 | 15,667 |
+| `Small` | 14 | 14 | 18,667 |
+| `Medium` | 17 | 17 | 22,667 |
+| `Large` | 22 | 22 | 32 |
 | `Body` | 17 | 16 | 14 |
 | `Header` | 17 | 96 | 46 |
 | `Title` | 28 | 24 | 24 |
