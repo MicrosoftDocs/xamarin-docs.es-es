@@ -6,18 +6,18 @@ ms.assetid: D6539F60-A5AC-46EF-86EB-E9F508EB1FA8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/24/2020
+ms.date: 02/05/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: dda3c0ded11af919dd80b2f0e00c50d8d6b77389
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: 2928e3bd32d7dd2722f01ad5a51dbaab127afd77
+ms.sourcegitcommit: 06701714021545eb5e932847829b876082194ffc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97939984"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585889"
 ---
-# <a name="no-locxamarinforms-shapes-polygon"></a>Xamarin.Forms Formas: Polígono
+# <a name="xamarinforms-shapes-polygon"></a>Xamarin.Forms Formas: Polígono
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -36,7 +36,7 @@ Para obtener más información acerca de la `FillRule` enumeración, consulte [ 
 
 ## <a name="create-a-polygon"></a>Crear un polígono
 
-Para dibujar un polígono, cree un `Polygon` objeto y establezca su `Points` propiedad en los vértices de una forma. Se dibuja automáticamente una línea que conecta los puntos primero y último. Para pintar el interior del polígono, establezca su `Fill` propiedad en [`Color`](xref:Xamarin.Forms.Color) . Para dar un contorno al polígono, establezca su `Stroke` propiedad en [`Color`](xref:Xamarin.Forms.Color) . La `StrokeThickness` propiedad especifica el grosor del contorno del polígono.
+Para dibujar un polígono, cree un `Polygon` objeto y establezca su `Points` propiedad en los vértices de una forma. Se dibuja automáticamente una línea que conecta los puntos primero y último. Para pintar el interior del polígono, establezca su `Fill` propiedad en un [`Brush`](xref:Xamarin.Forms.Brush) objeto derivado de. Para dar un contorno al polígono, establezca su `Stroke` propiedad en un [`Brush`](xref:Xamarin.Forms.Brush) objeto derivado de. La `StrokeThickness` propiedad especifica el grosor del contorno del polígono. Para obtener más información sobre los `Brush` objetos, vea [ Xamarin.Forms pinceles](~/xamarin-forms/user-interface/brushes/index.md).
 
 En el siguiente ejemplo de XAML se muestra cómo dibujar un polígono relleno:
 
@@ -100,3 +100,4 @@ En este ejemplo, el comportamiento de relleno de cada polígono se determina med
 - [ShapeDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Colocar](index.md)
 - [Xamarin.Forms Formas: reglas de relleno](fillrules.md)
+- [Pinceles de Xamarin.Forms](~/xamarin-forms/user-interface/brushes/index.md)
