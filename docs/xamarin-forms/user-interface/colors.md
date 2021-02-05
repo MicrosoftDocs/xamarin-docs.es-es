@@ -11,13 +11,13 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 6018946f280afa3f02d8f81bfc64338e561950fe
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.sourcegitcommit: 10c7dd16fe78226053d1d036492b6c9102fc421b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
+ms.lasthandoff: 02/05/2021
 ms.locfileid: "93375296"
 ---
-# <a name="colors-in-no-locxamarinforms"></a>Colores en Xamarin.Forms
+# <a name="colors-in-xamarinforms"></a>Colores en Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithcolors)
 
@@ -70,7 +70,7 @@ Establezca el color en borrar.
 
 En iOS y Android, esta instancia se establece en un color de contraste que está visible en el fondo predeterminado pero no es el mismo que el color de texto predeterminado.
 
-## <a name="additional-methods"></a>Métodos adicionales
+## <a name="additional-methods"></a>Otros métodos
 
 [`Color`](xref:Xamarin.Forms.Color) las instancias de incluyen los siguientes métodos adicionales:
 
