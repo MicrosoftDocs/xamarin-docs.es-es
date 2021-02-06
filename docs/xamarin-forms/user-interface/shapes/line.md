@@ -6,18 +6,18 @@ ms.assetid: 384F1A72-6D3B-4FD3-BC40-E00A73A463EC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/24/2020
+ms.date: 02/05/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5d5ecd7804c6cd8321827cd8aef98245124beca0
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: 962800c5deb546ddf6a74d1f52ffaf60734ae463
+ms.sourcegitcommit: 06701714021545eb5e932847829b876082194ffc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97939121"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585850"
 ---
-# <a name="no-locxamarinforms-shapes-line"></a>Xamarin.Forms Formas: línea
+# <a name="xamarinforms-shapes-line"></a>Xamarin.Forms Formas: línea
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -36,7 +36,7 @@ Para obtener información acerca de cómo controlar el modo en que se dibujan lo
 
 ## <a name="create-a-line"></a>Crear una línea
 
-Para dibujar una línea, cree un `Line` objeto y establezca sus `X1` `Y1` propiedades y en su punto inicial, y sus `X2` `Y` propiedades y en su punto final. Además, establezca su `Stroke` propiedad en [`Color`](xref:Xamarin.Forms.Color) porque una línea sin trazo no es visible.
+Para dibujar una línea, cree un `Line` objeto y establezca sus `X1` `Y1` propiedades y en su punto inicial, y sus `X2` `Y` propiedades y en su punto final. Además, establezca su `Stroke` propiedad en un [`Brush`](xref:Xamarin.Forms.Brush) objeto derivado de porque una línea sin trazo no es visible. Para obtener más información sobre los `Brush` objetos, vea [ Xamarin.Forms pinceles](~/xamarin-forms/user-interface/brushes/index.md).
 
 > [!NOTE]
 > Establecer la `Fill` propiedad de `Line` no tiene ningún efecto, ya que una línea no tiene ningún interior.
@@ -53,7 +53,7 @@ En el siguiente ejemplo de XAML se muestra cómo dibujar una línea:
 
 En este ejemplo, se dibuja una línea diagonal roja desde (40, 0) a (0120):
 
-![Line](line-images/line.png "Línea")
+![Línea diagonal](line-images/line.png "Línea")
 
 Dado que `X1` las `Y1` propiedades,, `X2` y `Y2` tienen valores predeterminados de 0, es posible dibujar algunas líneas con la sintaxis mínima:
 
@@ -86,3 +86,4 @@ Para obtener más información sobre cómo dibujar una línea discontinua, vea [
 
 - [ShapeDemos (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Colocar](index.md)
+- [Pinceles de Xamarin.Forms](~/xamarin-forms/user-interface/brushes/index.md)
