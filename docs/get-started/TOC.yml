@@ -32,9 +32,9 @@
       expanded: true
       items:
         - name: Archivo > Nuevo
-          href: quickstarts/single-page.md
-        - name: Varias páginas
-          href: quickstarts/multi-page.md
+          href: quickstarts/app.md
+        - name: Navegación
+          href: quickstarts/navigation.md
         - name: Base de datos
           href: quickstarts/database.md
         - name: Aplicación de estilos

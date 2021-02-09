@@ -32,9 +32,9 @@ items:
         href: ~/get-started/quickstarts/index.md
         items:
           - name: Archivo > Nuevo
-            href: ~/get-started/quickstarts/single-page.md
+            href: ~/get-started/quickstarts/app.md
           - name: Varias páginas
-            href: ~/get-started/quickstarts/multi-page.md
+            href: ~/get-started/quickstarts/navigation.md
           - name: Base de datos
             href: ~/get-started/quickstarts/database.md
           - name: Aplicación de estilos
