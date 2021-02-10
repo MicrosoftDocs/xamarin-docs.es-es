@@ -13,12 +13,12 @@ metadata:
   no-loc:
   - Xamarin.Forms
   - Xamarin.Essentials
-  ms.openlocfilehash: fdc3e6ec64cfda10151f5baabab47569b2df8635
-  ms.sourcegitcommit: b75c369adb8e02a429b6c0fed8ba4a855099bf01
+  ms.openlocfilehash: 6dfc1ba43e85ca8f4c5ad7ba2cd9eed78c9b9973
+  ms.sourcegitcommit: e122a06da4304c2477c934a357b236e0366a2b03
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/18/2021
-  ms.locfileid: "98554949"
+  ms.lasthandoff: 02/08/2021
+  ms.locfileid: "99821197"
 landingContent:
 - title: Primeros pasos
   linkLists:
@@ -42,10 +42,10 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Creación de una aplicación de página única de Xamarin.Forms
-      url: quickstarts/single-page.md
-    - text: Navegación en una aplicación de varias páginas de Xamarin.Forms
-      url: quickstarts/multi-page.md
+    - text: Creación de una aplicación de Xamarin.Forms
+      url: quickstarts/app.md
+    - text: Navegación en una aplicación de Xamarin.Forms
+      url: quickstarts/navigation.md
     - text: Almacenamiento de datos en una base de datos local de SQLite.NET
       url: quickstarts/database.md
     - text: Estilo de una aplicación multiplataforma de Xamarin.Forms

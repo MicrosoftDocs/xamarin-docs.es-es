@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 572c6d378bdc2af72277bba8726daba860ab38fe
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: d3bd26e4158586e18722c2bfcdb80a8629228514
+ms.sourcegitcommit: 1f391667869a4541dd9b42d78862dc01d69ed160
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91451592"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99974465"
 ---
 Ha completado el tutorial, donde ha aprendido a:
 
@@ -20,7 +20,7 @@ En esta serie de tutoriales, se han descrito los conceptos básicos de crear apl
 
 - Existen cuatro grupos de control principales que se usan para crear la interfaz de usuario de una aplicación de Xamarin.Forms. Para obtener más información, vea [Referencia de controles](~/xamarin-forms/user-interface/controls/index.md).
 - El enlace de datos es la técnica que consiste en vincular las propiedades de dos objetos para que los cambios en una propiedad se reflejen automáticamente en la otra propiedad. Para obtener más información, vea [Enlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- Xamarin.Forms proporciona una serie de experiencias de navegación de páginas diferente, en función del tipo de página que se use. Para obtener más información, consulte [Navigation](~/xamarin-forms/app-fundamentals/navigation/index.md) (Navegación).
+- Xamarin.Forms ofrece varias experiencias de navegación por páginas, en función del tipo de página que se use. Para obtener más información, consulte [Navigation](~/xamarin-forms/app-fundamentals/navigation/index.md) (Navegación).
 - Los estilos permiten reducir el uso de marcado repetitivo y conseguir que la apariencia de las aplicaciones pueda cambiarse con mayor facilidad. Para obtener más información, vea [Aplicación de estilos a aplicaciones de Xamarin.Forms](~/xamarin-forms/user-interface/styles/index.md).
 - Las extensiones de marcado XAML extienden las funciones avanzadas y la flexibilidad de XAML al permitir establecer atributos de elementos desde orígenes distintos de cadenas de texto literales. Para obtener más información, vea [Extensiones de marcado XAML](~/xamarin-forms/xaml/markup-extensions/index.md).
 - Las plantillas de datos permiten definir la presentación de los datos en las vistas admitidas. Para obtener más información, consulte [Data Templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md) (Plantillas de datos).

@@ -10,12 +10,12 @@ ms.date: 12/03/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: be281f9b7987a8d23ba6ac93f0771e432f277d45
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 21fc2c5ba042a19c68961bd969084aed0a8a4f18
+ms.sourcegitcommit: 9ab5a1e346e20f54e8b7aa655fd3d117b43978cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138923"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99223690"
 ---
 # <a name="xamarinforms-custom-renderers"></a>Representadores personalizados de Xamarin.Forms
 
@@ -56,7 +56,3 @@ Un objeto [`WebView`](xref:Xamarin.Forms.WebView) de Xamarin.Forms es una vista 
 ## <a name="implementing-a-view"></a>[Implementación de una vista](view.md)
 
 Los controles de interfaces de usuario personalizadas de Xamarin.Forms deben derivar de la clase [`View`](xref:Xamarin.Forms.View), que se usa para colocar los diseños y los controles en la pantalla. En este artículo se muestra cómo crear un representador personalizado para un control personalizado de Xamarin.Forms que se usa para mostrar una secuencia de vídeo de vista previa de la cámara del dispositivo.
-
-## <a name="implementing-a-video-player"></a>[Implementación de un reproductor de vídeo](video-player/index.md)
-
-En este artículo se muestra cómo escribir los representadores para implementar un control personalizado `VideoPlayer` que puede reproducir vídeos de la web, vídeos insertados como recursos de la aplicación o vídeos almacenados en la biblioteca de vídeos en el dispositivo del usuario. Se muestran varias técnicas, incluida la implementación de métodos y propiedades enlazables de solo lectura.

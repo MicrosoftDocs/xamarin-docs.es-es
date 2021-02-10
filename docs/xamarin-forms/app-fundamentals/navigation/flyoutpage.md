@@ -10,14 +10,14 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ea0be2136b354ef7a613904799481079bcae52ad
-ms.sourcegitcommit: 1decf2c65dc4c36513f7dd459a5df01e170a036f
+ms.openlocfilehash: 8a2947ef2c326c57bc646cd980109ed9a1b97347
+ms.sourcegitcommit: 9ab5a1e346e20f54e8b7aa655fd3d117b43978cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98115241"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99223716"
 ---
-# <a name="no-locxamarinforms-flyoutpage"></a>FlyoutPage de Xamarin.Forms
+# <a name="xamarinforms-flyoutpage"></a>FlyoutPage de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/navigation-flyoutpage)
 
@@ -27,7 +27,7 @@ Normalmente, una página de control flotante presenta una lista de elementos, co
 
 La ubicación de la lista de elementos es idéntica en cada plataforma; al seleccionar uno de los elementos, se le lleva a la página de detalles correspondiente. Además, la página de control flotante también incluye una barra de navegación que contiene un botón que se puede usar para ir a la página de detalles activa:
 
-- En iOS, la barra de navegación se encuentra en la parte superior de la página y tiene un botón que lleva a la página de detalles. Además, se puede ir a la página de detalles activa si se desliza la página maestra hacia la izquierda.
+- En iOS, la barra de navegación se encuentra en la parte superior de la página y tiene un botón que lleva a la página de detalles. Además, se puede ir a la página de detalles activa si se desliza el control flotante hacia la izquierda.
 - En Android, la barra de navegación se encuentra en la parte superior de la página y presenta un título, un icono y un botón que lleva a la página de detalles. El icono se define en el atributo `[Activity]` que decora la clase `MainActivity` en el proyecto específico de la plataforma Android. Además, se puede ir a la página de detalles activa si se desliza la página de control flotante hacia la izquierda, si se pulsa en el extremo derecho de la pantalla en la página de detalles y si se pulsa el botón *Atrás* situado en la parte inferior de la pantalla.
 - En Plataforma universal de Windows (UWP), la barra de navegación se encuentra en la parte superior de la página y tiene un botón que lleva a la página de detalles.
 
@@ -214,7 +214,7 @@ public class FlyoutMenuPageCS : ContentPage
 
 En las capturas de pantalla siguientes se muestra la página de control flotante en cada plataforma:
 
-![Ejemplo de página maestra](flyoutpage-images/flyoutpage.png)
+![Ejemplo de página de control flotante](flyoutpage-images/flyoutpage.png)
 
 ### <a name="create-and-display-the-detail-page"></a>Creación y visualización de la página de detalles
 
