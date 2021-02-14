@@ -9,15 +9,6 @@
           href: ios-simulator/deploy.md
         - name: Notas de la versión
           href: /xamarin/tools/ios-simulator/release-notes/?context=xamarin/tools
-    - name: Inspector
-      href: inspector/index.md
-      items:
-        - name: Instalación y requisitos
-          href: inspector/install.md
-        - name: Inspección de aplicaciones activas
-          href: inspector/inspect.md
-        - name: Notas de la versión
-          href: /xamarin/tools/inspector/release-notes/
     - name: Live Player
       items:
         - name: Acerca de la versión preliminar de Xamarin Live Player
@@ -28,7 +19,7 @@
           href: live-player/player.md
         - name: Solución de problemas
           href: live-player/troubleshooting.md
-    - name: Generador de perfiles
+    - name: generador de perfiles
       href: profiler/index.md
       items:
         - name: Solucionar problemas

@@ -11,13 +11,13 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: f4b15911f48b4260da8839f376800e95c63bf0e4
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.sourcegitcommit: 0a6b19004932c1ac82e16c95d5d3d5eb35a5b17f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
+ms.lasthandoff: 02/12/2021
 ms.locfileid: "93373632"
 ---
-# <a name="create-a-no-locxamarinforms-shell-application"></a>Creación de una aplicación de Xamarin.Forms Shell
+# <a name="create-a-xamarinforms-shell-application"></a>Creación de una aplicación de Xamarin.Forms Shell
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
@@ -40,7 +40,7 @@ El primer paso para crear una aplicación de Xamarin.Forms Shell es agregar un a
 </Shell>
 ```
 
-En el ejemplo siguiente se muestra el código subyacente, **AppShell.xaml.cs** :
+En el ejemplo siguiente se muestra el código subyacente, **AppShell.xaml.cs**:
 
 ```csharp
 using Xamarin.Forms;

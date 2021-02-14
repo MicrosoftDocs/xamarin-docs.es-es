@@ -4,12 +4,12 @@ description: Herramientas que le ayudarán a mejorar su experiencia de desarroll
 author: davidortinau
 ms.author: daortin
 ms.date: 12/27/2019
-ms.openlocfilehash: b90b7c83d7182866afb1e976cfb065f711a3a1fd
-ms.sourcegitcommit: bc2850d6f55f2e68c6ffeb9d562b21c1a242bab9
+ms.openlocfilehash: 4d39d8390aabbe868e14ef90e0720c880b435dc8
+ms.sourcegitcommit: 0a6b19004932c1ac82e16c95d5d3d5eb35a5b17f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96850964"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100255318"
 ---
 # <a name="xamarin-tools"></a>Herramientas de Xamarin
 
@@ -22,13 +22,6 @@ Herramientas que le ayudarán a mejorar su experiencia de desarrollo de Xamarin.
 ### <a name="ios-simulator-for-windows"></a>[Simulador de iOS para Windows](~/tools/ios-simulator/index.md)
 
 Interactúe con el simulador de iOS mediante Visual Studio en Windows.
-    :::column-end:::
-    :::column:::
-[![Xamarin Inspector](~/media/index/xamarin-tools-inspector.svg?branch=master)](~/tools/inspector/index.md)
-
-### <a name="xamarin-inspector"></a>[Xamarin Inspector](~/tools/inspector/index.md)
-
-Comprenda y depure la interfaz de usuario.
     :::column-end:::
     :::column:::
 [![Generador de perfiles de Xamarin](~/media/index/xamarin-tools-profiler.svg?branch=master)](~/tools/profiler/index.md)

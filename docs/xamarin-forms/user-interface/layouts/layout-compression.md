@@ -10,12 +10,12 @@ ms.date: 12/13/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c710328426590322f60f482708931c160b2100ca
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 9b22297fe06211b550ac2fdd62ee934b4ba849ee
+ms.sourcegitcommit: 0a6b19004932c1ac82e16c95d5d3d5eb35a5b17f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93372670"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100255322"
 ---
 # <a name="layout-compression"></a>Compresión de diseño
 
@@ -58,7 +58,7 @@ Este botón se especifica como un control personalizado con la siguiente jerarqu
 </ContentView>
 ```
 
-La jerarquía de vista anidada resultante se puede examinar con [Xamarin inspector](~/tools/inspector/index.md). En Android, la jerarquía de vistas anidadas contiene 17 vistas:
+La jerarquía de vista anidada resultante se puede examinar con el árbol visual dinámico. En Android, la jerarquía de vistas anidadas contiene 17 vistas:
 
 ![Botón ver jerarquía para Facebook](layout-compression-images/no-compression.png)
 
