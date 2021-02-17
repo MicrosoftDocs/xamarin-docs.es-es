@@ -10,14 +10,14 @@ ms.date: 09/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f3a89e0c5c49ec790cf35443030d50d3ddef9ed4
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: 2798ee872e9db86a31beb6021f6bf4c3d82caaa2
+ms.sourcegitcommit: a0de974875f8fa1a29f7abc990137246789ad85a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97939815"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630259"
 ---
-# <a name="no-locxamarinforms-shapes-geometries"></a>Xamarin.Forms Formas: geometrías
+# <a name="xamarinforms-shapes-geometries"></a>Xamarin.Forms Formas: geometrías
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -271,7 +271,7 @@ En el ejemplo siguiente se muestra cómo crear y representar un `BezierSegment` 
 
 En este ejemplo, una curva Bézier cúbica se dibuja de (10, 10) a (300, 10). La curva tiene dos puntos de control en (100, 0) y (200.200):
 
-![BezierSegment](geometry-images/beziersegment.png "BezierSegment")
+![Gráfico de líneas muestra una curva Bézier.](geometry-images/beziersegment.png "BezierSegment")
 
 ### <a name="create-a-linesegment"></a>Crear un LineSegment
 
@@ -310,7 +310,7 @@ En el ejemplo siguiente se muestra cómo crear y representar `LineSegment` objet
 
 En este ejemplo, un segmento de línea se dibuja de (10.100) a (100.100) y de (100.100) a (100, 50). Además, el `PathFigure` está cerrado porque su `IsClosed` propiedad está establecida en `true` . Esto da como resultado que se dibuje un triángulo:
 
-![LineSegments](geometry-images/linesegments.png "LineSegments")
+![Gráfico de líneas muestra un triángulo.](geometry-images/linesegments.png "LineSegments")
 
 ### <a name="create-a-polybeziersegment"></a>Creación de un PolyBezierSegment
 
@@ -345,7 +345,7 @@ En el ejemplo siguiente se muestra cómo crear y representar un `PolyBezierSegme
 
 En este ejemplo, `PolyBezierSegment` especifica dos curvas Bézier cúbicas. La primera curva va de (10, 10) a (150.100) con un punto de control de (0,0) y otro punto de control de (100, 0). La segunda curva va de (150.100) a (300, 10) con un punto de control de (150, 0) y otro punto de control de (200, 0):
 
-![PolyBezierSegment](geometry-images/polybeziersegment.png "PolyBezierSegment")
+![Gráfico de líneas muestra dos curvas de Bézier conectadas.](geometry-images/polybeziersegment.png "PolyBezierSegment")
 
 ### <a name="create-a-polylinesegment"></a>Creación de un PolyLineSegment
 
@@ -376,7 +376,7 @@ En el ejemplo siguiente se muestra cómo crear y representar un `PolyLineSegment
 
 En este ejemplo, `PolyLineSegment` especifica dos líneas. La primera línea va de (10, 10) a (50, 10) y la segunda línea va de (50, 10) a (50, 50):
 
-![PolyLineSegment](geometry-images/polylinesegment.png "PolyLineSegment")
+![Gráfico de líneas muestra dos líneas en un ángulo recto.](geometry-images/polylinesegment.png "PolyLineSegment")
 
 ### <a name="create-a-polyquadraticbeziersegment"></a>Creación de un PolyQuadraticBezierSegment
 
@@ -411,7 +411,7 @@ En el ejemplo siguiente se muestra cómo crear y representar un `PolyQuadraticBe
 
 En este ejemplo, `PolyQuadraticBezierSegment` especifica dos curvas de Bézier. La primera curva va de (10, 10) a (150, 50) con un punto de control en (100.100). La segunda curva va de (100.100) a (15.200) con un punto de control en (0100):
 
-![PolyQuadraticBezierSegment](geometry-images/polyquadraticbeziersegment.png "PolyQuadraticBezierSegment")
+![Gráfico de líneas muestra dos curvas Bézier superpuestas conectadas.](geometry-images/polyquadraticbeziersegment.png "PolyQuadraticBezierSegment")
 
 ### <a name="create-a-quadraticbeziersegment"></a>Creación de un QuadraticBezierSegment
 
@@ -452,7 +452,7 @@ En el ejemplo siguiente se muestra cómo crear y representar un `QuadraticBezier
 
 En este ejemplo, se dibuja una curva Bézier cuadrática de (10, 10) a (300, 10). La curva tiene un punto de control en (200.200):
 
-![QuadraticBezierSegment](geometry-images/quadraticbeziersegment.png "QuadraticBezierSegment")
+![Gráfico de líneas muestra una curva Bézier cuadrática.](geometry-images/quadraticbeziersegment.png "QuadraticBezierSegment")
 
 ### <a name="create-complex-geometries"></a>Crear geometrías complejas
 
@@ -583,7 +583,7 @@ Para dibujar una geometría compuesta, establezca los `Geometry` objetos necesar
 
 En este ejemplo, `EllipseGeometry` se combinan cuatro objetos con las mismas coordenadas x-radio e y, pero con distintas coordenadas de centro. Esto crea cuatro círculos superpuestos, cuyos interiores se rellenan de color naranja debido a la `EvenOdd` regla de relleno predeterminada:
 
-![GeometryGroup](geometry-images/geometrygroup.png "GeometryGroup")
+![Gráfico de líneas muestra cuatro círculos superpuestos con regiones llenas.](geometry-images/geometrygroup.png "GeometryGroup")
 
 ### <a name="roundrectanglegeometry"></a>RoundRectangleGeometry
 

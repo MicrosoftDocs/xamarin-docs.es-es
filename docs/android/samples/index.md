@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/27/2019
-ms.openlocfilehash: 2783380e486abf661955b90400a3a38a0c49bb94
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 4d730626503ccef7a272f3ddf9f938aef07d6875
+ms.sourcegitcommit: a0de974875f8fa1a29f7abc990137246789ad85a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91457931"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630220"
 ---
 # <a name="xamarinandroid-samples"></a>Ejemplos de Xamarin. Android
 
@@ -46,7 +46,7 @@ En este ejemplo se muestra cómo usar ViewPager y PagerTabStrip conjuntamente pa
 
 :::row:::
     :::column:::
-[![Fragments](images/fragments.png)](/samples/xamarin/monodroid-samples/fragmentswalkthrough/)
+[![Tutorial de fragmentos](images/fragments.png)](/samples/xamarin/monodroid-samples/fragmentswalkthrough/)
 
 ### <a name="fragments"></a>[Fragmentos](/samples/xamarin/monodroid-samples/fragmentswalkthrough/)
 
@@ -70,14 +70,14 @@ Use este ejemplo para aprender a usar los nuevos widgets CardView y RecyclerView
 
 :::row:::
     :::column:::
-[![Barra de herramientas](images/toolbar.png)](/samples/xamarin/monodroid-samples/android50-toolbar/)
+[![Ejemplo de barra de herramientas](images/toolbar.png)](/samples/xamarin/monodroid-samples/android50-toolbar/)
 
 ### <a name="toolbar"></a>[Barra de herramientas](/samples/xamarin/monodroid-samples/android50-toolbar/)
 
 Ejemplo de Android que reemplaza la barra de acciones por la nueva barra de herramientas en Android 5.0 Lollipop.
     :::column-end:::
     :::column:::
-[![WatchFace](images/watchface.png)](/samples/xamarin/monodroid-samples/wear-watchface/)
+[![Desgaste de Android WatchFace](images/watchface.png)](/samples/xamarin/monodroid-samples/wear-watchface/)
 
 ### <a name="watchface"></a>[WatchFace](/samples/xamarin/monodroid-samples/wear-watchface/)
 

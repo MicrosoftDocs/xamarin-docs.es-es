@@ -10,12 +10,12 @@ ms.date: 07/11/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6e3edf7d0e7630429f8f1c76009987ee8a4b737a
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 0797829a566ddd71311cb701dbc4d6b1f7bb1c2e
+ms.sourcegitcommit: a0de974875f8fa1a29f7abc990137246789ad85a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93375335"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630246"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>Obtener acceso a bits de píxel de mapa de bits SkiaSharp
 
@@ -497,7 +497,7 @@ Esta es una tabla que consolida los tiempos de ejecución en milisegundos:
 |           | uint      | 0,06 |    0,26 | 0,05 |
 |           | SKColor   | 0,29 |    0,99 | 0,07 |
 | SetPixels | byte      | 1.33 |    6,78 | 0,11 |
-|           | uint      | 0.14 |    0.69 | 0,06 |
+|           | uint      | 0,14 |    0.69 | 0,06 |
 |           | SKColor   | 0.35 |    1,93 | 0,10 |
 
 Como se esperaba, `SetPixel` la llamada a 65.536 veces es la forma menos effeicient de establecer los píxeles de un mapa de bits. El rellenado de una `SKColor` matriz y el establecimiento de la `Pixels` propiedad es mucho mejor e incluso se compara de forma favorable con algunas de las `GetPixels` `SetPixels` técnicas y. Trabajar con `uint` valores de píxeles suele ser más rápido que establecer `byte` componentes independientes y convertir el `SKColor` valor en un entero sin signo agrega cierta sobrecarga al proceso.
@@ -790,9 +790,9 @@ public class PosterizePage : ContentPage
 }
 ```
 
-El código del constructor accede a cada píxel, realiza una operación and bit a bit con el valor 0xE0E0E0FF y, a continuación, almacena el resultado en el mapa de bits. Los valores 0xE0E0E0FF mantienen los 3 bits superiores de cada componente de color y establecen los 5 bits inferiores en 0. En lugar de<sup>2 o</sup> 16.777.216 colores, el mapa de bits se reduce<sup>9</sup> a 2 o 512 colores:
+El código del constructor accede a cada píxel, realiza una operación and bit a bit con el valor 0xE0E0E0FF y, a continuación, almacena el resultado en el mapa de bits. Los valores 0xE0E0E0FF mantienen los 3 bits superiores de cada componente de color y establecen los 5 bits inferiores en 0. En lugar de<sup>2 o</sup> 16.777.216 colores, el mapa de bits se reduce<sup></sup> a 2 o 512 colores:
 
-[![Posterizar](pixel-bits-images/Posterize.png "Posterizar")](pixel-bits-images/Posterize-Large.png#lightbox)
+[![La captura de pantalla muestra una imagen de posterización de un Monkey de juguete en dos dispositivos móviles y una ventana de escritorio.](pixel-bits-images/Posterize.png "Posterizar")](pixel-bits-images/Posterize-Large.png#lightbox)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

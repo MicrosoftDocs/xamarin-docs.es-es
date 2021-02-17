@@ -10,16 +10,16 @@ ms.date: 04/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1ced6b54ce91f9b14d16a1baf8f5dd1d85902a42
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: acb3bc77aa19b1d90d73122e1b92ffb1fea953ca
+ms.sourcegitcommit: a0de974875f8fa1a29f7abc990137246789ad85a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558406"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630233"
 ---
 # <a name="gtk-platform-setup"></a>Configuración de la plataforma GTK #
 
-![Vista previa](~/media/shared/preview.png)
+:::image type="icon" source="~/media/shared/preview.png" border="false":::
 
 Xamarin.Forms ahora tiene compatibilidad con la versión preliminar de las aplicaciones GTK #. GTK # es un kit de herramientas de interfaz gráfica de usuario que vincula los GTK + Toolkit y varias bibliotecas de GNOME, lo que permite el desarrollo de aplicaciones de gráficos de GNOME totalmente nativas con mono y .NET. En este artículo se muestra cómo agregar un proyecto de GTK # a una Xamarin.Forms solución.
 
@@ -55,7 +55,7 @@ Siga estas instrucciones para agregar una aplicación GTK # que se ejecutará en
 
     Seleccione el paquete y haga clic en el botón **instalar** .
 
-5. Ahora busque ** Xamarin.Forms . Paquete Platform. GTK** 3,0 o superior.
+5. Ahora busque **Xamarin.Forms . Paquete Platform. GTK** 3,0 o superior.
 
     ![Seleccione::: no-LOC (Xamarin. Forms):::. Paquete NuGet de Platform. GTK](gtk-images/win/select-forms-platform-nuget-package.png "Seleccione::: no-LOC (Xamarin. Forms):::. Paquete NuGet de Platform. GTK")
 
@@ -67,7 +67,7 @@ Siga estas instrucciones para agregar una aplicación GTK # que se ejecutará en
 
     ![Referencia al proyecto compartido](gtk-images/win/reference-shared-project.png "Referencia al proyecto compartido")
 
-8. En el cuadro de diálogo **Administrador de referencias** , presione el botón **examinar** y vaya a la carpeta c:\Archivos de programa **(x86) \GtkSharp\2.12\lib** y seleccione los archivos **atk-sharp.dll**, **gdk-sharp.dll**, **glade-sharp.dll**, **glib-sharp.dll**, **gtk-dotnet.dll**y **gtk-sharp.dll** .
+8. En el cuadro de diálogo **Administrador de referencias** , presione el botón **examinar** y vaya a la carpeta c:\Archivos de programa **(x86) \GtkSharp\2.12\lib** y seleccione los archivos **atk-sharp.dll**, **gdk-sharp.dll**, **glade-sharp.dll**, **glib-sharp.dll**, **gtk-dotnet.dll** y **gtk-sharp.dll** .
 
     ![Referencia a las bibliotecas de GTK #](gtk-images/win/reference-gtk-libraries.png "Referencia a las bibliotecas de GTK #")
 

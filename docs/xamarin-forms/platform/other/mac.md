@@ -11,16 +11,16 @@ ms.date: 05/03/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 11897d2d3b8b7ba0a62956f1dbe4d8b873352e7a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5a5d26813719bfe807fff6745683fa13bde4429e
+ms.sourcegitcommit: a0de974875f8fa1a29f7abc990137246789ad85a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139560"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630155"
 ---
 # <a name="mac-platform-setup"></a>Configuración de la plataforma Mac
 
-![Vista previa](~/media/shared/preview.png)
+:::image type="icon" source="~/media/shared/preview.png" border="false":::
 
 Antes de empezar, cree un proyecto (o use uno existente) Xamarin.Forms . Solo puede agregar aplicaciones Mac mediante Visual Studio para Mac.
 
@@ -46,7 +46,7 @@ Siga estas instrucciones para agregar una aplicación Mac que se ejecutará en m
 
 6. En el proyecto de Mac, haga clic con el botón derecho en **referencias** y agregue una referencia al proyecto Xamarin.Forms (proyecto compartido o proyecto de biblioteca de .net Standard).
 
-    ![Agregar una referencia al Xamarin.Forms proyecto de código compartido](mac-images/references-sml.png)
+    ![Agregue una referencia al proyecto de código::: no-LOC (Xamarin. Forms)::: Shared Code](mac-images/references-sml.png)
 
 7. Actualice **Main.CS** para inicializar `AppDelegate` :
 
