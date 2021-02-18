@@ -12,14 +12,14 @@ ms.date: 05/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: beb3800b2b91c6c393b597ddb05042ea8cf92361
-ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
+ms.openlocfilehash: 75c260f0d362e598ffa378942a5de46d103ad844
+ms.sourcegitcommit: 1f391667869a4541dd9b42d78862dc01d69ed160
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98609019"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99818168"
 ---
-# <a name="build-your-first-no-locxamarinforms-app"></a>Compilación de la primera aplicación de Xamarin.Forms
+# <a name="build-your-first-xamarinforms-app"></a>Compilación de la primera aplicación de Xamarin.Forms
 
 _Vea este vídeo y siga el tutorial para crear una primera aplicación móvil con Xamarin.Forms._
 
@@ -214,6 +214,6 @@ Puede descargar el código completo desde la [galería de ejemplos](/samples/xam
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Inicio rápido de una sola página](~/get-started/quickstarts/single-page.md): compilación de una aplicación más funcional.
+- [Inicio rápido de una sola página](~/get-started/quickstarts/app.md): compilación de una aplicación más funcional.
 - [Ejemplos de Xamarin.Forms](~/xamarin-forms/samples/index.md): descarga y ejecución de ejemplos de código y de aplicaciones.
 - [Libro electrónico Creación de aplicaciones móviles](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md): capítulos detallados en los que se describe el desarrollo de Xamarin.Forms, disponible como archivo PDF y con cientos de ejemplos adicionales.

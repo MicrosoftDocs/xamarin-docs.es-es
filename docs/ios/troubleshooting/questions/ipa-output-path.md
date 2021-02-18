@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 303d7d58cc0274b8d9f82c33c9f153b9fd00269f
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 9d9ae44fc303af914d19f719f32e395accfd452e
+ms.sourcegitcommit: e7a5d1ec9e50a09b3b24f4c57850a4763c3406d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437130"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101087444"
 ---
 # <a name="can-i-change-the-output-path-of-the-ipa-file"></a>¿Se puede cambiar la ruta de acceso de salida del archivo IPA?
 
@@ -44,7 +44,7 @@ Estos pasos funcionarán en cualquier proyecto de iOS que use el motor de compil
 
 2. Establezca el valor de DestinationFolder en la carpeta de salida deseada. Como es habitual, puede usar las propiedades de MSBuild (como $ (OutputPath)) dentro de este argumento si lo desea.
 
-## <a name="notes"></a>Notas
+### <a name="notes"></a>Notas
 
 - La `CreateIpaDependsOn` propiedad se define en el `Xamarin.iOS.Common.targets` archivo que forma parte de Xamarin. iOS. Se comporta como se describe en la sección [reemplazar destinos predefinidos](/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) del artículo [Cómo: extender el proceso de compilación de Visual Studio](/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
 
@@ -79,7 +79,7 @@ Estos pasos funcionarán en cualquier proyecto de iOS que use el motor de compil
 
 2. Establezca `DestinationFolder` en la carpeta de salida deseada. Como es habitual, puede usar las propiedades de MSBuild (como `$(OutputPath)` ) dentro de este argumento si lo desea.
 
-## <a name="notes"></a>Notas
+### <a name="notes"></a>Notas
 
 - La `CreateIpaDependsOn` propiedad se define en el `Xamarin.iOS.Common.targets` archivo que forma parte de Xamarin. iOS. t se comporta como se describe en la sección [reemplazar destinos predefinidos](/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) del artículo [Cómo: extender el proceso de compilación de Visual Studio](/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
 

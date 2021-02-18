@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: chamons
 ms.author: chhamo
 ms.date: 04/16/2019
-ms.openlocfilehash: 6c6a0491f7989f2f76afabc3412e38be74a06da4
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 509f50d26818af09c4d664f27f2ae17a73430991
+ms.sourcegitcommit: e7a5d1ec9e50a09b3b24f4c57850a4763c3406d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91431572"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101087430"
 ---
 # <a name="can-i-use-an-older-version-of-xcode-or-xamarinios"></a>¿Puedo usar una versión anterior de Xcode o Xamarin. iOS?
 
@@ -76,7 +76,7 @@ Hay varias áreas posibles en las que las cosas pueden ir erróneas, entre las q
 
 Apple se reserva el derecho a actualizar las reglas de envío de AppStore en cualquier momento. Estos cambios de reglas solo se anuncian a veces de antemano. Algunos de estos cambios requieren que los cambios en las herramientas de soporte técnico, lo que requeriría un componente de Xamarin. iOS actualizado.
 
-Además de los cambios en las reglas, Apple suele agregar validaciones adicionales a las aplicaciones enviadas o estrecha las existentes. Algunos de ellos requieren cambios en nuestras herramientas (por ejemplo, un nuevo símbolo de lista negra). Muchos de ellos se encuentran en primer lugar por clientes que envían, ya que no hay ningún anuncio (o lista) de las reglas.
+Además de los cambios en las reglas, Apple suele agregar validaciones adicionales a las aplicaciones enviadas o estrecha las existentes. Algunos de ellos requieren cambios en nuestras herramientas (por ejemplo, un nuevo símbolo bloqueo). Muchos de ellos se encuentran en primer lugar por clientes que envían, ya que no hay ningún anuncio (o lista) de las reglas.
 
 ## <a name="summary"></a>Resumen
 

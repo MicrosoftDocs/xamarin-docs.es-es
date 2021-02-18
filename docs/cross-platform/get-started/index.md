@@ -7,12 +7,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 04/10/2017
-ms.openlocfilehash: da3148022f1280a18fd398e7c960c1a8440c0200
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: eb59d86582b50b5b0c166f2b5672422b481db048
+ms.sourcegitcommit: 1f391667869a4541dd9b42d78862dc01d69ed160
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91456813"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99818038"
 ---
 # <a name="building-mobile-apps"></a>Creación de aplicaciones móviles
 
@@ -21,7 +21,7 @@ Antes de comenzar, consulte los [requisitos del sistema](requirements.md) y las 
 ## <a name="build-your-first-app"></a>Compilación de la primera aplicación
 
 > [!div class="nextstepaction"]
-> [Inicio rápido de Xamarin.Forms](~/get-started/quickstarts/single-page.md)
+> [Inicio rápido de Xamarin.Forms](~/get-started/quickstarts/app.md)
 
 Si quiere compilar una aplicación con tecnologías de IU nativas (como Android XML o Xcode Storyboards), siga una de las guías específicas de plataformas siguientes:
 

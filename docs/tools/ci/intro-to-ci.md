@@ -6,12 +6,12 @@ ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
 author: davidortinau
 ms.author: daortin
 ms.date: 07/19/2017
-ms.openlocfilehash: 98606173913b57b7cf55f24c2581acbf82a587e3
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: b1a745e729a2313528c76e9f946ce79cece1d96c
+ms.sourcegitcommit: e7a5d1ec9e50a09b3b24f4c57850a4763c3406d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91457866"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101087409"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Introducción a la integración continua con Xamarin
 
@@ -23,7 +23,7 @@ La integración continua (CI) evita este tipo de complejidads combinando los cam
 
 Los sistemas de integración continua tienen dos partes principales:
 
-- **Control de versiones** : el control de versiones (VC), también denominado control de código fuente o administración de código fuente, consolida todo el código de un proyecto en un único repositorio compartido y mantiene un historial completo de todos los cambios en cada archivo. Este repositorio, que a menudo se conoce *como la principal o la* bifurcación *principal* , contiene el código fuente que se usará en última instancia para compilar la versión de producción o de lanzamiento de la aplicación. Hay muchos productos comerciales y de código abierto para esta tarea, que normalmente permiten a los equipos o usuarios bifurcar una copia del código en ramas secundarias, donde pueden realizar cambios extensivos o realizar experimentos sin riesgo en la rama principal. Una vez que se validan los cambios en una rama secundaria, se pueden volver a combinar todas en la rama principal.
+- **Control de versiones** : el control de versiones (VC), también denominado control de código fuente o administración de código fuente, consolida todo el código de un proyecto en un único repositorio compartido y mantiene un historial completo de todos los cambios en cada archivo. Este repositorio, que a menudo se conoce *como la principal o la* bifurcación *principal* , contiene el código fuente que se usará en última instancia para compilar la versión de producción o de lanzamiento de la aplicación. Hay muchos productos comerciales y de código abierto para esta tarea, que normalmente permiten a los equipos o usuarios bifurcar una copia del código en ramas secundarias, donde pueden realizar cambios extensivos o realizar experimentos sin riesgo en la rama principal. Una vez que se validan los cambios en una rama secundaria, se pueden volver a combinar en la rama principal.
 - **Servidor de integración continua** : el servidor de integración continua es responsable de recopilar todos los artefactos de un proyecto (código fuente, imágenes, vídeos, bases de datos, pruebas automatizadas, etc.), compilar la aplicación y ejecutar las pruebas automatizadas. De nuevo, hay muchas herramientas de servidor de CI de código abierto y comerciales.
 
 Los desarrolladores suelen tener una copia de trabajo de una o varias bifurcaciones en sus estaciones de trabajo, donde el trabajo se realiza inicialmente. Una vez que se completa un conjunto adecuado de trabajo, los cambios se "protegen" o "confirmados" en la bifurcación correspondiente, que los propaga a las copias de trabajo de otros desarrolladores. Así es como un equipo se asegura de que todo funciona en el mismo código.

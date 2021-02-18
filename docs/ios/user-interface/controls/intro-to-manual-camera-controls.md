@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 53ffd71704201c87d5e30dea0f8da46189d6e75b
-ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
+ms.openlocfilehash: 9162754dd41190a14ce1b385d63e94f7c8c1ced7
+ms.sourcegitcommit: e7a5d1ec9e50a09b3b24f4c57850a4763c3406d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98697532"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101087499"
 ---
 # <a name="manual-camera-controls-in-xamarinios"></a>Controles de cámara manuales en Xamarin. iOS
 
@@ -37,12 +37,6 @@ Con las nuevas API proporcionadas por iOS 8, la aplicación puede tomar el contr
 - **Balance manual en blanco** : el balance de blanco se usa para ajustar el color de una imagen, a menudo para que parezca realista. Diferentes fuentes de luz tienen temperaturas de color diferentes y la configuración de la cámara utilizada para capturar una imagen se ajusta para compensar estas diferencias. De nuevo, al permitir el control de usuario sobre el equilibrio de blanco, los usuarios pueden realizar ajustes que no se pueden realizar automáticamente.
 
 iOS 8 proporciona extensiones y mejoras a las API de iOS existentes para proporcionar este control específico sobre el proceso de captura de imágenes.
-
-## <a name="bracketed-capture"></a>Captura entre corchetes
-
-La captura entre corchetes se basa en la configuración de los controles de la cámara manual presentada anteriormente y permite a la aplicación capturar un momento dado, de varias maneras diferentes.
-
-Simplemente se ha indicado que la captura entre corchetes es una ráfaga de imágenes fijas tomadas con una variedad de opciones de imagen a imagen.
 
 ## <a name="requirements"></a>Requisitos
 

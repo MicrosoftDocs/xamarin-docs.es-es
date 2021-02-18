@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
-ms.openlocfilehash: 4064b5561569124ab15f77b9614eea5b91eadad4
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: b0acf65a2f570f0b55c5dde022e789d2f338026d
+ms.sourcegitcommit: e7a5d1ec9e50a09b3b24f4c57850a4763c3406d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91429980"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101087425"
 ---
 # <a name="xamarinios-errors"></a>Errores de Xamarin. iOS
 
@@ -882,8 +882,6 @@ Como última solución de paja, use una versión anterior de Xamarin. iOS que no
 <a name="MT1004"></a>
 
 ### <a name="mt1004-could-not-get-the-list-of-installed-applications"></a>MT1004: no se pudo obtener la lista de aplicaciones instaladas.
-
-## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: mensajes de error relacionados con el proyecto
 
 <a name="MT1005"></a>
 
@@ -1789,7 +1787,7 @@ Si cree que Xamarin. iOS debe admitir el tipo en cuestión, envíe una solicitud
 
 <a name="MT4102"></a>
 
-### <a name="mt4102-the-registrar-found-an-invalid-type--in-signature-for-method--use--instead"></a>MT4102: el registrador encontró un tipo no válido `*` en la firma para el método `*` . En su lugar, use `*`.
+### <a name="mt4102-the-registrar-found-an-invalid-type--in-signature-for-method--use--instead"></a>MT4102: el registrador encontró un tipo no válido `*` en la firma para el método `*` . Utilice `*` en su lugar.
 
 Esto solo sucede actualmente con un tipo: System. DateTime. En su lugar, use el equivalente de Objective-C (NSDate).
 
@@ -2775,12 +2773,12 @@ En algunos casos, se trata de un problema de "red local" y se puede solucionar a
 
 Donde * puede ser:
 
-- string
+- cadena
 - array
 - dict
 - bool
 - real
-- Entero
+- integer
 - date
 - datos
 
