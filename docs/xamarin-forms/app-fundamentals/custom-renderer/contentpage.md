@@ -11,10 +11,10 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 10e794dba276ed9d67b0e947d203cce0b62b7353
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.sourcegitcommit: 10c7dd16fe78226053d1d036492b6c9102fc421b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
+ms.lasthandoff: 02/05/2021
 ms.locfileid: "93374490"
 ---
 # <a name="customizing-a-contentpage"></a>Personalización de una página de contenido
@@ -37,7 +37,7 @@ El proceso de representación puede aprovecharse para implementar las personaliz
 
 Ahora se analizará en detalle cada elemento, para implementar un `CameraPage` que proporciona una fuente de la cámara en vivo y la capacidad de capturar una foto.
 
-## <a name="creating-the-no-locxamarinforms-page"></a>Creación de la página Xamarin.Forms
+## <a name="creating-the-xamarinforms-page"></a>Creación de la página Xamarin.Forms
 
 Puede agregarse una [`ContentPage`](xref:Xamarin.Forms.ContentPage) sin modificar al proyecto de Xamarin.Forms compartido, como se muestra en el siguiente ejemplo de código XAML:
 
@@ -76,7 +76,7 @@ public class CameraPageCS : ContentPage
 
 Una instancia de la `CameraPage` se usará para mostrar la fuente de la cámara en directo en cada plataforma. La personalización del control se llevará a cabo en el representador personalizado, por lo que no se requiere ninguna implementación adicional en la clase `CameraPage`.
 
-## <a name="consuming-the-no-locxamarinforms-page"></a>Consumo de la página de Xamarin.Forms
+## <a name="consuming-the-xamarinforms-page"></a>Consumo de la página de Xamarin.Forms
 
 La aplicación de Xamarin.Forms debe mostrar la `CameraPage` vacía. Esto se produce cuando se pulsa un botón en la instancia de `MainPage`, lo que a su vez ejecuta el método `OnTakePhotoButtonClicked`, como se muestra en el siguiente ejemplo de código:
 
