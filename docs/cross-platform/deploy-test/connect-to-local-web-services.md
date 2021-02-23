@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/29/2020
-ms.openlocfilehash: 2b289e5ffe4fba5c2f20caf0cf1d59cd277767f9
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.date: 02/04/2021
+ms.openlocfilehash: 6c9e91d8c434a0deea8c419def7dc3f1800b1d06
+ms.sourcegitcommit: 3b6eec7841868f50827271105577ecdc6766c162
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373424"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99606581"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>Conexión a servicios web locales desde simuladores de iOS y emuladores de Android
 
@@ -83,15 +83,17 @@ Cada instancia del emulador de Android está aislada de las interfaces de red de
 
 Sin embargo, el enrutador virtual de cada emulador administra un espacio de red especial que incluye direcciones asignadas previamente, donde la dirección `10.0.2.2` es un alias a la interfaz de bucle invertido del host (127.0.0.1 en la máquina de desarrollo). Por lo tanto, dado un servicio web seguro local que expone una operación GET mediante el identificador URI relativo `/api/todoitems/`, una aplicación que se ejecute en el emulador de Android puede consumir la operación por medio del envío de una solicitud GET a `https://10.0.2.2:<port>/api/todoitems/`.
 
-### <a name="xamarinforms-example"></a>Ejemplo de Xamarin.Forms
+### <a name="detect-the-operating-system"></a>Detección del sistema operativo
 
-En una aplicación de Xamarin.Forms, la clase [`Device`](xref:Xamarin.Forms.Device) puede usarse para detectar la plataforma en la que se ejecuta la aplicación. El nombre de host adecuado, que permite el acceso a servicios web seguros locales, se puede establecer de la manera siguiente:
+La clase [`DeviceInfo`](xref:Xamarin.Essentials.DeviceInfo) se puede usar para detectar la plataforma en la que se ejecuta la aplicación. El nombre de host adecuado, que permite el acceso a servicios web seguros locales, se puede establecer de la manera siguiente:
 
 ```csharp
 public static string BaseAddress =
-    Device.RuntimePlatform == Device.Android ? "https://10.0.2.2:5001" : "https://localhost:5001";
+    DeviceInfo.Platform == DevicePlatform.Android ? "https://10.0.2.2:5001" : "https://localhost:5001";
 public static string TodoItemsUrl = $"{BaseAddress}/api/todoitems/";
 ```
+
+Para más información sobre la clase `DeviceInfo`, consulte [Xamarin.Essentials: Información del dispositivo](~/essentials/device-information.md).
 
 ## <a name="bypass-the-certificate-security-check"></a>Omitir la comprobación de seguridad de certificado
 
@@ -124,9 +126,58 @@ En este ejemplo de código, el resultado de la validación del certificado de se
 #endif
 ```
 
+## <a name="enable-http-clear-text-traffic"></a>Habilitación del tráfico HTTP de texto no cifrado
+
+También puede configurar los proyectos iOS y Android para permitir el tráfico HTTP de texto no cifrado. Si el servicio back-end está configurado para permitir el tráfico HTTP, puede especificar HTTP en las URL base y, a continuación, configurar los proyectos para que permitan el tráfico de texto no cifrado:
+
+```csharp
+public static string BaseAddress =
+    DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5000" : "http://localhost:5000";
+public static string TodoItemsUrl = $"{BaseAddress}/api/todoitems/";
+```
+
+### <a name="ios-ats-opt-out"></a>Deshabilitación de ATS de iOS
+
+Para habilitar el tráfico local de texto no cifrado en iOS, debe [deshabilitar ATS](~/ios/app-fundamentals/ats.md#optout). Para ello, agregue lo siguiente en el archivo **Info.plist**:
+
+```xml
+<key>NSAppTransportSecurity</key>    
+<dict>
+    <key>NSAllowsLocalNetworking</key>
+    <true/>
+</dict>
+```
+
+### <a name="android-network-security-configuration"></a>Configuración de seguridad de red de Android
+
+Para habilitar el tráfico local de texto no cifrado en Android, debe crear una configuración de seguridad de red. Para ello, agregue un archivo XML nuevo denominado **network_security_config.xml** en la carpeta **Resources/xml**. El archivo XML debe especificar la configuración siguiente:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+  <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">10.0.2.2</domain>
+  </domain-config>
+</network-security-config>
+```
+
+Luego, configure la propiedad **networkSecurityConfig** en el nodo de **aplicación** del manifiesto de Android:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+    <application android:networkSecurityConfig="@xml/network_security_config">
+        ...
+    </application>
+</manifest>
+```
+
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [TodoREST (ejemplo)](/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 - [Habilitar HTTPS local](/aspnet/core/getting-started#enable-local-https)
 - [Selector de implementación de HttpClient y SSL/TLS para iOS y macOS](~/cross-platform/macios/http-stack.md)
 - [Selector de implementación de pila HttpClient y SSL/TLS para Android](~/android/app-fundamentals/http-stack.md)
+- [Configuración de seguridad de red de Android](https://devblogs.microsoft.com/xamarin/cleartext-http-android-network-security/)
+- [Seguridad de transporte de aplicación de iOS](~/ios/app-fundamentals/ats.md)
+- [Xamarin.Essentials: Información del dispositivo](~/essentials/device-information.md)

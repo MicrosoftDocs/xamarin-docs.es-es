@@ -10,12 +10,12 @@ ms.date: 05/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 708a310ea015f9e678d534898fde18abc3848120
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8c89a71de12fcd21ee907b6478d7a616f0d5337f
+ms.sourcegitcommit: 1f391667869a4541dd9b42d78862dc01d69ed160
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198322"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99818064"
 ---
 # <a name="what-is-xamarin"></a>¿Qué es Xamarin?
 
@@ -49,7 +49,7 @@ Para más información sobre la arquitectura específica de la plataforma, vea [
 
 ### <a name="added-features"></a>Características agregadas
 
-Xamarin combina las funciones de las plataformas nativas y agrega una serie de características, entre las que se incluyen las siguientes:
+Xamarin combina las capacidades de las plataformas nativas, mientras agregar características que incluyen lo siguiente:
 
 1. **Enlaces completos para los SDK subyacentes**: Xamarin contiene enlaces para casi todos los SDK de plataforma subyacentes en iOS y Android. Además, estos enlaces están fuertemente tipados, lo que significa que la navegación y el uso son fáciles y que proporcionan una sólida comprobación de tipos en tiempo de compilación y durante el desarrollo. Los enlaces fuertemente tipados producen menos errores en tiempo de ejecución y aplicaciones de mayor calidad.
 1. **Interoperabilidad con Objective-C, Java, C y C++** : Xamarin ofrece funciones para invocar directamente bibliotecas de Objective-C, Java, C y C++, lo que permite usar una amplia variedad de código de terceros. Estas funciones permiten usar bibliotecas existentes de iOS y Android escritas en Objective-C, Java, C o C++. Además, Xamarin ofrece proyectos de enlace que permiten enlazar bibliotecas nativas de Objective-C y Java mediante una sintaxis declarativa.

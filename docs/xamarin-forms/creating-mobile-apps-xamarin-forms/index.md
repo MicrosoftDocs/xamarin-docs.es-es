@@ -10,14 +10,14 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: af6da36e242ae2d967d795b61d65a38e5e43e22b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 0f04037941cb73af2f6cb9987c7cd4525477720b
+ms.sourcegitcommit: e7a5d1ec9e50a09b3b24f4c57850a4763c3406d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557288"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101087474"
 ---
-# <a name="creating-mobile-apps-with-no-locxamarinforms-book"></a>Creación de aplicaciones móviles con el libro de Xamarin.Forms
+# <a name="creating-mobile-apps-with-xamarinforms-book"></a>Creación de aplicaciones móviles con el libro de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples)
 
@@ -29,11 +29,11 @@ El libro se publicó en la primavera de 2016 y no se ha actualizado desde entonc
 
 Descargue su formato de libro electrónico preferido de Microsoft Virtual Academy:
 
-- [**PDF (56Mb)** ](https://aka.ms/xamformsebook)
+- [**PDF (56Mb)**](https://aka.ms/xamformsebook)
 
-- [**ePub (151Mb)** ](https://aka.ms/xamebook/epub)
+- [**ePub (151Mb)**](https://aka.ms/xamebook/epub)
 
-- [**Kindle Edition (325Mb)** ](https://aka.ms/xamebook/mobi)
+- [**Kindle Edition (325Mb)**](https://aka.ms/xamebook/mobi)
 
 También puede [descargar capítulos individuales](#download-chapters-and-summaries) como archivos PDF.
 
@@ -127,7 +127,7 @@ Los resúmenes de los capítulos incluyen información sobre los cambios de Xama
 
 ### <a name="samples"></a>Muestras
 
-En el repositorio de GitHub [**Xamarin-Forms-Book-samples**](https://github.com/xamarin/xamarin-forms-book-samples), la rama **original-code-from-book** contiene ejemplos de programas coherentes con el libro. La rama **maestra** contiene proyectos que se han actualizado para quitar API en desuso y reflejar las API mejoradas. Además, los proyectos de Android de la rama **maestra** se han actualizado para el [diseño de materiales a través de AppCompat](~/xamarin-forms/platform/android/index.md) de Android y, por lo general, mostrarán texto en negro sobre un fondo blanco.
+En el repositorio de GitHub [**Xamarin-Forms-Book-samples**](https://github.com/xamarin/xamarin-forms-book-samples), la rama **original-code-from-book** contiene ejemplos de programas coherentes con el libro. La rama principal contiene proyectos que se han actualizado para quitar API en desuso y reflejar las API mejoradas. Además, los proyectos de Android de la rama principal se han actualizado para el [diseño de materiales a través de AppCompat](~/xamarin-forms/platform/android/index.md) de Android y, por lo general, mostrarán texto en negro sobre un fondo blanco.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -10,12 +10,12 @@ ms.date: 07/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6e53fdc689c15b3495af838f4788c1a50ad7a989
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: 7eb555530f96a56b78087b64393e2c57efdb6d95
+ms.sourcegitcommit: e7a5d1ec9e50a09b3b24f4c57850a4763c3406d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97940348"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101087482"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Resumen del capítulo 3. Profundizar en el texto
 
@@ -106,7 +106,7 @@ Por último, dos propiedades estáticas de solo lectura definen el valor de colo
 `Color.Default` está pensado para aplicar la combinación de colores de la plataforma y, por consiguiente, tiene un significado diferente en contextos diferentes en plataformas diferentes. De forma predeterminada, las combinaciones de colores de la plataforma son:
 
 - iOS: Texto oscuro sobre un fondo claro.
-- Android: Texto claro sobre un fondo oscuro (en el libro) o texto oscuro sobre un fondo claro (para el diseño de material a través de AppCompat en la rama **maestra** del repositorio de código de ejemplo).
+- Android: Texto claro sobre un fondo oscuro (en el libro) o texto oscuro sobre un fondo claro (para el diseño de material a través de AppCompat en la rama principal del repositorio de código de ejemplo).
 - UWP: Texto oscuro sobre un fondo claro.
 
 El valor de `Color.Accent` da como resultado un color específico de la plataforma (y a veces seleccionable por el usuario) que es visible en un fondo oscuro o claro.

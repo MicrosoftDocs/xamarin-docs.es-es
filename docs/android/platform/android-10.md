@@ -5,12 +5,12 @@ ms.assetid: B3342772-FB88-4B7F-BC15-8BC78EED749E
 author: JonDouglas
 ms.author: jodou
 ms.date: 09/17/2019
-ms.openlocfilehash: d3e04daeb3957e0006f5746a730488ff455da18d
-ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
+ms.openlocfilehash: b3e4b21e9bf760380a655dd78a1a69cff70719cb
+ms.sourcegitcommit: a0de974875f8fa1a29f7abc990137246789ad85a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92928573"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630207"
 ---
 # <a name="android-10-with-xamarin"></a>Android 10 con Xamarin
 
@@ -28,10 +28,10 @@ Xamarin.Android 10.0 proporciona compatibilidad con Android 10. Para más info
 
 Para usar las características de Android 10 en aplicaciones basadas en Xamarin, se requiere lo siguiente:
 
-- **Visual Studio** : se recomienda Visual Studio 2019. En Windows, actualice a Visual Studio 2019 versión 16.3 o posterior. En macOS, actualice a Visual Studio 2019 para Mac versión 8.3 o posterior.
-- **Xamarin.Android** : Xamarin.Android 10.0 o posterior debe instalarse con Visual Studio (Xamarin.Android se instala automáticamente como parte de la carga de trabajo de **desarrollo móvil con .NET** en Windows y se instala como parte del **instalador de Visual Studio para Mac** ).
-- **Kit para desarrolladores de Java** : el desarrollo de Xamarin.Android 10.0 requiere JDK 8. La distribución de Microsoft de OpenJDK se instala automáticamente como parte de Visual Studio.
-- **Android SDK** : Android SDK (API 29) o posterior debe estar instalado mediante el Administrador de Android SDK.
+- **Visual Studio**: se recomienda Visual Studio 2019. En Windows, actualice a Visual Studio 2019 versión 16.3 o posterior. En macOS, actualice a Visual Studio 2019 para Mac versión 8.3 o posterior.
+- **Xamarin.Android**: Xamarin.Android 10.0 o posterior debe instalarse con Visual Studio (Xamarin.Android se instala automáticamente como parte de la carga de trabajo de **desarrollo móvil con .NET** en Windows y se instala como parte del **instalador de Visual Studio para Mac**).
+- **Kit para desarrolladores de Java**: el desarrollo de Xamarin.Android 10.0 requiere JDK 8. La distribución de Microsoft de OpenJDK se instala automáticamente como parte de Visual Studio.
+- **Android SDK**: Android SDK (API 29) o posterior debe estar instalado mediante el Administrador de Android SDK.
 
 ## <a name="get-started"></a>Primeros pasos
 
@@ -64,7 +64,7 @@ Para crear un proyecto con Xamarin.Android 10.0, primero debe usar el administr
 
     ![Selección del repositorio de Administrador de Android SDK](~/android/platform/android-10-images/sdkrepository.png)
 
-3. Instale los paquetes de la **plataforma del SDK de Android 10** , que se muestran como **Android SDK Platform 29** en la pestaña **Plataformas** (para más información acerca del uso del Administrador de SDK, consulte [Configuración del SDK de Android para Xamarin.Android](../get-started/installation/android-sdk.md)):
+3. Instale los paquetes de la **plataforma del SDK de Android 10**, que se muestran como **Android SDK Platform 29** en la pestaña **Plataformas** (para más información acerca del uso del Administrador de SDK, consulte [Configuración del SDK de Android para Xamarin.Android](../get-started/installation/android-sdk.md)):
 
     ![Pestaña Plataforma del Administrador de Android SDK](~/android/platform/android-10-images/sdkplatforms.png)
 
@@ -96,17 +96,17 @@ Estas características se recomiendan para todas las aplicaciones:
 
 ![Tema oscuro](~/android/platform/android-10-images/darktheme.png)
 
-- **Compatibilidad[ con la navegación mediante gestos en la aplicación](https://developer.android.com/preview/features/gesturalnav)** al ir de extremo a extremo y asegurarse de que los gestos personalizados se complementen con los gestos de navegación del sistema.
+- **Compatibilidad [ con la navegación mediante gestos en la aplicación](https://developer.android.com/preview/features/gesturalnav)** al ir de extremo a extremo y asegurarse de que los gestos personalizados se complementen con los gestos de navegación del sistema.
 
 ![Navegación mediante gestos](~/android/platform/android-10-images/gesturenavigation.png)
 
-- **Optimización para dispositivos plegables** : ofrezca experiencias integrales y fluidas en los innovadores dispositivos plegables que hay disponibles actualmente mediante la [optimización para dispositivos plegables](https://developer.android.com/guide/topics/ui/foldables).
+- **Optimización para dispositivos plegables**: ofrezca experiencias integrales y fluidas en los innovadores dispositivos plegables que hay disponibles actualmente mediante la [optimización para dispositivos plegables](https://developer.android.com/guide/topics/ui/foldables).
 
-![Dispositivo plegable](~/android/platform/android-10-images/foldable.png)
+![En la ilustración se muestra un dispositivo móvil plegable.](~/android/platform/android-10-images/foldable.png)
 
 Se recomiendan estas características si es pertinente para su aplicación:
 
-- **Más notificaciones interactivas:** si las notificaciones incluyen mensajes, habilite[respuestas y acciones sugeridas en las notificaciones](https://developer.android.com/preview/features#smart-suggestions) para atraer a los usuarios y permitirles actuar al instante.
+- **Más notificaciones interactivas:** si las notificaciones incluyen mensajes, habilite [respuestas y acciones sugeridas en las notificaciones](https://developer.android.com/preview/features#smart-suggestions) para atraer a los usuarios y permitirles actuar al instante.
 - **Mejor biometría:** si usa la autenticación biométrica, vaya a [BiometricPrompt](https://developer.android.com/reference/androidx/biometric/BiometricPrompt), la manera preferida de admitir la autenticación mediante huellas digitales en dispositivos modernos.
 - **Grabación enriquecida:** para admitir los subtítulos o la grabación de juegos, habilite la [captura de reproducción de audio](https://developer.android.com/preview/features/playback-capture). Es una excelente manera de llegar a más usuarios y hacer que la aplicación sea más accesible.
 - **Mejores códecs:** para aplicaciones multimedia, pruebe [AV1](https://en.wikipedia.org/wiki/AV1) para el streaming de vídeo y [HDR10 +](https://en.wikipedia.org/wiki/High-dynamic-range_video#HDR10+) para un vídeo de alto rango dinámico. Para el streaming de voz y música, puede usar la codificación [Opus](http://opus-codec.org/) y, para los músicos, está disponible una[API de MIDI nativa](https://developer.android.com/preview/features/midi).

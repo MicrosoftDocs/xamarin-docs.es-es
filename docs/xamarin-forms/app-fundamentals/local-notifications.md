@@ -6,18 +6,18 @@ ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 12/03/2020
+ms.date: 02/12/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1dad280ee8253d4ef627c5ab7ec9c8dcfa0408a2
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: 2ebc226e865bbf3e482857b9c99fdda5d4922a44
+ms.sourcegitcommit: 0a6b19004932c1ac82e16c95d5d3d5eb35a5b17f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97940452"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100255377"
 ---
-# <a name="local-notifications-in-no-locxamarinforms"></a>Notificaciones locales de Xamarin.Forms
+# <a name="local-notifications-in-xamarinforms"></a>Notificaciones locales de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/local-notifications)
 
@@ -47,7 +47,7 @@ public interface INotificationManager
 
 Esta interfaz se implementará en cada proyecto de plataforma. El evento `NotificationReceived` permite que la aplicación controle las notificaciones entrantes. El método `Initialize` debe ejecutar alguna lógica de plataforma nativa necesaria para preparar el sistema de notificación. El método `SendNotification` debe enviar una notificación, en un elemento `DateTime` opcional. La plataforma subyacente debe llamar al método `ReceiveNotification` cuando se reciba un mensaje.
 
-## <a name="consume-the-interface-in-no-locxamarinforms"></a>Uso de la interfaz en Xamarin.Forms
+## <a name="consume-the-interface-in-xamarinforms"></a>Uso de la interfaz en Xamarin.Forms
 
 Una vez creada una interfaz, se puede usar en el proyecto compartido de Xamarin.Forms aunque aún no se hayan creado las implementaciones de la plataforma. La aplicación de ejemplo contiene un elemento `ContentPage` denominado **MainPage.xaml** con el siguiente contenido:
 
@@ -179,10 +179,15 @@ namespace LocalNotifications.Droid
 
         public static AndroidNotificationManager Instance { get; private set; }
 
+        public AndroidNotificationManager() => Initialize();
+
         public void Initialize()
         {
-            CreateNotificationChannel();
-            Instance = this;
+            if (Instance == null)
+            {
+                CreateNotificationChannel();
+                Instance = this;
+            }
         }
 
         public void SendNotification(string title, string message, DateTime? notifyTime = null)
@@ -284,14 +289,15 @@ public class AlarmHandler : BroadcastReceiver
             string title = intent.GetStringExtra(AndroidNotificationManager.TitleKey);
             string message = intent.GetStringExtra(AndroidNotificationManager.MessageKey);
 
-            AndroidNotificationManager.Instance.Show(title, message);
+            AndroidNotificationManager manager = AndroidNotificationManager.Instance ?? new AndroidNotificationManager();
+            manager.Show(title, message);
         }
     }
 }
 ```
 
 > [!IMPORTANT]
-> De forma predeterminada, las notificaciones programadas con la clase `AlarmManager` no sobrevivirán al reinicio del dispositivo. Sin embargo, puede diseñar la aplicación para que vuelva a programar notificaciones automáticamente si el dispositivo se reinicia. Para más información, vea [Activación de una alarma cuando el dispositivo se reinicia](https://developer.android.com/training/scheduling/alarms#boot) en [Programación de alarmas repetidas](https://developer.android.com/training/scheduling/alarms) en developer.android.com. Para obtener información sobre el procesamiento en segundo plano en Android, vea la [guía sobre el procesamiento en segundo plano](https://developer.android.com/guide/background) en developer.android.com.
+> De forma predeterminada, las notificaciones programadas con la clase `AlarmManager` no sobrevivirán al reinicio del dispositivo. Sin embargo, puede diseñar la aplicación para que vuelva a programar notificaciones automáticamente si el dispositivo se reinicia. Para más información, consulte [Activación de una alarma cuando el dispositivo se reinicia](https://developer.android.com/training/scheduling/alarms#boot) en [Programación de alarmas repetidas](https://developer.android.com/training/scheduling/alarms) en developer.android.com y el [ejemplo](/samples/xamarin/xamarin-forms-samples/local-notifications). Para obtener información sobre el procesamiento en segundo plano en Android, vea la [guía sobre el procesamiento en segundo plano](https://developer.android.com/guide/background) en developer.android.com.
 
 Para más información sobre los receptores de difusión, vea [Receptores de difusión en Xamarin.Android](~/android/app-fundamentals/broadcast-receivers.md).
 
@@ -460,18 +466,23 @@ public class iOSNotificationReceiver : UNUserNotificationCenterDelegate
 {
     public override void WillPresentNotification(UNUserNotificationCenter center, UNNotification notification, Action<UNNotificationPresentationOptions> completionHandler)
     {
-        DependencyService.Get<INotificationManager>().ReceiveNotification(notification.Request.Content.Title, notification.Request.Content.Body);
-
-        // alerts are always shown for demonstration but this can be set to "None"
-        // to avoid showing alerts if the app is in the foreground
+        ProcessNotification(notification);
         completionHandler(UNNotificationPresentationOptions.Alert);
     }
+
+    void ProcessNotification(UNNotification notification)
+    {
+        string title = notification.Request.Content.Title;
+        string message = notification.Request.Content.Body;
+
+        DependencyService.Get<INotificationManager>().ReceiveNotification(title, message);
+    }    
 }
 ```
 
 Esta clase usa `DependencyService` para obtener una instancia de la clase `iOSNotificationManager` y proporciona datos de notificación entrantes al método `ReceiveNotification`.
 
-La clase `AppDelegate` debe especificar el delegado personalizado durante el inicio de la aplicación. La clase `AppDelegate` debe especificar un objeto `iOSNotificationReceiver` como delegado `UNUserNotificationCenter` durante el inicio de la aplicación. Esto sucede en el método `FinishedLaunching`:
+La clase `AppDelegate` debe especificar un objeto `iOSNotificationReceiver` como delegado `UNUserNotificationCenter` durante el inicio de la aplicación. Esto sucede en el método `FinishedLaunching`:
 
 ```csharp
 public override bool FinishedLaunching(UIApplication app, NSDictionary options)

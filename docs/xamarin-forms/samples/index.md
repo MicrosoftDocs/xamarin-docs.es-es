@@ -10,14 +10,14 @@ ms.date: 12/27/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 846cfed068cb03af9ade7af4258021abc7a0c59e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 3e49b472427ee51674c4dfbfd67fd4e7769fde43
+ms.sourcegitcommit: a0de974875f8fa1a29f7abc990137246789ad85a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562540"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630168"
 ---
-# <a name="no-locxamarinforms-samples"></a>Ejemplos de Xamarin.Forms
+# <a name="xamarinforms-samples"></a>Ejemplos de Xamarin.Forms
 
 Las aplicaciones de ejemplo y las demostraciones de código de Xamarin.Forms le ayudan a empezar a trabajar y comprender los conceptos de Xamarin.Forms.
 
@@ -25,14 +25,14 @@ Las aplicaciones de ejemplo y las demostraciones de código de Xamarin.Forms le 
 
 :::row:::
     :::column:::
-[![Lista de tareas pendientes](images/todo.png)](/samples/xamarin/xamarin-forms-samples/todo/)
+[![Aplicación de lista de tareas pendientes](images/todo.png)](/samples/xamarin/xamarin-forms-samples/todo/)
 
 ### <a name="todo"></a>[Lista de tareas pendientes](/samples/xamarin/xamarin-forms-samples/todo/)
 
 En este ejemplo se muestra una aplicación de la lista de tareas pendientes donde los datos se almacenan y se accede a ellos en una base de datos local de SQLite.
     :::column-end:::
     :::column:::
-[![BugSweeper](images/bugsweeper.png)](/samples/xamarin/xamarin-forms-samples/bugsweeper/)
+[![Juego BugSweeper](images/bugsweeper.png)](/samples/xamarin/xamarin-forms-samples/bugsweeper/)
 
 ### <a name="bugsweeper"></a>[BugSweeper](/samples/xamarin/xamarin-forms-samples/bugsweeper/)
 
@@ -49,7 +49,7 @@ Una calculadora RPN (notación polaca inversa) permite que se introduzcan operac
 
 :::row:::
     :::column:::
-[![SpinPaint](images/spinpaint.png)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint/)
+[![Aplicación SpinPaint](images/spinpaint.png)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint/)
 
 ### <a name="spinpaint"></a>[SpinPaint](/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint/)
 
@@ -63,7 +63,7 @@ El programa simula un disco giratorio que se puede pintar al tocar y mover los d
 El lenguaje XAML permite a los desarrolladores definir interfaces de usuario en Xamarin.Forms mediante el marcado, en lugar de código.
     :::column-end:::
         :::column:::
-[![Xuzzle](images/xuzzle.png)](/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/)
+[![Juego Xuzzle](images/xuzzle.png)](/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/)
 
 ### <a name="xuzzle"></a>[Xuzzle](/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/)
 
