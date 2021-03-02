@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93371513"
 ---
-# <a name="no-locxamarinforms-dependencyservice-introduction"></a>Introducción a DependencyService de Xamarin.Forms
+# <a name="xamarinforms-dependencyservice-introduction"></a>Introducción a DependencyService de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
