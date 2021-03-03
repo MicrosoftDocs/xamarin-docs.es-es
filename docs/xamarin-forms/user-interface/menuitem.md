@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93368159"
 ---
-# <a name="no-locxamarinforms-menuitem"></a>Xamarin.Forms Objetos
+# <a name="xamarinforms-menuitem"></a>Xamarin.Forms Objetos
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
 

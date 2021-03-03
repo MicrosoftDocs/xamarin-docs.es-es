@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93374282"
 ---
-# <a name="loading-xaml-at-runtime-in-no-locxamarinforms"></a>Cargar XAML en tiempo de ejecución en Xamarin.Forms
+# <a name="loading-xaml-at-runtime-in-xamarinforms"></a>Cargar XAML en tiempo de ejecución en Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
 
@@ -37,7 +37,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Cuando Visual Studio compila un proyecto que contiene un archivo XAML, analiza el archivo XAML para generar un archivo de código de C# (por ejemplo, **mainpage.Xaml.g.CS** ) que contiene la definición del `InitializeComponent` método:
+Cuando Visual Studio compila un proyecto que contiene un archivo XAML, analiza el archivo XAML para generar un archivo de código de C# (por ejemplo, **mainpage.Xaml.g.CS**) que contiene la definición del `InitializeComponent` método:
 
 ```csharp
 private void InitializeComponent()

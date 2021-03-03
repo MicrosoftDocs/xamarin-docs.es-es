@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93373619"
 ---
-# <a name="no-locxamarinforms-binding-path"></a>Enlace de ruta de acceso de Xamarin.Forms
+# <a name="xamarinforms-binding-path"></a>Enlace de ruta de acceso de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -38,7 +38,7 @@ La propiedad `Time` de `TimePicker` es de tipo `TimeSpan`, pero es posible que q
 
 La propiedad `Time` es de tipo `TimeSpan`, que tiene una propiedad `TotalSeconds`. Las propiedades `Time` y `TotalSeconds` se conectan simplemente con un punto. Los elementos de la cadena `Path` siempre hacen referencia a propiedades y no a los tipos de estas propiedades.
 
-Ese y otros muchos ejemplos se muestran en la página **Variaciones de la ruta de acceso** :
+Ese y otros muchos ejemplos se muestran en la página **Variaciones de la ruta de acceso**:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

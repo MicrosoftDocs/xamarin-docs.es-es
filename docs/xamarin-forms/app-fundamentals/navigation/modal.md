@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93368705"
 ---
-# <a name="no-locxamarinforms-modal-pages"></a>Páginas modales de Xamarin.Forms
+# <a name="xamarinforms-modal-pages"></a>Páginas modales de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/navigation-modal)
 

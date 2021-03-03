@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93374074"
 ---
-# <a name="xaml-custom-namespace-schemas-in-no-locxamarinforms"></a>Esquemas de espacios de nombres personalizados XAML en Xamarin.Forms
+# <a name="xaml-custom-namespace-schemas-in-xamarinforms"></a>Esquemas de espacios de nombres personalizados XAML en Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
 

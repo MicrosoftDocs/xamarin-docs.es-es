@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93374392"
 ---
-# <a name="no-locxamarinforms-shell-page-configuration"></a>Configuración de la página de Xamarin.Forms Shell
+# <a name="xamarinforms-shell-page-configuration"></a>Configuración de la página de Xamarin.Forms Shell
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 

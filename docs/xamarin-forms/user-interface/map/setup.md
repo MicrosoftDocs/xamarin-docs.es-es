@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93371292"
 ---
-# <a name="no-locxamarinforms-map-initialization-and-configuration"></a>Xamarin.Forms Inicialización y configuración de asignaciones
+# <a name="xamarinforms-map-initialization-and-configuration"></a>Xamarin.Forms Inicialización y configuración de asignaciones
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -57,7 +57,7 @@ Se requiere configuración adicional en Android y en el Plataforma universal de 
 
 ### <a name="ios"></a>iOS
 
-La visualización e interacción con un mapa en iOS no requiere ninguna configuración adicional. Sin embargo, para tener acceso a los servicios de ubicación, debe establecer las siguientes claves en **info. plist** :
+La visualización e interacción con un mapa en iOS no requiere ninguna configuración adicional. Sin embargo, para tener acceso a los servicios de ubicación, debe establecer las siguientes claves en **info. plist**:
 
 - iOS 11 y versiones posteriores
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) : para usar los servicios de ubicación cuando la aplicación está en uso
@@ -121,7 +121,7 @@ Para que el APK acceda a Google Maps, debe incluir las huellas digitales y los n
 
 #### <a name="specify-the-google-play-services-version-number"></a>Especificar el número de versión de los servicios de Google Play
 
-Agregue la siguiente declaración en el `<application>` elemento de **AndroidManifest.xml** :
+Agregue la siguiente declaración en el `<application>` elemento de **AndroidManifest.xml**:
 
 ```xml
 <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
@@ -131,7 +131,7 @@ Esto incrusta la versión de Google Play servicios con los que se compiló la ap
 
 #### <a name="specify-the-requirement-for-the-apache-http-legacy-library"></a>Especificación del requisito de la biblioteca de Apache HTTP Legacy
 
-Si su Xamarin.Forms aplicación tiene como destino la API 28 o una versión posterior, debe agregar la siguiente declaración en el `<application>` elemento de **AndroidManifest.xml** :
+Si su Xamarin.Forms aplicación tiene como destino la API 28 o una versión posterior, debe agregar la siguiente declaración en el `<application>` elemento de **AndroidManifest.xml**:
 
 ```xml
 <uses-library android:name="org.apache.http.legacy" android:required="false" />    
@@ -245,7 +245,7 @@ En UWP, la aplicación debe autenticarse para poder mostrar un mapa y consumir s
 
 Además, si la aplicación necesita tener acceso a la ubicación del usuario, debe habilitar la funcionalidad de ubicación en el manifiesto del paquete. Esto se puede lograr de la siguiente manera:
 
-1. En el **Explorador de soluciones** , haz doble clic en **package.appxmanifest** y selecciona la pestaña **Funcionalidades**.
+1. En el **Explorador de soluciones**, haz doble clic en **package.appxmanifest** y selecciona la pestaña **Funcionalidades**.
 1. En la lista **capacidades** , active la casilla **Ubicación**. Esto agrega la `location` capacidad del dispositivo al archivo de manifiesto del paquete.
 
     ```xml
@@ -257,7 +257,7 @@ Además, si la aplicación necesita tener acceso a la ubicación del usuario, de
 
 #### <a name="release-builds"></a>Versiones de lanzamiento
 
-Las compilaciones de versión de UWP usan la compilación nativa de .NET para compilar la aplicación directamente en código nativo. Sin embargo, una consecuencia de esto es que el representador del [`Map`](xref:Xamarin.Forms.Maps.Map) control en UWP puede estar vinculado fuera del archivo ejecutable. Esto se puede corregir mediante una sobrecarga específica de UWP del `Forms.Init` método en **app.Xaml.CS** :
+Las compilaciones de versión de UWP usan la compilación nativa de .NET para compilar la aplicación directamente en código nativo. Sin embargo, una consecuencia de esto es que el representador del [`Map`](xref:Xamarin.Forms.Maps.Map) control en UWP puede estar vinculado fuera del archivo ejecutable. Esto se puede corregir mediante una sobrecarga específica de UWP del `Forms.Init` método en **app.Xaml.CS**:
 
 ```csharp
 var assembliesToInclude = new [] { typeof(Xamarin.Forms.Maps.UWP.MapRenderer).GetTypeInfo().Assembly };

@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93374620"
 ---
-# <a name="no-locxamarinforms-control-templates"></a>Plantillas de control de Xamarin.Forms
+# <a name="xamarinforms-control-templates"></a>Plantillas de control de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
 

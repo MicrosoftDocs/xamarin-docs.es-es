@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93373125"
 ---
-# <a name="no-locxamarinforms-activityindicator"></a>Xamarin.Forms ActivityIndicator
+# <a name="xamarinforms-activityindicator"></a>Xamarin.Forms ActivityIndicator
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 
 El Xamarin.Forms [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) control muestra una animación para mostrar que la aplicación está ocupada en una actividad prolongada. A diferencia [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) de, el `ActivityIndicator` no proporciona ninguna indicación de progreso. `ActivityIndicator`Hereda de [`View`](xref:Xamarin.Forms.View) .

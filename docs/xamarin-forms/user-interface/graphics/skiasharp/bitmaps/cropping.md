@@ -739,7 +739,7 @@ public partial class PhotoPuzzlePage3 : ContentPage
 
 El controlador de botón **Done** obtiene el ancho y el alto del mapa de bits recortado (estos dos valores deben ser iguales) y, a continuación, lo divide en 15 mapas de bits independientes, cada uno de los cuales es 1/4 el ancho y el alto del original. (No se crea el último de los 16 mapas de bits posibles). El `DrawBitmap` método con el rectángulo de origen y de destino permite crear un mapa de bits basado en un subconjunto de un mapa de bits mayor.
 
-## <a name="converting-to-no-locxamarinforms-bitmaps"></a>Convertir en Xamarin.Forms mapas de bits
+## <a name="converting-to-xamarinforms-bitmaps"></a>Convertir en Xamarin.Forms mapas de bits
 
 En el `OnDoneButtonClicked` método, la matriz creada para los 15 mapas de bits es de tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource) :
 

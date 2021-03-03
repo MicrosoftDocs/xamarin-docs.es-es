@@ -18,11 +18,11 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93366430"
 ---
-# <a name="no-locxamarinforms-basic-bindings"></a>Enlaces básicos de Xamarin.Forms
+# <a name="xamarinforms-basic-bindings"></a>Enlaces básicos de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-Un enlace de datos de Xamarin.Forms enlaza un par de propiedades entre dos objetos, del que al menos uno suele ser un objeto de interfaz de usuario. Estos dos objetos se denominan el *destino* y el *origen* :
+Un enlace de datos de Xamarin.Forms enlaza un par de propiedades entre dos objetos, del que al menos uno suele ser un objeto de interfaz de usuario. Estos dos objetos se denominan el *destino* y el *origen*:
 
 - El *destino* es el objeto (y la propiedad) en la que se establece el enlace de datos.
 - El *origen* es el objeto (y la propiedad) al que hace referencia el enlace de datos.
@@ -102,7 +102,7 @@ Al manipular el elemento `Slider`, el elemento `Label` gira según corresponda:
 
 [![Enlace de código básico](basic-bindings-images/basiccodebinding-small.png "Enlace de código básico")](basic-bindings-images/basiccodebinding-large.png#lightbox "Enlace de código básico")
 
-La página **Enlace Xaml básico** es idéntica a la página **Enlace de código básico** , con la excepción de que define el enlace de datos completo en XAML:
+La página **Enlace Xaml básico** es idéntica a la página **Enlace de código básico**, con la excepción de que define el enlace de datos completo en XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -141,7 +141,7 @@ Pero eso no es correcto. Ese marcado establece la propiedad `BindingContext` en 
 
 Observe que la propiedad de origen se especifica con la propiedad [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) de `BindingExtension`, que se corresponde con la propiedad [`Path`](xref:Xamarin.Forms.Binding.Path) de la clase [`Binding`](xref:Xamarin.Forms.Binding).
 
-El marcado que se muestra en la página **Basic XAML Binding** (Enlace XAML básico) se puede simplificar: en las extensiones de marcado XAML como `x:Reference` y `Binding` se pueden definir atributos de *propiedad de contenido* , lo que para las extensiones de marcado XAML significa que no es necesario que aparezca el nombre de propiedad. La propiedad `Name` es la propiedad de contenido de `x:Reference` y la propiedad `Path` es la propiedad de contenido de `Binding`, lo que significa que se pueden eliminar de las expresiones:
+El marcado que se muestra en la página **Basic XAML Binding** (Enlace XAML básico) se puede simplificar: en las extensiones de marcado XAML como `x:Reference` y `Binding` se pueden definir atributos de *propiedad de contenido*, lo que para las extensiones de marcado XAML significa que no es necesario que aparezca el nombre de propiedad. La propiedad `Name` es la propiedad de contenido de `x:Reference` y la propiedad `Path` es la propiedad de contenido de `Binding`, lo que significa que se pueden eliminar de las expresiones:
 
 ```xaml
 <Label Text="TEXT"
@@ -156,7 +156,7 @@ El marcado que se muestra en la página **Basic XAML Binding** (Enlace XAML bás
 
 La propiedad `BindingContext` es un componente importante de los enlaces de datos, pero no siempre es necesaria. En su lugar, el objeto de origen se puede especificar en la llamada a `SetBinding` o en la extensión de marcado `Binding`.
 
-Esto se muestra en el ejemplo **Enlace de código alternativo**. El archivo XAML es similar al ejemplo **Enlace de código básico** , salvo que el elemento `Slider` se define para controlar la propiedad `Scale` del elemento `Label`. Por ese motivo, el elemento `Slider` se establece para un intervalo de &ndash;2 a 2:
+Esto se muestra en el ejemplo **Enlace de código alternativo**. El archivo XAML es similar al ejemplo **Enlace de código básico**, salvo que el elemento `Slider` se define para controlar la propiedad `Scale` del elemento `Label`. Por ese motivo, el elemento `Slider` se establece para un intervalo de &ndash;2 a 2:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

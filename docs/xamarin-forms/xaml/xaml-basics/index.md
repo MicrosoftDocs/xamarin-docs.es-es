@@ -18,7 +18,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93365872"
 ---
-# <a name="no-locxamarinforms-xaml-basics"></a>Xamarin.Forms Conceptos básicos de XAML
+# <a name="xamarinforms-xaml-basics"></a>Xamarin.Forms Conceptos básicos de XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 

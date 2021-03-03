@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93375387"
 ---
-# <a name="generics-in-no-locxamarinforms-xaml"></a>Genéricos en Xamarin.Forms XAML
+# <a name="generics-in-xamarinforms-xaml"></a>Genéricos en Xamarin.Forms XAML
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/xaml-generics/)
 

@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93366872"
 ---
-# <a name="no-locxamarinforms-messagingcenter"></a>MessagingCenter de Xamarin.Forms
+# <a name="xamarinforms-messagingcenter"></a>MessagingCenter de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
 

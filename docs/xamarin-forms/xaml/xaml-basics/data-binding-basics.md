@@ -215,7 +215,7 @@ Nada ilustra la eficacia de los enlaces de datos y XAML mejor que una plantilla 
 
 `ListView` define una `ItemsSource` propiedad de tipo `IEnumerable` y muestra los elementos de esa colección. Estos elementos pueden ser objetos de cualquier tipo. De forma predeterminada, `ListView` usa el `ToString` método de cada elemento para mostrar ese elemento. A veces, esto es exactamente lo que desea, pero en muchos casos, `ToString` solo devuelve el nombre de clase completo del objeto.
 
-Sin embargo, los elementos de la `ListView` colección se pueden mostrar de la forma que desee mediante el uso de una *plantilla* , que implica una clase que deriva de `Cell` . La plantilla se clona para cada elemento de `ListView` , y los enlaces de datos que se han establecido en la plantilla se transfieren a los clones individuales.
+Sin embargo, los elementos de la `ListView` colección se pueden mostrar de la forma que desee mediante el uso de una *plantilla*, que implica una clase que deriva de `Cell` . La plantilla se clona para cada elemento de `ListView` , y los enlaces de datos que se han establecido en la plantilla se transfieren a los clones individuales.
 
 Con mucha frecuencia, querrá crear una celda personalizada para estos elementos mediante la `ViewCell` clase. Este proceso es un poco confuso en el código, pero en XAML resulta muy sencillo.
 
@@ -342,7 +342,7 @@ Observe el uso de `OnPlatform` para definir el tamaño de un `BoxView` y el alto
 
 En el archivo XAML de **demostración de ListView** anterior se muestran las `R` propiedades individuales, `G` y `B` de la Xamarin.Forms `Color` estructura. Estas propiedades son del tipo `double` y van de 0 a 1. Si desea mostrar los valores hexadecimales, no se puede usar `StringFormat` con una especificación de formato "x2". Eso solo sirve para enteros y, además, los `double` valores se deben multiplicar por 255.
 
-Este pequeño problema se resolvió con un *convertidor de valores* , también denominado convertidor de *enlace*. Se trata de una clase que implementa la `IValueConverter` interfaz, lo que significa que tiene dos métodos denominados `Convert` y `ConvertBack` . `Convert`Se llama al método cuando se transfiere un valor desde el origen al destino; `ConvertBack` se llama al método para las transferencias del destino al origen en los `OneWayToSource` `TwoWay` enlaces o:
+Este pequeño problema se resolvió con un *convertidor de valores*, también denominado convertidor de *enlace*. Se trata de una clase que implementa la `IValueConverter` interfaz, lo que significa que tiene dos métodos denominados `Convert` y `ConvertBack` . `Convert`Se llama al método cuando se transfiere un valor desde el origen al destino; `ConvertBack` se llama al método para las transferencias del destino al origen en los `OneWayToSource` `TwoWay` enlaces o:
 
 ```csharp
 using System;

@@ -36,7 +36,7 @@ Estas se conocen como transformaciones *afines* . Las transformaciones afines si
 
 SkiaSharp también admite transformaciones no afines (también denominadas transformaciones *proyectadas* o de *perspectiva* ) basadas en una matriz de transformación estándar de 3 por 3. Una transformación no afín permite transformar un cuadrado en cualquier cuadrangular convexa, que es una figura de cuatro caras con todos los ángulos interiores inferiores a 180 grados. Las transformaciones no afines pueden hacer que las coordenadas o los tamaños se conviertan en infinitos, pero son fundamentales para los efectos 3D.
 
-## <a name="differences-between-skiasharp-and-no-locxamarinforms-transforms"></a>Diferencias entre SkiaSharp y Xamarin.Forms transformaciones
+## <a name="differences-between-skiasharp-and-xamarinforms-transforms"></a>Diferencias entre SkiaSharp y Xamarin.Forms transformaciones
 
 Xamarin.Forms también admite las transformaciones que son similares a las de SkiaSharp. La Xamarin.Forms [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase define las propiedades de transformación siguientes:
 

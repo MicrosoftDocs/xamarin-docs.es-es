@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93366326"
 ---
-# <a name="no-locxamarinforms-binding-fallbacks"></a>Conmutación por recuperación de enlaces de Xamarin.Forms
+# <a name="xamarinforms-binding-fallbacks"></a>Conmutación por recuperación de enlaces de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -53,7 +53,7 @@ Esta es la ejecución del programa:
 
 ![Enlace FallbackValue](binding-fallbacks-images/bindingunavailable-detail-cropped.png "Enlace FallbackValue")
 
-Cuando el `FallbackValue` propiedad no está establecida en una expresión de enlace y la ruta de acceso del enlace o parte de la ruta de acceso no se resuelve, [`BindableProperty.DefaultValue`](xref:Xamarin.Forms.BindableProperty.DefaultValue) se establece en el destino. Sin embargo, cuando la propiedad `FallbackValue` está establecida y la ruta de acceso del enlace o parte de la ruta de acceso no se resuelve, el valor de la propiedad del valor `FallbackValue` se establece en el destino. Por lo tanto, en la página **MonkeyDetail** , [`Label`](xref:Xamarin.Forms.Label) muestra el mensaje "Population size unknown" ("Tamaño de la población desconocido"), porque al elemento enlazado le falta una propiedad `Population`.
+Cuando el `FallbackValue` propiedad no está establecida en una expresión de enlace y la ruta de acceso del enlace o parte de la ruta de acceso no se resuelve, [`BindableProperty.DefaultValue`](xref:Xamarin.Forms.BindableProperty.DefaultValue) se establece en el destino. Sin embargo, cuando la propiedad `FallbackValue` está establecida y la ruta de acceso del enlace o parte de la ruta de acceso no se resuelve, el valor de la propiedad del valor `FallbackValue` se establece en el destino. Por lo tanto, en la página **MonkeyDetail**, [`Label`](xref:Xamarin.Forms.Label) muestra el mensaje "Population size unknown" ("Tamaño de la población desconocido"), porque al elemento enlazado le falta una propiedad `Population`.
 
 > [!IMPORTANT]
 > Un convertidor de valores definido no se ejecuta en una expresión de enlace cuando la propiedad [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) está establecida.

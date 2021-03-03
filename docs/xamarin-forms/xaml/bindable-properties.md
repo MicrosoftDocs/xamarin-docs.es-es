@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93374087"
 ---
-# <a name="no-locxamarinforms-bindable-properties"></a>Xamarin.Forms Propiedades enlazables
+# <a name="xamarinforms-bindable-properties"></a>Xamarin.Forms Propiedades enlazables
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 

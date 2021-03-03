@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93374581"
 ---
-# <a name="no-locxamarinforms-data-binding"></a>Enlace de datos de Xamarin.Forms
+# <a name="xamarinforms-data-binding"></a>Enlace de datos de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 

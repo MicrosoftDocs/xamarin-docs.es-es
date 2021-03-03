@@ -109,7 +109,7 @@ Establezca la *marca de gran arco* en 1 para el arco grande o en 0 para el arco 
 
 Establezca la *marca de barrido* en 1 para el sentido de las agujas del reloj y en 0 para el sentido contrario a las agujas del reloj.
 
-El arco se dibuja en el punto ( *x* , *y* ), que se convierte en la nueva posición actual.
+El arco se dibuja en el punto (*x*, *y*), que se convierte en la nueva posición actual.
 
 ## <a name="cubicto"></a>**Cúbico**
 
@@ -117,7 +117,7 @@ El arco se dibuja en el punto ( *x* , *y* ), que se convierte en la nueva posici
 C x1 y1 x2 y2 x3 y3 ...
 ```
 
-Este comando agrega una curva Bézier cúbica desde la posición actual a ( *x3* , *Y3* ), que se convierte en la nueva posición actual. Los puntos ( *x1* , *Y1* ) y ( *x2* , *Y2* ) son puntos de control.
+Este comando agrega una curva Bézier cúbica desde la posición actual a (*x3*, *Y3*), que se convierte en la nueva posición actual. Los puntos (*x1*, *Y1*) y (*x2*, *Y2*) son puntos de control.
 
 Se pueden especificar varias curvas Bezier mediante un solo `C` comando. El número de puntos debe ser un múltiplo de 3.
 
@@ -135,7 +135,7 @@ Este comando debe seguir un comando de Bézier normal (aunque no es estrictament
 Q x1 y1 x2 y2 ...
 ```
 
-En el caso de curvas Bézier cuadráticas, el número de puntos debe ser un múltiplo de 2. El punto de control es ( *x1* , *Y1* ) y el punto final (y la nueva posición actual) es ( *x2* , *Y2* )
+En el caso de curvas Bézier cuadráticas, el número de puntos debe ser un múltiplo de 2. El punto de control es (*x1*, *Y1*) y el punto final (y la nueva posición actual) es (*x2*, *Y2*)
 
 También hay un comando de curva cuadrática suave:
 

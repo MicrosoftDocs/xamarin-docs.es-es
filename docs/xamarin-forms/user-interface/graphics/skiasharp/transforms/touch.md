@@ -268,7 +268,7 @@ Sin embargo, el control de la `Moved` acción es más complejo. Si solo hay un d
 
 Después, el programa calcula dos vectores de la nueva posición del dedo en relación con el punto de pivote y la posición del dedo anterior en relación con el punto de pivote. Las proporciones de estos vectores son factores de escala. Dado que la división por cero es una posibilidad, se debe comprobar si hay valores infinitos o valores NaN (no un número). Si todo es correcto, una transformación de escala se concatena con el `SKMatrix` valor guardado como un campo.
 
-Al experimentar con esta página, observará que puede arrastrar el mapa de bits con uno o dos dedos, o bien escalarlo con dos dedos. El escalado es _anisotrópico_ , lo que significa que el escalado puede ser diferente en las direcciones horizontal y vertical. Esto distorsiona la relación de aspecto, pero también permite voltear el mapa de bits para crear una imagen reflejada. También puede descubrir que puede reducir el mapa de bits a una dimensión cero y desaparece. En el código de producción, querrá protegerse frente a esto.
+Al experimentar con esta página, observará que puede arrastrar el mapa de bits con uno o dos dedos, o bien escalarlo con dos dedos. El escalado es _anisotrópico_, lo que significa que el escalado puede ser diferente en las direcciones horizontal y vertical. Esto distorsiona la relación de aspecto, pero también permite voltear el mapa de bits para crear una imagen reflejada. También puede descubrir que puede reducir el mapa de bits a una dimensión cero y desaparece. En el código de producción, querrá protegerse frente a esto.
 
 ## <a name="two-finger-rotation"></a>Rotación de dos dedos
 

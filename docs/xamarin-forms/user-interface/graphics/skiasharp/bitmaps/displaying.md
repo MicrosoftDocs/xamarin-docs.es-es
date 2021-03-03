@@ -622,7 +622,7 @@ Estas son algunas combinaciones de opciones:
 
 [![Modos de escalado](displaying-images/ScalingModes.png "Modos de escalado")](displaying-images/ScalingModes-Large.png#lightbox)
 
-La página de **subconjunto de rectángulos** tiene prácticamente el mismo archivo XAML que los **modos de escalado** , pero el archivo de código subyacente define un subconjunto rectangular del mapa de bits proporcionado por el `SOURCE` campo: 
+La página de **subconjunto de rectángulos** tiene prácticamente el mismo archivo XAML que los **modos de escalado**, pero el archivo de código subyacente define un subconjunto rectangular del mapa de bits proporcionado por el `SOURCE` campo: 
 
 ```csharp
 public partial class ScalingModesPage : ContentPage

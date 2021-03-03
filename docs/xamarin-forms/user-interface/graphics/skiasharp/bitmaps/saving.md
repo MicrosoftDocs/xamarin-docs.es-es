@@ -476,7 +476,7 @@ El artículo sobre cómo [**pintar el dedo en SkiaSharp**](../paths/finger-paint
 
 La página **con el dedo pintar con guardar** en el ejemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) también conserva todo el dibujo en una colección de `SKPath` objetos, pero también representa el dibujo en un mapa de bits, que puede guardar en la biblioteca de fotos.
 
-Gran parte de este programa es similar al programa de pintura con el **dedo** original. Una mejora es que el archivo XAML ahora crea instancias de los botones con la etiqueta **Clear** y **Save** :
+Gran parte de este programa es similar al programa de pintura con el **dedo** original. Una mejora es que el archivo XAML ahora crea instancias de los botones con la etiqueta **Clear** y **Save**:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -705,7 +705,7 @@ En el ejemplo [**SpinPaint**](/samples/xamarin/xamarin-forms-samples/skiasharpfo
 
 [![Girar dibujo](saving-images/SpinPaint.png "Girar dibujo")](saving-images/SpinPaint-Large.png#lightbox)
 
-El botón **Guardar** de la `SpinPaint` clase es similar a la **pintura con dedo** en que guarda la imagen en un nombre de carpeta fijo ( **SpainPaint** ) y un nombre de archivo construido a partir de la fecha y la hora.
+El botón **Guardar** de la `SpinPaint` clase es similar a la **pintura con dedo** en que guarda la imagen en un nombre de carpeta fijo (**SpainPaint**) y un nombre de archivo construido a partir de la fecha y la hora.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

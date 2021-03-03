@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93369446"
 ---
-# <a name="no-locxamarinforms-collectionview-data"></a>Xamarin.Forms Datos de CollectionView
+# <a name="xamarinforms-collectionview-data"></a>Xamarin.Forms Datos de CollectionView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 

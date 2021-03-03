@@ -398,7 +398,7 @@ Necesitará declaraciones de espacio de nombres XML adicionales para tener acces
 xmlns:local="clr-namespace:XamlSamples"
 ```
 
-También puede definir declaraciones de espacios de nombres XML para espacios de nombres de .NET en cualquier ensamblado al que haga referencia la biblioteca .NET Standard. Por ejemplo, este es un `sys` prefijo para el espacio de nombres estándar de .net `System` , que se encuentra en el ensamblado **netstandard** . Dado que se trata de otro ensamblado, también debe especificar el nombre del ensamblado, en este caso **netstandard** :
+También puede definir declaraciones de espacios de nombres XML para espacios de nombres de .NET en cualquier ensamblado al que haga referencia la biblioteca .NET Standard. Por ejemplo, este es un `sys` prefijo para el espacio de nombres estándar de .net `System` , que se encuentra en el ensamblado **netstandard** . Dado que se trata de otro ensamblado, también debe especificar el nombre del ensamblado, en este caso **netstandard**:
 
 ```csharp
 xmlns:sys="clr-namespace:System;assembly=netstandard"

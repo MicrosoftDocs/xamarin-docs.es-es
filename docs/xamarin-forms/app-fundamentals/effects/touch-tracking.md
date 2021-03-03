@@ -31,9 +31,9 @@ Un efecto es ideal para el seguimiento multitáctil, ya que puede asociarse a cu
 
 iOS, Android y la Plataforma universal de Windows incluyen una API de bajo nivel que permite a las aplicaciones detectar la actividad táctil. Todas estas plataformas distinguen entre tres tipos básicos de eventos táctiles:
 
-- *Presionado* , cuando un dedo toca la pantalla
-- *Movido* , cuando se mueve un dedo tocando la pantalla
-- *Soltado* , cuando se separa el dedo de la pantalla
+- *Presionado*, cuando un dedo toca la pantalla
+- *Movido*, cuando se mueve un dedo tocando la pantalla
+- *Soltado*, cuando se separa el dedo de la pantalla
 
 En un entorno multitáctil, varios dedos pueden tocar la pantalla al mismo tiempo. Las diferentes plataformas incluyen un número de identificación (ID) que las aplicaciones pueden usar para distinguir entre varios dedos.
 
@@ -460,7 +460,7 @@ Puede mover varios elementos `BoxView` al mismo tiempo usando diferentes dedos.
 
 ### <a name="subclassing-the-view"></a>Creación de subclases de la vista
 
-A menudo, resulta más fácil para un elemento de Xamarin.Forms controlar sus propios eventos táctiles. La página **Arrastre de BoxView arrastrable** funciona igual que la página **Arrastre de BoxView** , pero los elementos que el usuario arrastra son instancias de una clase [`DraggableBoxView`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/DraggableBoxView.cs) que se deriva de `BoxView`:
+A menudo, resulta más fácil para un elemento de Xamarin.Forms controlar sus propios eventos táctiles. La página **Arrastre de BoxView arrastrable** funciona igual que la página **Arrastre de BoxView**, pero los elementos que el usuario arrastra son instancias de una clase [`DraggableBoxView`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/DraggableBoxView.cs) que se deriva de `BoxView`:
 
 ```csharp
 class DraggableBoxView : BoxView

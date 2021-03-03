@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/04/2020
 ms.locfileid: "93330967"
 ---
-# <a name="no-locxamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Forms propiedades, métodos y eventos de controles comunes
+# <a name="xamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Forms propiedades, métodos y eventos de controles comunes
 
 La Xamarin.Forms `VisualElement` clase es la clase base para la mayoría de los controles utilizados en una Xamarin.Forms aplicación. La `VisualElement` clase define muchas [propiedades](#properties), [métodos](#methods)y [eventos](#events) que se usan en las clases derivadas.
 

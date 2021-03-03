@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93375439"
 ---
-# <a name="no-locxamarinforms-map-pins"></a>Xamarin.Forms Anclajes de mapa
+# <a name="xamarinforms-map-pins"></a>Xamarin.Forms Anclajes de mapa
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 

@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93373398"
 ---
-# <a name="no-locxamarinforms-compiled-bindings"></a>Enlaces compilados de Xamarin.Forms
+# <a name="xamarinforms-compiled-bindings"></a>Enlaces compilados de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -38,7 +38,7 @@ El proceso para usar enlaces compilados es el siguiente:
 > [!NOTE]
 > Se recomienda establecer el atributo `x:DataType` en el mismo nivel de la jerarquía de vistas en que está establecido [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext). Sin embargo, este atributo puede volver a definirse en cualquier ubicación en una jerarquía de vistas.
 
-Para usar enlaces compilados, el atributo `x:DataType` debe establecerse en un literal de cadena o un tipo con la extensión de marcado `x:Type`. En tiempo de compilación XAML, las expresiones de enlace no válidas se notificarán como errores de compilación. Sin embargo, el compilador XAML solo notificará un error de compilación para la primera expresión de enlace no válida que encuentre. Las expresiones de enlace válidas que se definen en `VisualElement` o en sus elementos secundarios se compilarán, independientemente de si [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) está establecido en XAML o en código. La compilación de una expresión de enlace genera un código compilado que obtendrá un valor de una propiedad en el *origen* y lo establecerá en la propiedad en el *destino* que se especifica en el marcado. Además, dependiendo de la expresión de enlace, el código generado puede observar cambios en el valor de la propiedad de *origen* y actualizar la propiedad de *destino* , y puede insertar los cambios desde el *destino* de nuevo al *origen*.
+Para usar enlaces compilados, el atributo `x:DataType` debe establecerse en un literal de cadena o un tipo con la extensión de marcado `x:Type`. En tiempo de compilación XAML, las expresiones de enlace no válidas se notificarán como errores de compilación. Sin embargo, el compilador XAML solo notificará un error de compilación para la primera expresión de enlace no válida que encuentre. Las expresiones de enlace válidas que se definen en `VisualElement` o en sus elementos secundarios se compilarán, independientemente de si [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) está establecido en XAML o en código. La compilación de una expresión de enlace genera un código compilado que obtendrá un valor de una propiedad en el *origen* y lo establecerá en la propiedad en el *destino* que se especifica en el marcado. Además, dependiendo de la expresión de enlace, el código generado puede observar cambios en el valor de la propiedad de *origen* y actualizar la propiedad de *destino*, y puede insertar los cambios desde el *destino* de nuevo al *origen*.
 
 > [!IMPORTANT]
 > Los enlaces compilados actualmente están deshabilitados para las expresiones de enlace que definen la propiedad [`Source`](xref:Xamarin.Forms.Binding.Source). Esto es así porque la propiedad `Source` siempre se establece mediante la extensión de marcado `x:Reference`, que no se puede resolver en tiempo de compilación.

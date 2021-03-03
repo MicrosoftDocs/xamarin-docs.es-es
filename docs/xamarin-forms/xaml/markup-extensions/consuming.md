@@ -239,7 +239,7 @@ Así es como funciona el menú de navegación en `MainPage` en el programa de **
 </ContentPage>
 ```
 
-Esta es la Página principal de apertura en **las extensiones de marcado** :
+Esta es la Página principal de apertura en **las extensiones de marcado**:
 
 [![Página principal](consuming-images/mainpage-small.png "Página principal")](consuming-images/mainpage-large.png#lightbox "Página principal")
 

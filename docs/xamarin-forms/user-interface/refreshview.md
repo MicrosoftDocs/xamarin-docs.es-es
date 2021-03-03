@@ -19,7 +19,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93372891"
 ---
-# <a name="no-locxamarinforms-no-locrefreshview"></a>Xamarin.Forms RefreshView
+# <a name="xamarinforms-refreshview"></a>Xamarin.Forms RefreshView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
 
@@ -37,7 +37,7 @@ Estas propiedades están respaldadas por objetos [`BindableProperty`](xref:Xamar
 > [!NOTE]
 > En Universal Windows Platform , la dirección de extracción de un `RefreshView` se puede establecer con una específica de la plataforma. Para obtener más información, vea [ RefreshView dirección de extracción](~/xamarin-forms/platform/windows/refreshview-pulldirection.md).
 
-## <a name="create-a-no-locrefreshview"></a>Creación de una clase RefreshView
+## <a name="create-a-refreshview"></a>Creación de una clase RefreshView
 
 En el ejemplo siguiente se muestra cómo crear una instancia `RefreshView` de en XAML:
 
@@ -84,7 +84,7 @@ Cuando el usuario inicia una actualización, `ICommand` se ejecuta la definida p
 > [!NOTE]
 > Al establecer manualmente la `IsRefreshing` propiedad en `true` , se desencadenará la visualización de la actualización y se ejecutará el `ICommand` definido por la `Command` propiedad.
 
-## <a name="no-locrefreshview-appearance"></a>RefreshView aparición
+## <a name="refreshview-appearance"></a>RefreshView aparición
 
 Además de las propiedades que `RefreshView` heredan de la [`VisualElement`](xref:Xamarin.Forms.VisualElement) clase, `RefreshView` también define la `RefreshColor` propiedad. Esta propiedad se puede establecer para definir el color del círculo de progreso que aparece durante la actualización:
 
@@ -102,7 +102,7 @@ Además, la `BackgroundColor` propiedad se puede establecer en un [`Color`](xref
 > [!NOTE]
 > En iOS, la `BackgroundColor` propiedad establece el color de fondo del `UIView` que contiene el círculo de progreso.
 
-## <a name="disable-a-no-locrefreshview"></a>Deshabilitar un RefreshView
+## <a name="disable-a-refreshview"></a>Deshabilitar un RefreshView
 
 Una aplicación puede entrar en un estado en el que la extracción para actualizar no es una operación válida. En tales casos, `RefreshView` se puede deshabilitar estableciendo su `IsEnabled` propiedad en `false` . Esto impedirá que los usuarios puedan desencadenar la incorporación de cambios a la actualización.
 

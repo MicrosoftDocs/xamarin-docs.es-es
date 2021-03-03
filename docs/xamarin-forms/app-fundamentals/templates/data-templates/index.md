@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93373112"
 ---
-# <a name="no-locxamarinforms-data-templates"></a>Plantillas de datos de Xamarin.Forms
+# <a name="xamarinforms-data-templates"></a>Plantillas de datos de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 

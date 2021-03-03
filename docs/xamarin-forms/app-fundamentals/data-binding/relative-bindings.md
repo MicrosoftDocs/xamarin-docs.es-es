@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93374594"
 ---
-# <a name="no-locxamarinforms-relative-bindings"></a>Enlaces relativos de Xamarin.Forms
+# <a name="xamarinforms-relative-bindings"></a>Enlaces relativos de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 

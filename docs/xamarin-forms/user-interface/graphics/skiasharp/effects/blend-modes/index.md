@@ -23,7 +23,7 @@ ms.locfileid: "93368655"
 
 Estos artículos se centran en la [`BlendMode`](xref:SkiaSharp.SKPaint.BlendMode) propiedad de [`SKPaint`](xref:SkiaSharp.SKPaint) . La `BlendMode` propiedad es de tipo [`SKBlendMode`](xref:SkiaSharp.SKBlendMode) , una enumeración con 29 miembros.
 
-La `BlendMode` propiedad determina lo que ocurre cuando un objeto gráfico (a menudo denominado _origen_ ) se representa encima de los objetos gráficos existentes (denominados _destino_ ). Normalmente, esperamos que el nuevo objeto gráfico oculte los objetos debajo de él. Pero esto solo sucede porque el modo de mezcla predeterminado es `SKBlendMode.SrcOver` , lo que significa que el origen se dibuja _sobre_ el destino. Los otros 28 miembros de `SKBlendMode` causan otros efectos. En la programación de gráficos, la técnica de combinar objetos gráficos de varias maneras se denomina _composición_.
+La `BlendMode` propiedad determina lo que ocurre cuando un objeto gráfico (a menudo denominado _origen_) se representa encima de los objetos gráficos existentes (denominados _destino_). Normalmente, esperamos que el nuevo objeto gráfico oculte los objetos debajo de él. Pero esto solo sucede porque el modo de mezcla predeterminado es `SKBlendMode.SrcOver` , lo que significa que el origen se dibuja _sobre_ el destino. Los otros 28 miembros de `SKBlendMode` causan otros efectos. En la programación de gráficos, la técnica de combinar objetos gráficos de varias maneras se denomina _composición_.
 
 ## <a name="the-skblendmodes-enumeration"></a>La enumeración SKBlendModes
 

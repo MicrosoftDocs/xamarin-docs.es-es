@@ -148,7 +148,7 @@ El proceso para crear la clase del representador personalizado es el siguiente:
 
 1. Cree una subclase de la clase `WkWebViewRenderer` en iOS y de la clase `WebViewRenderer` en Android y UWP, que representa el control personalizado.
 1. Invalide el método `OnElementChanged` que representa el objeto [`WebView`](xref:Xamarin.Forms.WebView) y escriba lógica para personalizarlo. Este método se llama cuando se crea un objeto `HybridWebView`.
-1. Agregue un atributo `ExportRenderer` a la clase del representador personalizado o *AssemblyInfo.cs* , para especificar que se va a usar para representar el control personalizado de Xamarin.Forms. Este atributo se usa para registrar al representador personalizado con Xamarin.Forms.
+1. Agregue un atributo `ExportRenderer` a la clase del representador personalizado o *AssemblyInfo.cs*, para especificar que se va a usar para representar el control personalizado de Xamarin.Forms. Este atributo se usa para registrar al representador personalizado con Xamarin.Forms.
 
 > [!NOTE]
 > Para la mayoría de los elementos de Xamarin.Forms, proporcionar un representador personalizado en cada proyecto de la plataforma es un paso opcional. Si no se registra un representador personalizado, se usará el representador predeterminado de la clase base del control. Pero los representadores personalizados son necesarios en cada proyecto de plataforma al representar un elemento [View](xref:Xamarin.Forms.View).

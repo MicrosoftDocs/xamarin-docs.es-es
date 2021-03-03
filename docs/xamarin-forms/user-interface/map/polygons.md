@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93374789"
 ---
-# <a name="no-locxamarinforms-map-polygons-and-polylines"></a>Xamarin.Forms Rectángulos de mapa y polilíneas
+# <a name="xamarinforms-map-polygons-and-polylines"></a>Xamarin.Forms Rectángulos de mapa y polilíneas
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 

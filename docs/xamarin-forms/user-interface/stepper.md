@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93369797"
 ---
-# <a name="no-locxamarinforms-stepper"></a>Xamarin.Forms Hacer
+# <a name="xamarinforms-stepper"></a>Xamarin.Forms Hacer
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 

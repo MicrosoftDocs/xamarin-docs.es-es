@@ -6,7 +6,7 @@ MS. Prod: Xamarin ms. AssetID: B8B9268B-BCB8-42B9-B08C-C0F22C137238 ms. Technolo
 
 ---
 
-# <a name="no-locxamarinforms-checkbox"></a>Xamarin.Forms Casilla
+# <a name="xamarinforms-checkbox"></a>Xamarin.Forms Casilla
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
 

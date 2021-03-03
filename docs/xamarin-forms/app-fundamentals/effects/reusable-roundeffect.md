@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93374269"
 ---
-# <a name="no-locxamarinforms-reusable-roundeffect"></a>RoundEffect reutilizable de Xamarin.Forms
+# <a name="xamarinforms-reusable-roundeffect"></a>RoundEffect reutilizable de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
 

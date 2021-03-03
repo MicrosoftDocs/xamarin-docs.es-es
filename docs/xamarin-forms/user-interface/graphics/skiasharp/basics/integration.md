@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93366625"
 ---
-# <a name="integrating-with-no-locxamarinforms"></a>Integración con Xamarin.Forms
+# <a name="integrating-with-xamarinforms"></a>Integración con Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 

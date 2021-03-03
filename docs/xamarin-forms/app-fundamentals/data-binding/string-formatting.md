@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93369784"
 ---
-# <a name="no-locxamarinforms-string-formatting"></a>Formato de cadena de Xamarin.Forms
+# <a name="xamarinforms-string-formatting"></a>Formato de cadena de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -132,7 +132,7 @@ Esta es la ejecución del programa:
 
 Cuando se usa `Label` y `StringFormat` para mostrar el valor de una vista que también es el destino de una clase ViewModel, puede definir el enlace de la vista para `Label` o desde el ViewModel a `Label`. En general, el segundo enfoque es mejor porque comprueba que funcionan los enlaces entre View y ViewModel.
 
-Este método se muestra en el ejemplo **Mejor selector de colores** , que usa el mismo ViewModel que el programa **Selector de colores simple** que aparece en el artículo [**Xamarin.Forms Binding Mode**](binding-mode.md) (Modo de enlace de Xamarin.Forms):
+Este método se muestra en el ejemplo **Mejor selector de colores**, que usa el mismo ViewModel que el programa **Selector de colores simple** que aparece en el artículo [**Xamarin.Forms Binding Mode**](binding-mode.md) (Modo de enlace de Xamarin.Forms):
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

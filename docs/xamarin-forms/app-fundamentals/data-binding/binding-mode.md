@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93373645"
 ---
-# <a name="no-locxamarinforms-binding-mode"></a>Modo de enlace de Xamarin.Forms
+# <a name="xamarinforms-binding-mode"></a>Modo de enlace de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -208,7 +208,7 @@ public class HslColorViewModel : INotifyPropertyChanged
 }
 ```
 
-Cuando cambia la propiedad `Color`, el método estático `GetNearestColorName` de la clase `NamedColor` (incluido también en la solución **DataBindingDemos** )obtiene el color con nombre más cercano y establece la propiedad `Name`. Esta propiedad `Name` tiene un descriptor de acceso `set` privado, por lo que no se puede establecer desde fuera de la clase.
+Cuando cambia la propiedad `Color`, el método estático `GetNearestColorName` de la clase `NamedColor` (incluido también en la solución **DataBindingDemos**)obtiene el color con nombre más cercano y establece la propiedad `Name`. Esta propiedad `Name` tiene un descriptor de acceso `set` privado, por lo que no se puede establecer desde fuera de la clase.
 
 Cuando se establece una clase ViewModel como un origen de enlace, la infraestructura de enlace adjunta un controlador al evento `PropertyChanged`. De esta manera, el enlace puede recibir una notificación de cambios en las propiedades y, después, puede establecer las propiedades de destino a partir de los valores cambiados.
 
@@ -268,7 +268,7 @@ Cuando se ejecuta por primera vez el programa, `BoxView`, `Label` y los tres ele
 
 Al manipular los controles deslizantes, se actualizan `BoxView` y `Label` en consecuencia, como se muestra en la captura de pantalla de Android.
 
-Un enfoque común consiste en crear instancias de ViewModel en el diccionario de recursos. También se pueden crear instancias de ViewModel dentro de etiquetas de elemento de propiedad para la propiedad `BindingContext`. En el archivo XAML **Selector de colores simple** , intente quitar `HslColorViewModel` del diccionario de recursos y establézcalo en la propiedad `BindingContext` de `Grid` de esta forma:
+Un enfoque común consiste en crear instancias de ViewModel en el diccionario de recursos. También se pueden crear instancias de ViewModel dentro de etiquetas de elemento de propiedad para la propiedad `BindingContext`. En el archivo XAML **Selector de colores simple**, intente quitar `HslColorViewModel` del diccionario de recursos y establézcalo en la propiedad `BindingContext` de `Grid` de esta forma:
 
 ```xaml
 <Grid>
@@ -301,7 +301,7 @@ Pero establecer la propiedad `Mode` en `TwoWay` no siempre funciona como cabría
 
 Se podría esperar que `Slider` se inicializara en el valor inicial de la propiedad `Scale`, que es 1, pero no es lo que sucede. Cuando se inicializa un enlace `TwoWay`, primero se establece el destino a partir del origen, lo que significa que la propiedad `Scale` se establece en el valor predeterminado de `Slider` de 0. Cuando se configura el enlace `TwoWay` en el elemento `Slider`, el elemento `Slider` se establece inicialmente a partir del origen.
 
-Puede establecer el modo de enlace en `OneWayToSource` en el ejemplo **Enlace XAML alternativo** :
+Puede establecer el modo de enlace en `OneWayToSource` en el ejemplo **Enlace XAML alternativo**:
 
 ```xaml
 <Label Text="TEXT"

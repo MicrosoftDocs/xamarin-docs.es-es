@@ -16,7 +16,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93373437"
 ---
-# <a name="skiasharp-graphics-in-no-locxamarinforms"></a>Gráficos de SkiaSharp Xamarin.Forms
+# <a name="skiasharp-graphics-in-xamarinforms"></a>Gráficos de SkiaSharp Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 

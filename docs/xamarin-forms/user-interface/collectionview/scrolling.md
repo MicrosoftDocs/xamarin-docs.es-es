@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/13/2020
 ms.locfileid: "94590420"
 ---
-# <a name="no-locxamarinforms-collectionview-scrolling"></a>Xamarin.Forms Desplazamientos de CollectionView
+# <a name="xamarinforms-collectionview-scrolling"></a>Xamarin.Forms Desplazamientos de CollectionView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 

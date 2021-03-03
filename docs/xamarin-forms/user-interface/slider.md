@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93368549"
 ---
-# <a name="no-locxamarinforms-slider"></a>Xamarin.Forms Hasta
+# <a name="xamarinforms-slider"></a>Xamarin.Forms Hasta
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 

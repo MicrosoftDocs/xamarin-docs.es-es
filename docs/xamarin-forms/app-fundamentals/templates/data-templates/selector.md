@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93373021"
 ---
-# <a name="creating-a-no-locxamarinforms-datatemplateselector"></a>Creación de DataTemplateSelector de Xamarin.Forms
+# <a name="creating-a-xamarinforms-datatemplateselector"></a>Creación de DataTemplateSelector de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
 

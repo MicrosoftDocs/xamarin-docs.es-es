@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93374217"
 ---
-# <a name="no-locxamarinforms-button"></a>Xamarin.Forms Botón
+# <a name="xamarinforms-button"></a>Xamarin.Forms Botón
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
 
@@ -59,7 +59,7 @@ La página de **clics del botón básico** en el ejemplo [**ButtonDemos**](/samp
 
 De forma predeterminada, `Button` es rectangular, pero puede asignarle esquinas redondeadas mediante la [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) propiedad, como se describe a continuación en la sección [**apariencia del botón**](#button-appearance).
 
-La [`Text`](xref:Xamarin.Forms.Button.Text) propiedad especifica el texto que aparece en `Button` . El [`Clicked`](xref:Xamarin.Forms.Button.Clicked) evento se establece en un controlador de eventos denominado `OnButtonClicked` . Este controlador se encuentra en el archivo de código subyacente, **BasicButtonClickPage.Xaml.CS** :
+La [`Text`](xref:Xamarin.Forms.Button.Text) propiedad especifica el texto que aparece en `Button` . El [`Clicked`](xref:Xamarin.Forms.Button.Clicked) evento se establece en un controlador de eventos denominado `OnButtonClicked` . Este controlador se encuentra en el archivo de código subyacente, **BasicButtonClickPage.Xaml.CS**:
 
 ```csharp
 public partial class BasicButtonClickPage : ContentPage
@@ -133,7 +133,7 @@ Todo se realiza en el constructor de la clase. Dado que el `Clicked` controlador
 button.Clicked += async (sender, args) => await label.RelRotateTo(360, 1000);
 ```
 
-Por supuesto, también puede definir el controlador de eventos como un método independiente (al igual que el `OnButtonClick` método en el **clic de botón básico** ) y asociar ese método al evento:
+Por supuesto, también puede definir el controlador de eventos como un método independiente (al igual que el `OnButtonClick` método en el **clic de botón básico**) y asociar ese método al evento:
 
 ```csharp
 button.Clicked += OnButtonClicked;

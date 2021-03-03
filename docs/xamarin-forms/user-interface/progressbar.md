@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93370525"
 ---
-# <a name="no-locxamarinforms-progressbar"></a>Xamarin.Forms ProgressBar
+# <a name="xamarinforms-progressbar"></a>Xamarin.Forms ProgressBar
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-progressbardemos/)
 
 El Xamarin.Forms [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) control representa visualmente el progreso como una barra horizontal que se rellena con un porcentaje representado por un `float` valor. La `ProgressBar` clase hereda de [`View`](xref:Xamarin.Forms.View) .

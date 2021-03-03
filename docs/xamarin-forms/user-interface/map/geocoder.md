@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93375452"
 ---
-# <a name="no-locxamarinforms-map-geocoding"></a>Xamarin.Forms Geocodificación de mapas
+# <a name="xamarinforms-map-geocoding"></a>Xamarin.Forms Geocodificación de mapas
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 

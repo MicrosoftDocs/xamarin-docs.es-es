@@ -31,7 +31,7 @@ Todos los programas de ejemplo de esta sección aparecen bajo el encabezado **Sk
 
 Conozca los aspectos básicos del dibujo de SkiaSharp, incluidos los lienzos y los objetos Paint.
 
-## <a name="integrating-with-no-locxamarinforms"></a>[Integración con Xamarin.Forms](integration.md)
+## <a name="integrating-with-xamarinforms"></a>[Integración con Xamarin.Forms](integration.md)
 
 Cree gráficos interactivos de SkiaSharp mediante la respuesta a la entrada táctil y la integración con Xamarin.Forms elementos.
 

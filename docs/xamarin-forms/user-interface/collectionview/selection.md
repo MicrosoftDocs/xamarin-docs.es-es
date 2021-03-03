@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93375348"
 ---
-# <a name="no-locxamarinforms-collectionview-selection"></a>Xamarin.Forms Selección de CollectionView
+# <a name="xamarinforms-collectionview-selection"></a>Xamarin.Forms Selección de CollectionView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 

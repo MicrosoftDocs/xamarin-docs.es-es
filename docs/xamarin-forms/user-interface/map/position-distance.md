@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93367717"
 ---
-# <a name="no-locxamarinforms-map-position-and-distance"></a>Xamarin.Forms Posición y distancia del mapa
+# <a name="xamarinforms-map-position-and-distance"></a>Xamarin.Forms Posición y distancia del mapa
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 

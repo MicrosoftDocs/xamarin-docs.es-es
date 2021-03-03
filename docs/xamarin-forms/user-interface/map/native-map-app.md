@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93368250"
 ---
-# <a name="launch-the-native-map-app-from-no-locxamarinforms"></a>Inicie la aplicación de asignación nativa desde Xamarin.Forms
+# <a name="launch-the-native-map-app-from-xamarinforms"></a>Inicie la aplicación de asignación nativa desde Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 

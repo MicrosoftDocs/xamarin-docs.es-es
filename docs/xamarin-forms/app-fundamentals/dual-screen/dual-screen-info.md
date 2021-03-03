@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93374737"
 ---
-# <a name="no-locxamarinforms-dualscreeninfo-helper-class"></a>Clase auxiliar DualScreenInfo de Xamarin.Forms
+# <a name="xamarinforms-dualscreeninfo-helper-class"></a>Clase auxiliar DualScreenInfo de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 

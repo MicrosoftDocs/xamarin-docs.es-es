@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93369836"
 ---
-# <a name="the-no-locxamarinforms-command-interface"></a>Interfaz de comandos de Xamarin.Forms
+# <a name="the-xamarinforms-command-interface"></a>Interfaz de comandos de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -280,7 +280,7 @@ Antes de examinar el constructor de la clase `PersonCollectionViewModel`, veremo
 </ContentPage>
 ```
 
-Este es el funcionamiento: el usuario presiona primero el botón **New** (Nuevo). Esto habilita el formulario de entrada, pero deshabilita el botón **New**. Después, el usuario escribe un nombre, la edad y las habilidades. En cualquier momento durante la edición, el usuario puede presionar el botón **Cancel** (Cancelar) para volver a empezar. El botón **Submit** (Enviar) solo se habilita cuando se ha escrito un nombre y una edad válida. Al presionar este botón **Submit** , se transfiere a la persona a la colección mostrada por `ListView`. Después de presionar el botón **Cancel** o **Submit** , se borra el formulario de entrada y se vuelve a habilitar el botón **New**.
+Este es el funcionamiento: el usuario presiona primero el botón **New** (Nuevo). Esto habilita el formulario de entrada, pero deshabilita el botón **New**. Después, el usuario escribe un nombre, la edad y las habilidades. En cualquier momento durante la edición, el usuario puede presionar el botón **Cancel** (Cancelar) para volver a empezar. El botón **Submit** (Enviar) solo se habilita cuando se ha escrito un nombre y una edad válida. Al presionar este botón **Submit**, se transfiere a la persona a la colección mostrada por `ListView`. Después de presionar el botón **Cancel** o **Submit**, se borra el formulario de entrada y se vuelve a habilitar el botón **New**.
 
 En la pantalla de iOS de la izquierda se muestra el diseño antes de escribir una vigencia válida. En la pantallas de Android se muestra el botón **Enviar** habilitado después de haber establecido una edad:
 
@@ -288,7 +288,7 @@ En la pantalla de iOS de la izquierda se muestra el diseño antes de escribir un
 
 El programa no tiene ninguna función para editar las entradas existentes y no guarda las entradas al salir de la página.
 
-Toda la lógica para los botones **New** , **Submit** y **Cancel** se controla en `PersonCollectionViewModel` a través de definiciones de las propiedades `NewCommand`, `SubmitCommand` y `CancelCommand`. El constructor de `PersonCollectionViewModel` establece estas tres propiedades en objetos de tipo `Command`.  
+Toda la lógica para los botones **New**, **Submit** y **Cancel** se controla en `PersonCollectionViewModel` a través de definiciones de las propiedades `NewCommand`, `SubmitCommand` y `CancelCommand`. El constructor de `PersonCollectionViewModel` establece estas tres propiedades en objetos de tipo `Command`.  
 
 Un [constructor](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) de la clase `Command` permite pasar argumentos de tipo `Action` y `Func<bool>` correspondientes a los métodos `Execute` y `CanExecute`. Es más fácil definir estas acciones y funciones como funciones lambda directamente en el constructor de `Command`. Esta es la definición del objeto `Command` para la propiedad `NewCommand`:
 
@@ -334,7 +334,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 }
 ```
 
-Cuando el usuario hace clic en el botón **New** , se ejecuta la función `execute` pasada al constructor de `Command`. Esto crea un objeto `PersonViewModel`, establece un controlador en el evento `PropertyChanged` de ese objeto, establece `IsEditing` en `true`, y llama al método `RefreshCanExecutes` definido después del constructor.
+Cuando el usuario hace clic en el botón **New**, se ejecuta la función `execute` pasada al constructor de `Command`. Esto crea un objeto `PersonViewModel`, establece un controlador en el evento `PropertyChanged` de ese objeto, establece `IsEditing` en `true`, y llama al método `RefreshCanExecutes` definido después del constructor.
 
 Además de implementar la interfaz `ICommand`, la clase `Command` también define un método denominado `ChangeCanExecute`. El modelo de vista debe llamar a `ChangeCanExecute` para una propiedad `ICommand` cada vez que suceda algo que pueda cambiar el valor devuelto del método `CanExecute`. Una llamada a `ChangeCanExecute` hace que la clase `Command` desencadene el método `CanExecuteChanged`. El objeto `Button` ha adjuntado un controlador para ese evento y responde mediante una nueva llamada a `CanExecute` y, después, se habilita a sí mismo en función del valor devuelto de ese método.
 
@@ -691,7 +691,7 @@ Todos los métodos `execute` llaman a `RefreshCanExecutes`, que llama a `ChangeC
 
 ## <a name="asynchronous-commanding-for-navigation-menus"></a>Comandos asincrónicos para menús de navegación
 
-Los comandos son útiles para la implementación de menús de navegación, como los del propio programa [**Demostraciones de enlace de datos**](/samples/xamarin/xamarin-forms-samples/databindingdemos). Este es un fragmento de **MainPage.xaml** :
+Los comandos son útiles para la implementación de menús de navegación, como los del propio programa [**Demostraciones de enlace de datos**](/samples/xamarin/xamarin-forms-samples/databindingdemos). Este es un fragmento de **MainPage.xaml**:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -730,7 +730,7 @@ Los comandos son útiles para la implementación de menús de navegación, como 
 
 Al usar comandos con XAML, las propiedades `CommandParameter` normalmente se establecen en cadenas. Pero en este caso, se usa una extensión de marcado XAML para que `CommandParameter` sea de tipo `System.Type`.
 
-Cada propiedad `Command` se enlaza a una propiedad denominada `NavigateCommand`. Esa propiedad se define en el archivo de código subyacente, **MainPage.xaml.cs** :
+Cada propiedad `Command` se enlaza a una propiedad denominada `NavigateCommand`. Esa propiedad se define en el archivo de código subyacente, **MainPage.xaml.cs**:
 
 ```csharp
 public partial class MainPage : ContentPage

@@ -17,7 +17,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93373814"
 ---
-# <a name="no-locxamarinforms-twopaneview-layout"></a>Diseño TwoPaneView de Xamarin.Forms
+# <a name="xamarinforms-twopaneview-layout"></a>Diseño TwoPaneView de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
