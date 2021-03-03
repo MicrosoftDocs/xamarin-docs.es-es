@@ -6,16 +6,16 @@ ms.assetid: B540910C-9C51-416A-AAB9-057BF76489C3
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/03/2021
+ms.date: 02/26/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a3fd59ecbaf85f24515deba8562060aadc6d2165
-ms.sourcegitcommit: 10c7dd16fe78226053d1d036492b6c9102fc421b
+ms.openlocfilehash: 27bafeb9ac82ba23128eabdd9f4a15cb5c8c1bf1
+ms.sourcegitcommit: 322e7bcf9fb8c1ad52ab8e929bea95d45e280834
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99540966"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101751371"
 ---
 # <a name="consume-a-restful-web-service"></a>Consumo de un servicio web RESTful
 
@@ -50,7 +50,7 @@ Cuando se ejecute la aplicación de ejemplo, se conectará a un servicio REST ho
 >
 >ATS puede no participar en si no es posible usar el protocolo **https** y proteger la comunicación para los recursos de Internet. Esto se puede lograr actualizando el archivo **info. plist** de la aplicación. Para obtener más información, vea [seguridad de transporte de aplicaciones](~/ios/app-fundamentals/ats.md).
 
-## <a name="consuming-the-web-service"></a>Consumo del servicio Web
+## <a name="consume-the-web-service"></a>Consumo del servicio web
 
 El servicio REST se escribe utilizando ASP.NET Core y proporciona las operaciones siguientes:
 
@@ -59,33 +59,17 @@ El servicio REST se escribe utilizando ASP.NET Core y proporciona las operacione
 |Obtención de una lista de tareas pendientes|GET|/api/todoitems/|
 |Crear un nuevo elemento de tareas pendientes|POST|/api/todoitems/|Un TodoItem con formato JSON|
 |Actualizar una tarea pendiente|PUT|/api/todoitems/|Un TodoItem con formato JSON|
-|Eliminar una tarea pendiente|DELETE|/api/todoitems/{id}|
+|Eliminar una tarea pendiente|Delete|/api/todoitems/{id}|
 
 La mayoría de los URI incluyen el `TodoItem` identificador de la ruta de acceso. Por ejemplo, para eliminar el `TodoItem` cuyo identificador es `6bb8a868-dba1-4f1a-93b7-24ebce87e243` , el cliente envía una solicitud DELETE a `http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243` . Para obtener más información sobre el modelo de datos utilizado en la aplicación de ejemplo, vea [modelar los datos](~/xamarin-forms/data-cloud/web-services/introduction.md).
 
-Cuando el marco de la API Web recibe una solicitud, enruta la solicitud a una acción. Estas acciones son simplemente métodos públicos en la `TodoItemsController` clase. El marco de trabajo utiliza una tabla de enrutamiento para determinar qué acción se debe invocar en respuesta a una solicitud, que se muestra en el ejemplo de código siguiente:
-
-```csharp
-config.Routes.MapHttpRoute(
-    name: "TodoItemsApi",
-    routeTemplate: "api/{controller}/{id}",
-    defaults: new { controller="todoitems", id = RouteParameter.Optional }
-);
-```
-
-La tabla de enrutamiento contiene una plantilla de ruta y, cuando el marco de la API Web recibe una solicitud HTTP, intenta hacer coincidir el URI con la plantilla de ruta de la tabla de enrutamiento. Si no se encuentra una ruta coincidente, el cliente recibe un error 404 (no encontrado). Si se encuentra una ruta coincidente, la API Web selecciona el controlador y la acción como se indica a continuación:
-
-- Para encontrar el controlador, la API Web agrega "Controller" al valor de la variable *{Controller}* .
-- Para encontrar la acción, la API Web examina el método HTTP y examina las acciones del controlador que se representan con el mismo método HTTP que un atributo.
-- La variable de marcador de posición *{ID}* está asignada a un parámetro de acción.
-
-El servicio REST utiliza la autenticación básica. Para obtener más información, consulte [autenticación de un servicio web RESTful](~/xamarin-forms/data-cloud/authentication/rest.md). Para obtener más información sobre el enrutamiento de ASP.NET Web API, consulte [enrutamiento en ASP.net web API](https://www.asp.net/web-api/overview/web-api-routing-and-actions/routing-in-aspnet-web-api) en el sitio web de ASP.net. Para obtener más información sobre cómo compilar el servicio REST mediante ASP.NET Core, vea [crear servicios back-end para aplicaciones móviles nativas](/aspnet/core/mobile/native-mobile-backend/).
+Cuando el marco de la API Web recibe una solicitud, enruta la solicitud a una acción. Estas acciones son simplemente métodos públicos en la `TodoItemsController` clase. El marco de trabajo usa middleware de enrutamiento para hacer coincidir las direcciones URL de las solicitudes entrantes y asignarlas a las acciones. Las API de REST deben usar el enrutamiento de atributo para modelar la funcionalidad de la aplicación como un conjunto de recursos cuyas operaciones se representan mediante verbos HTTP. El enrutamiento mediante atributos utiliza un conjunto de atributos para asignar acciones directamente a las plantillas de ruta. Para obtener más información sobre el enrutamiento de atributos, consulte [enrutamiento de atributos para las API de REST](/aspnet/core/mvc/controllers/routing?view=aspnetcore-5.0#ar). Para obtener más información sobre cómo compilar el servicio REST mediante ASP.NET Core, vea [crear servicios back-end para aplicaciones móviles nativas](/aspnet/core/mobile/native-mobile-backend/).
 
 La `HttpClient` clase se utiliza para enviar y recibir solicitudes a través de http. Proporciona funcionalidad para enviar solicitudes HTTP y recibir respuestas HTTP de un recurso identificado por un URI. Cada solicitud se envía como una operación asincrónica. Para obtener más información acerca de las operaciones asincrónicas, vea [información general sobre la compatibilidad con Async](~/cross-platform/platform/async.md).
 
 La `HttpResponseMessage` clase representa un mensaje de respuesta http recibido del servicio Web después de que se haya realizado una solicitud HTTP. Contiene información sobre la respuesta, incluido el código de estado, los encabezados y cualquier cuerpo. La `HttpContent` clase representa el cuerpo http y los encabezados de contenido, como `Content-Type` y `Content-Encoding` . El contenido se puede leer mediante cualquiera de los `ReadAs` métodos, como `ReadAsStringAsync` y `ReadAsByteArrayAsync` , dependiendo del formato de los datos.
 
-### <a name="creating-the-httpclient-object"></a>Creación del objeto HTTPClient
+### <a name="create-the-httpclient-object"></a>Crear el objeto HTTPClient
 
 La `HttpClient` instancia de se declara en el nivel de clase para que el objeto se encuentre siempre que la aplicación necesite hacer solicitudes HTTP, como se muestra en el ejemplo de código siguiente:
 
@@ -98,12 +82,13 @@ public class RestService : IRestService
   public RestService ()
   {
     client = new HttpClient ();
+    ...
   }
   ...
 }
 ```
 
-### <a name="retrieving-data"></a>Recuperación de datos
+### <a name="retrieve-data"></a>Recuperación de datos
 
 El `HttpClient.GetAsync` método se usa para enviar la solicitud GET al servicio Web especificado por el URI y, a continuación, recibir la respuesta del servicio Web, como se muestra en el ejemplo de código siguiente:
 
@@ -117,7 +102,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
   if (response.IsSuccessStatusCode)
   {
       string content = await response.Content.ReadAsStringAsync ();
-      Items = JsonConvert.DeserializeObject <List<TodoItem>> (content);
+      Items = JsonSerializer.Deserialize<List<TodoItem>>(content, serializerOptions);
   }
   ...
 }
@@ -125,12 +110,12 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 
 El servicio REST envía un código de Estado HTTP en la `HttpResponseMessage.IsSuccessStatusCode` propiedad para indicar si la solicitud HTTP se ha realizado correctamente o no. Para esta operación, el servicio REST envía el código de Estado HTTP 200 (OK) en la respuesta, que indica que la solicitud se realizó correctamente y que la información solicitada se encuentra en la respuesta.
 
-Si la operación HTTP se realizó correctamente, se lee el contenido de la respuesta para su presentación. La `HttpResponseMessage.Content` propiedad representa el contenido de la respuesta HTTP y el `HttpContent.ReadAsStringAsync` método escribe de forma asincrónica el contenido http en una cadena. A continuación, este contenido se convierte de JSON a un `List` de `TodoItem` instancias de.
+Si la operación HTTP se realizó correctamente, se lee el contenido de la respuesta para su presentación. La `HttpResponseMessage.Content` propiedad representa el contenido de la respuesta HTTP y el `HttpContent.ReadAsStringAsync` método escribe de forma asincrónica el contenido http en una cadena. Este contenido se deserializa a partir de JSON a un `List` de `TodoItem` instancias.
 
 > [!WARNING]
 > El uso del `ReadAsStringAsync` método para recuperar una respuesta grande puede tener un impacto negativo en el rendimiento. En tales circunstancias, la respuesta se debe deserializar directamente para evitar tener que almacenarla completamente en búfer.
 
-### <a name="creating-data"></a>Crear datos
+### <a name="create-data"></a>Crear datos
 
 El `HttpClient.PostAsync` método se usa para enviar la solicitud post al servicio Web especificado por el URI y, a continuación, para recibir la respuesta del servicio Web, como se muestra en el ejemplo de código siguiente:
 
@@ -140,7 +125,7 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
   Uri uri = new Uri (string.Format (Constants.TodoItemsUrl, string.Empty));
 
   ...
-  string json = JsonConvert.SerializeObject (item);
+  string json = JsonSerializer.Serialize<TodoItem>(item, serializerOptions);
   StringContent content = new StringContent (json, Encoding.UTF8, "application/json");
 
   HttpResponseMessage response = null;
@@ -158,7 +143,7 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 }
 ```
 
-La `TodoItem` instancia se convierte en una carga JSON para enviarla al servicio Web. Esta carga se inserta entonces en el cuerpo del contenido HTTP que se enviará al servicio Web antes de que se realice la solicitud con el `PostAsync` método.
+La `TodoItem` instancia se serializa a una carga JSON para enviarla al servicio Web. Esta carga se inserta entonces en el cuerpo del contenido HTTP que se enviará al servicio Web antes de que se realice la solicitud con el `PostAsync` método.
 
 El servicio REST envía un código de Estado HTTP en la `HttpResponseMessage.IsSuccessStatusCode` propiedad para indicar si la solicitud HTTP se ha realizado correctamente o no. Las respuestas comunes para esta operación son:
 
@@ -166,7 +151,7 @@ El servicio REST envía un código de Estado HTTP en la `HttpResponseMessage.IsS
 - **400 (solicitud incorrecta)** : el servidor no entiende la solicitud.
 - **409 (conflicto)** : no se pudo realizar la solicitud debido a un conflicto en el servidor.
 
-### <a name="updating-data"></a>Actualización de datos
+### <a name="update-data"></a>Actualización de datos
 
 El `HttpClient.PutAsync` método se usa para enviar la solicitud Put al servicio Web especificado por el URI y, a continuación, recibir la respuesta del servicio Web, como se muestra en el ejemplo de código siguiente:
 
@@ -187,7 +172,7 @@ El servicio REST envía un código de Estado HTTP en la `HttpResponseMessage.IsS
 - **400 (solicitud incorrecta)** : el servidor no entiende la solicitud.
 - **404 (no encontrado)** : el recurso solicitado no existe en el servidor.
 
-### <a name="deleting-data"></a>Eliminar datos
+### <a name="delete-data"></a>Eliminación de datos
 
 El `HttpClient.DeleteAsync` método se usa para enviar la solicitud de eliminación al servicio Web especificado por el URI y, a continuación, recibir la respuesta del servicio Web, como se muestra en el ejemplo de código siguiente:
 
@@ -218,10 +203,11 @@ Si está desarrollando el servicio Web REST localmente con un marco de trabajo c
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Microsoft Learn: consumir servicios web REST en aplicaciones Xamarin](/learn/modules/consume-rest-services/)
-- [Microsoft Learn: creación de una API Web con ASP.NET Core](/learn/modules/build-web-api-aspnet-core/)
+- [Microsoft Learn: Creación de una API web con ASP.NET Core](/learn/modules/build-web-api-aspnet-core/)
 - [Creación de servicios back-end para aplicaciones móviles nativas](/aspnet/core/mobile/native-mobile-backend/)
+- [Enrutamiento de atributos para las API de REST](/aspnet/core/mvc/controllers/routing?view=aspnetcore-5.0#ar)
 - [TodoREST (ejemplo)](/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 - [API de HttpClient](xref:System.Net.Http.HttpClient)
 - [Configuración de seguridad de red de Android](https://devblogs.microsoft.com/xamarin/cleartext-http-android-network-security/)
-- [Seguridad de transporte de aplicaciones de iOS](~/ios/app-fundamentals/ats.md)
+- [Seguridad de transporte de aplicación de iOS](~/ios/app-fundamentals/ats.md)
 - [Conexión a servicios web locales](~/cross-platform/deploy-test/connect-to-local-web-services.md)

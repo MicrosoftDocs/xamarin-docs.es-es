@@ -112,6 +112,8 @@ items:
         items:
           - name: Recarga activa de XAML
             href: xaml/hot-reload.md
+          - name: Árbol visual dinámico
+            href: xaml/live-visual-tree.md
           - name: Cuadro de herramientas de XAML
             href: xaml/toolbox.md
           - name: Controlador de vista previa de XAML

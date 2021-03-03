@@ -10,12 +10,12 @@ ms.date: 12/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 09cffb4e5c7d8f6b78d5ab1de6ec9839c3969e87
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: 05ad6af1b094a980f5e226bcde22b43764576652
+ms.sourcegitcommit: 322e7bcf9fb8c1ad52ab8e929bea95d45e280834
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97940125"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101751522"
 ---
 # <a name="display-pop-ups"></a>Mostrar elementos emergentes
 
@@ -31,7 +31,7 @@ Todas las Xamarin.Forms plataformas compatibles con son un elemento emergente mo
 await DisplayAlert ("Alert", "You have been alerted", "OK");
 ```
 
-![Cuadro de diálogo de alerta con un botón](pop-ups-images/alert.png)
+[![Cuadro de diálogo de alerta con un botón, en iOS y Android](pop-ups-images/simple-alert.png)](pop-ups-images/simple-alert-large.png#lightbox)
 
 En este ejemplo, no se recopila información del usuario. La alerta se muestra modalmente y, después de cerrarla, el usuario sigue interactuando con la aplicación.
 
@@ -45,7 +45,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 }
 ```
 
-[![Cuadro de diálogo de alerta con dos botones](pop-ups-images/alert2-sml.png)](pop-ups-images/alert2.png#lightbox)
+[![Cuadro de diálogo de alerta con dos botones](pop-ups-images/two-button-alert.png)](pop-ups-images/two-button-alert.png#lightbox)
 
 El [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) método también tiene sobrecargas que aceptan un [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) argumento que especifica la dirección en la que fluyen los elementos de la interfaz de usuario dentro de la alerta. Para obtener más información acerca de la dirección de flujo, consulte [localización de derecha a izquierda](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 
@@ -66,9 +66,9 @@ async void OnActionSheetSimpleClicked (object sender, EventArgs e)
 }
 ```
 
-![Cuadro de diálogo de ActionSheet](pop-ups-images/action.png)
+[![Cuadro de diálogo ActionSheet, en iOS y Android](pop-ups-images/simple-actionsheet.png)](pop-ups-images/simple-actionsheet-large.png#lightbox)
 
-El botón `destroy` se representa de forma distinta y puede dejarse como `null`, o bien se puede especificar como el tercer parámetro de cadena. En el ejemplo siguiente, se usa el botón `destroy`:
+El `destroy` botón se representa de forma diferente a los demás botones de iOS y se puede dejar `null` o especificar como el tercer parámetro de cadena. En el ejemplo siguiente, se usa el botón `destroy`:
 
 ```csharp
 async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
@@ -78,7 +78,7 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 }
 ```
 
-[![DisplayActionSheet](pop-ups-images/action2-sml.png "Cuadro de diálogo de hoja de acción con el botón destruir")](pop-ups-images/action2.png#lightbox "Cuadro de diálogo de hoja de acción con el botón destruir")
+[![Cuadro de diálogo ActionSheet con el botón destruir, en iOS y Android](pop-ups-images/actionsheet-destroy-button.png)](pop-ups-images/actionsheet-destroy-button-large.png#lightbox)
 
 El [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) método también tiene una sobrecarga que acepta un [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) argumento que especifica la dirección en la que los elementos de la interfaz de usuario fluyen dentro de la hoja de acción. Para obtener más información acerca de la dirección de flujo, consulte [localización de derecha a izquierda](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 

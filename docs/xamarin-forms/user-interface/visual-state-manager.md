@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms Administrador de estado visual
+title: Administrador de estado visual de Xamarin.Forms
 description: Use el administrador de estado visual para realizar cambios en los elementos XAML en función de los Estados visuales establecidos desde el código.
 ms.prod: xamarin
 ms.assetid: 17296F14-640D-484B-A24C-A4E9B7013E4F
@@ -11,14 +11,14 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f1ceadb6d7985f5d448fe729a42e0cf0a3d5d6f6
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 2c69dc4373a2fe98d61b123daf63d54e129e8426
+ms.sourcegitcommit: 322e7bcf9fb8c1ad52ab8e929bea95d45e280834
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93374477"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101751436"
 ---
-# <a name="no-locxamarinforms-visual-state-manager"></a>Xamarin.Forms Administrador de estado visual
+# <a name="xamarinforms-visual-state-manager"></a>Administrador de estado visual de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
 
@@ -404,17 +404,17 @@ Ahora todas las `Entry` vistas de esta página responden de la misma manera a su
 
 [![VSM en estilo](vsm-images/VsmInStyle.png "VSM en estilo")](vsm-images/VsmInStyle-Large.png#lightbox)
 
-## <a name="visual-states-in-no-locxamarinforms"></a>Estados visuales en Xamarin.Forms
+## <a name="visual-states-in-xamarinforms"></a>Estados visuales en Xamarin.Forms
 
 En la tabla siguiente se enumeran los Estados visuales que se definen en Xamarin.Forms :
 
-| Class | States | Más información |
+| Clase | States | Más información |
 | ----- | ------ | ---------------- |
 | `Button` | `Pressed` | [Estados visuales del botón](~/xamarin-forms/user-interface/button.md#button-visual-states) |
 | `CheckBox` | `IsChecked` | [Estados visuales de la casilla](~/xamarin-forms/user-interface/checkbox.md#checkbox-visual-states) |
 | `CarouselView` | `DefaultItem`, `CurrentItem`, `PreviousItem`, `NextItem` | [Estados visuales de CarouselView](~/xamarin-forms/user-interface/carouselview/interaction.md#define-visual-states) |
 | `ImageButton` | `Pressed` | [Estados visuales de ImageButton](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) |
-| `RadioButton` | `IsChecked` | [Estados visuales de RadioButton](~/xamarin-forms/user-interface/radiobutton.md#radiobutton-visual-states) |
+| `RadioButton` | `Checked`, `Unchecked` | [Estados visuales de RadioButton](~/xamarin-forms/user-interface/radiobutton.md#radiobutton-visual-states) |
 | `Switch` | `On`, `Off` | [Cambiar Estados visuales](~/xamarin-forms/user-interface/switch.md#switch-visual-states) |
 | `VisualElement` | `Normal`, `Disabled`, `Focused`, `Selected` | [Estados comunes](#common-states) |
 

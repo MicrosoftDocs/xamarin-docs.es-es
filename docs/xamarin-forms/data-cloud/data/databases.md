@@ -6,18 +6,18 @@ ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 12/05/2019
+ms.date: 03/01/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4331b29c54b5f7c59daf0a9e04cd398693e79201
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: a7dd5ea8963fed079c82ac6944d571176002486e
+ms.sourcegitcommit: 322e7bcf9fb8c1ad52ab8e929bea95d45e280834
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93374711"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101751449"
 ---
-# <a name="no-locxamarinforms-local-databases"></a>Xamarin.Forms Bases de datos locales
+# <a name="xamarinforms-local-databases"></a>Xamarin.Forms Bases de datos locales
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/todo)
 
@@ -96,93 +96,70 @@ Una clase contenedora de base de datos abstrae la capa de acceso a datos desde e
 
 ### <a name="lazy-initialization"></a>Inicialización diferida
 
-`TodoItemDatabase`Usa la clase .net `Lazy` para retrasar la inicialización de la base de datos hasta que se obtiene acceso por primera vez. El uso de la inicialización diferida evita que el proceso de carga de la base de datos retrase el inicio de la aplicación. Para obtener más información, [vea &lt; &gt; clase T diferida](xref:System.Lazy`1).
+`TodoItemDatabase`Utiliza la inicialización diferida asincrónica, representada por la `AsyncLazy<T>` clase personalizada, para retrasar la inicialización de la base de datos hasta que se tiene acceso por primera vez:
 
 ```csharp
 public class TodoItemDatabase
 {
-    static readonly Lazy<SQLiteAsyncConnection> lazyInitializer = new Lazy<SQLiteAsyncConnection>(() =>
-    {
-        return new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
-    });
+    static SQLiteAsyncConnection Database;
 
-    static SQLiteAsyncConnection Database => lazyInitializer.Value;
-    static bool initialized = false;
+    public static readonly AsyncLazy<TodoItemDatabase> Instance = new AsyncLazy<TodoItemDatabase>(async () =>
+    {
+        var instance = new TodoItemDatabase();
+        CreateTableResult result = await Database.CreateTableAsync<TodoItem>();
+        return instance;
+    });
 
     public TodoItemDatabase()
     {
-        InitializeAsync().SafeFireAndForget(false);
-    }
-
-    async Task InitializeAsync()
-    {
-        if (!initialized)
-        {
-            if (!Database.TableMappings.Any(m => m.MappedType.Name == typeof(TodoItem).Name))
-            {
-                await Database.CreateTablesAsync(CreateFlags.None, typeof(TodoItem)).ConfigureAwait(false);
-            }
-            initialized = true;
-        }
+        Database = new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
     }
 
     //...
 }
 ```
 
-La conexión de base de datos es un campo estático que garantiza que se utiliza una conexión de base de datos única para la vida de la aplicación. El uso de una conexión estática persistente ofrece un mejor rendimiento que abrir y cerrar conexiones varias veces durante una sesión de aplicación única.
+El `Instance` campo se usa para crear la tabla de base de datos para el `TodoItem` objeto, si aún no existe, y devuelve `TodoItemDatabase` como singleton. El `Instance` campo de tipo `AsyncLazy<TodoItemDatabase>` se construye la primera vez que se espera. Si varios subprocesos intentan obtener acceso al campo al mismo tiempo, todos usarán la construcción única. A continuación, cuando se completa la construcción, todas `await` las operaciones se completan. Además, las `await` operaciones posteriores a la construcción se completarán inmediatamente, ya que el valor está disponible.
 
-El `InitializeAsync` método es responsable de comprobar si ya existe una tabla para almacenar `TodoItem` objetos. Este método crea automáticamente la tabla si no existe.
+> [!NOTE]
+> La conexión de base de datos es un campo estático que garantiza que se utiliza una conexión de base de datos única para la vida de la aplicación. El uso de una conexión estática persistente ofrece un mejor rendimiento que abrir y cerrar conexiones varias veces durante una sesión de aplicación única.
 
-### <a name="the-safefireandforget-extension-method"></a>El método de extensión SafeFireAndForget
+### <a name="asynchronous-lazy-initialization"></a>Inicialización diferida asincrónica
 
-Cuando `TodoItemDatabase` se crea una instancia de la clase, se debe inicializar la conexión de base de datos, que es un proceso asincrónico. Pero:
-
-- Los constructores de clase no pueden ser asincrónicos.
-- Un método asincrónico que no está en espera no producirá excepciones.
-- El uso del `Wait` método bloquea el subproceso _y_ reabsorbe las excepciones.
-
-Con el fin de iniciar la inicialización asincrónica, evitar el bloqueo de la ejecución y tener la oportunidad de detectar excepciones, la aplicación de ejemplo usa un método de extensión denominado `SafeFireAndForget` . El `SafeFireAndForget` método de extensión proporciona funcionalidad adicional a la `Task` clase:
+Con el fin de iniciar la inicialización de la base de datos, evitar el bloqueo de la ejecución y tener la oportunidad de detectar excepciones, la aplicación de ejemplo utiliza la inicialización diferida asincrónica, representada por la `AsyncLazy<T>` clase:
 
 ```csharp
-public static class TaskExtensions
+public class AsyncLazy<T> : Lazy<Task<T>>
 {
-    // NOTE: Async void is intentional here. This provides a way
-    // to call an async method from the constructor while
-    // communicating intent to fire and forget, and allow
-    // handling of exceptions
-    public static async void SafeFireAndForget(this Task task,
-        bool returnToCallingContext,
-        Action<Exception> onException = null)
-    {
-        try
-        {
-            await task.ConfigureAwait(returnToCallingContext);
-        }
+    readonly Lazy<Task<T>> instance;
 
-        // if the provided action is not null, catch and
-        // pass the thrown exception
-        catch (Exception ex) when (onException != null)
-        {
-            onException(ex);
-        }
+    public AsyncLazy(Func<T> factory)
+    {
+        instance = new Lazy<Task<T>>(() => Task.Run(factory));
+    }
+
+    public AsyncLazy(Func<Task<T>> factory)
+    {
+        instance = new Lazy<Task<T>>(() => Task.Run(factory));
+    }
+
+    public TaskAwaiter<T> GetAwaiter()
+    {
+        return instance.Value.GetAwaiter();
     }
 }
 ```
 
-El `SafeFireAndForget` método espera la ejecución asincrónica del `Task` objeto proporcionado y permite asociar un `Action` que se llama si se produce una excepción.
-
-Para obtener más información, vea [patrón asincrónico basado en tareas (TAP)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
+La `AsyncLazy` clase combina los `Lazy<T>` `Task<T>` tipos y para crear una tarea de inicialización diferida que representa la inicialización de un recurso. El delegado de generador que se pasa al constructor puede ser sincrónico o asincrónico. Los delegados de fábrica se ejecutarán en un subproceso de grupo de subprocesos y no se ejecutarán más de una vez (incluso cuando varios subprocesos intenten iniciarlos simultáneamente). Cuando se completa un delegado de generador, el valor inicializado de forma diferida está disponible y los métodos que esperan a la `AsyncLazy<T>` instancia reciben el valor. Para más información, vea [AsyncLazy](https://devblogs.microsoft.com/pfxteam/asynclazyt/).
 
 ### <a name="data-manipulation-methods"></a>Métodos de manipulación de datos
 
 La `TodoItemDatabase` clase incluye métodos para los cuatro tipos de manipulación de datos: crear, leer, editar y eliminar. La biblioteca SQLite.NET proporciona un mapa relacional de objetos simple (ORM) que permite almacenar y recuperar objetos sin escribir instrucciones SQL.
 
 ```csharp
-public class TodoItemDatabase {
-
+public class TodoItemDatabase
+{
     // ...
-
     public Task<List<TodoItem>> GetItemsAsync()
     {
         return Database.Table<TodoItem>().ToListAsync();
@@ -218,35 +195,20 @@ public class TodoItemDatabase {
 }
 ```
 
-## <a name="access-data-in-no-locxamarinforms"></a>Acceder a los datos en Xamarin.Forms
+## <a name="access-data-in-xamarinforms"></a>Acceder a los datos en Xamarin.Forms
 
-La Xamarin.Forms `App` clase expone una instancia de la `TodoItemDatabase` clase:
-
-```csharp
-static TodoItemDatabase database;
-public static TodoItemDatabase Database
-{
-    get
-    {
-        if (database == null)
-        {
-            database = new TodoItemDatabase();
-        }
-        return database;
-    }
-}
-```
-
-Esta propiedad permite Xamarin.Forms a los componentes llamar a métodos de recuperación y manipulación de datos en la `Database` instancia en respuesta a la interacción del usuario. Por ejemplo:
+La `TodoItemDatabase` clase expone el `Instance` campo a través del cual se pueden invocar las operaciones de acceso a datos en la `TodoItemDatabase` clase:
 
 ```csharp
-var saveButton = new Button { Text = "Save" };
-saveButton.Clicked += async (sender, e) =>
+async void OnSaveClicked(object sender, EventArgs e)
 {
     var todoItem = (TodoItem)BindingContext;
-    await App.Database.SaveItemAsync(todoItem);
+    TodoItemDatabase database = await TodoItemDatabase.Instance;
+    await database.SaveItemAsync(todoItem);
+
+    // Navigate backwards
     await Navigation.PopAsync();
-};
+}
 ```
 
 ## <a name="advanced-configuration"></a>Configuración avanzada
@@ -255,13 +217,13 @@ SQLite proporciona una sólida API con más características de las que se descr
 
 Para obtener más información, consulte la [documentación de SQLite](https://www.sqlite.org/docs.html) en SQLite.org.
 
-### <a name="write-ahead-logging"></a>Registro de escritura anticipada
+### <a name="write-ahead-logging"></a>Registro de escritura previa
 
 De forma predeterminada, SQLite usa un diario de reversión tradicional. Una copia del contenido de la base de datos sin modificar se escribe en un archivo de reversión independiente y, a continuación, los cambios se escriben directamente en el archivo de base de datos. La confirmación se produce cuando se elimina el diario de reversión.
 
 El registro de Write-Ahead (WAL) escribe los cambios en un archivo de WAL independiente en primer lugar. En el modo WAL, una confirmación es un registro especial que se anexa al archivo WAL, lo que permite que se produzcan varias transacciones en un único archivo de WAL. Un archivo WAL se vuelve a combinar en el archivo de base de datos en una operación especial denominada _punto de control_.
 
-WAL puede ser más rápido para las bases de datos locales, ya que los lectores y los escritores no se bloquean entre sí, lo que permite que las operaciones de lectura y escritura estén simultáneas. Sin embargo, el modo WAL no permite cambios en el _tamaño de página_ , agrega asociaciones de archivo adicionales a la base de datos y agrega la operación de _punto de comprobación_ adicional.
+WAL puede ser más rápido para las bases de datos locales, ya que los lectores y los escritores no se bloquean entre sí, lo que permite que las operaciones de lectura y escritura estén simultáneas. Sin embargo, el modo WAL no permite cambios en el _tamaño de página_, agrega asociaciones de archivo adicionales a la base de datos y agrega la operación de _punto de comprobación_ adicional.
 
 Para habilitar WAL en SQLite.NET, llame al `EnableWriteAheadLoggingAsync` método en la `SQLiteAsyncConnection` instancia de:
 
@@ -271,7 +233,7 @@ await Database.EnableWriteAheadLoggingAsync();
 
 Para obtener más información, consulte [SQLite Write-Ahead Logging](https://www.sqlite.org/wal.html) on SQLite.org.
 
-### <a name="copying-a-database"></a>Copiar una base de datos
+### <a name="copy-a-database"></a>Copia de una base de datos
 
 Hay varios casos en los que puede ser necesario copiar una base de datos de SQLite:
 
@@ -293,5 +255,4 @@ Para obtener más información, vea [control de Xamarin.Forms archivos en ](~/xa
 - [Documentación de SQLite](https://www.sqlite.org/docs.html)
 - [Uso de SQLite con Android](~/android/data-cloud/data-access/using-sqlite-orm.md)
 - [Uso de SQLite con iOS](~/ios/data-cloud/data/using-sqlite-orm.md)
-- [Modelo asincrónico basado en tareas (TAP)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
-- [Lazy &lt; T ( &gt; clase)](xref:System.Lazy`1)
+- [AsyncLazy](https://devblogs.microsoft.com/pfxteam/asynclazyt/)
