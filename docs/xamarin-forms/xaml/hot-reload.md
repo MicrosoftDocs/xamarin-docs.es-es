@@ -10,19 +10,19 @@ ms.date: 03/01/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7a0eb6eadb43fd191c5939270dca70a8c0ac7f3e
-ms.sourcegitcommit: 3aa9bdcaaedca74ab5175cb2338a1df122300243
+ms.openlocfilehash: aefd0ded8d9d0076a55f6a878761e5bb25ed69c9
+ms.sourcegitcommit: 278963e21bd07fe4b0bf0ed71b32ccb53dd95eff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101749374"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101841119"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms"></a>Recarga activa de XAML para Xamarin.Forms
 
 La recarga activa de XAML se conecta al flujo de trabajo existente para aumentar su productividad y ahorrar tiempo. Sin la recarga activa de XAML, debe compilar e implementar la aplicación cada vez que quiera ver un cambio de XAML. Con la recarga activa, al guardar el archivo XAML, los cambios se reflejan en directo en la aplicación en ejecución. Además, se mantendrán el estado y los datos de navegación, lo que le permitirá iterar rápidamente en la interfaz de usuario sin perder su lugar en la aplicación. Por lo tanto, con la recarga activa de XAML, pasará menos tiempo recompilando e implementando sus aplicaciones para validar los cambios de la interfaz de usuario.
 
-[!NOTE]
-Si está escribiendo una aplicación nativa de UWP o WPF, y no usa Xamarin.Forms , consulte [recarga activa de XAML para UWP y WPF](/visualstudio/debugger/xaml-hot-reload).
+> [!NOTE]
+> Si está escribiendo una aplicación nativa de UWP o WPF, y no usa Xamarin.Forms , consulte [recarga activa de XAML para UWP y WPF](/visualstudio/debugger/xaml-hot-reload).
 
 ## <a name="system-requirements"></a>Requisitos del sistema
 
@@ -59,11 +59,11 @@ Desde Visual Studio 16,9 y Visual Studio para Mac 8,9, el comportamiento predete
 El *modo solo cambios* analiza el código XAML para ver exactamente lo que cambió al realizar una edición y envía solo los cambios a la aplicación en ejecución. Se trata de la misma tecnología que se usa para la recarga activa de WPF y UWP. Conserva el estado de la interfaz de usuario, ya que no vuelve a crear la interfaz de usuario para la página completa, solo actualiza las propiedades cambiadas en los controles afectados por las ediciones. El modo solo cambia el uso del [árbol visual dinámico](live-visual-tree.md).
 
 De forma predeterminada, con solo cambios en el modo, no es necesario guardar el archivo para ver los cambios. las actualizaciones se aplican inmediatamente, a medida que escribe.
-Sin embargo, puede cambiar este comportamiento para que solo se actualice al guardar archivos. Para ello, active la casilla **aplicar recarga activa de XAML al guardar el documento** (actualmente solo está disponible en Windows) en la configuración del IDE de recarga en caliente. En ocasiones, la actualización en el almacenamiento de documentos puede ser útil si se realizan actualizaciones de XAML más grandes y no se desea que se muestren hasta que se completan. 
+Sin embargo, puede cambiar este comportamiento para que solo se actualice al guardar archivos. Para ello, active la casilla **aplicar recarga activa de XAML al guardar el documento** (actualmente solo está disponible en Windows) en la configuración del IDE de recarga en caliente. En ocasiones, la actualización en el almacenamiento de documentos puede ser útil si se realizan actualizaciones de XAML más grandes y no se desea que se muestren hasta que se completan.
 
 El *modo de página completa* envía el archivo XAML completo a la aplicación en ejecución después de realizar las modificaciones y guardar. La aplicación en ejecución vuelve a cargar la página y vuelve a crear sus controles; verá la actualización de la interfaz de usuario.
 
-El modo de solo cambios es el futuro de la recarga activa y se recomienda usarlo siempre que sea posible. Es rápido, conserva el estado de la interfaz de usuario y admite el [árbol visual dinámico](live-visual-tree.md). Todavía se proporciona el modo de página completa para las aplicaciones que aún no se han actualizado a Xamarin.Forms 5,0. 
+El modo de solo cambios es el futuro de la recarga activa y se recomienda usarlo siempre que sea posible. Es rápido, conserva el estado de la interfaz de usuario y admite el [árbol visual dinámico](live-visual-tree.md). Todavía se proporciona el modo de página completa para las aplicaciones que aún no se han actualizado a Xamarin.Forms 5,0.
 
 > [!NOTE]
 > Deberá reiniciar la sesión de depuración al cambiar de modo.
