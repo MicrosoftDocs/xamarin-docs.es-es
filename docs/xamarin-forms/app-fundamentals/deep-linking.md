@@ -4,29 +4,22 @@ description: En este artículo se explica cómo usar la indexación de la aplica
 ms.prod: xamarin
 ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
 ms.technology: xamarin-forms
-ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 99da232d13202aadc338ff419042998f646b7c28
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 1eb2bd3f6b996ece3388c3ce8ad8fceca4c31957
+ms.sourcegitcommit: 322e7bcf9fb8c1ad52ab8e929bea95d45e280834
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373073"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101751358"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexación de la aplicación y vinculación en profundidad
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/deeplinking)
-
-_La indexación de la aplicación permite a aplicaciones que de lo contrario se olvidarían tras unos pocos usos mantener su pertinencia al aparecer en los resultados de la búsqueda. La vinculación en profundidad permite a las aplicaciones responder a un resultado de la búsqueda que contiene datos de aplicación, normalmente al navegar a una página a la que se hace referencia a partir de un vínculo profundo. En este artículo se explica cómo usar la indexación de la aplicación y la vinculación en profundidad para que el contenido de las aplicaciones Xamarin.Forms permita efectuar búsquedas en dispositivos iOS y Android._
-
-> [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
-
-**Vídeo de vinculación en profundidad con Xamarin.Forms y Azure**
 
 La indexación de la aplicación y la vinculación en profundidad de Xamarin.Forms proporcionan una API para la publicación de metadatos y la indexación de las aplicaciones a medida que los usuarios navegan por ellas. Posteriormente, el contenido indexado se puede buscar en una búsqueda web, de Spotlight o de Google. Al pulsar en un resultado de la búsqueda que contenga un vínculo profundo, se desencadenará un evento que normalmente se usa para navegar a la página a la que se hace referencia desde el vínculo profundo y que puede controlarse mediante una aplicación.
 
@@ -244,10 +237,6 @@ Además, se pueden especificar valores para las siguientes claves:
 > La colección `KeyValues` no se usa en la plataforma Android.
 
 Para obtener más información sobre Handoff, vea la [introducción a Handoff](~/ios/platform/handoff.md).
-
-## <a name="summary"></a>Resumen
-
-En este artículo se explica cómo usar la indexación de la aplicación y la vinculación en profundidad para que el contenido de las aplicaciones Xamarin.Forms permita efectuar búsquedas en dispositivos iOS y Android. La indexación de la aplicación permite a aplicaciones que de lo contrario se olvidarían tras unos pocos usos mantener su pertinencia al aparecer en los resultados de la búsqueda.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
