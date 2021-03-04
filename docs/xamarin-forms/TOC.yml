@@ -308,8 +308,8 @@ items:
             href: app-fundamentals/shell/flyout.md
           - name: Tabulaciones
             href: app-fundamentals/shell/tabs.md
-          - name: Configuración de la página
-            href: app-fundamentals/shell/configuration.md
+          - name: Páginas
+            href: app-fundamentals/shell/pages.md
           - name: Navegación
             href: app-fundamentals/shell/navigation.md
           - name: Buscar
