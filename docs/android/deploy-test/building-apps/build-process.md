@@ -6,13 +6,13 @@ ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
-ms.date: 09/11/2020
-ms.openlocfilehash: 4a89cfbb2406b6a5cda125044d43736dfa02d791
-ms.sourcegitcommit: 01ccefd54c0ced724784dbe1aec9ecfc9b00e633
+ms.date: 03/01/2021
+ms.openlocfilehash: bc47c9a939188a8bf4d70e11e81e9c43c948f8f4
+ms.sourcegitcommit: 3aa9bdcaaedca74ab5175cb2338a1df122300243
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92630236"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101749309"
 ---
 # <a name="build-process"></a>Proceso de compilación
 
@@ -22,28 +22,36 @@ El proceso de compilación de Xamarin.Android es responsable de pegarlo todo jun
 
 En términos generales, hay dos tipos de paquetes de aplicación de Android (archivos `.apk`) que puede generar el sistema de compilación de Xamarin.Android:
 
-- Compilaciones de **versión** , que son totalmente autocontenidas y no requieren la ejecución de paquetes adicionales. Estos son los paquetes que se proporcionarían a una tienda de aplicaciones.
+- Compilaciones de **versión**, que son totalmente independientes y no requieren la ejecución de paquetes adicionales. Se trata de los paquetes que se ofrecen en una tienda de aplicaciones.
 
-- Compilaciones de **depuración** , los que no.
+- Compilaciones de **depuración**, los que no.
 
-No es por casualidad que estos correspondan al elemento de MSBuild `Configuration` que genera el paquete.
+Estos tipos de paquete coinciden con el objeto MSBuild `Configuration` que genera el paquete.
 
 ## <a name="shared-runtime"></a>Entorno de tiempo de ejecución compartido
 
-El *entorno de tiempo de ejecución compartido* es un par de paquetes de Android adicionales que proporcionan la biblioteca de clases base (`mscorlib.dll`, etc.) y la biblioteca de enlaces de Android (`Mono.Android.dll`, etc.). Las compilaciones de depuración dependen del entorno de tiempo de ejecución compartido en lugar de incluir los ensamblados de enlace y de biblioteca de clases base en el paquete de aplicaciones Android, lo que permite que el paquete de depuración sea más pequeño.
+Antes de Xamarin.Android 11.2, el *entorno de ejecución compartido* consistía en un par de paquetes de Android adicionales que proporcionaban la biblioteca de clases base (`mscorlib.dll`, etc.) y la biblioteca de enlaces de Android (`Mono.Android.dll`, etc.). Las compilaciones de depuración dependen del entorno de tiempo de ejecución compartido en lugar de incluir los ensamblados de enlace y de biblioteca de clases base en el paquete de aplicaciones Android, lo que permite que el paquete de depuración sea más pequeño.
 
-El entorno de tiempo de ejecución compartido se puede deshabilitar en las compilaciones de depuración si se establece la propiedad [`$(AndroidUseSharedRuntime)`](~/android/deploy-test/building-apps/build-properties.md#androidusesharedruntime)
+El entorno de ejecución compartido se podía deshabilitar en las compilaciones de depuración estableciendo la propiedad [`$(AndroidUseSharedRuntime)`](~/android/deploy-test/building-apps/build-properties.md#androidusesharedruntime)
 en `False`.
+
+La compatibilidad con el entorno de ejecución compartido se quitó en Xamarin.Android 11.2.
 
 <a name="Fast_Deployment"></a>
 
 ## <a name="fast-deployment"></a>Implementación rápida
 
-La *implementación rápida* funciona junto con el entorno de tiempo de ejecución compartido para reducir incluso más el tamaño del paquete de aplicaciones Android. Para lograr esto, los ensamblados de la aplicación no se incluyen dentro del paquete. En su lugar, se copian en el destino mediante `adb push`. Este proceso acelera el ciclo de compilación, implementación y depuración dado que *solo* cambian los ensamblados; el paquete no se vuelve a instalar. Solo los ensamblados actualizados se vuelven a sincronizar con el dispositivo de destino.
+La *implementación rápida* funciona reduciendo aún más el tamaño del paquete de aplicaciones Android. Para ello, se excluyen los ensamblados de la aplicación del paquete y, en su lugar, se implementan los ensamblados de la aplicación directamente en el directorio interno de la aplicación `files`, que normalmente se encuentra en `/data/data/com.some.package`. El directorio interno `files` no es una carpeta de escritura global, por lo que se usa la herramienta `run-as` para ejecutar todos los comandos para copiar los archivos en ese directorio.
 
-Se sabe que la implementación rápida genera errores en los dispositivos que impiden que `adb` se sincronicen con el directorio `/data/data/@PACKAGE_NAME@/files/.__override__`.
+Este proceso acelera el ciclo de compilación, implementación y depuración porque el paquete no se vuelve a instalar cuando *solo* se cambian ensamblados.
+Solo los ensamblados actualizados se vuelven a sincronizar con el dispositivo de destino.
+
+> [!ADVERTENCIA> Se sabe que la implementación rápida no funciona en los dispositivos que bloquean `run-as`, lo que suele incluir dispositivos anteriores a Android 5.0.
 
 La implementación rápida está habilitada de forma predeterminada y puede deshabilitarse en las compilaciones de depuración si se establece la propiedad `$(EmbedAssembliesIntoApk)` en `True`.
+
+Se puede usar el modo de [implementación rápida mejorada](~/android/deploy-test/building-apps/build-properties.md#androidfastdeploymenttype) con esta característica para acelerar aún más las implementaciones.
+Así se implementarán tanto ensamblados, como bibliotecas nativas, typemaps y dexes en el directorio `files`. Sin embargo, realmente solo debe habilitarlo si va a cambiar bibliotecas nativas, enlaces o código Java.
 
 ## <a name="msbuild-projects"></a>Proyectos de MSBuild
 
@@ -77,7 +85,7 @@ Las propiedades de MSBuild siguientes se utilizan para controlar la generación 
 
 ## <a name="signing-properties"></a>Propiedades de firma
 
-Las propiedades de firma controlan cómo se firma el paquete de aplicación para que se pueda instalar en un dispositivo Android. Para permitir una iteración de compilación más rápida, las tareas de Xamarin.Android no firman paquetes durante el proceso de compilación, porque es un proceso bastante lento. En su lugar, se firman (si es necesario) antes de la instalación o durante la exportación, por medio del IDE o del destino de compilación *Install* . Al invocar el destino *SignAndroidPackage* se produce un paquete con el sufijo `-Signed.apk` en el directorio de salida.
+Las propiedades de firma controlan cómo se firma el paquete de aplicación para que se pueda instalar en un dispositivo Android. Para permitir una iteración de compilación más rápida, las tareas de Xamarin.Android no firman paquetes durante el proceso de compilación, porque es un proceso bastante lento. En su lugar, se firman (si es necesario) antes de la instalación o durante la exportación, por medio del IDE o del destino de compilación *Install*. Al invocar el destino *SignAndroidPackage* se produce un paquete con el sufijo `-Signed.apk` en el directorio de salida.
 
 De forma predeterminada, el destino de firma genera una nueva clave de firma de depuración, si es necesario. Si desea usar una clave específica, por ejemplo, en un servidor de compilación, se usan las propiedades siguientes de MSBuild:
 
@@ -145,7 +153,7 @@ Tenga en cuenta esta recomendación sobre la extensión del proceso de compilaci
 
 ## <a name="target-definitions"></a>Definiciones de destino
 
-Las partes del proceso de compilación específicas de Xamarin.Android se definen en `$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets`, pero también se requieren los destinos normales específicos del lenguaje, como *Microsoft.CSharp.targets* , para compilar el ensamblado.
+Las partes del proceso de compilación específicas de Xamarin.Android se definen en `$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets`, pero también se requieren los destinos normales específicos del lenguaje, como *Microsoft.CSharp.targets*, para compilar el ensamblado.
 
 Las siguientes propiedades de compilación deben establecerse antes de importar los destinos de lenguaje:
 
@@ -157,7 +165,7 @@ Las siguientes propiedades de compilación deben establecerse antes de importar 
 </PropertyGroup>
 ```
 
-Todos estos destinos y propiedades se pueden incluir para C# mediante la importación de *Xamarin.Android.CSharp.targets* :
+Todos estos destinos y propiedades se pueden incluir para C# mediante la importación de *Xamarin.Android.CSharp.targets*:
 
 ```xml
 <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

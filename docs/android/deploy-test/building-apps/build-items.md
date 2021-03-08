@@ -6,13 +6,13 @@ ms.assetid: 5EBEE1A5-3879-45DD-B1DE-5CD4327C2656
 ms.technology: xamarin-android
 author: jonpryor
 ms.author: jopryo
-ms.date: 09/23/2020
-ms.openlocfilehash: 8a23e973687ac9f775042685122d558788fc7be7
-ms.sourcegitcommit: 145bd7550d19088c84949ecf5b1cc39002183234
+ms.date: 03/01/2021
+ms.openlocfilehash: 2ba9c4203b6bd196242183915127dd74fa6ddee7
+ms.sourcegitcommit: 3aa9bdcaaedca74ab5175cb2338a1df122300243
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "92897447"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101749296"
 ---
 # <a name="build-items"></a>Elementos de compilación
 
@@ -31,6 +31,8 @@ Los archivos con esta acción de compilación se tratarán de un modo bastante s
 ## <a name="androidaotprofile"></a>AndroidAotProfile
 
 Se usa para proporcionar un perfil de AOT, para su uso con el AOT guiado por perfiles.
+
+También se puede usar desde Visual Studio estableciendo la acción de compilación `AndroidAotProfile` en un archivo que contenga un perfil de AOT.
 
 ## <a name="androidboundlayout"></a>AndroidBoundLayout
 
@@ -57,12 +59,62 @@ Los archivos con una acción de compilación de `AndroidJavaLibrary` son archivo
 
 Los archivos con una acción de compilación de `AndroidJavaSource` son el código fuente de Java que se incluirá en el paquete final de Android.
 
+## <a name="androidlibrary"></a>AndroidLibrary
+
+**AndroidLibrary** es una nueva acción de compilación para simplificar cómo se incluyen los archivos `.jar` y `.aar` en los proyectos.
+
+En cualquier proyecto se puede especificar:
+
+```xml
+<ItemGroup>
+  <AndroidLibrary Include="foo.jar" />
+  <AndroidLibrary Include="bar.aar" />
+</ItemGroup>
+```
+
+El resultado del fragmento de código anterior tiene un efecto diferente para cada tipo de proyecto de Xamarin.Android:
+
+* Proyectos de biblioteca de clases y aplicaciones:
+  * `foo.jar` se asigna a [**AndroidJavaLibrary**](#androidjavalibrary).
+  * `bar.aar` se asigna a [**AndroidAarLibrary**](#androidaarlibrary).
+* Proyectos de enlace de Java:
+  * `foo.jar` se asigna a [**EmbeddedJar**](#embeddedjar).
+  * `foo.jar` se asigna a [**EmbeddedReferenceJar**](#embeddedreferencejar) si se agregan los metadatos `Bind="false"`.
+  * `bar.aar` se asigna a [**LibraryProjectZip**](#libraryprojectzip).
+
+Esta simplificación significa que puede usar **AndroidLibrary** en cualquier lugar.
+
+Esta acción de compilación se agregó en Xamarin.Android 11.2.
+
 ## <a name="androidlintconfig"></a>AndroidLintConfig
 
 La acción de compilación "AndroidLintConfig" se debe usar con la propiedad de compilación [`$(AndroidLintEnabled)`](~/android/deploy-test/building-apps/build-properties.md#androidlintenabled).
 propiedad. Los archivos con esta acción de compilación se combinan y se pasan a las herramientas `lint` de Android. Deben ser archivos XML que contengan información sobre qué pruebas se habilitan o deshabilitan.
 
 Vea la [documentación de lint](https://developer.android.com/studio/write/lint) para obtener más información.
+
+## <a name="androidmanifestoverlay"></a>AndroidManifestOverlay
+
+Se puede usar la acción de compilación `AndroidManifestOverlay` para proporcionar archivos `AndroidManifest.xml` adicionales a la herramienta de [fusión de manifiestos](https://developer.android.com/studio/build/manifest-merge).
+Los archivos con esta acción de compilación se pasarán a la fusión de manifiestos junto con el archivo `AndroidManifest.xml` principal y los archivos de manifiesto adicionales de las referencias. Después, se combinarán en el manifiesto final.
+
+Puede usar esta acción de compilación para proporcionar cambios y configuraciones adicionales a la aplicación en función de la configuración de compilación. Por ejemplo, si necesita tener un permiso concreto solo durante la depuración, puede utilizar la superposición para insertar ese permiso durante la depuración. Por ejemplo, dado el siguiente contenido de archivo de superposición:
+
+```
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <uses-permission android:name="android.permission.CAMERA" />
+</manifest>
+```
+
+Puede usar lo siguiente para agregarlo a una compilación de depuración:
+
+```
+<ItemGroup>
+  <AndroidManifestOverlay Include="DebugPermissions.xml" Condition=" '$(Configuration)' == 'Debug' " />
+</ItemGroup>
+```
+
+Esta acción de compilación se agregó en Xamarin.Android 11.2.
 
 ## <a name="androidnativelibrary"></a>AndroidNativeLibrary
 
@@ -137,6 +189,82 @@ Se ha agregado en Xamarin.Android 10.2.
 La acción de compilación `Content` no se admite (dado que no hemos descubierto cómo admitirla sin un paso seguramente costoso de primera ejecución).
 
 A partir de Xamarin.Android 5.1, si se intenta usar la acción de compilación `@(Content)` se producirá una advertencia `XA0101`.
+
+## <a name="embeddedjar"></a>EmbeddedJar
+
+En un proyecto de enlace de Xamarin.Android, la acción de compilación **EmbeddedJar** enlaza la biblioteca Java/Kotlin e inserta el archivo `.jar` en la biblioteca. Cuando un proyecto de la aplicación Xamarin.Android consume la biblioteca, tendrá acceso a las API de Java/Kotlin desde C# e incluirá el código de Java/Kotlin en la aplicación Android final.
+
+Desde Xamarin. Android 11.2, se puede usar la acción de compilación [**AndroidLibrary**](#androidlibrary) como alternativa, tal como:
+
+```xml
+<Project>
+  <ItemGroup>
+    <AndroidLibrary Include="Library.jar" />
+  </ItemGroup>
+</Project>
+```
+
+## <a name="embeddednativelibrary"></a>EmbeddedNativeLibrary
+
+En un proyecto de biblioteca de clases de Xamarin.Android o de enlace de Java, la acción de compilación **EmbeddedNativeLibrary** agrupa una biblioteca nativa como `lib/armeabi-v7a/libfoo.so` en la biblioteca. Cuando una aplicación de Xamarin.Android consume la biblioteca, el archivo `libfoo.so` se incluirá en la aplicación de Android final.
+
+Desde Xamarin. Android 11.2, se puede usar la acción de compilación [**AndroidNativeLibrary**](#androidnativelibrary) como alternativa, por ejemplo.
+
+## <a name="embeddedreferencejar"></a>EmbeddedReferenceJar
+
+En un proyecto de enlace de Xamarin.Android, la acción de compilación **EmbeddedReferenceJar** inserta el archivo `.jar` en la biblioteca, pero no crea un enlace de C# como hace [**EmbeddedJar**](#embeddedjar). Cuando un proyecto de aplicación de Xamarin.Android consume la biblioteca, incluirá el código Java/Kotlin en la aplicación de Android final.
+
+Desde Xamarin.Android 11.2, se puede usar la acción de compilación [**AndroidLibrary**](#androidlibrary) como alternativa, tal como `<AndroidLibrary Include="..." Bind="false" />`:
+
+```xml
+<Project>
+  <ItemGroup>
+    <!-- A .jar file to bind & embed -->
+    <AndroidLibrary Include="Library.jar" />
+    <!-- A .jar file to only embed -->
+    <AndroidLibrary Include="Dependency.jar" Bind="false" />
+  </ItemGroup>
+</Project>
+```
+
+## <a name="javadocjar"></a>JavaDocJar
+
+En un proyecto de enlace de Xamarin.Android, se usa la acción de compilación **JavaDocJar** en archivos `.jar` que contienen el *código HTML de Javadoc*.  Se analiza el código HTML de Javadoc para extraer los nombres de parámetro.
+
+Solo se admiten ciertos "dialectos HTML de Javadoc", entre los que se incluyen:
+
+  * Salida de JDK 1.7 `javadoc`.
+  * Salida de JDK 1.8 `javadoc`.
+  * Salida de Droiddoc.
+
+Esta acción de compilación queda en desuso en Xamarin.Android 11.3 y no se admitirá en .NET 6.
+Se prefiere la acción de compilación `@(JavaSourceJar)`.
+
+## <a name="javasourcejar"></a>JavaSourceJar
+
+En un proyecto de enlace de Xamarin.Android, la acción de compilación **JavaSourceJar** se usa en archivos `.jar` que contienen *código fuente de Java*, que contienen [comentarios de documentación de Javadoc](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html).
+
+Antes de Xamarin.Android 11.3, el Javadoc se convertía en HTML a través de la utilidad `javadoc` durante el tiempo de compilación y, posteriormente, se convertía en documentación XML.
+
+A partir de Xamarin.Android 11.3, Javadoc se convertirá en [comentarios de documentación XML de C#](/dotnet/csharp/codedoc) dentro del código fuente de enlace generado.
+
+`$(AndroidJavadocVerbosity)` controla hasta qué punto es "detallado" o "completo" el Javadoc importado.
+
+A partir de Xamarin.Android 11.3, se admiten los siguientes metadatos de MSBuild:
+
+* `%(CopyrightFile)`: ruta de acceso a un archivo que contiene información de copyright para el contenido de Javadoc, que se anexará a toda la documentación importada.
+
+* `%(UrlPrefix)`: prefijo de dirección URL para admitir la vinculación a documentación en línea dentro de la documentación importada.
+
+* `%(UrlStyle)`: el "estilo" de las direcciones URL que se generarán al vincular a la documentación en línea.  Actualmente, solo se admite un estilo: `developer.android.com/reference@2020-Nov`.
+
+
+## <a name="libraryprojectzip"></a>LibraryProjectZip
+
+En un proyecto de enlace de Xamarin.Android, la acción de compilación **LibraryProjectZip** enlaza la biblioteca Java/Kotlin e inserta el archivo `.zip` o `.aar` en la biblioteca. Cuando un proyecto de la aplicación Xamarin.Android consume la biblioteca, tendrá acceso a las API de Java/Kotlin desde C# e incluirá el código de Java/Kotlin en la aplicación Android final.
+
+> [!NOTE]
+> Solo se puede incluir una sola acción **LibraryProjectZip** en un proyecto de enlace de Xamarin.Android. Esta limitación se quitará en .NET 6.
 
 ## <a name="linkdescription"></a>LinkDescription
 

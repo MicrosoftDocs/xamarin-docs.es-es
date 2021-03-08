@@ -13,12 +13,12 @@ ms.date: 01/25/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 723ea0f3c6703824bfbfca51f4ecfc8c5ab0b83a
-ms.sourcegitcommit: 0a6b19004932c1ac82e16c95d5d3d5eb35a5b17f
+ms.openlocfilehash: 8e7a5a196dbbd55f8d10d1e1960f6b4c989021dc
+ms.sourcegitcommit: 1b542afc0f6f2f6adbced527ae47b9ac90eaa1de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "100255306"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101757648"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Análisis detallado de inicio rápido de Xamarin.Forms
 
@@ -212,7 +212,7 @@ Este XAML consta de dos objetos principales:
 - `TabBar`. El `TabBar` representa la barra de pestañas de la parte inferior y debe usarse cuando el patrón de navegación de la aplicación usa pestañas en la parte inferior. El objeto `TabBar` es un elemento secundario del objeto `Shell`.
 - `ShellContent`, que representa los objetos `ContentPage` para cada pestaña de `TabBar`. Cada objeto `ShellContent` es un elemento secundario del objeto `TabBar`.
 
-Estos objetos no representan ninguna interfaz de usuario, sino más bien la organización de la jerarquía visual de la aplicación. Shell tomará estos elementos y generará la interfaz de usuario de navegación del contenido. Por lo tanto, la clase `AppShell` define dos páginas que se pueden navegar desde las pestañas inferiores. Las páginas se crean a petición, en respuesta a la navegación del usuario.
+Estos objetos no representan ninguna interfaz de usuario, sino más bien la organización de la jerarquía visual de la aplicación. Shell tomará estos elementos y generará la interfaz de usuario de navegación del contenido. Por lo tanto, la clase `AppShell` define dos páginas que se pueden navegar desde las pestañas inferiores. Las páginas se crean a petición, en respuesta a la navegación.
 
 Para más información sobre las aplicaciones de Shell, consulte [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).
 

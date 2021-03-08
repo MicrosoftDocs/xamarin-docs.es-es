@@ -9,14 +9,14 @@ ms.date: 03/13/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 09e39f5cc99e5556274fb8d55db7f8b81970f8e1
-ms.sourcegitcommit: dac04cec56290fb19034f3e135708f6966a8f035
+ms.openlocfilehash: 0d1f953537b0963c3d25fbfe486a1e7ae97ce716
+ms.sourcegitcommit: 3aa9bdcaaedca74ab5175cb2338a1df122300243
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92169944"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101749348"
 ---
-# <a name="no-locxamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocalización
+# <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocalización
 
 La clase **Geolocation** proporciona las API para recuperar las coordenadas de geolocalización actuales del dispositivo.
 
@@ -53,6 +53,20 @@ Abra el archivo **AndroidManifest.xml** de la carpeta **Propiedades** y agregue 
 ```
 
 O bien, haga clic con el botón derecho en el proyecto de Android y abra las propiedades del proyecto. En **Manifiesto de Android**, busque el área **Permisos requeridos:** y active los permisos **ACCESS_COARSE_LOCATION** y **ACCESS_FINE_LOCATION**. Esto actualizará automáticamente el archivo **AndroidManifest.xml**.
+
+Si su aplicación tiene como destino Android 10-Q (nivel de API 29 o superior) y solicita **LocationAlways**, debe agregar también el siguiente permiso en **AssemblyInfo.cs**:
+
+```csharp
+[assembly: UsesPermission(Manifest.Permission.AccessBackgroundLocation)]
+```
+
+O directamente en el **AndroidManifest.xml**:
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+```
+
+Se recomienda leer la [documentación de Android en las actualizaciones de ubicación en segundo plano](https://developer.android.com/training/location/permissions), ya que hay muchas restricciones que deben tenerse en cuenta.
 
 [!include[](~/essentials/includes/android-permissions.md)]
 

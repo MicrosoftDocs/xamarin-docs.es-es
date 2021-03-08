@@ -6,27 +6,27 @@ ms.assetid: 3B1A6AE8-1D1E-4C34-B9AB-48F4444FEF32
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/29/2020
+ms.date: 02/15/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2a35966bfdf203a77fc3943e224d77fb087dcc45
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: cd70e7d50990cfc5c7668f4b7a51e889f14a9fb3
+ms.sourcegitcommit: 1b542afc0f6f2f6adbced527ae47b9ac90eaa1de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97940491"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101757563"
 ---
-# <a name="no-locxamarinforms-shell-custom-renderers"></a>Representadores personalizados de Xamarin.Forms Shell
+# <a name="xamarinforms-shell-custom-renderers"></a>Representadores personalizados de Xamarin.Forms Shell
 
-Una de las ventajas de las aplicaciones de Xamarin.Forms Shell es que su apariencia y comportamiento es muy personalizable mediante las propiedades y los métodos que exponen las distintas clases de Shell. Sin embargo, también es posible crear a un representador personalizado de Shell cuando se requieren personalizaciones más sofisticadas específicas de la plataforma. Al igual que con otros representadores personalizados, se puede agregar un representador personalizado de Shell a solo un proyecto de plataforma para personalizar la apariencia y el comportamiento, mientras se permite el comportamiento predeterminado en la otra plataforma; o se puede agregar un representador personalizado de Shell diferente a cada proyecto de plataforma para personalizar la apariencia y el comportamiento en iOS y Android.
+Una de las ventajas de las aplicaciones de Xamarin.Forms Shell es que su apariencia y comportamiento es muy personalizable mediante las propiedades y los métodos que exponen las distintas clases de Shell. Aun así, también es posible crear un representador personalizado de Shell cuando se requieren personalizaciones más extensas específicas de la plataforma. Al igual que con otros representadores personalizados, se puede agregar un representador personalizado de Shell a solo un proyecto de plataforma para personalizar la apariencia y el comportamiento, mientras se permite el comportamiento predeterminado en la otra plataforma; o se puede agregar un representador personalizado de Shell diferente a cada proyecto de plataforma para personalizar la apariencia y el comportamiento en iOS y Android.
 
 Las aplicaciones de Shell se representan mediante la clase `ShellRenderer` en iOS y Android. En iOS, la clase `ShellRenderer` se puede encontrar en el espacio de nombres `Xamarin.Forms.Platform.iOS`. En Android, la clase `ShellRenderer` se puede encontrar en el espacio de nombres `Xamarin.Forms.Platform.Android`.
 
 El proceso para crear un representador personalizado de Shell es el siguiente:
 
-1. Cree la subclase de la clase `Shell`. Esta acción ya se realizará en la aplicación de Shell.
-1. Consuma la clase `Shell` en subclase. Esta acción ya se realizará en la aplicación de Shell.
+1. Cree la subclase de la clase [`Shell`](xref:Xamarin.Forms.Shell). Esta acción ya se realizará en la aplicación de Shell.
+1. Consuma la clase [`Shell`](xref:Xamarin.Forms.Shell) con subclases. Esta acción ya se realizará en la aplicación de Shell.
 1. Cree una clase de representador personalizado que se derive de la clase `ShellRenderer`, en las plataformas necesarias.
 
 ## <a name="create-a-custom-renderer-class"></a>Creación de una clase de representador personalizado
@@ -46,7 +46,7 @@ La clase `ShellRenderer` expone los siguientes métodos reemplazables:
 | --- | --- | --- |
 | `SetElementSize`<br />`CreateFlyoutRenderer`<br />`CreateNavBarAppearanceTracker`<br />`CreatePageRendererTracker`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellItemTransition`<br />`CreateShellSearchResultsRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTabBarAppearanceTracker`<br />`Dispose`<br />`OnCurrentItemChanged`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`UpdateBackgroundColor` | `CreateFragmentForPage`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellFlyoutRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTrackerForToolbar`<br />`CreateToolbarAppearanceTracker`<br />`CreateTabLayoutAppearanceTracker`<br />`CreateBottomNavViewAppearanceTracker`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`SwitchFragment`<br />`Dispose` | `CreateShellFlyoutTemplateSelector`<br />`CreateShellHeaderRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellSectionRenderer`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`UpdateFlyoutBackdropColor`<br />`UpdateFlyoutBackgroundColor` |
 
-Las clases `FlyoutItem` y `TabBar` son alias de la clase `ShellItem`, y la clase `Tab` es un alias de la clase `ShellSection`. Por lo tanto, el método `CreateShellItemRenderer` se debe invalidar al crear un representador personalizado para objetos `FlyoutItem`, y el método `CreateShellSectionRenderer` se debe invalidar al crear un representador personalizado para objetos `Tab`.
+Las clases [`FlyoutItem`](xref:Xamarin.Forms.FlyoutItem) y [`TabBar`](xref:Xamarin.Forms.TabBar) son alias de la clase [`ShellItem`](xref:Xamarin.Forms.ShellItem) y la clase [`Tab`](xref:Xamarin.Forms.Tab) es un alias de la clase [`ShellSection`](xref:Xamarin.Forms.ShellSection). Por lo tanto, el método `CreateShellItemRenderer` se debe invalidar al crear un representador personalizado para objetos `FlyoutItem`, y el método `CreateShellSectionRenderer` se debe invalidar al crear un representador personalizado para objetos `Tab`.
 
 > [!IMPORTANT]
 > Hay clases de representador adicionales de Shell, como `ShellSectionRenderer` y `ShellItemRenderer`, en iOS, Android y UWP. Sin embargo, estas clases de representador adicionales se crean mediante invalidaciones en la clase `ShellRenderer`. Por lo tanto, para personalizar el comportamiento de estas clases de representador adicionales, puede crear una subclase de ellas y una instancia de la subclase en la invalidación adecuada de la clase `ShellRenderer` en subclase.

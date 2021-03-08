@@ -6,16 +6,16 @@ ms.assetid: 2A51D78F-6CD5-4BC4-A62E-11CEFA799987
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/24/2019
+ms.date: 02/15/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f4b15911f48b4260da8839f376800e95c63bf0e4
-ms.sourcegitcommit: 0a6b19004932c1ac82e16c95d5d3d5eb35a5b17f
+ms.openlocfilehash: f02deecbd372e7125fe13aaed37ad08f2cc4faf6
+ms.sourcegitcommit: 1b542afc0f6f2f6adbced527ae47b9ac90eaa1de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "93373632"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101757604"
 ---
 # <a name="create-a-xamarinforms-shell-application"></a>Creación de una aplicación de Xamarin.Forms Shell
 
@@ -24,18 +24,20 @@ ms.locfileid: "93373632"
 El proceso para crear una aplicación de Xamarin.Forms Shell es el siguiente:
 
 1. Cree una aplicación de Xamarin.Forms o cargue una aplicación existente que quiera convertir en una aplicación de Shell.
-1. Agregue un archivo XAML al proyecto de código compartido que sirva de subclase de la clase `Shell`. Para obtener más información, consulte [Subclass the Shell class](#subclass-the-shell-class) (Establecimiento de subclases en la clase Shell).
-1. Establezca la propiedad [`MainPage`](xref:Xamarin.Forms.Application.MainPage) de la clase `App` de la aplicación en el objeto `Shell` con subclases. Para obtener más información, consulte [Bootstrap the Shell application](#bootstrap-the-shell-application) (Arranque de la aplicación Shell).
-1. Describa la jerarquía visual de la aplicación en la clase `Shell` con subclases. Para obtener más información, consulte [Describe the visual hierarchy of the application](#describe-the-visual-hierarchy-of-the-application) (Descripción de la jerarquía visual de la aplicación).
+1. Agregue un archivo XAML al proyecto de código compartido que sirva de subclase de la clase [`Shell`](xref:Xamarin.Forms.Shell). Para obtener más información, consulte [Subclass the Shell class](#subclass-the-shell-class) (Establecimiento de subclases en la clase Shell).
+1. Establezca la propiedad [`MainPage`](xref:Xamarin.Forms.Application.MainPage) de la clase `App` de la aplicación en el objeto [`Shell`](xref:Xamarin.Forms.Shell) con subclases. Para obtener más información, consulte [Bootstrap the Shell application](#bootstrap-the-shell-application) (Arranque de la aplicación Shell).
+1. Describa la jerarquía visual de la aplicación en la clase [`Shell`](xref:Xamarin.Forms.Shell) con subclases. Para obtener más información, consulte [Describe the visual hierarchy of the application](#describe-the-visual-hierarchy-of-the-application) (Descripción de la jerarquía visual de la aplicación).
+
+Para ver un tutorial paso a paso sobre cómo crear una aplicación de Shell, consulte [Inicio rápido de la creación de una aplicación de Xamarin.Forms](~/get-started/quickstarts/app.md).
 
 ## <a name="subclass-the-shell-class"></a>Creación de subclases de la clase de Shell
 
-El primer paso para crear una aplicación de Xamarin.Forms Shell es agregar un archivo XAML al proyecto de código compartido que crea subclases en la clase `Shell`. Este archivo puede tener cualquier nombre, pero se recomienda **AppShell**. El siguiente código de ejemplo muestra un archivo **AppShell.xaml** recién creado:
+El primer paso para crear una aplicación de Xamarin.Forms Shell es agregar un archivo XAML al proyecto de código compartido que genera subclases de la clase [`Shell`](xref:Xamarin.Forms.Shell). Este archivo puede tener cualquier nombre, pero se recomienda **AppShell**. El siguiente código de ejemplo muestra un archivo **AppShell.xaml** recién creado:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       x:Class="Xaminals.AppShell">
+       x:Class="MyApp.AppShell">
 
 </Shell>
 ```
@@ -45,7 +47,7 @@ En el ejemplo siguiente se muestra el código subyacente, **AppShell.xaml.cs**:
 ```csharp
 using Xamarin.Forms;
 
-namespace Xaminals
+namespace MyApp
 {
     public partial class AppShell : Shell
     {
@@ -59,10 +61,10 @@ namespace Xaminals
 
 ## <a name="bootstrap-the-shell-application"></a>Arranque de una aplicación de Shell
 
-Después de crear el archivo XAML que crea subclases en el objeto `Shell`, la propiedad [`MainPage`](xref:Xamarin.Forms.Application.MainPage) de la clase `App` debe establecerse en el objeto `Shell` con subclases:
+Después de crear el archivo XAML que crea subclases en el objeto [`Shell`](xref:Xamarin.Forms.Shell), la propiedad [`MainPage`](xref:Xamarin.Forms.Application.MainPage) de la clase `App` debe establecerse en el objeto `Shell` con subclases:
 
 ```csharp
-namespace Xaminals
+namespace MyApp
 {
     public partial class App : Application
     {
@@ -76,22 +78,22 @@ namespace Xaminals
 }
 ```
 
-En este ejemplo, la clase `AppShell` es el archivo XAML que se deriva de la clase `Shell`.
+En este ejemplo, la clase `AppShell` es el archivo XAML que se deriva de la clase [`Shell`](xref:Xamarin.Forms.Shell).
 
-> [!NOTE]
-> Mientras se compila una aplicación de Shell en blanco, su ejecución dará como resultado la generación de `InvalidOperationException`.
+> [!WARNING]
+> Mientras se compila una aplicación de Shell en blanco, si intenta ejecutarla, se producirá una `InvalidOperationException` excepción.
 
 ## <a name="describe-the-visual-hierarchy-of-the-application"></a>Descripción de la jerarquía visual de la aplicación
 
-El último paso para crear una aplicación de Xamarin.Forms Shell consiste en describir la jerarquía visual de la aplicación en la clase `Shell` con subclases. Una clase `Shell` con subclases consta de tres objetos jerárquicos principales:
+El último paso para crear una aplicación de Xamarin.Forms Shell consiste en describir la jerarquía visual de la aplicación en la clase [`Shell`](xref:Xamarin.Forms.Shell) con subclases. Una clase `Shell` con subclases consta de tres objetos jerárquicos principales:
 
-- `FlyoutItem` o `TabBar`. Un `FlyoutItem` representa uno o varios elementos en el control flotante y debe usarse cuando el modelo de navegación de la aplicación incluye un control flotante. Un `TabBar` representa la barra de pestañas de la parte inferior y debe usarse cuando el patrón de navegación de la aplicación comienza con pestañas en la parte inferior. Cada objeto `FlyoutItem` o `TabBar` es un elemento secundario del objeto `Shell`.
-- `Tab`, que representa contenido agrupado, navegable mediante las pestañas inferiores. Cada objeto `Tab` es un elemento secundario de un objeto `FlyoutItem` o un objeto `TabBar`.
-- `ShellContent`, que representa el objeto `ContentPage` en la aplicación. Cada objeto `ShellContent` es un elemento secundario de un objeto `Tab`. Cuando hay más de un objeto `ShellContent` en un objeto `Tab`, los objetos serán navegables mediante las pestañas superiores.
+1. [`FlyoutItem`](xref:Xamarin.Forms.FlyoutItem) o [`TabBar`](xref:Xamarin.Forms.TabBar). Un objeto `FlyoutItem` representa uno o varios elementos en el control flotante y debe usarse cuando el modelo de navegación de la aplicación incluye un control flotante. Un objeto `TabBar` representa la barra de pestañas inferior y debe usarse cuando el modelo de navegación de la aplicación comienza con pestañas en la parte inferior y no requiere control flotante. Cada objeto `FlyoutItem` o `TabBar` es un elemento secundario del objeto [`Shell`](xref:Xamarin.Forms.Shell).
+1. [`Tab`](xref:Xamarin.Forms.Tab), que representa contenido agrupado, navegable mediante pestañas en la parte inferior. Cada objeto `Tab` es un elemento secundario de un objeto [`FlyoutItem`](xref:Xamarin.Forms.FlyoutItem) o un objeto [`TabBar`](xref:Xamarin.Forms.TabBar).
+1. [`ShellContent`](xref:Xamarin.Forms.ShellContent), que representa los objetos [`ContentPage`](xref:Xamarin.Forms.ContentPage) de cada pestaña. Cada objeto `ShellContent` es un elemento secundario de un objeto [`Tab`](xref:Xamarin.Forms.Tab). Cuando hay más de un objeto `ShellContent` en un objeto `Tab`, los objetos serán navegables mediante las pestañas superiores.
 
-Ninguno de estos objetos representa ninguna interfaz de usuario, sino más bien la organización de la jerarquía visual de la aplicación. Shell tomará estos elementos y generará la interfaz de usuario de navegación del contenido.
+Estos objetos no representan ninguna interfaz de usuario, sino más bien la organización de la jerarquía visual de la aplicación. Shell tomará estos elementos y generará la interfaz de usuario de navegación del contenido.
 
-El siguiente XAML muestra un ejemplo de una clase `Shell` con subclases:
+El siguiente XAML muestra un ejemplo de una clase [`Shell`](xref:Xamarin.Forms.Shell) con subclases:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -99,47 +101,51 @@ El siguiente XAML muestra un ejemplo de una clase `Shell` con subclases:
        xmlns:views="clr-namespace:Xaminals.Views"
        x:Class="Xaminals.AppShell">
     ...
-    <FlyoutItem Title="Animals"
-                FlyoutDisplayOptions="AsMultipleItems">
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <Tab Title="Domestic"
              Icon="paw.png">
             <ShellContent Title="Cats"
-                          Icon="cat.png">
-                <views:CatsPage />
-            </ShellContent>
+                          Icon="cat.png"
+                          ContentTemplate="{DataTemplate views:CatsPage}" />
             <ShellContent Title="Dogs"
-                          Icon="dog.png">
-                <views:DogsPage />
-            </ShellContent>
+                          Icon="dog.png"
+                          ContentTemplate="{DataTemplate views:DogsPage}" />
         </Tab>
+        <!--
+        Shell has implicit conversion operators that enable the Shell visual hierarchy to be simplified.
+        This is possible because a subclassed Shell object can only ever contain a FlyoutItem object or a TabBar object,
+        which can only ever contain Tab objects, which can only ever contain ShellContent objects.
+
+        The implicit conversion automatically wraps the ShellContent objects below in Tab objects.
+        -->
         <ShellContent Title="Monkeys"
-                      Icon="monkey.png">
-            <views:MonkeysPage />
-        </ShellContent>
+                      Icon="monkey.png"
+                      ContentTemplate="{DataTemplate views:MonkeysPage}" />
         <ShellContent Title="Elephants"
-                      Icon="elephant.png">  
-            <views:ElephantsPage />
-        </ShellContent>
+                      Icon="elephant.png"
+                      ContentTemplate="{DataTemplate views:ElephantsPage}" />
         <ShellContent Title="Bears"
-                      Icon="bear.png">
-            <views:BearsPage />
-        </ShellContent>
+                      Icon="bear.png"
+                      ContentTemplate="{DataTemplate views:BearsPage}" />
     </FlyoutItem>
     ...
 </Shell>
 ```
 
-Cuando se ejecuta, este XAML muestra el objeto `CatsPage`, porque es el primer elemento de contenido declarado en la clase `Shell` con subclases:
+Cuando se ejecuta, este XAML muestra el objeto `CatsPage`, porque es el primer elemento de contenido declarado en la clase [`Shell`](xref:Xamarin.Forms.Shell) con subclases:
 
-[![Captura de pantalla de una aplicación de shell en iOS y Android](create-images/cats.png "Aplicación de shell")](create-images/cats-large.png#lightbox "Aplicación de shell")
+[![Captura de pantalla de una aplicación de Shell en iOS y Android](create-images/cats.png)](create-images/cats-large.png#lightbox)
 
 Al presionar el icono de tres barras, o al deslizar el dedo desde la izquierda, se muestra el control flotante:
 
-[![Captura de pantalla de un control flotante de Shell en iOS y Android](create-images/flyout-reduced.png "Control flotante de Shell")](create-images/flyout-reduced-large.png#lightbox "Control flotante de Shell")
+[![Captura de pantalla de un control flotante de Shell en iOS y Android](create-images/flyout.png)](create-images/flyout-large.png#lightbox)
+
+Se muestran varios elementos en el control flotante porque la propiedad [`FlyoutDisplayOptions`](xref:Xamarin.Forms.ShellGroupItem.FlyoutDisplayOptions) está establecida en `AsMultipleItems`. Para obtener más información, consulte [Opciones de presentación de control flotante](flyout.md#flyout-display-options).
 
 > [!IMPORTANT]
-> En una aplicación de Shell, cada [`ContentPage`](xref:Xamarin.Forms.ContentPage) que es un elemento secundario de un objeto `ShellContent` se crea durante el inicio de la aplicación. Agregar objetos `ShellContent` adicionales mediante esta estrategia dará lugar a la creación de páginas adicionales durante el inicio de la aplicación, lo que puede conducir a una experiencia de inicio deficiente. Sin embargo, Shell también es capaz de crear páginas a petición, en respuesta a la navegación. Para más información, consulte [Carga eficiente de páginas](tabs.md#efficient-page-loading) en la guía [Pestañas de Xamarin.Forms Shell](tabs.md).
+> En una aplicación de Shell, las páginas se crean a petición en respuesta a la navegación. Esto se logra mediante el uso de la extensión de marcado [`DataTemplate`](xref:Xamarin.Forms.Xaml.DataTemplateExtension) para establecer la propiedad [`ContentTemplate`](xref:Xamarin.Forms.ShellContent.ContentTemplate) de cada objeto [`ShellContent`](xref:Xamarin.Forms.ShellContent) en un objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Xaminals (ejemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Inicio rápido de la creación de una aplicación de Xamarin.Forms](~/get-started/quickstarts/app.md)

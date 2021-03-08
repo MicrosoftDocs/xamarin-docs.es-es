@@ -6,13 +6,13 @@ ms.assetid: FC0DBC08-EBCB-4D2D-AB3F-76B54E635C22
 ms.technology: xamarin-android
 author: jonpryor
 ms.author: jopryo
-ms.date: 09/21/2020
-ms.openlocfilehash: aeb0cca9ead1a0f0a3f5b1dec88b2470289cd589
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.date: 03/01/2021
+ms.openlocfilehash: 5c26c171c198698580e2b2170a6692d8fb80a171
+ms.sourcegitcommit: 3aa9bdcaaedca74ab5175cb2338a1df122300243
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91454941"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101749322"
 ---
 # <a name="build-properties"></a>Propiedades de compilación
 
@@ -41,6 +41,14 @@ Se ha agregado en Xamarin.Android 9.1.
 Especifica opciones adicionales de la línea de comandos que se pasan al comando **aapt2 link** al procesar recursos de Android.
 
 Se ha agregado en Xamarin.Android 9.1.
+
+## <a name="androidaddkeepalives"></a>AndroidAddKeepAlives
+
+Una propiedad booleana que controla si el vinculador insertará `GC.KeepAlive()` invocaciones dentro de proyectos de enlace para evitar la recolección de objetos prematura.
+
+Tiene como valor predeterminado `True` para las compilaciones de configuración de versión.
+
+Esta propiedad se agregó en Xamarin.Android 11.2.
 
 ## <a name="androidaotcustomprofilepath"></a>AndroidAotCustomProfilePath
 
@@ -199,6 +207,27 @@ Especifica el formato de archivo de almacén de claves que se va a usar para `de
 
 Se ha agregado en Xamarin.Android 10.2.
 
+
+## <a name="androiddeviceuserid"></a>AndroidDeviceUserId
+
+Permite implementar y depurar la aplicación en cuentas de invitado o de trabajo. El valor es el valor `uid` que se obtiene del comando adb siguiente:
+
+```
+adb shell pm list users
+```
+
+Devolverá los datos siguientes:
+
+```
+Users:
+    UserInfo{0:Owner:c13} running
+    UserInfo{10:Guest:404}
+```
+
+El objeto `uid` es el primer valor entero. En el ejemplo, se trata de `0` y `10`.
+
+Esta propiedad se agregó en Xamarin.Android 11.2.
+
 ## <a name="androiddextool"></a>AndroidDexTool
 
 Propiedad de estilo de la enumeración con los valores válidos de `dx` o `d8`. Indica el compilador de [dex][dex] que se usa durante el proceso de compilación de Xamarin.Android.
@@ -298,17 +327,21 @@ Tenga en cuenta que esta propiedad es diferente de la propiedad `$(AndroidAotAdd
 
 Se ha agregado en Xamarin.Android 10.2.
 
+<a name="AndroidFastDeploymentType"></a>
+
 ## <a name="androidfastdeploymenttype"></a>AndroidFastDeploymentType
 
 Lista de valores separada por `:` (dos puntos) para controlar qué tipos se pueden implementar en el [directorio de implementación rápida](~/android/deploy-test/building-apps/build-process.md#Fast_Deployment) del dispositivo de destino cuando la propiedad de MSBuild [`$(EmbedAssembliesIntoApk)`](#embedassembliesintoapk) es `False`. Si un recurso se implementa rápido, *no* se inserta en el archivo `.apk` generado, lo que puede acelerar los tiempos de desarrollo. (Cuanto más rápido se implementa, con menos frecuencia es necesario recompilar el archivo `.apk`, y el proceso de instalación puede ser más rápido). Los valores válidos son:
 
 - `Assemblies`: implementa los ensamblados de aplicación.
-
-- `Dexes`: implementa archivos `.dex`, recursos de Android y activos de Android. **Este valor *solo* se puede usar en dispositivos que ejecutan Android 4.4 o posterior (API-19).**
+- `Dexes`: implemente archivos, bibliotecas nativas y typemaps `.dex`.
+  **Este valor *solo* se puede usar en dispositivos que ejecutan Android 4.4 o posterior (API-19).**
 
 El valor predeterminado es `Assemblies`.
 
-**Experimental**. Agregado en Xamarin.Android 6.1.
+La compatibilidad con la implementación rápida de recursos a través de ese sistema se quitó en la confirmación [f0d565fe](https://github.com/xamarin/xamarin-android/commit/f0d565fe4833f16df31378c77bbb492ffd2904b9). Esto se debe a que requería el uso de la API en desuso para trabajar.
+
+**Experimental**. Esta propiedad se agregó en Xamarin.Android 6.1.
 
 ## <a name="androidgeneratejnimarshalmethods"></a>AndroidGenerateJniMarshalMethods
 
@@ -381,6 +414,36 @@ Los valores más comunes para esta propiedad son los siguientes:
 > tendrá prioridad.
 
 Agregado en Xamarin.Android 6.1.
+
+## <a name="androidincludewrapsh"></a>AndroidIncludeWrapSh
+
+Un valor booleano que indica si el script del contenedor de Android ([`wrap.sh`](https://developer.android.com/ndk/guides/wrap-script)) se debe empaquetar en el APK. La propiedad tiene como valor predeterminado `false` porque el script de contenedor puede influir significativamente en la forma en que la aplicación se inicia y funciona, y el script debe incluirse solo cuando sea necesario, por ejemplo, para la depuración o cambiar el comportamiento de inicio/entorno de ejecución de la aplicación.
+
+El script se agrega al proyecto con la acción de compilación [`@(AndroidNativeLibrary)`](~/android/deploy-test/building-apps/build-items.md#androidnativelibrary),
+porque se coloca en el mismo directorio que las bibliotecas nativas específicas de la arquitectura y se debe denominar `wrap.sh`.
+
+La forma más fácil de especificar la ruta de acceso al script `wrap.sh` es colocarla en un directorio con el nombre de la arquitectura de destino. Este enfoque funcionará si se tiene tan solo un objeto `wrap.sh` por arquitectura:
+
+```xml
+<AndroidNativeLibrary Include="path/to/arm64-v8a/wrap.sh" />
+```
+
+Sin embargo, si el proyecto necesita más de un objeto `wrap.sh` por arquitectura para distintos propósitos, este enfoque no funcionará.
+En su lugar, en estos casos el nombre se puede especificar con los metadatos `Link` de `AndroidNativeLibrary`:
+
+```xml
+<AndroidNativeLibrary Include="/path/to/my/arm64-wrap.sh">
+  <Link>lib\arm64-v8a\wrap.sh</Link>
+</AndroidNativeLibrary>
+```
+
+Si se usan los metadatos `Link`, la ruta de acceso especificada en su valor debe ser una ruta de acceso de biblioteca específica de la arquitectura nativa válida, relativa al directorio raíz APK. El formato de la ruta de acceso es `lib\ARCH\wrap.sh` donde `ARCH` puede ser uno de los siguientes:
+
++ `arm64-v8a`
++ `armeabi-v7a`
++ `x86_64`
++ `x86`
+
 
 ## <a name="androidkeystore"></a>AndroidKeyStore
 
@@ -537,6 +600,14 @@ En Xamarin.Android 10.1, también había disponible un valor de `LowercaseMD5` 
 
 Se ha agregado en Xamarin.Android 10.1.
 
+## <a name="androidproguardmappingfile"></a>AndroidProguardMappingFile
+
+Especifica la regla de ProGuard `-printmapping` para `r8`. Esto significa que el archivo `mapping.txt` se generará en la carpeta `$(OutputPath)`. Este archivo se puede usar para cargar paquetes en Google Play Store.
+
+El valor predeterminado es `$(OutputPath)mapping.txt`.
+
+Esta propiedad se agregó en Xamarin.Android 11.2.
+
 ## <a name="androidr8ignorewarnings"></a>AndroidR8IgnoreWarnings
 
 Especifica la regla de ProGuard `-ignorewarnings` para `r8`. Esto permite a `r8` continuar con la compilación dex aunque se encuentren ciertas advertencias. El valor predeterminado es `True`, pero se puede establecer en `False` para exigir un comportamiento más estricto. Para obtener más información, consulte el[manual de ProGuard](https://www.guardsquare.com/products/proguard/manual/usage).
@@ -681,7 +752,7 @@ en su archivo `.csproj`. También puede proporcionar la propiedad en la línea d
 /p:AndroidUseAapt2=True
 ```
 
-Se ha agregado en Xamarin.Android 8.3.
+Esta propiedad se agregó en Xamarin.Android 8.3. La configuración de `AndroidUseAapt2` en `false` está en desuso en Xamarin.Android 11.2.
 
 ## <a name="androiduseapksigner"></a>AndroidUseApkSigner
 
@@ -713,7 +784,9 @@ Agregado en Xamarin.Android 8.1.
 
 Propiedad booleana que determina si se requieren los *paquetes en tiempo de ejecución compartido* para ejecutar la aplicación en el dispositivo de destino. Confiar en los paquetes de entorno de tiempo de ejecución compartido permite que el paquete de aplicación sea más pequeño y acelera el proceso de creación y desarrollo del paquete, lo que da lugar a un ciclo de respuesta de compilación, implementación y depuración más rápido.
 
-Esta propiedad debe ser `True` para las compilaciones de depuración y `False` para los proyectos de versión.
+Antes de Xamarin.Android 11.2, esta propiedad debía ser `True` para las compilaciones de depuración y `False` para los proyectos de versión.
+
+Esta propiedad se *quitó* en Xamarin.Android 11.2.
 
 ## <a name="androidversioncodepattern"></a>AndroidVersionCodePattern
 
@@ -730,7 +803,7 @@ Solo se admiten cadenas con formato de relleno "0" y "Dx", dado que el valor DEB
 
 Elementos de clave predefinidos
 
-- **** abi&ndash;: inserta la ABI de destino para la aplicación.
+- abi&ndash;: inserta la ABI de destino para la aplicación.
   - 2 &ndash; `armeabi-v7a`
   - 3: `x86`
   - 4: `arm64-v8a`
@@ -873,6 +946,8 @@ Para obtener más información, consulte la documentación de [compatibilidad co
 ## <a name="linkerdumpdependencies"></a>LinkerDumpDependencies
 
 Propiedad bool que permite la generación del archivo de dependencias del enlazador. Este archivo se puede usar como entrada para la herramienta [illinkanalyzer](https://github.com/mono/linker/blob/master/src/analyzer/README.md).
+
+El archivo de dependencias denominado `linker-dependencies.xml.gz` se escribe en el directorio del proyecto. En. NET5/6 se escribe junto a los ensamblados vinculados en el directorio `obj/<Configuration>/android<ABI>/linked`.
 
 El valor predeterminado es False.
 

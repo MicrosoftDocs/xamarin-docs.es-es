@@ -10,16 +10,14 @@ ms.date: 03/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b441e5fd5ef045bf90244b4b69f868fe858e002d
-ms.sourcegitcommit: ba052b0990499d8191bcb25291c6ccd8d1ff26fc
+ms.openlocfilehash: cbecb7035514341ff3b07cc9d765850945cc3b09
+ms.sourcegitcommit: 3aa9bdcaaedca74ab5175cb2338a1df122300243
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92493317"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101749387"
 ---
-# <a name="xamarin-hot-restart-preview"></a>Reinicio rápido de Xamarin (versión preliminar)
-
-![Características en versión preliminar](~/media/shared/preview.png)
+# <a name="xamarin-hot-restart"></a>Reinicio rápido de Xamarin
 
 El reinicio rápido de Xamarin permite probar rápidamente los cambios en la aplicación durante el desarrollo, incluidas las ediciones de código de varios archivos, los recursos y las referencias. Inserta los cambios nuevos en el grupo de aplicaciones existente en el destino de depuración, lo que genera un ciclo de compilación e implementación mucho más rápido.
 
@@ -28,17 +26,18 @@ El reinicio rápido de Xamarin permite probar rápidamente los cambios en la apl
 
 ## <a name="requirements"></a>Requisitos
 
-- Visual Studio 2019, versión 16.5
-- iTunes (64 bits)
+- Visual Studio 2019, versión 16.5 o posterior
+- iTunes (versiones de Microsoft Store o de 64 bits)
 - Cuenta de desarrollador de Apple e inscripción pagada al [Programa para Desarrolladores de Apple](https://developer.apple.com/programs)
 
 
 ## <a name="initial-setup"></a>Instalación inicial
 
 > [!NOTE]
-> El reinicio rápido de Xamarin está deshabilitado de forma predeterminada en la versión preliminar. Puede habilitarlo en **Herramientas > Opciones > Entorno > Características de versión preliminar > Habilitar el reinicio rápido de Xamarin** .
+> El reinicio rápido de Xamarin está deshabilitado de forma predeterminada en Visual Studio 16.8 y versiones anteriores. Puede habilitarlo en **Herramientas > Opciones > Entorno > Características de versión preliminar > Habilitar el reinicio rápido de Xamarin**.
+> A partir de Visual Studio 16.9, el reinicio rápido de Xamarin está activado de forma predeterminada y se puede desactivar en **Herramientas > Opciones > Xamarin > Configuración de iOS > Enable Hot Restart (Habilitar el reinicio rápido)** .
 
-1. Asegúrese de que el proyecto de iOS está establecido como proyecto de inicio y la configuración de compilación en **Depuración|iPhone** .
+1. Asegúrese de que el proyecto de iOS está establecido como proyecto de inicio y la configuración de compilación en **Depuración|iPhone**.
 
    1. Si se trata de un proyecto existente, vaya a **Compilar > Configuration Manager...** y asegúrese de que **Implementación** está habilitado para el proyecto de iOS.
 
@@ -48,19 +47,19 @@ El reinicio rápido de Xamarin permite probar rápidamente los cambios en la apl
 
 3. Si iTunes no está instalado, haga clic en **Descargar iTunes** para descargar el instalador. Haga clic en **Siguiente** cuando se complete la instalación de iTunes.
 
-4. Conecte un dispositivo iOS al equipo. Si un dispositivo ya estaba conectado, desconéctelo y vuelva a conectarlo. El nombre del dispositivo aparecerá en el asistente una vez que se haya detectado. Haga clic en **Siguiente** .
+4. Conecte un dispositivo iOS al equipo. Si un dispositivo ya estaba conectado, desconéctelo y vuelva a conectarlo. El nombre del dispositivo aparecerá en el asistente una vez que se haya detectado. Haga clic en **Siguiente**.
 
-5. Escriba las credenciales de la cuenta de desarrollador de Apple y haga clic en **Siguiente** .
+5. Escriba las credenciales de la cuenta de desarrollador de Apple y haga clic en **Siguiente**.
 
-6. Seleccione un equipo de desarrollo mediante el menú desplegable para habilitar el [ aprovisionamiento automático](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md) en el proyecto. Haga clic en **Finalizar** .
+6. Seleccione un equipo de desarrollo mediante el menú desplegable para habilitar el [ aprovisionamiento automático](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md) en el proyecto. Haga clic en **Finalizar**.
 
 > [!NOTE]
 > Se recomienda el uso del aprovisionamiento automático para que se puedan configurar fácilmente dispositivos iOS adicionales para la implementación. Pero puede deshabilitarlo y seguir usando el aprovisionamiento manual si los perfiles de aprovisionamiento correctos están presentes.
 
 ## <a name="use-xamarin-hot-restart"></a>Uso del reinicio rápido de Xamarin
-Después de la instalación inicial, el dispositivo conectado aparecerá en el menú desplegable de destino de depuración. Para depurar la aplicación, seleccione el dispositivo en la lista desplegable y haga clic en el botón **Ejecutar** . Es posible que vea un mensaje de Visual Studio en el que se le pide que inicie manualmente la aplicación en el dispositivo para poder iniciar la sesión de depuración.
+Después de la instalación inicial, el dispositivo conectado aparecerá en el menú desplegable de destino de depuración. Para depurar la aplicación, seleccione el dispositivo en la lista desplegable y haga clic en el botón **Ejecutar**. Es posible que vea un mensaje de Visual Studio en el que se le pide que inicie manualmente la aplicación en el dispositivo para poder iniciar la sesión de depuración.
 
-Puede realizar modificaciones en los archivos de código durante la depuración y después presionar el botón **Reiniciar** de la barra de herramientas de depuración, o bien **Ctrl+Mayús+F5** , para reiniciar la sesión de depuración con los nuevos cambios aplicados:
+Puede realizar modificaciones en los archivos de código durante la depuración y después presionar el botón **Reiniciar** de la barra de herramientas de depuración, o bien **Ctrl+Mayús+F5**, para reiniciar la sesión de depuración con los nuevos cambios aplicados:
 
 [![Captura de pantalla de la barra de herramientas de depuración con el botón Reiniciar resaltado.](hot-restart-images/restart.png)](hot-restart-images/toolbar.png)
 

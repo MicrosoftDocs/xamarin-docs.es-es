@@ -6,51 +6,51 @@ ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/06/2020
+ms.date: 02/23/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5fb215ea92035965b48fff85ef4ccc70edc65fdf
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: 7d714b38dd838ef0779802dc7ca8c050dbd4464b
+ms.sourcegitcommit: 1b542afc0f6f2f6adbced527ae47b9ac90eaa1de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97939191"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101757542"
 ---
-# <a name="no-locxamarinforms-shell-navigation"></a>Navegación en Xamarin.Forms Shell
+# <a name="xamarinforms-shell-navigation"></a>Navegación en Xamarin.Forms Shell
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Xamarin.Forms Shell incluye una experiencia de navegación basada en el URI que emplea rutas para navegar a cualquier página de la aplicación, sin tener que seguir una jerarquía de navegación establecida. También ofrece la posibilidad de navegar hacia atrás sin tener que visitar todas las páginas de la pila de navegación.
 
-`Shell` define las siguientes propiedades relacionadas con la navegación:
+La clase [`Shell`](xref:Xamarin.Forms.Shell) define las siguientes propiedades relacionadas con la navegación:
 
-- `BackButtonBehavior`, de tipo `BackButtonBehavior`, una propiedad adjunta que define el comportamiento del botón Atrás.
-- `CurrentItem`, de tipo `FlyoutItem`, el valor de `FlyoutItem` seleccionado actualmente.
-- `CurrentPage`, de tipo `Page`, la página presentada actualmente.
-- `CurrentState`, de tipo `ShellNavigationState`, el estado de navegación actual de `Shell`.
-- `Current`, de tipo `Shell`, un alias con el tipo convertido para `Application.Current.MainPage`.
+- [`BackButtonBehavior`](xref:Xamarin.Forms.Shell.BackButtonBehaviorProperty), de tipo [`BackButtonBehavior`](xref:Xamarin.Forms.BackButtonBehavior), propiedad adjunta que define el comportamiento del botón Atrás.
+- [`CurrentItem`](xref:Xamarin.Forms.Shell.CurrentItem), de tipo [`ShellItem`](xref:Xamarin.Forms.ShellItem), el valor seleccionado actualmente.
+- [`CurrentPage`](xref:Xamarin.Forms.Shell.CurrentPage), de tipo [`Page`](xref:Xamarin.Forms.Page), la página presentada actualmente.
+- [`CurrentState`](xref:Xamarin.Forms.Shell.CurrentState), de tipo [`ShellNavigationState`](xref:Xamarin.Forms.ShellNavigationState), el estado de navegación actual del objeto [`Shell`](xref:Xamarin.Forms.Shell).
+- [`Current`](xref:Xamarin.Forms.Shell.Current), de tipo [`Shell`](xref:Xamarin.Forms.Shell), alias con el tipo convertido para `Application.Current.MainPage`.
 
-Las propiedades `BackButtonBehavior`, `CurrentItem` y `CurrentState` están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que estas propiedades pueden ser destinos de los enlaces de datos.
+Las propiedades [`BackButtonBehavior`](xref:Xamarin.Forms.Shell.BackButtonBehaviorProperty), [`CurrentItem`](xref:Xamarin.Forms.Shell.CurrentItem) y [`CurrentState`](xref:Xamarin.Forms.Shell.CurrentState) están respaldadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que estas propiedades pueden ser destinos de los enlaces de datos.
 
-La navegación se realiza mediante la invocación del método `GoToAsync`, desde la clase `Shell`. Cuando la navegación está a punto de realizarse, se activa un evento `Navigating` y cuando finaliza, se activa un evento `Navigated`.
+La navegación se realiza mediante la invocación del método [`GoToAsync`](xref:Xamarin.Forms.Shell.GoToAsync*), desde la clase [`Shell`](xref:Xamarin.Forms.Shell). Cuando la navegación está a punto de realizarse, se activa un evento [`Navigating`](xref:Xamarin.Forms.Shell.Navigating) y, cuando finaliza, se activa un evento [`Navigated`](xref:Xamarin.Forms.Shell.Navigated).
 
 > [!NOTE]
-> La navegación todavía se puede realizar en una aplicación de Xamarin.Forms Shell mediante la propiedad [Navigation](xref:Xamarin.Forms.NavigableElement.Navigation). Para más información, consulte [Navegación jerárquica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
+> La navegación todavía se puede realizar en una aplicación de Shell mediante la propiedad [Navigation](xref:Xamarin.Forms.NavigableElement.Navigation). Para más información, consulte [Navegación jerárquica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
 ## <a name="routes"></a>Rutas
 
 La navegación se realiza en una aplicación de Shell mediante la especificación de un URI al que navegar. Los URI de navegación pueden tener tres componentes:
 
 - Una *ruta*, que define la ruta de acceso al contenido que existe como parte de la jerarquía visual de Shell.
-- Una *página*. Las páginas que no existen en la jerarquía visual de Shell se pueden insertar en la pila de navegación desde cualquier lugar dentro de una aplicación de Shell. Por ejemplo, una página de detalles de elementos no se definirá en la jerarquía visual de Shell, pero se puede insertar en la pila de navegación si es necesario.
+- Una *página*. Las páginas que no existen en la jerarquía visual de Shell se pueden insertar en la pila de navegación desde cualquier lugar dentro de una aplicación de Shell. Por ejemplo, una página de detalles no se definirá en la jerarquía visual de Shell, pero se puede insertar en la pila de navegación si es necesario.
 - Uno o varios *parámetros de consulta*. Los parámetros de consulta son parámetros que se pueden pasar a la página de destino durante la navegación.
 
 Cuando un URI de navegación incluye los tres componentes, la estructura es: //route/page?queryParameters
 
 ### <a name="register-routes"></a>Registro de rutas
 
-Las rutas se pueden definir en objetos `FlyoutItem`, `Tab` y `ShellContent` mediante sus propiedades `Route`:
+Se pueden definir rutas en objetos [`FlyoutItem`](xref:Xamarin.Forms.FlyoutItem), [`TabBar`](xref:Xamarin.Forms.TabBar), [`Tab`](xref:Xamarin.Forms.Tab) y [`ShellContent`](xref:Xamarin.Forms.ShellContent) mediante sus propiedades `Route`:
 
 ```xaml
 <Shell ...>
@@ -77,9 +77,9 @@ Las rutas se pueden definir en objetos `FlyoutItem`, `Tab` y `ShellContent` medi
 ```
 
 > [!NOTE]
-> Todos los elementos de la jerarquía de Shell tienen asociada una ruta. Si el desarrollador no establece una ruta, esta se genera en tiempo de ejecución. Sin embargo, no se garantiza que las rutas generadas sean coherentes entre distintas sesiones de aplicación.
+> Todos los elementos de la jerarquía de Shell tienen asociada una ruta. Si no se establece una ruta, se genera una en tiempo de ejecución. Sin embargo, no se garantiza que las rutas generadas sean coherentes entre distintas sesiones de aplicación.
 
-En este ejemplo se crea la siguiente jerarquía de ruta desde la misma aplicación, que se puede usar en la navegación mediante programación:
+En el ejemplo anterior se crea la siguiente jerarquía de ruta, que se puede usar en la navegación mediante programación:
 
 ```
 animals
@@ -92,14 +92,14 @@ animals
 about
 ```
 
-Para desplazarse al objeto `ShellContent` de la ruta `dogs`, el URI de la ruta absoluta es `//animals/domestic/dogs`. Igualmente, para desplazarse al objeto `ShellContent` de la ruta `about`, el URL de la ruta absoluta es `//about`.
+Para desplazarse al objeto [`ShellContent`](xref:Xamarin.Forms.ShellContent) de la ruta `dogs`, el URI de la ruta absoluta es `//animals/domestic/dogs`. Igualmente, para desplazarse al objeto `ShellContent` de la ruta `about`, el URL de la ruta absoluta es `//about`.
 
-> [!IMPORTANT]
+> [!WARNING]
 > Si se detecta una ruta duplicada, se produce una excepción `ArgumentException` al inicio de la aplicación. También se producirá esta excepción si dos o más rutas del mismo nivel de la jerarquía comparten el nombre de ruta.
 
-#### <a name="register-page-routes"></a>Registro de rutas de página
+### <a name="register-detail-page-routes"></a>Registro de rutas de la página de detalles
 
-En el constructor de subclases de Shell, o en cualquier otra ubicación que se ejecute antes de invocar una ruta, se pueden registrar explícitamente rutas adicionales para cualquier página que no esté representada en la jerarquía visual de Shell:
+En el constructor de subclases de [`Shell`](xref:Xamarin.Forms.Shell), o en cualquier otra ubicación que se ejecute antes de invocar una ruta, se pueden registrar explícitamente rutas adicionales para cualquier página que no esté representada en la jerarquía visual de Shell. Esto se realiza mediante el método [`Routing.RegisterRoute`](xref:Xamarin.Forms.Routing.RegisterRoute*):
 
 ```csharp
 Routing.RegisterRoute("monkeydetails", typeof(MonkeyDetailPage));
@@ -109,10 +109,10 @@ Routing.RegisterRoute("dogdetails", typeof(DogDetailPage));
 Routing.RegisterRoute("elephantdetails", typeof(ElephantDetailPage));
 ```
 
-En este ejemplo se registran como rutas páginas de detalles de elementos que no están definidas en la subclase de Shell. Luego, es posible desplazarse por estas páginas desde cualquier lugar de la aplicación mediante la navegación basada en el URI. Las rutas de estas páginas se conocen como *rutas globales*.
+En este ejemplo se registran como rutas páginas de detalles que no están definidas en la subclase [`Shell`](xref:Xamarin.Forms.Shell). Se puede navegar después a estas páginas desde cualquier lugar de la aplicación con la navegación basada en URI. Las rutas de estas páginas se conocen como *rutas globales*.
 
-> [!NOTE]
-> Si es necesario, se puede cancelar el registro de las páginas cuyas rutas se han registrado con el método `Routing.RegisterRoute`, con el método `Routing.UnRegisterRoute`.
+> [!WARNING]
+> Se producirá una excepción `ArgumentException` si el método [`Routing.RegisterRoute`](xref:Xamarin.Forms.Routing.RegisterRoute*) intenta registrar la misma ruta en dos o más tipos diferentes.
 
 Como alternativa, se pueden registrar las páginas en diferentes jerarquías de ruta:
 
@@ -124,33 +124,33 @@ Routing.RegisterRoute("dogs/details", typeof(DogDetailPage));
 Routing.RegisterRoute("elephants/details", typeof(ElephantDetailPage));
 ```
 
-En este ejemplo se habilita la navegación contextual por las páginas, donde la navegación a la ruta `details` desde la página de la ruta `monkeys` muestra `MonkeyDetailPage`. De forma similar, al desplazarse a la ruta `details` desde la página de la ruta `elephants` se muestra `ElephantDetailPage`.
+En este ejemplo se habilita la navegación contextual por las páginas, donde la navegación a la ruta `details` desde la página de la ruta `monkeys` muestra `MonkeyDetailPage`. De forma similar, al desplazarse a la ruta `details` desde la página de la ruta `elephants` se muestra `ElephantDetailPage`. Para obtener más información, consulte [Navegación contextual](#contextual-navigation).
 
-> [!IMPORTANT]
-> Se producirá una excepción `ArgumentException` si el método `Routing.RegisterRoute` intenta registrar la misma ruta en dos o más tipos diferentes.
+> [!NOTE]
+> Si es necesario, el registro de las páginas cuyas rutas se han registrado con el método [`Routing.RegisterRoute`](xref:Xamarin.Forms.Routing.RegisterRoute*) se puede cancelar con el método [`Routing.UnRegisterRoute`](xref:Xamarin.Forms.Routing.UnRegisterRoute*).
 
 ## <a name="perform-navigation"></a>Realización de la navegación
 
-Para realizar la navegación, se debe obtener primero una referencia a la subclase `Shell`. Esta referencia se puede obtener mediante la conversión de la propiedad `App.Current.MainPage` en un objeto `Shell`, por medio de la propiedad `Shell.Current`. Luego, se puede realizar la navegación mediante la llamada al método `GoToAsync` en el objeto `Shell`. Este método lleva a `ShellNavigationState` y devuelve un objeto `Task` que se completa una vez completada la animación de navegación. El objeto `ShellNavigationState` se construye mediante el método `GoToAsync`, desde una propiedad `string` o `Uri`, y tiene su propiedad `Location` establecida en el argumento `string` o `Uri`.
+Para realizar la navegación, se debe obtener primero una referencia a la subclase [`Shell`](xref:Xamarin.Forms.Shell). Esta referencia se puede obtener mediante la conversión de la propiedad `App.Current.MainPage` en un objeto `Shell` o por medio de la propiedad [`Shell.Current`](xref:Xamarin.Forms.Shell.Current). La navegación se puede realizar entonces llamando al método [`GoToAsync`](xref:Xamarin.Forms.Shell.GoToAsync*) en el objeto `Shell`. Este método lleva a una clase [`ShellNavigationState`](xref:Xamarin.Forms.ShellNavigationState) y devuelve un objeto `Task` que se completa una vez completada la animación de navegación. El objeto `ShellNavigationState` se construye mediante el método `GoToAsync`, desde una propiedad `string` o `Uri`, y tiene su propiedad `Location` establecida en el argumento `string` o `Uri`.
 
-Cuando se navega a una ruta de la jerarquía visual de Shell, no se crea una pila de navegación. Sin embargo, cuando se navega a una página que no está en la jerarquía visual de Shell, se crea una pila de navegación.
+> [!IMPORTANT]
+> Cuando se navega a una ruta de la jerarquía visual de Shell, no se crea una pila de navegación. Sin embargo, cuando se navega a una página que no está en la jerarquía visual de Shell, se crea una pila de navegación.
 
-> [!NOTE]
-> El estado actual de navegación de `Shell` se puede recuperar mediante la propiedad `Shell.Current.CurrentState`, que incluye el URI de la ruta mostrada en la propiedad `Location`.
+El estado actual de navegación del objeto [`Shell`](xref:Xamarin.Forms.Shell) se puede recuperar mediante la propiedad [`Shell.Current.CurrentState`](xref:Xamarin.Forms.Shell.CurrentState), que incluye el URI de la ruta mostrada en la propiedad `Location`.
 
 ### <a name="absolute-routes"></a>Rutas absolutas
 
-Se puede realizar la navegación mediante la especificación de un URI absoluto válido como argumento del método `GoToAsync`:
+La navegación se puede realizar mediante la especificación de un URI absoluto válido como argumento del método [`GoToAsync`](xref:Xamarin.Forms.Shell.GoToAsync*):
 
 ```csharp
 await Shell.Current.GoToAsync("//animals/monkeys");
 ```
 
-En este ejemplo se navega a la página de la ruta `monkeys`, donde dicha ruta se define en un objeto `ShellContent`. El objeto `ShellContent` que representa la ruta `monkeys` es un elemento secundario de un objeto `FlyoutItem`, cuya ruta es `animals`.
+En este ejemplo se navega a la página de la ruta `monkeys`, donde dicha ruta se define en un objeto [`ShellContent`](xref:Xamarin.Forms.ShellContent). El objeto `ShellContent` que representa la ruta `monkeys` es un elemento secundario de un objeto [`FlyoutItem`](xref:Xamarin.Forms.FlyoutItem), cuya ruta es `animals`.
 
 ### <a name="relative-routes"></a>Rutas relativas
 
-La navegación se puede realizar también mediante la especificación de un URI relativo válido como argumento del método `GoToAsync`. El sistema de enrutamiento intenta hacer coincidir el URI con un objeto `ShellContent`. Por lo tanto, si todas las rutas de una aplicación son únicas, la navegación se puede realizar con solo especificar el nombre de ruta único como un URI relativo.
+La navegación se puede realizar también mediante la especificación de un URI relativo válido como argumento del método [`GoToAsync`](xref:Xamarin.Forms.Shell.GoToAsync*). El sistema de enrutamiento intenta hacer coincidir el URI con un objeto [`ShellContent`](xref:Xamarin.Forms.ShellContent). Por lo tanto, si todas las rutas de una aplicación son únicas, la navegación se puede realizar con solo especificar el nombre de ruta único como un URI relativo.
 
 Se admiten los formatos siguientes de ruta relativa:
 
@@ -180,11 +180,11 @@ bears
   details
 ```
 
-Cuando se muestra la página registrada para la ruta `monkeys`, al navegar a la ruta `details` se mostrará la página registrada para la ruta `monkeys/details`. Igualmente, cuando se muestra la página registrada para la ruta `bears`, al navegar a la ruta `details` se mostrará la página registrada para la ruta `bears/details`. Para información sobre cómo registrar las rutas en este ejemplo, consulte [Registro de rutas de página](#register-page-routes).
+Cuando se muestra la página registrada para la ruta `monkeys`, al navegar a la ruta `details` se mostrará la página registrada para la ruta `monkeys/details`. Igualmente, cuando se muestra la página registrada para la ruta `bears`, al navegar a la ruta `details` se mostrará la página registrada para la ruta `bears/details`. Para información sobre cómo registrar las rutas en este ejemplo, consulte [Registro de rutas de página](#register-detail-page-routes).
 
 ### <a name="backwards-navigation"></a>Navegación hacia atrás
 
-La navegación hacia atrás se puede llevar a cabo especificando ".." como argumento en el método `GotoAsync`:
+La navegación hacia atrás se puede llevar a cabo especificando ".." como argumento en el método [`GoToAsync`](xref:Xamarin.Forms.Shell.GoToAsync*):
 
 ```csharp
 await Shell.Current.GoToAsync("..");
@@ -228,34 +228,33 @@ Los siguientes formatos de ruta no son válidos:
 
 | Formato | Explicación |
 | --- | --- |
-| *route* o /*route* | Las rutas de la jerarquía visual no se pueden insertar en la pila de navegación. |
 | //*page* o ///*page* | Actualmente, las rutas globales no pueden ser la única página en la pila de navegación. Por lo tanto, no se admite el enrutamiento absoluto a rutas globales. |
 
-El uso de cualquiera de estos formatos de ruta dará como resultado una excepción `Exception`.
+El uso de estos formatos de ruta dará como resultado una excepción `Exception`.
 
-> [!IMPORTANT]
+> [!WARNING]
 > Al intentar navegar a una ruta inexistente, se producirá una excepción `ArgumentException`.
 
 ### <a name="debugging-navigation"></a>Depuración de la navegación
 
-Algunas de las clases de Shell se representan con `DebuggerDisplayAttribute`, que especifica cómo el depurador muestra una clase o campo. Esto puede ayudar a depurar las solicitudes de navegación puesto que se muestran los datos relacionados con la solicitud de navegación. Por ejemplo, en la captura de pantalla siguiente se muestran las propiedades `CurrentItem` y `CurrentState` del objeto `Shell.Current`:
+Algunas de las clases de Shell se representan con `DebuggerDisplayAttribute`, que especifica cómo el depurador muestra una clase o campo. Esto puede ayudar a depurar las solicitudes de navegación puesto que se muestran los datos relacionados con la solicitud de navegación. Por ejemplo, en la captura de pantalla siguiente se muestran las propiedades [`CurrentItem`](xref:Xamarin.Forms.Shell.CurrentItem) y [`CurrentState`](xref:Xamarin.Forms.Shell.CurrentState) del objeto [`Shell.Current`](xref:Xamarin.Forms.Shell.Current):
 
 ![Captura de pantalla del depurador](navigation-images/debugger.png "instantáneas")
 
-En este ejemplo, la propiedad `CurrentItem`, de tipo `FlyoutItem`, muestra el título y la ruta del objeto `FlyoutItem`. Igualmente, la propiedad `CurrentState`, de tipo `ShellNavigationState`, muestra el URI de la ruta mostrada dentro de la aplicación de Shell.
+En este ejemplo, la propiedad [`CurrentItem`](xref:Xamarin.Forms.Shell.CurrentItem), de tipo [`FlyoutItem`](xref:Xamarin.Forms.FlyoutItem), muestra el título y la ruta de acceso del objeto `FlyoutItem`. Igualmente, la propiedad [`CurrentState`](xref:Xamarin.Forms.Shell.CurrentState), de tipo [`ShellNavigationState`](xref:Xamarin.Forms.ShellNavigationState), muestra el URI de la ruta mostrada dentro de la aplicación de Shell.
 
-### <a name="tab-class"></a>Clase Tab
+### <a name="navigation-stack"></a>Pila de navegación
 
-La clase `Tab` define una propiedad `Stack`, de tipo `IReadOnlyList<Page>`, que representa la pila de navegación actual insertada en `Tab`. La clase también proporciona los siguientes métodos de navegación reemplazables:
+La clase [`Tab`](xref:Xamarin.Forms.Tab) define una propiedad [`Stack`](xref:Xamarin.Forms.ShellSection.Stack), de tipo `IReadOnlyList<Page>`, que representa la pila de navegación actual en el objeto `Tab`. La clase también proporciona los siguientes métodos de navegación reemplazables:
 
-- `GetNavigationStack`, devuelve `IReadOnlyList<Page`>, la pila de navegación actual.
-- `OnInsertPageBefore`, que se llama cuando se llama a `INavigation.InsertPageBefore`.
-- `OnPopAsync`, devuelve `Task<Page>`, y se llama cuando se llama a `INavigation.PopAsync`.
-- `OnPopToRootAsync`, devuelve `Task`, y se llama cuando se llama a `INavigation.OnPopToRootAsync`.
-- `OnPushAsync`, devuelve `Task`, y se llama cuando se llama a `INavigation.PushAsync`.
-- `OnRemovePage`, que se llama cuando se llama a `INavigation.RemovePage`.
+- [`GetNavigationStack`](xref:Xamarin.Forms.ShellSection.GetNavigationStack*), que devuelve `IReadOnlyList<Page`>, la pila de navegación actual.
+- [`OnInsertPageBefore`](xref:Xamarin.Forms.ShellSection.OnInsertPageBefore*), que se llama cuando se llama a `INavigation.InsertPageBefore`.
+- [`OnPopAsync`](xref:Xamarin.Forms.ShellSection.OnPopAsync*), que devuelve `Task<Page>` y se llama cuando se llama a `INavigation.PopAsync`.
+- [`OnPopToRootAsync`](xref:Xamarin.Forms.ShellSection.OnPopToRootAsync*), que devuelve `Task` y se llama cuando se llama a `INavigation.OnPopToRootAsync`.
+- [`OnPushAsync`](xref:Xamarin.Forms.ShellSection.OnPushAsync*), que devuelve `Task` y se llama cuando se llama a `INavigation.PushAsync`.
+- [`OnRemovePage`](xref:Xamarin.Forms.ShellSection.OnRemovePage*), que se llama cuando se llama a `INavigation.RemovePage`.
 
-Por ejemplo, en el código siguiente de ejemplo se indica cómo invalidar el método `OnRemovePage`:
+En el ejemplo siguiente se muestra cómo se invalida el método [`OnRemovePage`](xref:Xamarin.Forms.ShellSection.OnRemovePage*):
 
 ```csharp
 public class MyTab : Tab
@@ -269,31 +268,34 @@ public class MyTab : Tab
 }
 ```
 
-Después, los objetos `MyTab` se pueden consumir en la jerarquía visual de Shell en lugar de los objetos `Tab`.
+En este ejemplo, los objetos `MyTab` se deben consumir en la jerarquía visual de Shell en lugar de los objetos [`Tab`](xref:Xamarin.Forms.Tab).
 
 ## <a name="navigation-events"></a>Eventos de navegación
 
-La clase `Shell` define un evento `Navigating`, que se desencadena cuando está a punto de realizarse la navegación, ya sea debido a la navegación mediante programación o a la interacción del usuario. El objeto `ShellNavigatingEventArgs` que acompaña al evento `Navigating` proporciona las siguientes propiedades:
+La clase [`Shell`](xref:Xamarin.Forms.Shell) define un evento [`Navigating`](xref:Xamarin.Forms.Shell.Navigating), que se desencadena cuando está a punto de realizarse la navegación, ya sea debido a la navegación mediante programación o a la interacción del usuario. El objeto [`ShellNavigatingEventArgs`](xref:Xamarin.Forms.ShellNavigatingEventArgs) que acompaña al evento `Navigating` proporciona las siguientes propiedades:
 
-| Propiedad. | Tipo | Descripción |
+| Propiedad | Tipo | Descripción |
 |---|---|---|
-| `Current` | `ShellNavigationState` | Identificador URI de la página actual. |
-| `Source` | `ShellNavigationSource` | El tipo de navegación que se ha producido. |
-| `Target` | `ShellNavigationState`  | Identificador URI que representa el destino de la navegación. |
-| `CanCancel`  | `bool` | Valor que indica si es posible cancelar la navegación. |
-| `Cancelled`  | `bool` | Valor que indica si la navegación se ha cancelado. |
+| [`Current`](xref:Xamarin.Forms.ShellNavigatingEventArgs.Current) | [`ShellNavigationState`](xref:Xamarin.Forms.ShellNavigationState) | Identificador URI de la página actual. |
+| [`Source`](xref:Xamarin.Forms.ShellNavigatingEventArgs.Source) | [`ShellNavigationSource`](xref:Xamarin.Forms.ShellNavigationSource) | El tipo de navegación que se ha producido. |
+| [`Target`](xref:Xamarin.Forms.ShellNavigatingEventArgs.Target) | [`ShellNavigationState`](xref:Xamarin.Forms.ShellNavigationState) | Identificador URI que representa el destino de la navegación. |
+| [`CanCancel`](xref:Xamarin.Forms.ShellNavigatingEventArgs.CanCancel)  | `bool` | Valor que indica si es posible cancelar la navegación. |
+| [`Cancelled`](xref:Xamarin.Forms.ShellNavigatingEventArgs.Cancelled)  | `bool` | Valor que indica si la navegación se ha cancelado. |
 
-Además, la clase `ShellNavigatingEventArgs` proporciona un método `Cancel`, que se puede usar para cancelar la navegación, y un método `GetDeferral`, que devuelve un token de `ShellNavigatingDeferral` que se puede usar para completar la navegación. Para obtener más información sobre el aplazamiento de la navegación, vea [Aplazamiento de navegación](#navigation-deferral).
+Además, la clase [`ShellNavigatingEventArgs`](xref:Xamarin.Forms.ShellNavigatingEventArgs) proporciona un método [`Cancel`](xref:Xamarin.Forms.ShellNavigatingEventArgs.Cancel*), que se puede usar para cancelar la navegación, y un método [`GetDeferral`](xref:Xamarin.Forms.ShellNavigatingEventArgs.GetDeferral*), que devuelve un token de [`ShellNavigatingDeferral`](xref:Xamarin.Forms.ShellNavigatingDeferral) que se puede usar para completar la navegación. Para obtener más información sobre el aplazamiento de la navegación, vea [Aplazamiento de navegación](#navigation-deferral).
 
-La clase `Shell` también define un evento `Navigated`, que se desencadena cuando se ha completado la navegación. El objeto `ShellNavigatedEventArgs` que acompaña al evento `Navigating` proporciona las siguientes propiedades:
+La clase [`Shell`](xref:Xamarin.Forms.Shell) también define un evento [`Navigated`](xref:Xamarin.Forms.Shell.Navigated), que se desencadena cuando se ha completado la navegación. El objeto [`ShellNavigatedEventArgs`](xref:Xamarin.Forms.ShellNavigatedEventArgs) que acompaña al evento `Navigated` proporciona las siguientes propiedades:
 
-| Propiedad. | Tipo | Descripción |
+| Propiedad | Tipo | Descripción |
 |---|---|---|
-| `Current` | `ShellNavigationState` | Identificador URI de la página actual. |
-| `Previous`| `ShellNavigationState` | Identificador URI de la página anterior. |
-| `Source`  | `ShellNavigationSource` | El tipo de navegación que se ha producido. |
+| [`Current`](xref:Xamarin.Forms.ShellNavigatedEventArgs.Current)  | [`ShellNavigationState`](xref:Xamarin.Forms.ShellNavigationState) | Identificador URI de la página actual. |
+| [`Previous`](xref:Xamarin.Forms.ShellNavigatedEventArgs.Previous) | [`ShellNavigationState`](xref:Xamarin.Forms.ShellNavigationState) | Identificador URI de la página anterior. |
+| [`Source`](xref:Xamarin.Forms.ShellNavigatedEventArgs.Source) | [`ShellNavigationState`](xref:Xamarin.Forms.ShellNavigationState) | El tipo de navegación que se ha producido. |
 
-Las clases `ShellNavigatedEventArgs` y `ShellNavigatingEventArgs` tienen ambas propiedades `Source`, de tipo `ShellNavigationSource`. Esta enumeración proporciona los valores siguientes:
+> [!IMPORTANT]
+> Se llama al método `OnNavigating` cuando se genera el evento [`Navigating`](xref:Xamarin.Forms.Shell.Navigating). Del mismo modo, se llama al método `OnNavigated` cuando se genera el evento [`Navigated`](xref:Xamarin.Forms.Shell.Navigated). Ambos métodos se pueden invalidar en la subclase [`Shell`](xref:Xamarin.Forms.Shell) para interceptar las solicitudes de navegación.
+
+Ambas clases, [`ShellNavigatedEventArgs`](xref:Xamarin.Forms.ShellNavigatedEventArgs) y [`ShellNavigatingEventArgs`](xref:Xamarin.Forms.ShellNavigatingEventArgs), tienen propiedades `Source`, de tipo [`ShellNavigationSource`](xref:Xamarin.Forms.ShellNavigationSource). Esta enumeración proporciona los valores siguientes:
 
 - `Unknown`
 - `Push`
@@ -305,22 +307,24 @@ Las clases `ShellNavigatedEventArgs` y `ShellNavigatingEventArgs` tienen ambas p
 - `ShellSectionChanged`
 - `ShellContentChanged`
 
-Por lo tanto, en un controlador del evento `Navigating`, es posible interceptar la navegación y realizar acciones en función del origen de navegación. Por ejemplo, el código siguiente muestra cómo cancelar la navegación hacia atrás si no se han guardado los datos de la página:
+Por lo tanto, se puede interceptar la navegación con una invalidación de `OnNavigating` y se pueden realizar acciones en función del origen de navegación. Por ejemplo, el código siguiente muestra cómo cancelar la navegación hacia atrás si no se han guardado los datos de la página:
 
 ```csharp
-void OnNavigating(object sender, ShellNavigatingEventArgs e)
+protected override void OnNavigating(ShellNavigatingEventArgs args)
 {
-    // Cancel back navigation if data is unsaved
-    if (e.Source == ShellNavigationSource.Pop && !dataSaved)
+    base.OnNavigating(args);
+
+    // Cancel any back navigation.
+    if (args.Source == ShellNavigationSource.Pop)
     {
-        e.Cancel();
+        args.Cancel();
     }
-}
+// }
 ```
 
 ## <a name="navigation-deferral"></a>Aplazamiento de navegación
 
-La navegación de shell se puede interceptar y completar o cancelar según lo que elija el usuario. Esto se puede conseguir invalidando el método `OnNavigating` de la subclase `Shell` y, después, llamando al método `GetDeferral` en el objeto `ShellNavigatingEventArgs`. Este método devuelve un token de `ShellNavigatingDeferral` que tiene un método `Complete`, que se puede usar para completar la solicitud de navegación:
+La navegación de shell se puede interceptar y completar o cancelar según lo que elija el usuario. Esto se puede conseguir invalidando el método `OnNavigating` de la subclase [`Shell`](xref:Xamarin.Forms.Shell) y llamando al método [`GetDeferral`](xref:Xamarin.Forms.ShellNavigatingEventArgs.GetDeferral*) en el objeto [`ShellNavigatingEventArgs`](xref:Xamarin.Forms.ShellNavigatingEventArgs). Este método devuelve un token de [`ShellNavigatingDeferral`](xref:Xamarin.Forms.ShellNavigatingDeferral) que tiene un método [`Complete`](xref:Xamarin.Forms.ShellNavigatingDeferral.Complete*), que se puede usar para completar la solicitud de navegación:
 
 ```csharp
 public MyShell : Shell
@@ -331,8 +335,8 @@ public MyShell : Shell
         base.OnNavigating(args);
 
         ShellNavigatingDeferral token = args.GetDeferral();
-        var result = await DisplayActionSheet("Navigate?", "Cancel", "Yes", "No");
 
+        var result = await DisplayActionSheet("Navigate?", "Cancel", "Yes", "No");
         if (result != "Yes")
         {
             args.Cancel();
@@ -342,60 +346,116 @@ public MyShell : Shell
 }
 ```
 
-En este ejemplo, se muestra una hoja de acción que invita al usuario a completar la solicitud de navegación o cancelarla. La navegación se cancela invocando el método `Cancel` en el objeto `ShellNavigatingEventArgs`. La navegación se completa invocando el método `Complete` en el token de `ShellNavigatingDeferral` obtenido mediante el método `GetDeferral` en el objeto `ShellNavigatingEventArgs`.
+En este ejemplo, se muestra una hoja de acción que invita al usuario a completar la solicitud de navegación o cancelarla. La navegación se cancela invocando el método [`Cancel`](xref:Xamarin.Forms.ShellNavigatingEventArgs.Cancel*) en el objeto [`ShellNavigatingEventArgs`](xref:Xamarin.Forms.ShellNavigatingEventArgs). La navegación se completa invocando el método [`Complete`](xref:Xamarin.Forms.ShellNavigatingDeferral.Complete*) en el token de [`ShellNavigatingDeferral`](xref:Xamarin.Forms.ShellNavigatingDeferral) obtenido mediante el método `GetDeferral` en el objeto `ShellNavigatingEventArgs`.
 
-> [!IMPORTANT]
-> El método `GoToAsync` generará una excepción `InvalidOperationException` si un usuario intenta navegar mientras hay un aplazamiento de navegación pendiente.
+> [!WARNING]
+> El método [`GoToAsync`](xref:Xamarin.Forms.Shell.GoToAsync*) generará una excepción `InvalidOperationException` si un usuario intenta navegar mientras hay un aplazamiento de navegación pendiente.
 
 ## <a name="pass-data"></a>Pasar datos
 
-Al realizar la navegación mediante programación, los datos pueden pasarse como parámetros de consulta. Por ejemplo, el código siguiente se ejecuta en la aplicación de ejemplo cuando un usuario selecciona un elefante en `ElephantsPage`:
+Al realizar la navegación mediante programación basada en URI, los datos pueden pasarse como parámetros de consulta. Esto se consigue anexando `?` después de una ruta, seguido de un identificador de parámetro de consulta, `=`, y un valor. Por ejemplo, el código siguiente se ejecuta en la aplicación de ejemplo cuando un usuario selecciona un elefante en `ElephantsPage`:
 
 ```csharp
 async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
 {
     string elephantName = (e.CurrentSelection.FirstOrDefault() as Animal).Name;
-    await Shell.Current.GoToAsync($"//animals/elephants/elephantdetails?name={elephantName}");
+    await Shell.Current.GoToAsync($"elephantdetails?name={elephantName}");
 }
 ```
 
-En este ejemplo de código se recupera el elefante actualmente seleccionado en [`CollectionView`](xref:Xamarin.Forms.CollectionView) y se navega a la ruta `elephantdetails`; además, se pasa `elephantName` como parámetro de consulta. Tenga en cuenta que los parámetros de consulta van a ser codificados con URL para la navegación, por lo que "Indian Elephant" se convertirá en "Indian%20Elephant".
+En este ejemplo de código se recupera el elefante actualmente seleccionado en [`CollectionView`](xref:Xamarin.Forms.CollectionView) y se navega a la ruta `elephantdetails`; además, se pasa `elephantName` como parámetro de consulta.
 
-Para recibir datos, la clase que representa la página a la que se navega, o la clase de [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la página, se debe decorar con un elemento `QueryPropertyAttribute` para cada parámetro de consulta:
+Para recibir datos, la clase que representa la página a la que se navega, o la clase correspondiente al objeto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la página, se debe decorar con un elemento [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) para cada parámetro de consulta:
 
 ```csharp
-[QueryProperty("Name", "name")]
+[QueryProperty(nameof(Name), "name")]
 public partial class ElephantDetailPage : ContentPage
 {
     public string Name
     {
         set
         {
-            BindingContext = ElephantData.Elephants.FirstOrDefault(m => m.Name == Uri.UnescapeDataString(value));
+            LoadAnimal(value);
         }
     }
     ...
+
+    void LoadAnimal(string name)
+    {
+        try
+        {
+            Animal animal = ElephantData.Elephants.FirstOrDefault(a => a.Name == name);
+            BindingContext = animal;
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("Failed to load animal.");
+        }
+    }    
 }
 ```
 
-El primer argumento de `QueryPropertyAttribute` especifica el nombre de la propiedad que recibirá los datos, mientras que el segundo argumento especifica el identificador del parámetro de consulta. Por tanto, el elemento `QueryPropertyAttribute` del ejemplo anterior especifica que la propiedad `Name` recibirá los datos pasados al parámetro de consulta `name` del URI en la llamada al método `GoToAsync`. La propiedad `Name` decodifica entonces el valor del parámetro de consulta en una dirección URL y lo usa para establecer el objeto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la página en el objeto que se mostrará.
+El primer argumento de [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) especifica el nombre de la propiedad que recibirá los datos, mientras que el segundo argumento especifica el identificador del parámetro de consulta. Por tanto, el elemento `QueryPropertyAttribute` del ejemplo anterior especifica que la propiedad `Name` recibirá los datos pasados al parámetro de consulta `name` del URI en la llamada al método [`GoToAsync`](xref:Xamarin.Forms.Shell.GoToAsync*). El establecedor de la propiedad `Name` llama al método `LoadAnimal` para recuperar el objeto `Animal` para el objeto `name` y lo establece como la propiedad [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la página.
 
-> [!NOTE]
-> Una clase se puede representar con varios objetos `QueryPropertyAttribute`.
+> [!IMPORTANT]
+> Los valores de los parámetros de consulta se descodifican automáticamente como dirección URL.
+
+### <a name="pass-multiple-query-parameters"></a>Paso de varios parámetros de consulta
+
+Se pueden pasar varios parámetros de consulta conectándolos con `&`. Por ejemplo, el código siguiente pasa dos elementos de datos:
+
+```csharp
+async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
+{
+    string elephantName = (e.CurrentSelection.FirstOrDefault() as Animal).Name;
+    string elephantLocation = (e.CurrentSelection.FirstOrDefault() as Animal).Location;
+    await Shell.Current.GoToAsync($"elephantdetails?name={elephantName}&location={elephantLocation}");
+}
+```
+
+En este ejemplo de código se recupera el elefante actualmente seleccionado en [`CollectionView`](xref:Xamarin.Forms.CollectionView) y se navega a la ruta `elephantdetails`; además, se pasan `elephantName` y `elephantLocation` como parámetros de consulta.
+
+Para recibir datos, la clase que representa la página a la que se navega, o la clase correspondiente al objeto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la página, se debe decorar con un elemento [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) para cada parámetro de consulta:
+
+```csharp
+[QueryProperty(nameof(Name), "name")]
+[QueryProperty(nameof(Location), "location")]
+public partial class ElephantDetailPage : ContentPage
+{
+    public string Name
+    {
+        set
+        {
+            // Custom logic
+        }
+    }
+
+    public string Location
+    {
+        set
+        {
+            // Custom logic
+        }
+    }
+    ...    
+}
+```
+
+En este ejemplo, la clase se decora con un objeto [`QueryPropertyAttribute`](xref:Xamarin.Forms.QueryPropertyAttribute) para cada parámetro de consulta. El primer objeto `QueryPropertyAttribute` especifica que la propiedad `Name` recibirá los datos pasados en el parámetro de consulta `name`, mientras que el segundo objeto `QueryPropertyAttribute` especifica que la propiedad `Location` recibirá los datos pasado en el parámetro de consulta `location`. En ambos casos, los valores de los parámetros de consulta se especifican en el URI en la llamada al método [`GoToAsync`](xref:Xamarin.Forms.Shell.GoToAsync*).
 
 ## <a name="back-button-behavior"></a>Comportamiento del botón Atrás
 
-La clase `BackButtonBehavior` define las siguientes propiedades que controlan la apariencia y el comportamiento del botón Atrás:
+La apariencia y el comportamiento del botón Atrás se pueden volver a definir estableciendo la propiedad adjunta [`BackButtonBehavior`](xref:Xamarin.Forms.Shell.BackButtonBehaviorProperty) en un objeto [`BackButtonBehavior`](xref:Xamarin.Forms.BackButtonBehavior). La clase [`BackButtonBehavior`](xref:Xamarin.Forms.BackButtonBehavior) define las propiedades siguientes:
 
-- `Command`, de tipo `ICommand`, que se ejecuta cuando se presiona el botón Atrás.
-- `CommandParameter`, de tipo `object`, que es el parámetro que se pasa a `Command`.
-- `IconOverride`, de tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), el icono usado para el botón Atrás.
-- `IsEnabled`, de tipo `boolean`, indica si se ha habilitado el botón Atrás. El valor predeterminado es `true`.
-- `TextOverride`, de tipo `string`, el texto usado para el botón Atrás.
+- [`Command`](xref:Xamarin.Forms.BackButtonBehavior.Command), de tipo `ICommand`, que se ejecuta cuando se presiona el botón Atrás.
+- [`CommandParameter`](xref:Xamarin.Forms.BackButtonBehavior.CommandParameter), de tipo `object`, que es el parámetro que se pasa al objeto `Command`.
+- [`IconOverride`](xref:Xamarin.Forms.BackButtonBehavior.IconOverride), de tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), el icono usado para el botón Atrás.
+- [`IsEnabled`](xref:Xamarin.Forms.BackButtonBehavior.IsEnabled), de tipo `boolean`, indica si se ha habilitado el botón Atrás. El valor predeterminado es `true`.
+- [`TextOverride`](xref:Xamarin.Forms.BackButtonBehavior.TextOverride), de tipo `string`, el texto usado para el botón Atrás.
 
 Todas estas propiedades están respaldados por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que las propiedades pueden ser destinos de los enlaces de datos.
 
-La clase `BackButtonBehavior` se puede consumir mediante el establecimiento de la propiedad adjunta `Shell.BackButtonBehavior` a un objeto `BackButtonBehavior`:
+En el código siguiente se muestra un ejemplo de cómo volver a definir la apariencia y el comportamiento del botón Atrás:
 
 ```xaml
 <ContentPage ...>    
@@ -420,9 +480,9 @@ Shell.SetBackButtonBehavior(this, new BackButtonBehavior
 });
 ```
 
-La propiedad `Command` se establece en `ICommand` para ejecutarse cuando se presiona el botón Atrás, y la propiedad `IconOverride` se establece en el icono que se usa para el botón Atrás:
+La propiedad [`Command`](xref:Xamarin.Forms.BackButtonBehavior.Command) se establece en `ICommand` para ejecutarse cuando se presiona el botón Atrás y la propiedad `IconOverride` se establece en el icono que se usa para el botón Atrás:
 
-[![Captura de pantalla de la invalidación de un icono de botón Atrás de shell en iOS y Android](navigation-images/back-button.png "Invalidación de icono de botón Atrás de Shell")](navigation-images/back-button-large.png#lightbox "Invalidación de icono de botón Atrás de Shell")
+[![Captura de pantalla de la invalidación de un icono de botón Atrás de Shell en iOS y Android](navigation-images/back-button.png)](navigation-images/back-button-large.png#lightbox)
 
 ## <a name="related-links"></a>Vínculos relacionados
 
