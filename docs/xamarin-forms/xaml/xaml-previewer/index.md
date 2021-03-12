@@ -11,20 +11,20 @@ ms.date: 03/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5af5846c77c5cd63e14494c25e5dc04ebcea4b7d
-ms.sourcegitcommit: f90e908a72cf616ee303c2751729b62f11654379
+ms.openlocfilehash: 94c09aa870052108261caf0107463b6beb88bb45
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2020
-ms.locfileid: "96299964"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102603014"
 ---
-# <a name="xaml-previewer-for-no-locxamarinforms"></a>Vista previa de XAML para Xamarin.Forms
+# <a name="xaml-previewer-for-xamarinforms"></a>Vista previa de XAML para Xamarin.Forms
 
 _Vea los Xamarin.Forms diseños que se representan a medida que escribe._
 
 > [!WARNING]
-> El previsor de XAML comenzará a salir de la fase en Visual Studio 2019, versión 16,8 y Visual Studio para Mac versión 8,8.
-> La forma recomendada de obtener una vista previa del código XAML es ahora con la **[recarga activa de XAML](~/xamarin-forms/xaml/hot-reload.md)**.
+> El previsor de XAML ha quedado en desuso en Visual Studio 2019 versión 16,8 y Visual Studio para Mac versión 8,8, y se ha reemplazado por la característica de recarga en caliente de XAML en Visual Studio 2019 versión 16,9 y Visual Studio para Mac versión 8,9.
+> Obtenga más información sobre la recarga activa de XAML en [la documentación](~/xamarin-forms/xaml/hot-reload.md)de.
 
 ## <a name="overview"></a>Información general
 

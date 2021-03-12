@@ -8,14 +8,14 @@ ms.date: 03/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4ab7c5dab6a414e15531e0e0e812d604e05ab1cc
-ms.sourcegitcommit: 3edcc63fcf86409b73cd6e5dc77f0093a99b3f87
+ms.openlocfilehash: 1dba93f5f6f0f81477824d22c616cd4a4c2d0b41
+ms.sourcegitcommit: b6f6dd231b6bef2df8b7f8e4c530c9aead70809a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98062607"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102498394"
 ---
-# <a name="no-locxamarinessentials-web-authenticator"></a>Xamarin.Essentials: Autenticador web
+# <a name="xamarinessentials-web-authenticator"></a>Xamarin.Essentials: Autenticador web
 
 La clase **WebAuthenticator** permite iniciar flujos basados en explorador que escuchan una devolución de llamada a una dirección URL específica registrada en la aplicación.
 
@@ -112,13 +112,17 @@ public override bool ContinueUserActivity(UIApplication application, NSUserActiv
 En el caso de UWP, deberá declarar el identificador URI de devolución de llamada en el archivo `Package.appxmanifest`:
 
 ```xml
-    <Extensions>
-        <uap:Extension Category="windows.protocol">
+<Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="MyApp.App">
+        <Extensions>
+            <uap:Extension Category="windows.protocol">
             <uap:Protocol Name="myapp">
                 <uap:DisplayName>My App</uap:DisplayName>
             </uap:Protocol>
-        </uap:Extension>
-    </Extensions>
+            </uap:Extension>
+        </Extensions>
+    </Application>
+</Applications>
 ```
 
 -----

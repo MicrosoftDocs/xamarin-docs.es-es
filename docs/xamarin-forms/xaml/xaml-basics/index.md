@@ -11,12 +11,12 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1c660c04e89c56f10435964425b2b20dbf5c8eb3
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: e269a56daa7517b2b3deb3808d7eb73da825ffac
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93365872"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102603066"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Xamarin.Forms Conceptos básicos de XAML
 
@@ -42,12 +42,12 @@ También hay desventajas, principalmente relacionadas con las limitaciones que s
 - Por lo general, XAML no puede crear instancias de clases que no definen un constructor sin parámetros. (Sin embargo, a veces hay una forma de evitar esta restricción).
 - Normalmente, XAML no puede llamar a métodos. (De nuevo, esta restricción a veces se puede solucionar).
 
-Todavía no hay un diseñador visual para generar XAML en Xamarin.Forms aplicaciones. Todo XAML debe estar escrito a mano, pero hay un controlador de [vista previa de XAML](~/xamarin-forms/xaml/xaml-previewer/index.md). Es posible que los programadores nuevos en XAML deseen compilar y ejecutar sus aplicaciones con frecuencia, especialmente después de cualquier cosa que podría no ser correcta. Incluso los desarrolladores con mucha experiencia en XAML saben que la experimentación es gratificante.
+Todavía no hay un diseñador visual para generar XAML en Xamarin.Forms aplicaciones. Todo el código XAML debe estar escrito a mano, pero puede usar [recarga en caliente (~/Xamarin-Forms/XAML/Hot-Reload/index.MD) de XAML en Visual Studio 2019 o Visual Studio para Mac para ver los diseños de pantalla a medida que los edita. Incluso los desarrolladores con mucha experiencia en XAML saben que la experimentación es gratificante.
 
 XAML es básicamente XML, pero XAML tiene algunas características de sintaxis únicas. Las más importantes son las siguientes:
 
 - Elementos de propiedad
-- Propiedades adjuntas
+- Propiedades asociadas
 - Extensiones de marcado
 
 Estas características *no* son extensiones XML. XAML es completamente XML legal. Pero estas características de sintaxis XAML usan XML de maneras únicas. Se describen en detalle en los artículos siguientes, que concluyen con una introducción al uso de XAML para implementar MVVM.

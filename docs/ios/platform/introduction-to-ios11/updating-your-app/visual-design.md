@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016
-ms.openlocfilehash: 532a26de422846d81f6ba6dead7dee6341bcee72
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 06a322a92158cf413e7b33109806010c068cf733
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570900"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602962"
 ---
 # <a name="visual-design-updates-in-ios-11"></a>Actualizaciones del diseño visual en iOS 11
 
@@ -74,7 +74,7 @@ View.LayoutMargins = UIEdgeInsets.Zero;
 
 iOS 7 [presentó](~/ios/platform/introduction-to-ios7/ios7-ui.md#fullscreen) `topLayoutGuide` y `bottomLayoutGuide` como una manera de restringir las vistas para que no estén ocultas por las barras de UIKit y estén en un área visible de la pantalla. Están en desuso en iOS 11 en favor del _área segura_.
 
-El área segura es una nueva manera de pensar en el espacio visible de la aplicación y en cómo se agregan las restricciones entre una vista y una vista superior. Por ejemplo, considere la siguiente imagen:
+El área segura es una nueva manera de pensar en el espacio visible de la aplicación y en cómo se agregan las restricciones entre una vista y una vista superior. Por ejemplo, considere la imagen siguiente:
 
 [![Guía de diseño de área segura frente al nivel superior e inferior](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
 
@@ -92,7 +92,7 @@ UITableView ha tenido varios cambios pequeños, pero significativos, en iOS 11.
 
 De forma predeterminada, los encabezados, pies de página y celdas ahora tienen el tamaño automáticamente en función de su contenido. Para no participar en este comportamiento de ajuste de tamaño automático `EstimatedRowHeight` , establezca, `EstimatedSectionHeaderHeight` o `EstimatedSectionFooterHeight` en cero.
 
-Sin embargo, en algunas circunstancias (por ejemplo, al agregar UITableViewController en el diseñador de iOS o al usar Storboards existentes en Interface Builder), es posible que tenga que habilitar manualmente las celdas autoajustables. Para ello, asegúrese de que ha establecido las propiedades siguientes en la vista de tabla para las celdas, encabezados y pies de página, respectivamente:
+Sin embargo, en algunas circunstancias (por ejemplo, al agregar UITableViewController cuando se usan guiones gráficos existentes en Interface Builder), puede que tenga que habilitar manualmente las celdas de autoajuste. Para ello, asegúrese de que ha establecido las propiedades siguientes en la vista de tabla para las celdas, encabezados y pies de página, respectivamente:
 
 ```csharp
 // Cells
@@ -109,7 +109,7 @@ TableView.EstimatedSectionFooterHeight = 40f;
 
 ```
 
-iOS 11 ha ampliado la funcionalidad de las acciones de fila. `UISwipeActionsConfiguration`se presentó para definir un conjunto de acciones que deben realizarse cuando el usuario se desliza rápidamente en cualquier dirección de una fila de una vista de tabla. Este comportamiento es similar al de Native mail. app. Para obtener más información, consulte la guía de [acciones de fila](~/ios/user-interface/controls/tables/row-action.md) .
+iOS 11 ha ampliado la funcionalidad de las acciones de fila. `UISwipeActionsConfiguration` se presentó para definir un conjunto de acciones que deben realizarse cuando el usuario se desliza rápidamente en cualquier dirección de una fila de una vista de tabla. Este comportamiento es similar al de Native mail. app. Para obtener más información, consulte la guía de [acciones de fila](~/ios/user-interface/controls/tables/row-action.md) .
 
 Las vistas de tabla tienen compatibilidad para arrastrar y colocar en iOS 11. Para obtener más información, vea la guía de [arrastrar y colocar](~/ios/platform/introduction-to-ios11/drag-and-drop.md#uitableview) .
 

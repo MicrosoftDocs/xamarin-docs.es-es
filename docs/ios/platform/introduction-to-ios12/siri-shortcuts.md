@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/08/2018
-ms.openlocfilehash: 9ad4a5cfb32aa1256d73eb6c9d2f5fe6953b6852
-ms.sourcegitcommit: c7d82b0684b1c26cdcbc16766b636894a64a80fd
+ms.openlocfilehash: fbd0f5025ab195ba7a81bf83870330662e3a6a01
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91607182"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602715"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Métodos abreviados de Siri en Xamarin. iOS
 
@@ -230,7 +230,7 @@ Para ver este código generado:
 - Agregue una importación al archivo de encabezado de la intención personalizada: `#import "OrderSoupIntent.h"`
 - En cualquier método de la clase, agregue una referencia a `OrderSoupIntent` .
 - Haga clic con el botón derecho en `OrderSoupIntent` y elija **saltar a definición**.
-- Haga clic con el botón secundario en el archivo recién abierto, **OrderSoupIntent. h**y seleccione **Mostrar en el buscador**.
+- Haga clic con el botón secundario en el archivo recién abierto, **OrderSoupIntent. h** y seleccione **Mostrar en el buscador**.
 - Esta acción abrirá una ventana de **búsqueda** que contiene un archivo **. h** y **. m** que contiene el código generado.
 
 Este código generado incluye:
@@ -252,7 +252,7 @@ Este proyecto de **biblioteca estática de chocolate Touch** contiene los archiv
 
 #### <a name="configuring-the-static-library-project-build-settings"></a>Configurar los valores de compilación del proyecto de biblioteca estática
 
-En el **Explorador de proyectos**de Xcode, seleccione el proyecto de nivel superior, **OrderSoupIntentStaticLib**, y vaya a compilar **fases > orígenes de compilación**.
+En el **Explorador de proyectos** de Xcode, seleccione el proyecto de nivel superior, **OrderSoupIntentStaticLib**, y vaya a compilar **fases > orígenes de compilación**.
 Observe que **OrderSoupIntent. m** (que importa **OrderSoupIntent. h**) aparece aquí. En **Link Binary with Libraries (vincular binario con bibliotecas**), tenga en cuenta que se incluyen **intents. Framework** y **Foundation. Framework** .
 Con estos valores en su lugar, el marco de trabajo se compilará correctamente.
 
@@ -262,7 +262,7 @@ Para compilar la biblioteca estática y generar definiciones de enlaces de C# pa
 
 - [Instale Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/get-started.md?context=xamarin%252fmac#installing-objective-sharpie), la herramienta que se usa para generar definiciones de enlaces a partir de los archivos **. h** y **. m** creados por Xcode.
 
-- Configure el sistema para usar **las herramientas de línea de comandos**de Xcode 10:
+- Configure el sistema para usar **las herramientas de línea de comandos** de Xcode 10:
 
   > [!WARNING]
   > La actualización de las **herramientas de línea de comandos** seleccionadas afecta a todas las versiones instaladas de Xcode en el sistema. Cuando haya terminado de usar la aplicación de ejemplo de chef de sopa, asegúrese de revertir esta configuración a su configuración original.
@@ -329,7 +329,7 @@ Una vez compilado el marco, siga los [mismos pasos](#creating-a-bindings-library
 
 ### <a name="adding-the-intent-definition-file-to-your-solution"></a>Agregar el archivo de definición de intención a la solución
 
-En la solución de C# **SoupChef** , el proyecto **SoupKit** contiene código compartido entre la aplicación y sus extensiones. El archivo **intents. intentdefinition** se ha colocado en el **directorio base. lproj** de **SoupKit**y tiene una acción de **compilación** de **contenido**. El proceso de compilación copia este archivo en el grupo de aplicaciones de la aplicación de chef de sopa, donde es necesario para que la aplicación funcione correctamente.
+En la solución de C# **SoupChef** , el proyecto **SoupKit** contiene código compartido entre la aplicación y sus extensiones. El archivo **intents. intentdefinition** se ha colocado en el **directorio base. lproj** de **SoupKit** y tiene una acción de **compilación** de **contenido**. El proceso de compilación copia este archivo en el grupo de aplicaciones de la aplicación de chef de sopa, donde es necesario para que la aplicación funcione correctamente.
 
 ### <a name="donating-an-intent"></a>Donar un intento
 
@@ -478,9 +478,9 @@ Una vez habilitada, cada donación correcta aparecerá en la pantalla de bloqueo
 
 El código que se ejecuta cuando Siri invoca un intento se coloca en una extensión intents, que se puede agregar como un nuevo proyecto a la misma solución que una aplicación de Xamarin. iOS existente, como la de sopa chef. En la solución **SoupChef** , la extensión se denomina **SoupChefIntents**.
 
-#### <a name="soupchefintents-infoplist-and-entitlementsplist"></a>SoupChefIntents: info. plist y contitles. plist
+#### <a name="soupchefintents--infoplist-and-entitlementsplist"></a>SoupChefIntents: info. plist y contitles. plist
 
-##### <a name="soupchefintents-infoplist"></a>SoupChefIntents: info. plist
+##### <a name="soupchefintents--infoplist"></a>SoupChefIntents: info. plist
 
 **Info. plist** en el proyecto **SoupChefIntents** define el identificador de la **agrupación** como `com.xamarin.SoupChef.SoupChefIntents` .
 
@@ -507,14 +507,14 @@ El archivo **info. plist** también contiene la entrada siguiente:
 </dict>
 ```
 
-En el archivo **info. plist**anterior:
+En el archivo **info. plist** anterior:
 
 - `IntentsRestrictedWhileLocked` muestra los intentos que se deben controlar cuando se desbloquea el dispositivo.
 - `IntentsSupported` enumera las intenciones controladas por esta extensión.
 - `NSExtensionPointIdentifier` especifica el tipo de extensión de aplicación. Para obtener más información, consulte [la documentación de Apple](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AppExtensionKeys.html#//apple_ref/doc/uid/TP40014212-SW15).
 - `NSExtensionPrincipalClass` Especifica la clase que se debe usar para controlar los intentos admitidos por esta extensión.
 
-##### <a name="soupchefintents-entitlementsplist"></a>SoupChefIntents: contitles. plist
+##### <a name="soupchefintents--entitlementsplist"></a>SoupChefIntents: contitles. plist
 
 El archivo **contitles. plist** del proyecto **SoupChefIntents** tiene la funcionalidad de **grupos de aplicaciones** . Esta capacidad está configurada para usar el mismo grupo de aplicaciones que el proyecto **SoupChef** :
 
@@ -582,7 +582,7 @@ Una extensión de interfaz de usuario de intents proporciona una interfaz de usu
 
 ### <a name="soupchefintentsui--infoplist-and-entitlementsplist"></a>SoupChefIntentsUI: info. plist y contitles. plist
 
-#### <a name="soupchefintentsui-infoplist"></a>SoupChefIntentsUI: info. plist
+#### <a name="soupchefintentsui--infoplist"></a>SoupChefIntentsUI: info. plist
 
 **Info. plist** en el proyecto **SoupChefIntentsUI** define el identificador de la **agrupación** como `com.xamarin.SoupChef.SoupChefIntentsui` .
 
@@ -606,13 +606,13 @@ El archivo **info. plist** también contiene la entrada siguiente:
 </dict>
 ```
 
-En el archivo **info. plist**anterior:
+En el archivo **info. plist** anterior:
 
 - `IntentsSupported` indica que la `OrderSoupIntent` extensión de la interfaz de usuario de intents controla el control.
 - `NSExtensionPointIdentifier` especifica el tipo de extensión de aplicación. Para obtener más información, consulte [la documentación de Apple](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AppExtensionKeys.html#//apple_ref/doc/uid/TP40014212-SW15).
 - `NSExtensionMainStoryboard` especifica el guión gráfico que define la interfaz principal de esta extensión.
 
-#### <a name="soupchefintentsui-entitlementsplist"></a>SoupChefIntentsUI: contitles. plist
+#### <a name="soupchefintentsui--entitlementsplist"></a>SoupChefIntentsUI: contitles. plist
 
 El proyecto **SoupChefIntentsUI** no necesita un archivo **contitles. plist** .
 
@@ -626,7 +626,7 @@ En este guión gráfico, hay un único controlador de vista, de tipo **IntentVie
 - **confirmationView**, de tipo `ConfirmOrderView`
 
 > [!NOTE]
-> Las interfaces de **invoiceView** y **confirmationView** se definen en **Main. Storyboard** como vistas secundarias. IOS Designer en Visual Studio para Mac y Visual Studio 2017 no proporcionan compatibilidad para ver o editar vistas secundarias. para ello, Abra **Main. Storyboard** en la Interface Builder de Xcode.
+> Las interfaces de **invoiceView** y **confirmationView** se definen en **Main. Storyboard** como vistas secundarias. Visual Studio para Mac y Visual Studio 2017 no proporcionan compatibilidad para ver o editar vistas secundarias; para ello, Abra **Main. Storyboard** en la Interface Builder de Xcode.
 
 `IntentViewController` implementa el [`IINUIHostedViewControlling`](xref:IntentsUI.IINUIHostedViewControlling)
 interfaz, que se usa para proporcionar una interfaz personalizada cuando se trabaja con Siri intents. [`ConfigureView`](xref:IntentsUI.INUIHostedViewControlling_Extensions.ConfigureView*)

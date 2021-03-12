@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/17/2017
-ms.openlocfilehash: ce436f907c70657ff6d08f39bdec9e7d796d519c
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: b4c23792cca0bbaabeeaac38b2756490f1485605
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91431033"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602936"
 ---
 # <a name="events-protocols-and-delegates-in-xamarinios"></a>Eventos, protocolos y delegados en Xamarin. iOS
 
@@ -52,23 +52,15 @@ aButton.TouchUpInside += delegate {
 };
 ```
 
-El código anterior se conecta en el `ViewDidLoad` método de UIViewController. La `aButton` variable hace referencia a un botón, que puede Agregar en el diseñador de iOS o con código. En la ilustración siguiente se muestra un botón que se ha agregado en el diseñador de iOS:
+El código anterior se conecta en el `ViewDidLoad` método de UIViewController. La `aButton` variable hace referencia a un botón, que puede Agregar en Xcode Interface Builder o con código. 
 
-[![Un botón agregado en el diseñador de iOS](delegates-protocols-and-events-images/02-interface-builder-outlet-sml.png)](delegates-protocols-and-events-images/02-interface-builder-outlet.png#lightbox)
+Xamarin. iOS también admite el estilo de acción de destino de la conexión del código a una interacción que se produce con un control. 
 
-Xamarin. iOS también admite el estilo de acción de destino de la conexión del código a una interacción que se produce con un control. Para crear una acción de destino para el botón **Hello** , haga doble clic en él en el diseñador de iOS. Se mostrará el archivo de código subyacente de UIViewController y se pedirá al desarrollador que seleccione una ubicación para insertar el método de conexión:
+Para más información sobre el patrón de acción de destino de iOS, consulte la sección Target-Action de las [principales capacidades de aplicación para iOS](https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/Target-Action/Target-Action.html#//apple_ref/doc/uid/TP40010810-CH12) en la biblioteca de desarrolladores de iOS de Apple.
 
-[![El archivo de código subyacente UIViewControllers](delegates-protocols-and-events-images/03-interface-builder-action-sml.png)](delegates-protocols-and-events-images/03-interface-builder-action.png#lightbox)
+Para obtener más información, consulte [diseñar interfaces de usuario con Xcode](~/ios/user-interface/storyboards/index.md).
 
-Una vez seleccionada una ubicación, se crea un nuevo método y se conecta al control. En el ejemplo siguiente, se escribirá un mensaje en la consola cuando se haga clic en el botón:
-
-[![Cuando se haga clic en el botón, se escribirá un mensaje en la consola.](delegates-protocols-and-events-images/05-interface-builder-action-sml.png)](delegates-protocols-and-events-images/05-interface-builder-action.png#lightbox)
-
-Para más información sobre el patrón de acción de destino de iOS, consulte la sección de acciones de destino de las [principales capacidades de aplicación para iOS](https://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) en la biblioteca de desarrolladores de iOS de Apple.
-
-Para obtener más información sobre cómo usar el diseñador de iOS con Xamarin. iOS, consulte la documentación de [información general del diseñador de iOS](~/ios/user-interface/designer/index.md) .
-
-## <a name="events"></a>Eventos
+## <a name="events"></a>Events
 
 Si desea interceptar eventos de UIControl, tiene una serie de opciones: desde el uso de las expresiones lambda de C# y las funciones de delegado hasta el uso de las API de Objective-C de bajo nivel.
 
@@ -249,7 +241,7 @@ public abstract class UITableViewDataSource : NSObject
 Tenga en cuenta que la clase es abstracta. Xamarin. iOS hace que la clase sea abstracta para admitir métodos opcionales o necesarios en los protocolos.
 Sin embargo, a diferencia de los protocolos Objective-C (o las interfaces de C#), las clases de C# no admiten la herencia múltiple. Esto afecta al diseño del código C# que usa los protocolos y, normalmente, conduce a clases anidadas. Más adelante en este documento encontrará más información sobre este problema, en la sección delegados.
 
- `GetCell(…)` es un método abstracto, enlazado al *selector*Objective-C, `tableView:cellForRowAtIndexPath:` , que es un método requerido del `UITableViewDataSource` Protocolo. Selector es el término Objective-C para el nombre del método. Para aplicar el método según sea necesario, Xamarin. iOS lo declara como abstracto. El otro método, `NumberOfSections(…)` , está enlazado a `numberOfSectionsInTableview:` . Este método es opcional en el protocolo, por lo que Xamarin. iOS lo declara como virtual, lo que permite invalidarlo en C#.
+ `GetCell(…)` es un método abstracto, enlazado al *selector* Objective-C, `tableView:cellForRowAtIndexPath:` , que es un método requerido del `UITableViewDataSource` Protocolo. Selector es el término Objective-C para el nombre del método. Para aplicar el método según sea necesario, Xamarin. iOS lo declara como abstracto. El otro método, `NumberOfSections(…)` , está enlazado a `numberOfSectionsInTableview:` . Este método es opcional en el protocolo, por lo que Xamarin. iOS lo declara como virtual, lo que permite invalidarlo en C#.
 
 Xamarin. iOS se encarga de todo el enlace de iOS. Sin embargo, si alguna vez necesita enlazar un protocolo desde Objective-C manualmente, puede hacerlo decorando una clase con `ExportAttribute` . Este es el mismo método que usa Xamarin. iOS.
 

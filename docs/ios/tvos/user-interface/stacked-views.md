@@ -7,14 +7,17 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: b318f11e866c94ab1f5aa8f6b4f351ac88475ac3
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 1d6f2b6cbc18317562396308bf353c83a8471c2c
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437045"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602897"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Trabajar con vistas apiladas tvOS en Xamarin
+> [!WARNING]
+> IOS Designer quedó en desuso en Visual Studio 2019 versión 16,8 y Visual Studio 2019 para Mac versión 8,8 y se quitó en Visual Studio 2019 versión 16,9 y Visual Studio para Mac versión 8,9.
+> La manera recomendada de compilar interfaces de usuario de iOS es directamente en un equipo Mac que ejecuta la Interface Builder de Xcode. Para obtener más información, consulte [diseñar interfaces de usuario con Xcode](~/ios/user-interface/storyboards/index.md). 
 
 El control de vista de pila ( `UIStackView` ) aprovecha la eficacia de las clases de diseño y tamaño automáticos para administrar una pila de subvistas, ya sea horizontal o verticalmente, que responde dinámicamente a los cambios de contenido y al tamaño de pantalla del dispositivo Apple TV.
 
@@ -65,7 +68,7 @@ Por lo general, esto significa anclar al menos dos bordes de la vista de pila pa
 - Si la `LayoutMarginsRelativeArrangement` propiedad es `true` , el tamaño de las vistas de pila también incluirá espacio para los márgenes.
 - El tamaño perpendicular al `Axis` se establecerá en la subvista más grande de la colección.
 
-Además, puede especificar restricciones para el **alto** y el **ancho**de la vista de pila. En este caso, las subvistas se colocarán (con el tamaño) para rellenar el espacio especificado por la vista de pila, según lo determinado por las `Distribution` `Alignment` propiedades y.
+Además, puede especificar restricciones para el **alto** y el **ancho** de la vista de pila. En este caso, las subvistas se colocarán (con el tamaño) para rellenar el espacio especificado por la vista de pila, según lo determinado por las `Distribution` `Alignment` propiedades y.
 
 Si la `BaselineRelativeArrangement` propiedad es `true` , las subvistas se organizarán en función de la primera o la última línea de base de la subvista, en lugar de usar la posición **superior**, **inferior** o **Centro* -  **Y** . Se calculan en el contenido de la vista de pila como se indica a continuación:
 
@@ -73,7 +76,7 @@ Si la `BaselineRelativeArrangement` propiedad es `true` , las subvistas se organ
 - Una vista de pila horizontal usará su subvista más alta para la primera y la última línea de base. Si la vista más alta también es una vista de pila, usará la subvista más alta como línea de base.
 
 > [!IMPORTANT]
-> La alineación de línea base no funciona en tamaños de subvista expandidos o comprimidos, ya que la línea base se calculará en la posición equivocada. Para la alineación de línea base, asegúrese de que el **alto** de la subvista coincide con el **alto**de la vista de contenido intrínseca.
+> La alineación de línea base no funciona en tamaños de subvista expandidos o comprimidos, ya que la línea base se calculará en la posición equivocada. Para la alineación de línea base, asegúrese de que el **alto** de la subvista coincide con el **alto** de la vista de contenido intrínseca.
 
 <a name="Common-Stack-View-Uses"></a>
 

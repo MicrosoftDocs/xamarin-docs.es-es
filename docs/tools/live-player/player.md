@@ -6,12 +6,12 @@ ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2019
-ms.openlocfilehash: d79eb9ad1ca57361e063f6ce73910d6bb149cf72
-ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
+ms.openlocfilehash: 7c99fb593f0515dc45b64c01621cb453340f7bc1
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98758076"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602871"
 ---
 # <a name="xamarin-live-player-app"></a>Aplicación Xamarin Live Player
 
@@ -21,7 +21,7 @@ ms.locfileid: "98758076"
 > Finalizó la vista previa de Xamarin Live Player. La aplicación ya no está disponible. Las instrucciones siguientes se proporcionan para que los clientes sigan usando la versión preliminar con Visual Studio 2017.
 
 > [!TIP]
-> Puede usar la [vista previa de XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) en Visual Studio 2019 o Visual Studio para Mac para ver los diseños de pantalla a medida que los edita.
+> Puede usar [~/Xamarin-Forms/XAML/Hot-Reload/index.MD (recarga activa) en Visual Studio 2019 o Visual Studio para Mac para ver los diseños de pantalla a medida que los edita.
 
 En el inicio, la aplicación Xamarin Live Player tiene el siguiente aspecto:
 

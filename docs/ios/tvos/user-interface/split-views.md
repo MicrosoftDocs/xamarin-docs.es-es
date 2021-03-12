@@ -7,14 +7,17 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 9cd19cfccac03ea1edb59c0422f197e33873abc6
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: cc7b61d4a02bf2b0dc64e7ebc3501a45832f5fa3
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436894"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102603092"
 ---
 # <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Trabajar con controladores de vista en dos paneles tvOS en Xamarin
+> [!WARNING]
+> IOS Designer quedó en desuso en Visual Studio 2019 versión 16,8 y Visual Studio 2019 para Mac versión 8,8 y se quitó en Visual Studio 2019 versión 16,9 y Visual Studio para Mac versión 8,9.
+> La manera recomendada de compilar interfaces de usuario de iOS es directamente en un equipo Mac que ejecuta la Interface Builder de Xcode. Para obtener más información, consulte [diseñar interfaces de usuario con Xcode](~/ios/user-interface/storyboards/index.md). 
 
 Un controlador de vista en dos paneles presenta y administra un controlador de vista principal y de detalles en paralelo, en la pantalla al mismo tiempo. Los controladores de vista en dos paneles se usan para presentar contenido persistente y enfocable en la vista maestra (la sección más pequeña a la izquierda) y los detalles relacionados en la vista de detalle (la sección más grande de la derecha).
 
@@ -56,7 +59,7 @@ La manera más sencilla de trabajar con controladores de vista en dos paneles en
 1. Si quita la vista maestra predeterminada, arrastre un nuevo controlador de vista a la superficie de diseño: 
 
     [![Un controlador de vista](split-views-images/activity02.png)](split-views-images/activity02.png#lightbox)
-1. Control: haga clic y arrastre desde el controlador de vista en dos paneles al nuevo controlador de vista maestra. 
+1. Control-Click y arrastre desde el controlador de vista en dos paneles hasta el nuevo controlador de vista maestra. 
 1. Seleccione **maestra** en el **menú emergente**: 
 
     [![Seleccionar maestro en el menú emergente](split-views-images/activity03.png)](split-views-images/activity03.png#lightbox)
@@ -76,7 +79,7 @@ La manera más sencilla de trabajar con controladores de vista en dos paneles en
 1. Si quita la vista maestra predeterminada, arrastre un nuevo controlador de vista a la superficie de diseño: 
 
     [![Un controlador de vista](split-views-images/activity02-vs.png)](split-views-images/activity02-vs.png#lightbox)
-1. Control: haga clic y arrastre desde el controlador de vista en dos paneles al nuevo controlador de vista maestra. 
+1. Control-Click y arrastre desde el controlador de vista en dos paneles hasta el nuevo controlador de vista maestra. 
 1. Seleccione **maestra** en el **menú emergente**: 
 
     [![Seleccionar maestro en el menú emergente](split-views-images/activity03-vs.png)](split-views-images/activity03-vs.png#lightbox)

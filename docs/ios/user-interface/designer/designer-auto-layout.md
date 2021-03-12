@@ -7,17 +7,17 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 37d90bc42e843dd3b3c8f07689e0e229225ff57d
-ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
+ms.openlocfilehash: a350e5cbea616c57d529ca5e05f531c58e8b141a
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439465"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602923"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Diseño automático con el Xamarin Designer para iOS
 
 > [!WARNING]
-> IOS Designer comenzará a quedar obsoleto en Visual Studio 2019, versión 16,8 y Visual Studio 2019 para Mac versión 8,8.
+> IOS Designer quedó en desuso en Visual Studio 2019 versión 16,8 y Visual Studio 2019 para Mac versión 8,8 y se quitó en Visual Studio 2019 versión 16,9 y Visual Studio para Mac versión 8,9.
 > La manera recomendada de compilar interfaces de usuario de iOS es directamente en un equipo Mac con Xcode. Para obtener más información, consulte [diseñar interfaces de usuario con Xcode](../storyboards/index.md). 
 
 El diseño automático (también denominado "diseño adaptable") es un enfoque de diseño con capacidad de respuesta. A diferencia del sistema de diseño de transición, donde la ubicación de cada elemento está codificada de forma rígida en un punto de la pantalla, el diseño automático trata sobre las *relaciones* : las posiciones de los elementos en relación con otros elementos en la superficie de diseño. En el corazón del diseño automático está la idea de restricciones o reglas que definen la ubicación de un elemento o conjunto de elementos en el contexto de otros elementos de la pantalla. Dado que los elementos no están asociados a una posición concreta en la pantalla, las restricciones ayudan a crear un diseño adaptable que tenga un aspecto correcto en diferentes tamaños de pantalla y orientaciones de dispositivo.

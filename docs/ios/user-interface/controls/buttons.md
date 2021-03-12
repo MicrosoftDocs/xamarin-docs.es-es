@@ -7,20 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/11/2018
-ms.openlocfilehash: d763d4433ef0979343de059c5113314f553142fa
-ms.sourcegitcommit: 01ccefd54c0ced724784dbe1aec9ecfc9b00e633
+ms.openlocfilehash: 2de52400241d45046f58222231b8d865ecf6666d
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92630223"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602806"
 ---
 # <a name="buttons-in-xamarinios"></a>Botones de Xamarin. iOS
 
 En iOS, la `UIButton` clase representa un control de botón.
 
-Las propiedades de un botón se pueden modificar mediante programación o con la **ventana Propiedades o el panel** del diseñador de iOS:
-
-![Panel de propiedades del diseñador de iOS](buttons-images/properties.png "Panel de propiedades del diseñador de iOS")
+Las propiedades de un botón se pueden modificar mediante programación o con la Interface Builder de Xcode.
 
 ## <a name="creating-a-button-programmatically"></a>Crear un botón mediante programación
 
@@ -86,14 +84,6 @@ myButton.TouchUpInside += (sender, e) => {
 
 > [!NOTE]
 > `TouchUpInside` no es el único evento de botón disponible. `UIButton` es una clase secundaria de `UIControl` , que define [muchos eventos diferentes](xref:UIKit.UIControlEvent).
-
-### <a name="using-the-ios-designer-to-specify-button-event-handlers"></a>Usar el diseñador de iOS para especificar controladores de eventos de botón
-
-Use la pestaña **eventos** del **Panel de propiedades** para especificar controladores de eventos para los distintos eventos de un botón.
-
-Para el evento adecuado, escriba el nombre de un nuevo controlador de eventos o seleccione uno de la lista. Al hacerlo, se creará un controlador de eventos en el código para el controlador de vistas del botón.
-
-![Pestaña eventos del Panel de propiedades](buttons-images/image1.png "Pestaña eventos del Panel de propiedades")
 
 ## <a name="styling-a-button"></a>Aplicar estilo a un botón
 

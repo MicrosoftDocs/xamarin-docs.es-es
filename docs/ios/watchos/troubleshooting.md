@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 7e56eed866cb647bd654370d587b02bcaba04d4e
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 5bea776f1f2046a6cad3651456a179d7efb59ebe
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91432817"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602793"
 ---
 # <a name="watchos-troubleshooting"></a>Solución de problemas de watchos
 
@@ -38,7 +38,7 @@ Esta página contiene información adicional y soluciones alternativas para los 
 - Las versiones anteriores de Visual Studio para Mac muestran incorrectamente uno de los iconos de **AppleCompanionSettings** como 88x88 píxeles; Esto da como resultado un **error de icono que falta** si intenta enviar a la tienda de aplicaciones.
     Este icono debe ser 87x87 píxeles (29 unidades para **@3x** pantallas retinas). No se puede corregir en Visual Studio para Mac: edite el recurso de imagen en Xcode o edite manualmente el **Contents.jsen** el archivo.
 
-- Si info. plist del proyecto de extensión de Watch **> ID. de agrupación de WKApp** no está [configurado correctamente](~/ios/watchos/get-started/project-references.md) para que coincida con el **identificador de lote**de la aplicación de inspección, el depurador no podrá conectarse y Visual Studio para Mac esperará con el mensaje *"esperando a que se conecte el depurador"*.
+- Si info. plist del proyecto de extensión de Watch **> ID. de agrupación de WKApp** no está [configurado correctamente](~/ios/watchos/get-started/project-references.md) para que coincida con el **identificador de lote** de la aplicación de inspección, el depurador no podrá conectarse y Visual Studio para Mac esperará con el mensaje *"esperando a que se conecte el depurador"*.
 
 - La depuración se admite en el modo de **notificaciones** , pero puede ser poco confiable. A veces, el reintento funcionará. Confirme que el archivo **info. plist** de la aplicación de inspección `WKCompanionAppBundleIdentifier` está configurado para coincidir con el identificador de paquete de la aplicación de contenedor/primario de iOS (es decir, el que se ejecuta en el iPhone).
 
@@ -51,10 +51,6 @@ Esta página contiene información adicional y soluciones alternativas para los 
 
 - Es posible que vea el error "no se ha compilado la aplicación" al intentar iniciar la aplicación. Esto ocurre después de una **limpieza** cuando el proyecto de inicio se establece en el proyecto de extensión de inspección.
     La solución consiste en seleccionar **Compilar > volver a generar todo** y, a continuación, volver a iniciar la aplicación.
-
-### <a name="visual-studio"></a>Visual Studio
-
-La compatibilidad con el diseñador de iOS para el kit de inspección *requiere* que la solución se configure correctamente. Si no se establecen las referencias del proyecto (vea [cómo establecer referencias](~/ios/watchos/get-started/project-references.md)), la superficie de diseño no funcionará correctamente.
 
 <a name="noalpha"></a>
 
@@ -241,7 +237,7 @@ Ejemplo:
 
 ## <a name="notification-mode"></a>Modo de notificación
 
-Para probar el modo de [ **notificación** ](~/ios/watchos/platform/notifications.md)de la aplicación, establezca el `watchlaunchmode` parámetro en `Notification` y proporcione una ruta de acceso a un archivo JSON que contenga una carga de notificación de prueba.
+Para probar el modo de [ **notificación**](~/ios/watchos/platform/notifications.md)de la aplicación, establezca el `watchlaunchmode` parámetro en `Notification` y proporcione una ruta de acceso a un archivo JSON que contenga una carga de notificación de prueba.
 
 El parámetro payload es *necesario* para el modo de notificación.
 
@@ -257,7 +253,7 @@ Los argumentos restantes se explican a continuación:
 
 ### <a name="--sdkroot"></a>--SDKRoot
 
-Obligatorio. Especifica la ruta de acceso a Xcode (6,2 o posterior).
+Necesario. Especifica la ruta de acceso a Xcode (6,2 o posterior).
 
 Ejemplo:
 

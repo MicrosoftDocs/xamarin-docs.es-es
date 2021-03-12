@@ -1,17 +1,17 @@
 ---
 title: Guiones gráficos en Xamarin. iOS
-description: En este documento se proporciona una introducción a los guiones gráficos en Xamarin. iOS. Describe cómo se usa un guion gráfico para definir una interfaz de usuario, objetos segue, y cómo usar el diseñador de iOS para editar archivos de guion gráfico.
+description: En este documento se proporciona una introducción a los guiones gráficos en Xamarin. iOS. Describe cómo se usa un guion gráfico para definir una interfaz de usuario y objetos segue.
 ms.prod: xamarin
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: b9e0f5d01d7843c25af3af3cddefbe0740f018a3
-ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
+ms.openlocfilehash: 37bdbfdc82946aec069325ff29e012f33b12cb13
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98697519"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602403"
 ---
 # <a name="storyboards-in-xamarinios"></a>Guiones gráficos en Xamarin. iOS
 
@@ -185,11 +185,7 @@ En la captura de pantalla siguiente se muestran dos controladores de vista en la
 
     [![Agregar guion gráfico](images/add-storyboard2.png)](images/add-storyboard2.png#lightbox)
 
-2. Haga clic con el botón derecho en el archivo de guion gráfico y seleccione **abrir con > Xcode Interface Builder** para abrirlo en Xcode.
-
-   > Tip Si prefiere usar el generador de interfaz de Xcode de forma predeterminada, puede elegirlo en el Visual Studio para Mac preferencias en **proyectos > iOS**.  A partir de la versión 16,9 de Visual Studio y Visual Studio para Mac 8,9, Xcode Interface Builder será la única opción. *
-
-   ![Seleccionar la herramienta de diseñador preferida.](images/set-preferred-designer-tool.png)
+2. Haga doble clic en el archivo de guion gráfico o haga clic con el botón derecho y seleccione **abrir con > Xcode Interface Builder** para abrirlo en Interface Builder de Xcode.
 
 3. En Xcode, abra la biblioteca (a través de la **vista > Mostrar biblioteca** o **Mayús + Comando + L**) para mostrar una lista de objetos que se pueden agregar al guion gráfico. Agregue un `Navigation Controller` al guion gráfico arrastrando el objeto desde la lista hasta el guión gráfico. De forma predeterminada, el `Navigation Controller` proporcionará dos pantallas. La pantalla de la derecha es la que se va a `TableViewController` reemplazar con una vista más simple, por lo que se puede quitar haciendo clic en la vista y presionando la tecla Supr.
 

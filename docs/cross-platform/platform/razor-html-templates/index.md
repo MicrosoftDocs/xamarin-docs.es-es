@@ -6,20 +6,20 @@ ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 author: davidortinau
 ms.author: daortin
 ms.date: 07/24/2018
-ms.openlocfilehash: 5f1b1345f9abbf891cfbea6e45a8ed2abd7c0dac
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a74ee38e8321ed4537d5181cda37f542d6a87dc6
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014600"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602845"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Compilar vistas HTML mediante plantillas de Razor
 
 En el mundo del desarrollo móvil, el término "aplicación híbrida" hace referencia normalmente a una aplicación que presenta algunas (o todas) sus pantallas como páginas HTML dentro de un control de visor web hospedado.
 
-Hay algunos entornos de desarrollo que le permiten compilar su aplicación móvil completamente en HTML y JavaScript, pero esas aplicaciones pueden sufrir problemas de rendimiento al intentar realizar complejos procesos o efectos de la interfaz de usuario, y también están limitadas en la plataforma características a las que pueden tener acceso.
+Hay algunos entornos de desarrollo que permiten compilar su aplicación móvil completamente en HTML y JavaScript. sin embargo, estas aplicaciones pueden sufrir problemas de rendimiento al intentar realizar complejos procesos o efectos de la interfaz de usuario y también se limitan a las características de la plataforma a las que pueden tener acceso.
 
-Xamarin ofrece lo mejor de ambos mundos, especialmente cuando se usa el motor de plantillas HTML de Razor. Con Xamarin, tiene la flexibilidad de crear vistas HTML con plantillas multiplataforma que usan JavaScript y CSS, pero también tiene acceso completo a las API de la plataforma subyacente y un procesamiento C#rápido mediante.
+Xamarin ofrece lo mejor de ambos mundos, especialmente cuando se usa el motor de plantillas HTML de Razor. Con Xamarin tiene la flexibilidad de crear vistas HTML con plantillas multiplataforma que usan JavaScript y CSS, pero también tiene acceso completo a las API de la plataforma subyacente y un procesamiento rápido mediante C#.
 
 En este documento se explica cómo usar el motor de plantillas Razor para compilar vistas HTML + JavaScript + CSS que se pueden usar en plataformas móviles con Xamarin.
 
@@ -27,7 +27,7 @@ En este documento se explica cómo usar el motor de plantillas Razor para compil
 
 Antes de obtener información sobre Razor en esta sección se explica cómo usar las vistas web para mostrar contenido HTML directamente, específicamente el contenido HTML que se genera dentro de una aplicación.
 
-Xamarin proporciona acceso completo a las API de la plataforma subyacente en iOS y Android, por lo que es fácil crear y mostrar HTML C#con. A continuación se muestra la sintaxis básica de cada plataforma.
+Xamarin proporciona acceso completo a las API de la plataforma subyacente en iOS y Android, por lo que es fácil crear y mostrar HTML con C#. A continuación se muestra la sintaxis básica de cada plataforma.
 
 ### <a name="ios"></a>iOS
 
@@ -70,17 +70,17 @@ En ambas plataformas hay un parámetro que especifica el directorio base para la
 <script type="text/javascript" src="jscript.js">
 ```
 
-Consulte estos archivos: **style. CSS**, **Monkey. jpg** y **JScript. js**. La configuración del directorio base indica a la vista web dónde se encuentran estos archivos para que se puedan cargar en la página.
+Consulte estos archivos: **style. CSS**, **monkey.jpg** y **jscript.js**. La configuración del directorio base indica a la vista web dónde se encuentran estos archivos para que se puedan cargar en la página.
 
 #### <a name="ios"></a>iOS
 
-La salida de la plantilla se representa en iOS con el C# código siguiente:
+La salida de la plantilla se representa en iOS con el siguiente código de C#:
 
 ```csharp
 webView.LoadHtmlString (page, NSBundle.MainBundle.BundleUrl);
 ```
 
-El directorio base se especifica como `NSBundle.MainBundle.BundleUrl` que hace referencia al directorio en el que está instalada la aplicación. Todos los archivos de la carpeta **recursos** se copian en esta ubicación, como el archivo **style. CSS** que se muestra aquí:
+El directorio base se especifica como, `NSBundle.MainBundle.BundleUrl` que hace referencia al directorio en el que está instalada la aplicación. Todos los archivos de la carpeta **recursos** se copian en esta ubicación, como el archivo **style. CSS** que se muestra aquí:
 
  ![solución iPhoneHybrid](images/image1_240x163.png)
 
@@ -104,7 +104,7 @@ La acción de compilación para todos los archivos de contenido estático debe s
 
  ![Acción de compilación del proyecto de Android: AndroidAsset](images/image4_250x71.png)
 
-### <a name="calling-c-from-html-and-javascript"></a>Llamar C# a desde HTML y JavaScript
+### <a name="calling-c-from-html-and-javascript"></a>Llamar a C# desde HTML y JavaScript
 
 Cuando se carga una página HTML en una vista Web, trata los vínculos y los formularios tal como lo haría si la página se cargara desde un servidor. Esto significa que si el usuario hace clic en un vínculo o envía un formulario, la vista Web intentará desplazarse hasta el destino especificado.
 
@@ -127,7 +127,7 @@ Las acciones de formulario siguen la misma regla.
 <form method="get" action="somepage.html"></form>
 ```
 
-No va a hospedar un servidor Web en el cliente. sin embargo, puede usar las mismas técnicas de comunicación de servidor empleadas en los patrones de diseño con capacidad de respuesta de hoy en día para llamar a los servicios a través de HTTP GET y controlar las respuestas de forma asincrónica emitiendo JavaScript (o llamando a JavaScript ya hospedado en la vista Web). Esto le permite pasar fácilmente los datos del HTML al C# código para su procesamiento y, a continuación, volver a mostrar los resultados en la página HTML.
+No va a hospedar un servidor Web en el cliente. sin embargo, puede usar las mismas técnicas de comunicación de servidor empleadas en los patrones de diseño con capacidad de respuesta de hoy en día para llamar a los servicios a través de HTTP GET y controlar las respuestas de forma asincrónica emitiendo JavaScript (o llamando a JavaScript ya hospedado en la vista Web). Esto le permite pasar fácilmente de nuevo los datos del HTML al código de C# para su procesamiento y, a continuación, volver a mostrar los resultados en la página HTML.
 
 Tanto iOS como Android proporcionan un mecanismo para que el código de aplicación intercepte estos eventos de navegación para que el código de la aplicación pueda responder (si es necesario). Esta característica es fundamental para compilar aplicaciones híbridas, ya que permite que el código nativo interactúe con la vista Web.
 
@@ -169,7 +169,7 @@ webView.SetWebViewClient (new HybridWebViewClient ());
 
 ### <a name="calling-javascript-from-c"></a>Llamar a JavaScript desde C\#
 
-Además de indicar a una vista Web que cargue una nueva página HTML, C# el código también puede ejecutar JavaScript en la página que se muestra actualmente. Los bloques de código JavaScript completos pueden crearse mediante C# cadenas y ejecutarse, o puede crear llamadas de método a JavaScript que ya están disponibles en la página a través de`script`etiquetas.
+Además de indicar a una vista Web que cargue una nueva página HTML, el código de C# también puede ejecutar JavaScript en la página que se muestra actualmente. Los bloques de código JavaScript completos pueden crearse mediante cadenas de C# y ejecutarse, o bien se pueden crear llamadas de método a JavaScript que ya están disponibles en la página a través de `script` etiquetas.
 
 #### <a name="android"></a>Android
 
@@ -195,8 +195,8 @@ En esta sección se han incorporado las características de los controles de vis
 
 - La capacidad de cargar HTML a partir de cadenas generadas en el código.
 - La capacidad de hacer referencia a archivos locales (CSS, JavaScript, imágenes u otros archivos HTML).
-- La capacidad de interceptar solicitudes de C# navegación en el código.
-- La capacidad de llamar a JavaScript C# desde el código.
+- La capacidad de interceptar solicitudes de navegación en código C#,
+- La capacidad de llamar a JavaScript desde el código de C#.
 
 En la siguiente sección se presenta Razor, que facilita la creación del código HTML para usarlo en aplicaciones híbridas.
 
@@ -204,7 +204,7 @@ En la siguiente sección se presenta Razor, que facilita la creación del códig
 
 Razor es un motor de plantillas que se presentó con ASP.NET MVC, originalmente para ejecutarse en el servidor y generar HTML para servir a los exploradores Web.
 
-El motor de plantillas de Razor amplía la sintaxis C# HTML estándar con para que pueda expresar el diseño e incorporar fácilmente hojas de estilos CSS y JavaScript. La plantilla puede hacer referencia a una clase de modelo, que puede ser cualquier tipo personalizado y a cuyas propiedades se puede obtener acceso directamente desde la plantilla. Una de sus principales ventajas es la capacidad de mezclar HTML y C# sintaxis fácilmente.
+El motor de plantillas de Razor amplía la sintaxis HTML estándar con C# para que pueda expresar el diseño e incorporar hojas de estilos CSS y JavaScript fácilmente. La plantilla puede hacer referencia a una clase de modelo, que puede ser cualquier tipo personalizado y a cuyas propiedades se puede obtener acceso directamente desde la plantilla. Una de sus principales ventajas es la posibilidad de mezclar fácilmente sintaxis HTML y C#.
 
 Las plantillas de Razor no se limitan al uso del lado servidor, también se pueden incluir en aplicaciones de Xamarin. El uso de plantillas de Razor junto con la capacidad de trabajar con vistas Web mediante programación permite crear aplicaciones híbridas multiplataforma sofisticadas con Xamarin.
 
@@ -227,15 +227,15 @@ A continuación se muestra una plantilla de Razor simple ( **RazorView. cshtml**
 
 Tenga en cuenta las siguientes diferencias con respecto a un archivo HTML normal:
 
-- El símbolo de `@` tiene un significado especial en las plantillas de Razor: indica que se C# va a evaluar la expresión siguiente.
-- `@model` Directiva siempre aparece como la primera línea de un archivo de plantilla de Razor.
-- La Directiva de `@model` debe ir seguida de un tipo. En este ejemplo, se pasa una cadena simple a la plantilla, pero puede ser cualquier clase personalizada.
-- Cuando se hace referencia a `@Model` a través de la plantilla, se proporciona una referencia al objeto que se pasa a la plantilla cuando se genera (en este ejemplo será una cadena).
+- El `@` símbolo tiene un significado especial en las plantillas de Razor, lo que indica que la siguiente expresión es C# que se va a evaluar.
+- `@model` la Directiva siempre aparece como la primera línea de un archivo de plantilla de Razor.
+- La `@model` Directiva debe ir seguida de un tipo. En este ejemplo, se pasa una cadena simple a la plantilla, pero puede ser cualquier clase personalizada.
+- Cuando `@Model` se hace referencia a en toda la plantilla, proporciona una referencia al objeto que se pasa a la plantilla cuando se genera (en este ejemplo será una cadena).
 - El IDE generará automáticamente una clase parcial para las plantillas (archivos con la extensión **. cshtml** ). Puede ver este código, pero no se debe editar.
- ![RazorView. cshtml](images/image6_125x34.png) la clase parcial se denomina RazorView para que coincida con el nombre de archivo de la plantilla. cshtml. Este es el nombre que se usa para hacer referencia a la plantilla C# en el código.
-- `@using` instrucciones también se pueden incluir en la parte superior de una plantilla de Razor para incluir espacios de nombres adicionales.
+ ![RazorView. cshtml ](images/image6_125x34.png) la clase parcial se denomina RazorView para que coincida con el nombre de archivo de la plantilla. cshtml. Este es el nombre que se usa para hacer referencia a la plantilla en el código de C#.
+- `@using` también se pueden incluir instrucciones en la parte superior de una plantilla de Razor para incluir espacios de nombres adicionales.
 
-A continuación, la salida HTML final se puede generar con C# el código siguiente. Tenga en cuenta que especificamos que el modelo es una cadena "Hola mundo" que se incorporará a la salida de la plantilla representada.
+Después, se puede generar la salida HTML final con el siguiente código de C#. Tenga en cuenta que especificamos que el modelo es una cadena "Hola mundo" que se incorporará a la salida de la plantilla representada.
 
 ```csharp
 var template = new RazorView () { Model = "Hello World" };
@@ -244,7 +244,7 @@ var page = template.GenerateString ();
 
 Este es el resultado que se muestra en una vista Web en el simulador de iOS y Android Emulator:
 
- ![Hello World](images/image7_523x135.png)
+ ![Hola mundo](images/image7_523x135.png)
 
 ### <a name="more-razor-syntax"></a>Más sintaxis de Razor
 
@@ -294,9 +294,9 @@ La salida final se muestra aquí en una vista Web en el simulador de iOS y Andro
 
  ![Rupert](images/image8_516x160.png)
 
-#### <a name="c-statements"></a>C#afirma
+#### <a name="c-statements"></a>Instrucciones de C#
 
-En la C# plantilla se pueden incluir más complejos, como las actualizaciones de las propiedades del modelo y el cálculo de la edad en este ejemplo:
+En la plantilla se pueden incluir C# más complejos, como las actualizaciones de las propiedades del modelo y el cálculo de la edad en este ejemplo:
 
 ```html
 @model Monkey
@@ -313,9 +313,9 @@ En la C# plantilla se pueden incluir más complejos, como las actualizaciones de
 </html>
 ```
 
-Puede escribir expresiones de una sola línea C# complejas (como el formato de la edad) rodeando el código con `@()`.
+Puede escribir expresiones complejas de C# de una sola línea (como dar formato a la edad) rodeando el código con `@()` .
 
-Se C# pueden escribir varias instrucciones con `@{}`.
+Se pueden escribir varias instrucciones de C# con `@{}` .
 
 #### <a name="if-else-statements"></a>Instrucciones IF-Else
 
@@ -340,7 +340,7 @@ Las bifurcaciones de código se pueden expresar con `@if` tal y como se muestra 
 
 #### <a name="loops"></a>Bucles
 
-También se pueden agregar construcciones de bucle como `foreach`. El prefijo `@` se puede usar en la variable de bucle (`@food` en este caso) para representarlo en HTML.
+`foreach`También se pueden agregar construcciones de bucle como. El `@` prefijo se puede usar en la variable de bucle ( `@food` en este caso) para representarlo en HTML.
 
 ```html
 @model Monkey
@@ -367,7 +367,7 @@ La salida de la plantilla anterior se muestra en ejecución en el simulador de i
 
  ![Rupert X Monkey](images/image9_520x277.png)
 
-En esta sección se han tratado los aspectos básicos del uso de plantillas de Razor para representar vistas simples de solo lectura. En la sección siguiente se explica cómo compilar aplicaciones más completas con Razor que pueden aceptar la entrada del usuario e interoperar entre JavaScript C#en la vista HTML y.
+En esta sección se han tratado los aspectos básicos del uso de plantillas de Razor para representar vistas simples de solo lectura. En la siguiente sección se explica cómo crear aplicaciones más completas con Razor que puede aceptar la entrada del usuario e interoperar entre JavaScript en la vista HTML y C#.
 
 ## <a name="using-razor-templates-with-xamarin"></a>Uso de plantillas de Razor con Xamarin
 
@@ -381,7 +381,7 @@ La **nueva** ventana de la solución tiene el siguiente aspecto para los proyect
 
  ![Creación de soluciones de iPhone y Android](images/image13_1139x959.png)
 
-Tenga en cuenta que puede agregar fácilmente una plantilla Razor de **. cshtml** a *cualquier* proyecto de Xamarin existente, no es necesario usar estas plantillas de solución. los proyectos de iOS no requieren un guion gráfico para usar Razor; simplemente agregue un control UIWebView a cualquier vista mediante programación y puede representar plantillas de Razor completo en C# el código.
+Tenga en cuenta que puede agregar fácilmente una plantilla Razor de **. cshtml** a *cualquier* proyecto de Xamarin existente, no es necesario usar estas plantillas de solución. los proyectos de iOS no requieren un guion gráfico para usar Razor; simplemente agregue un control UIWebView a cualquier vista mediante programación y puede representar plantillas de Razor completo en código C#.
 
 A continuación se muestra el contenido de la solución de plantilla predeterminada para los proyectos de iPhone y Android:
 
@@ -391,10 +391,10 @@ Las plantillas proporcionan una infraestructura de aplicaciones lista para usar 
 
 Las partes importantes de la solución son:
 
-- Contenido estático como el archivo **style. CSS** .
-- Archivos de plantilla Razor. cshtml como **RazorView. cshtml** .
-- Clases de modelo a las que se hace referencia en las plantillas de Razor, como **ExampleModel.CS** .
-- La clase específica de la plataforma que crea la vista Web y representa la plantilla, como el `MainActivity` en Android y el `iPhoneHybridViewController` en iOS.
+- Contenido estático como el archivo  **style. CSS** .
+- Archivos de plantilla Razor. cshtml como  **RazorView. cshtml** .
+- Clases de modelo a las que se hace referencia en las plantillas de Razor, como  **ExampleModel.CS** .
+- La clase específica de la plataforma que crea la vista Web y representa la plantilla, como  `MainActivity` en Android y  `iPhoneHybridViewController` en iOS.
 
 En la siguiente sección se explica cómo funcionan los proyectos.
 
@@ -412,17 +412,17 @@ Puede agregar cualquier hoja de estilos y los archivos JavaScript que necesite, 
 
 ### <a name="razor-cshtml-templates"></a>Plantillas de la cshtml de Razor
 
-La plantilla incluye un archivo Razor **. cshtml** que tiene código escrito previamente para facilitar la comunicación de datos entre HTML/JavaScript y C#. Esto le permitirá crear sofisticadas aplicaciones híbridas que no solo muestran datos de solo lectura del modelo, sino que también aceptan la entrada del usuario en el código HTML y la C# devuelven al código para su procesamiento o almacenamiento.
+La plantilla incluye un archivo Razor **. cshtml** que tiene código escrito previamente para ayudar a comunicar datos entre HTML/JavaScript y C#. Esto le permitirá crear sofisticadas aplicaciones híbridas que no solo muestran datos de solo lectura del modelo, sino que también aceptan la entrada del usuario en el código HTML y la devuelven al código de C# para su procesamiento o almacenamiento.
 
 #### <a name="rendering-the-template"></a>Representación de la plantilla
 
-La llamada al `GenerateString` en una plantilla representa el código HTML preparado para su presentación en una vista Web. Si la plantilla usa un modelo, debe proporcionarse antes de la representación. En este diagrama se muestra cómo funciona la representación: no se resuelven los recursos estáticos mediante la vista Web en tiempo de ejecución, utilizando el directorio base proporcionado para buscar los archivos especificados.
+La llamada a `GenerateString` en una plantilla representa el código HTML preparado para su presentación en una vista Web. Si la plantilla usa un modelo, debe proporcionarse antes de la representación. En este diagrama se muestra cómo funciona la representación: no se resuelven los recursos estáticos mediante la vista Web en tiempo de ejecución, utilizando el directorio base proporcionado para buscar los archivos especificados.
 
  ![Diagrama de flujo de Razor](images/image12_700x421.png)
 
-#### <a name="calling-c-code-from-the-template"></a>Llamar C# a código desde la plantilla
+#### <a name="calling-c-code-from-the-template"></a>Llamar a código C# desde la plantilla
 
-La comunicación desde una vista Web representada que C# devuelve una llamada a se realiza estableciendo la dirección URL de la vista Web y, a continuación C# , interceptando la solicitud en para controlar la solicitud nativa sin volver a cargar la vista Web.
+La comunicación desde una vista Web representada que llama de nuevo a C# se realiza estableciendo la dirección URL de la vista Web y, a continuación, interceptando la solicitud en C# para controlar la solicitud nativa sin volver a cargar la vista Web.
 
 Un ejemplo puede verse en cómo se controla el botón de RazorView. El botón tiene el siguiente código HTML:
 
@@ -430,7 +430,7 @@ Un ejemplo puede verse en cómo se controla el botón de RazorView. El botón ti
 <input type="button" name="UpdateLabel" value="Click" onclick="InvokeCSharpWithFormValues(this)" />
 ```
 
-La función `InvokeCSharpWithFormValues` JavaScript Lee todos los valores del formulario HTML y establece el `location.href` para la vista Web:
+La `InvokeCSharpWithFormValues` función JavaScript Lee todos los valores del formulario HTML y establece `location.href` para la vista Web:
 
 ```javascript
 location.href = "hybrid:" + elm.name + "?" + qs;
@@ -446,7 +446,7 @@ Cuando la vista Web nativa procesa esta solicitud de navegación, tenemos la opo
 
 El interior de estos dos interceptores de navegación es esencialmente el mismo.
 
-En primer lugar, Compruebe la dirección URL que está intentando cargar la vista Web y, si no se inicia con el esquema personalizado (`hybrid:`), permita que la navegación se realice de la forma habitual.
+En primer lugar, Compruebe la dirección URL que está intentando cargar la vista Web y, si no se inicia con el esquema personalizado ( `hybrid:` ), permita que la navegación se realice de la forma habitual.
 
 Para el esquema de dirección URL personalizada, todo en la dirección URL entre el esquema y el es el nombre del método que se va a controlar (en este caso, "UpdateLabel"). Todo lo que aparece en la cadena de consulta se tratará como los parámetros de la llamada al método:
 
@@ -456,19 +456,19 @@ var method = resources [0];
 var parameters = System.Web.HttpUtility.ParseQueryString(resources[1]);
 ```
 
-`UpdateLabel` en este ejemplo realiza una cantidad mínima de manipulación de cadenas en el parámetro de cuadro de textoC# (anteponiendo "dice" a la cadena) y, a continuación, vuelve a llamar a la vista Web.
+`UpdateLabel` en este ejemplo, se realiza una cantidad mínima de manipulación de cadenas en el parámetro de cuadro de texto (anteponiendo "C# dice" a la cadena) y, a continuación, vuelve a llamar a la vista Web.
 
 Después de administrar la dirección URL, el método anula la navegación para que la vista Web no intente terminar de navegar a la dirección URL personalizada.
 
 #### <a name="manipulating-the-template-from-c"></a>Manipular la plantilla desde C\#
 
-La comunicación con una vista web HTML presentada desde C# se realiza mediante una llamada a JavaScript en la vista Web. En iOS, esto se hace llamando a `EvaluateJavascript` en UIWebView:
+La comunicación con una vista web HTML representada desde C# se realiza mediante una llamada a JavaScript en la vista Web. En iOS, esto se hace llamando a `EvaluateJavascript` en UIWebView:
 
 ```csharp
 webView.EvaluateJavascript (js);
 ```
 
-En Android, se puede invocar JavaScript en la vista Web mediante la carga de JavaScript como una dirección URL mediante el esquema de URL de `"javascript:"`:
+En Android, se puede invocar JavaScript en la vista Web mediante la carga de JavaScript como una dirección URL mediante el `"javascript:"` esquema de direcciones URL:
 
 ```csharp
 webView.LoadUrl ("javascript:" + js);
@@ -480,7 +480,7 @@ Estas plantillas no hacen uso de controles nativos en cada plataforma; toda la p
 
 HTML puede ser excelente para crear prototipos y mostrar los tipos de elementos que la web es mejor en, como el texto enriquecido y el diseño dinámico. Sin embargo, no todas las tareas son adecuadas para HTML y JavaScript: desplazarse a través de listas largas de datos, por ejemplo, funciona mejor con los controles de interfaz de usuario nativos (como UITableView en iOS o ListView en Android).
 
-Las vistas Web de la plantilla se pueden aumentar fácilmente con controles específicos de la plataforma: simplemente Edite **archivo mainstoryboard. Storyboard** en iOS Designer o en **Resources/layout/main. axml** en Android.
+Las vistas Web de la plantilla se pueden aumentar fácilmente con controles específicos de la plataforma: simplemente Edite **archivo mainstoryboard. Storyboard** con Xcode en un equipo Mac o los **recursos/diseño/Main. axml** en Android.
 
 ### <a name="razortodo-sample"></a>Ejemplo de RazorTodo
 

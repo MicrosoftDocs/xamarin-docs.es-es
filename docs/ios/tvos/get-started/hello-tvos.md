@@ -7,16 +7,20 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: beaa26e0d028fb614baf76ff52d05b80584f14d4
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 2fcc08680185eed3a77f89ba4822172fcaf4b88e
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91435262"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102603053"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hola, guía de inicio rápido de tvOS
 
 _En esta guía se explica cómo crear su primera aplicación de Xamarin. tvOS y su cadena de herramientas de desarrollo. También presenta Xamarin Designer, que expone controles de interfaz de usuario al código y muestra cómo compilar, ejecutar y probar una aplicación de Xamarin. tvOS._
+
+> [!WARNING]
+> IOS Designer quedó en desuso en Visual Studio 2019 versión 16,8 y Visual Studio 2019 para Mac versión 8,8 y se quitó en Visual Studio 2019 versión 16,9 y Visual Studio para Mac versión 8,9.
+> La manera recomendada de compilar interfaces de usuario de iOS es directamente en un equipo Mac que ejecuta la Interface Builder de Xcode. Para obtener más información, consulte [diseñar interfaces de usuario con Xcode](~/ios/user-interface/storyboards/index.md). 
 
 Apple ha lanzado la quinta generación de Apple TV, Apple TV 4K, que ejecuta tvOS 11.
 
@@ -53,7 +57,7 @@ Para empezar, vamos a hacer lo siguiente:
 
     [![Visual Studio para Mac](hello-tvos-images/setup01.png)](hello-tvos-images/setup01.png#lightbox)
 2. Haga clic en el vínculo **nueva solución...** en la esquina superior izquierda de la pantalla para abrir el cuadro de diálogo **nuevo proyecto** .
-3. Seleccione **tvOS**  >  **aplicación de**  >  **vista única** de tvOS y haga clic en el botón **siguiente** :
+3. Seleccione   >  **aplicación de**  >  **vista única** de tvOS y haga clic en el botón **siguiente** :
 
     [![Seleccionar una aplicación de vista única](hello-tvos-images/setup02.png)](hello-tvos-images/setup02.png#lightbox)
 4. Escriba `Hello, tvOS` como nombre de la **aplicación**, escriba el identificador de la **organización** y haga clic en el botón **siguiente** :
@@ -67,7 +71,7 @@ Visual Studio para Mac creará la nueva aplicación Xamarin. tvOS y mostrará lo
 
  [![Vista de archivos predeterminados](hello-tvos-images/project01.png)](hello-tvos-images/project01.png#lightbox)
 
-Visual Studio para Mac usa **soluciones** y **proyectos**de la misma forma que Visual Studio. Una solución es un contenedor que puede contener uno o varios proyectos; los proyectos pueden incluir aplicaciones, bibliotecas auxiliares, aplicaciones de prueba, etc. En este caso, Visual Studio para Mac ha creado una solución y un proyecto de aplicación para usted.
+Visual Studio para Mac usa **soluciones** y **proyectos** de la misma forma que Visual Studio. Una solución es un contenedor que puede contener uno o varios proyectos; los proyectos pueden incluir aplicaciones, bibliotecas auxiliares, aplicaciones de prueba, etc. En este caso, Visual Studio para Mac ha creado una solución y un proyecto de aplicación para usted.
 
 Si lo desea, puede crear uno o varios proyectos de biblioteca de código que contengan código común compartido. El proyecto de aplicación puede consumir estos proyectos de biblioteca o compartirlos con otros proyectos de aplicaciones de Xamarin. tvOS (o Xamarin. iOS, Xamarin. Android y Xamarin. Mac según el tipo de código), tal como lo haría si estuviera creando una aplicación .NET estándar.
 
@@ -263,7 +267,7 @@ Para obtener más información sobre el diseñador de iOS y su funcionamiento, c
 
 Ahora podemos empezar a agregar controles a la superficie de diseño de nuestra aplicación Xamarin. tvOS.
 
-Siga estos pasos:
+Haga lo siguiente:
 
 1. Busque el **cuadro de herramientas**, que debe estar a la derecha de la superficie de diseño:
 
@@ -354,7 +358,7 @@ Ahora estamos listos para empezar a agregar código para que el botón funcione.
 
 ### <a name="naming-a-control"></a>Asignar un nombre a un control
 
-Al hacer clic en el botón, la etiqueta debe actualizarse en función del número de clics. Para ello, necesitaremos tener acceso a la etiqueta en el código. Esto se realiza asignándole un nombre. Siga estos pasos:
+Al hacer clic en el botón, la etiqueta debe actualizarse en función del número de clics. Para ello, necesitaremos tener acceso a la etiqueta en el código. Esto se realiza asignándole un nombre. Haga lo siguiente:
 
 1. Abra el guion gráfico y seleccione la etiqueta en la parte inferior del controlador de vista.
 2. En el panel de propiedades, seleccione la pestaña **Widget** :

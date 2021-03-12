@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 6048690bc68c3998b67dc89fdc191ea9158ae952
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 5ef7d08242702143de667803b76de7325fca1b82
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437275"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602338"
 ---
 # <a name="images-and-icons-in-xamarinios"></a>Imágenes e iconos en Xamarin. iOS
 
@@ -22,7 +22,6 @@ Hay varias maneras de usar recursos de imagen dentro de una aplicación iOS. Des
 
 - **Imágenes independientes** de la resolución: Use la compatibilidad integrada de iOS para trabajar con imágenes en diferentes tipos y resoluciones de dispositivos (iPhone, iPad, etc.).
 - **Conjuntos de imágenes del catálogo de activos** : use **conjuntos de imágenes del catálogo de recursos** para administrar y agrupar toda la versión de un recurso de imagen determinado que necesita una aplicación.
-- **Imágenes en el diseñador de iOS** : Use el diseñador de iOS para establecer imágenes para los controles.
 - **Imágenes en el código** : Use los `UIImage` métodos de la clase para cargar y trabajar con recursos de imagen y asignarlos a controles de interfaz de usuario en el código de C#.
 - **Icono de aplicación** : defina el icono de la aplicación que requiere cada aplicación de iOS. Este es el icono que el usuario va a pulsar en la pantalla principal de iOS para iniciar la aplicación. Además, Game Center usa este icono, si procede.
 - **Icono de Spotlight** : defina el icono de noticias destacadas de la aplicación. Siempre que el usuario escriba el nombre de una aplicación en una búsqueda de Spotlight, se mostrará este icono.

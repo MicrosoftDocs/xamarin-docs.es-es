@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/31/2018
-ms.openlocfilehash: 07226b22243f3d463ce2630e1f12a94f83ddd64a
-ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
+ms.openlocfilehash: cb0fb1e8d0deeb04c11870935275b7d9f211fa59
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439444"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102603118"
 ---
 # <a name="building-user-interfaces-with-the-ios-designer"></a>Creación de interfaces de usuario con el diseñador de iOS
 
 _El Xamarin Designer para iOS es un diseñador visual para los formatos de guion gráfico y Interface Builder de iOS que está totalmente integrado con Visual Studio para Mac y Visual Studio. IOS Designer mantiene la compatibilidad total con los formatos Storyboard y. Xib, de modo que los archivos se pueden editar en Visual Studio para Mac o Visual Studio además de los Interface Builder de Xcode. Además, el Xamarin Designer para iOS admite características avanzadas, como los controles personalizados que se representan en tiempo de diseño en el editor._
 
 > [!WARNING]
-> IOS Designer comenzará a quedar obsoleto en Visual Studio 2019, versión 16,8 y Visual Studio 2019 para Mac versión 8,8.
+> IOS Designer quedó en desuso en Visual Studio 2019 versión 16,8 y Visual Studio 2019 para Mac versión 8,8 y se quitó en Visual Studio 2019 versión 16,9 y Visual Studio para Mac versión 8,9.
 > La manera recomendada de compilar interfaces de usuario de iOS es directamente en un equipo Mac con Xcode. Para obtener más información, consulte [diseñar interfaces de usuario con Xcode](../storyboards/index.md). 
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
@@ -48,7 +48,7 @@ Esta guía se centra en los controles personalizados, en cómo se crean y en qu�
 
 ## <a name="walkthrough---using-custom-controls-with-ios-designer"></a>[Tutorial: uso de controles personalizados con el diseñador de iOS](ios-designable-controls-walkthrough.md)
 
-En este artículo se proporciona un tutorial paso a paso que muestra cómo crear un control personalizado y usarlo en el diseñador de iOS. Muestra cómo hacer que un control esté disponible en el cuadro de herramientas del diseñador para que se pueda arrastrar o colocar en una vista. Además, muestra cómo implementar un control para que se represente correctamente en tiempo de diseño y tiempo de ejecución, así como para crear propiedades que se pueden establecer en tiempo de diseño.
+En este artículo se proporciona un tutorial paso a paso que muestra cómo crear un control personalizado y usarlo en el diseñador de iOS. Muestra cómo hacer que un control esté disponible en el cuadro de herramientas del diseñador para que se pueda arrastrar o colocar en una vista. Además, muestra cómo implementar un control para que se represente correctamente en tiempo de diseño y en tiempo de ejecución, y cómo crear propiedades que se pueden establecer en tiempo de diseño.
 
 ## <a name="auto-layout-with-the-xamarin-ios-designer"></a>[Diseño automático con Xamarin iOS Designer](designer-auto-layout.md)
 

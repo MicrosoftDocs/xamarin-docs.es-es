@@ -10,17 +10,20 @@ ms.date: 03/27/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4f20a0586aee998c10372c60c96577321e697aad
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0e58626c193fb8e4c1bcf071bc44b64af4009851
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137272"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602949"
 ---
 # <a name="render-custom-controls-in-the-xaml-previewer"></a>Representar controles personalizados en el previsor de XAML
 
 _A veces, los controles personalizados no funcionan como se esperaba en la vista previa de XAML. Siga las instrucciones de este artículo para conocer las limitaciones de la vista previa de los controles personalizados._
 
+> [!WARNING]
+> El previsor de XAML ha quedado en desuso en Visual Studio 2019 versión 16,8 y Visual Studio para Mac versión 8,8, y se ha reemplazado por la característica de recarga en caliente de XAML en Visual Studio 2019 versión 16,9 y Visual Studio para Mac versión 8,9.
+> Obtenga más información sobre la recarga activa de XAML en [la documentación](~/xamarin-forms/xaml/hot-reload.md)de.
 ## <a name="basic-preview-mode"></a>Modo de vista previa básica
 
 Incluso si no ha compilado el proyecto, el previsor de XAML representará las páginas. Hasta que se compile, cualquier control que se base en el código subyacente mostrará su Xamarin.Forms tipo base. Cuando se compila el proyecto, el previsor de XAML intentará mostrar los controles personalizados con la representación en tiempo de diseño habilitada. Si se produce un error en el procesamiento, se mostrará el Xamarin.Forms tipo base.
@@ -47,7 +50,7 @@ Use [la clase base ImageCirclePlugin's de James Montemagno](https://github.com/j
 
 Actualmente, los controles de SkiaSharp solo se admiten cuando se realiza una vista previa en iOS. No se representarán en la versión preliminar de Android.
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 ### <a name="check-your-xamarinforms-version"></a>Comprobar la Xamarin.Forms versión
 Asegúrese de que tiene instalado al menos Xamarin.Forms 3,6. Puede actualizar su Xamarin.Forms versión en NuGet.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: d8dcf64f9a905557bea69402bcaf7fcfb51fb10b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3dd413d6d747c9bbec43e5a88f7e24b8e7868327
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86928580"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602910"
 ---
 # <a name="programmatic-layout-constraints-in-xamarinios"></a>Restricciones de diseño mediante programación en Xamarin. iOS
 
@@ -20,9 +20,9 @@ _En esta guía se presenta el uso de restricciones de diseño automático de iOS
 
 El diseño automático (también denominado "diseño adaptable") es un enfoque de diseño con capacidad de respuesta. A diferencia del sistema de diseño de transición, donde la ubicación de cada elemento está codificada de forma rígida en un punto de la pantalla, el diseño automático trata sobre las *relaciones* : las posiciones de los elementos en relación con otros elementos en la superficie de diseño. En el corazón del diseño automático está la idea de restricciones o reglas que definen la ubicación de un elemento o conjunto de elementos en el contexto de otros elementos de la pantalla. Dado que los elementos no están asociados a una posición concreta en la pantalla, las restricciones ayudan a crear un diseño adaptable que tenga un aspecto correcto en diferentes tamaños de pantalla y orientaciones de dispositivo.
 
-Normalmente, al trabajar con el diseño automático en iOS, usará el diseñador de iOS para colocar de forma gráfica las restricciones de diseño en los elementos de la interfaz de usuario. Sin embargo, puede haber ocasiones en las que necesite crear y aplicar restricciones en el código de C#. Por ejemplo, cuando se utilizan elementos de interfaz de usuario creados dinámicamente y se agregan a `UIView` .
+Normalmente, al trabajar con el diseño automático en iOS, usará los Interface Builder de Xcode para colocar de forma gráfica las restricciones de diseño en los elementos de la interfaz de usuario. Sin embargo, puede haber ocasiones en las que necesite crear y aplicar restricciones en el código de C#. Por ejemplo, cuando se utilizan elementos de interfaz de usuario creados dinámicamente y se agregan a `UIView` .
 
-En esta guía se muestra cómo crear y trabajar con restricciones mediante código C# en lugar de crearlas gráficamente en el diseñador de iOS.
+En esta guía se muestra cómo crear y trabajar con restricciones mediante código C# en lugar de crearlas de forma gráfica en la Interface Builder de Xcode.
 
 <a name="Creating-Constraints-Programmatically"></a>
 

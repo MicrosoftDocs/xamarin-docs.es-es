@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: fdfdd385563ee425f0e8767aed13304ae9541b94
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 849b19217a81a808dd86cacb68748731ff721e02
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91435365"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602819"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Guiones gráficos unificados en Xamarin. iOS
 
@@ -70,8 +70,6 @@ El comportamiento de carga de imágenes en iOS también reconoce un `@3x` sufijo
 UIImage icon = UIImage.FromFile("MonkeyImage.png");
 ```
 
-O bien, si asignan la imagen a un elemento de la interfaz de usuario mediante el diseñador de iOS como `MonkeyIcon.png` , se `MonkeyIcon@3x.png` usará de nuevo automáticamente en el iPhone 6 Plus.
-
 <a name="dynamic-launch-screens"></a>
 
 ### <a name="dynamic-launch-screens"></a>Pantallas de inicio dinámico
@@ -112,7 +110,7 @@ En esta sección se tratarán los tipos típicos de colecciones de rasgos que el
 
 A continuación se muestra una colección de rasgos típica que el desarrollador podría ver en un iPhone:
 
-|Propiedad.|Valor|
+|Propiedad|Valor|
 |--- |--- |
 |`HorizontalSizeClass`|Compacto|
 |`VerticalSizeClass`|Normal|
@@ -123,7 +121,7 @@ El conjunto anterior representaría una colección de rasgos completa, ya que ti
 
 También es posible tener una colección de rasgos que no presente algunos de sus valores (a los que Apple hace referencia como no *especificado*):
 
-|Propiedad.|Valor|
+|Propiedad|Valor|
 |--- |--- |
 |`HorizontalSizeClass`|Compacto|
 |`VerticalSizeClass`|Sin especificar|
@@ -216,7 +214,7 @@ iOS 8 proporciona varias devoluciones de llamada que el desarrollador puede usar
 
 |Fase|Devolución de llamada|Descripción|
 |--- |--- |--- |
-|Configurar|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Se llama a este método al principio de un cambio de rasgo antes de que una colección de rasgos se establezca en su nuevo valor.</li><li>Se llama al método cuando el valor de la colección de rasgos ha cambiado pero antes de que tenga lugar cualquier animación.</li></ul>|
+|Configuración|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Se llama a este método al principio de un cambio de rasgo antes de que una colección de rasgos se establezca en su nuevo valor.</li><li>Se llama al método cuando el valor de la colección de rasgos ha cambiado pero antes de que tenga lugar cualquier animación.</li></ul>|
 |Animación|`WillTransitionToTraitCollection`|El Coordinador de transiciones que se pasa a este método tiene una `AnimateAlongside` propiedad que permite al desarrollador agregar animaciones que se ejecutarán junto con las animaciones predeterminadas.|
 |Limpieza|`WillTransitionToTraitCollection`|Proporciona un método para que los desarrolladores incluyan su propio código de limpieza después de que tenga lugar la transición.|
 
@@ -284,7 +282,7 @@ Con un estilo de presentación personalizado, los desarrolladores tienen la opci
 
 El proyecto Adaptive photos de Xamarin que se incluye en este artículo ofrece un ejemplo práctico del uso de clases de tamaño y controladores de vistas adaptables en una aplicación de interfaz unificada de iOS 8.
 
-Mientras que la aplicación crea su interfaz de usuario completamente a partir del código, en lugar de usar el diseñador de IOS y crear un guión gráfico unificado, se aplican las mismas técnicas. Más adelante en este artículo, le mostraremos cómo usar clases de tamaño con un guión gráfico unificado y el diseñador de iOS en una aplicación de Xamarin.
+Mientras que la aplicación crea su interfaz de usuario completamente a partir del código, en lugar de crear un guión gráfico unificado con la Interface Builder de Xcode, se aplican las mismas técnicas. 
 
 Ahora, echemos un vistazo más de cerca a cómo el proyecto Adaptive photos está implementando algunas de las características de la clase size en iOS 8 para crear una aplicación adaptable.
 
@@ -554,127 +552,13 @@ Las ventajas principales de los guiones gráficos unificados son:
 
 - Use el mismo archivo de guion gráfico para iPhone y iPad.
 - Implementación inversa en iOS 6 e iOS 7.
-- Obtenga una vista previa del diseño de los distintos dispositivos, orientaciones y versiones del sistema operativo desde el diseñador de Xamarin iOS.
-
-Esta característica es totalmente compatible con Visual Studio para Mac
+- Obtenga una vista previa del diseño de distintos dispositivos, orientaciones y versiones del sistema operativo.
 
 <a name="enabling-size-classes"></a>
 
 ### <a name="enabling-size-classes"></a>Habilitar clases de tamaño
 
-De forma predeterminada, cualquier nuevo proyecto de Xamarin. iOS nos dará tamaño a las clases. Para usar clases de tamaño y objetos segue adaptables dentro de un guion gráfico de un proyecto anterior, primero se debe convertir al formato de guion gráfico unificado Xcode 6 desde dentro del diseñador de iOS.
-
-Para ello, abra el guion gráfico que se va a convertir en el diseñador de iOS y active la casilla **usar clases de tamaño** :
-
- [![Casilla Usar clases de tamaño](unified-storyboards-images/sizeclass01.png)](unified-storyboards-images/sizeclass01.png#lightbox)
-
-IOS Designer confirmará que el desarrollador desea convertir el formato del guion gráfico para usar las clases de tamaño:
-
- [![Alerta usar clases de tamaño](unified-storyboards-images/sizeclass02.png)](unified-storyboards-images/sizeclass02.png#lightbox)
-
-> [!IMPORTANT]
-> También debe comprobarse el diseño automático para que las clases de tamaño funcionen correctamente.
-
-### <a name="generic-device-types"></a>Tipos de dispositivos genéricos
-
-Una vez que el guion gráfico se ha convertido para usar clases de tamaño, se volverá a mostrar en el Superficie de diseño y la **vista como** dispositivo será genérica:
-
- [![Ver como un tipo de dispositivo genérico](unified-storyboards-images/sizeclass03.png)](unified-storyboards-images/sizeclass03.png#lightbox)
-
-Cuando se selecciona el tipo de dispositivo genérico, se cambia el tamaño de todos los controladores de vista a un cuadrado de 600 x 600. Este cuadrado representa los tamaños de cualquier ancho y cualquier alto. Cuando el diseñador de iOS está en este modo, cualquier edición se aplicará a todas las clases de tamaño.
-
-El desarrollador también tiene la opción de ver la superficie de diseño como un iPhone:
-
- [![Visualización de la superficie de diseño como un iPhone](unified-storyboards-images/sizeclass04.png)](unified-storyboards-images/sizeclass04.png#lightbox)
-
-O verlo como iPad:
-
- [![Ver la superficie de diseño como iPad](unified-storyboards-images/sizeclass05.png)](unified-storyboards-images/sizeclass05.png#lightbox)
-
-### <a name="select-a-size-class"></a>Seleccionar una clase de tamaño
-
-El botón selector de clase de tamaño está en la esquina superior izquierda del Superficie de diseño (cerca de la vista como lista desplegable). Permite al desarrollador seleccionar las clases de tamaño que se están editando actualmente:
-
- [![Seleccionar una clase de tamaño](unified-storyboards-images/sizeclass06.png)](unified-storyboards-images/sizeclass06.png#lightbox)
-
-El selector presenta la selección de clase de tamaño como una cuadrícula de 3 x 3. Cada uno de los cuadrados de la cuadrícula representa una combinación de una clase width y una clase height. El cuadrado central selecciona la clase cualquier ancho/cualquier tamaño de alto (que es la vista predeterminada de un guión gráfico unificado). Cuando se selecciona este cuadrado, el desarrollador está editando el diseño predeterminado, que es heredado por todas las demás configuraciones.
-
-El cuadrado situado en la esquina superior izquierda de la cuadrícula representa la clase de tamaño compacto/ancho compacto:
-
- [![La clase ancho compacto/tamaño de la altura compacta](unified-storyboards-images/sizeclass07.png)](unified-storyboards-images/sizeclass07.png#lightbox)
-
-Este modo corresponde a un iPhone en la orientación horizontal. El cuadrado situado en la esquina inferior derecha de la cuadrícula representa la clase de tamaño normal de ancho y alto normal, que representa un iPad:
-
- [![La clase de tamaño normal de ancho y alto normal](unified-storyboards-images/sizeclass08.png)](unified-storyboards-images/sizeclass08.png#lightbox)
-
-Para editar el diseño de un iPhone en orientación vertical, seleccione el cuadrado en la esquina inferior izquierda. Representa la clase de tamaño de ancho compacto/alto normal:
-
- [![La clase ancho compacto/tamaño de alto normal](unified-storyboards-images/sizeclass09.png)](unified-storyboards-images/sizeclass09.png#lightbox)
-
-Haga clic en el cuadrado para seleccionarlo y el Superficie de diseño cambiará el tamaño de los controladores de vista para que coincidan con la nueva selección:
-
- [![El Superficie de diseño cambiará el tamaño de los controladores de vista para que coincidan con la nueva selección, como se muestra](unified-storyboards-images/sizeclass10.png)](unified-storyboards-images/sizeclass10.png#lightbox)
-
-Vea la sección sobre la clase de tamaño de este artículo para obtener más información sobre las clases de tamaño y cómo afectan al diseño de iPhone y iPad.
-
-### <a name="adaptive-segue-types"></a>Tipos de segue adaptables
-
-Si el desarrollador ha usado guiones gráficos antes, estará familiarizado con los tipos de segue existentes de las **inserciones**, **modales** y **elemento flotante**. Cuando las clases de tamaño están habilitadas en un archivo de guion gráfico unificado, los siguientes tipos de segue adaptables (que corresponden a la nueva API del controlador de vista descritos anteriormente) están disponibles: **Mostrar** y **Mostrar detalles**.
-
-> [!IMPORTANT]
-> Cuando se habilitan las clases de tamaño, cualquier objetos segue existente se convertirá en los nuevos tipos.
-
-Tome el ejemplo de una aplicación de iOS 8 que usa un guion gráfico unificado con un controlador de vista en dos paneles que tiene un menú de navegación de juegos simple en la vista maestra. Si el usuario hace clic en un botón de menú, el controlador de vista del elemento seleccionado debe mostrarse en la sección de detalles del controlador de vista en dos paneles cuando se ejecuta en un iPad. En un iPhone, el controlador de vista del elemento se debe insertar en la pila de navegación.
-
-Para lograr este efecto, en el control del diseñador de iOS, haga clic en el botón y arrastre una línea hasta el controlador de vista que se va a mostrar. Cuando se suelte el botón del mouse, seleccione `Show Detail` en el menú emergente tipo de segue:
-
- [![Seleccione Mostrar detalles en el menú emergente tipo de segue](unified-storyboards-images/segue01.png)](unified-storyboards-images/segue01.png#lightbox)
-
-Se creará el nuevo segue entre el botón y el controlador de vista. Ahora ejecute la aplicación en el simulador de iPhone y se mostrará el menú principal:
-
- [![Menú principal](unified-storyboards-images/segue02.png)](unified-storyboards-images/segue02.png#lightbox)
-
-Haga clic en el botón **seleccionar juego** y el controlador de vista del elemento se insertará en la pila de navegación:
-
- [![El controlador de vista de elementos se insertará en la pila de navegación como se muestra](unified-storyboards-images/segue03.png)](unified-storyboards-images/segue03.png#lightbox)
-
-Detenga el simulador de iPhone y ejecute la aplicación en el simulador de iPad. Cambiar a la orientación horizontal y volver a mostrar el menú principal:
-
- [![El menú principal que se muestra](unified-storyboards-images/segue04.png)](unified-storyboards-images/segue04.png#lightbox)
-
-De nuevo, haga clic en el botón **seleccionar juego** y el controlador de vista del elemento se muestra en la sección de detalles del controlador de vista en dos paneles:
-
- [![El controlador de vista de elementos mostrado en la sección de detalles del controlador de vista en dos paneles](unified-storyboards-images/segue05.png)](unified-storyboards-images/segue05.png#lightbox)
-
-### <a name="excluding-an-element-from-a-size-class"></a>Exclusión de un elemento de una clase de tamaño
-
-Hay ocasiones en las que un elemento determinado (como una vista, un control o una restricción) no es necesario dentro de una clase de tamaño específica. Para excluir un elemento de una clase de tamaño, seleccione el elemento que desee excluir en el **superficie de diseño**. Desplácese hasta la parte inferior del **Explorador de propiedades** y haga clic en el menú desplegable **engranaje** . Seleccione la combinación de **ancho** y **alto** del que se va a excluir el elemento:
-
-[![Seleccionar la combinación de ancho y alto](unified-storyboards-images/exclude-a.png)](unified-storyboards-images/exclude-a.png#lightbox)
-
-Se agregará un nuevo *caso de exclusión* al elemento en la parte inferior del **Explorador de propiedades**. A continuación, desactive la casilla **instalado** de la clase de tamaño dado:
-
-[![Desactive la casilla instalado](unified-storyboards-images/exclude-b.png)](unified-storyboards-images/exclude-b.png#lightbox)
-
-Cambie el Superficie de diseño al ancho y el alto del que se excluyó el elemento, ya que se ha quitado de la clase de tamaño especificada, pero no del diseño de la interfaz de usuario completo:
-
- [![Cambiar el Superficie de diseño al ancho y el alto del que se excluyó el elemento](unified-storyboards-images/exclude02.png)](unified-storyboards-images/exclude02.png#lightbox)
-
-Volver a la clase any width/any height size y el elemento sigue en su lugar:
-
- [![Volver a la clase any width/any height size](unified-storyboards-images/exclude03.png)](unified-storyboards-images/exclude03.png#lightbox)
-
-Cuando la aplicación se ejecuta en el simulador de iPad, aparece el elemento:
-
- [![El elemento que se muestra cuando la aplicación en ejecución en el simulador de iPad](unified-storyboards-images/exclude04.png)](unified-storyboards-images/exclude04.png#lightbox)
-
-Y cuando la aplicación se ejecuta en el simulador de iPhone, falta el elemento:
-
- [![Falta el elemento cuando la aplicación en ejecución en el simulador de iPhone](unified-storyboards-images/exclude05.png)](unified-storyboards-images/exclude05.png#lightbox)
-
-Para quitar un caso de exclusión de un elemento, simplemente seleccione el elemento en el **superficie de diseño**, desplácese hasta la parte inferior del **Explorador de propiedades** y haga clic en el **-** botón situado junto al caso que se va a quitar.
-
-Para ver una implementación de guiones gráficos unificados, consulte la `UnifiedStoryboard` aplicación de Xamarin iOS 8 de ejemplo asociada a este documento.
+De forma predeterminada, cualquier nuevo proyecto de Xamarin. iOS usará clases de tamaño. Para usar clases de tamaño y objetos segue adaptables dentro de un guion gráfico de un proyecto anterior, primero se debe convertir al formato de guion gráfico unificado Xcode 6 y la casilla Usar clases de tamaño está seleccionada en el inspector de archivo de Xcode para los guiones gráficos.
 
 ## <a name="dynamic-launch-screens"></a>Pantallas de inicio dinámico
 
@@ -695,7 +579,7 @@ Las pantallas de inicio dinámico tienen las siguientes limitaciones y considera
 
 Teniendo en cuenta las instrucciones anteriores, echemos un vistazo a la adición de una pantalla de inicio dinámico a un proyecto existente de Xamarin iOS 8.
 
-Siga estos pasos:
+Haga lo siguiente:
 
 1. Abra **Visual Studio para Mac** y cargue la **solución** para agregar la pantalla de inicio dinámico a.
 2. En el **Explorador de soluciones**, haga clic con el botón derecho en el `MainStoryboard.storyboard` archivo y seleccione **abrir con**  >  **Xcode Interface Builder**:
@@ -704,7 +588,7 @@ Siga estos pasos:
 3. En Xcode, seleccione **archivo**  >  **nuevo**  >  **archivo...**:
 
     [![Seleccione Archivo/nuevo](unified-storyboards-images/dls02.png)](unified-storyboards-images/dls02.png#lightbox)
-4. Seleccione **iOS**  >  la pantalla de inicio de la**interfaz de usuario**de iOS  >  **Launch Screen** y haga clic en el botón **siguiente** :
+4. Seleccione   >  la pantalla de inicio de la **interfaz de usuario** de iOS  >   y haga clic en el botón **siguiente** :
 
     [![Seleccione iOS/interfaz de usuario/pantalla de inicio](unified-storyboards-images/dls03.png)](unified-storyboards-images/dls03.png#lightbox)
 5. Asigne un nombre al archivo `LaunchScreen.xib` y haga clic en el botón **crear** :
@@ -755,7 +639,7 @@ Para ver una implementación de una pantalla de inicio dinámico en Xamarin, con
 
 En este artículo se ha examinado rápidamente las clases de tamaño y cómo afectan al diseño en dispositivos iPhone y iPad. Se ha explicado cómo funcionan los rasgos, los entornos de rasgos y las colecciones de rasgos con clases de tamaño para crear interfaces unificadas. Ha tenido un breve vistazo a los controladores de vistas adaptables y cómo funcionan con clases de tamaño dentro de interfaces unificadas. En ella, se examinó la implementación de clases de tamaño y de interfaces unificadas desde el código de C# dentro de una aplicación Xamarin iOS 8.
 
-Por último, en este artículo se han tratado los conceptos básicos de la creación de guiones gráficos unificados con Xamarin iOS Designer que funcionará en dispositivos iOS y creará una única pantalla de inicio dinámico que se mostrará como pantalla de inicio en cada dispositivo iOS 8.
+Por último, en este artículo se describen los aspectos básicos de la creación de una única pantalla de inicio dinámico que se mostrará como pantalla de inicio en cada dispositivo iOS 8.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

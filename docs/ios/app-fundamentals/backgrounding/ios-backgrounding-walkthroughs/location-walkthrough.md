@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 2350db2e8d4f43a33b0ce394e06ffd2c16b6b7ad
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 6bd93fe50dc97c2349486513079768c473355e76
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436562"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602988"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Tutorial: ubicación en segundo plano en Xamarin. iOS
 
@@ -133,13 +133,11 @@ public class LocationUpdatedEventArgs : EventArgs
 
 ## <a name="user-interface"></a>Interfaz de usuario
 
-1. Use el diseñador de iOS para compilar la pantalla que mostrará la información de la ubicación. Haga doble clic en el archivo **Main. Storyboard** para comenzar.
+1. Use el Interface Builder de Xcode para compilar la pantalla que mostrará la información de la ubicación. Haga doble clic en el archivo **Main. Storyboard** para comenzar.
 
     En el guión gráfico, arrastre varias etiquetas a la pantalla para que actúen como marcadores de posición para la información de ubicación. En este ejemplo, hay etiquetas para latitud, longitud, altitud, curso y velocidad.
 
-    El diseño debe ser similar al siguiente:
-
-    ![Diseño de la interfaz de usuario de ejemplo en el diseñador de iOS](location-walkthrough-images/image8.png)
+    Para obtener más información, consulte [diseñar interfaces de usuario con Xcode](~/ios/user-interface/storyboards/index.md).
 
 1. En el Panel de solución, haga doble clic en el `ViewController.cs` archivo y edítelo para crear una nueva instancia de LocationManager y llamar a `StartLocationUpdates` en ella.
   Cambie el código para que tenga un aspecto similar al siguiente:

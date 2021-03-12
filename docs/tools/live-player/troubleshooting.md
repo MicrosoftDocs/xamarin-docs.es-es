@@ -6,12 +6,12 @@ ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2019
-ms.openlocfilehash: d51241bee5f4ddc06032006071fa8296be37f2fb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 86cc5e30efd16be5826dfd641549dca47cfbc0e9
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73005941"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602286"
 ---
 # <a name="troubleshooting-xamarin-live-player"></a>Solución de problemas Xamarin Live Player
 
@@ -21,7 +21,7 @@ ms.locfileid: "73005941"
 > Finalizó la vista previa de Xamarin Live Player. La aplicación ya no está disponible. Las instrucciones siguientes se proporcionan para que los clientes sigan usando la versión preliminar con Visual Studio 2017.
 
 > [!TIP]
-> Puede usar la [vista previa de XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) en Visual Studio 2019 o Visual Studio para Mac para ver los diseños de pantalla a medida que los edita.
+> Puede usar [~/Xamarin-Forms/XAML/Hot-Reload/index.MD (recarga activa) en Visual Studio 2019 o Visual Studio para Mac para ver los diseños de pantalla a medida que los edita.
 
 En este artículo se explican las limitaciones de Live Player y algunos problemas comunes con los pasos para corregirlos.
 
@@ -31,12 +31,12 @@ En este artículo se explican las limitaciones de Live Player y algunos problema
 
 La versión preliminar de Live Player solo está disponible en Visual Studio 2017.
 
-### <a name="device-requirements"></a>Requisitos del dispositivo
+### <a name="device-requirements"></a>Requisitos de los dispositivos
 
 La aplicación Xamarin Live Player admite los siguientes dispositivos Android:
 
 - Android 4,2 o posterior.
-- Procesador ARM-v7a, ARM-v8a, ARM64-v8a, x86 o x86_64.
+- ARM-v7a, ARM-v8a, ARM64-v8a, x86 o x86_64 procesador.
 
 ### <a name="ios-limitations"></a>limitaciones de iOS
 
@@ -60,7 +60,7 @@ Live Player no está disponible para iOS.
 - Algunas clases del sistema no se pueden invalidar (por ejemplo, no puede implementar una subclase).
 - Algunas características de la plataforma que requieren aprovisionamiento no funcionan en la aplicación Xamarin Live Player (sin embargo, se ha configurado para operaciones comunes como el acceso a la Galería fotográfica).
 - Se omiten los destinos personalizados y los pasos de compilación. Por ejemplo, las herramientas como Fody, alajustar, AutoFac y automapper no se pueden incorporar.
-- F#no se admiten proyectos
+- No se admiten proyectos de F #.
 - Es posible que no se admitan escenarios avanzados con interfaces y clases genéricas personalizadas.
 
 ## <a name="mobile-device-does-not-connect-after-scanning-barcode-or-entering-code"></a>El dispositivo móvil no se conecta después de examinar el código de barras (o de escribir código)
@@ -85,7 +85,7 @@ Este error suele producirse cuando el dispositivo móvil que ejecuta Xamarin Liv
 
 ## <a name="manually-configure-device"></a>Configurar manualmente el dispositivo
 
-Si no puede conectarse a su dispositivo a través de Wi-Fi, puede intentar configurar manualmente el dispositivo a través del archivo de configuración, con los siguientes pasos:
+Si no puede conectarse a su dispositivo a través de Wi-Fi puede intentar configurar manualmente el dispositivo a través del archivo de configuración, con los siguientes pasos:
 
 **Paso 1: abrir el archivo de configuración**
 
@@ -94,7 +94,7 @@ Vaya a la carpeta de datos de la aplicación:
 - Windows: **%userprofile%\AppData\Roaming**
 - macOS: **~/Users/$User/.config**
 
-En esta carpeta, encontrará **PlayerDeviceList. XML** si no existe, tendrá que crear uno.
+En esta carpeta, encontrará **PlayerDeviceList.xml** si no existe, tendrá que crear uno.
 
 **Paso 2: obtener la dirección IP**
 
@@ -112,7 +112,7 @@ Vaya a: https://www.guidgenerator.com/online-guid-generator.aspx y genere un nue
 
 **Paso 5: configurar el dispositivo**
 
-Abra **PlayerDeviceList. XML** en un editor como Visual Studio o Visual Studio Code. Debe configurar el dispositivo manualmente en este archivo. De forma predeterminada, el archivo debe contener el siguiente elemento XML vacío `Devices`:
+Abra el **PlayerDeviceList.xml** en un editor como Visual Studio o Visual Studio Code. Debe configurar el dispositivo manualmente en este archivo. De forma predeterminada, el archivo debe contener el siguiente `Devices` elemento XML vacío:
 
 ```xml
 <DeviceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">

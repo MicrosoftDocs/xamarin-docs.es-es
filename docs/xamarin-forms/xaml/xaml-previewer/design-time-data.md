@@ -10,16 +10,20 @@ ms.date: 03/27/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4221cd313ca8fbc3f3f9f886e3bd3f774c7472f7
-ms.sourcegitcommit: 27f33b0a83b9dc871ad9fb207a1c9960ef197d9e
+ms.openlocfilehash: b4d6eb3c1c983cb1add671d03d71cbb0499f1d89
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91897952"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602052"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usar datos de tiempo de diseño con el vista previa de XAML
 
 _Algunos diseños son difíciles de visualizar sin datos. Use estas sugerencias para sacar el máximo partido de las páginas con gran cantidad de datos en el visor de vistas previas de XAML._
+
+> [!WARNING]
+> El previsor de XAML ha quedado en desuso en Visual Studio 2019 versión 16,8 y Visual Studio para Mac versión 8,8, y se ha reemplazado por la característica de recarga en caliente de XAML en Visual Studio 2019 versión 16,9 y Visual Studio para Mac versión 8,9.
+> Obtenga más información sobre la recarga activa de XAML en [la documentación](~/xamarin-forms/xaml/hot-reload.md)de.
 
 > [!NOTE]
 > Si usa Windows Presentation Foundation (WPF) o UWP, consulte [usar datos de tiempo de diseño con el diseñador XAML para aplicaciones de escritorio](/visualstudio/xaml-tools/xaml-designtime-data) .
@@ -139,7 +143,7 @@ La ventaja es que puede enlazar con el modelo real que piensa usar.
 
 Si no desea agregar datos de tiempo de diseño a controles individuales, puede configurar un almacén de datos ficticios para enlazar a la página. Consulte la entrada de blog de James Montemagno [sobre cómo agregar datos en tiempo de diseño](https://montemagno.com/xamarin-forms-design-time-data-tips-best-practices/) para ver cómo enlazar a un ViewModel estático en XAML.
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 ### <a name="requirements"></a>Requisitos
 

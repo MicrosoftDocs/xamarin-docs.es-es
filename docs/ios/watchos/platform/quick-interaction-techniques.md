@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 0252626cb58ff334e3cff2cc60e6544e4eba18c0
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: c55af2cd31621a1be79c2af299edd1c25bc9487a
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91435387"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602858"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Técnicas de interacción rápida para watchos 3 en Xamarin
 
@@ -67,9 +67,9 @@ watchos 3 será compatible con los cuatro reconocedores de gesto siguientes:
   - Gesto de punteo ( `WKTapGestureRecognizer` ).
 - Tipos de gestos continuos:
   - El gesto de panorámica ( `WKPanGestureRecognizer` ).
-  - El gesto de presionar largo ( `WKLongPressGestureRecognizer` ).
+  - El gesto de Long-Press ( `WKLongPressGestureRecognizer` ).
 
-Para implementar uno de los reconocedores de gestos nuevos, basta con arrastrarlo a una superficie de diseño en el diseñador de iOS en Visual Studio para Mac y configurar sus propiedades.
+Para implementar uno de los reconocedores de gestos nuevos, basta con arrastrarlo a una vista en la Interface Builder de Xcode y configurar sus propiedades.
 
 En el código, responda a la acción del reconocedor para controlar el movimiento que desencadena el usuario. Una vez más, esto se hace de la misma manera que en iOS.
 

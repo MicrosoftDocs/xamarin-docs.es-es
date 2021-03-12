@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 7d5c5a6543da701b70532134d8ae901564e5c0b8
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 54b3b361110d3ad63effe0c2afc77a6398ab8034
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91430176"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102603001"
 ---
 # <a name="homekit-in-xamarinios"></a>HomeKit en Xamarin. iOS
 
@@ -25,7 +25,7 @@ Apple presentó HomeKit en iOS 8 como una manera de integrar sin problemas vario
 Con HomeKit, puede crear una aplicación de Xamarin. iOS que controle cualquier dispositivo habilitado para HomeKit sin usar las API o aplicaciones proporcionadas por el proveedor. Con HomeKit, puede hacer lo siguiente:
 
 - Descubra los nuevos dispositivos de automatización de inicio habilitados para HomeKit y agréguelos a una base de datos que se conservará en todos los dispositivos iOS del usuario.
-- Configurar, configurar, mostrar y controlar cualquier dispositivo en la _base de datos de configuración de inicio_de HomeKit.
+- Configurar, configurar, mostrar y controlar cualquier dispositivo en la _base de datos de configuración de inicio_ de HomeKit.
 - Comuníquese con cualquier dispositivo HomeKit preconfigurado y pídale que realice acciones individuales o trabaje en concierto, como la activación de todas las luces de la cocina.
 
 Además de servir dispositivos en la base de datos de configuración de inicio para aplicaciones habilitadas para HomeKit, HomeKit proporciona acceso a los comandos de Siri Voice. Dada una configuración de HomeKit configurada correctamente, el usuario puede emitir comandos de voz, como "Siri", activar las luces en el salón ".
@@ -50,7 +50,7 @@ La colección Home se almacena en una base de datos de configuración principal 
 
 Debido a los requisitos de seguridad impuestos por HomeKit, una aplicación de Xamarin. iOS que usa el marco de HomeKit debe estar configurada correctamente en el portal para desarrolladores de Apple y en el archivo de proyecto de Xamarin. iOS.
 
-Siga estos pasos:
+Haga lo siguiente:
 
 1. Inicie sesión en el [portal para desarrolladores de Apple](https://developer.apple.com).
 2. Haga clic en **certificados, identificadores & perfiles**.
@@ -87,7 +87,7 @@ Para proporcionar una manera de probar todos los servicios y dispositivos de aut
 
 Apple proporciona el simulador accesorio HomeKit como una descarga independiente de Xcode, por lo que tendrá que instalarlo antes de continuar.
 
-Siga estos pasos:
+Haga lo siguiente:
 
 1. En un explorador Web, visite [descargas para desarrolladores de Apple](https://developer.apple.com/download/more/?name=for%20Xcode) .
 2. Descargue las **herramientas adicionales para Xcode XXX** (donde xxx es la versión de Xcode que ha instalado): 
@@ -147,7 +147,7 @@ Para establecer esta clave, haga lo siguiente:
 
 ## <a name="connecting-to-homekit"></a>Conexión a HomeKit
 
-Para comunicarse con HomeKit, la aplicación de Xamarin. iOS debe crear primero una instancia de la `HMHomeManager` clase. Home Manager es el punto de entrada central en HomeKit y es responsable de proporcionar una lista de los hogares disponibles, la actualización y el mantenimiento de esa lista y la devolución del _Inicio principal_del usuario.
+Para comunicarse con HomeKit, la aplicación de Xamarin. iOS debe crear primero una instancia de la `HMHomeManager` clase. Home Manager es el punto de entrada central en HomeKit y es responsable de proporcionar una lista de los hogares disponibles, la actualización y el mantenimiento de esa lista y la devolución del _Inicio principal_ del usuario.
 
 El `HMHome` objeto contiene toda la información acerca de un proporcionar a la casa, incluidos los salones, grupos o zonas que puede contener, junto con los accesorios de automatización de inicio que se hayan instalado. Antes de que se puedan realizar operaciones en HomeKit, `HMHome` se debe crear al menos uno y asignarlo como principal principal.
 
@@ -229,7 +229,7 @@ Cuando el administrador de inicios realiza una conexión a HomeKit, se `DidUpdat
 
 Si la `PrimaryHome` propiedad de `HMHomeManager` se encuentra `null` después de un `DidUpdateHomes` evento, debe proporcionar una manera para que el usuario cree y asigne una página principal principal antes de continuar.
 
-Normalmente, la aplicación presentará un formulario para que el usuario asigne un nombre a una nueva página principal que, a continuación, se pasa al administrador principal para configurar como principal. En el caso de la aplicación de ejemplo **HomeKitIntro** , se creó una vista modal en el diseñador de iOS y la llamó `AddHomeSegue` segue desde la interfaz principal de la aplicación.
+Normalmente, la aplicación presentará un formulario para que el usuario asigne un nombre a una nueva página principal que, a continuación, se pasa al administrador principal para configurar como principal. En el caso de la aplicación de ejemplo **HomeKitIntro** , se creó una vista modal en Xcode Interface Builder y la llama `AddHomeSegue` segue desde la interfaz principal de la aplicación.
 
 Proporciona un campo de texto para que el usuario escriba un nombre para la nueva página principal y un botón para agregar la Página principal. Cuando el usuario pulsa el botón **Agregar Inicio** , el código siguiente llama al administrador principal para agregar el inicio:
 
@@ -389,7 +389,7 @@ La `HMCharacteristicType` enumeración proporciona un conjunto de valores de met
 - Calidad de la compra
 - AudioFeedback
 - BatteryLevel
-- Brillo
+- Luminosidad
 - CarbonDioxideDetected
 - CarbonDioxideLevel
 - CarbonDioxidePeakLevel
@@ -423,9 +423,9 @@ La `HMCharacteristicType` enumeración proporciona un conjunto de valores de met
 - LockMechanismLastKnownAction
 - Registros
 - Fabricante
-- Modelo
+- Modelado
 - MotionDetected
-- Name
+- Nombre
 - ObstructionDetected
 - OccupancyDetected
 - OutletInUse
@@ -696,7 +696,7 @@ Apple ha realizado los siguientes cambios y adiciones a HomeKit para iOS 9:
 - **Apple Watch support** -HomeKit está ahora disponible para watchos y el Apple Watch podrá controlar los dispositivos habilitados para HomeKit sin que un iPhone esté cerca de la inspección. HomeKit para watchos admite las siguientes funcionalidades: ver casas, controlar accesorios y ejecutar escenas.
 - **Nuevo tipo de desencadenador de evento** : además de los desencadenadores de tipo de temporizador admitidos en iOS 8, iOS 9 admite ahora desencadenadores de eventos basados en el estado del accesorio (como los datos del sensor) o la ubicación geográfica. Los desencadenadores de eventos usan `NSPredicates` para establecer las condiciones para su ejecución.
 - **Acceso remoto** : con acceso remoto, el usuario ahora puede controlar sus accesorios de automatización doméstica habilitados para HomeKit cuando están lejos de la casa en una ubicación remota. En iOS 8 esto solo se admitía si el usuario tuviera una tercera generación de TV de Apple en casa. En iOS 9, esta limitación se eleva y el acceso remoto se admite a través de iCloud y el protocolo de accesorio de HomeKit (HAP).
-- **Nuevas capacidades de Bluetooth de baja energía (ble)** : HomeKit admite ahora más tipos de accesorio que pueden comunicarse a través del protocolo Bluetooth de baja energía (ble). Mediante el uso de la tunelización segura de HAP, un accesorio de HomeKit puede exponer otro accesorio Bluetooth a través de Wi-Fi (si está fuera del intervalo de Bluetooth). En iOS 9, BLE los accesorios tienen compatibilidad total con las notificaciones y los metadatos.
+- **Nuevas capacidades de Bluetooth de baja energía (ble)** : HomeKit admite ahora más tipos de accesorio que pueden comunicarse a través del protocolo Bluetooth de baja energía (ble). Mediante el uso de la tunelización segura de HAP, un accesorio HomeKit puede exponer otro accesorio Bluetooth a través de Wi-Fi (si está fuera del intervalo de Bluetooth). En iOS 9, BLE los accesorios tienen compatibilidad total con las notificaciones y los metadatos.
 - **Nuevas categorías de accesorio** : Apple ha agregado las siguientes categorías de accesorio nuevas en iOS 9: cubiertas de ventanas, puertas motorizadas y ventanas, sistemas de alarmas, sensores y conmutadores programables.
 
 Para obtener más información sobre las nuevas características de HomeKit en iOS 9, consulte el [Índice de HomeKit](https://developer.apple.com/homekit/) de Apple y las novedades [de HomeKit](https://developer.apple.com/videos/wwdc/2015/?id=210) video.

@@ -7,16 +7,19 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: f4f24ee8bfc6bdde0becb9539ff9e2f532d06381
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: a37f8d85d022ae4dd8f161cb6ecfc4928d01c7b1
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91432023"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602832"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Pantallas de inicio para aplicaciones de Xamarin. iOS
 
 _En este artículo se explica cómo crear una pantalla de inicio de la aplicación para todos los dispositivos iOS, en cualquier resolución y orientación, con un solo guión gráfico unificado._
+
+> [!WARNING]
+> IOS Designer quedó en desuso en Visual Studio 2019 versión 16,8 y Visual Studio 2019 para Mac versión 8,8 y se quitó en Visual Studio 2019 versión 16,9 y Visual Studio para Mac versión 8,9. La manera recomendada de compilar interfaces de usuario de iOS es directamente en un equipo Mac con Xcode. Para obtener más información, consulte [diseñar interfaces de usuario con Xcode](~/ios/user-interface/storyboards/index.md). 
 
 Antes de iOS 8, la creación de una pantalla de inicio para una aplicación de iOS requirió que el desarrollador proporcionara un recurso de imagen para cada uno de los distintos factores de forma y resolución de los dispositivos en los que se podía ejecutar la aplicación. Sin embargo, desde el lanzamiento de iOS 8, se ha podido usar un solo guion gráfico unificado para crear una pantalla de inicio que sea correcta en todos los casos.
 
@@ -64,7 +67,7 @@ En iOS 8 (y versiones posteriores), el desarrollador puede crear un guión gráf
 
     ![Una vista única con un color de fondo púrpura](launch-screens-images/launch06.png)
 
-7. Agregue una **vista de imagen** a la pantalla de inicio y establezca su **imagen**de origen:
+7. Agregue una **vista de imagen** a la pantalla de inicio y establezca su **imagen** de origen:
 
     - Arrastre una **vista de imagen** desde el **panel del cuadro de herramientas** hasta el centro de la vista.
     - Con la **vista de imagen** seleccionada, en la sección **Widget** del **Panel de propiedades** establezca la propiedad **Image** en el conjunto de imágenes ya agregado al catálogo de recursos **assets. xcassets** . Cambie la posición y el tamaño de la **vista de imagen** según sea necesario:
@@ -144,7 +147,7 @@ En iOS 8 (y versiones posteriores), el desarrollador puede crear un guión gráf
     
     ![Una vista única con un color de fondo púrpura](launch-screens-images/launch09-vs.png)
 
-10. Agregue una **vista de imagen** a la pantalla de inicio y establezca su **imagen**de origen:
+10. Agregue una **vista de imagen** a la pantalla de inicio y establezca su **imagen** de origen:
 
     - Arrastre una **vista de imagen** desde el **cuadro de herramientas** hasta el centro de la vista.
     - Con la **vista imagen** todavía seleccionada, en la sección **Widget** de la **ventana Propiedades** , establezca la propiedad **Image** en el conjunto de imágenes ya agregado al catálogo de activos de **activos** . Cambie la posición y el tamaño de la **vista de imagen** según sea necesario:
@@ -189,7 +192,7 @@ Para obtener más información sobre cómo crear una pantalla de inicio con un g
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Al actualizar una aplicación existente para usar guiones gráficos para sus pantallas de inicio, haga clic con el botón derecho en el **nombre del proyecto** en el **Explorador de soluciones** y seleccione **Agregar**  >  **nuevo archivo..**.. Seleccione **iOS**  >  **pantalla de inicio** de iOS y haga clic en el botón **nuevo** :
+Al actualizar una aplicación existente para usar guiones gráficos para sus pantallas de inicio, haga clic con el botón derecho en el **nombre del proyecto** en el **Explorador de soluciones** y seleccione **Agregar**  >  **nuevo archivo..**.. Seleccione   >  **pantalla de inicio** de iOS y haga clic en el botón **nuevo** :
 
 ![Selección de una pantalla de inicio de iOS](launch-screens-images/storyboard02.png)
 

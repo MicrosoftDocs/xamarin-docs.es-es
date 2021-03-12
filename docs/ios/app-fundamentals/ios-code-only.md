@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: 7b6852485fed6cc14c9f9b2e1a303b7c2e576da9
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 0d5bdde37bef6247d2b78a84dbe217d6ab7796d4
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91433580"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102603157"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Creación de interfaces de usuario de iOS en código en Xamarin. iOS
 
@@ -24,7 +24,7 @@ En el diagrama siguiente se muestran las relaciones entre la ventana, las vistas
 
 [![En este diagrama se muestran las relaciones entre la ventana, las vistas, las subvistas y el controlador de vista.](ios-code-only-images/image9.png)](ios-code-only-images/image9.png#lightbox)
 
-Estas jerarquías de vistas se pueden construir mediante el [Xamarin Designer para iOS](~/ios/user-interface/designer/index.md) en Visual Studio, pero es conveniente tener una comprensión fundamental de cómo trabajar completamente en el código. Este artículo le guía a través de algunos puntos básicos para ponerse en marcha con el desarrollo de la interfaz de usuario de solo código.
+Estas jerarquías de vistas se pueden construir con la Interface Builder de Xcode, pero es conveniente tener un conocimiento fundamental de cómo trabajar completamente en el código. Este artículo le guía a través de algunos puntos básicos para ponerse en marcha con el desarrollo de la interfaz de usuario de solo código.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -32,7 +32,7 @@ En el diagrama siguiente se muestran las relaciones entre la ventana, las vistas
 
 [![En este diagrama se muestran las relaciones entre la ventana, las vistas, las subvistas y el controlador de vista.](ios-code-only-images/image9.png)](ios-code-only-images/image9.png#lightbox)
 
-Estas jerarquías de vistas se pueden construir mediante el [Xamarin Designer para iOS](~/ios/user-interface/designer/index.md) en Visual Studio para Mac, pero es conveniente tener un conocimiento fundamental de cómo trabajar completamente en el código. Este artículo le guía a través de algunos puntos básicos para ponerse en marcha con el desarrollo de la interfaz de usuario de solo código.
+Estas jerarquías de vistas se pueden construir con la Interface Builder de Xcode, pero es conveniente tener un conocimiento fundamental de cómo trabajar completamente en el código. Este artículo le guía a través de algunos puntos básicos para ponerse en marcha con el desarrollo de la interfaz de usuario de solo código.
 
 -----
 
@@ -594,9 +594,9 @@ Al crear un proyecto de iOS en Visual Studio para Mac, se proporciona una pantal
 
 -----
 
-Para editarlo, haga doble clic en él y ábralo en el diseñador de iOS.
+Para editarlo, haga doble clic en él y ábralo en la Interface Builder de Xcode.
 
-Apple recomienda que se use un archivo. Xib o Storyboard para las aplicaciones que tienen como destino iOS 8 o posterior, cuando se inicia cualquier archivo en el diseñador de iOS, se usarán las clases de tamaño y el diseño automático para adaptar el diseño de modo que tenga un aspecto correcto y se muestre correctamente en todos los tamaños de dispositivo. Se puede usar una imagen de inicio estática además de un. Xib o un guion gráfico para permitir la compatibilidad con aplicaciones destinadas a versiones anteriores.
+Apple recomienda que se use un archivo. Xib o Storyboard para las aplicaciones que tienen como destino iOS 8 o posterior, cuando se inicia cualquiera de los archivos en Xcode Interface Builder, se pueden usar las clases de tamaño y el diseño automático para adaptar el diseño de modo que tenga un aspecto correcto y se muestre correctamente en todos los tamaños de dispositivo. Se puede usar una imagen de inicio estática además de un. Xib o un guion gráfico para permitir la compatibilidad con aplicaciones destinadas a versiones anteriores.
 
 Para obtener más información acerca de cómo crear una pantalla de inicio, consulte los documentos siguientes:
 

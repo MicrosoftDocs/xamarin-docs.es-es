@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 593f03588d691071d4a231d9ed788391530d5608
-ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
+ms.openlocfilehash: 85a1c66f7cc72cc66069c86282821050ad4eb683
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439430"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602741"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Controles personalizados en el Xamarin Designer para iOS
 
 _El Xamarin Designer para iOS admite la representación de controles personalizados creados en el proyecto o a los que se hace referencia desde orígenes externos como el almacén de componentes de Xamarin._
 
 > [!WARNING]
-> IOS Designer comenzará a quedar obsoleto en Visual Studio 2019, versión 16,8 y Visual Studio 2019 para Mac versión 8,8.
+> IOS Designer quedó en desuso en Visual Studio 2019 versión 16,8 y Visual Studio 2019 para Mac versión 8,8 y se quitó en Visual Studio 2019 versión 16,9 y Visual Studio para Mac versión 8,9.
 > La manera recomendada de compilar interfaces de usuario de iOS es directamente en un equipo Mac con Xcode. Para obtener más información, consulte [diseñar interfaces de usuario con Xcode](../storyboards/index.md). 
 
 El Xamarin Designer para iOS es una herramienta eficaz para visualizar la interfaz de usuario de una aplicación y proporciona compatibilidad con la edición WYSIWYG para la mayoría de las vistas y los controladores de vistas de iOS. La aplicación también puede contener controles personalizados que extienden los que están integrados en iOS. Si estos controles personalizados se escriben teniendo en cuenta algunas instrucciones, también se pueden representar en el diseñador de iOS, lo que proporciona una experiencia de edición incluso más enriquecida. En este documento se examinan esas directrices.

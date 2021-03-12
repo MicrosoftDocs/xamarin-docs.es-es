@@ -7,14 +7,17 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: eedf76a4ecc566a18f4d4b7d5c4f1b63642b8e25
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: b612800656a7073d0442e450f52c8aacdd12f8cd
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437191"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602975"
 ---
 # <a name="auto-sizing-row-height-in-xamarinios"></a>Cambiar el alto de fila automáticamente en Xamarin. iOS
+> [!WARNING]
+> IOS Designer quedó en desuso en Visual Studio 2019 versión 16,8 y Visual Studio 2019 para Mac versión 8,8 y se quitó en Visual Studio 2019 versión 16,9 y Visual Studio para Mac versión 8,9.
+> La manera recomendada de compilar interfaces de usuario de iOS es directamente en un equipo Mac que ejecuta la Interface Builder de Xcode. Para obtener más información, consulte [diseñar interfaces de usuario con Xcode](~/ios/user-interface/storyboards/index.md). 
 
 A partir de iOS 8, Apple ha agregado la capacidad de crear una vista `UITableView` de tabla () que puede aumentar y reducir automáticamente el alto de una fila determinada en función del tamaño de su contenido mediante el diseño automático, las clases de tamaño y las restricciones.
 
@@ -26,7 +29,7 @@ Abra el guion gráfico de la vista de tabla para la que desea que se cambie el t
 
 [![Diseño del prototipo de la celda](autosizing-row-height-images/table01.png)](autosizing-row-height-images/table01.png#lightbox)
 
-Para cada elemento del prototipo, agregue restricciones para mantener los elementos en la posición correcta a medida que se cambie el tamaño de la vista de tabla para rotación o tamaños de pantalla diferentes del dispositivo iOS. Por ejemplo, anclar el `Title` a la parte superior, izquierda y derecha de la *vista de contenido*de la celda:
+Para cada elemento del prototipo, agregue restricciones para mantener los elementos en la posición correcta a medida que se cambie el tamaño de la vista de tabla para rotación o tamaños de pantalla diferentes del dispositivo iOS. Por ejemplo, anclar el `Title` a la parte superior, izquierda y derecha de la *vista de contenido* de la celda:
 
 [![Anclar el título a la parte superior, izquierda y derecha de la vista de contenido de las celdas](autosizing-row-height-images/table02.png)](autosizing-row-height-images/table02.png#lightbox)
 
@@ -40,7 +43,7 @@ Ahora que hemos restringido totalmente los elementos de la celda, es necesario a
 
 Establezca el elemento que desea expandir para que tenga un valor de prioridad hugging **inferior** y un valor de prioridad de resistencia de compresión **inferior** .
 
-A continuación, es necesario seleccionar el prototipo de celda y asignarle un **identificador**único:
+A continuación, es necesario seleccionar el prototipo de celda y asignarle un **identificador** único:
 
 [![Asignar a la celda el prototipo de un identificador único](autosizing-row-height-images/table04.png)](autosizing-row-height-images/table04.png#lightbox)
 

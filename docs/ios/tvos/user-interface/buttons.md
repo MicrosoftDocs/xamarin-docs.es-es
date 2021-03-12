@@ -7,14 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/07/2017
-ms.openlocfilehash: 07d48a38751680f5e7227682d0639b77b3a3627b
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 68a8c7499148da2b3712ce9b7a485c7e975dcd3c
+ms.sourcegitcommit: 4bbf54d2bc1df96af69814e2e5dae47be12e0474
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436150"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102602780"
 ---
 # <a name="working-with-tvos-buttons-in-xamarin"></a>Trabajar con botones de tvOS en Xamarin
+
+> [!WARNING]
+> IOS Designer quedó en desuso en Visual Studio 2019 versión 16,8 y Visual Studio 2019 para Mac versión 8,8 y se quitó en Visual Studio 2019 versión 16,9 y Visual Studio para Mac versión 8,9.
+> La manera recomendada de compilar interfaces de usuario de iOS es directamente en un equipo Mac que ejecuta la Interface Builder de Xcode. Para obtener más información, consulte [diseñar interfaces de usuario con Xcode](~/ios/user-interface/storyboards/index.md). 
 
 Use una instancia de la `UIButton` clase para crear un botón seleccionable y seleccionable en una ventana de tvOS. Cuando el usuario selecciona un botón, envía un mensaje de acción al objeto de destino, lo que permite que la aplicación de Xamarin. tvOS responda a la entrada del usuario.
 
@@ -34,7 +38,7 @@ Apple tiene las siguientes sugerencias para trabajar con botones:
 
 - **Usar un título o un icono** : mientras tanto un icono como un título pueden incluirse en un botón, el espacio está limitado, por lo que intente no combinar ambos.
 - **Marque claramente los botones destructivos** : Si el botón realiza una acción destructiva (como eliminar un archivo), márquelo claramente como tal usando texto o icono. Las acciones destructivas siempre deben presentar una [alerta](~/ios/tvos/user-interface/alerts.md) que pida al usuario que limite la acción.
-- **No usar botones atrás** : el botón de menú del control remoto Siri se usa para volver a la pantalla anterior. La única excepción a esta regla es para las compras desde la aplicación o las acciones destructivas en las que se debe mostrar un botón **Cancelar** .
+- **No usar botones atrás** : el botón de menú del control remoto Siri se usa para volver a la pantalla anterior. La única excepción a esta regla es para In-App compras o acciones destructivas en las que se debe mostrar un botón **Cancelar** .
 
 Para obtener más información sobre cómo trabajar con el foco y la navegación, consulte nuestra documentación sobre [Cómo trabajar con navegación y foco](~/ios/tvos/app-fundamentals/navigation-focus.md) .
 
@@ -52,7 +56,7 @@ Apple tiene las siguientes sugerencias al crear los títulos de los botones:
 
 - **Mostrar el texto descriptivo debajo de los iconos botones** : siempre que sea posible, coloque solo los botones borrar, texto descriptivo debajo del icono para obtener el propósito del botón.
 - **Usar verbos o frases verbales para el título** : indica claramente la acción que tendrá lugar cuando el usuario haga clic en el botón.
-- **Usar mayúsculas y minúsculas** en el estilo de título: con la excepción de los artículos, las conjunciones o las preposiciones (cuatro letras o menos), cada palabra del título del botón debe escribirse en mayúsculas.
+- **Usar el uso de mayúsculas Title-Style** : con la excepción de los artículos, las conjunciones o las preposiciones (cuatro letras o menos), cada palabra del título del botón debe escribirse en mayúsculas.
 - **Usar un título corto al punto** : Use el palabras más corto posible para describir la acción del botón.
 
 <a name="Buttons-and-Storyboards"></a>
@@ -122,7 +126,7 @@ namespace tvRemote
 Siempre y cuando la propiedad de un botón `Enabled` sea `true` y no esté incluida en otro control o vista, se puede convertir en el elemento enfocado mediante Siri remoto. Si el usuario selecciona el botón y hace clic en la superficie de toque, `ButtonPressed` se ejecutará la acción definida anteriormente.
 
 > [!IMPORTANT]
-> Aunque es posible asignar acciones como `TouchUpInside` a un `UIButton` en el diseñador de iOS al crear un controlador de **eventos**, nunca se llamará porque Apple TV no tiene una pantalla táctil ni eventos táctiles de soporte técnico. Siempre debe usar el tipo de **acción** predeterminada al crear **acciones** para los elementos de la interfaz de usuario de tvOS.
+> Aunque es posible asignar acciones como `TouchUpInside` a `UIButton` cuando se crea un **controlador de eventos**, nunca se llamará porque Apple TV no tiene una pantalla táctil ni eventos táctiles de soporte técnico. Siempre debe usar el tipo de **acción** predeterminada al crear **acciones** para los elementos de la interfaz de usuario de tvOS.
 
 Para obtener más información sobre cómo trabajar con guiones gráficos, vea nuestra [Guía de inicio rápido Hola, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
