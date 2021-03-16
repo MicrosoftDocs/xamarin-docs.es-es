@@ -10,14 +10,14 @@ ms.date: 05/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3fe1b7d56e71cac0b7a5a7b4e2bc68710241f13f
-ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
+ms.openlocfilehash: 2a006515fac63dfc09202c0c930104b377d5c179
+ms.sourcegitcommit: f397bfa4c7f36a4993dc341509ba0a41489fdee2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98609162"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103472695"
 ---
-# <a name="no-locxamarinforms-webview"></a>Xamarin.Forms WebView
+# <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
@@ -25,7 +25,7 @@ ms.locfileid: "98609162"
 
 ![En el explorador de aplicaciones](webview-images/in-app-browser.png)
 
-## <a name="content"></a>Content
+## <a name="content"></a>Contenido
 
 `WebView` admite los siguientes tipos de contenido:
 
@@ -44,7 +44,7 @@ Para mostrar un sitio web desde Internet, establezca la `WebView` [`Source`](xre
 ```csharp
 var browser = new WebView
 {
-  Source = "http://xamarin.com"
+  Source = "https://dotnet.microsoft.com/apps/xamarin"
 };
 ```
 
@@ -329,7 +329,7 @@ public partial class InAppBrowserXaml : ContentPage
 }
 ```
 
-Ya está.
+Eso es todo.
 
 ![Botones de navegación de vista previa](webview-images/in-app-browser.png)
 
@@ -365,7 +365,7 @@ Si prevé usar páginas web que tardan mucho tiempo en cargarse, considere la po
     <StackLayout>
         <!--Loading label should not render by default.-->
         <Label x:Name="labelLoading" Text="Loading..." IsVisible="false" />
-        <WebView HeightRequest="1000" WidthRequest="1000" Source="http://www.xamarin.com" Navigated="webviewNavigated" Navigating="webviewNavigating" />
+        <WebView HeightRequest="1000" WidthRequest="1000" Source="https://dotnet.microsoft.com/apps/xamarin" Navigated="webviewNavigated" Navigating="webviewNavigating" />
     </StackLayout>
 </ContentPage>
 ```
@@ -444,7 +444,7 @@ StackLayout con WidthRequest & HeightRequest:
 ```xaml
 <StackLayout>
     <Label Text="test" />
-    <WebView Source="http://www.xamarin.com/"
+    <WebView Source="https://dotnet.microsoft.com/apps/xamarin"
         HeightRequest="1000"
         WidthRequest="1000" />
 </StackLayout>
@@ -459,7 +459,7 @@ RelativeLayout con WidthRequest & HeightRequest:
                                       Type=Constant, Constant=10}"
         RelativeLayout.YConstraint= "{ConstraintExpression
                                       Type=Constant, Constant=20}" />
-    <WebView Source="http://www.xamarin.com/"
+    <WebView Source="https://dotnet.microsoft.com/apps/xamarin"
         RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,
                                      Constant=10}"
         RelativeLayout.YConstraint="{ConstraintExpression Type=Constant,
@@ -473,7 +473,7 @@ AbsoluteLayout *sin* WidthRequest & HeightRequest:
 ```xaml
 <AbsoluteLayout>
     <Label Text="test" AbsoluteLayout.LayoutBounds="0,0,100,100" />
-    <WebView Source="http://www.xamarin.com/"
+    <WebView Source="https://dotnet.microsoft.com/apps/xamarin"
       AbsoluteLayout.LayoutBounds="0,150,500,500" />
 </AbsoluteLayout>
 ```
@@ -487,7 +487,7 @@ Grid *sin* WidthRequest & HeightRequest. Grid es uno de los pocos diseños que n
         <RowDefinition Height="*" />
     </Grid.RowDefinitions>
     <Label Text="test" Grid.Row="0" />
-    <WebView Source="http://www.xamarin.com/" Grid.Row="1" />
+    <WebView Source="https://dotnet.microsoft.com/apps/xamarin" Grid.Row="1" />
 </Grid>
 ```
 

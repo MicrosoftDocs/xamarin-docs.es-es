@@ -6,16 +6,16 @@ ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/17/2019
+ms.date: 03/15/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 557c82ac9318faaef5628a15989af2982a7f5ba4
-ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
+ms.openlocfilehash: aa9b43c6a41e48557807270542efa3a1121ed0b5
+ms.sourcegitcommit: 9e3ebcd0bd96dd7f7d716e105504e97a7f848c01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94590420"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103557961"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Xamarin.Forms Desplazamientos de CollectionView
 
@@ -35,7 +35,17 @@ Cuando un usuario desliza el dedo para iniciar un desplazamiento, se puede contr
 
 ## <a name="detect-scrolling"></a>Detectar desplazamiento
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) define un `Scrolled` evento que se desencadena para indicar que se ha producido el desplazamiento. En el ejemplo de XAML siguiente se muestra un `CollectionView` que establece un controlador de eventos para el `Scrolled` evento:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define un `Scrolled` evento que se desencadena para indicar que se ha producido el desplazamiento. La `ItemsViewScrolledEventArgs` clase, que representa el objeto que acompaña al `Scrolled` evento, define las siguientes propiedades:
+
+- `HorizontalDelta`, de tipo `double` , representa el cambio en la cantidad de desplazamiento horizontal. Es un valor negativo al desplazarse a la izquierda y un valor positivo al desplazarse a la derecha.
+- `VerticalDelta`, de tipo `double` , representa el cambio en la cantidad de desplazamiento vertical. Se trata de un valor negativo al desplazarse hacia arriba y un valor positivo al desplazarse hacia abajo.
+- `HorizontalOffset`, de tipo `double` , define la cantidad por la que la lista se desplaza horizontalmente desde su origen.
+- `VerticalOffset`, de tipo `double` , define la cantidad por la que la lista se desplaza verticalmente desde su origen.
+- `FirstVisibleItemIndex`, de tipo `int` , es el índice del primer elemento que está visible en la lista.
+- `CenterItemIndex`, de tipo `int` , es el índice del elemento del centro que está visible en la lista.
+- `LastVisibleItemIndex`, de tipo `int` , es el índice del último elemento que está visible en la lista.
+
+En el ejemplo de XAML siguiente se muestra un `CollectionView` que establece un controlador de eventos para el `Scrolled` evento:
 
 ```xaml
 <CollectionView Scrolled="OnCollectionViewScrolled">
@@ -55,17 +65,9 @@ En este ejemplo de código, el `OnCollectionViewScrolled` controlador de eventos
 ```csharp
 void OnCollectionViewScrolled(object sender, ItemsViewScrolledEventArgs e)
 {
-    Debug.WriteLine("HorizontalDelta: " + e.HorizontalDelta);
-    Debug.WriteLine("VerticalDelta: " + e.VerticalDelta);
-    Debug.WriteLine("HorizontalOffset: " + e.HorizontalOffset);
-    Debug.WriteLine("VerticalOffset: " + e.VerticalOffset);
-    Debug.WriteLine("FirstVisibleItemIndex: " + e.FirstVisibleItemIndex);
-    Debug.WriteLine("CenterItemIndex: " + e.CenterItemIndex);
-    Debug.WriteLine("LastVisibleItemIndex: " + e.LastVisibleItemIndex);
+    // Custom logic
 }
 ```
-
-En este ejemplo, el `OnCollectionViewScrolled` controlador de eventos genera los valores del `ItemsViewScrolledEventArgs` objeto que acompaña al evento.
 
 > [!IMPORTANT]
 > El `Scrolled` evento se desencadena para los desplazamientos iniciados por el usuario y para los desplazamientos mediante programación.
